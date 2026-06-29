@@ -11,6 +11,12 @@ keywords:
 
 Describes the supported authentication methods and authentication procedures.
 
+:::info
+
+If you use Suprema CLUe mode, you can set the authentication mode only on the Suprema CLUe server, not on the device.
+
+:::
+
 ## Authentication mode
 
 Set the authentication mode. You can combine <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_322' product='dev' />, and <Cmd sid='ui_020' product='dev' /> for authentication mode, and you can also set schedules for each authentication mode.
@@ -19,7 +25,7 @@ Set the authentication mode. You can combine <Cmd sid='ui_312' product='dev' />,
 
 You can set schedules for each authentication method that uses fingerprints.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Press **6** after selecting <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_313' product='dev' />.
 
@@ -35,9 +41,7 @@ You can set schedules for each authentication method that uses fingerprints.
 
 :::info
 
-* <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If you have no scheduled settings, you can only select <Cmd sid='ui_162' product='dev' /> and <Cmd sid='ui_361' product='dev' />.
-
-* For more information about the <Cmd sid='ui_203' product='dev' /> settings, please refer to the <Linkto to='platform/biostar_x/settings-schedule'>BioStar X Administrator Guide</Linkto>.
+<Cmd sid='ui_203' product='dev' /> can be set on the Suprema CLUe server. If you have no scheduled settings, you can only select <Cmd sid='ui_162' product='dev' /> and <Cmd sid='ui_361' product='dev' />.
 
 :::
 
@@ -45,7 +49,7 @@ You can set schedules for each authentication method that uses fingerprints.
 
 You can set schedules for each authentication method that uses cards.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Press **6** after selecting <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_324' product='dev' />.
 
@@ -67,9 +71,7 @@ You can set schedules for each authentication method that uses cards.
 
 :::info
 
-* <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If you have no scheduled settings, you can only select <Cmd sid='ui_162' product='dev' /> and <Cmd sid='ui_361' product='dev' />.
-
-* For more information about the <Cmd sid='ui_203' product='dev' /> settings, please refer to the <Linkto to='platform/biostar_x/settings-schedule'>BioStar X Administrator Guide</Linkto>.
+<Cmd sid='ui_203' product='dev' /> can be set on the Suprema CLUe server. If you have no scheduled settings, you can only select <Cmd sid='ui_162' product='dev' /> and <Cmd sid='ui_361' product='dev' />.
 
 :::
 
@@ -77,7 +79,7 @@ You can set schedules for each authentication method that uses cards.
 
 You can set schedules for each authentication method that uses IDs.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Press **6** after selecting <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_021' product='dev' />.
 
@@ -97,9 +99,7 @@ You can set schedules for each authentication method that uses IDs.
 
 :::info
 
-* <Cmd sid='ui_203' product='dev' /> can be set in BioStar X. If you have no scheduled settings, you can only select <Cmd sid='ui_162' product='dev' /> and <Cmd sid='ui_361' product='dev' />.
-
-* For more information about the <Cmd sid='ui_203' product='dev' /> settings, please refer to the <Linkto to='platform/biostar_x/settings-schedule'>BioStar X Administrator Guide</Linkto>.
+<Cmd sid='ui_203' product='dev' /> can be set on the Suprema CLUe server. If you have no scheduled settings, you can only select <Cmd sid='ui_162' product='dev' /> and <Cmd sid='ui_361' product='dev' />.
 
 :::
 
@@ -107,7 +107,7 @@ You can set schedules for each authentication method that uses IDs.
 
 You can set how to register T&A mode.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_083_title' product='dev' />, then press **6**.
 
@@ -137,7 +137,7 @@ Set <Cmd sid='ui_279' product='dev' /> to <Cmd sid='ui_372' product='dev' /> to 
 
 You can change the settings for fingerprint authentication.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Press **6** after selecting <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_312' product='dev' />.
 
@@ -159,11 +159,11 @@ You can change the settings for fingerprint authentication.
 
    * <Cmd sid='ui_342' product='dev' />: Set the fingerprint template format. <Cmd sid='ui_057' product='dev' /> is set as default. Changing the template format will make all previously saved fingerprints unusable, so take care when changing.
 
-     :::info
+      :::info
 
-     Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format. 
+      Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format. 
 
-     :::
+      :::
 
    * <Cmd sid='ui_198' product='dev' />: Set to <Cmd sid='ui_277' product='dev' /> to turn on the fingerprint sensor when it detects the user’s finger. When set to <Cmd sid='ui_362' product='dev' />, the sensor remains on even when not scanning fingerprints.
 
@@ -175,9 +175,9 @@ You can change the settings for fingerprint authentication.
 
 ## Server matching
 
-You can set up server matching. When server matching is used, authentication is performed on BioStar X without authentication on the device. It can be used when the device has too much user information or when the device is installed outside.
+When you enable server matching, the device authenticates users or Suprema CLUe users according to the set authentication mode. It can be used when the device has too much user information or when the device is installed outside.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Press **6** after selecting <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_185' product='dev' />.
 
@@ -189,36 +189,8 @@ You can set up server matching. When server matching is used, authentication is 
 
 :::info
 
-* <Cmd sid='ui_185' product='dev' /> can only use <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' />, and <Cmd sid='ui_020' product='dev' />.
+* If you use <Cmd sid='ui_185' product='dev' />, enable server matching on both the device and the Suprema CLUe server.
 
-* If you use <Cmd sid='ui_185' product='dev' />, you must enable server matching on both the device and BioStar X. For detailed information on BioStar X server matching settings, please consult the <Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X Administrator Guide</Linkto>.
+* If you use Suprema CLUe mode, <Cmd sid='ui_185' product='dev' /> is enabled automatically.
 
 :::
-
-## Auth result display option
-
-You can set the auth result display option.
-
-1. Press **ESC** and authenticate as an administrator.
-
-2. Press **6** after selecting <Cmd sid='ui_256' product='dev' />.
-
-3. Select the desired item and press **4** or **6** to change settings.
-
-   <Image src='/img/device/bln2-auth5.png' />
-
-   * <Cmd sid='ui_169' product='dev' />: You can select how the user ID is displayed on the authentication result screen of the device.
-
-     * <Cmd sid='ui_138' product='dev' />: Displays the entire user ID.
-
-     * <Cmd sid='ui_316' product='dev' />: Displays only the first letter of the user ID.
-
-     * <Cmd sid='ui_357' product='dev' />: Do not display the user ID.
-
-   * <Cmd sid='ui_177' product='dev' />: You can select how the user name is displayed on the authentication result screen of the device.
-
-     * <Cmd sid='ui_138' product='dev' />: Displays the entire user name.
-
-     * <Cmd sid='ui_316' product='dev' />: Displays only the first letter of the user name.
-
-     * <Cmd sid='ui_357' product='dev' />: Do not display the user name.

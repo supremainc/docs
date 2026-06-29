@@ -4,7 +4,7 @@
 
 #### Conexión LAN (conexión a un concentrador)
 
-<Include product='bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2'>
+<Include product='bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biolite_n2_clue,biostation_2a,biostation_3,biostation_3_clue,facestation_2,xpass_s2,xstation_2,xstation_2_clue'>
 
 Conecte el producto a un concentrador con un cable CAT-5 estándar.
 
@@ -16,7 +16,7 @@ Conéctese al concentrador con un cable CAT-5e estándar.
 
 </Include>
 
-<Include product='biostation_3'><Image src='/img/device/installation-network-hub-connection-bs3.png' width='75%' className='none' /></Include>
+<Include product='biostation_3,biostation_3_clue'><Image src='/img/device/installation-network-hub-connection-bs3.png' width='75%' className='none' /></Include>
 
 <Include product='biostation_3_max'><Image src='/img/device/installation-network-hub-connection-bs3m.png' width='75%' className='none' /></Include>
 
@@ -30,9 +30,9 @@ Conéctese al concentrador con un cable CAT-5e estándar.
 
 <Include product='corestation_40'><Image src='/img/device/installation-network-hub-connection-cs40.png' width='65%' className='none' /></Include>
 
-<Include product='biolite_n2'><Image src='/img/device/installation-network-hub-connection-bln2.png' width='70%' className='none' /></Include>
+<Include product='biolite_n2,biolite_n2_clue'><Image src='/img/device/installation-network-hub-connection-bln2.png' width='70%' className='none' /></Include>
 
-<Include product='xstation_2'><Image src='/img/device/installation-network-hub-connection-xs2.png' width='65%' className='none' /></Include>
+<Include product='xstation_2,xstation_2_clue'><Image src='/img/device/installation-network-hub-connection-xs2.png' width='65%' className='none' /></Include>
 
 <Include product='facestation_2'><Image src='/img/device/installation-network-hub-connection-fs2.png' width='65%' className='none' /></Include>
 
@@ -60,7 +60,7 @@ Use un concentrador PSE para suministrar energía mediante PoE.
 
 #### Conexión LAN (conexión directa a una PC)
 
-<Include product='bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2'>
+<Include product='bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biolite_n2_clue,biostation_2a,biostation_3,biostation_3_clue,facestation_2,xstation_2,xstation_2_clue'>
 
 Este dispositivo cuenta con función automática MDI/MDIX, por lo que puede conectarse directamente a una PC utilizando un cable CAT-5 recto estándar o un cable cruzado.
 
@@ -90,21 +90,31 @@ Este producto incluye funcionalidad automática MDI/MDIX y permite la conexión 
 
 </Include>
 
+<Include type={props.type} ref='corestation_20_ul'>
+
+:::caution
+
+<Badge only>CS-20P</Badge> Este equipo está diseñado para cumplir con NFPA 70, artículo 725.121 (fuentes de alimentación para circuitos de Clase 2 y Clase 3), ya que la potencia suministrada a través de un cable de comunicaciones es menor o igual a 60 vatios.
+
+:::
+
+</Include>
+
 <Include product='xpass_q2'>
 
 * Este dispositivo cuenta con MDI/MDIX automático, por lo que puede conectarse directamente a una PC mediante un cable cruzado o un cable CAT-5e recto estándar.
 
-  :::caution
+   :::caution
 
-  Algunos concentradores o conmutadores no estándar podrían no admitir MDI/MDIX automático.
+   Algunos concentradores o conmutadores no estándar podrían no admitir MDI/MDIX automático.
 
-  :::
+   :::
 
 {/* * <Badge only>XPQ2-APB</Badge> admite PoE que suministra energía a través del cable Ethernet. */}
 
 </Include>
 
-<Include product='biostation_3'><Image src='/img/device/installation-network-direct-connection-bs3.png' width='60%' className='none' alone /></Include>
+<Include product='biostation_3,biostation_3_clue'><Image src='/img/device/installation-network-direct-connection-bs3.png' width='60%' className='none' alone /></Include>
 
 <Include product='biostation_3_max'><Image src='/img/device/installation-network-direct-connection-bs3m.png' width='60%' className='none' alone /></Include>
 
@@ -118,9 +128,9 @@ Este producto incluye funcionalidad automática MDI/MDIX y permite la conexión 
 
 <Include product='corestation_40'><Image src='/img/device/installation-network-direct-connection-cs40.png' width='75%' className='none' alone /></Include>
 
-<Include product='biolite_n2'><Image src='/img/device/installation-network-direct-connection-bln2.png' width='70%' className='none' alone /></Include>
+<Include product='biolite_n2,biolite_n2_clue'><Image src='/img/device/installation-network-direct-connection-bln2.png' width='70%' className='none' alone /></Include>
 
-<Include product='xstation_2'><Image src='/img/device/installation-network-direct-connection-xs2.png' width='65%' className='none' alone /></Include>
+<Include product='xstation_2,xstation_2_clue'><Image src='/img/device/installation-network-direct-connection-xs2.png' width='65%' className='none' alone /></Include>
 
 <Include product='facestation_2'><Image src='/img/device/installation-network-direct-connection-fs2.png' width='70%' className='none' alone /></Include>
 
@@ -134,7 +144,7 @@ Este producto incluye funcionalidad automática MDI/MDIX y permite la conexión 
 
 <Include product='xpass_q2'><Image src='/img/device/installation-network-direct-connection-xpq2.png' width='60%' className='none' alone /></Include>
 
-<Include product='biostation_3,facestation_f2,facestation_2,biostation_3_max'>
+<Include product='biostation_3,biostation_3_clue,facestation_f2,facestation_2,biostation_3_max'>
 
 :::info
 
@@ -150,7 +160,7 @@ Consulte la siguiente información al utilizar un conmutador de red gigabit.
 
 </Include>
 
-<Xclude product='xstation_2,corestation_40'>
+<Xclude product='xstation_2,xstation_2_clue,corestation_40'>
 
 <PageBreak />
 

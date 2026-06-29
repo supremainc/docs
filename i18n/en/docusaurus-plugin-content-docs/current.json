@@ -556,11 +556,11 @@
     "description": "The label for category '출입문 관리하기' in sidebar 'biostarx_mobile'"
   },
   "sidebar.bsx_hardening.category.BioStar X 보안 강화": {
-    "message": "BioStar X Hardening",
+    "message": "BioStar X Hardening Guide",
     "description": "The label for category 'BioStar X 보안 강화' in sidebar 'bsx_hardening'"
   },
   "sidebar.bsx_hardening.category.서버 보안 강화": {
-    "message": "Server Hardening",
+    "message": "Server Hardening Guide",
     "description": "The label for category '서버 보안 강화' in sidebar 'bsx_hardening'"
   },
   "sidebar.bsx_hardening.category.BioStar X 강화": {
@@ -569,10 +569,86 @@
   },
   "sidebar.howto.link.BioStar X 보안 강화": {
     "message": "BioStar X Hardening Guide",
-    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to 'bsx_hardening/'"
+    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to '/how-to/bsx_hardening/'"
   },
   "sidebar.vionyx.category.릴리스 노트": {
     "message": "Release Notes",
     "description": "The label for category '릴리스 노트' in sidebar 'vionyx'"
+  },
+  "sidebar.corestation_ul.category.CoreStation UL": {
+    "message": "CoreStation UL",
+    "description": "The label for category 'CoreStation UL' in sidebar 'corestation_ul'"
+  },
+  "sidebar.corestation20_ul.category.CoreStation 20 UL": {
+    "message": "CoreStation 20 UL",
+    "description": "The label for category 'CoreStation 20 UL' in sidebar 'corestation20_ul'"
+  },
+  "sidebar.doorinterface_ul.category.Door Interface UL": {
+    "message": "Door Interface UL",
+    "description": "The label for category 'Door Interface UL' in sidebar 'doorinterface_ul'"
+  },
+  "sidebar.securemodule_ul.category.Secure Module UL": {
+    "message": "Secure Module UL",
+    "description": "The label for category 'Secure Module UL' in sidebar 'securemodule_ul'"
+  },
+  "sidebar.bioentryw2_ul.category.BioEntry W2 UL": {
+    "message": "BioEntry W2 UL",
+    "description": "The label for category 'BioEntry W2 UL' in sidebar 'bioentryw2_ul'"
+  },
+  "sidebar.biostation3_clue.category.BioStation 3 CLUe": {
+    "message": "BioStation 3 CLUe",
+    "description": "The label for category 'BioStation 3 CLUe' in sidebar 'biostation3_clue'"
+  },
+  "sidebar.biostation3_clue.category.사용하기": {
+    "message": "How to Use",
+    "description": "The label for category '사용하기' in sidebar 'biostation3_clue'"
+  },
+  "sidebar.biostation3_clue.category.릴리스 노트": {
+    "message": "Release Notes",
+    "description": "The label for category '릴리스 노트' in sidebar 'biostation3_clue'"
+  },
+  "sidebar.biostation3_ul.category.BioStation 3 UL": {
+    "message": "BioStation 3 UL",
+    "description": "The label for category 'BioStation 3 UL' in sidebar 'biostation3_ul'"
+  },
+  "sidebar.bioliten2_clue.category.BioLite N2 CLUe": {
+    "message": "BioLite N2 CLUe",
+    "description": "The label for category 'BioLite N2 CLUe' in sidebar 'bioliten2_clue'"
+  },
+  "sidebar.bioliten2_clue.category.사용하기": {
+    "message": "How to Use",
+    "description": "The label for category '사용하기' in sidebar 'bioliten2_clue'"
+  },
+  "sidebar.bioliten2_clue.category.릴리스 노트": {
+    "message": "Release Notes",
+    "description": "The label for category '릴리스 노트' in sidebar 'bioliten2_clue'"
+  },
+  "sidebar.bioliten2_ul.category.BioLite N2 UL": {
+    "message": "BioLite N2 UL",
+    "description": "The label for category 'BioLite N2 UL' in sidebar 'bioliten2_ul'"
+  },
+  "sidebar.xpass2.category.CLUe 릴리스 노트": {
+    "message": "CLUe Release Notes",
+    "description": "The label for category 'CLUe 릴리스 노트' in sidebar 'xpass2'"
+  },
+  "sidebar.xpass2_ul.category.XPass 2 UL": {
+    "message": "XPass 2 UL",
+    "description": "The label for category 'XPass 2 UL' in sidebar 'xpass2_ul'"
+  },
+  "sidebar.xpassd2_ul.category.XPass D2 UL": {
+    "message": "XPass D2 UL",
+    "description": "The label for category 'XPass D2 UL' in sidebar 'xpassd2_ul'"
+  },
+  "sidebar.xstation2_clue.category.X-Station 2 CLUe": {
+    "message": "X-Station 2 CLUe",
+    "description": "The label for category 'X-Station 2 CLUe' in sidebar 'xstation2_clue'"
+  },
+  "sidebar.xstation2_clue.category.사용하기": {
+    "message": "How to Use",
+    "description": "The label for category '사용하기' in sidebar 'xstation2_clue'"
+  },
+  "sidebar.xstation2_clue.category.릴리스 노트": {
+    "message": "Release Notes",
+    "description": "The label for category '릴리스 노트' in sidebar 'xstation2_clue'"
   }
 }

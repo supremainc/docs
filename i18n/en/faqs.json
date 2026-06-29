@@ -7,11 +7,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "The power is being supplied but the device does not operate.",
@@ -42,6 +45,17 @@
       "contents": [
         {
           "product": [
+            "biostation_3_clue",
+            "biolite_n2_clue",
+            "xstation_2_clue"
+          ],
+          "question": "I lost my PIN.",
+          "answer": [
+            "If you lose your PIN, contact the installation company."
+          ]
+        },
+        {
+          "product": [
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
@@ -54,6 +68,18 @@
           "answer": [
             "For a normal user PIN, request it from the administrator and enter it again.",
             "If you have lost the Admin PIN, contact the installation company."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3_clue",
+            "biolite_n2_clue",
+            "xstation_2_clue"
+          ],
+          "question": "I entered my PIN and pressed the <span class='cmd'>OK</span> button, but I still cannot open the door.",
+          "answer": [
+            "Check if you have entered the registered PIN correctly.",
+            "Check if you have changed the PIN recently."
           ]
         },
         {
@@ -83,7 +109,8 @@
       "contents": [
         {
           "product": [
-            "xstation_2"
+            "xstation_2",
+            "xstation_2_clue"
           ],
           "question": "It fails to scan a QR/Barcode.",
           "answer": [
@@ -116,6 +143,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "facestation_2",
             "biostation_3_max"
@@ -129,6 +157,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "facestation_2",
             "biostation_3_max"
@@ -141,6 +170,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -182,7 +212,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -198,7 +230,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -213,7 +247,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -233,11 +269,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "The door cannot be locked when I close the door.",
@@ -256,11 +295,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "Suddenly the time has become incorrect.",

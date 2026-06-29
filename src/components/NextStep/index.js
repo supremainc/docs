@@ -1,10 +1,11 @@
+import clsx from 'clsx';
 import styles from './styles.module.css';
 import {translate} from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 
-export function NextStep({ notitle, children }) {
+export function NextStep({ notitle, children, className }) {
     return (
-        <div className={styles.nextStep}>
+        <div className={clsx(styles.nextStep, className)}>
             <div className={styles.nextStepTitle}>
                 {notitle ? null : 
                     <h4>

@@ -94,23 +94,23 @@ Cuando se establece en <Cmd sid='ui_034' product='dev' />, los datos de la tarje
 
 * <Cmd sid='ui_354' product='dev' />: Establece el formato de tarjeta Wiegand que se especificará para el dispositivo. Los datos de la tarjeta se procesan según el formato establecido.
 
-  * <Cmd sid='ui_179' product='dev' />: Si el formato deseado no está disponible, toca <IcAdd/> para agregar un nuevo formato Wiegand.
+   * <Cmd sid='ui_179' product='dev' />: Si el formato deseado no está disponible, toca <IcAdd/> para agregar un nuevo formato Wiegand.
 
-    <Image src='/img/device/xpd2-template-wiegand-card-new.png' width={250} />
+      <Image src='/img/device/xpd2-template-wiegand-card-new.png' width={250} />
 
-    * <Cmd sid='ui_253' product='dev' />: Ingresa el nombre del formato Wiegand deseado.
+      * <Cmd sid='ui_253' product='dev' />: Ingresa el nombre del formato Wiegand deseado.
 
-    * <Cmd sid='ui_318' product='dev' />: Ingresa el número total de bits.
+      * <Cmd sid='ui_318' product='dev' />: Ingresa el número total de bits.
 
-    * <Cmd sid='ui_024' product='dev' />: Ingresa los bits inicial y final del ID que deseas usar. Toca <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> para agregar un campo de ID.
+      * <Cmd sid='ui_024' product='dev' />: Ingresa los bits inicial y final del ID que deseas usar. Toca <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> para agregar un campo de ID.
 
-    * <Cmd sid='ui_350' product='dev' />: Ingresa la posición del campo de paridad y los bits inicial y final que deseas usar. Toca <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> para agregar un campo de paridad.
+      * <Cmd sid='ui_350' product='dev' />: Ingresa la posición del campo de paridad y los bits inicial y final que deseas usar. Toca <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> para agregar un campo de paridad.
 
-      :::info
+         :::info
 
-      Para agregar un campo de paridad, ingresa el número total de bits.
+         Para agregar un campo de paridad, ingresa el número total de bits.
 
-      :::
+         :::
 
 * <Cmd sid='ui_352' product='dev' />: Configura el ancho de pulso de la señal Wiegand.
 
@@ -124,29 +124,29 @@ Cuando se establece en <Cmd sid='ui_034' product='dev' />, los datos de la tarje
 
 * <Cmd sid='ui_032' product='dev' />: Configura tarjetas MIFARE.
 
-  * <Cmd sid='ui_379' product='dev' />: Puedes configurar el tipo de cifrado en SL1 o SL3.
+   * <Cmd sid='ui_379' product='dev' />: Puedes configurar el tipo de cifrado en SL1 o SL3.
 
-  * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+   * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
 
-  * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
+   * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
 
-  * <Cmd sid='ui_214' product='dev' />: Selecciona el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE.
+   * <Cmd sid='ui_214' product='dev' />: Selecciona el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE.
 
 * <Cmd sid='ui_010' product='dev' />: Configura tarjetas DESFire.
 
-  * <Cmd sid='ui_011' product='dev' />: Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESFire.
+   * <Cmd sid='ui_011' product='dev' />: Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESFire.
 
-  * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+   * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
 
-  * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
+   * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
 
-  * <Cmd sid='ui_223' product='dev' />: Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESFire.
+   * <Cmd sid='ui_223' product='dev' />: Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESFire.
 
-  * <Cmd sid='ui_347' product='dev' />: Establece el ID de archivo. Solo se puede configurar DESFire.
+   * <Cmd sid='ui_347' product='dev' />: Establece el ID de archivo. Solo se puede configurar DESFire.
 
-  * <Cmd sid='ui_222' product='dev' />: Configura el tipo de cifrado en DES/3DES o AES.
+   * <Cmd sid='ui_222' product='dev' />: Configura el tipo de cifrado en DES/3DES o AES.
 
-  * <Cmd sid='ui_386' product='dev' />: Al habilitar esta opción, se puede forzar el uso de mensajería segura al autenticarse en el dispositivo con tarjetas DESFire EV2 y EV3. Solo puede activarse cuando <Cmd sid='ui_222' product='dev' /> está configurado como AES.
+   * <Cmd sid='ui_386' product='dev' />: Habilite esta opción para forzar mensajería segura al autenticarse en el dispositivo con tarjetas DESFire EV2 o EV3. Solo puede activarse cuando <Cmd sid='ui_222' product='dev' /> está configurado como AES.
 
 * <Cmd sid='ui_202' product='dev' />: Configure el orden de bytes para la salida de tarjeta inteligente.
 
@@ -168,37 +168,37 @@ Cuando se establece en <Cmd sid='ui_034' product='dev' />, los datos de la tarje
 
 * <Cmd sid='ui_032' product='dev' />: Configura tarjetas MIFARE.
 
-  * <Cmd sid='ui_379' product='dev' />: Puedes configurar el tipo de cifrado en SL1 o SL3.
+   * <Cmd sid='ui_379' product='dev' />: Puedes configurar el tipo de cifrado en SL1 o SL3.
 
-  * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+   * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
 
-  * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
+   * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
 
-  * <Cmd sid='ui_154' product='dev' />: Seleccione el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE.
+   * <Cmd sid='ui_154' product='dev' />: Seleccione el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE.
 
-  * <Cmd sid='ui_145' product='dev' />: Configure el punto de inicio para leer el número de tarjeta.
+   * <Cmd sid='ui_145' product='dev' />: Configure el punto de inicio para leer el número de tarjeta.
 
-  * <Cmd sid='ui_110' product='dev' />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid='ui_087' product='dev' /> y <Cmd sid='ui_151' product='dev' /> son iguales a los de la tarjeta).
+   * <Cmd sid='ui_110' product='dev' />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid='ui_087' product='dev' /> y <Cmd sid='ui_151' product='dev' /> son iguales a los de la tarjeta).
 
 * <Cmd sid='ui_010' product='dev' />: Configura tarjetas DESFire.
 
-  * <Cmd sid='ui_011' product='dev' />: Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESFire.
+   * <Cmd sid='ui_011' product='dev' />: Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESFire.
 
-  * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+   * <Cmd sid='ui_087' product='dev' />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
 
-  * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
+   * <Cmd sid='ui_151' product='dev' />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid='ui_151' product='dev' /> del nivel anterior está activado.
 
-  * <Cmd sid='ui_223' product='dev' />: Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESFire.
+   * <Cmd sid='ui_223' product='dev' />: Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESFire.
 
-  * <Cmd sid='ui_347' product='dev' />: Establece el ID de archivo. Solo se puede configurar DESFire.
+   * <Cmd sid='ui_347' product='dev' />: Establece el ID de archivo. Solo se puede configurar DESFire.
 
-  * <Cmd sid='ui_222' product='dev' />: Configura el tipo de cifrado en DES/3DES o AES.
+   * <Cmd sid='ui_222' product='dev' />: Configura el tipo de cifrado en DES/3DES o AES.
 
-  * <Cmd sid='ui_145' product='dev' />: Configure el punto de inicio para leer el número de tarjeta.
+   * <Cmd sid='ui_145' product='dev' />: Configure el punto de inicio para leer el número de tarjeta.
 
-  * <Cmd sid='ui_110' product='dev' />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid='ui_087' product='dev' /> y <Cmd sid='ui_151' product='dev' /> son iguales a los de la tarjeta).
+   * <Cmd sid='ui_110' product='dev' />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid='ui_087' product='dev' /> y <Cmd sid='ui_151' product='dev' /> son iguales a los de la tarjeta).
 
-  * <Cmd sid='ui_386' product='dev' />: Al habilitar esta opción, se puede forzar el uso de mensajería segura al autenticarse en el dispositivo con tarjetas DESFire EV2 y EV3. Solo puede activarse cuando <Cmd sid='ui_222' product='dev' /> está configurado como AES.
+   * <Cmd sid='ui_386' product='dev' />: Habilite esta opción para forzar mensajería segura al autenticarse en el dispositivo con tarjetas DESFire EV2 o EV3. Solo puede activarse cuando <Cmd sid='ui_222' product='dev' /> está configurado como AES.
 
 * <Cmd sid='ui_146' product='dev' />: Configure el orden de bytes para la salida de tarjeta inteligente.
 

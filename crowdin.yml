@@ -55,6 +55,7 @@
       "/docs/common/_zlib-license.mdx",
       "/docs/reference/**/smartcardissue.mdx",
       "/docs/*/*/release-notes/*.mdx",
+      "/docs/*/*/release-notes-clue/*.mdx",
       "/docs/integration/**/*.mdx",
       "/docs/device/*_ul/*.mdx",
       "/docs/device/*_clue/*.mdx",

@@ -151,7 +151,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 * **Cable Connector**: Connects the cable.
 
-  Power / RS-485 / Ethernet + PoE / Relay / Wiegand Input/Output / Input
+   Power / RS-485 / Ethernet + PoE / Relay / Wiegand Input/Output / Input
 
 * **Speaker**: Delivers sound.
 
@@ -197,13 +197,6 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <PageBreak />
 
-{/* 마스터 관리자 설정하기 */}
-import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
-
-<Masteradminsettings />
-
-<PageBreak />
-
 {/* 올바른 지문 입력 방법 */}
 import DocumentA from '../../common/_enroll-fingerprint.mdx'
 
@@ -217,15 +210,9 @@ import DocumentA from '../../common/_enroll-fingerprint.mdx'
 
 You can issue a QR/barcode to the user for use as a means of authentication. To improve recognition rate, scan the QR/barcode correctly according to the guidance on the screen.
 
-#### Camera
-
-<div className='grid-container'>
+<Badge only>XS2-DPB, XS2-APB</Badge>
 
 <Image src='/img/device/qr-scanning-xs2.svg' className='none' alone />
-<Image src='/img/device/qr-scanning-xs2-q-camera.svg' className='none' alone />
-<Image src='/img/device/qr-scanning-xs2-finger.svg' className='none' alone />
-
-</div>
 
 * Keep the distance between the device's camera and the QR/barcode at 5-20 cm.
 
@@ -235,13 +222,25 @@ You can issue a QR/barcode to the user for use as a means of authentication. To 
 
 * Failure to follow the instructions on the screen may result in slow recognition or failure of the QR/barcode.
 
-#### QR/Barcode Scanner <Badge only>XS2-QDPB, XS2-QAPB</Badge>
+<Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
 <Image src='/img/device/qr-scanning-xs2-q.svg' className='none' alone />
 
 * Keep the distance between the device's QR/barcode recognition unit and the QR/barcode at 5-20 cm.
 
 * Ensure the device's QR/barcode recognition unit is horizontal to the QR/barcode being scanned, and position the guide beam in the center of the QR/barcode.
+
+* If authenticating with a QR/barcode downloaded to a mobile device, adjust the brightness of the mobile device to ensure the screen is clearly visible.
+
+* Failure to follow the instructions on the screen may result in slow recognition or failure of the QR/barcode.
+
+<Badge only>XS2-ODPB, XS2-OAPB</Badge>
+
+<Image src='/img/device/qr-scanning-xs2-finger.svg' className='none' alone />
+
+* Keep the distance between the device's camera and the QR/barcode at 5-20 cm.
+
+* Position the QR/barcode so that it is centered in the device's scanning screen.
 
 * If authenticating with a QR/barcode downloaded to a mobile device, adjust the brightness of the mobile device to ensure the screen is clearly visible.
 

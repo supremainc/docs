@@ -12,6 +12,12 @@ keywords:
 
 Describes the supported authentication methods and authentication procedures.
 
+:::info
+
+If you use Suprema CLUe mode, you can only enroll, edit, and delete authentication modes on the Suprema CLUe server, not on the device.
+
+:::
+
 ## Authentication mode
 
 Set the authentication mode. You can combine <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_323' product='dev' />, and <Cmd sid='ui_020' product='dev' /> for authentication mode, and you can also set schedules for each authentication mode.
@@ -24,7 +30,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 ### Registering auth mode {#registering-auth-mode}
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
 2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
 
@@ -48,9 +54,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
    :::info
 
-   * <Cmd sid='ui_203' product='dev' /> can be configured in BioStar X. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
-
-   * For more information about the <Cmd sid='ui_203' product='dev' /> settings, please refer to the <Linkto to='platform/biostar_x/settings-schedule'>BioStar X Administrator Guide</Linkto>.
+   * <Cmd sid='ui_203' product='dev' /> can be set on the Suprema CLUe server. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
 
    * To use <Cmd sid='ui_043' product='dev' /> authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, <Cmd sid='ui_043' product='dev' /> must be activated in <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' />, and a separate device license is required. For more information, refer to [License](settings#license).
 
@@ -60,7 +64,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 ### Modifying auth mode
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
 2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
 
@@ -70,7 +74,7 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 ### Delete auth mode
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
 2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
 
@@ -80,116 +84,67 @@ Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB produ
 
 ## Operation
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
 2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired item in <Cmd sid='ui_265' product='dev' />.
 
-   <Image src='/img/device/xs2-auth.png' />
+   <Image src='/img/device/xs2-auth-clue.png' />
+
+   * <Cmd sid='ui_395' product='dev' />: When you use the Face Detection feature, it can detect a real human face. After authenticating with a card, QR code, or PIN, the face must be detected for authentication to succeed.
 
    * <Cmd sid='ui_260' product='dev' />: If authentication is not completed within the set time, authentication will fail. It can be set to 3 to 20 seconds.
 
-   * <Cmd sid='ui_185' product='dev' />: When server matching is set, the device does not perform user authentication; BioStar X performs user authentication. It can be used when the device has too much user information or when the device is installed outside.
+   * <Cmd sid='ui_185' product='dev' />: When you set up server matching, it authenticates the device user or the Suprema CLUe user based on the configured authentication mode. It can be used when the device has too much user information or when the device is installed outside.
 
-     :::info
+      :::info
 
-     If you use <Cmd sid='ui_185' product='dev' />, you must enable server matching on both the device and BioStar X. For more information on BioStar X server matching settings, please refer to the <Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X Administrator Guide</Linkto>.
+     * If you use <Cmd sid='ui_185' product='dev' />, enable server matching on both the device and the Suprema CLUe server.
 
-     :::
+     * If you use Suprema CLUe mode, <Cmd sid='ui_185' product='dev' /> is enabled automatically.
 
-## PIN
-
-Set whether to use the scramble keypad when entering passwords.
-
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
-
-2. After pressing <Cmd sid='ui_256' product='dev' />, set whether to use <Cmd sid='ui_040' product='dev' /> in <Cmd sid='ui_204' product='dev' />.
-
-   <Image src='/img/device/xs2-auth1.png' />
-
-   * <Cmd sid='ui_204' product='dev' />: The positions of numeric keys can be scrambled randomly when entering a password to prevent password leaks.
-
-## Auth result display option
-
-You can set the auth result display option.
-
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
-
-2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired items in <Cmd sid='ui_259' product='dev' />.
-
-   <Image src='/img/device/xs2-auth2.png' />
-
-   * <Cmd sid='ui_169' product='dev' />: You can select how the user ID is displayed on the authentication result screen of the device.
-
-     * <Cmd sid='ui_307' product='dev' />: Displays the entire user ID.
-
-     * <Cmd sid='ui_316' product='dev' />: Displays only the first letter of the user ID.
-
-     * <Cmd sid='ui_357' product='dev' />: Do not display the user ID.
-
-   * <Cmd sid='ui_177' product='dev' />: You can select how the user name is displayed on the authentication result screen of the device.
-
-     * <Cmd sid='ui_307' product='dev' />: Displays the entire user name.
-
-     * <Cmd sid='ui_316' product='dev' />: Displays only the first letter of the user name.
-
-     * <Cmd sid='ui_357' product='dev' />: Do not display the user name.
+      :::
 
 ## QR/Barcode Authentication Options
 
 You can set QR/Barcode authentication.
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
-2. After pressing <Cmd sid='ui_256' product='dev' />, set the QR/Barcode authentication method in <Cmd sid='ui_044' product='dev' />.
+2. After pressing <Cmd sid='ui_256' product='dev' />, enable <Cmd sid='ui_043' product='dev' /> in <Cmd sid='ui_044' product='dev' />.
 
-<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+   <Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
-<div className='grid-container'>
+   <Image src='/img/device/xs2-qr-barcode-clue1.png' />
 
-<Image src='/img/device/xs2-qr-barcode-scanner.png' />
-<Image src='/img/device/xs2-qr-barcode-camera.png' />
+   * <Cmd sid='ui_043' product='dev' />: Select whether to use QR/Barcode authentication.
 
-</div>
+   * <Cmd sid='ui_374' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds.
 
-* <Cmd sid='ui_043' product='dev' />: Set the QR/Barcode authentication method. Select <Cmd sid='ui_330' product='dev' /> or <Cmd sid='ui_385' product='dev' /> to authenticate with the device front camera or bottom QR/Barcode scanner, respectively. The default is <Cmd sid='ui_385' product='dev' />.
+   * <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user.
 
-   :::info
+   <Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
 
-   A separate device license is required to use <Cmd sid='ui_330' product='dev' />. For more information, refer to [License](settings#license).
+   <Image src='/img/device/xs2-qr-barcode-clue2.png' />
 
-   :::
+   * <Cmd sid='ui_043' product='dev' />: Select whether to use QR/Barcode authentication.
 
-* <Cmd sid='ui_374' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_385' product='dev' />.
+   * <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
 
-* <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' />.
+   * <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
 
-* <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' />.
-
-* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' /> or <Cmd sid='ui_385' product='dev' />.
-
-<Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
-
-<Image src='/img/device/xs2-qr-barcode-camera.png' />
-
-* <Cmd sid='ui_043' product='dev' />: Set the QR/Barcode authentication method. Select <Cmd sid='ui_330' product='dev' /> to authenticate with the device front camera. When <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' />, you can use <Cmd sid='ui_375' product='dev' />, <Cmd sid='ui_140' product='dev' />, and <Cmd sid='ui_329' product='dev' />.
+   * <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
 
    :::info
 
-   A separate device license is required to use <Cmd sid='ui_330' product='dev' />. For more information, refer to [License](settings#license).
+   To use <Cmd sid='ui_043' product='dev' /> authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, <Cmd sid='ui_043' product='dev' /> must be activated in <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' />, and a separate device license is required. For more information, refer to [License](settings#license).
 
    :::
-
-* <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds.
-
-* <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device.
-
-* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user.
 
 ## Fingerprint settings <Badge only>XS2-ODPB, XS2-OAPB</Badge>
 
 You can change the settings for fingerprint authentication.
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
 2. After pressing <Cmd sid='ui_256' product='dev' />, change the desired items in <Cmd sid='ui_312' product='dev' />.
 
@@ -225,7 +180,7 @@ You can change the settings for fingerprint authentication.
 
 You can set how to register T&A mode.
 
-1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
+1. Press <Image src='/img/common/ico-menu2.svg' ico alone />, enter the password, and access the menu.
 
 2. Click <Cmd sid='ui_256' product='dev' />, then change the desired item in <Cmd sid='ui_083_list' product='dev' />.
 
