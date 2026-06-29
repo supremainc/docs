@@ -43,15 +43,47 @@ date: 2026-06-30T09:00
 
 ## Devices
 
+### 신규 장치
+
+* [BioStation 3 CLUe](../device/biostation_3_clue/)
+  
+* [BioLite N2 CLUe](../device/biolite_n2_clue/)
+  
+* [X-Station CLUe](../device/xstation_2_clue/)
+  
+* [XPass 2 CLUe 릴리스 노트](../device/xpass_2/release-notes-clue/)
+
 ### 장치 업데이트
 
-* [BioStation 3](../device/biostation_3/installation): 틸팅 브래킷 설치 안내 및 마스터 관리자 관련 내용 업데이트
+* [BioStation 3](../device/biostation_3/)
+  
+  * [벽걸이용 브래킷 이미지](../device/biostation_3/getting-started) 변경
 
-* [X-Station 2](../device/xstation_2/): 인증 방식, 설치, 제품 사양, 규제 인증 정보 업데이트
+  * [마스터 관리자](../device/biostation_3/installation) 관련 내용 업데이트
+  
+  * [틸팅 브래킷 설치](../device/biostation_3/installation) 안내
+  
+  * [제품 사양](../device/biostation_3/product-specifications) 업데이트
 
-* [BioStation 2a](../device/biostation_2a/installation): 설치 관련 내용 업데이트
+* [X-Station 2](../device/xstation_2/)
 
-* [BioLite N2](../device/biolite_n2/): 설치 방법 및 규제 인증 정보 업데이트
+  * [마스터 관리자](../device/xstation_2/installation) 관련 내용 업데이트
+  
+  * [Camera QR 지원](../device/xstation_2/authentication) 관련 내용 업데이트
+  
+  * [제품 사양](../device/xstation_2/product-specifications) 업데이트
+  
+* [BioStation 2a](../device/biostation_2a/installation)
+  
+  * [마스터 관리자](../device/biostation_2a/installation) 관련 내용 업데이트
+  
+  * [제품 사양](../device/biostation_2a/product-specifications) 업데이트
+
+* [BioLite N2](../device/biolite_n2/)
+
+  * [마스터 관리자](../device/biolite_n2/installation) 관련 내용 업데이트
+  
+  * [제품 사양](../device/biolite_n2/product-specifications) 업데이트
 
 * 제품 사양 업데이트
 
