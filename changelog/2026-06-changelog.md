@@ -55,6 +55,12 @@ date: 2026-06-30T09:00
 
 ### 장치 업데이트
 
+* [BioStation 3 Max](../device/biostation_3_max/)
+  
+  * [마스터 관리자](../device/biostation_3_max/installation) 관련 내용 업데이트
+  
+  * [제품 사양](../device/biostation_3_max/product-specifications) 업데이트
+  
 * [BioStation 3](../device/biostation_3/)
   
   * [벽걸이용 브래킷 이미지](../device/biostation_3/getting-started) 변경
