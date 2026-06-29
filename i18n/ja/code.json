@@ -1255,5 +1255,11 @@
   },
   "theme.docCardList.prefix.latest": {
     "message": "最新"
+  },
+  "component.DocbreadcrumOption.print": {
+    "message": "印刷"
+  },
+  "component.DocbreadcrumOption.download": {
+    "message": "ダウンロード"
   }
 }

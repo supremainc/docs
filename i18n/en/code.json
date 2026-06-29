@@ -1255,5 +1255,11 @@
   },
   "theme.docCardList.prefix.latest": {
     "message": "Latest"
+  },
+  "component.DocbreadcrumOption.print": {
+    "message": "Print"
+  },
+  "component.DocbreadcrumOption.download": {
+    "message": "Download"
   }
 }

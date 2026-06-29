@@ -1,24 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.css';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import {translate} from '@docusaurus/Translate';
 import FeedbackWidget from '@site/src/components/Feedback';
+import IcoDown from '@site/static/img/menus/ico-down-arrow.svg';
+import DocPrint from './dochub-print.svg';
+import DocHubLink from './dochub-down.svg';
 
 const DocuementButton = () => {
   const [isClient, setIsClient] = useState(false);
-  
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
       setIsClient(true);
     }
   }, []);
 
-  const handleButtonClick = () => {
+  useEffect(() => {
     if (!isClient) return;
-    // 모든 details 요소에 open 속성을 부여하고 하위에 있는 div 요소에 display: block 스타일을 적용
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isClient]);
+
+  const handlePrint = () => {
+    if (!isClient) return;
+    setIsDropdownOpen(false);
     const detailsElements = document.querySelectorAll('details');
     detailsElements.forEach((detailsElement) => {
       detailsElement.setAttribute('open', true);
-
       const childDivs = detailsElement.querySelectorAll('div');
       childDivs.forEach((div) => {
         div.style.display = 'block';
@@ -29,33 +45,49 @@ const DocuementButton = () => {
     window.print();
   };
 
+  const handleDownload = () => {
+    if (!isClient) return;
+    setIsDropdownOpen(false);
+    window.location.href = '/dochub';
+  };
+
   const curLocation = isClient ? window.location.href : '';
   const destURL = encodeURIComponent(curLocation);
-  const target = `https://forms.office.com/Pages/ResponsePage.aspx?id=_bYDU8LVnkqxz7A7AWK9TZ3QlIh-_zNBvEgx2mDsll1UQjNOVDhQNEFHUjMyTUw4NUZWWktMTUwwTi4u&r41f093b8508c4bf1996887fab4eb1ad0=${destURL}`;
 
-  // 팝업 창의 크기와 위치 설정 
   const popupWidth = 600;
   const popupHeight = 800;
   const browserWidth = isClient ? window.innerWidth : 0;
   const browserHeight = isClient ? window.innerHeight : 0;
   const left = isClient ? (browserWidth - popupWidth) / 2 + window.screenX : 0;
   const top = isClient ? (browserHeight - popupHeight) / 2 + window.screenY : 0;
-  const popupOptions = `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`;
-
-  const gotoFeedback = () => {
-    if (!isClient) return;
-    window.open(target, '_blank', popupOptions);
-  };
 
   return (
     <div className={styles.btnprint}>
-      <button onClick={handleButtonClick} disabled={!isClient} className={styles.printbtn}>
-        PDF
-      </button>
-
-      {/* <button onClick={gotoFeedback} className={styles.feedback__button} disabled={!isClient}>
-        Feedback
-      </button> */}
+      <div className={styles.pdfDropdown} ref={dropdownRef}>
+        <button
+          onClick={() => setIsDropdownOpen((prev) => !prev)}
+          disabled={!isClient}
+          className={styles.printbtn}
+          aria-haspopup="true"
+          aria-expanded={isDropdownOpen}
+        >
+          <IcoDown /> PDF
+        </button>
+        {isDropdownOpen && (
+          <ul className={styles.dropdownMenu} role="menu">
+            <li role="menuitem">
+              <button onClick={handlePrint} className={styles.dropdownItem}>
+                <DocPrint width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.print' })}
+              </button>
+            </li>
+            <li role="menuitem">
+              <button onClick={handleDownload} className={styles.dropdownItem}>
+                <DocHubLink width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.download' })}
+              </button>
+            </li>
+          </ul>
+        )}
+      </div>
 
       <FeedbackWidget
         googleFormId="1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA"
