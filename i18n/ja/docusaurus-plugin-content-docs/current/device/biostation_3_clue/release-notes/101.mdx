@@ -1,0 +1,142 @@
+---
+id: 101
+title: Firmware Version 1.0.1
+---
+
+# Firmware Version 1.0.1 (Build No. 1.0.1_221020)
+
+Release<Separator/>2022-10-21
+
+## New Features and Improvements
+
+---
+
+1. Improved motion detection performance for low-light environments.
+
+1. Improved Visual Face matching algorithm.
+
+1. Improved all pop-up messages displayed on the device to operate according to the time set in **Message Timeout**.
+
+1. Fixed Korean and English strings in the **RTSP** menu.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When upgrading resources or firmware from BioStar 2, the device could not check the progress of the upgrade because no information was displayed. <Badge>1.0.0</Badge>
+
+1. When synchronizing multiple users to a device in BioStar 2 and then restarting the device, the **User Usage** on the device displays a different number of visual faces than the number of synchronized. <Badge>1.0.0</Badge>
+
+1. When entering the device detail page after adding a logo image to the device connected as a slave, an Invalid payload error occurs and the RS-485 get disconnected. <Badge>1.0.0</Badge>
+
+1. When **Device Hashkey Management** is set to **Use** in BioStar 2 and migration proceeds, all users are deleted from the device, but a delete notification pop-up is not displayed. <Badge>1.0.0</Badge>
+
+1. Device hangs intermittently and then restarts. <Badge>1.0.0</Badge>
+
+1. When entering the **Wireless**, the new SSID does not appear, but only the previously searched SSID appears. <Badge>1.0.0</Badge>
+
+1. When enrolling a visual face or card on a device using the BioStar 2, the scan screen is not visible and the screen saver state remains. <Badge>1.0.0</Badge>
+
+1. When the call button on the main screen is pressed with only one extension number stored in the device, it does not connect directly. <Badge>1.0.0</Badge>
+
+1. In **Edit User**, if you select **Extended Private Auth Mode** as **ID** + **Fingerprint**/**PIN** and press **OK**, the fingerprint icon is incorrectly displayed as a face icon in the **Extended Private Auth Mode** list. <Badge>1.0.0</Badge>
+
+1. Authentication failure occurs when authenticating with AoC with private auth mode set to **Card** + **Face**. <Badge>1.0.0</Badge>
+
+1. When the device is restarted via BioStar 2, only a notification sound plays and the restart pop-up message does not appear. <Badge>1.0.0</Badge>
+
+1. Firmware upgrade via USB restarts the device without a success or failure popup message. <Badge>1.0.0</Badge>
+
+1. In BioStar 2's **T&A** menu, the **Schedule** display part is blank when creating a **T&A Code** with a **Schedule** other than **Always** and selecting the **T&A Code** on the device. <Badge>1.0.0</Badge>
+
+1. Memory usage incorrectly displayed in **DRAM Usage** in **Memory Info**. <Badge>1.0.0</Badge>
+
+1. When entering the menu from a device connected as a slave, a normal menu touch sound plays instead of a warning sound. <Badge>1.0.0</Badge>
+
+1. When enrolling a visual face in the **USER** menu in BioStar 2, when the scan waiting time exceeded while enrolling the 1st face and then scanning the 2nd face, the face enrolled in the 1st appears. <Badge>1.0.0</Badge>
+
+1. If the network is connected to a wireless LAN and then enters **Wireless** again after changing to an ethernet connection, the wireless AP list is not displayed. <Badge>1.0.0</Badge>
+
+1. Device hangs intermittently when Wiegand **Input/Output** setting is set to **Output**. <Badge>1.0.0</Badge>
+
+1. Extension number gets stored in the phonebook while exceeding the maximum characters in the **Display Name** of the **Intercom** settings. <Badge>1.0.0</Badge>
+
+1. When entering the edit screen by selecting the **Auth Mode** set in the device's **Auth Mode**, the touch sound does not play. <Badge>1.0.0</Badge>
+
+1. Device connected as a slave intermittently operates while disconnected. <Badge>1.0.0</Badge>
+
+1. An error occurs when calling the extension number when the **Intercom** of the device is set to **Not Use** via BioStar 2 while the list of extension numbers is displayed by pressing the call button on the main screen of the device. <Badge>1.0.0</Badge>
+
+1. In the screen to set the **Schedule** in **Auth Mode**, the already created schedule is shown as a duplicate. <Badge>1.0.0</Badge>
+
+1. When the device is in the middle of **Factory Default** process, the device hangs while loading. <Badge>1.0.0</Badge>
+
+1. When the **Language** of the device is set to **Custom**, the **Voice Instruction** menu part of **Sound** displays as a blank. <Badge>1.0.0</Badge>
+
+1. When the **Time Zone** of the master device connected via RS-485 is changed, the **Time Zone** of the slave device does not change. <Badge>1.0.0</Badge>
+
+1. When authenticating with a mobile card set to NFC, authentication fails and the device restarts intermittently <Badge>1.0.0</Badge>
+
+1. The correct message does not appear when an unenrolled card is scanned with **Filter** set to **Card** in the user search <Badge>1.0.0</Badge>
+
+1. The pop-up to set the **Filter** on the **EVENT LOG** search screen does not disappear even after the time set in the device's **Menu Timeout** has elapsed. <Badge>1.0.0</Badge>
+
+1. Event log is not logged when **Time Zone** is changed on the device. <Badge>1.0.0</Badge>
+
+1. When scanning **Visual Face** via BioStar 2 while the device is in the **SETTINGS**, the scan screen does not close on the device even after scanning is complete. <Badge>1.0.0</Badge>
+
+1. **Baud Rate** selection pop-up appears when touching an empty space at the bottom of the **Ethernet** screen. <Badge>1.0.0</Badge>
+
+1. When sending a user whose card is duplicated with another user from BioStar 2 to the device, the user is deleted from the device. <Badge>1.0.0</Badge>
+
+1. When the firmware is upgraded for each device connected as master-slave, the slave device completes normally, but the master device hangs. <Badge>1.0.0</Badge>
+
+1. RTSP connection termination event log is not logged and RTSP icon is not deleted even after setting **RTSP** to **Not Use**. <Badge>1.0.0</Badge>
+
+1. Does not restart on **Restore Default** due to setup error. <Badge>1.0.0</Badge>
+
+1. **Date & Time** not displayed correctly. <Badge>1.0.0</Badge>
+
+1. When adding a user, the backlight does not turn off when waiting without card input on the card scan screen. <Badge>1.0.0</Badge>
+
+1. Search does not work when searching by **Start Time** and **End Time** in **EVENT LOG**. <Badge>1.0.0</Badge>
+
+1. An incorrect schedule displays in the **Edit Auth Mode**. <Badge>1.0.0</Badge>
+
+1. If you scan a Wiegand format card that is not set when enrolling a card to a user and then scan a normal card, it will not be scanned. <Badge>1.0.0</Badge>
+
+1. The device retains the call screen even after the recipient terminates the call. <Badge>1.0.0</Badge>
+
+1. **WiFi MAC** does not appear in **DASHBOARD** and **Device Info** for Wi-Fi supported models. <Badge>1.0.0</Badge>
+
+1. On the scan card screen, the background allows touch and the face can get authenticated. <Badge>1.0.0</Badge>
+
+1. When enrolling a card in BioStar 2, after selecting **Write Smart Card**, the device restarts while waiting for scan. <Badge>1.0.0</Badge>
+
+1. An issue occurs when upgrading the firmware of a slave device from BioStar 2 while the device is connected as Master-Slave. <Badge>1.0.0</Badge>
+
+    - Slave device disconnects and the firmware upgrade fails.
+
+    - Master device restart fails.
+
+1. The **OK** button does not work when repeatedly searching the **EVENT LOG**. <Badge>1.0.0</Badge>
+
+1. Intermittently, the image log is logged abnormally. <Badge>1.0.0</Badge>
+
+1. Speaker turns on and off repeatedly when multiple sound files are played continuously. <Badge>1.0.0</Badge>
+
+1. The device restarts abnormally when the firmware is upgraded while the device is locked. <Badge>1.0.0</Badge>
+
+1. Wireless connection intermittently disconnects when sending Visual face from BioStar 2 to device. <Badge>1.0.0</Badge>
+
+1. The screen turns off at the time set in **Menu Timeout** during an Intercom call. <Badge>1.0.0</Badge>
+
+1. When deleting all logs, image logs does not get deleted. <Badge>1.0.0</Badge>
+
+1. **VFMCore** version information is not displayed when long-touching the **MAC** in **Device Info**. <Badge>1.0.0</Badge>
+
+1. When issuing a **Smart Card**, if a fingerprint/face is included in **Private Auth Mode**, the issuance fails intermittently in a specific card. <Badge>1.0.0</Badge>
+
+</BugLists>

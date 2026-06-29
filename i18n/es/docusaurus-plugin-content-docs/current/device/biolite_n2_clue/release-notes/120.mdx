@@ -1,0 +1,88 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_190806)
+
+Release<Separator/>2019-08-09
+
+## Main Fixes
+
+---
+
+1. The master device abnormally shuts down if it is operated after reconnecting a disconnected slave device.
+
+1. The master device abnormally shuts down if the RS-485 mode of the master device is changed after disconnecting the 31 connected slave devices.
+
+1. Unable to enter the Job Code menu if a user authenticates with AoC.
+
+## New Features and Improvements
+
+---
+
+1. OSDP Standardization
+
+    - Improved to comply with OSDP V2.1.7 protocol when connecting with 3rd-party controllers.
+
+1. Increase of the number of administrators that can be added.
+
+    :::info
+
+    You can add up to 1,000 device administrators. To add more than 10 device administrators, the device must be connected to BioStar 2 v2.7.3 or higher.
+
+    :::
+
+1. Support to the Clear APB for each user.
+
+1. Supports options by card type.
+
+1. Increase of the maximum number of floor levels to up to 2,048.
+
+1. Change the way new settings are applied when adding administrators using batch edit of devices.
+
+    - Before: Overwrite a new setting to existing settings.
+
+    - After: Add a new setting to existing settings.
+
+1. Supports the duplicate fingerprint check when registering users on a device.
+
+1. Supports setting options for Wiegand authentication result output.
+
+    - User ID and Card ID
+
+1. Supports Anti-Tailgating at doors.
+
+1. If the data transmission fails when communicating with OSDP, it is transmitted again.
+
+1. Support for RS-485 connections to new devices
+
+    - XPass 2(XP2-MDPB, XP2-GDPB, XP2-GKDPB)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Even if the CSN, Wiegand card option is disabled, the device recognizes EM and HID Prox cards (BLN2-OAB, BLN2-PAB).
+
+1. If the value of menu timeout is shorter than the auth timeout, a pop-up for success or fail does not occur when an T&A pop-up message is output after authentication.
+
+1. The device response to fingerprint or key input is slow.
+
+1. Start time is not applied in UTC when importing filtered logs using SDK.
+
+1. The held open occurs abnormally if the door is configured with a slave device after the slave device reboots.
+
+1. Applies FA(False Acceptance) improvement algorithm.
+
+1. Users without Administrator permission can access all menus on the device.
+
+1. Relay works after reconnecting for authentication that occurred when elevator connection is disconnected.
+
+1. When using Auth Mode, only the user ID is displayed on the next critical request screen on the slave device.
+
+1. Access is denied and user ID is displayed abnormally when using a smart card or fingerprint authentication in One Device Mode.
+
+</BugLists>
