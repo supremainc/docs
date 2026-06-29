@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.css';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import {translate} from '@docusaurus/Translate';
 import FeedbackWidget from '@site/src/components/Feedback';
 import IcoDown from '@site/static/img/menus/ico-down-arrow.svg';
 import DocPrint from './dochub-print.svg';
@@ -76,12 +77,12 @@ const DocuementButton = () => {
           <ul className={styles.dropdownMenu} role="menu">
             <li role="menuitem">
               <button onClick={handlePrint} className={styles.dropdownItem}>
-                <DocPrint width='18' height='18' /> Print
+                <DocPrint width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.print' })}
               </button>
             </li>
             <li role="menuitem">
               <button onClick={handleDownload} className={styles.dropdownItem}>
-                <DocHubLink width='18' height='18' /> Download
+                <DocHubLink width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.download' })}
               </button>
             </li>
           </ul>
