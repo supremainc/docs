@@ -31,6 +31,236 @@
         "release_date": "2026-05-14"
     },
     {
+        "category": "AI Camera",
+        "product": "ViOnyx",
+        "models": [
+            "VQF12-R"
+        ],
+        "version": "1.0.1",
+        "manuals": {
+            "ko": "ViOnyx_IG_1.00_KO_260629.pdf",
+            "en": "ViOnyx_IG_1.00_EN_260629.pdf",
+            "es": "ViOnyx_IG_1.00_ES_260629.pdf",
+            "ja": "ViOnyx_IG_1.00_JA_260629.pdf"
+        },
+        "release_notes": {
+            "ko": "ViOnyx_ReleaseNotes_1.0.1_KO_260609.pdf",
+            "en": "ViOnyx_ReleaseNotes_1.0.1_EN_260609.pdf"
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "ViOnyx_DrillingTemplate_KO.pdf",
+            "en": "ViOnyx_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-06-16"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioEntry P2",
+        "models": [
+            "BEP2-OD",
+            "BEP2-OA"
+        ],
+        "version": "1.6.1",
+        "manuals": {
+            "ko": "BioEntry P2_IG_1.09_KO_260622.pdf",
+            "en": "BioEntry P2_IG_1.09_EN_260622.pdf",
+            "es": "BioEntry P2_IG_1.09_ES_260622.pdf",
+            "ja": "BioEntry P2_IG_1.09_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "BioEntry P2_ReleaseNotes_1.6.1_KO_260428.pdf",
+            "en": "BioEntry P2_ReleaseNotes_1.6.1_EN_260428.pdf"
+        },
+        "a_e": "SUPREMA_BioEntry_P2_AE-Specification_250723.docx",
+        "dt": {
+            "ko": "BioEntry P2_DrillingTemplate_KO.pdf",
+            "en": "BioEntry P2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-05-18"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioEntry R2",
+        "models": [
+            "BER2-OD"
+        ],
+        "version": "1.4.2",
+        "manuals": {
+            "ko": "BioEntry R2_IG_1.05_KO_260622.pdf",
+            "en": "BioEntry R2_IG_1.05_EN_260622.pdf",
+            "es": "BioEntry R2_IG_1.05_ES_260622.pdf",
+            "ja": "BioEntry R2_IG_1.05_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "BioEntry R2_ReleaseNotes_1.4.2_KO_260430.pdf",
+            "en": "BioEntry R2_ReleaseNotes_1.4.2_EN_260430.pdf"
+        },
+        "a_e": "SUPREMA_BioEntry_R2_AE-Specification_240130.docx",
+        "dt": {
+            "ko": "BioEntry R2_DrillingTemplate_KO.pdf",
+            "en": "BioEntry R2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-30"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioEntry W2",
+        "models": [
+            "BEW2-OHPB",
+            "BEW2-ODPB",
+            "BEW2-OAPB"
+        ],
+        "version": "1.8.2",
+        "manuals": {
+            "ko": "BioEntry W2_IG_1.37_KO_260622.pdf",
+            "en": "BioEntry W2_IG_1.37_EN_260622.pdf",
+            "es": "BioEntry W2_IG_1.37_ES_260622.pdf",
+            "ja": "BioEntry W2_IG_1.37_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "BioEntry W2_RN_1.8.2_KO_260622.pdf",
+            "en": "BioEntry W2_RN_1.8.2_EN_260622.pdf"
+        },
+        "a_e": "SUPREMA_BioEntry_W2_AE-Specification_250723.docx",
+        "dt": {
+            "ko": "BioEntry W2_DrillingTemplate_KO.pdf",
+            "en": "BioEntry W2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2024-11-05"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioEntry W2 UL",
+        "models": [
+            "BEW2-OHPB",
+            "BEW2-ODPB",
+            "BEW2-OAPB"
+        ],
+        "version": "1.8.1",
+        "manuals": {
+            "ko": "BioEntry W2_IG_1.36_EN_240930.pdf",
+            "en": "BioEntry W2_IG_1.36_EN_240930.pdf",
+            "es": "BioEntry W2_IG_1.36_EN_240930.pdf",
+            "ja": "BioEntry W2_IG_1.36_EN_240930.pdf"
+        },
+        "release_date": "2024-09-30"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioEntry W3",
+        "models": [
+            "BEW3-DB",
+            "BEW3-APB"
+        ],
+        "version": "1.0.3",
+        "manuals": {
+            "ko": "BioEntry W3_IG_1.03_KO_260616.pdf",
+            "en": "BioEntry W3_IG_1.03_EN_260616.pdf",
+            "es": "BioEntry W3_IG_1.03_ES_260616.pdf",
+            "ja": "BioEntry W3_IG_1.03_JA_260616.pdf"
+        },
+        "release_notes": {
+            "ko": "BioEntry W3_ReleaseNotes_1.0.3_KO_260612.pdf",
+            "en": "BioEntry W3_ReleaseNotes_1.0.3_EN_260612.pdf"
+        },
+        "a_e": "SUPREMA_BioEntry_W3_AE-Specification_260622.docx",
+        "dt": {
+            "ko": "BioEntry W3_DrillingTemplate_KO.pdf",
+            "en": "BioEntry W3_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-06-29"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioLite N2",
+        "models": [
+            "BLN2-ODB",
+            "BLN2-OAB",
+            "BLN2-PAB"
+        ],
+        "version": "1.7.1",
+        "manuals": {
+            "ko": "BioLite N2_UG_1.19_KO_260616.pdf",
+            "en": "BioLite N2_UG_1.19_EN_260616.pdf",
+            "es": "BioLite N2_UG_1.19_ES_260616.pdf",
+            "ja": "BioLite N2_UG_1.19_JA_260616.pdf"
+        },
+        "release_notes": {
+            "ko": "BioLite N2_ReleaseNotes_1.7.1_KO_260417.pdf",
+            "en": "BioLite N2_ReleaseNotes_1.7.1_EN_260417.pdf"
+        },
+        "a_e": "SUPREMA_BioLite_N2_AE-Specification_260622.docx",
+        "dt": {
+            "ko": "BioLite N2_DrillingTemplate_KO.pdf",
+            "en": "BioLite N2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-17"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioLite N2 CLUe",
+        "models": [
+            "BLN2-ODB",
+            "BLN2-OAB",
+            "BLN2-PAB"
+        ],
+        "version": "1.6.0",
+        "manuals": {
+            "ko": "BioLite N2 Suprema CLUe_UG_1.01_KO_260629.pdf",
+            "en": "BioLite N2 Suprema CLUe_UG_1.01_EN_260629.pdf",
+            "es": "BioLite N2 Suprema CLUe_UG_1.01_ES_260629.pdf",
+            "ja": "BioLite N2 Suprema CLUe_UG_1.01_JA_260629.pdf"
+        },
+        "release_notes": {
+            "ko": "BioLite N2 Suprema CLUe_RN_1.6.0_KO_260628.pdf",
+            "en": "BioLite N2 Suprema CLUe_RN_1.6.0_EN_260628.pdf"
+        },
+        "release_date": "2025-05-15"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioLite N2 UL",
+        "models": [
+            "BLN2-ODB",
+            "BLN2-OAB",
+            "BLN2-PAB"
+        ],
+        "version": "1.6.1",
+        "manuals": {
+            "ko": "BioLite N2_UL_IG_1.14_EN_240516.pdf",
+            "en": "BioLite N2_UL_IG_1.14_EN_240516.pdf",
+            "es": "BioLite N2_UL_IG_1.14_EN_240516.pdf",
+            "ja": "BioLite N2_UL_IG_1.14_EN_240516.pdf"
+        },
+        "release_date": "2025-05-16"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioStation 2a",
+        "models": [
+            "BS2A-ODPB",
+            "BS2A-OAPWB"
+        ],
+        "version": "1.2.1",
+        "manuals": {
+            "ko": "BioStation 2a_UG_1.03_KO_260616.pdf",
+            "en": "BioStation 2a_UG_1.03_EN_260616.pdf",
+            "es": "BioStation 2a_UG_1.03_ES_260616.pdf",
+            "ja": "BioStation 2a_UG_1.03_JA_260616.pdf"
+        },
+        "release_notes": {
+            "ko": "BioStation 2a_ReleaseNotes_1.2.1_KO_260417.pdf",
+            "en": "BioStation 2a_ReleaseNotes_1.2.1_EN_260417.pdf"
+        },
+        "a_e": "SUPREMA_BioStation_2a_AE-Specification_260622.docx",
+        "dt": {
+            "ko": "BioStation 2a_DrillingTemplate_KO.pdf",
+            "en": "BioStation 2a_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-17"
+    },
+    {
         "category": "Biometric Device",
         "product": "BioStation 3",
         "models": [
@@ -39,16 +269,16 @@
         ],
         "version": "1.4.3",
         "manuals": {
-            "ko": "BioStation 3_IG_1.10_KO_250930.pdf",
-            "en": "BioStation 3_IG_1.10_EN_250930.pdf",
-            "es": "BioStation 3_IG_1.10_ES_250930.pdf",
-            "ja": "BioStation 3_IG_1.10_JA_250930.pdf"
+            "ko": "BioStation 3_UG_1.11_KO_260616.pdf",
+            "en": "BioStation 3_UG_1.11_EN_260616.pdf",
+            "es": "BioStation 3_UG_1.11_ES_260616.pdf",
+            "ja": "BioStation 3_UG_1.11_JA_260616.pdf"
         },
         "release_notes": {
             "ko": "BioStation 3_RevisionNotes_1.4.3_KO_260410.pdf",
             "en": "BioStation 3_RevisionNotes_1.4.3_EN_260410.pdf"
         },
-        "a_e": "SUPREMA_BioStation_3_AE-Specification_250723.docx",
+        "a_e": "SUPREMA_BioStation_3_AE-Specification_260622.docx",
         "dt": {
             "ko": "BioStation 3_DrillingTemplate_KO.pdf",
             "en": "BioStation 3_DrillingTemplate_EN.pdf"
@@ -57,29 +287,280 @@
     },
     {
         "category": "Biometric Device",
-        "product": "BioStation 3 Max",
+        "product": "BioStation 3 CLUe",
         "models": [
-            "BS3M-DB",
-            "BS3M-ODB",
-            "BS3M-APB",
-            "BS3M-OAPB"
+            "BS3-DB",
+            "BS3-APWB"
         ],
-        "version": "1.0.0",
+        "version": "1.1.0",
         "manuals": {
-            "ko": "BioStation 3 Max_UG_1.00_KO_260513.pdf",
-            "en": "BioStation 3 Max_UG_1.00_EN_260513.pdf",
-            "es": "BioStation 3 Max_UG_1.00_ES_260513.pdf",
-            "ja": "BioStation 3 Max_UG_1.00_JA_260513.pdf"
+            "ko": "BioStation 3 Suprema CLUe_UG_1.01_KO_260629.pdf",
+            "en": "BioStation 3 Suprema CLUe_UG_1.01_EN_260629.pdf",
+            "es": "BioStation 3 Suprema CLUe_UG_1.01_ES_260629.pdf",
+            "ja": "BioStation 3 Suprema CLUe_UG_1.01_JA_260629.pdf"
         },
-        "a_e": "SUPREMA_BioStation_3_Max_AE-Specification_260507.docx",
-        "dt": {
-            "ko": "BioStation 3 Max(DB_APB)_DrillingTemplate_1.00_KO_WEB_260113.pdf",
-            "en": "BioStation 3 Max(DB_APB)_DrillingTemplate_1.00_EN_WEB_260113.pdf"
+        "release_notes": {
+            "ko": "BioStation 3 Suprema CLUe_RN_1.1.0_KO_260628.pdf",
+            "en": "BioStation 3 Suprema CLUe_RN_1.1.0_EN_260628.pdf"
         },
-        "release_date": "2026-05-13"
+        "release_date": "2025-10-27"
     },
     {
-        "category": "RF/Mobile",
+        "category": "Biometric Device",
+        "product": "BioStation 3 UL",
+        "models": [
+            "BS3-DB",
+            "BS3-APWB"
+        ],
+        "version": "1.1.0",
+        "manuals": {
+            "ko": "BioStation 3_UL_IG_1.04_EN_230710.pdf",
+            "en": "BioStation 3_UL_IG_1.04_EN_230710.pdf",
+            "es": "BioStation 3_UL_IG_1.04_EN_230710.pdf",
+            "ja": "BioStation 3_UL_IG_1.04_EN_230710.pdf"
+        },
+        "release_date": "2023-07-10"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioStation 3 Max",
+        "models": [
+            "BS3M-ODB",
+            "BS3M-OAPB",
+            "BS3M-DB",
+            "BS3M-APB"
+        ],
+        "version": "1.0.1",
+        "manuals": {
+            "ko": "BioStation 3 Max_UG_1.01_KO_260625.pdf",
+            "en": "BioStation 3 Max_UG_1.01_EN_260625.pdf",
+            "es": "BioStation 3 Max_UG_1.01_ES_260625.pdf",
+            "ja": "BioStation 3 Max_UG_1.01_JA_260625.pdf"
+        },
+        "release_notes": {
+            "ko": "BioStation 3 Max_ReleaseNotes_1.0.1_KO_260624.pdf",
+            "en": "BioStation 3 Max_ReleaseNotes_1.0.1_EN_260624.pdf"
+        },
+        "a_e": "SUPREMA_BioStation_3_Max_AE-Specification_260625.docx",
+        "dt": {
+            "ko": "BioStation 3 Max_DrillingTemplate_KO.pdf",
+            "en": "BioStation 3 Max_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-06-30"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "FaceStation 2",
+        "models": [
+            "FS2-D",
+            "FS2-AWB"
+        ],
+        "version": "1.5.5",
+        "manuals": {
+            "ko": "FaceStation 2_UG_1.29_KO_260624.pdf",
+            "en": "FaceStation 2_UG_1.29_EN_260624.pdf",
+            "es": "FaceStation 2_UG_1.29_ES_260624.pdf",
+            "ja": "FaceStation 2_UG_1.29_JA_260624.pdf"
+        },
+        "release_notes": {
+            "ko": "FaceStation 2_RN_1.5.5_KO_260622.pdf",
+            "en": "FaceStation 2_RN_1.5.5_EN_260622.pdf"
+        },
+        "a_e": "SUPREMA_FaceStation_2_AE-Specification_250801.docx",
+        "dt": {
+            "ko": "FaceStation 2_DrillingTemplate_KO.pdf",
+            "en": "FaceStation 2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2024-08-29"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "FaceStation F2",
+        "models": [
+            "FSF2-DB",
+            "FSF2-AB",
+            "FSF2-ODB"
+        ],
+        "version": "2.2.2",
+        "manuals": {
+            "ko": "FaceStation F2_UG_1.13_KO_260624.pdf",
+            "en": "FaceStation F2_UG_1.13_EN_260624.pdf",
+            "es": "FaceStation F2_UG_1.13_ES_260624.pdf",
+            "ja": "FaceStation F2_UG_1.13_JA_260624.pdf"
+        },
+        "release_notes": {
+            "ko": "FaceStation F2_ReleaseNotes_2.2.2_KO_260519.pdf",
+            "en": "FaceStation F2_ReleaseNotes_2.2.2_EN_260519.pdf"
+        },
+        "a_e": "SUPREMA_FaceStation_F2_AE-Specification_250722.docx",
+        "dt": {
+            "ko": "FaceStation F2_DrillingTemplate_KO.pdf",
+            "en": "FaceStation F2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-05-20"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "X-Station 2",
+        "models": [
+            "XS2-ODPB",
+            "XS2-OAPB",
+            "XS2-QDPB",
+            "XS2-QAPB",
+            "XS2-DPB",
+            "XS2-APB"
+        ],
+        "version": "1.4.1",
+        "manuals": {
+            "ko": "X-Station 2_UG_1.11_KO_260616.pdf",
+            "en": "X-Station 2_UG_1.11_EN_260616.pdf",
+            "es": "X-Station 2_UG_1.11_ES_260616.pdf",
+            "ja": "X-Station 2_UG_1.11_JA_260616.pdf"
+        },
+        "release_notes": {
+            "ko": "X-Station 2_ReleaseNotes_1.4.1_KO_260417.pdf",
+            "en": "X-Station 2_ReleaseNotes_1.4.1_EN_260417.pdf"
+        },
+        "a_e": "SUPREMA_X-Station_2_AE-Specification_260622.docx",
+        "dt": {
+            "ko": "X-Station 2_DrillingTemplate_KO.pdf",
+            "en": "X-Station 2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-17"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "X-Station 2 CLUe",
+        "models": [
+            "XS2-ODPB",
+            "XS2-OAPB",
+            "XS2-QDPB",
+            "XS2-QAPB",
+            "XS2-DPB",
+            "XS2-APB"
+        ],
+        "version": "1.2.1",
+        "manuals": {
+            "ko": "X-Station 2 Suprema CLUe_UG_1.01_KO_260629.pdf",
+            "en": "X-Station 2 Suprema CLUe_UG_1.01_EN_260629.pdf",
+            "es": "X-Station 2 Suprema CLUe_UG_1.01_ES_260629.pdf",
+            "ja": "X-Station 2 Suprema CLUe_UG_1.01_JA_260629.pdf"
+        },
+        "release_notes": {
+            "ko": "X-Station 2 Suprema CLUe_RN_1.2.1_KO_260628.pdf",
+            "en": "X-Station 2 Suprema CLUe_RN_1.2.1_EN_260628.pdf"
+        },
+        "release_date": "2026-02-12"
+    },
+    {
+        "category": "RF/Mobile Device",
+        "product": "XPass 2",
+        "models": [
+            "XP2-MDPB",
+            "XP2-MAPB",
+            "XP2-MAPB-H",
+            "XP2-GDPB",
+            "XP2-GKDPB"
+        ],
+        "version": "1.5.2",
+        "manuals": {
+            "ko": "XPass 2_IG_1.09_KO_260616.pdf",
+            "en": "XPass 2_IG_1.09_EN_260616.pdf",
+            "es": "XPass 2_IG_1.09_ES_260616.pdf",
+            "ja": "XPass 2_IG_1.09_JA_260616.pdf"
+        },
+        "release_notes": {
+            "ko": "XPass 2_RevisionNotes_1.5.2_KO_260410.pdf",
+            "en": "XPass 2_RevisionNotes_1.5.2_EN_260410.pdf"
+        },
+        "a_e": "SUPREMA_XPass_2_AE-Specification_260622.docx",
+        "dt": {
+            "ko": "XPass 2_DrillingTemplate_KO.pdf",
+            "en": "XPass 2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-10"
+    },
+    {
+        "category": "RF/Mobile Device",
+        "product": "XPass 2 CLUe",
+        "models": [
+            "XP2-MDPB",
+            "XP2-MAPB",
+            "XP2-MAPB-H",
+            "XP2-GDPB",
+            "XP2-GKDPB"
+        ],
+        "version": "1.4.2",
+        "release_notes": {
+            "ko": "XPass 2 Suprema CLUe_RN_1.4.2_KO_260629.pdf",
+            "en": "XPass 2 Suprema CLUe_RN_1.4.2_EN_260629.pdf"
+        },
+        "release_date": "2025-05-07"
+    },
+    {
+        "category": "RF/Mobile Device",
+        "product": "XPass 2 UL",
+        "models": [
+            "XP2-MDPB",
+            "XP2-MAPB",
+            "XP2-MAPB-H",
+            "XP2-GDPB",
+            "XP2-GKDPB"
+        ],
+        "version": "1.3.2",
+        "manuals": {
+            "ko": "XPass 2_UL_IG_1.06_EN_230126.pdf",
+            "en": "XPass 2_UL_IG_1.06_EN_230126.pdf",
+            "es": "XPass 2_UL_IG_1.06_EN_230126.pdf",
+            "ja": "XPass 2_UL_IG_1.06_EN_230126.pdf"
+        },
+        "release_date": "2023-01-26"
+    },
+    {
+        "category": "RF/Mobile Device",
+        "product": "XPass D2",
+        "models": [
+            "XPD2-MDB",
+            "XPD2-GDB",
+            "XPD2-GKDB"
+        ],
+        "version": "1.8.3",
+        "manuals": {
+            "ko": "XPass D2_IG_1.12_KO_260624.pdf",
+            "en": "XPass D2_IG_1.12_EN_260624.pdf",
+            "es": "XPass D2_IG_1.12_ES_260624.pdf",
+            "ja": "XPass D2_IG_1.12_JA_260624.pdf"
+        },
+        "release_notes": {
+            "ko": "XPass D2_ReleaseNotes_1.8.3_KO_260420.pdf",
+            "en": "XPass D2_ReleaseNotes_1.8.3_EN_260420.pdf"
+        },
+        "a_e": "SUPREMA_XPass_D2_AE-Specification_260622.docx",
+        "dt": {
+            "ko": "XPass D2_DrillingTemplate_KO.pdf",
+            "en": "XPass D2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-21"
+    },
+    {
+        "category": "RF/Mobile Device",
+        "product": "XPass D2 UL",
+        "models": [
+            "XPD2-MDB",
+            "XPD2-GDB",
+            "XPD2-GKDB"
+        ],
+        "version": "1.7.1",
+        "manuals": {
+            "ko": "XPass D2_UL_IG_1.09_EN_230126.pdf",
+            "en": "XPass D2_UL_IG_1.09_EN_230126.pdf",
+            "es": "XPass D2_UL_IG_1.09_EN_230126.pdf",
+            "ja": "XPass D2_UL_IG_1.09_EN_230126.pdf"
+        },
+        "release_date": "2023-01-26"
+    },
+    {
+        "category": "RF/Mobile Device",
         "product": "XPass Q2",
         "models": [
             "XPQ2-DB"
@@ -91,32 +572,252 @@
             "es": "XPass Q2_IG_1.00_ES_260403.pdf",
             "ja": "XPass Q2_IG_1.00_JA_260403.pdf"
         },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
         "a_e": "SUPREMA_XPass_Q2_AE-Specification_260406.docx",
         "dt": {
-            "ko": "XPass Q2_DrillingTemplate_KO_WEB_260331.pdf",
-            "en": "XPass Q2_DrillingTemplate_EN_WEB_260331.pdf"
+            "ko": "XPass Q2_DrillingTemplate_KO.pdf",
+            "en": "XPass Q2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-04-03"
+        "release_date": "2026-02-27"
     },
     {
-        "category": "Access Controller",
+        "category": "RF/Mobile Device",
+        "product": "XPass S2",
+        "models": [
+            "XPS2M"
+        ],
+        "version": "2.4.4",
+        "manuals": {
+            "ko": "XPass S2_IG_2.25_KO_260625.pdf",
+            "en": "XPass S2_IG_2.25_EN_260625.pdf",
+            "es": "XPass S2_IG_2.25_ES_260625.pdf",
+            "ja": "XPass S2_IG_2.25_JA_260625.pdf"
+        },
+        "release_notes": {
+            "ko": "XPass S2_RN_2.4.4_KO_260622.pdf",
+            "en": "XPass S2_RN_2.4.4_EN_260622.pdf"
+        },
+        "a_e": "SUPREMA_XPass_S2_AE-Specification_250821.docx",
+        "dt": {
+            "ko": "XPass S2_DrillingTemplate_KO.pdf",
+            "en": "XPass S2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2018-09-04"
+    },
+    {
+        "category": "Intelligent Controller",
+        "product": "CoreStation 20",
+        "models": [
+            "CS-20",
+            "CS-20P"
+        ],
+        "version": "1.0.4",
+        "manuals": {
+            "ko": "CoreStation 20_IG_1.01_KO_260622.pdf",
+            "en": "CoreStation 20_IG_1.01_EN_260622.pdf",
+            "es": "CoreStation 20_IG_1.01_ES_260622.pdf",
+            "ja": "CoreStation 20_IG_1.01_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "CoreStation 20_ReleaseNotes_1.0.4_KO_260429.pdf",
+            "en": "CoreStation 20_ReleaseNotes_1.0.4_EN_260429.pdf"
+        },
+        "a_e": "SUPREMA_CoreStation 20_AE-Specification_250731.docx",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-04-30"
+    },
+    {
+        "category": "Intelligent Controller",
+        "product": "CoreStation 20 UL",
+        "models": [
+            "CS-20",
+            "CS-20P"
+        ],
+        "version": "1.0.1",
+        "manuals": {
+            "ko": "CoreStation 20_UL_IG_1.01_EN_250731.pdf",
+            "en": "CoreStation 20_UL_IG_1.01_EN_250731.pdf",
+            "es": "CoreStation 20_UL_IG_1.01_EN_250731.pdf",
+            "ja": "CoreStation 20_UL_IG_1.01_EN_250731.pdf"
+        },
+        "release_date": "2025-07-31"
+    },
+    {
+        "category": "Intelligent Controller",
         "product": "CoreStation",
         "models": [
             "CS-40"
         ],
         "version": "1.7.2",
         "manuals": {
-            "ko": "CoreStation_IG_1.12_KO_250730.pdf",
-            "en": "CoreStation_IG_1.12_EN_250730.pdf",
-            "es": "CoreStation_IG_1.12_ES_250730.pdf",
-            "ja": "CoreStation_IG_1.12_JA_250730.pdf"
+            "ko": "CoreStation_IG_1.12_KO_260622.pdf",
+            "en": "CoreStation_IG_1.12_EN_260622.pdf",
+            "es": "CoreStation_IG_1.12_ES_260622.pdf",
+            "ja": "CoreStation_IG_1.12_JA_260622.pdf"
         },
         "release_notes": {
             "ko": "CoreStation_ReleaseNotes_1.7.2_KO_260430.pdf",
             "en": "CoreStation_ReleaseNotes_1.7.2_EN_260430.pdf"
         },
         "a_e": "SUPREMA_CoreStation_AE-Specification_250731.docx",
-        "release_date": "2025-04-30"
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-04-30"
+    },
+    {
+        "category": "Intelligent Controller",
+        "product": "CoreStation UL",
+        "models": [
+            "CS-40"
+        ],
+        "version": "1.5.1",
+        "manuals": {
+            "ko": "CoreStation_IG_1.05_UL_EN_241216.pdf",
+            "en": "CoreStation_IG_1.05_UL_EN_241216.pdf",
+            "es": "CoreStation_IG_1.05_UL_EN_241216.pdf",
+            "ja": "CoreStation_IG_1.05_UL_EN_241216.pdf"
+        },
+        "release_date": "2024-12-16"
+    },
+    {
+        "category": "Intelligent Controller",
+        "product": "Enclosure",
+        "models": [
+            "ENCR-10"
+        ],
+        "version": "-",
+        "manuals": {
+            "ko": "Enclosure_IG_1.01_KO_260622.pdf",
+            "en": "Enclosure_IG_1.01_EN_260622.pdf",
+            "es": "Enclosure_IG_1.01_ES_260622.pdf",
+            "ja": "Enclosure_IG_1.01_JA_260622.pdf"
+        },
+        "release_date": "2021-11-15"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Door Interface",
+        "models": [
+            "DI-24"
+        ],
+        "version": "1.0.3",
+        "manuals": {
+            "ko": "Door Interface_IG_1.00_KO_260622.pdf",
+            "en": "Door Interface_IG_1.00_EN_260622.pdf",
+            "es": "Door Interface_IG_1.00_ES_260622.pdf",
+            "ja": "Door Interface_IG_1.00_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "Door Interface_ReleaseNotes_1.0.3_KO_260619.pdf",
+            "en": "Door Interface_ReleaseNotes_1.0.3_EN_260619.pdf"
+        },
+        "a_e": "SUPREMA_Door Interface_AE-Specification_250414.docx",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-06-22"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Door Interface UL",
+        "models": [
+            "DI-24"
+        ],
+        "version": "-",
+        "manuals": {
+            "ko": "Door Interface_UL_IG_1.00_EN_250414.pdf",
+            "en": "Door Interface_UL_IG_1.00_EN_250414.pdf",
+            "es": "Door Interface_UL_IG_1.00_EN_250414.pdf",
+            "ja": "Door Interface_UL_IG_1.00_EN_250414.pdf"
+        },
+        "release_date": "2025-04-14"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Door Module",
+        "models": [
+            "DM-20"
+        ],
+        "version": "1.2.2",
+        "manuals": {
+            "ko": "Door Module_IG_1.41_KO_260624.pdf",
+            "en": "Door Module_IG_1.41_EN_260624.pdf",
+            "es": "Door Module_IG_1.41_ES_260624.pdf",
+            "ja": "Door Module_IG_1.41_JA_260624.pdf"
+        },
+        "release_notes": {
+            "ko": "Door Module_RN_1.2.2_KO_260622.pdf",
+            "en": "Door Module_RN_1.2.2_EN_260622.pdf"
+        },
+        "a_e": "SUPREMA_DM-20_AE-Specification_240213.docx",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2022-02-07"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Extended Module",
+        "models": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "version": "-",
+        "manuals": {
+            "ko": "Extended Module_IG_1.00_KO_260622.pdf",
+            "en": "Extended Module_IG_1.00_EN_260622.pdf",
+            "es": "Extended Module_IG_1.00_ES_260622.pdf",
+            "ja": "Extended Module_IG_1.00_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2025-03-14"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Extended Module-SC",
+        "models": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "version": "-",
+        "manuals": {
+            "ko": "Extended Module-SC_IG_1.00_KO_260622.pdf",
+            "en": "Extended Module-SC_IG_1.00_EN_260622.pdf",
+            "es": "Extended Module-SC_IG_1.00_ES_260622.pdf",
+            "ja": "Extended Module-SC_IG_1.00_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2023-12-08"
     },
     {
         "category": "Peripherals",
@@ -126,20 +827,212 @@
         ],
         "version": "1.0.0",
         "manuals": {
-            "ko": "Input Module_IG_1.04_KO_240213.0.pdf",
-            "en": "Input Module_IG_1.04_EN_240213.0.pdf",
-            "es": "Input Module_IG_1.04_ES_240213.0.pdf",
-            "ja": "Input Module_IG_1.04_JA_240213.0.pdf"
+            "ko": "Input Module_IG_1.04_KO_260624.pdf",
+            "en": "Input Module_IG_1.04_EN_260624.pdf",
+            "es": "Input Module_IG_1.04_ES_260624.pdf",
+            "ja": "Input Module_IG_1.04_JA_260624.pdf"
         },
         "release_notes": {
-            "ko": "IM-120_RevisionNotes_1.0.0_KO.pdf",
-            "en": "IM-120_RevisionNotes_1.0.0_EN.pdf"
-        },
-        "dt": {
-            "ko": "IM-120_DrillingTemplate_KO_WEB.pdf",
-            "en": "IM-120_DrillingTemplate_EN_WEB.pdf"
+            "ko": "Input Module_RN_1.0.0_KO_260622.pdf",
+            "en": "Input Module_RN_1.0.0_EN_260622.pdf"
         },
         "a_e": "SUPREMA_IM-120_AE-Specification_240213.docx",
-        "release_date": "2024-02-13"
+        "dt": {
+            "ko": "Input Module_DrillingTemplate_KO.pdf",
+            "en": "Input Module_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2021-11-10"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Output Module",
+        "models": [
+            "OM-120"
+        ],
+        "version": "1.2.1",
+        "manuals": {
+            "ko": "Output Module_IG_1.04_KO_260624.pdf",
+            "en": "Output Module_IG_1.04_EN_260624.pdf",
+            "es": "Output Module_IG_1.04_ES_260624.pdf",
+            "ja": "Output Module_IG_1.04_JA_260624.pdf"
+        },
+        "release_notes": {
+            "ko": "Output Module_RN_1.2.1_KO_260622.pdf",
+            "en": "Output Module_RN_1.2.1_EN_260622.pdf"
+        },
+        "a_e": "SUPREMA_OM-120_AE-Specification_240214.docx",
+        "dt": {
+            "ko": "Output Module_DrillingTemplate_KO.pdf",
+            "en": "Output Module_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2022-01-27"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Secure Module",
+        "models": [
+            "SIO2"
+        ],
+        "version": "1.3.1",
+        "manuals": {
+            "ko": "Secure Module_IG_2.14_KO_260624.pdf",
+            "en": "Secure Module_IG_2.14_EN_260624.pdf",
+            "es": "Secure Module_IG_2.14_ES_260624.pdf",
+            "ja": "Secure Module_IG_2.14_JA_260624.pdf"
+        },
+        "release_notes": {
+            "ko": "Secure Module_RN_1.3.1_KO_260622.pdf",
+            "en": "Secure Module_RN_1.3.1_EN_260622.pdf"
+        },
+        "a_e": "SUPREMA_Secure_IO_2_AE-Specification_240215.docx",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2022-01-27"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Secure Module",
+        "models": [
+            "SIO2"
+        ],
+        "version": "-",
+        "manuals": {
+            "ko": "Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
+            "en": "Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
+            "es": "Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
+            "ja": "Secure_IO_2_UL_IG_2.13_EN_211201.pdf"
+        },
+        "release_date": "2021-12-01"
+    },
+    {
+        "category": "Apps",
+        "product": "CoreStation Setup Manager",
+        "models": [
+            "CoreStation",
+            "CoreStation 20",
+            "",
+            ""
+        ],
+        "version": "-",
+        "manuals": {
+            "ko": "CoreStation Setup Manager_UG_1.01_KO_260622.pdf",
+            "en": "CoreStation Setup Manager_UG_1.01_EN_260622.pdf",
+            "es": "CoreStation Setup Manager_UG_1.01_ES_260622.pdf",
+            "ja": "CoreStation Setup Manager_UG_1.01_JA_260622.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-06-30"
+    },
+    {
+        "category": "Apps",
+        "product": "Suprema Device Manager",
+        "models": [
+            "XPass D2",
+            "XPass 2",
+            "BioEntry W3",
+            "XPass Q2"
+        ],
+        "version": "1.2.3",
+        "manuals": {
+            "ko": "Suprema Device Manager_UG_1.08_KO_260515.pdf",
+            "en": "Suprema Device Manager_UG_1.08_EN_260515.pdf",
+            "es": "Suprema Device Manager_UG_1.08_ES_260515.pdf",
+            "ja": "Suprema Device Manager_UG_1.08_JA_260515.pdf"
+        },
+        "release_notes": {
+            "ko": "Device Manager_ReleaseNotes_1.2.3_KO_260513.pdf",
+            "en": "Device Manager_ReleaseNotes_1.2.3_EN_260513.pdf"
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-05-15"
+    },
+    {
+        "category": "Integration",
+        "product": "Genetec",
+        "models": [
+            "",
+            ""
+        ],
+        "version": "1.00",
+        "manuals": {
+            "ko": "Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
+            "en": "Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
+            "es": "Suprema Plugin for Genetec_UG_1.00_ES_260629.pdf",
+            "ja": "Suprema Plugin for Genetec_UG_1.00_JA_260629.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-07-01"
+    },
+    {
+        "category": "Integration",
+        "product": "Gallagher",
+        "models": [
+            "",
+            ""
+        ],
+        "version": "2.0",
+        "manuals": {
+            "ko": "Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
+            "en": "Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
+            "es": "Suprema Integration with Gallagher Command Centre_AG_2.0_ES_260629.pdf",
+            "ja": "Suprema Integration with Gallagher Command Centre_AG_2.0_JA_260629.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-07-01"
+    },
+    {
+        "category": "Integration",
+        "product": "Software House",
+        "models": [
+            "",
+            ""
+        ],
+        "version": "1.2",
+        "manuals": {
+            "ko": "Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
+            "en": "Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
+            "es": "Suprema - CCURE Integration (Advanced Version)_AG_1.2_ES_260629.pdf",
+            "ja": "Suprema - CCURE Integration (Advanced Version)_AG_1.2_JA_260629.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-07-01"
     }
 ]
