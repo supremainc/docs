@@ -428,6 +428,12 @@
   "index.shortcut.howto.description": {
     "message": "Provides user-oriented step-by-step guides to make the most of Suprema's devices and software. Follow the instructions and examples easily."
   },
+  "index.shortcut.docHub.title": {
+    "message": "Documentation Hub"
+  },
+  "index.shortcut.docHub.description": {
+    "message": "Download Suprema product manuals, release notes, drilling templates, and A&E specifications all in one place."
+  },
   "index.productTitle.biometricsDevice": {
     "message": "Biometric Devices"
   },

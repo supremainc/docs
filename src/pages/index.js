@@ -75,8 +75,12 @@ function HomepageHeader() {
           <p>{translate({ id: "index.shortcut.compare.description" })}</p>
         </div>
         <div className={styles.howToArticles}>
-          <h3>{translate({ id: "index.shortcut.howto.title" })} <Link to='how-to/'><span>{translate({ id: "index.shortcut.linkText" })}</span></Link></h3>
+          <h3>{translate({ id: "index.shortcut.howto.title" })} <Link to='how-to'><span>{translate({ id: "index.shortcut.linkText" })}</span></Link></h3>
           <p>{translate({ id: "index.shortcut.howto.description" })}</p>
+        </div>
+        <div className={styles.docHub}>
+          <h3>{translate({ id: "index.shortcut.docHub.title" })} <Link to='dochub'><span>{translate({ id: "index.shortcut.linkText" })}</span></Link></h3>
+          <p>{translate({ id: "index.shortcut.docHub.description" })}</p>
         </div>
       </div>
     </header>

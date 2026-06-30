@@ -51,7 +51,7 @@ const Locale = {
   },
   ja: {
     brand: "CENTRAL REPOSITORY",
-    pageTitle: "Document Hub",
+    pageTitle: "ドキュメントハブ",
     subtitle: "Suprema製品のマニュアルおよび技術文書を簡単に検索・ダウンロードできます。",
     searchPlaceholder: "モデルまたは製品名で検索...",
     allCategories: "すべて",
@@ -69,7 +69,7 @@ const Locale = {
   },
   es: {
     brand: "CENTRAL REPOSITORY",
-    pageTitle: "Document Hub",
+    pageTitle: "Centro de Documentación",
     subtitle: "Encuentre y descargue fácilmente los manuales de productos Suprema y documentación técnica.",
     searchPlaceholder: "Buscar por modelo o nombre de producto...",
     allCategories: "Todo",
