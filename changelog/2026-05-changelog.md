@@ -43,6 +43,8 @@ date: 2026-05-28T12:00
 
 ### 신규 장치
 
+슈프리마 플래그십 AI 기반 바이오인식 제품 BioStation 3 Max의 매뉴얼을 오픈했습니다.
+
 * [BioStation 3 Max](../device/biostation_3_max)
 
 ### 장치 업데이트
