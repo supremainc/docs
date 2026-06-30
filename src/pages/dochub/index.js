@@ -175,7 +175,7 @@ function DocHub({ data }) {
       const v = cell.getValue();
       if (!v) return "";
       const row = cell.getRow().getData();
-      if (row.category === 'Platform') {
+      if (row.category === 'Platform' || row.category === 'Integration') {
         return `<span class="dochub-version-badge platform">SW ${v}</span>`;
       } else {
         return `<span class="dochub-version-badge">FW ${v}</span>`;
