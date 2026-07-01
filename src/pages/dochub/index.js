@@ -175,9 +175,13 @@ function DocHub({ data }) {
       const v = cell.getValue();
       if (!v) return "";
       const row = cell.getRow().getData();
-      if (row.category === 'Platform' || row.category === 'Integration') {
+      if (row.category === 'Platform' ) {
         return `<span class="dochub-version-badge platform">SW ${v}</span>`;
-      } else {
+      }
+      else if (row.category === 'Apps' || row.category === 'Integration') {
+      return `<span class="dochub-version-badge none">${v}</span>`;
+      }
+      else {
         return `<span class="dochub-version-badge">FW ${v}</span>`;
       }
     };

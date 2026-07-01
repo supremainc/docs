@@ -797,12 +797,6 @@
     {
         "category": "Peripherals",
         "product": "Extended Module",
-        "models": [
-            "",
-            "",
-            "",
-            ""
-        ],
         "version": "-",
         "manuals": {
             "ko": "device/extendedmodule/Extended Module_IG_1.00_KO_260622.pdf",
@@ -824,12 +818,6 @@
     {
         "category": "Peripherals",
         "product": "Extended Module-SC",
-        "models": [
-            "",
-            "",
-            "",
-            ""
-        ],
         "version": "-",
         "manuals": {
             "ko": "device/extendedmodule_sc/Extended Module-SC_IG_1.00_KO_260622.pdf",
@@ -940,9 +928,7 @@
         "product": "CoreStation Setup Manager",
         "models": [
             "CoreStation",
-            "CoreStation 20",
-            "",
-            ""
+            "CoreStation 20"
         ],
         "version": "-",
         "manuals": {
@@ -992,11 +978,7 @@
     {
         "category": "Integration",
         "product": "Genetec",
-        "models": [
-            "",
-            ""
-        ],
-        "version": "1.00",
+        "version": "-",
         "manuals": {
             "ko": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
             "en": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
@@ -1017,11 +999,7 @@
     {
         "category": "Integration",
         "product": "Gallagher",
-        "models": [
-            "",
-            ""
-        ],
-        "version": "2.0",
+        "version": "-",
         "manuals": {
             "ko": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
             "en": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
@@ -1042,11 +1020,7 @@
     {
         "category": "Integration",
         "product": "Software House",
-        "models": [
-            "",
-            ""
-        ],
-        "version": "1.2",
+        "version": "-",
         "manuals": {
             "ko": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
             "en": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
