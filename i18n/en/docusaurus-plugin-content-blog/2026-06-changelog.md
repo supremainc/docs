@@ -13,7 +13,7 @@ This June, **Suprema Docs** is packed with major news. Suprema's new video secur
 
 ## Document Hub Launch
 
-![](/img/changelogs/document_hub_banner.png)
+![](/img/changelogs/document_hub_banner_en.png)
 
 [**Document Hub**](../dochub) is now open — your one-stop destination to download manuals, release notes, drilling templates, and A&E specifications for all Suprema products.
 
