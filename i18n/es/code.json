@@ -432,6 +432,12 @@
   "index.shortcut.howto.description": {
     "message": "Proporciona guías paso a paso orientadas al usuario para aprovechar al máximo los dispositivos y el software de Suprema. Sigue las instrucciones y ejemplos fácilmente."
   },
+  "index.shortcut.docHub.title": {
+    "message": "Centro de Documentos"
+  },
+  "index.shortcut.docHub.description": {
+    "message": "Descargue en un solo lugar los manuales, notas de versión, plantillas de perforación y especificaciones A&E de los productos Suprema."
+  },
   "index.productTitle.biometricsDevice": {
     "message": "Dispositivos Biométricos"
   },

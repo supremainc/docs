@@ -51,7 +51,7 @@ const Locale = {
   },
   ja: {
     brand: "CENTRAL REPOSITORY",
-    pageTitle: "Document Hub",
+    pageTitle: "ドキュメントハブ",
     subtitle: "Suprema製品のマニュアルおよび技術文書を簡単に検索・ダウンロードできます。",
     searchPlaceholder: "モデルまたは製品名で検索...",
     allCategories: "すべて",
@@ -69,7 +69,7 @@ const Locale = {
   },
   es: {
     brand: "CENTRAL REPOSITORY",
-    pageTitle: "Document Hub",
+    pageTitle: "Centro de Documentos",
     subtitle: "Encuentre y descargue fácilmente los manuales de productos Suprema y documentación técnica.",
     searchPlaceholder: "Buscar por modelo o nombre de producto...",
     allCategories: "Todo",
@@ -111,7 +111,7 @@ function DocHub({ data }) {
     const cats = [...new Set(data.map(item => item.category?.trim()).filter(Boolean))];
     setCategories(cats);
 
-    const REQUIRED = ["category", "product", "version", "release_date"];
+    const REQUIRED = ["category", "product", "release_date"];
     const errors = data.reduce((acc, item, i) => {
       const missing = REQUIRED.filter(f => !item[f]);
       if (missing.length) {
@@ -175,11 +175,7 @@ function DocHub({ data }) {
       const v = cell.getValue();
       if (!v) return "";
       const row = cell.getRow().getData();
-      if (row.category === 'Platform') {
-        return `<span class="dochub-version-badge platform">SW ${v}</span>`;
-      } else {
-        return `<span class="dochub-version-badge">FW ${v}</span>`;
-      }
+      return `<span class="dochub-version-badge">${v}</span>`;
     };
 
     const releaseDateFormatter = (cell) => {
