@@ -69,7 +69,7 @@ const Locale = {
   },
   es: {
     brand: "CENTRAL REPOSITORY",
-    pageTitle: "Centro de Documentación",
+    pageTitle: "Centro de Documentos",
     subtitle: "Encuentre y descargue fácilmente los manuales de productos Suprema y documentación técnica.",
     searchPlaceholder: "Buscar por modelo o nombre de producto...",
     allCategories: "Todo",
