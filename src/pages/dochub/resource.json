@@ -77,7 +77,7 @@
             "ko": "device/bioentry_p2/BioEntry P2_DrillingTemplate_KO.pdf",
             "en": "device/bioentry_p2/BioEntry P2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-05-18"
+        "release_date": "2026-04-30"
     },
     {
         "category": "Biometric Device",
@@ -137,14 +137,14 @@
             "BEW2-ODPB",
             "BEW2-OAPB"
         ],
-        "version": "1.8.1",
+        "version": "1.8.2",
         "manuals": {
             "ko": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
             "en": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
             "es": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
             "ja": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf"
         },
-        "release_date": "2024-09-30"
+        "release_date": "2025-03-14"
     },
     {
         "category": "Biometric Device",
@@ -233,7 +233,7 @@
             "es": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf",
             "ja": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf"
         },
-        "release_date": "2025-05-16"
+        "release_date": "2025-03-25"
     },
     {
         "category": "Biometric Device",
@@ -319,7 +319,7 @@
             "es": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf",
             "ja": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf"
         },
-        "release_date": "2023-07-10"
+        "release_date": "2024-04-04"
     },
     {
         "category": "Biometric Device",
@@ -346,7 +346,7 @@
             "ko": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-06-30"
+        "release_date": "2026-07-01"
     },
     {
         "category": "Biometric Device",
