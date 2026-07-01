@@ -4,6 +4,45 @@
   margin-top: 2px;
 }
 
+.pdfDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  min-width: 110px;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+  color: #A32343;
+}
+
 button.printbtn {
   width: fit-content;
   width: -moz-fit-content;
@@ -20,14 +59,9 @@ button.printbtn {
   cursor: pointer;
 }
 
-button.printbtn::before {
-  content: ' ';
+.printbtn svg {
+  top: 4px;
   position: relative;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: url('ico-down.svg') no-repeat;
-  margin-right: 5px;
 }
 
 .btnprint button.feedback__button::before {
@@ -53,6 +87,12 @@ button.printbtn::before {
 .feedback__button:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.dropdownItem svg {
+  top: 4px;
+  position: relative;
+  margin-right: 5px;
 }
 
 @media print {
