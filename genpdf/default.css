@@ -616,6 +616,10 @@ details.deviceInfo summary, details.faq summary {
   height: auto;
 }
 
+.doc-content table td img {
+  border: none;
+}
+
 .doc-content figure {
   margin: 8px 0;
 }
