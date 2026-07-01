@@ -295,6 +295,7 @@ const config = {
           {
             type: 'dropdown',
             label: 'Devices',
+            className: 'navbar-devices',
             position: 'right',
             items: [
                {
