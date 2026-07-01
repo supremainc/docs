@@ -5,7 +5,9 @@
         "version": "1.0.2",
         "manuals": {
             "ko": "platform/bsx/BioStar X_Administrator_Guide_1.0.2_KO_260507.pdf",
-            "en": "platform/bsx/BioStar X_Administrator_Guide_1.0.2_EN_260507.pdf"
+            "en": "platform/bsx/BioStar X_Administrator_Guide_1.0.2_EN_260507.pdf",
+            "es": "platform/bsx/BioStar X_Administrator_Guide_1.0.2_ES_260507.pdf",
+            "ja": "platform/bsx/BioStar X_Administrator_Guide_1.0.2_JA_260507.pdf"
         },
         "a_e": "platform/bsx/Suprema_BioStar X_Platform_AE-Specification_1.0.1_260109.docx",
         "release_notes": {
@@ -13,6 +15,18 @@
             "en": "platform/bsx/BioStar X_ReleaseNotes_1.0.2_EN_260507.pdf"
         },
         "release_date": "2026-05-07"
+    },
+    {
+        "category": "Platform",
+        "product": "BioStar X Mobile",
+        "version": "1.0.4",
+        "manuals": {
+            "ko": "platform/bsx-mobile/BioStar X Mobile_UG_1.0.4_KO_260701.pdf",
+            "en": "platform/bsx-mobile/BioStar X Mobile_UG_1.0.4_EN_260701.pdf",
+            "es": "platform/bsx-mobile/BioStar X Mobile_UG_1.0.4_ES_260701.pdf",
+            "ja": "platform/bsx-mobile/BioStar X Mobile_UG_1.0.4_JA_260701.pdf"
+        },
+        "release_date": "2026-03-04"
     },
     {
         "category": "Platform",
@@ -51,6 +65,21 @@
         "dt": {
             "ko": "device/vionyx/ViOnyx_DrillingTemplate_KO.pdf",
             "en": "device/vionyx/ViOnyx_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-06-16"
+    },
+    {
+        "category": "AI Camera",
+        "product": "ViOnyx Web Server",
+        "models": [
+            "VQF12-R"
+        ],
+        "version": "1.0.1",
+        "manuals": {
+            "ko": "device/vionyx/ViOnyx Web Server_UG_1.0.1_KO_260701.pdf",
+            "en": "device/vionyx/ViOnyx Web Server_UG_1.0.1_EN_260701.pdf",
+            "es": "device/vionyx/ViOnyx Web Server_UG_1.0.1_ES_260701.pdf",
+            "ja": "device/vionyx/ViOnyx Web Server_UG_1.0.1_JA_260701.pdf"
         },
         "release_date": "2026-06-16"
     },
