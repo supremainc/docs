@@ -12,6 +12,7 @@ import "./styles.css";
 
 const BLOB_BASE_URL = "https://supremadocs.blob.core.windows.net/dochub/";
 
+
 const Locale = {
   ko: {
     brand: "CENTRAL REPOSITORY",
@@ -22,6 +23,16 @@ const Locale = {
     colProduct: "PRODUCT IDENTITY",
     colVersion: "VERSION",
     colDocumentation: "DOCUMENTATION & ASSETS",
+    categories: {
+      platform: "플랫폼",
+      aicamera: "AI 카메라",
+      biometric: "바이오인식 장치",
+      rfmobile: "RF/모바일 장치",
+      intelligent: "출입통제 컨트롤러",
+      peripherals: "주변 장치",
+      apps: "애플리케이션",
+      integration: "인테그레이션"
+    },
     docLabels: {
       manuals: "사용자 가이드",
       release_notes: "릴리스 노트",
@@ -40,6 +51,16 @@ const Locale = {
     colProduct: "PRODUCT IDENTITY",
     colVersion: "VERSION",
     colDocumentation: "DOCUMENTATION & ASSETS",
+    categories: {
+      platform: "Platform",
+      aicamera: "AI Camera",
+      biometric: "Biometric Readers",
+      rfmobile: "RFID Readers",
+      intelligent: "Access Control Unit",
+      peripherals: "Peripherals",
+      apps: "Apps",
+      integration: "Integration"
+    },
     docLabels: {
       manuals: "Manual",
       release_notes: "Release Notes",
@@ -58,6 +79,16 @@ const Locale = {
     colProduct: "PRODUCT IDENTITY",
     colVersion: "VERSION",
     colDocumentation: "DOCUMENTATION & ASSETS",
+    categories: {
+      platform: "プラットフォーム",
+      aicamera: "AI カメラ",
+      biometric: "バイオメトリックリーダー",
+      rfmobile: "RFID リーダー",
+      intelligent: "アクセス制御ユニット",
+      peripherals: "周辺機器",
+      apps: "アプリ",
+      integration: "インテグレーション"
+    },
     docLabels: {
       manuals: "ユーザーガイド",
       release_notes: "リリースノート",
@@ -72,10 +103,20 @@ const Locale = {
     pageTitle: "Centro de Documentos",
     subtitle: "Encuentre y descargue fácilmente los manuales de productos Suprema y documentación técnica.",
     searchPlaceholder: "Buscar por modelo o nombre de producto...",
-    allCategories: "Todo",
+    allCategories: "Todos",
     colProduct: "PRODUCT IDENTITY",
     colVersion: "VERSION",
     colDocumentation: "DOCUMENTATION & ASSETS",
+    categories: {
+      platform: "Plataformas",
+      aicamera: "Cámaras AI",
+      biometric: "Lectores Biométricos",
+      rfmobile: "Lectores RFID",
+      intelligent: "Unidad de Control de Acceso",
+      peripherals: "Dispositivos Periféricos",
+      apps: "Aplicaciones",
+      integration: "Integración"
+    },
     docLabels: {
       manuals: "Manual",
       release_notes: "Notas de versión",
@@ -326,7 +367,7 @@ function DocHub({ data }) {
             className={`dochub-tab${selectedCategory === cat ? " active" : ""}`}
             onClick={() => setSelectedCategory(cat)}
           >
-            {cat}
+            {localeData.categories?.[cat] || cat}
           </button>
         ))}
       </div>

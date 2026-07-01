@@ -309,6 +309,9 @@ div[class*='docItemCol'] {
     a {
       font-weight: 400;
     }
+    .navbar-devices + ul {
+      columns: 2;
+    }
   }
   div[class*='navbarSearchContainer'] {
     padding-right: 0;

@@ -1,6 +1,6 @@
 [
     {
-        "category": "Platform",
+        "category": "platform",
         "product": "BioStar X",
         "version": "1.0.2",
         "manuals": {
@@ -17,7 +17,7 @@
         "release_date": "2026-05-07"
     },
     {
-        "category": "Platform",
+        "category": "platform",
         "product": "BioStar Air",
         "version": "2.12.0",
         "manuals": {
@@ -33,7 +33,7 @@
         "release_date": "2026-05-14"
     },
     {
-        "category": "AI Camera",
+        "category": "aicamera",
         "product": "ViOnyx",
         "models": [
             "VQF12-R"
@@ -57,7 +57,7 @@
         "release_date": "2026-06-16"
     },
     {
-        "category": "AI Camera",
+        "category": "aicamera",
         "product": "ViOnyx Web Server",
         "models": [
             "VQF12-R"
@@ -72,7 +72,7 @@
         "release_date": "2026-06-16"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioEntry P2",
         "models": [
             "BEP2-OD",
@@ -97,7 +97,7 @@
         "release_date": "2026-04-30"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioEntry R2",
         "models": [
             "BER2-OD"
@@ -121,7 +121,7 @@
         "release_date": "2026-04-30"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioEntry W2",
         "models": [
             "BEW2-OHPB",
@@ -147,7 +147,7 @@
         "release_date": "2024-11-05"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioEntry W2 UL",
         "models": [
             "BEW2-OHPB",
@@ -164,7 +164,7 @@
         "release_date": "2025-03-14"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioEntry W3",
         "models": [
             "BEW3-DB",
@@ -189,7 +189,7 @@
         "release_date": "2026-06-29"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioLite N2",
         "models": [
             "BLN2-ODB",
@@ -215,7 +215,7 @@
         "release_date": "2026-04-17"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioLite N2 CLUe",
         "models": [
             "BLN2-ODB",
@@ -236,7 +236,7 @@
         "release_date": "2025-05-15"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioLite N2 UL",
         "models": [
             "BLN2-ODB",
@@ -253,7 +253,7 @@
         "release_date": "2025-03-25"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioStation 2a",
         "models": [
             "BS2A-ODPB",
@@ -278,7 +278,7 @@
         "release_date": "2026-04-17"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioStation 3",
         "models": [
             "BS3-DB",
@@ -303,7 +303,7 @@
         "release_date": "2026-04-10"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioStation 3 CLUe",
         "models": [
             "BS3-DB",
@@ -323,7 +323,7 @@
         "release_date": "2025-10-27"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioStation 3 UL",
         "models": [
             "BS3-DB",
@@ -339,7 +339,7 @@
         "release_date": "2024-04-04"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "BioStation 3 Max",
         "models": [
             "BS3M-ODB",
@@ -366,7 +366,7 @@
         "release_date": "2026-07-01"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "FaceStation 2",
         "models": [
             "FS2-D",
@@ -391,7 +391,7 @@
         "release_date": "2024-08-29"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "FaceStation F2",
         "models": [
             "FSF2-DB",
@@ -417,7 +417,7 @@
         "release_date": "2026-05-20"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "X-Station 2",
         "models": [
             "XS2-ODPB",
@@ -446,7 +446,7 @@
         "release_date": "2026-04-17"
     },
     {
-        "category": "Biometric Device",
+        "category": "biometric",
         "product": "X-Station 2 CLUe",
         "models": [
             "XS2-ODPB",
@@ -470,7 +470,7 @@
         "release_date": "2026-02-12"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass 2",
         "models": [
             "XP2-MDPB",
@@ -498,7 +498,7 @@
         "release_date": "2026-04-10"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass 2 CLUe",
         "models": [
             "XP2-MDPB",
@@ -515,7 +515,7 @@
         "release_date": "2025-05-07"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass 2 UL",
         "models": [
             "XP2-MDPB",
@@ -534,7 +534,7 @@
         "release_date": "2024-01-24"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass D2",
         "models": [
             "XPD2-MDB",
@@ -560,7 +560,7 @@
         "release_date": "2026-04-21"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass D2 UL",
         "models": [
             "XPD2-MDB",
@@ -577,7 +577,7 @@
         "release_date": "2024-01-24"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass Q2",
         "models": [
             "XPQ2-DB"
@@ -601,7 +601,7 @@
         "release_date": "2026-02-27"
     },
     {
-        "category": "RF/Mobile Device",
+        "category": "rfmobile",
         "product": "XPass S2",
         "models": [
             "XPS2M"
@@ -625,7 +625,7 @@
         "release_date": "2018-07-24"
     },
     {
-        "category": "Intelligent Controller",
+        "category": "intelligent",
         "product": "CoreStation 20",
         "models": [
             "CS-20",
@@ -650,7 +650,7 @@
         "release_date": "2026-04-30"
     },
     {
-        "category": "Intelligent Controller",
+        "category": "intelligent",
         "product": "CoreStation 20 UL",
         "models": [
             "CS-20",
@@ -666,7 +666,7 @@
         "release_date": "2026-04-20"
     },
     {
-        "category": "Intelligent Controller",
+        "category": "intelligent",
         "product": "CoreStation",
         "models": [
             "CS-40"
@@ -690,7 +690,7 @@
         "release_date": "2026-04-30"
     },
     {
-        "category": "Intelligent Controller",
+        "category": "intelligent",
         "product": "CoreStation UL",
         "models": [
             "CS-40"
@@ -705,7 +705,7 @@
         "release_date": "2022-10-05"
     },
     {
-        "category": "Intelligent Controller",
+        "category": "intelligent",
         "product": "Enclosure",
         "models": [
             "ENCR-10"
@@ -720,7 +720,7 @@
         "release_date": "2017-09-21"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Door Interface",
         "models": [
             "DI-24"
@@ -744,7 +744,7 @@
         "release_date": "2026-06-22"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Door Interface UL",
         "models": [
             "DI-24"
@@ -759,7 +759,7 @@
         "release_date": "2026-04-20"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Door Module",
         "models": [
             "DM-20"
@@ -783,7 +783,7 @@
         "release_date": "2022-02-07"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Extended Module",
         "version": "",
         "manuals": {
@@ -804,7 +804,7 @@
         "release_date": "2025-03-14"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Extended Module-SC",
         "version": "",
         "manuals": {
@@ -825,7 +825,7 @@
         "release_date": "2023-12-08"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Input Module",
         "models": [
             "IM-120"
@@ -849,7 +849,7 @@
         "release_date": "2021-11-10"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Output Module",
         "models": [
             "OM-120"
@@ -873,7 +873,7 @@
         "release_date": "2022-01-27"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Secure Module",
         "models": [
             "SIO2"
@@ -897,7 +897,7 @@
         "release_date": "2022-01-27"
     },
     {
-        "category": "Peripherals",
+        "category": "peripherals",
         "product": "Secure Module UL",
         "models": [
             "SIO2"
@@ -912,7 +912,7 @@
         "release_date": "2024-01-24"
     },
     {
-        "category": "Apps",
+        "category": "apps",
         "product": "BioStar X Mobile",
         "version": "1.0.4",
         "manuals": {
@@ -924,7 +924,7 @@
         "release_date": "2026-03-04"
     },
     {
-        "category": "Apps",
+        "category": "apps",
         "product": "CoreStation Setup Manager",
         "models": [
             "CoreStation",
@@ -949,7 +949,7 @@
         "release_date": "2026-06-22"
     },
     {
-        "category": "Apps",
+        "category": "apps",
         "product": "Device Manager",
         "models": [
             "XPass D2",
@@ -976,7 +976,7 @@
         "release_date": "2026-05-15"
     },
     {
-        "category": "Integration",
+        "category": "integration",
         "product": "Genetec",
         "version": "",
         "manuals": {
@@ -997,7 +997,7 @@
         "release_date": "2026-06-29"
     },
     {
-        "category": "Integration",
+        "category": "integration",
         "product": "Gallagher",
         "version": "",
         "manuals": {
@@ -1018,7 +1018,7 @@
         "release_date": "2026-06-29"
     },
     {
-        "category": "Integration",
+        "category": "integration",
         "product": "Software House",
         "version": "",
         "manuals": {
