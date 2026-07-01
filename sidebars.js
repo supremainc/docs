@@ -51,7 +51,7 @@ function createSidebars(preview) {
             type: 'category',
             label: '방문자 가이드',
             items: [
-              'platform/clue/visiter-settings',
+              'platform/clue/visitor-start',
             ]
           }
         ]
