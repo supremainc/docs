@@ -1,5 +1,5 @@
 // @ts-check
-import ConfigLocalized from '../docusaurus.config.localized.json';
+import ConfigLocalized from '../docusaurus.config.localized.json' with { type: 'json' };
 
 const defaultLocale = 'ko';
 

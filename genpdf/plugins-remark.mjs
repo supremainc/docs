@@ -80,11 +80,7 @@ export function remarkTransformImagePaths(basePath = '', language = 'ko') {
       if (node.url.startsWith('/img/')) {
         if (basePath) {
           const normalizedUrl = node.url.replace(/^\/img\//, '');
-          if (language !== 'ko') {
-            node.url = basePath.replace(/\\/g, '/') + '/static/img/en/' + normalizedUrl;
-          } else {
-            node.url = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedUrl;
-          }
+          node.url = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedUrl;
         }
       }
     });
