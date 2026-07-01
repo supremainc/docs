@@ -7,11 +7,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "Se está suministrando energía, pero el dispositivo no funciona.",
@@ -42,18 +45,13 @@
       "contents": [
         {
           "product": [
-            "biostation_3",
-            "biostation_2a",
-            "facestation_f2",
-            "biolite_n2",
-            "facestation_2",
-            "xstation_2",
-            "biostation_3_max"
+            "biostation_3_clue",
+            "biolite_n2_clue",
+            "xstation_2_clue"
           ],
           "question": "Perdí mi PIN.",
           "answer": [
-            "Para un PIN de usuario normal, solicítelo al administrador e introdúzcalo nuevamente.",
-            "Si perdió el PIN de administrador, comuníquese con la empresa de instalación."
+            "Si pierde su PIN, comuníquese con la empresa de instalación."
           ]
         },
         {
@@ -66,10 +64,38 @@
             "xstation_2",
             "biostation_3_max"
           ],
-          "question": "Ingresé mi PIN y pulsé el botón <span class='cmd'>OK</span>, pero aún no puedo abrir la puerta.",
+          "question": "Perdí mi PIN.",
           "answer": [
-            "Verifique si ingresó el PIN registrado correctamente.",
-            "Verifique si ha cambiado el PIN recientemente.",
+            "Para un PIN de usuario normal, solicítelo al administrador e introdúzcalo nuevamente.",
+            "Si ha perdido el PIN de administrador, comuníquese con la empresa de instalación."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3_clue",
+            "biolite_n2_clue",
+            "xstation_2_clue"
+          ],
+          "question": "Ingresé mi PIN y presioné el botón <span class='cmd'>OK</span>, pero aún no puedo abrir la puerta.",
+          "answer": [
+            "Verifique si ingresó correctamente el PIN registrado.",
+            "Verifique si cambió el PIN recientemente."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2a",
+            "facestation_f2",
+            "biolite_n2",
+            "facestation_2",
+            "xstation_2",
+            "biostation_3_max"
+          ],
+          "question": "Ingresé mi PIN y presioné el botón <span class='cmd'>OK</span>, pero aún no puedo abrir la puerta.",
+          "answer": [
+            "Verifique si ingresó correctamente el PIN registrado.",
+            "Verifique si cambió el PIN recientemente.",
             "Si no recuerda el PIN, solicítelo al administrador e introdúzcalo nuevamente."
           ]
         }
@@ -83,7 +109,8 @@
       "contents": [
         {
           "product": [
-            "xstation_2"
+            "xstation_2",
+            "xstation_2_clue"
           ],
           "question": "No se puede escanear un código QR/código de barras.",
           "answer": [
@@ -116,6 +143,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "facestation_2",
             "biostation_3_max"
@@ -129,6 +157,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "facestation_2",
             "biostation_3_max"
@@ -141,6 +170,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -182,7 +212,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -198,7 +230,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -213,7 +247,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -233,11 +269,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "La puerta no se bloquea al cerrarla.",
@@ -256,11 +295,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "De repente, la hora es incorrecta.",
@@ -289,7 +331,7 @@
           "question": "Perdí mi PIN de administrador, por lo que no puedo acceder al modo de administrador.",
           "answer": [
             "El administrador otorga un permiso de acceso en el dispositivo, por lo que solo él puede acceder al menú de administrador.",
-            "Si perdió el PIN de administrador, comuníquese con la empresa de instalación."
+            "Si ha perdido el PIN de administrador, comuníquese con la empresa de instalación."
           ]
         }
       ]

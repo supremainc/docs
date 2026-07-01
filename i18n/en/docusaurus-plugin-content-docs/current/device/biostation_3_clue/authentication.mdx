@@ -1,0 +1,217 @@
+---
+id: authentication
+title: Authentication
+description: Describes the supported authentication methods and authentication procedures.
+keywords:
+  - Authentication mode
+  - Operation
+  - PIN
+  - Face
+  - T&A (Time and Attendance)
+---
+
+Describes the supported authentication methods and authentication procedures.
+
+:::info
+
+If you use Suprema CLUe mode, you can only enroll, edit, and delete authentication modes on the Suprema CLUe server, not on the device.
+
+:::
+
+## Authentication mode
+
+Set the authentication mode. You can combine <Cmd sid='ui_228' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_323' product='dev' />, and <Cmd sid='ui_020' product='dev' /> for authentication mode, and you can also set schedules for each authentication mode.
+
+### Registering auth mode {#registering-auth-mode}
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
+
+3. Select <Image src='/img/common/ico-add.svg' ico alone />.
+
+4. Pressing <Image src='/img/common/ico-add1.svg' ico alone /> will display the credential that can be added on the screen. Select the credentials to add. Press the <Image src='/img/common/ico-cancel.svg' ico alone /> while the credential is added, and the added credential will be deleted.
+
+   <Image src='/img/device/bs3-authmode.png' />
+
+5. After setting the desired authentication mode, set <Cmd sid='ui_203' product='dev' />.
+
+   <div className='overflow-x'>
+
+   | Category | Description |
+   | :-: | --- |
+   | Face | - <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: This mode uses only facial authentication.<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires facial authentication followed by PIN entry. |
+   | Card / QR Code | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />: This mode uses only card / QR code authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: This mode requires card / QR code authentication followed by facial authentication.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires card / QR code authentication followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires card / QR code authentication followed by either facial authentication or PIN entry.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both facial authentication and PIN entry after card / QR code authentication. |
+   | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: This mode requires ID entry followed by facial authentication.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires ID entry followed by PIN entry.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode requires ID entry followed by either facial authentication or PIN entry.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: This mode uses both facial authentication and PIN entry after ID entry. |
+
+   </div>
+
+   :::info
+
+   * <Cmd sid='ui_203' product='dev' /> can be set on the Suprema CLUe server. If no schedule is set, only <Cmd sid='ui_361' product='dev' /> can be selected.
+
+   * To use <Cmd sid='ui_042' product='dev' /> authentication, <Cmd sid='ui_256' product='dev' /> must be clicked and <Cmd sid='ui_265' product='dev' /> must have <Cmd sid='ui_041' product='dev' /> activated, and a separate device license is required. For more information, refer to [License](settings#license).
+
+   :::
+
+6. To save the settings, press <Cmd sid='ui_037' product='dev' />.
+
+### Modifying auth mode
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
+
+3. Select the authentication mode to modify.
+
+4. Modify the authentication mode by referring to [Registering auth mode](#registering-auth-mode) and press <Cmd sid='ui_037' product='dev' />.
+
+### Delete auth mode
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. Press <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' />.
+
+3. Press <Image src='/img/common/ico-delete.svg' ico alone /> and select the authentication mode to delete. You can select multiple options.
+
+4. To delete the selected item, press <Cmd sid='ui_037' product='dev' />.
+
+## Operation
+
+### Server matching
+
+You can set up server matching.
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, activate <Cmd sid='ui_265' product='dev' /> in <Cmd sid='ui_187' product='dev' />.
+
+   <Image src='/img/device/bs3-auth-option.png' />
+
+   * <Cmd sid='ui_187' product='dev' />: When you set server matching, the device authenticates users or Suprema CLUe users according to the configured authentication mode. It can be used when the device has too much user information or when the device is installed outside.
+
+:::info
+
+* <Cmd sid='ui_185' product='dev' /> can only use cards and IDs.
+
+* If you use <Cmd sid='ui_185' product='dev' />, enable server matching on both the device and the Suprema CLUe server.
+
+* If you use Suprema CLUe mode, <Cmd sid='ui_185' product='dev' /> is enabled automatically.
+
+:::
+
+### QR authentication
+
+You can activate QR code authentication.
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. After pressing <Cmd sid='ui_256' product='dev' />, activate <Cmd sid='ui_265' product='dev' /> for <Cmd sid='ui_041' product='dev' />.
+
+   <Image src='/img/device/bs3-auth-option-qr.png' />
+
+   * <Cmd sid='ui_041' product='dev' />: Set whether to use QR code authentication through the device's camera.
+
+   * <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. This can only be set when <Cmd sid='ui_041' product='dev' /> is activated.
+
+   :::info
+
+   A separate device license is required to use <Cmd sid='ui_041' product='dev' />. For more information, refer to [License](settings#license).
+
+   :::
+
+## Face
+
+You can change the configuration for facial authentication.
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_228' product='dev' />.
+
+3. Change the desired item.
+
+   <Image src='/img/device/bs3-auth-clue.png' />
+
+   * <Cmd sid='ui_140' product='dev' />: Set the sensitivity to detect motion around the device. When <Cmd sid='ui_140' product='dev' /> is set to <Cmd sid='ui_091' product='dev' />, touch the screen to authenticate your face.
+
+   * <Cmd sid='ui_115' product='dev' />: If the face is not enrolled within the set time, the face registration will be canceled.
+
+   * <Cmd sid='ui_260' product='dev' />: If authentication is not completed within the set time, authentication fails.
+
+   * <Cmd sid='ui_117' product='dev' />: You can check for duplicate faces during face registration.
+
+   * <Cmd sid='ui_229' product='dev' />: Set the position and size of the area where the device detects faces during face authentication.
+
+      :::info
+
+      For optimal performance, it is recommended to use default settings for the sub-options of <Cmd sid='ui_229' product='dev' />. The default values of each option are as follows:
+
+      * Maximum Head Pose Angle: 15
+
+      * Detection Distance: Min 30 cm, Max 100 cm
+
+      * Wide Search: Deactivated
+
+      :::
+
+   * <Cmd sid='ui_149' product='dev' />: You can set the security level for 1:N authentication.
+
+   * <Cmd sid='ui_278' product='dev' />: You can set the operating mode of the device for face authentication.
+
+      * <Cmd sid='ui_359' product='dev' />: Both visual and infrared matching work to increase the accuracy of face authentication.
+
+      * <Cmd sid='ui_159' product='dev' />: Users can perform rapid authentication while walking within the device's authentication range.
+
+   * <Cmd sid='ui_247' product='dev' />: You can prevent user authentication with spoofed faces such as photos. Activated when <Cmd sid='ui_278' product='dev' /> is set to <Cmd sid='ui_359' product='dev' />.
+
+      :::info
+
+      * Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test.
+
+      * In strong sunlight, it is recommended to use the <Cmd sid='ui_247' product='dev' /> function as <Cmd sid='ui_152' product='dev' />.
+
+      :::
+
+   * <Cmd sid='ui_070' product='dev' />: You can change advanced settings for facial authentication, such as mask detection.
+
+      * <Cmd sid='ui_368' product='dev' />: You can set the confirmation mode according to the purpose.
+
+      * <Cmd sid='ui_264' product='dev' />: Set whether to send a notification when authentication fails because the user is not wearing a mask.
+
+      * <Cmd sid='ui_123' product='dev' />: You can set whether to use mask detection. <Cmd sid='ui_165' product='dev' />: If set, users without masks are denied authentication, and maskless events are recorded in the logs. <Cmd sid='ui_164' product='dev' />: If set, users without masks can still authenticate, but maskless events are recorded in the logs.
+
+      * <Cmd sid='ui_124' product='dev' />: Set the sensitivity for detecting mask usage. Activated when <Cmd sid='ui_123' product='dev' /> is set to <Cmd sid='ui_161' product='dev' />.
+
+      :::info
+
+      * When using <Cmd sid='ui_123' product='dev' />, set <Cmd sid='ui_368' product='dev' /> according to the device's purpose.
+
+      * <Cmd sid='ui_267' product='dev' />: After authentication, check whether the user is wearing a mask.
+
+      * <Cmd sid='ui_369' product='dev' />: Authenticate after checking whether the user is wearing a mask. When using this mode, users without masks cannot authenticate.
+
+      * <Cmd sid='ui_370' product='dev' />: The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication.
+
+      :::
+
+## T&A (Time and Attendance)
+
+You can set how to register T&A mode.
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+2. Select <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_079' product='dev' />.
+
+3. Change the desired item.
+
+   <Image src='/img/device/bs3-auth2.png' />
+
+   * <Cmd sid='ui_083_list' product='dev' />: Set how to use attendance mode.
+
+   * <Cmd sid='ui_086' product='dev' />: Register T&A events. To register attendance events, select <Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> and then set the icon to display on the screen, <Cmd sid='ui_085' product='dev' />, and <Cmd sid='ui_203' product='dev' />.
+
+   * <Cmd sid='ui_082' product='dev' />: Set to require a user to select a T&A event when authenticating. Available when <Cmd sid='ui_083_list' product='dev' /> is set to <Cmd sid='ui_199' product='dev' />.
+
+   * <Cmd sid='ui_081' product='dev' />: Set to use only a T&A event selected by the administrator. Available when <Cmd sid='ui_083_list' product='dev' /> is set to <Cmd sid='ui_071' product='dev' />.
+
+   * <Cmd sid='ui_279' product='dev' />: Set whether to use the job code.

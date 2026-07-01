@@ -2040,15 +2040,62 @@ function createSidebars(preview) {
             'device/biostation_3/release-notes/100',
           ]
         },
-        // {
-        //   type: 'html',
-        //   value: '<hr />'
-        // },
-        // {
-        //   type: 'doc',
-        //   label: 'A&E',
-        //   id: 'device/biostation_3/ae/biostation3_ae',
-        // },
+      ],
+    },
+  ],
+  biostation3_clue: [
+    {
+      type: 'category',
+      label: 'BioStation 3 CLUe',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_3_clue/index',
+      },
+      items: [
+        'device/biostation_3_clue/safety-instructions',
+        'device/biostation_3_clue/getting-started',
+        'device/biostation_3_clue/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_clue/using-device',
+          },
+          items: [
+            'device/biostation_3_clue/admin-menu',
+            'device/biostation_3_clue/user',
+            'device/biostation_3_clue/authentication',
+            'device/biostation_3_clue/settings',
+            'device/biostation_3_clue/event-log',
+          ],
+        },
+        'device/biostation_3_clue/troubleshooting',
+        'device/biostation_3_clue/product-specifications',
+        'device/biostation_3_clue/regulatory-information',
+        'device/biostation_3_clue/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_clue/release-notes/index',
+          },
+          items: [
+            'device/biostation_3_clue/release-notes/110_clue',
+            'device/biostation_3_clue/release-notes/110',
+            'device/biostation_3_clue/release-notes/102',
+            'device/biostation_3_clue/release-notes/101',
+            'device/biostation_3_clue/release-notes/100',
+          ]
+        },
       ],
     },
   ],
@@ -2295,6 +2342,71 @@ function createSidebars(preview) {
       ],
     },
   ],
+  bioliten2_clue: [
+    {
+      type: 'category',
+      label: 'BioLite N2 CLUe',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2_clue/index',
+      },
+      items: [
+        'device/biolite_n2_clue/safety-instructions',
+        'device/biolite_n2_clue/getting-started',
+        'device/biolite_n2_clue/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2_clue/using-device',
+          },
+          items: [
+            'device/biolite_n2_clue/admin-menu',
+            'device/biolite_n2_clue/user',
+            'device/biolite_n2_clue/authentication',
+            'device/biolite_n2_clue/settings',
+            'device/biolite_n2_clue/event-log',
+          ],
+        },
+        'device/biolite_n2_clue/troubleshooting',
+        'device/biolite_n2_clue/product-specifications',
+        'device/biolite_n2_clue/regulatory-information',
+        'device/biolite_n2_clue/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2_clue/release-notes/index',
+          },
+          items: [
+            'device/biolite_n2_clue/release-notes/160_clue',
+            'device/biolite_n2_clue/release-notes/160',
+            'device/biolite_n2_clue/release-notes/150',
+            'device/biolite_n2_clue/release-notes/142',
+            'device/biolite_n2_clue/release-notes/141',
+            'device/biolite_n2_clue/release-notes/140',
+            'device/biolite_n2_clue/release-notes/132',
+            'device/biolite_n2_clue/release-notes/131',
+            'device/biolite_n2_clue/release-notes/130',
+            'device/biolite_n2_clue/release-notes/120',
+            'device/biolite_n2_clue/release-notes/110',
+            'device/biolite_n2_clue/release-notes/102',
+            'device/biolite_n2_clue/release-notes/101',
+            'device/biolite_n2_clue/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
   bioliten2_ul: [
     {
       type: 'category',
@@ -2361,6 +2473,32 @@ function createSidebars(preview) {
             'device/xpass_2/release-notes/120',
             'device/xpass_2/release-notes/110',
             'device/xpass_2/release-notes/100',
+          ]
+        },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'CLUe 릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_2/release-notes-clue/index',
+          },
+          items: [
+            'device/xpass_2/release-notes-clue/142_clue',
+            'device/xpass_2/release-notes-clue/142',
+            'device/xpass_2/release-notes-clue/141',
+            'device/xpass_2/release-notes-clue/132',
+            'device/xpass_2/release-notes-clue/131',
+            'device/xpass_2/release-notes-clue/124',
+            'device/xpass_2/release-notes-clue/123',
+            'device/xpass_2/release-notes-clue/122',
+            'device/xpass_2/release-notes-clue/121',
+            'device/xpass_2/release-notes-clue/120',
+            'device/xpass_2/release-notes-clue/110',
+            'device/xpass_2/release-notes-clue/100',
           ]
         },
       ],
@@ -2569,6 +2707,70 @@ function createSidebars(preview) {
             'device/xstation_2/release-notes/102',
             'device/xstation_2/release-notes/101',
             'device/xstation_2/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
+  xstation2_clue: [
+    {
+      type: 'category',
+      label: 'X-Station 2 CLUe',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xstation_2_clue/index',
+      },
+      items: [
+        'device/xstation_2_clue/safety-instructions',
+        'device/xstation_2_clue/getting-started',
+        'device/xstation_2_clue/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2_clue/using-device',
+          },
+          items: [
+            'device/xstation_2_clue/admin-menu',
+            'device/xstation_2_clue/user',
+            'device/xstation_2_clue/authentication',
+            'device/xstation_2_clue/settings',
+            'device/xstation_2_clue/event-log',
+          ],
+        },
+        'device/xstation_2_clue/troubleshooting',
+        'device/xstation_2_clue/product-specifications',
+        'device/xstation_2_clue/regulatory-information',
+        'device/xstation_2_clue/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2_clue/release-notes/index',
+          },
+          items: [
+            'device/xstation_2_clue/release-notes/121_clue_260125',
+            'device/xstation_2_clue/release-notes/121_clue',
+            'device/xstation_2_clue/release-notes/121',
+            'device/xstation_2_clue/release-notes/120',
+            'device/xstation_2_clue/release-notes/114',
+            'device/xstation_2_clue/release-notes/113',
+            'device/xstation_2_clue/release-notes/112',
+            'device/xstation_2_clue/release-notes/111',
+            'device/xstation_2_clue/release-notes/110',
+            'device/xstation_2_clue/release-notes/103',
+            'device/xstation_2_clue/release-notes/102',
+            'device/xstation_2_clue/release-notes/101',
+            'device/xstation_2_clue/release-notes/100',
           ]
         },
       ],

@@ -1,0 +1,56 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_200409)
+
+Release<Separator/>2020-04-13
+
+## New Features and Improvements
+
+---
+
+1. Support to the Change Deivce ID.
+
+1. Enhancement in the security of the device.
+
+    - Restrict unencrypted connections.
+
+    - Support for Secure Tamper on slave devices.
+
+    - Enhancement in the security of encryption keys.
+
+    - Encrypt user information.
+
+    - Restrict access through communications such as TCP/IP, RS-232, and USB.
+
+1. Support for connecting new devices.
+
+    - XPass D2 (Rev 2)
+
+1. Improved Anti-passback zone to operate based on the door status.
+
+1. Support to the BioStar 2 Mobile Access.
+
+1. Support to the Mobile Access V1.1.
+
+1. Support to the scheduled unlock function for each floor when controlling elevator.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Problem that the password set in the Device Manager app is not initialized even if the factory default is performed.
+
+1. The device does not recognize LF (Low Frequency) cards well.
+
+1. OSDP Communication does not work normally if the value sent to the slave device is greater than the defined value.
+
+1. The Secure Tamper occurs again if a user reboots the device after setting the smart card layout while the Secure Tamper has already occurred.
+
+1. The event log of the device is not sent in the order in which it occurred.
+
+</BugLists>

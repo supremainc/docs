@@ -214,5 +214,17 @@
   "item.label.ViOnyx Web Server": {
     "message": "ViOnyx Web Server",
     "description": "Navbar item with label ViOnyx Web Server"
+  },
+  "item.label.BioStation 3 (CLUe)": {
+    "message": "BioStation 3 (CLUe)",
+    "description": "Navbar item with label BioStation 3 (CLUe)"
+  },
+  "item.label.BioLite N2 (CLUe)": {
+    "message": "BioLite N2 (CLUe)",
+    "description": "Navbar item with label BioLite N2 (CLUe)"
+  },
+  "item.label.X-Station 2 (CLUe)": {
+    "message": "X-Station 2 (CLUe)",
+    "description": "Navbar item with label X-Station 2 (CLUe)"
   }
 }

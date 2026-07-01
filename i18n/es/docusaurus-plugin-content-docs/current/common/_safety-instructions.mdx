@@ -110,6 +110,12 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 * Puede causar incendios o descargas eléctricas.
 
+<Include type={props.type} ref='biolite_n2_ul'>
+
+**No conecte a un tomacorriente controlado por un interruptor**.
+
+</Include>
+
 {/* ViOnyx 전용 */}
 
 <Include product='vionyx'>
@@ -158,7 +164,7 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 {/* IP67 이상 제품만 적용 */}
 
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,vionyx'>
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,biolite_n2_clue,xpass_2,xpass_d2,vionyx'>
 
 **Al instalar el producto en una pared, no selle alrededor del dispositivo con silicona o materiales similares**.
 
@@ -174,7 +180,13 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 </Xclude>
 
-<Xclude product='extendedmodule,extendedmodule_sc'>
+<Include type={props.type} ref='biostation_3_ul,xpass_2_ul'>
+
+**El producto se alimenta con una fuente de alimentación Clase 2 de 12 VCC o 24 VCC, o con un equipo de fuente de alimentación (PSE) PoE listado en UL 62368-1**.
+
+</Include>
+
+<Xclude product='extendedmodule,extendedmodule_sc' type={props.type} ref='biolite_n2_ul'>
 
 **Use un adaptador de corriente con aprobación IEC/EN 62368-1 y con capacidad superior al consumo de energía del dispositivo terminal**. **Se recomienda usar los adaptadores de corriente vendidos por Suprema**.
 
@@ -183,6 +195,16 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 * Consulte la sección [Alimentación](product-specifications#specs.power) en las especificaciones del producto para conocer el consumo máximo de corriente.
 
 </Xclude>
+
+<Include type={props.type} ref='biolite_n2_ul'>
+
+**Use UL 60950-1/UL 62368-1 y UL 294, o un estándar LSS equivalente que incluya pruebas de transitorios de la línea de alimentación, y un adaptador de alimentación aprobado que admita un consumo de energía mayor que el del producto**.
+
+* El uso de una fuente de alimentación inadecuada puede provocar el mal funcionamiento de los dispositivos.
+
+* Consulte la sección [Alimentación](product-specifications#specs.power) en las especificaciones del producto para conocer el consumo máximo de corriente.
+
+</Include>
 
 {/* SIO2 연결 가능한 제품만 적용 */}
 
@@ -202,9 +224,27 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 </Include>
 
+<Include type={props.type} ref='securemodule_ul,xpass_d2_ul'>
+
+**El producto se alimenta con una fuente de alimentación Clase 2 de 12 VCC**.
+
+</Include>
+
+<Include type={props.type} ref='biostation_3_ul'>
+
+**Para PoE / PoE+, la distancia máxima desde el PSE es de 100 metros o 328 pies**.
+
+</Include>
+
+<Include type={props.type} ref='xpass_2_ul'>
+
+**Para PoE, la distancia máxima desde el PSE es de 100 metros o 328 pies**.
+
+</Include>
+
 {/* PoE 가능한 제품만 적용 */}
 
-<Include product='biostation_2a,bioentry_w3,xstation_2,bioentry_w2,xpass_2'>
+<Include product='biostation_2a,bioentry_w3,xstation_2,xstation_2_clue,bioentry_w2,xpass_2'>
 
 **No conecte la fuente de alimentación y la alimentación PoE juntas**.
 
@@ -214,7 +254,7 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 {/* PoE+ 가능한 제품만 적용 */}
 
-<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
+<Include product='biostation_3,biostation_3_clue,corestation_20,biostation_3_max,vionyx'>
 
 **No conecte la fuente de alimentación y la alimentación PoE+ juntas**.
 
@@ -224,7 +264,7 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 {/* 방수, 방진 + 케이블 커버있는 제품만 적용 */}
 
-<Include product='biostation_3,biostation_2a,xstation_2,facestation_f2,xpass_q2,biostation_3_max'>
+<Include product='biostation_3,biostation_3_clue,biostation_2a,xstation_2,xstation_2_clue,facestation_f2,xpass_q2,biostation_3_max'>
 
 **Para cumplir con las normas IP65, asegúrese de usar una cubierta de cable después de conectar el producto y el cable**. **Se recomienda usar un gabinete cuando se instale en exteriores con exposición total**.
 
@@ -234,7 +274,7 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 {/* 방수, 방진 가능하지만 케이블 커버 없는 제품만 적용 */}
 
-<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2,vionyx'>
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2,biolite_n2_clue,vionyx'>
 
 **Se recomienda usar un gabinete cuando se instale en exteriores con exposición total**.
 
@@ -244,7 +284,7 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 {/* PoE+ 가능한 제품만 적용 */}
 
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,biostation_3_clue,corestation_20,biostation_3_max'>
 
 **Al conectar alimentación PoE+, asegúrese de hacerlo según los estándares PoE+ o PoE++**.
 
@@ -284,7 +324,7 @@ Se utiliza para proporcionar notas o información adicional durante el uso del p
 
 ---
 
-<Xclude product='vionyx,biostation_3,extendedmodule,extendedmodule_sc,biostation_3_max'>
+<Xclude product='vionyx,biostation_3,biostation_3_clue,extendedmodule,extendedmodule_sc,biostation_3_max' type={props.type} ref='biostation_3_ul,xpass_2_ul'>
 
 <PageBreak />
 

@@ -74,13 +74,13 @@ You can add up to 100 templates.
 
 * <Cmd sid='ui_328' product='dev' />: You can set the type of card to be used by the device.
 
-  * <Cmd sid='ui_008' product='dev' />: You can select the CSN card type and set the byte order.
+   * <Cmd sid='ui_008' product='dev' />: You can select the CSN card type and set the byte order.
 
-  * <Cmd sid='ui_201' product='dev' />: You can select the types of smart cards issued by Suprema.
+   * <Cmd sid='ui_201' product='dev' />: You can select the types of smart cards issued by Suprema.
 
-  * <Cmd sid='ui_333' product='dev' />: You can select the types of smart cards issued by third parties.
+   * <Cmd sid='ui_333' product='dev' />: You can select the types of smart cards issued by third parties.
 
-  * <Cmd sid='ui_139' product='dev' />: You can set the mobile card type.
+   * <Cmd sid='ui_139' product='dev' />: You can set the mobile card type.
 
 :::info
 
@@ -94,23 +94,23 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 * <Cmd sid='ui_354' product='dev' />: You can set the Wiegand card format to be specified for the device. The card data is processed according to the set format.
 
-  * <Cmd sid='ui_179' product='dev' />: If the desired format is not available, you can click <IcAdd/> to add a new Wiegand format.
+   * <Cmd sid='ui_179' product='dev' />: If the desired format is not available, you can click <IcAdd/> to add a new Wiegand format.
 
-    <Image src='/img/device/xpd2-template-wiegand-card-new.png' width={250} />
+      <Image src='/img/device/xpd2-template-wiegand-card-new.png' width={250} />
 
-    * <Cmd sid='ui_253' product='dev' />: Enter the name of the desired Wiegand format.
+      * <Cmd sid='ui_253' product='dev' />: Enter the name of the desired Wiegand format.
 
-    * <Cmd sid='ui_318' product='dev' />: Enter the total number of bits.
+      * <Cmd sid='ui_318' product='dev' />: Enter the total number of bits.
 
-    * <Cmd sid='ui_024' product='dev' />: Enter the start and end bits of the ID you wish to use. Tap <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> to add an ID field.
+      * <Cmd sid='ui_024' product='dev' />: Enter the start and end bits of the ID you wish to use. Tap <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> to add an ID field.
 
-    * <Cmd sid='ui_350' product='dev' />: Enter the position of the parity field and the start and end bits you wish to use. Tap <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> to add a parity field.
+      * <Cmd sid='ui_350' product='dev' />: Enter the position of the parity field and the start and end bits you wish to use. Tap <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> to add a parity field.
 
-      :::info
+         :::info
 
-      To add a parity field, enter the total bits.
+         To add a parity field, enter the total bits.
 
-      :::
+         :::
 
 * <Cmd sid='ui_352' product='dev' />: You can set the pulse width of the Wiegand signal.
 
@@ -124,29 +124,29 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 * <Cmd sid='ui_032' product='dev' />: You can set up MIFARE cards.
 
-  * <Cmd sid='ui_379' product='dev' />: You can set the encryption type to SL1 or SL3.
+   * <Cmd sid='ui_379' product='dev' />: You can set the encryption type to SL1 or SL3.
 
-  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+   * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
 
-  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+   * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
 
-  * <Cmd sid='ui_214' product='dev' />: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
+   * <Cmd sid='ui_214' product='dev' />: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
 
 * <Cmd sid='ui_010' product='dev' />: You can set up DESFire cards.
 
-  * <Cmd sid='ui_011' product='dev' />: You can use DESFire cards issued by third parties. Only DESFire can be configured.
+   * <Cmd sid='ui_011' product='dev' />: You can use DESFire cards issued by third parties. Only DESFire can be configured.
 
-  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+   * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
 
-  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+   * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
 
-  * <Cmd sid='ui_223' product='dev' />: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESFire can be configured.
+   * <Cmd sid='ui_223' product='dev' />: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESFire can be configured.
 
-  * <Cmd sid='ui_347' product='dev' />: Set the file ID. Only DESFire can be configured.
+   * <Cmd sid='ui_347' product='dev' />: Set the file ID. Only DESFire can be configured.
 
-  * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to DES/3DES or AES.
+   * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to DES/3DES or AES.
 
-  * <Cmd sid='ui_386' product='dev' />: Enabling this option enforces the use of secure messaging when authenticating to a device using DESFire EV2 or EV3 cards. This option is only available when <Cmd sid='ui_222' product='dev' /> is set to AES.
+   * <Cmd sid='ui_386' product='dev' />: Enable this option to force secure messaging when authenticating to the device with DESFire EV2 or EV3 cards. This option is only available when <Cmd sid='ui_222' product='dev' /> is set to AES.
 
 * <Cmd sid='ui_202' product='dev' />: You can set the byte order for smart card output.
 
@@ -168,37 +168,37 @@ When set to <Cmd sid='ui_034' product='dev' />, card data is processed in left-t
 
 * <Cmd sid='ui_032' product='dev' />: You can set up MIFARE cards.
 
-  * <Cmd sid='ui_379' product='dev' />: You can set the encryption type to SL1 or SL3.
+   * <Cmd sid='ui_379' product='dev' />: You can set the encryption type to SL1 or SL3.
 
-  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+   * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
 
-  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+   * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
 
-  * <Cmd sid='ui_154' product='dev' />: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
+   * <Cmd sid='ui_154' product='dev' />: Select the starting block where each template will be stored. This block is the index of the block where user information is stored; set it to a storable block if the user is already using the smart card. Can only be set for MIFARE.
 
-  * <Cmd sid='ui_145' product='dev' />: You can set the starting point for reading the card number.
+   * <Cmd sid='ui_145' product='dev' />: You can set the starting point for reading the card number.
 
-  * <Cmd sid='ui_110' product='dev' />: (If the set values of <Cmd sid='ui_087' product='dev' /> and <Cmd sid='ui_151' product='dev' /> are the same as the values of the card) You can set the size of the data to read from the card.
+   * <Cmd sid='ui_110' product='dev' />: (If the set values of <Cmd sid='ui_087' product='dev' /> and <Cmd sid='ui_151' product='dev' /> are the same as the values of the card) You can set the size of the data to read from the card.
 
 * <Cmd sid='ui_010' product='dev' />: You can set up DESFire cards.
 
-  * <Cmd sid='ui_011' product='dev' />: You can use DESFire cards issued by third parties. Only DESFire can be configured.
+   * <Cmd sid='ui_011' product='dev' />: You can use DESFire cards issued by third parties. Only DESFire can be configured.
 
-  * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
+   * <Cmd sid='ui_087' product='dev' />: The key that encrypts communication between smart cards and the device.
 
-  * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
+   * <Cmd sid='ui_151' product='dev' />: You can use it to authenticate when the card's main site key does not match. The auxiliary site key field is only displayed when <Cmd sid='ui_151' product='dev' /> from the previous depth is activated.
 
-  * <Cmd sid='ui_223' product='dev' />: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESFire can be configured.
+   * <Cmd sid='ui_223' product='dev' />: Set the application ID. Serves as a kind of directory that includes a file ID. Only DESFire can be configured.
 
-  * <Cmd sid='ui_347' product='dev' />: Set the file ID. Only DESFire can be configured.
+   * <Cmd sid='ui_347' product='dev' />: Set the file ID. Only DESFire can be configured.
 
-  * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to DES/3DES or AES.
+   * <Cmd sid='ui_222' product='dev' />: You can set the encryption type to DES/3DES or AES.
 
-  * <Cmd sid='ui_145' product='dev' />: You can set the starting point for reading the card number.
+   * <Cmd sid='ui_145' product='dev' />: You can set the starting point for reading the card number.
 
-  * <Cmd sid='ui_110' product='dev' />: (If the set values of <Cmd sid='ui_087' product='dev' /> and <Cmd sid='ui_151' product='dev' /> are the same as the values of the card) You can set the size of the data to read from the card.
+   * <Cmd sid='ui_110' product='dev' />: (If the set values of <Cmd sid='ui_087' product='dev' /> and <Cmd sid='ui_151' product='dev' /> are the same as the values of the card) You can set the size of the data to read from the card.
 
-  * <Cmd sid='ui_386' product='dev' />: Enabling this option enforces the use of secure messaging when authenticating to a device using DESFire EV2 or EV3 cards. This option is only available when <Cmd sid='ui_222' product='dev' /> is set to AES.
+   * <Cmd sid='ui_386' product='dev' />: Enable this option to force secure messaging when authenticating to the device with DESFire EV2 or EV3 cards. This option is only available when <Cmd sid='ui_222' product='dev' /> is set to AES.
 
 * <Cmd sid='ui_146' product='dev' />: You can set the byte order for smart card output.
 

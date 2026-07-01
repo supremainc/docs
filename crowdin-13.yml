@@ -48,6 +48,7 @@ files: [
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_zlib-license.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/reference/**/smartcardissue.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/*/*/release-notes/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/*/*/release-notes-clue/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/opensourcelicenses.txt",
       "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/**/*.mdx",

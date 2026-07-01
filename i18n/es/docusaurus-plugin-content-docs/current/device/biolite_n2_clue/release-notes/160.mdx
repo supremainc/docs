@@ -1,0 +1,54 @@
+---
+id: 160
+title: Firmware Version 1.6.0
+---
+
+# Firmware Version 1.6.0 (Build No. 1.6.0_230602)
+
+Release<Separator/>2023-06-08
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports a new SE processor and new firmware.
+
+1. Improved the structure to prevent authentication fail caused by broken database or cache memory.
+
+1. Improved to select and update only the desired information when updating user information. (Compatible with BioStar v2.9.0 or higher)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When authenticating with a BLE mobile card running on iOS, authentication fails and the device restarts intermittently. <Badge>1.0.0</Badge>
+
+1. Card authentication performance being slower than the previous versions. <Badge>1.5.0</Badge>
+
+1. Improved the OSDP ID to also be deleted when a security tamper occurs on the device connected as a slave. <Badge>1.0.0</Badge>
+
+1. When using the card to authenticate to the device, the card that was normally authenticated fails intermittently. <Badge>1.0.0</Badge>
+
+1. Applying an invalid custom resource causes the device to restart. <Badge>1.0.0</Badge>
+
+1. Deleting all users included in an access group in BioStar 2 does not delete the access group from the device's user information. <Badge>1.0.0</Badge>
+
+1. Device does not recognize certain HID iCLASS Seos cards. <Badge>1.0.0</Badge>
+
+1. When the LAN cable connected to the device is disconnected and reconnected, it takes a long time for IP to be assigned by DHCP. <Badge>1.0.0</Badge>
+
+1. Door Locked event occurs when input signal gets detected while configured to Arm/Disarm by input signal. <Badge>1.0.0</Badge>
+
+1. Intermittently, the door does not open even if authentication succeeds when the door uses the slave device's relay. <Badge>1.0.0</Badge>
+
+</BugLists>

@@ -5,7 +5,7 @@
   },
   {
     "question": "¿Se admite el setting de Administrador maestro después de actualizar el firmware en un device existente? (Productos CE)",
-    "answer": "<b>Administrador maestro</b> solo se <b>admite en productos CE con una etiqueta marcada CE</b>.<br>Usa la etiqueta adhesiva en la parte trasera del producto para identificar <b>productos CE</b> y <b>productos Global (no CE)</b>. Para obtener detalles, consulta la <a href='#master-admin-support-policy'>política de soporte de Administrador maestro</a>."
+    "answer": "<b>Master Administrator</b> solo se <b>admite en productos CE con una etiqueta marcada CE</b>.<br>Usa la etiqueta adhesiva en la parte trasera del producto para identificar <b>productos CE</b> y <b>productos Global (no CE)</b>. Para obtener detalles, consulta la <a href='#master-admin-support-policy'>Política de soporte del Master Administrator</a>."
   },
   {
     "question": "¿Se puede enrollar un Administrador maestro en un device esclavo? (Productos CE)",

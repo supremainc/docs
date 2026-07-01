@@ -1,0 +1,54 @@
+---
+id: 142
+title: Firmware Version 1.4.2
+---
+
+# Firmware Version 1.4.2 (Build No. 1.4.2_220125)
+
+Release<Separator/>2022-02-11
+
+## New Features and Improvements
+
+---
+
+1. Supports a new BLE (Bluetooth Low Energy) chip.
+
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+1. Improved to transmit entire card data, including the parity bit, when a user authenticated the fingerprint while the Wiegand card was registered.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When initializing the master device with the 'Without Network' option, the RS-485 communication key was initialized and the slave device was disconnected <Badge>1.0.0</Badge>.
+
+1. Slave devices are disconnected when the master device is rebooted <Badge>1.0.0</Badge>.
+
+1. The device failed to recognize the iCLASS Seos card intermittently before rebooting the device (BLN2-OAB, BLN2-PAB) <Badge>1.0.0</Badge>.
+
+1. When loading the logs for the user who entered the admin menu using the SDK, the user ID was not displayed <Badge>1.0.0</Badge>.
+
+1. If some ports of the OM-120 connected as a slave are set as a door relay and the device is rebooted, the relay was operated abnormally <Badge>1.0.0</Badge>.
+
+1. PIN authentication did not work properly when using Device Hashkey Management <Badge>1.3.0</Badge>.
+
+1. Abnormal authentication failure occurred when the slave device's auth mode was set to card+fingerprint <Badge>1.3.0</Badge>.
+
+1. When authenticating on a device that has dual authentication set up, the authentication success sound is not output for the dual authentication result, and the home screen is maintained <Badge>1.4.0</Badge>.
+
+1. The 'Delete the Root Certificate' was not displayed when a user with the administrator level accessed the menu on the device where the certificate was stored <Badge>1.3.0</Badge>.
+
+1. Improved to check for the duplication of cards registered with users when transmitting user data from the server to devices <Badge>1.2.0</Badge>.
+
+1. The user ID was abnormally displayed in the event log if the user authenticated with AoC set as the blacklist card when the User ID Type was set to Alphanumeric <Badge>1.0.0</Badge>.
+
+1. When the device is connected as an intelligent slave and the first card registered to the user is a Wiegand card of a format other than 26-bit, the CSN value is output through OSDP when authenticated with the user's credentials other than the card <Badge>1.4.1</Badge>.
+
+1. When setting the elevator to the scheduled unlock zone and using the 'Started by User Authentication' option, the floor is activated normally when a user belonging to the access group authenticates, but the 'Floor released' logs are output <Badge>1.3.0</Badge>.
+
+1. Failed upgrading firmware related to BLE <Badge>1.4.1</Badge>.
+
+</BugLists>

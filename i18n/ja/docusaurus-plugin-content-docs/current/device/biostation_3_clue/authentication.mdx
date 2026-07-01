@@ -1,0 +1,217 @@
+---
+id: authentication
+title: 認証
+description: サポートする認証方式と認証手順について説明します。
+keywords:
+  - 認証モード
+  - 認証オプション
+  - PIN
+  - 顔
+  - 勤怠
+---
+
+サポートする認証方式と認証手順について説明します。
+
+:::info
+
+Suprema CLUe モードを使用する場合、認証モードの登録、編集、削除は Suprema CLUe サーバーでのみ可能で、装置ではできません。
+
+:::
+
+## 認証モード
+
+デバイスの認証モードを設定できます。 <Cmd sid='ui_228' product='dev' />、<Cmd sid='ui_040' product='dev' />、<Cmd sid='ui_323' product='dev' />、<Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして使用でき、各認証モードごとにスケジュールを設定することもできます。
+
+### 認証モードの登録 {#registering-auth-mode}
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-add.svg' ico alone /> を選択します。
+
+4. <Image src='/img/common/ico-add1.svg' ico alone /> を押すと、追加できるクレデンシャルが画面に表示されます。 必要なクレデンシャルを追加します。 クレデンシャルが追加された状態で <Image src='/img/common/ico-cancel.svg' ico alone /> を押すと、追加したクレデンシャルを削除できます。
+
+   <Image src='/img/device/bs3-authmode.png' />
+
+5. 目的の認証モードを設定した後、<Cmd sid='ui_203' product='dev' /> を設定します。
+
+   <div className='overflow-x'>
+
+   | 区分 | 説明 |
+   | :-: | --- |
+   | 顔 | - <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：顔だけを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：顔で認証した後に PIN を入力するモードです。 |
+   | カード / QR コード | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />：カード / QR コードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：カード / QRコードで認証した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後に顔認証またはPIN入力を行うモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後に顔認証とPIN入力の両方を使用するモードです。 |
+   | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：ID を入力した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に顔で認証するか、PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に顔認証と PIN 入力を両方使用するモードです。 |
+
+   </div>
+
+   :::info
+
+   * <Cmd sid='ui_203' product='dev' /> は Suprema CLUe サーバーで設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+
+   * <Cmd sid='ui_042' product='dev' /> 認証を使用するには、<Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_265' product='dev' /> で <Cmd sid='ui_041' product='dev' /> が有効になっている必要があり、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
+
+   :::
+
+6. 設定を保存するには <Cmd sid='ui_037' product='dev' /> を押します。
+
+### 認証モードの編集
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. 編集する認証モードを選択します。
+
+4. [認証モードの登録](#registering-auth-mode)を参照して認証モードを修正した後、<Cmd sid='ui_037' product='dev' /> を押します。
+
+### 認証モードの削除
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-delete.svg' ico alone /> をクリックして削除する項目を選択します。 複数選択することもできます。
+
+4. 選択した項目を削除するには <Cmd sid='ui_037' product='dev' /> を押します。
+
+## 認証オプション
+
+### サーバーマッチング
+
+サーバーマッチングを設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> を押した後、<Cmd sid='ui_265' product='dev' /> で <Cmd sid='ui_187' product='dev' /> を有効にします。
+
+   <Image src='/img/device/bs3-auth-option.png' />
+
+   * <Cmd sid='ui_187' product='dev' />: サーバーマッチングを設定すると、設定した認証モードに応じて装置ユーザー認証またはSuprema CLUeユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
+
+:::info
+
+* <Cmd sid='ui_185' product='dev' /> ではカードと ID のみ使用できます。
+
+* <Cmd sid='ui_185' product='dev' /> を使用する場合、デバイスと Suprema CLUe サーバーの両方でサーバーマッチングを有効にする必要があります。
+
+* Suprema CLUe モードを使用する場合、<Cmd sid='ui_185' product='dev' /> が自動的に有効になります。
+
+:::
+
+### QR認証
+
+QR コード認証を設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> を選択し、<Cmd sid='ui_265' product='dev' /> で <Cmd sid='ui_041' product='dev' /> を有効にします。
+
+   <Image src='/img/device/bs3-auth-option-qr.png' />
+
+   * <Cmd sid='ui_041' product='dev' />：デバイスのカメラによる QR コード認証の使用可否を設定できます。
+
+   * <Cmd sid='ui_329' product='dev' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。 <Cmd sid='ui_041' product='dev' /> が有効な場合にのみ設定できます。
+
+   :::info
+
+   <Cmd sid='ui_041' product='dev' /> を使用するには、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
+
+   :::
+
+## 顔
+
+顔認証に関する設定を変更できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_228' product='dev' /> を選択します。
+
+3. 必要な項目を変更してください。
+
+   <Image src='/img/device/bs3-auth-clue.png' />
+
+   * <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_140' product='dev' /> を <Cmd sid='ui_091' product='dev' /> に設定した場合、顔認証を行うには画面をタッチしてから認証を進めてください。
+
+   * <Cmd sid='ui_115' product='dev' />：設定した時間内に顔を登録できないと、顔登録がキャンセルされます。
+
+   * <Cmd sid='ui_260' product='dev' />：設定した時間内に認証を完了できないと、認証失敗となります。
+
+   * <Cmd sid='ui_117' product='dev' />：顔登録時に重複顔をチェックできます。
+
+   * <Cmd sid='ui_229' product='dev' />：顔認証時にデバイスが顔を検出する領域の位置とサイズを設定できます。
+
+      :::info
+
+      最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト設定のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。
+
+      * 最大顔回転角度：15
+
+      * 顔認識距離：最小 30 cm、最大 100 cm
+
+      * 顔認識領域拡張：無効
+
+      :::
+
+   * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_278' product='dev' />：顔認証時のデバイス動作モードを設定できます。
+
+      * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
+
+      * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
+
+   * <Cmd sid='ui_247' product='dev' />：写真などの偽造顔を用いたユーザー認証を防止できます。 <Cmd sid='ui_278' product='dev' /> を <Cmd sid='ui_359' product='dev' /> に設定すると有効になります。
+
+      :::info
+
+      * 偽造顔検出性能を向上させ、iBeta Level 1 ISO 30107-3 Presentation Attack Detection テストに合格しました。
+
+      * 日差しが強い環境では、<Cmd sid='ui_247' product='dev' /> 機能を <Cmd sid='ui_152' product='dev' /> に設定することを推奨します。
+
+      :::
+
+   * <Cmd sid='ui_070' product='dev' />：マスク検出など顔認証に関する高度な設定を変更できます。
+
+      * <Cmd sid='ui_368' product='dev' />：用途に応じて確認モードを設定できます。
+
+      * <Cmd sid='ui_264' product='dev' />: マスク未着用による認証失敗時に通知するかどうかを設定できます。
+
+      * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。 <Cmd sid='ui_165' product='dev' />に設定すると、マスクを着用していないユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。 <Cmd sid='ui_164' product='dev' />に設定すると、マスクを着用していないユーザーも認証できますが、マスク未着用イベントがログに記録されます。
+
+      * <Cmd sid='ui_124' product='dev' />：マスク着用を検知する感度を設定できます。<Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
+
+         :::info
+
+         * <Cmd sid='ui_123' product='dev' />を使用する場合、装置の用途に応じて<Cmd sid='ui_368' product='dev' />を設定できます。
+
+         * <Cmd sid='ui_267' product='dev' />：認証を実行した後にユーザーのマスク着用を確認します。
+
+         * <Cmd sid='ui_369' product='dev' />：ユーザーのマスク着用を確認した後に認証を実行します。 このモードを使用すると、マスクを着用していないユーザーは認証できません。
+
+         * <Cmd sid='ui_370' product='dev' />：デバイスをマスク着用確認専用として使用できます。 このモードを使用すると、認証に関係なくマスクを着用したユーザーはすべて入退室できます。
+
+         :::
+
+## 勤怠
+
+勤怠モードの登録方法を設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を押し、パスワードを入力してメニューに入ります。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_079' product='dev' /> を選択します。
+
+3. 必要な項目を設定してください。
+
+   <Image src='/img/device/bs3-auth2.png' />
+
+   * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
+
+   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。 勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> を選択し、画面に表示するアイコン、<Cmd sid='ui_085' product='dev' />、<Cmd sid='ui_203' product='dev' /> を設定します。
+
+   * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_199' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_081' product='dev' />：管理者が選択した勤怠イベントのみ使用するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_071' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_279' product='dev' />：作業コードの使用有無を選択できます。
