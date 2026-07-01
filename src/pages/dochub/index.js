@@ -111,7 +111,7 @@ function DocHub({ data }) {
     const cats = [...new Set(data.map(item => item.category?.trim()).filter(Boolean))];
     setCategories(cats);
 
-    const REQUIRED = ["category", "product", "version", "release_date"];
+    const REQUIRED = ["category", "product", "release_date"];
     const errors = data.reduce((acc, item, i) => {
       const missing = REQUIRED.filter(f => !item[f]);
       if (missing.length) {
@@ -175,11 +175,7 @@ function DocHub({ data }) {
       const v = cell.getValue();
       if (!v) return "";
       const row = cell.getRow().getData();
-      if (row.category === 'Platform' || row.category === 'Integration') {
-        return `<span class="dochub-version-badge platform">SW ${v}</span>`;
-      } else {
-        return `<span class="dochub-version-badge">FW ${v}</span>`;
-      }
+      return `<span class="dochub-version-badge">${v}</span>`;
     };
 
     const releaseDateFormatter = (cell) => {
