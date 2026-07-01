@@ -43,6 +43,8 @@ This May, **Suprema Docs** expanded in both scope and scale. The new device **Bi
 
 ### New Devices
 
+The manual for BioStation 3 Max, Suprema's flagship AI-based biometric device, is now available.
+
 * [BioStation 3 Max](../device/biostation_3_max)
 
 ### Device Updates
