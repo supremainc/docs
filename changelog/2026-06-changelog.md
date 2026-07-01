@@ -15,8 +15,7 @@ date: 2026-07-01T12:00
 
 ![](/img/changelogs/document_hub_banner.png)
 
-슈프리마 제품의 매뉴얼, 릴리스 노트, 드릴링 템플릿, A&E 사양서를 한곳에서 다운로드할 수 있는 [**Document Hub**](../reference/dochub)를 오픈했습니다.
-
+슈프리마 제품의 매뉴얼, 릴리스 노트, 드릴링 템플릿, A&E 사양서를 한곳에서 다운로드할 수 있는 [**Document Hub**](../dochub)를 오픈했습니다.
 
 ## AI 카메라
 
@@ -98,11 +97,11 @@ date: 2026-07-01T12:00
 
 ### 릴리스 노트
 
-  * [Door Interface](../device/doorinterface/release-notes/103): 1.0.3 버전 릴리스 노트 추가
+* [Door Interface](../device/doorinterface/release-notes/103): 1.0.3 버전 릴리스 노트 추가
 
-  * [ViOnyx](../device/vionyx/release-notes/101): 1.0.1 버전 릴리스 노트 추가
+* [ViOnyx](../device/vionyx/release-notes/101): 1.0.1 버전 릴리스 노트 추가
 
-  * [BioEntry W3](../device/bioentry_w3/release-notes/103): 1.0.3 버전 릴리스 노트 추가
+* [BioEntry W3](../device/bioentry_w3/release-notes/103): 1.0.3 버전 릴리스 노트 추가
 
 ## 제품 활용 가이드
 

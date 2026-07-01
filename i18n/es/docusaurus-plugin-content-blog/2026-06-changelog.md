@@ -15,7 +15,7 @@ This June, **Suprema Docs** is packed with major news. Suprema's new video secur
 
 ![](/img/changelogs/document_hub_banner.png)
 
-[**Document Hub**](../reference/dochub) is now open — your one-stop destination to download manuals, release notes, drilling templates, and A&E specifications for all Suprema products.
+[**Document Hub**](../dochub) is now open — your one-stop destination to download manuals, release notes, drilling templates, and A&E specifications for all Suprema products.
 
 
 ## AI Camera
@@ -98,11 +98,11 @@ Added guidance on credential reissuance
 
 ### Release Notes
 
-  * [Door Interface](../device/doorinterface/release-notes/103): Added release notes for version 1.0.3
+* [Door Interface](../device/doorinterface/release-notes/103): Added release notes for version 1.0.3
 
-  * [ViOnyx](../device/vionyx/release-notes/101): Added release notes for version 1.0.1
+* [ViOnyx](../device/vionyx/release-notes/101): Added release notes for version 1.0.1
 
-  * [BioEntry W3](../device/bioentry_w3/release-notes/103): Added release notes for version 1.0.3
+* [BioEntry W3](../device/bioentry_w3/release-notes/103): Added release notes for version 1.0.3
 
 ## How-To Guides
 
