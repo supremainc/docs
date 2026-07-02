@@ -11,7 +11,7 @@
 
 .dropdownMenu {
   position: absolute;
-  right: 0;
+  left: 0;
   top: calc(100% + 4px);
   z-index: 100;
   list-style: none;
@@ -26,8 +26,9 @@
 
 .dropdownItem {
   display: block;
+  position: relative;
   width: 100%;
-  padding: 6px 14px;
+  padding: 6px 14px 6px 35px;
   font-size: 0.75rem;
   font-weight: 600;
   color: #333;
@@ -43,25 +44,34 @@
   color: #A32343;
 }
 
+.dropdownItem svg {
+  top: 6px;
+  left: 10px;
+  position: absolute;
+  margin-right: 5px;
+}
+
 button.printbtn {
   width: fit-content;
   width: -moz-fit-content;
-  min-width: 65px;
   height: 26px;
   text-align: center;
   font-size: .7rem;
   font-weight: bold;
-  padding: 3px 5px;
+  padding: 3px 10px 3px 25px;
   border: none;
   background-color: #A32343;
   color: #fff;
   border-radius: 3px;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
 }
 
 .printbtn svg {
-  top: 4px;
-  position: relative;
+  top: 6px;
+  left: 4px;
+  position: absolute;
 }
 
 .btnprint button.feedback__button::before {
@@ -87,12 +97,6 @@ button.printbtn {
 .feedback__button:hover {
   color: #fff;
   text-decoration: none;
-}
-
-.dropdownItem svg {
-  top: 4px;
-  position: relative;
-  margin-right: 5px;
 }
 
 @media print {
