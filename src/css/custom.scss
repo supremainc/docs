@@ -115,6 +115,11 @@ html[lang='en-US'] {
       content: "CE products only";
     }
   }
+  .cookie-consent-button {
+    font-size: .9rem !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 html[lang='es-419'] *, html[lang='es'] {
