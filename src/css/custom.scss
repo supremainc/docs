@@ -128,10 +128,20 @@ html[lang='es-419'] *, html[lang='es'] {
       content: "Solo productos CE";
     }
   }
+  .cookie-consent-button {
+    font-size: .9rem !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
   font-family: 'Noto Sans JP', sans-serif;
+  .cookie-consent-button {
+    font-size: .9rem !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .theme-doc-sidebar-menu {
     li.ce--only a span::after {
       content: "CE 製品のみ";
