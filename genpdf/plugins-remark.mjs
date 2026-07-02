@@ -17,11 +17,12 @@ export function remarkProcessTextDirective() {
       if (!parent || index === null) return;
 
       // Replace textDirective node with plain text
-      // This handles cases where patterns like "1:N " get parsed as directives
-      // Reconstruct the directive as plain text: :name:
+      // This handles cases where patterns like "0:2" or "1:N" get misparsed as directives
+      // A text directive only ever consumes ":name" from the source (no closing colon),
+      // so reconstruct exactly that instead of fabricating a trailing colon
       const plainText = {
         type: 'text',
-        value: `:${node.name}:`
+        value: `:${node.name}`
       };
 
       parent.children[index] = plainText;
