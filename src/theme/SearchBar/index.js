@@ -25,6 +25,15 @@ function getPropertyByPath(obj, path) {
   return path.split('.').reduce((acc, key) => acc?.[key], obj);
 }
 
+// 구글 애널리틱스(GA4, gtag.js)로 검색 이벤트 전송
+// gtag는 docusaurus.config.js의 @docusaurus/plugin-google-gtag 플러그인이 전역에 로드함
+// (preview 환경 등 플러그인이 비활성화된 경우 window.gtag가 없을 수 있으므로 가드 필요)
+function trackSearchEvent(eventName, params) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
+}
+
 // <mark> 태그가 HTML 엔티티 중간을 쪼개는 경우를 처리하면서 엔티티를 디코딩
 // 예: <mark>T&amp;a</mark>mp;<mark>A</mark> → <mark>T&amp;A</mark>
 function decodeHighlightHtml(str) {
@@ -102,6 +111,7 @@ function CustomSnippet({ attribute, hit }) {
 function Hit({hit}) {
   const {siteConfig} = useDocusaurusContext();
   const {indexName} = siteConfig.themeConfig.algolia || {};
+  const {query} = useSearchBox();
   // hierarchy에서 마지막 null이 아닌 레벨 찾기
   const getLastHierarchyLevel = () => {
     for (let i = 6; i >= 0; i--) {
@@ -135,6 +145,14 @@ function Hit({hit}) {
     recentSearches = recentSearches.slice(0, 10);
 
     localStorage.setItem(key, JSON.stringify(recentSearches));
+
+    // GA4로 검색 결과 클릭 이벤트 전송
+    trackSearchEvent('select_content', {
+      content_type: 'search_result',
+      item_id: hit.objectID,
+      search_term: query,
+      link_url: hit.url,
+    });
   };
 
   return (
@@ -313,6 +331,15 @@ function HitsWithQuery({onClose, indexName}) {
   const transformItems = useTransformItems();
   const recentSearches = useRecentSearches(indexName);
   const hitsContainerRef = useRef(null);
+
+  // 검색어 입력이 멈춘 뒤 GA4로 search 이벤트 전송 (타이핑 중 매 글자마다 전송되는 것 방지)
+  useEffect(() => {
+    if (!query) return;
+    const timer = setTimeout(() => {
+      trackSearchEvent('search', { search_term: query });
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [query]);
 
   // 검색 결과 키보드 네비게이션
   useEffect(() => {
