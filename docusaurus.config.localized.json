@@ -42,10 +42,10 @@
     "es": "Aviso de cookies"
   },
   "cookieConsentDescription": {
-    "ko": "Suprema Docs 사이트는 서비스 이용 경험 개선과 방문 통계 분석을 위해 쿠키를 사용합니다. 자세한 내용은 [쿠키 정책](/cookie)에서 확인하세요.",
-    "en": "Suprema Docs uses cookies to improve your browsing experience and analyze site traffic. See our [Cookie Policy](/cookie) for details.",
-    "ja": "Suprema Docsでは、閲覧体験の向上とアクセス状況の分析のためにCookieを使用しています。詳細は[クッキーポリシー](/cookie)をご確認ください。",
-    "es": "Suprema Docs utiliza cookies para mejorar su experiencia de navegación y analizar el tráfico del sitio. Consulte nuestra [Política de cookies](/cookie) para más información."
+    "ko": "Suprema Docs 사이트는 서비스 이용 경험 개선과 방문 통계 분석을 위해 쿠키를 사용합니다. 자세한 내용은 [쿠키 정책](cookie)에서 확인하세요.",
+    "en": "Suprema Docs uses cookies to improve your browsing experience and analyze site traffic. See our [Cookie Policy](cookie) for details.",
+    "ja": "Suprema Docsでは、閲覧体験の向上とアクセス状況の分析のためにCookieを使用しています。詳細は[クッキーポリシー](cookie)をご確認ください。",
+    "es": "Suprema Docs utiliza cookies para mejorar su experiencia de navegación y analizar el tráfico del sitio. Consulte nuestra [Política de cookies](cookie) para más información."
   },
   "cookieConsentAcceptAllText": {
     "ko": "모두 동의",
