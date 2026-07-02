@@ -256,6 +256,33 @@ a.banner {
   }
 }
 
+.scrollHint {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: var(--ifm-color-cmd, #21A9DC);
+  opacity: 0.45;
+  pointer-events: none;
+  animation: scrollHintBounce 1.8s ease-in-out infinite;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scrollHintHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes scrollHintBounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;
