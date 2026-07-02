@@ -58,6 +58,7 @@ files: [
       "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.json",
       "/i18n/en/docusaurus-plugin-content-docs/current/integration/**/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/device/*_ul/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/cookie.mdx",
       # "/i18n/en/docusaurus-plugin-content-docs/current/device/**/*.mdx",
       # "/i18n/en/docusaurus-plugin-content-docs/current/device/vionyx_webserver/*.mdx",
       # "/i18n/en/docusaurus-plugin-content-docs/current/platform/**/*.mdx",

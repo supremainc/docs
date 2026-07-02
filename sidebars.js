@@ -1037,9 +1037,12 @@ function createSidebars(preview) {
       items: [
         'legal/disclaimers',
         'legal/eula',
-        'legal/open-source-licenses'
+        'legal/open-source-licenses',
       ]
     }
+  ],
+  cookie: [
+    'cookie'
   ],
   reference: [
     {

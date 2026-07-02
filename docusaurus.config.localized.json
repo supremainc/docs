@@ -34,5 +34,59 @@
     "en": "Provides best practices and recommendations for hardening BioStar X systems and devices.",
     "ja": "BioStar Xシステムとデバイスのセキュリティを強化するためのベストプラクティスと推奨事項を提供します。",
     "es": "Proporciona mejores prácticas y recomendaciones para fortalecer los sistemas y dispositivos BioStar X."
+  },
+  "cookieConsentTitle": {
+    "ko": "쿠키 사용 안내",
+    "en": "Cookie Notice",
+    "ja": "Cookie(クッキー)の使用について",
+    "es": "Aviso de cookies"
+  },
+  "cookieConsentDescription": {
+    "ko": "Suprema Docs 사이트는 서비스 이용 경험 개선과 방문 통계 분석을 위해 쿠키를 사용합니다. 자세한 내용은 [쿠키 정책](/cookie)에서 확인하세요.",
+    "en": "Suprema Docs uses cookies to improve your browsing experience and analyze site traffic. See our [Cookie Policy](/cookie) for details.",
+    "ja": "Suprema Docsでは、閲覧体験の向上とアクセス状況の分析のためにCookieを使用しています。詳細は[クッキーポリシー](/cookie)をご確認ください。",
+    "es": "Suprema Docs utiliza cookies para mejorar su experiencia de navegación y analizar el tráfico del sitio. Consulte nuestra [Política de cookies](/cookie) para más información."
+  },
+  "cookieConsentAcceptAllText": {
+    "ko": "모두 동의",
+    "en": "Accept All",
+    "ja": "すべて同意する",
+    "es": "Aceptar todo"
+  },
+  "cookieConsentRejectOptionalText": {
+    "ko": "필수만 허용",
+    "en": "Necessary Only",
+    "ja": "必須のみ許可",
+    "es": "Solo necesarias"
+  },
+  "cookieConsentRejectAllText": {
+    "ko": "모두 거부",
+    "en": "Reject All",
+    "ja": "すべて拒否する",
+    "es": "Rechazar todo"
+  },
+  "cookieConsentCategoryNecessaryLabel": {
+    "ko": "필수 쿠키",
+    "en": "Necessary Cookies",
+    "ja": "必須Cookie",
+    "es": "Cookies necesarias"
+  },
+  "cookieConsentCategoryNecessaryDescription": {
+    "ko": "언어 설정, 보안 등 사이트의 기본 기능을 위해 반드시 필요한 쿠키로, 비활성화할 수 없습니다.",
+    "en": "Required for core site functionality such as language settings and security. These cannot be disabled.",
+    "ja": "言語設定やセキュリティなど、サイトの基本機能に必要なCookieです。無効にすることはできません。",
+    "es": "Necesarias para el funcionamiento básico del sitio, como la configuración de idioma y la seguridad. No se pueden desactivar."
+  },
+  "cookieConsentCategoryAnalyticsLabel": {
+    "ko": "분석 쿠키",
+    "en": "Analytics Cookies",
+    "ja": "分析Cookie",
+    "es": "Cookies analíticas"
+  },
+  "cookieConsentCategoryAnalyticsDescription": {
+    "ko": "방문자가 사이트를 어떻게 이용하는지 파악하여 콘텐츠와 사용성을 개선하는 데 활용됩니다.",
+    "en": "Help us understand how visitors use the site so we can improve content and usability.",
+    "ja": "訪問者がサイトをどのように利用しているかを把握し、コンテンツと使いやすさを改善するために使用されます。",
+    "es": "Nos ayudan a entender cómo los visitantes utilizan el sitio para mejorar el contenido y la usabilidad."
   }
 }
