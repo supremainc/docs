@@ -108,10 +108,9 @@ function CustomSnippet({ attribute, hit }) {
   return <span dangerouslySetInnerHTML={{ __html: decodeHighlightHtml(raw) }} />;
 }
 
-function Hit({hit}) {
+function Hit({hit, query}) {
   const {siteConfig} = useDocusaurusContext();
   const {indexName} = siteConfig.themeConfig.algolia || {};
-  const {query} = useSearchBox();
   // hierarchy에서 마지막 null이 아닌 레벨 찾기
   const getLastHierarchyLevel = () => {
     for (let i = 6; i >= 0; i--) {
@@ -414,7 +413,7 @@ function HitsWithQuery({onClose, indexName}) {
         }}
       />
       <Hits
-        hitComponent={Hit}
+        hitComponent={(props) => <Hit {...props} query={query} />}
         transformItems={transformItems}
         escapeHTML={true}
         classNames={{
