@@ -87,6 +87,28 @@ function HomepageHeader() {
   );
 }
 
+function ScrollHint() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setHidden(true);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className={clsx(styles.scrollHint, hidden && styles.scrollHintHidden)} aria-hidden='true'>
+      <svg width='60' height='30' viewBox='0 0 24 24' preserveAspectRatio='none' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <path d='M2 6l10 12 10-12' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+      </svg>
+    </div>
+  );
+}
+
 function Integration() {
   return (
     <div className={clsx('container', styles.grid, styles.integration)}>
@@ -164,6 +186,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description={`${siteConfig.tagline}`}>
       <main className={styles.heroLayout}>
+        <ScrollHint />
         <HomepageHeader />
 
         <div className={clsx('container', styles.headsec)}>
