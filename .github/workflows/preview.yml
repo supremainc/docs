@@ -23,7 +23,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
-        # Build only Korean locale to keep the GitHub Pages artifact under 1 GB.
+        # Preview only: build Korean locale to keep the GitHub Pages artifact under 1 GB.
+        # Production release workflow still builds all locales.
         run: yarn build:preview --locale ko
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
