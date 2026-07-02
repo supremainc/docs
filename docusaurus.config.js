@@ -38,6 +38,9 @@ const config = {
   customFields: {
     context: process.env.CONTEXT || 'production'
   },
+  clientModules: [
+    require.resolve('./src/clientModules/cookieConsentScrollFix.js'),
+  ],
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'log',
   onDuplicateRoutes: 'warn',
@@ -158,6 +161,34 @@ const config = {
     ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
+    // 쿠키 동의 배너: GA4(gtag)에 대한 동의를 받기 위한 용도이므로 gtag와 동일하게 프로덕션에서만 활성화.
+    // Google Analytics(gtag) 플러그인보다 반드시 먼저 로드되어야 함
+    ...(!isPreview ? [[
+      'docusaurus-plugin-cookie-consent',
+      {
+        title: getLocalizedConfigValue('cookieConsentTitle'),
+        description: getLocalizedConfigValue('cookieConsentDescription'),
+        acceptAllText: getLocalizedConfigValue('cookieConsentAcceptAllText'),
+        rejectOptionalText: getLocalizedConfigValue('cookieConsentRejectOptionalText'),
+        rejectAllText: getLocalizedConfigValue('cookieConsentRejectAllText'),
+        toastMode: true,
+        categories: {
+          necessary: {
+            label: getLocalizedConfigValue('cookieConsentCategoryNecessaryLabel'),
+            description: getLocalizedConfigValue('cookieConsentCategoryNecessaryDescription'),
+          },
+          analytics: {
+            label: getLocalizedConfigValue('cookieConsentCategoryAnalyticsLabel'),
+            description: getLocalizedConfigValue('cookieConsentCategoryAnalyticsDescription'),
+          },
+          marketing: { enabled: false },
+          functional: { enabled: false },
+        },
+        googleConsentMode: {
+          enabled: true,
+        },
+      },
+    ]] : []),
     ...(!isPreview ? [[
       '@docusaurus/plugin-google-gtag',
       {

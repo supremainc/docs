@@ -2183,3 +2183,76 @@ footer {
     display: none;
   }
 }
+
+// 쿠키 동의 배너(docusaurus-plugin-cookie-consent) 스타일
+// 플러그인은 --ifm-background-color(페이지 배경)를 사용해 라이트 모드에서 배경이 페이지와 구분되지 않으므로
+// 이 사이트의 다른 플로팅 UI(Feedback, SearchBar 등)와 동일하게 --ifm-background-surface-color로 대체
+.cookie-consent-modal.cookie-consent-toast {
+  background-color: var(--ifm-background-surface-color) !important;
+}
+
+// 플러그인 CSS는 --ifm-heading-color(값: inherit)를 var()로 재참조하는데,
+// 커스텀 속성에 저장된 CSS 전역 키워드가 var()를 거치면 부모 색상이 아닌 속성 초기값(검정)으로
+// 계산되는 브라우저 동작 때문에 다크 모드에서 제목이 검게 보임 → 실제로 값이 채워지는 변수로 대체
+.cookie-consent-title {
+  color: var(--ifm-font-color-base) !important;
+}
+
+// 플러그인 CSS는 버튼 스타일을 카멜케이스 클래스(.cookie-consent-buttonPrimary 등)로 정의하지만
+// JS는 하이픈 표기(cookie-consent-button-primary)로 클래스를 생성해 서로 매칭되지 않음 →
+// 실제 생성되는 클래스명 기준으로 원래 의도된 스타일을 재정의
+.cookie-consent-button-primary {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-font-color-base-inverse, #ffffff);
+  border: none;
+
+  &:hover:not(:disabled) {
+    background-color: var(--ifm-color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--ifm-global-shadow-md);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.cookie-consent-button-secondary {
+  // --ifm-color-secondary는 이 사이트에서 라이트/다크 모드 값이 동일(고정 밝은 회색)하고,
+  // --ifm-font-color-base-inverse는 어두운 배경 위 밝은 글자용이라 밝은 회색 배경과 만나면 대비가 사라짐 →
+  // 실제로 테마에 따라 값이 바뀌는 emphasis 회색 + 기본 텍스트 색상 조합으로 대체
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  border: none;
+
+  &:hover:not(:disabled) {
+    background-color: var(--ifm-color-emphasis-300);
+    transform: translateY(-1px);
+    box-shadow: var(--ifm-global-shadow-md);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.cookie-consent-button-text {
+  background-color: transparent;
+  color: var(--ifm-link-color);
+  border: none;
+  text-decoration: underline;
+  font-weight: var(--ifm-font-weight-base, 400);
+
+  &:hover:not(:disabled) {
+    color: var(--ifm-link-hover-color);
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 769px) {
+  .cookie-consent-toast {
+    left: auto !important;
+    right: 20px !important;
+    bottom: 20px !important;
+  }
+}
