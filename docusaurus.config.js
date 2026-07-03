@@ -571,7 +571,7 @@ const config = {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: !isPreview ? 'https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg' : 'img/suprema-logo-bottom.svg',
+          src: 'https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg',
           width: '173px',
         },
         copyright: getLocalizedConfigValue('copyright'),
