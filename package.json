@@ -134,7 +134,7 @@
   },
   "lint-staged": {
     "static/img/**/*.{png,svg}": [
-      "node scripts/optimize-staged-images.js"
+      "node utils/optimize-staged-images.js"
     ]
   }
 }
