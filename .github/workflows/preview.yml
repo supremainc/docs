@@ -24,6 +24,12 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build:preview
+      - name: Remove duplicated locale img folders
+        # Docusaurus는 다국어 빌드 시 static/img 전체를 로케일마다(en/es/ja) 그대로
+        # 복사한다. Image/ProdImg 컴포넌트가 preview에서 공용 루트 /img 경로만
+        # 참조하도록 되어 있어 로케일별 사본은 쓰이지 않으므로 삭제해 아티팩트
+        # 용량을 줄인다 (GitHub Pages 1GB 제한 대응).
+        run: rm -rf build/en/img build/es/img build/ja/img
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
@@ -32,6 +38,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
           publish_dir: ./build
+          force_orphan: true
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
