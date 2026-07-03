@@ -20,7 +20,8 @@
     "translate:file": "tsx src/plugins/translate/index.ts --file",
     "mdx-to-html": "node genpdf/index.mjs",
     "build:postman": "node generate-postman-collection.js",
-    "addcodesample": "node utils/addCodeSamples.js"
+    "addcodesample": "node utils/addCodeSamples.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
@@ -81,9 +82,11 @@
     "gray-matter": "^4.0.3",
     "hanspell": "^0.9.7",
     "hast-util-to-html": "^9.0.4",
+    "husky": "^9.1.7",
     "image-size": "^2.0.2",
     "jiti": "^2.2.1",
     "js-yaml": "^4.1.1",
+    "lint-staged": "^17.0.8",
     "markdown-it": "^14.1.0",
     "markdown-it-code-block": "^0.1.0",
     "md5": "^2.3.0",
@@ -128,5 +131,10 @@
   },
   "engines": {
     "node": ">=20.0"
+  },
+  "lint-staged": {
+    "static/img/**/*.{png,svg}": [
+      "node scripts/optimize-staged-images.js"
+    ]
   }
 }
