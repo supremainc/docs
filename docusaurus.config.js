@@ -260,7 +260,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: !isPreview ? 'https://supremadocs.blob.core.windows.net/img/sns_img02.jpg' : 'img/sns_img02.jpg',
+      image: 'https://supremadocs.blob.core.windows.net/img/sns_img02.jpg',
       ...(isPreview ? {
         announcementBar: {
           id: 'annoucementbar',
@@ -279,8 +279,8 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: !isPreview ? 'https://supremainc.github.io/docs/img/suprema-logo.svg' : 'img/suprema-logo.svg',
-          srcDark: !isPreview ? 'https://supremainc.github.io/docs/img/suprema-logo-white.svg' : 'img/suprema-logo-white.svg',
+          src: 'https://supremadocs.blob.core.windows.net/img/suprema-logo.svg',
+          srcDark: 'https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
