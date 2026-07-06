@@ -47,8 +47,7 @@ function createSidebars(preview) {
               'platform/clue/fw-update',
               'platform/clue/add-device',
               'platform/clue/add-door',
-              'platform/clue/mobile-app-start',
-              'platform/clue/clue-dynamic-qr-code',
+              'platform/clue/mobile-app-start'
             ]
           },
           {
@@ -66,6 +65,7 @@ function createSidebars(preview) {
             label: '개발자',
             items: [
               'platform/clue/clue-api-guide',
+              'platform/clue/clue-dynamic-qr-code',
               {
                 type: 'link',
                 href: 'pathname:///api/clue',
