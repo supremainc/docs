@@ -280,7 +280,7 @@ const config = {
               {
                 type: 'doc',
                 label: 'CLUe',
-                docId: 'platform/clue/web-portal-getting-started'
+                docId: 'platform/clue/index'
               }
             ]
           },
