@@ -33,10 +33,14 @@ function createSidebars(preview) {
         collapsed: false,
         collapsible: false,
         className: 'p-title',
+        link: {
+          type: 'doc',
+          id: 'platform/clue/index',
+        },
         items: [
           {
             type: 'category',
-            label: '관리자 가이드',
+            label: 'CLUe 웹 포털 가이드',
             items: [
               'platform/clue/web-portal-getting-started',
               'platform/clue/service-settings',
@@ -44,14 +48,29 @@ function createSidebars(preview) {
               'platform/clue/add-device',
               'platform/clue/add-door',
               'platform/clue/mobile-app-start',
-              'platform/clue/dynamic-qr-code',
+              'platform/clue/clue-dynamic-qr-code',
             ]
           },
           {
             type: 'category',
-            label: '방문자 가이드',
+            label: 'CLUe Visitor 가이드',
             items: [
               'platform/clue/visitor-start',
+              'platform/clue/visitor-settings',
+              'platform/clue/visitor-invite',
+              'platform/clue/visitor-dynamic-qr-code',
+            ]
+          },
+          {
+            type: 'category',
+            label: '개발자',
+            items: [
+              'platform/clue/clue-api-guide',
+              {
+                type: 'link',
+                href: 'pathname:///api/clue',
+                label: 'CLUe API',
+              }
             ]
           }
         ]

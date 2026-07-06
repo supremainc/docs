@@ -1310,6 +1310,8 @@ footer {
     content: counter(column-count) ". ";
   }
   .columns {
+    margin-bottom: 1rem;
+    position: relative;
     .features {
       p.hasimg {
         margin-bottom: 0;
