@@ -304,6 +304,11 @@ const config = {
                 type: 'doc',
                 label: 'BioStar Air',
                 docId: 'platform/biostar_air/index'
+              },
+              {
+                type: 'doc',
+                label: 'CLUe',
+                docId: 'platform/clue/web-portal-getting-started'
               }
             ]
           },

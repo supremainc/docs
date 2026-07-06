@@ -1169,8 +1169,17 @@ footer {
     }
     figcaption {
       font-size: .8rem;
+      font-weight: 600;
       color: var(--ifm-color-color-gray);
       text-align: left;
+      background: var(--ifm-color-border);
+      width: fit-content;
+      padding: 0.2rem 0.5rem;
+      position: relative;
+      top: -7px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      color: var(--main-black);
     }
   }
 
@@ -1319,6 +1328,8 @@ footer {
     content: counter(column-count) ". ";
   }
   .columns {
+    margin-bottom: 1rem;
+    position: relative;
     .features {
       p.hasimg {
         margin-bottom: 0;

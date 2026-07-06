@@ -1,0 +1,1833 @@
+{
+  "info": {
+    "_postman_id": "8f7a505a-5efc-4458-b3c2-6ce891f9a8a4",
+    "name": "Suprema CLUe API",
+    "description": "All requests use the `https://api.moon.supremainc.com/v1` and `{{apiKey}}` collection variables. Set `{{apiKey}}` to the API key issued from the CLUe Web Portal (Place Group → Settings → Admin → Manage API Keys); it is sent as a Bearer token via the collection-level Authorization setting, inherited by every request.\n\nFor more information on issuing CLUe API keys, see [CLUe API Guide](../platform/clue/clue-api-guide).\n\n## API Basics\n\n**Base URL:** `https://api.moon.supremainc.com/v1` — all requests must be made over HTTPS.\n\nCLUe follows RESTful principles, using `GET`, `POST`, `PATCH`, and `DELETE`. Request and response bodies are JSON-encoded.\n\n**Success response**: HTTP `200`\n\n| field | Desc | Optional |\n| --- | --- | --- |\n| `code` | API Response Code | |\n| `status` | API Response Status | |\n| `message` | API Response Message | true |\n| `data` | API Response Data | true |\n\n**Fail response**: HTTP `400` / `500`\n\n| field | Desc | Optional |\n| --- | --- | --- |\n| `errors` | API fail Response | |\n| `errors.code` | Fail error code | |\n| `errors.message` | Fail reference message | |\n| `errors.details` | Fail details | true |\n\n\n#### General Error Codes\n\n| code | desc |\n| --- | --- |\n| `e1000` | Internal Server Error |\n| `e1001` | Permission Denied |\n| `e1002` | Not Supported |\n| `e1003` | Invalid Format |\n| `e1004` | Json Parse Error |\n| `e1005` | Method Argument Not Valid |\n| `e1006` | Bad Request |\n| `e1007` | Resource Not Exists |\n| `e1008` | Method Argument Type Mismatch |\n| `e1009` | Missing Request Header |\n\n## API Limit\n\nCLUe has an API call traffic limit of **300 calls per 5 minutes** per API, per source. For face enrollment specifically, add some sleep time between calls to account for template extraction and device sync.\n\n## Folders in this collection\n\n- **User & Face Management** — create users, enroll faces, and pre-check duplicate faces via device.\n- **User & Card Management** — enroll CSN/Wiegand cards, manage doors, and modify/delete auths.\n- **Fingerprint Enrollment** — enroll a fingerprint via device scan.\n- **RF Card Enrollment** — enroll an RF card via device scan.\n- **Biometric Data Link** — link-based biometric storage instead of storing biometrics on the CLUe server.\n- **Door Control** — remote unlock/lock.\n- **Device Display** — device images and on-screen notifications.\n- **Event Logs** — retrieve access/device/place event logs.\n- **Dynamic QR Code** — generate/list/retrieve/delete CLUe dynamic QR codes for VENDOR-integrated access.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User & Face Management",
+      "item": [
+        {
+          "name": "Create User & Enroll Face",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Creates a CLUe user and enrolls a face credential for the given place.\n\nA face-supported Suprema device must already be added to the place, and a door must be configured for use through the CLUe web portal before calling this API.\n\n- **user** refers to CLUe's internal management for global user administration.\n- **auth** includes credentials such as face images and card IDs, which are specific to the given place.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| Authorization | JWT AccessToken (Bearer {{apiKey}}) |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n#### Body notes\n\n- `user.key`: required, globally unique, 1-64 chars, lowercase letters/numbers and `- _ @ .` only. Use your company initial as a prefix.\n- `auth.startTime` / `auth.endTime`: access allow period (epoch ms). Do not exceed Feb 2038 for endTime.\n- `auth.doorAccessType`: `ALL_DOOR` or `SPECIFIC` (with `doorIds`, e.g. `[1, 2]`).\n- `auth.scheduleType`: `ALWAYS`, or omit and set `scheduleId` for a specific weekday schedule.\n- `auth.credentials.name`: shown on the device display if entered.\n- `auth.credentials.faceImages`: base64 encoded face image(s), up to two allowed.\n- `auth.activeStatus`: mandatory, `ACTIVE` or inactive to disable.\n\n**Name field REGEX:** `^(?=.{1,50}$)[\\p{L}\\p{N}\\-ー_・\\uFF66-\\uFF9D]+(?:[ 　][\\p{L}\\p{N}\\-ー_・\\uFF66-\\uFF9D]+)*$`\n\n> When calling this API repeatedly (bulk enrollment), set at least 300ms between calls to allow time for template extraction and device sync.\n\n#### Error Response codes (face quality)\n\n| code | desc |\n| --- | --- |\n| f1000 | FaceHeadPoseAngleExceedThreshold (Tilted face) |\n| f1001 | FaceImageQualityTooLow |\n| f1002 | FaceDetectFailed |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"key\": \"{{uniqueKey for each user}}\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test12345678\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "places",
+                    "{{placeId}}",
+                    "auths"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"user\": {\n        \"key\": \"{{uniqueKey for each user}}\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test12345678\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"authId\": 48363,\n        \"lastModifiedAt\": 1700721664157,\n        \"user\": {\n            \"userId\": 44285,\n            \"key\": \"yourcompanyname.1234\",\n            \"name\": \"test12345678\",\n            \"realNameAuthStatusType\": \"REAL_NAME_AUTH_BEFORE\"\n        },\n        \"auth\": {\n            \"startTime\": 1690853501093,\n            \"endTime\": 2147353200000,\n            \"doorAccessType\": \"ALL_DOOR\",\n            \"scheduleType\": \"ALWAYS\",\n            \"credentials\": {\n                \"modes\": [\"FACE\"],\n                \"name\": \"test12345678\",\n                \"faceImages\": [\"{{faceImageData}}\"]\n            },\n            \"activeStatus\": \"ACTIVE\"\n        }\n    }\n}"
+            },
+            {
+              "name": "Face Quality Error",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "places",
+                    "{{placeId}}",
+                    "auths"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"user\": {\n        \"key\": \"{{uniqueKey for each user}}\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test12345678\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"errors\": [\n        {\n            \"code\": \"f1000\",\n            \"message\": \"\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get FaceMatching Support Device List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/devices/face-matchable?placeId={{placeId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "devices",
+                "face-matchable"
+              ],
+              "query": [
+                {
+                  "key": "placeId",
+                  "value": "{{placeId}}",
+                  "description": "The unique id of the place."
+                }
+              ]
+            },
+            "description": "Returns the list of devices in a place that support server-assisted duplicate face pre-check.\n\nThe server does not perform face matching itself (storing/maintaining face templates for every place in memory would be costly). Instead, face matching is executed on connected devices. This assumes all users to be checked are already synced to the target device and that the device is online.\n\n> Requires BS3 firmware released on or after 2025/12/23.\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/devices/face-matchable?placeId={{placeId}}",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "devices",
+                    "face-matchable"
+                  ],
+                  "query": [
+                    {
+                      "key": "placeId",
+                      "value": "{{placeId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": [\n        {\n            \"deviceId\": 1454,\n            \"deviceName\": \"BS3_APWB-538159106\",\n            \"deviceSerial\": \"538159106\",\n            \"deviceType\": \"BioStation3\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Device FaceMatching Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/devices/{{deviceId}}/match-face",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "devices",
+                "{{deviceId}}",
+                "match-face"
+              ]
+            },
+            "description": "Asks the server to arrange the designated device to conduct a face matching check for the supplied image, in order to pre-check whether a face has already been enrolled before enrollment.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| deviceId | deviceId |\n\n#### Body\n\n| Field | Type | Description |\n| --- | --- | --- |\n| base64Image | String | base64 converted face photo |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base64Image\": \"base64_converted_facephoto\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/devices/{{deviceId}}/match-face",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "devices",
+                    "{{deviceId}}",
+                    "match-face"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"base64Image\": \"base64_converted_facephoto\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"taskUuid\": \"4f5b42f6-29d0-4176-9fea-3fb3ada73597\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get FaceMatching Result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/msa/tasks/match-faces/{{taskUuid}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "msa",
+                "tasks",
+                "match-faces",
+                "{{taskUuid}}"
+              ]
+            },
+            "description": "Retrieves the result of a face matching task. If the task takes more than 5 seconds, a timeout event is returned.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| taskUuid | taskUuid returned from the Device FaceMatching Request |\n\nIf `duplicatedAuthIds` is non-empty, it lists the `authId`s matched as duplicate faces. An empty list means no duplicate faces were found on the device.\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/msa/tasks/match-faces/{{taskUuid}}",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "msa",
+                    "tasks",
+                    "match-faces",
+                    "{{taskUuid}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"taskId\": \"4f5b42f6-29d0-4176-9fea-3fb3ada73597\",\n        \"taskType\": \"MATCH_FACE\",\n        \"status\": \"COMPLETED\",\n        \"duplicatedAuthIds\": [],\n        \"createdAt\": 1766559855620,\n        \"expiredAt\": 1766559860620\n    }\n}"
+            }
+          ]
+        }
+      ],
+      "description": "Create users, enroll faces, and pre-check duplicate faces via connected devices."
+    },
+    {
+      "name": "User & Card Management",
+      "item": [
+        {
+          "name": "Create User & Enroll Card (CSN)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Creates a CLUe user and enrolls a CSN card credential.\n\nThe system supports two card types: **CSN** and **Wiegand**.\n\n- For **CSN**, enter the card serial number without hyphens.\n- For **Wiegand**, insert a hyphen in the middle to separate the FC Code area from the Card ID area. The Card ID value must follow the device's Wiegand output format, configurable under the Device Settings tab.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user\": {\n    \"key\": \"{{uniqueKey for each user}}\"\n  },\n  \"auth\": {\n    \"activeStatus\": \"ACTIVE\",\n    \"startTime\": 1757516400000,\n    \"endTime\": 1757602740000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n      \"cards\": [\n        {\n          \"cardNumber\": \"12345\",\n          \"formatType\": \"CSN\"\n        }\n      ],\n      \"fingerprints\": [],\n      \"name\": \"test1234567\",\n      \"modes\": [\"CARD\"]\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User & Enroll Card (Wiegand)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Creates a CLUe user and enrolls a Wiegand card credential.\n\nThe system supports two card types: **CSN** and **Wiegand**.\n\n- For **CSN**, enter the card serial number without hyphens.\n- For **Wiegand**, insert a hyphen in the middle to separate the FC Code area from the Card ID area. The Card ID value must follow the device's Wiegand output format, configurable under the Device Settings tab.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user\": {\n    \"key\": \"{{uniqueKey for each user}}\"\n  },\n  \"auth\": {\n    \"activeStatus\": \"ACTIVE\",\n    \"startTime\": 1757516400000,\n    \"endTime\": 1757602740000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n      \"cards\": [\n        {\n          \"cardNumber\": \"12-123\",\n          \"formatType\": \"WIEGAND\"\n        }\n      ],\n      \"fingerprints\": [],\n      \"name\": \"test1234567\",\n      \"modes\": [\"CARD\"]\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sync Users to Designated Doors Only",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Creates/syncs a user's credentials only to specific doors instead of all doors in the place.\n\n- `user.key`: User key.\n\n- `startTime`: Start time of the access period.\n\n- `endTime`: End time of the access period.\n- `doorAccessType`: Set to `SPECIFIC` to sync to designated doors only.\n- `doorIds`: Door IDs, found via the CLUe web portal or the Door List API.\n\n- `scheduleType`: If specific weekday schedule limit required, please remove this field and create schedule from webportal and set like `scheduleId` : 1\n\n- `credentials.name`: If name is entered, it will be shown on the device display.\n\n- `credentials.faceImages`: Base64 encoded face image(s), up to two allowed.\n\n- `modes`: If you enroll card or other credentials, you can add modes to use for this user.\n\n- `activeStatus`: Mandatory, set to `ACTIVE` or inactive to disable.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"key\": \"yourcompanyname.1234\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"SPECIFIC\",\n        \"doorIds\": [1],\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test123\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ],\n            \"modes\": [\"FACE\"]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Door List in Place",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/doors?q=&page=0&size=20&sort=id,desc",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "doors"
+              ],
+              "query": [
+                {
+                  "key": "placeId",
+                  "value": "{{placeId}}",
+                  "description": "Place ID"
+                },
+                {
+                  "key": "q",
+                  "value": "string",
+                  "disabled": true,
+                  "description": "Search item"
+                },
+                {
+                  "key": "page",
+                  "value": "string",
+                  "disabled": true,
+                  "description": "Paging #"
+
+                },
+                {
+                  "key": "size",
+                  "value": "string",
+                  "disabled": true,
+                  "description": "Data size"
+                },
+                {
+                  "key": "sort",
+                  "value": "id,desc",
+                  "disabled": true,
+                  "description": "Sort order (`id,asc` / `id,desc`)"
+                }
+              ]
+            },
+            "description": "Returns the list of doors configured in the given place.\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/doors",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "places",
+                    "{{placeId}}",
+                    "doors"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n  \"total\": 1,\n  \"data\": [\n    {\n      \"doorId\": 1,\n      \"doorStatus\": \"NORMAL\",\n      \"doorName\": \"Door A\",\n      \"placeId\": 1,\n      \"entryDevice\": {\n        \"deviceId\": 3,\n        \"deviceType\": \"XStation2\",\n        \"deviceModelName\": \"XS2_DPB\",\n        \"deviceName\": \"XStation2\",\n        \"deviceDescription\": \"Front door2\",\n        \"deviceSerial\": \"2\",\n        \"deviceOrderType\": \"ENTRY\",\n        \"deviceRS485Type\": \"SLAVE\",\n        \"masterDeviceName\": \"DeviceName1\",\n        \"masterDeviceId\": 2,\n        \"placeId\": 1,\n        \"doorId\": 1,\n        \"timeZone\": \"Asia/Seoul\",\n        \"gmtOffsetSeconds\": 32400,\n        \"firstConnectedAt\": 1718696095374,\n        \"network\": {\n          \"useDHCP\": false,\n          \"cloudServer\": \"https://api.moon.supremainc.com\"\n        },\n        \"connectivity\": {\n          \"connected\": false\n        },\n        \"allowCredentials\": [],\n        \"allowOpenDeviceByQrCodeWhenDeviceIncident\": true,\n        \"lastSyncedDeviceLocalTimeAt\": 1718696095374\n      },\n      \"exitDevice\": {\n        \"deviceId\": 2,\n        \"deviceType\": \"XStation2\",\n        \"deviceModelName\": \"XS2_DPB\",\n        \"deviceName\": \"XStation2\",\n        \"deviceDescription\": \"Front door1\",\n        \"deviceSerial\": \"1\",\n        \"deviceOrderType\": \"EXIT\",\n        \"deviceRS485Type\": \"MASTER\",\n        \"placeId\": 1,\n        \"doorId\": 1,\n        \"timeZone\": \"Asia/Seoul\",\n        \"gmtOffsetSeconds\": 32400,\n        \"firstConnectedAt\": 1718696095374,\n        \"network\": {\n          \"useDHCP\": false,\n          \"cloudServer\": \"https://api.moon.supremainc.com\"\n        },\n        \"connectivity\": {\n          \"connected\": false\n        },\n        \"allowCredentials\": [],\n        \"allowOpenDeviceByQrCodeWhenDeviceIncident\": true,\n        \"lastSyncedDeviceLocalTimeAt\": 1718696095374\n      },\n      \"secureIODevices\": [\n        {\n          \"deviceId\": 3,\n          \"deviceType\": \"SecureIOModule\",\n          \"deviceModelName\": \"SIO2\",\n          \"deviceName\": \"SecureIO2\",\n          \"deviceDescription\": \"SecureIO desc\",\n          \"deviceSerial\": \"3\",\n          \"deviceRS485Type\": \"SLAVE\",\n          \"masterDeviceName\": \"DeviceName1\",\n          \"masterDeviceId\": 1,\n          \"placeId\": 1,\n          \"doorId\": 1,\n          \"firstConnectedAt\": 1718696095374,\n          \"network\": {\n            \"useDHCP\": false,\n            \"cloudServer\": \"https://api.moon.supremainc.com\"\n          },\n          \"connectivity\": {\n            \"connected\": false\n          },\n          \"allowCredentials\": [],\n          \"allowOpenDeviceByQrCodeWhenDeviceIncident\": false,\n          \"lastSyncedDeviceLocalTimeAt\": 1718696095374\n        }\n      ],\n      \"autoLockTimeoutMS\": 3000,\n      \"sensorIgnore\": false,\n      \"heldOpenAlarm\": true,\n      \"heldOpenAlarmTimeoutMS\": 2000,\n      \"forceOpenAlarm\": true,\n      \"relay\": {\n        \"deviceId\": 3,\n        \"port\": 0,\n        \"deviceSerial\": \"3\"\n      },\n      \"sensor\": {\n        \"deviceId\": 3,\n        \"deviceSerial\": \"3\",\n        \"port\": 0,\n        \"switchType\": \"NORMAL_CLOSE\"\n      },\n      \"button\": {\n        \"deviceId\": 3,\n        \"deviceSerial\": \"3\",\n        \"port\": 1,\n        \"switchType\": \"NORMAL_OPEN\"\n      },\n      \"schedule\": {\n        \"scheduleOpen\": true,\n        \"scheduleClose\": false,\n        \"scheduleOpenId\": 1,\n        \"scheduleCloseId\": 2\n      }\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Modify Auth (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/auths/{{authId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "auths",
+                "{{authId}}"
+              ]
+            },
+            "description": "Partially modifies an auth. `authId` must be passed as a path parameter. Only the `auth` fields should be sent (NOT the `user` part, i.e. no `userId`/`key`).\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| authId | authId |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"startTime\": 1682651679686,\n    \"endTime\": 2147353140000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"activeStatus\": \"ACTIVE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modify Auth (Overwrite)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/auths/{{authId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "auths",
+                "{{authId}}"
+              ]
+            },
+            "description": "Fully overwrites an auth's credentials. `authId` must be passed as a path parameter.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| authId | authId |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"startTime\": 1682651679686,\n    \"endTime\": 2147353140000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n        \"modes\": [\"FACE\"],\n        \"faceImages\": [\n            \"{{base64 encoded face image}}\"\n        ]\n    },\n    \"activeStatus\": \"ACTIVE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Auth",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/auths/{{authId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "auths",
+                "{{authId}}"
+              ]
+            },
+            "description": "Deletes an auth. `authId` must be passed as a path parameter. When an auth is deleted, the user's `key` value is retained for future use.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| authId | authId |\n\n"
+          },
+          "response": []
+        }
+      ],
+      "description": "Create users, enroll CSN/Wiegand cards, manage doors, and modify/delete auths."
+    },
+    {
+      "name": "Fingerprint Enrollment",
+      "item": [
+        {
+          "name": "Fingerprint Scan Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/credential-scans/request",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "credential-scans",
+                "request"
+              ]
+            },
+            "description": "Requests a fingerprint scan on a device. Check the device ID through the web portal and call the API using the corresponding ID.\n\n![Device ID](/img/clue/clue-device-id-sample.png)\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `deviceId` | Number | true | Device ID |\n| `verifyToken` | String | false | Verification token |\n| `credentialType` | String | true | `CARD` \\| `FINGERPRINT` |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceId\": {device ID},\n  \"credentialType\": \"FINGERPRINT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/credential-scans/request",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "credential-scans",
+                    "request"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"deviceId\": {device ID},\n  \"credentialType\": \"FINGERPRINT\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"tokenId\": 1,\n        \"token\": \"{response token}\",\n        \"expiredAt\": 1730794096996,\n        \"credentialType\": \"FINGERPRINT\",\n        \"timeout\": 10,\n        \"fingerprintScoreThreshold\": 50\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Scan Result Request (Fingerprint)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/credential-scans/{{token}}/result",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "credential-scans",
+                "{{token}}",
+                "result"
+              ]
+            },
+            "description": "Since fingerprint scanning on the device may take some time, request the scan result separately to check its completion status and retrieve the fingerprint data.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| token | token |\n\n\n#### Response fields\n\n| Field | Type | Nullable | Desc |\n| --- | --- | --- | --- |\n| `code` | Number | false | API response code |\n| `status` | Boolean | false | API response status |\n| `message` | String | false | API response message |\n| `data.tokenId` | Number | false | Token Index ID |\n| `data.token` | String | false | Token Serial |\n| `data.card` | Object | true | Card Information |\n| `data.card.cardNumber` | String | false | Card Number |\n| `data.card.formatType` | String | false | `CSN` \\| `WIEGAND` |\n| `data.card.formatData` | String | true | Card Format Data |\n| `data.fingerprint` | Object | true | Fingerprint data |\n| `data.fingerprint.template` | String | false | Fingerprint (Base64 Encoded) |\n| `data.fingerprint.score` | Number | false | Score |\n| `data.fingerprint.scoreThreshold` | Number | false | Score Threshold |\n| `data.duplicatedAuthIds` | Array | true | Duplicate authId List |\n| `data.status` | String | false | `NONE` \\| `SCANNING` \\| `COMPLETED` \\| `FAILED` |\n| `data.failReason` | String | true | `LOW_QUALITY` \\| `TIMEOUT` \\| `ARGUMENT_ERROR` \\| `VERIFY_FAIL` \\| `CANCELLED` \\| `PAST_REQUEST` \\| `UNKNOWN` |\n| `data.expiredAt` | Number | false | Scan Expiration Time (Epoch Milliseconds) |\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/credential-scans/{{token}}/result",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "credential-scans",
+                    "{{token}}",
+                    "result"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"tokenId\": 1028,\n        \"token\": \"64957838b59e4cacb821ba559395a9a9\",\n        \"status\": \"COMPLETED\",\n        \"credentialType\": \"FINGERPRINT\",\n        \"fingerprint\": {\n            \"template\": \"{template data}\",\n            \"score\": 94,\n            \"scoreThreshold\": 70\n        },\n        \"score\": 94,\n        \"expiredAt\": 1739840884753\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Add User with Fingerprint Scan Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Registers a user using the token obtained from the Scan Result Request. Duplicate fingerprint checks are performed on the device (not the server) during registration; a duplicate will surface as a failed authentication log later, not an enrollment error.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | place ID |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"key\": \"test123\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test123\"\n        },\n        \"registrationTokens\": [\"fingerprint scan token\"],\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add User with Fingerprint Data",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Registers a user directly with fingerprint template data (instead of a scan token). Response is the same shape as the face enrollment response; modify/delete work the same way as other auths.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | place ID |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user\": {\n    \"key\": \"timlee4\"\n  },\n  \"auth\": {\n    \"startTime\": 1681225200000,\n    \"endTime\": 2147353200000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n      \"fingerprints\": [\n        {\n          \"fingerFormat\": \"TEMPLATE_FORMAT_SUPREMA\",\n          \"fingerFlag\": \"NONE\",\n          \"fingerData\": \"{fingerprint data}\"\n        }\n      ],\n      \"name\": \"timlee4\"\n    },\n    \"activeStatus\": \"ACTIVE\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Enroll a fingerprint via device scan: request a scan, poll for the scan result/token, then add the user with the token or raw fingerprint data. Requires a fingerprint & CLUe supported Suprema device already added to the place with a configured door."
+    },
+    {
+      "name": "RF Card Enrollment",
+      "item": [
+        {
+          "name": "RF Card Scan Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/credential-scans/request",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "credential-scans",
+                "request"
+              ]
+            },
+            "description": "Requests an RF card scan on a device. Check the device ID through the web portal and call the API using the corresponding ID.\n\n![Device ID](/img/clue/clue-device-id-sample.png)\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `deviceId` | Number | true | Device ID |\n| `verifyToken` | String | false | Verification token |\n| `credentialType` | String | true | `CARD` \\| `FINGERPRINT` |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceId\": {device ID},\n  \"credentialType\": \"CARD\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/credential-scans/request",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "credential-scans",
+                    "request"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"deviceId\": {device ID},\n  \"credentialType\": \"CARD\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"tokenId\": 1,\n        \"token\": \"{response token}\",\n        \"expiredAt\": 1730794096996,\n        \"credentialType\": \"CARD\",\n        \"timeout\": 10\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Scan Result Request (Card)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/credential-scans/{{token}}/result",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "credential-scans",
+                "{{token}}",
+                "result"
+              ]
+            },
+            "description": "Since RF card scanning on the device may take some time, request the scan result separately to check its completion status and retrieve the card data.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `token` | token |\n\n\n#### Response fields\n\n| Field | Type | Nullable | Desc |\n| --- | --- | --- | --- |\n| `code` | Number | false | API response code |\n| `status` | Boolean | false | API response status |\n| `message` | String | false | API response message |\n| `data.tokenId` | Number | false | Token Index ID |\n| `data.token` | String | false | Token Serial |\n| `data.card` | Object | true | Card Information |\n| `data.card.cardNumber` | String | false | Card Number |\n| `data.card.formatType` | String | false | `CSN` \\| `WIEGAND` |\n| `data.card.formatData` | String | true | Card Format Data |\n| `data.fingerprint` | Object | true | Fingerprint data |\n| `data.fingerprint.template` | String | false | Fingerprint (Base64 Encoded) |\n| `data.fingerprint.score` | Number | false | Score |\n| `data.fingerprint.scoreThreshold` | Number | false | Score Threshold |\n| `data.duplicatedAuthIds` | Array | true | Duplicate authId List |\n| `data.status` | String | false | `NONE` \\| `SCANNING` \\| `COMPLETED` \\| `FAILED` |\n| `data.failReason` | String | true | `LOW_QUALITY` \\| `TIMEOUT` \\| `ARGUMENT_ERROR` \\| `VERIFY_FAIL` \\| `CANCELLED` \\| `PAST_REQUEST` \\| `UNKNOWN` |\n| `data.expiredAt` | Number | false | Scan Expiration Time (Epoch Milliseconds) |\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/credential-scans/{{token}}/result",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "credential-scans",
+                    "{{token}}",
+                    "result"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"tokenId\": 1028,\n        \"token\": \"64957838b59e4cacb821ba559395a9a9\",\n        \"status\": \"COMPLETED\",\n        \"credentialType\": \"CARD\",\n        \"card\": {\n            \"cardNumber\": \"3664853627\",\n            \"formatType\": \"CSN\"\n        },\n        \"expiredAt\": 1739847347024\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Add User with Card Scan Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Registers a user using the token obtained from the Scan Result Request. Each person can register up to two cards. For Wiegand-type cards, the device can output the authentication result as either success or bypass, per the Wiegand output setting.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | place ID |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"key\": \"test123\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test123\"\n        },\n        \"registrationTokens\": [\"card scan token\"],\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add User with Card Data",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "Registers a user directly with card data (instead of a scan token). Response is the same shape as the face enrollment response; modify/delete work the same way as other auths.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | place ID |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user\": {\n    \"key\": \"timlee4\"\n  },\n  \"auth\": {\n    \"startTime\": 1681225200000,\n    \"endTime\": 2147353200000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n      \"cards\": [\n        {\n          \"cardNumber\": \"3664853627\",\n          \"formatType\": \"CSN\"\n        }\n      ],\n      \"name\": \"timlee4\"\n    },\n    \"activeStatus\": \"ACTIVE\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "Enroll an RF card via device scan: request a scan, poll for the result/token, then add the user."
+    },
+    {
+      "name": "Biometric Data Link",
+      "item": [
+        {
+          "name": "Add User without Credential",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "{{placeId}}",
+                "auths"
+              ]
+            },
+            "description": "To send a biometric data link, first add a user without a biometric credential using this API, then call **Update Biometric Data Storage Link** with the returned `authId`.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| Authorization | JWT AccessToken |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeId` | Place Id |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user\": {\n        \"key\": \"test1235\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "places",
+                    "{{placeId}}",
+                    "auths"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"user\": {\n        \"key\": \"test1235\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"authId\": 48363,\n        \"lastModifiedAt\": 1700721664157,\n        \"user\": {\n            \"userId\": 44285,\n            \"key\": \"yourcompanyname.1234\",\n            \"realNameAuthStatusType\": \"REAL_NAME_AUTH_BEFORE\"\n        },\n        \"auth\": {\n            \"startTime\": 1690853501093,\n            \"endTime\": 2147353200000,\n            \"doorAccessType\": \"ALL_DOOR\",\n            \"scheduleType\": \"ALWAYS\",\n            \"credentials\": {\n                \"modes\": []\n            },\n            \"activeStatus\": \"ACTIVE\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Biometric Data Storage Link",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/auths/{{authId}}/face-links",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "auths",
+                "{{authId}}",
+                "face-links"
+              ]
+            },
+            "description": "Updates the user (identified by `authId`) to have a face link. The image link must be directly downloadable from a browser — pasting the URL should immediately start a download; web-view style links will not work correctly.\n\nAfter the update, the face photo link is visible in the CLUe web portal and syncs directly to the device, which then fetches the biometric data through the link.\n\n![Face photo link](/img/clue/clue-api-user-face-link.png)\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| Authorization | JWT AccessToken |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `authId` | authId |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"faceLinks\": [\n        {\n            \"{{URL}}\": \"https://drive.google.com/uc?export=download\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/auths/{{authId}}/face-links",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "auths",
+                    "{{authId}}",
+                    "face-links"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"faceLinks\": [\n        {\n            \"{{URL}}\": \"https://drive.google.com/uc?export=download\"\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"authId\": 224376,\n        \"faceLinks\": [\n            {\n                \"{{URL}}\": \"https://drive.google.com/uc?export=download\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Biometric Link",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/auths/{{authId}}/face-links",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "auths",
+                "{{authId}}",
+                "face-links"
+              ]
+            },
+            "description": "Retrieves the biometric data link(s) associated with the given `authId`.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `authId` | authId |\n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Biometric Link",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/auths/{{authId}}/face-links",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "auths",
+                "{{authId}}",
+                "face-links"
+              ]
+            },
+            "description": "Deletes the biometric data link associated with the given `authId`.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `authId` | authId |\n\n"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User Auth",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/places/auths/{{authId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "places",
+                "auths",
+                "{{authId}}"
+              ]
+            },
+            "description": "Deletes a user's auth by `authId`.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `authId` | authId |\n\n"
+          },
+          "response": []
+        }
+      ],
+      "description": "CLUe server can store a link and it only syncs a link to the local device, allowing the device to directly request and obtain the biometric information from the local server.\n\n![Biometric Data Link](/img/clue/clude-api-biometric-data-link.png)\n\n#### Place Group Settings to Start\n\nData storage method should be changed to accomodate the facial data link method. Please make sure to change the place group service setting as below before starting. Also, please make sure to have the right latest FW supporting a link connection. \n\n![](/img/clue/clude-api-service-setting-method-save-biometric.png)\n\n> After enabling this setting, child places can only use the link method for enrolling user biometric data. They cannot accept user data through any other means. This restriction prevents conflicts that could arise from unintentionally storing user data, including biometrics, on the CLUe server."
+    },
+    {
+      "name": "Door Control",
+      "item": [
+        {
+          "name": "Remote Door Control",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/doors/{{doorId}}/shadow/publish",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "doors",
+                "{{doorId}}",
+                "shadow",
+                "publish"
+              ]
+            },
+            "description": "Remotely unlock / manually unlock / manually lock a door. `doorId` can be found from the place in the CLUe web portal.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| Authorization | JWT AccessToken |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `doorId` | doorId |\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `eventTime` | Number | true | When to activate this command, UTC milliseconds |\n| `command` | String | true | `ALWAYS_OPEN` \\| `ALWAYS_CLOSE` \\| `ONCE_OPEN` \\| `RELEASE_MANUAL_MODE` (when manual mode is set, call `RELEASE_MANUAL_MODE` to return to the original status) |\n\n> Remote door control only works while the device is connected to the server.\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventTime\": 1728614419124,\n  \"command\": \"ONCE_OPEN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/doors/{{doorId}}/shadow/publish",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "doors",
+                    "{{doorId}}",
+                    "shadow",
+                    "publish"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"eventTime\": 1728614419124,\n  \"command\": \"ONCE_OPEN\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\"\n}"
+            }
+          ]
+        }
+      ],
+      "description": "Remotely control door lock/unlock state."
+    },
+    {
+      "name": "Device Display",
+      "item": [
+        {
+          "name": "Change Device Display Image",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/devices/{{deviceId}}/images/{{type}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "devices",
+                "{{deviceId}}",
+                "images",
+                "{{type}}"
+              ]
+            },
+            "description": "Changes the image displayed on a device. Maximum file size is 4MB. Each device has a designated image size:\n\n- **BS3**: 1280 x 720px (Top Menu Bar Height: 140px)\n- **XS2**: 480 x 800px (Top Menu Bar Height: 60px)\n- **N2**: 160 x 128px (Top Menu Bar Height: 20px)\n\nThe device image can also be updated via the portal, and changes are reflected there as well.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `deviceId` | deviceId |\n| `type` | `DEFAULT` \\| `SUCCESS` \\| `FAILURE` \\| `UNLOCKED` \\| `LOCKED` |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileName\": \"test.png\",\n  \"fileData\": \"{base64 encoded Image}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/devices/{{deviceId}}/images/{{type}}",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "devices",
+                    "{{deviceId}}",
+                    "images",
+                    "{{type}}"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fileName\": \"test.png\",\n  \"fileData\": \"{base64 encoded Image}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"imageId\": 329,\n        \"fileName\": \"test.png\",\n        \"key\": \"devices/1454/720e34e068f0473fbec6c83adfbf245c/test.png\",\n        \"imageUrl\": \"{imageURL}\",\n        \"type\": \"DEFAULT\",\n        \"lastModifiedAt\": 1757897975635\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Set Notification Message",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/devices/{{deviceId}}/messages",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "devices",
+                "{{deviceId}}",
+                "messages"
+              ]
+            },
+            "description": "Sets a notification message on the device's main display. To enable it, configure the device menu to set **Home Screen** to **Notice**.\n\nDepending on the device, up to 15-20 characters per line and up to 5 lines are supported (based on BS3). Devices with smaller displays may show fewer characters — test before using in production.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `deviceId` | Device ID |\n\n#### Body\n\n| Parameter | Description |\n| --- | --- |\n| `type` | `HOME_NOTIFICATION` |\n| `message` | Notification message |\n| `useFlag` | `true` \\| `false` |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"HOME_NOTIFICATION\",\n  \"message\": \"ABCDEFGHIJKLMNOPQRSTU\\nABCDEFGHIJKLMNOPQRSTU\\nABCDEFGHIJKLMNOPQRSTU\",\n  \"useFlag\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/devices/{{deviceId}}/messages",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "devices",
+                    "{{deviceId}}",
+                    "messages"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"HOME_NOTIFICATION\",\n  \"message\": \"ABCDEFGHIJKLMNOPQRSTU\\nABCDEFGHIJKLMNOPQRSTU\\nABCDEFGHIJKLMNOPQRSTU\",\n  \"useFlag\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"type\": \"HOME_NOTIFICATION\",\n        \"message\": \"noti messages\",\n        \"useFlag\": true\n    }\n}"
+            }
+          ]
+        }
+      ],
+      "description": "Manage device display images and on-screen notification messages."
+    },
+    {
+      "name": "Event Logs",
+      "item": [
+        {
+          "name": "Get Event Logs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/events/places/{{placeId}}/elastic?startTime={{startTime}}&endTime={{endTime}}&filterEvents=&filterDoorIds=&filterDeviceIds=&page=0&size=30&q=&sort=eventAt,desc",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "events",
+                "places",
+                "{{placeId}}",
+                "elastic"
+              ]
+            },
+            "description": "Retrieves event logs for a place. Event logs can be retrieved for up to a 7-day period at a time, within a 90-day event log history.\n\n> **Note**: The source guide shows this endpoint as `/api/v1/events/places/{placeID}/elastic`. The `https://api.moon.supremainc.com/v1` variable already includes `/v1`, so the extra `/api` prefix has been normalized out here — adjust the `baseUrl` variable if your environment actually requires the `/api` prefix.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | JWT AccessToken |\n\n#### Path / query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeId` | place ID |\n| `startTime` | UTC epoch milliseconds |\n| `endTime` | UTC epoch milliseconds |\n| `filterEvents` | Event type filter — see Event Filter list below |\n| `filterDoorIds` | door ID |\n| `filterDeviceIds` | device ID |\n| `page` | paging # |\n| `size` | events per page, up to 50 |\n| `q` | search query |\n| `sort` | e.g. `eventAt,desc` |\n\n#### Event Filter values\n\n`\"DEV_\"` or `\"DEVICE_\"` prefixed events originate from the device side; without those prefixes, events are generated server-side.\n\n| num |\n| -- |\n| `QR_AUTH_SUCCESS` |\n|`QR_AUTH_FAIL` |\n|`QR_3RD_PARTY_SERVER_ERROR_FAIL` |\n|`REAL_NAME_AUTH_NOT_MATCH` |\n|`VENDOR_AUTH_SUCCESS` |\n|`VENDOR_AUTH_FAIL` |\n|`KAKAO_QR_SERVER_RES_AUTH_SUCCESS` |\n|`KAKAO_QR_SERVER_RES_AUTH_FAIL` |\n|`NAVER_QR_SERVER_RES_AUTH_SUCCESS` |\n|`NAVER_QR_SERVER_RES_AUTH_FAIL` |\n|`SPARK_PLUS_QR_RES_AUTH_SUCCESS` |\n|`SPARK_PLUS_QR_RES_AUTH_FAIL` |\n|`CREDENTIAL_IDENTIFY_FAIL` |\n|`CREDENTIAL_THIRD_PARTY_LINK_NOT_EXISTS` |\n|`DEVICE_AWS_IOT_UNHEALTHY` |\n|`DOOR_INCIDENT` |\n|`DOOR_TEMP_OPEN_REQ` |\n|`DOOR_MANUAL_OPEN_REQ` |\n|`DOOR_MANUAL_CLOSE_REQ` |\n|`DOOR_MANUAL_RELEASE_REQ` |\n|`DEVICE_RESET_FACTORY_REQ` |\n|`DEVICE_RESET_REQ` |\n|`DEVICE_RESET_NETWORK_EXCLUDE_REQ` |\n|`DEVICE_REBOOT_DEVICE_REQ` |\n|`DEVICE_UPGRADE_FIRMWARE_REQ` |\n|`DEVICE_SEARCH_SLAVE_REQ` |\n|`DEVICE_SETTING_CONNECT_TEST_REQ` |\n|`DEVICE_HEALTH_CHECK_REQ` |\n|`DEVICE_LOCAL_LOGS_UPLOAD_REQ` |\n|`DEVICE_INFO_UPDATED_REQ` |\n|`SCHEDULE_UPDATED_REQ` |\n|`DOOR_INFO_UPDATED_REQ` |\n|`DEVICE_USER_AUTH_SYNC_REQ` |\n|`DEVICE_AUTH_STRATEGY_SYNC_REQ` |\n|`DEVICE_MENU_PASSWORD_RESET_REQ` |\n|`DEVICE_USER_ALL_DELETE_REQ` |\n|`DEVICE_USER_AUTH_ALL_SYNC_REQ` |\n|`PLACE_SERVICE_START` |\n|`PLACE_MODIFY` |\n|`PLACE_NEW_MEMBER` |\n|`PLACE_LEAVE_MEMBER` |\n|`PLACE_KICKOUT_MEMBER` |\n|`PLACE_MEMBER_ROLE_UPDATED` |\n|`ACCOUNT_INVITED_PLACE` |\n|`ACCOUNT_KICKOUTED_PLACE` |\n|`PLACE_DOOR_MODIFY` |\n|`PLACE_DOOR_DELETED` |\n|`PLACE_DOOR_ADDED` |\n|`PLACE_SCHEDULE_UPDATED` |\n|`DEV_NETWORK_DISCONNECT` |\n|`DEV_NETWORK_CONNECT` |\n|`DEV_DEVICE_SERVER_CONNECT` |\n|`DEV_DEVICE_SERVER_DISCONNECT` |\n|`DEV_DEVICE_START` |\n|`DEV_DEVICE_REBOOT` |\n|`DEV_DOOR_RELAY_OFF` |\n|`DEV_DOOR_RELAY_ON` |\n|`DEV_DOOR_SENSOR_OPEN` |\n|`DEV_DOOR_SENSOR_CLOSE` |\n|`DEV_DOOR_HELD_OPEN` |\n|`DEV_DOOR_HELD_OPEN_ALARM` |\n|`DEV_DOOR_HELD_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_FORCE_OPEN` |\n|`DEV_DOOR_FORCE_OPEN_ALARM` |\n|`DEV_DOOR_FORCE_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_TAMPER_ON` |\n|`DEV_DOOR_TAMPER_OFF` |\n|`DEV_DOOR_EXIT_BUTTON` |\n|`DEV_DEVICE_ADMIN_MENU_ON` |\n|`DEV_DEVICE_DHCP_CONNECTED` |\n|`DEV_DEVICE_TIME_SETTING` |\n|`DEV_DEVICE_TIMEZONE_SETTING` |\n|`DEV_QR_AUTH_SUCCESS` |\n|`DEV_QR_AUTH_FAIL` |\n|`DEV_FIRMWARE_UPGRADED` |\n|`DEV_FIRMWARE_UPGRADE_FAILED` |\n|`DEV_DOOR_START_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_START_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_ENTRY_BUTTON` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_UNLOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_UNLOCK` |\n|`DEV_CARD_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_MOBILE_CARD_AUTH_FAIL` |\n|`DEV_CARD_AUTH_FAIL` |\n|`DEV_CODE_AUTH_FAIL` |\n|`DEV_FACE_AUTH_FAIL` |\n|`DEV_FINGERPRINT_AUTH_FAIL` |\n|`DEV_PIN_AUTH_FAIL` |\n|`DEV_FACE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_AUTH_SUCCESS`\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/events/places/{{placeId}}/elastic?startTime={{startTime}}&endTime={{endTime}}",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "events",
+                    "places",
+                    "{{placeId}}",
+                    "elastic"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTime",
+                      "value": "{{startTime}}"
+                    },
+                    {
+                      "key": "endTime",
+                      "value": "{{endTime}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n  \"total\": 0,\n  \"data\": []\n}"
+            }
+          ]
+        }
+      ],
+      "description": "Retrieve access/device/place event logs for a place."
+    },
+    {
+      "name": "Dynamic QR Code",
+      "item": [
+        {
+          "name": "Generate Dynamic QR Code",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "dynamic-qrs"
+              ]
+            },
+            "description": "Generates a dynamic QR code. A unique string value must be provided as `uniqueKey` (e.g. a user ID or similar identifier). Once issued, the returned `dynamicQrUrl` needs to be delivered to the designated user through your own service.\n\nRequires a Place Group API Key, with `VENDOR` service method / CLUe QR enabled for the place group and a vendor code configured (a test vendor code can be requested from Suprema for testing without a real vendor integration).\n\n> The URL must be opened from a mobile web browser. If the user switches browsers after opening it, the URL should be regenerated, since the securely cached OTP mechanism is deleted. The link can only be accessed during the valid period.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | API Key (Bearer) |\n\n#### Body\n\n| Field | Type | Required | Description |\n| --- | --- | --- | --- |\n| `placeGroupId` | Number | true | Place Group ID |\n| `uniqueKey` | String | true | Vendor Management Unique Key |\n| `validFrom` | Number | true | Valid From — start, up to 90 days before current time, epoch ms |\n| `validTo` | Number | true | Valid To — end, `validFrom` + up to 90 days, epoch ms |\n\n#### Response fields\n\n| Field | Type | Nullable | Description |\n| --- | --- | --- | --- |\n| `code` | Number | false | API response code |\n| `status` | Boolean | false | API response status |\n| `message` | String | false | API response message |\n| `data.dynamicQrId` | String | false | Dynamic QR ID |\n| `data.placeGroupId` | Number | false | Place Group ID |\n| `data.validFrom` | Number | false | Valid From, epoch ms |\n| `data.validTo` | Number | false | Valid To, epoch ms |\n| `data.uniqueKey` | String | false | Vendor Management Unique Key |\n| `data.dynamicQrUrl` | String | false | Dynamic QR URL |\n\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"placeGroupId\": 1,\n  \"uniqueKey\": \"uniqueKey\",\n  \"validFrom\": 1722830098581,\n  \"validTo\": 1722830108581\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "dynamic-qrs"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"placeGroupId\": 1,\n  \"uniqueKey\": \"uniqueKey\",\n  \"validFrom\": 1722830098581,\n  \"validTo\": 1722830108581\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"dynamicQrId\": \"0d2960ef-26f5-4115-aca8-6e17b1aac262\",\n        \"uniqueKey\": \"uniqueKey\",\n        \"placeGroupId\": 1,\n        \"validFrom\": 1722830098581,\n        \"validTo\": 1722830108581,\n        \"dynamicQrUrl\": \"https://qr.moon.supremainc.com/dynamic?qid={dynamicQrId}\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get QR Code List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs?page=0&size=15&sort=createdAt,desc&placeGroupId={{placeGroupId}}&uniqueKey={{uniqueKey}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "dynamic-qrs"
+              ]
+            },
+            "description": "Returns a paginated list of dynamic QR codes.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | API Key (Bearer) |\n\n#### Query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `page` | page |\n| `size` | size |\n| `sort` | e.g. `createdAt,desc` |\n| `placeGroupId` | Place Group ID |\n| `uniqueKey` | Vendor Management Unique Key |\n\n#### Response fields\n\n| Field | Type | Nullable | Description |\n| --- | --- | --- | --- |\n| `code` | Number | false | API response code |\n| `status` | Boolean | false | API response status |\n| `message` | String | false | API response message |\n| `total` | Number | false | Total count |\n| `data[].dynamicQrId` | String | false | Dynamic QR ID |\n| `data[].placeGroupId` | Number | false | Place Group ID |\n| `data[].validFrom` | Number | false | Valid start time, epoch ms |\n| `data[].validTo` | Number | false | Valid end time, epoch ms |\n| `data[].uniqueKey` | String | false | Vendor Management Unique Key |\n| `data[].dynamicQrUrl` | String | false | Dynamic QR URL |\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs?page=0&size=15&sort=createdAt,desc&placeGroupId=1&uniqueKey=uniqueKey",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "dynamic-qrs"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "15"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "createdAt,desc"
+                    },
+                    {
+                      "key": "placeGroupId",
+                      "value": "1"
+                    },
+                    {
+                      "key": "uniqueKey",
+                      "value": "uniqueKey"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"total\": 1,\n    \"data\": [\n        {\n            \"dynamicQrId\": \"2d413422-4a5c-4ae7-8dd9-628c8e310b21\",\n            \"uniqueKey\": \"uniqueKey\",\n            \"placeGroupId\": 1,\n            \"validFrom\": 1722830099550,\n            \"validTo\": 1722830098550,\n            \"dynamicQrUrl\": \"https://qr.moon.supremainc.com/dynamic?qid={dynamicQrId}\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Dynamic QR",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs/{{dynamicQrId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "dynamic-qrs",
+                "{{dynamicQrId}}"
+              ]
+            },
+            "description": "Retrieves a single dynamic QR code by ID.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | API Key (Bearer) |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `dynamicQrId` | Dynamic QR ID |\n\n#### Response fields\n\n| Field | Type | Nullable | Description |\n| --- | --- | --- | --- |\n| `code` | Number | false | API response code |\n| `status` | Boolean | false | API response status |\n| `message` | String | false | API response message |\n| `data.dynamicQrId` | String | false | Dynamic QR ID |\n| `data.placeGroupId` | Number | false | Place Group ID |\n| `data.validFrom` | Number | false | Valid start time, epoch ms |\n| `data.validTo` | Number | false | Valid end time, epoch ms |\n| `data.uniqueKey` | String | false | Vendor Management Unique Key |\n| `data.dynamicQrUrl` | String | false | Dynamic QR URL |\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs/{{dynamicQrId}}",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "dynamic-qrs",
+                    "{{dynamicQrId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"code\": 200,\n    \"status\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"dynamicQrId\": \"7ee3b7a4-854e-4bf5-8822-70076e184f38\",\n        \"uniqueKey\": \"uniqueKey\",\n        \"placeGroupId\": 1,\n        \"validFrom\": 1722830099599,\n        \"validTo\": 1722830098599,\n        \"dynamicQrUrl\": \"https://qr.moon.supremainc.com/dynamic?qid={dynamicQrId}\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Dynamic QR",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs/{{dynamicQrId}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "dynamic-qrs",
+                "{{dynamicQrId}}"
+              ]
+            },
+            "description": "Deletes a single dynamic QR code by ID.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | API Key (Bearer) |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| `dynamicQrId` | Dynamic QR ID |\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs/{{dynamicQrId}}",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "dynamic-qrs",
+                    "{{dynamicQrId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Dynamic QR by UniqueKey",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs?placeGroupId={{placeGroupId}}&uniqueKey={{uniqueKey}}",
+              "host": [
+                "https://api.moon.supremainc.com/v1"
+              ],
+              "path": [
+                "dynamic-qrs"
+              ]
+            },
+            "description": "Deletes dynamic QR code(s) matching the given `placeGroupId` and `uniqueKey`.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | API Key (Bearer) |\n\n#### Query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeGroupId` | Place Group ID |\n| `uniqueKey` | Vendor Management Unique Key |\n\n"
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/dynamic-qrs?placeGroupId=1&uniqueKey=uniqueKey",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "dynamic-qrs"
+                  ],
+                  "query": [
+                    {
+                      "key": "placeGroupId",
+                      "value": "1"
+                    },
+                    {
+                      "key": "uniqueKey",
+                      "value": "uniqueKey"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\"\n}"
+            }
+          ]
+        }
+      ],
+      "description": "## What's needed to generate a QR Code?\n\nSince the dynamic QR code is for integration purposes, you need a **Place Group API Key** and a vendor code for testing.\n\n**How to enable the Service:** set the access type to `VENDOR` and mark **CLUe QR** (short for CLUe Dynamic QR code) to use. For the vendor code, follow the QR integration process and obtain a vendor code from the Suprema CLUe team. If you don't have a vendor side yet, you can test with a test vendor code configured by your Suprema representative — it grants access without validating the access level or period.\n\nFor more information on service settings, see [Service Settings](../platform/clue/service-settings).\n\n## Requests in this folder\n\nGenerate, list, retrieve, and delete CLUe dynamic QR codes for VENDOR-integrated access."
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{apiKey}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.moon.supremainc.com/v1",
+      "type": "string"
+    },
+    {
+      "key": "apiKey",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "placeId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "placeGroupId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "authId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "deviceId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "doorId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "taskUuid",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "dynamicQrId",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "uniqueKey",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "type",
+      "value": "DEFAULT",
+      "type": "string"
+    },
+    {
+      "key": "startTime",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "endTime",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+---
+id: web-portal-getting-started
+title: CLUe 웹 포털 시작하기
+description: CLUe 웹 포털에서 관리자 레벨을 이해하고, 대리점·공간 그룹·공간 등 하위 항목을 추가하는 방법을 안내합니다.
+---
+
+CLUe 웹 포털을 처음 사용한다면, 관리자 권한 구조를 이해하는 것부터 시작하세요. 이 문서에서는 브랜치 하위에 대리점, 공간 그룹, 공간을 추가하는 방법을 안내합니다.
+
+## 관리자 레벨 이해
+
+CLUe는 여러 지점에서 고객 서비스를 운영하는 유통 채널 환경을 위해 설계된 3단계 계층 구조의 멀티 테넌트 시스템입니다.
+
+<Image src='/img/clue/clue-admin-levels.png' alt='CLUe Admin Levels' />
+
+- **브랜치 관리자**(Branch Admin): 브랜치 관리자는 **대리점**/**공간 그룹**/**공간**을 하위 항목으로 생성할 수 있습니다.
+
+- **대리점 관리자**(Disti Admin): 대리점 관리자는 **공간 그룹**/**공간**을 하위 항목으로 생성할 수 있습니다.
+
+- **공간 그룹 관리자**(Place Group Admin): 공간 그룹 관리자는 **공간**을 하위 항목으로 생성할 수 있습니다.
+
+이메일을 통해 고객을 초대하고, 초대받은 고객은 이메일에 포함된 링크를 통해 가입한 후 초대받은 공간 그룹에 액세스할 수 있습니다.
+
+하나의 브랜치는 여러 대리점을 가질 수 있고, 하나의 대리점 역시 여러 공간 그룹을 가질 수 있습니다. 대리점 관리자 레벨이라면, 자신의 대리점과 하위 항목만 볼 수 있습니다.
+
+:::note
+
+**고객이나 최종 사용자는 어느 항목에 해당하나요?**
+
+위 계층 구조에서 **공간 그룹**(Place Group)이 고객 또는 서비스 제공자에게 할당되는 항목입니다. 공간 그룹은 여러 공간을 운영하는 고객 단위를 나타내므로, 공간 생성 시 해당 고객의 관리자 이메일을 입력해야 합니다.
+
+:::
+
+
+## 하위 항목 추가
+
+1. [CLUe 웹 포털](https://clue.moon.supremainc.com)에 로그인하세요.
+
+1. 로그인하면 초대받은 브랜치 목록을 확인할 수 있습니다. 원하는 브랜치를 선택하세요.
+
+1. 선택한 브랜치의 하위 항목인 대리점/공간 그룹/공간 목록이 표시되면 화면 오른쪽 상단의 <IcAirMore title='more' /> 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='add_child' product='clue' />을 클릭하세요.
+
+   <Image src='/img/clue/clue-basic-setup-add-child.png' alt='Add Child' />
+
+1. <Cmd sid='distributor' product='clue' /> <Cmd sid='add' product='clue' /> 팝업이 나타나면 각 필드를 입력하세요.
+
+   <Image src='/img/clue/clue-basic-setup-add-distributor.png' alt='Add Distributor' />
+
+   :::note
+
+   **관리자 이메일을 입력해야 하는 이유**
+
+   기본적으로 최고 관리자는 장치 또는 출입문 설정과 같이 고객 개인 정보와 관련 없는 메뉴에만 접근할 수 있습니다. 고객 개인 정보에 접근하려면 고객의 동의가 필요하므로 먼저 고객 관리자를 초대해야 합니다.
+
+   이후 개인 정보 접근이 필요하다면, 고객은 최고 관리자를 추가로 초대할 수 있습니다. 초대된 최고 관리자는 사용자, 관리자, 모니터링 등 개인 정보가 포함된 메뉴에 접근할 수 있습니다.
+
+   :::
+
+1. 입력을 모두 완료한 후 하단의 <Cmd sid='add' product='clue' /> 버튼을 클릭하세요.
+
+1. 항목이 추가되면 자동으로 <Cmd sid='basic' product='clue' /> 페이지로 이동되며, 이름이나 사진을 변경할 수 있습니다.
+
+   <Image src='/img/clue/clue-basic-setup-add-distributor-profile.png' alt='Distributor Profile' />
+
+:::info
+
+마찬가지로 대리점, 공간 그룹, 공간 목록에서 <IcAirMore title='more' /> →  <Cmd sid='add_child' product='clue' />을 클릭하면 하위 항목을 추가할 수 있습니다.
+
+:::
+
+
+## 관리자 초대
+
+<Cmd sid='admin' product='clue' /> 메뉴는 표시되지만, 고객사의 동의 없이는 관리자 정보를 열람할 수 없습니다. 고객사(대리점 또는 공간 그룹 관리자)가 상위 관리자를 초대해야만 열람이 가능합니다.
+
+<Image src='/img/clue/clue-basic-setup-admin-information.png' alt='Admin information' />
+
+<Cmd sid='admin' product='clue' /> 메뉴에서 이메일 주소를 입력해 같은 레벨의 관리자를 쉽게 초대할 수 있습니다. 초대받은 사용자가 가입을 완료하면 동일한 수준의 관리자 권한을 갖게 됩니다.
+
+<Image src='/img/clue/clue-basic-setup-invite-admin.png' alt='Invite Admin' />
+
+:::info
+
+<Cmd sid='main_admin' product='clue' /> / <Cmd sid='sub_admin' product='clue' />: 기능적인 차이는 없습니다. 이는 최소 한 명의 메인 관리자가 유지되도록 보장하기 위한 것입니다. 다만, 서브 관리자는 메인 관리자를 삭제할 수 없습니다.
+
+:::
