@@ -483,6 +483,10 @@ const config = {
                 to: '/api/bsxapi'
               },
               {
+                label: 'CLUe API',
+                to: '/api/clue'
+              },
+              {
                 label: 'BioStar Air Developer',
                 to: 'https://developers.biostarair.com',
                 target: '_blank',
