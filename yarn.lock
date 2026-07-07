@@ -2489,14 +2489,6 @@
   dependencies:
     "@types/mdx" "^2.0.0"
 
-"@mermaid-js/layout-elk@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.npmjs.org/@mermaid-js/layout-elk/-/layout-elk-0.1.9.tgz"
-  integrity sha512-HuvaqFZBr6yT9PpWYockvKAZPJVd89yn/UjOYPxhzbZxlybL2v+2BjVCg7MVH6vRs1irUohb/s42HEdec1CCZw==
-  dependencies:
-    d3 "^7.9.0"
-    elkjs "^0.9.3"
-
 "@mermaid-js/parser@^0.4.0":
   version "0.4.0"
   resolved "https://registry.npmjs.org/@mermaid-js/parser/-/parser-0.4.0.tgz"
@@ -6050,10 +6042,17 @@ electron-to-chromium@^1.5.73:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.97.tgz"
   integrity sha512-HKLtaH02augM7ZOdYRuO19rWDeY+QSJ1VxnXFa/XDFLf07HvM90pALIJFgrO+UVaajI3+aJMMpojoUTLZyQ7JQ==
 
+<<<<<<< HEAD
 elkjs@^0.9.3:
   version "0.9.3"
   resolved "https://registry.npmjs.org/elkjs/-/elkjs-0.9.3.tgz"
   integrity sha512-f/ZeWvW/BCXbhGEf1Ujp29EASo/lk1FDnETgNKwJrsVvGZhUWCZyg3xLJjAsxfOmt8KjswHmI5EwCQcPMpOYhQ==
+=======
+emoji-regex@^10.3.0:
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-10.6.0.tgz#bf3d6e8f7f8fd22a65d9703475bc0147357a6b0d"
+  integrity sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==
+>>>>>>> 6027041592c (Merge branch 'docs@svgr' into preview)
 
 emoji-regex@^8.0.0:
   version "8.0.0"

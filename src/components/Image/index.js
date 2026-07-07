@@ -3,7 +3,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import MDXContents from '@theme-original/MDXContent';
 import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
-import imageSize from './sizeOfimages.json';
 
 export default function Image({src, alt, className, alone, caption, ico, width, height, usemap}) {
     const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
@@ -25,31 +24,22 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     })();
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
-    // console.log('Image path:', imagePath, imageSize[imagePath]);
-    
 
     // Handle image loading errors
     function onError(e) {
         e.target.src = errTarget;
     }
 
-    // 서버 사이드 렌더링과 클라이언트 렌더링 일치를 위해
-    // width/height 속성이 있을 때만 포함하고, 없으면 속성 자체를 제거
+    // width/height는 remark-image-size 플러그인이 빌드 타임에 이미 주입해준다
+    // (직접 넘긴 경우는 그 값 우선). 하나만 전달된 경우 다른 하나는 auto로 설정.
     const imageProps = {
         loading: "lazy",
         decoding: "async",
         src: imagePath,
         alt: alt,
         onError: onError,
-        // props로 width 또는 height가 전달되었을 때, 
-        // 하나만 전달된 경우 다른 하나는 auto로 설정
-        ...(width || height ? {
-            width: width || 'auto',
-            height: height || 'auto'
-        } : {
-            width: imageSize[imagePath.replace(baseUrl, '')]?.width || 'auto',
-            height: imageSize[imagePath.replace(baseUrl, '')]?.height || 'auto'
-        }),
+        width: width || 'auto',
+        height: height || 'auto',
         usemap: usemap
     };
 
