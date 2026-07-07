@@ -45,7 +45,7 @@ async function readFilesInDirectory(directory, callback) {
 
 // 파일 확장자가 이미지인지 확인하는 함수
 function isImageFile(filePath) {
-    const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', 'svg']; // 확장자 추가 가능
+    const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.svg']; // 확장자 추가 가능
     const ext = path.extname(filePath).toLowerCase();
     return allowedExtensions.includes(ext);
 }
@@ -53,19 +53,17 @@ function isImageFile(filePath) {
 const imageInfo = {};
 
 // 파일 정보를 수집하는 콜백 함수
-function collectFileInfo(file, dimensions, baseUrl) {
-    const fileName = file.replace(/\\/g, '/').replace('static', baseUrl.replace(/\/$/, ''));
+// 이 크기 정보는 remark-image-size 플러그인이 빌드 타임에만 조회하므로,
+// 배포 baseUrl(/, /docs/)이나 CDN 접두어와 무관하게 항상 /img/... 형태의 경로로 고정한다.
+function collectFileInfo(file, dimensions) {
+    const fileName = file.replace(/\\/g, '/').replace('static', '');
     imageInfo[fileName] = { width: dimensions.width, height: dimensions.height };
 }
 
 // 디렉토리와 그 하위 디렉토리의 이미지 파일 정보를 수집
 async function processImages() {
-    const isPreview = process.env.CONTEXT === 'preview';
-    const baseUrl = isPreview ? '/docs/' : '/';
-    console.log(`[${isPreview ? 'PREVIEW' : 'PRODUCTION'}] Using baseUrl: ${baseUrl}`);
-    
     await readFilesInDirectory(directoryPath, (file, dimensions) => {
-        collectFileInfo(file, dimensions, baseUrl);
+        collectFileInfo(file, dimensions);
     });
     
     // 최종 결과를 JSON 파일로 저장
