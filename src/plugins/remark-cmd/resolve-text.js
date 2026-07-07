@@ -71,6 +71,9 @@ function resolveText(data, sid, product, deviceName, replace) {
         text = raw.replace('<br/>', '');
       }
     }
+  } else if (product === 'clue') {
+    const raw = data.clue[sid];
+    if (raw) text = raw.replace('<br/>', '');
   } else {
     const raw = data.x[sid];
     if (raw) text = raw.replace('<br>', '').replace('{{value}}', 'N');
