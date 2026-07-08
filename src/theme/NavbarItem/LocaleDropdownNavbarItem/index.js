@@ -88,13 +88,12 @@ export default function LocaleDropdownNavbarItem({
             : 'dropdown__link--active'
           : '',
       onClick: () => {
-        // 사용자가 명시적으로 언어를 선택했음을 기록
+        // 사용자가 명시적으로 언어를 선택했음을 쿠키에 기록 (서버 사이드 Function이 인식할 수 있도록)
         try {
-          localStorage.setItem('preferredLanguage', locale);
-          localStorage.setItem('userHasSelectedLanguage', 'true');
-          localStorage.setItem('lastLanguageChangeTime', Date.now().toString());
+          const secure = location.protocol === 'https:' ? '; Secure' : '';
+          document.cookie = `preferredLanguage=${locale}; path=/; max-age=31536000; SameSite=Lax${secure}`;
         } catch (e) {
-          // localStorage를 사용할 수 없는 환경에서는 무시
+          // 쿠키를 사용할 수 없는 환경에서는 무시
           console.warn('Unable to save language preference:', e);
         }
       },

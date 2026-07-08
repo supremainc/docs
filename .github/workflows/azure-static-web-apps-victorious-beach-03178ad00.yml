@@ -31,6 +31,10 @@ jobs:
       #     AZURE_STORAGE_CONTAINER_NAME: ${{ secrets.AZURE_STORAGE_CONTAINER_NAME }}
       - name: Build project
         run: npm run build
+      - name: Prepare API assets
+        run: |
+          mkdir -p api/assets
+          cp build/index.html api/assets/home.html
       - name: Clean up image directories
         run: |
           echo "Removing unnecessary image directories..."
@@ -49,7 +53,7 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "build" # App source code path - pointing to build directory
-          api_location: "" # Api source code path - optional
+          api_location: "api" # Api source code path - optional
           output_location: "" # Built app content directory - empty since we're pointing directly to build
           skip_app_build: true # Skip Azure's build since we already built
           ###### End of Repository/Build Configurations ######
