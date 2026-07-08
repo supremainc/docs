@@ -91,11 +91,26 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": {
-            "ko": [ "DC 전원: -20 °C ~ 60 °C", "PoE 전원: -20 °C ~ 50 °C" ],
-            "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ],
-            "es": [ "Energía DC: De -20 °C a 60 °C", "Energía PoE: De -20 °C a 50 °C" ],
-            "ja": [ "DC 電源：-20 °C ~ 60 °C", "PoE 電源：-20 °C ~ 50 °C" ]
+          "type": "model",
+          "items": {
+            "model1": {
+               "label": "XPQ2-DB",
+               "value": {
+                  "ko": "-20 °C ~ 60 °C",
+                  "en": "-20 °C ~ 60 °C",
+                  "es": "De -20 °C a 60 °C",
+                  "ja": "-20 °C ~ 60 °C"
+               }
+            },
+            "model2": {
+               "label": "XPQ2-DPB",
+               "value": {
+                  "ko": [ "DC 전원: -20 °C ~ 60 °C", "PoE 전원: -20 °C ~ 50 °C" ],
+                  "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ],
+                  "es": [ "Energía DC: De -20 °C a 60 °C", "Energía PoE: De -20 °C a 50 °C" ],
+                  "ja": [ "DC 電源：-20 °C ~ 60 °C", "PoE 電源：-20 °C ~ 50 °C" ]
+               }
+            }
           }
         },
         "storage_temp": {
