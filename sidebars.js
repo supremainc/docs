@@ -48,6 +48,7 @@ function createSidebars(preview) {
               'platform/clue/customer-api-integration',
               'platform/clue/fw-update',
               'platform/clue/add-device',
+              'platform/clue/allocate-device-to-place',
               'platform/clue/add-door',
               'platform/clue/fw-upgrade',
               'platform/clue/mobile-app-start'
