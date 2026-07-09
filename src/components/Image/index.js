@@ -68,7 +68,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
                             className={clsx('img', className)}
                         />
                         <figcaption>
-                            {caption === null ? 
+                            {caption === true ? 
                                 translate({
                                     id: 'theme.figureCaption.desc',
                                     message: '위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.'

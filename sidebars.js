@@ -41,23 +41,18 @@ function createSidebars(preview) {
           {
             type: 'category',
             label: 'CLUe 웹 포털 가이드',
+            collapsed: false,
             items: [
               'platform/clue/web-portal-getting-started',
               'platform/clue/service-settings',
+              'platform/clue/customer-api-integration',
               'platform/clue/fw-update',
               'platform/clue/add-device',
+              'platform/clue/allocate-device-to-place',
               'platform/clue/add-door',
+              'platform/clue/fw-upgrade',
+              'platform/clue/device-web-hook-settings',
               'platform/clue/mobile-app-start'
-            ]
-          },
-          {
-            type: 'category',
-            label: 'CLUe Visitor 가이드',
-            items: [
-              'platform/clue/visitor-start',
-              'platform/clue/visitor-settings',
-              'platform/clue/visitor-invite',
-              'platform/clue/visitor-dynamic-qr-code',
             ]
           },
           {
