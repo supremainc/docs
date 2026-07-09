@@ -375,19 +375,19 @@
             "12vdc": {
               "label": "12 Vdc",
               "value": {
-                "ko": [ "DC OUT 미사용 시 전류: 최대 0.5 A", "DC OUT 사용 시 전류: 최대 2.6 A" ],
-                "en": [ "DC OUT not used Current: Max. 0.5 A", "DC OUT used Current: Max. 2.6 A" ],
-                "es": [ "Corriente con DC OUT no utilizado: Máx. 0.5 A", "Corriente con DC OUT utilizado: Máx. 2.6 A" ],
-                "ja": [ "DC OUT 未使用時の電流：最大 0.5 A", "DC OUT 使用時の電流：最大 2.6 A" ]
+                "ko": [ "DC OUT 미사용 시 소모 전류: 최대 0.5 A", "DC OUT 사용 시 소모 전류: 최대 2.6 A" ],
+                "en": [ "DC OUT not used Consumption Current: Max. 0.5 A", "DC OUT used Consumption Current: Max. 2.6 A" ],
+                "es": [ "Corriente de consumo con DC OUT no utilizado: Máx. 0.5 A", "Corriente de consumo con DC OUT utilizado: Máx. 2.6 A" ],
+                "ja": [ "DC OUT 未使用時の消費電流：最大 0.5 A", "DC OUT 使用時の消費電流：最大 2.6 A" ]
               }
             },
             "24vdc": {
               "label": "24 Vdc",
               "value": {
-                "ko": [ "DC OUT 미사용 시 전류: 최대 0.3 A", "DC OUT 사용 시 전류: 최대 1.4 A" ],
-                "en": [ "DC OUT not used Current: Max. 0.3 A", "DC OUT used Current: Max. 1.4 A" ],
-                "es": [ "Corriente con DC OUT no utilizado: Máx. 0.3 A", "Corriente con DC OUT utilizado: Máx. 1.4 A" ],
-                "ja": [ "DC OUT 未使用時の電流：最大 0.3 A", "DC OUT 使用時の電流：最大 1.4 A" ]
+                "ko": [ "DC OUT 미사용 시 소모 전류: 최대 0.3 A", "DC OUT 사용 시 소모 전류: 최대 1.4 A" ],
+                "en": [ "DC OUT not used Consumption Current: Max. 0.3 A", "DC OUT used Consumption Current: Max. 1.4 A" ],
+                "es": [ "Corriente de consumo con DC OUT no utilizado: Máx. 0.3 A", "Corriente de consumo con DC OUT utilizado: Máx. 1.4 A" ],
+                "ja": [ "DC OUT 未使用時の消費電流：最大 0.3 A", "DC OUT 使用時の消費電流：最大 1.4 A" ]
               }
             }
           }
