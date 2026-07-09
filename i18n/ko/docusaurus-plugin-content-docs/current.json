@@ -569,7 +569,7 @@
   },
   "sidebar.howto.link.BioStar X 보안 강화": {
     "message": "BioStar X 보안 강화",
-    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to '/how-to/bsx_hardening/'"
+    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to '/how-to//how-to/bsx_hardening/'"
   },
   "sidebar.vionyx.category.릴리스 노트": {
     "message": "릴리스 노트",
@@ -650,5 +650,17 @@
   "sidebar.xstation2_clue.category.릴리스 노트": {
     "message": "릴리스 노트",
     "description": "The label for category '릴리스 노트' in sidebar 'xstation2_clue'"
+  },
+  "sidebar.corestation20_ul.category.CoreStation 20 UL": {
+    "message": "CoreStation 20 UL",
+    "description": "The label for category 'CoreStation 20 UL' in sidebar 'corestation20_ul'"
+  },
+  "sidebar.doorinterface_ul.category.Door Interface UL": {
+    "message": "Door Interface UL",
+    "description": "The label for category 'Door Interface UL' in sidebar 'doorinterface_ul'"
+  },
+  "sidebar.biostation3max.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category '릴리스 노트' in sidebar 'biostation3max'"
   }
 }
