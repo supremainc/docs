@@ -2159,6 +2159,22 @@ function createSidebars(preview) {
         'device/biostation_3_max/product-specifications',
         'device/biostation_3_max/regulatory-information',
         'device/biostation_3_max/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_max/release-notes/index',
+          },
+          items: [
+            'device/biostation_3_max/release-notes/101',
+            'device/biostation_3_max/release-notes/100',
+          ]
+        },
       ],
     },
   ],
