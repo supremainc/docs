@@ -51,6 +51,7 @@ function createSidebars(preview) {
               'platform/clue/allocate-device-to-place',
               'platform/clue/add-door',
               'platform/clue/fw-upgrade',
+              'platform/clue/device-web-hook-settings',
               'platform/clue/mobile-app-start'
             ]
           },
