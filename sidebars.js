@@ -49,6 +49,7 @@ function createSidebars(preview) {
               'platform/clue/fw-update',
               'platform/clue/add-device',
               'platform/clue/add-door',
+              'platform/clue/fw-upgrade',
               'platform/clue/mobile-app-start'
             ]
           },
