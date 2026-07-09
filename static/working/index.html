@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>근무시간 관리</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F7F9;
+    --surface:#FFFFFF;
+    --ink:#1C2430;
+    --muted:#6B7684;
+    --faint:#9AA4B0;
+    --line:#E4E8ED;
+    --line-strong:#D3DAE1;
+    --accent:#12727E;      /* 정밀한 틸 - 계기판 느낌 */
+    --accent-soft:#E5F1F2;
+    --accent-ink:#0C555E;
+    --amber:#B5751A;       /* 야근식대 등 신호색 */
+    --amber-soft:#FBF1DE;
+    --warn:#B4472E;        /* 코어타임 경고 */
+    --warn-soft:#FBEBE6;
+    --holiday:#7A5BB0;     /* 선택 휴무 */
+    --holiday-soft:#F0EBF8;
+    --mono:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    --sans:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:32px 20px 72px;}
+
+  /* ── 헤더 ── */
+  header.top{margin-bottom:24px;}
+  header.top .kicker{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:6px;
+  }
+  header.top h1{margin:0;font-size:26px;font-weight:700;letter-spacing:-.01em;}
+  header.top p{margin:6px 0 0;color:var(--muted);font-size:14px;}
+
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:22px 22px;margin-bottom:18px;
+  }
+  .card > .card-title{
+    font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--ink);
+    display:flex;align-items:center;gap:8px;margin-bottom:16px;
+  }
+  .card > .card-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+
+  /* ── 계산기 ── */
+  .calc-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:12px;color:var(--muted);font-weight:600;}
+  .tinput{
+    font-family:var(--mono);font-size:17px;padding:9px 13px;border:1px solid var(--line-strong);
+    border-radius:9px;background:#fff;color:var(--ink);width:168px;letter-spacing:.04em;text-align:center;
+  }
+  .tinput::placeholder{color:var(--faint);letter-spacing:.04em;}
+  .tinput:focus,input[type=number]:focus{outline:2px solid var(--accent-soft);border-color:var(--accent);}
+  .tilde{font-family:var(--mono);color:var(--faint);font-size:18px;padding-bottom:9px;}
+
+  .calc-result{
+    margin-left:auto;text-align:right;min-width:150px;
+  }
+  .calc-result .lab{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px;}
+  .calc-result .val{font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent-ink);font-family:var(--mono);}
+  .calc-meta{
+    margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);
+    display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;color:var(--muted);
+  }
+  .calc-meta b{color:var(--ink);font-family:var(--mono);font-weight:600;}
+  .chip{
+    display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;
+    padding:3px 9px;border-radius:20px;
+  }
+  .chip.meal{background:var(--amber-soft);color:var(--amber);}
+
+  /* ── 이번 달 요약 ── */
+  .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px;}
+  .stat{border:1px solid var(--line);border-radius:11px;padding:14px 16px;background:#fff;}
+  .stat .lab{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:6px;}
+  .stat .num{font-size:24px;font-weight:700;font-family:var(--mono);letter-spacing:-.01em;}
+  .stat.goal .num{color:var(--muted);}
+  .stat.done .num{color:var(--accent-ink);}
+  .stat.left .num{color:var(--amber);}
+  .stat.left .num.cleared{color:var(--accent-ink);}
+  .stat .min-input{display:flex;align-items:baseline;gap:6px;}
+  .stat input[type=number]{
+    font-family:var(--mono);font-size:22px;font-weight:700;width:70px;padding:2px 6px;
+    border:none;border-bottom:2px solid var(--line-strong);background:transparent;color:var(--ink);
+  }
+  .stat input[type=number]::-webkit-outer-spin-button,
+  .stat input[type=number]::-webkit-inner-spin-button{opacity:1;}
+  .stat .unit{font-size:14px;color:var(--muted);font-weight:600;}
+
+  .progress-shell{margin-top:2px;}
+  .progress-track{height:10px;border-radius:6px;background:var(--line);overflow:hidden;}
+  .progress-bar{height:100%;background:var(--accent);border-radius:6px;transition:width .35s ease;width:0;}
+  .progress-bar.over{background:linear-gradient(90deg,var(--accent),#1a9aa8);}
+  .progress-cap{display:flex;justify-content:space-between;margin-top:7px;font-size:12px;color:var(--muted);}
+  .progress-cap b{font-family:var(--mono);color:var(--ink);}
+
+  /* ── 캘린더 ── */
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .cal-head .month-lab{font-size:18px;font-weight:700;font-family:var(--mono);letter-spacing:.01em;}
+  .navbtn{
+    border:1px solid var(--line-strong);background:#fff;color:var(--ink);border-radius:9px;
+    width:38px;height:34px;cursor:pointer;font-size:16px;line-height:1;
+  }
+  .navbtn:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink);}
+  .today-btn{
+    border:1px solid var(--line-strong);background:#fff;color:var(--muted);border-radius:9px;
+    padding:0 12px;height:34px;cursor:pointer;font-size:13px;font-weight:600;margin-left:8px;
+  }
+  .today-btn:hover{background:var(--accent-soft);color:var(--accent-ink);border-color:var(--accent);}
+
+  .cal-scroll{overflow-x:auto;}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,minmax(122px,1fr));gap:8px;min-width:882px;}
+  .dow{font-size:12px;font-weight:700;color:var(--muted);text-align:center;padding-bottom:4px;}
+  .dow.sun{color:var(--warn);}
+  .dow.sat{color:var(--accent);}
+
+  .cell{
+    border:1px solid var(--line);border-radius:11px;background:#fff;padding:8px 8px 10px;
+    min-height:118px;display:flex;flex-direction:column;gap:6px;
+  }
+  .cell.empty{background:transparent;border:none;}
+  .cell.weekend{background:#FBFCFD;}
+  .cell.today{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);}
+  .cell .daynum{font-size:13px;font-weight:700;font-family:var(--mono);display:flex;align-items:center;gap:6px;}
+  .cell .daynum .sun{color:var(--warn);}
+  .cell .daynum .sat{color:var(--accent);}
+  .cell .daynum .hol{color:var(--warn);}
+  .cell .times{display:flex;flex-direction:column;gap:4px;}
+  .cell .times input.tinput{
+    width:100%;font-size:14px;padding:5px 4px;border-radius:7px;letter-spacing:.03em;
+  }
+  .cell .result{
+    margin-top:auto;font-family:var(--mono);font-size:14px;font-weight:700;color:var(--accent-ink);
+    line-height:1.25;word-break:keep-all;
+  }
+  .cell .result.none{color:var(--faint);font-weight:600;font-size:11.5px;}
+  .cell .result .rlab{font-size:9.5px;font-weight:700;color:var(--muted);display:block;letter-spacing:.02em;margin-top:3px;}
+  .cell .badges{display:flex;flex-wrap:wrap;gap:4px;}
+  .cell .badge{
+    font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:5px;line-height:1.3;
+  }
+  .badge.meal{background:var(--amber-soft);color:var(--amber);}
+  .badge.core{background:var(--warn-soft);color:var(--warn);}
+  .badge.off{background:var(--holiday-soft);color:var(--holiday);}
+  .badge.hol{background:var(--warn-soft);color:var(--warn);}
+  .cell .stay-note{font-size:10.5px;color:var(--faint);font-family:var(--mono);word-break:keep-all;margin-bottom:4px;}
+
+  /* ── 규칙 설명 ── */
+  details.rules{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;}
+  details.rules summary{
+    cursor:pointer;font-size:13px;font-weight:700;padding:16px 0;list-style:none;
+    display:flex;align-items:center;gap:8px;
+  }
+  details.rules summary::-webkit-details-marker{display:none;}
+  details.rules summary .tw{margin-left:auto;color:var(--faint);font-family:var(--mono);font-size:12px;}
+  details.rules[open] summary .tw{transform:none;}
+  details.rules .body{padding:0 0 20px;font-size:13.5px;color:var(--ink);line-height:1.7;}
+  details.rules .body ul{margin:8px 0;padding-left:18px;}
+  details.rules .body li{margin:5px 0;}
+  details.rules .body code{font-family:var(--mono);background:var(--bg);padding:1px 5px;border-radius:4px;font-size:12.5px;}
+  details.rules .body em{color:var(--accent-ink);font-style:normal;font-weight:600;}
+
+  .footnote{margin-top:18px;font-size:12px;color:var(--faint);text-align:center;}
+  .toolbar-note{font-size:12px;color:var(--muted);margin-top:12px;}
+
+  /* 저장 바 */
+  .data-bar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;
+    margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+  }
+  .save-status{font-size:12.5px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:6px;}
+  .save-status.saved{color:var(--accent-ink);}
+  .save-status .tick{
+    width:16px;height:16px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);
+    display:none;align-items:center;justify-content:center;font-size:10px;font-weight:800;
+  }
+  .save-status.saved .tick{display:inline-flex;}
+  .data-actions{display:flex;gap:8px;}
+  .databtn{
+    border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:9px;
+    padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--sans);
+  }
+  .databtn:hover{background:var(--accent-ink);border-color:var(--accent-ink);}
+  .databtn.ghost{background:#fff;color:var(--accent-ink);}
+  .databtn.ghost:hover{background:var(--accent-soft);}
+
+  /* 토스트 알림 */
+  .toast{
+    position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:13.5px;font-weight:600;
+    box-shadow:0 8px 24px rgba(28,36,48,.25);opacity:0;pointer-events:none;transition:all .25s ease;z-index:50;
+    max-width:90vw;text-align:center;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .toast.err{background:var(--warn);}
+
+  /* ── 레이아웃 (기본: 세로로 쌓임) ── */
+  .layout{display:block;}
+
+  /* 넓은 화면: 왼쪽 고정 사이드바 + 오른쪽 캘린더 */
+  @media (min-width:1180px){
+    .wrap{max-width:1380px;}
+    .layout{display:flex;gap:20px;align-items:flex-start;}
+    .sidebar{flex:0 0 340px;position:sticky;top:20px;}
+    .main{flex:1 1 auto;min-width:0;}
+    .sidebar .card:last-child{margin-bottom:0;}
+    /* 좁아진 사이드바 안에서 계산기/요약이 깔끔하게 보이도록 조정 */
+    .sidebar .field{flex:1 1 40%;}
+    .sidebar .tinput{width:100%;}
+    .sidebar .calc-result{flex:1 1 100%;margin-left:0;text-align:left;margin-top:12px;}
+    .sidebar .summary-grid{grid-template-columns:1fr;}
+  }
+
+  @media (max-width:560px){
+    .wrap{padding:22px 12px 60px;}
+    .summary-grid{grid-template-columns:1fr;}
+    .calc-result{margin-left:0;text-align:left;}
+    .calc-row{gap:12px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="kicker">Working Hours</div>
+    <h1>근무시간 관리</h1>
+    <p>출근·퇴근 시간을 입력하면 휴게시간 규칙에 따라 실 근무시간이 자동으로 계산됩니다.</p>
+  </header>
+
+  <div class="layout">
+  <aside class="sidebar">
+
+  <!-- ① 계산기 -->
+  <section class="card">
+    <div class="card-title"><span class="dot"></span>빠른 계산기</div>
+    <div class="calc-row">
+      <div class="field">
+        <label for="calcIn">출근 시간</label>
+        <input type="text" class="tinput" id="calcIn" inputmode="numeric" maxlength="5" placeholder="--:--" value="08:00">
+      </div>
+      <span class="tilde">~</span>
+      <div class="field">
+        <label for="calcOut">퇴근 시간</label>
+        <input type="text" class="tinput" id="calcOut" inputmode="numeric" maxlength="5" placeholder="--:--" value="17:00">
+      </div>
+      <div class="calc-result">
+        <div class="lab">실 근무시간</div>
+        <div class="val" id="calcVal">–</div>
+      </div>
+    </div>
+    <div class="calc-meta" id="calcMeta"></div>
+  </section>
+
+  <!-- ②③④ 이번 달 요약 -->
+  <section class="card">
+    <div class="card-title"><span class="dot"></span>이번 달 요약</div>
+    <div class="summary-grid">
+      <div class="stat goal">
+        <div class="lab">최소 근무시간</div>
+        <div class="min-input">
+          <input type="number" id="minHours" min="0" step="0.5" placeholder="0">
+          <span class="unit">시간</span>
+        </div>
+      </div>
+      <div class="stat done">
+        <div class="lab">누적 실 근무시간</div>
+        <div class="num" id="totalNum">0시간</div>
+      </div>
+      <div class="stat left">
+        <div class="lab">더 해야 하는 시간</div>
+        <div class="num" id="leftNum">–</div>
+      </div>
+    </div>
+    <div class="progress-shell">
+      <div class="progress-track"><div class="progress-bar" id="progBar"></div></div>
+      <div class="progress-cap">
+        <span>달성률 <b id="progPct">0%</b></span>
+        <span id="progText"></span>
+      </div>
+    </div>
+  </section>
+
+  </aside>
+  <main class="main">
+
+  <!-- ① 캘린더 -->
+  <section class="card">
+    <div class="cal-head">
+      <div class="month-lab" id="monthLab">–</div>
+      <div>
+        <button class="navbtn" id="prevBtn" aria-label="이전 달">‹</button>
+        <button class="navbtn" id="nextBtn" aria-label="다음 달">›</button>
+        <button class="today-btn" id="todayBtn">이번 달</button>
+      </div>
+    </div>
+    <div class="cal-scroll">
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+    <div class="data-bar">
+      <div class="save-status" id="saveStatus">입력하면 자동으로 저장됩니다</div>
+      <div class="data-actions">
+        <button class="databtn" id="backupBtn">백업 파일로 저장</button>
+        <button class="databtn ghost" id="restoreBtn">백업 불러오기</button>
+        <input type="file" id="restoreInput" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <div class="toolbar-note">매일 입력한 값은 이 브라우저에 자동 저장됩니다. 캐시를 지우거나 다른 PC에서 열어도 안전하게 쓰려면 가끔 <b>백업 파일로 저장</b>해 두세요.</div>
+  </section>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- 규칙 설명 -->
+  <details class="rules">
+    <summary><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;"></span>계산 규칙 자세히 보기<span class="tw">열기 / 닫기</span></summary>
+    <div class="body">
+      <ul>
+        <li><em>체류</em>: 출근부터 퇴근까지 사무실에 있는 전체 시간(휴게 포함).</li>
+        <li><em>휴게시간</em>: 근무 <code>4시간마다 30분</code>씩 차감됩니다. 단, 4시간을 채운 뒤 <b>더 체류(근무)할 시간이 남아 있을 때만</b> 그 휴게가 실제로 차감됩니다.
+          <ul>
+            <li>예) 07:30~16:30 (체류 9시간) → 4시간 근무·휴게 30분·4시간 근무·휴게 30분 = <b>실근무 8시간</b></li>
+            <li>예) 08:00~16:00 (체류 8시간) → 4시간 근무·휴게 30분·3시간 30분 근무(두 번째 4시간 미완성) = <b>실근무 7시간 30분</b></li>
+          </ul>
+        </li>
+        <li><em>업무 종료 이후 휴게시간</em>: 하루 <b>딱 4시간</b> 근무하는 날은 휴게 30분을 업무 종료 후에 이용하므로 차감되지 않습니다.
+          <ul>
+            <li>예) 08:00~12:00 (체류 4시간) → <b>실근무 4시간</b></li>
+            <li>예) 07:30~12:00 (체류 4시간 30분) → 4시간을 초과했으므로 휴게 30분 차감 → <b>실근무 4시간</b></li>
+          </ul>
+        </li>
+        <li><em>야근식대</em>: 평일에 <code>11시간 30분 이상</code> 체류하면 인당 12,000원 지원 대상입니다(달력 칸과 계산기에 <span class="chip meal">야근식대</span> 표시).</li>
+        <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간).</li>
+        <li><em>선택 휴무</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">선택 휴무</span>로 표시됩니다.</li>
+        <li><em>공휴일</em>: 2026년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
+      </ul>
+    </div>
+  </details>
+
+  </main>
+  </div>
+
+  <div class="footnote">Suprema · Technical Writing</div>
+</div>
+
+<script>
+/* =========================================================
+   핵심 계산: 체류시간(분) → 실 근무시간(분)
+   규칙: 4시간(240분) 근무할 때마다, 이후 체류할 시간이
+        남아 있으면 그때 휴게 30분을 차감한다.
+   ========================================================= */
+const BLOCK = 240;   // 근무 4시간
+const BREAK = 30;    // 휴게 30분
+
+function calcWorkMinutes(stayMin){
+  if(stayMin <= 0) return 0;
+  let remaining = stayMin, work = 0;
+  while(remaining > 0){
+    const seg = Math.min(BLOCK, remaining);   // 최대 4시간 근무
+    work += seg;
+    remaining -= seg;
+    // 4시간을 정확히 채웠고, 아직 체류할 시간이 남아 있으면 휴게 차감
+    if(work % BLOCK === 0 && remaining > 0){
+      remaining -= Math.min(BREAK, remaining);
+    }
+  }
+  return work;
+}
+
+/* 시간 문자열 → 분 ("HH:MM" 형식만 유효) */
+function toMin(t){
+  if(!t || !/^([01]?\d|2[0-3]):[0-5]\d$/.test(t)) return null;
+  const [h,m] = t.split(':').map(Number);
+  return h*60 + m;
+}
+
+/* 24시간 시간 입력 마스크
+   - 숫자만 입력받아 자동으로 "HH:MM" 형식으로 정리
+   - 오전/오후 표기 없음, 브라우저 설정과 무관하게 동일하게 동작 */
+function attachTimeMask(el, onChange){
+  el.addEventListener('focus', ()=>{ try{ el.select(); }catch(e){} });
+  // 입력 중: 숫자만 남기고 3자리 이상이면 콜론 자동 삽입
+  el.addEventListener('input', ()=>{
+    const d = el.value.replace(/[^0-9]/g,'').slice(0,4);
+    el.value = d.length >= 3 ? d.slice(0,2)+':'+d.slice(2) : d;
+    onChange();
+  });
+  // 포커스 아웃: 축약 입력 정규화 ("8"→"08:00", "830"→"08:30")
+  el.addEventListener('blur', ()=>{
+    const d = el.value.replace(/[^0-9]/g,'');
+    if(d.length === 0){ el.value=''; onChange(); return; }
+    let h, m;
+    if(d.length <= 2){ h = parseInt(d,10); m = 0; }
+    else if(d.length === 3){ h = parseInt(d.slice(0,1),10); m = parseInt(d.slice(1),10); }
+    else { h = parseInt(d.slice(0,2),10); m = parseInt(d.slice(2),10); }
+    el.value = (isNaN(h)||isNaN(m)||h>23||m>59)
+      ? '' : String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');
+    onChange();
+  });
+}
+/* 분 → "N시간 M분" (1시간 미만은 "M분"만) */
+function fmtDur(min){
+  if(min <= 0) return '0시간';
+  const h = Math.floor(min/60), m = min%60;
+  if(h === 0) return `${m}분`;
+  return m === 0 ? `${h}시간` : `${h}시간 ${m}분`;
+}
+/* 휴게시간 표기 (0이면 "없음") */
+function fmtBreak(min){
+  return min <= 0 ? '없음' : fmtDur(min);
+}
+/* 분 → 소수 시간(요약 계산용) */
+const toHours = min => min/60;
+
+/* =========================================================
+   코어타임 / 야근식대 / 선택 휴무 판정
+   ========================================================= */
+// 코어타임: 월~목 10:00~15:00, 금 10:00~12:00
+function coreRange(dow){ // dow: 0=일 … 6=토
+  if(dow >= 1 && dow <= 4) return [600, 900];   // 10:00~15:00
+  if(dow === 5) return [600, 720];              // 10:00~12:00
+  return null;                                   // 주말: 코어타임 없음
+}
+function meetsCore(dow, inMin, outMin, isHol){
+  if(isHol) return true;              // 공휴일은 코어타임 없음
+  const r = coreRange(dow);
+  if(!r) return true;
+  return inMin <= r[0] && outMin >= r[1];
+}
+// 야근식대: 평일(공휴일 제외) & 체류 11시간 30분(690분) 이상
+function isMealSupport(dow, stayMin, isHol){
+  if(isHol) return false;            // 공휴일은 평일이 아님
+  return dow >= 1 && dow <= 5 && stayMin >= 690;
+}
+// 셋째 주 금요일 = 그달 셋째 월요일 + 4일
+function optionalOffDate(year, month){ // month: 0-based
+  let mondays = 0, d = 1;
+  const last = new Date(year, month+1, 0).getDate();
+  for(; d <= last; d++){
+    if(new Date(year, month, d).getDay() === 1){
+      mondays++;
+      if(mondays === 3) return d + 4;  // 셋째 월요일 + 4 = 금요일
+    }
+  }
+  return null;
+}
+
+/* =========================================================
+   한국 공휴일 / 대체공휴일 (연도별)
+   ※ 설날·추석·부처님오신날은 음력 기준이라 매년 날짜가 달라
+     연도별로 직접 정리합니다. 현재는 2026년 데이터가 있습니다.
+   ========================================================= */
+const HOLIDAYS = {
+  2026:{
+    '01-01':'신정',
+    '02-16':'설날 연휴','02-17':'설날','02-18':'설날 연휴',
+    '03-01':'삼일절','03-02':'대체공휴일',
+    '05-01':'근로자의 날','05-05':'어린이날',
+    '05-24':'부처님오신날','05-25':'대체공휴일',
+    '06-03':'지방선거일','06-06':'현충일',
+    '07-17':'제헌절',
+    '08-15':'광복절','08-17':'대체공휴일',
+    '09-24':'추석 연휴','09-25':'추석','09-26':'추석 연휴',
+    '10-03':'개천절','10-05':'대체공휴일','10-09':'한글날',
+    '12-25':'성탄절'
+  }
+};
+function holidayName(year, month, day){
+  const t = HOLIDAYS[year];
+  if(!t) return null;
+  const key = `${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+  return t[key] || null;
+}
+
+/* =========================================================
+   저장 / 불러오기
+   ========================================================= */
+function monthKey(y,m){ return `wh-${y}-${String(m+1).padStart(2,'0')}`; }
+function safeGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function safeSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+
+function loadMonth(y,m){
+  const raw = safeGet(monthKey(y,m));
+  return raw ? JSON.parse(raw) : {};
+}
+function saveMonth(y,m,data){ safeSet(monthKey(y,m), JSON.stringify(data)); markSaved(); }
+function loadMin(y,m){
+  const v = safeGet(monthKey(y,m)+'-min');
+  return v === null ? '' : v;
+}
+function saveMin(y,m,v){ safeSet(monthKey(y,m)+'-min', v); markSaved(); }
+
+/* 저장 상태 표시 */
+function markSaved(){
+  const el = document.getElementById('saveStatus');
+  if(!el) return;
+  const now = new Date();
+  const hh = now.getHours(), mm = String(now.getMinutes()).padStart(2,'0');
+  const ampm = hh < 12 ? '오전' : '오후';
+  const h12 = hh % 12 === 0 ? 12 : hh % 12;
+  el.classList.add('saved');
+  el.innerHTML = `<span class="tick">✓</span>자동 저장됨 · ${ampm} ${h12}:${mm}`;
+}
+
+/* 토스트 알림 */
+let toastTimer = null;
+function showToast(msg, isErr){
+  const t = document.getElementById('toast');
+  if(!t) return;
+  t.textContent = msg;
+  t.className = 'toast show' + (isErr ? ' err' : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>{ t.className = 'toast'; }, 2600);
+}
+
+/* 백업 파일로 저장 (모든 달의 데이터를 JSON으로 내려받기) */
+function exportBackup(){
+  const dump = {};
+  try{
+    for(let i=0;i<localStorage.length;i++){
+      const k = localStorage.key(i);
+      if(k && k.indexOf('wh-') === 0) dump[k] = localStorage.getItem(k);
+    }
+  }catch(e){}
+  if(Object.keys(dump).length === 0){
+    showToast('저장된 근무 기록이 아직 없습니다', true);
+    return;
+  }
+  const payload = { app:'근무시간관리', version:1, exportedAt:new Date().toISOString(), data:dump };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const d = new Date();
+  const stamp = `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;
+  const a = document.createElement('a');
+  a.href = url; a.download = `근무시간_백업_${stamp}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  showToast('백업 파일을 저장했습니다');
+}
+
+/* 백업 불러오기 (JSON 파일에서 복원) */
+function importBackup(file){
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const payload = JSON.parse(e.target.result);
+      const data = (payload && payload.data) ? payload.data : payload;
+      let count = 0;
+      for(const k in data){
+        if(k.indexOf('wh-') === 0 && typeof data[k] === 'string'){ safeSet(k, data[k]); count++; }
+      }
+      if(count === 0){ showToast('올바른 백업 파일이 아닙니다', true); return; }
+      buildCalendar();
+      showToast(`백업을 불러왔습니다 · ${count}개 항목 복원`);
+    }catch(err){
+      showToast('불러오기 실패 · 파일을 확인해 주세요', true);
+    }
+  };
+  reader.readAsText(file);
+}
+
+/* =========================================================
+   상태
+   ========================================================= */
+const now = new Date();
+let curYear = now.getFullYear();
+let curMonth = now.getMonth();
+let monthData = {};
+
+const DOW = ['일','월','화','수','목','금','토'];
+
+/* =========================================================
+   ① 계산기
+   ========================================================= */
+const calcIn = document.getElementById('calcIn');
+const calcOut = document.getElementById('calcOut');
+const calcVal = document.getElementById('calcVal');
+const calcMeta = document.getElementById('calcMeta');
+
+function renderCalc(){
+  const i = toMin(calcIn.value), o = toMin(calcOut.value);
+  if(i === null || o === null || o <= i){
+    calcVal.textContent = '–';
+    calcMeta.innerHTML = (i!==null && o!==null && o<=i)
+      ? '<span style="color:var(--warn)">퇴근 시간이 출근 시간보다 늦어야 합니다.</span>' : '';
+    return;
+  }
+  const stay = o - i;
+  const work = calcWorkMinutes(stay);
+  const brk = stay - work;
+  calcVal.textContent = fmtDur(work);
+  let meta = `<span>체류 <b>${fmtDur(stay)}</b></span>` +
+             `<span>휴게시간 <b>${fmtBreak(brk)}</b></span>`;
+  if(stay >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
+  calcMeta.innerHTML = meta;
+}
+attachTimeMask(calcIn, renderCalc);
+attachTimeMask(calcOut, renderCalc);
+
+/* =========================================================
+   ②③④ 요약
+   ========================================================= */
+const minHours = document.getElementById('minHours');
+const totalNum = document.getElementById('totalNum');
+const leftNum = document.getElementById('leftNum');
+const progBar = document.getElementById('progBar');
+const progPct = document.getElementById('progPct');
+const progText = document.getElementById('progText');
+
+function totalWorkMinutes(){
+  let sum = 0;
+  for(const key in monthData){
+    const {in:i, out:o} = monthData[key];
+    const im = toMin(i), om = toMin(o);
+    if(im !== null && om !== null && om > im) sum += calcWorkMinutes(om - im);
+  }
+  return sum;
+}
+
+function renderSummary(){
+  const total = totalWorkMinutes();
+  totalNum.textContent = fmtDur(total);
+
+  const minH = parseFloat(minHours.value);
+  if(isNaN(minH) || minH <= 0){
+    leftNum.textContent = '–';
+    leftNum.classList.remove('cleared');
+    progBar.style.width = '0%';
+    progPct.textContent = '0%';
+    progText.textContent = '최소 근무시간을 입력하세요';
+    return;
+  }
+  const goalMin = Math.round(minH*60);
+  const leftMin = goalMin - total;
+  if(leftMin <= 0){
+    leftNum.textContent = '완료 ✓';
+    leftNum.classList.add('cleared');
+  }else{
+    leftNum.textContent = fmtDur(leftMin);
+    leftNum.classList.remove('cleared');
+  }
+  const pct = Math.min(100, Math.round(total/goalMin*100));
+  progBar.style.width = pct + '%';
+  progBar.classList.toggle('over', total >= goalMin);
+  progPct.textContent = pct + '%';
+  progText.innerHTML = `<b>${fmtDur(total)}</b> / ${fmtDur(goalMin)}`;
+}
+minHours.addEventListener('input', ()=>{ saveMin(curYear,curMonth,minHours.value); renderSummary(); });
+
+/* =========================================================
+   ① 캘린더
+   ========================================================= */
+const calGrid = document.getElementById('calGrid');
+const monthLab = document.getElementById('monthLab');
+
+function buildCalendar(){
+  monthLab.textContent = `${curYear}년 ${curMonth+1}월`;
+  monthData = loadMonth(curYear, curMonth);
+  minHours.value = loadMin(curYear, curMonth);
+
+  calGrid.innerHTML = '';
+  // 요일 헤더
+  DOW.forEach((d,idx)=>{
+    const h = document.createElement('div');
+    h.className = 'dow' + (idx===0?' sun':idx===6?' sat':'');
+    h.textContent = d;
+    calGrid.appendChild(h);
+  });
+
+  const firstDow = new Date(curYear, curMonth, 1).getDay();
+  const lastDate = new Date(curYear, curMonth+1, 0).getDate();
+  const offDay = optionalOffDate(curYear, curMonth);
+  const today = new Date();
+  const isThisMonth = today.getFullYear()===curYear && today.getMonth()===curMonth;
+
+  for(let i=0;i<firstDow;i++){
+    const e = document.createElement('div');
+    e.className = 'cell empty';
+    calGrid.appendChild(e);
+  }
+
+  for(let day=1; day<=lastDate; day++){
+    const dow = new Date(curYear, curMonth, day).getDay();
+    const hol = holidayName(curYear, curMonth, day);
+    const dateKey = `${curYear}-${String(curMonth+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+
+    const cell = document.createElement('div');
+    cell.className = 'cell' + ((dow===0||dow===6)?' weekend':'') + (isThisMonth&&today.getDate()===day?' today':'');
+
+    // 날짜
+    const dn = document.createElement('div');
+    dn.className = 'daynum';
+    const dowCls = hol ? 'hol' : (dow===0?'sun':dow===6?'sat':'');
+    dn.innerHTML = `<span class="${dowCls}">${day}</span>`;
+    cell.appendChild(dn);
+
+    // 시간 입력 (24시간 커스텀 입력)
+    const times = document.createElement('div');
+    times.className = 'times';
+    const inEl = document.createElement('input');
+    inEl.type='text'; inEl.className='tinput'; inEl.inputMode='numeric'; inEl.maxLength=5;
+    inEl.placeholder='--:--'; inEl.title='출근'; inEl.value = monthData[dateKey]?.in || '';
+    const outEl = document.createElement('input');
+    outEl.type='text'; outEl.className='tinput'; outEl.inputMode='numeric'; outEl.maxLength=5;
+    outEl.placeholder='--:--'; outEl.title='퇴근'; outEl.value = monthData[dateKey]?.out || '';
+    times.appendChild(inEl); times.appendChild(outEl);
+    cell.appendChild(times);
+
+    // 배지 + 결과 영역
+    const badges = document.createElement('div');
+    badges.className = 'badges';
+    cell.appendChild(badges);
+    const result = document.createElement('div');
+    cell.appendChild(result);
+
+    function refreshCell(){
+      const im = toMin(inEl.value), om = toMin(outEl.value);
+      badges.innerHTML = '';
+      // 공휴일 배지 (항상 표시)
+      if(hol){
+        const b=document.createElement('span'); b.className='badge hol'; b.textContent=hol; badges.appendChild(b);
+      }
+      // 선택 휴무 배지 (항상 표시)
+      if(day === offDay){
+        const b=document.createElement('span'); b.className='badge off'; b.textContent='선택 휴무'; badges.appendChild(b);
+      }
+      if(im === null || om === null){
+        result.className='result none';
+        result.textContent = '미입력';
+        return;
+      }
+      if(om <= im){
+        result.className='result none';
+        result.innerHTML = '<span style="color:var(--warn)">시간 확인</span>';
+        return;
+      }
+      const stay = om - im;
+      const work = calcWorkMinutes(stay);
+      const brk = stay - work;
+      result.className='result';
+      result.innerHTML =
+        `<div class="stay-note">체류 ${fmtDur(stay)}</div>` +
+        `<div class="stay-note">휴게시간 ${fmtBreak(brk)}</div>` +
+        `<span class="rlab">실근무</span>${fmtDur(work)}`;
+      // 야근식대
+      if(isMealSupport(dow, stay, !!hol)){
+        const b=document.createElement('span'); b.className='badge meal'; b.textContent='야근식대'; badges.appendChild(b);
+      }
+      // 코어타임 미충족
+      if(!meetsCore(dow, im, om, !!hol)){
+        const b=document.createElement('span'); b.className='badge core'; b.textContent='코어타임'; badges.appendChild(b);
+      }
+    }
+
+    function onChange(){
+      const im = inEl.value, om = outEl.value;
+      if(im || om){ monthData[dateKey] = {in:im, out:om}; }
+      else { delete monthData[dateKey]; }
+      saveMonth(curYear, curMonth, monthData);
+      refreshCell();
+      renderSummary();
+    }
+    attachTimeMask(inEl, onChange);
+    attachTimeMask(outEl, onChange);
+
+    refreshCell();
+    calGrid.appendChild(cell);
+  }
+  renderSummary();
+}
+
+document.getElementById('prevBtn').addEventListener('click', ()=>{
+  curMonth--; if(curMonth<0){curMonth=11;curYear--;} buildCalendar();
+});
+document.getElementById('nextBtn').addEventListener('click', ()=>{
+  curMonth++; if(curMonth>11){curMonth=0;curYear++;} buildCalendar();
+});
+document.getElementById('todayBtn').addEventListener('click', ()=>{
+  curYear=now.getFullYear(); curMonth=now.getMonth(); buildCalendar();
+});
+
+/* 백업 저장 / 불러오기 */
+document.getElementById('backupBtn').addEventListener('click', exportBackup);
+document.getElementById('restoreBtn').addEventListener('click', ()=>{
+  document.getElementById('restoreInput').click();
+});
+document.getElementById('restoreInput').addEventListener('change', e=>{
+  const f = e.target.files && e.target.files[0];
+  if(f) importBackup(f);
+  e.target.value = '';   // 같은 파일 다시 선택 가능하도록 초기화
+});
+
+/* 초기 실행 */
+renderCalc();
+buildCalendar();
+</script>
+</body>
+</html>
