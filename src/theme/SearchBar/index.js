@@ -108,7 +108,7 @@ function CustomSnippet({ attribute, hit }) {
   return <span dangerouslySetInnerHTML={{ __html: decodeHighlightHtml(raw) }} />;
 }
 
-function Hit({hit, query}) {
+function Hit({hit, query, sendEvent}) {
   const {siteConfig} = useDocusaurusContext();
   const {indexName} = siteConfig.themeConfig.algolia || {};
   // hierarchy에서 마지막 null이 아닌 레벨 찾기
@@ -144,6 +144,9 @@ function Hit({hit, query}) {
     recentSearches = recentSearches.slice(0, 10);
 
     localStorage.setItem(key, JSON.stringify(recentSearches));
+
+    // Algolia Insights로 클릭 이벤트 전송 (Analytics, Personalization 등에 활용)
+    sendEvent?.('click', hit, 'Hit Clicked');
 
     // GA4로 검색 결과 클릭 이벤트 전송
     trackSearchEvent('select_content', {
