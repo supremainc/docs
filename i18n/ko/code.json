@@ -936,6 +936,10 @@
   "theme.SearchBar.product.label": {
     "message": "제품"
   },
+  "theme.SearchBar.relatedDocs.title": {
+    "message": "관련 문서",
+    "description": "The title for related documents shown in the search popup when the query is empty"
+  },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "검색어 초기화",
     "description": "The label and ARIA label for search box reset button"

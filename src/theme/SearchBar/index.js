@@ -4,7 +4,7 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Translate, { translate } from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {useHistory} from '@docusaurus/router';
+import {useHistory, useLocation} from '@docusaurus/router';
 import {useSearchResultUrlProcessor} from '@docusaurus/theme-search-algolia/client';
 import {
   InstantSearch,
@@ -251,6 +251,193 @@ function useRecentSearches(indexName) {
   return recentSearches;
 }
 
+const MAX_RELATED_IN_SEARCH = 4;
+
+// 인덱스 레코드의 objectID는 "{n}-{url}" 형태이며 n(청크 번호)은 페이지마다 다르다.
+// 페이지의 대표 레코드(type: "lvl1")는 항상 낮은 번호(0~4)에 있으므로 후보를 한 번에 조회해 찾는다.
+async function resolvePageObjectId(appId, apiKey, indexName, url) {
+  const candidates = [0, 1, 2, 3, 4].map((n) => `${n}-${url}`);
+  const res = await fetch(`https://${appId}-dsn.algolia.net/1/indexes/*/objects`, {
+    method: 'POST',
+    headers: {
+      'X-Algolia-API-Key': apiKey,
+      'X-Algolia-Application-Id': appId,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      requests: candidates.map((objectID) => ({indexName, objectID})),
+    }),
+  });
+  if (!res.ok) return null;
+  const {results} = await res.json();
+  return results.find((r) => r?.type === 'lvl1')?.objectID ?? null;
+}
+
+async function fetchRelatedHits(appId, apiKey, indexName, objectID, locale, maxCount) {
+  const res = await fetch(`https://${appId}-dsn.algolia.net/1/indexes/*/recommendations`, {
+    method: 'POST',
+    headers: {
+      'X-Algolia-API-Key': apiKey,
+      'X-Algolia-Application-Id': appId,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      requests: [
+        {
+          indexName,
+          objectID,
+          model: 'related-products',
+          threshold: 0,
+          // 같은 문서의 청크가 여러 개 섞여 반환될 수 있어 넉넉히 받아 중복 제거 후 상위 N개만 사용
+          maxRecommendations: maxCount * 3,
+          queryParameters: {filters: `language:${locale}`},
+        },
+      ],
+    }),
+  });
+  if (!res.ok) return [];
+  const {results} = await res.json();
+  return results?.[0]?.hits ?? [];
+}
+
+// 크롤러가 같은 페이지를 트레일링 슬래시 유무로 다르게 색인하는 경우가 있어 비교 전 정규화
+function normalizeUrl(url) {
+  return url?.replace(/\/$/, '');
+}
+
+function dedupeByUrl(hits, excludeUrl, max) {
+  const excludeNormalized = normalizeUrl(excludeUrl);
+  const seen = new Set();
+  const unique = [];
+  for (const hit of hits) {
+    const normalized = normalizeUrl(hit.url_without_anchor);
+    if (normalized === excludeNormalized) continue;
+    if (seen.has(normalized)) continue;
+    seen.add(normalized);
+    unique.push(hit);
+    if (unique.length >= max) break;
+  }
+  return unique;
+}
+
+// 추천 결과는 본문 청크(type: "content")일 수 있어 hierarchy.lvl1이 비어 있는 경우가 많다.
+// 실제 페이지 제목은 그 페이지 고유의 대표 레코드(type: "lvl1")에만 있으므로 별도로 조회해야 한다.
+async function resolveTitleRecords(appId, apiKey, indexName, urls) {
+  const candidates = urls.flatMap((url) => [0, 1, 2, 3, 4].map((n) => `${n}-${url}`));
+  const res = await fetch(`https://${appId}-dsn.algolia.net/1/indexes/*/objects`, {
+    method: 'POST',
+    headers: {
+      'X-Algolia-API-Key': apiKey,
+      'X-Algolia-Application-Id': appId,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      requests: candidates.map((objectID) => ({indexName, objectID})),
+    }),
+  });
+  if (!res.ok) return new Map();
+  const {results} = await res.json();
+  const titleRecordByUrl = new Map();
+  for (const record of results) {
+    if (record?.type === 'lvl1') {
+      titleRecordByUrl.set(normalizeUrl(record.url_without_anchor), record);
+    }
+  }
+  return titleRecordByUrl;
+}
+
+// 대표 레코드 조회가 실패했을 때를 대비한 폴백: 사이드바 경로(sidelvl2~5)의 마지막 항목을 사용
+function getFallbackTitle(hit) {
+  return (
+    hit.hierarchy?.lvl1 ||
+    [hit.sidelvl2, hit.sidelvl3, hit.sidelvl4, hit.sidelvl5].filter(Boolean).pop() ||
+    hit.hierarchy?.lvl0 ||
+    hit.url
+  );
+}
+
+// 검색어가 없을 때, 현재 보고 있는 문서를 기준으로 Algolia Recommend(Related items)를 호출해
+// "최근" 검색 목록 위에 관련 문서를 보여준다.
+function RelatedDocsInSearch({onClose, indexName}) {
+  const {siteConfig, i18n: {currentLocale}} = useDocusaurusContext();
+  const {appId, apiKey} = siteConfig.themeConfig.algolia || {};
+  const location = useLocation();
+  const processSearchResultUrl = useSearchResultUrlProcessor();
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    if (!appId || !apiKey || !indexName) return;
+    let cancelled = false;
+    const currentUrl = `${siteConfig.url}${location.pathname}`;
+
+    (async () => {
+      try {
+        const sourceObjectId = await resolvePageObjectId(appId, apiKey, indexName, currentUrl);
+        if (!sourceObjectId || cancelled) return;
+
+        const hits = await fetchRelatedHits(
+          appId, apiKey, indexName, sourceObjectId, currentLocale, MAX_RELATED_IN_SEARCH,
+        );
+        if (cancelled) return;
+
+        const unique = dedupeByUrl(hits, currentUrl, MAX_RELATED_IN_SEARCH);
+        if (unique.length === 0) {
+          setItems([]);
+          return;
+        }
+
+        // 각 추천 페이지 고유의 대표 레코드를 조회해 정확한 제목/카테고리로 보강
+        const titleRecordByUrl = await resolveTitleRecords(
+          appId, apiKey, indexName, unique.map((hit) => hit.url_without_anchor),
+        );
+        if (cancelled) return;
+
+        const enriched = unique.map((hit) => {
+          const titleRecord = titleRecordByUrl.get(normalizeUrl(hit.url_without_anchor));
+          return {
+            ...hit,
+            displayTitle: titleRecord?.hierarchy?.lvl1 || getFallbackTitle(hit),
+            displayCategory: titleRecord?.hierarchy?.lvl0 || hit.hierarchy?.lvl0,
+          };
+        });
+        setItems(enriched);
+      } catch (e) {
+        console.error('Failed to load related docs:', e);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [appId, apiKey, indexName, currentLocale, location.pathname, siteConfig.url]);
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className="search-pop-related">
+      <h4>
+        <Translate id='theme.SearchBar.relatedDocs.title' />
+      </h4>
+      <ul className="search-pop-related-list">
+        {items.map((hit) => (
+          <li key={hit.objectID} className="search-pop-related-item-wrapper">
+            <Link
+              to={processSearchResultUrl(hit.url)}
+              className="search-pop-related-item"
+              onClick={onClose}
+            >
+              <div className="search-pop-related-title">{hit.displayTitle}</div>
+              {hit.displayCategory && (
+                <div className="search-pop-related-category">{hit.displayCategory}</div>
+              )}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function RecentSearches({onClose, indexName}) {
   const useRecentSearchesData = useRecentSearches(indexName);
   const [recentSearches, setRecentSearches] = useState(useRecentSearchesData);
@@ -391,20 +578,20 @@ function HitsWithQuery({onClose, indexName}) {
     };
   }, [query]);
 
-  // 검색어가 없고 최근 검색이 있으면 최근 검색 표시
-  if (!query && recentSearches.length > 0) {
-    return (
-      <RecentSearches onClose={onClose} indexName={indexName} />
-    );
-  }
-
-  // 검색어가 없으면 메시지 표시
+  // 검색어가 없으면 관련 문서(있을 때만) + 최근 검색 또는 안내 메시지 표시
   if (!query) {
     return (
-    <div className="search-pop-empty">
-      <Translate id='theme.SearchPage.inputPlaceholder' />
-    </div>
-  );
+      <div className="search-pop-start">
+        <RelatedDocsInSearch onClose={onClose} indexName={indexName} />
+        {recentSearches.length > 0 ? (
+          <RecentSearches onClose={onClose} indexName={indexName} />
+        ) : (
+          <div className="search-pop-empty">
+            <Translate id='theme.SearchPage.inputPlaceholder' />
+          </div>
+        )}
+      </div>
+    );
   }
 
   // 검색어가 있으면 검색 결과 표시
