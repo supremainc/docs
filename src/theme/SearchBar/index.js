@@ -16,6 +16,7 @@ import {
   ClearRefinements,
   Stats,
   useSearchBox,
+  useRelatedProducts,
 } from 'react-instantsearch';
 import {liteClient as algoliasearch} from 'algoliasearch/lite';
 import { isWindows, isMacOs, isMobile } from 'react-device-detect';
@@ -273,33 +274,6 @@ async function resolvePageObjectId(appId, apiKey, indexName, url) {
   return results.find((r) => r?.type === 'lvl1')?.objectID ?? null;
 }
 
-async function fetchRelatedHits(appId, apiKey, indexName, objectID, locale, maxCount) {
-  const res = await fetch(`https://${appId}-dsn.algolia.net/1/indexes/*/recommendations`, {
-    method: 'POST',
-    headers: {
-      'X-Algolia-API-Key': apiKey,
-      'X-Algolia-Application-Id': appId,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      requests: [
-        {
-          indexName,
-          objectID,
-          model: 'related-products',
-          threshold: 0,
-          // 같은 문서의 청크가 여러 개 섞여 반환될 수 있어 넉넉히 받아 중복 제거 후 상위 N개만 사용
-          maxRecommendations: maxCount * 3,
-          queryParameters: {filters: `language:${locale}`},
-        },
-      ],
-    }),
-  });
-  if (!res.ok) return [];
-  const {results} = await res.json();
-  return results?.[0]?.hits ?? [];
-}
-
 // 크롤러가 같은 페이지를 트레일링 슬래시 유무로 다르게 색인하는 경우가 있어 비교 전 정규화
 function normalizeUrl(url) {
   return url?.replace(/\/$/, '');
@@ -320,37 +294,23 @@ function dedupeByUrl(hits, excludeUrl, max) {
   return unique;
 }
 
-// 추천 결과는 본문 청크(type: "content")일 수 있어 hierarchy.lvl1이 비어 있는 경우가 많다.
-// 실제 페이지 제목은 그 페이지 고유의 대표 레코드(type: "lvl1")에만 있으므로 별도로 조회해야 한다.
-async function resolveTitleRecords(appId, apiKey, indexName, urls) {
-  const candidates = urls.flatMap((url) => [0, 1, 2, 3, 4].map((n) => `${n}-${url}`));
-  const res = await fetch(`https://${appId}-dsn.algolia.net/1/indexes/*/objects`, {
-    method: 'POST',
-    headers: {
-      'X-Algolia-API-Key': apiKey,
-      'X-Algolia-Application-Id': appId,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      requests: candidates.map((objectID) => ({indexName, objectID})),
-    }),
-  });
-  if (!res.ok) return new Map();
-  const {results} = await res.json();
-  const titleRecordByUrl = new Map();
-  for (const record of results) {
-    if (record?.type === 'lvl1') {
-      titleRecordByUrl.set(normalizeUrl(record.url_without_anchor), record);
-    }
-  }
-  return titleRecordByUrl;
+// content는 보통 "{카테고리}\r\n...\r\n{페이지 제목}"처럼 경로를 줄바꿈으로 나열한 짧은 텍스트지만,
+// 본문 문단 전체가 그대로 들어있는 청크도 있어 마지막 줄이 지나치게 길면(문장일 가능성) 제목으로 쓰지 않는다.
+function getLastLineOfContent(content) {
+  if (!content) return null;
+  const lines = content.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  const last = lines[lines.length - 1];
+  if (!last || last.length > 40) return null;
+  return last;
 }
 
-// 대표 레코드 조회가 실패했을 때를 대비한 폴백: 사이드바 경로(sidelvl2~5)의 마지막 항목을 사용
+// 추천 결과는 본문 청크(type: "content")일 수 있어 hierarchy.lvl1이 비어 있는 경우가 많다.
+// 이때는 사이드바 경로(sidelvl2~5)의 마지막 항목, 그다음 content의 마지막 줄,
+// 그마저 없으면 카테고리(hierarchy.lvl0)를 제목으로 사용한다.
 function getFallbackTitle(hit) {
   return (
-    hit.hierarchy?.lvl1 ||
     [hit.sidelvl2, hit.sidelvl3, hit.sidelvl4, hit.sidelvl5].filter(Boolean).pop() ||
+    getLastLineOfContent(hit.content) ||
     hit.hierarchy?.lvl0 ||
     hit.url
   );
@@ -358,58 +318,62 @@ function getFallbackTitle(hit) {
 
 // 검색어가 없을 때, 현재 보고 있는 문서를 기준으로 Algolia Recommend(Related items)를 호출해
 // "최근" 검색 목록 위에 관련 문서를 보여준다.
+// objectIDs로 현재 페이지의 대표 레코드를 알아야 하는데, 이는 InstantSearch/Recommend의 어떤
+// 위젯도 대신해주지 않는 이 인덱스(URL당 여러 청크 레코드) 특유의 조회라 raw API로 직접 해결한다.
+// (일반적인 이커머스라면 "지금 보고 있는 상품의 objectID"를 이미 알고 있어 이 단계가 필요 없다.)
 function RelatedDocsInSearch({onClose, indexName}) {
-  const {siteConfig, i18n: {currentLocale}} = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   const {appId, apiKey} = siteConfig.themeConfig.algolia || {};
   const location = useLocation();
-  const processSearchResultUrl = useSearchResultUrlProcessor();
-  const [items, setItems] = useState([]);
+  const [sourceObjectId, setSourceObjectId] = useState(null);
 
   useEffect(() => {
     if (!appId || !apiKey || !indexName) return;
     let cancelled = false;
     const currentUrl = `${siteConfig.url}${location.pathname}`;
 
-    (async () => {
-      try {
-        const sourceObjectId = await resolvePageObjectId(appId, apiKey, indexName, currentUrl);
-        if (!sourceObjectId || cancelled) return;
-
-        const hits = await fetchRelatedHits(
-          appId, apiKey, indexName, sourceObjectId, currentLocale, MAX_RELATED_IN_SEARCH,
-        );
-        if (cancelled) return;
-
-        const unique = dedupeByUrl(hits, currentUrl, MAX_RELATED_IN_SEARCH);
-        if (unique.length === 0) {
-          setItems([]);
-          return;
-        }
-
-        // 각 추천 페이지 고유의 대표 레코드를 조회해 정확한 제목/카테고리로 보강
-        const titleRecordByUrl = await resolveTitleRecords(
-          appId, apiKey, indexName, unique.map((hit) => hit.url_without_anchor),
-        );
-        if (cancelled) return;
-
-        const enriched = unique.map((hit) => {
-          const titleRecord = titleRecordByUrl.get(normalizeUrl(hit.url_without_anchor));
-          return {
-            ...hit,
-            displayTitle: titleRecord?.hierarchy?.lvl1 || getFallbackTitle(hit),
-            displayCategory: titleRecord?.hierarchy?.lvl0 || hit.hierarchy?.lvl0,
-          };
-        });
-        setItems(enriched);
-      } catch (e) {
-        console.error('Failed to load related docs:', e);
-      }
-    })();
+    resolvePageObjectId(appId, apiKey, indexName, currentUrl)
+      .then((id) => {
+        if (!cancelled) setSourceObjectId(id);
+      })
+      .catch((e) => console.error('Failed to resolve current page objectID:', e));
 
     return () => {
       cancelled = true;
     };
-  }, [appId, apiKey, indexName, currentLocale, location.pathname, siteConfig.url]);
+  }, [appId, apiKey, indexName, location.pathname, siteConfig.url]);
+
+  if (!sourceObjectId) return null;
+
+  return (
+    <RelatedDocsList
+      // 페이지 이동 시 이전 페이지의 추천 상태가 남지 않도록 objectID가 바뀌면 완전히 새로 마운트
+      key={sourceObjectId}
+      onClose={onClose}
+      currentUrl={`${siteConfig.url}${location.pathname}`}
+      sourceObjectId={sourceObjectId}
+    />
+  );
+}
+
+// 실제 추천 호출은 이미 <InstantSearch> 트리 안에 있으므로 react-instantsearch의
+// useRelatedProducts 내장 훅을 사용한다(raw fetch 대신).
+function RelatedDocsList({onClose, currentUrl, sourceObjectId}) {
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const processSearchResultUrl = useSearchResultUrlProcessor();
+  const {items: rawItems} = useRelatedProducts({
+    objectIDs: [sourceObjectId],
+    // 같은 문서의 청크가 여러 개 섞여 반환될 수 있어 넉넉히 받아 중복 제거 후 상위 N개만 사용
+    limit: MAX_RELATED_IN_SEARCH * 3,
+    threshold: 0,
+    queryParameters: {filters: `language:${currentLocale}`},
+  });
+
+  const items = dedupeByUrl(rawItems, currentUrl, MAX_RELATED_IN_SEARCH).map((hit) => ({
+    ...hit,
+    displayTitle: getFallbackTitle(hit),
+    displayCategory: hit.hierarchy?.lvl0,
+  }));
 
   if (items.length === 0) return null;
 
