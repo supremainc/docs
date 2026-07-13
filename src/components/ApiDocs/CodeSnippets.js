@@ -3,8 +3,8 @@ import CodeBlock from '@theme/CodeBlock';
 import { makeSnippets } from './utils';
 import { SNIPPET_LANGS } from './constants';
 
-export default function CodeSnippets({ req }) {
-  const snippets = useMemo(() => makeSnippets(req), [req]);
+export default function CodeSnippets({ req, auth }) {
+  const snippets = useMemo(() => makeSnippets(req, auth), [req, auth]);
   const tabs = Object.keys(snippets);
   const [active, setActive] = useState(tabs[0]);
 

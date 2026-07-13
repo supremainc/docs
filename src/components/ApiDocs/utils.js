@@ -48,13 +48,32 @@ export function findParentKeys(selected, folders) {
   return null;
 }
 
-export function makeSnippets(req) {
+export function getAuthHeader(auth) {
+  if (!auth) return null;
+  if (auth.type === 'bearer') {
+    const token = auth.bearer?.find(e => e.key === 'token')?.value || '{token}';
+    return { key: 'Authorization', value: `Bearer ${token}` };
+  }
+  if (auth.type === 'apikey') {
+    const entries = auth.apikey || [];
+    const at = entries.find(e => e.key === 'in')?.value;
+    if (at && at !== 'header') return null;
+    const key = entries.find(e => e.key === 'key')?.value || 'Authorization';
+    const value = entries.find(e => e.key === 'value')?.value || '{value}';
+    return { key, value };
+  }
+  return null;
+}
+
+export function makeSnippets(req, auth) {
   const method = req.method || 'GET';
   const url = toSnippetUrl(req.url);
   const isLogin = req.url?.raw?.includes('/api/login');
 
   const hdrs = [...(req.header || [])];
-  if (!isLogin) hdrs.unshift({ key: 'bs-session-id', value: '{your-session-id}' });
+  const authHeader = !isLogin ? getAuthHeader(auth) : null;
+  const hasAuthHeader = authHeader && hdrs.some(h => h.key?.toLowerCase() === authHeader.key.toLowerCase());
+  if (authHeader && !hasAuthHeader) hdrs.unshift(authHeader);
 
   const bodyRaw = req.body?.raw;
   const hasBody = !!bodyRaw;

@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import MethodBadge from './MethodBadge';
+import DeprecatedBadge from './DeprecatedBadge';
 import { findParentKeys } from './utils';
 
 const reqBtnStyle = (isActive) => ({
@@ -117,11 +118,15 @@ export default function Sidebar({ allFolders, title, selected, onSelect, isMobil
                         const isActive = selected?.name === req.name;
                         return (
                           <button key={req.name} onClick={() => onSelect(req)}
-                            style={{ ...reqBtnStyle(isActive), padding: '8px 14px 8px 34px' }}>
+                            style={{ ...reqBtnStyle(isActive), padding: '8px 14px 8px 34px', opacity: req.deprecated ? 0.55 : 1 }}>
                             <MethodBadge method={req.request?.method} compact />
-                            <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                            <span style={{
+                              flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                              textDecoration: req.deprecated ? 'line-through' : 'none',
+                            }}>
                               {req.name}
                             </span>
+                            {req.deprecated && <DeprecatedBadge compact />}
                           </button>
                         );
                       })}
@@ -132,11 +137,15 @@ export default function Sidebar({ allFolders, title, selected, onSelect, isMobil
                 const isActive = selected?.name === child.name;
                 return (
                   <button key={child.name} onClick={() => onSelect(child)}
-                    style={{ ...reqBtnStyle(isActive), padding: '8px 14px 8px 24px' }}>
+                    style={{ ...reqBtnStyle(isActive), padding: '8px 14px 8px 24px', opacity: child.deprecated ? 0.55 : 1 }}>
                     <MethodBadge method={child.request?.method} compact />
-                    <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <span style={{
+                      flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                      textDecoration: child.deprecated ? 'line-through' : 'none',
+                    }}>
                       {child.name}
                     </span>
+                    {child.deprecated && <DeprecatedBadge compact />}
                   </button>
                 );
               })}
