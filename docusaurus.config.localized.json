@@ -88,5 +88,11 @@
     "en": "Help us understand how visitors use the site so we can improve content and usability.",
     "ja": "訪問者がサイトをどのように利用しているかを把握し、コンテンツと使いやすさを改善するために使用されます。",
     "es": "Nos ayudan a entender cómo los visitantes utilizan el sitio para mejorar el contenido y la usabilidad."
+  },
+  "changelog": {
+    "ko": "업데이트 내역",
+    "en": "Changelog",
+    "ja": "更新履歴",
+    "es": "Registro de cambios"
   }
 }

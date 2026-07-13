@@ -130,7 +130,7 @@ const config = {
         blog: {
           path: 'changelog',
           editLocalizedFiles: false,
-          blogTitle: 'Changelog',
+          blogTitle: getLocalizedConfigValue('changelog'),
           blogDescription: 'Suprema product change logs',
           routeBasePath: 'changelog',
           showReadingTime: false,
