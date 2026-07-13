@@ -468,5 +468,15 @@
   "ui_383": "Manual Lock",
   "ui_384": "Normalize",
   "ui_385": "Scanner",
-  "ui_386": "Enforce EV2/EV3 Secure Messaging"
+  "ui_386": "Enforce EV2/EV3 Secure Messaging",
+  "ui_387": "Menu Password",
+  "ui_388": "CLUe Mode",
+  "ui_389": "Entry Button",
+  "ui_390": "Ping Test",
+  "ui_391": "Manual Address",
+  "ui_392": "Timeout",
+  "ui_393": "CLUe Resource",
+  "ui_394": "Log",
+  "ui_395": "Face Detection",
+  "ui_396": "OSS Notice"
 }

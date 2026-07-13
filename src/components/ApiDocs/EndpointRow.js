@@ -1,5 +1,6 @@
 import React from 'react';
 import MethodBadge from './MethodBadge';
+import DeprecatedBadge from './DeprecatedBadge';
 
 export default function EndpointRow({ req, onSelect }) {
   const method = req.request?.method;
@@ -11,11 +12,18 @@ export default function EndpointRow({ req, onSelect }) {
       padding: '12px 16px', background: 'none', border: 'none',
       borderBottom: '1px solid var(--ifm-color-emphasis-200)',
       cursor: 'pointer', textAlign: 'left',
+      opacity: req.deprecated ? 0.6 : 1,
     }}>
       <span style={{ flexShrink: 0, marginTop: 2 }}><MethodBadge method={method} compact /></span>
       <span style={{ flex: 1 }}>
-        <span style={{ display: 'block', fontWeight: 600, fontSize: 14, color: 'var(--ifm-color-content)' }}>
-          {req.name}
+        <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{
+            fontWeight: 600, fontSize: 14, color: 'var(--ifm-color-content)',
+            textDecoration: req.deprecated ? 'line-through' : 'none',
+          }}>
+            {req.name}
+          </span>
+          {req.deprecated && <DeprecatedBadge compact />}
         </span>
         {shortDesc && (
           <span style={{ display: 'block', fontSize: 13, color: 'var(--ifm-color-content-secondary)', marginTop: 2 }}>

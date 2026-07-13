@@ -155,7 +155,7 @@ export default function ApiV2Page() {
               </button>
             )}
             {selected
-              ? <RequestDetail key={selected.name || selected._folder?.name} item={selected} onSelect={handleSelect} />
+              ? <RequestDetail key={selected.name || selected._folder?.name} item={selected} onSelect={handleSelect} auth={collectionData.auth} />
               : <WelcomeScreen info={collectionData.info} totalEndpoints={TOTAL_ENDPOINTS} />
             }
           </main>

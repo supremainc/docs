@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "8f7a505a-5efc-4458-b3c2-6ce891f9a8a4",
     "name": "Suprema CLUe API",
-    "description": "All requests use the `https://api.moon.supremainc.com/v1` and `{{apiKey}}` collection variables. Set `{{apiKey}}` to the API key issued from the CLUe Web Portal (Place Group → Settings → Admin → Manage API Keys); it is sent as a Bearer token via the collection-level Authorization setting, inherited by every request.\n\nFor more information on issuing CLUe API keys, see [CLUe API Guide](../platform/clue/clue-api-guide).\n\n## API Basics\n\n**Base URL:** `https://api.moon.supremainc.com/v1` — all requests must be made over HTTPS.\n\nCLUe follows RESTful principles, using `GET`, `POST`, `PATCH`, and `DELETE`. Request and response bodies are JSON-encoded.\n\n**Success response**: HTTP `200`\n\n| field | Desc | Optional |\n| --- | --- | --- |\n| `code` | API Response Code | |\n| `status` | API Response Status | |\n| `message` | API Response Message | true |\n| `data` | API Response Data | true |\n\n**Fail response**: HTTP `400` / `500`\n\n| field | Desc | Optional |\n| --- | --- | --- |\n| `errors` | API fail Response | |\n| `errors.code` | Fail error code | |\n| `errors.message` | Fail reference message | |\n| `errors.details` | Fail details | true |\n\n\n#### General Error Codes\n\n| code | desc |\n| --- | --- |\n| `e1000` | Internal Server Error |\n| `e1001` | Permission Denied |\n| `e1002` | Not Supported |\n| `e1003` | Invalid Format |\n| `e1004` | Json Parse Error |\n| `e1005` | Method Argument Not Valid |\n| `e1006` | Bad Request |\n| `e1007` | Resource Not Exists |\n| `e1008` | Method Argument Type Mismatch |\n| `e1009` | Missing Request Header |\n\n## API Limit\n\nCLUe has an API call traffic limit of **300 calls per 5 minutes** per API, per source. For face enrollment specifically, add some sleep time between calls to account for template extraction and device sync.\n\n## Folders in this collection\n\n- **User & Face Management** — create users, enroll faces, and pre-check duplicate faces via device.\n- **User & Card Management** — enroll CSN/Wiegand cards, manage doors, and modify/delete auths.\n- **Fingerprint Enrollment** — enroll a fingerprint via device scan.\n- **RF Card Enrollment** — enroll an RF card via device scan.\n- **Door Control** — remote unlock/lock.\n- **Device Display** — device images and on-screen notifications.\n- **Event Logs** — retrieve access/device/place event logs.\n- **Dynamic QR Code** — generate/list/retrieve/delete CLUe dynamic QR codes for VENDOR-integrated access.",
+    "description": "All requests use the `https://api.moon.supremainc.com/v1` and `{{apiKey}}` collection variables. Set `{{apiKey}}` to the API key issued from the CLUe Web Portal (Place Group → Settings → Admin → Manage API Keys); it is sent as a Bearer token via the collection-level Authorization setting, inherited by every request.\n\nFor more information on issuing CLUe API keys, see [CLUe API Guide](../platform/clue/clue-api-guide).\n\n## API Basics\n\n**Base URL:** `https://api.moon.supremainc.com/v1` — all requests must be made over HTTPS.\n\nCLUe follows RESTful principles, using `GET`, `POST`, `PATCH`, and `DELETE`. Request and response bodies are JSON-encoded.\n\n**Success response**: HTTP `200`\n\n| field | Desc | Optional |\n| --- | --- | --- |\n| `code` | API Response Code | |\n| `status` | API Response Status | |\n| `message` | API Response Message | true |\n| `data` | API Response Data | true |\n\n**Fail response**: HTTP `400` / `500`\n\n| field | Desc | Optional |\n| --- | --- | --- |\n| `errors` | API fail Response | |\n| `errors.code` | Fail error code | |\n| `errors.message` | Fail reference message | |\n| `errors.details` | Fail details | true |\n\n\n#### General Error Codes\n\n| code | desc |\n| --- | --- |\n| `e1000` | Internal Server Error |\n| `e1001` | Permission Denied |\n| `e1002` | Not Supported |\n| `e1003` | Invalid Format |\n| `e1004` | Json Parse Error |\n| `e1005` | Method Argument Not Valid |\n| `e1006` | Bad Request |\n| `e1007` | Resource Not Exists |\n| `e1008` | Method Argument Type Mismatch |\n| `e1009` | Missing Request Header |\n| `e1010` | TooManyRequest |\n\n## API Limit\n\nCLUe has an API call traffic limit of **300 calls per 5 minutes** per API, per source. For face enrollment specifically, add some sleep time between calls to account for template extraction and device sync.\n\n## Folders in this collection\n\n- **User & Face Management** — create users, enroll faces, and pre-check duplicate faces via device.\n- **User & Card Management** — enroll CSN/Wiegand cards, manage doors, and modify/delete auths.\n- **Fingerprint Enrollment** — enroll a fingerprint via device scan.\n- **RF Card Enrollment** — enroll an RF card via device scan.\n- **Door Control** — remote unlock/lock.\n- **Device Display** — device images and on-screen notifications.\n- **Event Logs** — retrieve access/device/place event logs.\n- **Dynamic QR Code** — generate/list/retrieve/delete CLUe dynamic QR codes for VENDOR-integrated access.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -25,7 +25,7 @@
                 "auths"
               ]
             },
-            "description": "Creates a CLUe user and enrolls a face credential for the given place.\n\nA face-supported Suprema device must already be added to the place, and a door must be configured for use through the CLUe web portal before calling this API.\n\n- **user** refers to CLUe's internal management for global user administration.\n- **auth** includes credentials such as face images and card IDs, which are specific to the given place.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| Authorization | JWT AccessToken (Bearer {{apiKey}}) |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n#### Body notes\n\n- `user.key`: required, globally unique, 1-64 chars, lowercase letters/numbers and `- _ @ .` only. Use your company initial as a prefix.\n- `auth.startTime` / `auth.endTime`: access allow period (epoch ms). Do not exceed Feb 2038 for endTime.\n- `auth.doorAccessType`: `ALL_DOOR` or `SPECIFIC` (with `doorIds`, e.g. `[1, 2]`).\n- `auth.scheduleType`: `ALWAYS`, or omit and set `scheduleId` for a specific weekday schedule.\n- `auth.credentials.name`: shown on the device display if entered.\n- `auth.credentials.faceImages`: base64 encoded face image(s), up to two allowed.\n- `auth.activeStatus`: mandatory, `ACTIVE` or inactive to disable.\n\n**Name field REGEX:** `^(?=.{1,50}$)[\\p{L}\\p{N}\\-ー_・\\uFF66-\\uFF9D]+(?:[ 　][\\p{L}\\p{N}\\-ー_・\\uFF66-\\uFF9D]+)*$`\n\n> When calling this API repeatedly (bulk enrollment), set at least 300ms between calls to allow time for template extraction and device sync.\n\n#### Error Response codes (face quality)\n\n| code | desc |\n| --- | --- |\n| f1000 | FaceHeadPoseAngleExceedThreshold (Tilted face) |\n| f1001 | FaceImageQualityTooLow |\n| f1002 | FaceDetectFailed |\n\n",
+            "description": "Creates a CLUe user and enrolls a face credential for the given place.\n\nA face-supported Suprema device must already be added to the place, and a door must be configured for use through the CLUe web portal before calling this API.\n\n- **user** refers to CLUe's internal management for global user administration.\n- **auth** includes credentials such as face images and card IDs, which are specific to the given place.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| Authorization | JWT AccessToken (Bearer {{apiKey}}) |\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n#### Body notes\n\n- `user.key`: required, globally unique, 1-64 chars, lowercase letters/numbers and `- _ @ .` only. Use your company initial as a prefix.\n- `auth.startTime` / `auth.endTime`: access allow period (epoch ms). Do not exceed Feb 2038 for endTime.\n- `auth.doorAccessType`: `ALL_DOOR` or `SPECIFIC` (with `auth.doorIds`, e.g. `[1, 2]`, found via the CLUe web portal or the Door List API).\n- `auth.scheduleType`: `ALWAYS` allows access at all times; `SPECIFIC` restricts access to a defined weekday schedule.\n   - When `auth.scheduleType` is `SPECIFIC`, also set `auth.scheduleId` to the ID of a schedule created in advance via the CLUe web portal.\n- `auth.credentials.name`: shown on the device display if entered.\n- `auth.credentials.faceImages`: base64 encoded face image(s), up to two allowed.\n- `auth.activeStatus`: mandatory, `ACTIVE` or inactive to disable.\n\n**Name field REGEX:** `^(?=.{1,50}$)[\\p{L}\\p{N}\\-ー_・\\uFF66-\\uFF9D]+(?:[ 　][\\p{L}\\p{N}\\-ー_・\\uFF66-\\uFF9D]+)*$`\n\n> When calling this API repeatedly (bulk enrollment), set at least 300ms between calls to allow time for template extraction and device sync.\n\n#### Error Response codes (face quality)\n\n| code | desc |\n| --- | --- |\n| f1000 | FaceHeadPoseAngleExceedThreshold (Tilted face) |\n| f1001 | FaceImageQualityTooLow |\n| f1002 | FaceDetectFailed |\n\n#### Rate limit\n\nFace enrollment/modification requests are rate-limited. When the limit is exceeded, the API returns an error together with a `Retry-After` header indicating how many seconds to wait before retrying.\n\n| Situation | HTTP status | code | desc |\n| --- | --- | --- | --- |\n| Caller exceeded its own request limit | 400 | `e1010` | TooManyRequest |\n| Server-wide face template extraction is congested | 500 | `f1006` | FaceExtractionBusy |\n\n> On receiving either error, wait for the number of seconds given in the `Retry-After` header, then retry the request.\n\n",
             "body": {
               "mode": "raw",
               "raw": "{\n    \"user\": {\n        \"key\": \"{{uniqueKey for each user}}\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test12345678\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
@@ -122,6 +122,100 @@
               ],
               "cookie": [],
               "body": "{\n    \"errors\": [\n        {\n            \"code\": \"f1000\",\n            \"message\": \"\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "places",
+                    "{{placeId}}",
+                    "auths"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"user\": {\n        \"key\": \"{{uniqueKey for each user}}\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test12345678\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Retry-After",
+                  "value": "30"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"errors\": [\n        {\n            \"code\": \"e1010\",\n            \"message\": \"TooManyRequest\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Face Extraction Busy",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "https://api.moon.supremainc.com/v1/places/{{placeId}}/auths",
+                  "host": [
+                    "https://api.moon.supremainc.com/v1"
+                  ],
+                  "path": [
+                    "places",
+                    "{{placeId}}",
+                    "auths"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"user\": {\n        \"key\": \"{{uniqueKey for each user}}\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"ALL_DOOR\",\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test12345678\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Retry-After",
+                  "value": "30"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"errors\": [\n        {\n            \"code\": \"f1006\",\n            \"message\": \"FaceExtractionBusy\"\n        }\n    ]\n}"
             }
           ]
         },
@@ -333,7 +427,7 @@
                 "auths"
               ]
             },
-            "description": "Creates a CLUe user and enrolls a CSN card credential.\n\nThe system supports two card types: **CSN** and **Wiegand**.\n\n- For **CSN**, enter the card serial number without hyphens.\n- For **Wiegand**, insert a hyphen in the middle to separate the FC Code area from the Card ID area. The Card ID value must follow the device's Wiegand output format, configurable under the Device Settings tab.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n",
+            "description": "Creates a CLUe user and enrolls a CSN card credential.\n\nThe system supports two card types: **CSN** and **Wiegand**.\n\n- For **CSN**, enter the card serial number without hyphens.\n- For **Wiegand**, insert a hyphen in the middle to separate the FC Code area from the Card ID area. The Card ID value must follow the device's Wiegand output format, configurable under the Device Settings tab.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n#### Body notes\n\n- `user.key`: required, globally unique, 1-64 chars, lowercase letters/numbers and `- _ @ .` only. Use your company initial as a prefix.\n- `auth.startTime` / `auth.endTime`: access allow period (epoch ms). Do not exceed Feb 2038 for endTime.\n- `auth.doorAccessType`: `ALL_DOOR` or `SPECIFIC` (with `auth.doorIds`, e.g. `[1, 2]`, found via the CLUe web portal or the Door List API).\n- `auth.scheduleType`: `ALWAYS` allows access at all times; `SPECIFIC` restricts access to a defined weekday schedule.\n   - When `auth.scheduleType` is `SPECIFIC`, also set `auth.scheduleId` to the ID of a schedule created in advance via the CLUe web portal.\n- `auth.credentials.cards`: card credentials to enroll — set `formatType` to `CSN` and `cardNumber` to the card serial number without hyphens.\n- `auth.credentials.name`: shown on the device display if entered.\n- `auth.credentials.modes`: credential modes to enable for this user, e.g. `[\"CARD\"]`.\n- `auth.activeStatus`: mandatory, `ACTIVE` or inactive to disable.\n\n",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"user\": {\n    \"key\": \"{{uniqueKey for each user}}\"\n  },\n  \"auth\": {\n    \"activeStatus\": \"ACTIVE\",\n    \"startTime\": 1757516400000,\n    \"endTime\": 1757602740000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n      \"cards\": [\n        {\n          \"cardNumber\": \"12345\",\n          \"formatType\": \"CSN\"\n        }\n      ],\n      \"fingerprints\": [],\n      \"name\": \"test1234567\",\n      \"modes\": [\"CARD\"]\n    }\n  }\n}",
@@ -362,7 +456,7 @@
                 "auths"
               ]
             },
-            "description": "Creates a CLUe user and enrolls a Wiegand card credential.\n\nThe system supports two card types: **CSN** and **Wiegand**.\n\n- For **CSN**, enter the card serial number without hyphens.\n- For **Wiegand**, insert a hyphen in the middle to separate the FC Code area from the Card ID area. The Card ID value must follow the device's Wiegand output format, configurable under the Device Settings tab.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n",
+            "description": "Creates a CLUe user and enrolls a Wiegand card credential.\n\nThe system supports two card types: **CSN** and **Wiegand**.\n\n- For **CSN**, enter the card serial number without hyphens.\n- For **Wiegand**, insert a hyphen in the middle to separate the FC Code area from the Card ID area. The Card ID value must follow the device's Wiegand output format, configurable under the Device Settings tab.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n#### Body notes\n\n- `user.key`: required, globally unique, 1-64 chars, lowercase letters/numbers and `- _ @ .` only. Use your company initial as a prefix.\n- `auth.startTime` / `auth.endTime`: access allow period (epoch ms). Do not exceed Feb 2038 for endTime.\n- `auth.doorAccessType`: `ALL_DOOR` or `SPECIFIC` (with `auth.doorIds`, e.g. `[1, 2]`, found via the CLUe web portal or the Door List API).\n- `auth.scheduleType`: `ALWAYS` allows access at all times; `SPECIFIC` restricts access to a defined weekday schedule.\n   - When `auth.scheduleType` is `SPECIFIC`, also set `auth.scheduleId` to the ID of a schedule created in advance via the CLUe web portal.\n- `auth.credentials.cards`: card credentials to enroll — set `formatType` to `WIEGAND` and `cardNumber` with a hyphen separating the FC Code area from the Card ID area, following the device's Wiegand output format (configurable under Device Settings).\n- `auth.credentials.name`: shown on the device display if entered.\n- `auth.credentials.modes`: credential modes to enable for this user, e.g. `[\"CARD\"]`.\n- `auth.activeStatus`: mandatory, `ACTIVE` or inactive to disable.\n\n",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"user\": {\n    \"key\": \"{{uniqueKey for each user}}\"\n  },\n  \"auth\": {\n    \"activeStatus\": \"ACTIVE\",\n    \"startTime\": 1757516400000,\n    \"endTime\": 1757602740000,\n    \"doorAccessType\": \"ALL_DOOR\",\n    \"scheduleType\": \"ALWAYS\",\n    \"credentials\": {\n      \"cards\": [\n        {\n          \"cardNumber\": \"12-123\",\n          \"formatType\": \"WIEGAND\"\n        }\n      ],\n      \"fingerprints\": [],\n      \"name\": \"test1234567\",\n      \"modes\": [\"CARD\"]\n    }\n  }\n}",
@@ -376,7 +470,7 @@
           "response": []
         },
         {
-          "name": "Sync Users to Designated Doors Only",
+          "name": "Create User & Enroll Face (Specific Doors)",
           "request": {
             "method": "POST",
             "header": [],
@@ -391,7 +485,7 @@
                 "auths"
               ]
             },
-            "description": "Creates/syncs a user's credentials only to specific doors instead of all doors in the place.\n\n- `user.key`: User key.\n\n- `startTime`: Start time of the access period.\n\n- `endTime`: End time of the access period.\n- `doorAccessType`: Set to `SPECIFIC` to sync to designated doors only.\n- `doorIds`: Door IDs, found via the CLUe web portal or the Door List API.\n\n- `scheduleType`: If specific weekday schedule limit required, please remove this field and create schedule from webportal and set like `scheduleId` : 1\n\n- `credentials.name`: If name is entered, it will be shown on the device display.\n\n- `credentials.faceImages`: Base64 encoded face image(s), up to two allowed.\n\n- `modes`: If you enroll card or other credentials, you can add modes to use for this user.\n\n- `activeStatus`: Mandatory, set to `ACTIVE` or inactive to disable.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n",
+            "description": "Creates a CLUe user and enrolls a face credential, restricted to specific doors instead of all doors in the place.\n\n#### Path parameters\n\n| Parameter | Description |\n| --- | --- |\n| placeId | placeId |\n\n#### Body notes\n\n- `user.key`: required, globally unique, 1-64 chars, lowercase letters/numbers and `- _ @ .` only. Use your company initial as a prefix.\n- `auth.startTime` / `auth.endTime`: access allow period (epoch ms). Do not exceed Feb 2038 for endTime.\n- `auth.doorAccessType`: `ALL_DOOR` or `SPECIFIC` (with `auth.doorIds`, e.g. `[1, 2]`, found via the CLUe web portal or the Door List API).\n- `auth.scheduleType`: `ALWAYS` allows access at all times; `SPECIFIC` restricts access to a defined weekday schedule.\n   - When `auth.scheduleType` is `SPECIFIC`, also set `auth.scheduleId` to the ID of a schedule created in advance via the CLUe web portal.\n- `auth.credentials.name`: shown on the device display if entered.\n- `auth.credentials.faceImages`: base64 encoded face image(s), up to two allowed.\n- `auth.credentials.modes`: credential modes to enable for this user, e.g. `[\"FACE\"]`.\n- `auth.activeStatus`: mandatory, `ACTIVE` or inactive to disable.\n\n",
             "body": {
               "mode": "raw",
               "raw": "{\n    \"user\": {\n        \"key\": \"yourcompanyname.1234\"\n    },\n    \"auth\": {\n        \"startTime\": 1690853501093,\n        \"endTime\": 2147353200000,\n        \"doorAccessType\": \"SPECIFIC\",\n        \"doorIds\": [1],\n        \"scheduleType\": \"ALWAYS\",\n        \"credentials\": {\n            \"name\": \"test123\",\n            \"faceImages\": [\n                \"{{base64 encoded face image}}\"\n            ],\n            \"modes\": [\"FACE\"]\n        },\n        \"activeStatus\": \"ACTIVE\"\n    }\n}",
@@ -448,11 +542,11 @@
                   "key": "sort",
                   "value": "id,desc",
                   "disabled": true,
-                  "description": "Sort order (`id,asc` / `id,desc`)"
+                  "description": "Sort order (`id,asc` / `id,desc` / `name,asc` / `name,desc`)"
                 }
               ]
             },
-            "description": "Returns the list of doors configured in the given place.\n\n"
+            "description": "Returns the list of doors configured in the given place.\n\n#### Query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `sort` | `id,asc`, `id,desc`, `name,asc`, or `name,desc` |\n"
           },
           "response": [
             {
@@ -1010,7 +1104,7 @@
                 }
               ],
               "cookie": [],
-              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\"\n}"
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n  \"eventTime\": 1728614419124,\n  \"command\": \"ONCE_OPEN\"\n}"
             }
           ]
         }
@@ -1176,6 +1270,7 @@
       "item": [
         {
           "name": "Get Event Logs",
+          "deprecated": true,
           "request": {
             "method": "GET",
             "header": [],
@@ -1191,7 +1286,7 @@
                 "elastic"
               ]
             },
-            "description": "Retrieves event logs for a place. Event logs can be retrieved for up to a 7-day period at a time, within a 90-day event log history.\n\n> **Note**: The source guide shows this endpoint as `/api/v1/events/places/{placeID}/elastic`. The `https://api.moon.supremainc.com/v1` variable already includes `/v1`, so the extra `/api` prefix has been normalized out here — adjust the `baseUrl` variable if your environment actually requires the `/api` prefix.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | JWT AccessToken |\n\n#### Path / query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeId` | place ID |\n| `startTime` | UTC epoch milliseconds |\n| `endTime` | UTC epoch milliseconds |\n| `filterEvents` | Event type filter — see Event Filter list below |\n| `filterDoorIds` | door ID |\n| `filterDeviceIds` | device ID |\n| `page` | paging # |\n| `size` | events per page, up to 50 |\n| `q` | search query |\n| `sort` | e.g. `eventAt,desc` |\n\n#### Event Filter values\n\n`\"DEV_\"` or `\"DEVICE_\"` prefixed events originate from the device side; without those prefixes, events are generated server-side.\n\n| num |\n| -- |\n| `QR_AUTH_SUCCESS` |\n|`QR_AUTH_FAIL` |\n|`QR_3RD_PARTY_SERVER_ERROR_FAIL` |\n|`REAL_NAME_AUTH_NOT_MATCH` |\n|`VENDOR_AUTH_SUCCESS` |\n|`VENDOR_AUTH_FAIL` |\n|`KAKAO_QR_SERVER_RES_AUTH_SUCCESS` |\n|`KAKAO_QR_SERVER_RES_AUTH_FAIL` |\n|`NAVER_QR_SERVER_RES_AUTH_SUCCESS` |\n|`NAVER_QR_SERVER_RES_AUTH_FAIL` |\n|`SPARK_PLUS_QR_RES_AUTH_SUCCESS` |\n|`SPARK_PLUS_QR_RES_AUTH_FAIL` |\n|`CREDENTIAL_IDENTIFY_FAIL` |\n|`CREDENTIAL_THIRD_PARTY_LINK_NOT_EXISTS` |\n|`DEVICE_AWS_IOT_UNHEALTHY` |\n|`DOOR_INCIDENT` |\n|`DOOR_TEMP_OPEN_REQ` |\n|`DOOR_MANUAL_OPEN_REQ` |\n|`DOOR_MANUAL_CLOSE_REQ` |\n|`DOOR_MANUAL_RELEASE_REQ` |\n|`DEVICE_RESET_FACTORY_REQ` |\n|`DEVICE_RESET_REQ` |\n|`DEVICE_RESET_NETWORK_EXCLUDE_REQ` |\n|`DEVICE_REBOOT_DEVICE_REQ` |\n|`DEVICE_UPGRADE_FIRMWARE_REQ` |\n|`DEVICE_SEARCH_SLAVE_REQ` |\n|`DEVICE_SETTING_CONNECT_TEST_REQ` |\n|`DEVICE_HEALTH_CHECK_REQ` |\n|`DEVICE_LOCAL_LOGS_UPLOAD_REQ` |\n|`DEVICE_INFO_UPDATED_REQ` |\n|`SCHEDULE_UPDATED_REQ` |\n|`DOOR_INFO_UPDATED_REQ` |\n|`DEVICE_USER_AUTH_SYNC_REQ` |\n|`DEVICE_AUTH_STRATEGY_SYNC_REQ` |\n|`DEVICE_MENU_PASSWORD_RESET_REQ` |\n|`DEVICE_USER_ALL_DELETE_REQ` |\n|`DEVICE_USER_AUTH_ALL_SYNC_REQ` |\n|`PLACE_SERVICE_START` |\n|`PLACE_MODIFY` |\n|`PLACE_NEW_MEMBER` |\n|`PLACE_LEAVE_MEMBER` |\n|`PLACE_KICKOUT_MEMBER` |\n|`PLACE_MEMBER_ROLE_UPDATED` |\n|`ACCOUNT_INVITED_PLACE` |\n|`ACCOUNT_KICKOUTED_PLACE` |\n|`PLACE_DOOR_MODIFY` |\n|`PLACE_DOOR_DELETED` |\n|`PLACE_DOOR_ADDED` |\n|`PLACE_SCHEDULE_UPDATED` |\n|`DEV_NETWORK_DISCONNECT` |\n|`DEV_NETWORK_CONNECT` |\n|`DEV_DEVICE_SERVER_CONNECT` |\n|`DEV_DEVICE_SERVER_DISCONNECT` |\n|`DEV_DEVICE_START` |\n|`DEV_DEVICE_REBOOT` |\n|`DEV_DOOR_RELAY_OFF` |\n|`DEV_DOOR_RELAY_ON` |\n|`DEV_DOOR_SENSOR_OPEN` |\n|`DEV_DOOR_SENSOR_CLOSE` |\n|`DEV_DOOR_HELD_OPEN` |\n|`DEV_DOOR_HELD_OPEN_ALARM` |\n|`DEV_DOOR_HELD_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_FORCE_OPEN` |\n|`DEV_DOOR_FORCE_OPEN_ALARM` |\n|`DEV_DOOR_FORCE_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_TAMPER_ON` |\n|`DEV_DOOR_TAMPER_OFF` |\n|`DEV_DOOR_EXIT_BUTTON` |\n|`DEV_DEVICE_ADMIN_MENU_ON` |\n|`DEV_DEVICE_DHCP_CONNECTED` |\n|`DEV_DEVICE_TIME_SETTING` |\n|`DEV_DEVICE_TIMEZONE_SETTING` |\n|`DEV_QR_AUTH_SUCCESS` |\n|`DEV_QR_AUTH_FAIL` |\n|`DEV_FIRMWARE_UPGRADED` |\n|`DEV_FIRMWARE_UPGRADE_FAILED` |\n|`DEV_DOOR_START_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_START_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_ENTRY_BUTTON` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_UNLOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_UNLOCK` |\n|`DEV_CARD_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_MOBILE_CARD_AUTH_FAIL` |\n|`DEV_CARD_AUTH_FAIL` |\n|`DEV_CODE_AUTH_FAIL` |\n|`DEV_FACE_AUTH_FAIL` |\n|`DEV_FINGERPRINT_AUTH_FAIL` |\n|`DEV_PIN_AUTH_FAIL` |\n|`DEV_FACE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_AUTH_SUCCESS`\n"
+            "description": "[Deprecated] Retrieves event logs for a place. Event logs can be retrieved for up to a 7-day period at a time, within a 90-day event log history.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | JWT AccessToken |\n\n#### Path / query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeId` | place ID |\n| `startTime` | UTC epoch milliseconds |\n| `endTime` | UTC epoch milliseconds |\n| `filterEvents` | Event type filter — see Event Filter list below |\n| `filterDoorIds` | door ID |\n| `filterDeviceIds` | device ID |\n| `page` | paging # |\n| `size` | events per page, up to 50 |\n| `q` | search query |\n| `sort` | e.g. `eventAt,desc` |\n\n#### Event Filter values\n\n`\"DEV_\"` or `\"DEVICE_\"` prefixed events originate from the device side; without those prefixes, events are generated server-side.\n\n| num |\n| -- |\n| `QR_AUTH_SUCCESS` |\n|`QR_AUTH_FAIL` |\n|`QR_3RD_PARTY_SERVER_ERROR_FAIL` |\n|`REAL_NAME_AUTH_NOT_MATCH` |\n|`VENDOR_AUTH_SUCCESS` |\n|`VENDOR_AUTH_FAIL` |\n|`KAKAO_QR_SERVER_RES_AUTH_SUCCESS` |\n|`KAKAO_QR_SERVER_RES_AUTH_FAIL` |\n|`NAVER_QR_SERVER_RES_AUTH_SUCCESS` |\n|`NAVER_QR_SERVER_RES_AUTH_FAIL` |\n|`SPARK_PLUS_QR_RES_AUTH_SUCCESS` |\n|`SPARK_PLUS_QR_RES_AUTH_FAIL` |\n|`CREDENTIAL_IDENTIFY_FAIL` |\n|`CREDENTIAL_THIRD_PARTY_LINK_NOT_EXISTS` |\n|`DEVICE_AWS_IOT_UNHEALTHY` |\n|`DOOR_INCIDENT` |\n|`DOOR_TEMP_OPEN_REQ` |\n|`DOOR_MANUAL_OPEN_REQ` |\n|`DOOR_MANUAL_CLOSE_REQ` |\n|`DOOR_MANUAL_RELEASE_REQ` |\n|`DEVICE_RESET_FACTORY_REQ` |\n|`DEVICE_RESET_REQ` |\n|`DEVICE_RESET_NETWORK_EXCLUDE_REQ` |\n|`DEVICE_REBOOT_DEVICE_REQ` |\n|`DEVICE_UPGRADE_FIRMWARE_REQ` |\n|`DEVICE_SEARCH_SLAVE_REQ` |\n|`DEVICE_SETTING_CONNECT_TEST_REQ` |\n|`DEVICE_HEALTH_CHECK_REQ` |\n|`DEVICE_LOCAL_LOGS_UPLOAD_REQ` |\n|`DEVICE_INFO_UPDATED_REQ` |\n|`SCHEDULE_UPDATED_REQ` |\n|`DOOR_INFO_UPDATED_REQ` |\n|`DEVICE_USER_AUTH_SYNC_REQ` |\n|`DEVICE_AUTH_STRATEGY_SYNC_REQ` |\n|`DEVICE_MENU_PASSWORD_RESET_REQ` |\n|`DEVICE_USER_ALL_DELETE_REQ` |\n|`DEVICE_USER_AUTH_ALL_SYNC_REQ` |\n|`PLACE_SERVICE_START` |\n|`PLACE_MODIFY` |\n|`PLACE_NEW_MEMBER` |\n|`PLACE_LEAVE_MEMBER` |\n|`PLACE_KICKOUT_MEMBER` |\n|`PLACE_MEMBER_ROLE_UPDATED` |\n|`ACCOUNT_INVITED_PLACE` |\n|`ACCOUNT_KICKOUTED_PLACE` |\n|`PLACE_DOOR_MODIFY` |\n|`PLACE_DOOR_DELETED` |\n|`PLACE_DOOR_ADDED` |\n|`PLACE_SCHEDULE_UPDATED` |\n|`DEV_NETWORK_DISCONNECT` |\n|`DEV_NETWORK_CONNECT` |\n|`DEV_DEVICE_SERVER_CONNECT` |\n|`DEV_DEVICE_SERVER_DISCONNECT` |\n|`DEV_DEVICE_START` |\n|`DEV_DEVICE_REBOOT` |\n|`DEV_DOOR_RELAY_OFF` |\n|`DEV_DOOR_RELAY_ON` |\n|`DEV_DOOR_SENSOR_OPEN` |\n|`DEV_DOOR_SENSOR_CLOSE` |\n|`DEV_DOOR_HELD_OPEN` |\n|`DEV_DOOR_HELD_OPEN_ALARM` |\n|`DEV_DOOR_HELD_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_FORCE_OPEN` |\n|`DEV_DOOR_FORCE_OPEN_ALARM` |\n|`DEV_DOOR_FORCE_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_TAMPER_ON` |\n|`DEV_DOOR_TAMPER_OFF` |\n|`DEV_DOOR_EXIT_BUTTON` |\n|`DEV_DEVICE_ADMIN_MENU_ON` |\n|`DEV_DEVICE_DHCP_CONNECTED` |\n|`DEV_DEVICE_TIME_SETTING` |\n|`DEV_DEVICE_TIMEZONE_SETTING` |\n|`DEV_QR_AUTH_SUCCESS` |\n|`DEV_QR_AUTH_FAIL` |\n|`DEV_FIRMWARE_UPGRADED` |\n|`DEV_FIRMWARE_UPGRADE_FAILED` |\n|`DEV_DOOR_START_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_START_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_ENTRY_BUTTON` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_UNLOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_UNLOCK` |\n|`DEV_CARD_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_MOBILE_CARD_AUTH_FAIL` |\n|`DEV_CARD_AUTH_FAIL` |\n|`DEV_CODE_AUTH_FAIL` |\n|`DEV_FACE_AUTH_FAIL` |\n|`DEV_FINGERPRINT_AUTH_FAIL` |\n|`DEV_PIN_AUTH_FAIL` |\n|`DEV_FACE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_AUTH_SUCCESS`\n"
           },
           "response": [
             {

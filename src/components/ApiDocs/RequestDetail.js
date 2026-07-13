@@ -6,11 +6,12 @@ import ParamTable from './ParamTable';
 import CodeSnippets from './CodeSnippets';
 import ResponseExamples from './ResponseExamples';
 import EndpointRow from './EndpointRow';
+import DeprecatedBadge from './DeprecatedBadge';
 import { useIsMobile } from './hooks';
 import { toDisplayUrl, prettyJson } from './utils';
 import { METHOD_COLORS, SECTION_LABEL } from './constants';
 
-export default function RequestDetail({ item, onSelect }) {
+export default function RequestDetail({ item, onSelect, auth }) {
   // hooks는 조건문 이전에 항상 호출
   const isMobile = useIsMobile();
 
@@ -63,6 +64,7 @@ export default function RequestDetail({ item, onSelect }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
           <MethodBadge method={method} />
           <h1 style={{ fontSize: 24, margin: 0, lineHeight: 1.2 }}>{item.name}</h1>
+          {item.deprecated && <DeprecatedBadge />}
         </div>
         <div style={{
           background: 'var(--ifm-color-emphasis-100)', borderLeft: `4px solid ${color}`,
@@ -72,6 +74,17 @@ export default function RequestDetail({ item, onSelect }) {
         }}>
           <strong>{method}</strong>{' '}{url}
         </div>
+        {item.deprecated && (
+          <div style={{
+            marginTop: 14, padding: '9px 14px', borderRadius: 4,
+            background: 'var(--ifm-color-warning-contrast-background, #fff8e6)',
+            border: '1px solid var(--ifm-color-warning-dark, #e6a700)',
+            color: 'var(--ifm-color-warning-contrast-foreground, #715100)',
+            fontSize: 13,
+          }}>
+            ⚠ This API is deprecated. Do not use this endpoint for new integrations.
+          </div>
+        )}
       </div>
 
       <div style={{
@@ -102,7 +115,7 @@ export default function RequestDetail({ item, onSelect }) {
               <CodeBlock language="json">{prettyJson(req.body.raw)}</CodeBlock>
             </div>
           )}
-          <CodeSnippets req={req} />
+          <CodeSnippets req={req} auth={auth} />
           <ResponseExamples responses={item.response} />
         </div>
       </div>
