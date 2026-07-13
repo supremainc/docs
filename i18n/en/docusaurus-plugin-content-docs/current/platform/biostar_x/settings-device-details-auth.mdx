@@ -283,7 +283,7 @@ Only card types supported by the device will be displayed in the <Cmd sid='setti
 
 :::
 
-### <Cmd sid='device.card.CSN' product='2' />
+### <Cmd sid='device.card.CSN' product='2' /> {#deviceCardcsn}
 
 You can select the types of CSN cards and formats and set the byte order.
 
@@ -297,11 +297,11 @@ You can select the types of CSN cards and formats and set the byte order.
 
 * <Cmd sid='device.info.formatType' product='2' />
 
-  * <Cmd sid='common.general' product='2' />: Reads and expresses the card's serial number (CSN) without separate conversion.
+  * <Cmd sid='device.info.cardIdFormat.normal' product='2' />: Reads and expresses the card's serial number (CSN) without separate conversion.
 
-  * <Cmd sid='common.wiegand' product='2' />: Transforms and expresses the card's serial number (CSN) according to user-defined Wiegand format. See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to set a new Wiegand format.
+  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />: Transforms and expresses the card's serial number (CSN) according to user-defined Wiegand format. See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to set a new Wiegand format.
 
-### <Cmd sid='device.card.Wiegand' product='2' />
+### <Cmd sid='device.card.Wiegand' product='2' /> {#deviceCardwiegand}
 
 Select the types of Wiegand cards and set the Wiegand formats. Choose the Wiegand format to be used in the <Cmd sid='device.cardFormat.wiegand.format' product='2' /> option.
 
@@ -313,7 +313,7 @@ See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to
 
 :::
 
-### <Cmd sid='device.card.supremaSmartCard' product='2' />
+### <Cmd sid='device.card.supremaSmartCard' product='2' /> {#deviceCardsupremaSmartCard}
 
 Select the types of Suprema smart cards and set the card layout and byte order.
 
@@ -327,7 +327,7 @@ Select the types of Suprema smart cards and set the card layout and byte order.
 
   * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units.
 
-### <Cmd sid='device.card.customSmartCard' product='2' />
+### <Cmd sid='device.card.customSmartCard' product='2' /> {#deviceCardcustomSmartCard}
 
 Select types of custom smart cards issued by third parties and set the card layout and byte order.
 
@@ -367,7 +367,7 @@ Select types of custom smart cards issued by third parties and set the card layo
 
 </details>
 
-### <Cmd sid='device.info.csnMobile' product='2' />
+### <Cmd sid='device.info.csnMobile' product='2' /> {#deviceCsnMobile}
 
 You can set the method for recognizing mobile cards.
 
@@ -377,7 +377,7 @@ You can set the method for recognizing mobile cards.
 
 * <Cmd>BLE</Cmd>: Recognizes mobile cards through Bluetooth Low Energy (BLE) communication.
 
-### <Cmd sid='device.info.templateOnMobile' product='2' />
+### <Cmd sid='device.info.templateOnMobile' product='2' /> {#deviceInfotemplateOnMobile}
 
 You can specify how recognition works on the Template on Mobile and set the byte order for biometrics enrolled directly by the user on the device.
 
