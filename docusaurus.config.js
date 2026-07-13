@@ -480,11 +480,11 @@ const config = {
             items: [
               {
                 label: 'BioStar X API',
-                to: '/api/bsxapi'
+                to: '/developer/bsxapi'
               },
               {
                 label: 'CLUe API',
-                to: '/api/clue'
+                to: '/developer/clue'
               },
               {
                 label: 'BioStar Air Developer',
