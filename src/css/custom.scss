@@ -1169,8 +1169,17 @@ footer {
     }
     figcaption {
       font-size: .8rem;
+      font-weight: 600;
       color: var(--ifm-color-color-gray);
       text-align: left;
+      background: var(--ifm-color-border);
+      width: fit-content;
+      padding: 0.2rem 0.5rem;
+      position: relative;
+      top: -7px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      color: var(--main-black);
     }
   }
 
@@ -1319,6 +1328,8 @@ footer {
     content: counter(column-count) ". ";
   }
   .columns {
+    margin-bottom: 1rem;
+    position: relative;
     .features {
       p.hasimg {
         margin-bottom: 0;
@@ -1330,7 +1341,7 @@ footer {
         padding-top: 0;
         margin-top: 0;
       }
-      h3 {
+      h3, h4:first-of-type {
         margin-top: 0;
       }
       ul li {
@@ -1425,6 +1436,18 @@ footer {
     }
     ul {
       margin-bottom: 0;
+    }
+    code {
+      position: relative;
+      top: -2px;
+      font-size: .85rem;
+      font-family: 'Noto Sans Coptic';
+      background-color: #dceaffd8;
+      color: #1549c6;
+      border: 1px solid #dceaffd8;
+      border-radius: 0.3em;
+      padding: 0.1em 0.2em;
+      line-height: 1;
     }
   }
   .component {

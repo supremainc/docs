@@ -1,0 +1,81 @@
+---
+id: service-settings
+title: 서비스 설정하기
+description: CLUe 공간 그룹에서 출입 서비스 타입을 선택하고 설정하는 방법을 안내합니다.
+---
+
+공간 그룹 단위로 출입 서비스 방식을 설정합니다. 공간 그룹에서 설정한 서비스 타입과 크리덴셜은 하위 공간 전체에 자동으로 적용되므로, 개별 공간마다 반복해서 설정할 필요가 없습니다.
+
+CLUe는 두 가지 출입 서비스 방식을 지원합니다.
+
+* <Cmd sid='vendor' product='clue' className='bold' />: 외부 API를 통해 클라이언트에 출입 승인을 요청하는 방식입니다.
+
+* <Cmd sid='membership' product='clue' className='bold' />: 외부 연동 없이 CLUe가 독립적으로 출입을 제어하는 방식입니다.
+
+공간 그룹 설정의 왼쪽 사이드바에서 <Cmd sid='service' product='clue' />을 클릭하세요.
+
+<Image src='/img/clue/clue-basic-setup-services.png' alt='Services' />
+
+## <Cmd sid='vendor' product='clue' className='normal' /> 설정
+
+<Cmd sid='vendor' product='clue' className='bold' /> 방식은 출입문을 열기 전에 외부 클라이언트 API를 호출하여 출입 승인 여부를 결정합니다. QR 코드와 얼굴 인증을 지원합니다.
+
+### QR 방식
+
+QR 코드를 스캔하면 CLUe 서버가 클라이언트 API를 호출하여 출입 허용 여부를 직접 받습니다. 사용하는 QR 코드 유형에 따라 다음 두 가지 방식 중 하나를 선택하세요.
+
+- **CLUe QR**: CLUe에서 직접 발급하는 동적 QR 코드입니다.
+
+- **Customer QR**: 고객이 자체적으로 QR 코드를 생성·운영하는 경우 선택합니다.
+
+<Image src='/img/clue/clue-basic-setup-qr-code.png' alone caption='QR Case' />
+
+### 얼굴 인증 방식
+
+얼굴 인증을 사용한다면, 이미지만 등록하여 CLUe 서버가 템플릿을 추출하고 장치와 동기화합니다. 얼굴 매칭에 성공하면 QR 방식과 동일하게 클라이언트 API를 통해 출입 여부를 결정합니다. 얼굴 사용자 등록 방법은 [CLUe API 문서](https://twilight-value-ef0.notion.site/CLUe-API-Guide-11f03724c781804a9682c27c9fe331d9?pvs=74)를 참고하세요.
+
+<Image src='/img/clue/clue-basic-setup-face.png' alone caption='Face Case' />
+
+### 고객사 확인 코드 설정
+
+<Cmd sid='vendor' product='clue' className='bold' /> 방식을 사용하려면 CLUe 서버가 고객 또는 파트너 API를 어디서, 어떻게 호출하는지 고객사 확인 코드와 함께 입력해야 합니다.
+
+<Image src='/img/clue/clue-basic-setup-access-service-verify.png' alt='Access Service Verify' />
+
+<Cmd sid='vendor' product='clue' className='normal' /> 코드는 슈프리마 CLUe 팀이 어떤 클라이언트의 API를 호출할지 결정하기 위해 사전에 테스트하고 개발한 코드 형식입니다. 이 코드를 입력하면 하위 공간에서 추가 설정 없이도 각 인증 방식에 맞는 API를 자동으로 호출하고, 지정된 응답 값을 기반으로 출입 제어를 수행합니다.
+
+:::note
+
+**고객사 확인 코드 얻는 방법**
+
+다른 클라이언트의 코드가 노출되지 않도록 CLUe 팀에서 별도로 관리합니다. 고객사 확인 코드 생성은 API 스펙 검토 후 별도로 처리되며, 자세한 내용은 CLUe 팀에 직접 문의하세요.
+
+:::
+
+## <Cmd sid='membership' product='clue' className='normal' /> 설정
+
+<Cmd sid='membership' product='clue' className='bold' /> 방식은 외부 클라이언트나 제3자의 개입 없이 CLUe 시스템이 독립적으로 출입 제어를 결정합니다. 웹 포털이나 모바일 애플리케이션만으로 CLUe를 운영하는 경우에도 적용할 수 있습니다.
+
+<Image src='/img/clue/clue-basic-setup-membership-setup.png' alt='Membership setup' alone />
+
+<Image src='/img/clue/clue-basic-setup-membership-setup-web-mobile.png' alt='Membership setup web and mobile' alone />
+
+<Cmd sid='membership' product='clue' /> 설정을 통해 하위 공간에 적용할 크리덴셜을 선택할 수 있습니다.
+
+<Image src='/img/clue/clue-basic-setup-access-service-membership.png' alt='Access Service Membership' />
+
+:::note
+
+**공간 그룹과 다르게 공간 설정을 변경할 수 있나요?**
+
+네, 공간 설정 페이지에서 인증 방식을 구성할 수 있습니다. 다만 출입 방식을 <Cmd sid='membership' product='clue' />에서 <Cmd sid='vendor' product='clue' />으로, 또는 그 반대로 변경할 수 없습니다. 따라서 같은 공간 그룹의 고객이 서로 다른 출입 방식을 필요로 한다면 각 용도에 맞게 별도의 공간 그룹을 만드는 것을 권장합니다.
+
+:::
+
+<NextStep>
+<NextItem to='customer-api-integration'>
+
+CLUe 공간 그룹에서 고객사(Vendor) API를 등록하고 크리덴셜에 연결하여, 고객사의 출입 판정 로직을 CLUe 출입 제어와 연동하는 방법을 확인하세요.
+
+</NextItem>
+</NextStep>

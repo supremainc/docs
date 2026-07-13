@@ -26,6 +26,51 @@ const isPreview = process.env.CONTEXT === 'preview';
 function createSidebars(preview) {
   const sidebars = {
     // By default, Docusaurus generates a sidebar from the docs folder structure
+    clueportal: [
+      {
+        type: 'category',
+        label: 'CLUe',
+        collapsed: false,
+        collapsible: false,
+        className: 'p-title',
+        link: {
+          type: 'doc',
+          id: 'platform/clue/index',
+        },
+        items: [
+          {
+            type: 'category',
+            label: 'CLUe 웹 포털 가이드',
+            collapsed: false,
+            items: [
+              'platform/clue/web-portal-getting-started',
+              'platform/clue/service-settings',
+              'platform/clue/customer-api-integration',
+              'platform/clue/fw-update',
+              'platform/clue/add-device',
+              'platform/clue/allocate-device-to-place',
+              'platform/clue/add-door',
+              'platform/clue/fw-upgrade',
+              'platform/clue/device-web-hook-settings',
+              'platform/clue/mobile-app-start'
+            ]
+          },
+          {
+            type: 'category',
+            label: '개발자',
+            items: [
+              'platform/clue/clue-api-guide',
+              'platform/clue/clue-dynamic-qr-code',
+              {
+                type: 'link',
+                href: 'pathname:///developer/clue',
+                label: 'CLUe API',
+              }
+            ]
+          }
+        ]
+      }
+    ],
     aicamwebserver: [
     {
       type: 'category',

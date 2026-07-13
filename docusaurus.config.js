@@ -309,6 +309,11 @@ const config = {
                 type: 'doc',
                 label: 'BioStar Air',
                 docId: 'platform/biostar_air/index'
+              },
+              {
+                type: 'doc',
+                label: 'CLUe',
+                docId: 'platform/clue/index'
               }
             ]
           },
@@ -516,7 +521,11 @@ const config = {
             items: [
               {
                 label: 'BioStar X API',
-                to: '/api/bsxapi'
+                to: '/developer/bsxapi'
+              },
+              {
+                label: 'CLUe API',
+                to: '/developer/clue'
               },
               {
                 label: 'BioStar Air Developer',

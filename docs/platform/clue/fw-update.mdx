@@ -1,0 +1,135 @@
+---
+id: fw-update
+title: 펌웨어 변경하기
+description: 기존 BioStar 장치를 CLUe 지원 모드로 전환하는 방법을 안내합니다. CLUe 전용 펌웨어 한 번으로 인증서 설치까지 자동 완료됩니다.
+---
+
+CLUe에서 지원하는 장치는 다음과 같습니다. 펌웨어 한 번의 업데이트만으로 기존 BioStar 지원 모드에서 CLUe 지원 모드로 전환할 수 있습니다.
+
+* BioStation 3, BioEntry W3, BioEntry W2, BioLite N2, X-Station 2, XPass 2
+
+:::caution
+
+펌웨어 업데이트를 수행하기 전에 **장치에 사용자 정보가 남아 있지 않도록 확인하세요**. 사용자 데이터가 남아 있으면 CLUe 시스템에서 동기화되는 사용자 정보와 충돌이 발생할 수 있습니다.
+
+:::
+
+
+## CLUe 지원 모드로 전환
+
+:::info
+
+펌웨어 업데이트 전에 장치를 미리 등록하려면 장치 시리얼 번호(SN)와 모델명(예: BS3-DB)을 <Support />에 제공해 주세요. 사전 등록 절차를 진행해 드립니다.
+
+:::
+
+<Steps>
+<Step>
+
+### CLUe 지원 펌웨어 버전 준비
+
+슈프리마 현지 지사 또는 CLUe 팀을 통해 제공받을 수 있습니다. 장치에 적용할 수 있는 버전은 아래와 같습니다.
+
+* *xpass2_v1_x_CL-AU.bin*
+
+* *bs3-all_v1.x._CL-AU.bin*
+
+* *xs2-all_v1.x CL-AU.zip*
+
+* *bln2-oab_v1.x CL-AU.bin*
+
+* *bln2-odb_v1.x CL-AU.bin*
+
+* *bln2-pab_v1.x CL-AU.bin*
+
+* *bew3-all_v1.x CL-AU.bin*
+
+* *bew2_oa/d/hp_v1.x CL-AU.bin*
+
+:::info
+
+접미사 `AU`는 'Auto Update to CLUe FW'를 의미합니다.
+
+:::
+
+</Step>
+<Step>
+
+### 인터넷 연결 확인
+
+**펌웨어를 업데이트하기 전에 장치가 인터넷과 CLUe 서버에 연결할 수 있는지 확인하세요**.
+
+CLUe 펌웨어 업데이트 후 장치는 CLUe 서버에서 인증서를 자동으로 가져와 적용한 뒤
+연결을 시도하므로, 인터넷 연결이 반드시 필요합니다. 또한 장치는 기본적으로 DHCP를 통해 IP 주소를 할당받으므로, 동적 IP 주소를 할당할 수 있는지 확인하세요.
+
+* 기본 네트워크 설정은 DHCP입니다.
+
+* 8.8.8.8 DNS 서버를 사용합니다.
+
+</Step>
+<Step>
+
+### 펌웨어 업데이트 진행
+
+**업데이트 과정에서 장치는 최소 2~3회 재부팅됩니다**.
+
+메인 펌웨어 업데이트에는 다소 시간이 걸릴 수 있으며, 인증서 및 설정 펌웨어를 가져오는 과정은 비교적 짧게 완료됩니다. 전체 과정은 약 3\~5분이 소요되므로, 업데이트가 완료될 때까지 장치의 전원과 인터넷 연결 상태를 유지하세요.
+
+:::info
+
+BioStar 2 또는 USB를 이용해 펌웨어를 업데이트할 수도 있습니다.
+
+:::
+
+</Step>
+<Step>
+
+### 업데이트 완료 확인
+
+**모든 업데이트가 완료되면 장치 메인 화면에 CLUe 아이콘이 표시됩니다**.
+
+<Image src='/img/clue/bs3-main-clue.png' />
+
+디스플레이가 없는 장치는 CLUe 포털에서 시리얼 번호를 입력하여 장치 등록 상태를 확인할 수 있습니다.
+
+</Step>
+<Step>
+
+### 장치 등록
+
+**슈프리마 담당자에게 포털을 통해 장치를 계정에 할당해 달라고 요청하세요**.
+
+그런 다음 지정된 공간에 장치를 배정하고 출입문 설정과 함께 사용할 수 있습니다. 안전한 장치 관리를 위해 CLUe 시스템은 각 브랜치 관리자가 장치를 해당 공간 그룹에 할당하도록 요구합니다.
+
+</Step>
+<Step>
+
+### 장치 메뉴 비밀번호 설정
+
+펌웨어 업데이트 후 LCD 디스플레이가 있는 장치는 메뉴 비밀번호를 설정하라는 메시지가 표시됩니다. 화면의 안내에 따라 비밀번호를 설정하세요. 비밀번호는 CLUe 포털을 통해서도 설정할 수 있습니다.
+
+BioStar 장치와 달리 CLUe 장치는 사용자 데이터 없이 사용되는 경우가 많습니다. 따라서 메뉴 설정을 무단으로 변경하지 않도록 메뉴 비밀번호를 설정해야 합니다.
+
+<Image src='/img/clue/place-access-device-password.png' />
+
+</Step>
+</Steps>
+
+
+## 문제 해결
+
+장치 화면에 클라우드 아이콘이 표시되지 않는다면 다음 사항을 확인하세요.
+
+* 먼저 인터넷 연결 상태를 확인하세요. 장치가 클라우드 서버에 직접 연결되므로 반드시 인터넷에 연결되어 있어야 합니다. 또한 CLUe 펌웨어는 아웃바운드 통신에 표준 HTTPS 포트 443을 사용합니다.
+
+* 클라우드 아이콘이 여전히 표시되지 않는다면 장치에서 **Ping 테스트**를 실행해 인터넷 연결 상태를 확인하세요.
+
+   | 장치 | 경로 |
+   | -- | -- |
+   | BioStation 3 | 메뉴(<Image src='/img/common/ico-menu.svg' ico alone />) → <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_252' product='dev' /> → <Cmd sid='ui_390' product='dev' /> |
+   | BioLite N2 | **ESC** → <Cmd sid='ui_103' product='dev' /> → <Cmd sid='ui_059' product='dev' /> →  <Cmd sid='ui_390' product='dev' /> |
+   | X-Station 2 | 메뉴(<Image src='/img/common/ico-menu2.svg' ico alone />) → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_252' product='dev' /> → <Cmd sid='ui_390' product='dev' /> |
+
+   * **Ping 테스트 성공** 팝업이 표시되면 인터넷 연결에는 문제가 없는 상태입니다.
+
+   * **알 수 없음(Unknown)** 또는 **실패(Fail)** 팝업이 표시되면 해당 DNS 사용을 네트워크에서 차단하고 있는지 확인하세요.

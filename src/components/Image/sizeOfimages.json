@@ -4896,7 +4896,7 @@
     "height": 390
   },
   "/img/camera/microphone-switch-vionyx.svg": {
-    "width": 552,
+    "width": 463,
     "height": 310
   },
   "/img/camera/microsdcard-usb-vionyx.svg": {
@@ -4982,6 +4982,422 @@
   "/img/changelogs-202604.png": {
     "width": 800,
     "height": 394
+  },
+  "/img/clue/add-device-complete.png": {
+    "width": 1711,
+    "height": 294
+  },
+  "/img/clue/add-device-enter-id.png": {
+    "width": 968,
+    "height": 357
+  },
+  "/img/clue/add-device-go-device-tap.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/add-device-list-assign-place.png": {
+    "width": 1711,
+    "height": 551
+  },
+  "/img/clue/add-device-list-enable-edit-mode.png": {
+    "width": 1711,
+    "height": 289
+  },
+  "/img/clue/add-device-list-set-place.png": {
+    "width": 1715,
+    "height": 551
+  },
+  "/img/clue/add-device-list.png": {
+    "width": 1711,
+    "height": 349
+  },
+  "/img/clue/add-device-settings.png": {
+    "width": 1920,
+    "height": 403
+  },
+  "/img/clue/assign-device-device-list-assign-place.png": {
+    "width": 1709,
+    "height": 484
+  },
+  "/img/clue/assign-device-device-list-edit.png": {
+    "width": 1708,
+    "height": 347
+  },
+  "/img/clue/assign-device-device-list-move.png": {
+    "width": 1709,
+    "height": 348
+  },
+  "/img/clue/assign-device-device-list.png": {
+    "width": 1920,
+    "height": 494
+  },
+  "/img/clue/assign-device-settings.png": {
+    "width": 1920,
+    "height": 323
+  },
+  "/img/clue/bs3-main-clue.png": {
+    "width": 250,
+    "height": 444
+  },
+  "/img/clue/clude-api-biometric-data-link.png": {
+    "width": 1718,
+    "height": 761
+  },
+  "/img/clue/clude-api-service-setting-method-save-biometric.png": {
+    "width": 753,
+    "height": 46
+  },
+  "/img/clue/clue-admin-levels.png": {
+    "width": 763,
+    "height": 610
+  },
+  "/img/clue/clue-api-user-face-link.png": {
+    "width": 510,
+    "height": 512
+  },
+  "/img/clue/clue-app-email-login-auth-number.png": {
+    "width": 480,
+    "height": 927
+  },
+  "/img/clue/clue-app-email-login.png": {
+    "width": 480,
+    "height": 927
+  },
+  "/img/clue/clue-app-event-monitoring.png": {
+    "width": 480,
+    "height": 1039
+  },
+  "/img/clue/clue-app-invite-manage-users.png": {
+    "width": 480,
+    "height": 1039
+  },
+  "/img/clue/clue-app-remote-control.png": {
+    "width": 1001,
+    "height": 1039
+  },
+  "/img/clue/clue-app-select-login-method.png": {
+    "width": 480,
+    "height": 927
+  },
+  "/img/clue/clue-app-store-qr-code.png": {
+    "width": 270,
+    "height": 270
+  },
+  "/img/clue/clue-basic-setup-access-service-membership.png": {
+    "width": 1920,
+    "height": 485
+  },
+  "/img/clue/clue-basic-setup-access-service-verify.png": {
+    "width": 1121,
+    "height": 554
+  },
+  "/img/clue/clue-basic-setup-add-child.png": {
+    "width": 1920,
+    "height": 556
+  },
+  "/img/clue/clue-basic-setup-add-distributor-profile.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-basic-setup-add-distributor.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-basic-setup-admin-information.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-basic-setup-face.png": {
+    "width": 1102,
+    "height": 518
+  },
+  "/img/clue/clue-basic-setup-invite-admin.png": {
+    "width": 1920,
+    "height": 451
+  },
+  "/img/clue/clue-basic-setup-membership-setup-web-mobile.png": {
+    "width": 1175,
+    "height": 455
+  },
+  "/img/clue/clue-basic-setup-membership-setup.png": {
+    "width": 1102,
+    "height": 551
+  },
+  "/img/clue/clue-basic-setup-qr-code.png": {
+    "width": 1102,
+    "height": 481
+  },
+  "/img/clue/clue-basic-setup-services.png": {
+    "width": 1920,
+    "height": 501
+  },
+  "/img/clue/clue-device-id-sample.png": {
+    "width": 509,
+    "height": 565
+  },
+  "/img/clue/clue-dynamic-qr-code-architecture.png": {
+    "width": 1183,
+    "height": 569
+  },
+  "/img/clue/clue-fw-device-basic-select-fw-ver.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-fw-device-basic-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-fw-device-basic-upgrade-fw-confirm.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-fw-device-basic-upgrade-fw-verify.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-fw-device-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-invite-email.png": {
+    "width": 781,
+    "height": 597
+  },
+  "/img/clue/clue-place-device-webhook-config-field.png": {
+    "width": 1627,
+    "height": 716
+  },
+  "/img/clue/clue-place-device-webhook-event-type.png": {
+    "width": 595,
+    "height": 331
+  },
+  "/img/clue/clue-place-device-webhook-header.png": {
+    "width": 1036,
+    "height": 128
+  },
+  "/img/clue/clue-place-device-webhook-test-call.png": {
+    "width": 463,
+    "height": 671
+  },
+  "/img/clue/clue-place-device-webhook.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-place-group-settings-admin-api-copy.png": {
+    "width": 1707,
+    "height": 177
+  },
+  "/img/clue/clue-place-group-settings-admin-new-api.png": {
+    "width": 1707,
+    "height": 177
+  },
+  "/img/clue/clue-place-group-settings-admin.png": {
+    "width": 1920,
+    "height": 959
+  },
+  "/img/clue/clue-place-group-settings-service-setting.png": {
+    "width": 1920,
+    "height": 959
+  },
+  "/img/clue/clue-place-group-settings.png": {
+    "width": 1738,
+    "height": 340
+  },
+  "/img/clue/clue-place-self-reg-device-email-code.png": {
+    "width": 633,
+    "height": 390
+  },
+  "/img/clue/clue-place-self-reg-device-web-panel.png": {
+    "width": 633,
+    "height": 387
+  },
+  "/img/clue/clue-place-self-reg-lcd-device-enter-code.png": {
+    "width": 344,
+    "height": 595
+  },
+  "/img/clue/clue-place-self-reg-lcd-device-issue-code.png": {
+    "width": 343,
+    "height": 606
+  },
+  "/img/clue/clue-place-self-reg-lcd-device-place-allocation.png": {
+    "width": 343,
+    "height": 595
+  },
+  "/img/clue/clue-place-self-reg-lcd-device.png": {
+    "width": 337,
+    "height": 591
+  },
+  "/img/clue/clue-place-self-registration-email.png": {
+    "width": 595,
+    "height": 254
+  },
+  "/img/clue/clue-place-self-registration-space-id.png": {
+    "width": 595,
+    "height": 254
+  },
+  "/img/clue/clue-place-setting-basic-self-registration.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-play-store-qr-code.png": {
+    "width": 270,
+    "height": 270
+  },
+  "/img/clue/clue-qr-code-workflow.png": {
+    "width": 1321,
+    "height": 621
+  },
+  "/img/clue/clue-vendor-api-integ-auto-field.png": {
+    "width": 598,
+    "height": 281
+  },
+  "/img/clue/clue-vendor-api-integ-custom-header.png": {
+    "width": 598,
+    "height": 212
+  },
+  "/img/clue/clue-vendor-api-integ-list-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-integ-list.png": {
+    "width": 1920,
+    "height": 569
+  },
+  "/img/clue/clue-vendor-api-integ-manual-field.png": {
+    "width": 598,
+    "height": 204
+  },
+  "/img/clue/clue-vendor-api-integ-place-group-service-none.png": {
+    "width": 1920,
+    "height": 510
+  },
+  "/img/clue/clue-vendor-api-integ-place-group-service-select-vendor.png": {
+    "width": 1920,
+    "height": 737
+  },
+  "/img/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-integ-place-group-service-vendor-api.png": {
+    "width": 1920,
+    "height": 623
+  },
+  "/img/clue/clue-vendor-api-integ-place-group-settings.png": {
+    "width": 1742,
+    "height": 497
+  },
+  "/img/clue/clue-vendor-api-integ-test-fail-sample.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-integ-test-success-sample.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-integ-test-success-save.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-integ-test-success.png": {
+    "width": 985,
+    "height": 380
+  },
+  "/img/clue/clue-vendor-api-place-service-assign-api.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-service-verify-vendor-edit-save.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-vendor-api-service-verify-vendor.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/device-clue-mode.png": {
+    "width": 342,
+    "height": 122
+  },
+  "/img/clue/device-list-slave-device-02.png": {
+    "width": 899,
+    "height": 155
+  },
+  "/img/clue/device-list-slave-device-03.png": {
+    "width": 602,
+    "height": 510
+  },
+  "/img/clue/place-access-device-password.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-doors-add-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-doors-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-doors.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-group-settings-device-list-edit.png": {
+    "width": 1708,
+    "height": 286
+  },
+  "/img/clue/place-group-settings-device-list-move.png": {
+    "width": 1708,
+    "height": 286
+  },
+  "/img/clue/place-group-settings-device-list-select-place.png": {
+    "width": 1708,
+    "height": 378
+  },
+  "/img/clue/place-group-settings-device.png": {
+    "width": 1920,
+    "height": 492
+  },
+  "/img/clue/place-group-settings.png": {
+    "width": 1920,
+    "height": 269
+  },
+  "/img/clue/place-invite-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-invite-mobile-admin.png": {
+    "width": 1711,
+    "height": 235
+  },
+  "/img/clue/place-mobile-admin-invite-complete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-mobile-admin-invited.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-setting-basic-set-test-period.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/place-setting-set-test-period-pop.png": {
+    "width": 520,
+    "height": 350
+  },
+  "/img/clue/suprema-clue-architecture.png": {
+    "width": 1204,
+    "height": 668
+  },
+  "/img/clue/test-period-set-device-list.png": {
+    "width": 1709,
+    "height": 405
+  },
+  "/img/clue/webhook-tester.png": {
+    "width": 1920,
+    "height": 509
   },
   "/img/common/biostarx-chart.png": {
     "width": 600,
@@ -13603,6 +14019,106 @@
     "width": 600,
     "height": 443
   },
+  "/img/en/clue/add-device-complete.png": {
+    "width": 1511,
+    "height": 151
+  },
+  "/img/en/clue/add-device-enter-id.png": {
+    "width": 915,
+    "height": 266
+  },
+  "/img/en/clue/add-device-go-device-tap.png": {
+    "width": 152,
+    "height": 287
+  },
+  "/img/en/clue/add-device-list-set-place.png": {
+    "width": 1520,
+    "height": 174
+  },
+  "/img/en/clue/add-device-list.png": {
+    "width": 1515,
+    "height": 175
+  },
+  "/img/en/clue/add-device-settings.png": {
+    "width": 1589,
+    "height": 139
+  },
+  "/img/en/clue/assign-device-device-list-edit.png": {
+    "width": 1440,
+    "height": 86
+  },
+  "/img/en/clue/assign-device-device-list-move.png": {
+    "width": 210,
+    "height": 116
+  },
+  "/img/en/clue/assign-device-device-list.png": {
+    "width": 1547,
+    "height": 287
+  },
+  "/img/en/clue/assign-device-settings.png": {
+    "width": 1530,
+    "height": 109
+  },
+  "/img/en/clue/bs3-main-clue.png": {
+    "width": 250,
+    "height": 444
+  },
+  "/img/en/clue/clue-admin-levels.png": {
+    "width": 763,
+    "height": 610
+  },
+  "/img/en/clue/clue-basic-setup-access-service-membership.png": {
+    "width": 1000,
+    "height": 275
+  },
+  "/img/en/clue/clue-basic-setup-access-service-verify.png": {
+    "width": 714,
+    "height": 419
+  },
+  "/img/en/clue/clue-basic-setup-add-child.png": {
+    "width": 1309,
+    "height": 516
+  },
+  "/img/en/clue/clue-basic-setup-add-distributor-profile.png": {
+    "width": 1382,
+    "height": 698
+  },
+  "/img/en/clue/clue-basic-setup-add-distributor.png": {
+    "width": 655,
+    "height": 499
+  },
+  "/img/en/clue/clue-basic-setup-admin-information.png": {
+    "width": 1392,
+    "height": 729
+  },
+  "/img/en/clue/clue-basic-setup-face.png": {
+    "width": 1102,
+    "height": 518
+  },
+  "/img/en/clue/clue-basic-setup-invite-admin.png": {
+    "width": 1276,
+    "height": 206
+  },
+  "/img/en/clue/clue-basic-setup-membership-setup-web-mobile.png": {
+    "width": 1175,
+    "height": 455
+  },
+  "/img/en/clue/clue-basic-setup-membership-setup.png": {
+    "width": 1102,
+    "height": 551
+  },
+  "/img/en/clue/clue-basic-setup-qr-code.png": {
+    "width": 1102,
+    "height": 481
+  },
+  "/img/en/clue/clue-basic-setup-services.png": {
+    "width": 1321,
+    "height": 336
+  },
+  "/img/en/clue/suprema-clue-architecture.png": {
+    "width": 1208,
+    "height": 671
+  },
   "/img/en/device/auth-dynamic-roi.png": {
     "width": 800,
     "height": 1280
@@ -19126,6 +19642,26 @@
   "/img/menus/ico-close.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-clue-check.svg": {
+    "width": 18,
+    "height": 18
+  },
+  "/img/menus/ico-clue-delete.svg": {
+    "width": 18,
+    "height": 18
+  },
+  "/img/menus/ico-clue-edit.svg": {
+    "width": 18,
+    "height": 18
+  },
+  "/img/menus/ico-clue-editR.svg": {
+    "width": 18,
+    "height": 18
+  },
+  "/img/menus/ico-clue-move.svg": {
+    "width": 18,
+    "height": 18
   },
   "/img/menus/ico-content-full.svg": {
     "width": 20,
