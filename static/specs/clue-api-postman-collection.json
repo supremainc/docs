@@ -1103,7 +1103,7 @@
                 }
               ],
               "cookie": [],
-              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n  \"eventTime\": 1728614419124,\n  \"command\": \"ONCE_OPEN\"\n}"
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n\"data\": {\n\t\"eventTime\": 1728614419124,\n  \"command\": \"ONCE_OPEN\"\n\t}\n}"
             }
           ]
         }
