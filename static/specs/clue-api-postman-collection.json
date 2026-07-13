@@ -530,7 +530,6 @@
                   "value": "string",
                   "disabled": true,
                   "description": "Paging #"
-
                 },
                 {
                   "key": "size",
@@ -1270,23 +1269,19 @@
       "item": [
         {
           "name": "Get Event Logs",
-          "deprecated": true,
           "request": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "https://api.moon.supremainc.com/v1/events/places/{{placeId}}/elastic?startTime={{startTime}}&endTime={{endTime}}&filterEvents=&filterDoorIds=&filterDeviceIds=&page=0&size=30&q=&sort=eventAt,desc",
+              "raw": "https://api.moon.supremainc.com/v1/event-logs?placeId={{placeId}}&q=&startTime={{startTime}}&endTime={{endTime}}&filterEvents=&filterDoorIds=&filterDeviceIds=&size=30&afterId=",
               "host": [
                 "https://api.moon.supremainc.com/v1"
               ],
               "path": [
-                "events",
-                "places",
-                "{{placeId}}",
-                "elastic"
+                "event-logs"
               ]
             },
-            "description": "[Deprecated] Retrieves event logs for a place. Event logs can be retrieved for up to a 7-day period at a time, within a 90-day event log history.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | JWT AccessToken |\n\n#### Path / query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeId` | place ID |\n| `startTime` | UTC epoch milliseconds |\n| `endTime` | UTC epoch milliseconds |\n| `filterEvents` | Event type filter — see Event Filter list below |\n| `filterDoorIds` | door ID |\n| `filterDeviceIds` | device ID |\n| `page` | paging # |\n| `size` | events per page, up to 50 |\n| `q` | search query |\n| `sort` | e.g. `eventAt,desc` |\n\n#### Event Filter values\n\n`\"DEV_\"` or `\"DEVICE_\"` prefixed events originate from the device side; without those prefixes, events are generated server-side.\n\n| num |\n| -- |\n| `QR_AUTH_SUCCESS` |\n|`QR_AUTH_FAIL` |\n|`QR_3RD_PARTY_SERVER_ERROR_FAIL` |\n|`REAL_NAME_AUTH_NOT_MATCH` |\n|`VENDOR_AUTH_SUCCESS` |\n|`VENDOR_AUTH_FAIL` |\n|`KAKAO_QR_SERVER_RES_AUTH_SUCCESS` |\n|`KAKAO_QR_SERVER_RES_AUTH_FAIL` |\n|`NAVER_QR_SERVER_RES_AUTH_SUCCESS` |\n|`NAVER_QR_SERVER_RES_AUTH_FAIL` |\n|`SPARK_PLUS_QR_RES_AUTH_SUCCESS` |\n|`SPARK_PLUS_QR_RES_AUTH_FAIL` |\n|`CREDENTIAL_IDENTIFY_FAIL` |\n|`CREDENTIAL_THIRD_PARTY_LINK_NOT_EXISTS` |\n|`DEVICE_AWS_IOT_UNHEALTHY` |\n|`DOOR_INCIDENT` |\n|`DOOR_TEMP_OPEN_REQ` |\n|`DOOR_MANUAL_OPEN_REQ` |\n|`DOOR_MANUAL_CLOSE_REQ` |\n|`DOOR_MANUAL_RELEASE_REQ` |\n|`DEVICE_RESET_FACTORY_REQ` |\n|`DEVICE_RESET_REQ` |\n|`DEVICE_RESET_NETWORK_EXCLUDE_REQ` |\n|`DEVICE_REBOOT_DEVICE_REQ` |\n|`DEVICE_UPGRADE_FIRMWARE_REQ` |\n|`DEVICE_SEARCH_SLAVE_REQ` |\n|`DEVICE_SETTING_CONNECT_TEST_REQ` |\n|`DEVICE_HEALTH_CHECK_REQ` |\n|`DEVICE_LOCAL_LOGS_UPLOAD_REQ` |\n|`DEVICE_INFO_UPDATED_REQ` |\n|`SCHEDULE_UPDATED_REQ` |\n|`DOOR_INFO_UPDATED_REQ` |\n|`DEVICE_USER_AUTH_SYNC_REQ` |\n|`DEVICE_AUTH_STRATEGY_SYNC_REQ` |\n|`DEVICE_MENU_PASSWORD_RESET_REQ` |\n|`DEVICE_USER_ALL_DELETE_REQ` |\n|`DEVICE_USER_AUTH_ALL_SYNC_REQ` |\n|`PLACE_SERVICE_START` |\n|`PLACE_MODIFY` |\n|`PLACE_NEW_MEMBER` |\n|`PLACE_LEAVE_MEMBER` |\n|`PLACE_KICKOUT_MEMBER` |\n|`PLACE_MEMBER_ROLE_UPDATED` |\n|`ACCOUNT_INVITED_PLACE` |\n|`ACCOUNT_KICKOUTED_PLACE` |\n|`PLACE_DOOR_MODIFY` |\n|`PLACE_DOOR_DELETED` |\n|`PLACE_DOOR_ADDED` |\n|`PLACE_SCHEDULE_UPDATED` |\n|`DEV_NETWORK_DISCONNECT` |\n|`DEV_NETWORK_CONNECT` |\n|`DEV_DEVICE_SERVER_CONNECT` |\n|`DEV_DEVICE_SERVER_DISCONNECT` |\n|`DEV_DEVICE_START` |\n|`DEV_DEVICE_REBOOT` |\n|`DEV_DOOR_RELAY_OFF` |\n|`DEV_DOOR_RELAY_ON` |\n|`DEV_DOOR_SENSOR_OPEN` |\n|`DEV_DOOR_SENSOR_CLOSE` |\n|`DEV_DOOR_HELD_OPEN` |\n|`DEV_DOOR_HELD_OPEN_ALARM` |\n|`DEV_DOOR_HELD_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_FORCE_OPEN` |\n|`DEV_DOOR_FORCE_OPEN_ALARM` |\n|`DEV_DOOR_FORCE_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_TAMPER_ON` |\n|`DEV_DOOR_TAMPER_OFF` |\n|`DEV_DOOR_EXIT_BUTTON` |\n|`DEV_DEVICE_ADMIN_MENU_ON` |\n|`DEV_DEVICE_DHCP_CONNECTED` |\n|`DEV_DEVICE_TIME_SETTING` |\n|`DEV_DEVICE_TIMEZONE_SETTING` |\n|`DEV_QR_AUTH_SUCCESS` |\n|`DEV_QR_AUTH_FAIL` |\n|`DEV_FIRMWARE_UPGRADED` |\n|`DEV_FIRMWARE_UPGRADE_FAILED` |\n|`DEV_DOOR_START_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_START_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_ENTRY_BUTTON` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_UNLOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_UNLOCK` |\n|`DEV_CARD_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_MOBILE_CARD_AUTH_FAIL` |\n|`DEV_CARD_AUTH_FAIL` |\n|`DEV_CODE_AUTH_FAIL` |\n|`DEV_FACE_AUTH_FAIL` |\n|`DEV_FINGERPRINT_AUTH_FAIL` |\n|`DEV_PIN_AUTH_FAIL` |\n|`DEV_FACE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_AUTH_SUCCESS`\n"
+            "description": "Retrieves event logs for a place. Event logs can be retrieved for up to a 7-day period at a time, within a 90-day event log history.\n\n#### Header request\n\n| Name | Description |\n| --- | --- |\n| `Authorization` | JWT AccessToken |\n\n#### Query parameters\n\n| Parameter | Description |\n| --- | --- |\n| `placeId` | place ID (required) |\n| `startTime` | UTC epoch milliseconds (required) |\n| `endTime` | UTC epoch milliseconds (required) |\n| `filterEvents` | Event type filter — see Event Filter list below |\n| `filterDoorIds` | door ID |\n| `filterDeviceIds` | device ID |\n| `size` | events per page, up to 50 |\n| `afterId` | ID of the last event from the previous page — pass it to fetch the next page (cursor-based pagination; replaces the old `page`/`sort` parameters) |\n| `q` | Search query (User ID, User name) |\n\n#### Event Filter values\n\n`\"DEV_\"` or `\"DEVICE_\"` prefixed events originate from the device side; without those prefixes, events are generated server-side.\n\n| num |\n| -- |\n| `QR_AUTH_SUCCESS` |\n|`QR_AUTH_FAIL` |\n|`QR_3RD_PARTY_SERVER_ERROR_FAIL` |\n|`REAL_NAME_AUTH_NOT_MATCH` |\n|`VENDOR_AUTH_SUCCESS` |\n|`VENDOR_AUTH_FAIL` |\n|`KAKAO_QR_SERVER_RES_AUTH_SUCCESS` |\n|`KAKAO_QR_SERVER_RES_AUTH_FAIL` |\n|`NAVER_QR_SERVER_RES_AUTH_SUCCESS` |\n|`NAVER_QR_SERVER_RES_AUTH_FAIL` |\n|`SPARK_PLUS_QR_RES_AUTH_SUCCESS` |\n|`SPARK_PLUS_QR_RES_AUTH_FAIL` |\n|`CREDENTIAL_IDENTIFY_FAIL` |\n|`CREDENTIAL_THIRD_PARTY_LINK_NOT_EXISTS` |\n|`DEVICE_AWS_IOT_UNHEALTHY` |\n|`DOOR_INCIDENT` |\n|`DOOR_TEMP_OPEN_REQ` |\n|`DOOR_MANUAL_OPEN_REQ` |\n|`DOOR_MANUAL_CLOSE_REQ` |\n|`DOOR_MANUAL_RELEASE_REQ` |\n|`DEVICE_RESET_FACTORY_REQ` |\n|`DEVICE_RESET_REQ` |\n|`DEVICE_RESET_NETWORK_EXCLUDE_REQ` |\n|`DEVICE_REBOOT_DEVICE_REQ` |\n|`DEVICE_UPGRADE_FIRMWARE_REQ` |\n|`DEVICE_SEARCH_SLAVE_REQ` |\n|`DEVICE_SETTING_CONNECT_TEST_REQ` |\n|`DEVICE_HEALTH_CHECK_REQ` |\n|`DEVICE_LOCAL_LOGS_UPLOAD_REQ` |\n|`DEVICE_INFO_UPDATED_REQ` |\n|`SCHEDULE_UPDATED_REQ` |\n|`DOOR_INFO_UPDATED_REQ` |\n|`DEVICE_USER_AUTH_SYNC_REQ` |\n|`DEVICE_AUTH_STRATEGY_SYNC_REQ` |\n|`DEVICE_MENU_PASSWORD_RESET_REQ` |\n|`DEVICE_USER_ALL_DELETE_REQ` |\n|`DEVICE_USER_AUTH_ALL_SYNC_REQ` |\n|`PLACE_SERVICE_START` |\n|`PLACE_MODIFY` |\n|`PLACE_NEW_MEMBER` |\n|`PLACE_LEAVE_MEMBER` |\n|`PLACE_KICKOUT_MEMBER` |\n|`PLACE_MEMBER_ROLE_UPDATED` |\n|`ACCOUNT_INVITED_PLACE` |\n|`ACCOUNT_KICKOUTED_PLACE` |\n|`PLACE_DOOR_MODIFY` |\n|`PLACE_DOOR_DELETED` |\n|`PLACE_DOOR_ADDED` |\n|`PLACE_SCHEDULE_UPDATED` |\n|`DEV_NETWORK_DISCONNECT` |\n|`DEV_NETWORK_CONNECT` |\n|`DEV_DEVICE_SERVER_CONNECT` |\n|`DEV_DEVICE_SERVER_DISCONNECT` |\n|`DEV_DEVICE_START` |\n|`DEV_DEVICE_REBOOT` |\n|`DEV_DOOR_RELAY_OFF` |\n|`DEV_DOOR_RELAY_ON` |\n|`DEV_DOOR_SENSOR_OPEN` |\n|`DEV_DOOR_SENSOR_CLOSE` |\n|`DEV_DOOR_HELD_OPEN` |\n|`DEV_DOOR_HELD_OPEN_ALARM` |\n|`DEV_DOOR_HELD_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_FORCE_OPEN` |\n|`DEV_DOOR_FORCE_OPEN_ALARM` |\n|`DEV_DOOR_FORCE_OPEN_ALARM_CLEAR` |\n|`DEV_DOOR_TAMPER_ON` |\n|`DEV_DOOR_TAMPER_OFF` |\n|`DEV_DOOR_EXIT_BUTTON` |\n|`DEV_DEVICE_ADMIN_MENU_ON` |\n|`DEV_DEVICE_DHCP_CONNECTED` |\n|`DEV_DEVICE_TIME_SETTING` |\n|`DEV_DEVICE_TIMEZONE_SETTING` |\n|`DEV_QR_AUTH_SUCCESS` |\n|`DEV_QR_AUTH_FAIL` |\n|`DEV_FIRMWARE_UPGRADED` |\n|`DEV_FIRMWARE_UPGRADE_FAILED` |\n|`DEV_DOOR_START_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_OFF_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_END_RELAY_ON_BY_OPERATOR` |\n|`DEV_DOOR_START_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_OFF_BY_SCHEDULE` |\n|`DEV_DOOR_START_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_END_RELAY_ON_BY_SCHEDULE` |\n|`DEV_DOOR_ENTRY_BUTTON` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_LOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_SCHEDULE_UNLOCK` |\n|`DEV_QR_ACCESS_DENIED_ON_OPERATOR_UNLOCK` |\n|`DEV_CARD_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CARD_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CARD_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_CODE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_MOBILE_CARD_AUTH_FAIL` |\n|`DEV_CARD_AUTH_FAIL` |\n|`DEV_CODE_AUTH_FAIL` |\n|`DEV_FACE_AUTH_FAIL` |\n|`DEV_FINGERPRINT_AUTH_FAIL` |\n|`DEV_PIN_AUTH_FAIL` |\n|`DEV_FACE_THEN_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_FINGERPRINT_AUTH_SUCCESS` |\n|`DEV_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_FACE_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_THEN_PIN_AUTH_SUCCESS` |\n|`DEV_FINGERPRINT_AUTH_SUCCESS`\n"
           },
           "response": [
             {
@@ -1295,17 +1290,18 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://api.moon.supremainc.com/v1/events/places/{{placeId}}/elastic?startTime={{startTime}}&endTime={{endTime}}",
+                  "raw": "https://api.moon.supremainc.com/v1/event-logs?placeId={{placeId}}&startTime={{startTime}}&endTime={{endTime}}",
                   "host": [
                     "https://api.moon.supremainc.com/v1"
                   ],
                   "path": [
-                    "events",
-                    "places",
-                    "{{placeId}}",
-                    "elastic"
+                    "event-logs"
                   ],
                   "query": [
+                    {
+                      "key": "placeId",
+                      "value": "{{placeId}}"
+                    },
                     {
                       "key": "startTime",
                       "value": "{{startTime}}"
@@ -1327,7 +1323,7 @@
                 }
               ],
               "cookie": [],
-              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n  \"total\": 0,\n  \"data\": []\n}"
+              "body": "{\n  \"code\": 200,\n  \"status\": true,\n  \"message\": \"OK\",\n  \"data\": [\n    {\n      \"id\": \"6768eea0eaa5d5fe4420cd36\",\n      \"eventAt\": 1783898684842,\n      \"placeId\": 1,\n      \"authId\": 1,\n      \"deviceId\": 1,\n      \"doorId\": 1,\n      \"doorName\": \"doorName\",\n      \"userId\": \"userId\",\n      \"userName\": \"userName\",\n      \"localLogId\": 1,\n      \"eventType\": \"VENDOR_QR_CONFIRM_FAIL\",\n      \"domainId\": 1,\n      \"domainType\": \"DEVICE\",\n      \"detail\": \"{\n\t\"ID\": 518,\n\t\"timestamp\": 1734653435,\n\t\"deviceID\": 547837141,\n\t\"userID\": \"userId\"\n\t}\"\n    }\n  ]\n}"
             }
           ]
         }
