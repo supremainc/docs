@@ -63,7 +63,7 @@ function createSidebars(preview) {
               'platform/clue/clue-dynamic-qr-code',
               {
                 type: 'link',
-                href: 'pathname:///api/clue',
+                href: 'pathname:///developer/clue',
                 label: 'CLUe API',
               }
             ]
