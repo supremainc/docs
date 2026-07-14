@@ -371,6 +371,10 @@
     "width": 400,
     "height": 363
   },
+  "/img/air/bsair-device-bs3-video-service.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/air/bsair-device-camera-add.png": {
     "width": 1920,
     "height": 1080
@@ -5034,6 +5038,10 @@
   "/img/clue/assign-device-settings.png": {
     "width": 1920,
     "height": 323
+  },
+  "/img/clue/bs3-main-clue.png": {
+    "width": 250,
+    "height": 444
   },
   "/img/clue/clude-api-biometric-data-link.png": {
     "width": 1718,
@@ -9855,6 +9863,10 @@
     "width": 400,
     "height": 363
   },
+  "/img/en/air/bsair-device-bs3-video-service.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/air/bsair-device-camera-add.png": {
     "width": 1920,
     "height": 1080
@@ -14062,6 +14074,10 @@
   "/img/en/clue/assign-device-settings.png": {
     "width": 1530,
     "height": 109
+  },
+  "/img/en/clue/bs3-main-clue.png": {
+    "width": 250,
+    "height": 444
   },
   "/img/en/clue/clue-admin-levels.png": {
     "width": 763,
