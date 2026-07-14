@@ -58,7 +58,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const defaultExternalLinks = useMemo(() => [
     {
       title: 'BioStar X API',
-      url: '/api/bsxapi',
+      url: '/developer/bsxapi',
       Svg: require('@site/static/img/cover-api.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.xapi.desc" })}`,
