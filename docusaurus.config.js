@@ -113,6 +113,7 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
+            ...(!isPreview ? ['platform/clue/**.{md,mdx}'] : [])
           ],
           remarkPlugins: [
             [remarkCmd, { locale: locale || 'ko' }],
@@ -125,6 +126,7 @@ const config = {
             '_backup/**.{js,jsx,ts,tsx,md,mdx}',
             'cover/**.{js,jsx,ts,tsx,md,mdx}',
             'back/**.{js,jsx,ts,tsx,md,mdx}',
+            ...(!isPreview ? ['developer/clue/**.{js,jsx,ts,tsx,md,mdx}'] : [])
           ]
         },
         blog: {
@@ -311,11 +313,13 @@ const config = {
                 label: 'BioStar Air',
                 docId: 'platform/biostar_air/index'
               },
-              {
-                type: 'doc',
-                label: 'CLUe',
-                docId: 'platform/clue/index'
-              }
+              ...(!isPreview ? [] : [
+                {
+                  type: 'doc',
+                  label: 'CLUe',
+                  docId: 'platform/clue/index'
+                }
+              ])
             ]
           },
           {
@@ -524,10 +528,10 @@ const config = {
                 label: 'BioStar X API',
                 to: '/developer/bsxapi'
               },
-              {
+              ...(!isPreview ? [] : [{
                 label: 'CLUe API',
                 to: '/developer/clue'
-              },
+              }]),
               {
                 label: 'BioStar Air Developer',
                 to: 'https://developers.biostarair.com',

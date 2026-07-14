@@ -92,12 +92,12 @@ export default function ApiV2Page() {
         <title>BioStar X API Reference | Suprema Docs</title>
         <meta name="description" content="BioStar X REST API documentation. Manage users, access control, doors, devices, and credentials with JSON-based endpoints." />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <link rel="canonical" href="https://docs.supremainc.com/api/bsxapi" />
+        <link rel="canonical" href="https://docs.supremainc.com/developer/bsxapi" />
 
         <meta property="og:title" content="BioStar X API Reference | Suprema Docs" />
         <meta property="og:description" content="Complete REST API documentation for BioStar X access control system. Manage users, doors, devices, and biometric credentials." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://docs.supremainc.com/api/bsxapi" />
+        <meta property="og:url" content="https://docs.supremainc.com/developer/bsxapi" />
         <meta property="og:site_name" content="Suprema Docs" />
 
         <meta name="keywords" content="BioStar X API, Suprema API, access control API, biometric API, REST API, user management API, door control API, device management API" />
@@ -125,7 +125,7 @@ export default function ApiV2Page() {
             "dateModified": new Date().toISOString().split('T')[0],
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://docs.supremainc.com/api/bsxapi"
+              "@id": "https://docs.supremainc.com/developer/bsxapi"
             }
           })}
         </script>
