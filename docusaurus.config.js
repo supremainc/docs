@@ -32,7 +32,7 @@ const config = {
       removeLegacyPostBuildHeadAttribute: true,
       useCssCascadeLayers: false,
     },
-    experimental_faster: true
+    faster: true
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
