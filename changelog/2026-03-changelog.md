@@ -59,7 +59,7 @@ date: 2026-04-08T12:00
 
 ## Developer
 
-* API 문서 업데이트: [Create BioStar X QR](../api/bsxapi?api=create-biostar-x-qr)
+* API 문서 업데이트: [Create BioStar X QR](../developer/bsxapi?api=create-biostar-x-qr)
 
 * Device SDK: 2.9.12 버전 릴리스 노트 추가
 

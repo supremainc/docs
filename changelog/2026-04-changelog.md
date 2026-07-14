@@ -51,4 +51,4 @@ date: 2026-05-01T12:00
 
 ## Developer
 
-* API 문서 업데이트: [Export as CSV API](../api/bsxapi?api=export-as-csv)
+* API 문서 업데이트: [Export as CSV API](../developer/bsxapi?api=export-as-csv)

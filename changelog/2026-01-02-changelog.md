@@ -50,7 +50,7 @@ slug: 2026-01-02-changelog
 
   * 최대 관리자 수 설명 추가
 
-* [BioStar X API](../api/bsxapi) 문서 추가
+* [BioStar X API](../developer/bsxapi) 문서 추가
 
 * 복잡한 라이선스 요구 사항을 해결하는 데 도움이 되는 [BioStar X 라이선스 계산기](../bsx-license-calculator) 페이지 추가
 

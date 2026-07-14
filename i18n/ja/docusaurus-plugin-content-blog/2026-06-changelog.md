@@ -33,7 +33,7 @@ Added manuals for ViOnyx, Suprema's new video security product.
 
 * [Upgrading BioStar X](../platform/biostar_x/migration-x): Added minimum system requirements information for upgrades
 
-* [BioStar X API](../api/bsxapi) documentation revamped
+* [BioStar X API](../developer/bsxapi) documentation revamped
 
 ### BioStar X Mobile
 
