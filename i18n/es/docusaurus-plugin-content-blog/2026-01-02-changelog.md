@@ -50,7 +50,7 @@ Below is a summary of the key updates for January 2026.
 
   * Added description of maximum administrator count
 
-* Added [BioStar X API](../api/bsxapi) documentation
+* Added [BioStar X API](../developer/bsxapi) documentation
 
 * Added [BioStar X License Calculator](../bsx-license-calculator) page to help with complex licensing requirements
 

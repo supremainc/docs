@@ -33,7 +33,7 @@ date: 2026-07-01T12:00
 
 * [BioStar X 업그레이드하기](../platform/biostar_x/migration-x): 업그레이드 시 최소 사양 안내 문구 추가
 
-* [BioStar X API](../api/bsxapi) 문서 리뉴얼
+* [BioStar X API](../developer/bsxapi) 문서 리뉴얼
 
 ### BioStar X Mobile
 
