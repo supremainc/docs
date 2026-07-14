@@ -22,7 +22,7 @@ Below is a summary of the key updates for January 2026.
 
 ![Suprema Docs](/img/changelogs-202501.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## BioStar X
 

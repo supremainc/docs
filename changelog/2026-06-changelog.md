@@ -9,7 +9,7 @@ date: 2026-07-01T12:00
 
 ![Suprema Docs 26.06 Changelogs](/img/changelogs/changelogs-202606.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Document Hub 오픈
 

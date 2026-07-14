@@ -22,7 +22,7 @@ slug: 2026-01-02-changelog
 
 ![Suprema Docs](/img/changelogs-202501.png)
 
-<!-- truncate -->
+{/*truncate*/}
 
 ## BioStar X
 
