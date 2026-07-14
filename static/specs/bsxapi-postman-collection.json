@@ -4796,7 +4796,7 @@
                 "search"
               ]
             },
-            "description": "This API is used to list all users recorded on Bio Star X.\n\n#### BODY Parameters:\n\n| **Parameter** | **Type** | **Required** | **Description** |\n| --- | --- | --- | --- |\n| limit | Number | Y | Limit response record(s) by the value specified on this parameter |\n| search_text | String | N | Search record(s) with the text specified on this parameter. Default value: null |\n| user_group_id | Number | N | Filter response record(s) according to user_group_id specified on this parameter |\n| order_by | String | N | Order the response record(s) by the User parameter such as user_id or name. False for ascending, True for descending. |\n\n#### Known errors:\n\n- At least one parameter must exist\n    \n- Using unavailable user_group_id will show empty response"
+            "description": "This API is used to list all users recorded on BioStar X.\n\n#### BODY Parameters:\n\n| **Parameter** | **Type** | **Required** | **Description** |\n| --- | --- | --- | --- |\n| limit | Number | Y | Limit response record(s) by the value specified on this parameter |\n| search_text | String | N | Search record(s) with the text specified on this parameter. Default value: null |\n| user_group_id | Number | N | Filter response record(s) according to user_group_id specified on this parameter |\n| order_by | String | N | Order the response record(s) by the User parameter such as user_id or name. False for ascending, True for descending. |\n\n#### Known errors:\n\n- At least one parameter must exist\n    \n- Using unavailable user_group_id will show empty response"
           },
           "response": []
         },
