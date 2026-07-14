@@ -24,7 +24,7 @@ In the <Cmd>Service Settings</Cmd> menu of <Cmd>BioStar X Service Manager</Cmd>,
 
 * <Cmd>BioStar X Cache Service</Cmd>: Data caching and enhanced system performance
 
-## Situations where configuration changes are needed {#when-to-change}
+## Situations where configuration changes are needed {/* #when-to-change */}
 
 You may need to change the service settings in the following situations.
 
@@ -38,7 +38,7 @@ You may need to change the service settings in the following situations.
 
 * **Performance optimization**: When separation of ports is needed for traffic distribution or load balancing
 
-## How to change settings {#how-to-change}
+## How to change settings {/* #how-to-change */}
 
 1. Click the <Cmd>SERVICE SETTINGS</Cmd> menu in <Cmd>BioStar X Service Manager</Cmd>.
 
@@ -62,9 +62,9 @@ When changing port numbers, make sure there are no conflicts with other services
 
 :::
 
-## Service composition {#service-composition}
+## Service composition {/* #service-composition */}
 
-### BioStar X Core Web Service {#biostar-x-core-web-service}
+### BioStar X Core Web Service {/* #biostar-x-core-web-service */}
 
 This service is responsible for the web-based user interface.
 
@@ -74,7 +74,7 @@ This service is responsible for the web-based user interface.
 
 * <Cmd>WebServerThrift Port</Cmd>: Web server communication port based on the Thrift protocol (default: 9310)
 
-### BioStar X Core Service {#biostar-x-core-service}
+### BioStar X Core Service {/* #biostar-x-core-service */}
 
 This is the main service that handles core functionalities of the system and external API communications.
 
@@ -88,7 +88,7 @@ This is the main service that handles core functionalities of the system and ext
 
 * <Cmd>Rpc Port</Cmd>: Remote Procedure Call (RPC) communication port (default: 51218)
 
-### Unified Gateway Service {#unified-gateway-service}
+### Unified Gateway Service {/* #unified-gateway-service */}
 
 Efficiently process requests to the **BioStar X** server through reverse proxy, improve the security vulnerabilities of iframes, and minimize SSL certificate errors.
 
@@ -96,7 +96,7 @@ Efficiently process requests to the **BioStar X** server through reverse proxy, 
 
 * <Cmd>HTTPS Port</Cmd>: Integrated gateway HTTPS communication port (default: 443)
 
-### BioStar X Coordinator Service {#biostar-x-coordinator-service}
+### BioStar X Coordinator Service {/* #biostar-x-coordinator-service */}
 
 This service is responsible for managing configuration information of the distributed system, monitoring service status, and synchronizing services.
 
@@ -114,7 +114,7 @@ This service is responsible for managing configuration information of the distri
 
 :::
 
-### BioStar X Server (Main) {#biostar-x-server-(main)}
+### BioStar X Server (Main) {/* #biostar-x-server-(main) */}
 
 This is the core service that serves as the main server of the system.
 
@@ -128,7 +128,7 @@ This is the core service that serves as the main server of the system.
 
 * <Cmd>gRPC Server Port</Cmd>: High-performance communication port based on gRPC protocol (default: 51219)
 
-### BioStar X Cache Service {#biostar-x-cache-service}
+### BioStar X Cache Service {/* #biostar-x-cache-service */}
 
 This service improves the system's data processing speed and performance by storing frequently used data in memory.
 

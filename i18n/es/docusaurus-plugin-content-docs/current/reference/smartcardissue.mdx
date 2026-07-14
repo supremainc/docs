@@ -289,17 +289,17 @@ Clicking on the structure in the image will take you to the details of that stru
 />
 
 
-## CRC Calculation and Validation {#crc}
+## CRC Calculation and Validation {/* #crc */}
 
 CRC-16 CCITT checksums (`hdrCRC`, `cardCRC`) are used for the header and card data respectively, to ensure the integrity of SmartCard data.
 
-### What are hdrCRC and cardCRC? {#hdrcrc-cardcrc}
+### What are hdrCRC and cardCRC? {/* #hdrcrc-cardcrc */}
 
 - `hdrCRC`: The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the `cardCRC` to `reserved` (14 bytes total) of `BS2SmartCardHeader`.
 
 - `cardCRC`: The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from `cardType` to `BS2SmartCardData.accessOnData` (total card data excluding the header).
 
-### How to Calculate CRC {#crc-calculation}
+### How to Calculate CRC {/* #crc-calculation */}
 
 The [BioStar 2 SDK](https://kb.supremainc.com/bs2sdk/doku.php) provides the **BS2_ComputeCRC16CCITT** function. Below is an example of its use.
 
@@ -325,7 +325,7 @@ result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCa
 :::
 
 
-### How to Validate {#crc-validation}
+### How to Validate {/* #crc-validation */}
 
 To validate the integrity of card data when reading, do the following:
 

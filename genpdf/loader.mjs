@@ -106,7 +106,7 @@ const REGEX_PATTERNS = {
   
   // JSX expressions to remove, BUT PRESERVE specific patterns:
   // - {props.xxx}
-  // - {#anchor}
+  // - {/* #anchor */}
   // - {숫자}
   // - {식별자}
   // - {${...}} (template literals)
@@ -122,8 +122,8 @@ const REGEX_PATTERNS = {
   // Component with closing tags: <ComponentName ...>...</ComponentName>
   closingComponent: (name) => new RegExp(`<${name}([^>]*)>.*?</${name}>`, 'gs'),
   
-  // Anchor patterns: {#anchor}
-  anchors: /\{#([^}]+)\}/g,
+  // Anchor patterns: {/* #anchor */}
+  anchors: /\{/* #([^}]+)\ */}/g,
   
   // SpecSection with property path: <SpecSection data={varName.property} />
   specSectionWithProperty: (varName) => new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g'),
@@ -138,7 +138,7 @@ const REGEX_PATTERNS = {
 
 /**
  * Clean MDX/Markdown content by removing comments, imports, and JSX expressions
- * Preserves specific patterns: {props.xxx}, {#anchor}, {숫자}, etc.
+ * Preserves specific patterns: {props.xxx}, {/* #anchor}, {숫자 */}, etc.
  * @param {string} content - Raw MDX content
  * @returns {string} Cleaned content
  */
@@ -881,7 +881,7 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
     console.warn(`⚠️  Component replacement reached max iterations (${maxIterations}). Possible circular component references.`);
   }
 
-  // Convert {#anchor} to [#anchor] AFTER props substitution is complete
+  // Convert {/* #anchor */} to [#anchor] AFTER props substitution is complete
   // This must be done after props are substituted to avoid any conflicts
   processedContent = processedContent.replace(REGEX_PATTERNS.anchors, '[#$1]');
 

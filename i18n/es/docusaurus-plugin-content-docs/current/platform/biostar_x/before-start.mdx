@@ -15,7 +15,7 @@ Esta guía proporciona información importante que debe conocer antes de iniciar
 
 :::
 
-## Notas previas a la instalación {#before}
+## Notas previas a la instalación {/* #before */}
 
 Antes de instalar **BioStar X**, verifique lo siguiente y continúe con la instalación.
 
@@ -33,11 +33,11 @@ Antes de instalar **BioStar X**, verifique lo siguiente y continúe con la insta
 
 * Para ver el puerto predeterminado que usa **BioStar X**, consulte <DocLink docId='platform/biostar_x/service-settings' />. Si otro programa ocupa el mismo puerto, **BioStar X** podría no funcionar correctamente.
 
-## Verificar la base de datos {#checkdb}
+## Verificar la base de datos {/* #checkdb */}
 
 Si está utilizando una base de datos configurada por el usuario, verifique los siguientes elementos antes de instalar **BioStar X**.
 
-### MariaDB {#mariadb}
+### MariaDB {/* #mariadb */}
 
 1. Cambie las siguientes opciones en la sección `[mysql]` del archivo *my.cnf*.
 
@@ -61,7 +61,7 @@ Si está utilizando una base de datos configurada por el usuario, verifique los 
    GRANT SUPER ON . TO user_id@'%' IDENTIFIED BY "password";
    ```
 
-### MS SQL Server {#ms-sql-server}
+### MS SQL Server {/* #ms-sql-server */}
 
 :::info
 
@@ -71,13 +71,13 @@ Si está utilizando una base de datos configurada por el usuario, verifique los 
 
 :::
 
-#### Configurar el puerto {#port-setting}
+#### Configurar el puerto {/* #port-setting */}
 
 * Ejecute **SQL Server Configuration Manager** y establezca **TCP/IP Protocol** para **Protocols for SQLEXPRESS** en el número de puerto deseado.
 
 * Reinicie los **SQL Server Services** para aplicar los ajustes.
 
-#### Crear el usuario y la base de datos {#create-a-user-and-database}
+#### Crear el usuario y la base de datos {/* #create-a-user-and-database */}
 
 1. Inicie sesión con la cuenta **sa** usando **SQL Server Authentication** en **SQL Server Management Studio**.
 
@@ -141,12 +141,12 @@ Establezca los siguientes valores recomendados en la sección **Database Files**
 
 :::
 
-#### Configurar la base de datos de autenticación de Windows {#windows-authentication-database-settings}
+#### Configurar la base de datos de autenticación de Windows {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>
 
-##### Configuración previa {#preliminary-setting}
+##### Configuración previa {/* #preliminary-setting */}
 
 Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones previas que se indican a continuación antes de configurar la base de datos de autenticación de Windows.
 
@@ -173,7 +173,7 @@ Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones 
 </Step>
 <Step>
 
-##### Configurar la autenticación de Windows de MS SQL con una cuenta de Active Directory {#settingsforusingmssql}
+##### Configurar la autenticación de Windows de MS SQL con una cuenta de Active Directory {/* #settingsforusingmssql */}
 
 1. Ejecuta *services.msc*.
 
@@ -194,7 +194,7 @@ Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones 
 </Step>
 <Step>
 
-##### Configuración de la base de datos {#database-setting}
+##### Configuración de la base de datos {/* #database-setting */}
 
 1. Después de ejecutar **SQL Server Configuration Manager**, haz clic en **Client Protocol** en **SQL Native Client**.
 

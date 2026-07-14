@@ -28,7 +28,7 @@ keywords:
 
 4. 設定を保存するには、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックしてください。
 
-## 基本情報を設定する {#basic-setting}
+## 基本情報を設定する {/* #basic-setting */}
 
 <Cmd sid='common.general' product='2' /> セクションでは、**BioStar X** の基本情報を確認または設定できます。
 
@@ -44,13 +44,13 @@ keywords:
 
 * <Cmd sid="common.sessionTimeout" product='2' />：セッションのタイムアウト時間を設定できます。 **BioStar X** にログインした後、設定した時間操作がないと自動でログアウトします。
 
-## ユーザーおよびデバイス管理 {#user-and-device-management}
+## ユーザーおよびデバイス管理 {/* #user-and-device-management */}
 
 <Cmd sid='setting.server.userDeviceManagement' product='2' /> セクションでは、ユーザーとデバイス間の同期および認証方法を設定できます。
 
 <Image src='/img/biostarx-settings-server-management.png' className='none' />
 
-### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {#user-sync}
+### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {/* #user-sync */}
 
 <Cmd sid="setting.server.automaticUserSync" product='2' /> オプションでは、サーバーとデバイス間でユーザー情報を同期する方法を選択できます。
 
@@ -80,7 +80,7 @@ keywords:
 
 :::
 
-### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {#fingerprint-template-format}
+### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {/* #fingerprint-template-format */}
 
 <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> オプションでは、指紋テンプレート形式を選択できます。 次の項目から選択します。
 
@@ -96,7 +96,7 @@ keywords:
 
 :::
 
-### <Cmd sid="setting.userDevice.useridType" product='2' className='normal' /> {#userid-type}
+### <Cmd sid="setting.userDevice.useridType" product='2' className='normal' /> {/* #userid-type */}
 
 <Cmd sid="setting.userDevice.useridType" product='2' /> オプションでは、ユーザーIDの種類を <Cmd sid="setting.userDevice.useridType.numeric" product='2' /> または <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> に設定できます。 **BioStar X** サーバーに登録されているデバイス一覧を確認し、互換性のある設定値を選択します。
 
@@ -144,7 +144,7 @@ keywords:
 
 :::
 
-### <Cmd sid="setting.server.enrollment_device.title" product='2' className='normal' /> {#enrollment-device}
+### <Cmd sid="setting.server.enrollment_device.title" product='2' className='normal' /> {/* #enrollment-device */}
 
 指紋や顔、カードを登録する際によく使用するデバイスを <Cmd sid="setting.server.enrollment_device.title" product='2' /> オプションに追加し、便利に利用できます。 
 
@@ -174,7 +174,7 @@ keywords:
 
 :::
 
-### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {#custom-field}
+### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {/* #custom-field */}
 
 <Cmd sid="setting.server.custom_field.title" product='2' /> オプションでは、ユーザーの付加情報を入力するフィールドを追加できます。 追加したフィールドはユーザー情報画面に表示されます。
 
@@ -222,7 +222,7 @@ keywords:
 
 :::
 
-### AoCカード設定 {#aoc-card-setting}
+### AoCカード設定 {/* #aoc-card-setting */}
 
 ユーザーのクレデンシャルをカードに保存する[AoC（Access on Card）](../../reference/glossary#access_on_card)を発行する際に、**BioStar X** サーバーから個人情報とクレデンシャル情報を削除するには、<Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' /> オプションを有効にします。
 
@@ -290,13 +290,13 @@ keywords:
 
 :::
 
-### その他 {#other-settings}
+### その他 {/* #other-settings */}
 
 * <Cmd sid="setting.server.eventLogRetainDays" product='2' />：出入管理イベントログを保存する期間を設定します。
 
 * <Cmd sid="setting.server.hideCredentialFaces" product='2' />：ユーザーのプライバシーを保護するため、顔クレデンシャルを登録する際にプレビュー画像を非表示にできます。 このオプションを有効にすると、ユーザーの顔クレデンシャルを登録する際にプレビュー画面が表示されません。
 
-## サーバーマッチングを設定する {#servermatching}
+## サーバーマッチングを設定する {/* #servermatching */}
 
 <Cmd sid='common.serverMatching' product='2' /> セクションでは、ユーザー情報をデバイスで認証せず **BioStar X** で認証できる[サーバーマッチング](../../reference/glossary#server_matching)機能を設定できます。
 
@@ -328,7 +328,7 @@ keywords:
 
 :::
 
-## システムログレベルの設定 {#systemloglevel}
+## システムログレベルの設定 {/* #systemloglevel */}
 
 <Cmd sid='setting.server.logLevelManagement' product='2' /> セクションでは、データベースに保存されるシステムログのレベルを設定できます。
 
@@ -336,7 +336,7 @@ keywords:
 
 システムログはあらかじめ定義されたカテゴリーで管理され、ログレベルは <Cmd sid="setting.server.logLevel.trace" product='2' />、<Cmd sid="setting.server.logLevel.debug" product='2' />、<Cmd sid="setting.server.logLevel.info" product='2' />、<Cmd sid="setting.server.logLevel.warning" product='2' />、<Cmd sid="setting.server.logLevel.error" product='2' />に分類されます。 上位レベルには下位レベルのログがすべて含まれます。 例えば、システムログレベルを <Cmd sid="setting.server.logLevel.trace" product='2' /> に選択すると、下位レベルである <Cmd sid="setting.server.logLevel.debug" product='2' />、<Cmd sid="setting.server.logLevel.info" product='2' />、<Cmd sid="setting.server.logLevel.warning" product='2' />、<Cmd sid="setting.server.logLevel.error" product='2' /> のログもすべて含めて保存されます。
 
-## 顔画像の保存 {#storevisualfaceimage}
+## 顔画像の保存 {/* #storevisualfaceimage */}
 
 顔をクレデンシャルとして登録する際に、実際の画像とテンプレートの両方を保存するか、実際の画像は保存せずテンプレートのみ保存するかを設定できます。
 

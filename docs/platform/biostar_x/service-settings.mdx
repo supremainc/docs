@@ -22,7 +22,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 * <Cmd>BioStar X Cache Service</Cmd>: 데이터 캐싱 및 시스템 성능 향상
 
 
-## 설정 변경이 필요한 상황 {#when-to-change}
+## 설정 변경이 필요한 상황 {/* #when-to-change */}
 
 다음과 같은 상황에서 서비스 설정을 변경해야 할 수 있습니다.
 
@@ -37,7 +37,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 * **성능 최적화**: 트래픽 분산이나 로드 밸런싱을 위한 포트 분리가 필요할 때
 
 
-## 설정 변경 방법 {#how-to-change}
+## 설정 변경 방법 {/* #how-to-change */}
 
 1. <Cmd>BioStar X Service Manager</Cmd>에서 <Cmd>SERVICE SETTINGS</Cmd> 메뉴를 클릭하세요.
 
@@ -61,9 +61,9 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 :::
 
-## 서비스 구성 {#service-composition}
+## 서비스 구성 {/* #service-composition */}
 
-### BioStar X Core Web Service {#biostar-x-core-web-service}
+### BioStar X Core Web Service {/* #biostar-x-core-web-service */}
 
 웹 기반 사용자 인터페이스를 담당하는 서비스입니다.
 
@@ -73,7 +73,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 * <Cmd>WebServerThrift Port</Cmd>: Thrift 프로토콜 기반 웹서버 통신 포트 (기본값: 9310)
 
-### BioStar X Core Service {#biostar-x-core-service}
+### BioStar X Core Service {/* #biostar-x-core-service */}
 
 시스템의 핵심 기능과 외부 API 통신을 처리하는 메인 서비스입니다.
 
@@ -87,7 +87,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 * <Cmd>Rpc Port</Cmd>: 원격 프로시저 호출(RPC) 통신 포트 (기본값: 51218)
 
-### Unified Gateway Service {#unified-gateway-service}
+### Unified Gateway Service {/* #unified-gateway-service */}
 
 역방향 프록시(Reverse Proxy) 방식을 통해 **BioStar X** 서버에 대한 요청을 효율적으로 처리하고, iframe의 보안 취약점을 개선하며, SSL 인증서 오류를 최소화합니다.
 
@@ -95,7 +95,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 * <Cmd>HTTPS Port</Cmd>: 통합 게이트웨이 HTTPS 통신 포트 (기본값: 443)
 
-### BioStar X Coordinator Service {#biostar-x-coordinator-service}
+### BioStar X Coordinator Service {/* #biostar-x-coordinator-service */}
 
 분산 시스템의 구성 정보 관리, 서비스 상태 모니터링 및 서비스 간 동기화를 담당하는 서비스입니다.
 
@@ -113,7 +113,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 :::
 
-### BioStar X Server (Main) {#biostar-x-server-(main)}
+### BioStar X Server (Main) {/* #biostar-x-server-(main) */}
 
 시스템의 메인 서버 역할을 수행하는 핵심 서비스입니다.
 
@@ -127,7 +127,7 @@ keywords: [Service Settings, Service Manager, BioStar X]
 
 * <Cmd>gRPC Server Port</Cmd>: gRPC 프로토콜 기반 고성능 통신 포트 (기본값: 51219)
 
-### BioStar X Cache Service {#biostar-x-cache-service}
+### BioStar X Cache Service {/* #biostar-x-cache-service */}
 
 자주 사용되는 데이터를 메모리에 저장하여 시스템의 데이터 처리 속도와 성능을 향상시키는 서비스입니다.
 

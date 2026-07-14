@@ -1,4 +1,4 @@
-### <Cmd sid='new_layout_nav_title_detail' product='air' className='normal' /> {#deviceInfo}
+### <Cmd sid='new_layout_nav_title_detail' product='air' className='normal' /> {/* #deviceInfo */}
 
 The <Cmd sid='new_layout_nav_title_detail' product='air' /> section provides basic information — such as the device name, model, serial number, and firmware version — and includes an action menu for controlling features and default settings.
 
@@ -100,11 +100,11 @@ Modify the device's default settings.
 
 ---
 
-### <Cmd sid='device_card_title' product='air' className='normal' /> {#cardSettings}
+### <Cmd sid='device_card_title' product='air' className='normal' /> {/* #cardSettings */}
 
 In the <Cmd sid='device_card_title' product='air' /> section, you can modify card authentication settings.
 
-#### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {#nfcRfcard}
+#### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {/* #nfcRfcard */}
 
 * <Cmd sid='device_editable_fields_card' product='air' />: Click the toggle switch to enable or disable card access authentication. Select the card types supported for card authentication.
 
@@ -130,7 +130,7 @@ In the <Cmd sid='device_card_title' product='air' /> section, you can modify car
 
 <Xclude type={props.type} ref='cs-20'>
 
-#### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {#device_card_wiegand_card}
+#### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {/* #device_card_wiegand_card */}
 
 For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' product='air' /> and <Cmd sid='device_card_wiegand_card_hid_prox' product='air' />. Click the toggle to enable the feature, then select the desired card format in <Cmd sid='device_card_wiegand_card' product='air' />.
 
@@ -148,7 +148,7 @@ For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' pro
 
 ---
 
-### <Cmd sid='new_layout_nav_title_network' product='air' className='normal ' /> {#network}
+### <Cmd sid='new_layout_nav_title_network' product='air' className='normal ' /> {/* #network */}
 
 Modify the device's network settings.
 
@@ -204,7 +204,7 @@ Modify the device's network settings.
 
 ---
 
-### <Cmd sid='device_cs20_advanced' product='air' className='normal' /> {#advancedSettings}
+### <Cmd sid='device_cs20_advanced' product='air' className='normal' /> {/* #advancedSettings */}
 
 #### <Cmd sid='device_cs20_device_input_status' product='air' className='normal' />
 
@@ -246,7 +246,7 @@ You can set the Supervised Input port to function as an Input port and configure
 
 ---
 
-### <Cmd sid='new_layout_nav_title_authentication' product='air' className='normal' /> {#authentication}
+### <Cmd sid='new_layout_nav_title_authentication' product='air' className='normal' /> {/* #authentication */}
 
 <Include type={props.type} ref='xpass2'>
 
@@ -308,15 +308,15 @@ You can configure different authentication methods for the selected schedule. Fo
 
 ---
 
-### <Cmd sid='new_layout_nav_title_face' product='air' className='normal' /> {#faceAuthentication}
+### <Cmd sid='new_layout_nav_title_face' product='air' className='normal' /> {/* #faceAuthentication */}
 
-#### <Cmd sid='site_setting_tab_security' product='air' className='normal' /> {#faceSecurity}
+#### <Cmd sid='site_setting_tab_security' product='air' className='normal' /> {/* #faceSecurity */}
 
 * <Cmd sid="new_layout_device_bew3_block_7_title" product="air" />: Prevent user authentication with spoofed faces such as photos.
 
 * <Cmd sid="new_layout_device_bew3_block_7_text2" product="air" />: Check for duplicate registrations when enrolling facea.
 
-#### <Cmd sid='device_face_detection' product='air' className='normal' /> {#faceDetection}
+#### <Cmd sid='device_face_detection' product='air' className='normal' /> {/* #faceDetection */}
 
 * <Cmd sid="new_layout_device_bew3_block_2_title" product="air" />: Set the sensitivity for detecting movement around the device.
 
@@ -328,7 +328,7 @@ You can configure different authentication methods for the selected schedule. Fo
 
 * <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />: If a face is not enrolled within the set time during enrollment, the process is canceled.
 
-#### <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' className='normal' /> {#maskDetection}
+#### <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' className='normal' /> {/* #maskDetection */}
 
 Activate the <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> option to configure mask detection.
 
@@ -364,7 +364,7 @@ When using non-face credentials, the timing of "before" and "after" is usually i
 
 ---
 
-### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Time & Attendance, T&A) {#tna}
+### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Time & Attendance, T&A) {/* #tna */}
 
 When this feature is enabled, <Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> is logged in **Event Log** and used in <Cmd sid='tna_report' product='air' className='bold' />.
 
@@ -420,9 +420,9 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
 ---
 
-### <Cmd sid='device_bs3_sound_label' product='air' className='normal' /> {#device_bs3_sound_label}
+### <Cmd sid='device_bs3_sound_label' product='air' className='normal' /> {/* #device_bs3_sound_label */}
 
-#### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {#device_bs3_sound_label2}
+#### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {/* #device_bs3_sound_label2 */}
 
 * <Cmd sid='device_bs3_sound_label3' product='air' />: Reduce LCD brightness when the device is not in use to lower unnecessary power consumption.
 
@@ -446,7 +446,7 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
    :::
 
-#### <Cmd sid='device_bs3_sound_home_screen_sound' product='air' className='normal' /> {#device_bs3_sound_home_screen_sound}
+#### <Cmd sid='device_bs3_sound_home_screen_sound' product='air' className='normal' /> {/* #device_bs3_sound_home_screen_sound */}
 
 * <Cmd sid="device_bs3_sound_home_screen_soung_use_voice" product="air" />: Use voice guidance instead of notification tones.
 
@@ -460,7 +460,7 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
 ---
 
-### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {#wiegandoutput}
+### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {/* #wiegandoutput */}
 
 This feature integrates with external systems (e.g., alarm panels). Activate the <Cmd sid='use_wiegand_out_label' product='air' /> option to use this feature.
 
@@ -494,7 +494,7 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 ---
 
-### <Cmd sid='device_intercom_title' product='air' className='normal' /> {#intercom}
+### <Cmd sid='device_intercom_title' product='air' className='normal' /> {/* #intercom */}
 
 * <Cmd sid='device_intercom_txt_use_intercom' product='air' />: Activate or deactivate the IP intercom feature.
 
@@ -526,7 +526,7 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 ---
 
-### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
+### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {/* #secureTamper */}
 
 If a tamper event occurs, configure the device to delete **all user information**, **all logs**, and **security keys** stored on the device.
 
@@ -536,7 +536,7 @@ If a tamper event occurs, configure the device to delete **all user information*
 
 ---
 
-### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
+### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {/* #secureTamper */}
 
 If a tamper event occurs, configure the panel to delete **all user information**, **all logs**, and **security keys** stored on the panel.
 
@@ -546,7 +546,7 @@ If a tamper event occurs, configure the panel to delete **all user information**
 
 ---
 
-### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {#rtspStreaming}
+### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {/* #rtspStreaming */}
 
 Configure details for **Real Time Streaming Protocol** (RTSP) streaming. The device's camera can stream live video.
 
@@ -572,7 +572,7 @@ The RTSP streaming feature is supported only on BioStation 3.
 
 ---
 
-### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
+### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {/* #rssiSensitivity */}
 
 Adjust the RSSI value to set how close the mobile device must be to unlock the door.
 
@@ -594,7 +594,7 @@ To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
 
 ---
 
-### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
+### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {/* #moduleFoundSlots */}
 
 Option to detect an OM-120 module connected to the device. Click <Cmd sid='add_btn' product='air' /> to detect the module.
 
@@ -604,7 +604,7 @@ Option to detect an OM-120 module connected to the device. Click <Cmd sid='add_b
 
 ---
 
-### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
+### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {/* #moduleFoundSlots */}
 
 Option to detect an OM-120 module connected to the panel. Click <Cmd sid='add_btn' product='air' /> to detect the module.
 
