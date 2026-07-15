@@ -706,16 +706,16 @@ footer {
   }
 
   .tabs-container {
-    ul.tabs {
-      padding-left: 0;
+    .tabs__item--active {
+      background: none;
+    }
+    .tabs__item:hover {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
     h4.tab-label {
       display: none;
     }
-  }
-
-  .tabs__item--active {
-    background-color: var(--ifm-color-nextstep-background);
   }
 
   section {

@@ -85,7 +85,7 @@ function TabContent({children}) {
     Boolean,
   );
   return (
-    <div className="margin-top--md">
+    <div className={clsx('margin-top--md', styles.TabContent)}>
       {childTabs.map((tabItem, i) =>
         cloneElement(tabItem, {
           key: i,
