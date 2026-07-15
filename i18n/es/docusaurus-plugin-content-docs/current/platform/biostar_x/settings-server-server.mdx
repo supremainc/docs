@@ -28,7 +28,7 @@ Cambie la configuración de información básica del servidor BioStar X, la gest
 
 4. Haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla para guardar los ajustes.
 
-## Configuración de información básica {#basic-setting}
+## Configuración de información básica {/* #basic-setting */}
 
 Verifique o configure la información básica de **BioStar X** en la sección <Cmd sid='common.general' product='2' />.
 
@@ -44,13 +44,13 @@ Verifique o configure la información básica de **BioStar X** en la sección <C
 
 * <Cmd sid='common.sessionTimeout' product='2' />: Configure un período de expiración de sesión. Si no hay operación después de iniciar sesión en BioStar X durante el tiempo configurado, la sesión se cerrará automáticamente.
 
-## Gestión de usuarios y dispositivos {#user-and-device-management}
+## Gestión de usuarios y dispositivos {/* #user-and-device-management */}
 
 En la sección <Cmd sid='setting.server.userDeviceManagement' product='2' />, configure los métodos de sincronización y autenticación entre usuarios y dispositivos.
 
 <Image src='/img/biostarx-settings-server-management.png' className='none' />
 
-### <Cmd sid='setting.server.automaticUserSync' product='2' className='normal' /> {#user-sync}
+### <Cmd sid='setting.server.automaticUserSync' product='2' className='normal' /> {/* #user-sync */}
 
 En la opción <Cmd sid='setting.server.automaticUserSync' product='2' />, elija cómo sincronizar la información de usuario entre el servidor y los dispositivos.
 
@@ -80,7 +80,7 @@ En la opción <Cmd sid='setting.server.automaticUserSync' product='2' />, elija 
 
 :::
 
-### <Cmd sid='setting.server.fingerprintTemplateFormat' product='2' className='normal' /> {#fingerprint-template-format}
+### <Cmd sid='setting.server.fingerprintTemplateFormat' product='2' className='normal' /> {/* #fingerprint-template-format */}
 
 En la opción <Cmd sid='setting.server.fingerprintTemplateFormat' product='2' />, elija el formato de plantilla de huella digital. Seleccione entre los siguientes elementos.
 
@@ -96,7 +96,7 @@ Si existen plantillas de huellas digitales de usuario en el dispositivo, no se p
 
 :::
 
-### <Cmd sid='setting.userDevice.useridType' product='2' className='normal' /> {#userid-type}
+### <Cmd sid='setting.userDevice.useridType' product='2' className='normal' /> {/* #userid-type */}
 
 En la opción <Cmd sid='setting.userDevice.useridType' product='2' />, seleccione el tipo de ID de usuario como <Cmd sid='setting.userDevice.useridType.numeric' product='2' /> o <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />. Revise la lista de dispositivos registrados en el servidor **BioStar X** y seleccione la configuración compatible.
 
@@ -144,7 +144,7 @@ Cambiar de <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' /> 
 
 :::
 
-### <Cmd sid='setting.server.enrollment_device.title' product='2' className='normal' /> {#enrollment-device}
+### <Cmd sid='setting.server.enrollment_device.title' product='2' className='normal' /> {/* #enrollment-device */}
 
 Para mayor comodidad, añada dispositivos usados con frecuencia para enrolar huellas digitales, rostros o tarjetas en la opción <Cmd sid='setting.server.enrollment_device.title' product='2' />. 
 
@@ -174,7 +174,7 @@ Para mayor comodidad, añada dispositivos usados con frecuencia para enrolar hue
 
 :::
 
-### <Cmd sid='setting.server.custom_field.title' product='2' className='normal' /> {#custom-field}
+### <Cmd sid='setting.server.custom_field.title' product='2' className='normal' /> {/* #custom-field */}
 
 En la opción <Cmd sid='setting.server.custom_field.title' product='2' />, agregue campos para ingresar información adicional del usuario. Los campos agregados se mostrarán en la pantalla de información del usuario.
 
@@ -222,7 +222,7 @@ En la opción <Cmd sid='setting.server.custom_field.title' product='2' />, agreg
 
 :::
 
-### Configuración de tarjetas AoC {#aoc-card-setting}
+### Configuración de tarjetas AoC {/* #aoc-card-setting */}
 
 Habilite la opción <Cmd sid='setting.server.deleteCredentialAfterAOC' product='2' /> para emitir una credencial [Access on Card (AoC)](../../reference/glossary#access_on_card) que almacena las credenciales del usuario en una tarjeta y elimina la información personal y los datos de credenciales del servidor **BioStar X**.
 
@@ -290,13 +290,13 @@ Habilite la opción <Cmd sid='setting.server.deleteCredentialAfterAOC' product='
 
 :::
 
-### Otros ajustes {#other-settings}
+### Otros ajustes {/* #other-settings */}
 
 * <Cmd sid='setting.server.eventLogRetainDays' product='2' />: Configure el período de retención de los registros de eventos de control de acceso.
 
 * <Cmd sid='setting.server.hideCredentialFaces' product='2' />: Para proteger la información personal de los usuarios, la imagen de vista previa se puede ocultar durante el registro de credenciales faciales. Cuando esta opción está habilitada, la pantalla de vista previa no se mostrará al enrolar credenciales faciales de los usuarios.
 
-## Autenticación en servidor {#servermatching}
+## Autenticación en servidor {/* #servermatching */}
 
 En la sección <Cmd sid='common.serverMatching' product='2' />, configure la función de [autenticación en servidor](../../reference/glossary#server_matching) para autenticar la información del usuario en **BioStar X** sin autenticarla en el dispositivo.
 
@@ -328,7 +328,7 @@ En la sección <Cmd sid='common.serverMatching' product='2' />, configure la fun
 
 :::
 
-## Configuración del nivel de registro del sistema {#systemloglevel}
+## Configuración del nivel de registro del sistema {/* #systemloglevel */}
 
 En la sección <Cmd sid='setting.server.logLevelManagement' product='2' />, configure el nivel de registros del sistema que se almacenan en la base de datos.
 
@@ -336,7 +336,7 @@ En la sección <Cmd sid='setting.server.logLevelManagement' product='2' />, conf
 
 Los registros del sistema se gestionan según categorías predefinidas, y los niveles de registro se clasifican en <Cmd sid='setting.server.logLevel.trace' product='2' />, <Cmd sid='setting.server.logLevel.debug' product='2' />, <Cmd sid='setting.server.logLevel.info' product='2' />, <Cmd sid='setting.server.logLevel.warning' product='2' /> y <Cmd sid='setting.server.logLevel.error' product='2' />. El nivel más alto incluye todos los registros de los niveles inferiores. Por ejemplo, al seleccionar <Cmd sid='setting.server.logLevel.trace' product='2' />, se incluirán y guardarán todos los registros de los niveles inferiores <Cmd sid='setting.server.logLevel.debug' product='2' />, <Cmd sid='setting.server.logLevel.info' product='2' />, <Cmd sid='setting.server.logLevel.warning' product='2' /> y <Cmd sid='setting.server.logLevel.error' product='2' />.
 
-## Guardar imágenes faciales {#storevisualfaceimage}
+## Guardar imágenes faciales {/* #storevisualfaceimage */}
 
 Al inscribir un rostro como credencial, se puede configurar para guardar tanto la imagen real como la plantilla, o guardar solo la plantilla sin la imagen real.
 

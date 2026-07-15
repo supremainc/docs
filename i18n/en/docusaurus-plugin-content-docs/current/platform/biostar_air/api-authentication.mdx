@@ -11,7 +11,7 @@ keywords:
 
 The BioStar Air Cloud API uses Bearer token (JWT)-based authentication. You must obtain a token through the login process before calling the API, and include it in the Authorization header of every request.
 
-## API Base URLs {#api-base-urls}
+## API Base URLs {/* #api-base-urls */}
 
 | Environment | Base URL | Description |
 | --- | --- | --- |
@@ -26,11 +26,11 @@ The BioStar Air Cloud API uses Bearer token (JWT)-based authentication. You must
 
 :::
 
-## API login flow {#api-login-flow}
+## API login flow {/* #api-login-flow */}
 
 Make API calls with [Postman](https://www.postman.com/) or programmatically.
 
-### Log in {#login}
+### Log in {/* #login */}
 
 * **Endpoint**: `login`
 
@@ -45,7 +45,7 @@ Make API calls with [Postman](https://www.postman.com/) or programmatically.
 
 Returns a Bearer token (JWT).
 
-### Get account information {#get-self-accounts}
+### Get account information {/* #get-self-accounts */}
 
 * **Endpoint**: `getSelfAccounts`
 
@@ -53,7 +53,7 @@ Returns a Bearer token (JWT).
 
 Returns a list of accessible sites and accounts.
 
-### Log in to an account {#login-to-account}
+### Log in to an account {/* #login-to-account */}
 
 * **Endpoint**: `loginAccount`
 
@@ -61,11 +61,11 @@ Returns a list of accessible sites and accounts.
 
 Returns a site-specific token.
 
-## How to get a Bearer token from a web browser {#getYourBearerToken}
+## How to get a Bearer token from a web browser {/* #getYourBearerToken */}
 
 You can obtain the Bearer token directly from your browser using the developer tools, without Postman.
 
-### Chrome/Edge (Windows or Mac) {#chrome-edge}
+### Chrome/Edge (Windows or Mac) {/* #chrome-edge */}
 
 1. In the web browser, press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
 
@@ -87,7 +87,7 @@ You can obtain the Bearer token directly from your browser using the developer t
 
 <Image src='/img/air/bsair-chrome-develope.png' alone />
 
-### Safari (Mac) {#safari}
+### Safari (Mac) {/* #safari */}
 
 1. Enable the **Developer** menu. In Safari, go to Preferences → Advanced and check **Show Develop menu**.
 

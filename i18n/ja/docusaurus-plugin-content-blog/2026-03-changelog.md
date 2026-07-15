@@ -9,7 +9,7 @@ This March update improves your **Suprema Docs** experience with a more intuitiv
 
 ![Suprema Docs 26.03 Changelogs](/img/changelogs-202603.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Docs
 

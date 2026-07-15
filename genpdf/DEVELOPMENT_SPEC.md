@@ -419,7 +419,7 @@ ja: i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-m
 **1) inner 속성 (현재 페이지 내 앵커)**:
 
 ```mdx
-## 계정 정보 변경 {#changeAccountInfo}
+## 계정 정보 변경 {/* #changeAccountInfo */}
 
 사용자 이름, 비밀번호, 전화번호를 변경할 수 있습니다. 자세한 내용은 <DocLink inner='#changeAccountInfo' />를 참조하세요.
 ```
