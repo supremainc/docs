@@ -202,7 +202,7 @@
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "{heading} への直接リンク",
+    "message": "{heading} への直接リンクとコピー",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
