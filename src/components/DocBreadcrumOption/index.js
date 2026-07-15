@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.css';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {translate} from '@docusaurus/Translate';
 import FeedbackWidget from '@site/src/components/Feedback';
 import IcoDown from '@site/static/img/menus/ico-down-arrow.svg';
@@ -8,6 +9,7 @@ import DocPrint from './dochub-print.svg';
 import DocHubLink from './dochub-down.svg';
 
 const DocuementButton = () => {
+  const { siteConfig } = useDocusaurusContext();
   const [isClient, setIsClient] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -48,7 +50,7 @@ const DocuementButton = () => {
   const handleDownload = () => {
     if (!isClient) return;
     setIsDropdownOpen(false);
-    window.location.href = '/dochub';
+    window.location.href = `${siteConfig.url}${siteConfig.baseUrl}dochub`;
   };
 
   const curLocation = isClient ? window.location.href : '';
