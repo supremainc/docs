@@ -1,7 +1,23 @@
 .tabList {
+  margin-top: var(--ifm-leading);
   margin-bottom: var(--ifm-leading);
+  padding-bottom: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+}
+
+.tabList > ul[role='tablist'] {
+  margin: 0;
+  background-color: var(--ifm-color-nextstep-background);
+  padding: 0.5rem 1.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
 }
 
 .tabItem {
-  margin-top: 0 !important;
+  margin: 0 !important;
+  padding: 0.5rem 1rem;
+}
+
+.TabContent {
+  padding: .5rem 1.5rem;
 }
