@@ -6,7 +6,7 @@ description: Explica cómo reforzar la capa de aplicación de BioStar X mediante
 
 Después de reforzar la seguridad del servidor en el servidor BioStar X, el siguiente paso es proteger la propia aplicación BioStar X. Las cuentas de administrador predeterminadas, las contraseñas débiles y la comunicación no cifrada con dispositivos se convierten en vías para comprometer directamente el sistema y omitir la seguridad a nivel de infraestructura. Este documento explica cómo establecer una base de seguridad en la capa de aplicación mediante autenticación de BioStar X, gestión de roles, cifrado de dispositivos y estrategias de respaldo.
 
-## Cambiar el ID de inicio de sesión y la contraseña predeterminados del administrador {#changeDefaultAdmin}
+## Cambiar el ID de inicio de sesión y la contraseña predeterminados del administrador {/* #changeDefaultAdmin */}
 
 Cambie de inmediato el ID de inicio de sesión predeterminado del **Administrador** (`admin`) y asigne una contraseña segura y única después de la instalación.
 
@@ -176,7 +176,7 @@ Desactive <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2
 
 :::
 
-## Autenticación multifactor {#setMfa}
+## Autenticación multifactor {/* #setMfa */}
 
 Habilite la autenticación multifactor para todas las cuentas con privilegios altos (Admin, Operator) en BioStar X, y exija un factor biométrico adicional de huella dactilar.
 
@@ -226,7 +226,7 @@ Pruebe el inicio de sesión: ingrese credenciales válidas y luego escanee su hu
 
 :::
 
-## Comunicación segura con dispositivos {#secureComm}
+## Comunicación segura con dispositivos {/* #secureComm */}
 
 Habilite <Cmd sid='setting.sever.secure.comm.menu' product='2' /> para cifrar el tráfico entre BioStar X y los dispositivos conectados mediante certificados digitales, estilo TLS/SSL.
 

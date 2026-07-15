@@ -32,7 +32,8 @@ const config = {
       removeLegacyPostBuildHeadAttribute: true,
       useCssCascadeLayers: false,
     },
-    experimental_faster: true
+    faster: true,
+    experimental_vcs: 'default-v2'
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
@@ -120,6 +121,7 @@ const config = {
             [remarkImageSize, { locale: locale || 'ko' }],
           ],
           rehypePlugins: [ rehypeExtendedTable ],
+          showLastUpdateTime: true,
         },
         pages: {
           exclude: [

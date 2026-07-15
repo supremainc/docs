@@ -3,12 +3,16 @@ import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import {
   useScrollPositionBlocker,
+  useTabsContextValue,
   useTabs,
   sanitizeTabsChildren,
+  TabsProvider,
 } from '@docusaurus/theme-common/internal';
 import useIsBrowser from '@docusaurus/useIsBrowser';
+import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-function TabList({className, block, selectedValue, selectValue, tabValues}) {
+function TabList({className}) {
+  const {selectedValue, selectValue, tabValues, block} = useTabs();
   const tabRefs = [];
   const {blockElementScrollPositionUntilNextRender} =
     useScrollPositionBlocker();
@@ -61,8 +65,8 @@ function TabList({className, block, selectedValue, selectValue, tabValues}) {
           tabIndex={selectedValue === value ? 0 : -1}
           aria-selected={selectedValue === value}
           key={value}
-          ref={(tabControl) => {
-            tabRefs.push(tabControl);
+          ref={(ref) => {
+            tabRefs.push(ref);
           }}
           onKeyDown={handleKeydown}
           onClick={handleTabChange}
@@ -76,35 +80,29 @@ function TabList({className, block, selectedValue, selectValue, tabValues}) {
     </ul>
   );
 }
-function TabContent({lazy, children, selectedValue}) {
+function TabContent({children}) {
   const childTabs = (Array.isArray(children) ? children : [children]).filter(
     Boolean,
   );
-  if (lazy) {
-    const selectedTabItem = childTabs.find(
-      (tabItem) => tabItem.props.value === selectedValue,
-    );
-    if (!selectedTabItem) {
-      // fail-safe or fail-fast? not sure what's best here
-      return null;
-    }
-    return cloneElement(selectedTabItem, {
-      className: clsx('margin-top--md', selectedTabItem.props.className),
-    });
-  }
   return (
     <div className="margin-top--md">
       {childTabs.map((tabItem, i) =>
         cloneElement(tabItem, {
           key: i,
-          hidden: tabItem.props.value !== selectedValue,
+          children: (
+            <>
+              <Heading as="h4" className="tab-label">
+                {tabItem.props.label ?? tabItem.props.value}
+              </Heading>
+              {tabItem.props.children}
+            </>
+          ),
         }),
       )}
     </div>
   );
 }
-function TabsComponent(props) {
-  const tabs = useTabs(props);
+function TabsContainer({className, children}) {
   return (
     <div
       className={clsx(
@@ -114,20 +112,27 @@ function TabsComponent(props) {
         'tabs-container',
         styles.tabList,
       )}>
-      <TabList {...tabs} {...props} />
-      <TabContent {...tabs} {...props} />
+      <TabList
+        // Surprising but historical
+        // className is applied on TabList, not on TabsContainer
+        className={className}
+      />
+      <TabContent>{children}</TabContent>
     </div>
   );
 }
 export default function Tabs(props) {
   const isBrowser = useIsBrowser();
+  const value = useTabsContextValue(props);
   return (
-    <TabsComponent
+    <TabsProvider
+      value={value}
       // Remount tabs after hydration
       // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
-      key={String(isBrowser)}
-      {...props}>
-      {sanitizeTabsChildren(props.children)}
-    </TabsComponent>
+      key={String(isBrowser)}>
+      <TabsContainer className={props.className}>
+        {sanitizeTabsChildren(props.children)}
+      </TabsContainer>
+    </TabsProvider>
   );
 }

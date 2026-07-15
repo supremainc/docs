@@ -28,7 +28,7 @@ You can change the basic information settings of the BioStar X server, user and 
 
 4. Click <Cmd sid='button.apply' product='2' /> at the bottom right of the screen to save the settings.
 
-## Basic information settings {#basic-setting}
+## Basic information settings {/* #basic-setting */}
 
 You can check or set basic information for **BioStar X** in the <Cmd sid='common.general' product='2' /> section.
 
@@ -44,13 +44,13 @@ You can check or set basic information for **BioStar X** in the <Cmd sid='common
 
 * <Cmd sid="common.sessionTimeout" product='2' />: Set a session timeout period. If there is no operation after logging into BioStar X for the configured time, you will be automatically logged out.
 
-## User and device management {#user-and-device-management}
+## User and device management {/* #user-and-device-management */}
 
 In the <Cmd sid='setting.server.userDeviceManagement' product='2' /> section, you can set the synchronization and authentication methods between users and devices.
 
 <Image src='/img/biostarx-settings-server-management.png' className='none' />
 
-### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {#user-sync}
+### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {/* #user-sync */}
 
 In the <Cmd sid="setting.server.automaticUserSync" product='2' /> option, you can choose how to synchronize user information between the server and devices.
 
@@ -80,7 +80,7 @@ In the <Cmd sid="setting.server.automaticUserSync" product='2' /> option, you ca
 
 :::
 
-### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {#fingerprint-template-format}
+### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {/* #fingerprint-template-format */}
 
 In the <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> option, you can choose the fingerprint template format. Select from the following items.
 
@@ -96,7 +96,7 @@ If there are existing user fingerprint templates on the device, they cannot be c
 
 :::
 
-### <Cmd sid="setting.userDevice.useridType" product='2' className='normal' /> {#userid-type}
+### <Cmd sid="setting.userDevice.useridType" product='2' className='normal' /> {/* #userid-type */}
 
 In the <Cmd sid="setting.userDevice.useridType" product='2' /> option, you can select the user ID type as <Cmd sid="setting.userDevice.useridType.numeric" product='2' /> or <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />. Check the list of devices registered in the **BioStar X** server and select compatible settings.
 
@@ -144,7 +144,7 @@ Changing from <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' 
 
 :::
 
-### <Cmd sid="setting.server.enrollment_device.title" product='2' className='normal' /> {#enrollment-device}
+### <Cmd sid="setting.server.enrollment_device.title" product='2' className='normal' /> {/* #enrollment-device */}
 
 You can add frequently used devices for enrolling fingerprints, faces, or cards in the <Cmd sid="setting.server.enrollment_device.title" product='2' /> option for convenience. 
 
@@ -174,7 +174,7 @@ You can add frequently used devices for enrolling fingerprints, faces, or cards 
 
 :::
 
-### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {#custom-field}
+### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {/* #custom-field */}
 
 In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you can add fields to input additional information about the user. The added fields will be displayed on the user information screen.
 
@@ -222,7 +222,7 @@ In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you c
 
 :::
 
-### AoC card settings {#aoc-card-setting}
+### AoC card settings {/* #aoc-card-setting */}
 
 To issue an [Access on Card (AoC)](../../reference/glossary#access_on_card) credential that stores user credentials on a card, enable the <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' /> option to delete personal information and credential data from the **BioStar X** server.
 
@@ -290,13 +290,13 @@ To issue an [Access on Card (AoC)](../../reference/glossary#access_on_card) cred
 
 :::
 
-### Other settings {#other-settings}
+### Other settings {/* #other-settings */}
 
 * <Cmd sid="setting.server.eventLogRetainDays" product='2' />: Set the retention period for access control event logs.
 
 * <Cmd sid="setting.server.hideCredentialFaces" product='2' />: To protect users' personal information, the preview image can be hidden during the registration of face credentials. When this option is enabled, the preview screen will not be provided when enrolling users' face credentials.
 
-## Server matching {#servermatching}
+## Server matching {/* #servermatching */}
 
 In the <Cmd sid='common.serverMatching' product='2' /> section, you can set up the [server matching](../../reference/glossary#server_matching) feature to authenticate user information on **BioStar X** without authenticating on the device.
 
@@ -328,7 +328,7 @@ In the <Cmd sid='common.serverMatching' product='2' /> section, you can set up t
 
 :::
 
-## System log level settings {#systemloglevel}
+## System log level settings {/* #systemloglevel */}
 
 In the <Cmd sid='setting.server.logLevelManagement' product='2' /> section, you can set the level of system logs stored in the database.
 
@@ -336,7 +336,7 @@ In the <Cmd sid='setting.server.logLevelManagement' product='2' /> section, you 
 
 System logs are managed according to predefined categories, and the log levels are classified into <Cmd sid="setting.server.logLevel.trace" product='2' />, <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' />. The high level contains all lower level logs. For example, if you select <Cmd sid="setting.server.logLevel.trace" product='2' />, it will include and save all lower levels of <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' /> logs.
 
-## Saving facial images {#storevisualfaceimage}
+## Saving facial images {/* #storevisualfaceimage */}
 
 When enrolling a face as a credential, you can set it to save both the actual image and template, or to save only the template without the actual image.
 

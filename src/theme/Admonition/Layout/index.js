@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import styles from './styles.module.css';
-function AdmonitionContainer({type, className, children}) {
+function AdmonitionContainer({type, className, children, id}) {
   return (
     <div
       className={clsx(
@@ -10,7 +10,8 @@ function AdmonitionContainer({type, className, children}) {
         ThemeClassNames.common.admonitionType(type),
         styles.admonition,
         className,
-      )}>
+      )}
+      id={id}>
       {children}
     </div>
   );
@@ -29,9 +30,9 @@ function AdmonitionContent({children}) {
   ) : null;
 }
 export default function AdmonitionLayout(props) {
-  const {type, icon, title, children, className} = props;
+  const {type, icon, title, children, className, id} = props;
   return (
-    <AdmonitionContainer type={type} className={className}>
+    <AdmonitionContainer type={type} className={className} id={id}>
       {title || icon ? <AdmonitionHeading title={title} icon={icon} type={type} /> : null}
       <AdmonitionContent>{children}</AdmonitionContent>
     </AdmonitionContainer>

@@ -10,7 +10,7 @@ keywords:
 
 ドアを登録して設定する手順を案内します。 ドアごとに入室・退室デバイスを接続し、アンチパスバックや二重認証などのセキュリティ機能を設定することで、体系的な入退室管理環境を構築できます。 さらに、ドアの状態に基づくアラーム設定によりセキュリティ事故を事前に防止できます。
 
-## 開始前に {#before-start}
+## 開始前に {/* #before-start */}
 
 * ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。 詳しくは <DocLink docId='platform/biostar_x/settings-access-control' /> をご参照ください。
 
@@ -22,7 +22,7 @@ keywords:
 
   * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
 
-## ドア登録 {#adding-door}
+## ドア登録 {/* #adding-door */}
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
@@ -48,7 +48,7 @@ keywords:
 
 5. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
 
-### 基本情報の設定 {#info}
+### 基本情報の設定 {/* #info */}
 
 <Cmd sid='common.information' product='2' /> セクションでは、ドアの名前、グループ、説明を入力または変更できます。
 
@@ -68,7 +68,7 @@ keywords:
 
 :::
 
-### ドア設定 {#configdoor}
+### ドア設定 {/* #configdoor */}
 
 <Cmd sid='device.info.configuration' product='2' /> セクションでは、ドアに接続されたデバイスや退室ボタン、ドア配線などを設定できます。
 
@@ -108,7 +108,7 @@ keywords:
 
 :::
 
-### 追加オプションの設定 {#option}
+### 追加オプションの設定 {/* #option */}
 
 <Cmd sid='common.option' product='2' /> セクションでは、ドアに関する追加オプションを設定できます。
 
@@ -158,7 +158,7 @@ keywords:
 
   * <Cmd sid='common.sensor' product='2' />：テイルゲーティングを検知するセンサーを選択してください。
 
-### アンチパスバック設定 {#antipassback}
+### アンチパスバック設定 {/* #antipassback */}
 
 [アンチパスバック](../../reference/glossary#apb)は入退室履歴を管理し、セキュリティを強化するために使用します。 利用者が入室後にカードを他の利用者へ渡す悪用事例を防止でき、権限を持つ利用者に続いて外部者が入室した場合に退出できないように阻止できます。
 
@@ -184,7 +184,7 @@ keywords:
 
 :::
 
-### 時間制限アンチパスバック設定 {#timed-apb}
+### 時間制限アンチパスバック設定 {/* #timed-apb */}
 
 ユーザーが入退室認証後に同じデバイスで再度認証を試みると、アンチパスバック機能が作動して即時の再認証はできません。 <Cmd sid='timedAPB.title' product='2' /> セクションでは、アンチパスバック機能の初期化時間を設定してユーザーの頻繁な入室を効果的に制限できます。
 
@@ -196,7 +196,7 @@ keywords:
 
 * <Cmd sid='zone.apb.bypassGroup' product='2' />：時間制限アンチパスバックの制限を受けず常に通行できる入退室グループを選択できます。
 
-### アラーム設定 {#alarm}
+### アラーム設定 {/* #alarm */}
 
 <Cmd sid='door.alarm' product='2' /> セクションでは、ドアが強制的に開けられた場合、開いたまま放置された場合、またはアンチパスバック違反が発生した場合にアラームを鳴らすかデバイスの使用をブロックできます。 アラームを追加する項目で <Cmd sid='button.addplus' product='2' /> ボタンをクリックしてください。
 

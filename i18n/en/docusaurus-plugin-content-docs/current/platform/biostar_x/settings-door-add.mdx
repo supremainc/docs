@@ -10,7 +10,7 @@ keywords:
 
 This guide describes how to register and set up doors. Connect entry and exit devices for each door, and configure security features such as anti-passback and dual authentication to establish a systematic access management environment. Additionally, configure alarms based on the door status to prevent security incidents in advance.
 
-## Before you start {#before-start}
+## Before you start {/* #before-start */}
 
 * Set access levels, access groups, and floor levels for access control before registering doors. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
@@ -22,7 +22,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
   * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
 
-## Register door {#adding-door}
+## Register door {/* #adding-door */}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
@@ -48,7 +48,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
 5. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
 
-### Set basic information {#info}
+### Set basic information {/* #info */}
 
 In the <Cmd sid='common.information' product='2' /> section, you can input or change the door's name, group, and description.
 
@@ -68,7 +68,7 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 :::
 
-### Set door configuration {#configdoor}
+### Set door configuration {/* #configdoor */}
 
 In the <Cmd sid='device.info.configuration' product='2' /> section, you can set the devices connected to the door, exit buttons, and door sensors.
 
@@ -108,7 +108,7 @@ In the <Cmd sid='device.info.configuration' product='2' /> section, you can set 
 
 :::
 
-### Set additional options {#option}
+### Set additional options {/* #option */}
 
 In the <Cmd sid='common.option' product='2' /> section, you can set additional options for the door.
 
@@ -158,7 +158,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='common.sensor' product='2' />: Select a sensor to detect tailgating.
 
-### Set anti-passback {#antipassback}
+### Set anti-passback {/* #antipassback */}
 
 [Anti-passback](../../reference/glossary#apb) is used to manage access history and enhance security. It can prevent cases where a user hands over their entry card to another user after entering and stop outsiders from entering when they follow users with access privileges.
 
@@ -184,7 +184,7 @@ Refer below to complete the settings in the <Cmd sid='door.antiPassBack' product
 
 :::
 
-### Set timed anti-passback {#timed-apb}
+### Set timed anti-passback {/* #timed-apb */}
 
 When a user attempts to re-authenticate on the same device after entry authentication, the anti-passback feature will prevent immediate re-authentication. The <Cmd sid='timedAPB.title' product='2' /> section sets the initialization time for the anti-passback feature to effectively limit frequent entries by users.
 
@@ -196,7 +196,7 @@ When a user attempts to re-authenticate on the same device after entry authentic
 
 * <Cmd sid='zone.apb.bypassGroup' product='2' />: Select access groups that can always pass without being subject to timed anti-passback.
 
-### Set alarms {#alarm}
+### Set alarms {/* #alarm */}
 
 In the <Cmd sid='door.alarm' product='2' /> section, you can configure to sound an alarm or block device usage when the door is forcibly opened, left open, or when an anti-passback violation occurs. Click the <Cmd sid='button.addplus' product='2' /> button for the item to add an alarm.
 

@@ -27,7 +27,7 @@ The **Entra ID** or **Active Directory** settings feature is available through a
 
 :::
 
-## Directory Integration Settings {#intergratewithentraid}
+## Directory Integration Settings {/* #intergratewithentraid */}
 
 <Tabs>
 <TabItem label='Entra ID' value='entraid'>
@@ -53,7 +53,7 @@ To integrate with Entra ID, go to <Cmd sid='common.setting' product='2' /> → <
 <Steps>
 <Step>
 
-### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {#EntraidServer}
+### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {/* #EntraidServer */}
 
 Enter the server information for **Entra ID** and click <Cmd sid='settings.activeDirectory.Connect' product='2' /> in <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />.
 
@@ -109,7 +109,7 @@ The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrat
 
 <Step>
 
-### <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> {#setssoEntraid}
+### <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> {/* #setssoEntraid */}
 
 Change the <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> to <Cmd sid='device.info.enabled' product='2' /> to enable login to **BioStar X** using **Entra ID SSO**.
 
@@ -175,7 +175,7 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 
 <Step>
 
-### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {#ADserver}
+### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {/* #ADserver */}
 
 Enter the server information for **Active Directory** and click <Cmd sid='settings.activeDirectory.Connect' product='2' /> in <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />.
 
@@ -225,7 +225,7 @@ Each user field of **BioStar X** is set by default to map to items that match th
 
 <Step>
 
-### <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> {#setssoAD}
+### <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> {/* #setssoAD */}
 
 To configure login to **BioStar X** using the user ID of the Active Directory server, change the <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> to <Cmd sid='device.info.enabled' product='2' />. The value of the `sAMAccountName` field from the Active Directory server will be mapped to the **BioStar X** login ID.
 
@@ -256,7 +256,7 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 </TabItem>
 </Tabs>
 
-## View settings results {#checksettings}
+## View settings results {/* #checksettings */}
 
 After completing the integration settings with **Entra ID** or **Active Directory**, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. Refer to the following to check the synchronized settings.
 
@@ -266,7 +266,7 @@ After completing the integration settings with **Entra ID** or **Active Director
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
-## Exclude from directory integration {#excludeintegration}
+## Exclude from directory integration {/* #excludeintegration */}
 
 When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='setting.menu.directoryIntegration.root' /> feature, users who do not exist in the directory service may be deleted from **BioStar X**. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
 
@@ -284,7 +284,7 @@ When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='set
 
 The selected users will be excluded from integration when using the <Cmd sid='setting.menu.directoryIntegration.root' /> feature.
 
-## Disable Directory Integration {#disableIntegration}
+## Disable Directory Integration {/* #disableIntegration */}
 
 To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature, follow the steps:
 

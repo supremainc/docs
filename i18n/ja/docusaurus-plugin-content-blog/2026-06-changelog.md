@@ -9,7 +9,7 @@ This June, **Suprema Docs** is packed with major news. Suprema's new video secur
 
 ![Suprema Docs 26.06 Changelogs](/img/changelogs/changelogs-202606.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Document Hub Launch
 

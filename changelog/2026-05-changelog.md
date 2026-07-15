@@ -9,7 +9,7 @@ date: 2026-05-28T12:00
 
 ![Suprema Docs 26.05 Changelogs](/img/changelogs/changelogs-202605.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Platform
 

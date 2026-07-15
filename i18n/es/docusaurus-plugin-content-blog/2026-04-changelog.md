@@ -9,7 +9,7 @@ April was a busy month for **Suprema Docs** with new updates across platforms, d
 
 ![Suprema Docs 26.04 Changelogs](/img/changelogs-202604.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Platform
 
