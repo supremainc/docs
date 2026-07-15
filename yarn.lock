@@ -1672,7 +1672,7 @@
     webpack "^5.95.0"
     webpackbar "^7.0.0"
 
-"@docusaurus/core@3.10.2", "@docusaurus/core@^3.10.2":
+"@docusaurus/core@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-3.10.2.tgz#349cae728fc3769b3f8aef4cf538ccb79aace8d0"
   integrity sha512-EYByj6nk+aD9KeVxV6Hmo2/nAAT79P21Y82ycTBOBtrmqilloIbIEhgL2/8Xpt2Jz/pgNqHAwyusOGwmbKeJmA==
@@ -1730,7 +1730,7 @@
     postcss-sort-media-queries "^5.2.0"
     tslib "^2.6.0"
 
-"@docusaurus/faster@^3.10.2":
+"@docusaurus/faster@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/faster/-/faster-3.10.2.tgz#6cacd14085445d5826990f7525c5df1cf371e04a"
   integrity sha512-p/5E5/RyHv+QWusJMPN5i3OMJTqTgkhuwzVbB1AReDWTUHXQCmf5mlTFzGiDrWeQWIDOKsuOPn1jJh0s9LUOHA==
@@ -1746,7 +1746,7 @@
     tslib "^2.6.0"
     webpack "^5.95.0"
 
-"@docusaurus/logger@3.10.2", "@docusaurus/logger@^3.10.2":
+"@docusaurus/logger@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/logger/-/logger-3.10.2.tgz#280bed53d0eb9cdc56e896a155036207910e89c9"
   integrity sha512-gSEwqtPfCAnC3ZSJY6xL7tcIfgg0vFD39jbv93eakuweyvO2864xR0K+kmKwBhkTCtWRNjuGGnb5rdmkD/ndqw==
@@ -1784,7 +1784,7 @@
     vfile "^6.0.1"
     webpack "^5.88.1"
 
-"@docusaurus/module-type-aliases@3.10.2", "@docusaurus/module-type-aliases@^3.10.2":
+"@docusaurus/module-type-aliases@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.10.2.tgz#7c3b940c77d72e71d33a1e76f0e003b418e6163a"
   integrity sha512-h/I5e4jaAhDHW4vaLENi1i2hnOEnXY1t9R+nnRTbgUl7ymVRzN/HF7dDfj8rKYGj8gfIge+Ef+iYRAMtbGvsrQ==
@@ -1797,7 +1797,7 @@
     react-helmet-async "npm:@slorber/react-helmet-async@1.3.0"
     react-loadable "npm:@docusaurus/react-loadable@6.0.0"
 
-"@docusaurus/plugin-client-redirects@^3.10.2":
+"@docusaurus/plugin-client-redirects@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-3.10.2.tgz#55023f8538baf7e66ec33c49ab65879c74fd93cd"
   integrity sha512-z5I5ttCXw+8y2gHVZvqAMmUw4Rb0ZzKA5eCPk87SfM/jCKOTvE24yDpPAwwipvug96ij7mOwEHXWw8G4LlWdGA==
@@ -1812,7 +1812,7 @@
     lodash "^4.17.21"
     tslib "^2.6.0"
 
-"@docusaurus/plugin-content-blog@3.10.2", "@docusaurus/plugin-content-blog@^3.10.2":
+"@docusaurus/plugin-content-blog@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-blog/-/plugin-content-blog-3.10.2.tgz#2374886ec3d76e8f014e85db8c3c010de6c419be"
   integrity sha512-0cbEnNKf0InmLkhj/+nVRmqEnWEoOE8Mh+2x1qOXI0qYpCnphq4RXknVJ8BvybKRXqYVvbmdMfiJSup+k4tm5w==
@@ -1837,7 +1837,7 @@
     utility-types "^3.10.0"
     webpack "^5.88.1"
 
-"@docusaurus/plugin-content-docs@3.10.2", "@docusaurus/plugin-content-docs@^3.10.2":
+"@docusaurus/plugin-content-docs@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-docs/-/plugin-content-docs-3.10.2.tgz#249bbc806437f227b06410ecc771eb67d8910a9a"
   integrity sha512-Sqwl4FPoZBDrlY8I2VU2H8O0M91CHp9T8ToMSkTZmjvHCif+1laqfXi6sTk8IfyVS/trN5yNjcWd1bFsGB6W5Q==
@@ -1861,7 +1861,7 @@
     utility-types "^3.10.0"
     webpack "^5.88.1"
 
-"@docusaurus/plugin-content-pages@3.10.2", "@docusaurus/plugin-content-pages@^3.10.2":
+"@docusaurus/plugin-content-pages@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-pages/-/plugin-content-pages-3.10.2.tgz#377c11b36a6a5e0c0c14dd9dea799f986d662ed7"
   integrity sha512-h5R12sZ/vV9EPiVjvIl9YFCOwkpwXes7dQMYt3EvP6Pphu4amHxxTqWxf08Fl5DR8h+oZMbWpFTNw5vKEYfvzQ==
@@ -1928,7 +1928,7 @@
     "@docusaurus/utils-validation" "3.10.2"
     tslib "^2.6.0"
 
-"@docusaurus/plugin-sitemap@3.10.2", "@docusaurus/plugin-sitemap@^3.10.2":
+"@docusaurus/plugin-sitemap@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-sitemap/-/plugin-sitemap-3.10.2.tgz#6c662c7df3bb7d36887f8b73f54d85dc4d36371d"
   integrity sha512-PODkwg5XetLML3hU/3xpCKJUZ9cqExLaBnD/Fzzwj2VHogLeqnDisLIujae87zuze7T4mCm2A6KEqZkyiz07EQ==
@@ -1943,7 +1943,7 @@
     sitemap "^7.1.1"
     tslib "^2.6.0"
 
-"@docusaurus/plugin-svgr@3.10.2", "@docusaurus/plugin-svgr@^3.10.2":
+"@docusaurus/plugin-svgr@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-svgr/-/plugin-svgr-3.10.2.tgz#916fd0a5d39bf73cb621de9789cce243a7ef1754"
   integrity sha512-JgfT3jWM0TJ8Uw0cEcqxHpybngQY1vlBYpuuNO+gEh5iPh5Ar+vxq/u9CFrYsWeXy48BN7Db76Pzp2edNXUQ8A==
@@ -1957,7 +1957,7 @@
     tslib "^2.6.0"
     webpack "^5.88.1"
 
-"@docusaurus/preset-classic@^3.10.2":
+"@docusaurus/preset-classic@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/preset-classic/-/preset-classic-3.10.2.tgz#e4419c811723ab913a946c63efcc15e7f5f60a0a"
   integrity sha512-a4B3VczmDl99zK0EufDQYomdJ186WDingjmDXxhN2PNPS9Ty/Y2M5CLFX1KQMRKqRTLiRDKfutzG5IY1FC/ceg==
@@ -1978,7 +1978,7 @@
     "@docusaurus/theme-search-algolia" "3.10.2"
     "@docusaurus/types" "3.10.2"
 
-"@docusaurus/theme-classic@3.10.2", "@docusaurus/theme-classic@^3.10.2":
+"@docusaurus/theme-classic@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-classic/-/theme-classic-3.10.2.tgz#a64bd600c789b33c67c30c256b07e2ca0f57e2ae"
   integrity sha512-JqTSLQmqmA9uKWZsD5iwBGJ4JyKB4/yTw6PsSXVPRJG/6GAm/u+add9Iip+hvwP12/AnPNztrdxsI14NJW4KeA==
@@ -2028,7 +2028,7 @@
     tslib "^2.6.0"
     utility-types "^3.10.0"
 
-"@docusaurus/theme-mermaid@^3.10.2":
+"@docusaurus/theme-mermaid@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-mermaid/-/theme-mermaid-3.10.2.tgz#826e47a01fefbe49fdbb0f4f575c9399d3ccd92c"
   integrity sha512-Stssh5MYQJ+EdYugUXf+ZcpeJFQPKXf0KCd/SWp10o3CmXNaOoh5IEgVjVqY1e1XhQf3on4+Y4BnrMiD95E2SQ==
@@ -2072,7 +2072,7 @@
     fs-extra "^11.1.1"
     tslib "^2.6.0"
 
-"@docusaurus/types@3.10.2", "@docusaurus/types@^3.10.2":
+"@docusaurus/types@3.10.2":
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-3.10.2.tgz#9ffe35adfb4587e49158ee9e10d94b86419a5932"
   integrity sha512-B6rvfwIFSapUqUJjMriZswX13K8l5Z7AcmVE6uTEJpYddQieSTR12DsGaFtcZAIDsQd4p+0WTl0Vc6jmZK0Trw==
