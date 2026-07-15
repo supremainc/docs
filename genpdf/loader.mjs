@@ -123,7 +123,7 @@ const REGEX_PATTERNS = {
   closingComponent: (name) => new RegExp(`<${name}([^>]*)>.*?</${name}>`, 'gs'),
   
   // Anchor patterns: {/* #anchor */}
-  anchors: /\{/* #([^}]+)\ */}/g,
+  anchors: /\{\/\* #([^}]+) \*\/}/g,
   
   // SpecSection with property path: <SpecSection data={varName.property} />
   specSectionWithProperty: (varName) => new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g'),
@@ -138,7 +138,7 @@ const REGEX_PATTERNS = {
 
 /**
  * Clean MDX/Markdown content by removing comments, imports, and JSX expressions
- * Preserves specific patterns: {props.xxx}, {/* #anchor}, {숫자 */}, etc.
+ * Preserves specific patterns: {props.xxx}, {#anchor}, {숫자}, etc.
  * @param {string} content - Raw MDX content
  * @returns {string} Cleaned content
  */
