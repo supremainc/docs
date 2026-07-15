@@ -65,6 +65,17 @@
   }
   .tinput::placeholder{color:var(--faint);letter-spacing:.04em;}
   .tinput:focus,input[type=number]:focus{outline:2px solid var(--accent-soft);border-color:var(--accent);}
+  .vsel{
+    font-family:var(--sans);font-size:13.5px;padding:8px 10px;border:1px solid var(--line-strong);
+    border-radius:9px;background:#fff;color:var(--ink);width:100%;cursor:pointer;
+  }
+  .vsel:focus{outline:2px solid var(--accent-soft);border-color:var(--accent);}
+  .calc-vac{margin-top:14px;gap:6px;}
+  .calc-vac label{font-size:12px;color:var(--muted);font-weight:600;}
+  .vac-range{margin-top:10px;}
+  .cell .vrange{margin-top:2px;}
+  .cell .vrange input.tinput{font-size:13px;padding:4px 4px;}
+  .cell .vrange input.tinput::placeholder{font-size:10.5px;}
   .tilde{font-family:var(--mono);color:var(--faint);font-size:18px;padding-bottom:9px;}
 
   .calc-result{
@@ -157,6 +168,8 @@
   .badge.core{background:var(--warn-soft);color:var(--warn);}
   .badge.off{background:var(--holiday-soft);color:var(--holiday);}
   .badge.hol{background:var(--warn-soft);color:var(--warn);}
+  .badge.vac{background:var(--holiday-soft);color:var(--holiday);}
+  .cell .vsel{font-size:11px;padding:3px 5px;border-radius:6px;}
   .cell .stay-note{font-size:10.5px;color:var(--faint);font-family:var(--mono);word-break:keep-all;margin-bottom:4px;}
 
   /* ── 규칙 설명 ── */
@@ -263,6 +276,28 @@
         <div class="val" id="calcVal">–</div>
       </div>
     </div>
+    <div class="field calc-vac">
+      <label for="calcVac">휴가 (사무실 근무와 별도로 실근무에 합산)</label>
+      <select class="vsel" id="calcVac">
+        <option value="">휴가 없음</option>
+        <option value="annual">연차 (8시간)</option>
+        <option value="half">반차/건강검진 (4시간)</option>
+        <option value="quarter">반반차 (2시간)</option>
+        <option value="checkup_half">건강검진+반차 (8시간)</option>
+        <option value="half_quarter">반차/건강검진+반반차 (6시간)</option>
+      </select>
+    </div>
+    <div class="calc-row vac-range" id="calcVacRange" style="display:none;">
+      <div class="field">
+        <label for="calcVin">휴가 시작 (선택)</label>
+        <input type="text" class="tinput" id="calcVin" inputmode="numeric" maxlength="5" placeholder="--:--">
+      </div>
+      <span class="tilde">~</span>
+      <div class="field">
+        <label for="calcVout">휴가 종료 (선택)</label>
+        <input type="text" class="tinput" id="calcVout" inputmode="numeric" maxlength="5" placeholder="--:--">
+      </div>
+    </div>
     <div class="calc-meta" id="calcMeta"></div>
   </section>
 
@@ -330,21 +365,32 @@
     <div class="body">
       <ul>
         <li><em>체류</em>: 출근부터 퇴근까지 사무실에 있는 전체 시간(휴게 포함).</li>
-        <li><em>휴게시간</em>: 근무 <code>4시간마다 30분</code>씩 차감됩니다. 단, 4시간을 채운 뒤 <b>더 체류(근무)할 시간이 남아 있을 때만</b> 그 휴게가 실제로 차감됩니다.
+        <li><em>휴게시간</em>(HR 구간 방식): 사무실 체류 시간에 따라 아래처럼 한 번에 산정됩니다.
           <ul>
-            <li>예) 07:30~16:30 (체류 9시간) → 4시간 근무·휴게 30분·4시간 근무·휴게 30분 = <b>실근무 8시간</b></li>
-            <li>예) 08:00~16:00 (체류 8시간) → 4시간 근무·휴게 30분·3시간 30분 근무(두 번째 4시간 미완성) = <b>실근무 7시간 30분</b></li>
+            <li>실근무가 8시간에 닿는 순간(체류 8시간 30분부터) → 휴게 <b>1시간</b></li>
+            <li>실근무가 12시간에 닿는 순간(체류 13시간부터) → 휴게 <b>1시간 30분</b></li>
+            <li>그 외 → 휴게 <b>30분</b></li>
+            <li>예) 07:30~16:00 (체류 8시간 30분) → 휴게 1시간 → <b>실근무 7시간 30분</b></li>
+            <li>예) 07:30~16:30 (체류 9시간) → 휴게 1시간 → <b>실근무 8시간</b> (07:30 출근 시 8시간 인정받으려면 16:30까지 근무)</li>
           </ul>
         </li>
-        <li><em>업무 종료 이후 휴게시간</em>: 하루 <b>딱 4시간</b> 근무하는 날은 휴게 30분을 업무 종료 후에 이용하므로 차감되지 않습니다.
+        <li><em>업무 종료 이후 휴게시간</em>: 하루 <b>4시간만</b> 근무하는 날은 휴게를 근무 중이 아니라 업무 종료 후에 이용하므로, 사무실 체류가 <b>4시간~4시간 30분</b>이면 모두 <b>실근무 4시간</b>으로 인정됩니다.
           <ul>
-            <li>예) 08:00~12:00 (체류 4시간) → <b>실근무 4시간</b></li>
-            <li>예) 07:30~12:00 (체류 4시간 30분) → 4시간을 초과했으므로 휴게 30분 차감 → <b>실근무 4시간</b></li>
+            <li>예) 금요일 08:00~12:00 (체류 4시간) → <b>실근무 4시간</b></li>
+            <li>예) 08:00~12:20 (체류 4시간 20분) → <b>실근무 4시간</b> (20분은 업무 종료 후 휴게)</li>
+          </ul>
+        </li>
+        <li><em>휴가</em>: 연차(8시간), 반차/건강검진(각 4시간), 반반차(2시간)는 휴게시간과 무관하게 <b>실근무로 인정</b>되어 사무실 근무시간과 합산됩니다. 건강검진은 앞뒤로 반차/반반차와 이어 쓸 수 있어 드롭다운에 <b>건강검진+반차(8시간)</b>, <b>반차/건강검진+반반차(6시간)</b> 조합도 있습니다.
+          <ul>
+            <li>예) 반차 4시간 + 사무실 근무 4시간(12:00~16:00) → 휴게 없이 <b>실근무 8시간</b></li>
+            <li>예) 반반차 2시간 + 사무실 근무 4시간(12:00~16:00) → <b>실근무 6시간</b></li>
+            <li>휴가에는 휴게시간이 없으므로, 반차 후 사무실 근무 4시간은 <b>휴게 없이</b> 붙여서(중간에 점심시간 공백 없이) 근무해야 코어타임 공백이 생기지 않습니다.</li>
+            <li>연차 외 휴가는 <b>시간대(몇 시~몇 시)</b>를 지정할 수 있습니다. 근무 중간에 휴가를 넣으면(예: 07:30~11:30 근무, 11:30~13:30 반반차, 13:30~17:30 근무) 겹치는 시간을 빼고 사무실 근무 합계(8시간)에 휴게 30분을 적용한 뒤 휴가시간을 더해 <b>실근무 9시간 30분</b>으로 계산합니다.</li>
           </ul>
         </li>
         <li><em>야근식대</em>: 평일에 <code>11시간 30분 이상</code> 체류하면 인당 12,000원 지원 대상입니다(달력 칸과 계산기에 <span class="chip meal">야근식대</span> 표시).</li>
-        <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간).</li>
-        <li><em>선택 휴무</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">선택 휴무</span>로 표시됩니다.</li>
+        <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간). ※ 휴가가 있는 날은 이 자동 경고가 표시되지 않습니다.</li>
+        <li><em>선택 휴무</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">선택 휴무</span>로 표시됩니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
         <li><em>공휴일</em>: 2026년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
       </ul>
     </div>
@@ -353,31 +399,80 @@
   </main>
   </div>
 
-  <div class="footnote">Suprema · Technical Writing</div>
+  <div class="footnote">V1.0 | Technical Writing</div>
 </div>
 
 <script>
 /* =========================================================
-   핵심 계산: 체류시간(분) → 실 근무시간(분)
-   규칙: 4시간(240분) 근무할 때마다, 이후 체류할 시간이
-        남아 있으면 그때 휴게 30분을 차감한다.
+   휴게시간 규칙 (HR 구간 방식)
+   - 사무실 근무(체류)가 4시간 이하: 휴게 없음(업무 종료 후 이용)
+   - 실근무가 8시간에 닿는 순간(체류 8시간 30분~): 휴게 1시간
+   - 실근무가 12시간에 닿는 순간(체류 13시간~): 휴게 1시간 30분
+   - 그 외: 휴게 30분
    ========================================================= */
-const BLOCK = 240;   // 근무 4시간
-const BREAK = 30;    // 휴게 30분
+/* 사무실 체류시간(분) → 실 근무시간(분) */
+function calcWork(stay){
+  if(stay <= 0) return 0;
+  if(stay <= 240) return stay;          // 4시간 이하: 그대로 인정
+  if(stay <= 270) return 240;           // 4h~4h30m: 업무 종료 후 휴게 → 4시간 인정
+  if(stay - 30 < 480) return stay - 30; // 실근무 8시간 미만 → 휴게 30분
+  if(stay - 60 < 720) return stay - 60; // 실근무 12시간 미만 → 휴게 1시간
+  return stay - 90;                     // 그 이상 → 휴게 1시간 30분
+}
+/* 사무실 체류시간(분) → 휴게시간(분) */
+function calcBreak(stay){
+  return stay <= 0 ? 0 : stay - calcWork(stay);
+}
 
-function calcWorkMinutes(stayMin){
-  if(stayMin <= 0) return 0;
-  let remaining = stayMin, work = 0;
-  while(remaining > 0){
-    const seg = Math.min(BLOCK, remaining);   // 최대 4시간 근무
-    work += seg;
-    remaining -= seg;
-    // 4시간을 정확히 채웠고, 아직 체류할 시간이 남아 있으면 휴게 차감
-    if(work % BLOCK === 0 && remaining > 0){
-      remaining -= Math.min(BREAK, remaining);
+/* =========================================================
+   휴가 종류 (모두 휴게시간과 무관하게 실근무로 인정)
+   ========================================================= */
+const VAC = {
+  '':             { label:'',                 hours:0   },
+  'annual':       { label:'연차',              hours:480 },
+  'half':         { label:'반차/건강검진',      hours:240 },
+  'quarter':      { label:'반반차',            hours:120 },
+  'checkup_half': { label:'건강검진+반차',      hours:480 },
+  'half_quarter': { label:'반차/건강검진+반반차', hours:360 },
+  // 옛 저장값 호환(드롭다운에는 없지만 값 인식용)
+  'checkup':         { label:'반차/건강검진',      hours:240 },
+  'checkup_quarter': { label:'반차/건강검진+반반차', hours:360 },
+};
+// 옛 키를 현재 키로 정규화
+function normalizeVac(v){
+  if(v === 'checkup') return 'half';
+  if(v === 'checkup_quarter') return 'half_quarter';
+  return v || '';
+}
+function vacHours(key){ return (VAC[normalizeVac(key)] || VAC['']).hours; }
+function vacLabel(key){ return (VAC[normalizeVac(key)] || VAC['']).label; }
+
+/* =========================================================
+   하루 계산: 출근/퇴근 + 휴가(종류, 시간대) → 결과
+   - 휴가 시간대가 사무실 근무(출근~퇴근) 안에 겹치면 그만큼 빼고
+     남은 사무실 근무에 휴게 규칙을 적용한 뒤, 휴가시간을 합산한다.
+   - 휴가 시간대를 비워두면 사무실 근무와 별도(붙여 쓴 것)로 보고 그대로 합산.
+   ========================================================= */
+function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
+  const vh = vacHours(vacKey);
+  const officeValid = (inMin !== null && outMin !== null && outMin > inMin);
+  let stay = 0, overlap = 0, officePhysical = 0, brk = 0, officeWork = 0;
+  if(officeValid){
+    stay = outMin - inMin;
+    if(vinMin !== null && voutMin !== null && voutMin > vinMin){
+      const s = Math.max(inMin, vinMin), e = Math.min(outMin, voutMin);
+      overlap = Math.max(0, e - s);   // 휴가가 사무실 근무와 겹치는 부분
     }
+    officePhysical = stay - overlap;
+    officeWork = calcWork(officePhysical);
+    brk = officePhysical - officeWork;
   }
-  return work;
+  const vacRangeLen = (vinMin !== null && voutMin !== null && voutMin > vinMin) ? (voutMin - vinMin) : null;
+  return {
+    officeValid, officePhysical, officeWork, brk, vh,
+    total: officeWork + vh,
+    vacMismatch: (vh > 0 && vacRangeLen !== null && vacRangeLen !== vh)
+  };
 }
 
 /* 시간 문자열 → 분 ("HH:MM" 형식만 유효) */
@@ -589,26 +684,48 @@ const calcIn = document.getElementById('calcIn');
 const calcOut = document.getElementById('calcOut');
 const calcVal = document.getElementById('calcVal');
 const calcMeta = document.getElementById('calcMeta');
+const calcVac = document.getElementById('calcVac');
+const calcVin = document.getElementById('calcVin');
+const calcVout = document.getElementById('calcVout');
+const calcVacRange = document.getElementById('calcVacRange');
 
 function renderCalc(){
+  // 연차 외 휴가 선택 시 휴가 시간대 입력칸 표시
+  const showRange = calcVac.value && calcVac.value !== 'annual';
+  calcVacRange.style.display = showRange ? 'flex' : 'none';
+
   const i = toMin(calcIn.value), o = toMin(calcOut.value);
-  if(i === null || o === null || o <= i){
+  const vin = toMin(calcVin.value), vout = toMin(calcVout.value);
+  const vac = calcVac.value;
+  const badTime = (i!==null && o!==null && o<=i);
+  const r = computeDay(i, o, vac, vin, vout);
+
+  if(!r.officeValid && r.vh === 0){
     calcVal.textContent = '–';
-    calcMeta.innerHTML = (i!==null && o!==null && o<=i)
+    calcMeta.innerHTML = badTime
       ? '<span style="color:var(--warn)">퇴근 시간이 출근 시간보다 늦어야 합니다.</span>' : '';
     return;
   }
-  const stay = o - i;
-  const work = calcWorkMinutes(stay);
-  const brk = stay - work;
-  calcVal.textContent = fmtDur(work);
-  let meta = `<span>체류 <b>${fmtDur(stay)}</b></span>` +
-             `<span>휴게시간 <b>${fmtBreak(brk)}</b></span>`;
-  if(stay >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
+
+  calcVal.textContent = fmtDur(r.total);
+  let meta = '';
+  if(r.officeValid){
+    meta += `<span>사무실 근무 <b>${fmtDur(r.officePhysical)}</b></span>` +
+            `<span>휴게시간 <b>${fmtBreak(r.brk)}</b></span>` +
+            `<span>사무실 실근무 <b>${fmtDur(r.officeWork)}</b></span>`;
+  }
+  if(r.vh > 0){
+    meta += `<span>휴가 <b>${vacLabel(vac)} · ${fmtDur(r.vh)}</b></span>`;
+  }
+  if(r.officeValid && (o - i) >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
+  if(r.vacMismatch) meta += `<span style="color:var(--warn)">휴가 시간대 길이가 휴가 종류와 다릅니다</span>`;
   calcMeta.innerHTML = meta;
 }
 attachTimeMask(calcIn, renderCalc);
 attachTimeMask(calcOut, renderCalc);
+attachTimeMask(calcVin, renderCalc);
+attachTimeMask(calcVout, renderCalc);
+calcVac.addEventListener('change', renderCalc);
 
 /* =========================================================
    ②③④ 요약
@@ -623,9 +740,9 @@ const progText = document.getElementById('progText');
 function totalWorkMinutes(){
   let sum = 0;
   for(const key in monthData){
-    const {in:i, out:o} = monthData[key];
-    const im = toMin(i), om = toMin(o);
-    if(im !== null && om !== null && om > im) sum += calcWorkMinutes(om - im);
+    const d = monthData[key];
+    const r = computeDay(toMin(d.in), toMin(d.out), d.vac, toMin(d.vin), toMin(d.vout));
+    sum += r.total;
   }
   return sum;
 }
@@ -719,6 +836,31 @@ function buildCalendar(){
     times.appendChild(inEl); times.appendChild(outEl);
     cell.appendChild(times);
 
+    // 휴가 선택
+    const vacEl = document.createElement('select');
+    vacEl.className = 'vsel';
+    [['','휴가 없음'],['annual','연차'],['half','반차/건강검진'],['quarter','반반차'],
+     ['checkup_half','건강검진+반차'],['half_quarter','반차/건강검진+반반차']]
+      .forEach(([v,t])=>{ const o=document.createElement('option'); o.value=v; o.textContent=t; vacEl.appendChild(o); });
+    vacEl.value = normalizeVac(monthData[dateKey]?.vac || '');
+    cell.appendChild(vacEl);
+
+    // 휴가 시간대 (선택 입력) — 연차 외 휴가를 고르면 표시
+    const vrange = document.createElement('div');
+    vrange.className = 'times vrange';
+    const vinEl = document.createElement('input');
+    vinEl.type='text'; vinEl.className='tinput'; vinEl.inputMode='numeric'; vinEl.maxLength=5;
+    vinEl.placeholder='휴가시작'; vinEl.title='휴가 시작'; vinEl.value = monthData[dateKey]?.vin || '';
+    const voutEl = document.createElement('input');
+    voutEl.type='text'; voutEl.className='tinput'; voutEl.inputMode='numeric'; voutEl.maxLength=5;
+    voutEl.placeholder='휴가종료'; voutEl.title='휴가 종료'; voutEl.value = monthData[dateKey]?.vout || '';
+    vrange.appendChild(vinEl); vrange.appendChild(voutEl);
+    cell.appendChild(vrange);
+    function toggleVRange(){
+      vrange.style.display = (vacEl.value && vacEl.value !== 'annual') ? 'flex' : 'none';
+    }
+    toggleVRange();
+
     // 배지 + 결과 영역
     const badges = document.createElement('div');
     badges.className = 'badges';
@@ -728,6 +870,9 @@ function buildCalendar(){
 
     function refreshCell(){
       const im = toMin(inEl.value), om = toMin(outEl.value);
+      const vin = toMin(vinEl.value), vout = toMin(voutEl.value);
+      const vac = vacEl.value;
+      const r = computeDay(im, om, vac, vin, vout);
       badges.innerHTML = '';
       // 공휴일 배지 (항상 표시)
       if(hol){
@@ -737,44 +882,65 @@ function buildCalendar(){
       if(day === offDay){
         const b=document.createElement('span'); b.className='badge off'; b.textContent='선택 휴무'; badges.appendChild(b);
       }
-      if(im === null || om === null){
-        result.className='result none';
-        result.textContent = '미입력';
-        return;
+      // 휴가 배지
+      if(r.vh > 0){
+        const b=document.createElement('span'); b.className='badge vac'; b.textContent=vacLabel(vac); badges.appendChild(b);
       }
-      if(om <= im){
+
+      const hasOfficeInput = (inEl.value !== '' || outEl.value !== '');
+      const officeError = hasOfficeInput && im !== null && om !== null && om <= im;
+      if(officeError){
         result.className='result none';
         result.innerHTML = '<span style="color:var(--warn)">시간 확인</span>';
         return;
       }
-      const stay = om - im;
-      const work = calcWorkMinutes(stay);
-      const brk = stay - work;
+      if(!r.officeValid && r.vh === 0){
+        result.className='result none';
+        result.textContent = '미입력';
+        return;
+      }
+
+      let html = '';
+      if(r.officeValid){
+        html += `<div class="stay-note">체류 ${fmtDur(r.officePhysical)}</div>`;
+        html += `<div class="stay-note">휴게시간 ${fmtBreak(r.brk)}</div>`;
+      }
+      if(r.vh > 0){
+        html += `<div class="stay-note">휴가 ${fmtDur(r.vh)}</div>`;
+      }
+      html += `<span class="rlab">실근무</span>${fmtDur(r.total)}`;
       result.className='result';
-      result.innerHTML =
-        `<div class="stay-note">체류 ${fmtDur(stay)}</div>` +
-        `<div class="stay-note">휴게시간 ${fmtBreak(brk)}</div>` +
-        `<span class="rlab">실근무</span>${fmtDur(work)}`;
-      // 야근식대
-      if(isMealSupport(dow, stay, !!hol)){
+      result.innerHTML = html;
+
+      // 야근식대 (실제 사무실 체류 기준)
+      if(r.officeValid && isMealSupport(dow, r.officePhysical, !!hol)){
         const b=document.createElement('span'); b.className='badge meal'; b.textContent='야근식대'; badges.appendChild(b);
       }
-      // 코어타임 미충족
-      if(!meetsCore(dow, im, om, !!hol)){
+      // 코어타임 미충족 (휴가가 없는 순수 사무실 근무일에만 확인)
+      if(r.officeValid && r.vh === 0 && !meetsCore(dow, im, om, !!hol)){
         const b=document.createElement('span'); b.className='badge core'; b.textContent='코어타임'; badges.appendChild(b);
+      }
+      // 휴가 시간대 길이가 휴가 종류와 다르면 경고
+      if(r.vacMismatch){
+        const b=document.createElement('span'); b.className='badge core'; b.textContent='휴가시간 확인'; badges.appendChild(b);
       }
     }
 
     function onChange(){
-      const im = inEl.value, om = outEl.value;
-      if(im || om){ monthData[dateKey] = {in:im, out:om}; }
-      else { delete monthData[dateKey]; }
+      const im = inEl.value, om = outEl.value, vac = vacEl.value;
+      const vin = vinEl.value, vout = voutEl.value;
+      if(im || om || vac || vin || vout){
+        monthData[dateKey] = {in:im, out:om, vac:vac, vin:vin, vout:vout};
+      } else { delete monthData[dateKey]; }
       saveMonth(curYear, curMonth, monthData);
       refreshCell();
       renderSummary();
     }
     attachTimeMask(inEl, onChange);
     attachTimeMask(outEl, onChange);
+    attachTimeMask(vinEl, onChange);
+    attachTimeMask(voutEl, onChange);
+    vacEl.addEventListener('change', ()=>{ toggleVRange(); onChange(); });
 
     refreshCell();
     calGrid.appendChild(cell);
