@@ -41,6 +41,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "XPD2-MDB, XPD2-GDB, XPD2-GKDB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",

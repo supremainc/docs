@@ -133,6 +133,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB, XS2-QDPB, XS2-QAPB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
