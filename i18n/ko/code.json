@@ -202,7 +202,7 @@
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "{heading}에 대한 직접 링크",
+    "message": "{heading}에 대한 직접 링크 및 복사",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {

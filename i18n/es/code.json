@@ -202,7 +202,7 @@
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Enlace directo a {heading}",
+    "message": "Enlace directo y texto para {header}",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
