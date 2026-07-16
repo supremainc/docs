@@ -130,6 +130,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "BLN2-ODB, BLN2-OAB, BLN2-PAB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",

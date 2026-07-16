@@ -111,6 +111,17 @@
           "value": true,
           "annotation_label": "anno3",
           "annotation_value": "anno4"
+        },
+        "qr_barcode_read_range": {
+        "label": "QR/바코드 인식 권장 거리",
+        "label_id": "specs.credentials.qr_barcode_read_range",
+        "value": {
+            "ko": "30 ~ 40 cm",
+            "en": "30 ~ 40 cm",
+            "es": "De 30 a 40 cm",
+            "ja": "30 ~ 40 cm"
+         },
+         "annotation_label": "anno5"
         }
       }
     },
@@ -118,6 +129,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "BS3-DB, BS3-APWB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
@@ -245,7 +261,7 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "100,000",
-          "annotation_value": "anno5"
+          "annotation_value": "anno6"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
@@ -433,7 +449,7 @@
               }
             },
             "poe_plus": {
-              "label": "PoE+<sup id='anno6_dest'><a href='#anno6'></a></sup>",
+              "label": "PoE+<sup id='anno7_dest'><a href='#anno7'></a></sup>",
               "value": ["IEEE 802.3at compliant, 44-57 VDC Max. 600 mA", "BS3-DB: Not supported", "BS3-APWB: Supported"]
             }
           }

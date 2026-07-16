@@ -2,7 +2,7 @@
   margin-top: var(--ifm-leading);
   margin-bottom: var(--ifm-leading);
   padding-bottom: 0.5rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
+  outline: 2px solid var(--ifm-color-emphasis-300);
   border-radius: 10px;
 }
 
@@ -10,6 +10,8 @@
   margin: 0;
   background-color: var(--ifm-color-nextstep-background);
   padding: 0.5rem 1.5rem 0 1.5rem;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
   border-bottom: 1px solid var(--ifm-color-emphasis-300);
 }
 
