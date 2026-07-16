@@ -1,0 +1,82 @@
+#
+# Your Crowdin credentials
+#
+"project_id" : "4"
+"api_token" : "763fcd04f64c1312bad530dba993f905bad244a6d8b0e9f8da39bf8589242e3ee16d864c28f71eeb"
+"base_path" : "."
+"base_url" : "https://supremainc.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+#
+"files": [
+  {
+    "source" : "/i18n/ko/**/*",
+    "translation" : "/i18n/%two_letters_code%/**/%original_file_name%",
+    "escape_special_characters": 0,
+    "ignore": [
+      "/i18n/ko/docusaurus-plugin-content-blog/*.json",
+    ]
+  },
+  {
+    "source" : "/docs/**/*.mdx",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%",
+    "escape_special_characters": 0,
+    "ignore": [
+      "/docs/legal/*.mdx",
+      "/docs/_unused/*.mdx",
+      "/docs/common/_apache-license.mdx",
+      "/docs/common/_mit-open-source-license.mdx",
+      "/docs/common/_more-information.mdx",
+      "/docs/common/_openssl-license.mdx",
+      "/docs/common/_original-ssleay-license.mdx",
+      "/docs/common/_register-device-license.mdx",
+      "/docs/common/_sil-open-font-license.mdx",
+      "/docs/common/_boringssl-license.mdx",
+      "/docs/common/_ios-license.mdx",
+      "/docs/common/_android-license.mdx",
+      "/docs/common/_biostarair-customer-notice.mdx",
+      "/docs/common/_ic-information.mdx",
+      "/docs/common/_2clause-bsd-license.mdx",
+      "/docs/common/_3clause-bsd-license.mdx.mdx",
+      "/docs/common/_eclipse-distribution-license.mdx",
+      "/docs/common/_eclipse-public-license.mdx",
+      "/docs/common/_gnu-general-public-v2-license.mdx",
+      "/docs/common/_gnu-general-public-v3-license.mdx",
+      "/docs/common/_gnu-lesser-general-public-v2.1-license.mdx",
+      "/docs/common/_gnu-lesser-general-public-v3-license.mdx",
+      "/docs/common/_isc-license.mdx",
+      "/docs/common/_zlib-license.mdx",
+      "/docs/reference/**/smartcardissue.mdx",
+      "/docs/*/*/release-notes/*.mdx",
+      "/docs/*/*/release-notes-clue/*.mdx",
+      "/docs/integration/**/*.mdx",
+      "/docs/device/*_ul/*.mdx",
+      "/docs/cookie.mdx",
+      # "/docs/device/**/*.mdx",
+      # "/docs/device/vionyx_webserver/*.mdx",
+      # "/docs/how-to/*.mdx",
+      # "/docs/how-to/**/*.mdx",
+      # "/docs/platform/**/*.mdx",
+      # "/docs/platform/biostar_x/*.mdx",
+      # "/docs/platform/plugins/*.mdx",
+      # "/docs/platform/biostar_air/**/*.mdx",
+    ],
+    "type": "mdx_v1"
+  },
+  {
+    "source" : "/docs/**/*.json",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%",
+    "escape_special_characters": 0,
+    "ignore": [
+      "/docs/how-to/*.json",
+    ],
+    "type": "json"
+  }
+]
