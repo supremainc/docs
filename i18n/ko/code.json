@@ -522,6 +522,9 @@
   "specs.credentials.qr_barcode": {
     "message": "QR/바코드"
   },
+  "specs.credentials.qr_barcode_read_range": {
+    "message": "QR/바코드 인식 권장 거리"
+  },
   "specs.credentials.biometrics.face.auth_distance": {
     "message": "인증 거리"
   },

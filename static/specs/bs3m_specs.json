@@ -169,6 +169,17 @@
           "value": true,
           "annotation_label": "anno4",
           "annotation_value": "anno5"
+        },
+        "qr_barcode_read_range": {
+        "label": "QR/바코드 인식 권장 거리",
+        "label_id": "specs.credentials.qr_barcode_read_range",
+        "value": {
+            "ko": "8 ~ 25 cm",
+            "en": "8 ~ 25 cm",
+            "es": "De 8 a 25 cm",
+            "ja": "8 ~ 25 cm"
+         },
+         "annotation_label": "anno6"
         }
       }
     },
@@ -352,7 +363,7 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "100,000",
-          "annotation_value": "anno6"
+          "annotation_value": "anno7"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
@@ -494,7 +505,7 @@
           "label": "PoE+",
           "label_id": "specs.interface.poe_plus",
           "type": "model",
-          "annotation_label": "anno7",
+          "annotation_label": "anno8",
           "items": {
             "model1": {
               "label": "BS3M-DB, BS3M-ODB",
