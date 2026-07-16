@@ -1,0 +1,56 @@
+#
+# Your Crowdin credentials
+#
+"project_id" : "17"
+"api_token" : "763fcd04f64c1312bad530dba993f905bad244a6d8b0e9f8da39bf8589242e3ee16d864c28f71eeb"
+"base_path" : "."
+"base_url" : "https://supremainc.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+# i18n/en/docusaurus-plugin-content-docs/current
+"files": [
+  {
+    "source" : "/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/*.mdx",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/device/xpass_q2/%original_file_name%",
+    "escape_special_characters": 0,
+    "type": "mdx_v1"
+  },
+  {
+    "source" : "/i18n/en/docusaurus-plugin-content-docs/current/device/vionyx/*.mdx",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/device/vionyx/%original_file_name%",
+    "escape_special_characters": 0,
+    "type": "mdx_v1"
+  },
+  {
+    "source" : "/i18n/en/docusaurus-plugin-content-docs/current/common/*.mdx",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/common/%original_file_name%",
+    "escape_special_characters": 0,
+    "type": "mdx_v1"
+  },
+]
+
+# _ce.mdx
+# _device-connection-standalone-secure-notes.mdx
+# _device-factory-reset.mdx
+# _device-input-connetion.mdx
+# _device-network-connection.mdx
+# _device-relay-connection.mdx
+# _device-reset-network-settings.mdx
+# _device-secure-io2-connection.mdx
+# _device-standalone-connection.mdx
+# _device-wiegand-connection.mdx
+# _disclaimers-copyright-notice.mdx
+# _disclaimers.mdx
+# _fcc-compliance-information.mdx
+# _getting-started-cables-and-connectors.mdx
+# _getting-started-components-note.mdx
+# _ic-information.mdx
+# _more-information.mdx
+# _safety-instructions.mdx
