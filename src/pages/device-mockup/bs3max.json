@@ -1,0 +1,65 @@
+{
+   "device": "bs3max",
+   "device-name": "BioStation 3 Max",
+   "device-type": "biometric",
+   "screen-size": "800x1280",
+   "menus": [
+      {
+         "name": "All Menus",
+         "type": "button",
+         "ico": "/common/ico-menu.svg",
+         "children": [
+            {
+               "name": "DASHBOARD",
+               "type": "bottom-tab",
+               "ico": "/common/ico-dashboard.svg",
+               "content-type": "image",
+               "content": "/common/dashboard.png"
+            },
+            {
+               "name": "USER",
+               "type": "bottom-tab",
+               "ico": "/common/ico-user.svg",
+               "content-type": "image",
+               "content": "/common/user.png",
+               "children": [
+                  {
+                     "name": "Add user",
+                     "type": "button",
+                     "ico": "/common/ico-add-user.svg",
+                     "content-type": "function",
+                     "function": "add-user"
+                  },
+                  {
+                     "name": "Close",
+                     "type": "button",
+                     "ico": "/common/ico-close.svg",
+                     "content-type": "function",
+                     "function": "back"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "User ID",
+         "type": "button"
+      },
+      {
+         "name": "T&A",
+         "type": "button"
+      },
+      {
+         "name": "Door",
+         "type": "button"
+      }
+   ],
+   "function": [
+      {
+         "id": "add-user",
+         "name": "Add user",
+         "content-type": "image",
+         "content": "/common/add-user.png"
+      }
+   ]
+}
