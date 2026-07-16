@@ -41,6 +41,17 @@
           "value": true,
           "annotation_label": "anno3",
           "annotation_value": "anno4"
+        },
+        "qr_barcode_read_range": {
+        "label": "QR/바코드 인식 권장 거리",
+        "label_id": "specs.credentials.qr_barcode_read_range",
+        "value": {
+            "ko": "5 ~ 15 cm",
+            "en": "5 ~ 15 cm",
+            "es": "De 5 a 15 cm",
+            "ja": "5 ~ 15 cm"
+         },
+         "annotation_label": "anno5"
         }
       }
     },
@@ -218,7 +229,7 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "200,000",
-          "annotation_value": "anno5"
+          "annotation_value": "anno6"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
