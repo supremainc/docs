@@ -126,6 +126,17 @@
           "value": true,
           "annotation_label": "anno2",
           "annotation_value": "anno3"
+        },
+        "qr_barcode_read_range": {
+        "label": "QR/바코드 인식 권장 거리",
+        "label_id": "specs.credentials.qr_barcode_read_range",
+        "value": {
+            "ko": "5 ~ 20 cm",
+            "en": "5 ~ 20 cm",
+            "es": "De 5 a 20 cm",
+            "ja": "5 ~ 20 cm"
+         },
+         "annotation_label": "anno4"
         }
       }
     },
@@ -133,6 +144,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB, XS2-QDPB, XS2-QAPB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",

@@ -522,6 +522,9 @@
   "specs.credentials.qr_barcode": {
     "message": "QR/Código de Barras"
   },
+  "specs.credentials.qr_barcode_read_range": {
+    "message": "Rango de lectura QR/Código de barras"
+  },
   "specs.credentials.biometrics.face.auth_distance": {
     "message": "Distancia de autenticación"
   },

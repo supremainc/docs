@@ -85,6 +85,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "FS2-D, FS2-AWB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
