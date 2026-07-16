@@ -6,7 +6,7 @@ description: Explains how to harden the BioStar X application layer through stro
 
 After hardening the server security on BioStar X server, the next step is securing the BioStar X application itself. Default admin accounts, weak passwords, and unencrypted device communication become paths to directly compromise the system while bypassing infrastructure-level security. This document explains how to establish a security baseline at the application layer through BioStar X authentication, role management, device encryption, and backup strategies.
 
-## Change default admin login ID and password {#changeDefaultAdmin}
+## Change default admin login ID and password {/* #changeDefaultAdmin */}
 
 Change the default **Administrator** login ID (`admin`) and assign a strong, unique password immediately after installation.
 
@@ -176,7 +176,7 @@ Disable <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' 
 
 :::
 
-## Multi-factor authentication {#setMfa}
+## Multi-factor authentication {/* #setMfa */}
 
 Enable multi-factor authentication for all high-privilege accounts (Admin, Operator) in BioStar X by requiring an additional biometric fingerprint factor.
 
@@ -226,7 +226,7 @@ Test by logging in: enter valid credentials, then scan your fingerprint to gain 
 
 :::
 
-## Secure communication with device {#secureComm}
+## Secure communication with device {/* #secureComm */}
 
 Enable <Cmd sid='setting.sever.secure.comm.menu' product='2' /> to encrypt traffic between BioStar X and connected devices using digital certificates (TLS/SSL-style).
 

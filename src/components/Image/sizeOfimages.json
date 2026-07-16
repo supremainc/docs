@@ -371,6 +371,10 @@
     "width": 400,
     "height": 363
   },
+  "/img/air/bsair-device-bs3-video-service.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/air/bsair-device-camera-add.png": {
     "width": 1920,
     "height": 1080
@@ -9850,6 +9854,10 @@
   "/img/en/air/bsair-device-bs3-sip-account-settings.png": {
     "width": 400,
     "height": 363
+  },
+  "/img/en/air/bsair-device-bs3-video-service.png": {
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/air/bsair-device-camera-add.png": {
     "width": 1920,

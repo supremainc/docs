@@ -9,7 +9,7 @@ date: 2026-04-08T12:00
 
 ![Suprema Docs 26.03 Changelogs](/img/changelogs-202603.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Docs
 

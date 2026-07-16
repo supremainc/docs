@@ -15,7 +15,7 @@ This guide provides important information you should know before starting **BioS
 
 :::
 
-## Pre-installation Notes {#before}
+## Pre-installation Notes {/* #before */}
 
 Before installing **BioStar X**, check the following and proceed with the installation.
 
@@ -33,11 +33,11 @@ Before installing **BioStar X**, check the following and proceed with the instal
 
 * For the default port used by **BioStar X**, see <DocLink docId='platform/biostar_x/service-settings' />. If another program occupies the same port, **BioStar X** may not work properly.
 
-## Check the database {#checkdb}
+## Check the database {/* #checkdb */}
 
 If you are using a user-configured database, check the items below before installing **BioStar X**.
 
-### MariaDB {#mariadb}
+### MariaDB {/* #mariadb */}
 
 1. Please change the options below under the `[mysql]` section in the *my.cnf* file.
 
@@ -61,7 +61,7 @@ If you are using a user-configured database, check the items below before instal
    GRANT SUPER ON . TO user_id@'%' IDENTIFIED BY "password";
    ```
 
-### MS SQL Server {#ms-sql-server}
+### MS SQL Server {/* #ms-sql-server */}
 
 :::info
 
@@ -71,13 +71,13 @@ If you are using a user-configured database, check the items below before instal
 
 :::
 
-#### Setting the port {#port-setting}
+#### Setting the port {/* #port-setting */}
 
 * Run **SQL Server Configuration Manager** and set **TCP/IP Protocol** for **Protocols for SQLEXPRESS** to the desired port number.
 
 * Restart the **SQL Server Services** to apply the settings.
 
-#### Creating the user and database {#create-a-user-and-database}
+#### Creating the user and database {/* #create-a-user-and-database */}
 
 1. Log in with the **sa** account using **SQL Server Authentication** in **SQL Server Management Studio**.
 
@@ -141,12 +141,12 @@ Set the following recommended values in the **Database Files** section. Configur
 
 :::
 
-#### Setting the Windows Authentication database {#windows-authentication-database-settings}
+#### Setting the Windows Authentication database {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>
 
-##### Presetting {#preliminary-setting}
+##### Presetting {/* #preliminary-setting */}
 
 If you are using **Microsoft Windows Active Directory**, complete the presets as below before setting up the Windows Authentication database.
 
@@ -173,7 +173,7 @@ If you are using **Microsoft Windows Active Directory**, complete the presets as
 </Step>
 <Step>
 
-##### Set up MS SQL Windows Authentication with an Active Directory account {#settingsforusingmssql}
+##### Set up MS SQL Windows Authentication with an Active Directory account {/* #settingsforusingmssql */}
 
 1. Run *services.msc*.
 
@@ -194,7 +194,7 @@ If you are using **Microsoft Windows Active Directory**, complete the presets as
 </Step>
 <Step>
 
-##### Setting the database {#database-setting}
+##### Setting the database {/* #database-setting */}
 
 1. After running the **SQL Server Configuration Manager**, click on **Client Protocol** under **SQL Native Client**.
 

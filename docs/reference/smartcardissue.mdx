@@ -289,17 +289,17 @@ import ResponsiveImageMap from '@site/src/components/ResponsiveImageMap';
 />
 
 
-## CRC 계산 및 검증 {#crc}
+## CRC 계산 및 검증 {/* #crc */}
 
 SmartCard 데이터의 무결성을 보장하기 위해 헤더와 카드 데이터에 각각 CRC-16 CCITT 체크섬(`hdrCRC`, `cardCRC`)을 사용합니다.
 
-### hdrCRC, cardCRC란? {#hdrcrc-cardcrc}
+### hdrCRC, cardCRC란? {/* #hdrcrc-cardcrc */}
 
 - `hdrCRC`: `BS2SmartCardHeader`의 `cardCRC`부터 `reserved`까지(총 14바이트)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다.
 
 - `cardCRC`: `cardType`부터 `BS2SmartCardData.accessOnData`까지(헤더를 제외한 카드 데이터 전체)에 대해 CRC-16 CCITT(다항식 0x1021, 초기값 0xFFFF)로 계산한 값입니다.
 
-### CRC 계산 방법 {#crc-calculation}
+### CRC 계산 방법 {/* #crc-calculation */}
 
 [BioStar 2 SDK](https://kb.supremainc.com/bs2sdk/doku.php)에서는 **BS2_ComputeCRC16CCITT** 함수를 제공합니다. 아래는 사용 예시입니다.
 
@@ -325,7 +325,7 @@ result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCa
 :::
 
 
-### 검증 방법 {#crc-validation}
+### 검증 방법 {/* #crc-validation */}
 
 카드 데이터를 읽을 때 무결성을 검증하려면 다음과 같이 수행하세요.
 

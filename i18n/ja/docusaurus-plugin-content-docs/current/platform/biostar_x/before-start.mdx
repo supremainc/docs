@@ -15,7 +15,7 @@ keywords:
 
 :::
 
-## インストール前の注意事項 {#before}
+## インストール前の注意事項 {/* #before */}
 
 **BioStar X** をインストールする前に、次の事項を確認してからインストールを進めてください。
 
@@ -33,11 +33,11 @@ keywords:
 
 * **BioStar X** が使用するポートの既定値については、<DocLink docId='platform/biostar_x/service-settings' />をご参照ください。 他のプログラムが同じポートを占有している場合、**BioStar X** が正常に動作しない可能性があります。
 
-## データベースの確認 {#checkdb}
+## データベースの確認 {/* #checkdb */}
 
 **BioStar X** をインストールする前に、ユーザーが独自に構成したデータベースを使用する場合は、以下の事項を確認してください。
 
-### MariaDB {#mariadb}
+### MariaDB {/* #mariadb */}
 
 1. *my.cnf* ファイルの `[mysql]` セクションの下にあるオプションを次のように変更してください。
 
@@ -61,7 +61,7 @@ keywords:
    GRANT SUPER ON . TO user_id@'%' IDENTIFIED BY "password";
    ```
 
-### MS SQL Server {#ms-sql-server}
+### MS SQL Server {/* #ms-sql-server */}
 
 :::info
 
@@ -71,13 +71,13 @@ keywords:
 
 :::
 
-#### ポート設定 {#port-setting}
+#### ポート設定 {/* #port-setting */}
 
 * **SQL Server 構成マネージャー** を起動し、**SQL EXPRESS に対するプロトコル** の **TCP/IP プロトコル** を使用したいポート番号に設定してください。
 
 * 設定を適用するには、SQL Server サービスを再起動してください。
 
-#### ユーザーとデータベースの作成 {#create-a-user-and-database}
+#### ユーザーとデータベースの作成 {/* #create-a-user-and-database */}
 
 1. **SQL Server Management Studio** で **SQL Server 認証** を使用して **sa** アカウントでログインしてください。
 
@@ -141,12 +141,12 @@ keywords:
 
 :::
 
-#### Windows 認証データベース設定 {#windows-authentication-database-settings}
+#### Windows 認証データベース設定 {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>
 
-##### 事前設定 {#preliminary-setting}
+##### 事前設定 {/* #preliminary-setting */}
 
 **Microsoft Windows Active Directory** を使用する場合は、Windows 認証データベースを設定する前に、以下の事前設定を完了してください。
 
@@ -173,7 +173,7 @@ keywords:
 </Step>
 <Step>
 
-##### Active Directory アカウントで MS SQL Windows Authentication を使用するための設定 {#settingsforusingmssql}
+##### Active Directory アカウントで MS SQL Windows Authentication を使用するための設定 {/* #settingsforusingmssql */}
 
 1. *services.msc* を実行してください。
 
@@ -194,7 +194,7 @@ keywords:
 </Step>
 <Step>
 
-##### データベース設定 {#database-setting}
+##### データベース設定 {/* #database-setting */}
 
 1. **SQL Server 構成マネージャー** を起動し、**SQL Native Client** 配下の **クライアント プロトコル** をクリックします。
 

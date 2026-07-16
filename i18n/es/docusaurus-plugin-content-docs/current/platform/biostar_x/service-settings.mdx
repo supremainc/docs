@@ -24,7 +24,7 @@ La <Cmd>Service Settings</Cmd> incluye los siguientes servicios principales.
 
 * <Cmd>BioStar X Cache Service</Cmd>: Almacenamiento en caché de datos y mejora del rendimiento del sistema
 
-## Situaciones en las que se necesitan cambios de configuración {#when-to-change}
+## Situaciones en las que se necesitan cambios de configuración {/* #when-to-change */}
 
 Cambie la configuración del servicio en las siguientes situaciones.
 
@@ -38,7 +38,7 @@ Cambie la configuración del servicio en las siguientes situaciones.
 
 * **Optimización del rendimiento**: cuando se necesita separar puertos para distribuir el tráfico o equilibrar la carga
 
-## Cómo cambiar la configuración {#how-to-change}
+## Cómo cambiar la configuración {/* #how-to-change */}
 
 1. Haga clic en el menú <Cmd>SERVICE SETTINGS</Cmd> en <Cmd>BioStar X Service Manager</Cmd>.
 
@@ -62,9 +62,9 @@ Al cambiar los números de puerto, asegúrese de que no existan conflictos con o
 
 :::
 
-## Composición del servicio {#service-composition}
+## Composición del servicio {/* #service-composition */}
 
-### BioStar X Core Web Service {#biostar-x-core-web-service}
+### BioStar X Core Web Service {/* #biostar-x-core-web-service */}
 
 Este servicio es responsable de la interfaz de usuario basada en web.
 
@@ -74,7 +74,7 @@ Este servicio es responsable de la interfaz de usuario basada en web.
 
 * <Cmd>WebServerThrift Port</Cmd>: puerto de comunicación del servidor web basado en el protocolo Thrift (predeterminado: 9310)
 
-### BioStar X Core Service {#biostar-x-core-service}
+### BioStar X Core Service {/* #biostar-x-core-service */}
 
 Este es el servicio principal que gestiona las funcionalidades centrales del sistema y las comunicaciones API externas.
 
@@ -88,7 +88,7 @@ Este es el servicio principal que gestiona las funcionalidades centrales del sis
 
 * <Cmd>Rpc Port</Cmd>: puerto de comunicación de llamada a procedimiento remoto (RPC) (predeterminado: 51218)
 
-### Unified Gateway Service {#unified-gateway-service}
+### Unified Gateway Service {/* #unified-gateway-service */}
 
 Procese eficientemente las solicitudes al servidor **BioStar X** mediante proxy inverso, mejore las vulnerabilidades de seguridad de los iframes y minimice los errores de certificado SSL.
 
@@ -96,7 +96,7 @@ Procese eficientemente las solicitudes al servidor **BioStar X** mediante proxy 
 
 * <Cmd>HTTPS Port</Cmd>: puerto de comunicación HTTPS de la puerta de enlace integrada (predeterminado: 443)
 
-### BioStar X Coordinator Service {#biostar-x-coordinator-service}
+### BioStar X Coordinator Service {/* #biostar-x-coordinator-service */}
 
 Este servicio se encarga de administrar la información de configuración del sistema distribuido, supervisar el estado del servicio y sincronizar los servicios.
 
@@ -114,7 +114,7 @@ Este servicio se encarga de administrar la información de configuración del si
 
 :::
 
-### BioStar X Server (Main) {#biostar-x-server-(main)}
+### BioStar X Server (Main) {/* #biostar-x-server-(main) */}
 
 Este es el servicio central que funciona como servidor principal del sistema.
 
@@ -128,7 +128,7 @@ Este es el servicio central que funciona como servidor principal del sistema.
 
 * <Cmd>gRPC Server Port</Cmd>: puerto de comunicación de alto rendimiento basado en el protocolo gRPC (predeterminado: 51219)
 
-### BioStar X Cache Service {#biostar-x-cache-service}
+### BioStar X Cache Service {/* #biostar-x-cache-service */}
 
 Este servicio mejora la velocidad de procesamiento de datos y el rendimiento del sistema al almacenar en memoria los datos utilizados con frecuencia.
 

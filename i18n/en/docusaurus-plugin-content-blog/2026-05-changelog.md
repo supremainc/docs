@@ -9,7 +9,7 @@ This May, **Suprema Docs** expanded in both scope and scale. The new device **Bi
 
 ![Suprema Docs 26.05 Changelogs](/img/changelogs/changelogs-202605.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Platform
 

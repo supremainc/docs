@@ -7,7 +7,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 출입문을 등록하고 설정하는 방법을 안내합니다. 출입문별로 입실·퇴실 장치를 연결하고, 안티패스백과 이중 인증 등 보안 기능을 설정하여 체계적인 출입 관리 환경을 구축할 수 있습니다. 또한 출입문 상태에 따른 알람 설정으로 보안 사고를 사전에 예방할 수 있습니다.
 
-## 시작하기 전에 {#before-start}
+## 시작하기 전에 {/* #before-start */}
 
 * 출입문을 등록하기 전에 출입 통제를 위한 출입 등급, 출입 그룹, 층 등급을 설정하세요. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-access-control' />를 참고하세요.
 
@@ -20,7 +20,7 @@ keywords: [출입문, 보안, 출입 통제]
   * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
 
 
-## 출입문 등록 {#adding-door}
+## 출입문 등록 {/* #adding-door */}
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
@@ -47,7 +47,7 @@ keywords: [출입문, 보안, 출입 통제]
 1. 설정을 모두 완료했다면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
 
-### 기본 정보 설정 {#info}
+### 기본 정보 설정 {/* #info */}
 
 <Cmd sid='common.information' product='2' /> 섹션에서는 출입문의 이름 및 그룹, 설명을 입력하거나 변경할 수 있습니다.
 
@@ -67,7 +67,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 :::
 
-### 출입문 설정 {#configdoor}
+### 출입문 설정 {/* #configdoor */}
 
 <Cmd sid='device.info.configuration' product='2' /> 섹션에서는 출입문과 연결된 장치와 퇴실 버튼, 출입문 세선 등을 설정할 수 있습니다.
 
@@ -107,7 +107,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 :::
 
-### 부가 옵션 설정 {#option}
+### 부가 옵션 설정 {/* #option */}
 
 <Cmd sid='common.option' product='2' /> 섹션에서는 출입문에 대한 부가 옵션을 설정할 수 있습니다.
 
@@ -158,7 +158,7 @@ keywords: [출입문, 보안, 출입 통제]
   * <Cmd sid='common.sensor' product='2' />: 테일게이팅을 감지할 센서를 선택하세요.
 
 
-### 안티패스백 설정 {#antipassback}
+### 안티패스백 설정 {/* #antipassback */}
 
 [안티패스백](../../reference/glossary#apb)은 출입 이력을 관리하고 보안을 강화하기 위해 사용합니다. 사용자가 출입 카드로 입실 후 다른 사용자에게 카드를 넘겨주는 악용 사례를 막을 수 있으며, 외부인이 출입 권한을 가진 사용자를 뒤따라 들어올 때 나가지 못하도록 막을 수 있습니다.
 
@@ -184,7 +184,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 :::
 
-### 시간 제한 안티패스백 설정 {#timed-apb}
+### 시간 제한 안티패스백 설정 {/* #timed-apb */}
 
 사용자가 출입 인증 후 동일한 장치에서 다시 인증을 시도할 때, 안티패스백 기능이 작동하여 즉시 재인증할 수 없습니다. <Cmd sid='timedAPB.title' product='2' /> 섹션에서는 안티패스백 기능의 초기화 시간을 설정하여 사용자의 빈번한 입실을 효과적으로 제한할 수 있습니다.
 
@@ -196,7 +196,7 @@ keywords: [출입문, 보안, 출입 통제]
 
 * <Cmd sid='zone.apb.bypassGroup' product='2' />: 시간 제한 안티패스백 기능을 제한받지 않고 항상 통과할 수 있는 출입 그룹을 선택할 수 있습니다.
 
-### 알람 설정 {#alarm}
+### 알람 설정 {/* #alarm */}
 
 <Cmd sid='door.alarm' product='2' /> 섹션에서는 출입문이 강제로 열리거나, 열린 채로 방치되었거나 안티패스백 위반이 발생했을 때 경보를 울리거나 장치를 사용하지 못하도록 막을 수 있습니다. 알람을 추가할 항목에서 <Cmd sid='button.addplus' product='2' /> 버튼을 클릭하세요.
 

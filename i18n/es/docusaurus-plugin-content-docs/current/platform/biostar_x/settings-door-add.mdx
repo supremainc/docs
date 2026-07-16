@@ -10,7 +10,7 @@ keywords:
 
 Esta guía describe cómo registrar y configurar puertas. Conecte dispositivos de entrada y salida para cada puerta y configure funciones de seguridad como anti-passback y autenticación dual para establecer un entorno de gestión de acceso sistemático. Además, configure alarmas basadas en el estado de la puerta para prevenir incidentes de seguridad con anticipación.
 
-## Antes de comenzar {#before-start}
+## Antes de comenzar {/* #before-start */}
 
 * Configure los niveles de acceso, los grupos de acceso y los niveles de piso para el control de acceso antes de registrar puertas. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-access-control' />.
 
@@ -22,7 +22,7 @@ Esta guía describe cómo registrar y configurar puertas. Conecte dispositivos d
 
   * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
 
-## Registrar puerta {#adding-door}
+## Registrar puerta {/* #adding-door */}
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
@@ -48,7 +48,7 @@ Esta guía describe cómo registrar y configurar puertas. Conecte dispositivos d
 
 5. Una vez completadas todas las configuraciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
-### Configurar información básica {#info}
+### Configurar información básica {/* #info */}
 
 En la sección <Cmd sid='common.information' product='2' />, ingrese o cambie el nombre, el grupo y la descripción de la puerta.
 
@@ -68,7 +68,7 @@ En la sección <Cmd sid='common.information' product='2' />, ingrese o cambie el
 
 :::
 
-### Configurar la puerta {#configdoor}
+### Configurar la puerta {/* #configdoor */}
 
 En la sección <Cmd sid='device.info.configuration' product='2' />, configure los dispositivos conectados a la puerta, los botones de salida y los sensores de puerta.
 
@@ -108,7 +108,7 @@ En la sección <Cmd sid='device.info.configuration' product='2' />, configure lo
 
 :::
 
-### Configurar opciones adicionales {#option}
+### Configurar opciones adicionales {/* #option */}
 
 En la sección <Cmd sid='common.option' product='2' />, configure opciones adicionales para la puerta.
 
@@ -158,7 +158,7 @@ En la sección <Cmd sid='common.option' product='2' />, configure opciones adici
 
   * <Cmd sid='common.sensor' product='2' />: Selecciona un sensor para detectar tailgating.
 
-### Configurar anti-passback {#antipassback}
+### Configurar anti-passback {/* #antipassback */}
 
 [Anti-passback](../../reference/glossary#apb) se usa para gestionar el historial de acceso y mejorar la seguridad. Previene situaciones en las que un usuario entrega su tarjeta de entrada a otro después de ingresar y detiene a personas externas que siguen a usuarios con privilegios de acceso.
 
@@ -184,7 +184,7 @@ Consulta a continuación para completar la configuración en la sección <Cmd si
 
 :::
 
-### Configurar anti-passback temporizado {#timed-apb}
+### Configurar anti-passback temporizado {/* #timed-apb */}
 
 Cuando un usuario intenta volver a autenticarse en el mismo dispositivo después de la autenticación de ingreso, la función de anti-passback impide la reautenticación inmediata. La sección <Cmd sid='timedAPB.title' product='2' /> define el tiempo de inicialización de la función de anti-passback para limitar de forma efectiva las entradas frecuentes de los usuarios.
 
@@ -196,7 +196,7 @@ Cuando un usuario intenta volver a autenticarse en el mismo dispositivo después
 
 * <Cmd sid='zone.apb.bypassGroup' product='2' />: Selecciona los grupos de acceso que siempre pueden pasar sin estar sujetos al anti-passback temporizado.
 
-### Configurar alarmas {#alarm}
+### Configurar alarmas {/* #alarm */}
 
 En la sección <Cmd sid='door.alarm' product='2' />, configura que se active una alarma o se bloquee el uso del dispositivo cuando la puerta se abra por la fuerza, quede abierta o ocurra una violación de anti-passback. Haz clic en <Cmd sid='button.addplus' product='2' /> para agregar una alarma al elemento.
 

@@ -11,7 +11,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 :::
 
-## 설치 전 참고 사항 {#before}
+## 설치 전 참고 사항 {/* #before */}
 
 **BioStar X**를 설치하기 전에 다음 사항을 확인하고 설치를 진행하세요.
 
@@ -30,11 +30,11 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 * **BioStar X**가 사용하는 포트의 기본값은 <DocLink docId='platform/biostar_x/service-settings' />을 참고하세요. 다른 프로그램에서 동일한 포트를 점유한다면, **BioStar X**가 정상 구동되지 않을 수 있습니다.
 
 
-## 데이터베이스 확인 {#checkdb}
+## 데이터베이스 확인 {/* #checkdb */}
 
 **BioStar X**를 설치하기 전에 사용자가 직접 구성한 데이터베이스를 사용한다면 아래 사항을 확인하세요.
 
-### MariaDB {#mariadb}
+### MariaDB {/* #mariadb */}
 
 1. *my.cnf* 파일에서 `[mysql]` 항목 하단의 옵션을 아래와 같이 변경하세요.
 
@@ -58,7 +58,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
     GRANT SUPER ON . TO user_id@'%' IDENTIFIED BY "password";
     ```
 
-### MS SQL Server {#ms-sql-server}
+### MS SQL Server {/* #ms-sql-server */}
 
 :::info
 
@@ -68,13 +68,13 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 :::
 
-#### 포트 설정 {#port-setting}
+#### 포트 설정 {/* #port-setting */}
 
 * **SQL Server 구성 관리자**를 실행한 후 **SQL EXPRESS에 대한 프로토콜**의 **TCP/IP 프로토콜**을 사용하려는 포트 번호로 설정하세요.
 
 * 설정을 적용하려면 SQL Server 서비스를 재시작하세요.
 
-#### 사용자 및 데이터베이스 생성 {#create-a-user-and-database}
+#### 사용자 및 데이터베이스 생성 {/* #create-a-user-and-database */}
 
 1. **SQL Server Management Studio**에 **SQL Server 인증**을 이용하여 **sa** 계정으로 로그인하세요.
 
@@ -138,12 +138,12 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 :::
 
-#### Windows Authentication 데이터베이스 설정 {#windows-authentication-database-settings}
+#### Windows Authentication 데이터베이스 설정 {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>
 
-##### 사전 설정 {#preliminary-setting}
+##### 사전 설정 {/* #preliminary-setting */}
 
 **Microsoft Windows Active Directory**를 사용한다면 Windows Authentication 데이터베이스를 설정하기 전에 아래와 같이 사전 설정을 완료하세요.
 
@@ -170,7 +170,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 </Step>
 <Step>
 
-##### Active Directory 계정으로 MS SQL Windows Authentication을 사용하기 위한 설정 {#settingsforusingmssql}
+##### Active Directory 계정으로 MS SQL Windows Authentication을 사용하기 위한 설정 {/* #settingsforusingmssql */}
 
 1. *services.msc*를 실행하세요.
 
@@ -191,7 +191,7 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 </Step>
 <Step>
 
-##### 데이터베이스 설정 {#database-setting}
+##### 데이터베이스 설정 {/* #database-setting */}
 
 1. **SQL Server 구성 관리자**를 실행한 뒤 **SQL Native Client** 하위의 **클라이언트 프로토콜**을 클릭하세요.
 
