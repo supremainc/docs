@@ -122,8 +122,9 @@ const REGEX_PATTERNS = {
   // Component with closing tags: <ComponentName ...>...</ComponentName>
   closingComponent: (name) => new RegExp(`<${name}([^>]*)>.*?</${name}>`, 'gs'),
   
-  // Anchor patterns: {/* #anchor */}
-  anchors: /\{\/\* #([^}]+) \*\/}/g,
+  // Anchor patterns: {/* #anchor */} (heading id 지정용, kebab-case 슬러그 하나만 매칭)
+  // '{/* ## heading */}' 같은 아웃라인 주석까지 잘못 매칭되지 않도록 첫 글자를 영문자로 제한
+  anchors: /\{\/\*\s*#([a-zA-Z][\w-]*)\s*\*\/\}/g,
   
   // SpecSection with property path: <SpecSection data={varName.property} />
   specSectionWithProperty: (varName) => new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g'),
@@ -884,6 +885,11 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
   // Convert {/* #anchor */} to [#anchor] AFTER props substitution is complete
   // This must be done after props are substituted to avoid any conflicts
   processedContent = processedContent.replace(REGEX_PATTERNS.anchors, '[#$1]');
+
+  // Remove leftover generic MDX comments in the top-level document itself
+  // (imported partials are already cleaned via cleanMdxContent). Must run
+  // AFTER the anchors replacement above so real heading-id comments survive.
+  processedContent = processedContent.replace(REGEX_PATTERNS.mdxComments, '');
 
   return processedContent;
 }
