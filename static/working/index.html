@@ -327,10 +327,9 @@
         <select class="vsel" id="calcVac">
           <option value="">휴가 없음</option>
           <option value="annual">연차 (8시간)</option>
-          <option value="half">반차/건강검진 (4시간)</option>
+          <option value="half">반차 (4시간)</option>
           <option value="quarter">반반차 (2시간)</option>
-          <option value="checkup_half">건강검진+반차 (8시간)</option>
-          <option value="half_quarter">반차/건강검진+반반차 (6시간)</option>
+          <option value="half_quarter">반차+반반차 (6시간)</option>
         </select>
       </div>
       <div class="calc-row vac-range" id="calcVacRange" style="display:none;">
@@ -454,7 +453,7 @@
             <li>예) 08:00~12:20 (체류 4시간 20분) → <b>실근무 4시간</b> (20분은 업무 종료 후 휴게)</li>
           </ul>
         </li>
-        <li><em>휴가</em>: 연차(8시간), 반차/건강검진(각 4시간), 반반차(2시간)는 휴게시간과 무관하게 <b>실근무로 인정</b>되어 사무실 근무시간과 합산됩니다. 건강검진은 앞뒤로 반차/반반차와 이어 쓸 수 있어 드롭다운에 <b>건강검진+반차(8시간)</b>, <b>반차/건강검진+반반차(6시간)</b> 조합도 있습니다.
+        <li><em>휴가</em>: 연차(8시간), 반차(4시간), 반반차(2시간), 반차+반반차(6시간)는 휴게시간과 무관하게 <b>실근무로 인정</b>되어 사무실 근무시간과 합산됩니다. 반차·반반차·반차+반반차는 필요 시 시간대(몇 시~몇 시)를 입력할 수 있고, 연차는 시간대 없이 8시간으로 인정됩니다. ※ 토·일·공휴일에는 휴가를 사용할 수 없어 선택란이 표시되지 않습니다.
           <ul>
             <li>예) 반차 4시간 + 사무실 근무 4시간(12:00~16:00) → 휴게 없이 <b>실근무 8시간</b></li>
             <li>예) 반반차 2시간 + 사무실 근무 4시간(12:00~16:00) → <b>실근무 6시간</b></li>
@@ -464,7 +463,7 @@
         </li>
         <li><em>야근식대</em>: 평일에 <code>11시간 30분 이상</code> 체류하면 인당 12,000원 지원 대상입니다(달력 칸과 계산기에 <span class="chip meal">야근식대</span> 표시).</li>
         <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간). ※ 휴가가 있는 날은 이 자동 경고가 표시되지 않습니다.</li>
-        <li><em>선택 휴무</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">선택 휴무</span>로 표시됩니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
+        <li><em>근무 미편성 가능일</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">근무 미편성 가능일</span>로 표시됩니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
         <li><em>공휴일</em>: 2026년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
       </ul>
     </div>
@@ -473,7 +472,7 @@
   </main>
   </div>
 
-  <div class="footnote">V1.7 | Technical Writing</div>
+  <div class="footnote">V1.9 | Technical Writing</div>
 </div>
 
 <script>
@@ -502,24 +501,30 @@ function calcBreak(stay){
    휴가 종류 (모두 휴게시간과 무관하게 실근무로 인정)
    ========================================================= */
 const VAC = {
-  '':             { label:'',                 hours:0   },
-  'annual':       { label:'연차',              hours:480 },
-  'half':         { label:'반차/건강검진',      hours:240 },
-  'quarter':      { label:'반반차',            hours:120 },
-  'checkup_half': { label:'건강검진+반차',      hours:480 },
-  'half_quarter': { label:'반차/건강검진+반반차', hours:360 },
-  // 옛 저장값 호환(드롭다운에는 없지만 값 인식용)
-  'checkup':         { label:'반차/건강검진',      hours:240 },
-  'checkup_quarter': { label:'반차/건강검진+반반차', hours:360 },
+  '':             { label:'',           hours:0   },
+  'annual':       { label:'연차',        hours:480 },
+  'half':         { label:'반차',        hours:240 },
+  'quarter':      { label:'반반차',      hours:120 },
+  'half_quarter': { label:'반차+반반차',  hours:360 },
+  // 옛 저장값 호환(드롭다운에는 없음)
+  'checkup':         { label:'반차',        hours:240 },
+  'checkup_half':    { label:'연차',        hours:480 },
+  'checkup_quarter': { label:'반차+반반차',  hours:360 },
 };
 // 옛 키를 현재 키로 정규화
 function normalizeVac(v){
   if(v === 'checkup') return 'half';
+  if(v === 'checkup_half') return 'annual';   // 건강검진+반차(8h) → 연차로 취급
   if(v === 'checkup_quarter') return 'half_quarter';
   return v || '';
 }
 function vacHours(key){ return (VAC[normalizeVac(key)] || VAC['']).hours; }
 function vacLabel(key){ return (VAC[normalizeVac(key)] || VAC['']).label; }
+// 시간대(몇 시~몇 시)를 지정하는 휴가인지 (연차/없음은 시간대 없음)
+function vacUsesRange(key){
+  const k = normalizeVac(key);
+  return k === 'half' || k === 'quarter' || k === 'half_quarter';
+}
 
 /* =========================================================
    하루 계산: 출근/퇴근 + 휴가(종류, 시간대) → 결과
@@ -533,6 +538,10 @@ const REC_END   = 1410;  // 23:30
 
 function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
   const vh = vacHours(vacKey);
+  // 연차는 출근/퇴근(근무시간)과 연계되지 않고 8시간으로만 인정
+  if(normalizeVac(vacKey) === 'annual'){ inMin = null; outMin = null; }
+  // 시간대를 쓰지 않는 휴가(연차/없음)는 휴가 시간대 무시
+  if(!vacUsesRange(vacKey)){ vinMin = null; voutMin = null; }
   const rawValid = (inMin !== null && outMin !== null && outMin > inMin);
   let stay = 0, overlap = 0, officePhysical = 0, brk = 0, officeWork = 0;
   let officeValid = false, clamped = false, cIn = null, cOut = null;
@@ -894,9 +903,15 @@ const calcVacRange = document.getElementById('calcVacRange');
 const effHint = document.getElementById('effHint');
 
 function renderCalc(){
-  // 연차 외 휴가 선택 시 휴가 시간대 입력칸 표시
-  const showRange = calcVac.value && calcVac.value !== 'annual';
+  // 시간대를 쓰는 휴가일 때만 휴가 시간대 입력칸 표시 (아니면 초기화)
+  const showRange = vacUsesRange(calcVac.value);
   calcVacRange.style.display = showRange ? 'flex' : 'none';
+  if(!showRange){ calcVin.value = ''; calcVout.value = ''; }
+  // 연차는 근무시간과 연계 불가 → 출근·퇴근 입력 삭제
+  if(normalizeVac(calcVac.value) === 'annual'){
+    if(calcIn.value) calcIn.value = '';
+    if(calcOut.value) calcOut.value = '';
+  }
 
   const i = toMin(calcIn.value), o = toMin(calcOut.value);
   const vin = toMin(calcVin.value), vout = toMin(calcVout.value);
@@ -1020,7 +1035,14 @@ function totalWorkMinutes(){
   let sum = 0;
   for(const key in monthData){
     const d = monthData[key];
-    const r = computeDay(toMin(d.in), toMin(d.out), d.vac, toMin(d.vin), toMin(d.vout));
+    const parts = key.split('-').map(Number);
+    const dow = new Date(parts[0], parts[1]-1, parts[2]).getDay();
+    const isHol = !!holidayName(parts[0], parts[1]-1, parts[2]);
+    const vacOK = !(dow === 0 || dow === 6 || isHol);   // 주말·공휴일은 휴가 불가
+    const vac  = vacOK ? d.vac  : '';
+    const vin  = vacOK ? d.vin  : '';
+    const vout = vacOK ? d.vout : '';
+    const r = computeDay(toMin(d.in), toMin(d.out), vac, toMin(vin), toMin(vout));
     sum += r.total;
   }
   return sum;
@@ -1124,30 +1146,39 @@ function buildCalendar(){
     times.appendChild(inEl); times.appendChild(outEl);
     cell.appendChild(times);
 
-    // 휴가 선택
-    const vacEl = document.createElement('select');
-    vacEl.className = 'vsel';
-    [['','휴가 없음'],['annual','연차'],['half','반차/건강검진'],['quarter','반반차'],
-     ['checkup_half','건강검진+반차'],['half_quarter','반차/건강검진+반반차']]
-      .forEach(([v,t])=>{ const o=document.createElement('option'); o.value=v; o.textContent=t; vacEl.appendChild(o); });
-    vacEl.value = normalizeVac(monthData[dateKey]?.vac || '');
-    cell.appendChild(vacEl);
+    // 휴가 선택 (토·일·공휴일은 휴가 사용 불가 → 표시하지 않음)
+    const vacAllowed = !(dow === 0 || dow === 6 || hol);
+    let vacEl = null, vinEl = null, voutEl = null, vrange = null;
+    if(vacAllowed){
+      vacEl = document.createElement('select');
+      vacEl.className = 'vsel';
+      [['','휴가 없음'],['annual','연차'],['half','반차'],['quarter','반반차'],['half_quarter','반차+반반차']]
+        .forEach(([v,t])=>{ const o=document.createElement('option'); o.value=v; o.textContent=t; vacEl.appendChild(o); });
+      vacEl.value = normalizeVac(monthData[dateKey]?.vac || '');
+      cell.appendChild(vacEl);
 
-    // 휴가 시간대 (선택 입력) — 연차 외 휴가를 고르면 표시
-    const vrange = document.createElement('div');
-    vrange.className = 'times vrange';
-    const vinEl = document.createElement('input');
-    vinEl.type='text'; vinEl.className='tinput'; vinEl.inputMode='numeric'; vinEl.maxLength=5;
-    vinEl.placeholder='휴가시작'; vinEl.title='휴가 시작'; vinEl.value = monthData[dateKey]?.vin || '';
-    const voutEl = document.createElement('input');
-    voutEl.type='text'; voutEl.className='tinput'; voutEl.inputMode='numeric'; voutEl.maxLength=5;
-    voutEl.placeholder='휴가종료'; voutEl.title='휴가 종료'; voutEl.value = monthData[dateKey]?.vout || '';
-    vrange.appendChild(vinEl); vrange.appendChild(voutEl);
-    cell.appendChild(vrange);
+      // 휴가 시간대 (선택 입력) — 시간대를 쓰는 휴가를 고르면 표시
+      vrange = document.createElement('div');
+      vrange.className = 'times vrange';
+      vinEl = document.createElement('input');
+      vinEl.type='text'; vinEl.className='tinput'; vinEl.inputMode='numeric'; vinEl.maxLength=5;
+      vinEl.placeholder='휴가시작'; vinEl.title='휴가 시작'; vinEl.value = monthData[dateKey]?.vin || '';
+      voutEl = document.createElement('input');
+      voutEl.type='text'; voutEl.className='tinput'; voutEl.inputMode='numeric'; voutEl.maxLength=5;
+      voutEl.placeholder='휴가종료'; voutEl.title='휴가 종료'; voutEl.value = monthData[dateKey]?.vout || '';
+      vrange.appendChild(vinEl); vrange.appendChild(voutEl);
+      cell.appendChild(vrange);
+    }
     function toggleVRange(){
-      vrange.style.display = (vacEl.value && vacEl.value !== 'annual') ? 'flex' : 'none';
+      if(!vrange) return;
+      vrange.style.display = vacUsesRange(vacEl.value) ? 'flex' : 'none';
     }
     toggleVRange();
+
+    // 휴가 불가일(주말·공휴일)은 항상 '없음'으로 취급
+    const getVac  = ()=> vacEl  ? vacEl.value  : '';
+    const getVin  = ()=> vinEl  ? vinEl.value  : '';
+    const getVout = ()=> voutEl ? voutEl.value : '';
 
     // 배지 + 결과 영역
     const badges = document.createElement('div');
@@ -1158,8 +1189,8 @@ function buildCalendar(){
 
     function refreshCell(){
       const im = toMin(inEl.value), om = toMin(outEl.value);
-      const vin = toMin(vinEl.value), vout = toMin(voutEl.value);
-      const vac = vacEl.value;
+      const vac = getVac();
+      const vin = toMin(getVin()), vout = toMin(getVout());
       const r = computeDay(im, om, vac, vin, vout);
       badges.innerHTML = '';
       // 공휴일 배지 (항상 표시)
@@ -1168,7 +1199,7 @@ function buildCalendar(){
       }
       // 선택 휴무 배지 (항상 표시)
       if(day === offDay){
-        const b=document.createElement('span'); b.className='badge off'; b.textContent='선택 휴무'; badges.appendChild(b);
+        const b=document.createElement('span'); b.className='badge off'; b.textContent='근무 미편성 가능일'; badges.appendChild(b);
       }
       // 휴가 배지
       if(r.vh > 0){
@@ -1219,8 +1250,8 @@ function buildCalendar(){
     }
 
     function onChange(){
-      const im = inEl.value, om = outEl.value, vac = vacEl.value;
-      const vin = vinEl.value, vout = voutEl.value;
+      const im = inEl.value, om = outEl.value;
+      const vac = getVac(), vin = getVin(), vout = getVout();
       if(im || om || vac || vin || vout){
         monthData[dateKey] = {in:im, out:om, vac:vac, vin:vin, vout:vout};
       } else { delete monthData[dateKey]; }
@@ -1230,9 +1261,18 @@ function buildCalendar(){
     }
     attachTimeMask(inEl, onChange);
     attachTimeMask(outEl, onChange);
-    attachTimeMask(vinEl, onChange);
-    attachTimeMask(voutEl, onChange);
-    vacEl.addEventListener('change', ()=>{ toggleVRange(); onChange(); });
+    if(vinEl) attachTimeMask(vinEl, onChange);
+    if(voutEl) attachTimeMask(voutEl, onChange);
+    if(vacEl){
+      vacEl.addEventListener('change', ()=>{
+        // 시간대를 쓰지 않는 휴가로 바꾸면 입력했던 휴가 시간대를 비움
+        if(!vacUsesRange(vacEl.value)){ vinEl.value = ''; voutEl.value = ''; }
+        // 연차는 근무시간과 연계 불가 → 출근·퇴근 입력 삭제
+        if(normalizeVac(vacEl.value) === 'annual'){ inEl.value = ''; outEl.value = ''; }
+        toggleVRange();
+        onChange();
+      });
+    }
 
     refreshCell();
     calGrid.appendChild(cell);
