@@ -65,6 +65,22 @@
   }
   .tinput::placeholder{color:var(--faint);letter-spacing:.04em;}
   .tinput:focus,input[type=number]:focus{outline:2px solid var(--accent-soft);border-color:var(--accent);}
+
+  /* 시간 입력 + ▲▼ 스텝퍼 */
+  .timewrap{display:inline-flex;align-items:stretch;vertical-align:middle;}
+  .timewrap > .tinput{border-top-right-radius:0;border-bottom-right-radius:0;border-right:none;}
+  .stepper{display:flex;flex-direction:column;border:1px solid var(--line-strong);
+    border-radius:0 9px 9px 0;overflow:hidden;flex:none;}
+  .stepbtn{border:none;background:#f2f4f2;color:var(--muted);cursor:pointer;
+    font-size:8px;line-height:1;padding:0 7px;flex:1;display:flex;align-items:center;justify-content:center;}
+  .stepbtn:hover{background:var(--accent-soft);color:var(--accent-ink);}
+  .stepbtn:first-child{border-bottom:1px solid var(--line-strong);}
+  .stepbtn:active{background:var(--accent);color:#fff;}
+  /* 캘린더 셀 / 휴가 시간대 안에서는 꽉 차게 */
+  .cell .times .timewrap, .cell .vrange .timewrap{display:flex;width:100%;}
+  .cell .times .timewrap > .tinput, .cell .vrange .timewrap > .tinput{flex:1;min-width:0;}
+  .cell .stepbtn{padding:0 5px;font-size:7px;}
+  .cell .stepper{border-radius:0 7px 7px 0;}
   .vsel{
     font-family:var(--sans);font-size:13.5px;padding:8px 10px;border:1px solid var(--line-strong);
     border-radius:9px;background:#fff;color:var(--ink);width:100%;cursor:pointer;
@@ -74,7 +90,7 @@
   .calc-vac label{font-size:12px;color:var(--muted);font-weight:600;}
   .vac-range{margin-top:10px;}
   .cell .vrange{margin-top:2px;}
-  .cell .vrange input.tinput{font-size:13px;padding:4px 4px;}
+  .cell .vrange input.tinput{font-size:13px;padding:4px 4px;border-radius:7px 0 0 7px;}
   .cell .vrange input.tinput::placeholder{font-size:10.5px;}
   .tilde{font-family:var(--mono);color:var(--faint);font-size:18px;padding-bottom:9px;}
 
@@ -167,7 +183,7 @@
   .cell .daynum .hol{color:var(--warn);}
   .cell .times{display:flex;flex-direction:column;gap:4px;}
   .cell .times input.tinput{
-    width:100%;font-size:14px;padding:5px 4px;border-radius:7px;letter-spacing:.03em;
+    width:100%;font-size:14px;padding:5px 4px;border-radius:7px 0 0 7px;letter-spacing:.03em;
   }
   .cell .result{
     margin-top:auto;font-family:var(--mono);font-size:14px;font-weight:700;color:var(--accent-ink);
@@ -184,6 +200,7 @@
   .badge.off{background:var(--holiday-soft);color:var(--holiday);}
   .badge.hol{background:var(--warn-soft);color:var(--warn);}
   .badge.vac{background:var(--holiday-soft);color:var(--holiday);}
+  .badge.clamp{background:var(--amber-soft);color:var(--amber);}
   .cell .vsel{font-size:11px;padding:3px 5px;border-radius:6px;}
   .cell .stay-note{font-size:10.5px;color:var(--faint);font-family:var(--mono);word-break:keep-all;margin-bottom:4px;}
 
@@ -249,6 +266,8 @@
     /* 좁아진 사이드바 안에서 계산기/요약이 깔끔하게 보이도록 조정 */
     .sidebar .field{flex:1 1 40%;}
     .sidebar .tinput{width:100%;}
+    .sidebar .timewrap{display:flex;width:100%;}
+    .sidebar .timewrap > .tinput{flex:1;min-width:0;}
     .sidebar .calc-result{flex:1 1 100%;margin-left:0;text-align:left;margin-top:12px;}
     .sidebar .summary-grid{grid-template-columns:1fr;}
   }
@@ -409,7 +428,8 @@
     <summary><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;"></span>계산 규칙 자세히 보기<span class="tw">열기 / 닫기</span></summary>
     <div class="body">
       <ul>
-        <li><em>체류</em>: 출근부터 퇴근까지 사무실에 있는 전체 시간(휴게 포함).</li>
+        <li><em>근무인정 시간대</em>: 실근무로 인정되는 시간은 <b>07:30 ~ 23:30</b>입니다. 이 범위를 벗어난 시간은 인정되지 않습니다. 예) 07:00 출근·11:00 퇴근 → 07:30부터 인정되어 <b>실근무 3시간 30분</b>.</li>
+        <li><em>체류</em>: 출근부터 퇴근까지 사무실에 있는 전체 시간(휴게 포함, 근무인정 시간대 내).</li>
         <li><em>휴게시간</em>(HR 구간 방식): 사무실 체류 시간에 따라 아래처럼 한 번에 산정됩니다.
           <ul>
             <li>실근무가 8시간에 닿는 순간(체류 8시간 30분부터) → 휴게 <b>1시간</b></li>
@@ -444,7 +464,7 @@
   </main>
   </div>
 
-  <div class="footnote">V1.2 | Technical Writing</div>
+  <div class="footnote">V1.5 | Technical Writing</div>
 </div>
 
 <script>
@@ -498,23 +518,34 @@ function vacLabel(key){ return (VAC[normalizeVac(key)] || VAC['']).label; }
      남은 사무실 근무에 휴게 규칙을 적용한 뒤, 휴가시간을 합산한다.
    - 휴가 시간대를 비워두면 사무실 근무와 별도(붙여 쓴 것)로 보고 그대로 합산.
    ========================================================= */
+/* 근무인정 시간대: 07:30 ~ 23:30 (이 범위만 실근무로 인정) */
+const REC_START = 450;   // 07:30
+const REC_END   = 1410;  // 23:30
+
 function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
   const vh = vacHours(vacKey);
-  const officeValid = (inMin !== null && outMin !== null && outMin > inMin);
+  const rawValid = (inMin !== null && outMin !== null && outMin > inMin);
   let stay = 0, overlap = 0, officePhysical = 0, brk = 0, officeWork = 0;
-  if(officeValid){
-    stay = outMin - inMin;
-    if(vinMin !== null && voutMin !== null && voutMin > vinMin){
-      const s = Math.max(inMin, vinMin), e = Math.min(outMin, voutMin);
-      overlap = Math.max(0, e - s);   // 휴가가 사무실 근무와 겹치는 부분
+  let officeValid = false, clamped = false, cIn = null, cOut = null;
+  if(rawValid){
+    cIn  = Math.max(inMin, REC_START);   // 07:30 이전 출근은 07:30부터 인정
+    cOut = Math.min(outMin, REC_END);    // 23:30 이후 퇴근은 23:30까지 인정
+    clamped = (cIn !== inMin) || (cOut !== outMin);
+    if(cOut > cIn){
+      officeValid = true;
+      stay = cOut - cIn;
+      if(vinMin !== null && voutMin !== null && voutMin > vinMin){
+        const s = Math.max(cIn, vinMin), e = Math.min(cOut, voutMin);
+        overlap = Math.max(0, e - s);   // 휴가가 인정 근무시간과 겹치는 부분
+      }
+      officePhysical = stay - overlap;
+      officeWork = calcWork(officePhysical);
+      brk = officePhysical - officeWork;
     }
-    officePhysical = stay - overlap;
-    officeWork = calcWork(officePhysical);
-    brk = officePhysical - officeWork;
   }
   const vacRangeLen = (vinMin !== null && voutMin !== null && voutMin > vinMin) ? (voutMin - vinMin) : null;
   return {
-    officeValid, officePhysical, officeWork, brk, vh,
+    officeValid, officePhysical, officeWork, brk, vh, clamped,
     total: officeWork + vh,
     vacMismatch: (vh > 0 && vacRangeLen !== null && vacRangeLen !== vh)
   };
@@ -527,29 +558,103 @@ function toMin(t){
   return h*60 + m;
 }
 
-/* 24시간 시간 입력 마스크
-   - 숫자만 입력받아 자동으로 "HH:MM" 형식으로 정리
-   - 오전/오후 표기 없음, 브라우저 설정과 무관하게 동일하게 동작 */
+/* 느슨한 파싱: 부분 입력도 분으로 변환 ("8"→480, "830"→510) */
+function parseLooseMin(str){
+  const d = String(str).replace(/[^0-9]/g,'');
+  if(d.length === 0) return null;
+  let h, m;
+  if(d.length <= 2){ h = +d; m = 0; }
+  else if(d.length === 3){ h = +d.slice(0,1); m = +d.slice(1); }
+  else { h = +d.slice(0,2); m = +d.slice(2); }
+  if(isNaN(h) || isNaN(m) || h > 23 || m > 59) return null;
+  return h*60 + m;
+}
+function minToHHMM(m){
+  return String(Math.floor(m/60)).padStart(2,'0') + ':' + String(m%60).padStart(2,'0');
+}
+
+/* 24시간 시간 입력 마스크 + ▲▼ 스텝퍼(1분 단위) + 키보드 위/아래
+   - 오전/오후 표기 없음
+   - 기존 값의 일부만 고쳐도 나머지가 밀리지 않도록 개선 */
 function attachTimeMask(el, onChange){
   el.addEventListener('focus', ()=>{ try{ el.select(); }catch(e){} });
-  // 입력 중: 숫자만 남기고 3자리 이상이면 콜론 자동 삽입
+
+  // 입력 중: 값이 실제로 바뀔 때만 재설정(커서 튐 방지)
   el.addEventListener('input', ()=>{
-    const d = el.value.replace(/[^0-9]/g,'').slice(0,4);
-    el.value = d.length >= 3 ? d.slice(0,2)+':'+d.slice(2) : d;
+    let v = el.value.replace(/[^0-9:]/g,'');
+    const ci = v.indexOf(':');
+    if(ci !== -1) v = v.slice(0, ci+1) + v.slice(ci+1).replace(/:/g,'');
+    const caretAtEnd = el.selectionStart >= el.value.length;
+    if(v.indexOf(':') !== -1){
+      const p = v.split(':');
+      v = p[0].slice(0,2) + ':' + p[1].slice(0,2);
+    } else {
+      const d = v.slice(0,4);
+      if(d.length >= 3) v = d.slice(0,2) + ':' + d.slice(2);
+      else if(d.length === 2 && caretAtEnd) v = d + ':';
+      else v = d;
+    }
+    if(v !== el.value) el.value = v;   // 변경될 때만 대입 → 부분 수정 시 커서 유지
     onChange();
   });
-  // 포커스 아웃: 축약 입력 정규화 ("8"→"08:00", "830"→"08:30")
+
+  // 포커스 아웃: 정규화 ("8"→"08:00", "830"→"08:30")
   el.addEventListener('blur', ()=>{
-    const d = el.value.replace(/[^0-9]/g,'');
-    if(d.length === 0){ el.value=''; onChange(); return; }
-    let h, m;
-    if(d.length <= 2){ h = parseInt(d,10); m = 0; }
-    else if(d.length === 3){ h = parseInt(d.slice(0,1),10); m = parseInt(d.slice(1),10); }
-    else { h = parseInt(d.slice(0,2),10); m = parseInt(d.slice(2),10); }
-    el.value = (isNaN(h)||isNaN(m)||h>23||m>59)
-      ? '' : String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');
+    const m = parseLooseMin(el.value);
+    el.value = (el.value.replace(/[^0-9]/g,'').length === 0 || m === null) ? '' : minToHHMM(m);
     onChange();
   });
+
+  // 1분 단위 증감
+  function step(delta){
+    let m = parseLooseMin(el.value);
+    if(m === null) m = 0;
+    m = (m + delta + 1440) % 1440;
+    el.value = minToHHMM(m);
+    onChange();
+  }
+  // 키보드 위/아래
+  el.addEventListener('keydown', e=>{
+    if(e.key === 'ArrowUp'){ e.preventDefault(); step(1); }
+    else if(e.key === 'ArrowDown'){ e.preventDefault(); step(-1); }
+  });
+
+  // ▲▼ 버튼 래핑 (누르고 있으면 연속 증감)
+  if(el.parentNode){
+    const wrap = document.createElement('span');
+    wrap.className = 'timewrap';
+    el.parentNode.insertBefore(wrap, el);
+    wrap.appendChild(el);
+    const stepper = document.createElement('span');
+    stepper.className = 'stepper';
+    const up = document.createElement('button');
+    up.type = 'button'; up.className = 'stepbtn'; up.textContent = '▲'; up.tabIndex = -1;
+    const dn = document.createElement('button');
+    dn.type = 'button'; dn.className = 'stepbtn'; dn.textContent = '▼'; dn.tabIndex = -1;
+    holdRepeat(up, ()=>step(1));
+    holdRepeat(dn, ()=>step(-1));
+    stepper.appendChild(up); stepper.appendChild(dn);
+    wrap.appendChild(stepper);
+  }
+}
+/* 버튼을 누르는 동안 fn을 반복 실행 (짧게 누르면 1회) */
+function holdRepeat(btn, fn){
+  let delayTimer = null, repeatTimer = null;
+  function start(e){
+    if(e){ e.preventDefault(); }          // 포커스 이동·텍스트 선택·중복 이벤트 방지
+    stop();
+    fn();                                  // 즉시 1회
+    delayTimer = setTimeout(()=>{          // 잠시 후부터 연속 반복
+      repeatTimer = setInterval(fn, 60);
+    }, 350);
+  }
+  function stop(){
+    clearTimeout(delayTimer); clearInterval(repeatTimer);
+    delayTimer = repeatTimer = null;
+  }
+  btn.addEventListener('mousedown', start);
+  btn.addEventListener('touchstart', start, { passive:false });
+  ['mouseup','mouseleave','touchend','touchcancel','blur'].forEach(ev=> btn.addEventListener(ev, stop));
 }
 /* 분 → "N시간 M분" (1시간 미만은 "M분"만) */
 function fmtDur(min){
@@ -790,13 +895,14 @@ function renderCalc(){
   const badTime = (i!==null && o!==null && o<=i);
   const r = computeDay(i, o, vac, vin, vout);
 
-  // 효율적인 퇴근 시간 힌트 (출근 시간 기준)
+  // 효율적인 퇴근 시간 힌트 (근무인정 시작 07:30 반영)
   if(i !== null){
+    const effIn = Math.max(i, REC_START);
     effHint.style.display = 'block';
     effHint.innerHTML =
       `<span class="eff-title">효율적인 퇴근 시간 · 휴게 손실 없는 최대치</span>` +
-      `<b>${minToClock(i+509)}</b> 퇴근 → 실근무 7시간 59분 (휴게 30분)<br>` +
-      `<b>${minToClock(i+779)}</b> 퇴근 → 실근무 11시간 59분 (휴게 1시간)`;
+      `<b>${minToClock(effIn+509)}</b> 퇴근 → 실근무 7시간 59분 (휴게 30분)<br>` +
+      `<b>${minToClock(effIn+779)}</b> 퇴근 → 실근무 11시간 59분 (휴게 1시간)`;
   } else {
     effHint.style.display = 'none';
   }
@@ -818,7 +924,8 @@ function renderCalc(){
   if(r.vh > 0){
     meta += `<span>휴가 <b>${vacLabel(vac)} · ${fmtDur(r.vh)}</b></span>`;
   }
-  if(r.officeValid && (o - i) >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
+  if(r.officeValid && r.officePhysical >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
+  if(r.clamped) meta += `<span style="color:var(--amber)">근무인정 07:30~23:30 적용</span>`;
   if(r.vacMismatch) meta += `<span style="color:var(--warn)">휴가 시간대 길이가 휴가 종류와 다릅니다</span>`;
   calcMeta.innerHTML = meta;
 }
@@ -835,20 +942,24 @@ const leaveVal = document.getElementById('leaveVal');
 const leaveMeta = document.getElementById('leaveMeta');
 
 function renderLeave(){
-  const i = toMin(leaveIn.value);
+  const iRaw = toMin(leaveIn.value);
   const W = toMin(leaveTarget.value);   // 원하는 실근무(시:분) → 분
-  if(i === null || W === null || W <= 0){
+  if(iRaw === null || W === null || W <= 0){
     leaveVal.textContent = '–';
     leaveMeta.innerHTML = '';
     return;
   }
+  const i = Math.max(iRaw, REC_START);  // 07:30 이전 출근은 07:30부터 인정
   const stay = stayForWork(W);
   const brk = stay - W;
-  leaveVal.textContent = minToClock(i + stay);
-  leaveMeta.innerHTML =
-    `<span>체류 <b>${fmtDur(stay)}</b></span>` +
-    `<span>휴게시간 <b>${fmtBreak(brk)}</b></span>` +
-    `<span>실근무 <b>${fmtDur(W)}</b></span>`;
+  const outM = i + stay;
+  leaveVal.textContent = minToClock(outM);
+  let meta = `<span>체류 <b>${fmtDur(stay)}</b></span>` +
+             `<span>휴게시간 <b>${fmtBreak(brk)}</b></span>` +
+             `<span>실근무 <b>${fmtDur(W)}</b></span>`;
+  if(iRaw < REC_START) meta += `<span style="color:var(--amber)">근무인정 시작 07:30 적용</span>`;
+  if(outM > REC_END) meta += `<span style="color:var(--warn)">근무인정 종료(23:30)를 초과합니다</span>`;
+  leaveMeta.innerHTML = meta;
 }
 attachTimeMask(leaveIn, renderLeave);
 attachTimeMask(leaveTarget, renderLeave);
@@ -1068,6 +1179,10 @@ function buildCalendar(){
       // 야근식대 (실제 사무실 체류 기준)
       if(r.officeValid && isMealSupport(dow, r.officePhysical, !!hol)){
         const b=document.createElement('span'); b.className='badge meal'; b.textContent='야근식대'; badges.appendChild(b);
+      }
+      // 근무인정시간(07:30~23:30) 적용됨
+      if(r.clamped){
+        const b=document.createElement('span'); b.className='badge clamp'; b.textContent='인정시간'; badges.appendChild(b);
       }
       // 코어타임 미충족 (휴가가 없는 순수 사무실 근무일에만 확인)
       if(r.officeValid && r.vh === 0 && !meetsCore(dow, im, om, !!hol)){
