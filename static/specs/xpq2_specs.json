@@ -67,7 +67,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.0 GHz"
+          "value": {
+            "ko": "1.2 GHz Single Core",
+            "en": "1.2 GHz Single Core",
+            "es": "1.2 GHz de un núcleo",
+            "ja": "1.2 GHz 1 コア"
+          }
         },
         "memory": {
           "label": "메모리",
