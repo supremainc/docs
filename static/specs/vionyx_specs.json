@@ -16,7 +16,8 @@
             "ko": "MicroSD, SDHC, SDXC 지원 (최대 1 TB)",
             "en": "Supports MicroSD, SDHC, SDXC (Up to 1 TB)",
             "es": "Admite MicroSD, SDHC, SDXC (hasta 1 TB)",
-            "ja": "MicroSD、SDHC、SDXC サポート（最大 1 TB）"
+            "ja": "MicroSD、SDHC、SDXC サポート（最大 1 TB）",
+            "ru": "Поддержка MicroSD, SDHC, SDXC (до 1 ТБ)"
           }
         },
         "operating_temp": {
@@ -26,7 +27,8 @@
             "ko": "-40 °C ~ 50 °C",
             "en": "-40 °C ~ 50 °C",
             "es": "De -40 °C a 50 °C",
-            "ja": "-40 °C ~ 50 °C"
+            "ja": "-40 °C ~ 50 °C",
+            "ru": "От -40 °C до 50 °C"
           }
         },
         "storage_temp": {
@@ -36,7 +38,8 @@
             "ko": "-40 °C ~ 70 °C",
             "en": "-40 °C ~ 70 °C",
             "es": "De -40 °C a 70 °C",
-            "ja": "-40 °C ~ 70 °C"
+            "ja": "-40 °C ~ 70 °C",
+            "ru": "От -40 °C до 70 °C"
           }
         },
         "operating_humidity": {
@@ -46,7 +49,8 @@
             "ko": "0 % ~ 90 %, 비응축",
             "en": "0 % ~ 90 %, non-condensing",
             "es": "Del 0 % al 90 %, sin condensación",
-            "ja": "0 % ~ 90 %（結露なきこと）"
+            "ja": "0 % ~ 90 %（結露なきこと）",
+            "ru": "От 0 % до 90 %, без конденсации"
           }
         },
         "storage_humidity": {
@@ -56,7 +60,8 @@
             "ko": "0 % ~ 90 %, 비응축",
             "en": "0 % ~ 90 %, non-condensing",
             "es": "Del 0 % al 90 %, sin condensación",
-            "ja": "0 % ~ 90 %（結露なきこと）"
+            "ja": "0 % ~ 90 %（結露なきこと）",
+            "ru": "От 0 % до 90 %, без конденсации"
           }
         },
         "dimensions": {
@@ -67,12 +72,24 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": "155.5 x 155.5 x 68.9 (mm)"
+              "value": {
+                "ko": "155.5 x 155.5 x 68.9 (mm)",
+                "en": "155.5 x 155.5 x 68.9 (mm)",
+                "es": "155.5 x 155.5 x 68.9 (mm)",
+                "ja": "155.5 x 155.5 x 68.9 (mm)",
+                "ru": "155,5 x 155,5 x 68,9 (мм)"
+              }
             },
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
-              "value": "148.15 x 148.15 (mm)"
+              "value": {
+                "ko": "148.15 x 148.15 (mm)",
+                "en": "148.15 x 148.15 (mm)",
+                "es": "148.15 x 148.15 (mm)",
+                "ja": "148.15 x 148.15 (mm)",
+                "ru": "148,15 x 148,15 (мм)"
+              }
             }
           }
         },
@@ -84,7 +101,13 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": "1.8 kg"
+              "value": {
+                "ko": "1.8 kg",
+                "en": "1.8 kg",
+                "es": "1.8 kg",
+                "ja": "1.8 kg",
+                "ru": "1,8 кг"
+              }
             },
             "model2": {
               "label": "브래킷",
@@ -93,7 +116,8 @@
                 "ko": "188 g (와셔 및 볼트 포함)",
                 "en": "188 g (including washers and bolts)",
                 "es": "188 g (incluye arandelas y tornillos)",
-                "ja": "188 g (ワッシャーおよびボルトを含む)"
+                "ja": "188 g (ワッシャーおよびボルトを含む)",
+                "ru": "188 г (включая шайбы и болты)"
               }
             }
           }
@@ -106,7 +130,8 @@
             "ko": "IP66, IP67, NEMA 4X",
             "en": "IP66, IP67, NEMA 4X",
             "es": "IP66, IP67, NEMA 4X",
-            "ja": "IP66、IP67、NEMA 4X"
+            "ja": "IP66、IP67、NEMA 4X",
+            "ru": "IP66, IP67, NEMA 4X"
           }
         },
         "ik_rating": {
@@ -122,7 +147,8 @@
             "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
             "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
             "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE"
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE",
+            "ru": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE"
           }
         }
       }
@@ -138,7 +164,8 @@
             "ko": "1/1.6\" 12MP (3520 x 3520)",
             "en": "1/1.6\" 12MP (3520 x 3520)",
             "es": "1/1.6\" 12MP (3520 x 3520)",
-            "ja": "1/1.6\" 1200 万画素 (3520 x 3520)"
+            "ja": "1/1.6\" 1200 万画素 (3520 x 3520)",
+            "ru": "1/1.6\" 12 МП (3520 x 3520)"
           }
         },
         "lens": {
@@ -148,7 +175,8 @@
             "ko": ["초점 거리: 1.7 mm", "조리개: F2.0"],
             "en": ["Focal Length: 1.7 mm", "Aperture: F2.0"],
             "es": ["Distancia focal: 1.7 mm", "Apertura: F2.0"],
-            "ja": ["焦点距離：1.7 mm", "絞り：F2.0"]
+            "ja": ["焦点距離：1.7 mm", "絞り：F2.0"],
+            "ru": ["Фокусное расстояние: 1,7 мм", "Диафрагма: F2.0"]
           }
         },
         "fov": {
@@ -158,7 +186,8 @@
             "ko": "180° (최소 거리: 50 cm)",
             "en": "180° (Min distance: 50 cm)",
             "es": "180° (Distancia mínima: 50 cm)",
-            "ja": "180° (最小距離：50 cm)"
+            "ja": "180° (最小距離：50 cm)",
+            "ru": "180° (мин. расстояние: 50 см)"
           }
         },
         "min_illumination": {
@@ -168,7 +197,8 @@
             "ko": ["컬러: 0.01 lux 이하", "IR: 0 lux"],
             "en": ["Color: ≤ 0.01 lux", "IR: 0 lux"],
             "es": ["Color: ≤ 0.01 lux", "IR: 0 lux"],
-            "ja": ["カラー：0.01 lux 以下", "IR：0 lux"]
+            "ja": ["カラー：0.01 lux 以下", "IR：0 lux"],
+            "ru": ["Цвет: ≤ 0.01 люкс", "ИК: 0 люкс"]
           }
         },
         "zoom": {
@@ -178,7 +208,8 @@
             "ko": ["디지털 줌 12배 이상", "ePTZ 지원"],
             "en": ["Digital Zoom ≥ x12", "ePTZ supported"],
             "es": ["Zoom digital ≥ x12", "ePTZ compatible"],
-            "ja": ["デジタルズーム 12 倍以上", "ePTZ サポート"]
+            "ja": ["デジタルズーム 12 倍以上", "ePTZ サポート"],
+            "ru": ["Цифровой зум ≥ x12", "Поддержка ePTZ"]
           }
         },
         "ir_led": {
@@ -188,7 +219,8 @@
             "ko": "10개 (IR 컷 필터 지원)",
             "en": "10 ea (IR Cut Filter supported)",
             "es": "10 unidades (Filtro de corte IR admitido)",
-            "ja": "10 個（IR カットフィルターサポート）"
+            "ja": "10 個（IR カットフィルターサポート）",
+            "ru": "10 шт. (поддержка ИК-фильтра)"
           }
         }
       }
@@ -204,7 +236,8 @@
             "ko": "H.265, H.264, MJPEG",
             "en": "H.265, H.264, MJPEG",
             "es": "H.265, H.264, MJPEG",
-            "ja": "H.265、H.264、MJPEG"
+            "ja": "H.265、H.264、MJPEG",
+            "ru": "H.265, H.264, MJPEG"
           }
         },
         "wdr": {
@@ -219,7 +252,8 @@
             "ko": ["스피커", "내장형 마이크<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
             "en": ["Speaker", "Built-in Mic<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
             "es": ["Altavoz", "Micrófono incorporado<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
-            "ja": ["スピーカー", "内蔵マイク<sup id='anno1_dest'><a href='#anno1'></a></sup>"]
+            "ja": ["スピーカー", "内蔵マイク<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "ru": ["Динамик", "Встроенный микрофон<sup id='anno1_dest'><a href='#anno1'></a></sup>"]
           }
         }
       }
@@ -235,7 +269,8 @@
             "ko": "지원 (10/100/1000 Mbps, 자동 MDI/MDI-X)",
             "en": "Supported (10/100/1000 Mbps, auto MDI/MDI-X)",
             "es": "Admitida (10/100/1000 Mbps, MDI/MDI-X automática)",
-            "ja": "サポート対象（10/100/1000 Mbps、自動 MDI/MDI-X）"
+            "ja": "サポート対象（10/100/1000 Mbps、自動 MDI/MDI-X）",
+            "ru": "Поддерживается (10/100/1000 Мбит/с, автоматическое определение MDI/MDI-X)"
           }
         },
         "network_protocol": {
@@ -252,7 +287,8 @@
             "ko": "1채널",
             "en": "1 ch",
             "es": "1 canal",
-            "ja": "1 チャンネル"
+            "ja": "1 チャンネル",
+            "ru": "1 канал"
           }
         },
         "rs485_protocol": {
@@ -262,7 +298,8 @@
             "ko": "OSDP V2 호환",
             "en": "OSDP V2 compliant",
             "es": "Compatible con OSDP V2",
-            "ja": "OSDP V2 準拠"
+            "ja": "OSDP V2 準拠",
+            "ru": "Соответствует OSDP V2"
           }
         },
         "alarm": {
@@ -272,7 +309,8 @@
             "ko": "1채널 입력",
             "en": "1 ch Input",
             "es": "Entrada de 1 canal",
-            "ja": "1 チャンネル入力"
+            "ja": "1 チャンネル入力",
+            "ru": "Вход 1 канал"
           }
         },
         "relay": {
@@ -282,7 +320,8 @@
             "ko": "1개 (1 A @ 30 VDC)",
             "en": "1 relay (1 A @ 30 VDC)",
             "es": "1 relé (1 A a 30 VCC)",
-            "ja": "1 リレー (1 A @ 30 VDC)"
+            "ja": "1 リレー (1 A @ 30 VDC)",
+            "ru": "1 реле (1 А при 30 В пост. тока)"
           }
         },
         "audio": {
@@ -294,7 +333,8 @@
             "ko": ["1채널 입력 (LINE IN, 지원 전압: 2.5 VDC)", "1채널 출력 (LINE OUT, 최대 출력: 1 Vrms)"],
             "en": ["1-channel input (LINE IN, Supported voltage: 2.5 VDC)", "1-channel output (LINE OUT, Maximum output: 1 Vrms)"],
             "es": ["Entrada de 1 canal (LINE IN, voltaje admitido: 2.5 VDC)", "Salida de 1 canal (LINE OUT, salida máxima: 1 Vrms)"],
-            "ja": ["1チャンネル入力 (LINE IN、対応電圧：2.5 VDC)", "1チャンネル出力 (LINE OUT、最大出力：1 Vrms)"]
+            "ja": ["1チャンネル入力 (LINE IN、対応電圧：2.5 VDC)", "1チャンネル出力 (LINE OUT、最大出力：1 Vrms)"],
+            "ru": ["Вход 1 канал (LINE IN, поддерживаемое напряжение: 2.5 В пост. тока)", "Выход 1 канал (LINE OUT, максимальный выход: 1 Vrms)"]
           }
         },
         "poe": {
@@ -304,7 +344,8 @@
             "ko": "지원 (IEEE 802.3af 호환)",
             "en": "Supported (IEEE 802.3af compliant)",
             "es": "Compatible (compatible con IEEE 802.3af)",
-            "ja": "対応（IEEE 802.3af 互換）"
+            "ja": "対応（IEEE 802.3af 互換）",
+            "ru": "Поддерживается (соответствует IEEE 802.3af)"
           }
         },
         "poe_plus": {
@@ -315,7 +356,8 @@
              "ko": "지원 (IEEE 802.3at 호환)",
              "en": "Supported (IEEE 802.3at compliant)",
              "es": "Compatible (compatible con IEEE 802.3at)",
-             "ja": "対応（IEEE 802.3at 互換）"
+             "ja": "対応（IEEE 802.3at 互換）",
+             "ru": "Поддерживается (соответствует IEEE 802.3at)"
           }
         },
         "rtsp": {
@@ -332,7 +374,8 @@
             "ko": "USB Type-A",
             "en": "USB Type-A",
             "es": "USB Tipo-A",
-            "ja": "USB Type-A"
+            "ja": "USB Type-A",
+            "ru": "USB Type-A"
           }
         },
         "tamper": {
@@ -370,7 +413,8 @@
                "ko": ["최대 12 W", "12 VDC: 1.0 A"],
                "en": ["Max. 12 W", "12 VDC: 1.0 A"],
                "es": ["Máx. 12 W", "12 VDC: 1.0 A"],
-               "ja": ["最大 12 W", "12 VDC：1.0 A"]
+               "ja": ["最大 12 W", "12 VDC：1.0 A"],
+               "ru": ["Макс. 12 Вт", "12 В пост. тока: 1,0 А"]
               }
             },
             "model2": {
@@ -380,7 +424,8 @@
                "ko": ["최대 22 W", "12 VDC: 1.8 A"],
                "en": ["Max. 22 W", "12 VDC: 1.8 A"],
                "es": ["Máx. 22 W", "12 VDC: 1.8 A"],
-               "ja": ["最大 22 W", "12 VDC：1.8 A"]
+               "ja": ["最大 22 W", "12 VDC：1.8 A"],
+               "ru": ["Макс. 22 Вт", "12 В пост. тока: 1,8 А"]
               }
             }
           }
@@ -392,7 +437,8 @@
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
             "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
-            "ja": [ "最小：3 V", "最大：5 V" ]
+            "ja": [ "最小：3 V", "最大：5 V" ],
+            "ru": [ "Мин.: 3 В", "Макс.: 5 В" ]
           }
         },
         "alarm_input_vil": {
@@ -402,7 +448,8 @@
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
             "es": "Máx.: 1 V",
-            "ja": "最大：1 V"
+            "ja": "最大：1 V",
+            "ru": "Макс.: 1 В"
           }
         }
       }

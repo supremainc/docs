@@ -1,0 +1,1278 @@
+{
+  "externalLinks.BioStation2a.desc": {
+    "message": "Почувствуйте мощь ИИ"
+  },
+  "externalLinks.BioEntryW3.desc": {
+    "message": "Простое, надежное, безопасное<br/>устройство распознавания лица на базе ИИ"
+  },
+  "externalLinks.BioStation3.desc": {
+    "message": "Новый опыт доступа через дверь"
+  },
+  "externalLinks.FaceStationF2.desc": {
+    "message": "Fusion Multimodal Terminal"
+  },
+  "externalLinks.XStation2.desc": {
+    "message": "Универсальный интеллектуальный терминал"
+  },
+  "externalLinks.BioentryP2.desc": {
+    "message": "Компактное IP-устройство для отпечатков пальцев"
+  },
+  "externalLinks.XPass2.desc": {
+    "message": "Компактный наружный RFID-считыватель"
+  },
+  "externalLinks.XPassS2.desc": {
+    "message": "IP RFID-устройство"
+  },
+  "externalLinks.Aiirfobpatch.desc": {
+    "message": "Преобразователь мобильного телефона в RF-карту"
+  },
+  "externalLinks.CoreStation.desc": {
+    "message": "Интеллектуальный биометрический контроллер"
+  },
+  "externalLinks.CoreStation20.desc": {
+    "message": "Мощная безопасность, гибкое расширение"
+  },
+  "externalLinks.CoreStationEnclosure.desc": {
+    "message": "Корпус для CoreStation"
+  },
+  "externalLinks.peripheral.im120.desc": {
+    "message": "Модуль расширения с несколькими входами"
+  },
+  "externalLinks.peripheral.om120.desc": {
+    "message": "Модуль расширения с несколькими выходами"
+  },
+  "externalLinks.peripheral.di24.desc": {
+    "message": "Масштабируемое управление, бесперебойный доступ"
+  },
+  "externalLinks.peripheral.sio2.desc": {
+    "message": "Модуль управления безопасностью дверного доступа"
+  },
+  "externalLinks.peripheral.extendedmodule.desc": {
+    "message": "Масштабируемый модуль связи и безопасности"
+  },
+  "externalLinks.apps.devicemanager.desc": {
+    "message": "Мобильное приложение для управления устройствами контроля доступа"
+  },
+  "externalLinks.apps.setupmanager.desc": {
+    "message": "Веб-сервер централизованного управления контролем доступа"
+  },
+  "externalLinks.ViOnyx.desc": {
+    "message": "Интеллектуальная камера видеоаналитики на базе ИИ"
+  },
+  "externalLinks.BioStation3Max.desc": {
+    "message": "Интеллектуальный биометрический терминал на базе ИИ"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Навигационная цепочка",
+    "description": "ARIA-метка для навигационной цепочки"
+  },
+  "theme.admonition.caution": {
+    "message": "Предупреждение",
+    "description": "Стандартная метка, используемая для предупреждения Caution (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "Опасность",
+    "description": "Стандартная метка, используемая для предупреждения Danger (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "Информация",
+    "description": "Стандартная метка, используемая для предупреждения Info (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "Примечание",
+    "description": "Стандартная метка, используемая для предупреждения Note (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "Совет",
+    "description": "Стандартная метка, используемая для предупреждения Tip (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "Предупреждение",
+    "description": "Стандартная метка, используемая для предупреждения Warning (:::warning)"
+  },
+  "theme.admonition.important": {
+    "message": "Важно",
+    "description": "Стандартная метка, используемая для предупреждения Important (:::important)"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Домой",
+    "description": "ARIA-метка для главной страницы в навигационной цепочке"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Эта страница дала сбой.",
+    "description": "Заголовок запасной страницы, когда страница дала сбой"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Прокрутить обратно наверх",
+    "description": "ARIA-метка для кнопки возврата наверх"
+  },
+  "theme.blog.archive.title": {
+    "message": "Архив",
+    "description": "Заголовок страницы и hero-блок страницы архива блога"
+  },
+  "theme.blog.archive.description": {
+    "message": "Архив",
+    "description": "Описание страницы и hero-блок страницы архива блога"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Навигация по странице списка блога",
+    "description": "ARIA-метка для пагинации блога"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Более новые записи",
+    "description": "Метка для перехода на страницу более новых записей блога (предыдущая страница)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Более старые записи",
+    "description": "Метка для перехода на страницу более старых записей блога (следующая страница)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Навигация по странице записи блога",
+    "description": "ARIA-метка для пагинации записей блога"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Более новая запись",
+    "description": "Метка кнопки записи блога для перехода к более новой/предыдущей записи"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Более старая запись",
+    "description": "Метка кнопки записи блога для перехода к более старой/следующей записи"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Показать все теги",
+    "description": "Метка ссылки, ведущей на страницу списка тегов"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Переключить между темной и светлой темой (сейчас {mode})",
+    "description": "ARIA-метка для переключателя цветового режима"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "Темный режим",
+    "description": "Название темного цветового режима"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "Светлый режим",
+    "description": "Название светлого цветового режима"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 элемент|{count} элементов",
+    "description": "Стандартное описание карточки категории в сгенерированном индексе о том, сколько элементов включает эта категория"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Страницы документации",
+    "description": "ARIA-метка для пагинации документации"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Предыдущая",
+    "description": "Метка для перехода к предыдущему документу"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Следующая",
+    "description": "Метка для перехода к следующему документу"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Один документ с тегом|{count} документов с тегом",
+    "description": "Склоняемая метка для \"{count} документов с тегом\". Используйте столько форм множественного числа (разделенных \"|\") сколько поддерживает ваш язык (см. https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} с \"{tagName}\"",
+    "description": "Заголовок страницы для тега документации"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Версия: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Это документация в разработке для версии {siteTitle} {versionLabel}.",
+    "description": "Метка, используемая для сообщения пользователю, что он просматривает версию документации в разработке"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Это документация для {siteTitle} {versionLabel}, которая больше не поддерживается.",
+    "description": "Метка, используемая для сообщения пользователю, что он просматривает неподдерживаемую версию документации"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Для актуальной документации см. {latestVersionLink} ({versionLabel}).",
+    "description": "Метка, используемая для сообщения пользователю о необходимости проверить последнюю версию"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "последняя версия",
+    "description": "Метка, используемая для ссылки-подсказки на последнюю версию"
+  },
+  "theme.common.editThisPage": {
+    "message": "Редактировать эту страницу",
+    "description": "Метка ссылки для редактирования текущей страницы"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Прямая ссылка и копирование для {heading}",
+    "description": "Заголовок ссылки на заголовок"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " на {date}",
+    "description": "Слова, используемые для указания даты последнего обновления страницы"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " от {user}",
+    "description": "Слова, используемые для указания того, кем была последнего обновлена страница"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Последнее обновление{atDate}{byUser}",
+    "description": "Предложение, используемое для отображения того, когда страница была последнего обновлена и кем"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Версии",
+    "description": "Метка для выпадающего списка версий в навбаре в мобильном виде"
+  },
+  "theme.NotFound.title": {
+    "message": "Страница не найдена",
+    "description": "Заголовок страницы 404"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Теги:",
+    "description": "Метка рядом со списком тегов"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Закрыть",
+    "description": "ARIA-метка для кнопки закрытия панели объявлений"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Навигация по недавним записям блога",
+    "description": "ARIA-метка для недавних записей в боковой панели блога"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Скопировано",
+    "description": "Метка кнопки \"Скопировано\" в блоках кода"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Скопировать код в буфер обмена",
+    "description": "ARIA-метка для кнопки копирования блоков кода"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Копировать",
+    "description": "Метка кнопки копирования в блоках кода"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Переключить перенос строк",
+    "description": "Атрибут title для кнопки переключения переноса строк в строках блока кода"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Развернуть категорию боковой панели '{label}'",
+    "description": "ARIA-метка для развертывания категории боковой панели"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Свернуть категорию боковой панели '{label}'",
+    "description": "ARIA-метка для сворачивания категории боковой панели"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Главная",
+    "description": "ARIA-метка для основной навигации"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Языки",
+    "description": "Метка для выпадающего списка переключения языка в мобильной версии"
+  },
+  "theme.NotFound.p1": {
+    "message": "Мы не смогли найти то, что вы искали.",
+    "description": "Первый абзац страницы 404"
+  },
+  "theme.NotFound.p2": {
+    "message": "Пожалуйста, свяжитесь с владельцем сайта, который привел вас на исходный URL, и сообщите ему, что его ссылка не работает.",
+    "description": "Второй абзац страницы 404"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Показать оглавление",
+    "description": "Метка, используемая кнопкой в сворачиваемом компоненте оглавления"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Читать далее",
+    "description": "Метка, используемая в отрывках записей блога для ссылки на полные записи блога"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Читать далее о {title}",
+    "description": "ARIA-метка для ссылки на полные записи блога из отрывков"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Чтение: 1 мин.|Чтение: {readingTime} мин.",
+    "description": "Склоняемая метка для \"{readingTime} min read\". Используйте столько форм множественного числа (разделенных \"|\") сколько поддерживает ваш язык (см. https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Свернуть боковую панель",
+    "description": "Атрибут title для кнопки сворачивания боковой панели документации"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Свернуть боковую панель",
+    "description": "Атрибут title для кнопки сворачивания боковой панели документации"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Боковая панель документации",
+    "description": "ARIA-метка для навигации боковой панели"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Закрыть панель навигации",
+    "description": "ARIA-метка для кнопки закрытия мобильной боковой панели"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Назад к главному меню",
+    "description": "Метка кнопки возврата в главное меню внутри вторичного меню мобильной боковой панели навбара (в частности используется для отображения боковой панели документации)"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Переключить панель навигации",
+    "description": "ARIA-метка для кнопки-«гамбургера» мобильной навигации"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Развернуть боковую панель",
+    "description": "ARIA-метка и атрибут title для кнопки развертывания боковой панели документации"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Развернуть боковую панель",
+    "description": "ARIA-метка и атрибут title для кнопки развертывания боковой панели документации"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Одна запись|{count} записей",
+    "description": "Склоняемая метка для \"{count} записей\". Используйте столько форм множественного числа (разделенных \"|\") сколько поддерживает ваш язык (см. https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} с тегом \"{tagName}\"",
+    "description": "Заголовок страницы для тега блога"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "Заголовок страницы для автора блога"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Авторы",
+    "description": "Заголовок страницы авторов"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Показать всех авторов",
+    "description": "Метка ссылки, ведущей на страницу авторов блога"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Этот автор пока не написал ни одной записи.",
+    "description": "Текст для авторов с 0 записей в блоге"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Страница без индексации",
+    "description": "Заголовок баннера контента без индексации"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Эта страница без индексации. Поисковые системы не будут индексировать ее, и доступ к ней будет только у пользователей, у которых есть прямая ссылка.",
+    "description": "Баннер сообщения о контенте без индексации"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Черновик страницы",
+    "description": "Заголовок баннера черновика"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Эта страница является черновиком. Она будет видна только в dev и будет исключена из production-сборки.",
+    "description": "Сообщение баннера черновика"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Попробовать еще раз",
+    "description": "Метка кнопки повторной попытки рендеринга, когда граница ошибок React перехватывает ошибку"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Перейти к основному содержимому",
+    "description": "Метка перехода к содержимому для доступности, позволяющая быстро перейти к основному содержимому с помощью навигации клавишами Tab/Enter"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Теги",
+    "description": "Заголовок страницы списка тегов"
+  },
+  "theme.docs.nextStep": {
+    "message": "Следующий шаг"
+  },
+  "theme.docs.overview.viewContent": {
+    "message": "Читать далее"
+  },
+  "theme.docs.glossary.all": {
+    "message": "Все",
+    "description": "Метка кнопки \"все\" в глоссарии"
+  },
+  "theme.figureCaption.desc": {
+    "message": "Изображение выше является примером экрана и может отличаться от фактического экрана."
+  },
+  "theme.cover.address": {
+    "message": "<b>Suprema Inc.</b><br/>17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, 13554, Rep. of KOREA<br/>Tel: +82 31 783 4502 | Fax: +82 31 783 4503 | Inquiry: sales_sys@supremainc.com"
+  },
+  "theme.cover.copyright": {
+    "message": "© 2025 Suprema Inc. Suprema и указанные здесь идентифицирующие названия и номера продуктов являются зарегистрированными товарными знаками Suprema, Inc.<br/>Все бренды и названия продуктов, не относящиеся к Suprema, являются товарными знаками или зарегистрированными товарными знаками соответствующих компаний.<br/>Внешний вид изделия, состояние сборки и/или технические характеристики могут быть изменены без предварительного уведомления."
+  },
+  "theme.cover.qrCodetext": {
+    "message": "Для получения дополнительной информации о глобальных филиалах Suprema,<br/>отсканируйте QR-код и перейдите на страницу ниже.<br/>https://supremainc.com/en/about/global-office.asp"
+  },
+  "theme.revision.badge": {
+    "message": "Затрагиваемая версия"
+  },
+  "index.search": {
+    "message": "Поиск"
+  },
+  "index.biostarx.subtitle": {
+    "message": "Одна платформа. Полная уверенность."
+  },
+  "index.biostarx.description": {
+    "message": "BioStar X — это единая платформа безопасности Suprema с лучшими в своем классе биометрическим доступом, интегрированным мониторингом и надежной инфраструктурой, созданной для масштабирования, непрерывной работы и соответствия требованиям."
+  },
+  "index.biostarair.subtitle": {
+    "message": "Без локальной установки. BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "Единственное решение для контроля доступа, которое нативно подключает к облаку самые передовые биометрические считыватели в мире."
+  },
+  "index.shortcut.linkText": {
+    "message": "Перейти →"
+  },
+  "index.shortcut.compare.title": {
+    "message": "Сравнить характеристики и спецификации продуктов"
+  },
+  "index.shortcut.compare.description": {
+    "message": "Вы можете сравнить характеристики и спецификации каждого продукта, предлагаемого Suprema. Сравните характеристики и спецификации разных продуктов с первого взгляда."
+  },
+  "index.shortcut.howto.title": {
+    "message": "Практические статьи"
+  },
+  "index.shortcut.howto.description": {
+    "message": "Пошаговые руководства, ориентированные на пользователя, помогут максимально эффективно использовать устройства и ПО Suprema. Следуйте инструкциям и примерам без труда."
+  },
+  "index.shortcut.docHub.title": {
+    "message": "Центр документов"
+  },
+  "index.shortcut.docHub.description": {
+    "message": "Скачивайте руководства по продуктам Suprema, примечания к выпуску, шаблоны для сверления и спецификации A&E — все в одном месте."
+  },
+  "index.productTitle.biometricsDevice": {
+    "message": "Биометрические устройства"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "Устройства RF/мобильные"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "Интеллектуальный контроллер"
+  },
+  "index.productTitle.peripheral": {
+    "message": "Периферия"
+  },
+  "index.productTitle.apps": {
+    "message": "ПРИЛОЖЕНИЯ"
+  },
+  "index.productTitle.developers": {
+    "message": "Разработчики"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "Изучить BioStar X →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "Изучить BioStar Air →"
+  },
+  "windows.key.start": {
+    "message": "Пуск"
+  },
+  "biostar2.install.ok": {
+    "message": "ОК"
+  },
+  "biostar2.install.agree": {
+    "message": "Я принимаю соглашение"
+  },
+  "biostar2.install.next": {
+    "message": "Следующая"
+  },
+  "biostar2.install.expressInstall": {
+    "message": "Экспресс-установка"
+  },
+  "biostar2.install.customInstall": {
+    "message": "Выборочная установка"
+  },
+  "biostar2.install.btnInstall": {
+    "message": "Установка"
+  },
+  "biostar2.install.complete": {
+    "message": "Завершить"
+  },
+  "specs.common.supported": {
+    "message": "Поддерживается"
+  },
+  "specs.common.Notsupported": {
+    "message": "Не поддерживается"
+  },
+  "specs.credentials": {
+    "message": "Учетные данные"
+  },
+  "specs.credentials.biometrics": {
+    "message": "Биометрия"
+  },
+  "specs.credentials.biometrics.face": {
+    "message": "Лицо"
+  },
+  "specs.credentials.biometrics.fingerprint": {
+    "message": "Отпечаток пальца"
+  },
+  "specs.credentials.rfcard": {
+    "message": "RF-карта"
+  },
+  "specs.credentials.rf_distance": {
+    "message": "Диапазон считывания RF"
+  },
+  "specs.credentials.multi_controller": {
+    "message": "Мультиконтроллер"
+  },
+  "specs.credentials.mobile": {
+    "message": "Мобильный"
+  },
+  "specs.credentials.keypad": {
+    "message": "Случайная клавиатура (PIN)"
+  },
+  "specs.credentials.qr_barcode": {
+    "message": "QR-код/штрихкод"
+  },
+  "specs.credentials.qr_barcode_read_range": {
+    "message": "Диапазон считывания QR-кода/штрихкода"
+  },
+  "specs.credentials.biometrics.face.auth_distance": {
+    "message": "Расстояние аутентификации"
+  },
+  "specs.credentials.biometrics.face.auth_height": {
+    "message": "Высота аутентификации"
+  },
+  "specs.credentials.biometrics.face.matching_speed": {
+    "message": "Скорость сопоставления"
+  },
+  "specs.credentials.biometrics.face.live_face_detection": {
+    "message": "Обнаружение живого лица"
+  },
+  "specs.credentials.biometrics.fingerprint.image_dimension": {
+    "message": "Размер изображения"
+  },
+  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+    "message": "Глубина цвета изображения"
+  },
+  "specs.credentials.biometrics.fingerprint.resolution": {
+    "message": "Разрешение"
+  },
+  "specs.credentials.biometrics.fingerprint.template": {
+    "message": "Шаблон"
+  },
+  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+    "message": "Извлекатель / Сопоставитель"
+  },
+  "specs.credentials.biometrics.fingerprint.sensor_certificates": {
+    "message": "Сертификаты датчика"
+  },
+  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+    "message": "Обнаружение живого отпечатка пальца"
+  },
+  "specs.general": {
+    "message": "Общие сведения"
+  },
+  "specs.general.modelName": {
+    "message": "Название модели"
+  },
+  "specs.general.cpu": {
+    "message": "CPU"
+  },
+  "specs.general.memory": {
+    "message": "Память"
+  },
+  "specs.general.crypto_chip": {
+    "message": "Крипточип"
+  },
+  "specs.general.lcd_type": {
+    "message": "Дисплей"
+  },
+  "specs.general.led_type": {
+    "message": "Светодиод"
+  },
+  "specs.general.led_type.multiColor": {
+    "message": "Многоцветный"
+  },
+  "specs.general.lcd_resolution": {
+    "message": "Разрешение дисплея"
+  },
+  "specs.general.sound": {
+    "message": "Звук"
+  },
+  "specs.general.operating_temp": {
+    "message": "Рабочая температура"
+  },
+  "specs.general.storage_temp": {
+    "message": "Температура хранения"
+  },
+  "specs.general.operating_humidity": {
+    "message": "Рабочая влажность"
+  },
+  "specs.general.storage_humidity": {
+    "message": "Влажность хранения"
+  },
+  "specs.general.operating_condition": {
+    "message": "Условия окружающей среды при эксплуатации"
+  },
+  "specs.general.camera": {
+    "message": "Камера"
+  },
+  "specs.general.camera_type": {
+    "message": "Тип камеры"
+  },
+  "specs.general.camera_resolution": {
+    "message": "Разрешение камеры"
+  },
+  "specs.general.camera_angle": {
+    "message": "Угол камеры"
+  },
+  "specs.general.ip_rating": {
+    "message": "Степень защиты IP"
+  },
+  "specs.general.ik_rating": {
+    "message": "Степень защиты IK"
+  },
+  "specs.general.certifications": {
+    "message": "Аутентификация"
+  },
+  "specs.general.supported_products": {
+    "message": "Поддерживаемые продукты"
+  },
+  "specs.general.material": {
+    "message": "Материал"
+  },
+  "specs.general.dimensions": {
+    "message": "Размеры (Ш x В x Г)"
+  },
+  "specs.general.weight": {
+    "message": "Вес"
+  },
+  "specs.general.weight.device": {
+    "message": "Устройство"
+  },
+  "specs.general.weight.bracket": {
+    "message": "Кронштейн"
+  },
+  "specs.storage": {
+    "message": "Ёмкость"
+  },
+  "specs.storage.max_users": {
+    "message": "Макс. число пользователей"
+  },
+  "specs.storage.max_credentials_1n": {
+    "message": "Макс. число учетных данных (1:N)"
+  },
+  "specs.storage.max_credentials_1on1": {
+    "message": "Макс. число учетных данных (1:1)"
+  },
+  "specs.storage.max_text_logs": {
+    "message": "Макс. текстовых журналов"
+  },
+  "specs.storage.max_image_logs": {
+    "message": "Макс. журналов изображений"
+  },
+  "specs.storage.max_card": {
+    "message": "Макс. число карт"
+  },
+  "specs.interface": {
+    "message": "Интерфейс"
+  },
+  "specs.interface.ethernet": {
+    "message": "Ethernet"
+  },
+  "specs.interface.wifi": {
+    "message": "Wi-Fi"
+  },
+  "specs.interface.network_protocol": {
+    "message": "Сетевой протокол"
+  },
+  "specs.interface.rs485": {
+    "message": "RS-485"
+  },
+  "specs.interface.rs232c": {
+    "message": "RS-232C"
+  },
+  "specs.interface.rs485_protocol": {
+    "message": "Протокол связи RS-485"
+  },
+  "specs.interface.wiegand": {
+    "message": "Wiegand"
+  },
+  "specs.interface.input": {
+    "message": "Вход"
+  },
+  "specs.interface.output": {
+    "message": "Выход"
+  },
+  "specs.interface.supervised": {
+    "message": "Контролируемый вход"
+  },
+  "specs.interface.auxInput": {
+    "message": "Вспомогательный вход"
+  },
+  "specs.interface.ttl_input": {
+    "message": "Вход TTL"
+  },
+  "specs.interface.relay": {
+    "message": "Реле"
+  },
+  "specs.interface.poe": {
+    "message": "PoE"
+  },
+  "specs.interface.poe_plus": {
+    "message": "PoE+"
+  },
+  "specs.interface.interphone": {
+    "message": "Домофон"
+  },
+  "specs.interface.rtsp": {
+    "message": "RTSP"
+  },
+  "specs.interface.usb": {
+    "message": "USB"
+  },
+  "specs.interface.usb_ext": {
+    "message": "Порт расширения USB"
+  },
+  "specs.interface.tamper": {
+    "message": "Тампер"
+  },
+  "specs.interface.micro_sd": {
+    "message": "Слот для карты Micro SD"
+  },
+  "specs.interface.samSlot": {
+    "message": "Слот SAM"
+  },
+  "specs.interface.led": {
+    "message": "Светодиод"
+  },
+  "specs.interface.beep": {
+    "message": "Звук сигнала"
+  },
+  "specs.power": {
+    "message": "Электрические параметры"
+  },
+  "specs.power.power": {
+    "message": "Питание"
+  },
+  "specs.power.power_output": {
+    "message": "Выходная мощность"
+  },
+  "specs.power.powerSupply": {
+    "message": "Блок питания (SMPS) ВХОД ПЕРЕМЕННОГО ТОКА"
+  },
+  "specs.power.power_consumption": {
+    "message": "Потребляемая мощность"
+  },
+  "specs.power.switch_input_vih": {
+    "message": "VIH входа переключателя"
+  },
+  "specs.power.alarm_input_vih": {
+    "message": "VIH входа тревоги"
+  },
+  "specs.power.led_beep_input_vih": {
+    "message": "VIH входа светодиода, звукового сигнала"
+  },
+  "specs.power.switch_input_vil": {
+    "message": "VIL входа переключателя"
+  },
+  "specs.power.alarm_input_vil": {
+    "message": "VIL входа тревоги"
+  },
+  "specs.power.led_beep_input_vil": {
+    "message": "VIL входа светодиода, звукового сигнала"
+  },
+  "specs.power.switch_pullup": {
+    "message": "Подтягивающее сопротивление входа переключателя"
+  },
+  "specs.power.led_beep_pullup": {
+    "message": "Подтягивающее сопротивление входа светодиода, звукового сигнала"
+  },
+  "specs.power.wiegand_voh": {
+    "message": "VOH выхода Wiegand"
+  },
+  "specs.power.wiegand_vol": {
+    "message": "VOL выхода Wiegand"
+  },
+  "specs.power.wiegand_pullup": {
+    "message": "Подтягивающее сопротивление выхода Wiegand"
+  },
+  "specs.power.relay": {
+    "message": "Реле"
+  },
+  "specs.power.poe12vout": {
+    "message": "PoE (12 В на выходе)"
+  },
+  "specs.power.poe_plus12vout": {
+    "message": "PoE+ (12 В на выходе)"
+  },
+  "specs.size_weight": {
+    "message": "Размеры и вес"
+  },
+  "specs.size_weight.size": {
+    "message": "Размеры"
+  },
+  "specs.size_weight.weight": {
+    "message": "Вес"
+  },
+  "specs.size_weight.device": {
+    "message": "Устройство"
+  },
+  "specs.size_weight.bracket": {
+    "message": "Кронштейн"
+  },
+  "specs.size_weight.bracket.weight_include": {
+    "message": "(Включая шайбы и болты)"
+  },
+  "specs.power_supply": {
+    "message": "Блок питания"
+  },
+  "specs.power_supply.modelName": {
+    "message": "Название модели"
+  },
+  "specs.power_supply.vendor": {
+    "message": "Поставщик"
+  },
+  "specs.power_supply.input": {
+    "message": "Вход"
+  },
+  "specs.power_supply.output": {
+    "message": "Выход"
+  },
+  "specs.backup_battery": {
+    "message": "Резервная батарея"
+  },
+  "specs.backup_battery.modelName": {
+    "message": "Название модели"
+  },
+  "specs.backup_battery.vendor": {
+    "message": "Поставщик"
+  },
+  "specs.backup_battery.voltage": {
+    "message": "Напряжение"
+  },
+  "specs.backup_battery.capacity": {
+    "message": "Ёмкость"
+  },
+  "specs.general.extended_memory": {
+    "message": "Расширяемая память"
+  },
+  "specs.camera": {
+    "message": "Камера"
+  },
+  "specs.camera.image_sensor": {
+    "message": "Датчик изображения"
+  },
+  "specs.camera.lens": {
+    "message": "Объектив"
+  },
+  "specs.camera.fov": {
+    "message": "Поле зрения (FOV)"
+  },
+  "specs.camera.min_illumination": {
+    "message": "Минимальная освещенность"
+  },
+  "specs.camera.zoom": {
+    "message": "Зум и PTZ"
+  },
+  "specs.camera.ir_led": {
+    "message": "ИК-светодиод"
+  },
+  "specs.video_audio": {
+    "message": "Видео и аудио"
+  },
+  "specs.video_audio.video_compression": {
+    "message": "Сжатие видео"
+  },
+  "specs.video_audio.wdr": {
+    "message": "Широкий динамический диапазон (WDR)"
+  },
+  "specs.video_audio.audio": {
+    "message": "Аудио"
+  },
+  "specs.interface.alarm": {
+    "message": "Тревога"
+  },
+  "specs.interface.audio": {
+    "message": "Аудио"
+  },
+  "externalLinks.FaceStation2.desc": {
+    "message": "IP-терминал для распознавания лица"
+  },
+  "externalLinks.BioStationL2.desc": {
+    "message": "IP-терминал для отпечатков пальцев"
+  },
+  "externalLinks.BioLiteN2.desc": {
+    "message": "Наружный IP-терминал для отпечатков пальцев"
+  },
+  "externalLinks.BioentryW2.desc": {
+    "message": "Наружное IP-устройство для отпечатков пальцев"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 документ найден|{count} документов найдено",
+    "description": "Склоняемая метка для \"{count} документов найдено\". Используйте столько форм множественного числа (разделенных \"|\") сколько поддерживает ваш язык (см. https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Результаты поиска по запросу \"{query}\"",
+    "description": "Заголовок страницы поиска для непустого запроса"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Поиск документов.",
+    "description": "Заголовок страницы поиска для пустого запроса"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Введите ваш запрос для поиска здесь.",
+    "description": "Заполнитель для поля поиска на странице поиска"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Поиск",
+    "description": "ARIA-метка для поля ввода на странице поиска"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Поиск через Algolia",
+    "description": "Метка-описание упоминания Algolia"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Нет результатов",
+    "description": "Абзац для пустого результата поиска"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Получение новых результатов...",
+    "description": "Абзац для получения новых результатов поиска"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Показать все {count} результатов"
+  },
+  "theme.SearchBar.label": {
+    "message": "Поиск",
+    "description": "ARIA-метка и заполнитель для кнопки поиска"
+  },
+  "theme.SearchBar.product.label": {
+    "message": "Продукты"
+  },
+  "theme.SearchBar.relatedDocs.title": {
+    "message": "Связанные документы",
+    "description": "Заголовок для связанных документов, показываемых во всплывающем окне поиска, когда запрос пуст"
+  },
+  "theme.SearchModal.searchBox.resetButtonTitle": {
+    "message": "Очистить запрос",
+    "description": "Метка и ARIA-метка для кнопки сброса поля поиска"
+  },
+  "theme.SearchModal.searchBox.cancelButtonText": {
+    "message": "Отмена",
+    "description": "Метка и ARIA-метка для кнопки отмены в поле поиска"
+  },
+  "theme.SearchModal.startScreen.recentSearchesTitle": {
+    "message": "Недавние",
+    "description": "Заголовок для недавних поисков"
+  },
+  "theme.SearchModal.startScreen.noRecentSearchesText": {
+    "message": "Недавних поисков нет",
+    "description": "Текст, когда недавних поисков нет"
+  },
+  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+    "message": "Сохранить этот поиск",
+    "description": "Заголовок кнопки сохранения недавнего поиска"
+  },
+  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+    "message": "Удалить этот поиск из истории",
+    "description": "Заголовок кнопки удаления недавнего поиска"
+  },
+  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+    "message": "Избранное",
+    "description": "Заголовок для избранных поисков"
+  },
+  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+    "message": "Удалить этот поиск из избранного",
+    "description": "Заголовок кнопки удаления из избранного"
+  },
+  "theme.SearchModal.errorScreen.titleText": {
+    "message": "Не удалось получить результаты",
+    "description": "Заголовок для экрана ошибки"
+  },
+  "theme.SearchModal.errorScreen.helpText": {
+    "message": "Возможно, стоит проверить ваше сетевое подключение.",
+    "description": "Текст справки для экрана ошибки"
+  },
+  "theme.SearchModal.footer.selectText": {
+    "message": "чтобы выбрать",
+    "description": "Текст выбора для подвала"
+  },
+  "theme.SearchModal.footer.selectKeyAriaLabel": {
+    "message": "Клавиша Enter",
+    "description": "ARIA-метка для клавиши выбора в подвале"
+  },
+  "theme.SearchModal.footer.navigateText": {
+    "message": "чтобы перемещаться",
+    "description": "Текст перемещения для подвала"
+  },
+  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+    "message": "Стрелка вверх",
+    "description": "ARIA-метка для клавиши перемещения вверх в подвале"
+  },
+  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+    "message": "Стрелка вниз",
+    "description": "ARIA-метка для клавиши перемещения вниз в подвале"
+  },
+  "theme.SearchModal.footer.closeText": {
+    "message": "чтобы закрыть",
+    "description": "Текст закрытия для подвала"
+  },
+  "theme.SearchModal.footer.closeKeyAriaLabel": {
+    "message": "Клавиша Escape",
+    "description": "ARIA-метка для клавиши закрытия в подвале"
+  },
+  "theme.SearchModal.footer.searchByText": {
+    "message": "Поиск по",
+    "description": "Текст \"Powered by\" для подвала"
+  },
+  "theme.SearchModal.noResultsScreen.noResultsText": {
+    "message": "Нет результатов для",
+    "description": "Текст, когда результатов нет"
+  },
+  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+    "message": "Попробуйте поискать",
+    "description": "Текст для предлагаемого запроса"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+    "message": "Думаете, что этот запрос должен вернуть результаты?",
+    "description": "Текст для сообщения об отсутствии результатов"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+    "message": "Сообщите нам.",
+    "description": "Текст ссылки для сообщения об отсутствии результатов"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "Поиск по документации",
+    "description": "Заполнитель всплывающего модального окна DocSearch"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "системный режим",
+    "description": "Название системного цветового режима"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Развернуть выпадающий список",
+    "description": "ARIA-метка кнопки для развертывания пункта выпадающего списка навбара на мобильном"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Свернуть выпадающий список",
+    "description": "ARIA-метка кнопки для сворачивания пункта выпадающего списка навбара на мобильном"
+  },
+  "theme.mslogin.buttonText": {
+    "message": "🔑 Вход с учетной записью Microsoft",
+    "description": "Текст кнопки входа"
+  },
+  "theme.typedefstruct.fieldDetails": {
+    "message": "Сведения о поле"
+  },
+  "theme.typedefstruct.availableValue": {
+    "message": "Доступные значения"
+  },
+  "theme.typedefstruct.value": {
+    "message": "Значение"
+  },
+  "theme.typedefstruct.description": {
+    "message": "Описание"
+  },
+  "theme.typedefstruct.references": {
+    "message": "Ссылки"
+  },
+  "theme.typedefstruct.relatedStructs": {
+    "message": "Связанные структуры"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(открывается в новой вкладке)",
+    "description": "ARIA-метка для иконки внешней ссылки"
+  },
+  "theme.SearchModal.searchBox.placeholderText": {
+    "message": "Поиск по документации",
+    "description": "Текст-заполнитель для основного поля поиска"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAi": {
+    "message": "Задайте другой вопрос...",
+    "description": "Текст-заполнитель в режиме вопроса ИИ"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
+    "message": "Идет ответ...",
+    "description": "Текст-заполнитель поля поиска, когда ИИ стримит ответ"
+  },
+  "theme.SearchModal.searchBox.enterKeyHint": {
+    "message": "Поиск",
+    "description": "Подсказка для текста клавиши Enter в поле поиска"
+  },
+  "theme.SearchModal.searchBox.enterKeyHintAskAi": {
+    "message": "Вход",
+    "description": "Подсказка для текста клавиши Enter в режиме вопроса ИИ"
+  },
+  "theme.SearchModal.searchBox.searchInputLabel": {
+    "message": "Поиск",
+    "description": "ARIA-метка для поля ввода поиска"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
+    "message": "Вернуться к поиску по ключевым словам",
+    "description": "Текст для кнопки возврата к поиску по ключевым словам"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
+    "message": "Вернуться к поиску по ключевым словам",
+    "description": "ARIA-метка для кнопки возврата к поиску по ключевым словам"
+  },
+  "theme.SearchModal.startScreen.recentConversationsTitle": {
+    "message": "Недавние разговоры",
+    "description": "Заголовок для недавних разговоров"
+  },
+  "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
+    "message": "Удалить этот разговор из истории",
+    "description": "Заголовок кнопки удаления недавнего разговора"
+  },
+  "theme.SearchModal.resultsScreen.askAiPlaceholder": {
+    "message": "Вопрос ИИ: ",
+    "description": "Текст-заполнитель для ввода вопроса ИИ"
+  },
+  "theme.SearchModal.askAiScreen.disclaimerText": {
+    "message": "Ответы генерируются ИИ, который может ошибаться. Проверяйте ответы.",
+    "description": "Текст дисклеймера для ответов ИИ"
+  },
+  "theme.SearchModal.askAiScreen.relatedSourcesText": {
+    "message": "Связанные источники",
+    "description": "Текст для связанных источников"
+  },
+  "theme.SearchModal.askAiScreen.thinkingText": {
+    "message": "Подумать...",
+    "description": "Текст, когда ИИ думает"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonText": {
+    "message": "Копировать",
+    "description": "Текст для кнопки копирования"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
+    "message": "Скопировано!",
+    "description": "Текст для кнопки копирования после копирования"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonTitle": {
+    "message": "Копировать",
+    "description": "Заголовок для кнопки копирования"
+  },
+  "theme.SearchModal.askAiScreen.likeButtonTitle": {
+    "message": "Нравится",
+    "description": "Заголовок для кнопки \"Нравится\""
+  },
+  "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
+    "message": "Не нравится",
+    "description": "Заголовок для кнопки \"Не нравится\""
+  },
+  "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
+    "message": "Спасибо за ваш отзыв!",
+    "description": "Текст благодарности за отзыв"
+  },
+  "theme.SearchModal.askAiScreen.preToolCallText": {
+    "message": "Поиск...",
+    "description": "Текст перед вызовом инструмента"
+  },
+  "theme.SearchModal.askAiScreen.duringToolCallText": {
+    "message": "Поиск: ",
+    "description": "Текст во время вызова инструмента"
+  },
+  "theme.SearchModal.askAiScreen.afterToolCallText": {
+    "message": "Искали ",
+    "description": "Текст после вызова инструмента"
+  },
+  "theme.SearchModal.footer.submitQuestionText": {
+    "message": "Отправить вопрос",
+    "description": "Текст отправки вопроса для подвала"
+  },
+  "theme.SearchModal.footer.backToSearchText": {
+    "message": "Вернуться к поиску",
+    "description": "Текст возврата к поиску для подвала"
+  },
+  "externalLinks.peripheral.dm20.desc": {
+    "message": "Модуль I/O безопасности для нескольких дверей"
+  },
+  "feedback.components.sendFeedback": {
+    "message": "Отправить отзыв"
+  },
+  "feedback.components.thanksForFeedback": {
+    "message": "Спасибо за ваш отзыв!"
+  },
+  "feedback.components.successSubtext": {
+    "message": "Ваш отзыв важен для улучшения документации."
+  },
+  "feedback.components.feedbackTitle": {
+    "message": "Была ли эта страница полезной?"
+  },
+  "feedback.components.feedbackDescription": {
+    "message": "Ваш отзыв важен для улучшения документации."
+  },
+  "feedback.components.feedbackTypeGood": {
+    "message": "Полезно."
+  },
+  "feedback.components.feedbackTypeBad": {
+    "message": "Требует доработки."
+  },
+  "feedback.components.quickSubmitButton.onGoing": {
+    "message": "Отправка..."
+  },
+  "feedback.components.quickSubmitButton.idle": {
+    "message": "Быстрая отправка (без дополнительных комментариев)"
+  },
+  "feedback.components.feedbackDetail": {
+    "message": "Пожалуйста, подробнее опишите ваш отзыв."
+  },
+  "feedback.components.required": {
+    "message": "(Обязательно)"
+  },
+  "feedback.components.optional": {
+    "message": "(Необязательно)"
+  },
+  "feedback.component.feedbackTextarea.negativePlaceholder": {
+    "message": "Пожалуйста, предоставьте подробную информацию о любых проблемах с документацией, чтобы мы могли решить их к вашему удовлетворению."
+  },
+  "feedback.component.feedbackTextarea.positivePlaceholder": {
+    "message": "Пожалуйста, свободно пишите о любых областях, требующих улучшения, или дополнительные комментарии."
+  },
+  "feedback.component.requiredNote": {
+    "message": "* Обязательно"
+  },
+  "feedback.components.errorMessage": {
+    "message": "При отправке вашего отзыва произошла ошибка. Пожалуйста, попробуйте еще раз позже."
+  },
+  "feedback.components.validationError": {
+    "message": "Пожалуйста, предоставьте подробный отзыв об областях, которые нужно улучшить."
+  },
+  "feedback.component.feedbackCompletedMessage": {
+    "message": "Отзыв отправлен"
+  },
+  "feedback.component.cancelButton.label": {
+    "message": "Отменить ввод отзыва"
+  },
+  "feedback.component.privacyNote": {
+    "message": "Отправленный отзыв используется исключительно для улучшения документации<br/>и не собирает персонально идентифицируемую информацию."
+  },
+  "externalLinks.XPassQ2.desc": {
+    "message": "Интеллектуальный QR RFID-считыватель"
+  },
+  "externalLinks.dev.sdk.desc": {
+    "message": "Интеграция основных функций устройства отпечатков пальцев со сторонним ПО"
+  },
+  "externalLinks.dev.xapi.desc": {
+    "message": "API-документация, позволяющая сразу увидеть все API BioStar X"
+  },
+  "externalLinks.dev.2api.desc": {
+    "message": "API-документация, позволяющая сразу увидеть все API BioStar 2"
+  },
+  "externalLinks.dev.gsdk.desc": {
+    "message": "Кроссплатформенное решение с поддержкой различных языков программирования"
+  },
+  "externalLinks.dev.svpsdk.desc": {
+    "message": "Основные функции устройств Suprema, поддерживаемые сторонним ПО"
+  },
+  "externalLinks.dev.bsair.desc": {
+    "message": "Бесшовная интеграция API с существующими системами"
+  },
+  "externalLinks.apps.supremapass.desc": {
+    "message": "Мобильные учетные данные BioStar Air"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "Очистить все"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "Очистить недавние поиски"
+  },
+  "theme.docCardList.prefix.latest": {
+    "message": "Последний"
+  },
+  "component.DocbreadcrumOption.print": {
+    "message": "Печать"
+  },
+  "component.DocbreadcrumOption.download": {
+    "message": "Скачать"
+  }
+}

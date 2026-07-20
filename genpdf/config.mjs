@@ -16,7 +16,7 @@ const ROOT_DIR = path.dirname(__dirname);
  * @returns {Object} Loaded translations
  */
 export function loadTranslations(language) {
-  const supportedLanguages = ['ko', 'en', 'es', 'ja'];
+  const supportedLanguages = ['ko', 'en', 'es', 'ja', 'ru'];
   const lang = supportedLanguages.includes(language) ? language : 'ko';
   const translationPath = path.join(ROOT_DIR, 'i18n', lang, 'code.json');
   
@@ -35,7 +35,7 @@ export function loadTranslations(language) {
  * @returns {string} Document base path
  */
 export function getDocBasePath(language) {
-  const supportedLanguages = ['ko', 'en', 'es', 'ja'];
+  const supportedLanguages = ['ko', 'en', 'es', 'ja', 'ru'];
   const lang = supportedLanguages.includes(language) ? language : 'ko';
   
   // Korean uses 'docs', others use i18n structure

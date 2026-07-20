@@ -467,7 +467,8 @@ export function remarkProcessFaqs(productOption = '', language = 'ko') {
       ko: 'i18n/ko/faqs.json',
       en: 'i18n/en/faqs.json',
       ja: 'i18n/ja/faqs.json',
-      es: 'i18n/es/faqs.json'
+      es: 'i18n/es/faqs.json',
+      ru: 'i18n/ru/faqs.json'
     };
 
     const faqsFilePath = langMap[language] || langMap['ko'];

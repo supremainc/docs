@@ -181,6 +181,9 @@ export function generateTableOfContents(contentHtml, language, maxDepth = 3, rn 
     case 'ja':
       tocTitle = '目次';
       break;
+    case 'ru':
+      tocTitle = 'СОДЕРЖАНИЕ';
+      break;
     default:
       tocTitle = '목차';
   }
@@ -269,6 +272,9 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
       break;
     case 'ja':
       copyright = 'Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369';
+      break;
+    case 'ru':
+      copyright = 'Copyright © Suprema Inc. Все права защищены. | SUPREMA Co., Ltd. Номер регистрации компании 431-87-00369';
       break;
   }
 

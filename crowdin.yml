@@ -29,6 +29,18 @@
     "type": "mdx_v1"
   },
   {
+    "source" : "/i18n/en/faqs.json",
+    "translation" : "/i18n/%two_letters_code%/%original_file_name%",
+    "escape_special_characters": 0,
+    "type": "json"
+  },
+  {
+    "source" : "/i18n/en/code.json",
+    "translation" : "/i18n/%two_letters_code%/%original_file_name%",
+    "escape_special_characters": 0,
+    "type": "json"
+  },
+  {
     "source" : "/i18n/en/docusaurus-plugin-content-docs/current/common/*.mdx",
     "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/common/%original_file_name%",
     "escape_special_characters": 0,
