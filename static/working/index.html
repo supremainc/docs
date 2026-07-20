@@ -99,6 +99,8 @@
   }
   .calc-result .lab{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px;}
   .calc-result .val{font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent-ink);font-family:var(--mono);}
+  .calc-result .val.loss{color:var(--warn);}
+  .chip.loss{background:#fdeceb;color:var(--warn);}
   .calc-meta{
     margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);
     display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;color:var(--muted);
@@ -119,11 +121,19 @@
   .calc-tab:hover{color:var(--ink);}
   .calc-tab.active{color:var(--accent-ink);border-bottom-color:var(--accent);}
   .eff-hint{
-    margin-top:12px;padding:10px 12px;background:var(--accent-soft);border-radius:9px;
-    font-size:12.5px;color:var(--accent-ink);line-height:1.6;
+    margin-top:12px;padding:12px 14px;background:var(--accent-soft);border-radius:11px;
+    border-left:4px solid var(--accent);font-size:12.5px;color:var(--accent-ink);line-height:1.6;
   }
   .eff-hint b{font-weight:700;}
-  .eff-hint .eff-title{display:block;font-size:11px;color:var(--accent);font-weight:700;margin-bottom:2px;letter-spacing:.02em;}
+  .eff-hint .eff-title{display:block;font-size:11.5px;color:var(--accent-ink);font-weight:600;margin-bottom:2px;}
+  .eff-times{display:flex;gap:9px;margin-top:9px;flex-wrap:wrap;}
+  .eff-chip{flex:1 1 120px;background:#fff;border:1px solid var(--accent);border-radius:9px;padding:8px 10px;text-align:center;}
+  .eff-timerow{display:flex;align-items:baseline;justify-content:center;gap:5px;}
+  .eff-time{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--accent-ink);line-height:1.1;letter-spacing:-.01em;}
+  .eff-timelab{font-size:13px;font-weight:600;color:var(--muted);}
+  .eff-sub{font-size:10.5px;color:var(--muted);margin-top:2px;}
+  @keyframes effPop{0%{transform:scale(1);}30%{transform:scale(1.14);color:var(--accent);}100%{transform:scale(1);}}
+  .eff-hint.pulse .eff-time{animation:effPop .45s ease;}
 
   /* ── 이번 달 요약 ── */
   .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px;}
@@ -472,7 +482,7 @@
   </main>
   </div>
 
-  <div class="footnote">V1.9 | Technical Writing</div>
+  <div class="footnote">V2.1 | Technical Writing</div>
 </div>
 
 <script>
@@ -495,6 +505,14 @@ function calcWork(stay){
 /* 사무실 체류시간(분) → 휴게시간(분) */
 function calcBreak(stay){
   return stay <= 0 ? 0 : stay - calcWork(stay);
+}
+/* 휴게 경계를 막 넘어 손해 보는 구간인지 (더 일찍 나가면 실근무가 같거나 더 많음)
+   - 체류 8h30m~8h59m: 실근무 7h59m를 넘기려다 휴게 30→60분으로 손실
+   - 체류 13h00m~13h29m: 실근무 11h59m를 넘기려다 휴게 60→90분으로 손실 */
+function isBreakLoss(stay){
+  if(stay > 509 && stay <= 539) return true;
+  if(stay > 779 && stay <= 809) return true;
+  return false;
 }
 
 /* =========================================================
@@ -901,6 +919,7 @@ const calcVin = document.getElementById('calcVin');
 const calcVout = document.getElementById('calcVout');
 const calcVacRange = document.getElementById('calcVacRange');
 const effHint = document.getElementById('effHint');
+let lastEffIn = null;   // 효율 힌트: 출근이 바뀔 때만 갱신/반짝임
 
 function renderCalc(){
   // 시간대를 쓰는 휴가일 때만 휴가 시간대 입력칸 표시 (아니면 초기화)
@@ -923,22 +942,32 @@ function renderCalc(){
   if(i !== null){
     const effIn = Math.max(i, REC_START);
     effHint.style.display = 'block';
-    effHint.innerHTML =
-      `<span class="eff-title">효율적인 퇴근 시간 · 휴게 손실 없는 최대치</span>` +
-      `<b>${minToClock(effIn+509)}</b> 퇴근 → 실근무 7시간 59분 (휴게 30분)<br>` +
-      `<b>${minToClock(effIn+779)}</b> 퇴근 → 실근무 11시간 59분 (휴게 1시간)`;
+    if(effIn !== lastEffIn){          // 출근이 바뀔 때만 갱신 + 반짝임
+      lastEffIn = effIn;
+      effHint.innerHTML =
+        `<span class="eff-title">효율적인 퇴근 시간</span>` +
+        `<div class="eff-times">` +
+          `<div class="eff-chip"><div class="eff-timerow"><span class="eff-time">${minToClock(effIn+509)}</span><span class="eff-timelab">퇴근</span></div><div class="eff-sub">실근무 7시간 59분</div><div class="eff-sub">휴게 30분</div></div>` +
+          `<div class="eff-chip"><div class="eff-timerow"><span class="eff-time">${minToClock(effIn+779)}</span><span class="eff-timelab">퇴근</span></div><div class="eff-sub">실근무 11시간 59분</div><div class="eff-sub">휴게 1시간</div></div>` +
+        `</div>`;
+      effHint.classList.remove('pulse'); void effHint.offsetWidth; effHint.classList.add('pulse');
+    }
   } else {
     effHint.style.display = 'none';
+    lastEffIn = null;
   }
 
   if(!r.officeValid && r.vh === 0){
     calcVal.textContent = '–';
+    calcVal.classList.remove('loss');
     calcMeta.innerHTML = badTime
       ? '<span style="color:var(--warn)">퇴근 시간이 출근 시간보다 늦어야 합니다.</span>' : '';
     return;
   }
 
   calcVal.textContent = fmtDur(r.total);
+  const loss = r.officeValid && isBreakLoss(r.officePhysical);
+  calcVal.classList.toggle('loss', loss);
   let meta = '';
   if(r.officeValid){
     meta += `<span>체류 <b>${fmtDur(r.officePhysical)}</b></span>` +
@@ -948,6 +977,7 @@ function renderCalc(){
   if(r.vh > 0){
     meta += `<span>휴가 <b>${vacLabel(vac)} · ${fmtDur(r.vh)}</b></span>`;
   }
+  if(loss) meta += `<span class="chip loss">⚠ 휴게 손실 구간 · 조금 일찍 퇴근해도 실근무는 같거나 더 많아요</span>`;
   if(r.officeValid && r.officePhysical >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
   if(r.clamped) meta += `<span style="color:var(--amber)">근무인정 07:30~23:30 적용</span>`;
   if(r.vacMismatch) meta += `<span style="color:var(--warn)">휴가 시간대 길이가 휴가 종류와 다릅니다</span>`;
