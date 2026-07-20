@@ -1,0 +1,64 @@
+---
+id: product-specifications
+title: Технические характеристики продукта
+description: Предоставляет ключевые технические характеристики продукта, включая размеры, функции и производительность.
+keywords:
+  - Учетные данные
+  - Общие сведения
+  - Ёмкость
+  - Интерфейс
+  - Электрические параметры
+  - Размеры
+---
+
+Предоставляет ключевые технические характеристики продукта, включая размеры, функции и производительность.
+
+import specs from '@site/static/specs/xpq2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.xpassq2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.xpassq2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.xpassq2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.xpassq2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.xpassq2.power} />
+
+## Размеры и вес
+
+<Image src='/img/device/xpq2-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> Карты DESFire EV2/EV3 обратно совместимы с картами DESFire EV1, поддерживая CSN и функции смарт-карт, включая функции карт DESFire EV1.
+
+<Anno id='anno2'>2)</Anno> Дальность считывания RF зависит от условий установки.
+
+<Anno id='anno3'>3)</Anno> Поддерживает QR-коды длиной до 32 ASCII символов.
+
+<Anno id='anno4'>4)</Anno> Для более расширенной аутентификации QR/штрихкодов необходима лицензия Camera QR. Для подробной информации о лицензиях устройств смотрите <Linkto to='platform/biostar_x/settings-license-device-license'>Руководство администратора BioStar X</Linkto>.
+
+- Типы штрихкодов, поддерживаемые лицензией Camera QR: QR Code, DataMatrix, Aztec, Micro QR Code, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
+
+<Anno id='anno5'>5)</Anno> Данные основаны на пользователях, зарегистрированных без учетных данных.
+
+:::
+
+:::info
+
+Технические характеристики продукта могут изменяться без предварительного уведомления в целях повышения производительности.
+
+:::

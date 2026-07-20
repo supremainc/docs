@@ -1,0 +1,209 @@
+---
+id: getting-started
+title: Начало работы
+description: Обзор компонентов камеры ViOnyx, включая название и функцию каждой части.
+keywords:
+  - Компоненты
+  - Название
+  - порт
+  - Кабель
+  - PoE+
+  - RS-485
+  - Тревога
+  - Реле
+  - USB
+  - Micro SD
+  - Микрофон
+  - Светодиод
+---
+
+Обзор компонентов камеры ViOnyx, включая название и функцию каждой части.
+
+## Компоненты
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/camera/component-cover-vionyx.svg' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-camera-body-vionyx.svg' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-wall-bracket-vionyx.svg' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-drilling-template.svg' className='none' width={200} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Крышка</Td>
+
+<Td>Корпус камеры</Td>
+
+<Td>Монтажная пластина</Td>
+
+<Td>Шаблон для сверления</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/camera/component-connection-cables-vionyx.png' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-waterproof-grommet-ethernet-cable-vionyx.svg' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-waterproof-rubber-hole-plug-vionyx.svg' className='none' width={150} alone /></Td>
+
+<Td><Image src='/img/camera/component-fixing-screws4-vionyx.png' className='none' width={150} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Кабели подключения</Td>
+
+<Td>Водонепроницаемый уплотнитель для Ethernet-кабеля</Td>
+
+<Td>Водонепроницаемая резиновая заглушка для отверстия</Td>
+
+<Td>Крепёжный винт x4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/camera/component-diode1-vionyx.png' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-120-resistor1-vionyx.png' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-t10-torx-driver-vionyx.svg' className='none' width={40} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Диод</Td>
+
+<Td>Резистор 120 Ω</Td>
+
+<Td>T10 Torx Driver (Star-shaped)</Td>
+
+<Td>Краткое руководство</Td>
+
+<Td>Open Source Software Guide</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Название и функция каждой части
+
+### Конфигурация внутренних портов
+
+<Image src='/img/camera/name-function-each-part-vionyx.svg' className='none' width={700} />
+
+<div className='overflow-x col2-2-8'>
+| Name | Function |
+| -- | -- |
+| **Alarm Input, Relay (5-pin)** | Подключите кабель для входа тревоги и выхода реле. |
+| **Audio Input/Output (4-pin)** | Подключите кабель для аудиовхода/аудиовыхода. |
+| **Ethernet (PoE+)** | Подключите Ethernet-кабель. Питание может подаваться через PoE+. |
+| **Power, RS-485 (5-pin)** | Подключите кабель питания и связи RS-485. |
+| **Reset Button** | Сбрасывает все настройки до заводских значений. Подробнее о инициализации до заводских настроек смотрите в разделе [Factory default](maintenance#factory-reset). |
+| **Micro SD Card Slot** | Вставьте карту microSD. |
+| **USB (Type-A)** | Подключайте USB-аксессуары. |
+| **MIC Switch** | Используйте переключатель микрофона, чтобы физически включать или отключать аудиозапись. |
+</div>
+
+### Кабели и разъёмы
+
+#### Питание и RS-485
+
+<Image src='/img/camera/cable-vionyx-power-rs485.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Name | Color |
+| :--: | :--: | :--: | :--: |
+| POWER | 1 | PWR +VDC | Red |
+| ^ | 2 | PWR GND | Black |
+| RS-485 | 3 | 485 TRXP | Blue |
+| ^ | 4 | 485 TRXN | Yellow |
+| ^ | 5 | 485 GND | Gray |
+</div>
+
+#### Вход тревоги и реле
+
+<Image src='/img/camera/cable-vionyx-alarmin-relay.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Name | Color |
+| :--: | :--: | :--: | :--: |
+| ALARM_IN | 1 | ALARM IN | Purple |
+| ^ | 2 | ALARM GND | Black |
+| RELAY | 3 | RLY NC | Orange |
+| ^ | 4 | RLY COM | Blue |
+| ^ | 5 | RLY NO | White |
+</div>
+
+<PageBreak />
+
+#### Аудиовход/аудиовыход
+
+<Image src='/img/camera/cable-vionyx-line-inout.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Name | Color |
+| :--: | :--: | :--: | :--: |
+| LINE_IN | 1 | LINE IN | White |
+| ^ | 2 | LINE IN GND | Black |
+| LINE_OUT | 3 | LINE OUT | White |
+| ^ | 4 | LINE OUT GND | Black |
+</div>
+
+<PageBreak />
+
+### Световой индикатор LED
+
+Светодиод на передней части крышки камеры показывает состояние работы устройства и аутентификации с помощью цветов и мигающих сигналов.
+
+<Image src='/img/camera/led-status-indicator-vionyx.svg' className='none' width={350} alone />
+
+|     Цвет светодиода     | Статус                                                                          |
+| :---------------------: | ------------------------------------------------------------------------------- |
+|         Зелёный         | Аутентификация прошла успешно                                                   |
+|         Красный         | Ошибка аутентификации                                                           |
+|          Синий          | Нормальная работа                                                               |
+| Мигание синим и зелёным | При включенном <Cmd sid='ui_012' product='dev' /> невозможно получить IP-адрес. |
+
+<PageBreak />
+
+### Настройки переключателя микрофона (скоро будет доступно)
+
+Используйте переключатель микрофона, чтобы физически отключить микрофон камеры и предотвратить запись звука.
+
+<Image src='/img/camera/microphone-switch-vionyx.svg' className='none' width={450} alone />
+
+- По умолчанию аудиозапись отключена.
+
+- Переведите переключатель микрофона вправо, чтобы включить аудиозапись.
+
+{/* \* ViOnyx 웹 서버에서도 오디오 녹음을 활성/비활성화할 수 있습니다.
+
+:::caution
+
+제품의 마이크 스위치가 물리적으로 비활성화되어있는 상태에서는 ViOnyx 웹 서버에서 오디오 녹음을 활성화하더라도 오디오가 녹음되지 않습니다.
+
+::: \*/}
