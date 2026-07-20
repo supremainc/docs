@@ -127,14 +127,18 @@
 
   /* ── 이번 달 요약 ── */
   .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px;}
-  .stat{border:1px solid var(--line);border-radius:11px;padding:14px 16px;background:#fff;}
-  .stat .lab{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:6px;}
-  .stat .num{font-size:24px;font-weight:700;font-family:var(--mono);letter-spacing:-.01em;}
+  .stat{
+    border:1px solid var(--line);border-radius:11px;padding:12px 16px;background:#fff;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+  }
+  .stat .lab{font-size:12.5px;color:var(--muted);font-weight:600;}
+  .stat .stat-v{text-align:right;}
+  .stat .num{font-size:19px;font-weight:700;font-family:var(--mono);letter-spacing:-.01em;line-height:1.2;}
   .stat.goal .num{color:var(--ink);}
   .stat.done .num{color:var(--accent-ink);}
   .stat.left .num{color:var(--amber);}
   .stat.left .num.cleared{color:var(--accent-ink);}
-  .stat .substat{font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:4px;}
+  .stat .substat{font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px;}
 
   .progress-shell{margin-top:2px;}
   .progress-track{height:10px;border-radius:6px;background:var(--line);overflow:hidden;}
@@ -260,9 +264,11 @@
   @media (min-width:1180px){
     .wrap{max-width:1380px;}
     .layout{display:flex;gap:20px;align-items:flex-start;}
-    .sidebar{flex:0 0 340px;position:sticky;top:20px;}
+    .sidebar{flex:0 0 340px;position:sticky;top:20px;display:flex;flex-direction:column;gap:18px;}
     .main{flex:1 1 auto;min-width:0;}
-    .sidebar .card:last-child{margin-bottom:0;}
+    .sidebar .card{margin-bottom:0;}
+    /* 요약을 계산기보다 위로 → 스크롤해도 항상 상단에 보이게 */
+    .sidebar .summary-card{order:-1;}
     /* 좁아진 사이드바 안에서 계산기/요약이 깔끔하게 보이도록 조정 */
     .sidebar .field{flex:1 1 40%;}
     .sidebar .tinput{width:100%;}
@@ -359,25 +365,28 @@
         </div>
       </div>
       <div class="calc-meta" id="leaveMeta"></div>
+      <div class="eff-hint" id="leaveEffHint" style="display:none;"></div>
     </div>
   </section>
 
   <!-- ②③④ 이번 달 요약 -->
-  <section class="card">
+  <section class="card summary-card">
     <div class="card-title"><span class="dot"></span>이번 달 요약</div>
     <div class="summary-grid">
       <div class="stat goal">
         <div class="lab">기준근로시간</div>
-        <div class="num" id="stdNum">–</div>
-        <div class="substat" id="maxSub">최대 –</div>
+        <div class="stat-v">
+          <div class="num" id="stdNum">–</div>
+          <div class="substat" id="maxSub">최대 –</div>
+        </div>
       </div>
       <div class="stat done">
         <div class="lab">누적 실 근무시간</div>
-        <div class="num" id="totalNum">0시간</div>
+        <div class="stat-v"><div class="num" id="totalNum">0시간</div></div>
       </div>
       <div class="stat left">
-        <div class="lab">더 해야 하는 시간</div>
-        <div class="num" id="leftNum">–</div>
+        <div class="lab">남은 실 근무 시간</div>
+        <div class="stat-v"><div class="num" id="leftNum">–</div></div>
       </div>
     </div>
     <div class="progress-shell">
@@ -464,7 +473,7 @@
   </main>
   </div>
 
-  <div class="footnote">V1.5 | Technical Writing</div>
+  <div class="footnote">V1.7 | Technical Writing</div>
 </div>
 
 <script>
@@ -940,6 +949,7 @@ const leaveIn = document.getElementById('leaveIn');
 const leaveTarget = document.getElementById('leaveTarget');
 const leaveVal = document.getElementById('leaveVal');
 const leaveMeta = document.getElementById('leaveMeta');
+const leaveEffHint = document.getElementById('leaveEffHint');
 
 function renderLeave(){
   const iRaw = toMin(leaveIn.value);
@@ -947,6 +957,7 @@ function renderLeave(){
   if(iRaw === null || W === null || W <= 0){
     leaveVal.textContent = '–';
     leaveMeta.innerHTML = '';
+    leaveEffHint.style.display = 'none';
     return;
   }
   const i = Math.max(iRaw, REC_START);  // 07:30 이전 출근은 07:30부터 인정
@@ -960,6 +971,19 @@ function renderLeave(){
   if(iRaw < REC_START) meta += `<span style="color:var(--amber)">근무인정 시작 07:30 적용</span>`;
   if(outM > REC_END) meta += `<span style="color:var(--warn)">근무인정 종료(23:30)를 초과합니다</span>`;
   leaveMeta.innerHTML = meta;
+
+  // 8시간·12시간 목표는 휴게 경계라 비효율(1분 더 채우려다 손실) → 효율 퇴근시간 안내
+  if(W === 480 || W === 720){
+    const eff = (W === 480)
+      ? { stay:509, work:'7시간 59분', brk:'휴게 30분' }
+      : { stay:779, work:'11시간 59분', brk:'휴게 1시간' };
+    leaveEffHint.style.display = 'block';
+    leaveEffHint.innerHTML =
+      `<span class="eff-title">휴게 손실 없는 효율적인 퇴근 시간</span>` +
+      `<b>${minToClock(i + eff.stay)}</b> 퇴근 → 실근무 ${eff.work} (${eff.brk})`;
+  } else {
+    leaveEffHint.style.display = 'none';
+  }
 }
 attachTimeMask(leaveIn, renderLeave);
 attachTimeMask(leaveTarget, renderLeave);
