@@ -172,6 +172,20 @@
 
   /* ── 캘린더 ── */
   .cal-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;gap:12px;}
+  .import-bar{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    background:var(--accent-soft);border:1px solid var(--accent);border-radius:11px;
+    padding:10px 14px;margin-bottom:14px;
+  }
+  .import-desc{font-size:12px;color:var(--accent-ink);line-height:1.5;flex:1 1 260px;}
+  .import-desc b{font-weight:700;}
+  .import-btn{
+    flex:none;background:var(--accent);color:#fff;border:none;border-radius:9px;
+    padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;
+    font-family:var(--sans);transition:background .15s;
+  }
+  .import-btn:hover{background:var(--accent-ink);}
+  .import-btn.loading{opacity:.6;pointer-events:none;}
   .cal-head .month-lab{font-size:18px;font-weight:700;font-family:var(--mono);letter-spacing:.01em;padding-top:8px;}
   .cal-head-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
   .cal-nav{display:flex;align-items:center;}
@@ -353,7 +367,7 @@
         <label for="calcVac">휴가 (사무실 근무와 별도로 실근무에 합산)</label>
         <select class="vsel" id="calcVac">
           <option value="">휴가 없음</option>
-          <option value="annual">연차 (8시간)</option>
+          <option value="annual">연차 (1일)</option>
           <option value="half">반차 (4시간)</option>
           <option value="quarter">반반차 (2시간)</option>
           <option value="half_quarter">반차+반반차 (6시간)</option>
@@ -439,6 +453,13 @@
 
   <!-- ① 캘린더 -->
   <section class="card">
+    <div class="import-bar">
+      <div class="import-desc">JaDE 내정보 → 근무현황(웹)에서 받은 <b>.xlsx</b>를 올리면 근무내역이 캘린더에 자동 입력됩니다.</div>
+      <label class="import-btn" id="attImportLabel">
+        근태 파일 불러오기
+        <input type="file" id="attImport" accept=".xlsx" hidden>
+      </label>
+    </div>
     <div class="cal-head">
       <div class="month-lab" id="monthLab">–</div>
       <div class="cal-head-right">
@@ -507,7 +528,7 @@
   </main>
   </div>
 
-  <div class="footnote">V2.3 | Technical Writing</div>
+  <div class="footnote">V2.4 | Technical Writing</div>
 </div>
 
 <script>
@@ -1402,6 +1423,114 @@ document.getElementById('restoreBtn').addEventListener('click', ()=>{
 document.getElementById('restoreInput').addEventListener('change', e=>{
   const f = e.target.files && e.target.files[0];
   if(f) importBackup(f);
+  e.target.value = '';   // 같은 파일 다시 선택 가능하도록 초기화
+});
+
+/* ==========================================================
+   근태 파일(.xlsx) 불러오기
+   - JaDE 근무현황(웹) 다운로드 파일
+   - B열 근무일 / G열 출근시각 / H열 퇴근시각 사용 (3행부터 데이터)
+   - 출근·퇴근이 모두 있는 날만 캘린더에 입력, 기존 휴가 정보는 보존
+   ========================================================== */
+let _xlsxLoader = null;
+function ensureSheetJS(){
+  if(window.XLSX) return Promise.resolve(window.XLSX);
+  if(_xlsxLoader) return _xlsxLoader;
+  _xlsxLoader = new Promise((resolve, reject)=>{
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+    s.onload = ()=> window.XLSX ? resolve(window.XLSX) : reject(new Error('XLSX 없음'));
+    s.onerror = ()=> reject(new Error('스크립트 로드 실패'));
+    document.head.appendChild(s);
+  });
+  return _xlsxLoader;
+}
+// "07:52" → "07:52", "7:5" 등 비정상은 '' 반환
+function normImportTime(v){
+  const m = String(v == null ? '' : v).match(/(\d{1,2}):(\d{2})/);
+  if(!m) return '';
+  const h = +m[1], mi = +m[2];
+  if(h > 23 || mi > 59) return '';
+  return String(h).padStart(2,'0') + ':' + String(mi).padStart(2,'0');
+}
+// 근태사항(N열) → 시뮬레이터 휴가 키
+//  "연차휴가(1일)"→연차, (0.5일)→반차, (0.25일)→반반차, (0.75일)→반차+반반차
+//  ※ 반차/반반차 실제 표기 샘플이 없어 '일수' 기준으로 추정 매핑
+function mapAttendance(n){
+  const s = String(n == null ? '' : n).trim();
+  if(!s) return '';
+  const dm = s.match(/([\d.]+)\s*일/);
+  if(dm && /연차|휴가|반차/.test(s)){
+    const days = parseFloat(dm[1]);
+    if(days >= 1)                     return 'annual';        // 1일  = 8시간
+    if(Math.abs(days - 0.75) < 0.01)  return 'half_quarter';  // 0.75일 = 6시간
+    if(Math.abs(days - 0.5)  < 0.01)  return 'half';          // 0.5일  = 4시간
+    if(Math.abs(days - 0.25) < 0.01)  return 'quarter';       // 0.25일 = 2시간
+  }
+  // 명시적 문구 대비 백업 매핑
+  if(/반반차/.test(s)) return 'quarter';
+  if(/반차/.test(s))   return 'half';
+  if(/연차/.test(s))   return 'annual';
+  return '';   // 병가·공가 등 그 외는 매핑하지 않음
+}
+
+async function importAttendance(file){
+  const label = document.getElementById('attImportLabel');
+  label.classList.add('loading');
+  try{
+    const XLSX = await ensureSheetJS();
+    const buf = await file.arrayBuffer();
+    const wb = XLSX.read(buf, { type:'array' });
+    const ws = wb.Sheets[wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(ws, { header:1, raw:false, defval:'' });
+
+    const touched = {};   // "y-mo" → {y, mo, data}
+    let count = 0, firstY = null, firstMo = null;
+
+    for(let i = 2; i < rows.length; i++){        // 3행(인덱스 2)부터 데이터
+      const row = rows[i] || [];
+      const dstr = String(row[1] || '').trim();  // B열: 근무일
+      const dm = dstr.match(/(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})/);
+      if(!dm) continue;
+      const gin  = normImportTime(row[6]);       // G열: 출근시각
+      const gout = normImportTime(row[7]);       // H열: 퇴근시각
+      const vac  = mapAttendance(row[13]);       // N열: 근태사항 → 휴가
+      const hasOffice = !!(gin && gout);
+      const hasVac = vac !== '';
+      if(!hasOffice && !hasVac) continue;        // 근무·휴가 아무것도 없으면 건너뜀
+
+      const y = +dm[1], mo = +dm[2] - 1, da = +dm[3];
+      const mk = y + '-' + mo;
+      if(!touched[mk]) touched[mk] = { y, mo, data: loadMonth(y, mo) };
+      const dateKey = `${y}-${String(mo+1).padStart(2,'0')}-${String(da).padStart(2,'0')}`;
+      touched[mk].data[dateKey] = {
+        in:  hasOffice ? gin  : '',
+        out: hasOffice ? gout : '',
+        vac: hasVac ? vac : '',
+        vin: '', vout: ''
+      };
+      count++;
+      if(firstY === null){ firstY = y; firstMo = mo; }
+    }
+
+    if(count === 0){
+      showToast('불러올 근무내역이 없습니다. 파일을 확인해주세요.', true);
+      return;
+    }
+    for(const mk in touched){ saveMonth(touched[mk].y, touched[mk].mo, touched[mk].data); }
+    if(firstY !== null){ curYear = firstY; curMonth = firstMo; }
+    buildCalendar();
+    showToast(count + '일 근무내역을 불러왔습니다.');
+  }catch(err){
+    showToast('파일을 읽지 못했습니다. 인터넷 연결과 파일 형식(.xlsx)을 확인해주세요.', true);
+  }finally{
+    label.classList.remove('loading');
+  }
+}
+
+document.getElementById('attImport').addEventListener('change', e=>{
+  const f = e.target.files && e.target.files[0];
+  if(f) importAttendance(f);
   e.target.value = '';   // 같은 파일 다시 선택 가능하도록 초기화
 });
 
