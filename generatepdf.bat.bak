@@ -8,16 +8,15 @@
 @REM SIDEBAR : sidebar.js 파일에 적용된 키 값을 입력하세요.
 @REM FILTER : 문서가 저장된 경로를 입력하세요. Include, Xclude 컴포넌트에서 사용하기 위한 값입니다.
 @REM RELEASE: 문서의 배포 날짜를 입력하세요.
-@REM CONTEXT: preview
 
-set PRODUCT_NAME=BioEntry W3
-set LANGUAGE=ja
-set PRODUCT_TYPE=UG
-set VERSION=1.0.1
-set DOCUMENT_NUMBER=102.00.BW3
-set SIDEBAR=bioentryw3
-set FILTER=bioentry_w3
-set RELEASE=260121
+set PRODUCT_NAME=XPass Q2
+set LANGUAGE=ko
+set PRODUCT_TYPE=IG
+set VERSION=1.00
+set DOCUMENT_NUMBER=101.00.XPQ2
+set SIDEBAR=xpassq2
+set FILTER=xpass_q2
+set RELEASE=260722
 set CONTEXT=preview
 
 @REM SVG 파일 맵핑 파일 생성
@@ -36,6 +35,9 @@ if %LANGUAGE%==ko (
 ) else if %LANGUAGE%==es (
     set LANG=ES
     set BACK=back-cover-es.pdf
+) else if %LANGUAGE%==ru (
+    set LANG=RU
+    set BACK=back-cover-ru.pdf
 ) else (
   set LANG=KO
   set BACK=back-cover.pdf
@@ -77,5 +79,5 @@ pdfcpu viewerpref set "./pdf/%OUTPUT%" '{"FitWindow": true, "CenterWindow": true
 
 @REM 임시 파일 삭제
 del pdf\temp.pdf
-del pdf\front-cover.html
-del pdf\document.html
+@REM del pdf\front-cover.html
+@REM del pdf\document.html
