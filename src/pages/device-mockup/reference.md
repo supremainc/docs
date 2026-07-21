@@ -1,0 +1,271 @@
+# 슈프리마 장치 목업(Mockup) 구현 코드 작성
+
+슈프리마의 장치 화면과 똑같은 화면을 웹에서 볼 수 있는 코드를 구현한다.
+
+화면 왼쪽에는 장치 목업 이미지가 표시되고, 목업에 표시된 항목을 클릭하면 description 속성값이 장치 오른쪽에 표시된다.
+
+## 속성
+
+- top/left/icon: 상단 왼쪽 아이콘으로 표시, 위치에 따라 아이콘 표시됨
+- bottom/tab: 하단 탭 메뉴로 구성
+- function: image를 표시하거나 특정 위치로 이동
+- category: 하위 메뉴 범주
+- parent: 항목을 클릭하면 하위 메뉴 목록이 표시됨, 상단에는 선택한 항목 이름 표시, 뒤로 가기 표시됨, 오른쪽에는 > 표시
+- list: 목록 구성
+- toggle: 토글 버튼, true/false 값 표시
+- select: 선택 목록 표시됨, 오른쪽에는 default 값 표시
+- slide: 슬라이더가 표시되어 드래그하여 원하는 값 선택, 오른쪽에는 default 표시, a to b의 경우 간격값을 표시
+
+## 메뉴 구성
+
+- 홈 화면 (시계 표시)
+  - 모든 메뉴:top/left/icon
+    - 대시보드:bottom/tab - image
+      - 사용자 등록 마법사:function
+        - 사용자 추가 화면:image
+      - 규제인증 및 라이선스:top/right/icon
+        - 라이선스:category
+          - 오픈 소스 소프트웨어:parent
+        - 규제인증 정보:category
+    - 사용자:list
+      - 사용자 수:category
+        - Administrator:item
+      - 사용자 추가(+):bottom/right/icon - function
+        - 사용자 추가 화면:image
+      - 사용자 등록현황(i):top/right/icon
+        - 사용자 등록 현황:image
+    - 인증:bottom/tab
+      - 인증 모드:top/tab
+        - 인증 모드:string
+          - (+):bottom/right/icon
+            - 인증 모드 등록:image
+        - 인증 옵션:category
+          - 서버 매칭(지문, 카드, ID):toggle - false
+          - QR 인증:toggle - false
+          - 카드를 QR로 인증하기:toggle - false
+        - PIN:category
+          - 스크램블 키패드:toggle - true
+        - 인증 결과 표시 옵션:category
+          - 사용자 ID 표시:select
+            - 전체 표시:default
+            - 첫 문자만 표시
+            - 표시하지 않기
+          - 사용자 이름 표시:select
+            - 전체 표시:default
+            - 첫 문자만 표시
+            - 표시하지 않기
+      - 얼굴 & 지문:top/tab
+        - 얼굴 인증 옵션:category
+          - 모션 센서 감도:select
+            - 끔
+            - 낮음
+            - 중간:default
+            - 높음
+          - 등록 대기 시간:slide - default: 20
+          - 인증 대기 시간:slide - default: 5
+          - 등록얼굴 중복검사:toggle - true
+          - 얼굴 검출 설정:parent
+            - 최대 얼굴 회전 각도:select
+              - 15°:default
+              - 30°
+              - 45°
+              - 60°
+              - 75°
+              - 90°
+            - 얼굴 인식 거리:slide(a to b) - default: 30cm ~ 130cm
+            - 얼굴 인식 영역 넓히기:toggle - false
+          - ToM 등록:toggle - true
+          - 비주얼 페이스 이미지 저장하기:toggle - true
+        - 얼굴 인식:category
+          - 보안 등급:select
+            - 보통:default
+            - 안전
+            - 가장 안전
+          - 작동 모드:select
+            - 퓨전 매칭:default
+            - 빠른 인증
+          - 위조 얼굴 검출
+            - 보통
+            - 안전:default
+            - 강함
+            - 아주 강함
+          - 고급 설정:parent
+            - 마스크 검출:category
+              - 마스크 검출:toggle - false
+            - 마스크 확인 모드 설정:category
+              - 확인 모드:select
+                - 인증 후 확인:default
+                - 확인 후 인증
+                - 확인만
+        - 지문 인증 옵션:category
+          - 보안 등급:select
+            - 보통:default
+            - 안전
+            - 가장 안전
+          - 매칭 대기 시간:slide - 5 ch
+          - 이미지 표시:toggle - false
+          - 센서 감도:slide - 7
+          - 1:N Fase 모드:select
+            - 자동:default
+            - 보통
+            - 빠름
+            - 가장 빠름
+          - 템플릿 형식:select
+            - SUPREMA:default
+            - ISO 19794-2
+            - ANSI-378
+          - 센서 모드:select
+            - 항상 켜짐
+            - 자동 켜짐:default
+          - 위조 지문 검출:select
+            - 사용 안 함:default
+            - 보통
+            - 강함
+            - 아주 강함
+          - 등록 품질 검사:toggle
+          - 등록지문 중복검사:toggle
+      - 근태:top/tab
+        - 근태 모드:select
+          - 사용 안함:default
+          - 수동변경
+          - 자동변경
+          - 수동고정
+          - 고정
+        - 근태 코드:list
+          - (+):bottom/right/icon - function
+            - 근태 코드 등록:image
+        - 근태 등록 필요:toggle - false
+        - 작업 코드:toggle - false
+    - 설정:bottom/tab
+      - 화면과 소리:top/tab
+        - 화면:category
+          - 홈 화면:select
+            - 보통:default
+            - 공지사항
+            - 로고
+            - 슬라이드쇼
+          - 언어:select
+            - 한국어:default
+            - English
+            - 사용자 정의
+          - 장치 개인 메시지:toggle
+          - 서버 개인 메시지:toggle
+          - 화면 보호기:toggle
+        - 타임아웃:category
+          - 메뉴 표시 시간:select
+            - 항상 켜짐
+            - 10 초
+            - 20 초:default
+            - 30 초
+            - 40 초
+            - 50 초
+          - 메시지 표시 시간:select
+            - 0.5 초
+            - 1 초
+            - 2 초:default
+            - 3 초
+            - 4 초
+            - 5 초
+          - 백라이트 시간:select
+            - 항상 켜짐
+            - 10 초
+            - 20 초:default
+            - 30 초
+            - 40 초
+            - 50 초
+        - 사운드:category
+          - 음성 안내:toggle - false
+          - 볼륨:slide - 50
+          - IP 인터폰 스피커 음량:slide - 50
+          - IP 인터폰 마이크 음량:slide - 50
+      - 통신:top/tab
+        - 네트워크 장치:category
+          - 이더넷:parent
+            - TCP/IP 설정:category
+              - DHCP:toggle
+              - 장치 포트:string - 51211
+              - IP 주소:string - 192.168.1.111
+              - 게이트웨이:string - 192.168.1.1
+              - 서브넷마스크:string - 255.255.255.0
+              - 도메인네임서버:string - 0.0.0.0
+          - 네트워크 서버:category
+            - 서버:parent
+              서버 → 장치(서버 편집에서 선택한 값 표시)
+              - 서버 편집:title
+                - 장치 -> 서버:toggle - false
+          - OSDP 통신 설정:category
+            - RS-485:select
+              - 마스터
+              - 슬레이브
+              - 기본값:default
+            - 전송 속도:select 
+              - 115200:default
+              - 57600
+              - 38400
+              - 19200
+              - 9600
+            - 인증 결과:select
+              - 컨트롤러 결과 표시:default
+              - 장치 인증 결과 표시
+      - 장치:tob/tab
+        - 설정:category
+          - IP 인터폰:parent
+            - IP 인터폰:toggle
+          - 라이선스:parent
+            - 슬레이브 장치 라이선스 목록:parent
+            - 장치에 활성화된 라이선스 목록:category
+              - Camera QR
+          - 릴레이:parent
+            - 릴레이:toggle - false
+          - 날짜와 시간:parent
+            - 날짜와 시간:input - 2026/07/20 오전 04:08:39
+            - 표준 시간대:select
+              - UTC:default
+            - 시간 동기화:toggle - true
+            - 날짜 형식:select
+              - YYYY/MM/DD:default
+              - MM/DD/YYYY
+              - DD/MM/YYYY
+            - 시간 형식:select
+              - 오전/오후:default
+              - 24시간
+          - 일광적약시간:parent
+            - (+):bottom/right/icon
+              - 일광절약시간 추가:image
+          - 장치 정보:parent
+            - 모델명:string - BS3M-OAPB
+            - 장치 ID:string - *********
+            - 시리얼 번호:string - *********
+            - HW:string - 1.0.0
+            - FW:string - 1.0.0 [YYYY/MM/DD hh:mm:ss](D)
+            - 커널:string - 1.0.0 [YYYY/MM/DD hh:mm:ss]
+            - MAC:string - ##:##:##:##:##:##
+          - 메모리 정보:parent
+            - 메모리 정보:image
+          - USB 메모리:parent
+            - 가져오기:parent
+            - 내보내기:parent
+            - 펌웨어 업그레이드:parent
+          - 보안 탬퍼:toggle
+          - RSTP:parent
+            - RSTP:toggle - false
+          - 마스터 관리자:parent
+            - 마스터 관리자 설정:image
+          - 장치 다시 시작:parent
+            - 장치 다시 시작:popup
+          - 기본값 복원:parent
+            - 전체 설정:parent
+            - 네트워크 설정 유지:parent
+            - 공장 초기화:parent
+          - 사용자 ID 종류:select
+            - 숫자:default
+            - 영숫자
+    - 나가기:bottom/tab
+      function: go 홈 화면
+  - 사용자 ID:bottom/icon
+  - 근태 코드:bottom/icon
+    - 근태 코드 입력:image
+  - 출입문:bottom/icon/parent
+    - 수동 개방
+    - 수동 잠금
+    - 개방/잠금 해제

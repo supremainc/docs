@@ -1,0 +1,108 @@
+.device {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    font-family: inherit;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #232323;
+    color: #fff;
+    padding: 14px 10px;
+}
+
+.headerTitle {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.backBtnPlaceholder {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.chevron {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.body {
+    background-color: #fff;
+    min-height: 120px;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #ececec;
+    cursor: pointer;
+    color: #222;
+    transition: background-color 0.15s;
+}
+
+.listItem:last-child {
+    border-bottom: none;
+}
+
+.listItem:hover {
+    background-color: #f5f5f5;
+}
+
+.listItemTitle {
+    flex: 1;
+    font-size: 14px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.bodyText {
+    margin: 0;
+    padding: 20px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}

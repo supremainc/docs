@@ -3,63 +3,1611 @@
    "device-name": "BioStation 3 Max",
    "device-type": "biometric",
    "screen-size": "800x1280",
-   "menus": [
-      {
-         "name": "All Menus",
-         "type": "button",
-         "ico": "/common/ico-menu.svg",
-         "children": [
-            {
-               "name": "DASHBOARD",
-               "type": "bottom-tab",
-               "ico": "/common/ico-dashboard.svg",
-               "content-type": "image",
-               "content": "/common/dashboard.png"
+   "menu": {
+      "name": "홈 화면",
+      "description": "",
+      "type": "home",
+      "note": "시계 표시",
+      "children": [
+         {
+            "name": "모든 메뉴",
+            "description": "",
+            "type": "icon",
+            "position": "top-left",
+            "coords": {
+               "x": 50,
+               "y": 50,
+               "width": 60,
+               "height": 60
             },
-            {
-               "name": "USER",
-               "type": "bottom-tab",
-               "ico": "/common/ico-user.svg",
-               "content-type": "image",
-               "content": "/common/user.png",
-               "children": [
-                  {
-                     "name": "Add user",
-                     "type": "button",
-                     "ico": "/common/ico-add-user.svg",
-                     "content-type": "function",
-                     "function": "add-user"
-                  },
-                  {
-                     "name": "Close",
-                     "type": "button",
-                     "ico": "/common/ico-close.svg",
-                     "content-type": "function",
-                     "function": "back"
-                  }
-               ]
+            "children": [
+               {
+                  "name": "대시보드",
+                  "description": "장치 사용 현황 및 정보를 확인할 수 있습니다. 또는 사용자 등록 마법사를 눌러 바로 사용자를 등록할 수도 있습니다.",
+                  "type": "tab",
+                  "position": "bottom",
+                  "content-type": "image",
+                  "content": "/img/device/bs3m-dashboard.png",
+                  "children": [
+                     {
+                        "name": "사용자 등록 마법사",
+                        "description": "새로운 사용자를 등록할 수 있습니다.",
+                        "type": "function",
+                        "children": [
+                           {
+                              "name": "사용자 추가",
+                              "description": "",
+                              "type": "image",
+                              "content-type": "image",
+                              "content": "/img/device/bs3m-add-user1.png"
+                           }
+                        ]
+                     },
+                     {
+                        "name": "규제인증 및 라이선스",
+                        "description": "",
+                        "type": "icon",
+                        "position": "top-right",
+                        "coords": {
+                           "x": 700,
+                           "y": 20,
+                           "width": 60,
+                           "height": 60
+                        },
+                        "children": [
+                           {
+                              "name": "라이선스",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "오픈 소스 소프트웨어",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": []
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "규제인증 정보",
+                              "description": "",
+                              "type": "category"
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "name": "사용자",
+                  "description": "",
+                  "type": "list",
+                  "position": "bottom",
+                  "children": [
+                     {
+                        "name": "사용자 수",
+                        "description": "",
+                        "type": "category",
+                        "children": [
+                           {
+                              "name": "Administrator",
+                              "description": "",
+                              "type": "item"
+                           }
+                        ]
+                     },
+                     {
+                        "name": "사용자 추가(+)",
+                        "description": "",
+                        "type": "icon",
+                        "position": "bottom-right",
+                        "coords": {
+                           "x": 700,
+                           "y": 1180,
+                           "width": 60,
+                           "height": 60
+                        },
+                        "children": [
+                           {
+                              "name": "사용자 추가 화면",
+                              "description": "",
+                              "type": "function",
+                              "children": [
+                                 {
+                                    "name": "사용자 추가",
+                                    "description": "",
+                                    "type": "image",
+                                    "content-type": "image",
+                                    "content": "/img/device/bs3m-add-user1.png"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "name": "사용자 등록현황(i)",
+                        "description": "",
+                        "type": "icon",
+                        "position": "top-right",
+                        "coords": {
+                           "x": 700,
+                           "y": 20,
+                           "width": 60,
+                           "height": 60
+                        },
+                        "children": [
+                           {
+                              "name": "사용자 등록 현황",
+                              "description": "",
+                              "type": "image",
+                              "content-type": "image",
+                              "content": "/img/device/bs3m-user-usage.png"
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "name": "인증",
+                  "description": "",
+                  "type": "tab",
+                  "position": "bottom",
+                  "children": [
+                     {
+                        "name": "인증 모드",
+                        "description": "",
+                        "type": "tab",
+                        "position": "top",
+                        "children": [
+                           {
+                              "name": "인증 모드",
+                              "description": "",
+                              "type": "string",
+                              "children": [
+                                 {
+                                    "name": "(+)",
+                                    "description": "",
+                                    "type": "icon",
+                                    "position": "bottom-right",
+                                    "coords": {
+                                       "x": 700,
+                                       "y": 1180,
+                                       "width": 60,
+                                       "height": 60
+                                    },
+                                    "children": [
+                                       {
+                                          "name": "인증 모드 등록",
+                                          "description": "",
+                                          "type": "image",
+                                          "content-type": "image",
+                                          "content": "/img/device/bs3m-add-auth-mode.png"
+                                       }
+                                    ]
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "인증 옵션",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "서버 매칭(지문, 카드, ID)",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": false
+                                 },
+                                 {
+                                    "name": "QR 인증",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": false
+                                 },
+                                 {
+                                    "name": "카드를 QR로 인증하기",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": false
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "PIN",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "스크램블 키패드",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": true
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "인증 결과 표시 옵션",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "사용자 ID 표시",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "전체 표시",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "첫 문자만 표시",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "표시하지 않기",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "사용자 이름 표시",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "전체 표시",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "첫 문자만 표시",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "표시하지 않기",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "name": "얼굴 & 지문",
+                        "description": "",
+                        "type": "tab",
+                        "position": "top",
+                        "children": [
+                           {
+                              "name": "얼굴 인증 옵션",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "모션 센서 감도",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "끔",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "낮음",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "중간",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "높음",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "등록 대기 시간",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": 20
+                                 },
+                                 {
+                                    "name": "인증 대기 시간",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": 5
+                                 },
+                                 {
+                                    "name": "등록얼굴 중복검사",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": true
+                                 },
+                                 {
+                                    "name": "얼굴 검출 설정",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "최대 얼굴 회전 각도",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "15°",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             },
+                                             {
+                                                "name": "30°",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "45°",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "60°",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "75°",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "90°",
+                                                "description": "",
+                                                "type": "option"
+                                             }
+                                          ]
+                                       },
+                                       {
+                                          "name": "얼굴 인식 거리",
+                                          "description": "",
+                                          "type": "slide",
+                                          "range": true,
+                                          "default": {
+                                             "min": "30cm",
+                                             "max": "130cm"
+                                          }
+                                       },
+                                       {
+                                          "name": "얼굴 인식 영역 넓히기",
+                                          "description": "",
+                                          "type": "toggle",
+                                          "default": false
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "ToM 등록",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": true
+                                 },
+                                 {
+                                    "name": "비주얼 페이스 이미지 저장하기",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": true
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "얼굴 인식",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "보안 등급",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "보통",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "안전",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "가장 안전",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "작동 모드",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "퓨전 매칭",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "빠른 인증",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "위조 얼굴 검출",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "보통",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "안전",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "강함",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "아주 강함",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "고급 설정",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "마스크 검출",
+                                          "description": "",
+                                          "type": "category",
+                                          "children": [
+                                             {
+                                                "name": "마스크 검출",
+                                                "description": "",
+                                                "type": "toggle",
+                                                "default": false
+                                             }
+                                          ]
+                                       },
+                                       {
+                                          "name": "마스크 확인 모드 설정",
+                                          "description": "",
+                                          "type": "category",
+                                          "children": [
+                                             {
+                                                "name": "확인 모드",
+                                                "description": "",
+                                                "type": "select",
+                                                "children": [
+                                                   {
+                                                      "name": "인증 후 확인",
+                                                      "description": "",
+                                                      "type": "option",
+                                                      "default": true
+                                                   },
+                                                   {
+                                                      "name": "확인 후 인증",
+                                                      "description": "",
+                                                      "type": "option"
+                                                   },
+                                                   {
+                                                      "name": "확인만",
+                                                      "description": "",
+                                                      "type": "option"
+                                                   }
+                                                ]
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "지문 인증 옵션",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "보안 등급",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "보통",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "안전",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "가장 안전",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "매칭 대기 시간",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": "5 ch"
+                                 },
+                                 {
+                                    "name": "이미지 표시",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": false
+                                 },
+                                 {
+                                    "name": "센서 감도",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": 7
+                                 },
+                                 {
+                                    "name": "1:N Fast 모드",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "자동",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "보통",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "빠름",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "가장 빠름",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "템플릿 형식",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "SUPREMA",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "ISO 19794-2",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "ANSI-378",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "센서 모드",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "항상 켜짐",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "자동 켜짐",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "위조 지문 검출",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "사용 안 함",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "보통",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "강함",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "아주 강함",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "등록 품질 검사",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": true
+                                 },
+                                 {
+                                    "name": "등록지문 중복검사",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": true
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "name": "근태",
+                        "description": "",
+                        "type": "tab",
+                        "position": "top",
+                        "children": [
+                           {
+                              "name": "근태 모드",
+                              "description": "",
+                              "type": "select",
+                              "children": [
+                                 {
+                                    "name": "사용 안함",
+                                    "description": "",
+                                    "type": "option",
+                                    "default": true
+                                 },
+                                 {
+                                    "name": "수동변경",
+                                    "description": "",
+                                    "type": "option"
+                                 },
+                                 {
+                                    "name": "자동변경",
+                                    "description": "",
+                                    "type": "option"
+                                 },
+                                 {
+                                    "name": "수동고정",
+                                    "description": "",
+                                    "type": "option"
+                                 },
+                                 {
+                                    "name": "고정",
+                                    "description": "",
+                                    "type": "option"
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "근태 코드",
+                              "description": "",
+                              "type": "list",
+                              "children": [
+                                 {
+                                    "name": "(+)",
+                                    "description": "",
+                                    "type": "icon",
+                                    "position": "bottom-right",
+                                    "coords": {
+                                       "x": 700,
+                                       "y": 1180,
+                                       "width": 60,
+                                       "height": 60
+                                    },
+                                    "children": [
+                                       {
+                                          "name": "근태 코드 등록",
+                                          "description": "",
+                                          "type": "image",
+                                          "content-type": "image",
+                                          "content": "/img/device/bs3m-add-tna-code.png"
+                                       }
+                                    ]
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "근태 등록 필요",
+                              "description": "",
+                              "type": "toggle",
+                              "default": false
+                           },
+                           {
+                              "name": "작업 코드",
+                              "description": "",
+                              "type": "toggle",
+                              "default": false
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "name": "설정",
+                  "description": "",
+                  "type": "tab",
+                  "position": "bottom",
+                  "children": [
+                     {
+                        "name": "화면과 소리",
+                        "description": "",
+                        "type": "tab",
+                        "position": "top",
+                        "children": [
+                           {
+                              "name": "화면",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "홈 화면",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "보통",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "공지사항",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "로고",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "슬라이드쇼",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "언어",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "한국어",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "English",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "사용자 정의",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "장치 개인 메시지",
+                                    "description": "",
+                                    "type": "toggle"
+                                 },
+                                 {
+                                    "name": "서버 개인 메시지",
+                                    "description": "",
+                                    "type": "toggle"
+                                 },
+                                 {
+                                    "name": "화면 보호기",
+                                    "description": "",
+                                    "type": "toggle"
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "타임아웃",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "메뉴 표시 시간",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "항상 켜짐",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "10 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "20 초",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "30 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "40 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "50 초",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "메시지 표시 시간",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "0.5 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "1 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "2 초",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "3 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "4 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "5 초",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "백라이트 시간",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "항상 켜짐",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "10 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "20 초",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "30 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "40 초",
+                                          "description": "",
+                                          "type": "option"
+                                       },
+                                       {
+                                          "name": "50 초",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 }
+                              ]
+                           },
+                           {
+                              "name": "사운드",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "음성 안내",
+                                    "description": "",
+                                    "type": "toggle",
+                                    "default": false
+                                 },
+                                 {
+                                    "name": "볼륨",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": 50
+                                 },
+                                 {
+                                    "name": "IP 인터폰 스피커 음량",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": 50
+                                 },
+                                 {
+                                    "name": "IP 인터폰 마이크 음량",
+                                    "description": "",
+                                    "type": "slide",
+                                    "default": 50
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "name": "통신",
+                        "description": "",
+                        "type": "tab",
+                        "position": "top",
+                        "children": [
+                           {
+                              "name": "네트워크 장치",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "이더넷",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "TCP/IP 설정",
+                                          "description": "",
+                                          "type": "category",
+                                          "children": [
+                                             {
+                                                "name": "DHCP",
+                                                "description": "",
+                                                "type": "toggle"
+                                             },
+                                             {
+                                                "name": "장치 포트",
+                                                "description": "",
+                                                "type": "string",
+                                                "value": "51211"
+                                             },
+                                             {
+                                                "name": "IP 주소",
+                                                "description": "",
+                                                "type": "string",
+                                                "value": "192.168.1.111"
+                                             },
+                                             {
+                                                "name": "게이트웨이",
+                                                "description": "",
+                                                "type": "string",
+                                                "value": "192.168.1.1"
+                                             },
+                                             {
+                                                "name": "서브넷마스크",
+                                                "description": "",
+                                                "type": "string",
+                                                "value": "255.255.255.0"
+                                             },
+                                             {
+                                                "name": "도메인네임서버",
+                                                "description": "",
+                                                "type": "string",
+                                                "value": "0.0.0.0"
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "네트워크 서버",
+                                    "description": "",
+                                    "type": "category",
+                                    "children": [
+                                       {
+                                          "name": "서버",
+                                          "description": "",
+                                          "type": "parent",
+                                          "note": "서버 → 장치(서버 편집에서 선택한 값 표시)",
+                                          "children": [
+                                             {
+                                                "name": "서버 편집",
+                                                "description": "",
+                                                "type": "title",
+                                                "children": [
+                                                   {
+                                                      "name": "장치 -> 서버",
+                                                      "description": "",
+                                                      "type": "toggle",
+                                                      "default": false
+                                                   }
+                                                ]
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "OSDP 통신 설정",
+                                    "description": "",
+                                    "type": "category",
+                                    "children": [
+                                       {
+                                          "name": "RS-485",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "마스터",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "슬레이브",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "기본값",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             }
+                                          ]
+                                       },
+                                       {
+                                          "name": "전송 속도",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "115200",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             },
+                                             {
+                                                "name": "57600",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "38400",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "19200",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "9600",
+                                                "description": "",
+                                                "type": "option"
+                                             }
+                                          ]
+                                       },
+                                       {
+                                          "name": "인증 결과",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "컨트롤러 결과 표시",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             },
+                                             {
+                                                "name": "장치 인증 결과 표시",
+                                                "description": "",
+                                                "type": "option"
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "name": "장치",
+                        "description": "",
+                        "type": "tab",
+                        "position": "top",
+                        "children": [
+                           {
+                              "name": "설정",
+                              "description": "",
+                              "type": "category",
+                              "children": [
+                                 {
+                                    "name": "IP 인터폰",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "IP 인터폰",
+                                          "description": "",
+                                          "type": "toggle"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "라이선스",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "슬레이브 장치 라이선스 목록",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       },
+                                       {
+                                          "name": "장치에 활성화된 라이선스 목록",
+                                          "description": "",
+                                          "type": "category",
+                                          "children": [
+                                             {
+                                                "name": "Camera QR",
+                                                "description": "",
+                                                "type": "item"
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "릴레이",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "릴레이",
+                                          "description": "",
+                                          "type": "toggle",
+                                          "default": false
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "날짜와 시간",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "날짜와 시간",
+                                          "description": "",
+                                          "type": "input",
+                                          "value": "2026/07/20 오전 04:08:39"
+                                       },
+                                       {
+                                          "name": "표준 시간대",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "UTC",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             }
+                                          ]
+                                       },
+                                       {
+                                          "name": "시간 동기화",
+                                          "description": "",
+                                          "type": "toggle",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "날짜 형식",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "YYYY/MM/DD",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             },
+                                             {
+                                                "name": "MM/DD/YYYY",
+                                                "description": "",
+                                                "type": "option"
+                                             },
+                                             {
+                                                "name": "DD/MM/YYYY",
+                                                "description": "",
+                                                "type": "option"
+                                             }
+                                          ]
+                                       },
+                                       {
+                                          "name": "시간 형식",
+                                          "description": "",
+                                          "type": "select",
+                                          "children": [
+                                             {
+                                                "name": "오전/오후",
+                                                "description": "",
+                                                "type": "option",
+                                                "default": true
+                                             },
+                                             {
+                                                "name": "24시간",
+                                                "description": "",
+                                                "type": "option"
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "일광절약시간",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "(+)",
+                                          "description": "",
+                                          "type": "icon",
+                                          "position": "bottom-right",
+                                          "coords": {
+                                             "x": 700,
+                                             "y": 1180,
+                                             "width": 60,
+                                             "height": 60
+                                          },
+                                          "children": [
+                                             {
+                                                "name": "일광절약시간 추가",
+                                                "description": "",
+                                                "type": "image",
+                                                "content-type": "image",
+                                                "content": "/img/device/bs3m-add-dst.png"
+                                             }
+                                          ]
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "장치 정보",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "모델명",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "BS3M-OAPB"
+                                       },
+                                       {
+                                          "name": "장치 ID",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "*********"
+                                       },
+                                       {
+                                          "name": "시리얼 번호",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "*********"
+                                       },
+                                       {
+                                          "name": "HW",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "1.0.0"
+                                       },
+                                       {
+                                          "name": "FW",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "1.0.0 [YYYY/MM/DD hh:mm:ss](D)"
+                                       },
+                                       {
+                                          "name": "커널",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "1.0.0 [YYYY/MM/DD hh:mm:ss]"
+                                       },
+                                       {
+                                          "name": "MAC",
+                                          "description": "",
+                                          "type": "string",
+                                          "value": "##:##:##:##:##:##"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "메모리 정보",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "메모리 정보",
+                                          "description": "",
+                                          "type": "image",
+                                          "content-type": "image",
+                                          "content": "/img/device/bs3m-memory-info.png"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "USB 메모리",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "가져오기",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       },
+                                       {
+                                          "name": "내보내기",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       },
+                                       {
+                                          "name": "펌웨어 업그레이드",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "보안 탬퍼",
+                                    "description": "",
+                                    "type": "toggle"
+                                 },
+                                 {
+                                    "name": "RTSP",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "RTSP",
+                                          "description": "",
+                                          "type": "toggle",
+                                          "default": false
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "마스터 관리자",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "마스터 관리자 설정",
+                                          "description": "",
+                                          "type": "image",
+                                          "content-type": "image",
+                                          "content": "/img/device/bs3m-setting-master-admin-start.png"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "장치 다시 시작",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "장치 다시 시작",
+                                          "description": "",
+                                          "type": "popup"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "기본값 복원",
+                                    "description": "",
+                                    "type": "parent",
+                                    "children": [
+                                       {
+                                          "name": "전체 설정",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       },
+                                       {
+                                          "name": "네트워크 설정 유지",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       },
+                                       {
+                                          "name": "공장 초기화",
+                                          "description": "",
+                                          "type": "parent",
+                                          "children": []
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "name": "사용자 ID 종류",
+                                    "description": "",
+                                    "type": "select",
+                                    "children": [
+                                       {
+                                          "name": "숫자",
+                                          "description": "",
+                                          "type": "option",
+                                          "default": true
+                                       },
+                                       {
+                                          "name": "영숫자",
+                                          "description": "",
+                                          "type": "option"
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "name": "나가기",
+                  "description": "",
+                  "type": "tab",
+                  "position": "bottom",
+                  "target": "home"
+               }
+            ]
+         },
+         {
+            "name": "사용자 ID",
+            "description": "",
+            "type": "icon",
+            "position": "bottom",
+            "coords": {
+               "x": 100,
+               "y": 900,
+               "width": 200,
+               "height": 260
             }
-         ]
-      },
-      {
-         "name": "User ID",
-         "type": "button"
-      },
-      {
-         "name": "T&A",
-         "type": "button"
-      },
-      {
-         "name": "Door",
-         "type": "button"
-      }
-   ],
-   "function": [
-      {
-         "id": "add-user",
-         "name": "Add user",
-         "content-type": "image",
-         "content": "/common/add-user.png"
-      }
-   ]
+         },
+         {
+            "name": "근태 코드",
+            "description": "",
+            "type": "icon",
+            "position": "bottom",
+            "coords": {
+               "x": 320,
+               "y": 900,
+               "width": 200,
+               "height": 260
+            },
+            "children": [
+               {
+                  "name": "근태 코드 입력",
+                  "description": "",
+                  "type": "image",
+                  "content-type": "image",
+                  "content": "/img/device/bs3m-add-tna-code.png"
+               }
+            ]
+         },
+         {
+            "name": "출입문",
+            "description": "",
+            "type": "icon",
+            "position": "bottom",
+            "coords": {
+               "x": 540,
+               "y": 900,
+               "width": 200,
+               "height": 260
+            },
+            "children": [
+               {
+                  "name": "수동 개방",
+                  "description": "",
+                  "type": "parent",
+                  "children": []
+               },
+               {
+                  "name": "수동 잠금",
+                  "description": "",
+                  "type": "parent",
+                  "children": []
+               },
+               {
+                  "name": "개방/잠금 해제",
+                  "description": "",
+                  "type": "parent",
+                  "children": []
+               }
+            ]
+         }
+      ]
+   }
 }
