@@ -1,0 +1,77 @@
+---
+id: view-audit-log
+title: 감사 로그 확인하기
+description: CLUe 포털에서 공간의 감사 로그를 조회하고, 조회 기간을 설정하거나 검색해 원하는 활동 기록을 찾는 방법을 안내합니다.
+---
+
+<Cmd sid='audit_log' product='clue' className='normal' />는 CLUe 포털의 공간에서 발생하는 모든 활동을 기록하고 추적하는 기능입니다. 관리자는 <Cmd sid='audit_log' product='clue' className='normal' />를 통해 누가, 언제, 어떤 활동을 수행했는지 확인하고 보안 및 규정 준수 요구 사항을 충족할 수 있습니다.
+
+## 감사 로그 조회
+
+1. [CLUe 웹 포털](https://clue.moon.supremainc.com)에 로그인하세요.
+
+1. 감사 로그를 확인할 공간을 선택하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings' product='clue' /> → <Cmd sid='audit_log' product='clue' />를 클릭하세요.
+
+<Image src='/img/clue/clue-place-setting-audit-log.png' />
+
+가장 최근의 감사 로그가 최신 순으로 목록에 표시됩니다. 각 로그 항목에는 활동을 수행한 <Cmd sid='date_and_time' product='clue' />, <Cmd sid='source' product='clue' />, <Cmd sid='administrator' product='clue' />, <Cmd sid='ip_address_2' product='clue' />, <Cmd sid='type_2' product='clue' />, <Cmd sid='target' product='clue' />, <Cmd sid='event_2' product='clue' />를 확인할 수 있습니다.
+
+## 상세 정보 확인
+
+감사 로그 항목의 상세 정보를 확인하려면, 목록 가장 오른쪽의 <Cmd sid='detail' product='clue' /> 열에서 <IcCLDetail title='Detail' /> 버튼을 클릭하세요. 화면 오른쪽에 <Cmd sid='detail' product='clue' /> 패널이 나타납니다.
+
+<Image src='/img/clue/clue-place-setting-audit-log-details.png' />
+
+<Cmd sid='detail' product='clue' /> 패널에서는 날짜 및 시간, 관리자 계정과 함께 <Cmd sid='source' product='clue' />, <Cmd sid='type_2' product='clue' />, 요청 URL을 확인할 수 있으며, 다음 정보도 함께 제공됩니다.
+
+* <Cmd sid='item' product='clue' />: 활동이 발생한 범주를 표시합니다.
+
+* <Cmd sid='target' product='clue' />: 활동이 적용된 대상의 ID와 이름을 표시합니다.
+
+* <Cmd sid='content' product='clue' />: 요청 또는 응답 데이터를 표시합니다.
+
+## 조회 기간 설정
+
+현재 설정된 조회 기간 단위로 조회 기간을 변경하려면 감사 로그 목록 왼쪽 상단의 <IcFw title='Previous' /> 또는 <IcBw title='Next' />를 클릭하세요. 
+
+특정 기간 동안의 감사 로그를 조회하려면 날짜와 시간 영역(<IcCLCal />)을 클릭하세요. <Cmd sid='setting_date_and_time' product='clue' /> 창이 나타나면 시작 날짜와 시간, 종료 날짜와 시간을 설정하세요. 설정한 기간 동안의 감사로그를 조회할 수 있습니다.
+
+<Image src='/img/clue/clue-place-setting-audit-log-set-period.png' />
+
+:::info
+
+설정한 조회 기간을 초기화하려면 <Cmd sid='recent' product='clue' /> 버튼을 클릭하세요.
+
+:::
+
+## 검색
+
+감사 로그 목록의 각 컬럼 값을 기준으로 원하는 데이터를 검색하거나 필터링할 수 있습니다. 감사 로그 목록 상단 오른쪽의 검색 도구를 사용하세요.
+
+<Image src='/img/clue/clue-place-setting-audit-log-search.png' />
+
+* <Cmd sid='administrator' product='clue' />: 관리자 이름을 입력해 검색할 수 있습니다. 대소문자 구분하여 검색합니다.
+
+* <Cmd sid='ip_address_2' product='clue' />: IP 주소를 기준으로 검색할 수 있습니다. 정확한 아이피 주소를 입력해야 합니다.
+
+   > 예: 192.168.1.1
+
+* <Cmd sid='source' product='clue' />: 사용자가 어떤 플랫폼에서 활동했는지 조건을 선택할 수 있습니다.
+
+   > 웹(<Cmd>WEB</Cmd>), 모바일(<Cmd>MOBILE</Cmd>), API(<Cmd>API_TOKEN</Cmd>)
+
+* <Cmd sid='type_2' product='clue' />: 사용자의 활동 범주를 선택할 수 있습니다.
+
+   > <Cmd sid='device_4' product='clue' />, <Cmd sid='door_4' product='clue' />, <Cmd sid='place_2' product='clue' />, <Cmd sid='user_2' product='clue' />, <Cmd sid='place_strategy' product='clue' />, <Cmd sid='admin_2' product='clue' />, <Cmd sid='access_to_personal_information' product='clue' />
+
+* <Cmd sid='event_2' product='clue' />: 다음 이벤트 조건을 선택할 수 있습니다.
+
+   > <Cmd sid='detail_2' product='clue' />, <Cmd sid='list_2' product='clue' />, <Cmd sid='create' product='clue' />, <Cmd sid='update_2' product='clue' />, <Cmd sid='delete' product='clue' />, <Cmd sid='command_2' product='clue' />
+
+여러 필터 항목을 함께 선택해 필터링할 수 있습니다. 서로 다른 항목을 선택하면 `AND` 조건으로, 같은 항목에 값을 여러 개 선택하면 `OR` 조건으로 필터링합니다. 필터링을 해제하려면 <IcClose title='Disable' /> 버튼을 클릭하세요.
+
+<Image src='/img/clue/clue-place-setting-audit-log-search-filter.png' />
+
+<Image src='/img/clue/clue-place-setting-audit-log-search-filter-or.png' />
