@@ -5239,6 +5239,30 @@
     "width": 595,
     "height": 254
   },
+  "/img/clue/clue-place-setting-audit-log-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-place-setting-audit-log-search-filter-or.png": {
+    "width": 1920,
+    "height": 487
+  },
+  "/img/clue/clue-place-setting-audit-log-search-filter.png": {
+    "width": 1920,
+    "height": 502
+  },
+  "/img/clue/clue-place-setting-audit-log-search.png": {
+    "width": 1920,
+    "height": 426
+  },
+  "/img/clue/clue-place-setting-audit-log-set-period.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/clue/clue-place-setting-audit-log.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/clue/clue-place-setting-basic-self-registration.png": {
     "width": 1920,
     "height": 1080
@@ -19658,6 +19682,14 @@
   "/img/menus/ico-close.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-clue-audit-log.svg": {
+    "width": 15,
+    "height": 18
+  },
+  "/img/menus/ico-clue-calendar.svg": {
+    "width": 20,
+    "height": 20
   },
   "/img/menus/ico-clue-check.svg": {
     "width": 18,
