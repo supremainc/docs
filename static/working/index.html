@@ -76,6 +76,12 @@
   .stepbtn:hover{background:var(--accent-soft);color:var(--accent-ink);}
   .stepbtn:first-child{border-bottom:1px solid var(--line-strong);}
   .stepbtn:active{background:var(--accent);color:#fff;}
+
+  /* 원하는 실근무: [ ]시간 [ ]분 */
+  .dur-input{display:flex;align-items:center;gap:5px;flex-wrap:nowrap;}
+  .dur-unit{font-size:13px;color:var(--muted);font-weight:600;}
+  .dur-input .timewrap{width:auto !important;}
+  .dur-input .tinput.numsm{width:34px !important;flex:none !important;text-align:center;padding-left:4px;padding-right:4px;}
   /* 캘린더 셀 / 휴가 시간대 안에서는 꽉 차게 */
   .cell .times .timewrap, .cell .vrange .timewrap{display:flex;width:100%;}
   .cell .times .timewrap > .tinput, .cell .vrange .timewrap > .tinput{flex:1;min-width:0;}
@@ -165,8 +171,19 @@
   .max-warn{margin-top:12px;font-size:12.5px;color:var(--warn);font-weight:600;}
 
   /* ── 캘린더 ── */
-  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
-  .cal-head .month-lab{font-size:18px;font-weight:700;font-family:var(--mono);letter-spacing:.01em;}
+  .cal-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;gap:12px;}
+  .cal-head .month-lab{font-size:18px;font-weight:700;font-family:var(--mono);letter-spacing:.01em;padding-top:8px;}
+  .cal-head-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+  .cal-nav{display:flex;align-items:center;}
+  .kb-tip{
+    font-size:11.5px;color:var(--muted);background:var(--accent-soft);
+    padding:4px 10px;border-radius:20px;white-space:nowrap;
+  }
+  .kb-tip b{color:var(--accent-ink);font-weight:700;}
+  .kb-tip .kb-tag{
+    font-size:9.5px;font-weight:800;color:#fff;background:var(--accent);
+    border-radius:4px;padding:1px 5px;margin-right:5px;letter-spacing:.04em;
+  }
   .navbtn{
     border:1px solid var(--line-strong);background:#fff;color:var(--ink);border-radius:9px;
     width:38px;height:34px;cursor:pointer;font-size:16px;line-height:1;
@@ -365,8 +382,13 @@
           <input type="text" class="tinput" id="leaveIn" inputmode="numeric" maxlength="5" placeholder="--:--" value="08:00">
         </div>
         <div class="field">
-          <label for="leaveTarget">원하는 실근무 (시:분)</label>
-          <input type="text" class="tinput" id="leaveTarget" inputmode="numeric" maxlength="5" placeholder="08:00" value="08:00">
+          <label>원하는 실근무</label>
+          <div class="dur-input">
+            <input type="text" class="tinput numsm" id="leaveH" inputmode="numeric" maxlength="2" value="8">
+            <span class="dur-unit">시간</span>
+            <input type="text" class="tinput numsm" id="leaveM" inputmode="numeric" maxlength="2" value="0">
+            <span class="dur-unit">분</span>
+          </div>
         </div>
         <div class="calc-result">
           <div class="lab">퇴근 시간</div>
@@ -419,10 +441,13 @@
   <section class="card">
     <div class="cal-head">
       <div class="month-lab" id="monthLab">–</div>
-      <div>
-        <button class="navbtn" id="prevBtn" aria-label="이전 달">‹</button>
-        <button class="navbtn" id="nextBtn" aria-label="다음 달">›</button>
-        <button class="today-btn" id="todayBtn">이번 달</button>
+      <div class="cal-head-right">
+        <div class="kb-tip"><span class="kb-tag">TIP</span> 시간 칸에서 <b>↑ ↓</b> 방향키로도 조절돼요</div>
+        <div class="cal-nav">
+          <button class="navbtn" id="prevBtn" aria-label="이전 달">‹</button>
+          <button class="navbtn" id="nextBtn" aria-label="다음 달">›</button>
+          <button class="today-btn" id="todayBtn">이번 달</button>
+        </div>
       </div>
     </div>
     <div class="cal-scroll">
@@ -482,7 +507,7 @@
   </main>
   </div>
 
-  <div class="footnote">V2.1 | Technical Writing</div>
+  <div class="footnote">V2.3 | Technical Writing</div>
 </div>
 
 <script>
@@ -691,6 +716,46 @@ function holdRepeat(btn, fn){
   btn.addEventListener('mousedown', start);
   btn.addEventListener('touchstart', start, { passive:false });
   ['mouseup','mouseleave','touchend','touchcancel','blur'].forEach(ev=> btn.addEventListener(ev, stop));
+}
+
+/* 정수 입력칸(시간/분) + ▲▼ 스텝퍼 + 키보드 위/아래 (min~max 클램프)
+   onCarry(dir): 값이 max를 넘으면 min으로, min 밑으로 내려가면 max로 돌리며 상위 단위에 dir(+1/-1) 전달 */
+function attachIntStepper(el, min, max, onChange, onCarry){
+  el.addEventListener('focus', ()=>{ try{ el.select(); }catch(e){} });
+  el.addEventListener('input', ()=>{
+    const v = el.value.replace(/[^0-9]/g,'').slice(0,2);
+    if(v !== el.value) el.value = v;
+    onChange();
+  });
+  el.addEventListener('blur', ()=>{
+    let n = parseInt(el.value, 10);
+    if(isNaN(n)){ el.value = ''; onChange(); return; }
+    n = Math.max(min, Math.min(max, n));
+    el.value = String(n);
+    onChange();
+  });
+  function step(d){
+    let n = parseInt(el.value, 10); if(isNaN(n)) n = 0;
+    let nn = n + d;
+    if(onCarry && nn > max){ nn = min; onCarry(1); }        // 59 → 0 (+1시간)
+    else if(onCarry && nn < min){ nn = max; onCarry(-1); }  // 0 → 59 (-1시간)
+    else nn = Math.max(min, Math.min(max, nn));
+    el.value = String(nn);
+    onChange();
+  }
+  el.addEventListener('keydown', e=>{
+    if(e.key === 'ArrowUp'){ e.preventDefault(); step(1); }
+    else if(e.key === 'ArrowDown'){ e.preventDefault(); step(-1); }
+  });
+  if(el.parentNode){
+    const wrap = document.createElement('span'); wrap.className = 'timewrap';
+    el.parentNode.insertBefore(wrap, el); wrap.appendChild(el);
+    const stepper = document.createElement('span'); stepper.className = 'stepper';
+    const up = document.createElement('button'); up.type='button'; up.className='stepbtn'; up.textContent='▲'; up.tabIndex=-1;
+    const dn = document.createElement('button'); dn.type='button'; dn.className='stepbtn'; dn.textContent='▼'; dn.tabIndex=-1;
+    holdRepeat(up, ()=>step(1)); holdRepeat(dn, ()=>step(-1));
+    stepper.appendChild(up); stepper.appendChild(dn); wrap.appendChild(stepper);
+  }
 }
 /* 분 → "N시간 M분" (1시간 미만은 "M분"만) */
 function fmtDur(min){
@@ -991,15 +1056,18 @@ calcVac.addEventListener('change', renderCalc);
 
 /* 탭2: 출근 + 원하는 실근무 → 퇴근 시간 */
 const leaveIn = document.getElementById('leaveIn');
-const leaveTarget = document.getElementById('leaveTarget');
+const leaveH = document.getElementById('leaveH');
+const leaveM = document.getElementById('leaveM');
 const leaveVal = document.getElementById('leaveVal');
 const leaveMeta = document.getElementById('leaveMeta');
 const leaveEffHint = document.getElementById('leaveEffHint');
 
 function renderLeave(){
   const iRaw = toMin(leaveIn.value);
-  const W = toMin(leaveTarget.value);   // 원하는 실근무(시:분) → 분
-  if(iRaw === null || W === null || W <= 0){
+  const h = parseInt(leaveH.value, 10) || 0;
+  const m = parseInt(leaveM.value, 10) || 0;
+  const W = h*60 + m;                   // 원하는 실근무(분)
+  if(iRaw === null || W <= 0){
     leaveVal.textContent = '–';
     leaveMeta.innerHTML = '';
     leaveEffHint.style.display = 'none';
@@ -1031,7 +1099,13 @@ function renderLeave(){
   }
 }
 attachTimeMask(leaveIn, renderLeave);
-attachTimeMask(leaveTarget, renderLeave);
+attachIntStepper(leaveH, 0, 24, renderLeave);
+attachIntStepper(leaveM, 0, 59, renderLeave, (dir)=>{
+  // 분이 넘치거나 모자라면 시간 ±1 (0~24 클램프)
+  let h = parseInt(leaveH.value, 10); if(isNaN(h)) h = 0;
+  h = Math.max(0, Math.min(24, h + dir));
+  leaveH.value = String(h);
+});
 
 /* 탭 전환 */
 const panelWork = document.getElementById('panelWork');
