@@ -584,16 +584,16 @@
         ],
         "version": "1.0.0",
         "manuals": {
-            "ko": "device/xpass_q2/XPass Q2_IG_1.00_KO_260403.pdf",
-            "en": "device/xpass_q2/XPass Q2_IG_1.00_EN_260403.pdf",
-            "es": "device/xpass_q2/XPass Q2_IG_1.00_ES_260403.pdf",
-            "ja": "device/xpass_q2/XPass Q2_IG_1.00_JA_260403.pdf"
+            "ko": "device/xpass_q2/XPass Q2_IG_1.01_KO_260720.pdf",
+            "en": "device/xpass_q2/XPass Q2_IG_1.01_EN_260720.pdf",
+            "es": "device/xpass_q2/XPass Q2_IG_1.01_ES_260720.pdf",
+            "ja": "device/xpass_q2/XPass Q2_IG_1.01_JA_260720.pdf"
         },
         "release_notes": {
             "ko": "",
             "en": ""
         },
-        "a_e": "device/xpass_q2/SUPREMA_XPass_Q2_AE-Specification_260406.docx",
+        "a_e": "device/xpass_q2/SUPREMA_XPass_Q2_AE-Specification_260721.docx",
         "dt": {
             "ko": "device/xpass_q2/XPass Q2_DrillingTemplate_KO.pdf",
             "en": "device/xpass_q2/XPass Q2_DrillingTemplate_EN.pdf"
