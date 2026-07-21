@@ -168,6 +168,8 @@
   }
   .ot-row .ot-lab{font-size:13px;font-weight:700;color:var(--amber);}
   .ot-row .ot-val{font-size:20px;font-weight:700;font-family:var(--mono);color:var(--amber);}
+  .ot-row.hol{background:var(--holiday-soft);}
+  .ot-row.hol .ot-lab,.ot-row.hol .ot-val{color:var(--holiday);}
   .max-warn{margin-top:12px;font-size:12.5px;color:var(--warn);font-weight:600;}
 
   /* ── 캘린더 ── */
@@ -430,7 +432,7 @@
         <div class="stat-v"><div class="num" id="totalNum">0시간</div></div>
       </div>
       <div class="stat left">
-        <div class="lab">남은 실 근무 시간</div>
+        <div class="lab">남은 실 근무시간</div>
         <div class="stat-v"><div class="num" id="leftNum">–</div></div>
       </div>
     </div>
@@ -444,6 +446,14 @@
     <div class="ot-row" id="otRow" style="display:none;">
       <span class="ot-lab">연장근로수당 지급시간</span>
       <span class="ot-val" id="otVal">–</span>
+    </div>
+    <div class="ot-row" id="nightRow" style="display:none;">
+      <span class="ot-lab">야간근로수당 지급시간</span>
+      <span class="ot-val" id="nightVal">–</span>
+    </div>
+    <div class="ot-row hol" id="holRow" style="display:none;">
+      <span class="ot-lab">휴일 근무 시간</span>
+      <span class="ot-val" id="holVal">–</span>
     </div>
     <div class="max-warn" id="maxWarn" style="display:none;">※ 누적 실 근무시간이 최대근로시간을 초과했습니다.</div>
   </section>
@@ -521,6 +531,8 @@
         <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간). ※ 휴가가 있는 날은 이 자동 경고가 표시되지 않습니다.</li>
         <li><em>근무 미편성 가능일</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">근무 미편성 가능일</span>로 표시됩니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
         <li><em>공휴일</em>: 2026년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
+        <li><em>야간근로수당</em>: 야간(<code>22:00~06:00</code>)에 근무한 시간이 한 달 <code>6시간</code>을 초과하면 그 초과분이 <b>야간근로수당 지급시간</b>으로 요약에 표시됩니다(= 총 야간근로시간 − 6시간). 실 근무시간으로 인정되는 밤 시간은 22:00~23:30까지이며, 그 이후~06:00 근무는 실근무엔 포함되지 않지만 야간근로수당 산정에는 포함됩니다. 자정을 넘겨 근무한 경우 퇴근 시간을 <b>24:00 이후 표기</b>로 입력하세요(예: 익일 01:30 → <code>25:30</code>).</li>
+        <li><em>휴일 근무</em>: 주말·공휴일에 한 근무는 기준근로시간에 포함되지 않고 <b>휴일 근무 시간</b>으로 따로 집계됩니다(별도 인정·정산). 휴일근무는 <code>1일 최대 8시간</code>까지만 인정되며, 초과분은 인정되지 않습니다(달력 칸에 <span class="badge core" style="display:inline-block;">8시간 초과 미인정</span> 표시).</li>
       </ul>
     </div>
   </details>
@@ -528,7 +540,7 @@
   </main>
   </div>
 
-  <div class="footnote">V2.4 | Technical Writing</div>
+  <div class="footnote">V2.5 | Technical Writing</div>
 </div>
 
 <script>
@@ -607,12 +619,14 @@ function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
   // 시간대를 쓰지 않는 휴가(연차/없음)는 휴가 시간대 무시
   if(!vacUsesRange(vacKey)){ vinMin = null; voutMin = null; }
   const rawValid = (inMin !== null && outMin !== null && outMin > inMin);
-  let stay = 0, overlap = 0, officePhysical = 0, brk = 0, officeWork = 0;
+  let stay = 0, overlap = 0, officePhysical = 0, brk = 0, officeWork = 0, night = 0;
   let officeValid = false, clamped = false, cIn = null, cOut = null;
   if(rawValid){
     cIn  = Math.max(inMin, REC_START);   // 07:30 이전 출근은 07:30부터 인정
     cOut = Math.min(outMin, REC_END);    // 23:30 이후 퇴근은 23:30까지 인정
     clamped = (cIn !== inMin) || (cOut !== outMin);
+    // 야간근로시간: 22:00(1320) ~ 익일 06:00(1800). 실근무 인정(23:30)과 무관하게 산정
+    night = Math.max(0, Math.min(outMin, 1800) - Math.max(inMin, 1320));
     if(cOut > cIn){
       officeValid = true;
       stay = cOut - cIn;
@@ -627,7 +641,7 @@ function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
   }
   const vacRangeLen = (vinMin !== null && voutMin !== null && voutMin > vinMin) ? (voutMin - vinMin) : null;
   return {
-    officeValid, officePhysical, officeWork, brk, vh, clamped,
+    officeValid, officePhysical, officeWork, brk, vh, clamped, night,
     total: officeWork + vh,
     vacMismatch: (vh > 0 && vacRangeLen !== null && vacRangeLen !== vh)
   };
@@ -639,16 +653,26 @@ function toMin(t){
   const [h,m] = t.split(':').map(Number);
   return h*60 + m;
 }
+/* 퇴근 시간 파싱: 자정 넘김 표기(24:00~29:59) 허용 → 0~1799분 */
+function toMinOut(t){
+  if(!t) return null;
+  const mm = String(t).match(/^(\d{1,2}):([0-5]\d)$/);
+  if(!mm) return null;
+  const h = +mm[1], mi = +mm[2];
+  if(h > 29) return null;
+  return h*60 + mi;
+}
 
-/* 느슨한 파싱: 부분 입력도 분으로 변환 ("8"→480, "830"→510) */
-function parseLooseMin(str){
+/* 느슨한 파싱: 부분 입력도 분으로 변환 ("8"→480, "830"→510). maxHour까지 허용 */
+function parseLooseMin(str, maxHour){
+  maxHour = (maxHour == null) ? 23 : maxHour;
   const d = String(str).replace(/[^0-9]/g,'');
   if(d.length === 0) return null;
   let h, m;
   if(d.length <= 2){ h = +d; m = 0; }
   else if(d.length === 3){ h = +d.slice(0,1); m = +d.slice(1); }
   else { h = +d.slice(0,2); m = +d.slice(2); }
-  if(isNaN(h) || isNaN(m) || h > 23 || m > 59) return null;
+  if(isNaN(h) || isNaN(m) || h > maxHour || m > 59) return null;
   return h*60 + m;
 }
 function minToHHMM(m){
@@ -656,9 +680,11 @@ function minToHHMM(m){
 }
 
 /* 24시간 시간 입력 마스크 + ▲▼ 스텝퍼(1분 단위) + 키보드 위/아래
-   - 오전/오후 표기 없음
-   - 기존 값의 일부만 고쳐도 나머지가 밀리지 않도록 개선 */
-function attachTimeMask(el, onChange){
+   opts.overnight=true 이면 퇴근용으로 24:00~29:59(익일 06:00까지) 입력 허용 */
+function attachTimeMask(el, onChange, opts){
+  opts = opts || {};
+  const maxHour = opts.overnight ? 29 : 23;
+  const stepWrap = opts.overnight ? 1800 : 1440;   // 스텝퍼 순환 범위
   el.addEventListener('focus', ()=>{ try{ el.select(); }catch(e){} });
 
   // 입력 중: 값이 실제로 바뀔 때만 재설정(커서 튐 방지)
@@ -682,16 +708,16 @@ function attachTimeMask(el, onChange){
 
   // 포커스 아웃: 정규화 ("8"→"08:00", "830"→"08:30")
   el.addEventListener('blur', ()=>{
-    const m = parseLooseMin(el.value);
+    const m = parseLooseMin(el.value, maxHour);
     el.value = (el.value.replace(/[^0-9]/g,'').length === 0 || m === null) ? '' : minToHHMM(m);
     onChange();
   });
 
   // 1분 단위 증감
   function step(delta){
-    let m = parseLooseMin(el.value);
+    let m = parseLooseMin(el.value, maxHour);
     if(m === null) m = 0;
-    m = (m + delta + 1440) % 1440;
+    m = (m + delta + stepWrap) % stepWrap;
     el.value = minToHHMM(m);
     onChange();
   }
@@ -1018,7 +1044,7 @@ function renderCalc(){
     if(calcOut.value) calcOut.value = '';
   }
 
-  const i = toMin(calcIn.value), o = toMin(calcOut.value);
+  const i = toMin(calcIn.value), o = toMinOut(calcOut.value);
   const vin = toMin(calcVin.value), vout = toMin(calcVout.value);
   const vac = calcVac.value;
   const badTime = (i!==null && o!==null && o<=i);
@@ -1065,12 +1091,16 @@ function renderCalc(){
   }
   if(loss) meta += `<span class="chip loss">⚠ 휴게 손실 구간 · 조금 일찍 퇴근해도 실근무는 같거나 더 많아요</span>`;
   if(r.officeValid && r.officePhysical >= 690) meta += `<span class="chip meal">야근식대 (평일 기준)</span>`;
-  if(r.clamped) meta += `<span style="color:var(--amber)">근무인정 07:30~23:30 적용</span>`;
+  if(o !== null && o >= 1440){
+    meta += `<span style="color:var(--amber)">자정 넘김 · 익일 ${minToClock(o)} 퇴근 · 실근무는 23:30까지 인정</span>`;
+  } else if(r.clamped){
+    meta += `<span style="color:var(--amber)">근무인정 07:30~23:30 적용</span>`;
+  }
   if(r.vacMismatch) meta += `<span style="color:var(--warn)">휴가 시간대 길이가 휴가 종류와 다릅니다</span>`;
   calcMeta.innerHTML = meta;
 }
 attachTimeMask(calcIn, renderCalc);
-attachTimeMask(calcOut, renderCalc);
+attachTimeMask(calcOut, renderCalc, {overnight:true});
 attachTimeMask(calcVin, renderCalc);
 attachTimeMask(calcVout, renderCalc);
 calcVac.addEventListener('change', renderCalc);
@@ -1154,27 +1184,34 @@ const progPct = document.getElementById('progPct');
 const progText = document.getElementById('progText');
 const otRow = document.getElementById('otRow');
 const otVal = document.getElementById('otVal');
+const nightRow = document.getElementById('nightRow');
+const nightVal = document.getElementById('nightVal');
+const holRow = document.getElementById('holRow');
+const holVal = document.getElementById('holVal');
 const maxWarn = document.getElementById('maxWarn');
 
-function totalWorkMinutes(){
-  let sum = 0;
+function monthTotals(){
+  let regular = 0, holiday = 0, night = 0;
   for(const key in monthData){
     const d = monthData[key];
     const parts = key.split('-').map(Number);
     const dow = new Date(parts[0], parts[1]-1, parts[2]).getDay();
     const isHol = !!holidayName(parts[0], parts[1]-1, parts[2]);
-    const vacOK = !(dow === 0 || dow === 6 || isHol);   // 주말·공휴일은 휴가 불가
-    const vac  = vacOK ? d.vac  : '';
-    const vin  = vacOK ? d.vin  : '';
-    const vout = vacOK ? d.vout : '';
-    const r = computeDay(toMin(d.in), toMin(d.out), vac, toMin(vin), toMin(vout));
-    sum += r.total;
+    const isRest = (dow === 0 || dow === 6 || isHol);   // 휴일: 주말·공휴일
+    const vac  = isRest ? '' : d.vac;                   // 휴일엔 휴가 없음
+    const vin  = isRest ? '' : d.vin;
+    const vout = isRest ? '' : d.vout;
+    const r = computeDay(toMin(d.in), toMinOut(d.out), vac, toMin(vin), toMin(vout));
+    if(isRest) holiday += Math.min(r.total, 480);       // 휴일근무는 1일 최대 8시간 인정
+    else       regular += r.total;                      // 평일 실근무 (기준 대상)
+    night += r.night;                                   // 야간근로 (휴일 포함 전체)
   }
-  return sum;
+  return { regular, holiday, night };
 }
 
 function renderSummary(){
-  const total = totalWorkMinutes();
+  const t = monthTotals();
+  const total = t.regular;              // 기준근로시간 대상은 평일 실근무만
   totalNum.textContent = fmtDur(total);
 
   const stdH = standardHours(curYear, curMonth);
@@ -1183,7 +1220,7 @@ function renderSummary(){
   stdNum.textContent = stdH + '시간';
   maxSub.textContent = '최대 ' + mxH + '시간';
 
-  // 더 해야 하는 시간 (기준근로시간 기준)
+  // 남은 실 근무시간 (기준근로시간 기준)
   const leftMin = stdMin - total;
   if(leftMin <= 0){
     leftNum.textContent = '완료 ✓';
@@ -1209,6 +1246,23 @@ function renderSummary(){
   } else {
     otRow.style.display = 'none';
   }
+
+  // 야간근로수당 지급시간 = 총 야간근로시간 − 6시간(고정야간). 6시간 초과 시에만 표시
+  if(t.night > 360){
+    nightRow.style.display = 'flex';
+    nightVal.textContent = fmtDur(t.night - 360);   // 360분 = 6시간
+  } else {
+    nightRow.style.display = 'none';
+  }
+
+  // 휴일 근무 시간 (기준근로시간에 미포함, 별도 정산). 휴일근무가 있을 때만 표시
+  if(t.holiday > 0){
+    holRow.style.display = 'flex';
+    holVal.textContent = fmtDur(t.holiday);
+  } else {
+    holRow.style.display = 'none';
+  }
+
   // 최대근로시간 초과 경고
   maxWarn.style.display = (total > mxMin) ? 'block' : 'none';
 }
@@ -1313,7 +1367,7 @@ function buildCalendar(){
     cell.appendChild(result);
 
     function refreshCell(){
-      const im = toMin(inEl.value), om = toMin(outEl.value);
+      const im = toMin(inEl.value), om = toMinOut(outEl.value);
       const vac = getVac();
       const vin = toMin(getVin()), vout = toMin(getVout());
       const r = computeDay(im, om, vac, vin, vout);
@@ -1352,16 +1406,26 @@ function buildCalendar(){
       if(r.vh > 0){
         html += `<div class="stay-note">휴가 ${fmtDur(r.vh)}</div>`;
       }
-      html += `<span class="rlab">실근무</span>${fmtDur(r.total)}`;
+      // 휴일(주말·공휴일) 근무는 1일 최대 8시간까지만 인정
+      const isRest = !vacAllowed;
+      const holidayCapped = isRest && r.total > 480;
+      const recWork = holidayCapped ? 480 : r.total;
+      html += `<span class="rlab">실근무</span>${fmtDur(recWork)}`;
       result.className='result';
       result.innerHTML = html;
 
+      // 휴일근무 8시간 초과분 미인정 표시
+      if(holidayCapped){
+        const b=document.createElement('span'); b.className='badge core'; b.textContent='8시간 초과 미인정'; badges.appendChild(b);
+      }
       // 야근식대 (실제 사무실 체류 기준)
       if(r.officeValid && isMealSupport(dow, r.officePhysical, !!hol)){
         const b=document.createElement('span'); b.className='badge meal'; b.textContent='야근식대'; badges.appendChild(b);
       }
-      // 근무인정시간(07:30~23:30) 적용됨
-      if(r.clamped){
+      // 근무인정시간(07:30~23:30) 적용됨 / 자정 넘김
+      if(om !== null && om >= 1440){
+        const b=document.createElement('span'); b.className='badge clamp'; b.textContent='익일 퇴근'; badges.appendChild(b);
+      } else if(r.clamped){
         const b=document.createElement('span'); b.className='badge clamp'; b.textContent='인정시간'; badges.appendChild(b);
       }
       // 코어타임 미충족 (휴가가 없는 순수 사무실 근무일에만 확인)
@@ -1385,7 +1449,7 @@ function buildCalendar(){
       renderSummary();
     }
     attachTimeMask(inEl, onChange);
-    attachTimeMask(outEl, onChange);
+    attachTimeMask(outEl, onChange, {overnight:true});
     if(vinEl) attachTimeMask(vinEl, onChange);
     if(voutEl) attachTimeMask(voutEl, onChange);
     if(vacEl){
