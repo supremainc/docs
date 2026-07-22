@@ -2,7 +2,7 @@
 id: configuration
 title: 장치 구성
 description: 장치의 설정과 관리를 안내합니다.
-keywords: [ 장치 구성, 슬레이브, 정보, 네트워크, 인증, 고급 설정 ]
+keywords: [ 장치 구성, 슬레이브, 정보, 백업, 복원, 네트워크, 인증, 고급 설정 ]
 ---
 
 장치의 설정과 관리를 안내합니다.
@@ -15,11 +15,11 @@ CoreStation에 슬레이브 장치를 추가하여 손쉽게 출입통제 시스
 
 1. Device List의 CoreStation을 마우스 오른쪽 버튼으로 클릭한 뒤 **Search Slave Device**를 클릭하세요. CoreStation에 연결된 슬레이브 장치 목록이 나타납니다.
 
-    <Image src='/img/device/config-search-slave-device1.png' alone />
+   <Image src='/img/device/config-search-slave-device1.png' alone />
 
 1. 슬레이브로 등록할 장치를 선택한 뒤 **Add**를 클릭하세요. 또는 개별 포트를 선택하여 슬레이브 장치를 추가할 수도 있습니다.
 
-    <Image src='/img/device/config-search-slave-device2.png' alone />
+   <Image src='/img/device/config-search-slave-device2.png' alone />
 
 ## 장치 재시작
 
@@ -29,7 +29,7 @@ CoreStation에 슬레이브 장치를 추가하여 손쉽게 출입통제 시스
 
 1. Device List의 CoreStation을 마우스 오른쪽 버튼으로 클릭한 뒤 **Reboot**를 클릭하세요.
 
-    <Image src='/img/device/config-reboot.png' alone />
+   <Image src='/img/device/config-reboot.png' alone />
 
 ## 장치 설정 및 정보 수정
 
@@ -69,6 +69,29 @@ CoreStation의 세부 정보를 설정할 수 있습니다.
 
 :::
 
+### 백업 및 복원
+
+<Image src='/img/device/config-backup-restore.png' alone />
+
+<div className='overflow-x col2--20-80'>
+
+| 명칭 | 기능 설명 |
+| -- | -- |
+| **Device Backup** | **Export Backup Data**를 클릭하면 CoreStation의 설정 정보를 파일로 백업합니다. 백업 파일은 압축 후 암호화되어 브라우저에 설정된 다운로드 위치에 저장됩니다. |
+| **Restore Device** | **Import Backup Data**를 클릭하면 백업한 파일을 이용하여 CoreStation에 설정 정보를 복원합니다. |
+
+</div>
+
+:::info
+
+* 백업 파일에는 Device ID, Network (IP, DNS, Server, Gateway), RS485 Baud Rate (per channel), SCB Key, 루트 인증서가 포함됩니다. MAC 주소는 백업 파일에 포함되지 않으며, 장치를 교체하면 MAC 주소가 달라지므로 DHCP 환경에서는 IP 주소가 변경될 수 있습니다. 백업 및 복원 시 고정 IP 사용을 권장합니다.
+
+* 복원은 백업 파일을 생성한 장치와 동일한 장치 종류 간에만 가능합니다.
+
+* CoreStation에 슬레이브 장치가 연결되어 있는 경우 SCB Key 복원을 지원하지 않습니다. 이미 SCB Key를 사용하여 슬레이브 장치를 연결한 CoreStation은 복원할 수 없습니다.
+
+:::
+
 ### 네트워크
 
 <Image src='/img/device/config-network.png' alone />
@@ -87,9 +110,16 @@ CoreStation의 세부 정보를 설정할 수 있습니다.
 | **Server Address** | BioStar X 서버의 IP 주소 또는 도메인 주소를 입력하세요. |
 | **Server Port** | BioStar X 서버의 포트를 입력하세요. |
 | **RS485** | 마스터 모드만 사용할 수 있습니다. |
+| **SCB Key** | CoreStation에 적용할 보안 키를 직접 입력할 수 있습니다. |
 | **Baud Rate** | 각 RS-485 포트의 전송 속도를 설정할 수 있습니다. |
 
 </div>
+
+:::info
+
+CoreStation에 슬레이브 장치가 연결되어 있는 경우 SCB Key를 설정할 수 없습니다.
+
+:::
 
 ### 인증
 

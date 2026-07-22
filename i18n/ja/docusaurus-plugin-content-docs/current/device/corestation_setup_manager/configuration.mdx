@@ -6,6 +6,8 @@ keywords:
   - デバイス構成
   - スレーブ
   - 情報
+  - バックアップ
+  - 復元
   - ネットワーク
   - 認証
   - 高度な設定
@@ -75,6 +77,29 @@ CoreStation の詳細を設定できます。
 
 :::
 
+### バックアップと復元
+
+<Image src='/img/device/config-backup-restore.png' alone />
+
+<div className='overflow-x col2--20-80'>
+
+| 名称 | 機能説明 |
+| --- | --- |
+| **Device Backup** | **Export Backup Data** をクリックすると、CoreStation の設定情報をファイルにバックアップします。 バックアップファイルは圧縮後に暗号化され、ブラウザーに設定されたダウンロード先に保存されます。 |
+| **Restore Device** | **Import Backup Data** をクリックすると、バックアップしたファイルを使用して CoreStation の設定情報を復元します。 |
+
+</div>
+
+:::info
+
+* バックアップファイルには、Device ID、Network（IP、DNS、Server、Gateway）、RS485 Baud Rate（チャネルごと）、SCB Key、ルート証明書が含まれます。 MAC アドレスはバックアップファイルに含まれません。デバイスを交換すると MAC アドレスが変わるため、DHCP 環境では IP アドレスが変更される場合があります。バックアップと復元では固定 IP の使用を推奨します。
+
+* 復元は、バックアップファイルを作成したデバイスタイプと同じデバイスタイプ間でのみ可能です。
+
+* CoreStation にスレーブデバイスが接続されている場合、SCB Key の復元はサポートしません。すでに SCB Key を使用してスレーブデバイスを接続した CoreStation は復元できません。
+
+:::
+
 ### ネットワーク
 
 <Image src='/img/device/config-network.png' alone />
@@ -93,9 +118,16 @@ CoreStation の詳細を設定できます。
 | **Server Address** | BioStar X サーバーの IP アドレスまたはドメインアドレスを入力します。 |
 | **Server Port** | BioStar X サーバーのポートを入力します。 |
 | **RS485** | マスターモードのみ使用できます。 |
+| **SCB Key** | CoreStation に適用するセキュリティキーを直接入力できます。 |
 | **Baud Rate** | 各 RS-485 ポートのボーレートを設定できます。 |
 
 </div>
+
+:::info
+
+CoreStation にスレーブデバイスが接続されている場合、SCB Key を設定できません。
+
+:::
 
 ### 認証
 

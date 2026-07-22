@@ -6,6 +6,8 @@ keywords:
   - Device Settings
   - Slave
   - Information
+  - Backup
+  - Restore
   - Network
   - Authentication
   - Advanced Settings
@@ -75,6 +77,29 @@ The **Factory Default** menu can be used when a root certificate is stored on th
 
 :::
 
+### Backup and Restore
+
+<Image src='/img/device/config-backup-restore.png' alone />
+
+<div className='overflow-x col2--20-80'>
+
+| Name | Feature description |
+| --- | --- |
+| **Device Backup** | Click **Export Backup Data** to back up CoreStation setting information to a file. The backup file is compressed, encrypted, and saved to the download location set in the browser. |
+| **Restore Device** | Click **Import Backup Data** to restore CoreStation setting information from a backed-up file. |
+
+</div>
+
+:::info
+
+* The backup file includes the Device ID, Network (IP, DNS, Server, Gateway), RS485 Baud Rate (per channel), SCB Key, and root certificate. The MAC address is not included in the backup file. When you replace a device, the MAC address changes, so the IP address may change in a DHCP environment. Use a static IP for backup and restore.
+
+* Restore is available only between the same device types as the one used to create the backup file.
+
+* If slave devices are connected to CoreStation, SCB Key restore is not supported. You cannot restore a CoreStation that already uses the SCB Key to connect slave devices.
+
+:::
+
 ### Network
 
 <Image src='/img/device/config-network.png' alone />
@@ -93,9 +118,16 @@ The **Factory Default** menu can be used when a root certificate is stored on th
 | **Server Address** | Enter the IP address or domain address of the BioStar X server. |
 | **Server Port** | Enter the port of the BioStar X server. |
 | **RS485** | Only master mode is available. |
+| **SCB Key** | Enter the security key to apply to CoreStation directly. |
 | **Baud Rate** | You can set the transmission speed for each RS-485 port. |
 
 </div>
+
+:::info
+
+If slave devices are connected to CoreStation, you cannot set the SCB Key.
+
+:::
 
 ### Authentication
 

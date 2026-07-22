@@ -6,6 +6,8 @@ keywords:
   - Configuración del Dispositivo
   - Esclavo
   - Información
+  - Copia de seguridad
+  - Restaurar
   - Red
   - Autenticación
   - Configuración Avanzada
@@ -75,6 +77,29 @@ El menú **Factory Default** se puede usar cuando hay un certificado raíz almac
 
 :::
 
+### Copia de seguridad y restauración
+
+<Image src='/img/device/config-backup-restore.png' alone />
+
+<div className='overflow-x col2--20-80'>
+
+| Nombre | Descripción de la función |
+| --- | --- |
+| **Device Backup** | Haga clic en **Export Backup Data** para crear una copia de seguridad de la información de configuración de CoreStation en un archivo. El archivo de copia de seguridad se comprime, se cifra y se guarda en la ubicación de descarga definida en el navegador. |
+| **Restore Device** | Haga clic en **Import Backup Data** para restaurar la información de configuración de CoreStation desde un archivo de copia de seguridad. |
+
+</div>
+
+:::info
+
+* El archivo de copia de seguridad incluye el ID del dispositivo, la red (IP, DNS, servidor, puerta de enlace), la velocidad en baudios de RS-485 (por canal), la clave SCB y el certificado raíz. La dirección MAC no se incluye en el archivo de copia de seguridad. Cuando reemplaza un dispositivo, la dirección MAC cambia, por lo que la dirección IP puede cambiar en un entorno DHCP. Use una IP estática para la copia de seguridad y la restauración.
+
+* La restauración solo está disponible entre los mismos tipos de dispositivo que los usados para crear el archivo de copia de seguridad.
+
+* Si hay dispositivos esclavos conectados a CoreStation, no se admite la restauración de la clave SCB. No puede restaurar una CoreStation que ya usa la clave SCB para conectar dispositivos esclavos.
+
+:::
+
 ### Red
 
 <Image src='/img/device/config-network.png' alone />
@@ -93,9 +118,16 @@ El menú **Factory Default** se puede usar cuando hay un certificado raíz almac
 | **Dirección Servidor** | Ingresa la dirección IP o el dominio del servidor BioStar X. |
 | **Puerto del servidor** | Ingresa el puerto del servidor BioStar X. |
 | **RS485** | Solo está disponible el modo maestro. |
+| **SCB Key** | Ingrese la clave de seguridad para aplicarla directamente a CoreStation. |
 | **Baud rate** | Define la velocidad de transmisión para cada puerto RS-485. |
 
 </div>
+
+:::info
+
+Si hay dispositivos esclavos conectados a CoreStation, no puede establecer la clave SCB.
+
+:::
 
 ### Autenticación
 
