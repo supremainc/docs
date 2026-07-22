@@ -254,6 +254,11 @@ function useRecentSearches(indexName) {
 
 const MAX_RELATED_IN_SEARCH = 4;
 
+// 네브바, 홈페이지 히어로 등 여러 곳에 <SearchBar/>가 동시에 마운트될 수 있어,
+// 인스턴스별 상태만으로는 두 모달이 동시에 열려 오버레이가 중첩될 수 있다.
+// 모듈 스코프 잠금으로 한 번에 하나의 모달만 열리도록 보장한다.
+let isAnyModalOpen = false;
+
 // 인덱스 레코드의 objectID는 "{n}-{url}" 형태이며 n(청크 번호)은 페이지마다 다르다.
 // 페이지의 대표 레코드(type: "lvl1")는 항상 낮은 번호(0~4)에 있으므로 후보를 한 번에 조회해 찾는다.
 async function resolvePageObjectId(appId, apiKey, indexName, url) {
@@ -613,8 +618,14 @@ export default function SearchPop() {
     return algoliasearch(appId, apiKey);
   }, [appId, apiKey]);
 
-  const openModal = useCallback(() => setIsOpen(true), []);
+  const openModal = useCallback(() => {
+    // 다른 인스턴스의 모달이 이미 열려 있으면 중복으로 열지 않음
+    if (isAnyModalOpen) return;
+    isAnyModalOpen = true;
+    setIsOpen(true);
+  }, []);
   const closeModal = useCallback(() => {
+    isAnyModalOpen = false;
     setIsOpen(false);
     triggerRef.current?.focus();
   }, []);
