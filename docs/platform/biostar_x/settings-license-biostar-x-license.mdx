@@ -1,13 +1,13 @@
 ---
 id: settings-license-biostar-x-license
 title: BioStar X 라이선스
-description: 구매한 BioStar X 라이선스를 활성화할 수 있습니다.
+description: 구매한 BioStar X 라이선스를 등록할 수 있습니다.
 keywords: [라이선스]
 ---
 
-구매한 **BioStar X** 라이선스를 활성화할 수 있습니다.
+구매한 **BioStar X** 라이선스를 등록할 수 있습니다.
 
-사용자의 네트워크 환경에 따라 <Cmd sid='setting.menu.license.biostarXLicense' />를 활성화할 수 있는 방법이 다릅니다. 제공하는 안내에 따라 네트워크 상태를 확인하고 라이선스를 활성화하세요.
+사용자의 네트워크 환경에 따라 <Cmd sid='setting.menu.license.biostarXLicense' />를 등록할 수 있는 방법이 다릅니다. 제공하는 안내에 따라 네트워크 상태를 확인하고 라이선스를 활성화하세요.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
@@ -25,8 +25,28 @@ import DocumentA from '../../common/_register-license-key.mdx'
 
 <DocumentA />
 
+## 라이선스 활성화 결과 확인 {/* #checkResult */}
+
+입력한 라이선스 키의 활성화 결과에 따라 다음과 같이 안내가 표시됩니다.
+
+* 입력한 모든 라이선스 키가 유효하면 성공 메시지가 표시됩니다.
+
+   <Image src='/img/biostarx-license-success.png' />
+
+* 일부 키만 활성화에 성공했거나 모든 키가 실패하면, 키별 성공·실패 여부와 실패 사유를 확인할 수 있습니다. 성공한 키의 입력란은 초기화되고, 실패한 키는 재입력할 수 있도록 입력란에 그대로 남습니다.
+
+   <Image src='/img/biostarx-license-fail.png' />
+
+* 인터넷 연결이 되지 않아 모든 키가 실패하면, 인터넷 연결을 확인한 후 다시 시도하라는 안내와 함께 <Cmd sid='setting.xlicense.offlineActivation' product='2' /> 버튼이 표시됩니다. 폐쇄된 네트워크 환경이라면 이 버튼을 클릭해 오프라인 상태에서 등록하세요.
+
+:::info
+
+실패한 키를 복사하려면 <Cmd sid='setting.xlicense.activation.copyFailedKeys' product='2' /> 버튼을 클릭하세요.
+
+:::
+
 ## 활성화된 라이선스 확인
 
-<Cmd sid='setting.xlicense.myLicense' product='2' />에서는 활성화된 **BioStar X** 라이선스 정보를 확인할 수 있습니다.
+등록한 **BioStar X** 라이선스 정보는 <Cmd sid='setting.xlicense.myLicense' product='2' />에서 확인할 수 있습니다.
 
 <Image src='/img/biostarx-settings-license-active-license.png' />

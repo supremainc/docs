@@ -1,34 +1,85 @@
-## 온라인 상태에서 등록하기 {/* #registering-online */}
+## 온라인 상태에서 등록 {/* #registering-online */}
+
+:::info
+
+라이선스 키는 숫자와 하이픈(`-`)만 입력할 수 있습니다. `1111-1111-1111-1111` 형식으로 최대 16자의 숫자를 입력해야 합니다.
+
+:::
+
+
+### 단일 라이선스 등록
 
 인터넷이 연결된 온라인 상태에서 **BioStar X** 라이선스를 활성화하려면, 이름과 전달받은 라이선스 키를 입력하고, <Cmd sid='setting.server.license.button.activate' product='2' /> 버튼을 클릭하세요.
 
 <Image src='/img/biostarx-tutorial-license-online.png' />
 
+### 여러 개의 라이선스 등록
 
-## 오프라인 상태에서 등록하기 {/* #registering-offline */}
+최대 30개까지의 라이선스를 한 번에 추가할 수 있습니다. <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> 버튼을 클릭하세요. 라이선스를 모두 입력한 후 <Cmd sid='setting.server.license.button.activate' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-tutorial-license-online-added.png' />
+
+:::note
+
+* 입력 칸이 30개에 도달하면 <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> 버튼이 비활성화되어 더 이상 추가할 수 없습니다.
+
+* 여러 개의 라이선스 키를 한 번에 복사해 입력 칸에 붙여넣으면, `1111-1111-1111-1111` 형식에 맞는 키만 자동으로 인식해 각 입력 칸에 나눠 추가합니다.
+
+* 붙여넣은 키가 30개를 초과하면 30개까지만 자동으로 입력되고, 초과한 키는 무시됩니다.
+
+:::
+
+### 활성화 진행 상태
+
+<Cmd sid='setting.server.license.button.activate' product='2' /> 버튼을 클릭하면 진행 상태 팝업이 표시됩니다. 활성화가 완료될 때까지 페이지나 팝업을 닫지 마세요.
+
+## 오프라인 상태에서 등록 {/* #registering-offline */}
 
 폐쇄된 네트워크 환경이나 인터넷 연결이 제한된 오프라인 상태에서 **BioStar X** 라이선스를 활성화하려면 다음의 안내에 따르세요.
 
-1. <Cmd sid='setting.xlicense.activation' product='2' /> 섹션에서 <Cmd sid='setting.xlicense.offlineActivation' product='2' /> 버튼을 클릭하세요.
+1. <Cmd sid='setting.xlicense.activation' product='2' /> 섹션에서 임의의 등록 관리자 이름과 라이선스 키를 입력하세요.
 
-    <Image src='/img/biostarx-tutorial-license-offline.png' />
+   :::note
 
-1. <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' /> 창이 나타나면 <Cmd sid='setting.xlicense.button.requestOfflineKey' product='2' /> 버튼을 클릭하세요.
+   * 라이선스 키는 숫자와 하이픈(`-`)만 입력할 수 있습니다. `1111-1111-1111-1111` 형식으로 최대 16자의 숫자를 입력해야 합니다.
 
-    <Image src='/img/biostarx-tutorial-license-offline-popup.png' />
+   * 등록 관리자 이름과 라이선스 키를 기억하거나 메모해두세요.
 
-1. 대화창이 나타나면 <Cmd sid='setting.xlicense.offlineActivation.requestBy' product='2' />와 <Cmd sid='setting.xlicense.offlineActivation.activationKey' product='2' />를 입력하세요.
+   * 여러 개의 라이선스가 필요하다면 <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> 버튼을 클릭해 추가하세요.
 
-    <Image src='/img/biostarx-tutorial-license-offline-popup-filed.png' className='none' />
+   :::
 
-1. <Cmd sid='setting.server.license.button.download' product='2' /> 버튼을 클릭하여 라이선스 요청 파일(*\*.req*)을 다운로드하세요.
+1. <Cmd sid='setting.xlicense.offlineActivation' product='2' /> 버튼을 클릭하세요.
 
-1. 구매처에 전송하세요.
+   <Image src='/img/biostarx-tutorial-license-offline.png' />
 
-구매처로부터 라이선스 파일(*\*.lic*)을 받으면 <Cmd sid='setting.xlicense.offlineActivationTitle' product='2' /> 버튼을 클릭해 라이선스 파일을 업로드하세요.
+1. <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' /> 창이 나타나면 <Cmd sid='setting.xlicense.offlineActivation.needFile' product='2' /> 버튼을 클릭하세요.
 
-:::info
+   <Image src='/img/biostarx-tutorial-license-offline-popup.png' />
 
-라이선스 키를 가지고 있지 않다면 <Cmd sid='setting.xlicense.offlineActivation.requestBy' product='2' />만 입력하세요.
+   :::note
 
-:::
+   이미 발급받은 라이선스 파일이 있다면, 이 화면에서 <Cmd sid='setting.xlicense.offlineActivation.haveFile' product='2' /> 버튼을 클릭한 후 9단계로 이동하세요.
+
+   :::
+
+
+1. 발급 요청 파일(\*.req) 파일이 생성되면 사용자의 로컬 디스크에 다운로드하세요.
+
+1. 다운로드한 발급 요청 파일을 구매처에 보내 오프라인 활성화 파일(\*.lic) 파일을 요청하세요.
+
+1. 오프라인 활성화 파일을 전달 받은 후 1단계에서 입력한 관리자 이름과 라이선스 키를 <Cmd sid='setting.xlicense.activation' product='2' /> 섹션에 입력하세요.
+
+1. <Cmd sid='setting.xlicense.offlineActivation' product='2' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' /> 창이 나타나면 <Cmd sid='setting.xlicense.offlineActivation.haveFile' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-tutorial-license-offline-popup-filed.png' className='none' />
+
+1. 파일 열기 창이 나타나면 로컬에 저장된 오프라인 활성화 파일(\*.lic) 또는 압축 파일(\*.zip)을 선택하세요.
+
+   :::note
+
+   여러 개의 라이선스를 요청했을 때는 압축 파일을 전달받을 수 있습니다.
+
+   :::
