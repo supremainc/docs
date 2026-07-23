@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Suprema Docs Blog</title>
+        <link>https://supremainc.github.io/docs/ja/changelog</link>
+        <description>Suprema Docs Blog</description>
+        <lastBuildDate>Wed, 01 Jul 2026 12:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ja</language>
+        <item>
+            <title><![CDATA[June 2026]]></title>
+            <link>https://supremainc.github.io/docs/ja/changelog/2026-06-changelog</link>
+            <guid>https://supremainc.github.io/docs/ja/changelog/2026-06-changelog</guid>
+            <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+            <description><![CDATA[Provides the major update history for Suprema Docs in June 2026.]]></description>
+            <content:encoded><![CDATA[<p>This June, <strong>Suprema Docs</strong> is packed with major news. Suprema's new video security product, <strong>AI Camera ViOnyx</strong>, has been launched with its installation manual and web server manual now available. In addition, the <strong>BioStar X Mobile</strong> manual for managing access control systems from your smartphone, and the <strong>BioStar X Security Hardening Guide</strong> for enhancing system security, have also been newly published. Check them out now.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs 26.06 Changelogs" src="https://supremainc.github.io/docs/ja/assets/images/changelogs-202606-f5ea2ddeae2dfa0f40a2123d4067358a.png" width="800" height="394" class="img_ev3q"></p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="document-hub-launch">Document Hub Launch<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#document-hub-launch" class="hash-link" aria-label="Document Hub Launch への直接リンクとコピー" title="Document Hub Launch への直接リンクとコピー" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://supremainc.github.io/docs/ja/assets/images/document_hub_banner_en-d63bb908dfe2b24b99f3f7cac38638e8.png" width="1600" height="400" class="img_ev3q"></p>
+<p><a class="" href="https://supremainc.github.io/docs/ja/dochub"><strong>Document Hub</strong></a> is now open — your one-stop destination to download manuals, release notes, drilling templates, and A&amp;E specifications for all Suprema products.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-camera">AI Camera<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#ai-camera" class="hash-link" aria-label="AI Camera への直接リンクとコピー" title="AI Camera への直接リンクとコピー" translate="no">​</a></h2>
+<p>Added manuals for ViOnyx, Suprema's new video security product.</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/vionyx">ViOnyx Installation Manual</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/vionyx_webserver">ViOnyx Web Server Manual</a></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform">Platform<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#platform" class="hash-link" aria-label="Platform への直接リンクとコピー" title="Platform への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#biostar-x" class="hash-link" aria-label="BioStar X への直接リンクとコピー" title="BioStar X への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>See the <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/release-notes/102">1.0.2 Hotfix Release Notes</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/migration-x">Upgrading BioStar X</a>: Added minimum system requirements information for upgrades</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/developer/bsxapi">BioStar X API</a> documentation revamped</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x-mobile">BioStar X Mobile<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#biostar-x-mobile" class="hash-link" aria-label="BioStar X Mobile への直接リンクとコピー" title="BioStar X Mobile への直接リンクとコピー" translate="no">​</a></h3>
+<p>The <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x_mobile">BioStar X Mobile</a> app user manual has been newly added. It covers features including user registration, remote door control, real-time event monitoring, and alert handling on mobile devices.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-air">BioStar Air<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#biostar-air" class="hash-link" aria-label="BioStar Air への直接リンクとコピー" title="BioStar Air への直接リンクとコピー" translate="no">​</a></h3>
+<p>Added guidance on credential reissuance</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/user-management-user-list#manageUserStatus">Manage Users</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/troubleshooting-suprema-pass-app#mobileCardDeleted">Troubleshooting Mobile Cards</a></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#devices" class="hash-link" aria-label="Devices への直接リンクとコピー" title="Devices への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-updates">Device Updates<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#device-updates" class="hash-link" aria-label="Device Updates への直接リンクとコピー" title="Device Updates への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3_max">BioStation 3 Max</a></p>
+<ul>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3_max/getting-started">Master Admin</a> content</p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3_max/product-specifications">Product Specifications</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3">BioStation 3</a></p>
+<ul>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3/getting-started">wall mount bracket image</a></p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3/getting-started">Master Admin</a> content</p>
+</li>
+<li class="">
+<p>Added <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3/installation">tilting bracket installation</a> instructions</p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3/product-specifications">Product Specifications</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xstation_2">X-Station 2</a></p>
+<ul>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/xstation_2/getting-started">Master Admin</a> content</p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/xstation_2/authentication">Camera QR support</a> content</p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/xstation_2/product-specifications">Product Specifications</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_2a">BioStation 2a</a></p>
+<ul>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_2a/getting-started">Master Admin</a> content</p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biostation_2a/product-specifications">Product Specifications</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biolite_n2">BioLite N2</a></p>
+<ul>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biolite_n2/getting-started">Master Admin</a> content</p>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/device/biolite_n2/product-specifications">Product Specifications</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Product Specifications updated</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_2/product-specifications">XPass 2</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_d2/product-specifications">XPass D2</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w3/product-specifications">BioEntry W3</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-notes">Release Notes<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#release-notes" class="hash-link" aria-label="Release Notes への直接リンクとコピー" title="Release Notes への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/doorinterface/release-notes/103">Door Interface</a>: Added release notes for version 1.0.3</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/vionyx/release-notes/101">ViOnyx</a>: Added release notes for version 1.0.1</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w3/release-notes/103">BioEntry W3</a>: Added release notes for version 1.0.3</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-guides">How-To Guides<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#how-to-guides" class="hash-link" aria-label="How-To Guides への直接リンクとコピー" title="How-To Guides への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="master-admin">Master Admin<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#master-admin" class="hash-link" aria-label="Master Admin への直接リンクとコピー" title="Master Admin への直接リンクとコピー" translate="no">​</a></h3>
+<p><a class="" href="https://supremainc.github.io/docs/ja/how-to/master-admin">Master Admin Setup Guide</a>: Revised overall master administrator content and added device placement information for CE-compliant products</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x-security-hardening">BioStar X Security Hardening<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#biostar-x-security-hardening" class="hash-link" aria-label="BioStar X Security Hardening への直接リンクとコピー" title="BioStar X Security Hardening への直接リンクとコピー" translate="no">​</a></h3>
+<p>The <a class="" href="https://supremainc.github.io/docs/ja/how-to/bsx_hardening">BioStar X Hardening Guide</a> is now available. It provides step-by-step practical recommendations for enhancing access control system security, including server hardening, network firewall configuration, and patch management.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integrations">Integrations<a href="https://supremainc.github.io/docs/ja/changelog/2026-06-changelog#integrations" class="hash-link" aria-label="Integrations への直接リンクとコピー" title="Integrations への直接リンクとコピー" translate="no">​</a></h2>
+<p><a class="" href="https://supremainc.github.io/docs/ja/integration/genetec">Genetec</a>: Updated system management content</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[May 2026]]></title>
+            <link>https://supremainc.github.io/docs/ja/changelog/2026-05-changelog</link>
+            <guid>https://supremainc.github.io/docs/ja/changelog/2026-05-changelog</guid>
+            <pubDate>Thu, 28 May 2026 12:00:00 GMT</pubDate>
+            <description><![CDATA[Provides an overview of key updates to Suprema Docs in May 2026.]]></description>
+            <content:encoded><![CDATA[<p>This May, <strong>Suprema Docs</strong> expanded in both scope and scale. The new device <strong>BioStation 3 Max</strong> has joined the lineup, and BioStar X and BioStar Air have received significant feature enhancements. Don't miss the highlight of this month—a brand-new <strong>Integration</strong> category covering third-party product connectivity.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs 26.05 Changelogs" src="data:image/png;base64,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" width="800" height="394" class="img_ev3q"></p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform">Platform<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#platform" class="hash-link" aria-label="Platform への直接リンクとコピー" title="Platform への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#biostar-x" class="hash-link" aria-label="BioStar X への直接リンクとコピー" title="BioStar X への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Read the <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/release-notes/102">v1.0.2 Release Notes</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/change-ip">Change the Main Server IP Address</a>: Added instructions for changing the BioStar X main server IP address</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-diretory-integration">Directory Integration Settings</a>: Added <strong>Add/Update/Delete</strong> modes to directory service integration settings</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-system-system-restore">System Restore</a>: Updated detailed procedures for using the restore tool</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-device-using-functions#deleteLogsFromDevice">Delete Event Logs from Device</a>: Added the feature to delete event logs stored on the device</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-video-integration">Integrate VMS</a>: Added support for <strong>Nx Witness v6.x.x</strong></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-videos-camera#addCameraPermission">Set Up the Camera</a>: Added instructions for configuring camera group permission settings</p>
+</li>
+<li class="">
+<p>Added support specifications for BioStation 3 Max and XPass Q2 devices</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-air">BioStar Air<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#biostar-air" class="hash-link" aria-label="BioStar Air への直接リンクとコピー" title="BioStar Air への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Read the <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/release-notes/bsair-release-notes#2120">SW v2.12 Release Notes</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/install-airfob-patch">Install Airfob Patch</a>: Added instructions for installing the Airfob patch</p>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#devices" class="hash-link" aria-label="Devices への直接リンクとコピー" title="Devices への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-devices">New Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#new-devices" class="hash-link" aria-label="New Devices への直接リンクとコピー" title="New Devices への直接リンクとコピー" translate="no">​</a></h3>
+<p>The manual for BioStation 3 Max, Suprema's flagship AI-based biometric device, is now available.</p>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3_max">BioStation 3 Max</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-updates">Device Updates<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#device-updates" class="hash-link" aria-label="Device Updates への直接リンクとコピー" title="Device Updates への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Applied v1.0.2 update for <a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w3">BioEntry W3</a></p>
+<ul>
+<li class="">
+<p>Updated wall mount bracket images</p>
+</li>
+<li class="">
+<p>Added <a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w3/getting-started#cable">RS-485 usage precautions</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Applied v1.2.3 update for <a class="" href="https://supremainc.github.io/docs/ja/device/device_manager">Device Manager</a></p>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/device_manager/xpd2-settings">Set Up XPass D2</a>: Added <strong>Enforce EV2/EV3 Secure Messaging</strong> feature</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-release-notes">Device Release Notes<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#device-release-notes" class="hash-link" aria-label="Device Release Notes への直接リンクとコピー" title="Device Release Notes への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_r2/release-notes/142">BioEntry R2</a>: Added v1.4.2 Release Notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/corestation_40/release-notes/172">CoreStation</a>: Added v1.7.2 Release Notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/corestation_20/release-notes/104">CoreStation 20</a>: Added v1.0.4 Release Notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w3/release-notes/102">BioEntry W3</a>: Added v1.0.2 Release Notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/device_manager/release-notes/123">Device Manager</a>: Added v1.2.3 Release Notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/facestation_f2/release-notes/222">FaceStation F2</a>: Added v2.2.2 Release Notes</p>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration">Integration<a href="https://supremainc.github.io/docs/ja/changelog/2026-05-changelog#integration" class="hash-link" aria-label="Integration への直接リンクとコピー" title="Integration への直接リンクとコピー" translate="no">​</a></h2>
+<p>We've added a new <strong>Integration</strong> category. Check out how to integrate third-party products with Suprema devices.</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/integration/genetec">Genetec</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/integration/gallagher">Gallagher</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/integration/ccure">Software House</a></p>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[April 2026]]></title>
+            <link>https://supremainc.github.io/docs/ja/changelog/2026-04-changelog</link>
+            <guid>https://supremainc.github.io/docs/ja/changelog/2026-04-changelog</guid>
+            <pubDate>Fri, 01 May 2026 12:00:00 GMT</pubDate>
+            <description><![CDATA[Provides an overview of key updates to Suprema Docs in April 2026.]]></description>
+            <content:encoded><![CDATA[<p>April was a busy month for <strong>Suprema Docs</strong> with new updates across platforms, devices, and developer APIs. Explore the changes we've made this month.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs 26.04 Changelogs" src="data:image/png;base64,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" width="800" height="394" class="img_ev3q"></p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform">Platform<a href="https://supremainc.github.io/docs/ja/changelog/2026-04-changelog#platform" class="hash-link" aria-label="Platform への直接リンクとコピー" title="Platform への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/ja/changelog/2026-04-changelog#biostar-x" class="hash-link" aria-label="BioStar X への直接リンクとコピー" title="BioStar X への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-video-integration#install-vms-certification">Integrate VMS</a>: Added example paths for certificate installation</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-server-server#custom-field">Server Detailed Settings</a>: Added clarification that no file format restrictions are applied when custom user fields are set as file upload options</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/licensing#features-add-ons">Video License</a>: Updated documentation</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-air">BioStar Air<a href="https://supremainc.github.io/docs/ja/changelog/2026-04-changelog#biostar-air" class="hash-link" aria-label="BioStar Air への直接リンクとコピー" title="BioStar Air への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Updated BioStar Air <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/release-notes/firmware">v2.12 firmware release notes</a></p>
+</li>
+<li class="">
+<p>Restructured BioStar Air release notes documentation</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/release-notes/software">Software Release Notes</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air/release-notes/firmware">Firmware Release Notes</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-04-changelog#devices" class="hash-link" aria-label="Devices への直接リンクとコピー" title="Devices への直接リンクとコピー" translate="no">​</a></h2>
+<p>Added new release notes and updated device documentation.</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_q2">XPass Q2 Installation Guide</a>: Newly created</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_d2/release-notes/183">XPass D2</a>: Added v1.8.3 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_2a/release-notes/121">BioStation 2a</a>: Added v1.2.1 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xstation_2/release-notes/141">X-Station 2</a>: Added v1.4.1 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biolite_n2/release-notes/171">BioLite N2</a>: Added v1.7.1 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3/release-notes/143">BioStation 3</a>: Added v1.4.3 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_2/release-notes/152">XPass 2</a>: Added v1.5.2 release notes</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer">Developer<a href="https://supremainc.github.io/docs/ja/changelog/2026-04-changelog#developer" class="hash-link" aria-label="Developer への直接リンクとコピー" title="Developer への直接リンクとコピー" translate="no">​</a></h2>
+<ul>
+<li class="">Updated API documentation: <a class="" href="https://supremainc.github.io/docs/ja/developer/bsxapi?api=export-as-csv">Export as CSV API</a></li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[March 2026]]></title>
+            <link>https://supremainc.github.io/docs/ja/changelog/2026-03-changelog</link>
+            <guid>https://supremainc.github.io/docs/ja/changelog/2026-03-changelog</guid>
+            <pubDate>Wed, 08 Apr 2026 12:00:00 GMT</pubDate>
+            <description><![CDATA[Provides an overview of key updates to Suprema Docs from February through March.]]></description>
+            <content:encoded><![CDATA[<p>This March update improves your <strong>Suprema Docs</strong> experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs 26.03 Changelogs" src="data:image/png;base64,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" width="800" height="394" class="img_ev3q"></p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="docs">Docs<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#docs" class="hash-link" aria-label="Docs への直接リンクとコピー" title="Docs への直接リンクとコピー" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>Redesigned home page</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs home" src="https://supremainc.github.io/docs/ja/assets/images/changelog-03-home-38066f673f95a261234c3ba071742ba2.png" width="1332" height="1360" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>Enhanced search functionality</p>
+<p>Added product-specific search and keyboard shortcut (Ctrl + K) to open the search bar</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs home" src="https://supremainc.github.io/docs/ja/assets/images/changelog-03-search-c8ee50f84fab89ade3604cd5b53ebbcd.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform">Platform<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#platform" class="hash-link" aria-label="Platform への直接リンクとコピー" title="Platform への直接リンクとコピー" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#biostar-x" class="hash-link" aria-label="BioStar X への直接リンクとコピー" title="BioStar X への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">Updated documentation for <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-video-integration">VMS Server Integration and Certificate Installation</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-air">BioStar Air<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#biostar-air" class="hash-link" aria-label="BioStar Air への直接リンクとコピー" title="BioStar Air への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Completed comprehensive restructuring and optimization of the <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air">BioStar Air Administrator Guide</a></p>
+</li>
+<li class="">
+<p>Expanded multilingual support for BioStar Air: English, Japanese, and Spanish translations added</p>
+<ul>
+<li class="">
+<p>Added documentation for key features including user management, access rights management, and video management</p>
+</li>
+<li class="">
+<p>Added English interface images and user interface screenshots</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Improved BioStar Air table of contents structure and reorganized sections</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#devices" class="hash-link" aria-label="Devices への直接リンクとコピー" title="Devices への直接リンクとコピー" translate="no">​</a></h2>
+<p>Added new release notes and updated existing device documentation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-documentation-updates">Device Documentation Updates<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#device-documentation-updates" class="hash-link" aria-label="Device Documentation Updates への直接リンクとコピー" title="Device Documentation Updates への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_2/release-notes/151">XPass 2</a>: Added v1.5.1 release notes</li>
+</ul>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/device_manager/release-notes/122">Device Manager</a>: Established new app release notes category and added v1.2.2 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_p2/release-notes/160">BioEntry P2</a>: Added v1.6.0 release notes</p>
+</li>
+<li class="">
+<p>Added instructional images for device factory reset button location</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer">Developer<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#developer" class="hash-link" aria-label="Developer への直接リンクとコピー" title="Developer への直接リンクとコピー" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>API documentation updated: <a class="" href="https://supremainc.github.io/docs/ja/developer/bsxapi?api=create-biostar-x-qr">Create BioStar X QR</a></p>
+</li>
+<li class="">
+<p>Device SDK: Added v2.9.12 release notes</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="multilingual-support">Multilingual Support<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#multilingual-support" class="hash-link" aria-label="Multilingual Support への直接リンクとコピー" title="Multilingual Support への直接リンクとコピー" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>Improved documentation quality for Japanese and Spanish versions</p>
+<ul>
+<li class="">
+<p>Enhanced consistency of document titles and content</p>
+</li>
+<li class="">
+<p>Corrected mistranslations and standardized terminology</p>
+</li>
+<li class="">
+<p>Fixed spacing and grammar issues</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Significantly updated English translation</p>
+<ul>
+<li class="">
+<p>Standardized technical terminology</p>
+</li>
+<li class="">
+<p>Improved sentence structure and phrasing</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="open-source-software-licenses">Open Source Software Licenses<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#open-source-software-licenses" class="hash-link" aria-label="Open Source Software Licenses への直接リンクとコピー" title="Open Source Software Licenses への直接リンクとコピー" translate="no">​</a></h2>
+<ul>
+<li class="">Added license attributions: <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#the-2-clause-bsd-license">BSD-2-Clause</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#the-3-clause-bsd-license">BSD-3-Clause</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#eclipse-public-license">EPL</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#eclipse-distribution-license">EDL</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#gnu-lesser-general-public-v21-license">LGPLv2.1</a>​, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#gnu-general-public-v2-license">GPLv2</a>​, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#isc-license">ISC</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#zlib-license">zlib</a></li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[January 2026]]></title>
+            <link>https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog</link>
+            <guid>https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog</guid>
+            <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Provides an overview of updates since the initial launch of Suprema Docs through December.]]></description>
+            <content:encoded><![CDATA[<p><strong>Suprema Docs</strong> is a knowledge hub that brings together all product manuals and technical documentation in one place. It includes the following key documentation:</p>
+<ul>
+<li class="">
+<p><strong>Product manuals</strong>: Installation and user manuals for Suprema products</p>
+</li>
+<li class="">
+<p><strong>Solution manuals</strong></p>
+<ul>
+<li class="">
+<p>User manual for BioStar X</p>
+</li>
+<li class="">
+<p>User manual for BioStar Air (coming soon)</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Technical documents</strong>: APIs and other technical resources</p>
+</li>
+<li class="">
+<p><strong>Release Notes</strong></p>
+</li>
+</ul>
+<p>Below is a summary of the key updates for January 2026.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs" src="data:image/png;base64,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" width="800" height="394" class="img_ev3q"></p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#biostar-x" class="hash-link" aria-label="BioStar X への直接リンクとコピー" title="BioStar X への直接リンクとコピー" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>Added <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/release-notes/101">BioStar X v1.0.1 Release Notes</a></p>
+</li>
+<li class="">
+<p>Added guide for <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/enroll-credential-ir-face">IR Face</a> credentials</p>
+</li>
+<li class="">
+<p>Added guide for <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-remote-access">Remote Access</a> configuration and usage</p>
+</li>
+<li class="">
+<p>Added guide for integrating event logs using the <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-virtual-device-event-log">Virtual Device</a> feature</p>
+</li>
+<li class="">
+<p>Updated guides for the ability to enter a reason when exporting or printing user, data, and audit trail menus</p>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/export-import-user-info">Export/Import User Information</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/data-generate-reports">Generate Report</a></p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-system-audit-trail">Manage Audit Trail</a></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Updated <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/licensing">License Policy</a> details</p>
+<ul>
+<li class="">
+<p>Added description that devices cannot be added without a Base License</p>
+</li>
+<li class="">
+<p>Added description of limit on the number of Ethernet-connected devices</p>
+</li>
+<li class="">
+<p>Added description of maximum administrator count</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Added <a class="" href="https://supremainc.github.io/docs/ja/developer/bsxapi">BioStar X API</a> documentation</p>
+</li>
+<li class="">
+<p>Added <a class="" href="https://supremainc.github.io/docs/ja/bsx-license-calculator">BioStar X License Calculator</a> page to help with complex licensing requirements</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#devices" class="hash-link" aria-label="Devices への直接リンクとコピー" title="Devices への直接リンクとコピー" translate="no">​</a></h2>
+<p>Updated all the latest device manuals. The device manuals available in <strong>Suprema Docs</strong> are as follows:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biometric-devices">Biometric Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#biometric-devices" class="hash-link" aria-label="Biometric Devices への直接リンクとコピー" title="Biometric Devices への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w3">BioEntry W3</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_2a">BioStation 2a</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/biostation_3">BioStation 3</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/facestation_f2">FaceStation F2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/facestation_2">FaceStation 2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/biolite_n2">BioLite N2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_w2">BioEntry W2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_p2">BioEntry P2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_r2">BioEntry R2</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rfmobile-devices">RF/Mobile Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#rfmobile-devices" class="hash-link" aria-label="RF/Mobile Devices への直接リンクとコピー" title="RF/Mobile Devices への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/xstation_2">X-Station 2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_2">XPass 2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_d2">XPass D2</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_s2">XPass S2</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="intelligent-controller">Intelligent Controller<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#intelligent-controller" class="hash-link" aria-label="Intelligent Controller への直接リンクとコピー" title="Intelligent Controller への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/corestation_20">CoreStation 20</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/corestation_40">CoreStation</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/enclosure">Enclosure</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="peripherals">Peripherals<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#peripherals" class="hash-link" aria-label="Peripherals への直接リンクとコピー" title="Peripherals への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/doorinterface">Door Interface</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/inputmodule">Input Module</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/outputmodule">Output Module</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/doormodule">Door Module</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/securemodule">Secure Module</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/extendedmodule">Extended Module</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/extendedmodule_sc">Extended Module-SC</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="apps">APPS<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#apps" class="hash-link" aria-label="APPS への直接リンクとコピー" title="APPS への直接リンクとコピー" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/device_manager">Device Manager</a></li>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/corestation_setup_manager">CoreStation Setup Manager</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-next-and-expected-benefits">What’s next and expected benefits<a href="https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog#whats-next-and-expected-benefits" class="hash-link" aria-label="What’s next and expected benefits への直接リンクとコピー" title="What’s next and expected benefits への直接リンクとコピー" translate="no">​</a></h2>
+<p><strong>Suprema Docs</strong> will continue to evolve. We will keep updating the content to improve completeness and quality, so it better meets the needs of our customers and partners. Internally, it will also help you quickly share accurate information needed for product development, technical support, and sales activities. We also plan to expand multilingual support in the near future. Documentation in Japanese and Spanish will be released soon.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

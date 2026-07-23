@@ -1,0 +1,311 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integration/ccure/enrolling-biometrics" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>C•CURE 9000 からの生体認証登録 | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics /><meta data-rh=true property=og:locale content=ja_JP /><meta data-rh=true property=og:locale:alternate content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="C•CURE 9000 からの生体認証登録 | Suprema Docs"/><meta data-rh=true name=description content="RFID カード、指紋、顔を含む生体認証クレデンシャルの登録手順を、C•CURE 9000 での事前登録方法の管理も含めて、手順ごとに説明します。"/><meta data-rh=true property=og:description content="RFID カード、指紋、顔を含む生体認証クレデンシャルの登録手順を、C•CURE 9000 での事前登録方法の管理も含めて、手順ごとに説明します。"/><meta data-rh=true name=keywords content="生体認証登録,資格情報,C•CURE 9000"/><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/ccure/enrolling-biometrics hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/integration/ccure/enrolling-biometrics hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/integration/ccure/enrolling-biometrics hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/ccure/enrolling-biometrics hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics/#webpage","@type":"WebPage","breadcrumb":{"@id":"https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics/#breadcrumb"},"datePublished":"2026-01-02","description":"RFID カード、指紋、顔を含む生体認証クレデンシャルの登録手順を、C•CURE 9000 での事前登録方法の管理も含めて、手順ごとに説明します。","inLanguage":"ja-JP","isPartOf":{"@id":"https://supremainc.github.io/#website"},"name":"C•CURE 9000 からの生体認証登録","potentialAction":[{"@type":"ReadAction","target":["https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics"]}],"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","article p:first-of-type","[data-speakable]"]},"url":"https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics"},{"@id":"https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/integration/ccure/","name":"C•CURE 9000","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/integration/ccure/enrolling-biometrics","name":"C•CURE 9000 からの生体認証登録","position":2}]},{"@id":"https://supremainc.github.io/#website","@type":"WebSite","description":"Supremaのすべての製品およびBioStar関連情報をここで確認してください。","inLanguage":"ja-JP","name":"Suprema Docs","potentialAction":[{"@type":"SearchAction","query-input":"required name=searchTerms","target":{"@type":"EntryPoint","urlTemplate":"https://supremainc.github.io/search?q={searchTerms}"}}],"publisher":{"@id":"https://supremainc.github.io/#organization"},"url":"https://supremainc.github.io"},{"@id":"https://supremainc.github.io/#organization","@type":"Organization","address":{"@type":"PostalAddress","addressCountry":"KR","postalCode":"13554","streetAddress":"L17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://support.supremainc.com"},"logo":{"@id":"https://supremainc.com/#logo","@type":"ImageObject","caption":"Suprema - Security & Biometrics","contentUrl":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","height":900,"url":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","width":1440},"name":"Suprema","sameAs":["https://blog.naver.com/supremakr","https://www.facebook.com/supremaglobal","https://www.youtube.com/user/supremainc","https://www.instagram.com/official.suprema","https://pf.kakao.com/_xnkPxes","https://www.linkedin.com/company/suprema-inc-/"],"url":"https://supremainc.com"}]}</script><link rel=alternate type=application/rss+xml href=/docs/ja/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/ja/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/ja/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.a6fb417b.css /><script src=/docs/ja/assets/js/runtime~main.0966827d.js defer></script><script src=/docs/ja/assets/js/main.ae4e2736.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg /><div role=region aria-label=本文へスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>本文へスキップ</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>このドキュメントには、まだサービスバージョンにリリースされていないコンテンツが含まれています。公式にリリースされた機能のドキュメントについては、<a href=https://docs.supremainc.com/ja/integration/ccure/enrolling-biometrics/en/ target=_blank>次のリンク</a>をご覧ください。</b></div></div><nav aria-label=メイン class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=サイドバーを展開/折りたたむ aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>プラットフォーム</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_x_mobile>BioStar X Mobile</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_air>BioStar Air</a><li><a class=dropdown__link href=/docs/ja/platform/clue>CLUe</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI カメラ</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/ja/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar-devices">デバイス</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3_clue>BioStation 3 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/ja/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2_clue>BioLite N2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2_clue>X-Station 2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/ja/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/ja/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/ja/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/ja/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/ja/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/ja/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/ja/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/ja/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/ja/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/ja/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>インテグレーション</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/integration/genetec>Genetec</a><li><a class=dropdown__link href=/docs/ja/integration/gallagher>Gallagher</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/integration/ccure>Software House</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>開発者センター</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/developer/bsxapi>BioStar X API</a><li><a class=dropdown__link href=/docs/ja/developer/clue>CLUe API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/ja/reference>リファレンス</a><a class="navbar__item navbar__link" href=/docs/ja/changelog>更新履歴</a><a class="navbar__item navbar__link" href=/docs/ja/legal/disclaimers>法的情報</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=検索><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>日本語</a><ul class=dropdown__menu><li><a href=/docs/integration/ccure/enrolling-biometrics target=_self rel="noopener noreferrer" class=dropdown__link lang=ko-KR>한국어</a><li><a href=/docs/en/integration/ccure/enrolling-biometrics target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/integration/ccure/enrolling-biometrics target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/integration/ccure/enrolling-biometrics target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title=システムモード aria-label="ダークモードとライトモードを切り替え (現在 システムモード)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=トップへスクロール class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=ドキュメントサイドバー class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/ja/integration/ccure><span class=categoryLinkLabel_W154>C•CURE 9000</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/ccure/getting-started><span class=linkLabel_WmDU>はじめに</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/ccure/installation><span class=linkLabel_WmDU>Suprema - C•CURE インテグレーションのインストール</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/ja/integration/ccure/enrolling-biometrics><span class=linkLabel_WmDU>C•CURE 9000 からの生体認証登録</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/ccure/appendices><span class=linkLabel_WmDU>付録</span></a></ul></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label=パンくずリスト><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホーム class=breadcrumbs__link href=/docs/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/ja/integration/ccure><span>C•CURE 9000</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-2"><span class=breadcrumbs__link>C•CURE 9000 からの生体認証登録</span></ul><div class=btnprint_MOIq><div class=pdfDropdown_hR9S><button disabled class=printbtn_FzsH aria-haspopup=true aria-expanded=false><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m4 6 4 4 4-4"/></svg> PDF</button><button class=feedbackTrigger_JVwE aria-label=フィードバックを送信>Feedback</button></div></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">目次を表示</button></div><div class="theme-doc-markdown markdown"><header><h1>C•CURE 9000 からの生体認証登録</h1></header><p>Administration Workstation を開き、Personnel View で既存のユーザーをクリックするか、新規ユーザーを作成してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics1.png width=800 height=auto /></p>
+<p>Personnel View を開いたら、下図のように <strong>Suprema Biometrics Enrollment View</strong> になっていることを確認してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics2.png width=800 height=auto /></p>
+<p>Personnel View のタブの末尾にある Suprema タブを確認できます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics3.png width=800 height=auto /></p>
+<p>クリックすると、次の内容が表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics4.png width=800 height=auto /></p>
+<p>右側のサイドパネルに、現在のユーザーの概要が表示されます。</p>
+<ol>
+<li class="">
+<p><strong>ユーザーが新規の場合</strong>、まだ C•CURE 9000 に保存されていません。この通知が表示され、バイオメトリクス データを登録する前にユーザーを保存するよう求められます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics5.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p><strong>ユーザーが Suprema デバイスで新規の場合</strong>、ユーザーを保存して Suprema タブを開くと、次の内容が表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics6.png width=800 height=auto /></p>
+<p>インテグレーション機能が Suprema デバイスとユーザーを同期している間は <strong>Please wait</strong> ダイアログが表示されます。処理が完了すると、次のような画面が表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics7.png width=800 height=auto /></p>
+<p>新規作成したユーザーなのでテンプレートは表示されません。では、テンプレートを作成します。</p>
+<p>最初の手順は、Credentials タブから RFID クレデンシャルを追加することです。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics8.png width=800 height=auto /></p>
+<p>少なくとも次の項目を設定してください：</p>
+<ol>
+<li class="">
+<p>カード番号。</p>
+</li>
+<li class="">
+<p>Facility Code。</p>
+</li>
+<li class="">
+<p>有効化日時。</p>
+</li>
+<li class="">
+<p>有効期限日時。</p>
+</li>
+</ol>
+<p>これらの設定を少なくとも追加したら、Suprema タブに移動する前に <strong>Save</strong> ボタンをクリックしてください。</p>
+<p>新しく追加した情報が Suprema デバイスに転送されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics9.png width=800 height=auto /></p>
+<p>処理時間は、情報の同期先デバイス数に応じて、数秒の一部からそれ以上まで変わります。しばらくお待ちください。</p>
+<p>処理が完了すると、情報ボックスが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics10.png width=199 height=141 /></p>
+<p>User Details のサイドパネルで、情報の更新を確認できます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics11.png width=346 height=149 /></p>
+<p>カードが複数ある場合は、C•CURE のクレデンシャル最大数に従い最大 5 枚まで、次の内容が表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics12.png width=346 height=387 /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>このインテグレーション機能の <em>Basic</em> 版は、Personnel の Credentials プールにある最初の利用可能なカードのみを同期します。</div></div>
+<p>これで、現在のユーザーに生体認証を登録できます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics13.png width=393 height=141 /></p>
+<p>前の画像のとおり、RFID カード、指紋、顔クレデンシャルの登録オプションがあります。</p>
+<p>いずれかを選択すると、画面に各クレデンシャル種別の動的パネルが表示されます。参考：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics14.png width=1000 height=auto class=none /></p>
+<p>クレデンシャルの種類を選択すると、インテグレーション機能がデバイスの機能に応じて分類し、選択したクレデンシャル種別を処理できるデバイスのみを表示します。 例：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics15.png width=1000 height=auto class=none /></p>
+<p>デバイスを選択すると、各パネルのオプションが有効になり、次へ進めます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>クレデンシャルの種類を選択すると、インテグレーション機能は選択したクレデンシャルを処理できるデバイスのみを選択します。該当デバイスがない場合は、次のメッセージが表示されます。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrolling-biometrics16.png width=363 height=150 /></div></div>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=カードのスキャン>カードのスキャン<a href=#カードのスキャン class=hash-link aria-label="カードのスキャン への直接リンクとコピー" title="カードのスキャン への直接リンクとコピー" translate=no>​</a></h2>
+<p>Suprema デバイスはマルチテクノロジーです。そのため、少なくとも次の特性のカードを読み取れます：EM (125KHz)、13.56MHz の MIFARE、MIFARE Plus、DESFire EV1/EV2、FeliCa。</p>
+<p>別のデバイスセットでは、125KHz の EM に加えて HID Prox、iCLASS SE/SR/SEOS もサポートしています。</p>
+<p>お使いの Suprema デバイスが対応する RF について不明な点がある場合は、<a href=https://www.supremainc.com/en/hardware/security-products-lineup.asp target=_blank rel="noopener noreferrer" class="">https://www.supremainc.com/en/hardware/security-products-lineup.asp</a> のデバイスマニュアルを確認してください。</p>
+<p>カードをスキャンすると、次の詳細が表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-card1.png width=511 height=251 /></p>
+<p><strong>Card Format</strong> には、リーダーが自動認識したフォーマットが表示されます。</p>
+<p><strong>Card-on-Screen-design</strong> には、Facility Code + Card Number の形式のカードシリアル（ダッシュ区切り）が表示され、カードにシリアル番号が物理的に印字されていない場合でも、Credentials タブからのカード登録を সহজにします。</p>
+<p><em>Card Format</em> に表示される認識済みフォーマットは、Card Formats and Keys 設定メニューで選択したカードフォーマットと、登録予定のカードが互換性があるか確認する際にも役立ちます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p><strong>Enroll Card</strong> ボタンをクリックした後、Suprema タブでの変更を C•CURE に反映させるために、Personnel ウィンドウ上部の <strong>Save</strong> ボタンをクリックしてください。</div></div>
+<p>カードの登録後は、User Summary の下にある Card Templates をダブルクリックして、クレデンシャルの表示または削除ができます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-card2.png width=346 height=387 /></p>
+<p>Credentials の下に表示されている Card をダブルクリックすると、<strong>Card-on-Screen-design</strong> にカードが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-card3.png width=800 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=カードの削除>カードの削除<a href=#カードの削除 class=hash-link aria-label="カードの削除 への直接リンクとコピー" title="カードの削除 への直接リンクとコピー" translate=no>​</a></h3>
+<p>ここから Suprema デバイスのカードを削除する場合は、<strong>Delete</strong> ボタンをクリックしてください。警告メッセージが表示されます。Suprema デバイスの User プロファイルからカードを削除する場合は <strong>Yes</strong> をクリックし、そうでない場合は <strong>No</strong> をクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/delete-credential.png width=411 height=161 /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>このクレデンシャルをユーザープロファイルから削除し、そのユーザーのプロファイルに別のカードがない場合、または（<em>Basic</em> 版の場合）別のカードに置き換えない場合、インテグレーション機能は Personnel Credentials に保存された最後のカードに置き換えます。両方からクレデンシャルを削除すると、iStar パネルでの認証にエラーが発生する可能性があります。</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=指紋のスキャン>指紋のスキャン<a href=#指紋のスキャン class=hash-link aria-label="指紋のスキャン への直接リンクとコピー" title="指紋のスキャン への直接リンクとコピー" translate=no>​</a></h2>
+<p>指紋認証率を向上させるには、指紋を正しく登録してください。 Suprema デバイスは、ユーザーの指紋入力の角度や位置が変わっても指紋を認識できます。 次の点に注意して指紋を登録すると、認証率を向上できます。</p>
+<p>Enrollment Minimum Quality は、指が他人と区別できる十分な品質であることを保証します。 より良い認証のため、90 以上の値を推奨します。ただし、指紋の認識で問題がある場合は、少し下げてもかまいません。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-fingerprints1.png width=503 height=208 /></p>
+<p>画面とデバイスのメッセージに注意してください。画面には次のメッセージ付きアニメーションが表示されます：</p>
+<div class=grid-container><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-fingerprints2.png width=372 height=205 /><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-fingerprints3.png width=372 height=205 /></div>
+<p>画面のメッセージでセンサーに指を置くよう求められます。1 回目のスキャンが完了すると、メッセージが変わり、もう一度指を置くよう求められます。</p>
+<p>各スキャン完了時に、テンプレートとスキャンイベントの実際の品質結果が画面に表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-fingerprints4.png width=305 height=79 /></p>
+<p>インテグレーション機能は、次の処理のために指を 2 回スキャンするよう求めます：</p>
+<p><strong>実施する検証：</strong></p>
+<ol>
+<li class="">
+<p>スキャン結果は Enrollment Minimum Quality を満たしていますか? この検証は各スキャンで実行され、最小品質を満たさない場合は失敗します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made1.png width=344 height=139 /></p>
+<p>セキュリティ上の理由から、現在取得した情報はリセットされ、生体認証データとして明確で適合したデータになります。</p>
+</li>
+<li class="">
+<p>同じ指が 2 回スキャンされましたか? そうでない場合は検証に失敗します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made2.png width=332 height=141 /></p>
+</li>
+<li class="">
+<p>その指はすでに登録されていますか? その指が同一ユーザーまたは別ユーザーにすでに登録されている場合、検証に失敗します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made3.png width=340 height=141 /></p>
+</li>
+<li class="">
+<p>上記の条件を満たすと、<strong>Enrollment</strong> ボタンが有効になり、この指を現在のユーザーに登録できます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made4.png width=191 height=141 /></p>
+</li>
+</ol>
+<p>続いて <strong>Enroll Finger</strong> ボタンが有効になります。</p>
+<div class=grid-container><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made5.png width=270 height=243 /><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made6.png width=407 height=139 /></div>
+<p>警告メッセージが表示され、<strong>Yes</strong> をクリックすると、データはすぐに Suprema デバイスに送信され、直ちに利用可能になります。 <strong>No</strong> をクリックすると、ダイアログを閉じます。</p>
+<p>処理が終了すると、確認メッセージが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made7.png width=299 height=138 /></p>
+<p>指紋の登録後は、User Summary の下にある Fingerprint Templates をダブルクリックして、クレデンシャルの表示または削除ができます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made8.png width=346 height=387 /></p>
+<p>Credentials の下に表示されている Finger Template をダブルクリックすると、テンプレートが <strong>Fingerprints</strong> パネルに表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/verifications-made9.png width=800 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=指紋の削除>指紋の削除<a href=#指紋の削除 class=hash-link aria-label="指紋の削除 への直接リンクとコピー" title="指紋の削除 への直接リンクとコピー" translate=no>​</a></h3>
+<p>ここから Suprema デバイスのユーザープロファイルから指紋を削除する場合は、<strong>Delete</strong> ボタンをクリックしてください。警告メッセージが表示されます。Suprema デバイスの User プロファイルからクレデンシャルを削除する場合は <strong>Yes</strong> をクリックし、そうでない場合は <strong>No</strong> をクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/delete-credential.png width=411 height=161 /></p>
+<p><strong>各ユーザーに追加できる指紋の数は?</strong></p>
+<p>ユーザーの手の 10 本の指紋をユーザープロファイルに追加できます。人差し指、中指、親指が登録手順で一般的に使用されますが、10 本すべての登録を試してかまいません。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/delete-fingerprint.png width=346 height=387 /></p>
+<p>画面で各テンプレートをダブルクリックすると、指紋パネルに表示されます。そこから、前の節で説明したとおり編集できます。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=指紋登録方法>指紋登録方法<a href=#指紋登録方法 class=hash-link aria-label="指紋登録方法 への直接リンクとコピー" title="指紋登録方法 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>LCD 画面に「センサーに指を置いてください。」というメッセージが表示されたら、登録したい指紋の指を指紋認証ユニットに置き、認証精度を高めるため軽く押さえてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/device/fingerprint-register.svg width=371 height=108 class=none /></p>
+</li>
+<li class="">
+<p>ビープ音の後に再入力画面が表示されたら、登録した指の指紋をもう一度スキャンしてください（登録対象の指紋を 2 回スキャンします）。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>指紋のスキャンと登録の際に留意すべき推奨事項と注意事項があります。<p>指紋が認識されると、最初に登録した指紋と比較されます。そのため、最初の指紋登録が最も重要です。 指紋を登録するときは、次の点に注意してください。<ul>
+<li class="">
+<p>指先を十分奥まで入れ、センサー全体に完全に接触させてください。</p>
+</li>
+<li class="">
+<p>指紋の中心をセンサーの中心に合わせてください。</p>
+</li>
+<li class="">
+<p>指に傷がある場合や指紋が不鮮明な場合は、別の指の指紋を選択してください。</p>
+</li>
+<li class="">
+<p>画面の指示に従い、動かさずに正しく指紋をスキャンしてください。</p>
+</li>
+<li class="">
+<p>指を立ててセンサーとの接触面を減らしたり、指の角度を曲げたりすると、指紋認証が実行されない場合があります。</p>
+</li>
+</ul><p class=hasimg><img loading=lazy decoding=async src=/docs/img/device/fingerprint-authentication.svg width=514 height=143 class=none /><p>Suprema デバイスは、季節や指の状態が変わっても指紋を認識できます。<p>ただし、認証率は外部環境や指紋入力方法によって変わる場合があります。 指紋認証がスムーズに行えない場合は、次の対策を推奨します。<ul>
+<li class="">
+<p>指が水や汗で濡れている場合は、指を拭いてからスキャンしてください。</p>
+</li>
+<li class="">
+<p>指が乾燥しすぎている場合は、指先に息を吹きかけてからスキャンしてください。</p>
+</li>
+<li class="">
+<p>指に傷がある場合は、別の指の指紋を登録してください。</p>
+</li>
+<li class="">
+<p>最初に登録した指紋は正しくスキャンされていないことがあります。上記の推奨事項に従って、もう一度指紋を登録してください。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=顔クレデンシャルの操作>顔クレデンシャルの操作<a href=#顔クレデンシャルの操作 class=hash-link aria-label="顔クレデンシャルの操作 への直接リンクとコピー" title="顔クレデンシャルの操作 への直接リンクとコピー" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=顔のスキャン>顔のスキャン<a href=#顔のスキャン class=hash-link aria-label="顔のスキャン への直接リンクとコピー" title="顔のスキャン への直接リンクとコピー" translate=no>​</a></h3>
+<p>対応デバイスを選択すると、<strong>Scan Face</strong> ボタンが有効になり、そのデバイスから顔をスキャンできます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face1.png width=541 height=293 /></p>
+<p><strong>Scan Face</strong> ボタンをクリックすると、アニメーション付きで次のメッセージが表示され、次の操作を求められます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face2.png width=372 height=205 /></p>
+<p>一定時間内にデバイスの前に顔が提示されない場合、次のメッセージが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face3.png width=405 height=136 /></p>
+<p>一方、人物がデバイスの前にいる場合は、その顔がキャプチャされ、パネルに表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face4.png width=510 height=329 /></p>
+<p><strong>Enroll Face</strong> ボタンが有効になり、顔の登録を続行できることがわかります。</p>
+<p>処理が終了すると確認ダイアログが表示されます。続行するには <strong>OK</strong> をクリックしてください：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face5.png width=353 height=152 /></p>
+<p>右側のサイドパネルにある User Details パネルの更新が確認できます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face6.png width=346 height=387 /></p>
+<p>Visual Face の登録に関する一般的なガイドラインを確認してください：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/genetec/face-enrollment.png width=800 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>これらのガイドラインは、デバイスから直接顔をスキャンする場合と、事前登録用に顔写真をアップロードする場合の両方に適用されます。</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=事前登録>事前登録<a href=#事前登録 class=hash-link aria-label="事前登録 への直接リンクとコピー" title="事前登録 への直接リンクとコピー" translate=no>​</a></h3>
+<p><em>Advanced</em> 版では、顔クレデンシャル パネルで <strong>Pre-Enroll</strong> ボタンをクリックします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment-button.png width=158 height=46 /></p>
+<p>次のメニューが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment1.png width=368 height=198 /></p>
+<ul>
+<li class="">
+<p>事前登録用に画像をアップロードします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/upload-from-file-button.png width=158 height=36 /></p>
+</li>
+</ul>
+<p>これは非対面での登録オプションの 1 つです。 <strong>Upload from File</strong> ボタンをクリックすると、ファイル選択ダイアログが表示され、登録予定の人物の画像を選択できます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment2.png width=632 height=363 /></p>
+<p>登録予定の人物の画像を選択し、<strong>Open</strong> をクリックします。</p>
+<p>選択した画像に顔が含まれていることを確認してください。そうでない場合、処理は続行されず、次のメッセージが表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment3.png width=395 height=139 /></p>
+<p>例として、画像は正面を向いた無表情で、顔が隠れていない人物のものにしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment4.png width=150 height=189 /></p>
+<p>事前登録処理を成功させるには、次の条件を考慮してください。</p>
+<ul>
+<li class="">
+<p>解像度：250 x 250 ピクセル超</p>
+</li>
+<li class="">
+<p>画像サイズ：最大 10 MB</p>
+</li>
+<li class="">
+<p>対応形式：JPG、JPEG、PNG のみ</p>
+</li>
+</ul>
+<p>画像を読み込むと、顔の位置を自動認識する切り抜き矩形が表示されます。まだ完全に選択されていない場合は、顔領域の選択を補助してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment5.png width=485 height=255 /></p>
+<p>画像をダブルクリックして切り抜き手順を完了します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment6.png width=492 height=255 /></p>
+<p>顔画像をダブルクリックすると、顔が自動的に拡大されて領域いっぱいに表示されます。さらに、<strong>Enroll Face</strong> ボタンが有効になり、顔の登録を完了できます。</p>
+<p>処理が終了すると確認メッセージが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/scanning-face5.png width=353 height=152 /></p>
+<p>顔の登録後は、User Summary の下にある Facial Templates をダブルクリックして、クレデンシャルの表示または削除ができます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment7.png width=346 height=387 /></p>
+<p>Credentials の下に表示されている Face Template をダブルクリックすると、テンプレートが <strong>Facial</strong> パネルに表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment8.png width=807 height=212 /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=メール送信>メール送信<a href=#メール送信 class=hash-link aria-label="メール送信 への直接リンクとコピー" title="メール送信 への直接リンクとコピー" translate=no>​</a></h3>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/send-by-email-button.png width=158 height=36 /></p>
+<p>これは非対面での顔登録の 2 つ目のオプションです。このオプションでは、メールで安全な事前登録リンクを送信できます。ユーザーはそこで自分の写真を撮影し、その事前登録データをリアルタイムで顧客サーバーへ返送できます。そのため、ユーザーが初めて顧客施設を訪れた際に、生体認証で認識されます（C•CURE/BioStar 2 間で事前に設定したアクセス制御ポリシーに依存します）。</p>
+<p>検証後、ユーザープロファイルにメールアドレスが登録されていない場合は、事前登録リンクを送信する前にメールアドレスを登録する次のパネルが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/send-by-email1.png width=446 height=191 /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>入力したデータが有効なメールアドレスであることをインテグレーション機能が検証します。 検証後、インテグレーション機能は新しく入力したデータを BioStar 2 と C•CURE に保存します。Personnel View ウィンドウを閉じる前に必ず <strong>Save</strong> を押してください。</div></div>
+<p>メールアドレスを入力すると、次の通知が表示されます。続行するには <strong>Yes</strong>、キャンセルするには <strong>No</strong> をクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/send-by-email2.png width=386 height=174 /></p>
+<p><strong>Yes</strong> をクリックした場合、インテグレーション機能は事前登録リンクを送信する前にもう 1 回確認を実行し、この機能に必要なすべての設定を検証します。</p>
+<p>未設定の項目がある場合、次のウィンドウが表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/send-by-email3.png width=405 height=187 /></p>
+<p>続行前に確認または設定が必要な機能を示します。</p>
+<p>すべて設定済みの場合は、すべて正常に実行されたことを示す確認通知が表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/send-by-email4.png width=362 height=141 /></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=ccure-プロファイル画像を使用>C•CURE プロファイル画像を使用<a href=#ccure-プロファイル画像を使用 class=hash-link aria-label="C•CURE プロファイル画像を使用 への直接リンクとコピー" title="C•CURE プロファイル画像を使用 への直接リンクとコピー" translate=no>​</a></h4>
+<p>このオプションを有効にし、ユーザープロファイルに顔クレデンシャルがない場合、Personnel View を開くと、インテグレーション機能がそのプロファイル画像を使って顔の事前登録クレデンシャルを自動的に作成しようとします。</p>
+<p>インテグレーション機能は AI アルゴリズムを使って画像を解析し、人の顔があるかを確認します。ない場合は画像を拒否します。 人の顔がある場合は、続いて追加の確認を実行し、人物画像が最低要件を満たすかどうかを判断します。 満たしている場合、その画像を顔の事前登録クレデンシャル作成の入力として使用します。</p>
+<p>Integration Configuration Tool で <strong>Use C•CURE Personnel Images (for Facial Pre-enrollment)</strong> オプションが有効でない場合、Pre-Enrollment メニューのみが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/profile-image1.png width=368 height=198 /></p>
+<p>有効化または無効化するには、<strong>Integration Configuration Tool</strong> → <strong>Users menu</strong> に移動してください：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/profile-image2.png width=500 height=auto /></p>
+<p>次の通知が表示されます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/profile-image3.png width=392 height=382 /></p>
+<p>続行するには <strong>Accept</strong>、そうでない場合は <strong>Cancel</strong> をクリックしてください。</p>
+<p>オプションを有効にした場合は、Personnel View に戻り、Personnel プロファイルを開いて、Pre-Enrollment メニュー下に追加されたオプションを確認できます：</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/pre-enrollment1.png width=368 height=198 /></p>
+<p><strong>Use C•CURE Profile Image</strong> ボタンをクリックすると、インテグレーション機能が C•CURE プロファイル画像の解析処理を実行し、前述の要件を満たしていれば、有効な顔の事前登録クレデンシャルを作成します。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=顔の削除>顔の削除<a href=#顔の削除 class=hash-link aria-label="顔の削除 への直接リンクとコピー" title="顔の削除 への直接リンクとコピー" translate=no>​</a></h3>
+<p>ここから Suprema デバイスの User プロファイルから顔を削除する場合は、<strong>Delete</strong> ボタンをクリックしてください。警告メッセージが表示されます。Suprema デバイスの User プロファイルからクレデンシャルを削除する場合は <strong>Yes</strong> をクリックし、そうでない場合は <strong>No</strong> をクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/delete-credential.png width=411 height=161 /></p>
+<p><strong>各ユーザーに追加できる顔の数は?</strong></p>
+<p>ユーザーごとに 1 件の顔記録を登録または事前登録できます（BioStar 2 経由なら 2 件）。これは、FaceStation F2 と BioStation 3 に実装された Deep Learning アルゴリズムが非常に高精度であり、最も重要な機能は自己学習アルゴリズムが、その名のとおり、顔の変化を自ら学習できることです。たとえば、マスクの有無、メガネ、ひげ、口ひげです。</p>
+<p>ただし、Suprema の Fusion Matching アルゴリズムは市場最高水準でも、顔の特徴が露出していないヘルメット着用者を認識するような不可能な処理はできません。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/delete-face.png width=346 height=387 /></p>
+<p>画面で種類ごとの各テンプレートをダブルクリックすると、それぞれのパネルに表示されます。そこから、前の節で説明したとおり編集できます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>これらの変更はオンラインで実行され、Suprema デバイスに直ちに反映されます。必ず正しい変更を行ってください。そうでないと、誤って人のアクセスを禁止する可能性があります。</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=その他>その他<a href=#その他 class=hash-link aria-label="その他 への直接リンクとコピー" title="その他 への直接リンクとコピー" translate=no>​</a></h2>
+<p>Suprema タブの下部パネルにヘルパー セクションがあります。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/miscellaneous1.png width=573 height=143 /></p>
+<p>ここでは、ログ情報を確認でき、Suprema サービスからの変更や応答も確認できます。</p>
+<p>初回実行時、またはライセンスが正しく検証されていない場合、あるいは Suprema - C•CURE Integration Service が実行されていない場合は、次の内容が表示されます。</p>
+<div class=grid-container><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/miscellaneous2.png width=600 height=auto /><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/miscellaneous3.png width=381 height=141 /></div>
+<p>ライセンスの検証状態またはサービスの実行状態を確認するまで、このインテグレーション機能は使用できません。</p>
+<p>ライセンスが正しく検証されているのにこのエラーが引き続き表示される場合は、Personnel View を閉じて再度開いてください。解決しない場合は、Troubleshooting の 2 番を参照してください。</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>このページは役に立ちましたか？</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>役に立ちました。</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>改善が必要です。</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/integration/ccure/installation><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>Suprema - C•CURE インテグレーションのインストール</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/integration/ccure/appendices><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>付録</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=https://www.linkedin.com/company/suprema-inc- target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVR42u3XPUoEQRCG4WdVTEw1M1UET2BiZKKRJ/AMgjChB5gjGAoGgtGaaayhgWBgZGAqg8Iu4g+OSQWLKP6wO7NIfVF30VS//RXVTXfqujYumjBGSpiESZh/CTP1k0VlWa5jH3fYwM1vNimKYqjObGMWS9hqu0zHqPGI01bLhAOcoY/biM1gOsZvePiQ93VUzlS4wDV2I7YX8QqXWEMX93iJtZujcOY7zX9SvkUcYRXnTbb2V3kmsdPGPXMYbizgaiC+0nSZqmj555ifYDnGc0070xsAgae/HDjfpoRJmGGpk5+4hEmYhEmYlvQO+74srj8PcOoAAAAASUVORK5CYII="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR42u2XOwrCQBCGv5UQy2DAJr3gLcRzeI8tbez2IJ4lt4mIViJrk2IZSCGYzYL/DwvzYOGDmdmHizFSilYUJMEIRjC/UvXthhCCDe2AM3AEOuAFPL337ewwRnugB5okVo8re5kuBmTRnjkY/wSsAZelZ4y2if0ArqVM0/u/RxuYenM0Jud0Ai9ZpiGxN6Z8t9ww7UT/3E1Ot7ZgBCMYAKfvrWAEI5iZ9QEdXBhIqJQhWAAAAABJRU5ErkJggg=="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR42u3XP0pDQRDH8U9EIdFCtFARbGJnobWVhwhoYeufA4g5xBNPIJ4g4iU8hIiipVgoahEVwWez1cO8vJgNpNgfbLM7DN+dmZ1ha3meGxdNGCMlmASTYBLMqDXZzyDLshqO0MIC6mhg9o/L/OANH/jEEy5x2m6386FhsIeTASI9FxY0sRkAz2KkaSdCBrZj1Uyzx/49HivCrMaCme+xf421EP78nz4GhpkuOXvFAbZwU2I3EwtmqoLNFTaQDfFQqhlVUB372B1pn8F3SXQaOMQxlvv4iALTDQ2uqHU8YLGijygwLz1gVgbIwHOsAr6NUFN3sWA6EWA6sdJ0Hgq4haXCkCwOyy6+wpB8D4PyIvjoq1r6NyWYBJNgEkyC4Rd70TD9XaltowAAAABJRU5ErkJggg=="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVR42u1WQVLiQBR9/zelBRtzhMwNnBNMPIHMCcATjGwse0VYNdEFzAnQG+AJDCeQGwxHiCssNf+76ViRASXgzMLiVaUq0A15ef/91x/YYYcdviCoymbnXAggYuZARIJV+5g5y/N8RkRTa+3sU8k450IiGhFRVPVtVTVV1ZN1SNE6RIwxd6oaAJgAGItIVihQ3PvPr4oxcwCgCeAHgExEvn9EqPYRGWPMSFUDEelZa+OKwgyTJIkBdIloBOBoY2WccyEz/xGRibU2quItY8ydiEzPz8+PLi4ublU1EpFv76nzrjLMfOjrPl7x0AhAk4gOVPUewNhamwIIVTUgotD//gZA5K+rTcsUAgARZeUv4zgOGo3GQFXbrxITAcCvJEmG8/m8V6/XfxLRDABEJGNmeN9t5hkRCZgZzPyGzP7+/lBVWwCmAHpENMvz/JCZuwBOG41GcHZ2dvKXJ4iCrQxcvFm5NMzcAjCbz+dHcRwXa9PBYDB+enq6VdW2c+7alwwA1soarpySRE1PsFciAgDodDqZqvbK+6qANwixwJOZLlt/fn4uVDj452QKM9dqtfC9DgRw/z+UKdq8G8dxsNhl3sQr42BrAxctDgDW2jRJkmsArXq9fuec64nIlIhCY0zXZ8zvknmLo2E7MostXWBvb+/08fERAFrMPGJ+I/D1w8NDvCwiVDXbJmeWhlWn08kAtJ1zV0TU9Gmbqeq4rMiiMsaYrQ7K1P/ZMYDh4qJ/cLqG6Y9VdWUHrmVga+2MiFIiipIk6W4yvV1eXnb9ITnZeoTI8/zEzzNxv9+PiOimnMgL6RqWS6OqxyIS+Thof9qkx8xXflCqiomItD9l0ltC6hBA+NEM7NVLq8zAO+yww5fEC4LXWfVMU1ZGAAAAAElFTkSuQmCC width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"localStorage"},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>

@@ -1,0 +1,629 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integration/gallagher/troubleshooting" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>トラブルシューティングとFAQ | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting /><meta data-rh=true property=og:locale content=ja_JP /><meta data-rh=true property=og:locale:alternate content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="トラブルシューティングとFAQ | Suprema Docs"/><meta data-rh=true name=description content="Suprema Integration with Gallagher のトラブルシューティングガイドとFAQです。ミドルウェアのアップグレード、ネットワークエラー、SSL証明書、PostgreSQLデータベース管理を扱います。"/><meta data-rh=true property=og:description content="Suprema Integration with Gallagher のトラブルシューティングガイドとFAQです。ミドルウェアのアップグレード、ネットワークエラー、SSL証明書、PostgreSQLデータベース管理を扱います。"/><meta data-rh=true name=keywords content=トラブルシューティング,SSL証明書,PostgreSQL /><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/gallagher/troubleshooting hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/integration/gallagher/troubleshooting hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/integration/gallagher/troubleshooting hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/gallagher/troubleshooting hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting/#webpage","@type":"WebPage","breadcrumb":{"@id":"https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting/#breadcrumb"},"datePublished":"2026-01-02","description":"Suprema Integration with Gallagher のトラブルシューティングガイドとFAQです。ミドルウェアのアップグレード、ネットワークエラー、SSL証明書、PostgreSQLデータベース管理を扱います。","inLanguage":"ja-JP","isPartOf":{"@id":"https://supremainc.github.io/#website"},"name":"トラブルシューティングとFAQ","potentialAction":[{"@type":"ReadAction","target":["https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting"]}],"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","article p:first-of-type","[data-speakable]"]},"url":"https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting"},{"@id":"https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/integration/gallagher/","name":"Gallagher","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting","name":"トラブルシューティングとFAQ","position":2}]},{"@id":"https://supremainc.github.io/#website","@type":"WebSite","description":"Supremaのすべての製品およびBioStar関連情報をここで確認してください。","inLanguage":"ja-JP","name":"Suprema Docs","potentialAction":[{"@type":"SearchAction","query-input":"required name=searchTerms","target":{"@type":"EntryPoint","urlTemplate":"https://supremainc.github.io/search?q={searchTerms}"}}],"publisher":{"@id":"https://supremainc.github.io/#organization"},"url":"https://supremainc.github.io"},{"@id":"https://supremainc.github.io/#organization","@type":"Organization","address":{"@type":"PostalAddress","addressCountry":"KR","postalCode":"13554","streetAddress":"L17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://support.supremainc.com"},"logo":{"@id":"https://supremainc.com/#logo","@type":"ImageObject","caption":"Suprema - Security & Biometrics","contentUrl":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","height":900,"url":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","width":1440},"name":"Suprema","sameAs":["https://blog.naver.com/supremakr","https://www.facebook.com/supremaglobal","https://www.youtube.com/user/supremainc","https://www.instagram.com/official.suprema","https://pf.kakao.com/_xnkPxes","https://www.linkedin.com/company/suprema-inc-/"],"url":"https://supremainc.com"}]}</script><link rel=alternate type=application/rss+xml href=/docs/ja/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/ja/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/ja/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.a6fb417b.css /><script src=/docs/ja/assets/js/runtime~main.0966827d.js defer></script><script src=/docs/ja/assets/js/main.ae4e2736.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg /><div role=region aria-label=本文へスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>本文へスキップ</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>このドキュメントには、まだサービスバージョンにリリースされていないコンテンツが含まれています。公式にリリースされた機能のドキュメントについては、<a href=https://docs.supremainc.com/ja/integration/gallagher/troubleshooting/en/ target=_blank>次のリンク</a>をご覧ください。</b></div></div><nav aria-label=メイン class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=サイドバーを展開/折りたたむ aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>プラットフォーム</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_x_mobile>BioStar X Mobile</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_air>BioStar Air</a><li><a class=dropdown__link href=/docs/ja/platform/clue>CLUe</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI カメラ</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/ja/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar-devices">デバイス</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3_clue>BioStation 3 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/ja/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2_clue>BioLite N2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2_clue>X-Station 2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/ja/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/ja/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/ja/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/ja/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/ja/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/ja/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/ja/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/ja/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/ja/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/ja/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>インテグレーション</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/integration/genetec>Genetec</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/integration/gallagher>Gallagher</a><li><a class=dropdown__link href=/docs/ja/integration/ccure>Software House</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>開発者センター</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/developer/bsxapi>BioStar X API</a><li><a class=dropdown__link href=/docs/ja/developer/clue>CLUe API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/ja/reference>リファレンス</a><a class="navbar__item navbar__link" href=/docs/ja/changelog>更新履歴</a><a class="navbar__item navbar__link" href=/docs/ja/legal/disclaimers>法的情報</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=検索><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>日本語</a><ul class=dropdown__menu><li><a href=/docs/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class=dropdown__link lang=ko-KR>한국어</a><li><a href=/docs/en/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title=システムモード aria-label="ダークモードとライトモードを切り替え (現在 システムモード)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=トップへスクロール class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=ドキュメントサイドバー class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/ja/integration/gallagher><span class=categoryLinkLabel_W154>Gallagher</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/purpose><span class=linkLabel_WmDU>目的</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/introduction><span class=linkLabel_WmDU>概要</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/installation><span class=linkLabel_WmDU>インストール</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/configuration><span class=linkLabel_WmDU>設定</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/integration-gallagher><span class=linkLabel_WmDU>Suprema と Gallagher のインテグレーション</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/ja/integration/gallagher/troubleshooting><span class=linkLabel_WmDU>トラブルシューティングとFAQ</span></a></ul></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label=パンくずリスト><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホーム class=breadcrumbs__link href=/docs/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/ja/integration/gallagher><span>Gallagher</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-2"><span class=breadcrumbs__link>トラブルシューティングとFAQ</span></ul><div class=btnprint_MOIq><div class=pdfDropdown_hR9S><button disabled class=printbtn_FzsH aria-haspopup=true aria-expanded=false><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m4 6 4 4 4-4"/></svg> PDF</button><button class=feedbackTrigger_JVwE aria-label=フィードバックを送信>Feedback</button></div></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">目次を表示</button></div><div class="theme-doc-markdown markdown"><header><h1>トラブルシューティングとFAQ</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=セットアップ>セットアップ<a href=#セットアップ class=hash-link aria-label="セットアップ への直接リンクとコピー" title="セットアップ への直接リンクとコピー" translate=no>​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>ミドルウェアのみを新しいバージョンにアップグレードする（手動手順）。</strong></summary><div><div class=collapsibleContent_i85q><p>ミドルウェアのみをアップグレードする場合は、以下の手順に従ってください。<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>ミドルウェアを V1.8.3 にアップグレードする場合は、<a href=#create-migration-manually class="">Migration を手動で作成する</a> を参照してください。</div></div><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-1.png width=399 height=206 /><p>以前のバージョンの <code>setup.vbs - Shortcut</code> を削除します。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-2.png width=540 height=122 /><p>下の画像のように、現在使用しているバージョンから cert ファイルと key ファイルを切り取ります。<p>既定のパスは次のとおりです：<code>C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(Current working version)\files</code><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-3.png width=540 height=216 /><div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>1.8.0 以降のバージョンからアップグレードする場合は、<code>key.pem</code>、<code>cert.pem</code>、<code>cronjob_status.txt</code>、<code>number_range.txt</code> の4ファイルを切り取る必要があります。</p>
+</li>
+<li class="">
+<p>1.7.0 では <code>number_range</code> のみ使用できないため、他の3ファイルを切り取ります。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-4.png width=540 height=274 /></p>
+</li>
+</ul></div></div><p>次に、上記のとおり <code>Gallagher V(new version)\files</code> にファイルを<strong>貼り付け</strong>ます。1.8.0 以降からアップグレードする場合は4ファイルを切り取る必要があります。下の画像は4ファイルを新しいバージョンに貼り付けた例です。4ファイルがない場合は、旧バージョンから新バージョンへ2ファイルを貼り付けてください。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-5.png width=540 height=253 /><p>Suprema Integration with Gallagher の最新バージョンの setup.vbs のショートカットを作成し、そのショートカットファイルを切り取ります。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-6.png width=540 height=472 /><p><kbd class=kbd_QsL_>Win + R</kbd> を実行し、<code>shell:startup</code> に貼り付けたあと、デスクトップを再起動します。</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>ミドルウェアが自動的に起動しない場合。</strong></summary><div><div class=collapsibleContent_i85q><p>まず、setup.vbs ファイルのショートカットが <code>shell:startup</code> にあることを確認します。 setup.vbs がない場合は、<code>shell:startup</code> に貼り付けてシステムを再起動します。<p>それでもミドルウェアが自動的に起動しない場合は、環境変数を確認します。<span class=bold>開始</span> <svg xmlns=http://www.w3.org/2000/svg xml:space=preserve width=1rem height=1rem viewBox="0 0 452.986 452.986"><path d="M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z" style=fill:currentColor /></svg> → システムの環境変数を編集 → <strong>詳細設定</strong> タブ → タブ下部の <strong>環境変数</strong> ボタンから開けます。<p><em>環境変数</em> ウィンドウ（下図）で、<em>システム環境変数</em> セクションの <strong>Path</strong> 変数を選択し、<strong>編集</strong> ボタンをクリックします。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup2-1.png width=338 height=305 /><p>環境変数の編集ウィンドウ（下図）が開いたら、<strong>新規</strong> ボタンをクリックし、<code>C:\Program Files\nodejs\</code> のパスを追加して <strong>OK</strong> ボタンを押します。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup2-2.png width=384 height=367 /><p><em>環境変数</em> ウィンドウで <strong>OK</strong> ボタンを押し、続いてシステムのプロパティでも <strong>OK</strong> ボタンを押します。<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>環境変数を作成または変更したあと、変更を Windows に反映するためにコンピューターを再起動します。</div></div></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>ミドルウェアの前提条件リストをアンインストールする。</strong></summary><div><div class=collapsibleContent_i85q><p>以下は、ミドルウェアの前提条件をアンインストールする手順です。<ol>
+<li class="">
+<p><strong>コントロール パネル</strong> を開き、<strong>プログラムと機能</strong> に移動します。</p>
+</li>
+<li class="">
+<p>下へスクロールして <strong>Node.js</strong> を<strong>検索</strong>し、右クリックして <strong>アンインストール</strong> を<strong>選択</strong>します。</p>
+</li>
+<li class="">
+<p>Node.js のアンインストールを求められたら、<strong>はい</strong> を<strong>押し</strong>てアンインストールを開始します。</p>
+</li>
+<li class="">
+<p>しばらくすると Runtime application の削除を求められるので、以下に従って <strong>OK</strong> を<strong>押し</strong>ます。 該当しない場合は、この手順をスキップしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup3-1.png width=318 height=267 /></p>
+</li>
+<li class="">
+<p>次に <strong>OpenSSL</strong> を<strong>検索</strong>し、右クリックして <strong>アンインストール</strong> を<strong>押し</strong>ます。</p>
+</li>
+<li class="">
+<p>OpenSSL のアンインストールを求められたら、<strong>はい</strong> を押し、アンインストールを開始します。</p>
+</li>
+<li class="">
+<p>次に <strong>PgAdmin 4</strong> を<strong>検索</strong>し、右クリックして <strong>アンインストール</strong> を<strong>押し</strong>ます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>PgAdmin 4 が表示されない、またはアンインストールできない場合は、この手順をスキップして次へ進んでください。</div></div>
+</li>
+<li class="">
+<p>PgAdmin 4 のアンインストールを求められたら、<strong>はい</strong> を押し、アンインストールを開始します。</p>
+</li>
+<li class="">
+<p>次に PostgreSQL 14 を<strong>検索</strong>し、右クリックして <strong>アンインストール</strong> を<strong>押し</strong>ます。</p>
+</li>
+<li class="">
+<p>PostgreSQL 14 のアンインストールを求められたら、<strong>はい</strong> を押し、アンインストールを開始します。</p>
+</li>
+<li class="">
+<p>アンインストール モードが開いたら、<strong>アプリケーション全体</strong> のラジオ ボタンを<strong>選択</strong>し、<strong>次へ</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup3-2.png width=396 height=314 /></p>
+</li>
+<li class="">
+<p>次に <code>C:\Users\&lt;YourUser>\AppData\Roaming\pgadmin\sessions</code> に<strong>移動</strong>し、このフォルダー内のすべてのファイルを削除します。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>AppData フォルダーが表示されない場合：<a href=#open-appdata-folder-windows class="">Windows で AppData フォルダーを開く</a>。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup3-3.png width=445 height=266 /></p>
+</li>
+<li class="">
+<p>次に <code>C:\Users\&lt;Your User>\AppData\Local</code> に<strong>移動</strong>し、PgAdmin フォルダーと PgAdmin4 フォルダーを選択してフォルダーを<strong>削除</strong>します。</p>
+</li>
+<li class="">
+<p>次に <code>C:\Program Files</code> に<strong>移動</strong>し、PostgreSQL フォルダーを削除します。</p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=open-appdata-folder-windows><strong>Windows で AppData フォルダーを開く方法。</strong></summary><div><div class=collapsibleContent_i85q><p>Windows 11 を使用している場合は、ファイル マネージャーで <strong>表示</strong> タブをクリックし、<strong>表示</strong> を<strong>選択</strong>して <strong>隠しファイル</strong> を<strong>クリック</strong>します。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup4-1.png width=309 height=380 /><p>Windows 10 を使用している場合は、ファイル マネージャーを開き、<strong>表示</strong> を<strong>クリック</strong>して <strong>隠しファイル</strong> を<strong>選択</strong>します。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup4-2.png width=629 height=91 /></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=manual-thumbprint-certificate-generation><strong>thumbprint と証明書を手動で生成する方法。</strong></summary><div><div class=collapsibleContent_i85q><ol>
+<li class="">
+<p>Client Certificate の Thumbprint を生成するには、Windows PowerShell を開き、このコマンドを実行して証明書の Thumbprint を取得します。</p>
+<blockquote>
+<p>New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -dnsname GallagherRestClientCert</p>
+</blockquote>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup5-1.png width=624 height=183 /></p>
+</li>
+<li class="">
+<p>Thumbprint を<strong>コピー</strong>し、Client Certificate Thumbprint セクションに <strong>Client Certificate Thumbprint key</strong> を<strong>貼り付け</strong>、<strong>OK</strong> ボタンを<strong>押し</strong>て、Services and Workstations も<strong>閉じ</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup5-2.png width=400 height=277 /></p>
+</li>
+</ol></div></div></details>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=ssl証明書の生成>SSL証明書の生成<a href=#ssl証明書の生成 class=hash-link aria-label="SSL証明書の生成 への直接リンクとコピー" title="SSL証明書の生成 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>スタート メニューを開き、<strong>MMC</strong> アプリケーションを<strong>開き</strong>ます。</p>
+</li>
+<li class="">
+<p><strong>ファイル</strong> → <strong>スナップインの追加と削除…</strong> に進み、下の画面を表示します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation1.png width=520 height=368 /></p>
+</li>
+<li class="">
+<p><strong>Certificates</strong> を<strong>選択</strong>して <strong>追加</strong> ボタンを<strong>クリック</strong>すると、下の画面が表示されます。そこで <strong>My user account</strong> のラジオ ボタンを<strong>選択</strong>し、<strong>Finish</strong> ボタンを<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation2.png width=520 height=auto /></p>
+</li>
+<li class="">
+<p>Finish をクリックすると下の画面が表示されるので、<strong>OK</strong> ボタンを<strong>クリック</strong>します。 証明書が正常に追加されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation3.png width=596 height=420 /></p>
+</li>
+<li class="">
+<p>次に <strong>Certificates - Current User</strong> → <strong>Personal</strong> → <strong>Certificates</strong> に移動し、<strong>GallagherRestClientCert</strong> 証明書を選択します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation4.png width=578 height=auto /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation5.png width=578 height=271 /></p>
+</li>
+<li class="">
+<p><strong>Details</strong> に移動し、<strong>Copy to File</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation6.png width=405 height=516 /></p>
+<p>次に、以下のスクリーンショットに従って <strong>Next</strong> を順に<strong>クリック</strong>します。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>証明書が複数ある場合は、Thumbprint が正しいことを確認してください。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation7.png width=380 height=373 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation8.png width=380 height=373 /></p>
+</li>
+<li class="">
+<p>次の画面が表示されたら、パスワードのチェックボックスをオンにし、パスワードを次のように設定します：<span class=cmd>G@ll@gher</span></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation9.png width=380 height=368 /></p>
+</li>
+<li class="">
+<p>次に、<code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> のパスを<strong>参照</strong>してファイルをエクスポートし、このファイルを <strong>GallagherRestClient.pfx</strong> として<strong>保存</strong>してから、<strong>Next</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation10.png width=380 height=368 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation11.png width=380 height=370 /></p>
+<p><strong>Finish</strong> を<strong>クリック</strong>すると証明書のエクスポートが正常に完了します。証明書と MMC ウィンドウを<strong>閉じ</strong>ます。</p>
+</li>
+<li class="">
+<p>次に、<strong>GallagherRestClient.pfx</strong> 証明書ファイルをエクスポートした <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> に移動し、<strong>GallagherRestClient.pfx</strong> ファイルを<strong>ダブルクリック</strong>します。下の画像のように <strong>Current User</strong> のラジオ ボタンを<strong>選択</strong>し、<strong>Next</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation12.png width=380 height=363 /></p>
+</li>
+<li class="">
+<p>次に、<strong>GallagherRestClient.pfx</strong> を保存した <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> を<strong>参照</strong>し、<strong>Next</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation13.png width=380 height=363 /></p>
+</li>
+<li class="">
+<p>次に、パスワード <span class=cmd>G@ll@gher</span> を<strong>入力</strong>し、下の画像のようにチェックボックスを<strong>オンにし</strong>てから <strong>Next</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation14.png width=380 height=365 /></p>
+</li>
+<li class="">
+<p><strong>Place all certificates in the following store</strong> のラジオ ボタンを<strong>選択</strong>し、<strong>Trusted Root Certification Authorities</strong> フォルダーを<strong>参照</strong>してから <strong>OK</strong> と <strong>Next</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation15.png width=380 height=370 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation16.png width=380 height=370 /></p>
+</li>
+<li class="">
+<p><strong>Finish</strong> を<strong>クリック</strong>するとセキュリティ警告が表示されるので、<strong>Yes</strong> を<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation17.png width=380 height=363 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation18.png width=380 height=351 /></p>
+<p>次に、GallagherRestClient.pfx ファイルを保存した <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> に<strong>移動</strong>し、ここで Powershell を<strong>開き</strong>ます。フォルダー URL に <strong>PowerShell</strong> と<strong>入力</strong>して PowerShell を開きます。</p>
+</li>
+<li class="">
+<p>以下のコマンドを<strong>入力</strong>して <strong>key.pem</strong> ファイルを生成します。</p>
+<blockquote>
+<p>openssl pkcs12 -in Gallagherrestclient.pfx -nocerts -out key.pem</p>
+</blockquote>
+</li>
+<li class="">
+<p>次に、パスワードを求められます。 そのため、以前設定したパスワード、つまり <span class=cmd>G@ll@gher</span> を<strong>入力</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation19.png width=600 height=auto /></p>
+<p><strong>key.pem</strong> ファイルが正常に生成されます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>ここではパスワードを3回入力する必要があります。</div></div>
+<ol>
+<li class="">
+<p>次に、以下のコマンドを<strong>入力</strong>して <strong>cert.pem</strong> ファイルを生成します：</p>
+<blockquote>
+<p>command: openssl pkcs12 -in Gallagherrestclient.pfx -clcerts -nokeys -out cert.pem</p>
+</blockquote>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation20.png width=600 height=auto /></p>
+<p>次に、パスワードを求められます。 そのため、以前設定したパスワード <span class=cmd>G@ll@gher</span> を<strong>入力</strong>します。</p>
+<p><strong>cert.pem</strong> ファイルが正常に生成されます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>ここではパスワードを1回入力する必要があります。</div></div>
+</li>
+</ol>
+</li>
+<li class="">
+<p>次に、<strong>key.pem</strong> と <strong>cert.pem</strong> の両方を<strong>コピー</strong>し、次のパス <code>C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(lateast version)\files</code> に貼り付けます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation21.png width=608 height=299 /></p>
+</li>
+</ol>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>EXE アプリケーションからミドルウェアを直接アップグレードする。</strong></summary><div><div class=collapsibleContent_i85q><ol>
+<li class="">
+<p>バージョンをアップグレードする場合は、ポップアップで <strong>OK</strong> を<strong>押し</strong>ます。</p>
+</li>
+<li class="">
+<p>その後、<strong>Update</strong> ボタンを<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-upgrade-from-exe1.png width=490 height=398 /></p>
+</li>
+<li class="">
+<p>ミドルウェアのアップグレードが始まります。</p>
+</li>
+<li class="">
+<p>ミドルウェアのインストールが正常に完了したら、<strong>Finish</strong> ボタンを<strong>押し</strong>ます。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>最新の変更を反映するには、システムの再起動が必要です。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-upgrade-from-exe2.png width=490 height=401 /></p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>EXE アプリケーションからミドルウェアを直接アンインストールする。</strong></summary><div><div class=collapsibleContent_i85q><ol>
+<li class="">
+<p>Windows の <span class=bold>開始</span> <svg xmlns=http://www.w3.org/2000/svg xml:space=preserve width=1rem height=1rem viewBox="0 0 452.986 452.986"><path d="M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z" style=fill:currentColor /></svg> ボタンを<strong>押し</strong>、<strong>検索</strong>して、<strong>アプリの追加と削除</strong> を<strong>開き</strong>ます。</p>
+</li>
+<li class="">
+<p>アプリと機能の検索一覧で、Suprema integration with the Gallagher のバージョンを<strong>検索</strong>して選択し、<strong>アンインストール</strong> を<strong>クリック</strong>します。小さなポップアップが表示されたら、もう一度 <strong>アンインストール</strong> を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe1.png width=513 height=346 /></p>
+</li>
+<li class="">
+<p>インテグレーションのすべてのコンポーネントを削除するポップアップで<strong>はい</strong>を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe2.png width=375 height=153 /></p>
+</li>
+<li class="">
+<p>アンインストールが始まり、下の画面のような表示が見えます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe3.png width=587 height=312 /></p>
+</li>
+<li class="">
+<p>下のポップアップで <strong>はい</strong> を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe4.png width=328 height=147 /></p>
+</li>
+<li class="">
+<p>下のポップアップでも <strong>はい</strong> を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe5.png width=376 height=140 /></p>
+</li>
+<li class="">
+<p><strong>OK</strong> を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe6.png width=375 height=146 /></p>
+</li>
+<li class="">
+<p>次に端末内をクリックし、<strong>Enter</strong> を押してアンインストールを完了します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe7.png width=612 height=211 /></p>
+</li>
+<li class="">
+<p>下のポップアップで <strong>OK</strong> を<strong>押し</strong>ます。これでミドルウェアの削除は完了です。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>変更を反映するには、システムを再起動する必要があります。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe8.png width=375 height=158 /></p>
+</li>
+</ol></div></div></details>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=ミドルウェア>ミドルウェア<a href=#ミドルウェア class=hash-link aria-label="ミドルウェア への直接リンクとコピー" title="ミドルウェア への直接リンクとコピー" translate=no>​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>ミドルウェアでのスキャンまたはデータ同期が非常に遅い場合。</strong></summary><div><div class=collapsibleContent_i85q><ul>
+<li class="">
+<p>この問題を解決するには、<a href=https://support.supremainc.com/en/support/solutions/articles/24000023469--biostar-2-changing-the-server-ip-register-resolving-https-not-secure-issue- target=_blank rel="noopener noreferrer" class="">ここをクリック</a>してブログを参照してください。</p>
+<ul>
+<li class="">カード所有者カードが自動作成されない場合、ミドルウェアでカードは表示されません。</li>
+</ul>
+</li>
+<li class="">
+<p>オペレーター グループに3つの権限を追加する必要があります。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-slow-scan-sync-issue.png width=577 height=330 /></p>
+<p>これら3つの権限を追加したあと、システムを再起動してください。</p>
+</li>
+</ul></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=login-lan-disconnected-error><strong>ログイン ページに「LAN is disconnected or IP is changed for (IP Address)」というエラーが表示される場合。</strong></summary><div><div class=collapsibleContent_i85q><ul>
+<li class="">
+<p>この問題を解決するには、次のトラブルシューティング項目を確認してください：</p>
+<ol>
+<li class="">
+<p>LAN ケーブルが接続されていることを確認します。</p>
+</li>
+<li class="">
+<p>IP が変更されていないこと、また BioStar 2 Server の IP アドレスが同じであることを確認してください。誤った IP アドレスを入力している可能性があります。</p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>ログイン画面で <strong>LAN is disconnected or IP is changed for (IP Address)</strong> のエラーを受信した場合は、ミドルウェアの <strong>click here to Reset</strong> <strong>ボタン</strong>を<strong>押す</strong>必要があります。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/login-error-lan-disconnected-ip-changed1.png width=589 height=302 /></p>
+<p>ミドルウェアのリセット許可を求められたら、<strong>Yes</strong> <strong>ボタン</strong>を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/login-error-lan-disconnected-ip-changed2.png width=439 height=138 /></p>
+<p>リセットすると、ミドルウェアの初期画面が表示されるので、続きの手順に従います。</p>
+</li>
+</ul></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>任意のページでミドルウェア実行中に「LAN is disconnected or IP is changed for (IP Address)」というエラーが発生する場合。</strong></summary><div><div class=collapsibleContent_i85q><ul>
+<li class="">
+<p>この問題を解決するには、次のトラブルシューティング項目を確認してください：</p>
+<ol>
+<li class="">
+<p>LAN ケーブルが接続されていることを確認します。</p>
+</li>
+<li class="">
+<p>IP が変更されていないこと、また BioStar 2 Server の IP アドレスが変更されていることを確認してください。</p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>その場合は、ミドルウェア内の <strong>Settings</strong> → <strong>Admin Management</strong> → <strong>IP management</strong> セクションに移動します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-lan-disconnected-ip-error1.png width=519 height=256 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-lan-disconnected-ip-error2.png width=565 height=280 /></p>
+<p>次に、テキスト ボックスに BioStar 2 server の IP アドレスとミドルウェアの HOST/SERVER 名を入力し、<strong>Submit</strong> ボタンを押してミドルウェア用の BioStar 2 サービスを開始します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-lan-disconnected-ip-error3.png width=572 height=287 /></p>
+<p><strong>Submit</strong> <strong>button</strong> を<strong>押す</strong>と IP 変更の成功メッセージが表示されるので、<strong>Exit setting</strong> <strong>button</strong> を<strong>押して</strong>設定画面を終了します。</p>
+</li>
+</ul></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>古いバージョンで複数サーバー上のミドルウェアを使用する方法。</strong></summary><div><div class=collapsibleContent_i85q><p>バージョン 1.7.0 から、BioStar 2 server の IP アドレスを取得するための独立した画面を追加しました。 そのため、これは 1.7.0 未満のミドルウェア バージョンで使用するための解決策です。<p>IP アドレスを変更する手順は次のとおりです。<ol>
+<li class="">
+<p>PgAdmin → テーブル に移動し、テーブルを右クリックして <strong>Truncate</strong> → <strong>Truncate Restart Identity</strong>（3つのテーブルすべて）を実行します。</p>
+</li>
+<li class="">
+<p>API key ウィンドウが表示されず、ログイン画面しか表示されない場合は、Gallagher command center に入って <strong>reset middleware</strong> リンクをクリックし、ミドルウェアをリセットします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-multi-server-older-versions1.png width=584 height=299 /></p>
+</li>
+<li class="">
+<p>ミドルウェアの API key を入力したあとにログインし、Pgadmin を開き、資格情報テーブルを右クリックして、<strong>View/Edit Data</strong> → <strong>All Rows</strong> を開きます。</p>
+</li>
+<li class="">
+<p>テーブルのデータが読み込まれます。 次に、BioStar server の IP に合わせて IP アドレスを変更し、<strong>F6</strong> ボタンを押して変更を保存します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-multi-server-older-versions2.png width=593 height=109 /></p>
+</li>
+<li class="">
+<p>そのあと、Pgadmin 内の globaluserrecord テーブルを truncate します。</p>
+</li>
+<li class="">
+<p>変更を反映するためにシステムを再起動します。</p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>特定の IP アドレスを持つ 2 台の異なるサーバーで特定のポート上でミドルウェアを実行する / ミドルウェアの受信ルールを構成する。</strong></summary><div><div class=collapsibleContent_i85q><p>以下は、特定の IP アドレスを持つ 2 台の異なるサーバーで特定のポート上でミドルウェアを実行する手順です。<p>ミドルウェアが 28523 ポートを使ってアプリケーションのバックエンド（middleware-backend）を呼び出していることが分かりました。バックエンドでは BioStar 2 server API を呼び出しているため、使用するポートは Web サーバーの HTTPS 既定ポートである 443 のみです。<p>そのため、BioStar 2 server である server2 では、プロトコル タイプを TCP に設定し、ローカル ポートに 443、8081 を指定します。 リモート ポート オプションは <strong>All ports</strong> のままにします。<p>Server 1 には Gallagher と Middleware が含まれます。<ul>
+<li class="">
+<p>IP Address: 192.168.1.68</p>
+</li>
+<li class="">
+<p>Subnet mask: 255.255.255.0</p>
+</li>
+<li class="">
+<p>Default Gateway: 162.168.1.1</p>
+</li>
+</ul><p>Server 2 には BioStar 2 が含まれます。<ul>
+<li class="">
+<p>IP Address: 10.10.104.13</p>
+</li>
+<li class="">
+<p>Subnet mask: 255.255.254.0</p>
+</li>
+<li class="">
+<p>Default Gateway: 10.10.104.1</p>
+</li>
+</ul><p>受信ルールを作成する手順は次のとおりです：<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>以下の手順は BioStar 2 server で実行する必要があります。</div></div><ol>
+<li class="">
+<p>Windows Defender Firewall の設定を開く：</p>
+<ul>
+<li class="">
+<p><kbd class=kbd_QsL_>Win + R</kbd> を押して、[ファイル名を指定して実行] ダイアログを開きます。</p>
+</li>
+<li class="">
+<p><code>control firewall.cpl</code> と入力し、Enter を押します。 Windows Defender Firewall の設定が開きます。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>詳細設定にアクセスする：</p>
+<ul>
+<li class="">Windows Defender Firewall ウィンドウでは、左側にオプションが表示されます。 <strong>詳細設定</strong> をクリックします。 Windows Defender Firewall with Advanced Security コンソールが開きます。</li>
+</ul>
+</li>
+<li class="">
+<p>新しい受信ルールを作成する：</p>
+<ul>
+<li class="">
+<p>Windows Defender Firewall with Advanced Security コンソールでは、左側に <strong>Inbound Rules</strong> と <strong>Outbound Rules</strong> を含むオプションが表示されます。</p>
+</li>
+<li class="">
+<p><strong>Inbound Rules</strong> をクリックします。</p>
+</li>
+<li class="">
+<p>右側のペインで <strong>New Rule...</strong> をクリックします。 New Inbound Rule Wizard が開きます。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>ルールの種類を選択する：</p>
+<ul>
+<li class="">New Inbound Rule Wizard で <strong>Custom</strong> を選択し、<strong>Next</strong> をクリックします。</li>
+</ul>
+</li>
+<li class="">
+<p>プログラムを構成する：</p>
+<ul>
+<li class="">このルールを特定のプログラムに適用する場合は、ここで指定します。 ICMP トラフィックを扱うため、ここは <strong>All programs</strong> のままにして <strong>Next</strong> をクリックします。</li>
+</ul>
+</li>
+<li class="">
+<p>プロトコルとポートを構成する：</p>
+<ul>
+<li class="">プロトコルとポートのウィンドウで、特定のポートを使用するため <strong>TCP</strong> を選択します。 次にローカル ポートで <strong>Specific Ports</strong> を選択し、443 と 8081 を入力します。 リモート ポートは <strong>All Ports</strong> のままにします。 その後、<strong>Next</strong> をクリックします。</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>ここでは、8081 ポートを BioStar 2 の USB デバイス用として割り当てています。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-port-ip-config-inbound-rules1.png width=499 height=389 /></p>
+</li>
+<li class="">
+<p>スコープを構成する：</p>
+<ul>
+<li class="">Scope ウィンドウでは、どの IP アドレスがサーバーに ICMP トラフィックを送信できるかを指定できます。 そのため、ローカル IP アドレスはそのままにし、リモート IP アドレスには Gallagher と Middleware のサーバーの IP アドレスを入力します。次に <strong>These IP addresses：</strong> を選び、<strong>Add</strong> ボタンをクリックします。IP address wizard で Gallagher と Middleware のサーバーの IP Address を入力し、<strong>OK</strong> を押します。 参照用に下の画像を確認してください。</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png width=499 height=407 /></p>
+</li>
+<li class="">
+<p>アクションを構成する：</p>
+<ul>
+<li class="">Action ウィンドウで <strong>Allow the connection</strong> を選択し、<strong>Next</strong> をクリックします。</li>
+</ul>
+</li>
+<li class="">
+<p>プロファイルを構成する：</p>
+<ul>
+<li class="">Profile ウィンドウで、このルールを適用するプロファイルを選択します。 通常は、すべてのプロファイル（Domain、Private、Public）で有効にします。 その後、<strong>Next</strong> をクリックします。</li>
+</ul>
+</li>
+<li class="">
+<p>名前と説明：</p>
+<ul>
+<li class="">ルールに名前と説明を付けます。 たとえば、<strong>Allow ICMP Echo Request for middleware</strong> という名前にします。 その後、<strong>Finish</strong> をクリックします。</li>
+</ul>
+</li>
+<li class="">
+<p>ルールを有効にする：</p>
+<ul>
+<li class="">
+<p>ルールを作成すると、Windows Defender Firewall with Advanced Security コンソールの Inbound Rules セクションに表示されます。</p>
+</li>
+<li class="">
+<p>作成したルールを右クリックし、自動で有効にならない場合は <strong>Enable Rule</strong> を選択します。 これでルールが有効になり、ICMP トラフィックを許可します。</p>
+</li>
+</ul>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>BioStar サーバーの IP が変更され、ミドルウェアの動作が遅くなった場合。</strong></summary><div><div class=collapsibleContent_i85q><p>IP が変更されたというエラーが発生した場合は、次のリンクを確認してください：<a href=https://support.supremainc.com/en/support/solutions/articles/24000041659--biostar-2-troubleshooting-when-the-server-ip-changed target=_blank rel="noopener noreferrer" class="">https://support.supremainc.com/en/support/solutions/articles/24000041659--biostar-2-troubleshooting-when-the-server-ip-changed</a>.</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=thumbprint-not-generated><strong>EXE ファイル実行時に thumbprint が生成されない場合。</strong></summary><div><div class=collapsibleContent_i85q><p>ミドルウェアをインストールしても thumbprint が生成されない場合は、管理者権限で EXE ファイルを再度実行してください。手順は次のとおりです。<p>下のスクリーンショットのように、Suprema integration with the gallagher.exe ファイルを右クリックし、<strong>管理者として実行</strong> を<strong>選択</strong>します。 続いて許可を求められるので、<strong>はい</strong> を<strong>クリック</strong>して exe ファイルを実行します。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/exe-thumbprint-not-generated1.png width=574 height=401 /><p>それでも thumbprint ファイルが生成されない場合は、<code>C:\TMP</code> に移動し、すべてのログ ファイルを開発チームと共有してください。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/exe-thumbprint-not-generated2.png width=637 height=164 /><p>それまでの間、thumbprint を手動で生成する方法の記事を参照してください。 参照：<a href=#manual-thumbprint-certificate-generation class="">thumbprint を手動で生成する方法</a>。</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=create-migration-manually><strong>Migration を手動で作成する。</strong></summary><div><div class=collapsibleContent_i85q><p>ミドルウェア V1.8.3 では Hostname に対応したため、Gallagher workstation client を使ってミドルウェアを使用できるように、Migration を実施しています。<p>Migration を手動で作成するには、以下の手順に従ってください：<ol>
+<li class="">
+<p>Pgadmin に移動します。 パスワードを求められたら、インストール時に設定した既定のパスワード <strong>G@ll@gher</strong> を入力します。</p>
+</li>
+<li class="">
+<p>次に <strong>Servers</strong> を<strong>クリック</strong>します。パスワードを求められたら同じ <strong>G@ll@gher</strong> をパスワードとして使用します。続いて <strong>Databases</strong> を<strong>クリック</strong>し、Suprema → Schemas → public → Tables を<strong>展開</strong>します。 次に credentials テーブルを<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually1.png width=289 height=754 /></p>
+</li>
+<li class="">
+<p>次に credentials テーブルを<strong>右クリック</strong>し、一覧から <strong>Properties</strong> オプションを<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually2.png width=399 height=298 /></p>
+</li>
+<li class="">
+<p>次のウィンドウで <strong>Columns</strong> オプションを<strong>選択</strong>し、<strong>+</strong> アイコンを<strong>クリック</strong>すると、下の画像のように新しい列オプションが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually3.png width=537 height=330 /></p>
+</li>
+<li class="">
+<p>次に Columns オプション内で、名前を host_name、データ型を character varying、Length/Precision を 255 に設定し、<strong>Save</strong> ボタンを<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually4.png width=578 height=355 /></p>
+</li>
+<li class="">
+<p>次に credentials テーブルを<strong>選択</strong>し、<strong>View Data</strong> ボタンを<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually5.png width=249 height=510 /></p>
+</li>
+<li class="">
+<p>次に host_name 列内のボックスを<strong>ダブルクリック</strong>すると、ポップアップが開きます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually6.png width=613 height=101 /></p>
+</li>
+<li class="">
+<p>ポップアップに <code>https://[YOUR-HOST/SYSTEM-NAME]/api</code> と入力し、<strong>OK</strong> を<strong>押し</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually7.png width=258 height=142 /></p>
+</li>
+<li class="">
+<p>次に <kbd class=kbd_QsL_>F6</kbd> を<strong>押して</strong>変更を保存します。</p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>PostgreSQL 14 のデータベースをバックアップし、バージョン 16 にアップグレードして、データベースを復元する手順。</strong></summary><div><div class=collapsibleContent_i85q><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=postgresql-14-でデータベースをバックアップする>PostgreSQL 14 でデータベースをバックアップする<a href=#postgresql-14-でデータベースをバックアップする class=hash-link aria-label="PostgreSQL 14 でデータベースをバックアップする への直接リンクとコピー" title="PostgreSQL 14 でデータベースをバックアップする への直接リンクとコピー" translate=no>​</a></h5><ol>
+<li class="">
+<p>pgAdmin 4 を開く：</p>
+<ul>
+<li class=""><strong>Databases</strong> セクションの下にある <strong>Suprema</strong> データベースを右クリックし、<strong>Backup</strong> を選択します。</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore1.png width=262 height=410 /></p>
+</li>
+<li class="">
+<p>バックアップ ファイル名と形式を設定する：</p>
+<ul>
+<li class="">
+<p><strong>File name</strong> フィールドに <strong>Suprema-backup</strong> と入力し、形式として <strong>Directory</strong> を選択します。</p>
+</li>
+<li class="">
+<p><strong>ファイル</strong> アイコンをクリックして保存先を選択します。</p>
+</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore2.png width=515 height=350 /></p>
+</li>
+<li class="">
+<p>保存先を選択する：</p>
+<ul>
+<li class="">バックアップを保存するディレクトリを選択します（例：デスクトップ）。 ファイル名を入力し、<strong>Save</strong> を押します。</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore3.png width=515 height=339 /></p>
+</li>
+<li class="">
+<p>バックアップを開始する：</p>
+<ul>
+<li class="">選択した場所が反映されたファイル名が表示されます。 <strong>Backup</strong> ボタンを押します。</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore4.png width=515 height=383 /></p>
+</li>
+<li class="">
+<p>バックアップ完了を確認する：</p>
+<ul>
+<li class="">バックアップが完了すると通知が表示されます。 これでデータベースのバックアップは安全に保存されました。</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore5.png width=515 height=224 /></p>
+</li>
+</ol><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=postgresql-をバージョン-16-にアップグレードする>PostgreSQL をバージョン 16 にアップグレードする<a href=#postgresql-をバージョン-16-にアップグレードする class=hash-link aria-label="PostgreSQL をバージョン 16 にアップグレードする への直接リンクとコピー" title="PostgreSQL をバージョン 16 にアップグレードする への直接リンクとコピー" translate=no>​</a></h5><ol>
+<li class="">
+<p>ミドルウェアと PostgreSQL のサービスを停止する：</p>
+<ul>
+<li class="">28523 ポートと 5432 ポートのプロセスを停止して、実行中のミドルウェアと PostgreSQL のサービスを終了します。</li>
+</ul>
+</li>
+<li class="">
+<p>パスワードを更新する（必要な場合）：</p>
+<ul>
+<li class="">アップグレード中の互換性を確保するため、パスワードを <span class=cmd>G@ll@gher</span> に設定します。</li>
+</ul>
+</li>
+<li class="">
+<p>PostgreSQL 16 をインストールする：</p>
+<ul>
+<li class="">公式 PostgreSQL Web サイトから PostgreSQL 16 をダウンロードしてインストールし、OS に応じた手順に従ってください。直接 V16.4.1 を取得する場合は、次のリンクを参照してください：<a href="https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link" target=_blank rel="noopener noreferrer" class="">https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link</a>.</li>
+</ul>
+</li>
+<li class="">
+<p>データを移行する（任意）：</p>
+<ul>
+<li class=""><a href=#database-postgresql class="">Postgresql 16 でデータベースを復元する</a> を参照してください。</li>
+</ul>
+</li>
+<li class="">
+<p>PostgreSQL 14 をアンインストールする（任意）：</p>
+<ul>
+<li class="">アップグレードを確認したあと、不要であれば PostgreSQL 14 をアンインストールできます。 参照：<a href=#uninstall-postgresql-after-upgrade class="">バージョン 16 へアップグレードしたあとに postgresql14 をアンインストールする</a>。</li>
+</ul>
+</li>
+</ol><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=database-postgresql>PostgreSQL 16 でデータベースを復元する<a href=#database-postgresql class=hash-link aria-label="PostgreSQL 16 でデータベースを復元する への直接リンクとコピー" title="PostgreSQL 16 でデータベースを復元する への直接リンクとコピー" translate=no>​</a></h5><ol>
+<li class="">
+<p>pgAdmin 4 を開きます（PostgreSQL 16 に接続済み）。</p>
+</li>
+<li class="">
+<p>新しいデータベースを作成する：</p>
+<ul>
+<li class="">
+<p>pgAdmin で <strong>Databases</strong> を右クリックし、<strong>Create</strong> → <strong>Database</strong> を選択します。</p>
+</li>
+<li class="">
+<p>データベース名を <strong>Suprema</strong> にして保存します。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>バックアップを復元する：</p>
+<ul>
+<li class="">新しく作成した <strong>Suprema</strong> データベースを右クリックし、<strong>Restore</strong> を選択します。</li>
+</ul>
+</li>
+<li class="">
+<p>バックアップ ファイルを選択する：</p>
+<ul>
+<li class=""><strong>Filename</strong> フィールドで、以前作成したディレクトリ バックアップ ファイル（Suprema-backup）を選択します。</li>
+</ul>
+</li>
+<li class="">
+<p>復元を開始する：</p>
+<ul>
+<li class=""><strong>Restore</strong> をクリックします。 処理が完了するまで待ちます。</li>
+</ul>
+</li>
+<li class="">
+<p>復元完了を確認する：</p>
+<ul>
+<li class="">復元が完了すると、成功メッセージが表示されます。 これで PostgreSQL 16 でデータにアクセスし、確認できます。</li>
+</ul>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=uninstall-postgresql-after-upgrade><strong>PostgreSQL をバージョン 16 にアップグレードしたあと、PostgreSQL 14 をアンインストールする。</strong></summary><div><div class=collapsibleContent_i85q><p>PostgreSQL 14 をアンインストールするには、以下の手順に従ってください。<ol>
+<li class="">
+<p><strong>コントロール パネル</strong> → <strong>プログラム</strong> → <strong>プログラムと機能</strong> に移動します。</p>
+</li>
+<li class="">
+<p>インストール済みプログラムの一覧で <strong>PostgreSQL 14</strong> を見つけます。</p>
+</li>
+<li class="">
+<p><strong>PostgreSQL 14</strong> を右クリックし、<strong>アンインストール</strong> を選択します。 表示される案内に従ってアンインストールを完了します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-1.png width=584 height=372 /></p>
+</li>
+<li class="">
+<p>インストール ディレクトリ（通常は <code>C:\Program Files\PostgreSQL\14</code>）を確認し、残っているファイルやフォルダーを削除します。</p>
+</li>
+</ol><div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>アンインストール後も pgAdmin に PostgreSQL 14 が表示される場合、pgAdmin がサーバー設定を保持している可能性があります。</div></div><p>次の手順で pgAdmin から手動で削除できます：<ol>
+<li class="">
+<p>pgAdmin の Object Explorer パネルで <strong>PostgreSQL 14</strong> を<strong>右クリック</strong>します。</p>
+</li>
+<li class="">
+<p>コンテキスト メニューから <strong>Delete/Remove Server</strong> を<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-2.png width=312 height=319 /></p>
+</li>
+<li class="">
+<p>表示される削除確認を<strong>確定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-3.png width=459 height=106 /></p>
+</li>
+</ol><p>これで PostgreSQL 16 のインストールに影響を与えずに、pgAdmin から PostgreSQL 14 のサーバー設定が削除されます。</div></div></details></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>このページは役に立ちましたか？</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>役に立ちました。</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>改善が必要です。</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/integration/gallagher/integration-gallagher><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>Suprema と Gallagher のインテグレーション</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=https://www.linkedin.com/company/suprema-inc- target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVR42u3XPUoEQRCG4WdVTEw1M1UET2BiZKKRJ/AMgjChB5gjGAoGgtGaaayhgWBgZGAqg8Iu4g+OSQWLKP6wO7NIfVF30VS//RXVTXfqujYumjBGSpiESZh/CTP1k0VlWa5jH3fYwM1vNimKYqjObGMWS9hqu0zHqPGI01bLhAOcoY/biM1gOsZvePiQ93VUzlS4wDV2I7YX8QqXWEMX93iJtZujcOY7zX9SvkUcYRXnTbb2V3kmsdPGPXMYbizgaiC+0nSZqmj555ifYDnGc0070xsAgae/HDjfpoRJmGGpk5+4hEmYhEmYlvQO+74srj8PcOoAAAAASUVORK5CYII="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR42u2XOwrCQBCGv5UQy2DAJr3gLcRzeI8tbez2IJ4lt4mIViJrk2IZSCGYzYL/DwvzYOGDmdmHizFSilYUJMEIRjC/UvXthhCCDe2AM3AEOuAFPL337ewwRnugB5okVo8re5kuBmTRnjkY/wSsAZelZ4y2if0ArqVM0/u/RxuYenM0Jud0Ai9ZpiGxN6Z8t9ww7UT/3E1Ot7ZgBCMYAKfvrWAEI5iZ9QEdXBhIqJQhWAAAAABJRU5ErkJggg=="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR42u3XP0pDQRDH8U9EIdFCtFARbGJnobWVhwhoYeufA4g5xBNPIJ4g4iU8hIiipVgoahEVwWez1cO8vJgNpNgfbLM7DN+dmZ1ha3meGxdNGCMlmASTYBLMqDXZzyDLshqO0MIC6mhg9o/L/OANH/jEEy5x2m6386FhsIeTASI9FxY0sRkAz2KkaSdCBrZj1Uyzx/49HivCrMaCme+xf421EP78nz4GhpkuOXvFAbZwU2I3EwtmqoLNFTaQDfFQqhlVUB372B1pn8F3SXQaOMQxlvv4iALTDQ2uqHU8YLGijygwLz1gVgbIwHOsAr6NUFN3sWA6EWA6sdJ0Hgq4haXCkCwOyy6+wpB8D4PyIvjoq1r6NyWYBJNgEkyC4Rd70TD9XaltowAAAABJRU5ErkJggg=="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVR42u1WQVLiQBR9/zelBRtzhMwNnBNMPIHMCcATjGwse0VYNdEFzAnQG+AJDCeQGwxHiCssNf+76ViRASXgzMLiVaUq0A15ef/91x/YYYcdviCoymbnXAggYuZARIJV+5g5y/N8RkRTa+3sU8k450IiGhFRVPVtVTVV1ZN1SNE6RIwxd6oaAJgAGItIVihQ3PvPr4oxcwCgCeAHgExEvn9EqPYRGWPMSFUDEelZa+OKwgyTJIkBdIloBOBoY2WccyEz/xGRibU2quItY8ydiEzPz8+PLi4ublU1EpFv76nzrjLMfOjrPl7x0AhAk4gOVPUewNhamwIIVTUgotD//gZA5K+rTcsUAgARZeUv4zgOGo3GQFXbrxITAcCvJEmG8/m8V6/XfxLRDABEJGNmeN9t5hkRCZgZzPyGzP7+/lBVWwCmAHpENMvz/JCZuwBOG41GcHZ2dvKXJ4iCrQxcvFm5NMzcAjCbz+dHcRwXa9PBYDB+enq6VdW2c+7alwwA1soarpySRE1PsFciAgDodDqZqvbK+6qANwixwJOZLlt/fn4uVDj452QKM9dqtfC9DgRw/z+UKdq8G8dxsNhl3sQr42BrAxctDgDW2jRJkmsArXq9fuec64nIlIhCY0zXZ8zvknmLo2E7MostXWBvb+/08fERAFrMPGJ+I/D1w8NDvCwiVDXbJmeWhlWn08kAtJ1zV0TU9Gmbqeq4rMiiMsaYrQ7K1P/ZMYDh4qJ/cLqG6Y9VdWUHrmVga+2MiFIiipIk6W4yvV1eXnb9ITnZeoTI8/zEzzNxv9+PiOimnMgL6RqWS6OqxyIS+Thof9qkx8xXflCqiomItD9l0ltC6hBA+NEM7NVLq8zAO+yww5fEC4LXWfVMU1ZGAAAAAElFTkSuQmCC width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"localStorage"},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>

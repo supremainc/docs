@@ -1,0 +1,411 @@
+{
+  "vionyx": {
+    "general": {
+      "label": "일반",
+      "label_id": "specs.general",
+      "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "VQF12-R"
+        },
+        "extended_memory": {
+          "label": "확장 메모리",
+          "label_id": "specs.general.extended_memory",
+          "value": {
+            "ko": "MicroSD, SDHC, SDXC 지원 (최대 1 TB)",
+            "en": "Supports MicroSD, SDHC, SDXC (Up to 1 TB)",
+            "es": "Admite MicroSD, SDHC, SDXC (hasta 1 TB)",
+            "ja": "MicroSD、SDHC、SDXC サポート（最大 1 TB）"
+          }
+        },
+        "operating_temp": {
+          "label": "동작 온도",
+          "label_id": "specs.general.operating_temp",
+          "value": {
+            "ko": "-40 °C ~ 50 °C",
+            "en": "-40 °C ~ 50 °C",
+            "es": "De -40 °C a 50 °C",
+            "ja": "-40 °C ~ 50 °C"
+          }
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
+          }
+        },
+        "operating_humidity": {
+          "label": "동작 습도",
+          "label_id": "specs.general.operating_humidity",
+          "value": {
+            "ko": "0 % ~ 90 %, 비응축",
+            "en": "0 % ~ 90 %, non-condensing",
+            "es": "Del 0 % al 90 %, sin condensación",
+            "ja": "0 % ~ 90 %（結露なきこと）"
+          }
+        },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
+          "value": {
+            "ko": "0 % ~ 90 %, 비응축",
+            "en": "0 % ~ 90 %, non-condensing",
+            "es": "Del 0 % al 90 %, sin condensación",
+            "ja": "0 % ~ 90 %（結露なきこと）"
+          }
+        },
+        "dimensions": {
+          "label": "크기 (W x H x D)",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "155.5 x 155.5 x 68.9 (mm)"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": "148.15 x 148.15 (mm)"
+            }
+          }
+        },
+        "weight": {
+          "label": "무게",
+          "label_id": "specs.general.weight",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "1.8 kg"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": {
+                "ko": "188 g (와셔 및 볼트 포함)",
+                "en": "188 g (including washers and bolts)",
+                "es": "188 g (incluye arandelas y tornillos)",
+                "ja": "188 g (ワッシャーおよびボルトを含む)"
+              }
+            }
+          }
+        },
+        "ip_rating": {
+          "label": "IP 등급",
+          "label_id": "specs.general.ip_rating",
+          "label_link": "../../reference/glossary#ip_rating",
+          "value": {
+            "ko": "IP66, IP67, NEMA 4X",
+            "en": "IP66, IP67, NEMA 4X",
+            "es": "IP66, IP67, NEMA 4X",
+            "ja": "IP66、IP67、NEMA 4X"
+          }
+        },
+        "ik_rating": {
+          "label": "IK 등급",
+          "label_id": "specs.general.ik_rating",
+          "label_link": "../../reference/glossary#ik_rating",
+          "value": "IK10"
+        },
+        "certifications": {
+          "label": "인증",
+          "label_id": "specs.general.certifications",
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE"
+          }
+        }
+      }
+    },
+    "camera": {
+      "label": "카메라",
+      "label_id": "specs.camera",
+      "items": {
+        "image_sensor": {
+          "label": "이미지 센서",
+          "label_id": "specs.camera.image_sensor",
+          "value": {
+            "ko": "1/1.6\" 12MP (3520 x 3520)",
+            "en": "1/1.6\" 12MP (3520 x 3520)",
+            "es": "1/1.6\" 12MP (3520 x 3520)",
+            "ja": "1/1.6\" 1200 万画素 (3520 x 3520)"
+          }
+        },
+        "lens": {
+          "label": "렌즈",
+          "label_id": "specs.camera.lens",
+          "value": {
+            "ko": ["초점 거리: 1.7 mm", "조리개: F2.0"],
+            "en": ["Focal Length: 1.7 mm", "Aperture: F2.0"],
+            "es": ["Distancia focal: 1.7 mm", "Apertura: F2.0"],
+            "ja": ["焦点距離：1.7 mm", "絞り：F2.0"]
+          }
+        },
+        "fov": {
+          "label": "시야각 (FOV)",
+          "label_id": "specs.camera.fov",
+          "value": {
+            "ko": "180° (최소 거리: 50 cm)",
+            "en": "180° (Min distance: 50 cm)",
+            "es": "180° (Distancia mínima: 50 cm)",
+            "ja": "180° (最小距離：50 cm)"
+          }
+        },
+        "min_illumination": {
+          "label": "최저 조도",
+          "label_id": "specs.camera.min_illumination",
+          "value": {
+            "ko": ["컬러: 0.01 lux 이하", "IR: 0 lux"],
+            "en": ["Color: ≤ 0.01 lux", "IR: 0 lux"],
+            "es": ["Color: ≤ 0.01 lux", "IR: 0 lux"],
+            "ja": ["カラー：0.01 lux 以下", "IR：0 lux"]
+          }
+        },
+        "zoom": {
+          "label": "줌 및 PTZ",
+          "label_id": "specs.camera.zoom",
+          "value": {
+            "ko": ["디지털 줌 12배 이상", "ePTZ 지원"],
+            "en": ["Digital Zoom ≥ x12", "ePTZ supported"],
+            "es": ["Zoom digital ≥ x12", "ePTZ compatible"],
+            "ja": ["デジタルズーム 12 倍以上", "ePTZ サポート"]
+          }
+        },
+        "ir_led": {
+          "label": "IR LED",
+          "label_id": "specs.camera.ir_led",
+          "value": {
+            "ko": "10개 (IR 컷 필터 지원)",
+            "en": "10 ea (IR Cut Filter supported)",
+            "es": "10 unidades (Filtro de corte IR admitido)",
+            "ja": "10 個（IR カットフィルターサポート）"
+          }
+        }
+      }
+    },
+    "video_audio": {
+      "label": "비디오 및 오디오",
+      "label_id": "specs.video_audio",
+      "items": {
+        "video_compression": {
+          "label": "비디오 압축",
+          "label_id": "specs.video_audio.video_compression",
+          "value": {
+            "ko": "H.265, H.264, MJPEG",
+            "en": "H.265, H.264, MJPEG",
+            "es": "H.265, H.264, MJPEG",
+            "ja": "H.265、H.264、MJPEG"
+          }
+        },
+        "wdr": {
+          "label": "광역 역광 보정 (WDR)",
+          "label_id": "specs.video_audio.wdr",
+          "value": "120 dB"
+        },
+        "audio": {
+          "label": "오디오",
+          "label_id": "specs.video_audio.audio",
+          "value": {
+            "ko": ["스피커", "내장형 마이크<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "en": ["Speaker", "Built-in Mic<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "es": ["Altavoz", "Micrófono incorporado<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "ja": ["スピーカー", "内蔵マイク<sup id='anno1_dest'><a href='#anno1'></a></sup>"]
+          }
+        }
+      }
+    },
+    "interface": {
+      "label": "인터페이스",
+      "label_id": "specs.interface",
+      "items": {
+        "ethernet": {
+          "label": "이더넷",
+          "label_id": "specs.interface.ethernet",
+          "value": {
+            "ko": "지원 (10/100/1000 Mbps, 자동 MDI/MDI-X)",
+            "en": "Supported (10/100/1000 Mbps, auto MDI/MDI-X)",
+            "es": "Admitida (10/100/1000 Mbps, MDI/MDI-X automática)",
+            "ja": "サポート対象（10/100/1000 Mbps、自動 MDI/MDI-X）"
+          }
+        },
+        "network_protocol": {
+          "label": "네트워크 프로토콜",
+          "label_id": "specs.interface.network_protocol",
+          "value": "ONVIF (Profile S, T)"
+        },
+        "rs485": {
+          "label": "RS-485",
+          "label_id": "specs.interface.rs485",
+          "annotation_label": "anno1",
+          "annotation_dupl": true,
+          "value": {
+            "ko": "1채널",
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
+          }
+        },
+        "rs485_protocol": {
+          "label": "RS-485 통신 프로토콜",
+          "label_id": "specs.interface.rs485_protocol",
+          "value": {
+            "ko": "OSDP V2 호환",
+            "en": "OSDP V2 compliant",
+            "es": "Compatible con OSDP V2",
+            "ja": "OSDP V2 準拠"
+          }
+        },
+        "alarm": {
+          "label": "알람",
+          "label_id": "specs.interface.alarm",
+          "value": {
+            "ko": "1채널 입력",
+            "en": "1 ch Input",
+            "es": "Entrada de 1 canal",
+            "ja": "1 チャンネル入力"
+          }
+        },
+        "relay": {
+          "label": "릴레이",
+          "label_id": "specs.interface.relay",
+          "value": {
+            "ko": "1개 (1 A @ 30 VDC)",
+            "en": "1 relay (1 A @ 30 VDC)",
+            "es": "1 relé (1 A a 30 VCC)",
+            "ja": "1 リレー (1 A @ 30 VDC)"
+          }
+        },
+        "audio": {
+          "label": "오디오",
+          "label_id": "specs.interface.audio",
+          "annotation_label": "anno1",
+          "annotation_dupl": true,
+          "value": {
+            "ko": ["1채널 입력 (LINE IN, 지원 전압: 2.5 VDC)", "1채널 출력 (LINE OUT, 최대 출력: 1 Vrms)"],
+            "en": ["1-channel input (LINE IN, Supported voltage: 2.5 VDC)", "1-channel output (LINE OUT, Maximum output: 1 Vrms)"],
+            "es": ["Entrada de 1 canal (LINE IN, voltaje admitido: 2.5 VDC)", "Salida de 1 canal (LINE OUT, salida máxima: 1 Vrms)"],
+            "ja": ["1チャンネル入力 (LINE IN、対応電圧：2.5 VDC)", "1チャンネル出力 (LINE OUT、最大出力：1 Vrms)"]
+          }
+        },
+        "poe": {
+          "label": "PoE",
+          "label_id": "specs.interface.poe",
+          "value": {
+            "ko": "지원 (IEEE 802.3af 호환)",
+            "en": "Supported (IEEE 802.3af compliant)",
+            "es": "Compatible (compatible con IEEE 802.3af)",
+            "ja": "対応（IEEE 802.3af 互換）"
+          }
+        },
+        "poe_plus": {
+          "label": "PoE+",
+          "label_id": "specs.interface.poe_plus",
+          "annotation_label": "anno2",
+          "value": {
+             "ko": "지원 (IEEE 802.3at 호환)",
+             "en": "Supported (IEEE 802.3at compliant)",
+             "es": "Compatible (compatible con IEEE 802.3at)",
+             "ja": "対応（IEEE 802.3at 互換）"
+          }
+        },
+        "rtsp": {
+          "label": "RTSP",
+          "label_id": "specs.interface.rtsp",
+          "value": true
+        },
+        "usb": {
+          "label": "USB",
+          "label_id": "specs.interface.usb",
+          "annotation_label": "anno1",
+          "annotation_dupl": true,
+          "value": {
+            "ko": "USB Type-A",
+            "en": "USB Type-A",
+            "es": "USB Tipo-A",
+            "ja": "USB Type-A"
+          }
+        },
+        "tamper": {
+          "label": "탬퍼",
+          "label_id": "specs.interface.tamper",
+          "value": true
+        },
+        "micro_sd": {
+          "label": "Micro SD 카드 슬롯",
+          "label_id": "specs.interface.micro_sd",
+          "annotation_label": "anno1",
+          "annotation_dupl": true,
+          "value": true
+        }
+      }
+    },
+    "power": {
+      "label": "전기 규격",
+      "label_id": "specs.power",
+      "items": {
+        "power": {
+          "label": "전원",
+          "label_id": "specs.power.power",
+          "value": "12 VDC / PoE / PoE+"
+        },
+        "power_consumption": {
+          "label": "소비 전력",
+          "label_id": "specs.power.power_consumption",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "PoE",
+              "label_id": "specs.interface.poe",
+              "value": {
+               "ko": ["최대 12 W", "12 VDC: 1.0 A"],
+               "en": ["Max. 12 W", "12 VDC: 1.0 A"],
+               "es": ["Máx. 12 W", "12 VDC: 1.0 A"],
+               "ja": ["最大 12 W", "12 VDC：1.0 A"]
+              }
+            },
+            "model2": {
+              "label": "PoE+",
+              "label_id": "specs.interface.poe_plus",
+              "value": {
+               "ko": ["최대 22 W", "12 VDC: 1.8 A"],
+               "en": ["Max. 22 W", "12 VDC: 1.8 A"],
+               "es": ["Máx. 22 W", "12 VDC: 1.8 A"],
+               "ja": ["最大 22 W", "12 VDC：1.8 A"]
+              }
+            }
+          }
+        },
+        "alarm_input_vih": {
+          "label": "알람 입력 VIH",
+          "label_id": "specs.power.alarm_input_vih",
+          "value": {
+            "ko": [ "최소: 3 V", "최대: 5 V" ],
+            "en": [ "Min.: 3 V", "Max.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
+            "ja": [ "最小：3 V", "最大：5 V" ]
+          }
+        },
+        "alarm_input_vil": {
+          "label": "알람 입력 VIL",
+          "label_id": "specs.power.alarm_input_vil",
+          "value": {
+            "ko": "최대: 1 V",
+            "en": "Max.: 1 V",
+            "es": "Máx.: 1 V",
+            "ja": "最大：1 V"
+          }
+        }
+      }
+    }
+  }
+}

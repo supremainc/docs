@@ -1,0 +1,566 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integration/gallagher/configuration" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>設定 | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/ja/integration/gallagher/configuration /><meta data-rh=true property=og:locale content=ja_JP /><meta data-rh=true property=og:locale:alternate content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="設定 | Suprema Docs"/><meta data-rh=true name=description content="Gallagher Command Centre の設定ガイド、ハードウェア配線、BioStar 2 のカード形式、および Suprema Integration 用のアクセスグループ設定。"/><meta data-rh=true property=og:description content="Gallagher Command Centre の設定ガイド、ハードウェア配線、BioStar 2 のカード形式、および Suprema Integration 用のアクセスグループ設定。"/><meta data-rh=true name=keywords content=設定,APIキー,ハードウェア設定 /><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/ja/integration/gallagher/configuration /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/gallagher/configuration hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/integration/gallagher/configuration hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/integration/gallagher/configuration hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/integration/gallagher/configuration hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/gallagher/configuration hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://supremainc.github.io/docs/ja/integration/gallagher/configuration/#webpage","@type":"WebPage","breadcrumb":{"@id":"https://supremainc.github.io/docs/ja/integration/gallagher/configuration/#breadcrumb"},"datePublished":"2026-01-02","description":"Gallagher Command Centre の設定ガイド、ハードウェア配線、BioStar 2 のカード形式、および Suprema Integration 用のアクセスグループ設定。","inLanguage":"ja-JP","isPartOf":{"@id":"https://supremainc.github.io/#website"},"name":"設定","potentialAction":[{"@type":"ReadAction","target":["https://supremainc.github.io/docs/ja/integration/gallagher/configuration"]}],"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","article p:first-of-type","[data-speakable]"]},"url":"https://supremainc.github.io/docs/ja/integration/gallagher/configuration"},{"@id":"https://supremainc.github.io/docs/ja/integration/gallagher/configuration/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/integration/gallagher/","name":"Gallagher","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/integration/gallagher/configuration","name":"設定","position":2}]},{"@id":"https://supremainc.github.io/#website","@type":"WebSite","description":"Supremaのすべての製品およびBioStar関連情報をここで確認してください。","inLanguage":"ja-JP","name":"Suprema Docs","potentialAction":[{"@type":"SearchAction","query-input":"required name=searchTerms","target":{"@type":"EntryPoint","urlTemplate":"https://supremainc.github.io/search?q={searchTerms}"}}],"publisher":{"@id":"https://supremainc.github.io/#organization"},"url":"https://supremainc.github.io"},{"@id":"https://supremainc.github.io/#organization","@type":"Organization","address":{"@type":"PostalAddress","addressCountry":"KR","postalCode":"13554","streetAddress":"L17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://support.supremainc.com"},"logo":{"@id":"https://supremainc.com/#logo","@type":"ImageObject","caption":"Suprema - Security & Biometrics","contentUrl":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","height":900,"url":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","width":1440},"name":"Suprema","sameAs":["https://blog.naver.com/supremakr","https://www.facebook.com/supremaglobal","https://www.youtube.com/user/supremainc","https://www.instagram.com/official.suprema","https://pf.kakao.com/_xnkPxes","https://www.linkedin.com/company/suprema-inc-/"],"url":"https://supremainc.com"}]}</script><link rel=alternate type=application/rss+xml href=/docs/ja/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/ja/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/ja/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.a6fb417b.css /><script src=/docs/ja/assets/js/runtime~main.0966827d.js defer></script><script src=/docs/ja/assets/js/main.ae4e2736.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg /><div role=region aria-label=本文へスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>本文へスキップ</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>このドキュメントには、まだサービスバージョンにリリースされていないコンテンツが含まれています。公式にリリースされた機能のドキュメントについては、<a href=https://docs.supremainc.com/ja/integration/gallagher/configuration/en/ target=_blank>次のリンク</a>をご覧ください。</b></div></div><nav aria-label=メイン class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=サイドバーを展開/折りたたむ aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>プラットフォーム</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_x_mobile>BioStar X Mobile</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_air>BioStar Air</a><li><a class=dropdown__link href=/docs/ja/platform/clue>CLUe</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI カメラ</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/ja/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar-devices">デバイス</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3_clue>BioStation 3 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/ja/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2_clue>BioLite N2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2_clue>X-Station 2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/ja/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/ja/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/ja/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/ja/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/ja/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/ja/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/ja/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/ja/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/ja/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/ja/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>インテグレーション</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/integration/genetec>Genetec</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/integration/gallagher>Gallagher</a><li><a class=dropdown__link href=/docs/ja/integration/ccure>Software House</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>開発者センター</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/developer/bsxapi>BioStar X API</a><li><a class=dropdown__link href=/docs/ja/developer/clue>CLUe API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/ja/reference>リファレンス</a><a class="navbar__item navbar__link" href=/docs/ja/changelog>更新履歴</a><a class="navbar__item navbar__link" href=/docs/ja/legal/disclaimers>法的情報</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=検索><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>日本語</a><ul class=dropdown__menu><li><a href=/docs/integration/gallagher/configuration target=_self rel="noopener noreferrer" class=dropdown__link lang=ko-KR>한국어</a><li><a href=/docs/en/integration/gallagher/configuration target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/integration/gallagher/configuration target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/integration/gallagher/configuration target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title=システムモード aria-label="ダークモードとライトモードを切り替え (現在 システムモード)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=トップへスクロール class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=ドキュメントサイドバー class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/ja/integration/gallagher><span class=categoryLinkLabel_W154>Gallagher</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/purpose><span class=linkLabel_WmDU>目的</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/introduction><span class=linkLabel_WmDU>概要</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/installation><span class=linkLabel_WmDU>インストール</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/ja/integration/gallagher/configuration><span class=linkLabel_WmDU>設定</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/integration-gallagher><span class=linkLabel_WmDU>Suprema と Gallagher のインテグレーション</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/integration/gallagher/troubleshooting><span class=linkLabel_WmDU>トラブルシューティングとFAQ</span></a></ul></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label=パンくずリスト><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホーム class=breadcrumbs__link href=/docs/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/ja/integration/gallagher><span>Gallagher</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-2"><span class=breadcrumbs__link>設定</span></ul><div class=btnprint_MOIq><div class=pdfDropdown_hR9S><button disabled class=printbtn_FzsH aria-haspopup=true aria-expanded=false><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m4 6 4 4 4-4"/></svg> PDF</button><button class=feedbackTrigger_JVwE aria-label=フィードバックを送信>Feedback</button></div></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">目次を表示</button></div><div class="theme-doc-markdown markdown"><header><h1>設定</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=gallagher-command-centre-の設定>Gallagher Command Centre の設定<a href=#gallagher-command-centre-の設定 class=hash-link aria-label="Gallagher Command Centre の設定 への直接リンクとコピー" title="Gallagher Command Centre の設定 への直接リンクとコピー" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=gallagher-configuration-client-へのログオン>Gallagher Configuration Client へのログオン<a href=#gallagher-configuration-client-へのログオン class=hash-link aria-label="Gallagher Configuration Client へのログオン への直接リンクとコピー" title="Gallagher Configuration Client へのログオン への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><strong>クリック</strong>してスタートメニューを開き、Configuration Client を開きます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-client-logon1.png width=362 height=257 /></p>
+</li>
+<li class="">
+<p>ログオン名を <strong>system</strong> に設定し、パスワードは <strong>none</strong> にして、<strong>Logon</strong> ボタンを <strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-client-logon2.png width=362 height=258 /></p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=gallagher-command-centre>Gallagher Command Centre<a href=#gallagher-command-centre class=hash-link aria-label="Gallagher Command Centre への直接リンクとコピー" title="Gallagher Command Centre への直接リンクとコピー" translate=no>​</a></h3>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>Gallagher APIキーを生成する手順。</div></div>
+<ol>
+<li class="">
+<p>Gallagher Command Centre を開き、ログオン名を system に設定して、<strong>OK</strong> ボタンを押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre1.png width=470 height=283 /></p>
+</li>
+<li class="">
+<p>ログオン名を <strong>system</strong> に<strong>設定</strong>し、Gallagher Command Centre のパスワードを設定して、<strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre2.png width=470 height=324 /></p>
+</li>
+<li class="">
+<p>次に、左上隅の Administration に移動し、<strong>Configuration Client を選択</strong>します。ウィンドウが開きます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre3.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>下のタブが開きます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre4.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>サーバー設定を構成するには、<strong>File を選択</strong> → <strong>Server Properties</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre5.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>新しいウィンドウが開きます。<strong>Web Services</strong> に移動し、<strong>REST API</strong> セクションでローカルネットワーク接続を有効にします。サーバーポートを <strong>8904</strong> に<strong>設定</strong>し、Enable REST client with no client certificate のチェックを外して、<strong>OK</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre6.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p><strong>Gallagher Client に切り替えます</strong>。</p>
+<p><strong>Manage をクリック</strong>します。 ドロップダウンで <strong>Operator Groups を選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre7.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Operator Group ウィンドウが開きます。<strong>右クリック</strong>して <strong>New</strong> → <strong>Operator Group</strong> を選択します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre8.png width=452 height=325 /></p>
+</li>
+<li class="">
+<p>一般設定で、名前を <strong>REST Client Operator Group</strong> に<strong>設定</strong>します。 次に <strong>Apply</strong> をクリックします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre9.png width=575 height=329 /></p>
+</li>
+<li class="">
+<p>次に、Operator group で <strong>Operator Privileges</strong> 設定を<strong>選択</strong>し、Gallagher configuration client ウィンドウの Manage → Operator Privileges に移動します。 次に<strong>ドラッグ＆ドロップ</strong>します。</p>
+<p>Operator Group に 3 つの権限（Add Card or Credential、Edit Cardholders、View Cardholders）を operator privileges から operator group に追加し、<strong>OK</strong> ボタンを<strong>押して</strong>、operator privileges を<strong>閉じます</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre10.png width=600 height=auto /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre11.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>Configuration Client に移動し、<strong>Cardholders を選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre12.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p><strong>右クリック</strong>して New → Cardholder を選択します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre13.png width=452 height=325 /></p>
+</li>
+<li class="">
+<p>一般設定で First Name を <strong>REST Client</strong> にし、<strong>Apply</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre14.png width=600 height=441 /></p>
+</li>
+<li class="">
+<p>REST Client Properties の左側にある <strong>Operator Configuration</strong> タブを<strong>クリック</strong>します。 作成した REST Client operator group を Operator Group から Operator Group Membership に<strong>ドラッグ＆ドロップ</strong>します。</p>
+</li>
+<li class="">
+<p>REST Client Operator Group を Operator Group Membership に<strong>ドラッグ</strong>します。次の画像のようにします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre15.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>ログオン名を <strong>REST</strong> に<strong>設定</strong>し、パスワードは Gallagher Command Centre で設定したものと同じにします。 <strong>OK</strong> をクリックし、Operator Group ウィンドウも<strong>閉じます</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre16.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Configuration Client で Configure → Services & Workstations に移動します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre17.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>次に<strong>右クリック</strong>して New → REST Client を選択します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre18.png width=450 height=324 /></p>
+</li>
+<li class="">
+<p>APIキー欄で、Cardholder から REST Client を REST Client Operator に<strong>ドラッグ＆ドロップ</strong>します。 <strong>Apply をクリック</strong>します。 Cardholder ウィンドウを<strong>閉じます</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre19.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>Gallagher APIキーは APIキー欄にあります。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>Gallagher APIキーは安全な場所に保存してください。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre20.png width=500 height=auto /></p>
+</li>
+<li class="">
+<p>thumbprint を取得するには、<code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> に移動し、thumbprint ファイルを開いて、その中の thumbprint の値をコピーします。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>thumbprint ファイルがない場合。 <a class="" href=/docs/ja/integration/gallagher/troubleshooting#thumbprint-not-generated>EXE ファイルの実行中に thumbprint が生成されない場合。</a></div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre21.png width=600 height=auto /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre22.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Thumbprint を<strong>コピー</strong>し、Client Certificate Thumbprint セクションに <strong>Client Certificate Thumbprint key</strong> を<strong>貼り付け</strong>、<strong>OK</strong> ボタンを<strong>押し</strong>て、Services and Workstations も<strong>閉じ</strong>ます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/command-centre23.png width=592 height=409 /></p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=gallagher-apiキーを確認>Gallagher APIキーを確認<a href=#gallagher-apiキーを確認 class=hash-link aria-label="Gallagher APIキーを確認 への直接リンクとコピー" title="Gallagher APIキーを確認 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>Command Centre iso → utilities → REST API → RestClient_v8.60.072 → win-x64 → RestClientDemo に移動し、それをデスクトップに<strong>移動</strong>して、<code>RESTClientDemo.exe</code> を<strong>開きます</strong>。</p>
+</li>
+<li class="">
+<p>画像のとおり Gallagher APIキーを<strong>入力</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/check-api-key1.png width=500 height=275 /></p>
+</li>
+<li class="">
+<p>Command Centre Requirement Client Certificate に<strong>チェック</strong>し、Certificate Thumbprint を入力します。Remember credentials (Optional) にも<strong>チェック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/check-api-key2.png width=502 height=275 /></p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>エラーがある場合は端末に表示され、問題がなければ下の画像のように新しい画面が開きます。 テスト後、このウィンドウを閉じます。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/check-api-key3.png width=800 height=auto /></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=ハードウェア設定>ハードウェア設定<a href=#ハードウェア設定 class=hash-link aria-label="ハードウェア設定 への直接リンクとコピー" title="ハードウェア設定 への直接リンクとコピー" translate=no>​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>ハードウェアの設定が完了している場合は、<a href=#biostar2-setup class="">BioStar 2 設定</a> に進みます。</p>
+</li>
+<li class="">
+<p>ここでは Controller 6000 を例として使用します。別のコントローラーを使用する場合は、それに合わせて手順を実行してください。</p>
+</li>
+</ul></div></div>
+<ol>
+<li class="">
+<p>まず、Gallagher コントローラーに<strong>接続</strong>する Controller 6000（または使用中の別のコントローラー）を作成します。</p>
+<p>Gallagher Configuration Client ウィンドウを開き、Configure → Hardware に移動します。</p>
+</li>
+<li class="">
+<p>ハードウェアウィンドウで<strong>右クリック</strong>し、<strong>New</strong> → <strong>Controllers</strong> → <strong>Controller 6000</strong>（別のコントローラーを使用している場合はここに表示されます）を選び、<strong>Apply</strong> を押します。 これでハードウェアにコントローラーが作成されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw1.png width=480 height=386 /></p>
+</li>
+<li class="">
+<p>次に Gallagher Configuration Client に戻り、configure → Alarm Zones に移動して<strong>右クリック</strong>し、新しいアラームゾーンを作成します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw2.png width=452 height=324 /></p>
+</li>
+<li class="">
+<p>アラームゾーンの一般設定で名前を <strong>System Alarm Zone</strong> に変更し、<strong>OK</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw3.png width=602 height=465 /></p>
+</li>
+<li class="">
+<p>Controller 6000 を設定します。一般設定で名前を <strong>Controller 6000</strong> に<strong>設定</strong>します（名前は使用中のコントローラーと同じにします）。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw4.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>次に <strong>Event Response</strong> に移動し、すべてのイベントで Alarm Zone を選び、<strong>System Alarm Zone</strong> を選択します。 そして <strong>Apply</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw5.png width=600 height=auto /></p>
+<p>次に System Alarm Zone Properties で <strong>Connections を選択</strong>し、controller のドロップダウンで <strong>Controller 6000 を選択</strong>します。 <strong>OK</strong> ボタンを<strong>押して</strong>、Alarm Zone ウィンドウを<strong>閉じます</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw6.png width=601 height=465 /></p>
+</li>
+<li class="">
+<p>次に、configure で Access Zone を<strong>作成</strong>します。</p>
+<p>Access Zone に移動すると、ウィンドウが開きます。 Access Zone ウィンドウで<strong>右クリック</strong>し、New を<strong>選択</strong>してから Access Zone を<strong>クリック</strong>します。これで access zone が作成されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw7.png width=341 height=272 /></p>
+</li>
+<li class="">
+<p>作成した Access Zone Properties を一般設定で<strong>開きます</strong>。 次に名前を <strong>Suprema Access Zone</strong> に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw8.png width=612 height=460 /></p>
+</li>
+<li class="">
+<p>Access Mode タブ設定に<strong>移動します</strong>。 Schedule を Default Access Zone Secure に<strong>選択</strong>し、<strong>OK</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw9.png width=612 height=461 /></p>
+</li>
+<li class="">
+<p>次に Hardware ウィンドウに<strong>移動</strong>し、Controller 6000 を<strong>右クリック</strong>します。 New → HBUS Devices → HBUS I/O を選択します。 この手順で Controller 配下に HBUS が作成されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw10.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>作成した HBUS を<strong>ダブルクリック</strong>して、プロパティを編集し、設定します。 一般設定で名前を <strong>HBUS I/O Wiegand Module (Suprema)</strong> に<strong>設定</strong>します。</p>
+<p>Connections タブに<strong>移動</strong>し、Controller を Controller 6000 に<strong>選択</strong>します。Hardware Variant を 4 in 2 out に設定し、<strong>OK</strong> ボタンを押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw11.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Gallagher Controller をシステムに接続するには、Controller 6000 のプロパティを<strong>開き</strong>、Server Address タブを<strong>クリック</strong>します。 サーバーに別の IP を使用するに<strong>チェック</strong>し、PC/サーバーの IP アドレスを入力します。 次に <strong>Apply</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw12.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Controller Address 設定でコントローラーの MAC アドレスを設定します（C6000 コントローラーを確認してください）。また、コントローラーに割り当てた IP アドレス、サブネット、ゲートウェイも<strong>設定</strong>します。 <strong>Apply</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw13.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Setup タブで Plug in Module を <strong>4H Module</strong> に<strong>設定</strong>します（コントローラーに合わせて選択します）。Hardware RS485 Bus 1 は <strong>OSDP</strong>、RS485 Bus 2 は <strong>HBUS</strong> にし、Apply を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw14.png width=600 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>設定は Gallagher デバイスとコンポーネントによって異なる場合があります。</div></div>
+</li>
+<li class="">
+<p>Status and Overrides のオプションで、Disable Front Tamper と DisableRear Tamper の両方のチェックボックスを<strong>オンにします</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw15.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>コントローラーをシステムに接続するには、コントローラーの電源を<strong>切り</strong>、赤いランプが消えるまで待ちます。 次に左から 2 番目のボタンを<strong>オンにします</strong>。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>この手順を行う前に、PC のファイアウォールがオフになっていることを確認してください。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw16.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>コントローラーの状態が正常になったら、2 番目のボタンを<strong>オフにします</strong>（2 番目のボタンを下げます）。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>コントローラーがオンラインで正常になったら、2 番目を含むすべての DIP スイッチをオフにできます。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw17.png width=400 height=auto /></p>
+<p><strong>補足：初回電源投入と新しいコントローラー接続：</strong></p>
+<p>新しいコントローラーの初回電源投入時にサーバーへ接続する場合のみ #2 をオンにします。</p>
+<p>また、Jumper #2 はコントローラーのリセット時にも使用できます。 コントローラーをアップグレードする場合は、固定してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw18.png width=600 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>コントローラーの HBUS 設定で HBUS にアクセスするには、デバイスを接続します。 （デバイスの接続方法は BioStar 2 設定を参照してください。）</div></div>
+</li>
+<li class="">
+<p>Controller 6000 の HBUS Devices オプションで、HBUS I/O 4 in 2 Out module - Wiegand を Plugin Modules から Undetected devices の HBUS I/O に<strong>ドラッグ＆ドロップ</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw19.png width=473 height=409 /></p>
+</li>
+<li class="">
+<p>ドアを作成するには Configure → Door に移動し、<strong>右クリック</strong>して新しいドアを作成します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw20.png width=451 height=325 /></p>
+</li>
+<li class="">
+<p>ドア名を <strong>Suprema Door</strong> に<strong>設定</strong>し、Event Response に移動してアラームを System Alarm Zone に<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw21.png width=593 height=457 /></p>
+</li>
+<li class="">
+<p>Connections で Controller を Controller 6000 に<strong>選択</strong>し、<strong>Apply</strong> と <strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw22.png width=593 height=457 /></p>
+</li>
+<li class="">
+<p><strong>OSDP 接続を作成するには、Hardware ウィンドウを右クリックします。 New</strong> → <strong>OSDP Device</strong> → そして OSDP Reader をクリックし、Hardware に OSDP Reader を作成します。</p>
+<p>新しいウィンドウが開きます。 名前を Suprema OSDP Reader に<strong>設定</strong>し、Event Response 設定タブで Alarm Zone for all events を System Alarm Zone に<strong>設定</strong>します。 次に Apply をクリックし、<strong>OK</strong> を押して変更を保存します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw23.png width=599 height=410 /></p>
+<p>Hardware ウィンドウに<strong>戻ります</strong>。 Controller 6000 を<strong>ダブルクリック</strong>してプロパティを開きます。 OSDP Devices タブを<strong>クリック</strong>します。</p>
+</li>
+<li class="">
+<p>OSDP reader を <strong>Hardware Window から</strong> OSDP Devices タブの <strong>Controller properties</strong> に<strong>ドラッグ</strong>します。 Configured Address を 0、Suprema OSDP Device Address を 0、Baudrate を <strong>115200</strong> に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw24.png width=600 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>2x OSDP Reader を使用している場合は、BioStar 2 で OSDP アドレスを変更してください。</div></div>
+</li>
+<li class="">
+<p>Wiegand Reader を作成します。 Hardware ウィンドウを<strong>右クリック</strong>します。 New → Third-Party Reader をクリックします。 新しいウィンドウが表示されます。名前を Suprema Wiegand Reader に<strong>設定</strong>し、Event Response タブに移動します。 Alarm Zone を System Alarm Zone に<strong>選択</strong>し、<strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw25.png width=600 height=528 /></p>
+</li>
+<li class="">
+<p>作成した Door のプロパティで <strong>Entry Zone</strong> に<strong>移動</strong>し、Access Zone を <strong>Suprema Access Zone</strong>、reader を <strong>Suprema Wiegand Reader</strong> と <strong>Suprema OSDP Reader</strong> に<strong>設定</strong>して、<strong>OK</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw26.png width=594 height=457 /></p>
+</li>
+<li class="">
+<p>HBUS I/O のプロパティで Reader 設定に<strong>移動</strong>し、Reader 1 を Suprema Wiegand Reader に設定して、<strong>OK</strong> ボタンを<strong>押します</strong>。 Door ウィンドウと Controller ウィンドウを<strong>閉じます</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw27.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>カード種別を作成するには Configure → Card Type を<strong>右クリック</strong>し、新しい <strong>Card Type</strong> を作成します。 名前を <strong>Suprema Card Type</strong> に<strong>設定</strong>します。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>Gallagher QR Code を読み取るには QR Device ライセンスが必要です。 必要な場合は Suprema にお問い合わせください。</p>
+</li>
+<li class="">
+<p>フィールド名は記載されている用語をそのまま使用してください。</p>
+</li>
+</ul></div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw28.png width=452 height=323 /></p>
+</li>
+<li class="">
+<p>Card type properties で setup オプションに<strong>移動</strong>し、Region code を <strong>A</strong>、Facility code を <strong>10000</strong>、card number range を <strong>1 to 99999999999999999999 (20 times)</strong> に設定し、card expiry notification を有効にします。 <strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw29.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>別のカード種別を作成するには Configure → Card Type を<strong>右クリック</strong>し、新しい <strong>Card Type</strong> を作成します。 名前を <strong>HID Seos Corporate</strong> に設定します。 そしてカード種別を設定するため、プロパティ（setup）に<strong>移動します</strong>。 下の設定を使ってカードを構成し、<strong>Apply</strong> と <strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw30.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p><a id=create-another-card-type class=anchor href=#create-another-card-type>​</a>別のカード種別を作成するには Configure → Card Type を<strong>右クリック</strong>し、新しい <strong>Card Type</strong> を作成します。 名前を <strong>Suprema QR Code</strong> に設定します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw31.png width=450 height=322 /></p>
+</li>
+<li class="">
+<p>Card type properties で setup オプションに<strong>移動</strong>し、Region code を <strong>A</strong>、Facility code を <strong>10000</strong>、card number range を <strong>4194304 to 8388607</strong> に設定し、card expiry notification を有効にします。 <strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw32.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>ユニバーサルカード形式を作成するには Configure → Universal Card Format を<strong>右クリック</strong>し、新しい universal card format を作成します。 4 つのカード形式を作成する必要があります。</p>
+<ol>
+<li class="">
+<p>新しい形式名を <strong>Suprema 26 bits</strong> Wiegand として<strong>作成</strong>し、形式を下の画像のとおりに設定します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw33.png width=561 height=472 /></p>
+</li>
+<li class="">
+<p>2 つ目のカード形式を <strong>Suprema CSN 32 bits</strong> として<strong>作成</strong>し、形式を下のとおりに<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw34.png width=561 height=473 /></p>
+</li>
+<li class="">
+<p>3 つ目のカード形式を <strong>Suprema CSN 56 bits</strong> として<strong>作成</strong>し、形式を下のとおりに<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw35.png width=561 height=473 /></p>
+</li>
+<li class="">
+<p>4 つ目のカード形式を <strong>Suprema Virtual Card (25bit)</strong> として<strong>作成</strong>し、形式を下のとおりに<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw36.png width=561 height=496 /></p>
+</li>
+<li class="">
+<p>5 つ目のカード形式を <strong>HID 48bit</strong> として<strong>作成</strong>し、形式を下のとおりに<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw37.png width=561 height=496 /></p>
+</li>
+<li class="">
+<p>6 つ目のカード形式を <strong>Suprema QR 23 bits</strong> として<strong>作成</strong>し、形式を下のとおりに<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw38.png width=562 height=497 /></p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>6 つのカード種別をすべてドラッグして Controller properties の Card Format Setting にドロップし、設定を<strong>適用</strong>します。 <strong>OK</strong> を押して、Gallagher Configuration Client のすべてのウィンドウを<strong>閉じます</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw39.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>Config Client の Configure → Hardware に<strong>移動</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw40.png width=600 height=auto /></p>
+<p>次にウィンドウを<strong>右クリック</strong>し、出力を<strong>作成</strong>して、一般タブで名前を <strong>Wiegand Output</strong> に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw41.png width=376 height=402 /></p>
+</li>
+<li class="">
+<p>次に左側の Advance を<strong>クリック</strong>し、Output times オプションで 1 秒に<strong>設定</strong>して、<strong>Apply</strong> と <strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw42.png width=593 height=429 /></p>
+</li>
+<li class="">
+<p>次に hardware window → HBUS I/O Wiegand Module (Suprema) を左側で<strong>ダブルクリック</strong>し、Outputs に<strong>移動</strong>して Wiegand Output を<strong>選択</strong>し、<strong>Apply</strong> と <strong>OK</strong> を押します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/configuration-hw43.png width=600 height=auto /></p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=biostar2-setup>BioStar 2 設定<a href=#biostar2-setup class=hash-link aria-label="BioStar 2 設定 への直接リンクとコピー" title="BioStar 2 設定 への直接リンクとコピー" translate=no>​</a></h2>
+<ol>
+<li class="">
+<p>BioStar 2 を開くには、ブラウザーで <code>https://[Your system IP Address]/#/login</code> と<strong>入力</strong>すると、ログインフォームが開きます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup1.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>BioStar 2 の資格情報を<strong>入力</strong>してログインし、設定ページに<strong>移動</strong>して、Card Format を<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup2.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>カード設定で <strong>edit</strong> ボタンを<strong>クリック</strong>し、新しいカード形式を作成します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup3.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>ここでも <strong>56-bit</strong>、<strong>32-bit</strong>、<strong>26-bit</strong> の 3 つのカード種別を作成する必要があります。</p>
+<ol>
+<li class="">
+<p>名前を <strong>56-bit Gallagher</strong>、total bits を 56 に<strong>設定</strong>し、ID field で <strong>add</strong> を<strong>押して</strong> start bit を 0、end bit を 55 に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup4.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>名前を <strong>32-bit Gallagher</strong>、total bits を 32 に<strong>設定</strong>し、ID field で <strong>add</strong> を押して start bit を 0、end bit を 31 に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup5.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>名前を <strong>26-bit Gallagher</strong>、total bits を 26 に<strong>設定</strong>し、ID field で <strong>add</strong> を押して start bit を 0、end bit を 25 に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup6.png width=800 height=auto /></p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>次にカード形式内で、smart card ボタンを<strong>押して</strong> smart card セクションに<strong>移動</strong>し、ADD SMART CARD ボタンを<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup7.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>次に名前を AOC Inside MIFARE に<strong>入力</strong>し、Start Block Index に 1 を<strong>入力</strong>し、Use Face template のチェックボックスを<strong>オンにして</strong>、Apply ボタンを<strong>押します</strong>。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>顔の表示を使わず、smart card では fingerprint のみを使う場合は、チェックボックスをオフにできます。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup8.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>デバイスをシステムに接続するには、device panel に<strong>移動</strong>し、SEARCH DEVICE ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup9.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>次に search ボタンを<strong>押し</strong>、デバイスを<strong>選択</strong>して、Add ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup10.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>接続したデバイスは、左側の device panel に一覧表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/biostar2-setup11.png width=800 height=auto /></p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=wiegand-の-reader-connection>Wiegand の READER CONNECTION<a href=#wiegand-の-reader-connection class=hash-link aria-label="Wiegand の READER CONNECTION への直接リンクとコピー" title="Wiegand の READER CONNECTION への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>Wiegand 接続で接続されたデバイスを<strong>クリック</strong>します。 Card Type が表示されるまで<strong>下にスクロール</strong>します。</p>
+<p><strong>CSN card</strong> を<strong>オンにし</strong>、<strong>Mifare/Felica</strong> に<strong>チェック</strong>し、形式 type を <strong>Wiegand</strong>、Byte order を <strong>LSB</strong>、Wiegand format を <strong>56-bit Gallagher</strong> に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/wiegand-reader-connection1.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>次に advanced setting に<strong>移動</strong>し、trigger and action が表示されるまで下にスクロールして add ボタンを<strong>押し</strong>、画像のとおりに field を<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/wiegand-reader-connection2.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>もう一度 add ボタンを<strong>押して</strong>、別の trigger and action を追加します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/wiegand-reader-connection3.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>Advanced Section の Trigger & Action：Wiegand setting では、Input/Output を <strong>Output</strong>、Wiegand Input Format を Default、Pulse width を <strong>40</strong>、pulse interval を <strong>10000</strong>、output mode を <strong>normal</strong> に設定し、fail code を確認して、output info を <strong>Card ID</strong> にします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/wiegand-reader-connection4.png width=800 height=auto /></p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=osdp-reader-connection>OSDP READER CONNECTION<a href=#osdp-reader-connection class=hash-link aria-label="OSDP READER CONNECTION への直接リンクとコピー" title="OSDP READER CONNECTION への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>OSDP 接続では、OSDP パネルに接続されたデバイスを<strong>クリック</strong>し、Serial が表示されるまで下にスクロールします。</p>
+<p>RS485 を Default に、Baud rate を <strong>115200</strong> に<strong>設定</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/osdp-reader-connection1.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>intelligent slave expectation code を <strong>Enabled</strong>、output info を Card ID、OSDP ID を <strong>0</strong> にします。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>OSDP デバイスが複数ある場合は、OSDP ID を別の番号に<strong>変更</strong>し、output の Info は Card ID にしてください。</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/osdp-reader-connection2.png width=800 height=auto /></p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=email-config-qr-code>QR コード用のメール設定<a href=#email-config-qr-code class=hash-link aria-label="QR コード用のメール設定 への直接リンクとコピー" title="QR コード用のメール設定 への直接リンクとコピー" translate=no>​</a></h3>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>QR コードには、メール確認とユーザープロファイルのメールが必須です。</p>
+</li>
+<li class="">
+<p>メールにはライセンスが必要です。 必要なライセンスを取得するには管理者にお問い合わせください。</p>
+</li>
+</ul></div></div>
+<ol>
+<li class="">
+<p>設定ページに<strong>移動</strong>し、Email Settings を<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/email-configuration-qr-code1.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>メール設定内の SMTP setting ボタンを<strong>押し</strong>、SMTP オプションの詳細を入力して、<strong>Apply</strong> ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/email-configuration-qr-code2.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>確認用にはテストメール機能を使用できます。送信先のメールアドレスを入力し、send email ボタンを<strong>押します</strong>。</p>
+<p>QR Code カードを使うには、設定内で QR オプションを<strong>有効にし</strong>、要件に従って詳細を入力して、Apply ボタンを<strong>押します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/email-configuration-qr-code3.png width=800 height=auto /></p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=suprema-integration-with-gallagher-v20>Suprema Integration with Gallagher v2.0<a href=#suprema-integration-with-gallagher-v20 class=hash-link aria-label="Suprema Integration with Gallagher v2.0 への直接リンクとコピー" title="Suprema Integration with Gallagher v2.0 への直接リンクとコピー" translate=no>​</a></h2>
+<ol>
+<li class="">
+<p>Cardholder viewer オプションで Gallagher Command Centre を<strong>開き</strong>、viewer configuration に<strong>移動します</strong>。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/suprema-integration-gallagher1.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>Viewer Configuration で、下の画像のようにウィンドウを設定し、window toolbox を使ってウィンドウを<strong>ドラッグ＆ドロップ</strong>します。</p>
+<ul>
+<li class="">
+<p>Cardholder Details</p>
+</li>
+<li class="">
+<p>Cardholder Access Groups</p>
+</li>
+<li class="">
+<p>Cardholder Cards</p>
+</li>
+<li class="">
+<p>Event trail</p>
+</li>
+<li class="">
+<p>URL Tile</p>
+</li>
+<li class="">
+<p>Cardholder Images</p>
+</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/suprema-integration-gallagher2.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p>URL ウィンドウで<strong>クリック</strong>し、Specific URL を <code>&lt;127.0.0.1>:28523</code> に設定して、navigation を Disable Navigation に<strong>選択</strong>します。 そして <strong>save button</strong> を<strong>押して</strong>設定を保存します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/suprema-integration-gallagher3.png width=402 height=352 /></p>
+</li>
+<li class="">
+<p>設定完了後、<strong>save button</strong> を<strong>押し</strong>、viewer configuration を<strong>右クリック</strong>して viewer を再読み込みし、変更を確認します。</p>
+</li>
+<li class="">
+<p><strong>Mifare Encoder を PC に接続します</strong>。</p>
+</li>
+<li class="">
+<p>システムのデバイスマネージャーのその他のデバイスにある SDI011 Contactless Reader（環境によっては別のデバイス）を<strong>右クリック</strong>し、ドライバーの更新を<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/suprema-integration-gallagher4.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p>ドライバーをコンピューター上で検索し、提供されたフォルダーを<strong>選択</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/suprema-integration-gallagher5.png width=603 height=560 /></p>
+</li>
+<li class="">
+<p>ドライバーを初めて更新すると、スマートカードリーダーが使用可能になります。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>USB デバイス名はデバイスごとに異なる場合があります。</div></div>
+</li>
+<li class="">
+<p>次に同じファイルで Contactless Reader ドライバーを<strong>再度更新</strong>します。 その後、新しいスマートカードドライバーが使用可能になります。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/suprema-integration-gallagher6.png width=450 height=410 /></p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=アクセスグループを追加>アクセスグループを追加<a href=#アクセスグループを追加 class=hash-link aria-label="アクセスグループを追加 への直接リンクとコピー" title="アクセスグループを追加 への直接リンクとコピー" translate=no>​</a></h2>
+<ol>
+<li class="">
+<p><strong>Administration に移動</strong>し、左上にある <strong>Access Groups</strong> を<strong>クリック</strong>します。すると左下に <strong>New Access Group</strong> ボタンが表示されます。 そのボタンを<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/add-access-group1.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p><strong>New Access Group</strong> ボタンをクリックすると、下の画像のようなポップアップが開きます。名前を <strong>Suprema Access Group</strong> に<strong>設定</strong>し、Close ボタンを<strong>クリック</strong>するとポップアップが閉じます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/add-access-group2.png width=413 height=237 /></p>
+</li>
+<li class="">
+<p>Close ボタンを<strong>クリック</strong>すると、下の画像のような画面が表示されるので、左下隅の <strong>Add Access</strong> ボタンを<strong>クリック</strong>します。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/add-access-group3.png width=800 height=auto /></p>
+</li>
+<li class="">
+<p><strong>Add Access</strong> ボタンをクリックすると、下の画像のようなポップアップが開きます。そこで <strong>checkbox</strong> に<strong>チェック</strong>し、Add <strong>Selection</strong> ボタンをクリックします。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/add-access-group4.png width=600 height=auto /></p>
+<p>次に <strong>radio</strong> ボタンを<strong>選択</strong>し、<strong>OK</strong> ボタンをクリックするとポップアップが閉じます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/add-access-group5.png width=600 height=auto /></p>
+</li>
+<li class="">
+<p><strong>Save</strong> ボタンを<strong>クリック</strong>すると、Access Group が正常に追加されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/add-access-group6.png width=600 height=auto /></p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>このページは役に立ちましたか？</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>役に立ちました。</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>改善が必要です。</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/integration/gallagher/installation><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>インストール</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/integration/gallagher/integration-gallagher><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>Suprema と Gallagher のインテグレーション</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=https://www.linkedin.com/company/suprema-inc- target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVR42u3XPUoEQRCG4WdVTEw1M1UET2BiZKKRJ/AMgjChB5gjGAoGgtGaaayhgWBgZGAqg8Iu4g+OSQWLKP6wO7NIfVF30VS//RXVTXfqujYumjBGSpiESZh/CTP1k0VlWa5jH3fYwM1vNimKYqjObGMWS9hqu0zHqPGI01bLhAOcoY/biM1gOsZvePiQ93VUzlS4wDV2I7YX8QqXWEMX93iJtZujcOY7zX9SvkUcYRXnTbb2V3kmsdPGPXMYbizgaiC+0nSZqmj555ifYDnGc0070xsAgae/HDjfpoRJmGGpk5+4hEmYhEmYlvQO+74srj8PcOoAAAAASUVORK5CYII="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR42u2XOwrCQBCGv5UQy2DAJr3gLcRzeI8tbez2IJ4lt4mIViJrk2IZSCGYzYL/DwvzYOGDmdmHizFSilYUJMEIRjC/UvXthhCCDe2AM3AEOuAFPL337ewwRnugB5okVo8re5kuBmTRnjkY/wSsAZelZ4y2if0ArqVM0/u/RxuYenM0Jud0Ai9ZpiGxN6Z8t9ww7UT/3E1Ot7ZgBCMYAKfvrWAEI5iZ9QEdXBhIqJQhWAAAAABJRU5ErkJggg=="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR42u3XP0pDQRDH8U9EIdFCtFARbGJnobWVhwhoYeufA4g5xBNPIJ4g4iU8hIiipVgoahEVwWez1cO8vJgNpNgfbLM7DN+dmZ1ha3meGxdNGCMlmASTYBLMqDXZzyDLshqO0MIC6mhg9o/L/OANH/jEEy5x2m6386FhsIeTASI9FxY0sRkAz2KkaSdCBrZj1Uyzx/49HivCrMaCme+xf421EP78nz4GhpkuOXvFAbZwU2I3EwtmqoLNFTaQDfFQqhlVUB372B1pn8F3SXQaOMQxlvv4iALTDQ2uqHU8YLGijygwLz1gVgbIwHOsAr6NUFN3sWA6EWA6sdJ0Hgq4haXCkCwOyy6+wpB8D4PyIvjoq1r6NyWYBJNgEkyC4Rd70TD9XaltowAAAABJRU5ErkJggg=="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVR42u1WQVLiQBR9/zelBRtzhMwNnBNMPIHMCcATjGwse0VYNdEFzAnQG+AJDCeQGwxHiCssNf+76ViRASXgzMLiVaUq0A15ef/91x/YYYcdviCoymbnXAggYuZARIJV+5g5y/N8RkRTa+3sU8k450IiGhFRVPVtVTVV1ZN1SNE6RIwxd6oaAJgAGItIVihQ3PvPr4oxcwCgCeAHgExEvn9EqPYRGWPMSFUDEelZa+OKwgyTJIkBdIloBOBoY2WccyEz/xGRibU2quItY8ydiEzPz8+PLi4ublU1EpFv76nzrjLMfOjrPl7x0AhAk4gOVPUewNhamwIIVTUgotD//gZA5K+rTcsUAgARZeUv4zgOGo3GQFXbrxITAcCvJEmG8/m8V6/XfxLRDABEJGNmeN9t5hkRCZgZzPyGzP7+/lBVWwCmAHpENMvz/JCZuwBOG41GcHZ2dvKXJ4iCrQxcvFm5NMzcAjCbz+dHcRwXa9PBYDB+enq6VdW2c+7alwwA1soarpySRE1PsFciAgDodDqZqvbK+6qANwixwJOZLlt/fn4uVDj452QKM9dqtfC9DgRw/z+UKdq8G8dxsNhl3sQr42BrAxctDgDW2jRJkmsArXq9fuec64nIlIhCY0zXZ8zvknmLo2E7MostXWBvb+/08fERAFrMPGJ+I/D1w8NDvCwiVDXbJmeWhlWn08kAtJ1zV0TU9Gmbqeq4rMiiMsaYrQ7K1P/ZMYDh4qJ/cLqG6Y9VdWUHrmVga+2MiFIiipIk6W4yvV1eXnb9ITnZeoTI8/zEzzNxv9+PiOimnMgL6RqWS6OqxyIS+Thof9qkx8xXflCqiomItD9l0ltC6hBA+NEM7NVLq8zAO+yww5fEC4LXWfVMU1ZGAAAAAElFTkSuQmCC width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"localStorage"},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>

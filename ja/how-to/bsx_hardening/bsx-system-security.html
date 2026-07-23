@@ -1,0 +1,697 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-how-to/bsx_hardening/bsx-system-security" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>システムセキュリティ | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security /><meta data-rh=true property=og:locale content=ja_JP /><meta data-rh=true property=og:locale:alternate content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="システムセキュリティ | Suprema Docs"/><meta data-rh=true name=description content="強力な認証、役割ベースのアクセス制御、暗号化通信、定期バックアップによって、BioStar Xアプリケーション層のセキュリティを強化する方法を案内します。"/><meta data-rh=true property=og:description content="強力な認証、役割ベースのアクセス制御、暗号化通信、定期バックアップによって、BioStar Xアプリケーション層のセキュリティを強化する方法を案内します。"/><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/how-to/bsx_hardening/bsx-system-security hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/how-to/bsx_hardening/bsx-system-security hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security/#webpage","@type":"WebPage","breadcrumb":{"@id":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security/#breadcrumb"},"datePublished":"2026-01-02","description":"強力な認証、役割ベースのアクセス制御、暗号化通信、定期バックアップによって、BioStar Xアプリケーション層のセキュリティを強化する方法を案内します。","inLanguage":"ja-JP","isPartOf":{"@id":"https://supremainc.github.io/#website"},"name":"システムセキュリティ","potentialAction":[{"@type":"ReadAction","target":["https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security"]}],"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","article p:first-of-type","[data-speakable]"]},"url":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security"},{"@id":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/","name":"BioStar Xのセキュリティ強化","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/hardening-biostarx","name":"BioStar Xの強化","position":2},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security","name":"システムセキュリティ","position":3}]},{"@id":"https://supremainc.github.io/#website","@type":"WebSite","description":"Supremaのすべての製品およびBioStar関連情報をここで確認してください。","inLanguage":"ja-JP","name":"Suprema Docs","potentialAction":[{"@type":"SearchAction","query-input":"required name=searchTerms","target":{"@type":"EntryPoint","urlTemplate":"https://supremainc.github.io/search?q={searchTerms}"}}],"publisher":{"@id":"https://supremainc.github.io/#organization"},"url":"https://supremainc.github.io"},{"@id":"https://supremainc.github.io/#organization","@type":"Organization","address":{"@type":"PostalAddress","addressCountry":"KR","postalCode":"13554","streetAddress":"L17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://support.supremainc.com"},"logo":{"@id":"https://supremainc.com/#logo","@type":"ImageObject","caption":"Suprema - Security & Biometrics","contentUrl":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","height":900,"url":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","width":1440},"name":"Suprema","sameAs":["https://blog.naver.com/supremakr","https://www.facebook.com/supremaglobal","https://www.youtube.com/user/supremainc","https://www.instagram.com/official.suprema","https://pf.kakao.com/_xnkPxes","https://www.linkedin.com/company/suprema-inc-/"],"url":"https://supremainc.com"}]}</script><link rel=alternate type=application/rss+xml href=/docs/ja/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/ja/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/ja/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.a6fb417b.css /><script src=/docs/ja/assets/js/runtime~main.0966827d.js defer></script><script src=/docs/ja/assets/js/main.ae4e2736.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg /><div role=region aria-label=本文へスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>本文へスキップ</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>このドキュメントには、まだサービスバージョンにリリースされていないコンテンツが含まれています。公式にリリースされた機能のドキュメントについては、<a href=https://docs.supremainc.com/ja/how-to/bsx_hardening/bsx-system-security/en/ target=_blank>次のリンク</a>をご覧ください。</b></div></div><nav aria-label=メイン class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=サイドバーを展開/折りたたむ aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>プラットフォーム</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_x_mobile>BioStar X Mobile</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_air>BioStar Air</a><li><a class=dropdown__link href=/docs/ja/platform/clue>CLUe</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI カメラ</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/ja/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar-devices">デバイス</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3_clue>BioStation 3 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/ja/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2_clue>BioLite N2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2_clue>X-Station 2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/ja/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/ja/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/ja/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/ja/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/ja/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/ja/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/ja/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/ja/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/ja/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/ja/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>インテグレーション</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/integration/genetec>Genetec</a><li><a class=dropdown__link href=/docs/ja/integration/gallagher>Gallagher</a><li><a class=dropdown__link href=/docs/ja/integration/ccure>Software House</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>開発者センター</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/developer/bsxapi>BioStar X API</a><li><a class=dropdown__link href=/docs/ja/developer/clue>CLUe API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/ja/reference>リファレンス</a><a class="navbar__item navbar__link" href=/docs/ja/changelog>更新履歴</a><a class="navbar__item navbar__link" href=/docs/ja/legal/disclaimers>法的情報</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=検索><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>日本語</a><ul class=dropdown__menu><li><a href=/docs/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class=dropdown__link lang=ko-KR>한국어</a><li><a href=/docs/en/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title=システムモード aria-label="ダークモードとライトモードを切り替え (現在 システムモード)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=トップへスクロール class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=ドキュメントサイドバー class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/ja/how-to/bsx_hardening><span class=categoryLinkLabel_W154>BioStar Xのセキュリティ強化</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/how-to/bsx_hardening/security-principle><span class=linkLabel_WmDU>セキュア入退室制御の基本原則</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/ja/how-to/bsx_hardening/server-hardening-overview><span class=categoryLinkLabel_W154>サーバーのセキュリティ強化</span></a><button aria-label="サイドバー分類 'サーバーのセキュリティ強化' を展開" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/ja/how-to/bsx_hardening/hardening-biostarx><span class=categoryLinkLabel_W154>BioStar Xの強化</span></a><button aria-label="サイドバー分類 'BioStar Xの強化' を折りたたむ" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/ja/how-to/bsx_hardening/bsx-system-security><span class=linkLabel_WmDU>システムセキュリティ</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/how-to/bsx_hardening/bsx-privacy-data-security><span class=linkLabel_WmDU>個人データセキュリティ</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/how-to/bsx_hardening/hardening-suprema-device><span class=linkLabel_WmDU>Supremaデバイスの強化</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/how-to/bsx_hardening/references><span class=linkLabel_WmDU>参考</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/how-to/bsx_hardening/appendices><span class=linkLabel_WmDU>付録</span></a></ul></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label=パンくずリスト><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホーム class=breadcrumbs__link href=/docs/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/ja/how-to/bsx_hardening><span>BioStar Xのセキュリティ強化</span></a><li class="breadcrumbs__item item-2"><a class=breadcrumbs__link href=/docs/ja/how-to/bsx_hardening/hardening-biostarx><span>BioStar Xの強化</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-3"><span class=breadcrumbs__link>システムセキュリティ</span></ul><div class=btnprint_MOIq><div class=pdfDropdown_hR9S><button disabled class=printbtn_FzsH aria-haspopup=true aria-expanded=false><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m4 6 4 4 4-4"/></svg> PDF</button><button class=feedbackTrigger_JVwE aria-label=フィードバックを送信>Feedback</button></div></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">目次を表示</button></div><div class="theme-doc-markdown markdown"><header><h1>システムセキュリティ</h1></header><p>BioStar Xサーバーのセキュリティを強化した後、次のステップはBioStar Xアプリケーション自体のセキュリティ設定です。 既定の管理者アカウント、弱いパスワード、暗号化されていないデバイス通信は、インフラレベルのセキュリティを回避し、システムへ直接侵入する経路になります。 このドキュメントでは、BioStar Xの認証、役割管理、デバイス暗号化、バックアップ戦略を通じて、アプリケーション層のセキュリティ基準を確立する方法を案内します。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=changeDefaultAdmin>既定の管理者IDとパスワードの変更<a href=#changeDefaultAdmin class=hash-link aria-label="既定の管理者IDとパスワードの変更 への直接リンクとコピー" title="既定の管理者IDとパスワードの変更 への直接リンクとコピー" translate=no>​</a></h2>
+<p>インストール直後に、既定の<strong>Administrator</strong>アカウントのログインID(<code>admin</code>)を変更し、強力で固有のパスワードに更新してください。</p>
+<p>既定のクレデンシャルは、攻撃者が侵入する最も一般的な経路の1つです。 すべてのBioStar Xインストールには、事前定義されたAdministratorアカウント（UID: 1）が含まれます。変更しない場合、システムは予測しやすくなり、ブルートフォース攻撃や辞書攻撃に非常に脆弱になります。</p>
+<ol>
+<li class="">
+<p>既定の管理者(<code>admin</code>)アカウントでログインします。</p>
+</li>
+<li class="">
+<p><span class=cmd>ユーザー</span>に移動します。</p>
+</li>
+<li class="">
+<p>ユーザー一覧で<strong>Administrator</strong>アカウントをダブルクリックします。</p>
+<blockquote>
+<p>ユーザー名: Administrator, UID: 1</p>
+</blockquote>
+</li>
+<li class="">
+<p>ユーザー編集ページの<span class=cmd>許可</span>セクションで、以下の項目を変更します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>ﾛｸﾞｲﾝ ID</span>: <code>admin</code>を固有で推測しにくいユーザーIDに変更します。 <code>root</code>、<code>system</code>、または会社名は使用しないでください。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾟｽﾜｰﾄﾞ</span>: 安全なパスワードに変更します。 BioStar Xは既定で<strong>中強度</strong>のパスワードを使用します。 パスワードは8~32文字で、大文字、小文字、数字をすべて含める必要があります。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>画面右上の <span class=cmd>保存</span> ボタンをクリックします。</p>
+</li>
+<li class="">
+<p>ログアウト後、<strong>新しいIDとパスワード</strong>で再度ログインします。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><ul>
+<li class="">
+<p>個人名や単純なパターン（<code>admin1</code>、<code>company2025</code>）は<strong>使用しないでください</strong>。</p>
+</li>
+<li class="">
+<p>新しいIDとパスワードは、安全なパスワードマネージャーまたは企業向けパスワード保管庫に保存してください。</p>
+</li>
+<li class="">
+<p>緊急時用の<strong>補助管理者アカウント</strong>を作成します。</p>
+</li>
+<li class="">
+<p>管理者ログイン試行に対する<strong>監査ログ</strong>を定期的に確認します。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=アクセス権の分離>アクセス権の分離<a href=#アクセス権の分離 class=hash-link aria-label="アクセス権の分離 への直接リンクとコピー" title="アクセス権の分離 への直接リンクとコピー" translate=no>​</a></h2>
+<p>BioStar X内で、<strong>フル管理者</strong>、<strong>オペレーター</strong>、<strong>監査者</strong>アカウントに明確に定義された権限を付与し、役割分離を厳格に適用します。</p>
+<p>すべての作業を1つの最高管理者アカウントで処理すると、不要なリスクが発生します。 役割を分離すると、次の効果があります。</p>
+<ul>
+<li class="">
+<p>誤った設定によるミスの発生可能性を低減</p>
+</li>
+<li class="">
+<p>1人のユーザーに無制限の権限を持たせないことで、内部者による脅威を防止</p>
+</li>
+<li class="">
+<p>役割ごとの責任範囲を明確にし、監査可能性とコンプライアンスを向上</p>
+</li>
+</ul>
+<p>この方法は、ISO 27001、NIST、その他のフレームワークの中核原則である<strong>最小権限</strong>と<strong>職務分離</strong>に通じます。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=インストール後の推奨対応>インストール後の推奨対応<a href=#インストール後の推奨対応 class=hash-link aria-label="インストール後の推奨対応 への直接リンクとコピー" title="インストール後の推奨対応 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><strong>既定の管理者(<code>admin</code>)名の変更とセキュリティ設定</strong></p>
+<p>既定の管理者(<code>admin</code>)アカウントは<strong>緊急時専用アカウント</strong>として管理します。 詳細については、<a href=#changeDefaultAdmin>#changeDefaultAdmin</a>をご参照ください。</p>
+</li>
+<li class="">
+<p><strong>名前付き役割アカウントの作成</strong></p>
+<ul>
+<li class="">
+<p><strong>フル管理者(Admin)役割</strong>: システム構成と役割管理専用で、信頼できる1~2人に限定します。</p>
+</li>
+<li class="">
+<p><strong>オペレーター(Operator)役割</strong>: ユーザーの追加と削除、出入り口/デバイス制御などの日常運用を担当します。 システムのセキュリティ設定や監査ログへのアクセスはありません。</p>
+</li>
+<li class="">
+<p><strong>監査者(Auditor)役割</strong>: ログ、レポート、設定への読み取り専用アクセス権のみを付与します。 システムの主要設定を変更できません。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>多要素認証(MFA)の有効化</strong></p>
+<p>すべての役割アカウントにMFAを適用します。 詳細については、<a href=#setMfa>#setMfa</a>をご参照ください。</p>
+</li>
+<li class="">
+<p><strong>カスタム権限アカウントの使用</strong>（必要な場合）</p>
+<ul>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>アカウント</span>に移動し、<span class=cmd>ｶｽﾀﾑﾚﾍﾞﾙ追加</span>ボタンをクリックします。</p>
+</li>
+<li class="">
+<p>ユーザーグループ、デバイスグループ、出入口グループ、エレベーターグループ、アクセスグループにまたがる詳細なアクセス権を設定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>管理者ﾒﾆｭｰ設定</span>で、各メニュー項目に対して<span class=cmd>編集/読込</span>または<span class=cmd>表示のみ</span>権限を選択します。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=カスタム監査者auditor役割の作成例>カスタム監査者(Auditor)役割の作成例<a href=#カスタム監査者auditor役割の作成例 class=hash-link aria-label="カスタム監査者(Auditor)役割の作成例 への直接リンクとコピー" title="カスタム監査者(Auditor)役割の作成例 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>アカウント</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ｶｽﾀﾑﾚﾍﾞﾙ追加</span> をクリックします。</p>
+</li>
+<li class="">
+<p>カスタム権限の<span class=cmd>名称</span>に<code>Auditor</code>を入力し、説明を追加します。</p>
+</li>
+<li class="">
+<p><span class=cmd>同期モード</span>で、次のように権限を設定します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>ﾕｰｻﾞｰ</span>: <span class=cmd>表示のみ</span></p>
+</li>
+<li class="">
+<p><span class=cmd>ﾓﾆﾀﾘﾝｸﾞ</span>: <span class=cmd>表示のみ</span></p>
+</li>
+<li class="">
+<p><span class=cmd>ﾃﾞｰﾀ</span>: <span class=cmd>表示のみ</span></p>
+</li>
+<li class="">
+<p><span class=cmd>ﾀﾞｯｼｭﾎﾞｰﾄﾞ</span>: <span class=cmd>表示のみ</span></p>
+</li>
+<li class="">
+<p><span class=cmd>設定</span>: 選択しない</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>指定した監査者アカウントに役割を割り当てるには、画面下部の<span class=cmd>適用</span>ボタンをクリックします。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><ul>
+<li class="">
+<p><strong>個人ごとに固有のアカウント</strong>を割り当て、ログイン情報を共有しないでください。</p>
+</li>
+<li class="">
+<p>四半期ごとにアカウントの役割を確認し、使用していないアカウントを削除します。</p>
+</li>
+<li class="">
+<p>名前を変更した既定の管理者アカウントは、緊急時のみ使用します。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=強力なパスワードポリシーの適用>強力なパスワードポリシーの適用<a href=#強力なパスワードポリシーの適用 class=hash-link aria-label="強力なパスワードポリシーの適用 への直接リンクとコピー" title="強力なパスワードポリシーの適用 への直接リンクとコピー" translate=no>​</a></h2>
+<p>すべてのユーザーアカウントに強力なパスワードポリシーを適用するようにBioStar Xを設定します。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=パスワードポリシーオプション>パスワードポリシーオプション<a href=#パスワードポリシーオプション class=hash-link aria-label="パスワードポリシーオプション への直接リンクとコピー" title="パスワードポリシーオプション への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<span class=cmd>ﾊﾟｽﾜｰﾄﾞ ﾚﾍﾞﾙ</span>
+<ul>
+<li class="">
+<p><span class=cmd>低</span>：最大32文字まで入力できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>中</span>: パスワードを設定する際は、8~32文字の英字（大文字または小文字）と数字を組み合わせる必要があります。</p>
+</li>
+<li class="">
+<p><span class=cmd>高</span>: パスワードを設定する際は、10~32文字の英字（大文字と小文字、少なくとも1文字の大文字を含む）と数字、特殊記号を組み合わせる必要があります。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾟｽﾜｰﾄﾞ有効期間</span>: 1日から180日まで設定できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾛｸﾞｲﾝ試行回数</span>: 設定した回数を超えてパスワードを誤入力すると、制限時間中はログインできません。 既定値は10分間に100回ですが、<strong>15分間に5~10回に減らすこと</strong>を推奨します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾟｽﾜｰﾄﾞ変更回数</span>: ユーザーが1日にパスワードを変更できる回数を制限できます。</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=パスワードポリシーの強化>パスワードポリシーの強化<a href=#パスワードポリシーの強化 class=hash-link aria-label="パスワードポリシーの強化 への直接リンクとコピー" title="パスワードポリシーの強化 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>システム</span> → <span class=cmd>ｾｷｭﾘﾃｨ</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾛｸﾞｲﾝ ﾊﾟｽﾜｰﾄﾞ</span>で、次のように設定します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>ﾊﾟｽﾜｰﾄﾞ ﾚﾍﾞﾙ</span>: <span class=cmd>高</span></p>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾟｽﾜｰﾄﾞ有効期間</span>: 有効化後、<strong>90日</strong>に設定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾛｸﾞｲﾝ試行回数</span>: 有効化後、<strong>15分間に5回</strong>に設定します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾟｽﾜｰﾄﾞ変更回数</span>: 有効化後、最大<strong>5回</strong>に設定します。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>画面右下の<span class=cmd>適用</span>をクリックします。</p>
+</li>
+</ol>
+<p>すべてのユーザーに新しいパスワードポリシーを通知します。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=セッションセキュリティ>セッションセキュリティ<a href=#セッションセキュリティ class=hash-link aria-label="セッションセキュリティ への直接リンクとコピー" title="セッションセキュリティ への直接リンクとコピー" translate=no>​</a></h2>
+<p><strong>メニュー経路</strong>: <span class=cmd>設定</span> → <span class=cmd>システム</span> → <span class=cmd>ｾｷｭﾘﾃｨ</span> → <span class=cmd>ｾｯｼｮﾝｾｷｭﾘﾃｨ</span></p>
+<p>各アカウントを一度に1つのアクティブセッションでのみ使用できるようにするには、<span class=cmd>同時接続</span>を無効にします。</p>
+<ul>
+<li class="">
+<p><span class=cmd>有効</span>: 同じクレデンシャルで複数のユーザーが同時にログインできます。</p>
+</li>
+<li class="">
+<p><span class=cmd>無効</span>: 1アカウントにつき1回のログインのみ許可します。 新しいログインが発生すると、以前のセッションは自動的にログアウトされます。</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>アカウント共有を検知できないと、誰がどの作業を実行したか分かりません。</p>
+</li>
+<li class="">
+<p>盗まれたクレデンシャルを入手した攻撃者は、正規ユーザーが活動中でも目立たずにログインできます。</p>
+</li>
+<li class="">
+<p>監査ログは特定ユーザーの作業を追跡できないため、その価値が下がります。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=setMfa>多要素認証 (MFA)<a href=#setMfa class=hash-link aria-label="多要素認証 (MFA) への直接リンクとコピー" title="多要素認証 (MFA) への直接リンクとコピー" translate=no>​</a></h2>
+<p>BioStar Xのすべての高権限アカウント（管理者、オペレーター）に指紋認証を追加して、多要素認証を有効にできます。</p>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>BioStar Xでの動作</strong><ul>
+<li class="">
+<p>Suprema BioMiniやBioMini Plus 2などの指紋スキャナーを使用してMFAを実装します。</p>
+</li>
+<li class="">
+<p>ユーザーがログインIDとパスワードを入力すると、システムが指紋スキャンを要求します。</p>
+</li>
+</ul></div></div>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>管理者アカウントでMFAが有効な場合、指紋認証に失敗するとアカウントがロックされることがあります。</p>
+</li>
+<li class="">
+<p>クラウドインターフェース経由のログインではMFAはサポートされません。</p>
+</li>
+<li class="">
+<p>Active Directory、またはサポートされていないサービスを通じて認証されたアカウントには、MFAを有効にできません。</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=手順>手順<a href=#手順 class=hash-link aria-label="手順 への直接リンクとコピー" title="手順 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>BioStar XサーバーまたはクライアントPCに指紋スキャナーを接続してインストールします。</p>
+</li>
+<li class="">
+<p>BioStar Xで<span class=cmd>ユーザー</span>に移動します。</p>
+</li>
+<li class="">
+<p>ユーザープロファイルを開き、指紋を登録します。</p>
+</li>
+<li class="">
+<p><span class=cmd>許可</span>セクションで、<span class=cmd>ログインのための多要素認証</span>項目を<span class=cmd>使用する</span>に設定します。</p>
+</li>
+<li class="">
+<p>変更を適用するには、画面右上の<span class=cmd>保存</span>ボタンをクリックします。</p>
+</li>
+</ol>
+<p>ログアウト後、有効なクレデンシャルを入力し、指紋をスキャンしてログインします。</p>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティスと安全対策</strong><ul>
+<li class="">
+<p>スキャナーエラーに備えて、別の指で代替指紋を登録します。</p>
+</li>
+<li class="">
+<p>生体認証デバイスのエラーに備えて復旧できるよう、既定の管理者アカウント（「緊急用」アカウント）をバックアップアカウントとして設定しておきます。</p>
+</li>
+<li class="">
+<p>多要素認証(MFA)が有効なアカウントを文書化し、復旧メカニズムを維持管理します。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=secureComm>デバイスとの安全な通信<a href=#secureComm class=hash-link aria-label="デバイスとの安全な通信 への直接リンクとコピー" title="デバイスとの安全な通信 への直接リンクとコピー" translate=no>​</a></h2>
+<p>デジタル証明書（TLS/SSL方式）を使用して、BioStar Xと接続されたデバイス間のトラフィックを暗号化するには、<span class=cmd>端末の暗号化通信</span>を有効にします。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=オプションa-サーバー生成証明書既定値>オプションA: サーバー生成証明書（既定値）<a href=#オプションa-サーバー生成証明書既定値 class=hash-link aria-label="オプションA: サーバー生成証明書（既定値） への直接リンクとコピー" title="オプションA: サーバー生成証明書（既定値） への直接リンクとコピー" translate=no>​</a></h3>
+<p>BioStar Xで証明書を生成し、デバイスに自動的にプロビジョニングします。</p>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><p>この機能を無効にしてから再度有効にすると、新しい証明書が生成されるため、デバイスを手動で再設定する必要があります。</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=オプションb-外部証明書エンタープライズ利用を推奨>オプションB: 外部証明書（エンタープライズ利用を推奨）<a href=#オプションb-外部証明書エンタープライズ利用を推奨 class=hash-link aria-label="オプションB: 外部証明書（エンタープライズ利用を推奨） への直接リンクとコピー" title="オプションB: 外部証明書（エンタープライズ利用を推奨） への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>組織の証明書チェーンと秘密鍵をアップロードできます。</p>
+</li>
+<li class="">
+<p>エンタープライズPKIとの連携が容易です。</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=手順-1>手順<a href=#手順-1 class=hash-link aria-label="手順 への直接リンクとコピー" title="手順 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>管理者アカウントでBioStar Xにログインします。</p>
+</li>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>システム</span> → <span class=cmd>ｾｷｭﾘﾃｨ</span> → <span class=cmd>詳細なｾｷｭﾘﾃｨ設定</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>端末の暗号化通信</span>を<span class=cmd>使用する</span>に設定します。</p>
+</li>
+<li class="">
+<p>外部CA証明書を使用する場合は、<span class=cmd>外部証明書を使用する</span>を<span class=cmd>使用する</span>に設定します。</p>
+<ul>
+<li class="">ルートCA、公開証明書、秘密鍵をアップロードします。</li>
+</ul>
+</li>
+<li class="">
+<p>適用し、デバイスが安全なチャネルで接続されることを確認します。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><ul>
+<li class="">
+<p>必ず<strong>強力な暗号鍵</strong>（RSA 2048以上、または同等のECC）を使用します。</p>
+</li>
+<li class="">
+<p>デバイス接続方式（ホスト名またはIPアドレス）と一致する適切な<strong>CN/SAN値</strong>を持つ証明書を使用します。</p>
+</li>
+<li class="">
+<p>有効期限前に証明書を交換し、更新スケジュールを管理します。</p>
+</li>
+</ul></div></div>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ログアップロードの注意</strong><p><span class=cmd>ﾛｸﾞのｱｯﾌﾟﾛｰﾄﾞ</span>が<span class=cmd>手動</span>に設定されている場合、<strong>イベント可視性の遅延</strong>または<strong>監査追跡の欠落</strong>のリスクがあります。 可能であれば、<span class=cmd>ﾛｸﾞのｱｯﾌﾟﾛｰﾄﾞ</span>は<span class=cmd>自動</span>のままにします。</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=デバイスハッシュキーの手動管理>デバイスハッシュキーの手動管理<a href=#デバイスハッシュキーの手動管理 class=hash-link aria-label="デバイスハッシュキーの手動管理 への直接リンクとコピー" title="デバイスハッシュキーの手動管理 への直接リンクとコピー" translate=no>​</a></h2>
+<p>BioStar Xとデバイス間で使用される暗号化キーを手動で制御するには、<span class=cmd>端末ﾊｯｼｭｷｰ管理</span>を有効にする必要があります。 この機能はタンパー防御機能を有効にします。 物理的な改ざんを検知すると、デバイスは重要データを自動的に削除します。</p>
+<div class="theme-admonition theme-admonition-important admonition_Gfwi alert alert--important"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>重要</div><div class=admonitionContent_UjKb><p><a href=#secureComm>#secureComm</a>は転送中のデータを保護しますが、<span class=cmd>端末ﾊｯｼｭｷｰ管理</span>は次の追加機能を提供します。<ul>
+<li class="">
+<p><strong>データ暗号化キーは自動生成されず、管理者が管理します。</strong></p>
+</li>
+<li class="">
+<p><strong>タンパー防御</strong>機能を有効にします。 デバイスが不正アクセスまたは改ざんを検知すると、保存されたユーザー情報、ログ、暗号化キーを削除します。</p>
+</li>
+</ul></div></div>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><strong>管理者アカウント以外のユーザーがログインパスワードまたはPINを持っている場合、手動キー管理は適用できません</strong>。</p>
+</li>
+<li class="">
+<p>有効化する前に、そのログイン情報を削除します。</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=手順-2>手順<a href=#手順-2 class=hash-link aria-label="手順 への直接リンクとコピー" title="手順 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>管理者アカウントでBioStar Xにログインします。</p>
+</li>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>システム</span> → <span class=cmd>ｾｷｭﾘﾃｨ</span> → <span class=cmd>詳細なｾｷｭﾘﾃｨ設定</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>端末ﾊｯｼｭｷｰ管理</span>を<span class=cmd>使用</span>に設定します。</p>
+</li>
+<li class="">
+<p>警告ポップアップを読み、確認します。</p>
+</li>
+<li class="">
+<p>適用する前に、デバイスから管理者以外のユーザーのパスワード/PINログインをすべて削除します。</p>
+</li>
+<li class="">
+<p>メッセージが表示されたら、暗号化キーと管理者パスワードを変更します。</p>
+</li>
+<li class="">
+<p>デバイスが引き続きユーザー、ログ、イベントを同期できることを確認します。</p>
+</li>
+<li class="">
+<p>キーの変更内容を文書化します（日時、担当管理者、次回変更予定日）。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><ul>
+<li class="">
+<p>デバイスハッシュキーを毎年、または6か月ごとに定期的に変更します。</p>
+</li>
+<li class="">
+<p>すべての変更を記録し、安全な保管場所に保存します。</p>
+</li>
+<li class="">
+<p>検証用または一時的なデバイスでタンパーイベントをテストします。</p>
+</li>
+<li class="">
+<p>多層防御（Defense in Depth）のために、<a href=#secureComm>#secureComm</a>と併用します。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=システムバックアップ>システムバックアップ<a href=#システムバックアップ class=hash-link aria-label="システムバックアップ への直接リンクとコピー" title="システムバックアップ への直接リンクとコピー" translate=no>​</a></h2>
+<p><strong>システムバックアップ</strong>機能を使用して、BioStar Xのデータベース、システム設定、キー値を定期的にバックアップします。</p>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>BioStar XとMSSQLが別々のサーバーにインストールされている場合、<strong>システムバックアップ/復元</strong>機能は使用できません。</p>
+</li>
+<li class="">
+<p>BioStar Xのバックアップ機能（手動または予約）は<strong>暗号化されません</strong>。</p>
+</li>
+<li class="">
+<p>BioStar Xの復元機能は、暗号化されたバックアップをサポートしません。</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=手動バックアップの設定>手動バックアップの設定<a href=#手動バックアップの設定 class=hash-link aria-label="手動バックアップの設定 への直接リンクとコピー" title="手動バックアップの設定 への直接リンクとコピー" translate=no>​</a></h3>
+<p><strong>メニュー経路</strong>: <span class=cmd>設定</span> → <span class=cmd>システム</span> → <span class=cmd>ｼｽﾃﾑ ﾊﾞｯｸｱｯﾌﾟ</span></p>
+<ul>
+<li class="">
+<p><span class=cmd>ﾊﾞｯｸｱｯﾌﾟ ﾌｧｲﾙ ﾊﾟｽ</span>: ディレクトリを指定します。 パスは存在している必要があり、適切な書き込み権限が必要です。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾞｯｸｱｯﾌﾟﾌｧｲﾙ 保存数</span>: 1~100個まで設定でき、日次予約では少なくとも<strong>7~10個の循環バックアップ</strong>を保持することを推奨します。</p>
+</li>
+<li class="">
+<p><span class=cmd>今すぐに ﾊﾞｯｸｱｯﾌﾟ</span>: 必要に応じてすぐにバックアップを実行します。 アップグレードまたは大きな変更の前に有用です。</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=システム自動バックアップ>システム自動バックアップ<a href=#システム自動バックアップ class=hash-link aria-label="システム自動バックアップ への直接リンクとコピー" title="システム自動バックアップ への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p><span class=cmd>周期</span>: <span class=cmd>日ごと</span> / <span class=cmd>週ごと</span> / <span class=cmd>月ごと</span></p>
+</li>
+<li class="">
+<p><span class=cmd>時刻</span>: 時刻を指定します。 BioStar Xのサーバータイムゾーンに合わせて予約が実行されます。</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><p>運用環境では、<strong>利用者の少ない時間帯に毎日バックアップ</strong>することを推奨します。<blockquote>
+<p>例: 現地時間 午前2時</p>
+</blockquote></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=自動バックアップの設定>自動バックアップの設定<a href=#自動バックアップの設定 class=hash-link aria-label="自動バックアップの設定 への直接リンクとコピー" title="自動バックアップの設定 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>システム</span> → <span class=cmd>ｼｽﾃﾑ ﾊﾞｯｸｱｯﾌﾟ</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>自動 ｼｽﾃﾑ ﾊﾞｯｸｱｯﾌﾟ</span>を設定します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>周期</span>: <span class=cmd>日ごと</span></p>
+</li>
+<li class="">
+<p><span class=cmd>時刻</span>: 02:00（または利用者が少ない別の時間帯）</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾊﾞｯｸｱｯﾌﾟﾌｧｲﾙ 保存数</span>: 30</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>適用</span> をクリックして設定を保存します。</p>
+</li>
+<li class="">
+<p>対象ディレクトリにバックアップファイルが作成されたことを確認します。</p>
+</li>
+<li class="">
+<p>ステージング環境で<strong>復元手順</strong>を定期的にテストします。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><p>サーバーがUPSで保護されていることを確認します。 「進行中」状態が表示されている間は、作業を中断しないでください。 バックアップまたは復元を中断すると、データベースが破損することがあります。</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=ディレクトリ連携>ディレクトリ連携<a href=#ディレクトリ連携 class=hash-link aria-label="ディレクトリ連携 への直接リンクとコピー" title="ディレクトリ連携 への直接リンクとコピー" translate=no>​</a></h2>
+<p>ディレクトリ連携により、BioStar Xは**Entra ID（Azure AD）<strong>や</strong>Microsoft Active Directory（AD）**などのエンタープライズIDシステムと接続できます。</p>
+<ul>
+<li class="">
+<p><strong>強化されたセキュリティ</strong>: パスワード規則、多要素認証(MFA)、条件付きアクセスに対するエンタープライズポリシーをBioStar Xに自動適用できます。</p>
+</li>
+<li class="">
+<p><strong>集中管理</strong>: ユーザーライフサイクルがEntra ID/ADで管理されるため、アカウント失効のリスクが下がります。</p>
+</li>
+<li class="">
+<p><strong>監査とコンプライアンス</strong>: すべてのユーザー操作が会社アカウントに関連付けられます。</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>ディレクトリ連携には<strong>アドバンス</strong>(Advanced)ライセンスが必要です。</div></div>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><ul>
+<li class="">
+<p>権限を制限した<strong>専用のEntra ID/ADサービスアカウント</strong>を使用します。</p>
+</li>
+<li class="">
+<p>同期を<strong>関連グループ</strong>のみに制限します。</p>
+</li>
+<li class="">
+<p>Active Directory接続には常に<strong>LDAPS</strong>を使用します。</p>
+</li>
+<li class="">
+<p>同期済みアカウントを定期的に確認し、古い項目がないか点検します。</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=microsoft-entra-idの手順案内>Microsoft Entra IDの手順案内<a href=#microsoft-entra-idの手順案内 class=hash-link aria-label="Microsoft Entra IDの手順案内 への直接リンクとコピー" title="Microsoft Entra IDの手順案内 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>管理者アカウントでBioStar Xにログインします。</p>
+</li>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>ディレクトリ統合</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ディレクトリサービス</span>で、<span class=cmd>Microsoft Entra ID</span>を選択します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ｱｸﾃｨﾌﾞﾃﾞｨﾚｸﾄﾘｻｰﾊﾞｰ</span>を設定します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>クライアント ID</span>：<strong>Entra ID</strong> で登録したアプリケーションの <strong>クライアント ID</strong>（<strong>Client ID</strong>）を入力します。</p>
+</li>
+<li class="">
+<p><span class=cmd>クライアントシークレット</span>：<strong>Entra ID</strong> で登録したアプリケーションの <strong>証明書とシークレット</strong>（<strong>Certificates & secrets</strong>）に追加した <strong>クライアント シークレット</strong>（<strong>Client secrets</strong>）を入力します。</p>
+</li>
+<li class="">
+<p><span class=cmd>プライマリドメイン</span>：<strong>Entra ID</strong> で組織を作成するときに入力した既定のドメイン名を入力します。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>BioStar Xにユーザーグループ情報を取り込むには、<span class=cmd>接続</span>ボタンをクリックします。</p>
+</li>
+<li class="">
+<p><span class=cmd>BioStar X Entra ID を使用したログイン</span>を有効にします。</p>
+</li>
+<li class="">
+<p><span class=cmd>リダイレクトURI</span>をコピーし、<strong>Entra ID</strong>ポータルのSSOリダイレクト設定に貼り付けます。</p>
+</li>
+<li class="">
+<p><span class=cmd>同期モード</span>で、希望する同期方式を選択します。</p>
+</li>
+<li class="">
+<p>設定を保存するには、<span class=cmd>適用</span> をクリックします。</p>
+</li>
+</ol>
+<p>ユーザー一覧を確認し、同期が完了したことを点検します。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><strong>Entra ID</strong> でアプリケーションを登録する方法は <a href=https://learn.microsoft.com/entra/identity-platform/quickstart-register-app target=_blank rel="noopener noreferrer" class="">以下のリンク</a> を参照してください。</p>
+</li>
+<li class="">
+<p><strong>Entra ID</strong> で <strong>証明書とシークレット</strong> を設定する方法は <a href="https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret" target=_blank rel="noopener noreferrer" class="">以下のリンク</a> を参照してください。</p>
+</li>
+<li class="">
+<p><strong>テナント ID</strong> は <strong>Entra ID</strong> で登録したアプリケーションの <strong>概要</strong>（<strong>Overview</strong>）で確認できます。</p>
+</li>
+<li class="">
+<p><span class=cmd>プライマリドメイン</span> の情報は <strong>Entra ID</strong> の <strong>概要</strong> (Overview) で確認できます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/en/biostarx-setting-directory-primary-domain.png width=1000 height=478 /></p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=microsoft-active-directoryの手順案内>Microsoft Active Directoryの手順案内<a href=#microsoft-active-directoryの手順案内 class=hash-link aria-label="Microsoft Active Directoryの手順案内 への直接リンクとコピー" title="Microsoft Active Directoryの手順案内 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>管理者アカウントでBioStar Xにログインします。</p>
+</li>
+<li class="">
+<p><span class=cmd>設定</span> → <span class=cmd>ディレクトリ統合</span>に移動します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ディレクトリサービス</span>で、<span class=cmd>Microsoft Active Directory</span>を選択します。</p>
+</li>
+<li class="">
+<p><span class=cmd>ｱｸﾃｨﾌﾞﾃﾞｨﾚｸﾄﾘｻｰﾊﾞｰ</span>を設定します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>ｻｰﾊﾞｰ ｱﾄﾞﾚｽ</span>: ADサーバーのIPアドレスまたはホスト名です。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾕｰｻﾞｰ名称</span> / <span class=cmd>ﾊﾟｽﾜｰﾄﾞ</span>: ADサービスアカウントのクレデンシャルです。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾕｰｻﾞｰﾍﾞｰｽ DN</span>: ADドメインの固有名です。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>暗号化接続(LDAPS)を使用するには、<span class=cmd>暗号化通信</span>を有効にします。</p>
+<ul>
+<li class="">
+<p>ADサーバーにAD証明書サービスをインストールします。</p>
+</li>
+<li class="">
+<p>ルート証明書をエクスポートし、<em>.jks</em>ファイルに変換して、BioStar Xのインストールパスに配置します。</p>
+</li>
+<li class="">
+<p>BioStar Xで<span class=cmd>ｷｰｽﾄｱﾊﾟｽﾜｰﾄﾞ</span>を入力します。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>BioStar Xにユーザーグループ情報を取り込むには、<span class=cmd>接続</span>ボタンをクリックします。</p>
+</li>
+<li class="">
+<p><span class=cmd>ﾕｰｻﾞｰｸﾞﾙｰﾌﾟ</span>で、不要なグループの選択を解除します。</p>
+</li>
+<li class="">
+<p><span class=cmd>BioStar X Active Directory を使用したログイン</span>を有効にします。</p>
+</li>
+<li class="">
+<p><span class=cmd>同期モード</span>で、希望する同期方式を選択します。</p>
+</li>
+<li class="">
+<p>設定を保存するには、<span class=cmd>適用</span> をクリックします。</p>
+</li>
+</ol>
+<p>ユーザー一覧を確認し、同期が完了したことを点検します。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=システムログ設定>システムログ設定<a href=#システムログ設定 class=hash-link aria-label="システムログ設定 への直接リンクとコピー" title="システムログ設定 への直接リンクとコピー" translate=no>​</a></h2>
+<p><strong>メニュー経路</strong>: <span class=cmd>設定</span> → <span class=cmd>サーバー</span> → <span class=cmd>ｻｰﾊﾞｰ</span></p>
+<p>監査と問題解決に必要な十分なデータを保持するように、BioStar Xのログ設定を構成します。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=システムログ保存期間>システムログ保存期間<a href=#システムログ保存期間 class=hash-link aria-label="システムログ保存期間 への直接リンクとコピー" title="システムログ保存期間 への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p><span class=cmd>ﾛｸﾞのｱｯﾌﾟﾛｰﾄﾞ</span>: イベントログのアップロード方法を選択します。</p>
+<ul>
+<li class="">
+<p><span class=cmd>自動</span>(既定値): 保存期間が過ぎるとログを自動削除します。</p>
+</li>
+<li class="">
+<p><span class=cmd>手動</span>: ログを手動で削除する必要があります。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>ｼｽﾃﾑﾛｸﾞの保存期間</span>: 1~120日（既定値: 60日）</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>ベストプラクティス</strong><p>コンプライアンスが重要な環境では、保存期間を90~120日に設定し、ログをSIEMに送信します。</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=システムログレベルの設定>システムログレベルの設定<a href=#システムログレベルの設定 class=hash-link aria-label="システムログレベルの設定 への直接リンクとコピー" title="システムログレベルの設定 への直接リンクとコピー" translate=no>​</a></h3>
+<p>サブシステム別: デバッグ、ネットワーク、SQL、システム、Web、WebSocket</p>
+<table><thead><tr><th>レベル<th>説明<tbody><tr><td>トレース<td>すべての項目をキャプチャ（非常に詳細）<tr><td>デバッグ<td>開発者レベルの詳細ログ<tr><td>インフォメーション<td>運用イベント、接続成功（多くは既定値）<tr><td>ワーニング<td>潜在的な問題<tr><td>エラー<td>失敗のみ</table>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><p>運用環境で<strong>トレース</strong>または<strong>デバッグ</strong>モードを実行すると、過剰なログが生成され、性能低下やディスク容量不足が発生することがあります。 短期的な問題解決にのみ使用します。</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=biostar-x既定のログレベル>BioStar X既定のログレベル<a href=#biostar-x既定のログレベル class=hash-link aria-label="BioStar X既定のログレベル への直接リンクとコピー" title="BioStar X既定のログレベル への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>デバッグ、SQL、WebSocket: <strong>無効</strong></p>
+</li>
+<li class="">
+<p>ネットワーク、システム、Web: <strong>インフォメーション</strong></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=サーバーポートの構成>サーバーポートの構成<a href=#サーバーポートの構成 class=hash-link aria-label="サーバーポートの構成 への直接リンクとコピー" title="サーバーポートの構成 への直接リンクとコピー" translate=no>​</a></h2>
+<p>BioStar Xのポートを明示的に設定し、可能なら安全なチャネルを優先します。 システムアクセスには既定のHTTPSポート(<code>443</code>)を使用し、デバイス通信ポートは信頼できるネットワークにのみ制限します。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=httpsポートの変更>HTTPSポートの変更<a href=#httpsポートの変更 class=hash-link aria-label="HTTPSポートの変更 への直接リンクとコピー" title="HTTPSポートの変更 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>BioStar X Service Manager</span>(<code>http:/127.0.0.1:28088/</code>)を実行します。</p>
+</li>
+<li class="">
+<p>左側のサイドメニューで<span class=cmd>SERVICE SETTINGS</span>をクリックします。</p>
+</li>
+<li class="">
+<p><span class=cmd>Unified Gateway Service</span>の<span class=cmd>HTTPS Port</span>（既定値: 443）フィールドに移動します。</p>
+</li>
+<li class="">
+<p>ポート番号を希望の値に変更します。</p>
+<blockquote>
+<p>例: 8443</p>
+</blockquote>
+</li>
+<li class="">
+<p><span class=cmd>Apply</span>ボタンをクリックし、必要に応じてサービスを再起動します。</p>
+</li>
+<li class="">
+<p>変更したポートに合わせて、ファイアウォールルールとクライアント接続を更新します。</p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>このページは役に立ちましたか？</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>役に立ちました。</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>改善が必要です。</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/how-to/bsx_hardening/hardening-biostarx><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>BioStar Xの強化</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/how-to/bsx_hardening/bsx-privacy-data-security><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>個人データセキュリティ</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=https://www.linkedin.com/company/suprema-inc- target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVR42u3XPUoEQRCG4WdVTEw1M1UET2BiZKKRJ/AMgjChB5gjGAoGgtGaaayhgWBgZGAqg8Iu4g+OSQWLKP6wO7NIfVF30VS//RXVTXfqujYumjBGSpiESZh/CTP1k0VlWa5jH3fYwM1vNimKYqjObGMWS9hqu0zHqPGI01bLhAOcoY/biM1gOsZvePiQ93VUzlS4wDV2I7YX8QqXWEMX93iJtZujcOY7zX9SvkUcYRXnTbb2V3kmsdPGPXMYbizgaiC+0nSZqmj555ifYDnGc0070xsAgae/HDjfpoRJmGGpk5+4hEmYhEmYlvQO+74srj8PcOoAAAAASUVORK5CYII="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR42u2XOwrCQBCGv5UQy2DAJr3gLcRzeI8tbez2IJ4lt4mIViJrk2IZSCGYzYL/DwvzYOGDmdmHizFSilYUJMEIRjC/UvXthhCCDe2AM3AEOuAFPL337ewwRnugB5okVo8re5kuBmTRnjkY/wSsAZelZ4y2if0ArqVM0/u/RxuYenM0Jud0Ai9ZpiGxN6Z8t9ww7UT/3E1Ot7ZgBCMYAKfvrWAEI5iZ9QEdXBhIqJQhWAAAAABJRU5ErkJggg=="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR42u3XP0pDQRDH8U9EIdFCtFARbGJnobWVhwhoYeufA4g5xBNPIJ4g4iU8hIiipVgoahEVwWez1cO8vJgNpNgfbLM7DN+dmZ1ha3meGxdNGCMlmASTYBLMqDXZzyDLshqO0MIC6mhg9o/L/OANH/jEEy5x2m6386FhsIeTASI9FxY0sRkAz2KkaSdCBrZj1Uyzx/49HivCrMaCme+xf421EP78nz4GhpkuOXvFAbZwU2I3EwtmqoLNFTaQDfFQqhlVUB372B1pn8F3SXQaOMQxlvv4iALTDQ2uqHU8YLGijygwLz1gVgbIwHOsAr6NUFN3sWA6EWA6sdJ0Hgq4haXCkCwOyy6+wpB8D4PyIvjoq1r6NyWYBJNgEkyC4Rd70TD9XaltowAAAABJRU5ErkJggg=="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVR42u1WQVLiQBR9/zelBRtzhMwNnBNMPIHMCcATjGwse0VYNdEFzAnQG+AJDCeQGwxHiCssNf+76ViRASXgzMLiVaUq0A15ef/91x/YYYcdviCoymbnXAggYuZARIJV+5g5y/N8RkRTa+3sU8k450IiGhFRVPVtVTVV1ZN1SNE6RIwxd6oaAJgAGItIVihQ3PvPr4oxcwCgCeAHgExEvn9EqPYRGWPMSFUDEelZa+OKwgyTJIkBdIloBOBoY2WccyEz/xGRibU2quItY8ydiEzPz8+PLi4ublU1EpFv76nzrjLMfOjrPl7x0AhAk4gOVPUewNhamwIIVTUgotD//gZA5K+rTcsUAgARZeUv4zgOGo3GQFXbrxITAcCvJEmG8/m8V6/XfxLRDABEJGNmeN9t5hkRCZgZzPyGzP7+/lBVWwCmAHpENMvz/JCZuwBOG41GcHZ2dvKXJ4iCrQxcvFm5NMzcAjCbz+dHcRwXa9PBYDB+enq6VdW2c+7alwwA1soarpySRE1PsFciAgDodDqZqvbK+6qANwixwJOZLlt/fn4uVDj452QKM9dqtfC9DgRw/z+UKdq8G8dxsNhl3sQr42BrAxctDgDW2jRJkmsArXq9fuec64nIlIhCY0zXZ8zvknmLo2E7MostXWBvb+/08fERAFrMPGJ+I/D1w8NDvCwiVDXbJmeWhlWn08kAtJ1zV0TU9Gmbqeq4rMiiMsaYrQ7K1P/ZMYDh4qJ/cLqG6Y9VdWUHrmVga+2MiFIiipIk6W4yvV1eXnb9ITnZeoTI8/zEzzNxv9+PiOimnMgL6RqWS6OqxyIS+Thof9qkx8xXflCqiomItD9l0ltC6hBA+NEM7NVLq8zAO+yww5fEC4LXWfVMU1ZGAAAAAElFTkSuQmCC width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"localStorage"},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>

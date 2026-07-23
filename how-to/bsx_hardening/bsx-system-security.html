@@ -1,0 +1,697 @@
+<!doctype html><html lang=ko-KR dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-how-to/bsx_hardening/bsx-system-security" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>시스템 보안 | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security /><meta data-rh=true property=og:locale content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true property=og:locale:alternate content=ja_JP /><meta data-rh=true name=docusaurus_locale content=ko /><meta data-rh=true name=docsearch:language content=ko /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="시스템 보안 | Suprema Docs"/><meta data-rh=true name=description content="강력한 인증, 역할 기반 접근 제어, 암호화된 통신, 정기 백업을 통해 BioStar X 애플리케이션 계층의 보안을 강화하는 방법을 안내합니다."/><meta data-rh=true property=og:description content="강력한 인증, 역할 기반 접근 제어, 암호화된 통신, 정기 백업을 통해 BioStar X 애플리케이션 계층의 보안을 강화하는 방법을 안내합니다."/><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/how-to/bsx_hardening/bsx-system-security hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/how-to/bsx_hardening/bsx-system-security hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/how-to/bsx_hardening/bsx-system-security hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security/#webpage","@type":"WebPage","breadcrumb":{"@id":"https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security/#breadcrumb"},"datePublished":"2026-01-02","description":"강력한 인증, 역할 기반 접근 제어, 암호화된 통신, 정기 백업을 통해 BioStar X 애플리케이션 계층의 보안을 강화하는 방법을 안내합니다.","inLanguage":"ko-KR","isPartOf":{"@id":"https://supremainc.github.io/#website"},"name":"시스템 보안","potentialAction":[{"@type":"ReadAction","target":["https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security"]}],"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","article p:first-of-type","[data-speakable]"]},"url":"https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security"},{"@id":"https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/how-to/bsx_hardening/","name":"BioStar X 보안 강화","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/how-to/bsx_hardening/hardening-biostarx","name":"BioStar X 강화","position":2},{"@type":"ListItem","item":"https://supremainc.github.io/docs/how-to/bsx_hardening/bsx-system-security","name":"시스템 보안","position":3}]},{"@id":"https://supremainc.github.io/#website","@type":"WebSite","description":"슈프리마의 모든 제품 및 BioStar 관련 정보를 이곳에서 확인하세요.","inLanguage":"ko-KR","name":"Suprema Docs","potentialAction":[{"@type":"SearchAction","query-input":"required name=searchTerms","target":{"@type":"EntryPoint","urlTemplate":"https://supremainc.github.io/search?q={searchTerms}"}}],"publisher":{"@id":"https://supremainc.github.io/#organization"},"url":"https://supremainc.github.io"},{"@id":"https://supremainc.github.io/#organization","@type":"Organization","address":{"@type":"PostalAddress","addressCountry":"KR","postalCode":"13554","streetAddress":"L17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://support.supremainc.com"},"logo":{"@id":"https://supremainc.com/#logo","@type":"ImageObject","caption":"Suprema - Security & Biometrics","contentUrl":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","height":900,"url":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","width":1440},"name":"Suprema","sameAs":["https://blog.naver.com/supremakr","https://www.facebook.com/supremaglobal","https://www.youtube.com/user/supremainc","https://www.instagram.com/official.suprema","https://pf.kakao.com/_xnkPxes","https://www.linkedin.com/company/suprema-inc-/"],"url":"https://supremainc.com"}]}</script><link rel=alternate type=application/rss+xml href=/docs/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.7f238323.css /><script src=/docs/assets/js/runtime~main.b8c469cd.js defer></script><script src=/docs/assets/js/main.1465a0f7.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg /><div role=region aria-label="본문으로 건너뛰기"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>본문으로 건너뛰기</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 <a href=https://docs.supremainc.com/how-to/bsx_hardening/bsx-system-security/ target=_blank>다음 링크</a>에서 확인하세요.</b></div></div><nav aria-label=메인 class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="사이드바 펼치거나 접기" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/><div class=navbar__logo><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>플랫폼</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/platform/biostar_x_mobile>BioStar X Mobile</a><li><a class=dropdown__link href=/docs/platform/biostar_air>BioStar Air</a><li><a class=dropdown__link href=/docs/platform/clue>CLUe</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI 카메라</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar-devices">장치</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/device/biostation_3_clue>BioStation 3 (CLUe)</a><li><a class=dropdown__link href=/docs/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/device/biolite_n2_clue>BioLite N2 (CLUe)</a><li><a class=dropdown__link href=/docs/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/device/xstation_2_clue>X-Station 2 (CLUe)</a><li><a class=dropdown__link href=/docs/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>인테그레이션</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/integration/genetec>Genetec</a><li><a class=dropdown__link href=/docs/integration/gallagher>Gallagher</a><li><a class=dropdown__link href=/docs/integration/ccure>Software House</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>개발자 센터</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/developer/bsxapi>BioStar X API</a><li><a class=dropdown__link href=/docs/developer/clue>CLUe API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/reference>참고 문서</a><a class="navbar__item navbar__link" href=/docs/changelog>업데이트 내역</a><a class="navbar__item navbar__link" href=/docs/legal/disclaimers>법적 고지</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=검색><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>한국어</a><ul class=dropdown__menu><li><a href=/docs/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ko-KR>한국어</a><li><a href=/docs/en/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/how-to/bsx_hardening/bsx-system-security target=_self rel="noopener noreferrer" class=dropdown__link lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="시스템 모드" aria-label="어두운 모드와 밝은 모드 전환하기 (현재 시스템 모드)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="맨 위로 스크롤하기" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="문서 사이드바" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/how-to/bsx_hardening><span class=categoryLinkLabel_W154>BioStar X 보안 강화</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/how-to/bsx_hardening/security-principle><span class=linkLabel_WmDU>보안 출입 제어의 핵심 원칙</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/how-to/bsx_hardening/server-hardening-overview><span class=categoryLinkLabel_W154>서버 보안 강화</span></a><button aria-label="사이드바 분류 '서버 보안 강화' 펼치기" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/how-to/bsx_hardening/hardening-biostarx><span class=categoryLinkLabel_W154>BioStar X 강화</span></a><button aria-label="사이드바 분류 'BioStar X 강화' 접기" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/how-to/bsx_hardening/bsx-system-security><span class=linkLabel_WmDU>시스템 보안</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/how-to/bsx_hardening/bsx-privacy-data-security><span class=linkLabel_WmDU>개인 데이터 보안</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/how-to/bsx_hardening/hardening-suprema-device><span class=linkLabel_WmDU>슈프리마 장치 강화</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/how-to/bsx_hardening/references><span class=linkLabel_WmDU>참조</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/how-to/bsx_hardening/appendices><span class=linkLabel_WmDU>부록</span></a></ul></ul></nav><button type=button title="사이드바 숨기기" aria-label="사이드바 숨기기" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label="탐색 경로"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=홈 class=breadcrumbs__link href=/docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/how-to/bsx_hardening><span>BioStar X 보안 강화</span></a><li class="breadcrumbs__item item-2"><a class=breadcrumbs__link href=/docs/how-to/bsx_hardening/hardening-biostarx><span>BioStar X 강화</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-3"><span class=breadcrumbs__link>시스템 보안</span></ul><div class=btnprint_MOIq><div class=pdfDropdown_hR9S><button disabled class=printbtn_FzsH aria-haspopup=true aria-expanded=false><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m4 6 4 4 4-4"/></svg> PDF</button><button class=feedbackTrigger_JVwE aria-label="피드백 보내기">Feedback</button></div></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">목차 보기</button></div><div class="theme-doc-markdown markdown"><header><h1>시스템 보안</h1></header><p>BioStar X 서버 보안을 강화한 후 다음 단계는 BioStar X 애플리케이션 자체의 보안 설정입니다. 기본 관리자 계정, 취약한 암호, 암호화되지 않은 장치 통신은 인프라 수준의 보안을 우회하여 시스템을 직접 침해하는 경로가 됩니다. 이 문서에서는 BioStar X의 인증, 역할 관리, 장치 암호화, 백업 전략을 통해 애플리케이션 계층의 보안 기준선을 확립하는 방법을 안내합니다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=changeDefaultAdmin>기본 관리자 아이디 및 암호 변경<a href=#changeDefaultAdmin class=hash-link aria-label="기본 관리자 아이디 및 암호 변경에 대한 직접 링크 및 복사" title="기본 관리자 아이디 및 암호 변경에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>설치 직후 기본 <strong>Administrator</strong> 계정의 로그인 아이디(<code>admin</code>)를 변경하고 강력하고 고유한 암호로 업데이트하세요.</p>
+<p>기본 크리덴셜은 공격자가 침입하는 가장 일반적인 경로 중 하나입니다. 모든 BioStar X 설치는 사전 정의된 Administrator 계정(UID: 1)이 포함되어 있으므로, 이를 변경하지 않으면 시스템이 예측 가능해지고 무차별 대입 공격이나 사전 공격에 매우 취약해집니다.</p>
+<ol>
+<li class="">
+<p>기본 관리자(<code>admin</code>) 계정으로 로그인하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>사용자</span>로 이동하세요.</p>
+</li>
+<li class="">
+<p>사용자 목록에서 <strong>Administrator</strong> 계정을 더블 클릭하세요.</p>
+<blockquote>
+<p>사용자 이름: Administrator, UID: 1</p>
+</blockquote>
+</li>
+<li class="">
+<p>사용자 편집 페이지의 <span class=cmd>권한</span> 섹션에서 아래 항목을 변경하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>로그인 ID</span>: <code>admin</code>을 고유하고 쉽게 알아볼 수 없는 사용자 아이디로 변경하세요. <code>root</code>, <code>system</code>, 또는 회사 이름을 사용하지 마세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>암호</span>: 안전한 암호로 변경하세요. BioStar X는 기본적으로 <strong>중간 강도</strong>의 암호를 사용합니다. 암호는 8~32자 길이이며, 대문자/소문자와 숫자를 모두 포함해야 합니다.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>화면 오른쪽 상단의 <span class=cmd>저장</span> 버튼을 클릭하세요.</p>
+</li>
+<li class="">
+<p>로그아웃한 후 <strong>새로운 아이디와 비밀번호</strong>로 다시 로그인하세요.</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><ul>
+<li class="">
+<p>개인 이름이나 단순한 패턴(<code>admin1</code>, <code>company2025</code>)은 <strong>사용하지 마세요</strong>.</p>
+</li>
+<li class="">
+<p>새 아이디와 비밀번호는 안전한 암호 관리자 또는 기업용 비밀번호 저장소에 저장하세요.</p>
+</li>
+<li class="">
+<p>비상 사용을 위한 <strong>보조 관리자 계정</strong>을 생성하세요.</p>
+</li>
+<li class="">
+<p>관리자 로그인 시도에 대한 <strong>감사 로그</strong>를 정기적으로 검토하세요.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=접근-권한-분리>접근 권한 분리<a href=#접근-권한-분리 class=hash-link aria-label="접근 권한 분리에 대한 직접 링크 및 복사" title="접근 권한 분리에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>BioStar X 내에서 <strong>전체 관리자</strong>, <strong>오퍼레이터</strong>, <strong>감사자</strong> 계정에 명확히 정의된 권한을 부여하고, 역할 분리를 엄격하게 적용해야 합니다.</p>
+<p>모든 작업을 하나의 최고 관리자 계정으로 처리하는 것은 불필요한 위험을 초래합니다. 역할을 분리하면 다음과 같은 효과를 얻을 수 있습니다.</p>
+<ul>
+<li class="">
+<p>실수로 인한 설정 오류 발생 가능성 감소</p>
+</li>
+<li class="">
+<p>한 명의 사용자가 무제한 권한을 갖지 않도록 내부자 위협 방지</p>
+</li>
+<li class="">
+<p>역할별 명확한 책임 소재를 통해 감사 가능성 및 규정 준수 향상</p>
+</li>
+</ul>
+<p>이러한 방식은 ISO 27001, NIST 및 기타 프레임워크의 핵심 원칙인 <strong>최소 권한</strong> 및 <strong>직무 분리</strong>와 일맥상통합니다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=설치-후-권장-조치>설치 후 권장 조치<a href=#설치-후-권장-조치 class=hash-link aria-label="설치 후 권장 조치에 대한 직접 링크 및 복사" title="설치 후 권장 조치에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><strong>기본 관리자(<code>admin</code>) 이름 변경 및 보안 설정</strong></p>
+<p>기본 관리자(<code>admin</code>) 계정은 <strong>비상시 전용 계정</strong>으로 관리합니다. 자세한 내용은 <a href=#changeDefaultAdmin>#changeDefaultAdmin</a>을 참고하세요.</p>
+</li>
+<li class="">
+<p><strong>명명된 역할 계정 생성</strong></p>
+<ul>
+<li class="">
+<p><strong>전체 관리자(Admin) 역할</strong>: 시스템 구성 및 역할 관리 전용으로, 신뢰할 수 있는 1~2명의 사람으로 제한합니다.</p>
+</li>
+<li class="">
+<p><strong>오퍼레이터(Operator) 역할</strong>: 사용자 추가 및 제거, 출입문/장치 제어 등 일상적인 운영을 담당합니다. 시스템 보안 설정 또는 감사 로그 접근은 없습니다.</p>
+</li>
+<li class="">
+<p><strong>감사자(Auditor) 역할</strong>: 로그, 보고서, 구성에 대한 읽기 전용 액세스 권한만 부여합니다. 시스템의 주요 설정을 변경할 수 없습니다.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>멀티팩터 인증(MFA) 인증 활성화</strong></p>
+<p>모든 역할 계정에 MFA를 적용하세요. 자세한 내용은 <a href=#setMfa>#setMfa</a>을 참고하세요.</p>
+</li>
+<li class="">
+<p><strong>커스텀 권한 계정 사용</strong>(필요한 경우)</p>
+<ul>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>계정</span>으로 이동한 후 <span class=cmd>커스텀 권한 추가</span> 버튼을 클릭하세요.</p>
+</li>
+<li class="">
+<p>사용자 그룹, 장치 그룹, 출입문 그룹, 엘리베이터 그룹, 출입 그룹에 걸쳐 세부적인 액세스 권한을 구성하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>메뉴 별 권한</span>에서 각 메뉴 항목에 대해 <span class=cmd>수정/보기</span> 또는 <span class=cmd>보기</span> 권한을 선택하세요.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=커스텀-감사자auditor-역할-생성-예시>커스텀 감사자(Auditor) 역할 생성 예시<a href=#커스텀-감사자auditor-역할-생성-예시 class=hash-link aria-label="커스텀 감사자(Auditor) 역할 생성 예시에 대한 직접 링크 및 복사" title="커스텀 감사자(Auditor) 역할 생성 예시에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>계정</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>커스텀 권한 추가</span> 버튼을 클릭하세요.</p>
+</li>
+<li class="">
+<p>커스텀 권한의 <span class=cmd>이름</span>을 <code>Auditor</code>로 입력하고, 설명을 추가하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>메뉴 별 권한</span>에서 아래와 같이 권한을 설정하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>사용자</span>: <span class=cmd>보기</span></p>
+</li>
+<li class="">
+<p><span class=cmd>모니터링</span>: <span class=cmd>보기</span></p>
+</li>
+<li class="">
+<p><span class=cmd>데이터</span>: <span class=cmd>보기</span></p>
+</li>
+<li class="">
+<p><span class=cmd>대시보드</span>: <span class=cmd>보기</span></p>
+</li>
+<li class="">
+<p><span class=cmd>설정</span>: 선택하지 않음</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>지정된 감사자 계정에 역할을 할당하려면 화면 가장 아래에 있는 <span class=cmd>확인</span> 버튼을 클릭하세요.</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><ul>
+<li class="">
+<p><strong>개인별로 고유한 계정</strong>을 할당하여 로그인 정보를 공유하지 마세요.</p>
+</li>
+<li class="">
+<p>분기별로 계정 역할을 검토하고 사용하지 않는 계정을 삭제합니다.</p>
+</li>
+<li class="">
+<p>이름이 변경된 기본 제공 관리자 계정은 비상시에만 사용합니다.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=강력한-암호-정책-적용>강력한 암호 정책 적용<a href=#강력한-암호-정책-적용 class=hash-link aria-label="강력한 암호 정책 적용에 대한 직접 링크 및 복사" title="강력한 암호 정책 적용에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>모든 사용자 계정에 강력한 암호 정책을 적용하도록 BioStar X를 구성하세요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=암호-정책-옵션>암호 정책 옵션<a href=#암호-정책-옵션 class=hash-link aria-label="암호 정책 옵션에 대한 직접 링크 및 복사" title="암호 정책 옵션에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ul>
+<li class="">
+<span class=cmd>비밀번호 레벨</span>
+<ul>
+<li class="">
+<p><span class=cmd>낮음</span>: 최대 32자까지 입력할 수 있습니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>보통</span>: 비밀번호를 설정할 때 8~32 영어 문자(대문자 또는 소문자)와 숫자를 조합해야 합니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>강함</span>: 비밀번호를 설정할 때 10~32 영어 문자(대문자와 소문자, 최소 한 글자 이상의 대문자 포함)와 숫자, 특수 기호를 조합해야 합니다.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>비밀번호 변경 주기</span>: 1일부터 180일까지 설정할 수 있습니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>비밀번호 최대 실패 허용 횟수</span>: 설정한 횟수를 초과하여 비밀번호를 잘못 입력하면 제한 시간 동안 로그인할 수 없습니다. 기본값은 10분 내 100회이며, <strong>15분 내 5~10회로 줄이는 것</strong>을 권장합니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>비밀번호 일일 변경 허용 횟수</span>: 사용자가 하루에 비밀번호를 변경할 수 있는 횟수를 제한할 수 있습니다.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=비밀번호-정책-강화>비밀번호 정책 강화<a href=#비밀번호-정책-강화 class=hash-link aria-label="비밀번호 정책 강화에 대한 직접 링크 및 복사" title="비밀번호 정책 강화에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>시스템</span> → <span class=cmd>시스템 보안</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>로그인 비밀 번호</span>에서 아래와 같이 설정하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>비밀번호 레벨</span>: <span class=cmd>강함</span></p>
+</li>
+<li class="">
+<p><span class=cmd>비밀번호 변경 주기</span>: 활성화 후, <strong>90일</strong>로 설정하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>비밀번호 최대 실패 허용 횟수</span>: 활성화 후 <strong>15분 내 5회</strong>로 설정하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>비밀번호 일일 변경 허용 횟수</span>: 활성화 후 최대 <strong>5회</strong>로 설정하세요.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>화면 오른쪽 하단의 <span class=cmd>확인</span>을 클릭하세요.</p>
+</li>
+</ol>
+<p>모든 사용자에게 새로운 비밀번호 정책을 공지하세요.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=세션-보안>세션 보안<a href=#세션-보안 class=hash-link aria-label="세션 보안에 대한 직접 링크 및 복사" title="세션 보안에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p><strong>메뉴 경로</strong>: <span class=cmd>설정</span> → <span class=cmd>시스템</span> → <span class=cmd>시스템 보안</span> → <span class=cmd>세션 보안</span></p>
+<p>각 계정이 한 번에 하나의 활성 세션에만 사용될 수 있도록 <span class=cmd>동시 접속 허용</span>을 비활성화하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>활성</span>: 동일한 크리덴셜로 여러 사용자가 동시에 로그인할 수 있습니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>비활성</span>: 계정당 하나의 로그인만 허용합니다. 새 로그인이 발생하면 이전 세션은 자동 로그아웃됩니다.</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>계정 공유가 감지되지 않으면 누가 어떤 작업을 수행했는지 알 수 없습니다.</p>
+</li>
+<li class="">
+<p>탈취된 크리덴셜을 획득한 공격자는 정당한 사용자가 활동 중인 동안에도 눈에 띄지 않게 로그인할 수 있습니다.</p>
+</li>
+<li class="">
+<p>감사 로그는 특정 사용자의 작업을 추적할 수 없으므로 그 가치가 떨어지게 됩니다.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=setMfa>멀티팩터 인증 (MFA)<a href=#setMfa class=hash-link aria-label="멀티팩터 인증 (MFA)에 대한 직접 링크 및 복사" title="멀티팩터 인증 (MFA)에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>BioStar X의 모든 고위 권한 계정(관리자, 운영자)에 대해 지문 인증을 추가하여 멀티팩터 인증을 활성화할 수 있습니다.</p>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>BioStar X에서 작동 방식</strong><ul>
+<li class="">
+<p>슈프리마 BioMini 또는 BioMini Plus 2와 같은 지문 스캐너를 사용하여 MFA를 구현합니다.</p>
+</li>
+<li class="">
+<p>사용자가 로그인 아이디와 비밀번호를 입력하면 시스템에서 지문 스캔을 요청합니다.</p>
+</li>
+</ul></div></div>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>관리자 계정에 MFA가 활성화되어 있고, 지문 인식에 실패하면 계정이 잠길 수 있습니다.</p>
+</li>
+<li class="">
+<p>클라우드 인터페이스를 통한 로그인 시 MFA는 지원되지 않습니다.</p>
+</li>
+<li class="">
+<p>Active Directory 또는 지원되지 않는 서비스를 통해 인증된 계정에는 MFA를 활성화할 수 없습니다.</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=단계별-안내>단계별 안내<a href=#단계별-안내 class=hash-link aria-label="단계별 안내에 대한 직접 링크 및 복사" title="단계별 안내에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>BioStar X 서버 또는 클라이언트 PC에 지문 스캐너를 연결하고 설치하세요.</p>
+</li>
+<li class="">
+<p>BioStar X에서 <span class=cmd>사용자</span>로 이동하세요.</p>
+</li>
+<li class="">
+<p>사용자 프로필을 열고 지문을 등록하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>권한</span> 섹션에서 <span class=cmd>다중 인증 로그인</span> 항목을 <span class=cmd>사용</span>으로 설정하세요.</p>
+</li>
+<li class="">
+<p>변경 사항을 적용하려면 화면 오른쪽 상단의 <span class=cmd>저장</span> 버튼을 클릭하세요.</p>
+</li>
+</ol>
+<p>로그아웃 후 유효한 크리덴셜을 입력하고, 지문을 스캔하여 로그인하세요.</p>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례 및 안전 조치</strong><ul>
+<li class="">
+<p>스캐너 오류를 대비하여 다른 손가락으로 대체 지문을 등록하세요.</p>
+</li>
+<li class="">
+<p>바이오메트릭 장치 오류 발생 시 복구할 수 있도록 기본 제공되는 관리자 계정('비상용' 계정)을 백업 계정으로 설정해 두세요.</p>
+</li>
+<li class="">
+<p>멀티팩터 인증(MFA)이 활성화된 계정을 문서화하고 복구 메커니즘을 유지 관리하세요.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=secureComm>장치와의 보안 통신<a href=#secureComm class=hash-link aria-label="장치와의 보안 통신에 대한 직접 링크 및 복사" title="장치와의 보안 통신에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>디지털 인증서(TLS/SSL 방식)를 사용하여 BioStar X와 연결된 장치 간 트래픽을 암호화하려면 <span class=cmd>장치와 보안 통신</span>을 활성화하세요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=옵션-a-서버-생성-인증서기본값>옵션 A: 서버 생성 인증서(기본값)<a href=#옵션-a-서버-생성-인증서기본값 class=hash-link aria-label="옵션 A: 서버 생성 인증서(기본값)에 대한 직접 링크 및 복사" title="옵션 A: 서버 생성 인증서(기본값)에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<p>BioStar X에서 인증서를 생성하여 장치에 자동으로 프로비저닝합니다.</p>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><p>이 기능을 비활성화했다가 다시 활성화하면 새 인증서가 생성되어 장치를 수동으로 재설정해야 합니다.</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=옵션-b-외부-인증서엔터프라이즈-사용-권장>옵션 B: 외부 인증서(엔터프라이즈 사용 권장)<a href=#옵션-b-외부-인증서엔터프라이즈-사용-권장 class=hash-link aria-label="옵션 B: 외부 인증서(엔터프라이즈 사용 권장)에 대한 직접 링크 및 복사" title="옵션 B: 외부 인증서(엔터프라이즈 사용 권장)에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>조직의 인증서 체인과 개인 키를 업로드할 수 있습니다.</p>
+</li>
+<li class="">
+<p>엔터프라이즈 PKI와의 연동이 용이합니다.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=단계별-안내-1>단계별 안내<a href=#단계별-안내-1 class=hash-link aria-label="단계별 안내에 대한 직접 링크 및 복사" title="단계별 안내에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>관리자 계정으로 BioStar X에 로그인하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>시스템</span> → <span class=cmd>시스템 보안</span> → <span class=cmd>고급 보안 설정</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>장치와 보안 통신</span>를 <span class=cmd>사용</span>으로 설정하세요.</p>
+</li>
+<li class="">
+<p>외부 CA 인증서를 사용한다면 <span class=cmd>외부 인증서 사용</span>를 <span class=cmd>사용</span>으로 설정하세요.</p>
+<ul>
+<li class="">루트 CA, 공개 인증서 및 개인 키를 업로드하세요.</li>
+</ul>
+</li>
+<li class="">
+<p>적용하고 장치가 보안 채널을 통해 연결되는지 확인하세요.</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><ul>
+<li class="">
+<p>항상 <strong>강력한 암호 키</strong>(RSA 2048 이상 또는 이에 상응하는 ECC)를 사용하세요.</p>
+</li>
+<li class="">
+<p>장치 연결 방식(호스트 이름 또는 IP 주소)과 일치하는 적절한 <strong>CN/SAN 값</strong>을 가진 인증서를 사용하세요.</p>
+</li>
+<li class="">
+<p>만료 전에 인증서를 교체하고 갱신 일정을 관리하세요.</p>
+</li>
+</ul></div></div>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>로그 업로드 참고</strong><p><span class=cmd>로그 업로드</span>가 <span class=cmd>수동</span>으로 설정되어 있다면, <strong>이벤트 가시성 지연</strong> 또는 <strong>감사 추적 누락</strong>의 위험이 있습니다. 가능하다면 <span class=cmd>로그 업로드</span>를 <span class=cmd>자동</span>으로 유지하세요.</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=장치-해시키-수동-관리>장치 해시키 수동 관리<a href=#장치-해시키-수동-관리 class=hash-link aria-label="장치 해시키 수동 관리에 대한 직접 링크 및 복사" title="장치 해시키 수동 관리에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>BioStar X와 장치 간에 사용되는 암호화 키를 수동으로 제어하려면 <span class=cmd>장치 해시키 수동 관리</span>를 활성화해야 합니다. 이 기능은 탬퍼 방어 기능을 활성화합니다. 물리적 변조가 감지되면 기기에서 중요한 데이터가 자동으로 삭제됩니다.</p>
+<div class="theme-admonition theme-admonition-important admonition_Gfwi alert alert--important"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>중요</div><div class=admonitionContent_UjKb><p><a href=#secureComm>#secureComm</a>이 전송 중인 데이터를 보호하지만, <span class=cmd>장치 해시키 수동 관리</span>는 아래와 같은 추가 기능을 제공합니다.<ul>
+<li class="">
+<p><strong>데이터 암호화 키가 자동으로 생성되는 것이 아니라 관리자가 관리</strong>합니다.</p>
+</li>
+<li class="">
+<p><strong>탬퍼 방어</strong> 기능을 활성화합니다. 장치가 무단 접근 또는 조작을 감지하면 저장된 사용자 정보, 로그 및 암호화 키를 삭제합니다.</p>
+</li>
+</ul></div></div>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><strong>관리자 계정이 아닌 사용자가 로그인 비밀번호 또는 PIN을 가지고 있다면 수동 키 관리를 적용할 수 없습니다</strong>.</p>
+</li>
+<li class="">
+<p>활성화하기 전에 해당 로그인 정보를 제거하세요.</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=단계별-안내-2>단계별 안내<a href=#단계별-안내-2 class=hash-link aria-label="단계별 안내에 대한 직접 링크 및 복사" title="단계별 안내에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>관리자 계정으로 BioStar X에 로그인하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>시스템</span> → <span class=cmd>시스템 보안</span> → <span class=cmd>고급 보안 설정</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>장치 해시키 수동 관리</span>를 <span class=cmd>사용</span>으로 설정하세요.</p>
+</li>
+<li class="">
+<p>경고 팝업을 읽고 확인하세요.</p>
+</li>
+<li class="">
+<p>적용하기 전에 장치에서 관리자 이외의 사용자 비밀번호/PIN 로그인을 모두 제거하세요.</p>
+</li>
+<li class="">
+<p>메시지가 표시되면 암호화 키와 관리자 비밀번호를 변경하세요.</p>
+</li>
+<li class="">
+<p>장치가 여전히 사용자, 로그 및 이벤트를 동기화할 수 있는지 확인하세요.</p>
+</li>
+<li class="">
+<p>키 변경 사항을 문서화(날짜, 담당 관리자, 다음 변경 예정일)하세요.</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><ul>
+<li class="">
+<p>장치 해시키를 매년 또는 6개월마다 정기적으로 변경하세요.</p>
+</li>
+<li class="">
+<p>모든 변경 사항을 기록하고 안전한 저장소에 보관하세요.</p>
+</li>
+<li class="">
+<p>실험실/임시 장치에서 탬퍼 이벤트를 테스트하세요.</p>
+</li>
+<li class="">
+<p>심층 방어(defense-in-depth)를 위해 <a href=#secureComm>#secureComm</a>과 함께 사용하세요.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=시스템-백업>시스템 백업<a href=#시스템-백업 class=hash-link aria-label="시스템 백업에 대한 직접 링크 및 복사" title="시스템 백업에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p><strong>시스템 백업</strong> 기능을 사용하여 BioStar X의 데이터베이스, 시스템 설정, 키 값을 정기적으로 백업하세요.</p>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>BioStar X와 MSSQL이 서로 다른 서버에 설치된 경우, <strong>시스템 백업/복원</strong> 기능을 사용할 수 없습니다.</p>
+</li>
+<li class="">
+<p>BioStar X 백업 기능(수동 또는 예약)은 <strong>암호화되지 않습니다</strong>.</p>
+</li>
+<li class="">
+<p>BioStar X 복원 기능은 암호화된 백업을 지원하지 않습니다.</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=수동-백업-설정>수동 백업 설정<a href=#수동-백업-설정 class=hash-link aria-label="수동 백업 설정에 대한 직접 링크 및 복사" title="수동 백업 설정에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<p><strong>메뉴 경로</strong>: <span class=cmd>설정</span> → <span class=cmd>시스템</span> → <span class=cmd>시스템 백업</span></p>
+<ul>
+<li class="">
+<p><span class=cmd>백업 파일 저장 경로</span>: 디렉터리를 지정하세요. 경로는 존재해야 하며 적절한 쓰기 권한이 있어야 합니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>최대 백업파일 수</span>: 1~100개까지 설정할 수 있으며, 일일 예약의 경우 최소 <strong>7~10개의 순환 백업</strong>을 유지하도록 권장합니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>백업하기</span>: 필요에 따라 즉시 백업을 실행합니다. 업그레이드 또는 주요 변경 전에 유용합니다.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=시스템-자동-백업>시스템 자동 백업<a href=#시스템-자동-백업 class=hash-link aria-label="시스템 자동 백업에 대한 직접 링크 및 복사" title="시스템 자동 백업에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p><span class=cmd>빈도</span>: <span class=cmd>일간</span> / <span class=cmd>주간</span> / <span class=cmd>월간</span></p>
+</li>
+<li class="">
+<p><span class=cmd>시간</span>: 시간을 지정하세요. BioStar X의 서버 시간대에 맞춰 예약이 실행됩니다.</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><p>운영 환경의 경우 <strong>사용자가 적은 시간대에 매일 백업</strong>을 권장합니다.<blockquote>
+<p>예: 현지 시간 오전 2시</p>
+</blockquote></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=자동-백업-구성>자동 백업 구성<a href=#자동-백업-구성 class=hash-link aria-label="자동 백업 구성에 대한 직접 링크 및 복사" title="자동 백업 구성에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>시스템</span> → <span class=cmd>시스템 백업</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>시스템 자동 백업</span>을 설정하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>빈도</span>: <span class=cmd>일간</span></p>
+</li>
+<li class="">
+<p><span class=cmd>시간</span>: 02:00 (또는 다른 사용자가 적은 시간대)</p>
+</li>
+<li class="">
+<p><span class=cmd>최대 백업파일 수</span>: 30</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>설정을 저장하려면 <span class=cmd>확인</span>을 클릭하세요.</p>
+</li>
+<li class="">
+<p>대상 디렉터리에서 백업 파일을 생성했는지 확인하세요.</p>
+</li>
+<li class="">
+<p>스테이징 환경에서 <strong>복원 과정</strong>을 주기적으로 테스트하세요.</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><p>서버가 UPS로 보호되는지 확인하세요. '진행 중' 상태가 표시되는 동안에는 작업을 중단하지 마세요. 백업 또는 복원을 중단하면 데이터베이스가 손상될 수 있습니다.</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=디렉터리-연동>디렉터리 연동<a href=#디렉터리-연동 class=hash-link aria-label="디렉터리 연동에 대한 직접 링크 및 복사" title="디렉터리 연동에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>디렉터리 연동을 통해 BioStar X는 <strong>Entra ID(Azure AD)</strong> 또는 **Microsoft Active Directory(AD)**와 같은 엔터프라이즈 ID 시스템과 연결할 수 있습니다.</p>
+<ul>
+<li class="">
+<p><strong>강화된 보안</strong>: 암호 규칙, 멀티팩터 인증(MFA) 및 조건부 액세스에 대한 엔터프라이즈 정책을 BioStar X에 자동 적용할 수 있습니다.</p>
+</li>
+<li class="">
+<p><strong>중앙 집중식 제어</strong>: 사용자 수명 주기가 Entra ID/AD에서 관리되므로 계정 만료 위험이 줄어듭니다.</p>
+</li>
+<li class="">
+<p><strong>감사 및 규정 준수</strong>: 모든 사용자 작업이 회사 계정과 연결됩니다.</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>디렉터리 연동에는 <strong>어드밴스</strong>(Advanced) 라이선스가 필요합니다.</div></div>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><ul>
+<li class="">
+<p>권한이 제한된 <strong>전용 Entra ID/AD 서비스 계정</strong>을 사용하세요.</p>
+</li>
+<li class="">
+<p>동기화를 <strong>관련 그룹</strong>으로만 제한하세요.</p>
+</li>
+<li class="">
+<p>Active Directory 연결에는 항상 <strong>LDAPS</strong>를 사용하세요.</p>
+</li>
+<li class="">
+<p>동기화된 계정을 주기적으로 검토하여 오래된 항목이 있는지 확인하세요.</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=microsoft-entra-id-단계별-안내>Microsoft Entra ID 단계별 안내<a href=#microsoft-entra-id-단계별-안내 class=hash-link aria-label="Microsoft Entra ID 단계별 안내에 대한 직접 링크 및 복사" title="Microsoft Entra ID 단계별 안내에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>관리자 계정으로 BioStar X에 로그인하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>디렉토리 연동</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>디렉토리 서비스</span>에서 <span class=cmd>Microsoft Entra ID</span>를 선택하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>디렉토리 서버</span>를 구성하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>클라이언트 ID</span>: <strong>Entra ID</strong>에서 등록한 애플리케이션의 <strong>클라이언트 아이디</strong>(<strong>Client ID</strong>)를 입력하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>클라이언트 시크릿</span>: <strong>Entra ID</strong>에서 등록한 애플리케이션의 <strong>인증서 및 암호</strong>(<strong>Certificates & secrets</strong>)에 추가한 <strong>클라이언트 암호</strong>(<strong>Client secrets</strong>)를 입력하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>주 도메인</span>: <strong>Entra ID</strong>에서 조직을 만들 때 입력한 기본 도메인 이름을 입력하세요.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>BioStar X에 사용자 그룹 정보를 가져오려면 <span class=cmd>연결</span> 버튼을 클릭하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>Entra ID로 BioStar X 로그인</span>을 활성화하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>리디렉션 URI</span>를 복사하고, <strong>Entra ID</strong> 포털의 SSO 리디렉션 설정에 붙여넣으세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>동기화 모드</span>에서 원하는 동기화 방식을 선택하세요.</p>
+</li>
+<li class="">
+<p>설정을 저장하려면 <span class=cmd>확인</span> 버튼을 클릭하세요.</p>
+</li>
+</ol>
+<p>사용자 목록을 확인하여 동기화가 완료되었는지 점검하세요.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><strong>Entra ID</strong>에서 애플리케이션을 등록하는 방법은 <a href=https://learn.microsoft.com/entra/identity-platform/quickstart-register-app target=_blank rel="noopener noreferrer" class="">다음 링크</a>를 참고하세요.</p>
+</li>
+<li class="">
+<p><strong>Entra ID</strong>에서 <strong>인증서 및 암호</strong> 설정 방법은 <a href="https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret" target=_blank rel="noopener noreferrer" class="">다음 링크</a>를 참고하세요.</p>
+</li>
+<li class="">
+<p><strong>테넌트 ID</strong>는 <strong>Entra ID</strong>에서 등록한 애플리케이션의 <strong>개요</strong>(<strong>Overview</strong>)에서 확인할 수 있습니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>주 도메인</span> 정보는 <strong>Entra ID</strong>의 <strong>개요</strong>(<strong>Overview</strong>)에서 확인할 수 있습니다.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/biostarx-setting-directory-primary-domain.png width=1000 height=475 /></p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=microsoft-active-directory-단계별-안내>Microsoft Active Directory 단계별 안내<a href=#microsoft-active-directory-단계별-안내 class=hash-link aria-label="Microsoft Active Directory 단계별 안내에 대한 직접 링크 및 복사" title="Microsoft Active Directory 단계별 안내에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>관리자 계정으로 BioStar X에 로그인하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>설정</span> → <span class=cmd>디렉토리 연동</span>으로 이동하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>디렉토리 서비스</span>에서 <span class=cmd>Microsoft Active Directory</span>를 선택하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>디렉토리 서버</span>를 구성하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>서버 주소</span>: AD 서버의 IP 주소 또는 호스트 이름입니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>사용자명</span> / <span class=cmd>비밀번호</span>: AD 서비스 계정 크리덴셜입니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>기본 Domain 명</span>: AD 도메인의 고유 이름입니다.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>암호화된 연결(LDAPS)을 사용하려면 <span class=cmd>암호화 사용</span>을 활성화하세요.</p>
+<ul>
+<li class="">
+<p>AD 서버에 AD 인증서 서비스를 설치하세요.</p>
+</li>
+<li class="">
+<p>루트 인증서를 내보내고 <em>.jks</em> 파일로 변환하여 BioStar X 설치 경로에 배치하세요.</p>
+</li>
+<li class="">
+<p>BioStar X에서 <span class=cmd>키 저장소 비밀번호</span>를 입력하세요.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>BioStar X에 사용자 그룹 정보를 가져오려면 <span class=cmd>연결</span> 버튼을 클릭하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>사용자 그룹 필터</span>에서 필요 없는 그룹은 선택 해제하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>Active Directory로 BioStar X 로그인</span>을 활성화하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>동기화 모드</span>에서 원하는 동기화 방식을 선택하세요.</p>
+</li>
+<li class="">
+<p>설정을 저장하려면 <span class=cmd>확인</span> 버튼을 클릭하세요.</p>
+</li>
+</ol>
+<p>사용자 목록을 확인하여 동기화가 완료되었는지 점검하세요.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=시스템-로그-설정>시스템 로그 설정<a href=#시스템-로그-설정 class=hash-link aria-label="시스템 로그 설정에 대한 직접 링크 및 복사" title="시스템 로그 설정에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p><strong>메뉴 경로</strong>: <span class=cmd>설정</span> → <span class=cmd>서버</span> → <span class=cmd>서버</span></p>
+<p>감사 및 문제 해결에 필요한 충분한 데이터를 보존하도록 BioStar X 로깅을 구성하세요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=시스템-로그-저장-기간>시스템 로그 저장 기간<a href=#시스템-로그-저장-기간 class=hash-link aria-label="시스템 로그 저장 기간에 대한 직접 링크 및 복사" title="시스템 로그 저장 기간에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p><span class=cmd>로그 업로드</span>: 이벤트 로그의 업로드 방법을 선택하세요.</p>
+<ul>
+<li class="">
+<p><span class=cmd>자동</span>(기본값): 보존 기간이 지나면 로그를 자동 삭제합니다.</p>
+</li>
+<li class="">
+<p><span class=cmd>수동</span>: 수동으로 로그를 삭제해야 합니다.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><span class=cmd>시스템 로그 저장 기간</span>: 1~120일(기본값: 60일)</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>모범 사례</strong><p>규정 준수가 중요한 환경에서는 보존 기간을 90~120일로 설정하고 로그를 SIEM으로 전송하세요.</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=시스템-로그-수준-설정>시스템 로그 수준 설정<a href=#시스템-로그-수준-설정 class=hash-link aria-label="시스템 로그 수준 설정에 대한 직접 링크 및 복사" title="시스템 로그 수준 설정에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<p>하위 시스템별: 디버그, 네트워크, SQL, 시스템, 웹, 웹소켓</p>
+<table><thead><tr><th>수준<th>설명<tbody><tr><td>추적<td>모든 항목 캡처(매우 상세)<tr><td>디버그<td>개발자 수준의 상세 로그<tr><td>정보<td>운영 이벤트, 성공 연결(대부분 기본값)<tr><td>경고<td>잠재적 문제<tr><td>에러<td>실패만</table>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>주의</div><div class=admonitionContent_UjKb><p>운영 환경에서 <strong>추적</strong> 또는 <strong>디버그</strong> 모드로 실행하면 과도한 로그가 생성되어 성능 저하 및 디스크 용량 부족 현상이 발생할 수 있습니다. 단기적인 문제 해결 용도로만 사용하세요.</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=biostar-x-기본-로그-수준>BioStar X 기본 로그 수준<a href=#biostar-x-기본-로그-수준 class=hash-link aria-label="BioStar X 기본 로그 수준에 대한 직접 링크 및 복사" title="BioStar X 기본 로그 수준에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>디버그, SQL, WebSocket: <strong>사용 안 함</strong></p>
+</li>
+<li class="">
+<p>네트워크, 시스템, 웹: <strong>정보</strong></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=서버-포트-구성>서버 포트 구성<a href=#서버-포트-구성 class=hash-link aria-label="서버 포트 구성에 대한 직접 링크 및 복사" title="서버 포트 구성에 대한 직접 링크 및 복사" translate=no>​</a></h2>
+<p>BioStar X 포트를 명시적으로 구성하고 가능하다면 보안 채널을 우선 사용하세요. 시스템 액세스에는 기본 HTTPS 포트(<code>443</code>)를 사용하고, 장치 통신 포트는 신뢰할 수 있는 네트워크로만 제한해야 합니다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=https-포트-변경>HTTPS 포트 변경<a href=#https-포트-변경 class=hash-link aria-label="HTTPS 포트 변경에 대한 직접 링크 및 복사" title="HTTPS 포트 변경에 대한 직접 링크 및 복사" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><span class=cmd>BioStar X Service Manager</span>(<code>http:/127.0.0.1:28088/</code>)를 실행하세요.</p>
+</li>
+<li class="">
+<p>왼쪽 사이드 메뉴에서 <span class=cmd>SERVICE SETTINGS</span>를 클릭하세요.</p>
+</li>
+<li class="">
+<p><span class=cmd>Unified Gateway Service</span>에서 <span class=cmd>HTTPS Port</span>(기본값: 443) 필드로 이동하세요.</p>
+</li>
+<li class="">
+<p>포트 번호를 원하는 값으로 변경하세요.</p>
+<blockquote>
+<p>예: 8443</p>
+</blockquote>
+</li>
+<li class="">
+<p><span class=cmd>Apply</span> 버튼을 클릭하고, 필요시 서비스를 재시작하세요.</p>
+</li>
+<li class="">
+<p>변경한 포트에 맞게 방화벽 규칙 및 클라이언트 연결을 업데이트하세요.</p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>이 페이지가 도움이 되었나요?</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>도움이 되었습니다.</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>개선이 필요합니다.</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="문서 페이지"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/how-to/bsx_hardening/hardening-biostarx><div class=pagination-nav__sublabel>이전</div><div class=pagination-nav__label>BioStar X 강화</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/how-to/bsx_hardening/bsx-privacy-data-security><div class=pagination-nav__sublabel>다음</div><div class=pagination-nav__label>개인 데이터 보안</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=http://pf.kakao.com/_xnkPxes target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAACWklEQVR42u2Xz0sVURTHPxNq1gP7YQbRol1QRJDUJiKXFgRFltQqKoI20kq+0C4o8VCbiAghywJXRdR/0ELaCC1aPHxBCYZEVJRPLMly2twHwzjzmjvzFgbvwDB3zp177mfuueecO0EYhqwWWcMqkibMfwFDGIYrLh8xs6DofLUrSJo8CIK0iTuBc8AJ4ADQHuleBCaB58AjSV/TYNIkE4yZtQJXgUGglGEBFoCbwJCkpYbBmNk24IVbCV+ZBI5L+lgYxrnlFbCzwLZ8Cxysua0ezL+iabwgCG78eKHQNrN+oDehawnwrSG9zl7uPKPY8zNgn6Q2YD3QB3yI9G8CbnvYywZjZuuA7ojqoaQ+YIuZ3XFRNQEcBqoZV6fb2U2VlhR9R6T9Cxg0s1PAk4j+LLAHGHFwAO+B08A8cAU4mmD3p6+b2iLtNy4SLsTe2QXMxPRjwA7gO3AS+FbHbmaYaNZbTtDVZDvQGXkeAG4BDyQtAuU6djPD/I6095pZBzCakD9agaGIrsvdSwl2ai73hlmItNuB65KeAkeA+4ABPW7yyx4hXs0DU435e8DMRoEpSZdcndoNvAQ2u3c2AGtrds1sYyxAypJ+1INJLQdmNpySGz67PFPyTHznJY3lLQc3gOkEfVcOkAngce4MLGkeOAZ8KVibZoEzkpYLHTsllYFDQCUnSAXokTTbkDOwpAow7AnxB7gL7Jf0LuuglgYfqafcQWxE0rTv4Lww94BrwFYX0nPAjKS5Il/iC1MFLroECPCpkcuaFSYEXgP9PnvAV4Lmj38TpgnTIPkLvkTfMFt8BpQAAAAASUVORK5CYII="/></a><li><a href=https://blog.naver.com/supremakr target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB00lEQVR42u3XTYhOURzH8c8jmZqFt7AYPZSwEBqxIWUhjIS8rjFFKWzUZGNh5dkSSWa8NCEUOxJWUt5Tj42VRNkwRiKaweb/1Olpjnk25pmae+p0z7nnd+79/n/3f869t1SpVIyWMs4oKgVMAVPAFDBjGuZa1JUZ/Xk8w9aRgNkRdVZGPwFLcQOrm/2YbuEbStg7UjDz0YsXOItynL+Onmi31c3Zhsu4jeNDuNuGU3gVQe2PlLhQE4zPwByN6GEJOrAI/fg+hL4Hu5N+B/ZhHZ5gCh5hdowvxuZo9w/nzCAu4XH0y9iZ0W5IQG6iCx8xGd1xvjMBuYtj+FR/oZwzp3EILXiPaWjPaNfE8UMk/2DAXMRCzAwnoA8b8QvvcK6RnJkYx9ZYQfAno/2ZaFujPT2Z8yOZ24JJ0Z7RqDO7IonLCdjTjPYqDkdePEc1ood7+IzXCXBNs7bR1dSHFXWrqDejfYkDGMA8bIkgq9gTmjMBUcu/9eHYP52pPf83WIU5eIgHidXduI8vdTl2B5vCoWok80CMf43gtmNBjC/HwfTmpSb8HczFsthzpsa+096sF2UnrgQInBwugf93+Y23OJHsRU2BORK1+LgqYAqYAmZsw/wF+XNdKdEcW/QAAAAASUVORK5CYII="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR42u2XOwrCQBCGv5UQy2DAJr3gLcRzeI8tbez2IJ4lt4mIViJrk2IZSCGYzYL/DwvzYOGDmdmHizFSilYUJMEIRjC/UvXthhCCDe2AM3AEOuAFPL337ewwRnugB5okVo8re5kuBmTRnjkY/wSsAZelZ4y2if0ArqVM0/u/RxuYenM0Jud0Ai9ZpiGxN6Z8t9ww7UT/3E1Ot7ZgBCMYAKfvrWAEI5iZ9QEdXBhIqJQhWAAAAABJRU5ErkJggg=="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR42u3XP0pDQRDH8U9EIdFCtFARbGJnobWVhwhoYeufA4g5xBNPIJ4g4iU8hIiipVgoahEVwWez1cO8vJgNpNgfbLM7DN+dmZ1ha3meGxdNGCMlmASTYBLMqDXZzyDLshqO0MIC6mhg9o/L/OANH/jEEy5x2m6386FhsIeTASI9FxY0sRkAz2KkaSdCBrZj1Uyzx/49HivCrMaCme+xf421EP78nz4GhpkuOXvFAbZwU2I3EwtmqoLNFTaQDfFQqhlVUB372B1pn8F3SXQaOMQxlvv4iALTDQ2uqHU8YLGijygwLz1gVgbIwHOsAr6NUFN3sWA6EWA6sdJ0Hgq4haXCkCwOyy6+wpB8D4PyIvjoq1r6NyWYBJNgEkyC4Rd70TD9XaltowAAAABJRU5ErkJggg=="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVR42u1WQVLiQBR9/zelBRtzhMwNnBNMPIHMCcATjGwse0VYNdEFzAnQG+AJDCeQGwxHiCssNf+76ViRASXgzMLiVaUq0A15ef/91x/YYYcdviCoymbnXAggYuZARIJV+5g5y/N8RkRTa+3sU8k450IiGhFRVPVtVTVV1ZN1SNE6RIwxd6oaAJgAGItIVihQ3PvPr4oxcwCgCeAHgExEvn9EqPYRGWPMSFUDEelZa+OKwgyTJIkBdIloBOBoY2WccyEz/xGRibU2quItY8ydiEzPz8+PLi4ublU1EpFv76nzrjLMfOjrPl7x0AhAk4gOVPUewNhamwIIVTUgotD//gZA5K+rTcsUAgARZeUv4zgOGo3GQFXbrxITAcCvJEmG8/m8V6/XfxLRDABEJGNmeN9t5hkRCZgZzPyGzP7+/lBVWwCmAHpENMvz/JCZuwBOG41GcHZ2dvKXJ4iCrQxcvFm5NMzcAjCbz+dHcRwXa9PBYDB+enq6VdW2c+7alwwA1soarpySRE1PsFciAgDodDqZqvbK+6qANwixwJOZLlt/fn4uVDj452QKM9dqtfC9DgRw/z+UKdq8G8dxsNhl3sQr42BrAxctDgDW2jRJkmsArXq9fuec64nIlIhCY0zXZ8zvknmLo2E7MostXWBvb+/08fERAFrMPGJ+I/D1w8NDvCwiVDXbJmeWhlWn08kAtJ1zV0TU9Gmbqeq4rMiiMsaYrQ7K1P/ZMYDh4qJ/cLqG6Y9VdWUHrmVga+2MiFIiipIk6W4yvV1eXnb9ITnZeoTI8/zEzzNxv9+PiOimnMgL6RqWS6OqxyIS+Thof9qkx8xXflCqiomItD9l0ltC6hBA+NEM7NVLq8zAO+yww5fEC4LXWfVMU1ZGAAAAAElFTkSuQmCC width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"localStorage"},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>
