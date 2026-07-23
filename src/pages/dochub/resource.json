@@ -932,10 +932,10 @@
         ],
         "version": "",
         "manuals": {
-            "ko": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.01_KO_260622.pdf",
-            "en": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.01_EN_260622.pdf",
-            "es": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.01_ES_260622.pdf",
-            "ja": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.01_JA_260622.pdf"
+            "ko": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.02_KO_260722.pdf",
+            "en": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.02_EN_260722.pdf",
+            "es": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.02_ES_260722.pdf",
+            "ja": "device/corestation_setup_manager/CoreStation Setup Manager_UG_1.02_JA_260722.pdf"
         },
         "release_notes": {
             "ko": "",
@@ -946,7 +946,7 @@
             "ko": "",
             "en": ""
         },
-        "release_date": "2026-06-22"
+        "release_date": "2026-07-22"
     },
     {
         "category": "apps",
