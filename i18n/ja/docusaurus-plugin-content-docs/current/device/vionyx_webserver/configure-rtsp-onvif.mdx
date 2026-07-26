@@ -1,0 +1,80 @@
+---
+id: configure-rtsp-onvif
+title: RTSPおよびONVIF連携
+description: RTSPストリーミング接続先URLの規則とONVIFプロトコルを使って、他社NVR/VMSと連携する方法を案内します。
+keywords:
+  - RTSP
+  - ONVIF
+  - NVR
+  - VMS
+  - ストリーミング
+  - 連携
+---
+
+カメラは、他社NVR(Network Video Recorder)およびVMS(Video Management Software)との標準連携のために、RTSP(Real-Time Streaming Protocol)ストリーミングとONVIF(Open Network Video Interface Forum)プロトコルをサポートします。
+
+次のような場合は、この文書を参照してください。
+
+* 他社NVR/VMSでRTSP経由でカメラ映像を取得したいとき
+
+* ONVIFをサポートするNVR/VMSとカメラを連携したいとき
+
+* RTSP接続先URLやONVIF連携に必要なアカウント情報を確認したいとき
+
+## RTSPストリーミング
+
+### ポートおよび転送方式
+
+RTSPポートと転送方式は<Cmd sid='network' product='cam' />設定で変更できます。 ポート設定、映像転送、および暗号化設定の詳細は、次の文書を参照してください。
+
+* [ポート設定](configure-network#port-settings)
+
+* [映像転送と暗号化の設定](configure-network#rtsp-settings)
+
+:::info
+
+RTSPポートをデフォルト値(554)から変更した場合は、下の**Connection URL**の`{port}`部分も変更後のポート番号に入力してください。
+
+:::
+
+### RTSP Connection URL
+
+他社NVR/VMSでカメラ映像をRTSPで取得するには、チャンネルと解像度に合うConnection URLを登録する必要があります。
+
+| チャンネル | ストリーム | Connection URL |
+| --- | --- | --- |
+| Channel 1 - Fisheye(フィッシュアイ映像) | メインストリーム(高解像度) | `rtsp://{id}:{passwd}@{IP_address}:{port}/fisheye_primary` |
+| Channel 1 - Fisheye(フィッシュアイ映像) | サブストリーム(低解像度) | `rtsp://{id}:{passwd}@{IP_address}:{port}/fisheye_secondary` |
+| Channel 2 - Dewarp(平面歪み補正映像) | メインストリーム(高解像度) | `rtsp://{id}:{passwd}@{IP_address}:{port}/dewarp_primary` |
+
+* `{id}`, `{passwd}`: カメラに接続するアカウントのIDとパスワードを入力します。
+
+* `{IP_address}`: カメラのIPアドレスを入力します。
+
+* `{port}`: RTSPポート番号を入力します。 デフォルト値は554です。
+
+## ONVIF連携
+
+### サポート仕様
+
+カメラはONVIF **Profile S**および**Profile T**をサポートします。
+
+### ONVIF専用アカウントの準備
+
+セキュリティ標準仕様により、デフォルトの管理者(admin)アカウントではONVIF接続をサポートしません。 ONVIFで連携する前に、ONVIF専用のオペレーターアカウントを追加し、そのアカウント情報でNVR/VMSに接続してください。 オペレーターアカウントの追加方法は<DocLink docId='device/vionyx_webserver/manage-operators' />を参照してください。
+
+### 連携時の注意事項
+
+* **設定同期保護**
+
+   Web設定エンジンとのデータ整合性を維持し、誤動作を防ぐため、ONVIF経由で解像度、ビットレート、イメージセンサー属性などのカメラ内部設定値を変更する書き込み(Write)操作はサポートしません。
+
+* **VMS自動最適化機能の無効化**
+
+   一部のVMSは、接続時にカメラ設定を自動変更する機能(Video Optimization、Auto Configurationなど)を提供します。 この機能がオンだと連携エラーが発生する場合があるため、VMS側でカメラ設定の自動修正/最適化オプションを無効にしてください。
+
+:::caution
+
+RTSP転送方式を変更すると、既存のRTSPセッションを再接続する必要があります。 NVR/VMSでも、選択した転送方式と互換になるように設定してください。
+
+:::

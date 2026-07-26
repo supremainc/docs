@@ -1,0 +1,80 @@
+---
+id: configure-rtsp-onvif
+title: Integrar RTSP y ONVIF
+description: Esta guía explica cómo integrar con NVR/VMS de terceros mediante reglas de URL de acceso de transmisión RTSP y el protocolo ONVIF.
+keywords:
+  - RTSP
+  - ONVIF
+  - NVR
+  - VMS
+  - Transmisión
+  - Integración
+---
+
+La cámara admite transmisión RTSP (Real-Time Streaming Protocol) y el protocolo ONVIF (Open Network Video Interface Forum) para la integración estándar con NVR (Network Video Recorder) y VMS (Video Management Software) de terceros.
+
+Consulta esta guía en los siguientes casos:
+
+* Cuando quieres obtener video de la cámara mediante RTSP en un NVR/VMS de terceros
+
+* Cuando quieres integrar la cámara con un NVR/VMS que admite ONVIF
+
+* Cuando quieres consultar la información de la cuenta necesaria para una URL de acceso RTSP o la integración ONVIF
+
+## Transmisión RTSP
+
+### Puerto y método de transporte
+
+Cambia el puerto RTSP y el método de transporte en la <Cmd sid='network' product='cam' /> setting. Para obtener detalles sobre la configuración del puerto, la transmisión de video y la configuración de cifrado, consulta el siguiente documento.
+
+* [Ajustes de puertos](configure-network#port-settings)
+
+* [Ajustes de transmisión y cifrado de video](configure-network#rtsp-settings)
+
+:::info
+
+Si cambiaste el puerto RTSP respecto al valor predeterminado (554), ingresa el número de puerto cambiado en la parte `{port}` de la **URL de conexión** a continuación.
+
+:::
+
+### URL de conexión RTSP
+
+Para obtener video de la cámara mediante RTSP en un NVR/VMS de terceros, registra una URL de conexión que coincida con el canal y la resolución.
+
+| Canal | Transmisión | URL de conexión |
+| --- | --- | --- |
+| Canal 1 - Fisheye (video fisheye) | Transmisión principal (alta resolución) | `rtsp://{id}:{passwd}@{IP_address}:{port}/fisheye_primary` |
+| Canal 1 - Fisheye (video fisheye) | Transmisión secundaria (baja resolución) | `rtsp://{id}:{passwd}@{IP_address}:{port}/fisheye_secondary` |
+| Canal 2 - Dewarp (video rectificado) | Transmisión principal (alta resolución) | `rtsp://{id}:{passwd}@{IP_address}:{port}/dewarp_primary` |
+
+* `{id}`, `{passwd}`: Ingresa el ID y la contraseña de la cuenta usada para acceder a la cámara.
+
+* `{IP_address}`: Ingresa la dirección IP de la cámara.
+
+* `{port}`: Ingresa el número de puerto RTSP. El valor predeterminado es 554.
+
+## Integración ONVIF
+
+### Especificaciones admitidas
+
+La cámara admite ONVIF **Profile S** y **Profile T**.
+
+### Prepara una cuenta ONVIF dedicada
+
+Según las especificaciones del estándar de seguridad, la cuenta de administrador predeterminada (admin) no admite conexiones ONVIF. Antes de integrar con ONVIF, agrega una cuenta de operador dedicada para ONVIF y usa la información de esa cuenta para acceder al NVR/VMS. Para obtener más información sobre cómo agregar una cuenta de operador, consulta <DocLink docId='device/vionyx_webserver/manage-operators' />.
+
+### Notas de integración
+
+* **Proteger la sincronización de la configuración**
+
+   Para mantener la coherencia de datos con el motor de configuración web y evitar fallas, no se admiten las operaciones de escritura que cambian la configuración interna de la cámara, como la resolución, la tasa de bits y las propiedades del sensor de imagen, mediante ONVIF.
+
+* **Desactiva la función de optimización automática de VMS**
+
+   Algunos productos VMS incluyen una función que cambia automáticamente la configuración de la cámara al conectarse, como Video Optimization y Auto Configuration. Si esta función está habilitada, pueden producirse errores de integración, así que desactiva en el VMS la opción de corrección/optimización automática para la configuración de la cámara.
+
+:::caution
+
+Si cambias el método de transporte RTSP, quizá debas volver a conectar la sesión RTSP existente. Configura el NVR/VMS para que sea compatible con el método de transporte seleccionado.
+
+:::
