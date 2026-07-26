@@ -7343,13 +7343,17 @@
     "width": 800,
     "height": 269
   },
+  "/img/device/config-backup-restore.png": {
+    "width": 800,
+    "height": 139
+  },
   "/img/device/config-information.png": {
     "width": 800,
     "height": 555
   },
   "/img/device/config-network.png": {
     "width": 800,
-    "height": 857
+    "height": 914
   },
   "/img/device/config-reboot.png": {
     "width": 300,
