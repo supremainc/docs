@@ -15,8 +15,9 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
         const localizedSrc = currentLocale === 'ko' || alone ?
             src :
             src.replace('/img/', `/img/en/`);
-
-        if (isPreview) {
+        if (isDev && isPreview) {
+            return useBaseUrl(localizedSrc);
+        } else if (isPreview) {
             // preview 빌드는 로케일마다 baseUrl이 /docs/<locale>/로 스코프되어
             // useBaseUrl을 그대로 쓰면 static/img 전체가 로케일 수만큼 빌드 결과물에
             // 복제된다. 로케일 세그먼트를 제거한 공용 루트 경로로 고정해 중복을 막는다.
