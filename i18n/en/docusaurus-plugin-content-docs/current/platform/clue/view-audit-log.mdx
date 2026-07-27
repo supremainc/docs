@@ -1,0 +1,77 @@
+---
+id: view-audit-log
+title: View Audit Logs
+description: This guide explains how to view a Place's audit logs in the CLUe portal, set a search period, or use search to find the activity records you need.
+---
+
+The <Cmd sid='audit_log' product='clue' className='normal' /> feature records and tracks all activities that occur in a Place in the CLUe portal. Administrators can use <Cmd sid='audit_log' product='clue' /> to check who performed which activity and when, and meet security and compliance requirements.
+
+## View audit logs
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. Select the Place where you want to view audit logs.
+
+3. In the left sidebar, click <Cmd sid='settings' product='clue' /> → <Cmd sid='audit_log' product='clue' />.
+
+<Image src='/img/clue/clue-place-setting-audit-log.png' />
+
+The most recent audit logs appear first in the list. Each log entry lets you check the <Cmd sid='date_and_time' product='clue' />, <Cmd sid='source' product='clue' />, <Cmd sid='administrator' product='clue' />, <Cmd sid='ip_address_2' product='clue' />, <Cmd sid='type_2' product='clue' />, <Cmd sid='target' product='clue' />, and <Cmd sid='event_2' product='clue' /> for the activity.
+
+## View details
+
+To view detailed information for an audit log entry, click the <IcCLDetail title='Detail' /> button in the <Cmd sid='detail' product='clue' /> column at the far right of the list. The <Cmd sid='detail' product='clue' /> panel appears on the right side of the screen.
+
+<Image src='/img/clue/clue-place-setting-audit-log-details.png' />
+
+In the <Cmd sid='detail' product='clue' /> panel, you can check <Cmd sid='source' product='clue' />, <Cmd sid='type_2' product='clue' />, and related APIs along with the date, time, and administrator account. It also provides the following information:
+
+* <Cmd sid='item' product='clue' />: Shows the category where the activity occurred.
+
+* <Cmd sid='target' product='clue' />: Shows the ID and name of the target where the activity applied.
+
+* <Cmd sid='content' product='clue' />: Shows the API request body data. If no request body exists, it appears as an empty value (`{}`).
+
+## Set search period
+
+To change the search period by the currently set unit, click <IcFw title='Previous' /> or <IcBw title='Next' /> at the upper left of the audit log list. 
+
+To view audit logs for a certain period, click the date and time area (<IcCLCal />). When the <Cmd sid='setting_date_and_time' product='clue' /> window appears, set the start date and time, and the end date and time. You can view audit logs for the set period.
+
+<Image src='/img/clue/clue-place-setting-audit-log-set-period.png' />
+
+:::info
+
+To clear the set search period, click the <Cmd sid='recent' product='clue' /> button.
+
+:::
+
+## Search
+
+Search or filter the data you need based on each column value in the audit log list. Use the search tools at the upper right of the audit log list.
+
+<Image src='/img/clue/clue-place-setting-audit-log-search.png' />
+
+* <Cmd sid='administrator' product='clue' />: Enter an administrator name to search. Searches are case-sensitive.
+
+* <Cmd sid='ip_address_2' product='clue' />: Search by IP address. Enter the exact IP address.
+
+  > Example: 192.168.1.1
+
+* <Cmd sid='source' product='clue' />: Select the condition for the platform where the user acted.
+
+  > Web(<Cmd>WEB</Cmd>), Mobile(<Cmd>MOBILE</Cmd>), API(<Cmd>API_TOKEN</Cmd>)
+
+* <Cmd sid='type_2' product='clue' />: Select the user's activity category.
+
+  > <Cmd sid='device_4' product='clue' />, <Cmd sid='door_4' product='clue' />, <Cmd sid='place_2' product='clue' />, <Cmd sid='user_2' product='clue' />, <Cmd sid='place_strategy' product='clue' />, <Cmd sid='admin_2' product='clue' />, <Cmd sid='access_to_personal_information' product='clue' />
+
+* <Cmd sid='event_2' product='clue' />: Select the following event condition.
+
+  > <Cmd sid='detail_2' product='clue' />, <Cmd sid='list_2' product='clue' />, <Cmd sid='create' product='clue' />, <Cmd sid='update_2' product='clue' />, <Cmd sid='delete' product='clue' />, <Cmd sid='command_2' product='clue' />
+
+Select multiple filter fields together to filter. If you select different fields, filtering uses the `AND` condition. If you select multiple values for the same field, filtering uses the `OR` condition. To clear filtering, click the <IcClose title='Disable' /> button.
+
+<Image src='/img/clue/clue-place-setting-audit-log-search-filter.png' />
+
+<Image src='/img/clue/clue-place-setting-audit-log-search-filter-or.png' />

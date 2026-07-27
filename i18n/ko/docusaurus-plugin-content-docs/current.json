@@ -569,6 +569,22 @@
   },
   "sidebar.howto.link.BioStar X 보안 강화": {
     "message": "BioStar X 보안 강화",
-    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to 'bsx_hardening/'"
+    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to '/how-to/bsx_hardening/'"
+  },
+  "sidebar.clueportal.category.CLUe": {
+    "message": "CLUe",
+    "description": "The label for category 'CLUe' in sidebar 'clueportal'"
+  },
+  "sidebar.clueportal.category.CLUe 웹 포털 가이드": {
+    "message": "CLUe 웹 포털 가이드",
+    "description": "The label for category 'CLUe 웹 포털 가이드' in sidebar 'clueportal'"
+  },
+  "sidebar.clueportal.category.개발자": {
+    "message": "개발자",
+    "description": "The label for category '개발자' in sidebar 'clueportal'"
+  },
+  "sidebar.clueportal.link.CLUe API": {
+    "message": "CLUe API",
+    "description": "The label for link 'CLUe API' in sidebar 'clueportal', linking to 'pathname:///developer/clue'"
   }
 }

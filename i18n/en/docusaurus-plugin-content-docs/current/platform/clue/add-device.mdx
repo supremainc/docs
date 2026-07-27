@@ -1,0 +1,151 @@
+---
+id: add-device
+title: Add Device
+description: This guide explains how to enroll devices in the CLUe portal and assign them to places by role.
+---
+
+To use a CLUe device, complete enrollment and assignment in the web portal. Only the Branch manager can enroll devices, and the Distributor manager or Place group manager assigns enrolled devices to their assigned place.
+
+Customers who purchased a new device should check that the CLUe firmware and certificate are applied, then request device enrollment from the Suprema branch.
+
+## Device enrollment (Branch manager)
+
+Only the Branch manager can enroll devices. Check the device serial number before enrolling the device. Find the serial number on the sticker attached to the back of the device.
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. On the initial screen, select the Branch to enroll the device.
+
+3. In the upper-right corner of the screen, click <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />.
+
+   <Image src='/img/clue/add-device-settings.png' />
+
+4. Click <Cmd sid='device' product='clue' /> in the left sidebar.
+
+   <Image src='/img/clue/add-device-go-device-tap.png' />
+
+5. In the <Cmd sid='add_4' product='clue' /> section, enter the device serial number in the <Cmd sid='device_id_s_n' product='clue' /> input field, then click <Cmd sid='add' product='clue' />.
+
+   <Image src='/img/clue/add-device-enter-id.png' />
+
+6. The added device appears in <Cmd sid='device_list' product='clue' />.
+
+   <Image src='/img/clue/add-device-list.png' />
+
+7. To enable edit mode, click the <Cmd sid='none_2' product='clue' /> field and select <IcCLEdit title='edit' />.
+
+   <Image src='/img/clue/add-device-list-enable-edit-mode.png' />
+
+8. Select the <Cmd sid='distributor' product='clue' className='normal' />, <Cmd sid='place_group' product='clue' className='normal' />, or <Cmd sid='place' product='clue' className='normal' /> to assign the device.
+
+   <Image src='/img/clue/add-device-list-set-place.png' />
+
+9. Click <IcCLCheck title='confirm' /> to apply the selected option.
+
+A success message for device assignment appears at the top of the screen. When you click each field, the <IcCLMove title='move' /> button activates, and you can move to the corresponding <Cmd sid='distributor' product='clue' className='normal' />, <Cmd sid='place_group' product='clue' className='normal' />, or <Cmd sid='place' product='clue' className='normal' />. Click the button to move to the location, then set the device and door.
+
+<Image src='/img/clue/add-device-complete.png' />
+
+## Device assignment
+
+### Distributor manager
+
+The Distributor manager can assign devices assigned to them to a lower Place group or an individual Place. If the device that needs enrollment does not appear in the list, contact the relevant Suprema branch or headquarters.
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. On the initial screen, select the Distributor to assign the device.
+
+3. In the upper-right corner of the screen, click <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />.
+
+   <Image src='/img/clue/assign-device-settings.png' />
+
+4. Click <Cmd sid='device' product='clue' /> in the left sidebar.
+
+   <Image src='/img/clue/assign-device-device-list.png' />
+
+5. To enable edit mode, click the <Cmd sid='none_2' product='clue' /> field and select <IcCLEdit title='edit' />.
+
+   <Image src='/img/clue/assign-device-device-list-edit.png' />
+
+6. Select the <Cmd sid='place_group' product='clue' className='normal' /> or <Cmd sid='place' product='clue' className='normal' /> to assign the device.
+
+   <Image src='/img/clue/assign-device-device-list-assign-place.png' />
+
+7. Click <IcCLCheck title='confirm' /> to apply the selected option.
+
+A success message for device assignment appears at the top of the screen. When you click each field, the <IcCLMove title='move' /> button activates, and you can move to the corresponding <Cmd sid='place_group' product='clue' className='normal' /> or <Cmd sid='place' product='clue' className='normal' />. After assignment, move to the Place and add a door.
+
+<Image src='/img/clue/assign-device-device-list-move.png' />
+
+:::info
+
+* By default, the Distributor manager cannot view the Users and Monitoring tabs under the privacy policy. If access is required, request an invitation from the <Cmd sid='place_group' product='clue' className='normal' />, <Cmd sid='place' product='clue' className='normal' /> manager.
+
+* When you delete a device, it returns automatically to the Branch-level device list and becomes unassigned. If you deleted a device by mistake, ask the Branch manager to reassign it.
+
+:::
+
+### Place group manager
+
+The Place group manager can assign devices assigned to them to a lower Place.
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. On the initial screen, select the Place group to assign the device.
+
+3. In the upper-right corner of the screen, click <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />.
+
+   <Image src='/img/clue/place-group-settings.png' />
+
+4. Click <Cmd sid='device' product='clue' /> in the left sidebar.
+
+   <Image src='/img/clue/place-group-settings-device.png' />
+
+5. To enable edit mode, click the <Cmd sid='none_2' product='clue' /> field and select <IcCLEdit title='edit' />.
+
+   <Image src='/img/clue/place-group-settings-device-list-edit.png' />
+
+6. Select the <Cmd sid='place' product='clue' className='normal' /> to assign the device.
+
+   <Image src='/img/clue/place-group-settings-device-list-select-place.png' />
+
+7. Click <IcCLCheck title='confirm' /> to apply the selected option.
+
+A success message for device assignment appears at the top of the screen. After device assignment, move to the corresponding <Cmd sid='place' product='clue' className='normal' /> and add a door.
+
+<Image src='/img/clue/place-group-settings-device-list-move.png' />
+
+## Test place setting (Branch manager)
+
+Because subscriptions are based on the number of devices, separate test devices and exclude them from the total. To do this, users with the Branch manager role can designate certain places as "test places" in Place settings.
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. Select the Place to designate as a test place.
+
+3. On the left sidebar, click <Cmd sid='settings' product='clue' /> → <Cmd sid='basic' product='clue' />.
+
+   <Image src='/img/clue/place-setting-basic-set-test-period.png' />
+
+4. Click <Cmd sid='setting_of_test_date' product='clue' /> in the upper-right corner of the screen.
+
+5. When the <Cmd sid='test_period' product='clue' /> popup appears, set the test period.
+
+   <Image src='/img/clue/place-setting-set-test-period-pop.png' />
+
+   To use it without a time limit, set the end date to **9999.12.31 23:59**.
+
+6. To finish, click <Cmd sid='ok' product='clue' />.
+
+All devices in the Place appear in red in the device list, so they are identified as test devices. You can also check the total quantity information.
+
+<Image src='/img/clue/test-period-set-device-list.png' alone />
+
+<NextStep>
+<NextItem to='fw-upgrade'>
+
+Learn how to upgrade the device firmware.
+
+</NextItem>
+</NextStep>

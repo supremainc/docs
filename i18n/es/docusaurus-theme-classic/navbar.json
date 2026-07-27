@@ -210,5 +210,13 @@
   "item.label.BioStar X Mobile": {
     "message": "BioStar X Mobile",
     "description": "Navbar item with label BioStar X Mobile"
+  },
+  "item.label.CLUe": {
+    "message": "CLUe",
+    "description": "Navbar item with label CLUe"
+  },
+  "item.label.CLUe API": {
+    "message": "CLUe API",
+    "description": "Navbar item with label CLUe API"
   }
 }

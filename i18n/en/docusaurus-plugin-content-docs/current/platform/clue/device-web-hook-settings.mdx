@@ -1,0 +1,132 @@
+---
+id: device-web-hook-settings
+title: Set Up Device Webhook
+description: This guide explains how to set up a webhook in the CLUe portal so the device sends real-time notifications to an external endpoint when a specified event occurs.
+---
+
+When you set up a webhook in the CLUe portal, the device sends real-time events to the endpoint you specify (an external server) when a specified event occurs. Use this feature for the following use cases.
+
+* Integration with a time and attendance system
+
+* Receive duplicated face detection events
+
+You can also use it for various real-time, event-based integrations with systems.
+
+## Supported devices {/* #supportedDevice */}
+
+| Device | Model | Supported firmware version |
+| --- | --- | --- |
+| **BioStation 3** | BS3-DB, BS3-APWB | `bs3-all_v1.1.0_20250626` or later |
+
+:::info
+
+The following CLUe supported devices will also support webhooks.
+
+* BioEntry W3, BioLite N2, X-Station 2, XPass 2
+
+:::
+
+## Key advantages
+
+* Send the device's real-time event notifications to an external system.
+
+* Integrate with external systems easily through webhooks.
+
+* Supports use cases such as time and attendance integration and security event monitoring.
+
+## Webhook settings
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. Go to the Place assigned to the device where you want to set up the webhook.
+
+3. Click <Cmd sid='device_2' product='clue' /> in the left sidebar.
+
+4. Select the device from the device list where you want to set up the webhook.
+
+   <Image src='/img/clue/clue-fw-device-list.png' />
+
+5. Click the <Cmd sid='webhook' product='clue' /> tab at the top of the screen.
+
+   <Image src='/img/clue/clue-place-device-webhook.png' />
+
+:::info
+
+If the <Cmd sid='webhook' product='clue' /> tab does not appear, check the device's **CLUe firmware version** and update it to [the supported firmware version or later](#supportedDevice).
+
+:::
+
+<Steps>
+<Step>
+
+### Method
+
+Webhooks use the **POST** method by default.
+
+</Step>
+<Step>
+
+### Endpoint URL settings
+
+* <Cmd>Online Event</Cmd>: An endpoint that sends real-time webhook calls when a specified event occurs while the device is online.
+
+* <Cmd>Offline Event</Cmd>: An endpoint that sends a list of events that occurred while the device was offline, after it comes back online.
+
+</Step>
+<Step>
+
+### Header settings
+
+Set the required keys or authentication values for the webhook server in the request headers. To add a header, click the <IcAdd /> button.
+
+<Image src='/img/clue/clue-place-device-webhook-header.png' />
+
+</Step>
+<Step>
+
+### Select trigger events
+
+Select the events that trigger webhook calls. In addition to the default selected events, you can also select events such as <Cmd sid='duplicated_face_fail_from_the_device' product='clue' />.
+
+<Image src='/img/clue/clue-place-device-webhook-event-type.png' />
+
+</Step>
+<Step>
+
+### Webhook field settings
+
+To define the data the device sends, configure the **webhook fields**.
+
+<Image src='/img/clue/clue-place-device-webhook-config-field.png' />
+
+* <Cmd sid='auto_fields' product='clue' />: Indicates the type of data set the device can send.
+
+* <Cmd>nonString</Cmd>: Refers to data types that do not use quotation marks (`""`), such as Boolean and int.
+
+After selecting the required data fields, you can preview the webhook payload in the <Cmd sid='preview' product='clue' /> panel.
+
+If you also need to include fixed values, add them with <Cmd sid='manual_fields' product='clue' />. These values are sent as fixed values with the webhook payload.
+
+</Step>
+<Step>
+
+### Run a test call
+
+After completing the settings, you can run <Cmd sid='test_call' product='clue' />.
+
+<Image src='/img/clue/clue-place-device-webhook-test-call.png' />
+
+:::info
+
+A test call lets you check the structure and format of data sent directly from the browser to the configured endpoint, not the actual device.
+
+:::
+
+</Step>
+</Steps>
+
+## Notes
+
+Even if the server is not ready yet, you can test webhooks with a publicly available webhook testing service on the internet. For example, use [Webhook.site](https://webhook.site) to easily verify webhook calls.
+
+<Image src='/img/clue/webhook-tester.png' alone />
