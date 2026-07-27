@@ -22,6 +22,10 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Generate SVG components map
+        # svg-img 페이지가 참조하는 genpdf/svg-components-map.mjs는 .gitignore에
+        # 등록된 생성 파일이므로, 빌드 전에 MDXComponents.js를 파싱해 재생성한다.
+        run: node genpdf/generateSvgMap.js
       - name: Build website
         run: yarn build:preview
       - name: Remove duplicated locale img folders
