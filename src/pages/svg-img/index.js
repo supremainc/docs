@@ -1,6 +1,6 @@
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-import { svgComponentsMap } from '../../../genpdf/svg-components-map.mjs';
+import { svgComponentsMap } from '@site/genpdf/svg-components-map.mjs';
 
 // static/img/menus 폴더의 SVG 파일명 목록만 가져옵니다. (keys()는 모듈을 실행하지 않으므로
 // 실제 로더(svgr 등) 처리 방식과 무관하게 파일 경로만 안전하게 나열할 수 있습니다.)
