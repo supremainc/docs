@@ -1,0 +1,53 @@
+---
+id: clue-dynamic-qr-code
+title: Integrar código QR dinámico
+description: Esta guía explica cómo funciona CLUe Dynamic QR Code y cómo integrarlo con sistemas de clientes.
+---
+
+**CLUe Dynamic QR** es una solución QR integrada que admite todo el proceso, desde la generación hasta la verificación. Esta guía está dirigida a desarrolladores que desean integrar CLUe Dynamic QR Code con sus propios sistemas y explica los pasos desde la emisión de una clave API hasta la configuración del servicio.
+
+## Qué es CLUe Dynamic QR Code
+
+CLUe Dynamic QR Code es una solución integrada que admite todo el proceso, desde la generación hasta la verificación. Está diseñado para que los clientes integren fácilmente las funciones de código QR en sus propios sistemas sin desarrollarlas desde cero.
+
+<Image src='/img/clue/clue-dynamic-qr-code-architecture.png' alone />
+
+:::info
+
+CLUe Dynamic QR Code se puede usar con el método de servicio de **verificación de clientes** (**Vendor**). Para obtener más información sobre la configuración de **verificación de clientes**, consulte <DocLink docId='platform/clue/service-settings' />.
+
+:::
+
+## Antes de comenzar
+
+CLUe Dynamic QR Code está destinado a la integración, por lo que requiere una clave API del grupo Place y un código de proveedor para las pruebas.
+
+<Image src='/img/clue/clue-qr-code-workflow.png' alone />
+
+import IssueAPI from './_clue-issue-api.mdx';
+
+<IssueAPI />
+
+## Configuración del Servicio
+
+Configure <Cmd sid='access_type' product='clue' /> en <Cmd sid='vendor' product='clue' /> en el <Cmd sid='service' product='clue' /> del grupo Place, luego seleccione <Cmd sid='clue_qr' product='clue' />.
+
+<ProdImg src='/img/clue/clue-place-group-settings-service-setting.png' />
+
+El código de verificación de clientes debe ser emitido por el equipo de Suprema CLUe y configurado según el procedimiento de integración de QR.
+
+:::note
+
+¿Puedo probar sin un código de verificación de clientes?
+
+Sí. Sin embargo, configure un **código de verificación de clientes de prueba** en el sistema. Contacte a su representante de Suprema y solicite soporte. El código de verificación de clientes de prueba permite el acceso sin verificar los derechos de acceso ni el período de validez.
+
+:::
+
+<NextStep>
+<NextItem to='pathname:///developer/clue?api=dynamic-qr-code'>
+
+Consulte más detalles sobre el uso de la API Dynamic CLUe QR.
+
+</NextItem>
+</NextStep>

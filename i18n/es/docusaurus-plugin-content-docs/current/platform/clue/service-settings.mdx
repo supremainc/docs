@@ -1,0 +1,81 @@
+---
+id: service-settings
+title: Configuración del Servicio
+description: Esta guía explica cómo seleccionar y configurar un tipo de servicio para el control de acceso en un grupo de Place de CLUe.
+---
+
+Configure el método de servicio de acceso para cada grupo de Place. El tipo de servicio y el conjunto de credenciales de un grupo de Place se aplican automáticamente a todos los Place secundarios, así que no necesita configurarlos por separado para cada Place.
+
+CLUe admite dos métodos de servicio de acceso.
+
+* <Cmd sid='vendor' product='clue' className='bold' />: Un método que solicita la aprobación de acceso a un cliente mediante una API externa.
+
+* <Cmd sid='membership' product='clue' className='bold' />: Un método en el que CLUe controla el acceso de forma independiente, sin integración externa.
+
+Haga clic en <Cmd sid='service' product='clue' /> en la barra lateral izquierda de la configuración del grupo de Place.
+
+<ProdImg src='/img/clue/clue-basic-setup-services.png' alt='Services' />
+
+## configuración de <Cmd sid='vendor' product='clue' className='normal' />
+
+El método <Cmd sid='vendor' product='clue' className='bold' /> llama a una API de cliente externa antes de abrir la puerta para decidir si permite el acceso. Admite códigos QR y Autenticación facial.
+
+### Caso QR
+
+Cuando escanea un código QR, el servidor de CLUe llama a la API del cliente y obtiene la decisión de acceso directamente. Seleccione uno de los dos métodos siguientes según el tipo de código QR que use.
+
+* **CLUe QR**: Un código QR dinámico emitido directamente por CLUe.
+
+* **Customer QR**: Seleccione esta opción cuando el cliente genere y opere códigos QR de forma independiente.
+
+<ProdImg src='/img/clue/clue-basic-setup-qr-code.png' alone caption='QR Case' />
+
+### Caso de Autenticación facial
+
+Si usa Autenticación facial, registre solo la imagen. El servidor de CLUe extrae la plantilla y la sincroniza con el dispositivo. Si la coincidencia facial se realiza con éxito, CLUe decide si permite el acceso mediante la API del cliente, igual que con el método QR. Consulte la [documentación de la API de CLUe](../../developer/clue?api=create-user-enroll-face) para saber cómo inscribir un usuario facial.
+
+<ProdImg src='/img/clue/clue-basic-setup-face.png' alone caption='Face Case' />
+
+### Configuración del código de verificación del cliente
+
+Para usar el método <Cmd sid='vendor' product='clue' className='bold' />, ingrese el código de verificación del cliente junto con dónde y cómo el servidor de CLUe llama a la API del cliente o socio.
+
+<ProdImg src='/img/clue/clue-basic-setup-access-service-verify.png' alt='Access Service Verify' />
+
+El código <Cmd sid='vendor' product='clue' className='normal' /> es un formato de código que el equipo de Suprema CLUe preprueba y desarrolla para decidir qué API del cliente llamar. Después de ingresar este código, el sistema llama automáticamente a la API para cada método de autenticación en los Place secundarios, sin configuraciones adicionales, y controla el acceso según los valores de respuesta especificados.
+
+:::note
+
+**Cómo obtener un código de verificación del cliente**
+
+El equipo de CLUe lo administra por separado para que los códigos de otros clientes no se expongan. La generación del código de verificación del cliente se gestiona por separado después de revisar la especificación de la API. Comuníquese directamente con el equipo de CLUe para obtener más detalles.
+
+:::
+
+## configuración de <Cmd sid='membership' product='clue' className='normal' />
+
+El método <Cmd sid='membership' product='clue' className='bold' /> permite que el sistema CLUe decida el control de acceso de forma independiente, sin intervención de un cliente externo ni de un tercero. Esto también aplica cuando opera CLUe solo a través de un portal web o una app móvil.
+
+<Image src='/img/clue/clue-basic-setup-membership-setup.png' alt='Membership setup' alone />
+
+<Image src='/img/clue/clue-basic-setup-membership-setup-web-mobile.png' alt='Membership setup web and mobile' alone />
+
+Con la configuración <Cmd sid='membership' product='clue' />, puede seleccionar la credencial que se aplica a los Place secundarios.
+
+<ProdImg src='/img/clue/clue-basic-setup-access-service-membership.png' alt='Access Service Membership' />
+
+:::note
+
+**¿Puedo cambiar la configuración del Place de forma distinta a la del grupo de Place?**
+
+Sí, puede configurar el método de autenticación en la página de configuración del Place. Sin embargo, no puede cambiar el método de acceso de <Cmd sid='membership' product='clue' /> a <Cmd sid='vendor' product='clue' />, o viceversa. Por lo tanto, si los clientes del mismo grupo de Place necesitan métodos de acceso distintos, recomendamos crear grupos de Place separados para cada caso de uso.
+
+:::
+
+<NextStep>
+<NextItem to='customer-api-integration'>
+
+Vea cómo registrar una API de cliente o proveedor en un grupo de Place de CLUe y conectarla a una credencial para que la lógica de decisión de acceso del cliente funcione con el control de acceso de CLUe.
+
+</NextItem>
+</NextStep>

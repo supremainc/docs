@@ -1,0 +1,85 @@
+---
+id: web-portal-getting-started
+title: Primeros pasos con el portal web de CLUe
+description: Obtén información sobre los niveles de administrador en el portal web de CLUe y cómo agregar subelementos como distributors, place groups y places.
+---
+
+Si eres nuevo en el portal web de CLUe, empieza por entender la estructura de permisos de administrador. Este documento explica cómo agregar distributors, place groups y places en una branch.
+
+## Entender los niveles de administrador
+
+CLUe es un sistema multiinquilino con una jerarquía de tres niveles, diseñado para entornos de canales de distribución que operan servicios al cliente en varias branches.
+
+<ProdImg src='/img/clue/clue-admin-levels.png' alt='CLUe Admin Levels' />
+
+* **Branch Admin**: Un Branch Admin puede crear subelementos **Distributor**/**Place group**/**Place**.
+
+* **Distributor Admin**: Un Distributor Admin puede crear subelementos **Place group**/**Place**.
+
+* **Place Group Admin**: Un Place Group Admin puede crear subelementos **Place**.
+
+Invita a los clientes por correo electrónico. Los clientes invitados pueden registrarse mediante el enlace del correo electrónico y acceder al place group invitado.
+
+Una branch puede tener varios distributors, y un distributor también puede tener varios place groups. En el nivel de Distributor Admin, solo puedes ver tu propio distributor y sus subelementos.
+
+:::note
+
+**¿A qué item pertenece el cliente o usuario final?**
+
+En la jerarquía anterior, el **Place group** es el item asignado al cliente o proveedor de servicios. Un place group representa una unidad de cliente que opera varios places, así que ingresa el correo electrónico de administración de ese cliente cuando crees un place.
+
+:::
+
+## Agregar subelementos
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Después de iniciar sesión, puedes ver la lista de branches invitadas. Selecciona la branch que quieras.
+
+3. Cuando aparezca la lista de subelementos bajo la branch seleccionada, como distributors, place groups y places, haz clic en el botón <IcAirMore title='more' /> en la esquina superior derecha de la pantalla.
+
+4. Haz clic en <Cmd sid='add_child' product='clue' /> en el menú emergente.
+
+   <ProdImg src='/img/clue/clue-basic-setup-add-child.png' alt='Add Child' />
+
+5. Cuando aparezca el popup <Cmd sid='add' product='clue' /> <Cmd sid='distributor' product='clue' />, ingresa cada campo.
+
+   <ProdImg src='/img/clue/clue-basic-setup-add-distributor.png' alt='Add Distributor' />
+
+   :::note
+
+   **¿Por qué ingresar el correo electrónico de administración?**
+
+   De forma predeterminada, el superadmin solo puede acceder a menús que no están relacionados con los datos personales del cliente, como la configuración del dispositivo o la puerta. El acceso a los datos personales del cliente requiere su consentimiento, así que primero invita al administrador del cliente.
+
+   Si después se necesita acceso a datos personales, el cliente puede invitar de nuevo al superadmin. El superadmin invitado puede acceder a menús que incluyen datos personales, como usuarios, administradores y monitoreo.
+
+   :::
+
+6. Después de completar todas las entradas, haz clic en el botón <Cmd sid='add' product='clue' /> en la parte inferior.
+
+7. Cuando se agrega el item, el sistema pasa automáticamente a la página <Cmd sid='basic' product='clue' />, donde puedes cambiar el nombre o la foto.
+
+   <ProdImg src='/img/clue/clue-basic-setup-add-distributor-profile.png' alt='Distributor Profile' />
+
+:::info
+
+De igual forma, haz clic en <IcAirMore title='more' /> → <Cmd sid='add_child' product='clue' /> en la lista de distributors, place groups o places para agregar un subelemento.
+
+:::
+
+## Invitar administradores
+
+El menú <Cmd sid='admin' product='clue' /> aparece, pero no puedes ver la información de administrador sin el consentimiento del cliente. El acceso de visualización solo está disponible después de que la empresa cliente, o un administrador de distributor o place group, invita a un administrador de nivel superior.
+
+<ProdImg src='/img/clue/clue-basic-setup-admin-information.png' alt='Admin information' />
+
+En el menú <Cmd sid='admin' product='clue' />, ingresa una dirección de correo electrónico para invitar fácilmente a un administrador del mismo nivel. Después de que el usuario invitado complete el registro, obtiene permisos de administrador del mismo nivel.
+
+<ProdImg src='/img/clue/clue-basic-setup-invite-admin.png' alt='Invite Admin' />
+
+:::info
+
+<Cmd sid='main_admin' product='clue' /> / <Cmd sid='sub_admin' product='clue' />: No hay diferencia funcional. Así se asegura que permanezca al menos un administrador principal. Sin embargo, un subadmin no puede eliminar al administrador principal.
+
+:::

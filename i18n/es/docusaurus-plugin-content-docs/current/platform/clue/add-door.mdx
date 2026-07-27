@@ -1,0 +1,49 @@
+---
+id: add-door
+title: Agregar puertas
+description: Esta guía explica cómo agregar puertas a un Place de CLUe y configurar las setting necesarias, como los relés y los botones de salida.
+---
+
+Las setting de puerta son necesarias en CLUe. Si no configuras las puertas, la comunicación con el servidor, incluida la sincronización de usuarios, no funcionará correctamente. Completa este paso antes de iniciar el servicio.
+
+## Configuración de control de acceso
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Selecciona el Place donde quieres agregar una puerta.
+
+3. En la barra lateral izquierda, haz clic en <Cmd sid='door' product='clue' /> → <Cmd sid='door' product='clue' />.
+
+   <ProdImg src='/img/clue/place-doors.png' />
+
+4. En la parte superior derecha de la pantalla, haz clic en <IcCLEditR title='Editar' /> → <Cmd sid='add_5' product='clue' />.
+
+   <ProdImg src='/img/clue/place-doors-add.png' />
+
+5. Ingresa el nombre de la puerta y selecciona otras setting necesarias, como el dispositivo de entrada, el relé y el botón de salida.
+
+   <ProdImg src='/img/clue/place-doors-add-details.png' />
+
+6. Después de completar las setting de puerta, haz clic en el botón <Cmd sid='add_2' product='clue' />.
+
+:::info
+
+<Cmd sid='sensor_ignore_option' product='clue' />
+
+* <Cmd sid='use' product='clue' />: El relé de la puerta cambia de estado después de que transcurre el tiempo de bloqueo, sin importar el estado del sensor de puerta.
+
+* <Cmd sid='not_in_use' product='clue' />: El relé de la puerta no vuelve a su estado original, aunque el sensor de puerta detecte un estado abierto. Selecciona esta opción si configuras una puerta automática.
+
+:::
+
+## Usar relés de dispositivos esclavos
+
+Si usas un dispositivo esclavo RS485, como SIO2, DM-20 o DI-24, asígnalo a un Place separado, incluso si se conecta al dispositivo maestro. Asígnalo a un Place de la misma forma en que asignas un dispositivo estándar. Para obtener más información sobre cómo asignar un dispositivo a un Place, consulta <DocLink docId='platform/clue/add-device' />.
+
+* Revisa los dispositivos esclavos en la lista de dispositivos.
+
+  <Image src='/img/clue/device-list-slave-device-02.png' alone />
+
+* Selecciona el dispositivo maestro y agrega los dispositivos esclavos conectados. Luego, puedes usar los puertos de relé y entrada en los dispositivos esclavos.
+
+  <Image src='/img/clue/device-list-slave-device-03.png' alone />

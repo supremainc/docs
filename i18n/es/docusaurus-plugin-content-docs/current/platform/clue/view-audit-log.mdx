@@ -1,0 +1,77 @@
+---
+id: view-audit-log
+title: Ver registros de auditoría
+description: Esta guía explica cómo ver los registros de auditoría de un Place en el portal CLUe, establecer un período de búsqueda o usar la búsqueda para encontrar los registros de actividad que necesita.
+---
+
+La feature <Cmd sid='audit_log' product='clue' className='normal' /> registra y sigue todas las actividades que ocurren en un Place en el portal CLUe. Los administradores pueden usar <Cmd sid='audit_log' product='clue' /> para revisar quién realizó cada actividad y cuándo, y cumplir con los requisitos de seguridad y cumplimiento.
+
+## Ver registros de auditoría
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Seleccione el Place donde desea ver los registros de auditoría.
+
+3. En la barra lateral izquierda, haga clic en <Cmd sid='settings' product='clue' /> → <Cmd sid='audit_log' product='clue' />.
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log.png' />
+
+Los registros de auditoría más recientes aparecen primero en la lista. Cada registro le permite revisar la <Cmd sid='date_and_time' product='clue' />, <Cmd sid='source' product='clue' />, <Cmd sid='administrator' product='clue' />, <Cmd sid='ip_address_2' product='clue' />, <Cmd sid='type_2' product='clue' />, <Cmd sid='target' product='clue' /> y <Cmd sid='event_2' product='clue' /> de la actividad.
+
+## Ver detalles
+
+Para ver información detallada de un registro de auditoría, haga clic en el botón <IcCLDetail title='Detail' /> de la columna <Cmd sid='detail' product='clue' /> al extremo derecho de la lista. El panel <Cmd sid='detail' product='clue' /> aparece en el lado derecho de la pantalla.
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-details.png' />
+
+En el panel <Cmd sid='detail' product='clue' />, puede revisar <Cmd sid='source' product='clue' />, <Cmd sid='type_2' product='clue' /> y las APIs relacionadas, junto con la fecha, la hora y la cuenta del administrador. También proporciona la siguiente información:
+
+* <Cmd sid='item' product='clue' />: Muestra la categoría donde ocurrió la actividad.
+
+* <Cmd sid='target' product='clue' />: Muestra el ID y el nombre del destino donde se aplicó la actividad.
+
+* <Cmd sid='content' product='clue' />: Muestra los datos del cuerpo de la solicitud de la API. Si no existe un cuerpo de solicitud, aparece como un valor vacío (`{}`).
+
+## Establecer período de búsqueda
+
+Para cambiar el período de búsqueda según la unidad configurada actualmente, haga clic en <IcFw title='Previous' /> o <IcBw title='Next' /> en la parte superior izquierda de la lista de registros de auditoría. 
+
+Para ver los registros de auditoría de un período cierto, haga clic en el área de fecha y hora (<IcCLCal />). Cuando aparece la ventana <Cmd sid='setting_date_and_time' product='clue' />, establezca la fecha y hora de inicio, y la fecha y hora de fin. Puede ver los registros de auditoría del período configurado.
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-set-period.png' />
+
+:::info
+
+Para borrar el período de búsqueda configurado, haga clic en el botón <Cmd sid='recent' product='clue' />.
+
+:::
+
+## Buscar
+
+Busque o filtre los datos que necesita según el valor de cada columna en la lista de registros de auditoría. Use las herramientas de búsqueda en la parte superior derecha de la lista de registros de auditoría.
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-search.png' />
+
+* <Cmd sid='administrator' product='clue' />: Ingrese un nombre de administrador para buscar. Las búsquedas distinguen mayúsculas y minúsculas.
+
+* <Cmd sid='ip_address_2' product='clue' />: Busque por dirección IP. Ingrese la dirección IP exacta.
+
+  > Ejemplo: 192.168.1.1
+
+* <Cmd sid='source' product='clue' />: Seleccione la condición de la plataforma donde actuó el usuario.
+
+  > Web(<Cmd>WEB</Cmd>), Mobile(<Cmd>MOBILE</Cmd>), API(<Cmd>API_TOKEN</Cmd>)
+
+* <Cmd sid='type_2' product='clue' />: Seleccione la categoría de actividad del usuario.
+
+  > <Cmd sid='device_4' product='clue' />, <Cmd sid='door_4' product='clue' />, <Cmd sid='place_2' product='clue' />, <Cmd sid='user_2' product='clue' />, <Cmd sid='place_strategy' product='clue' />, <Cmd sid='admin_2' product='clue' />, <Cmd sid='access_to_personal_information' product='clue' />
+
+* <Cmd sid='event_2' product='clue' />: Seleccione la siguiente condición de evento.
+
+  > <Cmd sid='detail_2' product='clue' />, <Cmd sid='list_2' product='clue' />, <Cmd sid='create' product='clue' />, <Cmd sid='update_2' product='clue' />, <Cmd sid='delete' product='clue' />, <Cmd sid='command_2' product='clue' />
+
+Seleccione varios campos de filtro juntos para filtrar. Si selecciona campos diferentes, el filtrado usa la condición `AND`. Si selecciona varios valores para el mismo campo, el filtrado usa la condición `OR`. Para borrar el filtrado, haga clic en el botón <IcClose title='Disable' />.
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-search-filter.png' />
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-search-filter-or.png' />

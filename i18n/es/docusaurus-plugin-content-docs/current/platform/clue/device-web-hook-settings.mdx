@@ -1,0 +1,132 @@
+---
+id: device-web-hook-settings
+title: Configurar webhook del dispositivo Web
+description: Esta guía explica cómo configurar un webhook en el portal de CLUe para que el dispositivo envíe notificaciones en tiempo real a un endpoint externo cuando ocurre un evento especificado.
+---
+
+Cuando configuras un webhook en el portal de CLUe, el dispositivo envía eventos en tiempo real al endpoint que especificas (un servidor externo) cuando ocurre un evento especificado. Usa esta feature para los siguientes casos de uso.
+
+* Integración con un sistema de tiempo y asistencia
+
+* Recibir eventos duplicados de detección facial
+
+También puedes usarlo para varias integraciones en tiempo real basadas en eventos con sistemas.
+
+## Dispositivos compatibles {/* #supportedDevice */}
+
+| Dispositivo | Modelo | Versión de firmware compatible |
+| --- | --- | --- |
+| **BioStation 3** | BS3-DB, BS3-APWB | `bs3-all_v1.1.0_20250626` o posterior |
+
+:::info
+
+Los siguientes dispositivos compatibles con CLUe también admitirán webhooks.
+
+* BioEntry W3, BioLite N2, X-Station 2, XPass 2
+
+:::
+
+## Ventajas clave
+
+* Envía las notificaciones de eventos en tiempo real del dispositivo a un sistema externo.
+
+* Integra sistemas externos fácilmente mediante webhooks.
+
+* Admite casos de uso como la integración de tiempo y asistencia y la supervisión de eventos de seguridad.
+
+## Configuración de webhooks
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Ve al Place asignado al dispositivo donde quieres configurar el webhook.
+
+3. Haz clic en <Cmd sid='device_2' product='clue' /> en la barra lateral izquierda.
+
+4. Selecciona el dispositivo de la lista de dispositivos donde quieres configurar el webhook.
+
+   <ProdImg src='/img/clue/clue-fw-device-list.png' />
+
+5. Haz clic en la pestaña <Cmd sid='webhook' product='clue' /> en la parte superior de la pantalla.
+
+   <ProdImg src='/img/clue/clue-place-device-webhook.png' />
+
+:::info
+
+Si la pestaña <Cmd sid='webhook' product='clue' /> no aparece, revisa la **versión de firmware de CLUe** del dispositivo y actualízala a [la versión de firmware compatible o posterior](#supportedDevice).
+
+:::
+
+<Steps>
+<Step>
+
+### Método
+
+Los webhooks usan el método **POST** de forma predeterminada.
+
+</Step>
+<Step>
+
+### Configuración de URL del endpoint
+
+* <Cmd>Evento en línea</Cmd>: Un punto de conexión que envía llamadas webhook en tiempo real cuando ocurre un evento especificado mientras el dispositivo está en línea.
+
+* <Cmd>Evento sin conexión</Cmd>: Un punto de conexión que envía una lista de eventos ocurridos mientras el dispositivo estaba sin conexión, después de que vuelve a estar en línea.
+
+</Step>
+<Step>
+
+### Configuración de encabezados
+
+Define las claves requeridas o los valores de autenticación para el servidor del webhook en los encabezados de la solicitud. Para agregar un encabezado, haz clic en el botón <IcAdd />.
+
+<ProdImg src='/img/clue/clue-place-device-webhook-header.png' />
+
+</Step>
+<Step>
+
+### Selecciona los eventos desencadenantes
+
+Selecciona los eventos que desencadenan llamadas de webhook. Además de los eventos seleccionados de forma predeterminada, también puedes seleccionar eventos como <Cmd sid='duplicated_face_fail_from_the_device' product='clue' />.
+
+<ProdImg src='/img/clue/clue-place-device-webhook-event-type.png' />
+
+</Step>
+<Step>
+
+### Configuración de campos del webhook
+
+Para definir los datos que envía el dispositivo, configura los **campos del webhook**.
+
+<ProdImg src='/img/clue/clue-place-device-webhook-config-field.png' />
+
+* <Cmd sid='auto_fields' product='clue' />: Indica el tipo de conjunto de datos que el dispositivo puede enviar.
+
+* <Cmd>nonString</Cmd>: Se refiere a tipos de datos que no usan comillas (`""`), como Boolean e int.
+
+Después de seleccionar los campos de datos necesarios, puedes obtener una vista previa del payload del webhook en el panel <Cmd sid='preview' product='clue' />.
+
+Si también necesitas incluir valores fijos, agrégalos con <Cmd sid='manual_fields' product='clue' />. Estos valores se envían como valores fijos con el payload del webhook.
+
+</Step>
+<Step>
+
+### Ejecutar una llamada de prueba
+
+Después de completar la configuración, puedes ejecutar <Cmd sid='test_call' product='clue' />.
+
+<ProdImg src='/img/clue/clue-place-device-webhook-test-call.png' />
+
+:::info
+
+Una llamada de prueba te permite comprobar la estructura y el formato de los datos enviados directamente desde el navegador al endpoint configurado, no al dispositivo real.
+
+:::
+
+</Step>
+</Steps>
+
+## Notas
+
+Aunque el servidor todavía no esté listo, puedes probar webhooks con un servicio público de prueba de webhooks en internet. Por ejemplo, usa [Webhook.site](https://webhook.site) para verificar fácilmente las llamadas de webhook.
+
+<Image src='/img/clue/webhook-tester.png' alone />

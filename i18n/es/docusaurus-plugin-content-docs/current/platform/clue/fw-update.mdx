@@ -1,0 +1,132 @@
+---
+id: fw-update
+title: Cambiar el firmware
+description: Esta guía explica cómo cambiar un dispositivo BioStar existente al modo de soporte CLUe. Un solo paquete de firmware para CLUe instala automáticamente el certificado.
+---
+
+Los siguientes dispositivos son compatibles con CLUe: Con una actualización de firmware, cambie del modo de soporte BioStar existente al modo de soporte CLUe.
+
+* BioStation 3, BioEntry W3, BioEntry W2, BioLite N2, X-Station 2, XPass 2
+
+:::caution
+
+Antes de actualizar el firmware, asegúrese de que no queden datos de usuarios en el dispositivo. Si quedan datos de usuarios, pueden entrar en conflicto con la información de usuarios sincronizada desde el sistema CLUe.
+
+:::
+
+## Cambiar al modo de soporte CLUe
+
+:::info
+
+Para preinscribir el dispositivo antes de la actualización de firmware, proporcione el número de serie del dispositivo (SN) y el nombre del modelo (por ejemplo, BS3-DB) a <Support />. El proceso de preinscripción continuará.
+
+:::
+
+<Steps>
+<Step>
+
+### Preparar una versión de firmware de soporte CLUe
+
+Obténgala a través de su sucursal local de Suprema o del equipo de CLUe. Las versiones disponibles para el dispositivo son las siguientes.
+
+* *xpass2_v1_x_CL-AU.bin*
+
+* *bs3-all_v1.x._CL-AU.bin*
+
+* *xs2-all_v1.x CL-AU.zip*
+
+* *bln2-oab_v1.x CL-AU.bin*
+
+* *bln2-odb_v1.x CL-AU.bin*
+
+* *bln2-pab_v1.x CL-AU.bin*
+
+* *bew3-all_v1.x CL-AU.bin*
+
+* *bew2_oa/d/hp_v1.x CL-AU.bin*
+
+:::info
+
+El sufijo `AU` significa "Auto Update to CLUe FW".
+
+:::
+
+</Step>
+<Step>
+
+### Comprobar la conexión a internet
+
+**Antes de actualizar el firmware, asegúrese de que el dispositivo pueda conectarse a internet y al servidor CLUe**.
+
+Después de la actualización del firmware CLUe, el dispositivo obtiene automáticamente el certificado del servidor CLUe, lo aplica y luego intenta conectarse, por lo que se requiere una conexión a internet. El dispositivo también obtiene una dirección IP mediante DHCP de forma predeterminada, así que asegúrese de que pueda recibir una dirección IP dinámica.
+
+* La setting de red predeterminada es DHCP.
+
+* Use el servidor DNS 8.8.8.8.
+
+</Step>
+<Step>
+
+### Proceder con la actualización del firmware
+
+**Durante el proceso de actualización, el dispositivo se reinicia al menos 2 o 3 veces**.
+
+La actualización del firmware principal puede tardar un poco, y el proceso de carga del certificado y del firmware de setting se completa relativamente rápido. Todo el proceso tarda unos 3~5 minutos, así que mantenga el dispositivo encendido y conectado a internet hasta que finalice la actualización.
+
+:::info
+
+También puede actualizar el firmware mediante BioStar 2 o USB.
+
+:::
+
+</Step>
+<Step>
+
+### Confirmar que la actualización se completó
+
+**Cuando finalizan todas las actualizaciones, el ícono de CLUe aparece en la pantalla principal del dispositivo**.
+
+<Image src='/img/clue/bs3-main-clue.png' />
+
+En dispositivos sin pantalla, ingrese el número de serie en el portal de CLUe para comprobar el estado de preinscripción del dispositivo.
+
+</Step>
+<Step>
+
+### Registrar dispositivo
+
+**Pida al contacto de Suprema que asigne el dispositivo a su cuenta a través del portal**.
+
+Luego asigne el dispositivo al Place especificado y úselo con la setting de la puerta. Para una administración segura del dispositivo, el sistema CLUe requiere que cada Branch manager asigne dispositivos al Place group correspondiente.
+
+</Step>
+<Step>
+
+### Establecer la contraseña del menú del dispositivo
+
+Después de la actualización del firmware, los dispositivos con pantalla LCD le piden que establezca una contraseña de menú. Siga las instrucciones en pantalla para establecer la contraseña. También puede establecer la contraseña a través del portal de CLUe.
+
+A diferencia de los dispositivos BioStar, los dispositivos CLUe suelen usarse sin datos de usuarios. Por lo tanto, establezca una contraseña de menú para evitar cambios no autorizados en las setting del menú.
+
+<ProdImg src='/img/clue/place-access-device-password.png' />
+
+</Step>
+</Steps>
+
+## Solución de Problemas
+
+Si el ícono de la nube no aparece en la pantalla del dispositivo, revise lo siguiente:
+
+* Primero, compruebe la conexión a internet. El dispositivo se conecta directamente al servidor en la nube, así que debe permanecer conectado a internet. El firmware CLUe también usa el puerto estándar HTTPS 443 para la comunicación saliente.
+
+* Si el ícono de la nube aún no aparece, ejecute una prueba de ping en el dispositivo para comprobar la conexión a internet.
+
+  | Dispositivo | Ruta |
+  | --- | --- |
+  | BioStation 3 | Menú (<Image src='/img/common/ico-menu.svg' ico alone />) → <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_252' product='dev' /> → <Cmd sid='ui_390' product='dev' /> |
+  | BioLite N2 | **ESC** → <Cmd sid='ui_103' product='dev' /> → <Cmd sid='ui_059' product='dev' /> →  <Cmd sid='ui_390' product='dev' /> |
+  | X-Station 2 | Menú (<Image src='/img/common/ico-menu2.svg' ico alone />) → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_252' product='dev' /> → <Cmd sid='ui_390' product='dev' /> |
+
+  * Si aparece la ventana emergente **Ping test successful**, la conexión a internet funciona correctamente.
+
+  * Si aparece la ventana emergente **Unknown** o **Fail**, compruebe si la red bloquea el DNS en uso.

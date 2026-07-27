@@ -1,0 +1,90 @@
+---
+id: clue-api-guide
+title: Guía de la API CLUe
+description: Esta guía proporciona la información básica necesaria para usar la API CLUe, incluida la forma de emitir claves de API, los formatos de solicitud y respuesta, los códigos de error y los límites de velocidad.
+---
+
+Este documento ayuda a integrar rápidamente y con facilidad la API CLUe de Suprema. Esta guía proporciona la información básica necesaria para usar la API CLUe, desde la forma de emitir claves de API hasta los formatos de solicitud y respuesta, los códigos de error y los límites de velocidad. La API CLUe funciona con las setting del portal CLUe de Suprema. Si no tiene una cuenta del portal CLUe, solicite una primero.
+
+<NextStep notitle>
+<NextItem to='pathname:///developer/clue'>
+
+Obtenga más información sobre el uso de la API CLUe.
+
+</NextItem>
+</NextStep>
+
+## Qué es una clave de API
+
+Se requiere una clave de API para llamar a la API CLUe. Puede emitir una desde el menú de administrador para el grupo de lugares. La API CLUe requiere una clave de API como token Bearer en el encabezado de la solicitud. Puede emitir y administrar claves de API en el [portal CLUe](https://clue.moon.supremainc.com/login).
+
+Para registrarse, obtenga una invitación de un administrador de nivel superior o de un administrador en el mismo grupo de lugares.
+
+:::note
+
+**Qué son Place y Place group?**
+
+Como CLUe admite un sistema multicliente, un **Place** se refiere a una unidad independiente, como una empresa o Branch, y un **Place group** es un concepto de nivel superior que administra varios Places en conjunto.
+
+:::
+
+import IssueAPI from './_clue-issue-api.mdx';
+
+<IssueAPI />
+
+## Conceptos básicos de la API CLUe
+
+### URL base
+
+La URL base para todas las solicitudes de API es `https://api.moon.supremainc.com/v1`. Envíe todas las solicitudes de API por HTTPS.
+
+La API CLUe sigue los principios RESTful tanto como es posible y ejecuta la mayoría de las operaciones en páginas y recursos de base de datos con solicitudes `GET`, `POST`, `PATCH` y `DELETE`. Tanto el cuerpo de la solicitud como el de la respuesta están codificados en JSON.
+
+### Respuesta correcta de la API
+
+Cuando la respuesta se completa con éxito, se devuelve el siguiente estado.
+
+Código de estado HTTP: `200`
+
+| Campo | Descripción | Opcional |
+| :-: | --- | :-: |
+| `code` | Código de respuesta de la API |  |
+| `status` | Estado de respuesta de la API |  |
+| `message` | Mensaje de respuesta de la API | true |
+| `data` | Datos de respuesta de la API | true |
+
+### Respuesta fallida de la API
+
+Cuando la respuesta falla, se devuelve uno de los siguientes estados.
+
+Código de estado HTTP: `400` / `500`
+
+| Campo | Descripción | Opcional |
+| :-: | --- | :-: |
+| `errors` | Respuesta fallida de la API |  |
+| `errors.code` | Código de error de fallo |  |
+| `errors.message` | Mensaje de referencia del fallo |  |
+| `errors.details` | Detalles del fallo | true |
+
+### Códigos de error comunes
+
+| **Código** | **Descripción** |
+| :-: | --- |
+| `e1000` | Error interno del servidor |
+| `e1001` | Permiso denegado |
+| `e1002` | No compatible |
+| `e1003` | Formato no válido |
+| `e1004` | Error de análisis de JSON |
+| `e1005` | Argumento de método no válido |
+| `e1006` | Solicitud incorrecta |
+| `e1007` | Recurso no encontrado |
+| `e1008` | Tipo de argumento de método incompatible |
+| `e1009` | Falta el encabezado de la solicitud |
+
+## Límites de velocidad de la API
+
+:::caution
+
+CLUe limita cada API a 300 llamadas por 5 minutos, y este límite se aplica por origen de llamada. Sin embargo, las API que agregan imágenes faciales incluyen tareas de procesamiento, como la extracción y generación de plantillas, por lo que recomendamos esperar poco tiempo entre llamadas.
+
+:::

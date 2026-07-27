@@ -1,0 +1,233 @@
+---
+id: allocate-device-to-place
+title: Autoasignar dispositivo
+description: Esta guía explica cómo los instaladores autoasignan un dispositivo a un Place en sitio, sin acceder al portal CLUe.
+---
+
+Incluso cuando los instaladores no pueden iniciar sesión en el portal CLUe en sitio, pueden asignar un dispositivo a un Place usando solo la información que el administrador preparó con anticipación. Esta feature se llama Autoasignación de dispositivo y consta de un paso de preparación del administrador, realizado con anticipación, y un paso de asignación en sitio, realizado por el instalador.
+
+## Modelos de dispositivo y versiones de firmware compatibles
+
+| Modelo de dispositivo | Versión de firmware compatible |
+| --- | --- |
+| X-Station 2 | 2026.06.01 o posterior |
+| BioStation 3 | 2026.05.26 o posterior |
+| BioLite N2 | 2026.06.01 o posterior |
+| XPass 2 | 2026.06.01 o posterior |
+| BioEntry W3 | No compatible |
+| BioEntry W2 | No compatible |
+
+## Paso de preparación del administrador
+
+Antes de iniciar la asignación en sitio, el administrador del Place debe revisar el Place ID en el portal CLUe y definir la dirección de correo electrónico de asignación del dispositivo. Si no la define, no puede recibir el código de asignación en sitio. Solo los administradores invitados con permisos de administrador de Place o superiores pueden acceder.
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Vaya al Place donde asignará el dispositivo.
+
+3. En la barra lateral izquierda, haz clic en <Cmd sid='settings' product='clue' /> → <Cmd sid='basic' product='clue' />.
+
+4. Haga clic en la sección <Cmd sid='device_self_allocation' product='clue' />.
+
+   <ProdImg src='/img/clue/clue-place-setting-basic-self-registration.png' />
+
+El campo <Cmd sid='place' product='clue' /> <Cmd sid='id' product='clue' /> (solo lectura) y el campo de dirección de correo electrónico de <Cmd sid='device_self_allocation' product='clue' /> aparecen.
+
+### Revise el Place ID
+
+<Cmd sid='place' product='clue' /> <Cmd sid='id' product='clue' /> es de solo lectura. Comparte este número con el instalador en sitio. El instalador puede ingresar el ID de Place en el dispositivo para completar el registro. Ingresar el ID de Place incorrecto es la causa más común de que falle el registro, así que compártelo con precisión.
+
+<ProdImg src='/img/clue/clue-place-self-registration-space-id.png' />
+
+### Defina la dirección de correo electrónico de asignación del dispositivo
+
+Defina la dirección de correo electrónico de asignación del dispositivo con uno de dos métodos.
+
+<ProdImg src='/img/clue/clue-place-self-registration-email.png' />
+
+* <Cmd sid='use_admin_account_email' product='clue' />: Completa automáticamente la dirección de correo electrónico de la cuenta de administrador que inició sesión actualmente.
+
+* <Cmd sid='enter_manually' product='clue' />: Ingrese manualmente cualquier dirección de correo electrónico. Ingrésela con el formato habitual de dirección de correo electrónico, hasta 254 caracteres.
+
+En ambos métodos, la dirección de correo electrónico ingresada se almacena en el servidor tal como se ingresó. El sistema no distingue si el destinatario es un administrador, un instalador en sitio o un tercero. Solo puede definir un correo electrónico de asignación para cada Place. Cuando crea un nuevo Place, el correo electrónico de asignación comienza sin definir, así que primero defina el correo para usar la feature de autoasignación.
+
+:::note
+
+**¿Qué sucede si no define una dirección de correo electrónico?**
+
+Si un instalador ejecuta **Send Allocation Code** en un Place sin un correo electrónico de asignación definido, aparece el error "El administrador debe definir primero la dirección de correo electrónico de asignación."
+
+:::
+
+## Paso de asignación en sitio
+
+El proceso de asignación para dispositivos con LCD (<DocLink inner='#lcdSelfRegistration' />) y dispositivos sin LCD (<DocLink inner='#nonelcdSelfRegistration' />) sigue el mismo principio, pero las pantallas difieren. Primero, esta guía explica los conceptos que aplican a ambos.
+
+| Pasos | Activador y acción | Resultado |
+| --- | --- | --- |
+| Enviar código de asignación | Ingrese el Place ID y luego ejecute **Send Allocation Code**. | El servidor genera un código de asignación de 6 dígitos y lo envía a la dirección de correo electrónico de asignación del Place. |
+| Ingresar código de asignación | Ingrese el código que recibió por correo electrónico dentro del tiempo especificado. | Si el código coincide, el dispositivo se asigna a ese Place. |
+
+### Autoasignación de dispositivo LCD {/* #lcdSelfRegistration */}
+
+Las pantallas siguientes son ejemplos. Los diseños reales de pantalla y los nombres de los botones pueden variar según el modelo de dispositivo y la versión de firmware. Continúe según la guía que aparece en la pantalla.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/clue/clue-place-self-reg-lcd-device.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+#### <Num num='1' /> Vaya a la asignación de Place
+
+En el menú de configuración del dispositivo, seleccione **DEVICE** → **CLUe Place Allocation**. Aparece la pantalla de asignación de Place.
+
+:::info
+
+* Los nombres y las ubicaciones de los menús pueden variar según el modelo de dispositivo y la versión de firmware.
+
+* Si el dispositivo ya pertenece a un Place, grupo de Place, Distributor o Branch específicos, no puede entrar en la pantalla de asignación y aparece un mensaje que indica que ya está asignado.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/clue/clue-place-self-reg-lcd-device-place-allocation.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+#### <Num num='2' /> Ingrese el Place ID
+
+Ingrese el Place ID que recibió del administrador con el teclado numérico. Si ingresa un ID que no existe, o un ID de Branch, Distributor o grupo de Place en lugar de un Place ID, aparece un mensaje de error. Revise de nuevo el Place ID y luego ingréselo.
+
+</Column>
+</Columns>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/clue/clue-place-self-reg-lcd-device-issue-code.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+#### <Num num='3' /> Enviar código de asignación
+
+Ingrese el Place ID y luego ejecute **Issue Code**. El servidor genera un código de asignación de 6 dígitos y lo envía a la dirección de correo electrónico de asignación de ese Place. El dispositivo cambia a la pantalla de ingreso del código de asignación.
+
+:::info
+
+Si no hay un correo electrónico de asignación definido, aparece un mensaje de error. En este caso, pida al administrador que defina la dirección de correo electrónico de asignación.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/clue/clue-place-self-reg-lcd-device-enter-code.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+#### <Num num='4' /> Ingrese el código de asignación
+
+Ingrese el código de 6 dígitos que recibió por correo electrónico dentro de 30 minutos. Si el código vence o no coincide, aparece un mensaje de error.
+
+:::info
+
+* Para ingresar el código otra vez o solicitar uno nuevo, toque el botón **Reissue Code**.
+
+* Si ingresa el código incorrectamente cinco veces seguidas, el código emitido se descarta. Regrese al paso anterior y solicite un código nuevo.
+
+:::
+
+#### <Num num='5' /> Asignación completada
+
+Toque el botón **Allocate Space**. Si el código coincide, el dispositivo se asigna a ese Place y aparece un mensaje de asignación completada. Después de eso, el dispositivo cambia a la pantalla normal de operación de acceso.
+
+Un dispositivo asignado no puede cambiar de Place en sitio. Si necesita cambiarlo, hágalo en el portal CLUe.
+
+</Column>
+</Columns>
+
+### Autoasignación de dispositivo sin LCD (servidor web) {/* #nonelcdSelfRegistration */}
+
+Los dispositivos sin LCD no pueden asignar un Place en el cuerpo del dispositivo. Use un navegador web en una PC o dispositivo móvil conectado a la misma red que el dispositivo para acceder al servidor web del dispositivo y completar la asignación.
+
+#### Acceda al servidor web del dispositivo
+
+Ingrese la siguiente dirección en la barra de direcciones del navegador web, en un dispositivo conectado a la misma red que el dispositivo de destino.
+
+> https://`{device_IP_address}`:`{port}` — por ejemplo, https://192.168.0.27:8443
+
+* Consulte la guía de instalación de cada dispositivo para revisar la dirección IP y el port del dispositivo.
+
+* Si usa un certificado autofirmado, el navegador puede mostrar una advertencia de seguridad: "No seguro." Continúe para abrir la pantalla de asignación.
+
+Si el dispositivo aún no está asignado a ningún Place, aparece la pantalla de asignación de Place (**CLUe Device Web Panel**). Si el dispositivo pertenece a un Place específico, aparece un mensaje que indica que ya está asignado y no puede acceder a la pantalla de asignación.
+
+#### Asignar en la web
+
+Siga las instrucciones a continuación para completar la Autoasignación de dispositivo.
+
+<Image src='/img/clue/clue-place-self-reg-device-web-panel.png' alone />
+
+##### <Num num='1' /> Ingrese el Place ID
+
+Ingrese el Place ID que recibió del administrador en el campo de entrada **Place ID**. Si ingresa un ID que no existe o que no es un Place hoja, aparece un mensaje de error. Revise de nuevo el Place ID y luego ingréselo.
+
+##### <Num num='2' /> Enviar código de asignación
+
+Ingrese el Place ID y luego haga clic en el botón **Issue Code**. El servidor genera un código de asignación de 6 dígitos y lo envía a la dirección de correo electrónico de asignación de ese Place.
+
+:::info
+
+Si no hay un correo electrónico de asignación definido, aparece un mensaje de error. En este caso, pida al administrador que defina la dirección de correo electrónico de asignación.
+
+:::
+
+##### <Num num='3' /> Ingrese el código de asignación
+
+Ingrese el código de 6 dígitos que recibió por correo electrónico dentro de 30 minutos. Si el código vence o no coincide, aparece un mensaje de error.
+
+:::info
+
+* Para revisar el estado actual de la asignación, haga clic en el botón **Check Status**.
+
+* Para recibir el código otra vez, haga clic en el botón **Reissue Code**. Sin embargo, el mismo dispositivo debe esperar 60 segundos después del envío anterior del código antes de enviarlo de nuevo.
+
+* Si ingresa el código incorrectamente cinco veces seguidas, el código emitido se descarta. Regrese al paso anterior y solicite un código nuevo.
+
+:::
+
+##### <Num num='4' /> Asignación completada
+
+Haga clic en el botón **Allocate Space**. Si el código coincide, el dispositivo se asigna a ese Place y aparece un mensaje de completado. Después de completar la asignación, el servidor web sigue en ejecución durante unos 3 minutos más y luego se apaga automáticamente. Después de eso, los intentos de acceder a la misma dirección ya no conectan. Este comportamiento es normal para evitar el uso innecesario de recursos y mejorar la seguridad. Para cambiar el Place después de la asignación, hágalo en el portal CLUe.
+
+## Notas
+
+### Revisar correo electrónico del código de asignación
+
+Cuando ejecuta **Send Allocation Code** (**Issue Code**), el sistema envía un correo electrónico con el código de asignación a la dirección de correo electrónico de asignación definida para el Place. Antes de ingresar el código de asignación, el destinatario debe revisar el cuerpo del correo para confirmar que el destino de la asignación es correcto.
+
+<Image src='/img/clue/clue-place-self-reg-device-email-code.png' alone />
+
+El asunto del correo incluye el número de serie del dispositivo (deviceSn). En la lista de la bandeja de entrada, solo el asunto identifica a qué dispositivo pertenece el código. Cuando instale varios dispositivos a la vez, use el número de serie del asunto para distinguir el correo de cada dispositivo.
+
+### Dispositivo ya asignado (no se permite reasignación)
+
+Un dispositivo que ya pertenece a un Place, grupo de Place, Distributor o Branch específicos no puede asignarse otra vez en sitio. Si ingresa al menú de asignación (**CLUe Place Allocation**) en un dispositivo LCD o accede al servidor web de un dispositivo sin LCD, aparece el siguiente mensaje y se bloquea el acceso a la pantalla de asignación.
+
+> Este dispositivo ya está asignado. Los cambios se pueden hacer desde el portal CLUe.
+
+Puede cambiar o desasignar un Place solo en el portal CLUe, no en sitio. En casos poco frecuentes, el dispositivo puede parecer que no pertenece a ningún Place específico, pero el servidor ya lo tiene asignado, por ejemplo, cuando se preasignó en el portal. En ese caso, ejecutar **Send Allocation Code** también muestra el mismo mensaje de error de ya asignado. En este caso también, cámbielo en el portal.

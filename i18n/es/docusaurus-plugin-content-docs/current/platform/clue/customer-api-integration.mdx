@@ -1,0 +1,625 @@
+---
+id: customer-api-integration
+title: Integrar con una API de cliente
+description: Esta guía explica cómo registrar una API de proveedor en un CLUe place group y conectarla a una credential para integrar la lógica de decisión de acceso del cliente con el control de acceso de CLUe.
+---
+
+Customer API integration es un método de acceso en el que CLUe envía datos de credential reconocidos, como rostro, fingerprint, tarjeta RF, PIN, CLUe QR o QR personalizado, a una API externa operada por el cliente. Luego, el acceso se permite o se deniega según la respuesta. Este método permite aplicar políticas específicas del cliente, como permisos de acceso, asistencia y gestión de visitantes, directamente al control de acceso de CLUe sin desarrollo adicional.
+
+CLUe solo identifica credentials y las envía a la API del cliente. La respuesta de la API del cliente determina si el acceso se permite.
+
+## Antes de comenzar
+
+### Público
+
+Este documento es para **administradores de place group** y **administradores de Place**.
+
+* **Administrador de place group**: registra, edita y elimina APIs de cliente, asigna tipos de credential a APIs y aplica settings a sub-places.
+
+* **Administrador de Place**: revisa los settings heredados del place group y aplica sobrescrituras específicas del Place cuando es necesario.
+
+:::info
+
+Este documento es para administradores de TI familiarizados con **HTTPS**, **códigos de estado HTTP**, **webhooks** (HTTP POST), **JSON** y **JSONPath**. Coordine con el contacto del cliente la especificación de la API, incluida la URL, el encabezado de autenticación y la estructura JSON de solicitud/respuesta, con anticipación.
+
+:::
+
+### Requisitos previos
+
+* Para acceder a este menú, el place group o Place de destino debe invitarte como administrador.
+
+* Prepare con anticipación la URL del Webhook de autenticación del cliente (**se requiere HTTPS**, **se recibe HTTP POST**) y los valores necesarios del encabezado de autenticación.
+
+### Términos clave
+
+| Término | Descripción |
+| --- | --- |
+| Integración de API de cliente | Un método de acceso que envía datos de credential a una API externa operada por el cliente para validación cuando un usuario presenta una credential al dispositivo. |
+| Credencial | Rostro / Fingerprint / tarjeta RF / PIN de usuario / CLUe QR / QR personalizado |
+| <Cmd sid='webhook_url' product='clue' className='normal' /> | Un endpoint HTTPS que el servidor del cliente abre para recibir solicitudes de autenticación desde CLUe mediante **HTTP POST** con `Content-Type: application/json`. |
+| Encabezado de solicitud | Un par clave/valor que se envía con la solicitud para autenticación y autorización. (Ejemplo: token `Authorization`) |
+| <Cmd sid='auto_fields' product='clue' className='normal' /> | Un valor que el sistema completa automáticamente en el cuerpo de la solicitud. Seleccione solo los campos necesarios. |
+| <Cmd sid='manual_fields' product='clue' className='normal' /> | Un valor fijo que el administrador ingresa directamente en el cuerpo de la solicitud. |
+| Criterios de decisión | Un conjunto de reglas que interpreta la respuesta del cliente como acceso permitido o denegado, e incluye statusCode, pares clave/valor de resultado correcto y claves de mensaje de éxito/fallo. La pantalla muestra esto como la sección <Cmd sid='response_parsing' product='clue' />. |
+| Modo de decisión | Un elemento que configura los criterios de decisión. Seleccione una de estas opciones: solo código de respuesta HTTP, solo campo del cuerpo de la respuesta o una combinación de ambos. |
+
+## Integración de API de cliente
+
+Customer API integration es un método de acceso que envía datos de credential reconocidos por el dispositivo CLUe a una API HTTPS operada por el cliente y decide si permite o deniega el acceso según la respuesta. Esto permite aplicar directamente políticas específicas del cliente, como permisos de acceso, asistencia y gestión de visitantes, al control de acceso de CLUe.
+
+* Puede conectar una API de cliente distinta para cada tipo de credential, como rostro, fingerprint, tarjeta RF, PIN, CLUe QR y QR personalizado.
+
+* Antes de guardar el registro, verifique la integración con una llamada de prueba.
+
+* CLUe solo identifica y envía credentials. La respuesta de la API del cliente determina la decisión real de permitir o denegar.
+
+### Credentials compatibles
+
+* Rostro
+
+* Huella
+
+* Tarjeta RF
+
+* PIN de usuario
+
+* CLUe QR
+
+* QR personalizado
+
+### Roles de los place groups y Places
+
+| Nivel | roles | Responsabilidades |
+| --- | --- | --- |
+| Place group | Administrador de place group | Registra, edita y elimina APIs de cliente, y conecta APIs con credentials |
+| Place | Administrador de Place | Revisa los settings heredados y aplica sobrescrituras específicas del Place cuando es necesario |
+
+:::note
+
+**Reglas de aplicación**
+
+* **Guardado a nivel de place group**: Los mismos settings se aplican de inmediato a todos los sub-places del place group. Los sobrescrituras específicas de Place existentes se reemplazan con los valores del place group.
+
+* **Guardado a nivel de Place**: Se aplica solo a ese Place. No afecta a otros Places ni al place group principal.
+
+:::
+
+## Flujo principal
+
+Customer API integration tiene dos flujos principales. El **flujo de settings** que realizan primero los administradores y el **flujo de eventos de acceso** que se ejecuta cuando un usuario intenta acceder.
+
+### Resumen del flujo de settings {/* #settingWorkflow */}
+
+Los pasos que realiza el administrador. Cada paso se describe en detalle a partir del capítulo 4.
+
+1. (Place group) Seleccione el método de acceso. 
+
+   * <Cmd sid='vendor' product='clue' /> o <Cmd sid='mixed_advanced_method' product='clue' />
+
+   * La entrada <Cmd sid='customer_api_integration' product='clue' /> se activa en la barra lateral izquierda.
+
+2. (Place group) Registre la API en <Cmd sid='customer_api_integration' product='clue' />.
+
+   Información básica → Encabezado personalizado → Campo automático → Campo manual → Ejecutar prueba → Configurar análisis de respuesta → Guardar
+
+3. (Place group) Conecte la API registrada a cada credential.
+
+   Cuando guarda, los mismos settings se aplican automáticamente a todos los sub-places.
+
+4. (Opcional) Configure una sobrescritura específica del Place.
+
+   Se aplica solo al Place seleccionado. De forma predeterminada, los settings del place group siguen vigentes.
+
+### Resumen del flujo de eventos de acceso
+
+Esta es la secuencia que se ejecuta después de la configuración cuando un usuario intenta acceder.
+
+1. El usuario presenta una credential al dispositivo. (Rostro / Fingerprint / tarjeta RF / PIN / CLUe QR / QR personalizado)
+
+2. El dispositivo envía una solicitud de verificación al servidor de CLUe.
+
+3. El servidor de CLUe envía una solicitud de verificación al servidor del cliente. 
+
+   Incluye la URL del Webhook registrada, el encabezado personalizado, los campos automáticos y los campos manuales
+
+4. El servidor de CLUe decide el acceso según la respuesta del cliente.
+
+   Los criterios de decisión configurados determinan si el acceso se permite o se deniega.
+
+5. El sistema devuelve el resultado al dispositivo.
+
+   Si la respuesta incluye un mensaje, aparece en la pantalla del dispositivo.
+
+## Flujo de settings
+
+### Paso 1 — Habilite la integración de API de cliente
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Seleccione el place group.
+
+3. Haga clic en <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' /> en la esquina superior derecha de la pantalla.
+
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-settings.png' />
+
+4. Haga clic en <Cmd sid='service' product='clue' /> en la barra lateral izquierda de la pantalla.
+
+   :::note
+
+   Al inicio, <Cmd sid='access_type' product='clue' /> está configurado en <Cmd sid='none_2' product='clue' />. En este estado, no hay settings activos.
+
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-none.png' />
+
+   :::
+
+5. En <Cmd sid='access_type' product='clue' />, seleccione <Cmd sid='vendor' product='clue' />.
+
+6. Aparece la sección <Cmd sid='verify_vendor' product='clue' />.
+
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-select-vendor.png' />
+
+   La sección <Cmd sid='verify_vendor' product='clue' /> muestra las seis credentials compatibles. Luego conecte la API del cliente registrada para cada credential.
+
+7. Cuando <Cmd sid='customer_api_integration' product='clue' /> se active en la barra lateral izquierda, haga clic en ella.
+
+:::info
+
+* <Cmd sid='customer_api_integration' product='clue' /> se activa cuando <Cmd sid='access_type' product='clue' /> se configura en <Cmd sid='vendor' product='clue' /> o <Cmd sid='mixed_advanced_method' product='clue' />.
+
+* No se requiere guardar en este paso. Para registrar la API y conectarla, consulte <DocLink inner="#vendorApiregistration" />.
+
+:::
+
+### Paso 2 — Registre la API de cliente {/* #vendorApiregistration */}
+
+<Steps>
+<Step>
+
+#### Agregar API
+
+1. Haga clic en el botón <Cmd sid='add_api' product='clue' /> en la parte superior derecha de la pantalla.
+
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api.png' />
+
+2. Cuando aparece el panel <Cmd sid='add_api' product='clue' />, ingrese la información necesaria.
+
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png' />
+
+</Step>
+<Step>
+
+#### Ingrese información básica
+
+| Campo | Descripción | Obligatorio | Regla de entrada |
+| --- | --- | :-: | --- |
+| <Cmd sid='connector_name' product='clue' /> | Ingrese un nombre para identificar esta integración. | Si | Hasta 64 caracteres. |
+| <Cmd sid='auth_type' product='clue' /> | Seleccione la credential que usará esta API. | Si | Seleccione uno de los seis tipos. |
+| <Cmd sid='webhook_url' product='clue' /> | URL del Webhook del cliente. | Si | Debe comenzar con `https://` y puede tener hasta 512 caracteres. Las URLs `http://` no se pueden guardar. |
+
+:::info
+
+<Cmd sid='auth_type' product='clue' /> no se puede cambiar después de configurarlo una vez. Para usarlo con un tipo de credential diferente, registre una API nueva.
+
+:::
+
+#### Especificación de la solicitud
+
+CLUe solo envía solicitudes **HTTP POST** con `Content-Type: application/json` a la URL registrada. La API del cliente debe aceptar solicitudes en este formato. Los endpoints que solo permiten otros métodos, como `GET` o `PUT`, no son compatibles.
+
+#### Especificación de la respuesta {/* #responseSpec */}
+
+La API del cliente debe incluir `Content-Type: application/json` en el encabezado de respuesta y devolver el cuerpo de la respuesta en formato JSON. CLUe no puede analizar respuestas que no sean JSON, como páginas de error HTML, texto sin formato o XML. Fallan tanto la verificación de acceso de prueba como la de acceso en vivo.
+
+```json title="Example response body"
+{
+   "valid": true,
+   "message": "Access granted."
+}
+```
+
+En el ejemplo anterior, establezca `Key` de los criterios de decisión en `$.valid` y `Value` en `true` (`BOOLEAN`) para definir la condición de éxito, y establezca <Cmd sid='success_message_jsonpath' product='clue' /> en `$.message` para mostrar el mensaje de éxito. Haga coincidir los nombres reales de las claves y la estructura con la especificación de la API del cliente.
+
+:::note
+
+**Límite de registro**
+
+Puede registrar hasta **3** APIs por tipo de credential. En otras palabras, puede registrar hasta 18 APIs por place group entre los seis tipos: rostro, fingerprint, tarjeta RF, PIN, CLUe QR y QR personalizado. No puede registrar más para un tipo de credential que ya tiene 3 APIs. Seleccione la API que cada credential usa realmente en <DocLink inner="#credentialApiAssignment" />.
+
+:::
+
+</Step>
+<Step>
+
+#### Agregar encabezados personalizados
+
+Agregue encabezados personalizados si la API del cliente requiere encabezados **Authentication** o **Authorization**.
+
+> Ejemplo: token `Authorization`, clave de API
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-custom-header.png' />
+
+| Campo | Descripción |
+| --- | --- |
+| <Cmd sid='header_name' product='clue' /> | Ingrese el nombre del encabezado, como `Authorization`. No se permiten nombres duplicados. |
+| <Cmd sid='header_value' product='clue' /> | Ingrese el valor del encabezado. |
+
+* Puede agregar hasta **10** encabezados personalizados.
+
+* Deje esta sección en blanco si la API del cliente es un endpoint público o no requiere encabezados separados.
+
+* Para insertar una fila, haga clic en el botón <Cmd sid='add' product='clue' />. Para eliminar una, haga clic en el botón <IcClose title='Delete' />.
+
+:::note
+
+**Los encabezados fijos no se pueden configurar**
+
+`Content-Type` y `Accept` no se pueden agregar como encabezados personalizados. CLUe envía `Content-Type: application/json` y `Accept: application/json` como valores fijos internamente, por lo que el administrador no necesita configurarlos por separado. Si intenta agregar un encabezado con este nombre, el sistema no lo guarda. La API del cliente debe diseñarse teniendo en cuenta estos dos encabezados.
+
+:::
+
+</Step>
+<Step>
+
+#### Seleccione campos automáticos
+
+<Cmd sid='auto_fields' product='clue' /> son valores que el sistema **completa automáticamente en el cuerpo de la solicitud**. Los campos automáticos disponibles varían según el tipo de credential. La ubicación de cada valor de campo aparece como un **marcador de posición** `{{...}}`, y el sistema lo reemplaza con valores reales del dispositivo o del usuario al momento de la solicitud.
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-auto-field.png' caption />
+
+| Clave predeterminada | Marcador de posición (ubicación del valor) | Disponible para | Valor real |
+| --- | --- | --- | --- |
+| `deviceId` | `{{DEVICE_SERIAL}}` | Todos los tipos de credential | El número de serie del dispositivo solicitado |
+| `userKey` | `{{USER_KEY}}` | Rostro / Fingerprint / CLUe QR | El identificador de usuario administrado por CLUe |
+| `rfCard` | `{{CARD_NUMBER}}` | Tarjeta RF | Número de tarjeta presentado |
+| `uniquePin` | `{{UNIQUE_PIN}}` | PIN de usuario | Valor de PIN ingresado |
+| `qrCode` | `{{QR_CODE}}` | QR personalizado | Payload de QR |
+
+:::note
+
+**Reglas de selección de campos**
+
+* Use la casilla a la izquierda de cada campo para **decidir si se incluye en la solicitud**.
+
+* No necesita seleccionarlos todos. Seleccione solo los valores que la API del cliente realmente necesita para la decisión. Reducir los datos innecesarios facilita la solución de problemas.
+
+* Puede editar el nombre de la clave. Cámbielo para que coincida con el nombre requerido por la API del cliente, como `userKey → employeeId`. El sistema fija el valor de ubicación del marcador de posición, por lo que no puede cambiarlo.
+
+* El tipo de datos de cada campo, como `STRING`, aparece a la derecha del campo.
+
+:::
+
+:::info
+
+* No puede agregar marcadores de posición más allá de estos cinco. Si la API del cliente requiere valores adicionales, consulte <DocLink inner="#manualField" /> para agregar valores fijos o coordine con el cliente para que los derive del número de serie del dispositivo o de la clave de usuario.
+
+* Puede incluir hasta **10** campos en el cuerpo de la solicitud, combinando campos automáticos y manuales. Cuantos más campos automáticos seleccione, menos campos manuales podrá usar.
+
+:::
+
+</Step>
+<Step>
+
+#### Agregar campo manual {/* #manualField */}
+
+Agregue campos manuales cuando la API del cliente requiera valores fijos en la solicitud.
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-manual-field.png' />
+
+| Campo | Descripción |
+| --- | --- |
+| <Cmd sid='field_name' product='clue' /> | Los nombres de campo deben ser únicos y deben diferir de los nombres de los campos automáticos. |
+| **Tipo de campo** | Seleccione `STRING`, `NUMBER` o `BOOLEAN`. |
+| <Cmd sid='value' product='clue' /> | Ingrese el valor de este campo. El sistema lo convierte al tipo de datos JSON adecuado según el tipo seleccionado.<br /> Ejemplo: `NUMBER: 123`, `STRING: "123"`, `BOOLEAN: true/false` |
+
+* Puede incluir hasta **10** campos en total, combinando campos automáticos y manuales.
+
+* Si no se agregan campos manuales, aparece el mensaje <Cmd sid='no_manual_fields_defined' product='clue' />.
+
+* Para insertar una fila, haga clic en el botón <Cmd sid='add' product='clue' />. Para eliminar una, haga clic en el botón <IcCLDel title='Delete' width='20' height='20' />.
+
+</Step>
+<Step>
+
+#### Ejecutar prueba de API {/* #apiTest */}
+
+Después de completar la información básica, los encabezados personalizados, los campos automáticos y los campos manuales, ejecute una prueba antes de configurar los criterios de decisión. La respuesta real de la prueba es necesaria para configurar los criterios de decisión (<DocLink inner="#responseParsing" />).
+
+Use <Cmd sid='api_test_console' product='clue' /> en el lado derecho del panel <Cmd sid='add_api' product='clue' />.
+
+##### Parámetros de prueba
+
+Los campos de entrada que muestra la consola de prueba varían según el tipo de credential. <Cmd sid='device_id' product='clue' /> (número de serie del dispositivo) es obligatorio para todos los tipos. Ingrese los valores restantes en el mismo formato que el cliente administra para ese tipo de credential.
+
+| Método de autenticación | Valor para ingresar | Marcador de posición coincidente |
+| --- | --- | --- |
+| Todos los tipos | <Cmd sid='device_id' product='clue' /> — 9 a 12 dígitos, número de serie del dispositivo | `{{DEVICE_SERIAL}}` |
+| Rostro / Fingerprint / CLUe QR | <Cmd sid='user_key' product='clue' /> — 1 a 64 caracteres, el identificador de usuario administrado por CLUe | `{{USER_KEY}}` |
+| Tarjeta RF | El **número de tarjeta** administrado por el cliente | `{{CARD_NUMBER}}` |
+| PIN de usuario | El **PIN de usuario** administrado por el cliente | `{{UNIQUE_PIN}}` |
+| QR personalizado | El **payload de QR** administrado por el cliente | `{{QR_CODE}}` |
+
+Los valores ingresados en la consola de prueba reemplazan los marcadores de posición de los campos automáticos y se envían como el cuerpo real de la solicitud. Para las pruebas, ingrese valores que realmente existan en la base de datos del cliente para verificar respuestas de permiso y denegación. En un entorno en vivo, los valores reconocidos por el dispositivo se completan automáticamente.
+
+##### Ejecutar prueba
+
+1. Haga clic en el botón <Cmd sid='execute_test' product='clue' /> en la parte inferior de la consola.
+
+2. Aparece un indicador de progreso mientras se ejecuta la prueba. 
+
+3. Cuando llegan los resultados, los detalles de la solicitud y la respuesta aparecen en el área de la consola <Cmd sid='terminal_output' product='clue' />.
+
+Si cierra el panel o vuelve al paso anterior mientras se ejecuta, la prueba se detiene.
+
+Cuando la respuesta llega correctamente, pase al siguiente paso y configure los criterios de decisión según la respuesta. Si la URL, el encabezado o los settings de los campos impiden una respuesta, revise los valores y vuelva a probar.
+
+:::note
+
+**Obligatorio antes de guardar**
+
+El botón <Cmd sid='save_configuration' product='clue' /> se activa después de al menos una prueba exitosa. Aquí, éxito significa recibir cualquier respuesta HTTP del servidor del cliente, incluidas respuestas 4xx y 5xx. Si un error de red impide una respuesta, no puede guardar.
+
+:::
+
+##### Ejemplo de error de prueba — cuando el cuerpo de la respuesta no es JSON
+
+Aunque el servidor del cliente devuelva una respuesta, la consola de prueba muestra un error y un registro de fallo si el cuerpo no es JSON o si el encabezado `Content-Type` de la respuesta no es `application/json`. El botón <Cmd sid='save_configuration' product='clue' /> no se activa. 
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-fail-sample.png' caption />
+
+Usando <DocLink inner="#responseSpec" />, verifique con el contacto del cliente que la API cumpla ambas condiciones siguientes.
+
+* El encabezado de respuesta incluye `Content-Type: application/json`
+
+* El cuerpo de la respuesta es JSON válido, no una página de error HTML, texto sin formato ni XML
+
+</Step>
+<Step>
+
+#### Configurar análisis de respuesta {/* #responseParsing */}
+
+Según la respuesta que reciba, defina qué respuesta cuenta como acceso permitido en este paso. Las respuestas que coinciden con los criterios configurados se permiten. Todas las demás se deniegan.
+
+El modo de decisión se determina automáticamente según los campos que ingrese. Se requiere al menos uno de <Cmd sid='statuscode' product='clue' /> y <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>. Si deja ambos en blanco, no puede guardar.
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success.png' caption />
+
+| #  | Modo | Entrada | Criterios de éxito |
+| --- | --- | --- | --- |
+| 1 | Validación del código de respuesta | solo <Cmd sid='statuscode' product='clue' /> | El éxito ocurre cuando el código de estado HTTP coincide con uno de los valores de la lista. |
+| 2 | Validación del cuerpo de la respuesta | solo <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd> | El éxito ocurre cuando el cuerpo cumple la condición `Key = Value`, sin importar el código de respuesta HTTP. Si la condición coincide, las respuestas 4xx y 5xx también se permiten. |
+| 3 | Validación combinada | Ambos | El éxito ocurre cuando el código de estado coincide y la condición del cuerpo también coincide. Si el código de estado no coincide, el sistema no evalúa el cuerpo. |
+
+<Cmd sid='statuscode' product='clue' /> (usado en los modos 1 y 3)
+
+* Puede especificar solo enteros en el rango de 100 a 399. No puede configurar códigos `4xx` o `5xx` como éxito.
+
+* Puede especificar hasta 3 valores y no se permiten valores duplicados.
+
+* Si configura varios valores, el éxito se aplica cuando cualquiera coincide, como `200` o `201`.
+
+<Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd> (usado en los modos 2 y 3)
+
+* Ingrese `Key`, `Value` y el tipo de datos (`BOOLEAN`, `STRING` o `NUMBER`) que identifican la respuesta correcta.
+
+* Solo puede configurar una condición de clave de éxito.
+
+* Las respuestas que no coinciden con esta condición se deniegan.
+
+<Cmd sid='success_message_jsonpath' product='clue' /> / <Cmd sid='failure_message_jsonpath' product='clue' /> (Opcional)
+
+* Especifique la clave para extraer la cadena que se muestra en el dispositivo para éxito y fallo. `$.message` se usa con frecuencia.
+
+* Puede guardar aunque no lo especifique. Si lo deja en blanco, el sistema solo decide permitir o denegar y no muestra un mensaje en el dispositivo.
+
+* Puede establecer claves distintas para éxito y fallo.
+
+* El valor de la clave especificada debe ser una cadena y no debe ser demasiado largo para la pantalla del dispositivo.
+
+:::tip
+
+**Si es difícil ingresar JSONPath directamente**
+
+Arrastre y suelte campos desde el área de respuesta en los campos <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>, <Cmd sid='success_message_jsonpath' product='clue' /> y <Cmd sid='failure_message_jsonpath' product='clue' />. La ruta JSON se completa automáticamente. No necesita escribir el JSONPath manualmente.
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success-sample.png' />
+
+:::
+
+</Step>
+<Step>
+
+#### Guardar {/* #save */}
+
+El botón <Cmd sid='save_configuration' product='clue' /> en la parte inferior del panel <Cmd sid='add_api' product='clue' /> se activa cuando todos los campos obligatorios y los criterios de decisión se ingresan correctamente, y la prueba de API se ejecuta correctamente al menos una vez.
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success-save.png' />
+
+* Si falta algún campo obligatorio, el formato de la URL no es válido, un valor de campo manual no se puede convertir al tipo especificado, faltan criterios de decisión o la prueba no se ha ejecutado correctamente, incluidos los errores de red, el botón <Cmd sid='save_configuration' product='clue' /> permanece deshabilitado.
+
+* Para completar el registro, haga clic en el botón <Cmd sid='save_configuration' product='clue' />.
+
+Cuando guarda la API, el panel se cierra y la API recién registrada aparece en la lista como una tarjeta. La tarjeta muestra información como el nombre, el tipo de credential y la URL registrada.
+
+<ProdImg src='/img/clue/clue-vendor-api-integ-list.png' />
+
+* Para editar una API, haga clic en la tarjeta. Se abre el panel de edición. Puede editar <Cmd sid='connector_name' product='clue' />, <Cmd sid='webhook_url' product='clue' />, <Cmd sid='auto_fields' product='clue' />, <Cmd sid='manual_fields' product='clue' /> y <Cmd sid='response_parsing' product='clue' />. <Cmd sid='auth_type' product='clue' /> no se puede cambiar.
+
+* <Cmd sid='remove' product='clue' />: Elimina la API registrada. Si esta API estaba conectada a una credential, esa conexión se elimina automáticamente y el cambio se aplica al dispositivo de inmediato. Luego, una credential desconectada funciona solo con la autenticación del dispositivo, sin verificación del cliente. Si le preocupa una interrupción operativa, registre y conecte una API de reemplazo antes de eliminarla.
+
+  <ProdImg src='/img/clue/clue-vendor-api-integ-list-edit.png' />
+
+</Step>
+</Steps>
+
+### Paso 3 — Asigne APIs a cada credential {/* #credentialApiAssignment */}
+
+En la barra lateral izquierda, haga clic en <Cmd sid='service' product='clue' /> → <Cmd sid='service' product='clue' />. En la sección <Cmd sid='verify_vendor' product='clue' />, especifique la API para cada credential.
+
+<ProdImg src='/img/clue/clue-vendor-api-service-verify-vendor.png' />
+
+* Haga clic en el menú desplegable junto a cada credential para mostrar la lista de APIs registradas. Solo aparecen las APIs que coinciden con la credential seleccionada y <Cmd sid='auth_type' product='clue' />.
+
+* Para cada credential de rostro, fingerprint, tarjeta RF, PIN, CLUe QR y QR personalizado, seleccione la API que se usará. Puede asignar una API distinta a cada credential.
+
+* Una credential sin API asignada funciona solo con la autenticación del dispositivo. No se envía ninguna solicitud de verificación a la API del cliente para esa credential. Deje sin asignar solo las credentials que no necesitan verificación del cliente.
+
+#### Guardar y aplicar reglas
+
+Después de asignar la API registrada a la credential y hacer clic en el botón <Cmd sid='modify' product='clue' />, aparece un cuadro de confirmación que pregunta si desea aplicar el cambio a los sub-places.
+
+<ProdImg src='/img/clue/clue-vendor-api-service-verify-vendor-edit-save.png' />
+
+* <Cmd sid='ok' product='clue' />: Los mismos settings se aplican de inmediato a todos los sub-places del place group actual. Los sobrescrituras específicas de Place existentes se reemplazan con los valores del place group.
+
+* <Cmd sid='cancel' product='clue' />: No guarde los cambios.
+
+En la mayoría de los casos, los settings a nivel de place group son suficientes para mantener coherentes todos los sub-places. Si necesita una API distinta para un Place específico, consulte <DocLink inner="#spaceOverride" />.
+
+### Paso 4 — Configure una sobrescritura específica del Place (opcional) {/* #spaceOverride */}
+
+Esta sección explica cómo asignar una API distinta solo a un Place específico, en lugar de los settings heredados del place group. Los settings aplicados solo a un Place específico no afectan a otros Places ni al place group principal.
+
+1. Muévase a un Place específico dentro del place group.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='settings' product='clue' /> → <Cmd sid='service' product='clue' />.
+
+   <ProdImg src='/img/clue/clue-vendor-api-place-service-assign-api.png' />
+
+3. En cada menú desplegable de credential de la sección <Cmd sid='verify_vendor' product='clue' />, seleccione la API diferente que se usará solo para este Place.
+
+4. Haga clic en el botón <Cmd sid='modify' product='clue' /> para guardar los cambios. 
+
+Los cambios se guardan solo en el Place actual. No se aplican a otros Places.
+
+:::info
+
+Solo los administradores de Place invitados como administradores para ese Place pueden acceder a <Cmd sid='settings' product='clue' /> → <Cmd sid='service' product='clue' />.
+
+:::
+
+:::caution
+
+Si cambia la asignación de credential a API en el place group principal después de asignar una API a un Place específico y guardar, la sobrescritura específica del Place se reemplaza con los valores del place group. Si necesita conservar los settings específicos del Place después de un cambio en el place group, vuelva a asignarlos en <Cmd sid='settings' product='clue' /> → <Cmd sid='service' product='clue' /> de ese Place después de actualizar el place group.
+
+:::
+
+## Resumen de reglas de entrada
+
+| Campo | Obligatorio | Reglas |
+| --- | :-: | --- |
+| <Cmd sid='connector_name' product='clue' /> | Si | Hasta 64 caracteres |
+| <Cmd sid='auth_type' product='clue' /> | Si | No se puede cambiar después de guardar |
+| <Cmd sid='webhook_url' product='clue' /> | Si | `https://` obligatorio / hasta 512 caracteres / CLUe solo envía solicitudes **HTTP POST**/`application/json` a esta URL |
+| Cantidad de APIs de <Cmd sid='auth_type' product='clue' /> | - | Se pueden registrar hasta **3** APIs por tipo de credential |
+| <Cmd sid='custom_headers' product='clue' /> | Opcional | Hasta 10 pares clave/valor / no se permiten nombres duplicados (sin distinguir mayúsculas y minúsculas) |
+| <Cmd sid='auto_fields' product='clue' /> | Opcional | Incluya solo los campos marcados en la solicitud / los nombres de clave se pueden editar / el sistema completa los valores automáticamente |
+| <Cmd sid='manual_fields' product='clue' /> | Opcional | Hasta **10** campos en total con campos automáticos / no se permiten nombres duplicados / los valores se convierten a datos JSON según el tipo seleccionado (`STRING` / `NUMBER` / `BOOLEAN`) |
+| <Cmd sid='user_key' product='clue' /> (prueba) | Depende de <Cmd sid='auth_type' product='clue' /> | 1 a 64 caracteres |
+| <Cmd sid='device_id' product='clue' /> (prueba) | Si | Solo 9 a 12 dígitos |
+| <Cmd sid='response_parsing' product='clue' /> | - | Se requiere al menos uno de <Cmd sid='statuscode' product='clue' /> o <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>. Si se ingresan ambos, se activa la validación combinada. |
+| <Cmd sid='statuscode' product='clue' /> | - | Enteros en el rango de 100 a 399 / hasta 3 / no se permiten duplicados |
+| <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd> | - | 1 campo: `Key` + `Value` + tipo de datos (`BOOLEAN` / `STRING` / `NUMBER`) |
+| <Cmd sid='success_message_jsonpath' product='clue' /> / <Cmd sid='failure_message_jsonpath' product='clue' /> | Opcional | Si se especifica, la clave para extraer del cuerpo de la respuesta. El valor debe ser una cadena y debe caber en la pantalla del dispositivo. Si no se especifica, no aparece ningún mensaje en el dispositivo. |
+| Condiciones para guardar | - | Solo se puede guardar después de una prueba exitosa |
+
+## Solución de problemas {/* #troubleshooting */}
+
+### Problemas de acceso (solución paso a paso) {/* #accessTroubleshooting */}
+
+Consulte <DocLink inner='#settingWorkflow' /> para acotar el área del problema.
+
+| Pasos | Síntoma | Elementos a revisar |
+| :-: | --- | --- |
+| 1 | Una credential específica no se reconoce | Asegúrese de que la credential esté enrollada en el dispositivo y activa. |
+| 2 | Falló la comunicación entre el dispositivo y el servidor | Revise la conexión de red y el estado de enroll del dispositivo. |
+| 3 | La solicitud no llega al servidor del cliente | Revise la URL registrada (HTTPS), los encabezados personalizados y las reglas del firewall. |
+| 4 | El cliente responde, pero todos los intentos se deniegan | Revise los criterios de decisión, incluido el modo de decisión, el valor clave de éxito y el código de estado HTTP. |
+| 5 | El permiso/denegación funciona correctamente, pero no aparece ningún mensaje | Revise <Cmd sid='success_message_jsonpath' product='clue' />/<Cmd sid='failure_message_jsonpath' product='clue' /> y la cadena del mensaje en el cuerpo de la respuesta. |
+
+### Botón <Cmd sid='save_configuration' product='clue' className='normal' /> deshabilitado
+
+Si no puede hacer clic en el botón <Cmd sid='save_configuration' product='clue' />, revise lo siguiente en orden.
+
+* **Campos obligatorios**: Asegúrese de que <Cmd sid='connector_name' product='clue' />, <Cmd sid='auth_type' product='clue' /> y <Cmd sid='webhook_url' product='clue' /> no estén vacíos.
+
+* <Cmd sid='webhook_url' product='clue' />: Asegúrese de que comience con `https://` y no supere el límite de 512 caracteres.
+
+* <Cmd sid='manual_fields' product='clue' />: Asegúrese de que el valor se pueda convertir al tipo seleccionado (`STRING` / `NUMBER` / `BOOLEAN`).
+
+  > Ejemplo: cuando ingresa un carácter no numérico en `NUMBER`
+
+* <Cmd sid='response_parsing' product='clue' />: Asegúrese de haber ingresado al menos uno de <Cmd sid='statuscode' product='clue' /> o <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>. 
+   
+   * Si usa <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>, asegúrese de haber ingresado `Key`, `Value` y el tipo de datos.
+   
+   * <Cmd sid='success_message_jsonpath' product='clue' />/<Cmd sid='failure_message_jsonpath' product='clue' /> son opcionales y no afectan el guardado.
+
+* **Prueba de API**: Asegúrese de que al menos una prueba se haya ejecutado correctamente. No puede guardar sin una prueba exitosa.
+
+### Fallo de prueba
+
+Los fallos de prueba se dividen en tres tipos.
+
+* <DocLink inner='#inputValidation' />
+
+* <DocLink inner='#requestFailure' />
+
+* <DocLink inner='#responseMismatch' />
+
+#### (A) Bloqueado durante la validación de entrada {/* #inputValidation */}
+
+La solicitud no se envía porque la entrada no cumple las reglas.
+
+| Síntoma | Elementos a revisar |
+| --- | --- |
+| Error de formato de URL del Webhook | Asegúrese de que <Cmd sid='webhook_url' product='clue' /> comience con `https://` y no supere los 512 caracteres. |
+| Error de formato de clave de criterios de decisión | Asegúrese de que <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>, <Cmd sid='success_message_jsonpath' product='clue' /> y <Cmd sid='failure_message_jsonpath' product='clue' /> usen formato JSONPath que comience con `$.` y tenga hasta 128 caracteres. |
+| No se especificaron criterios de decisión | Asegúrese de haber ingresado al menos uno de <Cmd sid='statuscode' product='clue' /> o <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>. |
+| Error de rango/cantidad de códigos de estado correctos | Asegúrese de que cada valor esté en el rango de 100 a 399, que se hayan configurado tres valores o menos y que no haya duplicados. |
+| Clave de campo duplicada | Asegúrese de que las claves en <Cmd sid='auto_fields' product='clue' /> y <Cmd sid='manual_fields' product='clue' /> sean únicas y no se superpongan. |
+| Clave de encabezado de solicitud duplicada | Asegúrese de que las claves de los encabezados de solicitud sean únicas y no se superpongan, sin distinguir mayúsculas y minúsculas. |
+| Se usó un nombre de encabezado restringido | Asegúrese de no haber agregado `Content-Type` o `Accept` como encabezados personalizados. El sistema los usa como valores fijos, sin distinguir mayúsculas y minúsculas. |
+| Demasiados campos o encabezados | Asegúrese de no tener más de 10 campos de <Cmd sid='auto_fields' product='clue' /> y <Cmd sid='manual_fields' product='clue' />, y no más de 10 encabezados personalizados. |
+| Demasiados registros de <Cmd sid='auth_type' product='clue' /> | Asegúrese de que este tipo de credential ya tenga 3 APIs registradas. |
+| Error de formato de <Cmd sid='user_key' product='clue' /> | Asegúrese de que el <Cmd sid='user_key' product='clue' /> en la consola de prueba cumpla con el conjunto de caracteres permitido (letras, números, `-`, `_`, `@`, `.`) y con una longitud de 1 a 64 caracteres. |
+| Error de formato de <Cmd sid='device_id' product='clue' /> | Asegúrese de que el <Cmd sid='device_id' product='clue' /> en la consola de prueba tenga 9 a 12 dígitos. |
+
+#### (B) Se envió la solicitud, pero la prueba falló {/* #requestFailure */}
+
+El resultado de la prueba muestra `success = false`, y no puede guardar en este estado.
+
+| Síntoma | Elementos a revisar |
+| --- | --- |
+| Fallo de conexión / error de red (sin respuesta del servidor del cliente) | Revise el acceso externo al servidor del cliente, la validez del certificado HTTPS, el firewall y los settings de port, así como los encabezados personalizados, como tokens vencidos o errores tipográficos. |
+| Tiempo de espera agotado (sin respuesta) | Retraso en la respuesta del servidor del cliente, estado de red. La prueba falla si no llega ninguna respuesta en unos segundos. |
+| Se recibió una respuesta, pero el cuerpo no es JSON | Verifique si el cliente devuelve una respuesta JSON y si el `Content-Type` de la respuesta está configurado en `application/json`. Esto incluye páginas de error HTML y texto en blanco. |
+
+#### (C) Se recibió la respuesta, pero el resultado no es el esperado {/* #responseMismatch */}
+
+Con `success = true`, el código de estado HTTP real aparece en <Cmd sid='statuscode' product='clue' />, y la respuesta sin procesar del cliente aparece en <Cmd sid='terminal_output' product='clue' />. Puede guardar y debe configurar el análisis de respuesta según la respuesta de este paso.
+
+| Síntoma | Elementos a revisar |
+| --- | --- |
+| Se recibió el código de estado, pero todo el acceso se deniega | **Modos 1 y 3**: Revise la lista de códigos de estado que cuentan como éxito. **Modo 2**: Revise la condición de clave/valor en el cuerpo. El código de estado se ignora. |
+| La condición del campo del cuerpo no coincide | Revise el `Key`, `Value` y el tipo de datos (`BOOLEAN` / `STRING` / `NUMBER`) ingresados en <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>. Verifique si la respuesta es `"true"` (STRING) o `true` (BOOLEAN). El tipo debe coincidir. |
+| <Cmd sid='manual_fields' product='clue' /> aparece en un formato no válido en el cuerpo de la solicitud | Vuelva a revisar si el tipo de <Cmd sid='manual_fields' product='clue' /> (`STRING` / `NUMBER` / `BOOLEAN`) coincide con el valor ingresado real. |
+
+:::info
+
+* La API de prueba muestra el cuerpo de la respuesta tal cual, sin analizarlo, así que use el JSON real de la respuesta que aparece en <Cmd sid='terminal_output' product='clue' /> para hacer coincidir los settings de JSONPath, clave y valor.
+
+* Consulte <DocLink inner="#accessTroubleshooting" /> para identificar la causa del fallo del lado del dispositivo.
+
+:::
+
+### Problema de nombre duplicado
+
+Los nombres de clave en <Cmd sid='auto_fields' product='clue' /> y <Cmd sid='manual_fields' product='clue' /> no pueden superponerse. Las claves de los encabezados de solicitud tampoco pueden superponerse. Si cambió un nombre de clave de <Cmd sid='auto_fields' product='clue' />, asegúrese de que no entre en conflicto con <Cmd sid='manual_fields' product='clue' />.
+
+### No aparece ningún mensaje en el dispositivo
+
+* Asegúrese de que el cuerpo de la respuesta realmente contenga el campo especificado por <Cmd sid='success_message_jsonpath' product='clue' /> o <Cmd sid='failure_message_jsonpath' product='clue' />.
+
+* Asegúrese de que el valor de esa clave sea una **cadena**. Los números, objetos y matrices no aparecen.
+
+* Asegúrese de que el nombre configurado de <Cmd sid='success_message_jsonpath' product='clue' /> / <Cmd sid='failure_message_jsonpath' product='clue' /> coincida exactamente con la clave real de la respuesta.
