@@ -7375,13 +7375,17 @@
     "width": 800,
     "height": 269
   },
+  "/img/device/config-backup-restore.png": {
+    "width": 800,
+    "height": 139
+  },
   "/img/device/config-information.png": {
     "width": 800,
     "height": 555
   },
   "/img/device/config-network.png": {
     "width": 800,
-    "height": 857
+    "height": 914
   },
   "/img/device/config-reboot.png": {
     "width": 300,
@@ -14060,56 +14064,52 @@
     "height": 443
   },
   "/img/en/clue/add-device-complete.png": {
-    "width": 1711,
-    "height": 294
+    "width": 1511,
+    "height": 151
   },
   "/img/en/clue/add-device-enter-id.png": {
-    "width": 968,
-    "height": 357
+    "width": 915,
+    "height": 266
   },
   "/img/en/clue/add-device-go-device-tap.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 152,
+    "height": 287
   },
   "/img/en/clue/add-device-list-enable-edit-mode.png": {
     "width": 1711,
     "height": 289
   },
   "/img/en/clue/add-device-list-set-place.png": {
-    "width": 1715,
-    "height": 551
+    "width": 1520,
+    "height": 174
   },
   "/img/en/clue/add-device-list.png": {
-    "width": 1711,
-    "height": 349
+    "width": 1515,
+    "height": 175
   },
   "/img/en/clue/add-device-settings.png": {
-    "width": 1920,
-    "height": 403
+    "width": 1589,
+    "height": 139
   },
   "/img/en/clue/assign-device-device-list-assign-place.png": {
     "width": 1709,
     "height": 484
   },
   "/img/en/clue/assign-device-device-list-edit.png": {
-    "width": 1708,
-    "height": 347
+    "width": 1440,
+    "height": 86
   },
   "/img/en/clue/assign-device-device-list-move.png": {
-    "width": 1709,
-    "height": 348
+    "width": 210,
+    "height": 116
   },
   "/img/en/clue/assign-device-device-list.png": {
-    "width": 1920,
-    "height": 494
+    "width": 1547,
+    "height": 287
   },
   "/img/en/clue/assign-device-settings.png": {
-    "width": 1920,
-    "height": 323
-  },
-  "/img/en/clue/bs3-main-clue.png": {
-    "width": 250,
-    "height": 444
+    "width": 1530,
+    "height": 109
   },
   "/img/en/clue/bs3-main-clue.png": {
     "width": 250,
@@ -14132,36 +14132,36 @@
     "height": 927
   },
   "/img/en/clue/clue-basic-setup-access-service-membership.png": {
-    "width": 1920,
-    "height": 485
+    "width": 1000,
+    "height": 275
   },
   "/img/en/clue/clue-basic-setup-access-service-verify.png": {
-    "width": 1157,
-    "height": 554
+    "width": 714,
+    "height": 419
   },
   "/img/en/clue/clue-basic-setup-add-child.png": {
-    "width": 1920,
-    "height": 556
+    "width": 1309,
+    "height": 516
   },
   "/img/en/clue/clue-basic-setup-add-distributor-profile.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1382,
+    "height": 698
   },
   "/img/en/clue/clue-basic-setup-add-distributor.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 655,
+    "height": 499
   },
   "/img/en/clue/clue-basic-setup-admin-information.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1392,
+    "height": 729
   },
   "/img/en/clue/clue-basic-setup-face.png": {
     "width": 1102,
     "height": 518
   },
   "/img/en/clue/clue-basic-setup-invite-admin.png": {
-    "width": 1920,
-    "height": 451
+    "width": 1276,
+    "height": 206
   },
   "/img/en/clue/clue-basic-setup-membership-setup-web-mobile.png": {
     "width": 1175,
@@ -14176,8 +14176,8 @@
     "height": 481
   },
   "/img/en/clue/clue-basic-setup-services.png": {
-    "width": 1920,
-    "height": 501
+    "width": 1321,
+    "height": 336
   },
   "/img/en/clue/clue-fw-device-basic-select-fw-ver.png": {
     "width": 1920,
@@ -20051,6 +20051,10 @@
     "width": 1157,
     "height": 554
   },
+  "/img/ja/clue/clue-basic-setup-add-child.png": {
+    "width": 1920,
+    "height": 556
+  },
   "/img/ja/clue/clue-basic-setup-add-distributor-profile.png": {
     "width": 1920,
     "height": 1080
@@ -20294,6 +20298,10 @@
   "/img/ja/clue/place-setting-set-test-period-pop.png": {
     "width": 520,
     "height": 350
+  },
+  "/img/ja/clue/suprema-clue-architecture.png": {
+    "width": 1204,
+    "height": 668
   },
   "/img/ja/device/bs3-dimension.svg": {
     "width": 1097,
