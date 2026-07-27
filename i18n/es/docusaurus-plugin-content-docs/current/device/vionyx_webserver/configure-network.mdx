@@ -36,7 +36,7 @@ DHCP asigna direcciones IP automáticamente en la red. En la mayoría de los ent
 
 1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+2. En la barra lateral izquierda, haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
 
 3. Seleccione <Cmd sid='dhcp' product='cam' /> en <Cmd sid='ip_type' product='cam' />.
 
@@ -66,7 +66,7 @@ Establezca la dirección IP manualmente cuando la red requiera una IP fija para 
 
 1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+2. En la barra lateral izquierda, haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
 
 3. Seleccione <Cmd sid='static' product='cam' /> en <Cmd sid='ip_type' product='cam' />.
 
@@ -104,7 +104,7 @@ En la sección <Cmd sid='port' product='cam' />, establezca los números de puer
 
 1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+2. En la barra lateral izquierda, haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
 
 3. Establezca los puertos necesarios en la sección <Cmd sid='port' product='cam' />.
 
@@ -134,7 +134,7 @@ En la sección <Cmd sid='rtsp' product='cam' />, configure los ajustes de transm
 
 1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+2. En la barra lateral izquierda, haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
 
 3. Establezca las siguientes opciones en la sección <Cmd sid='rtsp' product='cam' />.
 
@@ -144,15 +144,27 @@ En la sección <Cmd sid='rtsp' product='cam' />, configure los ajustes de transm
 
      * <Cmd>UDP</Cmd>: Permite una transmisión más rápida, pero el video puede entrecortarse según las condiciones de la red.
 
-     * <Cmd>TCP</Cmd>: Permite una transmisión estable, pero puede producirse latencia en la red.
+     * <Cmd>TCP</Cmd>: Proporciona transmisión estable, pero puede haber latencia en comparación con <Cmd>UDP</Cmd> según las condiciones de la red.
 
-     * <Cmd>DUAL</Cmd>: Selecciona automáticamente UDP o TCP para la transmisión según las condiciones de la red.
+     * <Cmd>DUAL</Cmd>: Selecciona automáticamente UDP o TCP para la transmisión según las condiciones de la red. Esta es la opción predeterminada recomendada para entornos generales.
 
-     * <Cmd>TLS</Cmd>: Envía el flujo RTSP con cifrado TLS. Mejora la seguridad, pero puede aumentar la carga de la CPU.
+     * <Cmd>TLS</Cmd>: Envía el flujo RTSP con cifrado TLS. Mejora la seguridad, pero puede aumentar la carga de la CPU. Comprueba si el NVR/VMS conectado admite TLS.
 
    * <Cmd sid='secure_rtp' product='cam' />: Active la opción de cifrado del flujo RTSP.
 
 4. Haga clic en <Cmd sid='save' product='cam' /> para guardar los ajustes.
+
+:::info
+
+Si necesitas cifrado para los datos de video y audio, activa la opción <Cmd sid='secure_rtp' product='cam' />, y comprueba si es compatible con el NVR/VMS conectado.
+
+:::
+
+:::caution
+
+Después de cambiar la opción <Cmd sid='secure_rtp' product='cam' />, es posible que debas volver a conectar la sesión RTSP existente. Configura el NVR/VMS para que sea compatible con el método de transporte seleccionado.
+
+:::
 
 ## Conexión en la nube CLUe
 
@@ -160,7 +172,7 @@ Suprema CLUe es un servicio de administración remota basado en la nube. Conéct
 
 1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+2. En la barra lateral izquierda, haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
 
 3. Haga clic en el interruptor <Cmd sid='clue' product='cam' /> de la sección <Cmd sid='cloud' product='cam' /> para activarlo.
 
