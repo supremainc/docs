@@ -1,0 +1,81 @@
+---
+id: service-settings
+title: サービスを設定する
+description: CLUe プレース グループで出入管理サービスの種類を選択して設定する方法を案内します。
+---
+
+プレース グループ単位で出入管理サービスの方式を設定します。 プレース グループで設定したサービス種類とクレデンシャルは下位のプレース全体に自動適用されるため、プレースごとに繰り返し設定する必要はありません。
+
+CLUeは2つの出入管理サービス方式をサポートします。
+
+* <Cmd sid='vendor' product='clue' className='bold' />: 外部 API を通じてクライアントに出入承認を要求する方式です。
+
+* <Cmd sid='membership' product='clue' className='bold' />: 外部連携なしで CLUe が独立して出入を制御する方式です。
+
+プレース グループ設定の左サイドバーで <Cmd sid='service' product='clue' /> をクリックします。
+
+<ProdImg src='/img/clue/clue-basic-setup-services.png' alt='Services' />
+
+## <Cmd sid='vendor' product='clue' className='normal' /> 設定
+
+<Cmd sid='vendor' product='clue' className='bold' /> 方式は、出入口を開く前に外部クライアント API を呼び出して出入承認の可否を決定します。 QR コードと顔認証をサポートします。
+
+### QR 方式
+
+QR コードをスキャンすると、CLUe サーバーがクライアント API を呼び出し、出入許可の可否を直接受け取ります。 使用する QR コードの種類に応じて、次の 2 つの方式から 1 つを選択します。
+
+* **CLUe QR**: CLUe から直接発行する動的 QR コードです。
+
+* **Customer QR**: 顧客が独自に QR コードを生成・運用する場合に選択します。
+
+<ProdImg src='/img/clue/clue-basic-setup-qr-code.png' alone caption='QR Case' />
+
+### 顔認証方式
+
+顔認証を使用する場合は、画像のみを登録すると、CLUe サーバーがテンプレートを抽出してデバイスと同期します。 顔照合に成功すると、QR 方式と同様にクライアント API を通じて出入の可否を決定します。 顔ユーザー登録方法は [CLUe API ドキュメント](../../developer/clue?api=create-user-enroll-face) を参照してください。
+
+<ProdImg src='/img/clue/clue-basic-setup-face.png' alone caption='Face Case' />
+
+### 顧客確認コード設定
+
+<Cmd sid='vendor' product='clue' className='bold' /> 方式を使用するには、CLUe サーバーが顧客またはパートナー API をどこで、どのように呼び出すかを、顧客確認コードとあわせて入力する必要があります。
+
+<ProdImg src='/img/clue/clue-basic-setup-access-service-verify.png' alt='Access Service Verify' />
+
+<Cmd sid='vendor' product='clue' className='normal' /> コードは、Suprema CLUe チームがどのクライアントの API を呼び出すかを判断するために、事前にテストして開発したコード形式です。 このコードを入力すると、下位のプレースで追加設定なしに各認証方式に合う API を自動呼び出しし、指定した応答値を基に出入制御を実行します。
+
+:::note
+
+**顧客確認コードの取得方法**
+
+他のクライアントのコードが公開されないよう、CLUe チームで個別に管理します。 顧客確認コードの生成は API 仕様確認後に個別対応します。詳細は CLUe チームへ直接お問い合わせください。
+
+:::
+
+## <Cmd sid='membership' product='clue' className='normal' /> 設定
+
+<Cmd sid='membership' product='clue' className='bold' /> 方式は、外部クライアントや第三者の介入なしで、CLUe システムが独立して出入制御を決定します。 Web ポータルやモバイルアプリケーションだけで CLUe を運用する場合にも適用できます。
+
+<Image src='/img/clue/clue-basic-setup-membership-setup.png' alt='Membership setup' alone />
+
+<Image src='/img/clue/clue-basic-setup-membership-setup-web-mobile.png' alt='Membership setup web and mobile' alone />
+
+<Cmd sid='membership' product='clue' /> 設定を通じて、下位のプレースに適用するクレデンシャルを選択できます。
+
+<ProdImg src='/img/clue/clue-basic-setup-access-service-membership.png' alt='Access Service Membership' />
+
+:::note
+
+**プレース グループと異なり、プレース設定を変更できますか?**
+
+はい、プレース設定ページで認証方式を設定できます。 ただし、出入方式を <Cmd sid='membership' product='clue' /> から <Cmd sid='vendor' product='clue' /> へ、またはその逆へ変更することはできません。 そのため、同じプレース グループの顧客で異なる出入方式が必要な場合は、用途に合わせて別のプレース グループを作成することを推奨します。
+
+:::
+
+<NextStep>
+<NextItem to='customer-api-integration'>
+
+CLUe プレース グループで顧客企業（Vendor）API を登録し、クレデンシャルに連携して、顧客企業の出入判定ロジックを CLUe の出入制御と連携する方法を確認してください。
+
+</NextItem>
+</NextStep>

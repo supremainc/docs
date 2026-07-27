@@ -14,7 +14,7 @@ CLUe supports two access service methods.
 
 Click <Cmd sid='service' product='clue' /> in the left sidebar of Place group settings.
 
-<Image src='/img/clue/clue-basic-setup-services.png' alt='Services' />
+<ProdImg src='/img/clue/clue-basic-setup-services.png' alt='Services' />
 
 ## <Cmd sid='vendor' product='clue' className='normal' /> setting
 
@@ -28,19 +28,19 @@ When you scan a QR code, the CLUe server calls the client API and gets the acces
 
 * **Customer QR**: Select this when the customer generates and operates QR codes independently.
 
-<Image src='/img/clue/clue-basic-setup-qr-code.png' alone caption='QR Case' />
+<ProdImg src='/img/clue/clue-basic-setup-qr-code.png' alone caption='QR Case' />
 
 ### Facial authentication case
 
 If you use Facial Authentication, register only the image. The CLUe server extracts the template and syncs it with the device. If face matching succeeds, CLUe decides whether to allow access through the client API, just like the QR method. See [CLUe API documentation](../../developer/clue?api=create-user-enroll-face) for how to enroll a face user.
 
-<Image src='/img/clue/clue-basic-setup-face.png' alone caption='Face Case' />
+<ProdImg src='/img/clue/clue-basic-setup-face.png' alone caption='Face Case' />
 
 ### Customer verification code setting
 
 To use the <Cmd sid='vendor' product='clue' className='bold' /> method, enter the customer verification code together with where and how the CLUe server calls the customer or partner API.
 
-<Image src='/img/clue/clue-basic-setup-access-service-verify.png' alt='Access Service Verify' />
+<ProdImg src='/img/clue/clue-basic-setup-access-service-verify.png' alt='Access Service Verify' />
 
 The <Cmd sid='vendor' product='clue' className='normal' /> code is a code format that the Suprema CLUe team pretests and develops to decide which client's API to call. After you enter this code, the system automatically calls the API for each authentication method in child places without additional settings, and controls access based on the specified response values.
 
@@ -62,7 +62,7 @@ The <Cmd sid='membership' product='clue' className='bold' /> method lets the CLU
 
 With the <Cmd sid='membership' product='clue' /> setting, you can select the credential that applies to child places.
 
-<Image src='/img/clue/clue-basic-setup-access-service-membership.png' alt='Access Service Membership' />
+<ProdImg src='/img/clue/clue-basic-setup-access-service-membership.png' alt='Access Service Membership' />
 
 :::note
 

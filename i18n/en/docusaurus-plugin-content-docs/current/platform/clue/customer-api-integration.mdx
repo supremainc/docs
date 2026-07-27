@@ -140,7 +140,7 @@ This is the sequence that runs after setup when a user actually tries to access.
 
 3. Click <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' /> in the upper right of the screen.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-settings.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-settings.png' />
 
 4. Click <Cmd sid='service' product='clue' /> in the left sidebar of the screen.
 
@@ -148,7 +148,7 @@ This is the sequence that runs after setup when a user actually tries to access.
 
    Initially, <Cmd sid='access_type' product='clue' /> is set to <Cmd sid='none_2' product='clue' />. In this state, no settings are active.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-none.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-none.png' />
 
    :::
 
@@ -156,7 +156,7 @@ This is the sequence that runs after setup when a user actually tries to access.
 
 6. The <Cmd sid='verify_vendor' product='clue' /> section appears.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-select-vendor.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-select-vendor.png' />
 
    The <Cmd sid='verify_vendor' product='clue' /> section shows all six supported credentials. Then connect the customer API registered for each credential.
 
@@ -179,11 +179,11 @@ This is the sequence that runs after setup when a user actually tries to access.
 
 1. Click the <Cmd sid='add_api' product='clue' /> button at the top right of the screen.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api.png' />
 
 2. When the <Cmd sid='add_api' product='clue' /> panel appears, enter the required information.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png' />
 
 </Step>
 <Step>
@@ -236,7 +236,7 @@ Add custom headers if the customer API requires **Authentication** or **Authoriz
 
 > Example: `Authorization` token, API key
 
-<Image src='/img/clue/clue-vendor-api-integ-custom-header.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-custom-header.png' />
 
 | Field | Description |
 | --- | --- |
@@ -264,7 +264,7 @@ Add custom headers if the customer API requires **Authentication** or **Authoriz
 
 <Cmd sid='auto_fields' product='clue' /> are values that the system **fills into the request body automatically**. Available auto fields vary by credential type. The location of each field value appears as a `{{...}}` **placeholder**, and the system replaces it with actual device or user values at request time.
 
-<Image src='/img/clue/clue-vendor-api-integ-auto-field.png' caption />
+<ProdImg src='/img/clue/clue-vendor-api-integ-auto-field.png' caption />
 
 | Default key | Placeholder (value location) | Available for | Actual value |
 | --- | --- | --- | --- |
@@ -303,7 +303,7 @@ Add custom headers if the customer API requires **Authentication** or **Authoriz
 
 Add manual fields when the customer API requires fixed values in the request.
 
-<Image src='/img/clue/clue-vendor-api-integ-manual-field.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-manual-field.png' />
 
 | Field | Description |
 | --- | --- |
@@ -364,7 +364,7 @@ The <Cmd sid='save_configuration' product='clue' /> button activates after at le
 
 Even if the customer server returns a response, the test console shows an error and failure log if the body is not JSON or if the response header `Content-Type` is not `application/json`. The <Cmd sid='save_configuration' product='clue' /> button does not activate. 
 
-<Image src='/img/clue/clue-vendor-api-integ-test-fail-sample.png' caption />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-fail-sample.png' caption />
 
 Using <DocLink inner="#responseSpec" />, check with the customer contact that the API meets both conditions below.
 
@@ -381,7 +381,7 @@ Based on the response you receive, define which response counts as access allowe
 
 The judgment mode is determined automatically based on the fields you enter. At least one of <Cmd sid='statuscode' product='clue' /> and <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd> is required. If you leave both blank, you cannot save.
 
-<Image src='/img/clue/clue-vendor-api-integ-test-success.png' caption />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success.png' caption />
 
 | #  | Mode | Input | Success criteria |
 | --- | --- | --- | --- |
@@ -421,7 +421,7 @@ The judgment mode is determined automatically based on the fields you enter. At 
 
 Drag and drop fields from the response area into the <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>, <Cmd sid='success_message_jsonpath' product='clue' />, and <Cmd sid='failure_message_jsonpath' product='clue' /> inputs. The JSON path fills in automatically. You do not need to write the JSONPath manually.
 
-<Image src='/img/clue/clue-vendor-api-integ-test-success-sample.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success-sample.png' />
 
 :::
 
@@ -432,7 +432,7 @@ Drag and drop fields from the response area into the <Cmd sid='success_result' p
 
 The <Cmd sid='save_configuration' product='clue' /> button at the bottom of the <Cmd sid='add_api' product='clue' /> panel activates when all required fields and judgment criteria are entered correctly, and the API test succeeds at least once.
 
-<Image src='/img/clue/clue-vendor-api-integ-test-success-save.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success-save.png' />
 
 * If any required field is missing, the URL format is invalid, a manual field value cannot convert to the specified type, judgment criteria are missing, or the test has not succeeded, including network errors, the <Cmd sid='save_configuration' product='clue' /> button remains disabled.
 
@@ -440,13 +440,13 @@ The <Cmd sid='save_configuration' product='clue' /> button at the bottom of the 
 
 When you save the API, the panel closes and the newly registered API appears in the list as a card. The card shows information such as the name, credential type, and registered URL.
 
-<Image src='/img/clue/clue-vendor-api-integ-list.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-list.png' />
 
 * To edit an API, click the card. The edit panel opens. You can edit <Cmd sid='connector_name' product='clue' />, <Cmd sid='webhook_url' product='clue' />, <Cmd sid='auto_fields' product='clue' />, <Cmd sid='manual_fields' product='clue' />, and <Cmd sid='response_parsing' product='clue' />. <Cmd sid='auth_type' product='clue' /> cannot be changed.
 
 * <Cmd sid='remove' product='clue' />: Delete the registered API. If this API was connected to a credential, that connection is removed automatically, and the change applies to the device immediately. A disconnected credential then works with device authentication only, without customer verification. If you worry about an operational gap, register and connect a replacement API before deletion.
 
-  <Image src='/img/clue/clue-vendor-api-integ-list-edit.png' />
+  <ProdImg src='/img/clue/clue-vendor-api-integ-list-edit.png' />
 
 </Step>
 </Steps>
@@ -455,7 +455,7 @@ When you save the API, the panel closes and the newly registered API appears in 
 
 On the left sidebar, click <Cmd sid='service' product='clue' /> → <Cmd sid='service' product='clue' />. In the <Cmd sid='verify_vendor' product='clue' /> section, specify the API for each credential.
 
-<Image src='/img/clue/clue-vendor-api-service-verify-vendor.png' />
+<ProdImg src='/img/clue/clue-vendor-api-service-verify-vendor.png' />
 
 * Click the dropdown next to each credential to show the list of registered APIs. Only APIs that match the selected credential and <Cmd sid='auth_type' product='clue' /> appear.
 
@@ -467,7 +467,7 @@ On the left sidebar, click <Cmd sid='service' product='clue' /> → <Cmd sid='se
 
 After you assign the API registered to the credential and click the <Cmd sid='modify' product='clue' /> button, a confirmation dialog asks whether to apply the change to sub-places.
 
-<Image src='/img/clue/clue-vendor-api-service-verify-vendor-edit-save.png' />
+<ProdImg src='/img/clue/clue-vendor-api-service-verify-vendor-edit-save.png' />
 
 * <Cmd sid='ok' product='clue' />: The same settings apply immediately to all sub-places in the current place group. Existing place-specific overrides are overwritten by the place group values.
 
@@ -483,7 +483,7 @@ This section explains how to assign a different API only to a specific place, in
 
 2. On the left sidebar, click <Cmd sid='settings' product='clue' /> → <Cmd sid='service' product='clue' />.
 
-   <Image src='/img/clue/clue-vendor-api-place-service-assign-api.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-place-service-assign-api.png' />
 
 3. In each credential dropdown in the <Cmd sid='verify_vendor' product='clue' /> section, select the different API to use only for this place.
 
