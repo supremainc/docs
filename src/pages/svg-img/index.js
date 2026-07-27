@@ -47,7 +47,7 @@ function SVGLists() {
             {svgList.map(({ fileName, definedName }) => (
               <tr key={fileName}>
                 <td>
-                  <img src={`/img/menus/${fileName}`} alt={fileName} width={24} height={24} />
+                  <img src={`/docs/img/menus/${fileName}`} alt={fileName} width={24} height={24} />
                 </td>
                 <td>{fileName}</td>
                 <td>{definedName ?? '(Not set)'}</td>
