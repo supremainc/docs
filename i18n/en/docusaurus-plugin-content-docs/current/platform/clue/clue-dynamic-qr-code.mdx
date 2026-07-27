@@ -1,0 +1,53 @@
+---
+id: clue-dynamic-qr-code
+title: Integrate Dynamic QR Code
+description: This guide explains how CLUe Dynamic QR Code works and how to integrate it with customer systems.
+---
+
+**CLUe Dynamic QR** is an integrated QR solution that supports the entire process from generation to verification. This guide targets developers who want to integrate CLUe Dynamic QR Code with their own systems and explains the steps from issuing an API key to setting up the service.
+
+## What is CLUe Dynamic QR Code
+
+CLUe Dynamic QR Code is an integrated solution that supports the entire process from generation to verification. It is designed so customers can easily integrate QR Code features into their own systems without developing them from scratch.
+
+<Image src='/img/clue/clue-dynamic-qr-code-architecture.png' alone />
+
+:::info
+
+CLUe Dynamic QR Code can be used with the **customer verification** (**Vendor**) service method. For more information about the **customer verification** setting, see <DocLink docId='platform/clue/service-settings' />.
+
+:::
+
+## Before you start
+
+CLUe Dynamic QR Code is intended for integration, so it requires a Place group API key and a vendor code for testing.
+
+<Image src='/img/clue/clue-qr-code-workflow.png' alone />
+
+import IssueAPI from './_clue-issue-api.mdx';
+
+<IssueAPI />
+
+## Service Settings
+
+Set <Cmd sid='access_type' product='clue' /> to <Cmd sid='vendor' product='clue' /> in the Place group <Cmd sid='service' product='clue' />, then select <Cmd sid='clue_qr' product='clue' />.
+
+<ProdImg src='/img/clue/clue-place-group-settings-service-setting.png' />
+
+The customer verification code must be issued by the Suprema CLUe team and configured according to the QR integration procedure.
+
+:::note
+
+Can I test without a customer verification code?
+
+Yes. However, set a **test customer verification code** in the system. Contact your Suprema representative and request support. The test customer verification code allows access without verifying access rights or validity period.
+
+:::
+
+<NextStep>
+<NextItem to='pathname:///developer/clue?api=dynamic-qr-code'>
+
+See more details about using the Dynamic CLUe QR API.
+
+</NextItem>
+</NextStep>

@@ -1,0 +1,151 @@
+---
+id: add-device
+title: Agregar dispositivo
+description: Esta guía explica cómo enrollar dispositivos en el portal de CLUe y asignarlos a lugares según su función.
+---
+
+Para usar un dispositivo de CLUe, completa el enrolamiento y la asignación en el portal web. Solo el administrador de Branch puede enrollar dispositivos, y el administrador de Distributor o de Place group asigna los dispositivos enrolados a su Place asignado.
+
+Los clientes que compraron un dispositivo nuevo deben verificar que se apliquen el firmware y el certificado de CLUe, y luego solicitar el enrolamiento del dispositivo a la sucursal de Suprema.
+
+## Enrolamiento de dispositivos (Branch manager)
+
+Solo el administrador de Branch puede enrollar dispositivos. Verifica el número de serie del dispositivo antes de enrollarlo. Busca el número de serie en la etiqueta adherida a la parte trasera del dispositivo.
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. En la pantalla inicial, selecciona la Branch para enrollar el dispositivo.
+
+3. En la esquina superior derecha de la pantalla, haz clic en <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />.
+
+   <ProdImg src='/img/clue/add-device-settings.png' />
+
+4. Haga clic en <Cmd sid='device' product='clue' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/clue/add-device-go-device-tap.png' />
+
+5. En la sección <Cmd sid='add_4' product='clue' />, ingresa el número de serie del dispositivo en el campo de entrada <Cmd sid='device_id_s_n' product='clue' />, luego haz clic en <Cmd sid='add' product='clue' />.
+
+   <ProdImg src='/img/clue/add-device-enter-id.png' />
+
+6. El dispositivo agregado aparece en <Cmd sid='device_list' product='clue' />.
+
+   <ProdImg src='/img/clue/add-device-list.png' />
+
+7. Para habilitar el modo de edición, haz clic en el campo <Cmd sid='none_2' product='clue' /> y selecciona <IcCLEdit title='edit' />.
+
+   <ProdImg src='/img/clue/add-device-list-enable-edit-mode.png' />
+
+8. Selecciona <Cmd sid='distributor' product='clue' className='normal' />, <Cmd sid='place_group' product='clue' className='normal' /> o <Cmd sid='place' product='clue' className='normal' /> para asignar el dispositivo.
+
+   <ProdImg src='/img/clue/add-device-list-set-place.png' />
+
+9. Haz clic en <IcCLCheck title='confirm' /> para aplicar la opción seleccionada.
+
+Aparece un mensaje de éxito para la asignación del dispositivo en la parte superior de la pantalla. Cuando hagas clic en cada campo, se activa el botón <IcCLMove title='move' />, y puedes moverlo al <Cmd sid='distributor' product='clue' className='normal' />, <Cmd sid='place_group' product='clue' className='normal' /> o <Cmd sid='place' product='clue' className='normal' /> correspondiente. Haz clic en el botón para moverlo a la ubicación y luego configura el dispositivo y la puerta.
+
+<ProdImg src='/img/clue/add-device-complete.png' />
+
+## Asignación de dispositivos
+
+### Administrador de Distributor
+
+El administrador de Distributor puede asignar los dispositivos que tiene asignados a un Place group inferior o a un Place individual. Si el dispositivo que necesita enrolamiento no aparece en la lista, contacta a la sucursal de Suprema o a la sede correspondiente.
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. En la pantalla inicial, selecciona el Distributor para asignar el dispositivo.
+
+3. En la esquina superior derecha de la pantalla, haz clic en <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />.
+
+   <ProdImg src='/img/clue/assign-device-settings.png' />
+
+4. Haga clic en <Cmd sid='device' product='clue' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/clue/assign-device-device-list.png' />
+
+5. Para habilitar el modo de edición, haz clic en el campo <Cmd sid='none_2' product='clue' /> y selecciona <IcCLEdit title='edit' />.
+
+   <ProdImg src='/img/clue/assign-device-device-list-edit.png' />
+
+6. Selecciona <Cmd sid='place_group' product='clue' className='normal' /> o <Cmd sid='place' product='clue' className='normal' /> para asignar el dispositivo.
+
+   <ProdImg src='/img/clue/assign-device-device-list-assign-place.png' />
+
+7. Haz clic en <IcCLCheck title='confirm' /> para aplicar la opción seleccionada.
+
+Aparece un mensaje de éxito para la asignación del dispositivo en la parte superior de la pantalla. Cuando hagas clic en cada campo, se activa el botón <IcCLMove title='move' />, y puedes moverlo al <Cmd sid='place_group' product='clue' className='normal' /> o <Cmd sid='place' product='clue' className='normal' /> correspondiente. Después de la asignación, ve al Place y agrega una puerta.
+
+<ProdImg src='/img/clue/assign-device-device-list-move.png' />
+
+:::info
+
+* De forma predeterminada, el administrador de Distributor no puede ver las pestañas Users y Monitoring según la política de privacidad. Si necesitas acceso, solicita una invitación al administrador de <Cmd sid='place_group' product='clue' className='normal' /> o <Cmd sid='place' product='clue' className='normal' />.
+
+* Cuando eliminas un dispositivo, este regresa automáticamente a la lista de dispositivos a nivel Branch y queda sin asignar. Si eliminaste un dispositivo por error, pide al administrador de Branch que lo reasigne.
+
+:::
+
+### Administrador de place group
+
+El administrador de Place group puede asignar los dispositivos que tiene asignados a un Place inferior.
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. En la pantalla inicial, selecciona el Place group para asignar el dispositivo.
+
+3. En la esquina superior derecha de la pantalla, haz clic en <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />.
+
+   <ProdImg src='/img/clue/place-group-settings.png' />
+
+4. Haga clic en <Cmd sid='device' product='clue' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/clue/place-group-settings-device.png' />
+
+5. Para habilitar el modo de edición, haz clic en el campo <Cmd sid='none_2' product='clue' /> y selecciona <IcCLEdit title='edit' />.
+
+   <ProdImg src='/img/clue/place-group-settings-device-list-edit.png' />
+
+6. Selecciona el <Cmd sid='place' product='clue' className='normal' /> para asignar el dispositivo.
+
+   <ProdImg src='/img/clue/place-group-settings-device-list-select-place.png' />
+
+7. Haz clic en <IcCLCheck title='confirm' /> para aplicar la opción seleccionada.
+
+Aparece un mensaje de éxito para la asignación del dispositivo en la parte superior de la pantalla. Después de la asignación del dispositivo, ve al <Cmd sid='place' product='clue' className='normal' /> correspondiente y agrega una puerta.
+
+<ProdImg src='/img/clue/place-group-settings-device-list-move.png' />
+
+## Configuración del lugar de prueba (Branch manager)
+
+Como las suscripciones se basan en la cantidad de dispositivos, separa los dispositivos de prueba y exclúyelos del total. Para hacerlo, los usuarios con el rol de Branch manager pueden designar ciertos lugares como "lugares de prueba" en la configuración de Place.
+
+1. Inicie sesión en el [portal web de CLUe](https://clue.moon.supremainc.com).
+
+2. Selecciona el Place que se designará como lugar de prueba.
+
+3. En la barra lateral izquierda, haz clic en <Cmd sid='settings' product='clue' /> → <Cmd sid='basic' product='clue' />.
+
+   <ProdImg src='/img/clue/place-setting-basic-set-test-period.png' />
+
+4. Haz clic en <Cmd sid='setting_of_test_date' product='clue' /> en la esquina superior derecha de la pantalla.
+
+5. Cuando aparece la ventana emergente <Cmd sid='test_period' product='clue' />, configura el período de prueba.
+
+   <ProdImg src='/img/clue/place-setting-set-test-period-pop.png' />
+
+   Para usarlo sin límite de tiempo, establece la fecha de fin en **9999.12.31 23:59**.
+
+6. Para finalizar, haz clic en <Cmd sid='ok' product='clue' />.
+
+Todos los dispositivos del Place aparecen en rojo en la lista de dispositivos, por lo que se identifican como dispositivos de prueba. También puedes verificar la información de cantidad total.
+
+<Image src='/img/clue/test-period-set-device-list.png' alone />
+
+<NextStep>
+<NextItem to='fw-upgrade'>
+
+Aprende a actualizar el firmware del dispositivo.
+
+</NextItem>
+</NextStep>

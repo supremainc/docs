@@ -140,15 +140,15 @@ CLUe는 크리덴셜을 인식해 고객사 API로 전달하는 역할만 수행
 
 1. 화면 오른쪽 상단의 <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />을 클릭하세요.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-settings.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-settings.png' />
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='service' product='clue' /> → <Cmd sid='service' product='clue' />을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='service' product='clue' />을 클릭하세요.
 
    :::note
 
    초기 상태에서는 <Cmd sid='access_type' product='clue' />이 <Cmd sid='none_2' product='clue' />으로 설정되어 있습니다. 이 상태에서는 아무 설정도 활성화되지 않습니다.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-none.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-none.png' />
 
    :::
 
@@ -156,7 +156,7 @@ CLUe는 크리덴셜을 인식해 고객사 API로 전달하는 역할만 수행
 
 1. <Cmd sid='verify_vendor' product='clue' /> 섹션이 나타납니다.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-select-vendor.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-select-vendor.png' />
 
    <Cmd sid='verify_vendor' product='clue' /> 섹션에는 지원하는 6개 크리덴셜이 모두 표시됩니다. 이후 각 크리덴셜에 등록한 고객사 API를 연결할 수 있습니다.
 
@@ -179,11 +179,11 @@ CLUe는 크리덴셜을 인식해 고객사 API로 전달하는 역할만 수행
 
 1. 화면 오른쪽 상단의 <Cmd sid='add_api' product='clue' /> 버튼을 클릭하세요.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api.png' />
 
 1. <Cmd sid='add_api' product='clue' /> 패널이 나타나면 필요한 정보를 입력하세요.
 
-   <Image src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png' />
 
 </Step>
 <Step>
@@ -236,7 +236,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 > 예: `Authorization` 토큰, API 키
 
-<Image src='/img/clue/clue-vendor-api-integ-custom-header.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-custom-header.png' />
 
 | 필드 | 설명 |
 | --- | --- |
@@ -264,7 +264,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 <Cmd sid='auto_fields' product='clue' />는 시스템이 요청 본문에 **자동으로 채우는 값**입니다. 사용할 수 있는 자동 필드는 크리덴셜 타입에 따라 달라집니다. 각 필드의 값 위치는 `{{...}}` **플레이스홀더**로 표시되며, 요청 시점에 실제 장치/사용자 값으로 대체됩니다.
 
-<Image src='/img/clue/clue-vendor-api-integ-auto-field.png' caption />
+<ProdImg src='/img/clue/clue-vendor-api-integ-auto-field.png' caption />
 
 | 기본 키 | 플레이스홀더(값 위치) | 사용 가능 대상 | 실제 값 |
 | --- | --- | --- | --- |
@@ -303,7 +303,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 고객사 API가 고정 값을 요청에 포함하도록 요구할 때 수동 필드를 추가하세요.
 
-<Image src='/img/clue/clue-vendor-api-integ-manual-field.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-manual-field.png' />
 
 | 필드 | 설명 |
 | --- | --- |
@@ -364,7 +364,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 고객사 서버가 응답을 반환하더라도 본문이 JSON 형식이 아니거나 응답 헤더의 `Content-Type`이 `application/json`이 아니면, 테스트 콘솔에 오류와 함께 실패 로그가 표시되고 <Cmd sid='save_configuration' product='clue' /> 버튼은 활성화되지 않습니다. 
 
-<Image src='/img/clue/clue-vendor-api-integ-test-fail-sample.png' caption />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-fail-sample.png' caption />
 
 <DocLink inner="#responseSpec" />을 참고하여 고객사 담당자와 함께 API가 다음 두 조건을 모두 충족하는지 확인하세요.
 
@@ -381,7 +381,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 판정 모드는 입력한 필드에 따라 자동 결정됩니다. <Cmd sid='statuscode' product='clue' />와 <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd> 중 최소 하나는 반드시 입력해야 하며, 둘 다 비워두면 저장할 수 없습니다.
 
-<Image src='/img/clue/clue-vendor-api-integ-test-success.png' caption />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success.png' caption />
 
 | # | 모드 | 입력 | 성공 기준 |
 | --- | --- | --- | --- |
@@ -421,7 +421,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 응답 영역에서 필드를 <Cmd sid='success_result' product='clue' /> <Cmd>JSONPath</Cmd>, <Cmd sid='success_message_jsonpath' product='clue' />, <Cmd sid='failure_message_jsonpath' product='clue' /> 입력란에 드래그 앤 드롭하면 JSON 경로가 자동으로 채워집니다. JSONPath를 직접 작성할 필요가 없습니다.
 
-<Image src='/img/clue/clue-vendor-api-integ-test-success-sample.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success-sample.png' />
 
 :::
 
@@ -432,7 +432,7 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 <Cmd sid='add_api' product='clue' /> 패널 하단의 <Cmd sid='save_configuration' product='clue' /> 버튼은 모든 필수 항목과 판정 기준이 올바르게 입력되고, API 테스트가 최소 한 번 성공했을 때 활성화됩니다.
 
-<Image src='/img/clue/clue-vendor-api-integ-test-success-save.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-test-success-save.png' />
 
 * 필수 필드 누락, URL 형식 오류, 지정한 타입으로 변환할 수 없는 수동 필드 값, 판정 기준 미입력, 테스트 미성공(네트워크 오류 포함) 중 하나라도 해당하면 <Cmd sid='save_configuration' product='clue' /> 버튼은 비활성화된 상태로 유지됩니다.
 
@@ -440,13 +440,13 @@ CLUe는 등록된 URL에 **HTTP POST**, `Content-Type: application/json` 요청�
 
 API를 저장하면 패널이 닫히고 새로 등록한 API가 목록에 카드로 표시됩니다. 카드에는 이름, 크리덴셜 타입, 등록된 URL 등의 정보가 표시됩니다.
 
-<Image src='/img/clue/clue-vendor-api-integ-list.png' />
+<ProdImg src='/img/clue/clue-vendor-api-integ-list.png' />
 
 * API를 수정하려면 카드를 클릭하세요. 수정 패널이 열립니다. <Cmd sid='connector_name' product='clue' />, <Cmd sid='webhook_url' product='clue' />, <Cmd sid='auto_fields' product='clue' />, <Cmd sid='manual_fields' product='clue' />, <Cmd sid='response_parsing' product='clue' />을 수정할 수 있습니다. <Cmd sid='auth_type' product='clue' />은 수정할 수 없습니다.
 
 * <Cmd sid='remove' product='clue' />: 등록한 API를 삭제합니다. 이 API가 크리덴셜에 연결되어 있었다면 해당 연결도 자동으로 해제되며 변경 사항이 즉시 장치에 적용됩니다. 연결이 해제된 크리덴셜은 이후 고객사 검증 없이 장치 자체 인증만으로 동작합니다. 운영 공백이 우려된다면 삭제하기 전에 대체 API를 먼저 등록하고 연결하세요.
 
-   <Image src='/img/clue/clue-vendor-api-integ-list-edit.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-integ-list-edit.png' />
 
 </Step>
 </Steps>
@@ -455,7 +455,7 @@ API를 저장하면 패널이 닫히고 새로 등록한 API가 목록에 카드
 
 화면 왼쪽 사이드바에서 <Cmd sid='service' product='clue' /> → <Cmd sid='service' product='clue' />을 클릭하세요. <Cmd sid='verify_vendor' product='clue' /> 섹션에서 각 크리덴셜에 사용할 API를 지정하세요.
 
-<Image src='/img/clue/clue-vendor-api-service-verify-vendor.png' />
+<ProdImg src='/img/clue/clue-vendor-api-service-verify-vendor.png' />
 
 * 각 크리덴셜 옆의 드롭다운을 클릭하면 등록된 API 목록이 표시됩니다. 선택한 크리덴셜과 <Cmd sid='auth_type' product='clue' />이 일치하는 API만 표시됩니다.
 
@@ -467,7 +467,7 @@ API를 저장하면 패널이 닫히고 새로 등록한 API가 목록에 카드
 
 크리덴셜에 등록한 API를 지정하고 <Cmd sid='modify' product='clue' /> 버튼을 클릭하면 변경 사항을 하위 공간에 적용할지 묻는 확인 대화상자가 나타납니다.
 
-<Image src='/img/clue/clue-vendor-api-service-verify-vendor-edit-save.png' />
+<ProdImg src='/img/clue/clue-vendor-api-service-verify-vendor-edit-save.png' />
 
 * <Cmd sid='ok' product='clue' />: 동일한 설정이 현재 공간 그룹의 모든 하위 공간에 즉시 적용됩니다. 기존의 공간별 재정의는 공간 그룹 값으로 덮어쓰기됩니다.
 
@@ -483,7 +483,7 @@ API를 저장하면 패널이 닫히고 새로 등록한 API가 목록에 카드
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='settings' product='clue' /> → <Cmd sid='service' product='clue' />을 클릭하세요.
 
-   <Image src='/img/clue/clue-vendor-api-place-service-assign-api.png' />
+   <ProdImg src='/img/clue/clue-vendor-api-place-service-assign-api.png' />
 
 1. <Cmd sid='verify_vendor' product='clue' /> 섹션의 각 크리덴셜 드롭다운에서 **이 공간에만 사용할 다른 API**를 선택하세요.
 

@@ -1,0 +1,49 @@
+---
+id: add-door
+title: ドアの追加
+description: CLUeのプレースにドアを追加し、リレーや退室ボタンなどの必要な設定を構成する方法を案内します。
+---
+
+CLUeではドア設定が必須です。 ドアを設定しないと、ユーザー同期を含むサーバーとの通信が正常に動作しません。サービス開始前に必ず完了してください。
+
+## ドア設定
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. ドアを追加するプレースを選択してください。
+
+3. 画面左側のサイドバーで <Cmd sid='door' product='clue' /> → <Cmd sid='door' product='clue' /> をクリックしてください。
+
+   <ProdImg src='/img/clue/place-doors.png' />
+
+4. 画面右上の <IcCLEditR title='Edit' /> → <Cmd sid='add_5' product='clue' /> をクリックしてください。
+
+   <ProdImg src='/img/clue/place-doors-add.png' />
+
+5. ドア名を入力し、入室装置、リレー、退室ボタンなど、その他の必要な設定を選択してください。
+
+   <ProdImg src='/img/clue/place-doors-add-details.png' />
+
+6. ドア設定を完了したら、<Cmd sid='add_2' product='clue' /> ボタンをクリックしてください。
+
+:::info
+
+<Cmd sid='sensor_ignore_option' product='clue' />
+
+* <Cmd sid='use' product='clue' />: ドアセンサーの状態に関係なく、ロック時間が経過するとドアリレーの状態が切り替わります。
+
+* <Cmd sid='not_in_use' product='clue' />: ドアセンサーが開状態を検知しても、ドアリレーは元の状態に切り替わりません。 自動ドアを構成する場合は、このオプションを選択してください。
+
+:::
+
+## スレーブ装置リレー使用
+
+SIO2、DM-20、DI-24のようなRS485スレーブ装置を使用する場合、マスター装置に接続されていても別のプレースに割り当てる必要があります。 一般装置と同じ方法でプレースに割り当ててください。 装置をプレースに割り当てる方法は <DocLink docId='platform/clue/add-device' /> を参照してください。
+
+* 装置一覧でスレーブ装置を確認してください。
+
+  <Image src='/img/clue/device-list-slave-device-02.png' alone />
+
+* マスター装置を選択し、接続されたスレーブ装置を追加してください。 その後、スレーブ装置のリレーと入力ポートを使用できます。
+
+  <Image src='/img/clue/device-list-slave-device-03.png' alone />

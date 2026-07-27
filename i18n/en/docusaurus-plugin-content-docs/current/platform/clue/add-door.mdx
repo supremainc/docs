@@ -1,0 +1,49 @@
+---
+id: add-door
+title: Add Doors
+description: This guide explains how to add doors to a CLUe place and configure the required settings, such as relays and exit buttons.
+---
+
+Door settings are required in CLUe. If you do not configure doors, communication with the server, including user synchronization, will not work properly. Complete this step before you start the service.
+
+## Access control setting
+
+1. Log in to the [CLUe web portal](https://clue.moon.supremainc.com).
+
+2. Select the Place where you want to add a door.
+
+3. On the left sidebar, click <Cmd sid='door' product='clue' /> → <Cmd sid='door' product='clue' />.
+
+   <ProdImg src='/img/clue/place-doors.png' />
+
+4. At the top right of the screen, click <IcCLEditR title='Edit' /> → <Cmd sid='add_5' product='clue' />.
+
+   <ProdImg src='/img/clue/place-doors-add.png' />
+
+5. Enter the door name, and select any other required settings, such as the entry device, relay, and exit button.
+
+   <ProdImg src='/img/clue/place-doors-add-details.png' />
+
+6. After you complete the door settings, click the <Cmd sid='add_2' product='clue' /> button.
+
+:::info
+
+<Cmd sid='sensor_ignore_option' product='clue' />
+
+* <Cmd sid='use' product='clue' />: The door relay changes state after the lock time passes, regardless of the door sensor status.
+
+* <Cmd sid='not_in_use' product='clue' />: The door relay does not return to its original state, even if the door sensor detects an open state. Select this option if you configure an automatic door.
+
+:::
+
+## Use slave device relays
+
+If you use an RS485 slave device, such as SIO2, DM-20, or DI-24, assign it to a separate Place, even if it connects to the master device. Assign it to a Place the same way you assign a standard device. For information on how to assign a device to a Place, see <DocLink docId='platform/clue/add-device' />.
+
+* Check the slave devices in the device list.
+
+  <Image src='/img/clue/device-list-slave-device-02.png' alone />
+
+* Select the master device, and add the connected slave devices. Then, you can use the relay and input ports on the slave devices.
+
+  <Image src='/img/clue/device-list-slave-device-03.png' alone />

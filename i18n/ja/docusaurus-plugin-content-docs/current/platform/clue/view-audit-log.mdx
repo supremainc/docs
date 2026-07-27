@@ -1,0 +1,77 @@
+---
+id: view-audit-log
+title: 監査ログを確認する
+description: CLUeポータルでプレースの監査ログを照会し、照会期間を設定したり、検索して目的のアクティビティ記録を見つける方法を案内します。
+---
+
+<Cmd sid='audit_log' product='clue' className='normal' />は、CLUeポータルのプレースで発生するすべてのアクティビティを記録し、追跡する機能です。 管理者は<Cmd sid='audit_log' product='clue' className='normal' />を使用して、誰が、いつ、どのアクティビティを実行したかを確認し、セキュリティ要件とコンプライアンス要件を満たせます。
+
+## 監査ログを照会する
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. 監査ログを確認するプレースを選択してください。
+
+3. 画面左のサイドバーで<Cmd sid='settings' product='clue' /> → <Cmd sid='audit_log' product='clue' />をクリックしてください。
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log.png' />
+
+最新の監査ログが新しい順に一覧に表示されます。 各ログ項目では、アクティビティを実行した<Cmd sid='date_and_time' product='clue' />、<Cmd sid='source' product='clue' />、<Cmd sid='administrator' product='clue' />、<Cmd sid='ip_address_2' product='clue' />、<Cmd sid='type_2' product='clue' />、<Cmd sid='target' product='clue' />、<Cmd sid='event_2' product='clue' />を確認できます。
+
+## 詳細情報の確認
+
+監査ログ項目の詳細情報を確認するには、一覧の一番右にある<Cmd sid='detail' product='clue' />列で<IcCLDetail title='Detail' />ボタンをクリックしてください。 画面右側に<Cmd sid='detail' product='clue' />パネルが表示されます。
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-details.png' />
+
+<Cmd sid='detail' product='clue' />パネルでは、日付と時刻、管理者アカウントに加え、<Cmd sid='source' product='clue' />、<Cmd sid='type_2' product='clue' />、関連APIを確認でき、次の情報も表示します。
+
+* <Cmd sid='item' product='clue' />: アクティビティが発生したカテゴリを表示します。
+
+* <Cmd sid='target' product='clue' />: アクティビティが適用された対象のIDと名前を表示します。
+
+* <Cmd sid='content' product='clue' />: APIリクエスト本文データを表示します。 リクエスト本文がない場合は、空の値(`{}`)で表示されます。
+
+## 照会期間の設定
+
+現在設定されている照会期間の単位で照会期間を変更するには、監査ログ一覧の左上にある<IcFw title='Previous' />または<IcBw title='Next' />をクリックしてください。 
+
+特定の期間の監査ログを照会するには、日付と時刻の領域(<IcCLCal />)をクリックしてください。 <Cmd sid='setting_date_and_time' product='clue' />ウィンドウが表示されたら、開始日時と終了日時を設定してください。 設定した期間の監査ログを照会できます。
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-set-period.png' />
+
+:::info
+
+設定した照会期間を初期化するには、<Cmd sid='recent' product='clue' />ボタンをクリックしてください。
+
+:::
+
+## 検索
+
+監査ログ一覧の各列の値を基準に、目的のデータを検索したりフィルタリングできます。 監査ログ一覧の右上にある検索ツールを使用してください。
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-search.png' />
+
+* <Cmd sid='administrator' product='clue' />: 管理者名を入力して検索できます。 大文字と小文字を区別して検索します。
+
+* <Cmd sid='ip_address_2' product='clue' />: IPアドレスを基準に検索できます。 正確なIPアドレスを入力する必要があります。
+
+  > 例: 192.168.1.1
+
+* <Cmd sid='source' product='clue' />: ユーザーがどのプラットフォームでアクティビティを行ったかの条件を選択できます。
+
+  > Web(<Cmd>WEB</Cmd>)、モバイル(<Cmd>MOBILE</Cmd>)、API(<Cmd>API_TOKEN</Cmd>)
+
+* <Cmd sid='type_2' product='clue' />: ユーザーのアクティビティカテゴリを選択できます。
+
+  > <Cmd sid='device_4' product='clue' />、<Cmd sid='door_4' product='clue' />、<Cmd sid='place_2' product='clue' />、<Cmd sid='user_2' product='clue' />、<Cmd sid='place_strategy' product='clue' />、<Cmd sid='admin_2' product='clue' />、<Cmd sid='access_to_personal_information' product='clue' />
+
+* <Cmd sid='event_2' product='clue' />: 次のイベント条件を選択できます。
+
+  > <Cmd sid='detail_2' product='clue' />、<Cmd sid='list_2' product='clue' />、<Cmd sid='create' product='clue' />、<Cmd sid='update_2' product='clue' />、<Cmd sid='delete' product='clue' />、<Cmd sid='command_2' product='clue' />
+
+複数のフィルター項目を同時に選択してフィルタリングできます。 異なる項目を選択すると`AND`条件で、同じ項目に複数の値を選択すると`OR`条件でフィルタリングします。 フィルタリングを解除するには、<IcClose title='Disable' />ボタンをクリックしてください。
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-search-filter.png' />
+
+<ProdImg src='/img/clue/clue-place-setting-audit-log-search-filter-or.png' />

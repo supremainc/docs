@@ -226,5 +226,13 @@
   "item.label.X-Station 2 (CLUe)": {
     "message": "X-Station 2 (CLUe)",
     "description": "Navbar item with label X-Station 2 (CLUe)"
+  },
+  "item.label.CLUe": {
+    "message": "CLUe",
+    "description": "Navbar item with label CLUe"
+  },
+  "item.label.CLUe API": {
+    "message": "CLUe API",
+    "description": "Navbar item with label CLUe API"
   }
 }

@@ -1,0 +1,90 @@
+---
+id: clue-api-guide
+title: CLUe API Guide
+description: This guide provides the basic information needed to use the CLUe API, including how to issue API keys, request and response formats, error codes, and rate limits.
+---
+
+This document helps you integrate with Suprema CLUe API quickly and easily. This guide provides the basic information needed to use the CLUe API, from how to issue API keys to request and response formats, error codes, and rate limits. The CLUe API works with Suprema CLUe portal settings. If you do not have a CLUe portal account, request one first.
+
+<NextStep notitle>
+<NextItem to='pathname:///developer/clue'>
+
+Learn more about using the CLUe API.
+
+</NextItem>
+</NextStep>
+
+## What is an API key
+
+An API key is required to call the CLUe API. You can issue one from the administrator menu for the place group. CLUe API requires an API key as a Bearer token in the request header. You can issue and manage API keys in the [CLUe portal](https://clue.moon.supremainc.com/login).
+
+To sign up, get an invitation from a higher-level administrator or an administrator in the same place group.
+
+:::note
+
+**What are Place and Place Group?**
+
+Because CLUe supports a multi-tenant system, a **Place** refers to an independent unit such as a company or Branch, and a **Place group** is a higher-level concept that manages multiple Places together.
+
+:::
+
+import IssueAPI from './_clue-issue-api.mdx';
+
+<IssueAPI />
+
+## CLUe API basics
+
+### Base URL
+
+The base URL for all API requests is `https://api.moon.supremainc.com/v1`. Send all API requests over HTTPS.
+
+CLUe API follows RESTful principles as much as possible and performs most operations on pages and database resources with `GET`, `POST`, `PATCH`, and `DELETE` requests. The request body and response body are both encoded in JSON.
+
+### API success response
+
+When the response succeeds, the following status is returned.
+
+HTTP status code: `200`
+
+| Field | Description | Optional |
+| :-: | --- | :-: |
+| `code` | API response code |  |
+| `status` | API response status |  |
+| `message` | API response message | true |
+| `data` | API response data | true |
+
+### API failure response
+
+When the response fails, one of the following statuses is returned.
+
+HTTP status code: `400` / `500`
+
+| Field | Description | Optional |
+| :-: | --- | :-: |
+| `errors` | API failure response |  |
+| `errors.code` | Failure error code |  |
+| `errors.message` | Failure reference message |  |
+| `errors.details` | Failure details | true |
+
+### Common error codes
+
+| **Code** | **Description** |
+| :-: | --- |
+| `e1000` | Internal server error |
+| `e1001` | Permission denied |
+| `e1002` | Not supported |
+| `e1003` | Invalid format |
+| `e1004` | JSON parse error |
+| `e1005` | Invalid method argument |
+| `e1006` | Bad request |
+| `e1007` | Resource not found |
+| `e1008` | Method argument type mismatch |
+| `e1009` | Missing request header |
+
+## API rate limits
+
+:::caution
+
+CLUe limits each API to 300 calls per 5 minutes, and this limit applies per call source. However, APIs that add facial images include processing tasks such as template extraction and generation, so we recommend waiting a short time between calls.
+
+:::

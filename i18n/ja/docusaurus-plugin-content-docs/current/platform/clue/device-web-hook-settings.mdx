@@ -1,0 +1,132 @@
+---
+id: device-web-hook-settings
+title: デバイス Webhook 設定
+description: 指定したイベントが発生すると、デバイスが外部エンドポイントにリアルタイム通知を送信する Webhook を CLUe ポータルで設定する方法を案内します。
+---
+
+CLUe ポータルで Webhook を設定すると、指定したイベントが発生したときに、デバイスが指定したエンドポイント（外部サーバー）へリアルタイムイベントを送信します。 この機能で、次のユースケースを実現できます。
+
+* **勤怠管理システム**との連携
+
+* **重複顔検出**イベントの受信
+
+ほかにも、システムとのさまざまなリアルタイムイベント連携に活用できます。
+
+## 対応デバイス {/* #supportedDevice */}
+
+| デバイス | モデル | 対応ファームウェアバージョン |
+| --- | --- | --- |
+| **BioStation 3** | BS3-DB, BS3-APWB | `bs3-all_v1.1.0_20250626` 以降 |
+
+:::info
+
+次の CLUe 対応デバイスでも Webhook をサポートする予定です。
+
+* BioEntry W3, BioLite N2, X-Station 2, XPass 2
+
+:::
+
+## 主な利点
+
+* デバイスのリアルタイムイベント通知を外部システムへ送信できます。
+
+* Webhook を通じて外部システムと簡単に連携できます。
+
+* 勤怠連携、セキュリティイベント監視などのユースケースをサポートします。
+
+## Webhook 設定
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. Webhook を設定するデバイスが割り当てられたスペースに移動してください。
+
+3. 画面左側のサイドバーで <Cmd sid='device_2' product='clue' /> をクリックしてください。
+
+4. デバイス一覧から Webhook を設定するデバイスを選択してください。
+
+   <ProdImg src='/img/clue/clue-fw-device-list.png' />
+
+5. 画面上部の <Cmd sid='webhook' product='clue' /> タブをクリックしてください。
+
+   <ProdImg src='/img/clue/clue-place-device-webhook.png' />
+
+:::info
+
+<Cmd sid='webhook' product='clue' /> タブが表示されない場合は、デバイスの **CLUe ファームウェアバージョン**を確認し、[対応するファームウェアバージョン以降](#supportedDevice) に更新してください。
+
+:::
+
+<Steps>
+<Step>
+
+### メソッド
+
+Webhook は既定で **POST** メソッドを使用します。
+
+</Step>
+<Step>
+
+### エンドポイント（URL）設定
+
+* <Cmd>オンラインイベント</Cmd>: デバイスがオンライン状態のときに指定したイベントが発生すると、リアルタイムの Webhook 呼び出しを送信するエンドポイントです。
+
+* <Cmd>オフラインイベント</Cmd>: デバイスがオフライン状態から再びオンライン状態に切り替わると、その間に発生したイベントを一覧形式で送信するエンドポイントです。
+
+</Step>
+<Step>
+
+### ヘッダー設定
+
+Webhook サーバーに必要なキーまたは認証値をリクエストヘッダーに設定してください。 ヘッダーを追加するには <IcAdd /> ボタンをクリックしてください。
+
+<ProdImg src='/img/clue/clue-place-device-webhook-header.png' />
+
+</Step>
+<Step>
+
+### トリガーイベントの指定
+
+Webhook 呼び出しをトリガーするイベントを選択してください。 既定で選択されたイベント以外にも、<Cmd sid='duplicated_face_fail_from_the_device' product='clue' /> のようなイベントを追加で選択できます。
+
+<ProdImg src='/img/clue/clue-place-device-webhook-event-type.png' />
+
+</Step>
+<Step>
+
+### Webhook フィールドの構成
+
+デバイスが送信するデータを定義するには、**Webhook フィールド**を構成してください。
+
+<ProdImg src='/img/clue/clue-place-device-webhook-config-field.png' />
+
+* <Cmd sid='auto_fields' product='clue' />: デバイスが送信できるデータセットの種類を示します。
+
+* <Cmd>nonString</Cmd>: Boolean、int のように引用符（`""`）で囲まないデータ型を指します。
+
+必要なデータフィールドを選択した後、<Cmd sid='preview' product='clue' /> パネルで Webhook ペイロードを事前確認できます。
+
+追加で固定値を含める必要がある場合は、<Cmd sid='manual_fields' product='clue' /> で追加できます。 この値は Webhook ペイロードと一緒に固定値として送信されます。
+
+</Step>
+<Step>
+
+### テスト呼び出しの実行
+
+設定が完了したら、<Cmd sid='test_call' product='clue' /> を実行できます。
+
+<ProdImg src='/img/clue/clue-place-device-webhook-test-call.png' />
+
+:::info
+
+テスト呼び出しでは、実際のデバイスではなく、ブラウザーから直接設定したエンドポイントに送信されるデータの構造と形式を確認できます。
+
+:::
+
+</Step>
+</Steps>
+
+## 参考
+
+サーバーがまだ準備されていなくても、インターネット上で公開されている Webhook テストサービスを使って Webhook テストを実行できます。 たとえば、[Webhook.site](https://webhook.site) を使って Webhook 呼び出しを簡単に確認できます。
+
+<Image src='/img/clue/webhook-tester.png' alone />
