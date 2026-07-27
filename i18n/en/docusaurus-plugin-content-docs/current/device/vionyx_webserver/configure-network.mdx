@@ -144,15 +144,27 @@ In the <Cmd sid='rtsp' product='cam' /> section, configure video transmission an
 
      * <Cmd>UDP</Cmd>: Enables faster transmission, but video may stutter depending on network conditions.
 
-     * <Cmd>TCP</Cmd>: Enables stable transmission, but network latency may occur.
+     * <Cmd>TCP</Cmd>: Provides stable transmission, but latency may occur compared with <Cmd>UDP</Cmd> depending on network conditions.
 
-     * <Cmd>DUAL</Cmd>: Automatically selects UDP or TCP for streaming based on network conditions.
+     * <Cmd>DUAL</Cmd>: Automatically selects UDP or TCP for streaming based on network conditions. This is the recommended default for general environments.
 
-     * <Cmd>TLS</Cmd>: Sends the RTSP stream with TLS encryption. Enhances security, but may increase CPU load.
+     * <Cmd>TLS</Cmd>: Sends the RTSP stream with TLS encryption. Enhances security, but may increase CPU load. Check whether the connected NVR/VMS supports TLS.
 
    * <Cmd sid='secure_rtp' product='cam' />: Enable the RTSP stream encryption option.
 
 4. Click <Cmd sid='save' product='cam' /> to save the settings.
+
+:::info
+
+If you need encryption for video and audio data, enable the <Cmd sid='secure_rtp' product='cam' /> option, and check whether it is compatible with the connected NVR/VMS.
+
+:::
+
+:::caution
+
+After changing the <Cmd sid='secure_rtp' product='cam' /> option, you may need to reconnect the existing RTSP session. Configure the NVR/VMS to be compatible with the selected transport method.
+
+:::
 
 ## CLUe cloud connection
 
