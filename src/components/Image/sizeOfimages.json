@@ -2019,6 +2019,18 @@
     "width": 1500,
     "height": 844
   },
+  "/img/biostarx-license-fail-alone.png": {
+    "width": 380,
+    "height": 189
+  },
+  "/img/biostarx-license-fail.png": {
+    "width": 380,
+    "height": 220
+  },
+  "/img/biostarx-license-success.png": {
+    "width": 215,
+    "height": 130
+  },
   "/img/biostarx-login.png": {
     "width": 800,
     "height": 556
@@ -3505,7 +3517,7 @@
   },
   "/img/biostarx-settings-video-event-bookmark.png": {
     "width": 1077,
-    "height": 549
+    "height": 318
   },
   "/img/biostarx-settings-video-integration-login.png": {
     "width": 600,
@@ -3513,7 +3525,7 @@
   },
   "/img/biostarx-settings-video-integration.png": {
     "width": 1078,
-    "height": 692
+    "height": 327
   },
   "/img/biostarx-settings-video-move-camera-group.png": {
     "width": 400,
@@ -3522,6 +3534,14 @@
   "/img/biostarx-settings-video-rename-camera-group.png": {
     "width": 300,
     "height": 264
+  },
+  "/img/biostarx-settings-video-set-cert.png": {
+    "width": 1077,
+    "height": 446
+  },
+  "/img/biostarx-settings-video-vms-server-info.png": {
+    "width": 1078,
+    "height": 327
   },
   "/img/biostarx-settings-visitor-custom-visitor-field.png": {
     "width": 1510,
@@ -3784,20 +3804,24 @@
     "height": 468
   },
   "/img/biostarx-tutorial-license-offline-popup-filed.png": {
-    "width": 540,
-    "height": 383
+    "width": 500,
+    "height": 288
   },
   "/img/biostarx-tutorial-license-offline-popup.png": {
     "width": 500,
-    "height": 251
+    "height": 288
   },
   "/img/biostarx-tutorial-license-offline.png": {
     "width": 878,
-    "height": 128
+    "height": 184
+  },
+  "/img/biostarx-tutorial-license-online-added.png": {
+    "width": 878,
+    "height": 221
   },
   "/img/biostarx-tutorial-license-online.png": {
     "width": 878,
-    "height": 128
+    "height": 184
   },
   "/img/biostarx-ui-monitoring.png": {
     "width": 1500,
@@ -4146,6 +4170,34 @@
   "/img/biostarx-visitor-settings-use-card.png": {
     "width": 1000,
     "height": 315
+  },
+  "/img/biostarx-vms-cert-installation-tool-01.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-02-found.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-02-list.png": {
+    "width": 602,
+    "height": 555
+  },
+  "/img/biostarx-vms-cert-installation-tool-02.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-03.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-04.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-fail.png": {
+    "width": 602,
+    "height": 554
   },
   "/img/biostarx-widget-edit.png": {
     "width": 600,
@@ -11411,6 +11463,18 @@
     "width": 1500,
     "height": 844
   },
+  "/img/en/biostarx-license-fail-alone.png": {
+    "width": 380,
+    "height": 189
+  },
+  "/img/en/biostarx-license-fail.png": {
+    "width": 380,
+    "height": 220
+  },
+  "/img/en/biostarx-license-success.png": {
+    "width": 215,
+    "height": 130
+  },
   "/img/en/biostarx-login.png": {
     "width": 800,
     "height": 551
@@ -12873,7 +12937,7 @@
   },
   "/img/en/biostarx-settings-video-event-bookmark.png": {
     "width": 1077,
-    "height": 549
+    "height": 318
   },
   "/img/en/biostarx-settings-video-integration-login.png": {
     "width": 600,
@@ -12881,11 +12945,19 @@
   },
   "/img/en/biostarx-settings-video-integration.png": {
     "width": 1078,
-    "height": 692
+    "height": 327
   },
   "/img/en/biostarx-settings-video-rename-camera-group.png": {
     "width": 300,
     "height": 263
+  },
+  "/img/en/biostarx-settings-video-set-cert.png": {
+    "width": 1077,
+    "height": 446
+  },
+  "/img/en/biostarx-settings-video-vms-server-info.png": {
+    "width": 1078,
+    "height": 327
   },
   "/img/en/biostarx-settings-visitor-custom-visitor-field.png": {
     "width": 1510,
@@ -13144,20 +13216,28 @@
     "height": 467
   },
   "/img/en/biostarx-tutorial-license-offline-popup-filed.png": {
-    "width": 540,
-    "height": 400
+    "width": 500,
+    "height": 288
   },
   "/img/en/biostarx-tutorial-license-offline-popup.png": {
     "width": 500,
-    "height": 251
+    "height": 288
   },
   "/img/en/biostarx-tutorial-license-offline.png": {
     "width": 878,
-    "height": 127
+    "height": 184
+  },
+  "/img/en/biostarx-tutorial-license-online-1.png": {
+    "width": 878,
+    "height": 184
+  },
+  "/img/en/biostarx-tutorial-license-online-added.png": {
+    "width": 878,
+    "height": 221
   },
   "/img/en/biostarx-tutorial-license-online.png": {
     "width": 878,
-    "height": 127
+    "height": 184
   },
   "/img/en/biostarx-ui-monitoring.png": {
     "width": 1500,
