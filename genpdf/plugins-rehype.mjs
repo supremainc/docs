@@ -19,13 +19,9 @@ const __dirname = dirname(__filename);
 // Cmd component locale imports
 const cmdKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/ko.json`, 'utf-8'));
 const cmdEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/en.json`, 'utf-8'));
-const cmdEs = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/es.json`, 'utf-8'));
-const cmdJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/ja.json`, 'utf-8'));
 
 const cmdXKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/ko.json`, 'utf-8'));
 const cmdXEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/en.json`, 'utf-8'));
-const cmdXEs = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/es.json`, 'utf-8'));
-const cmdXJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/ja.json`, 'utf-8'));
 
 const cmdDevKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/device/ko.json`, 'utf-8'));
 const cmdDevEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/device/en.json`, 'utf-8'));
@@ -681,16 +677,12 @@ export function rehypeProcessAdmonitions() {
 export function rehypeProcessCmdComponent(language = 'ko') {
   const cmdLocaleMap = {
     ko: cmdKo,
-    en: cmdEn,
-    es: cmdEs,
-    ja: cmdJa,
+    en: cmdEn
   };
 
   const cmdXLocaleMap = {
     ko: cmdXKo,
-    en: cmdXEn,
-    es: cmdXEs,
-    ja: cmdXJa,
+    en: cmdXEn
   };
 
   const deviceLocaleMap = {
