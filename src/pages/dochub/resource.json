@@ -155,12 +155,7 @@
             "BEW2-OAPB"
         ],
         "version": "1.8.2",
-        "manuals": {
-            "ko": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
-            "en": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
-            "es": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
-            "ja": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf"
-        },
+        "manuals": "device/bioentry_w2/BioEntry W2_IG_1.36_EN_240930.pdf",
         "release_date": "2025-03-14"
     },
     {
@@ -244,13 +239,33 @@
             "BLN2-PAB"
         ],
         "version": "1.6.1",
-        "manuals": {
-            "ko": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf",
-            "en": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf",
-            "es": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf",
-            "ja": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf"
-        },
+        "manuals": "device/biolite_n2/BioLite N2_UL_IG_1.14_EN_240516.pdf",
         "release_date": "2025-03-25"
+    },
+    {
+        "category": "biometric",
+        "product": "BioStation 2",
+        "models": [
+            "BS2-OEPW",
+            "BS2-OHPW",
+            "BS2-OIPW",
+            "BS2-OMPW"
+        ],
+        "version": "1.10.2",
+        "manuals": {
+            "ko": "device/biostation_2/BioStation 2_Guide_KO.zip",
+            "en": "device/biostation_2/BioStation 2_Guide_EN.zip"
+        },
+        "release_notes": {
+            "ko": "device/biostation_2/BioStation 2_RevisionNotes_1.10.2_KO_240719.0.pdf",
+            "en": "device/biostation_2/BioStation 2_RevisionNotes_1.10.2_EN_240719.0.pdf"
+        },
+        "a_e": "device/biostation_2/SUPREMA_BioStation_2_AE-Specification_240205.docx",
+        "dt": {
+            "ko": "device/biostation_2/BioStation 2_DrillingTemplate_KO.pdf",
+            "en": "device/biostation_2/BioStation 2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2024-08-01"
     },
     {
         "category": "biometric",
@@ -330,12 +345,7 @@
             "BS3-APWB"
         ],
         "version": "",
-        "manuals": {
-            "ko": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf",
-            "en": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf",
-            "es": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf",
-            "ja": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf"
-        },
+        "manuals": "device/biostation_3/BioStation 3_UL_IG_1.04_EN_230710.pdf",
         "release_date": "2024-04-04"
     },
     {
@@ -364,6 +374,76 @@
             "en": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_EN.pdf"
         },
         "release_date": "2026-07-01"
+    },
+    {
+        "category": "biometric",
+        "product": "BioStation A2",
+        "models": [
+            "BSA2-OEPW",
+            "BSA2-OHPW",
+            "BSA2-OIPW",
+            "BSA2-OMPW"
+        ],
+        "version": "1.9.3",
+        "manuals": {
+            "ko": "device/biostation_a2/BioStation A2_Guide_KO.zip",
+            "en": "device/biostation_a2/BioStation A2_Guide_EN.zip"
+        },
+        "release_notes": {
+            "ko": "device/biostation_a2/BioStation A2_RevisionNotes_1.9.3_KO_240313.0.pdf",
+            "en": "device/biostation_a2/BioStation A2_RevisionNotes_1.9.3_EN_240313.0.pdf"
+        },
+        "a_e": "device/biostation_a2/SUPREMA_BioStation_A2_AE-Specification_240207.docx",
+        "dt": {
+            "ko": "device/biostation_a2/BioStation A2_DrillingTemplate_KO.pdf",
+            "en": "device/biostation_a2/BioStation A2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2024-03-21"
+    },
+    {
+        "category": "biometric",
+        "product": "BioStation L2",
+        "models": [
+            "BSL2-OE",
+            "BSL2-OM"
+        ],
+        "version": "1.6.2",
+        "manuals": {
+            "ko": "device/biostation_l2/BioStation L2_Guide_KO.zip",
+            "en": "device/biostation_l2/BioStation L2_Guide_EN.zip"
+        },
+        "release_notes": {
+            "ko": "device/biostation_l2/BioStation L2_RevisionNotes_1.6.2_KO_240828.0.pdf",
+            "en": "device/biostation_l2/BioStation L2_RevisionNotes_1.6.2_EN_240828.0.pdf"
+        },
+        "a_e": "device/biostation_l2/SUPREMA_BioStation_L2_AE-Specification_240208.docx",
+        "dt": {
+            "ko": "device/biostation_l2/BioStation L2_DrillingTemplate_KO.pdf",
+            "en": "device/biostation_l2/BioStation L2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2024-08-29"
+    },
+    {
+        "category": "biometric",
+        "product": "FaceLite",
+        "models": [
+            "FL-DB"
+        ],
+        "version": "1.3.5",
+        "manuals": {
+            "ko": "device/facelite/FaceLite_Guide_KO.zip",
+            "en": "device/facelite/FaceLite_Guide_EN.zip"
+        },
+        "release_notes": {
+            "ko": "device/facelite/FaceLite_RevisionNotes_1.3.5_KO_240807.0.pdf",
+            "en": "device/facelite/FaceLite_RevisionNotes_1.3.5_EN_240807.0.pdf"
+        },
+        "a_e": "device/facelite/SUPREMA_FaceLite_AE-Specification_231228.docx",
+        "dt": {
+            "ko": "device/facelite/FaceLite_DrillingTemplate_KO.pdf",
+            "en": "device/facelite/FaceLite_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2024-08-19"
     },
     {
         "category": "biometric",
@@ -525,12 +605,7 @@
             "XP2-GKDPB"
         ],
         "version": "",
-        "manuals": {
-            "ko": "device/xpass_2/XPass 2_UL_IG_1.06_EN_230126.pdf",
-            "en": "device/xpass_2/XPass 2_UL_IG_1.06_EN_230126.pdf",
-            "es": "device/xpass_2/XPass 2_UL_IG_1.06_EN_230126.pdf",
-            "ja": "device/xpass_2/XPass 2_UL_IG_1.06_EN_230126.pdf"
-        },
+        "manuals": "device/xpass_2/XPass 2_UL_IG_1.06_EN_230126.pdf",
         "release_date": "2024-01-24"
     },
     {
@@ -568,12 +643,7 @@
             "XPD2-GKDB"
         ],
         "version": "",
-        "manuals": {
-            "ko": "device/xpass_d2/XPass D2_UL_IG_1.09_EN_230126.pdf",
-            "en": "device/xpass_d2/XPass D2_UL_IG_1.09_EN_230126.pdf",
-            "es": "device/xpass_d2/XPass D2_UL_IG_1.09_EN_230126.pdf",
-            "ja": "device/xpass_d2/XPass D2_UL_IG_1.09_EN_230126.pdf"
-        },
+        "manuals": "device/xpass_d2/XPass D2_UL_IG_1.09_EN_230126.pdf",
         "release_date": "2024-01-24"
     },
     {
@@ -657,12 +727,7 @@
             "CS-20P"
         ],
         "version": "",
-        "manuals": {
-            "ko": "device/corestation_20/CoreStation 20_UL_IG_1.01_EN_250731.pdf",
-            "en": "device/corestation_20/CoreStation 20_UL_IG_1.01_EN_250731.pdf",
-            "es": "device/corestation_20/CoreStation 20_UL_IG_1.01_EN_250731.pdf",
-            "ja": "device/corestation_20/CoreStation 20_UL_IG_1.01_EN_250731.pdf"
-        },
+        "manuals": "device/corestation_20/CoreStation 20_UL_IG_1.01_EN_250731.pdf",
         "release_date": "2026-04-20"
     },
     {
@@ -696,12 +761,7 @@
             "CS-40"
         ],
         "version": "1.5.1",
-        "manuals": {
-            "ko": "device/corestation_40/CoreStation_IG_1.05_UL_EN_241216.pdf",
-            "en": "device/corestation_40/CoreStation_IG_1.05_UL_EN_241216.pdf",
-            "es": "device/corestation_40/CoreStation_IG_1.05_UL_EN_241216.pdf",
-            "ja": "device/corestation_40/CoreStation_IG_1.05_UL_EN_241216.pdf"
-        },
+        "manuals": "device/corestation_40/CoreStation_IG_1.05_UL_EN_241216.pdf",
         "release_date": "2022-10-05"
     },
     {
@@ -750,12 +810,7 @@
             "DI-24"
         ],
         "version": "",
-        "manuals": {
-            "ko": "device/doorinterface/Door Interface_UL_IG_1.00_EN_250414.pdf",
-            "en": "device/doorinterface/Door Interface_UL_IG_1.00_EN_250414.pdf",
-            "es": "device/doorinterface/Door Interface_UL_IG_1.00_EN_250414.pdf",
-            "ja": "device/doorinterface/Door Interface_UL_IG_1.00_EN_250414.pdf"
-        },
+        "manuals": "device/doorinterface/Door Interface_UL_IG_1.00_EN_250414.pdf",
         "release_date": "2026-04-20"
     },
     {
@@ -903,12 +958,7 @@
             "SIO2"
         ],
         "version": "",
-        "manuals": {
-            "ko": "device/securemodule/Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
-            "en": "device/securemodule/Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
-            "es": "device/securemodule/Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
-            "ja": "device/securemodule/Secure_IO_2_UL_IG_2.13_EN_211201.pdf"
-        },
+        "manuals": "device/securemodule/Secure_IO_2_UL_IG_2.13_EN_211201.pdf",
         "release_date": "2024-01-24"
     },
     {
@@ -980,7 +1030,6 @@
         "product": "Genetec",
         "version": "",
         "manuals": {
-            "ko": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
             "en": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
             "es": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_ES_260629.pdf",
             "ja": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_JA_260629.pdf"
@@ -1001,7 +1050,6 @@
         "product": "Gallagher",
         "version": "",
         "manuals": {
-            "ko": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
             "en": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
             "es": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_ES_260629.pdf",
             "ja": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_JA_260629.pdf"
@@ -1022,7 +1070,6 @@
         "product": "Software House",
         "version": "",
         "manuals": {
-            "ko": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
             "en": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
             "es": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_ES_260629.pdf",
             "ja": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_JA_260629.pdf"
