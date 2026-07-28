@@ -369,10 +369,10 @@
         <label for="calcVac">휴가 (사무실 근무와 별도로 실근무에 합산)</label>
         <select class="vsel" id="calcVac">
           <option value="">휴가 없음</option>
-          <option value="annual">연차 (1일)</option>
-          <option value="half">반차 (4시간)</option>
-          <option value="quarter">반반차 (2시간)</option>
-          <option value="half_quarter">반차+반반차 (6시간)</option>
+          <option value="annual">연차휴가(1일)</option>
+          <option value="half">연차휴가(4시간)</option>
+          <option value="quarter">연차휴가(2시간)</option>
+          <option value="half_quarter">연차휴가(6시간)</option>
         </select>
       </div>
       <div class="calc-row vac-range" id="calcVacRange" style="display:none;">
@@ -540,7 +540,7 @@
   </main>
   </div>
 
-  <div class="footnote">V2.5 | Technical Writing</div>
+  <div class="footnote">V2.6 | Technical Writing</div>
 </div>
 
 <script>
@@ -596,6 +596,12 @@ function normalizeVac(v){
 }
 function vacHours(key){ return (VAC[normalizeVac(key)] || VAC['']).hours; }
 function vacLabel(key){ return (VAC[normalizeVac(key)] || VAC['']).label; }
+// 캘린더 배지용 전체 명칭 (근태 파일 표기와 동일)
+function vacFullLabel(key){
+  const k = normalizeVac(key);
+  const map = { annual:'연차휴가(1일)', half:'연차휴가(4시간)', quarter:'연차휴가(2시간)', half_quarter:'연차휴가(6시간)' };
+  return map[k] || '';
+}
 // 시간대(몇 시~몇 시)를 지정하는 휴가인지 (연차/없음은 시간대 없음)
 function vacUsesRange(key){
   const k = normalizeVac(key);
@@ -1331,7 +1337,7 @@ function buildCalendar(){
     if(vacAllowed){
       vacEl = document.createElement('select');
       vacEl.className = 'vsel';
-      [['','휴가 없음'],['annual','연차'],['half','반차'],['quarter','반반차'],['half_quarter','반차+반반차']]
+      [['','휴가 없음'],['annual','연차휴가(1일)'],['half','연차휴가(4시간)'],['quarter','연차휴가(2시간)'],['half_quarter','연차휴가(6시간)']]
         .forEach(([v,t])=>{ const o=document.createElement('option'); o.value=v; o.textContent=t; vacEl.appendChild(o); });
       vacEl.value = normalizeVac(monthData[dateKey]?.vac || '');
       cell.appendChild(vacEl);
@@ -1382,7 +1388,7 @@ function buildCalendar(){
       }
       // 휴가 배지
       if(r.vh > 0){
-        const b=document.createElement('span'); b.className='badge vac'; b.textContent=vacLabel(vac); badges.appendChild(b);
+        const b=document.createElement('span'); b.className='badge vac'; b.textContent=vacFullLabel(vac); badges.appendChild(b);
       }
 
       const hasOfficeInput = (inEl.value !== '' || outEl.value !== '');
@@ -1518,20 +1524,29 @@ function normImportTime(v){
   return String(h).padStart(2,'0') + ':' + String(mi).padStart(2,'0');
 }
 // 근태사항(N열) → 시뮬레이터 휴가 키
-//  "연차휴가(1일)"→연차, (0.5일)→반차, (0.25일)→반반차, (0.75일)→반차+반반차
-//  ※ 반차/반반차 실제 표기 샘플이 없어 '일수' 기준으로 추정 매핑
+//  연차휴가(1일)→연차, (4시간)→반차, (2시간)→반반차, (6시간)→반차+반반차
 function mapAttendance(n){
   const s = String(n == null ? '' : n).trim();
   if(!s) return '';
+  // 시간 표기: "연차휴가(4시간)"
+  const hm = s.match(/([\d.]+)\s*시간/);
+  if(hm && /연차|휴가|반차/.test(s)){
+    const hrs = parseFloat(hm[1]);
+    if(hrs >= 8) return 'annual';          // 8시간 = 연차
+    if(hrs === 6) return 'half_quarter';   // 6시간 = 반차+반반차
+    if(hrs === 4) return 'half';           // 4시간 = 반차
+    if(hrs === 2) return 'quarter';        // 2시간 = 반반차
+  }
+  // 일 표기: "연차휴가(1일)" (0.5/0.25/0.75일 대비)
   const dm = s.match(/([\d.]+)\s*일/);
   if(dm && /연차|휴가|반차/.test(s)){
     const days = parseFloat(dm[1]);
-    if(days >= 1)                     return 'annual';        // 1일  = 8시간
-    if(Math.abs(days - 0.75) < 0.01)  return 'half_quarter';  // 0.75일 = 6시간
-    if(Math.abs(days - 0.5)  < 0.01)  return 'half';          // 0.5일  = 4시간
-    if(Math.abs(days - 0.25) < 0.01)  return 'quarter';       // 0.25일 = 2시간
+    if(days >= 1)                     return 'annual';
+    if(Math.abs(days - 0.75) < 0.01)  return 'half_quarter';
+    if(Math.abs(days - 0.5)  < 0.01)  return 'half';
+    if(Math.abs(days - 0.25) < 0.01)  return 'quarter';
   }
-  // 명시적 문구 대비 백업 매핑
+  // 백업 키워드 매핑
   if(/반반차/.test(s)) return 'quarter';
   if(/반차/.test(s))   return 'half';
   if(/연차/.test(s))   return 'annual';
