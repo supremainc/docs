@@ -3,7 +3,7 @@ import Link from '@docusaurus/Link';
 export default function Jira({num, bss}) {
     let jiraLink;
     if (num) {
-        jiraLink = 'https://jira.suprema.co.kr/browse/' + num;
+        jiraLink = 'https://supremainc.atlassian.net/browse/' + num;
         return (
             <Link to={jiraLink} target="_blank" className="jira-link">
             [{num}]
