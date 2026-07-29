@@ -31,24 +31,23 @@ title: 펌웨어 버전 1.1.0
 1. DESFire EV2/EV3 카드에 대한 EV2 Secure Messaging 인증 및 발급 지원
 1. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
 
-<Jira num='BS3MFW-463' />	BSF-2925BDP-1634 OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기
+<Jira num='BS3MFW-463' /> BSF-2925BDP-1634 OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기
 1. OSDP 리더 모드에서 타사 컨트롤 패널의 출입 거부 시 'Access Denied'로 표시되도록 개선
 1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
 
-<Jira num='BS3MFW-541' />	[FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System)
+<Jira num='BS3MFW-541' /> [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System)
 1. BLE 동작 안정성 개선
 1. Improved BLE stability.
 
-(BS3MFW-562) [UI 지원 장치] 사용자 이름 및 사용자 ID에 Dot(.) 지원
+<Jira num='BS3MFW-562' /> [UI 지원 장치] 사용자 이름 및 사용자 ID에 Dot(.) 지원
 1. 사용자 ID 및 사용자 이름의 허용 문자 확장
   * 사용자 ID에 마침표(.) 입력 지원
   * 사용자 이름에 마침표(.)와 아포스트로피(') 입력 지원
-
 1. Expanded allowed characters for User ID and User Name
   * Added support for periods (.) in User ID
   * Added support for periods (.) and apostrophes (') in User Name
 
-(BS3MFW-95)	Server / Device Private MSG관련하여 근태 표시 시 아래 이미지 처럼 표시가 되는 현상 - 1.0.0
+<Jira num='BS3MFW-95' /> Server / Device Private MSG관련하여 근태 표시 시 아래 이미지 처럼 표시가 되는 현상 - 1.0.0
 1. 근태 메시지가 두 줄로 표시되도록 개선
 1. Improved T&A message display to show on two lines.
 
@@ -58,80 +57,79 @@ title: 펌웨어 버전 1.1.0
 
 <BugLists>
 
-(BS3MFW-455)	ffplay를 통해 tcp로 rtsp 연결하면 30초 Timeout에 발생에 대한 개선
+<Jira num='BS3MFW-455' /> ffplay를 통해 tcp로 rtsp 연결하면 30초 Timeout에 발생에 대한 개선
 1. TCP 방식으로 RTSP 연결 시 일정 시간 후 영상 송출이 중단되는 문제 <Badge>1.0.0</Badge>
 1. Video streaming stopping after a certain period when connecting to RTSP over TCP. <Badge>1.0.0</Badge>
 
-(BS3MFW-457)	BSF-2925 osdp pdcap 개선
+<Jira num='BS3MFW-457' /> BSF-2925 osdp pdcap 개선
 1. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제 <Badge>1.0.0</Badge>
 1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
 
-(BS3MFW-462)	FISF-2436 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 - 1.0.0
+<Jira num='BS3MFW-462' /> FISF-2436 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 - 1.0.0
 1. 연결된 Wiegand 리더에서 카드 인증이 실패하는 문제 <Badge>1.0.0</Badge>
 1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
 
-(BS3MFW-467)	프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 - 1.0.0
+<Jira num='BS3MFW-467' /> 프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 - 1.0.0
 1. 사용자 추가/삭제 중 얼굴 인증이 발생하면 장치가 멈추거나 재부팅되는 문제 <Badge>1.0.0</Badge>
 1. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
 
-(BS3MFW-474)	FISF-2475 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 - 1.0.0
+<Jira num='BS3MFW-474' /> FISF-2475 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 - 1.0.0
 1. 사용자 동기화 중 장치가 멈추거나 재부팅되고 사용자 등록이 지연되는 문제 <Badge>1.0.0</Badge>
 1. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
 
-(BS3MFW-203)	Master LED breathing 수행하지 않는 현상 - 1.0.0
+<Jira num='BS3MFW-203' /> Master LED breathing 수행하지 않는 현상 - 1.0.0
 1. 화면 보호기 동작 시 LED 효과가 동작하지 않는 문제 <Badge>1.0.0</Badge>
 1. LED effect not working when the screen saver is active. <Badge>1.0.0</Badge>
 
-(BS3MFW-275)	장치의 Ethernet 설정에서 오류가 나는 현상 - 1.0.0
+<Jira num='BS3MFW-275' /> 장치의 Ethernet 설정에서 오류가 나는 현상 - 1.0.0
 1. 장치의 이더넷 설정에서 유효하지 않은 값이 입력되는 문제 <Badge>1.0.0</Badge>
 1. Invalid values being accepted in the device's Ethernet settings. <Badge>1.0.0</Badge>
 
-(BS3MFW-369)	Manual Lock 상태에서 Wiegand Reader에 인증 성공하여 Slave의 Relay 동작 시에, 장치 화면의 자물쇠 Icon이 해제되는 현상 - 1.0.0
-(BS3MFW-370)	Master의 자물쇠 Icon이 표시가 안 되는 현상 - 1.0.0
-(BS3MFW-371)	Master의 Door Icon이 표시가 사라지는 현상 - 1.0.0
+<Jira num='BS3MFW-369' /> Manual Lock 상태에서 Wiegand Reader에 인증 성공하여 Slave의 Relay 동작 시에, 장치 화면의 자물쇠 Icon이 해제되는 현상 - 1.0.0
+<Jira num='BS3MFW-370' /> Master의 자물쇠 Icon이 표시가 안 되는 현상 - 1.0.0
+<Jira num='BS3MFW-371' /> Master의 Door Icon이 표시가 사라지는 현상 - 1.0.0
 1. 특정 조건에서 마스터 장치 화면의 아이콘이 올바르게 표시되지 않는 문제 개선 <Badge>1.0.0</Badge>
   * **수동 잠김** 상태에서 다른 출입문 인증 성공 시 자물쇠 아이콘이 사라지는 문제
   * **수동 잠김** 상태에서 마스터 장치 화면에 자물쇠 아이콘이 표시되지 않는 문제
   * 출입문 추가 설정 시 마스터 장치 화면의 출입문 아이콘이 사라지는 문제
-
 1. Improved icon display issues on the master device screen under certain conditions <Badge>1.0.0</Badge>
   * Lock icon disappearing when authentication succeeds at another door while in **Manual Lock** state
   * Lock icon not displayed on the master device screen while in **Manual Lock** state
   * Door icon disappearing on the master device screen when adding a door configuration
 
-(BS3MFW-384) [VoIP] 장치에서 발신 시 BS3M 수신 장치에 통화 화면 영상 미출력 - 1.0.0
+<Jira num='BS3MFW-384' /> [VoIP] 장치에서 발신 시 BS3M 수신 장치에 통화 화면 영상 미출력 - 1.0.0
 1. VoIP 통화 시 수신 장치에 영상이 표시되지 않는 문제 <Badge>1.0.0</Badge>
 1. Video not displayed on the receiving device during a VoIP call. <Badge>1.0.0</Badge>
 
-(BS3MFW-401)	[VoIP] VoIP 통화 중 BioStar에서 지문 등록 시 스캔 화면 출력 - 1.0.0
+<Jira num='BS3MFW-401' /> [VoIP] VoIP 통화 중 BioStar에서 지문 등록 시 스캔 화면 출력 - 1.0.0
 1. VoIP 통화 중 지문 등록 시 스캔 화면이 출력되는 문제 <Badge>1.0.0</Badge>
 1. Fingerprint scan screen appearing when enrolling a fingerprint during a VoIP call. <Badge>1.0.0</Badge>
 
-(BS3MFW-365)	장치 Time Zone을 UTC-1 ~ UTC-12로 설정 후 Event Log 상에서 유효 범위 값을 입력 시 NaN/aN/aN aN:aN으로 표시가 되는 현상 - 1.0.0
+<Jira num='BS3MFW-365' /> 장치 Time Zone을 UTC-1 ~ UTC-12로 설정 후 Event Log 상에서 유효 범위 값을 입력 시 NaN/aN/aN aN:aN으로 표시가 되는 현상 - 1.0.0
 1. **표준 시간대**를 UTC-1 ~ UTC-12로 설정 시 이벤트 로그의 날짜/시간이 비정상적으로 표시되는 문제 <Badge>1.0.0</Badge>
 1. Date and time displayed incorrectly in the event log when the **Time Zone** is set to UTC-1 through UTC-12. <Badge>1.0.0</Badge>
 
-(BS3MFW-414)	지문을 등록하거나 수정할 시에 "지문을 한 번 더 입력하십시오."로 문구가 표시되는 현상 - 1.0.0
+<Jira num='BS3MFW-414' /> 지문을 등록하거나 수정할 시에 "지문을 한 번 더 입력하십시오."로 문구가 표시되는 현상 - 1.0.0
 1. 지문 등록/수정 시 안내 문구가 잘못 표시되는 문제 <Badge>1.0.0</Badge>
 1. Incorrect guidance message displayed when enrolling or editing a fingerprint. <Badge>1.0.0</Badge>
 
-(BS3MFW-456)	FISF-2471 Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 1.0.0
+<Jira num='BS3MFW-456' /> FISF-2471 Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 1.0.0
 1. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
 1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
 
-(BS3MFW-413)	[외부광-자연태양광]외부광 환경에서 순광 상태에서 BS3M의 FD가 불가하여 인증이 안되는 현상 - 1.0.0
+<Jira num='BS3MFW-413' /> [외부광-자연태양광]외부광 환경에서 순광 상태에서 BS3M의 FD가 불가하여 인증이 안되는 현상 - 1.0.0
 1. 태양광이 정면으로 비치는 환경에서 얼굴 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
 1. Face authentication failing in bright external lighting conditions. <Badge>1.0.0</Badge>
 
-(BS3MFW-498)	[Slave - Scan Finger]Biostar에서 Slave 장치로 Scan Finger 시 Master 장치의 IR이 깜빡이는 현상 - 1.0.1
+<Jira num='BS3MFW-498' /> [Slave - Scan Finger]Biostar에서 Slave 장치로 Scan Finger 시 Master 장치의 IR이 깜빡이는 현상 - 1.0.1
 1. 슬레이브 장치에서 지문 스캔 시 마스터 장치의 IR LED가 깜빡이는 문제 <Badge>1.0.1</Badge>
 1. Master device's IR LED blinking when scanning a fingerprint on a slave device. <Badge>1.0.1</Badge>
 
-(BS3MFW-502)	Master Admin 스탠다드향임에도 지문의 포맷을 변경하면 무조건 재부팅이 되는 현상 - 1.0.1
+<Jira num='BS3MFW-502' /> Master Admin 스탠다드향임에도 지문의 포맷을 변경하면 무조건 재부팅이 되는 현상 - 1.0.1
 1. 글로벌향 제품에서 지문 템플릿 포맷 변경 시 재부팅되는 문제 <Badge>1.0.1</Badge>
 1. Reboot occurring when changing the fingerprint template format on standard models. <Badge>1.0.1</Badge>
 
-(BS3MFW-545) Slave으로 연결된 BS3M 장치에서 카드 등록 시 카드 데이터가 다른 값으로 읽히는 현상 - 1.0.1
+<Jira num='BS3MFW-545' /> Slave으로 연결된 BS3M 장치에서 카드 등록 시 카드 데이터가 다른 값으로 읽히는 현상 - 1.0.1
 1. Slave로 연결된 BS3M 장치에서 카드 등록 시 카드 데이터가 다른 값으로 읽히는 문제 <Badge>1.0.1</Badge>
 1. Card data being read incorrectly when registering cards on a BS3M device connected as a slave. <Badge>1.0.1</Badge>
 
