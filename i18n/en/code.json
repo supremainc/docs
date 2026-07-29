@@ -1245,6 +1245,9 @@
   "externalLinks.dev.xapi.desc": {
     "message": "API documentation that allows you to see all APIs of BioStar X at a glance"
   },
+  "externalLinks.dev.clueapi.desc": {
+    "message": "API documentation that allows you to see APIs of CLUe at a glance"
+  },
   "externalLinks.dev.2api.desc": {
     "message": "API documentation that allows you to see all APIs of BioStar 2 at a glance"
   },

@@ -1245,6 +1245,9 @@
   "externalLinks.dev.xapi.desc": {
     "message": "BioStar X의 모든 API를 한눈에 볼 수 있는 API 문서"
   },
+  "externalLinks.dev.clueapi.desc": {
+    "message": "CLUe의 API를 한눈에 볼 수 있는 API 문서"
+  },
   "externalLinks.dev.2api.desc": {
     "message": "BioStar 2의 모든 API를 한눈에 볼 수 있는 API 문서"
   },
