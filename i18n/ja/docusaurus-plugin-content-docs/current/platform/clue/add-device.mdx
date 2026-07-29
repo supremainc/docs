@@ -1,0 +1,151 @@
+---
+id: add-device
+title: デバイスを追加する
+description: CLUeポータルでデバイスを登録し、プレースに割り当てる方法を役割別に案内します。
+---
+
+CLUeデバイスを使用するには、Webポータルで**登録**と**割り当て**を完了する必要があります。 デバイス登録はブランチ管理者のみが実行できます。登録が完了したデバイスは、代理店管理者またはプレース グループ管理者が担当プレースに割り当てます。
+
+新規デバイスを購入したお客様は、CLUeファームウェアと証明書が適用されているか確認した後、Supremaの支店にデバイス登録を依頼してください。
+
+## デバイス登録（ブランチ管理者）
+
+ブランチ管理者のみがデバイスを登録できます。 デバイスを登録する前に、デバイスのシリアル番号を確認してください。 シリアル番号は、デバイス背面に貼付されたステッカーで確認できます。
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. 初期画面で、デバイスを登録するブランチを選択してください。
+
+3. 画面右上の <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/add-device-settings.png' />
+
+4. 画面左側のサイドバーで <Cmd sid='device' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/add-device-go-device-tap.png' />
+
+5. <Cmd sid='add_4' product='clue' /> セクションの <Cmd sid='device_id_s_n' product='clue' /> 入力フィールドにデバイスのシリアル番号を入力し、<Cmd sid='add' product='clue' /> ボタンをクリックしてください。
+
+   <ProdImg src='/img/clue/add-device-enter-id.png' />
+
+6. <Cmd sid='device_list' product='clue' />に追加したデバイスが表示されます。
+
+   <ProdImg src='/img/clue/add-device-list.png' />
+
+7. 編集モードを有効にするには、<Cmd sid='none_2' product='clue' /> フィールドをクリックし、<IcCLEdit title='edit' /> ボタンを選択してください。
+
+   <ProdImg src='/img/clue/add-device-list-enable-edit-mode.png' />
+
+8. デバイスを割り当てる <Cmd sid='distributor' product='clue' className='normal' />、<Cmd sid='place_group' product='clue' className='normal' />、<Cmd sid='place' product='clue' className='normal' />を選択してください。
+
+   <ProdImg src='/img/clue/add-device-list-set-place.png' />
+
+9. 選択した項目を適用するには、<IcCLCheck title='confirm' /> ボタンをクリックしてください。
+
+デバイス割り当ての成功メッセージが画面上部に表示されます。 各フィールドをクリックすると、該当する <Cmd sid='distributor' product='clue' className='normal' />、<Cmd sid='place_group' product='clue' className='normal' />、<Cmd sid='place' product='clue' className='normal' />へ移動できる <IcCLMove title='move' /> ボタンが有効になります。 ボタンをクリックすると、該当の場所へ移動した後、デバイスとドアを設定できます。
+
+<ProdImg src='/img/clue/add-device-complete.png' />
+
+## デバイス割り当て
+
+### 代理店管理者
+
+代理店管理者は、自分に割り当てられたデバイスを下位のプレース グループまたは個別のプレースに割り当てられます。 登録が必要なデバイスが一覧に表示されない場合は、該当のSuprema支店または本社に問い合わせてください。
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. 初期画面で、デバイスを割り当てる代理店を選択してください。
+
+3. 画面右上の <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/assign-device-settings.png' />
+
+4. 画面左側のサイドバーで <Cmd sid='device' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/assign-device-device-list.png' />
+
+5. 編集モードを有効にするには、<Cmd sid='none_2' product='clue' /> フィールドをクリックし、<IcCLEdit title='edit' /> ボタンを選択してください。
+
+   <ProdImg src='/img/clue/assign-device-device-list-edit.png' />
+
+6. デバイスを割り当てる <Cmd sid='place_group' product='clue' className='normal' /> または <Cmd sid='place' product='clue' className='normal' />を選択してください。
+
+   <ProdImg src='/img/clue/assign-device-device-list-assign-place.png' />
+
+7. 選択した項目を適用するには、<IcCLCheck title='confirm' /> ボタンをクリックしてください。
+
+デバイス割り当ての成功メッセージが画面上部に表示されます。 各フィールドをクリックすると、該当する <Cmd sid='place_group' product='clue' className='normal' />、<Cmd sid='place' product='clue' className='normal' />へ移動できる <IcCLMove title='move' /> ボタンが有効になります。 割り当て後は、プレースへ移動してドアを追加することを推奨します。
+
+<ProdImg src='/img/clue/assign-device-device-list-move.png' />
+
+:::info
+
+* 代理店管理者は、プライバシーポリシーにより、既定ではユーザータブとモニタリングタブを表示できません。 アクセスが必要な場合は、<Cmd sid='place_group' product='clue' className='normal' />、<Cmd sid='place' product='clue' className='normal' />管理者に招待を依頼してください。
+
+* デバイスを削除すると、自動的にブランチレベルのデバイス一覧に戻り、未割り当て状態になります。 誤ってデバイスを削除した場合は、ブランチ管理者に再割り当てを依頼してください。
+
+:::
+
+### プレース グループ管理者
+
+プレース グループ管理者は、自分に割り当てられたデバイスを下位のプレースに割り当てられます。
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. 初期画面で、デバイスを割り当てるプレース グループを選択してください。
+
+3. 画面右上の <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/place-group-settings.png' />
+
+4. 画面左側のサイドバーで <Cmd sid='device' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/place-group-settings-device.png' />
+
+5. 編集モードを有効にするには、<Cmd sid='none_2' product='clue' /> フィールドをクリックし、<IcCLEdit title='edit' /> ボタンを選択してください。
+
+   <ProdImg src='/img/clue/place-group-settings-device-list-edit.png' />
+
+6. デバイスを割り当てる <Cmd sid='place' product='clue' className='normal' />を選択してください。
+
+   <ProdImg src='/img/clue/place-group-settings-device-list-select-place.png' />
+
+7. 選択した項目を適用するには、<IcCLCheck title='confirm' /> ボタンをクリックしてください。
+
+デバイス割り当ての成功メッセージが画面上部に表示されます。 デバイス割り当て後は、該当の <Cmd sid='place' product='clue' className='normal' />へ移動してドアを追加することを推奨します。
+
+<ProdImg src='/img/clue/place-group-settings-device-list-move.png' />
+
+## テストプレースの設定（ブランチ管理者）
+
+サブスクリプションはデバイス数を基準にするため、テストデバイスを区別して合計から除外する必要があります。 そのため、ブランチ管理者権限のユーザーは、プレース設定で特定のプレースを「テストプレース」に指定できます。
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. テストプレースとして指定するプレースを選択してください。
+
+3. 画面左側のサイドバーで <Cmd sid='settings' product='clue' /> → <Cmd sid='basic' product='clue' />をクリックしてください。
+
+   <ProdImg src='/img/clue/place-setting-basic-set-test-period.png' />
+
+4. 画面右上の <Cmd sid='setting_of_test_date' product='clue' />をクリックしてください。
+
+5. <Cmd sid='test_period' product='clue' /> ポップアップが表示されたら、テスト期間を設定してください。
+
+   <ProdImg src='/img/clue/place-setting-set-test-period-pop.png' />
+
+   期間制限なく使用するには、終了日を**9999.12.31 23:59**に設定してください。
+
+6. 設定を完了するには、<Cmd sid='ok' product='clue' /> ボタンをクリックしてください。
+
+プレースに属するすべてのデバイスが、デバイス一覧で赤色で表示され、テストデバイスとして区別されます。 合計数量情報もあわせて確認できます。
+
+<Image src='/img/clue/test-period-set-device-list.png' alone />
+
+<NextStep>
+<NextItem to='fw-upgrade'>
+
+デバイスのファームウェアアップグレード方法を確認してください。
+
+</NextItem>
+</NextStep>

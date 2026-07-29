@@ -1,0 +1,53 @@
+---
+id: clue-dynamic-qr-code
+title: Dynamic QRコード連携
+description: CLUe Dynamic QRコードの動作方式と、顧客システムとの連携方法を案内します。
+---
+
+**CLUe Dynamic QR**コードは、生成から検証までの全工程をサポートする統合QRソリューションです。 このドキュメントは、CLUe Dynamic QRコードを自社システムに連携する開発者向けに、APIキーの発行からサービス設定までの手順を案内します。
+
+## CLUe Dynamic QRコードとは
+
+CLUe Dynamic QRコードは、生成から検証までの全工程をサポートする統合ソリューションです。顧客は、QRコード機能を最初から独自に開発せずに、自社システムへ簡単に連携できます。
+
+<Image src='/img/clue/clue-dynamic-qr-code-architecture.png' alone />
+
+:::info
+
+CLUe Dynamic QRコードは、**顧客確認**(**Vendor**)サービス方式と併用できます。 **顧客確認**設定の詳細は、<DocLink docId='platform/clue/service-settings' />を参照してください。
+
+:::
+
+## 開始する前に
+
+CLUe Dynamic QRコードは連携を目的とするため、プレース グループ(Place Group) APIキーが必要です。また、テスト用のベンダーコードも適用する必要があります。
+
+<Image src='/img/clue/clue-qr-code-workflow.png' alone />
+
+import IssueAPI from './_clue-issue-api.mdx';
+
+<IssueAPI />
+
+## サービス設定
+
+プレース グループの<Cmd sid='service' product='clue' />で<Cmd sid='access_type' product='clue' />を<Cmd sid='vendor' product='clue' />に設定し、<Cmd sid='clue_qr' product='clue' />を選択してください。
+
+<ProdImg src='/img/clue/clue-place-group-settings-service-setting.png' />
+
+顧客確認コードは、QR連携手順に従ってSuprema CLUeチームから発行を受け、設定します。
+
+:::note
+
+**顧客確認コードなしでテストできますか?**
+
+可能です。 ただし、この場合はシステムに**テスト用顧客確認コード**を設定する必要があります。 Supremaの担当者に連絡し、サポートを依頼してください。 テスト用顧客確認コードは、アクセス権限や有効期限を検証せずにアクセスを許可します。
+
+:::
+
+<NextStep>
+<NextItem to='pathname:///developer/clue?api=dynamic-qr-code'>
+
+Dynamic CLUe QR APIの使用に関する詳細を確認してください。
+
+</NextItem>
+</NextStep>

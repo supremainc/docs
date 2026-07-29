@@ -1,0 +1,85 @@
+---
+id: web-portal-getting-started
+title: CLUe Webポータルの始め方
+description: CLUe Webポータルで管理者レベルを理解し、代理店、プレース グループ、プレースなどの下位項目を追加する方法を案内します。
+---
+
+CLUe Webポータルを初めて使用する場合は、まず管理者権限の構造を理解してください。 このドキュメントでは、ブランチの下に代理店、プレース グループ、プレースを追加する方法を案内します。
+
+## 管理者レベルの理解
+
+CLUeは、複数の拠点で顧客サービスを運営する流通チャネル環境向けに設計された、3段階の階層構造を持つマルチテナントシステムです。
+
+<ProdImg src='/img/clue/clue-admin-levels.png' alt='CLUe Admin Levels' />
+
+* **ブランチ管理者**(Branch Admin): ブランチ管理者は、**代理店**/**プレース グループ**/**プレース**を下位項目として作成できます。
+
+* **代理店管理者**(Disti Admin): 代理店管理者は、**プレース グループ**/**プレース**を下位項目として作成できます。
+
+* **プレース グループ管理者**(Place Group Admin): プレース グループ管理者は、**プレース**を下位項目として作成できます。
+
+メールで顧客を招待し、招待された顧客はメールに含まれるリンクから登録した後、招待されたプレース グループにアクセスできます。
+
+1つのブランチは複数の代理店を持て、1つの代理店も複数のプレース グループを持てます。 代理店管理者レベルでは、自分の代理店と下位項目のみを表示できます。
+
+:::note
+
+**顧客や最終ユーザーはどの項目に該当しますか?**
+
+この階層構造では、**プレース グループ**(Place Group)が顧客またはサービス提供者に割り当てる項目です。 プレース グループは、複数のプレースを運営する顧客単位を表します。そのため、プレースを作成するときは、該当顧客の管理者メールアドレスを入力してください。
+
+:::
+
+## 下位項目の追加
+
+1. [CLUe Webポータル](https://clue.moon.supremainc.com)にログインしてください。
+
+2. ログインすると、招待されたブランチの一覧を確認できます。 目的のブランチを選択してください。
+
+3. 選択したブランチの下位項目である代理店/プレース グループ/プレースの一覧が表示されたら、画面右上の <IcAirMore title='more' /> ボタンをクリックしてください。
+
+4. ポップアップメニューで <Cmd sid='add_child' product='clue' /> をクリックしてください。
+
+   <ProdImg src='/img/clue/clue-basic-setup-add-child.png' alt='Add Child' />
+
+5. <Cmd sid='distributor' product='clue' /> <Cmd sid='add' product='clue' /> のポップアップが表示されたら、各フィールドを入力します。
+
+   <ProdImg src='/img/clue/clue-basic-setup-add-distributor.png' alt='Add Distributor' />
+
+   :::note
+
+   **管理者メールアドレスを入力する理由**
+
+   既定では、最上位管理者は、デバイスやドア設定など、顧客の個人情報に関係しないメニューにのみアクセスできます。 顧客の個人情報にアクセスするには顧客の同意が必要なため、まず顧客管理者を招待してください。
+
+   その後、個人情報へのアクセスが必要な場合は、顧客が最上位管理者を追加で招待できます。 招待された最上位管理者は、ユーザー、管理者、監視など、個人情報を含むメニューにアクセスできます。
+
+   :::
+
+6. すべての入力が完了したら、下部の <Cmd sid='add' product='clue' /> ボタンをクリックしてください。
+
+7. 項目を追加すると、自動的に <Cmd sid='basic' product='clue' /> ページに移動し、名前や写真を変更できます。
+
+   <ProdImg src='/img/clue/clue-basic-setup-add-distributor-profile.png' alt='Distributor Profile' />
+
+:::info
+
+同様に、代理店、プレース グループ、プレースの一覧で <IcAirMore title='more' /> → <Cmd sid='add_child' product='clue' /> をクリックすると、下位項目を追加できます。
+
+:::
+
+## 管理者の招待
+
+<Cmd sid='admin' product='clue' /> メニューは表示されますが、顧客企業の同意がない限り、管理者情報は閲覧できません。 顧客企業(代理店またはプレース グループ管理者)が上位管理者を招待して初めて閲覧できます。
+
+<ProdImg src='/img/clue/clue-basic-setup-admin-information.png' alt='Admin information' />
+
+<Cmd sid='admin' product='clue' /> メニューでメールアドレスを入力すると、同じレベルの管理者を簡単に招待できます。 招待されたユーザーが登録を完了すると、同じレベルの管理者権限を持ちます。
+
+<ProdImg src='/img/clue/clue-basic-setup-invite-admin.png' alt='Invite Admin' />
+
+:::info
+
+<Cmd sid='main_admin' product='clue' /> / <Cmd sid='sub_admin' product='clue' />: 機能上の違いはありません。 これは、少なくとも1人のメイン管理者を維持するためです。 ただし、サブ管理者はメイン管理者を削除できません。
+
+:::

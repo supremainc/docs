@@ -677,7 +677,7 @@
                 "request"
               ]
             },
-            "description": "Requests a fingerprint scan on a device. Check the device ID through the web portal and call the API using the corresponding ID.\n\n![Device ID](/img/clue/clue-device-id-sample.png)\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `deviceId` | Number | true | Device ID |\n| `verifyToken` | String | false | Verification token |\n| `credentialType` | String | true | `CARD` \\| `FINGERPRINT` |\n\n",
+            "description": "Requests a fingerprint scan on a device. Check the device ID through the web portal and call the API using the corresponding ID.\n\n![Device ID](/img/clue/clue-device-id-sample.png)\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `deviceId` | Number | true | Device ID |\n| `verifyToken` | String | false | Verification token |\n| `credentialType` | String | true | `CARD` \\| `FINGERPRINT` \\| `FACE` |\n\n",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"deviceId\": {device ID},\n  \"credentialType\": \"FINGERPRINT\"\n}",
@@ -862,7 +862,7 @@
                 "request"
               ]
             },
-            "description": "Requests an RF card scan on a device. Check the device ID through the web portal and call the API using the corresponding ID.\n\n![Device ID](/img/clue/clue-device-id-sample.png)\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `deviceId` | Number | true | Device ID |\n| `verifyToken` | String | false | Verification token |\n| `credentialType` | String | true | `CARD` \\| `FINGERPRINT` |\n\n",
+            "description": "Requests an RF card scan on a device. Check the device ID through the web portal and call the API using the corresponding ID.\n\n![Device ID](/img/clue/clue-device-id-sample.png)\n\n#### Body\n\n| field | Type | Required | Desc |\n| --- | --- | --- | --- |\n| `deviceId` | Number | true | Device ID |\n| `verifyToken` | String | false | Verification token |\n| `credentialType` | String | true | `CARD` \\| `FINGERPRINT` \\| `FACE` |\n\n",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"deviceId\": {device ID},\n  \"credentialType\": \"CARD\"\n}",
