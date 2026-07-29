@@ -65,6 +65,14 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
+      title: 'CLUe API',
+      url: '/developer/clue',
+      Svg: require('@site/static/img/cover-clue-api.svg').default,
+      height: '60px',
+      desc: `${translate({ id: "externalLinks.dev.clueapi.desc" })}`,
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
+    },
+    {
       title: 'BioStar Air Developer',
       url: 'https://developers.biostarair.com',
       Svg: require('@site/static/img/cover-air-dev.svg').default,
@@ -484,6 +492,14 @@ export function Apps({ externalLinks: externalLinksProp }) {
       play: 'https://play.google.com/store/apps/details?id=com.supremainc.biostarair',
       ios: 'https://apps.apple.com/app/biostar-air/id6745057397',
       img: require('@site/static/img/bsair-app.png').default,
+      height: '60px'
+    },
+    ,
+    {
+      title: 'Suprema CLUe',
+      play: 'https://play.google.com/store/apps/details?id=com.suprema.moon',
+      ios: 'https://apps.apple.com/kr/app/suprema-clue/id1639027796',
+      img: require('@site/static/img/clue-app.png').default,
       height: '60px'
     },
     {
