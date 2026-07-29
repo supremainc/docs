@@ -14056,52 +14056,52 @@
     "height": 443
   },
   "/img/en/clue/add-device-complete.png": {
-    "width": 1511,
-    "height": 151
+    "width": 1711,
+    "height": 294
   },
   "/img/en/clue/add-device-enter-id.png": {
-    "width": 915,
-    "height": 266
+    "width": 968,
+    "height": 357
   },
   "/img/en/clue/add-device-go-device-tap.png": {
-    "width": 152,
-    "height": 287
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/clue/add-device-list-enable-edit-mode.png": {
     "width": 1711,
     "height": 289
   },
   "/img/en/clue/add-device-list-set-place.png": {
-    "width": 1520,
-    "height": 174
+    "width": 1715,
+    "height": 551
   },
   "/img/en/clue/add-device-list.png": {
-    "width": 1515,
-    "height": 175
+    "width": 1711,
+    "height": 349
   },
   "/img/en/clue/add-device-settings.png": {
-    "width": 1589,
-    "height": 139
+    "width": 1920,
+    "height": 403
   },
   "/img/en/clue/assign-device-device-list-assign-place.png": {
     "width": 1709,
     "height": 484
   },
   "/img/en/clue/assign-device-device-list-edit.png": {
-    "width": 1440,
-    "height": 86
+    "width": 1708,
+    "height": 347
   },
   "/img/en/clue/assign-device-device-list-move.png": {
-    "width": 210,
-    "height": 116
+    "width": 1709,
+    "height": 348
   },
   "/img/en/clue/assign-device-device-list.png": {
-    "width": 1547,
-    "height": 287
+    "width": 1920,
+    "height": 494
   },
   "/img/en/clue/assign-device-settings.png": {
-    "width": 1530,
-    "height": 109
+    "width": 1920,
+    "height": 323
   },
   "/img/en/clue/bs3-main-clue.png": {
     "width": 250,
@@ -14124,36 +14124,36 @@
     "height": 927
   },
   "/img/en/clue/clue-basic-setup-access-service-membership.png": {
-    "width": 1000,
-    "height": 275
+    "width": 1920,
+    "height": 485
   },
   "/img/en/clue/clue-basic-setup-access-service-verify.png": {
-    "width": 714,
-    "height": 419
+    "width": 1157,
+    "height": 554
   },
   "/img/en/clue/clue-basic-setup-add-child.png": {
-    "width": 1309,
-    "height": 516
+    "width": 1920,
+    "height": 556
   },
   "/img/en/clue/clue-basic-setup-add-distributor-profile.png": {
-    "width": 1382,
-    "height": 698
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/clue/clue-basic-setup-add-distributor.png": {
-    "width": 655,
-    "height": 499
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/clue/clue-basic-setup-admin-information.png": {
-    "width": 1392,
-    "height": 729
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/clue/clue-basic-setup-face.png": {
     "width": 1102,
     "height": 518
   },
   "/img/en/clue/clue-basic-setup-invite-admin.png": {
-    "width": 1276,
-    "height": 206
+    "width": 1920,
+    "height": 451
   },
   "/img/en/clue/clue-basic-setup-membership-setup-web-mobile.png": {
     "width": 1175,
@@ -14168,8 +14168,8 @@
     "height": 481
   },
   "/img/en/clue/clue-basic-setup-services.png": {
-    "width": 1321,
-    "height": 336
+    "width": 1920,
+    "height": 501
   },
   "/img/en/clue/clue-fw-device-basic-select-fw-ver.png": {
     "width": 1920,
@@ -14398,6 +14398,10 @@
   "/img/en/clue/suprema-clue-architecture.png": {
     "width": 1208,
     "height": 671
+  },
+  "/img/en/clue/test-period-set-device-list.png": {
+    "width": 1706,
+    "height": 405
   },
   "/img/en/device/auth-dynamic-roi.png": {
     "width": 800,
@@ -17479,6 +17483,10 @@
     "width": 1208,
     "height": 671
   },
+  "/img/es/clue/test-period-set-device-list.png": {
+    "width": 1706,
+    "height": 405
+  },
   "/img/es/device/bs3-dimension.svg": {
     "width": 1097,
     "height": 698
@@ -20294,6 +20302,10 @@
   "/img/ja/clue/suprema-clue-architecture.png": {
     "width": 1204,
     "height": 668
+  },
+  "/img/ja/clue/test-period-set-device-list.png": {
+    "width": 1706,
+    "height": 446
   },
   "/img/ja/device/bs3-dimension.svg": {
     "width": 1097,
