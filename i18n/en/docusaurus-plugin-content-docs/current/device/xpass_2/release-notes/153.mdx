@@ -1,0 +1,50 @@
+---
+id: 153
+title: Firmware Version 1.5.3
+---
+
+# Firmware Version 1.5.3 (빌드 번호 1.5.3_260713)
+
+Release<Separator/>2026-07-29
+
+:::caution
+
+- Devices with firmware v1.5.1 or later cannot be downgraded to versions earlier than v1.5.1.
+
+- The XP2-MAPB-H model cannot be downgraded to versions earlier than v1.4.3.
+
+- XP2-GKDPB models with hardware v1.2.0 or later cannot be downgraded to versions earlier than v1.4.3. You can check the hardware version in the **Device** menu in BioStar 2.
+
+- Devices with the new BLE chip cannot be downgraded to versions earlier than v1.3.1. This restriction does not apply to devices with the existing BLE chip.
+
+To check whether your device can be downgraded and whether the new BLE chip is installed, verify the serial number and contact [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Added support for unlocking or normalizing a door through user authentication.
+
+1. Supports the **Extended Door Open Time** feature, which allows certain users to have the door remain open longer than the default door open time.
+
+1. Improved door control status to accurately display control results and change details in monitoring.
+
+1. Supports real-time monitoring of the device's multiple statuses in BioStar X.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+1. The master device disconnecting or alarms failing to clear when performing **Clear Alarm** on alarms triggered by **Trigger & Action** settings on master or slave devices. <Badge>1.5.2</Badge>
+
+1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.3.2</Badge>
+
+1. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.5.2</Badge>
+
+</BugLists>
