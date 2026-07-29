@@ -19,14 +19,6 @@ date: 2026-08-01T09:00
 
 * [CLUe API](../developer/clue): 사용자 관리와 출입 인증 기능을 직접 연동하려는 개발자를 위한 API 문서입니다.
 
-CLUe 전용 펌웨어를 탑재한 장치 매뉴얼도 함께 추가되었습니다.
-
-* [BioStation 3 CLUe](../device/biostation_3_clue/)
-
-* [X-Station 2 CLUe](../device/xstation_2_clue/)
-
-* [BioLite N2 CLUe](../device/biolite_n2_clue/)
-
 ## 플랫폼
 
 ### BioStar X
@@ -40,6 +32,8 @@ CLUe 전용 펌웨어를 탑재한 장치 매뉴얼도 함께 추가되었습니
 ## 장치
 
 ### 신규 장치
+
+CLUe 전용 펌웨어를 탑재한 장치 매뉴얼이 추가되었습니다.
 
 * [BioStation 3 CLUe](../device/biostation_3_clue/)
   
@@ -57,9 +51,9 @@ CLUe 전용 펌웨어를 탑재한 장치 매뉴얼도 함께 추가되었습니
   
 * [ViOnyx](../device/vionyx)
   
-  * [안전주의 문구 추가](../device/vionyx/safety-instructions)
+  * [안전주의 문구](../device/vionyx/safety-instructions) 추가
   
-  * [나사 사양 추가](../device/vionyx/getting-started)
+  * [나사 사양](../device/vionyx/getting-started) 추가
 
   * [제품 사양](../device/vionyx/product-specifications) 업데이트
 
