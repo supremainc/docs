@@ -39,23 +39,35 @@ CLUe 전용 펌웨어를 탑재한 장치 매뉴얼도 함께 추가되었습니
 
 ## 장치
 
+### 신규 장치
+
+* [BioStation 3 CLUe](../device/biostation_3_clue/)
+  
+* [BioLite N2 CLUe](../device/biolite_n2_clue/)
+  
+* [X-Station CLUe](../device/xstation_2_clue/)
+  
+* [XPass 2 CLUe 릴리스 노트](../device/xpass_2/release-notes-clue/)
+
 ### 장치 업데이트
 
 * [CoreStation Setup Manager](../device/corestation_setup_manager/configuration): 장치 설정 백업 및 복원, SCB Key 기능 안내 추가
 
 * [ViOnyx 웹 서버](../device/vionyx_webserver/configure-rtsp-onvif): RTSP/ONVIF 연동하기 문서 신규 추가
+  
+* [ViOnyx](../device/vionyx)
+  
+  * [안전주의 문구 추가](../device/vionyx/safety-instructions)
+  
+  * [나사 사양 추가](../device/vionyx/getting-started)
 
-* 제품 사양: QR/바코드 인식 권장 거리 안내 추가
+  * [제품 사양](../device/vionyx/product-specifications) 업데이트
 
-  * [XPass Q2](../device/xpass_q2/product-specifications)
+* [XPass Q2](../device/xpass_q2)
+  
+  * [전원, 네트워크 관련 문구](../device/xpass_q2/installation) 업데이트
 
-  * [BioStation 3](../device/biostation_3/product-specifications)
-
-  * [BioStation 3 Max](../device/biostation_3_max/product-specifications)
-
-  * [X-Station 2](../device/xstation_2/product-specifications)
-
-* [안전 지침](../device/biostation_3/safety-instructions): 배터리 교체 주의 문구, 전원 공급 장치(PS2 또는 LPS 인증) 관련 안내 추가 (전 기종 공통 반영)
+  * [제품 사양](../device/xpass_q2/product-specifications) 업데이트
 
 ### 릴리스 노트
 
