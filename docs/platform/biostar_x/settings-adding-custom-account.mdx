@@ -15,11 +15,11 @@ keywords: [계정, 운영 권한, 커스텀 권한]
 
 1. <Cmd sid='setting.account.addCustomOperator' product='2' /> 버튼을 클릭하세요.
 
-    <Image src='/img/biostarx-settings-account-add-custom-permission.png' />
+   <Image src='/img/biostarx-settings-account-add-custom-permission.png' />
 
 1. 새로 생성하는 권한에 대한 이름과 설명을 입력하세요.
 
-    <Image src='/img/biostarx-settings-account-add-custom-permission-details.png' />
+   <Image src='/img/biostarx-settings-account-add-custom-permission-details.png' />
 
 1. 나머지 각 항목을 입력하거나 선택하세요.
 
@@ -66,17 +66,45 @@ keywords: [계정, 운영 권한, 커스텀 권한]
 
 ### <Cmd sid='settings.account.menu.setting' product='2' className='normal' /> {/* #menuSetting */}
 
-개별 메뉴에 대한 **수정** 및 **보기** 권한을 설정하세요. 메뉴마다 다른 권한을 설정할 수 있습니다.
+개별 메뉴에 대한 <Cmd sid='settings.account.menu.readOnly' product='2' /> 또는 <Cmd sid='settings.account.menu.fullAccess' product='2' />을 선택할 수 있습니다. 메뉴마다 다른 권한을 부여할 수 있습니다. 권한을 부여할 메뉴의 <Cmd sid='settings.account.menu.permission' product='2' /> 체크박스를 클릭하고 <Cmd sid='settings.account.menu.readOnly' product='2' /> 또는 <Cmd sid='settings.account.menu.fullAccess' product='2' />을 선택하세요.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-menus.png' />
 
-* <Cmd sid='common.editRead' product='2' />: 해당 메뉴의 항목을 추가, 편집, 삭제할 수 있는 권한을 부여합니다.
+* <Cmd sid='settings.account.menu.readOnly' product='2' />: 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있는 권한을 부여합니다.
 
-* <Cmd sid='common.read' product='2' />: 해당 메뉴를 진입하여 설정 내용을 확인만 할 수 있는 권한을 부여합니다.
+* <Cmd sid='settings.account.menu.fullAccess' product='2' />: 해당 메뉴의 항목을 추가, 편집, 삭제할 수 있는 권한을 부여합니다.
 
 :::info
 
-각 메뉴에 대한 **수정** 권한을 부여하면 <Cmd sid='button.add' product='2' /> 버튼이 활성화됩니다. 단, <Cmd sid='shell.header.dashboard' /> 및 <Cmd sid='shell.header.setting' /> 메뉴의 경우 추가 기능이 없으므로 <Cmd sid='setting.account.menu.canCreate.na' product='2' />으로 표시되며, <Cmd sid='common.permission.module.ac' product='2' /> 메뉴의 경우 <Cmd sid='settings.account.menu.detailSetting' product='2' />에서 <Cmd sid='common.permission.module.accessGroup' product='2' />을 <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' />으로 설정하고 **수정** 권한을 부여할 때에만 <Cmd sid='button.add' product='2' /> 버튼이 활성화됩니다.
+* <Cmd sid='shell.header.arena' /> 메뉴의 <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' />은 탭을 추가하거나 상태 트리 항목을 제어할 수 있습니다.
+
+* <Cmd sid='shell.header.data' /> 메뉴의 <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' />은 보고서 저장 및 자동 보고서 일정 추가, 설정에 접근할 수 있습니다.
+
+* <Cmd sid='shell.header.dashboard' /> 메뉴의 <Cmd sid='settings.account.menu.readOnly' product='2' className='bold' /> 권한만으로도 새 대시보드와 위젯을 생성할 수 있습니다.
+
+* <Cmd sid='settings.account.menu.item' product='2' /> 목록에 없는 메뉴는 권한과 무관한게 진입할 수 있습니다.
+
+:::
+
+:::tip
+
+상위 메뉴의 권한을 클릭하면 하위 모든 메뉴에 대한 권한이 활성화됩니다.
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-example.png' />
+
+:::
+
+### 플러그인
+
+플러그인을 추가했다면 플러그인 권한을 설정할 수 있습니다. 플러그인 권한이 없는 사용자는 해당 플러그인에 대한 접근할 수 없으며, 초기 화면이나 런처에 표시되지 않습니다.
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-plugin.png' />
+
+:::info
+
+* 플러그인 기능을 사용하려면 플러그인 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
+
+* <Cmd sid='common.permission.module.time_attendance' product='2' /> 플러그인에만 <Cmd sid='settings.account.menu.readOnly' product='2' /> 또는 <Cmd sid='settings.account.menu.fullAccess' product='2' />을 적용할 수 있습니다.
 
 :::
 
