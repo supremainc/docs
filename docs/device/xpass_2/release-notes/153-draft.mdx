@@ -1,0 +1,68 @@
+---
+id: 153-draft
+title: 펌웨어 버전 1.5.3
+draft: true
+---
+
+# 펌웨어 버전 1.5.3 (빌드 번호 1.5.3_260713)
+
+릴리즈<Separator/>2026-07-29
+
+:::caution
+
+- 펌웨어 v1.5.1 이상이 설치된 장치는 v1.5.1 미만 버전으로 다운그레이드할 수 없습니다.
+
+- XP2-MAPB-H 모델은 v1.4.3 미만 버전으로 다운그레이드할 수 없습니다.
+
+- 하드웨어 v1.2.0 이상의 XP2-GKDPB 모델은 v1.4.3 미만 버전으로 다운그레이드할 수 없습니다. 하드웨어 버전은 BioStar 2의 **장치** 메뉴에서 확인할 수 있습니다.
+
+- 신규 BLE 칩이 적용된 장치는 v1.3.1 미만 버전으로 다운그레이드할 수 없습니다. 기존 BLE 칩이 적용된 장치에는 이 제한이 적용되지 않습니다.
+
+장치의 펌웨어 다운그레이드 가능 여부 및 신규 BLE 칩 적용 여부는 장치의 시리얼 번호를 확인한 뒤 [슈프리마 홈페이지](https://supremainc.com)에 문의하세요.
+
+:::
+
+
+## 신규 기능 및 개선
+
+---
+
+(XPASSII-707) [BDP-1593] 출입문 Toggle
+1. 사용자 인증을 통해 출입문을 수동 개방하거나 해제 상태로 전환하는 기능 추가
+1. Added support for unlocking or normalizing a door through user authentication.
+
+(XPASSII-562) [BDP-1561] Extended Door Open Time
+1. 특정 사용자에게 기본 출입문 열림 시간보다 더 긴 시간 동안 출입문이 열리도록 하는 **연장된 출입문 열림 시간** 기능 지원
+1. Supports the **Extended Door Open Time** feature, which allows certain users to have the door remain open longer than the default door open time.
+
+(XPASSII-708) [BDP-1592] Door Unlock/Lock Improvement
+1. 모니터링에서 출입문 제어 상태와 변경 정보를 정확하게 확인하도록 개선
+1. Improved door control status to accurately display control results and change details in monitoring.
+
+(XPASSII-561) [BDP-962] Realtime Status of all devices connected to BSX
+1. BioStar X에서 장치의 여러 상태를 실시간으로 확인할 수 있도록 지원
+1. Supports real-time monitoring of the device's multiple statuses in BioStar X.
+
+## 버그 수정
+
+---
+
+<BugLists>
+
+(XPASSII-704) [FISF-2436] 카드만 등록된 사용자 카드를 위겐드 리더기에서 인증시 Authentication Fail
+1. 연결된 Wiegand 리더에서 카드 인증이 실패하는 문제 <Badge>1.0.0</Badge>
+1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+(XPASSII-698) TiggerAction으로 Slave 장치 Alarm 발생시 Clear Alarm을 하면 Master 장치 연결이 끊어지고 Alarm 해제도 되지 않음
+1. **작업 조건 및 동작(Trigger & Action)** 설정으로 인해 마스터 또는 슬레이브 장치에서 발생한 알람을 해제할 때, 마스터 장치의 연결이 끊어지거나 알람이 정상적으로 해제되지 않는 문제 <Badge>1.5.2</Badge>
+1. The master device disconnecting or alarms failing to clear when performing **Clear Alarm** on alarms triggered by **Trigger & Action** settings on master or slave devices. <Badge>1.5.2</Badge>
+
+(XPASSII-701) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가
+1. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.3.2</Badge>
+1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.3.2</Badge>
+
+(XPASSII-709) [FISF-3089] BioStar X Desfre EV2 Secure Credential Card Write 실패
+1. DESFire EV2 카드에 보안 크리덴셜 카드 발급이 실패하는 문제 <Badge>1.5.2</Badge>
+1. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.5.2</Badge>
+
+</BugLists>
