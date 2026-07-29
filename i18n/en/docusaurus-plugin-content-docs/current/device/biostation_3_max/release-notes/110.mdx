@@ -1,0 +1,82 @@
+---
+id: 110
+title: Firmware Version 1.1.0
+---
+
+# Firmware Version 1.1.0 (Build No. 1.1.0_260728)
+
+Release<Separator/>2026-07-29
+
+## New Features and Improvements
+
+---
+
+1. Added support for video playback on the standby screen.
+
+  :::note
+
+  This feature can be configured in BioStar X. For detailed instructions, refer to **Setting Up Video Playback on the Standby Screen** in the BioStar X guide.
+
+  :::
+
+1. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
+
+1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+
+1. Improved BLE stability.
+
+1. Expanded allowed characters for User ID and User Name
+
+  * Added support for periods (.) in User ID
+
+  * Added support for periods (.) and apostrophes (') in User Name
+
+1. Improved T&A message display to show on two lines.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Video streaming stopping after a certain period when connecting to RTSP over TCP. <Badge>1.0.0</Badge>
+
+1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+
+1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+1. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
+
+1. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
+
+1. LED effect not working when the screen saver is active. <Badge>1.0.0</Badge>
+
+1. Invalid values being accepted in the device's Ethernet settings. <Badge>1.0.0</Badge>
+
+1. Improved icon display issues on the master device screen under certain conditions <Badge>1.0.0</Badge>
+
+  * Lock icon disappearing when authentication succeeds at another door while in **Manual Lock** state
+
+  * Lock icon not displayed on the master device screen while in **Manual Lock** state
+
+  * Door icon disappearing on the master device screen when adding a door configuration
+
+1. Video not displayed on the receiving device during a VoIP call. <Badge>1.0.0</Badge>
+
+1. Fingerprint scan screen appearing when enrolling a fingerprint during a VoIP call. <Badge>1.0.0</Badge>
+
+1. Date and time displayed incorrectly in the event log when the **Time Zone** is set to UTC-1 through UTC-12. <Badge>1.0.0</Badge>
+
+1. Incorrect guidance message displayed when enrolling or editing a fingerprint. <Badge>1.0.0</Badge>
+
+1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+
+1. Face authentication failing in bright external lighting conditions. <Badge>1.0.0</Badge>
+
+1. Master device's IR LED blinking when scanning a fingerprint on a slave device. <Badge>1.0.1</Badge>
+
+1. Reboot occurring when changing the fingerprint template format on standard models. <Badge>1.0.1</Badge>
+
+1. Card data being read incorrectly when registering cards on a BS3M device connected as a slave. <Badge>1.0.1</Badge>
+
+</BugLists>

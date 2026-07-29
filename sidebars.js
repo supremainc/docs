@@ -2219,6 +2219,7 @@ function createSidebars(preview) {
             id: 'device/biostation_3_max/release-notes/index',
           },
           items: [
+            'device/biostation_3_max/release-notes/110',
             'device/biostation_3_max/release-notes/101',
             'device/biostation_3_max/release-notes/100',
           ]
