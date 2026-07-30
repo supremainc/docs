@@ -869,22 +869,9 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-credential-card-manage',
                 'platform/biostar_x/settings-credential-wiegand-format',
                 'platform/biostar_x/settings-credential-smart-format',
+                'platform/biostar_x/settings-card-printer',
                 'platform/biostar_x/settings-credential-mobile-access-card',
                 'platform/biostar_x/settings-credential-ir-face-group-matching'
-              ]
-            },
-            'platform/biostar_x/settings-card-printer',
-            'platform/biostar_x/settings-email-setting',
-            {
-              type: 'category',
-              label: '서버 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-server',
-              },
-              items: [
-                'platform/biostar_x/settings-server-server',
-                'platform/biostar_x/settings-server-https'
               ]
             },
             {
@@ -899,6 +886,7 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-license-device-license'
               ]
             },
+            'platform/biostar_x/settings-system-audit-trail',
             {
               type: 'category',
               label: '시스템 설정하기',
@@ -907,14 +895,16 @@ function createSidebars(preview) {
                 id: 'platform/biostar_x/settings-system'
               },
               items: [
-                'platform/biostar_x/settings-system-audit-trail',
+                'platform/biostar_x/settings-server-server',
+                'platform/biostar_x/settings-server-https',
                 'platform/biostar_x/settings-system-system-backup',
                 'platform/biostar_x/settings-system-system-restore',
                 'platform/biostar_x/settings-system-security',
-                'platform/biostar_x/settings-system-daylight-saving-time'
+                'platform/biostar_x/settings-system-daylight-saving-time',
+                'platform/biostar_x/settings-email-setting',
+                'platform/biostar_x/settings-preferences'
               ]
-            },
-            'platform/biostar_x/settings-preferences'
+            }
           ]
         },
         {
