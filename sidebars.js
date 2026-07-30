@@ -855,6 +855,7 @@ function createSidebars(preview) {
             },
             'platform/biostar_x/settings-schedule',
             'platform/biostar_x/settings-triger-and-action',
+            'platform/biostar_x/settings-custom-interface',
             'platform/biostar_x/settings-event-log-import',
             'platform/biostar_x/settings-alert',
             {
@@ -874,7 +875,6 @@ function createSidebars(preview) {
             },
             'platform/biostar_x/settings-card-printer',
             'platform/biostar_x/settings-email-setting',
-            'platform/biostar_x/settings-custom-interface',
             {
               type: 'category',
               label: '서버 설정하기',
