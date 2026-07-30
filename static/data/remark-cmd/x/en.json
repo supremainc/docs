@@ -301,6 +301,8 @@
   "user.list.visualFaceMigration.noFaceRequiresMigration": "No face requires migration.",
   "user.cardPrinter.error": "Card printing failed.\n\nPlease check that the card printer settings are configured correctly and try again.\n\nIncorrect settings can be identified by running Test Print from the card printer settings menu.",
   "user.passportScan.agentUpgradeRequired.description": "To use the passport scanner, the USB Agent must be upgraded to the latest version. Please upgrade it in the USB Agent settings.",
+  "user.passportScan.agentNotInstalled.title": "USB Agent Not Found",
+  "user.passportScan.agentNotInstalled.description": "USB Agent is not installed or not running. Please install and run USB Agent, then try again.",
   "tema.user.list.advSearchTitle": "Search Result ({0})",
   "arena.eventTable.location": "Location",
   "arena.eventTable.title": "Event",
@@ -720,6 +722,8 @@
   "arena.batchResult.copyFailList": "Copy fail list to clipboard",
   "arena.batchResult.skippedChip": "{{count}} Skipped",
   "arena.batchResult.reason.unreported": "Result not confirmed (no response / timeout)",
+  "arena.batchResult.reason.codeOnly": "Error code: {{code}}",
+  "arena.batchResult.reason.withCode": "{{reason}} (Error code: {{code}})",
   "ACB_ERROR_CODE.9": "There are no users available for export.",
   "ACB_ERROR_CODE.124": "Invalid Password",
   "ACB_ERROR_CODE.237": "Modifications to the Administrator account with User ID 1 are not allowed.",
@@ -1131,6 +1135,8 @@
   "setting.passportScan.faceDoNotAsk": "Do not ask",
   "setting.passportScan.faceAsk": "Always ask",
   "setting.passportScan.selectAtLeastOne": "Please select at least one data item.",
+  "setting.passportScan.menu": "ID Scanning",
+  "setting.passportScan.useImport": "Use Data Import",
   "common.go": "Go",
   "common.apply": "Apply",
   "common.select": "Select",
@@ -1352,7 +1358,7 @@
   "eventType.4007": "BioStar X Device Service Down",
   "eventType.4088": "Access Granted",
   "eventType.17669": "Auth Fail Lockout",
-  "eventType.23824": "Control Operator",
+  "eventType.23824": "Request Operator ID",
   "audit.menu.event_log": "Event Log",
   "audit.event_log.event_log_imported": "Event Log Imported",
   "searchdevice.useridType.unmatched.error.msg": "Device(s) with mismatched user ID type has been detected. The user ID type of the device(s) will be automatically changed according to the server's type.<br>Server User ID Type: {0}",
@@ -2004,5 +2010,5 @@
   "monitoring.multiControl.stopAction": "Stop Action",
   "monitoring.multiControl.unlock": "Unlock",
   "monitoring.multiControl.unlockDevice": "Unlock Device",
-  "monitoring.multiControl.alarmsOverZones": "{{alarmCount}} alarms over {{zoneCount}} zones"
+  "monitoring.multiControl.alarmsOverZones": "{{alarmCount}} alarms over {{zoneCount}} Advanced AC"
 }
