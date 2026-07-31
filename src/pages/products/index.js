@@ -22,7 +22,7 @@ export default function Redirect2Product() {
          return <Redirect to={useBaseUrl(`/device/xpass_q2`)} />;
       case 'bs3m':
          return <Redirect to={useBaseUrl(`/device/biostation_3_max`)} />;
-      case 'vionyx':
+      case 'vqf12r':
          return <Redirect to={useBaseUrl(`/device/vionyx`)} />;
       case 'bew3':
          return <Redirect to={useBaseUrl(`/device/bioentry_w3`)} />;
