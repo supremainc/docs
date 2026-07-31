@@ -6896,7 +6896,7 @@
   "device.idle.video.schedule.deletedTooltip": "You are using a deleted schedule.",
   "device.idle.video.lib.mediaFoundation": "Microsoft Media Foundation",
   "device.idle.video.rs485NotSupported": "RS485-connected devices do not support video upload. Connect to a PC and upload directly.",
-  "setting.xlicense.activation.result.partial": "Some licenses failed to register. Please enter valid license keys.",
+  "setting.xlicense.activation.result.partial": "Some licenses failed to activate. Please enter valid license keys.",
   "setting.xlicense.activation.result.allFail": "License activation failed. Please enter valid license keys.",
   "setting.xlicense.activation.progress.verifying": "Verifying",
   "setting.xlicense.activation.connectionLost": "Connection lost during activation. If your network is offline, use offline activation.",

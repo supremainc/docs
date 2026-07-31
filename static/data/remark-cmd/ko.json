@@ -6897,7 +6897,7 @@
   "device.idle.video.schedule.deletedTooltip": "삭제된 스케줄을 사용하고 있습니다.",
   "device.idle.video.lib.mediaFoundation": "Microsoft Media Foundation",
   "device.idle.video.rs485NotSupported": "RS485 연결 장치는 동영상 업로드를 지원하지 않습니다. 컴퓨터에 연결하여 직접 업로드하세요.",
-  "setting.xlicense.activation.result.partial": "일부 라이선스 등록에 실패했습니다. 유효한 라이선스 키를 입력해 주세요.",
+  "setting.xlicense.activation.result.partial": "일부 라이선스 활성화에 실패했습니다. 유효한 라이선스 키를 입력해 주세요.",
   "setting.xlicense.activation.result.allFail": "라이선스 활성화에 실패했습니다. 유효한 라이선스 키를 입력해 주세요.",
   "setting.xlicense.activation.progress.verifying": "점검 중",
   "setting.xlicense.activation.connectionLost": "활성화 중 연결이 끊어졌습니다. 네트워크가 오프라인이면 오프라인 활성화를 사용하세요.",
