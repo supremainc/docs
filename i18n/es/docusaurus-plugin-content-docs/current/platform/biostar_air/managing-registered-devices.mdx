@@ -50,7 +50,7 @@ Compruebe el estado de conexión de cada dispositivo mediante los iconos de esta
 
 * ⚪ **No conectado**: El dispositivo no tiene conexión a la red. (p. ej., Airfob Patch)
 
-* <IcAirWarn /> **Advertencia**: Se requiere sincronización entre el servidor y el dispositivo.
+* <IcAirWarn /> **Advertencia**: Se requiere sincronización entre el servidor y el dispositivo. Consulte <DocLink inner='#resyncing-offline-devices' /> para ver las instrucciones de resincronización.
 
 ### Información del dispositivo {/* #device-information */}
 
@@ -68,7 +68,7 @@ Cada columna de la lista de dispositivos contiene la siguiente información.
 
 * <Cmd sid="device_group_column" product="air" />: El grupo al que pertenece el dispositivo.
 
-* <Cmd sid='device_battery_column' product='air' />: Disponible solo en dispositivos alimentados por batería. Compatible únicamente con los dispositivos Airfob Tag.
+* <Cmd sid='device_battery_column' product='air' />: Disponible solo en dispositivos con batería. Compatible únicamente con dispositivos Airfob Tag.
 
 * <Cmd sid="device_fw_column" product="air" />: La versión de firmware instalada actualmente.
 
@@ -133,6 +133,24 @@ Usa los controles en la parte superior de la lista de dispositivos para administ
 * <IcAirDset width='24px' height='24px' title='Load Device Setting' />: Importa los ajustes del dispositivo configurados originalmente en modo autónomo.
 
 * <IcAirUpd width='24px' height='24px' title='Update Status' />: Actualiza el estado de los dispositivos seleccionados en la lista de dispositivos.
+
+## Resincronizar dispositivos sin conexión {/* #resyncing-offline-devices */}
+
+Si un dispositivo ha estado sin conexión durante mucho tiempo, su información puede dejar de coincidir con la del servidor, y puede ser necesario resincronizarlo manualmente.
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Busque dispositivos con el icono <IcAirWarn /> en la columna <Cmd sid='device_product_column' product='air' /> de la lista de dispositivos.
+
+3. Seleccione la casilla del dispositivo.
+
+4. En la barra de herramientas, en la parte superior de la lista, haga clic en el botón <IcAirCloud width='24px' height='24px' title='Sync with Server' />.
+
+:::info
+
+Los dispositivos que han estado sin conexión por menos de 7 días se sincronizan automáticamente cuando vuelven a conectarse, así que no se requiere ninguna acción adicional.
+
+:::
 
 ## Gestión de grupos de dispositivos {/* #device_group_in_device_list */}
 

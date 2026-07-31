@@ -50,7 +50,7 @@ Check each device’s connection status from the status icons in the device list
 
 * ⚪ **Not connected**: The device has no network connection. (e.g., Airfob Patch)
 
-* <IcAirWarn /> **Warning**: Synchronization is required between the server and the device.
+* <IcAirWarn /> **Warning**: Synchronization is required between the server and the device. See <DocLink inner='#resyncing-offline-devices' /> for resync instructions.
 
 ### Device information {/* #device-information */}
 
@@ -133,6 +133,24 @@ Use the controls at the top of the device list to manage multiple devices at onc
 * <IcAirDset width='24px' height='24px' title='Load Device Setting' />: Import the device settings originally configured in standalone mode.
 
 * <IcAirUpd width='24px' height='24px' title='Update Status' />: Update the status of the selected devices in the device list.
+
+## Resync offline devices {/* #resyncing-offline-devices */}
+
+If a device has been offline for a long time, its information may no longer match the server, and you may need to resync it manually.
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Check for devices with the <IcAirWarn /> icon in the <Cmd sid='device_product_column' product='air' /> column in the device list.
+
+3. Select the checkbox for the device.
+
+4. In the toolbar at the top of the list, click the <IcAirCloud width='24px' height='24px' title='Sync with Server' /> button.
+
+:::info
+
+Devices that have been offline for less than 7 days sync automatically when they reconnect, so no additional action is required.
+
+:::
 
 ## Device group management {/* #device_group_in_device_list */}
 

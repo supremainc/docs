@@ -45,7 +45,7 @@ keywords: [장치 관리, 장치 설정, BioStar Air, 생체 인증, 카드 설�
 
 * ⚪ **연결 없음**: 네트워크 연결이 없는 장치입니다. (예, Airfob Patch)
 
-* <IcAirWarn /> **주의**: 서버와 장치 간의 동기화가 필요한 상태입니다.
+* <IcAirWarn /> **주의**: 서버와 장치 간의 동기화가 필요한 상태입니다. 재동기화 방법은 <DocLink inner='#resyncing-offline-devices' />를 참고하세요.
 
 
 ### 장치 정보 {/* #device-information */}
@@ -133,6 +133,25 @@ keywords: [장치 관리, 장치 설정, BioStar Air, 생체 인증, 카드 설�
 * <IcAirDset width='24px' height='24px' title='Load Device Setting' />: 독립 실행 모드에서 원래 설정된 장치의 설정을 가져올 수 있습니다.
 
 * <IcAirUpd width='24px' height='24px' title='Update Status' />: 장치 목록에서 선택한 장치의 상태를 업데이트할 수 있습니다.
+
+
+## 오프라인 장치 재동기화 {/* #resyncing-offline-devices */}
+
+장치가 오랫동안 오프라인 상태였다면 서버와 정보가 어긋나 수동으로 재동기화해야 할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. 장치 목록의 <Cmd sid='device_product_column' product='air' /> 열에서 <IcAirWarn /> 아이콘이 표시된 장치를 확인하세요.
+
+1. 해당 장치의 체크박스를 선택하세요.
+
+1. 목록 상단 도구 모음에서 <IcAirCloud width='24px' height='24px' title='Sync with Server' /> 버튼을 클릭하세요.
+
+:::info
+
+7일 미만 오프라인 상태였던 장치는 재연결 시 자동으로 동기화되므로 별도 조치가 필요하지 않습니다.
+
+:::
 
 
 ## 장치 그룹 관리 {/* #device_group_in_device_list */}

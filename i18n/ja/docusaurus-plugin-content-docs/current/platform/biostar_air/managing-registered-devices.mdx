@@ -50,7 +50,7 @@ keywords:
 
 * ⚪ **接続なし**：ネットワークに接続されていないデバイスです。 (例：Airfob Patch)
 
-* <IcAirWarn /> **注意**：サーバーとデバイス間の同期が必要な状態です。
+* <IcAirWarn /> **注意**：サーバーとデバイス間の同期が必要な状態です。 再同期方法については <DocLink inner='#resyncing-offline-devices' /> を参照してください。
 
 ### デバイス情報 {/* #device-information */}
 
@@ -133,6 +133,24 @@ keywords:
 * <IcAirDset width='24px' height='24px' title='Load Device Setting' />：スタンドアロンモードで、元の設定を持つデバイスの設定を読み込むことができます。
 
 * <IcAirUpd width='24px' height='24px' title='Update Status' />：デバイス一覧で選択したデバイスの状態を更新できます。
+
+## オフラインデバイスの再同期 {/* #resyncing-offline-devices */}
+
+デバイスが長期間オフラインだった場合、サーバーとの情報がずれ、手動で再同期する必要があります。
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. デバイス一覧の <Cmd sid='device_product_column' product='air' /> 列で <IcAirWarn /> アイコンが表示されているデバイスを確認します。
+
+3. 該当するデバイスのチェックボックスを選択します。
+
+4. 一覧上部のツールバーで <IcAirCloud width='24px' height='24px' title='Sync with Server' /> ボタンをクリックします。
+
+:::info
+
+7日未満オフラインだったデバイスは、再接続時に自動で同期されるため、別途対応は不要です。
+
+:::
 
 ## デバイスグループの管理 {/* #device_group_in_device_list */}
 
