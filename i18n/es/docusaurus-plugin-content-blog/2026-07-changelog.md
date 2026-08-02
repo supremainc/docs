@@ -2,7 +2,7 @@
 title: July 2026
 description: Provides the major update history for Suprema Docs in July 2026.
 slug: 2026-07-changelog
-date: 2026-08-01T09:00
+date: 2026-08-03T07:30
 ---
 
 Summer heat has arrived in full force this July. We hope you stay healthy through the hot weather, and this month brings plenty of good news for **Suprema Docs**. We've newly published a user guide for the cloud-managed platform **CLUe**, which lets you build an access control system entirely in the cloud, without an on-premises server. We've also added a range of other documentation, including the backup and restore feature for CoreStation Setup Manager and an RTSP/ONVIF integration guide for the ViOnyx web server. Check them out now.
