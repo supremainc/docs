@@ -244,6 +244,33 @@
     },
     {
         "category": "biometric",
+        "product": "BioStation",
+        "models": [
+            "BST-OC",
+            "BSTW-OC",
+            "BSR-OC",
+            "BSRW-OC",
+            "BSH-OC",
+            "BSM-OC"
+        ],
+        "version": "1.94",
+        "manuals": {
+            "ko": "device/biostation/BioStation_Guide_KO.zip",
+            "en": "device/biostation/BioStation_Guide_EN.zip"
+        },
+        "release_notes": {
+            "ko": "device/biostation/BioStation_RevisionNotes_V1_94_KO.pdf",
+            "en": "device/biostation/BioStation_RevisionNotes_V1_94_EN.pdf"
+        },
+        "a_e": "device/biostation/SUPREMA_BioStation_AE-Specification_160928.docx",
+        "dt": {
+            "ko": "device/biostation/BioStation_DrillingTemplate_KO.pdf",
+            "en": "device/biostation/BioStation_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2015-07-06"
+    },
+    {
+        "category": "biometric",
         "product": "BioStation 2",
         "models": [
             "BS2-OEPW",
@@ -422,6 +449,31 @@
             "en": "device/biostation_l2/BioStation L2_DrillingTemplate_EN.pdf"
         },
         "release_date": "2024-08-29"
+    },
+    {
+        "category": "biometric",
+        "product": "BioStation T2",
+        "models": [
+            "BST2R-OC",
+            "BST2RW",
+            "BST2M-OC",
+            "BST2MW-OC"
+        ],
+        "version": "1.32",
+        "manuals": {
+            "ko": "device/biostation_t2/1.x_BioStation_T2_UG_V1.21_KO.pdf",
+            "en": "device/biostation_t2/1.x_BioStation_T2_UG_V1.21_EN.pdf"
+        },
+        "release_notes": {
+            "ko": "device/biostation_t2/BioStation_T2_RevisionNotes_V1_32_KO.pdf",
+            "en": "device/biostation_t2/BioStation_T2_RevisionNotes_V1_32_EN.pdf"
+        },
+        "a_e": "device/biostation_t2/SUPREMA_BioStation_T2_AE-Specification_160928.docx",
+        "dt": {
+            "ko": "device/biostation_t2/BioStation T2_DrillingTemplate_KO.pdf",
+            "en": "device/biostation_t2/BioStation T2_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2015-06-29"
     },
     {
         "category": "biometric",
