@@ -35,7 +35,7 @@ Comprueba el estado de conexión de cada panel o dispositivo secundario mediante
 
 * <StatusUpdating /> **Naranja**: Se está actualizando el firmware.
 
-* <IcAirWarn /> **Advertencia**: Se requiere sincronización entre el servidor y el panel o dispositivo secundario.
+* <IcAirWarn /> **Advertencia**: Se requiere sincronización entre el servidor y el panel o dispositivo auxiliar. Consulte <DocLink inner='#resyncing-offline-devices' /> para ver las instrucciones de resincronización.
 
 ### Información de paneles y dispositivos
 
@@ -124,6 +124,26 @@ Selecciona un panel en la lista para usar las funciones de administración en la
 :::info
 
 Los subdispositivos conectados a un CS-20 solo admiten las funciones de actualización (<IcAirRef width='24px' height='24px' title='Refresh' />), eliminación (<IcAirRemove width='24px' height='24px' title='Delete' />) y actualización de firmware (<IcAirFw width='24px' height='24px' title='Update Firmware' />).
+
+:::
+
+## Resincronizar paneles sin conexión y dispositivos secundarios {/* #resyncing-offline-devices */}
+
+Si un panel o dispositivo auxiliar ha estado sin conexión durante mucho tiempo, su información puede desincronizarse con el servidor y requerir una resincronización manual.
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='device_slaves_panels' product='air' />.
+
+3. En la lista, revise el panel o dispositivo auxiliar con el icono <IcAirWarn /> en la columna <Cmd sid='device_product_column' product='air' />.
+
+4. Seleccione la casilla del panel o dispositivo auxiliar.
+
+5. En la barra de herramientas, en la parte superior de la lista, haga clic en el botón <IcAirCloud width='24px' height='24px' title='Sync with Server' />.
+
+:::info
+
+Los paneles o dispositivos auxiliares que han estado sin conexión durante menos de 7 días se sincronizan automáticamente cuando se reconectan, así que no se requiere ninguna acción.
 
 :::
 

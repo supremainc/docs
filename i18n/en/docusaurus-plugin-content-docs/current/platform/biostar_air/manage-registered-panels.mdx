@@ -35,7 +35,7 @@ Check each panel or secondary device’s connection status from the status icons
 
 * <StatusUpdating /> **Orange**: Firmware is updating.
 
-* <IcAirWarn /> **Warning**: Synchronization is required between the server and the panel or secondary device.
+* <IcAirWarn /> **Warning**: Synchronization is required between the server and the panel or secondary device. See <DocLink inner='#resyncing-offline-devices' /> for resync instructions.
 
 ### Panel and device information
 
@@ -124,6 +124,26 @@ Select a panel in the list to use the management features at the top.
 :::info
 
 Subdevices connected to a CS-20 only support the refresh (<IcAirRef width='24px' height='24px' title='Refresh' />), delete (<IcAirRemove width='24px' height='24px' title='Delete' />), and firmware update (<IcAirFw width='24px' height='24px' title='Update Firmware' />) functions.
+
+:::
+
+## Resync offline panels and secondary devices {/* #resyncing-offline-devices */}
+
+If a panel or auxiliary device has been offline for a long time, its information may fall out of sync with the server and require manual resync.
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. In the list, check the panel or auxiliary device with the <IcAirWarn /> icon in the <Cmd sid='device_product_column' product='air' /> column.
+
+4. Select the checkbox for the panel or auxiliary device.
+
+5. In the toolbar at the top of the list, click the <IcAirCloud width='24px' height='24px' title='Sync with Server' /> button.
+
+:::info
+
+Panels or auxiliary devices that have been offline for less than 7 days sync automatically when they reconnect, so no action is required.
 
 :::
 
