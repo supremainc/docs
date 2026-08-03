@@ -44,7 +44,8 @@ function resolveText(data, sid, product, deviceName, replace) {
           .replace('&sol;', '/')
           .replace('\\xB0\\x43', '℃')
           .replace('\\xB0\\x46', '℉')
-          .replace(' <font size="1">※ｵﾝ時 ﾘﾚｰ非動作</font>', '');
+          .replace(' <font size="1">※ｵﾝ時 ﾘﾚｰ非動作</font>', '')
+          .replace('\\n', ' ');
       }
     }
   } else if (product === 'dev') {

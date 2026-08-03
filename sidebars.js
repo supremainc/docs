@@ -688,6 +688,7 @@ function createSidebars(preview) {
             },
             'platform/biostar_x/set-permission',
             'platform/biostar_x/set-user-advanced',
+            'platform/biostar_x/add-user-by-scanning-passport',
             'platform/biostar_x/view-users',
             {
               type: 'category',
@@ -839,6 +840,7 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-adding-custom-account',
               ]
             },
+            'platform/biostar_x/settings-account-scan-passport',
             {
               type: 'category',
               label: '출입 통제 설정하기',
