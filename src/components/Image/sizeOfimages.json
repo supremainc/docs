@@ -4067,6 +4067,10 @@
     "width": 800,
     "height": 483
   },
+  "/img/biostarx-user-scan-passport-error-usb-agent.png": {
+    "width": 362,
+    "height": 230
+  },
   "/img/biostarx-user-sub-group-add.png": {
     "width": 400,
     "height": 272
@@ -13419,6 +13423,18 @@
     "width": 200,
     "height": 104
   },
+  "/img/en/biostarx-user-add-by-scanning-passport-btn.png": {
+    "width": 1117,
+    "height": 451
+  },
+  "/img/en/biostarx-user-add-face-credential-confirm.png": {
+    "width": 362,
+    "height": 190
+  },
+  "/img/en/biostarx-user-add-import-passport-data.png": {
+    "width": 560,
+    "height": 338
+  },
   "/img/en/biostarx-user-add-user-01.png": {
     "width": 1200,
     "height": 182
@@ -13446,6 +13462,10 @@
   "/img/en/biostarx-user-credential-set-emergency-opening.png": {
     "width": 800,
     "height": 227
+  },
+  "/img/en/biostarx-user-edit-by-scanning-passport-btn.png": {
+    "width": 1118,
+    "height": 424
   },
   "/img/en/biostarx-user-export-csv-popup.png": {
     "width": 600,
@@ -13522,6 +13542,10 @@
   "/img/en/biostarx-user-list-transfer-device.png": {
     "width": 1200,
     "height": 250
+  },
+  "/img/en/biostarx-user-scan-passport-error-usb-agent.png": {
+    "width": 362,
+    "height": 230
   },
   "/img/en/biostarx-user-sub-group-add.png": {
     "width": 400,
