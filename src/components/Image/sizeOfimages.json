@@ -1737,27 +1737,43 @@
   },
   "/img/biostarx-data-alert-events-disable-filter.png": {
     "width": 1200,
-    "height": 106
+    "height": 182
   },
   "/img/biostarx-data-alert-events-filtered.png": {
     "width": 1200,
-    "height": 412
+    "height": 182
+  },
+  "/img/biostarx-data-alert-history-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
+  },
+  "/img/biostarx-data-alert-lists-save-report.png": {
+    "width": 1680,
+    "height": 266
   },
   "/img/biostarx-data-alert-lists.png": {
-    "width": 1200,
-    "height": 539
+    "width": 1920,
+    "height": 360
   },
   "/img/biostarx-data-all-events-disable-filter.png": {
     "width": 1200,
-    "height": 147
+    "height": 110
+  },
+  "/img/biostarx-data-all-events-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
+  },
+  "/img/biostarx-data-all-events-filtered-save-report.png": {
+    "width": 1200,
+    "height": 276
   },
   "/img/biostarx-data-all-events-filtered.png": {
     "width": 1200,
-    "height": 526
+    "height": 448
   },
   "/img/biostarx-data-all-events-select-period.png": {
     "width": 400,
-    "height": 214
+    "height": 219
   },
   "/img/biostarx-data-all-events-set-custom-period.png": {
     "width": 600,
@@ -1828,8 +1844,8 @@
     "height": 384
   },
   "/img/biostarx-data-generate-report.png": {
-    "width": 1200,
-    "height": 700
+    "width": 1920,
+    "height": 716
   },
   "/img/biostarx-data-information.png": {
     "width": 1000,
@@ -1838,6 +1854,10 @@
   "/img/biostarx-data-main.png": {
     "width": 1200,
     "height": 539
+  },
+  "/img/biostarx-data-report-add-filter.png": {
+    "width": 480,
+    "height": 264
   },
   "/img/biostarx-data-report-format.png": {
     "width": 1000,
@@ -2144,8 +2164,8 @@
     "height": 319
   },
   "/img/biostarx-monitoring-event-list-filter-02.png": {
-    "width": 1200,
-    "height": 539
+    "width": 800,
+    "height": 459
   },
   "/img/biostarx-monitoring-event-list-pause.png": {
     "width": 1000,
@@ -11265,27 +11285,43 @@
   },
   "/img/en/biostarx-data-alert-events-disable-filter.png": {
     "width": 1200,
-    "height": 109
+    "height": 182
   },
   "/img/en/biostarx-data-alert-events-filtered.png": {
     "width": 1200,
-    "height": 410
+    "height": 182
+  },
+  "/img/en/biostarx-data-alert-history-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
+  },
+  "/img/en/biostarx-data-alert-lists-save-report.png": {
+    "width": 1680,
+    "height": 266
   },
   "/img/en/biostarx-data-alert-lists.png": {
-    "width": 1200,
-    "height": 539
+    "width": 1920,
+    "height": 360
   },
   "/img/en/biostarx-data-all-events-disable-filter.png": {
+    "width": 1218,
+    "height": 110
+  },
+  "/img/en/biostarx-data-all-events-filtered-1.png": {
     "width": 1200,
-    "height": 147
+    "height": 276
+  },
+  "/img/en/biostarx-data-all-events-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
   },
   "/img/en/biostarx-data-all-events-filtered.png": {
     "width": 1200,
-    "height": 551
+    "height": 448
   },
   "/img/en/biostarx-data-all-events-select-period.png": {
-    "width": 400,
-    "height": 201
+    "width": 424,
+    "height": 219
   },
   "/img/en/biostarx-data-all-events-set-custom-period.png": {
     "width": 600,
@@ -11356,8 +11392,8 @@
     "height": 384
   },
   "/img/en/biostarx-data-generate-report.png": {
-    "width": 1200,
-    "height": 694
+    "width": 1920,
+    "height": 716
   },
   "/img/en/biostarx-data-information.png": {
     "width": 1000,
@@ -11366,6 +11402,10 @@
   "/img/en/biostarx-data-main.png": {
     "width": 1200,
     "height": 539
+  },
+  "/img/en/biostarx-data-report-add-filter.png": {
+    "width": 480,
+    "height": 264
   },
   "/img/en/biostarx-data-report-format.png": {
     "width": 1000,
@@ -11668,8 +11708,8 @@
     "height": 321
   },
   "/img/en/biostarx-monitoring-event-list-filter-02.png": {
-    "width": 1200,
-    "height": 539
+    "width": 800,
+    "height": 459
   },
   "/img/en/biostarx-monitoring-event-list-pause.png": {
     "width": 1000,
