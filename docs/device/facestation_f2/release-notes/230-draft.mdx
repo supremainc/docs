@@ -4,9 +4,9 @@ title: 펌웨어 버전 2.3.0
 draft: true
 ---
 
-# 펌웨어 버전 2.3.0 (빌드 번호 2.3.0_260715)
+# 펌웨어 버전 2.3.0 (빌드 번호 2.3.0_260731)
 
-릴리즈<Separator/>2026-07-29
+릴리즈<Separator/>2026-08-04
 
 :::caution
 
@@ -57,6 +57,23 @@ draft: true
 (DFW-1295) [BDP-1592] Door Lock/Unlock Control Improvement
 1. 모니터링에서 출입문 제어 상태와 변경 정보를 정확하게 확인하도록 개선
 1. Improved door control status to accurately display control results and change details in monitoring.
+
+(DFW-1310) [FIMA-212] XPASS D2 BLE 이슈
+1. BLE 동작 안정성 개선
+1. Improved BLE stability.
+
+(DFW-1339) [UI 지원 장치] 사용자 이름 및 사용자 ID에 Dot(.) 지원
+1. 사용자 ID 및 사용자 이름의 허용 문자 확장
+   * 사용자 ID에 마침표(.) 입력 지원
+   * 사용자 이름에 마침표(.)와 아포스트로피(') 입력 지원
+
+1. Expanded allowed characters for User ID and User Name
+   * Added support for periods (.) in User ID
+   * Added support for periods (.) and apostrophes (') in User Name
+
+(DFW-1280) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경
+1. 화재 알람 발생 후 전원 재기동 시 화재 경보 구역 상태 표시 및 알람 해제 동작 개선
+1. Improved Fire alarm zone status display and alarm clearing behavior after power restart following a fire alarm.
 
 ## 버그 수정
 
