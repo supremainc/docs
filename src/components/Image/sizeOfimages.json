@@ -3653,7 +3653,7 @@
   },
   "/img/biostarx-tna-access-btn.png": {
     "width": 300,
-    "height": 264
+    "height": 346
   },
   "/img/biostarx-tna-initial-setting-device-setting.png": {
     "width": 800,
@@ -3661,15 +3661,15 @@
   },
   "/img/biostarx-tna-initial-setting-register-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 490
   },
   "/img/biostarx-tna-initial-setting-select-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 539
   },
   "/img/biostarx-tna-initial-setting-selected-device.png": {
     "width": 1200,
-    "height": 448
+    "height": 698
   },
   "/img/biostarx-tna-initial-setting.png": {
     "width": 1200,
@@ -3708,16 +3708,16 @@
     "height": 894
   },
   "/img/biostarx-tna-report-edit-calendar.png": {
-    "width": 952,
-    "height": 867
+    "width": 977,
+    "height": 881
   },
   "/img/biostarx-tna-report-edit-list.png": {
     "width": 1009,
-    "height": 321
+    "height": 266
   },
   "/img/biostarx-tna-report-filter-saving.png": {
     "width": 1200,
-    "height": 474
+    "height": 515
   },
   "/img/biostarx-tna-report-filter-setting-column.png": {
     "width": 300,
@@ -3725,39 +3725,39 @@
   },
   "/img/biostarx-tna-report-filter-setting.png": {
     "width": 1000,
-    "height": 295
+    "height": 309
   },
   "/img/biostarx-tna-report-individual-types.png": {
     "width": 900,
-    "height": 352
+    "height": 379
   },
   "/img/biostarx-tna-report-period-setting.png": {
-    "width": 900,
+    "width": 991,
     "height": 191
   },
   "/img/biostarx-tna-report-update-list.png": {
     "width": 1000,
-    "height": 638
+    "height": 625
   },
   "/img/biostarx-tna-report-working-alarm-auto-email-receipt.png": {
     "width": 400,
     "height": 295
   },
   "/img/biostarx-tna-report-working-alarm-auto-email.png": {
-    "width": 800,
+    "width": 873,
     "height": 187
   },
   "/img/biostarx-tna-report-working-alarm.png": {
     "width": 1200,
-    "height": 680
+    "height": 695
   },
   "/img/biostarx-tna-report.png": {
     "width": 1200,
-    "height": 436
+    "height": 473
   },
   "/img/biostarx-tna-schedule-remove-item.png": {
     "width": 1200,
-    "height": 209
+    "height": 176
   },
   "/img/biostarx-tna-schedule-remove-leave-item.png": {
     "width": 200,
@@ -3773,50 +3773,50 @@
   },
   "/img/biostarx-tna-schedule-template-add-temp-schedule.png": {
     "width": 350,
-    "height": 152
+    "height": 192
   },
   "/img/biostarx-tna-schedule-template-add-temp-user.png": {
     "width": 1200,
-    "height": 799
+    "height": 819
   },
   "/img/biostarx-tna-schedule-template-adding.png": {
     "width": 1200,
-    "height": 879
+    "height": 818
   },
   "/img/biostarx-tna-schedule-template.png": {
     "width": 1200,
-    "height": 468
+    "height": 381
   },
   "/img/biostarx-tna-settings-export-csv.png": {
     "width": 1200,
     "height": 144
   },
   "/img/biostarx-tna-settings-register-list.png": {
-    "width": 600,
-    "height": 160
+    "width": 813,
+    "height": 166
   },
   "/img/biostarx-tna-settings-save-period.png": {
     "width": 1200,
-    "height": 152
+    "height": 170
   },
   "/img/biostarx-tna-settings-sender-info.png": {
     "width": 400,
-    "height": 418
+    "height": 416
   },
   "/img/biostarx-tna-settings-unregister-list.png": {
-    "width": 600,
-    "height": 141
+    "width": 812,
+    "height": 160
   },
   "/img/biostarx-tna-settings.png": {
     "width": 1200,
-    "height": 797
+    "height": 526
   },
   "/img/biostarx-tna-shift-day-adding-fixed-allow-time.png": {
-    "width": 800,
+    "width": 904,
     "height": 64
   },
   "/img/biostarx-tna-shift-day-adding-fixed-before-after-time.png": {
-    "width": 800,
+    "width": 1009,
     "height": 99
   },
   "/img/biostarx-tna-shift-day-adding-fixed-roundup.png": {
@@ -3825,39 +3825,39 @@
   },
   "/img/biostarx-tna-shift-day-adding-fixed.png": {
     "width": 1200,
-    "height": 1122
+    "height": 1005
   },
   "/img/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png": {
-    "width": 800,
+    "width": 930,
     "height": 103
   },
   "/img/biostarx-tna-shift-day-adding-flexible.png": {
     "width": 1200,
-    "height": 991
+    "height": 933
   },
   "/img/biostarx-tna-shift-day-adding-floating-timesegment.png": {
-    "width": 300,
-    "height": 98
+    "width": 292,
+    "height": 129
   },
   "/img/biostarx-tna-shift-day-adding-floating.png": {
     "width": 1200,
-    "height": 953
+    "height": 1175
   },
   "/img/biostarx-tna-shift-day.png": {
     "width": 1200,
-    "height": 469
+    "height": 470
   },
   "/img/biostarx-tna-shift-overtime-adding.png": {
     "width": 1200,
-    "height": 841
+    "height": 749
   },
   "/img/biostarx-tna-shift-overtime-example.png": {
     "width": 800,
-    "height": 234
+    "height": 201
   },
   "/img/biostarx-tna-shift-overtime.png": {
     "width": 1200,
-    "height": 472
+    "height": 380
   },
   "/img/biostarx-tna-shift-paycode-adding.png": {
     "width": 1200,
@@ -3869,19 +3869,19 @@
   },
   "/img/biostarx-tna-shift-schedule-adding-daily.png": {
     "width": 400,
-    "height": 110
+    "height": 127
   },
   "/img/biostarx-tna-shift-schedule-adding-drag-shift.png": {
     "width": 1200,
-    "height": 434
+    "height": 573
   },
   "/img/biostarx-tna-shift-schedule-adding.png": {
     "width": 1200,
-    "height": 670
+    "height": 807
   },
   "/img/biostarx-tna-shift-schedule.png": {
     "width": 1200,
-    "height": 468
+    "height": 385
   },
   "/img/biostarx-tutorial-license-offline-popup-filed.png": {
     "width": 500,
@@ -13169,23 +13169,23 @@
   },
   "/img/en/biostarx-tna-access-btn.png": {
     "width": 300,
-    "height": 265
+    "height": 346
   },
   "/img/en/biostarx-tna-initial-setting-device-setting.png": {
     "width": 800,
-    "height": 378
+    "height": 376
   },
   "/img/en/biostarx-tna-initial-setting-register-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 490
   },
   "/img/en/biostarx-tna-initial-setting-select-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 539
   },
   "/img/en/biostarx-tna-initial-setting-selected-device.png": {
     "width": 1200,
-    "height": 448
+    "height": 698
   },
   "/img/en/biostarx-tna-initial-setting.png": {
     "width": 1200,
@@ -13224,16 +13224,16 @@
     "height": 894
   },
   "/img/en/biostarx-tna-report-edit-calendar.png": {
-    "width": 946,
-    "height": 835
+    "width": 977,
+    "height": 881
   },
   "/img/en/biostarx-tna-report-edit-list.png": {
     "width": 1009,
-    "height": 316
+    "height": 266
   },
   "/img/en/biostarx-tna-report-filter-saving.png": {
     "width": 1200,
-    "height": 474
+    "height": 515
   },
   "/img/en/biostarx-tna-report-filter-setting-column.png": {
     "width": 300,
@@ -13241,39 +13241,39 @@
   },
   "/img/en/biostarx-tna-report-filter-setting.png": {
     "width": 1000,
-    "height": 293
+    "height": 309
   },
   "/img/en/biostarx-tna-report-individual-types.png": {
     "width": 900,
-    "height": 351
+    "height": 379
   },
   "/img/en/biostarx-tna-report-period-setting.png": {
-    "width": 900,
-    "height": 190
+    "width": 991,
+    "height": 191
   },
   "/img/en/biostarx-tna-report-update-list.png": {
     "width": 1000,
-    "height": 637
+    "height": 625
   },
   "/img/en/biostarx-tna-report-working-alarm-auto-email-receipt.png": {
     "width": 400,
     "height": 295
   },
   "/img/en/biostarx-tna-report-working-alarm-auto-email.png": {
-    "width": 800,
+    "width": 953,
     "height": 187
   },
   "/img/en/biostarx-tna-report-working-alarm.png": {
     "width": 1200,
-    "height": 680
+    "height": 695
   },
   "/img/en/biostarx-tna-report.png": {
     "width": 1200,
-    "height": 436
+    "height": 473
   },
   "/img/en/biostarx-tna-schedule-remove-item.png": {
     "width": 1200,
-    "height": 206
+    "height": 176
   },
   "/img/en/biostarx-tna-schedule-template-add-leave-setting.png": {
     "width": 850,
@@ -13285,91 +13285,91 @@
   },
   "/img/en/biostarx-tna-schedule-template-add-temp-schedule.png": {
     "width": 350,
-    "height": 159
+    "height": 198
   },
   "/img/en/biostarx-tna-schedule-template-add-temp-user.png": {
     "width": 1200,
-    "height": 800
+    "height": 819
   },
   "/img/en/biostarx-tna-schedule-template-adding.png": {
     "width": 1200,
-    "height": 879
+    "height": 818
   },
   "/img/en/biostarx-tna-schedule-template.png": {
     "width": 1200,
-    "height": 473
+    "height": 381
   },
   "/img/en/biostarx-tna-settings-export-csv.png": {
     "width": 1200,
     "height": 138
   },
   "/img/en/biostarx-tna-settings-register-list.png": {
-    "width": 600,
-    "height": 155
+    "width": 813,
+    "height": 166
   },
   "/img/en/biostarx-tna-settings-save-period.png": {
     "width": 1200,
-    "height": 148
+    "height": 170
   },
   "/img/en/biostarx-tna-settings-sender-info.png": {
     "width": 400,
-    "height": 418
+    "height": 416
   },
   "/img/en/biostarx-tna-settings-unregister-list.png": {
-    "width": 600,
-    "height": 144
+    "width": 812,
+    "height": 160
   },
   "/img/en/biostarx-tna-settings.png": {
     "width": 1200,
-    "height": 797
+    "height": 526
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed-allow-time.png": {
-    "width": 800,
-    "height": 59
+    "width": 904,
+    "height": 64
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed-before-after-time.png": {
-    "width": 800,
-    "height": 101
+    "width": 1009,
+    "height": 99
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed-roundup.png": {
     "width": 800,
-    "height": 107
+    "height": 102
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed.png": {
     "width": 1200,
-    "height": 1117
+    "height": 1005
   },
   "/img/en/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png": {
-    "width": 825,
+    "width": 930,
     "height": 103
   },
   "/img/en/biostarx-tna-shift-day-adding-flexible.png": {
     "width": 1200,
-    "height": 975
+    "height": 926
   },
   "/img/en/biostarx-tna-shift-day-adding-floating-timesegment.png": {
-    "width": 226,
-    "height": 98
+    "width": 292,
+    "height": 129
   },
   "/img/en/biostarx-tna-shift-day-adding-floating.png": {
     "width": 1200,
-    "height": 961
+    "height": 1175
   },
   "/img/en/biostarx-tna-shift-day.png": {
     "width": 1200,
-    "height": 470
+    "height": 469
   },
   "/img/en/biostarx-tna-shift-overtime-adding.png": {
     "width": 1200,
-    "height": 845
+    "height": 749
   },
   "/img/en/biostarx-tna-shift-overtime-example.png": {
     "width": 800,
-    "height": 236
+    "height": 201
   },
   "/img/en/biostarx-tna-shift-overtime.png": {
     "width": 1200,
-    "height": 469
+    "height": 380
   },
   "/img/en/biostarx-tna-shift-paycode-adding.png": {
     "width": 1200,
@@ -13381,19 +13381,19 @@
   },
   "/img/en/biostarx-tna-shift-schedule-adding-daily.png": {
     "width": 400,
-    "height": 109
+    "height": 127
   },
   "/img/en/biostarx-tna-shift-schedule-adding-drag-shift.png": {
     "width": 1200,
-    "height": 434
+    "height": 573
   },
   "/img/en/biostarx-tna-shift-schedule-adding.png": {
     "width": 1200,
-    "height": 669
+    "height": 807
   },
   "/img/en/biostarx-tna-shift-schedule.png": {
     "width": 1200,
-    "height": 467
+    "height": 385
   },
   "/img/en/biostarx-tutorial-license-offline-popup-filed.png": {
     "width": 500,
