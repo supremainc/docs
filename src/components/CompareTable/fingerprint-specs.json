@@ -228,9 +228,9 @@
         "BSL2-OM": false
       },
       "BioLite N2": {
-        "BLN2-ODB": "IP67",
-        "BLN2-OAB": "IP67",
-        "BLN2-PAB": "IP67"
+        "BLN2-ODB": "IP65, IP67",
+        "BLN2-OAB": "IP65, IP67",
+        "BLN2-PAB": "IP65, IP67"
       },
       "BioEntry W2": {
         "BEW2-OHP": "IP67",

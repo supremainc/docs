@@ -193,16 +193,16 @@
         ],
         "version": "1.7.1",
         "manuals": {
-            "ko": "device/biolite_n2/BioLite N2_UG_1.19_KO_260616.pdf",
-            "en": "device/biolite_n2/BioLite N2_UG_1.19_EN_260616.pdf",
-            "es": "device/biolite_n2/BioLite N2_UG_1.19_ES_260616.pdf",
-            "ja": "device/biolite_n2/BioLite N2_UG_1.19_JA_260616.pdf"
+            "ko": "device/biolite_n2/BioLite N2_UG_1.20_KO_260805.pdf",
+            "en": "device/biolite_n2/BioLite N2_UG_1.20_EN_260805.pdf",
+            "es": "device/biolite_n2/BioLite N2_UG_1.20_ES_260805.pdf",
+            "ja": "device/biolite_n2/BioLite N2_UG_1.20_JA_260805.pdf"
         },
         "release_notes": {
             "ko": "device/biolite_n2/BioLite N2_ReleaseNotes_1.7.1_KO_260417.pdf",
             "en": "device/biolite_n2/BioLite N2_ReleaseNotes_1.7.1_EN_260417.pdf"
         },
-        "a_e": "device/biolite_n2/SUPREMA_BioLite_N2_AE-Specification_260622.docx",
+        "a_e": "device/biolite_n2/SUPREMA_BioLite_N2_AE-Specification_260805.docx",
         "dt": {
             "ko": "device/biolite_n2/BioLite N2_DrillingTemplate_KO.pdf",
             "en": "device/biolite_n2/BioLite N2_DrillingTemplate_EN.pdf"
@@ -219,10 +219,10 @@
         ],
         "version": "1.6.0",
         "manuals": {
-            "ko": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.01_KO_260629.pdf",
-            "en": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.01_EN_260629.pdf",
-            "es": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.01_ES_260629.pdf",
-            "ja": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.01_JA_260629.pdf"
+            "ko": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.02_KO_260805.pdf",
+            "en": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.02_EN_260805.pdf",
+            "es": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.02_ES_260805.pdf",
+            "ja": "device/biolite_n2/BioLite N2 Suprema CLUe_UG_1.02_JA_260805.pdf"
         },
         "release_notes": {
             "ko": "device/biolite_n2/BioLite N2 Suprema CLUe_RN_1.6.0_KO_260628.pdf",
