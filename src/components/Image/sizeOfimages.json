@@ -2080,16 +2080,20 @@
     "height": 682
   },
   "/img/biostarx-monitoring-camera-popup.png": {
+    "width": 418,
+    "height": 326
+  },
+  "/img/biostarx-monitoring-device-attention-filter.png": {
     "width": 400,
-    "height": 364
+    "height": 277
   },
   "/img/biostarx-monitoring-device-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 501
   },
   "/img/biostarx-monitoring-device-popup.png": {
-    "width": 400,
-    "height": 315
+    "width": 418,
+    "height": 323
   },
   "/img/biostarx-monitoring-door-ac-details.png": {
     "width": 1200,
@@ -11648,16 +11652,16 @@
     "height": 682
   },
   "/img/en/biostarx-monitoring-camera-popup.png": {
-    "width": 400,
-    "height": 365
+    "width": 418,
+    "height": 326
   },
   "/img/en/biostarx-monitoring-device-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 501
   },
   "/img/en/biostarx-monitoring-device-popup.png": {
-    "width": 400,
-    "height": 315
+    "width": 418,
+    "height": 323
   },
   "/img/en/biostarx-monitoring-door-ac-details.png": {
     "width": 1200,
@@ -20042,6 +20046,14 @@
   "/img/menus/ico-descend.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-device-off.svg": {
+    "width": 21,
+    "height": 21
+  },
+  "/img/menus/ico-device-on.svg": {
+    "width": 21,
+    "height": 21
   },
   "/img/menus/ico-disable.svg": {
     "width": 16,
