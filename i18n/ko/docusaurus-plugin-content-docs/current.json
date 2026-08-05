@@ -678,5 +678,9 @@
   "sidebar.clueportal.link.CLUe API": {
     "message": "CLUe API",
     "description": "The label for link 'CLUe API' in sidebar 'clueportal', linking to 'pathname:///developer/clue'"
+  },
+  "sidebar.xpassq2.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category '릴리스 노트' in sidebar 'xpassq2'"
   }
 }
