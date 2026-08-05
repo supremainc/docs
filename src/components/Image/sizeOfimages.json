@@ -2065,11 +2065,11 @@
   },
   "/img/biostarx-monitoring-camera-clear-alarm-success.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/biostarx-monitoring-camera-clear-alarm.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/biostarx-monitoring-camera-details.png": {
     "width": 1278,
@@ -2077,7 +2077,7 @@
   },
   "/img/biostarx-monitoring-camera-event-video-log.png": {
     "width": 1200,
-    "height": 682
+    "height": 675
   },
   "/img/biostarx-monitoring-camera-popup.png": {
     "width": 418,
@@ -2163,13 +2163,21 @@
     "width": 442,
     "height": 450
   },
+  "/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
+    "width": 640,
+    "height": 357
+  },
   "/img/biostarx-monitoring-event-alert-acknowledge.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
+  },
+  "/img/biostarx-monitoring-event-alert-message-1.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-event-alert-message.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/biostarx-monitoring-event-list-alarm-active.png": {
     "width": 1000,
@@ -2212,16 +2220,16 @@
     "height": 319
   },
   "/img/biostarx-monitoring-event-list-view-alerts-02.png": {
-    "width": 700,
-    "height": 351
+    "width": 1000,
+    "height": 632
   },
   "/img/biostarx-monitoring-event-list-view-only-alarm.png": {
     "width": 1000,
     "height": 257
   },
   "/img/biostarx-monitoring-event-list.png": {
-    "width": 1500,
-    "height": 745
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-group-expand-collapse.png": {
     "width": 400,
@@ -2241,11 +2249,11 @@
   },
   "/img/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
-    "height": 539
+    "height": 289
   },
   "/img/biostarx-monitoring-video-tiles.png": {
     "width": 1200,
-    "height": 539
+    "height": 645
   },
   "/img/biostarx-new-user-credential-authmod-default.png": {
     "width": 1069,
@@ -11637,11 +11645,11 @@
   },
   "/img/en/biostarx-monitoring-camera-clear-alarm-success.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/en/biostarx-monitoring-camera-clear-alarm.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/en/biostarx-monitoring-camera-details.png": {
     "width": 1278,
@@ -11649,7 +11657,7 @@
   },
   "/img/en/biostarx-monitoring-camera-event-video-log.png": {
     "width": 1200,
-    "height": 682
+    "height": 675
   },
   "/img/en/biostarx-monitoring-camera-popup.png": {
     "width": 418,
@@ -11731,13 +11739,21 @@
     "width": 442,
     "height": 450
   },
+  "/img/en/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
+    "width": 640,
+    "height": 357
+  },
   "/img/en/biostarx-monitoring-event-alert-acknowledge.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-event-alert-message-1.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-event-alert-message.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/en/biostarx-monitoring-event-list-alarm-active.png": {
     "width": 1000,
@@ -11780,16 +11796,16 @@
     "height": 321
   },
   "/img/en/biostarx-monitoring-event-list-view-alerts-02.png": {
-    "width": 700,
-    "height": 351
+    "width": 1000,
+    "height": 632
   },
   "/img/en/biostarx-monitoring-event-list-view-only-alarm.png": {
     "width": 1000,
     "height": 257
   },
   "/img/en/biostarx-monitoring-event-list.png": {
-    "width": 1500,
-    "height": 745
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-group-expand-collapse.png": {
     "width": 400,
@@ -11809,11 +11825,11 @@
   },
   "/img/en/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
-    "height": 539
+    "height": 289
   },
   "/img/en/biostarx-monitoring-video-tiles.png": {
     "width": 1200,
-    "height": 539
+    "height": 645
   },
   "/img/en/biostarx-new-user-credential-1.png": {
     "width": 1069,
@@ -16640,8 +16656,8 @@
     "height": 477
   },
   "/img/en/monitoring-door-control-open-video-drag-drop.png": {
-    "width": 1200,
-    "height": 382
+    "width": 1239,
+    "height": 387
   },
   "/img/en/monitoring-door-control-open-video.png": {
     "width": 881,
@@ -16696,8 +16712,8 @@
     "height": 583
   },
   "/img/en/monitoring-video-alarm.png": {
-    "width": 1705,
-    "height": 1270
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/settings-custom-interface-add-quick-action.png": {
     "width": 550,
@@ -20844,7 +20860,7 @@
     "height": 477
   },
   "/img/monitoring-door-control-open-video-drag-drop.png": {
-    "width": 1200,
+    "width": 1239,
     "height": 387
   },
   "/img/monitoring-door-control-open-video.png": {
@@ -20904,8 +20920,8 @@
     "height": 678
   },
   "/img/monitoring-video-alarm.png": {
-    "width": 1705,
-    "height": 1270
+    "width": 1920,
+    "height": 1080
   },
   "/img/monitoring-video-close.png": {
     "width": 730,
