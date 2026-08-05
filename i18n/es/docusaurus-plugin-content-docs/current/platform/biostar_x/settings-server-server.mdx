@@ -44,13 +44,19 @@ Verifique o configure la información básica de **BioStar X** en la sección <C
 
 * <Cmd sid='common.sessionTimeout' product='2' />: Configure un período de expiración de sesión. Si no hay operación después de iniciar sesión en BioStar X durante el tiempo configurado, la sesión se cerrará automáticamente.
 
+:::info
+
+Si establece la opción <Cmd sid="setting.server.logUploadType" product='2' /> en <Cmd sid='common.auto' product='2' />, los registros de eventos almacenados en el dispositivo se cargan automáticamente al servidor cuando se pierde y se restablece la conexión entre el servidor y el dispositivo.
+
+:::
+
 ## Gestión de usuarios y dispositivos {/* #user-and-device-management */}
 
 En la sección <Cmd sid='setting.server.userDeviceManagement' product='2' />, configure los métodos de sincronización y autenticación entre usuarios y dispositivos.
 
 <Image src='/img/biostarx-settings-server-management.png' className='none' />
 
-### <Cmd sid='setting.server.automaticUserSync' product='2' className='normal' /> {/* #user-sync */}
+### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {/* #user-sync */}
 
 En la opción <Cmd sid='setting.server.automaticUserSync' product='2' />, elija cómo sincronizar la información de usuario entre el servidor y los dispositivos.
 
@@ -80,7 +86,7 @@ En la opción <Cmd sid='setting.server.automaticUserSync' product='2' />, elija 
 
 :::
 
-### <Cmd sid='setting.server.fingerprintTemplateFormat' product='2' className='normal' /> {/* #fingerprint-template-format */}
+### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {/* #fingerprint-template-format */}
 
 En la opción <Cmd sid='setting.server.fingerprintTemplateFormat' product='2' />, elija el formato de plantilla de huella digital. Seleccione entre los siguientes elementos.
 
@@ -96,7 +102,7 @@ Si existen plantillas de huellas digitales de usuario en el dispositivo, no se p
 
 :::
 
-### <Cmd sid='setting.userDevice.useridType' product='2' className='normal' /> {/* #userid-type */}
+### <Cmd sid="setting.userDevice.useridType" product='2' className='normal' /> {/* #userid-type */}
 
 En la opción <Cmd sid='setting.userDevice.useridType' product='2' />, seleccione el tipo de ID de usuario como <Cmd sid='setting.userDevice.useridType.numeric' product='2' /> o <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />. Revise la lista de dispositivos registrados en el servidor **BioStar X** y seleccione la configuración compatible.
 
@@ -144,7 +150,7 @@ Cambiar de <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' /> 
 
 :::
 
-### <Cmd sid='setting.server.enrollment_device.title' product='2' className='normal' /> {/* #enrollment-device */}
+### <Cmd sid="setting.server.enrollment_device.title" product='2' className='normal' /> {/* #enrollment-device */}
 
 Para mayor comodidad, añada dispositivos usados con frecuencia para enrolar huellas digitales, rostros o tarjetas en la opción <Cmd sid='setting.server.enrollment_device.title' product='2' />. 
 
@@ -174,7 +180,7 @@ Para mayor comodidad, añada dispositivos usados con frecuencia para enrolar hue
 
 :::
 
-### <Cmd sid='setting.server.custom_field.title' product='2' className='normal' /> {/* #custom-field */}
+### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {/* #custom-field */}
 
 En la opción <Cmd sid='setting.server.custom_field.title' product='2' />, agregue campos para ingresar información adicional del usuario. Los campos agregados se mostrarán en la pantalla de información del usuario.
 
