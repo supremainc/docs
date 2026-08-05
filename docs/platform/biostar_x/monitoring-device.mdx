@@ -17,12 +17,34 @@ keywords: [ 모니터링, 장치, 카메라 ]
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <StatusOK/> | 장치가 정상 연결된 상태입니다. |
-| <StatusFail /> | 장치가 꺼져 있거나 연결이 해제된 상태입니다. |
+| <IcDeviceOn width='35px' height='35px'/> | 장치가 정상 연결된 상태입니다. |
+| <IcDeviceOff width='35px' height='35px' /> | 장치가 꺼져 있거나 연결이 해제된 상태입니다. |
 | <IcCamOk width='auto' height='35px'/> | 카메라가 연결된 상태입니다. |
 | <IcCamFail width='auto' height='35px'/> | 카메라가 꺼져 있거나 연결이 해제된 상태입니다. |
 
 </div>
+
+### 주의가 필요한 장치 모아보기 {/* #checkAttentionFilter */}
+
+관리자는 조치가 필요한 장치만 한 번에 모아 볼 수 있습니다. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.entitiesNeedAttention' />을 클릭하세요. 장치의 상태를 확인하고, 문제가 발생한 대상에 조치를 취할 수 있습니다.
+
+<Image src='/img/biostarx-monitoring-device-attention-filter.png' />
+
+### 조치 대상 판정 기준
+
+장치 트리에서 정상이 아닌 장치를 조치 대상으로 판정합니다.
+
+| 이상 상태 종류 | 상태 표시 | 설명 |
+| -- | -- | -- |
+| 연결 끊김 | <Cmd sid='arena.tree.disconnected' /> | 장치와의 네트워크 연결이 끊긴 상태 |
+| 동기화 오류 | <Cmd sid='arena.tree.syncError' /> | 연결은 되어 있으니 데이터 동기화가 어긋난 상태 |
+| 커뮤니케이션 서버 오류 | <Cmd sid='arena.tree.communicationError' /> | 장치가 속한 커뮤니케이션 서버에서 오류가 발생한 상태 |
+
+:::info
+
+위 이상 상태 외에도 장치 잠금, 인증 연속 실패로 인한 잠금(Auth Fail Lockout) 상태가 포함됩니다.
+
+:::
 
 
 ## 장치 제어
@@ -65,7 +87,11 @@ keywords: [ 모니터링, 장치, 카메라 ]
 
 <Image src='/img/biostarx-monitoring-device-details.png' />
 
-장치의 ID 및 그룹, 모델명, 기동 시간, IP 주소 등의 정보를 확인할 수 있습니다. 하단의 <Cmd sid='arena.recentEvent' /> 목록에서는 최근 발생한 이벤트를 시간 역순으로 확인할 수 있습니다.
+* **장치 제어**: 장치 작업 중지 또는 재시작, 재연결 등의 제어 기능을 실행할 수 있습니다.
+
+* **장치 상세 정보**: 장치의 ID 및 그룹, 모델명, 기동 시간, IP 주소 등의 정보를 확인할 수 있습니다.
+
+* <Cmd sid='arena.recentEvent' />: 선택한 장치에서 발생한 최근 이벤트 목록을 확인할 수 있습니다.
 
 
 ## 카메라 제어

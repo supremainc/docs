@@ -2229,11 +2229,11 @@
   },
   "/img/biostarx-monitoring-map-main.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
   },
   "/img/biostarx-monitoring-map-open-camera.png": {
     "width": 1078,
-    "height": 315
+    "height": 347
   },
   "/img/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
@@ -6133,11 +6133,11 @@
   },
   "/img/common/monitoring-map-area-tree-example.png": {
     "width": 400,
-    "height": 395
+    "height": 469
   },
   "/img/common/monitoring-map-area-tree.png": {
-    "width": 2743,
-    "height": 1771
+    "width": 1220,
+    "height": 830
   },
   "/img/common/monitoring-map-camera-icon.svg": {
     "width": 45,
@@ -11797,11 +11797,11 @@
   },
   "/img/en/biostarx-monitoring-map-main.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
   },
   "/img/en/biostarx-monitoring-map-open-camera.png": {
     "width": 1078,
-    "height": 315
+    "height": 347
   },
   "/img/en/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
@@ -16659,17 +16659,25 @@
     "width": 763,
     "height": 220
   },
+  "/img/en/monitoring-map-area-tree-example.png": {
+    "width": 400,
+    "height": 469
+  },
   "/img/en/monitoring-map-floor-control-door.png": {
     "width": 800,
     "height": 450
   },
   "/img/en/monitoring-map-open-map.png": {
-    "width": 1500,
-    "height": 648
+    "width": 1200,
+    "height": 675
   },
   "/img/en/monitoring-map-select-floor.png": {
     "width": 1100,
-    "height": 817
+    "height": 911
+  },
+  "/img/en/monitoring-map-tree-attention-filter.png": {
+    "width": 400,
+    "height": 329
   },
   "/img/en/monitoring-video-adjust-size-01.png": {
     "width": 900,
@@ -20155,6 +20163,10 @@
     "width": 20,
     "height": 20
   },
+  "/img/menus/ico-floor-camera.svg": {
+    "width": 20,
+    "height": 20
+  },
   "/img/menus/ico-floor-locked-door.svg": {
     "width": 20,
     "height": 20
@@ -20218,6 +20230,18 @@
   "/img/menus/ico-logout.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-map-area.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-map-facility.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-map-floor.svg": {
+    "width": 20,
+    "height": 20
   },
   "/img/menus/ico-map-more.svg": {
     "width": 20,
@@ -20831,17 +20855,29 @@
     "width": 763,
     "height": 220
   },
+  "/img/monitoring-map-area-tree-example.png": {
+    "width": 400,
+    "height": 469
+  },
   "/img/monitoring-map-floor-control-door.png": {
     "width": 800,
     "height": 450
   },
+  "/img/monitoring-map-floor-status-check.png": {
+    "width": 860,
+    "height": 259
+  },
   "/img/monitoring-map-open-map.png": {
-    "width": 1500,
-    "height": 644
+    "width": 1200,
+    "height": 675
   },
   "/img/monitoring-map-select-floor.png": {
     "width": 1100,
-    "height": 817
+    "height": 911
+  },
+  "/img/monitoring-map-tree-attention-filter.png": {
+    "width": 400,
+    "height": 329
   },
   "/img/monitoring-video-adjust-size-01.png": {
     "width": 900,
