@@ -167,8 +167,8 @@ const config = {
     [ '@docusaurus/plugin-client-redirects', {
       redirects: [
         {
-          to: 'device/vionyx_webserver',
-          from: '/docs/device/vionyx_webserver',
+          to: '/device/vionyx_webserver',
+          from: '/docs/device/device/vionyx_webserver',
         }
       ]
     } ],
