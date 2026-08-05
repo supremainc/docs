@@ -1,29 +1,25 @@
 [
   {
-    "name": "すべてのドアグループ",
+    "name": "All Door Groups",
     "children": [
       {
-        "name": "ドアグループ A",
+        "name": "Door Group A",
         "type": "door-group",
         "children": [
           {
-            "name": "ドア",
+            "name": "Door",
             "type": "door-device",
             "children": [
               {
-                "name": "ドアセンサー",
-                "type": "door-sensor"
-              },
-              {
-                "name": "ドアリレー",
+                "name": "Door relay",
                 "type": "door-relay"
               },
               {
-                "name": "警備状態",
+                "name": "Arming status",
                 "type": "door-arm"
               },
               {
-                "name": "カメラ",
+                "name": "Camera",
                 "type": "door-camera"
               }
             ]
@@ -33,23 +29,23 @@
     ]
   },
   {
-    "name": "すべてのエレベーターグループ",
+    "name": "All Elevators",
     "type": "elevator",
     "children": [
       {
-        "name": "エレベーターグループ B",
+        "name": "Elevator Group B",
         "type": "elevator-group",
         "children": [
           {
-            "name": "エレベーター 1",
+            "name": "Elevator 1",
             "type": "elevator-device",
             "children": [
               {
-                "name": "エレベーター 1 - 1階",
+                "name": "Elevator 1 - 1st Floor",
                 "type": "elevator-floor"
               },
               {
-                "name": "エレベーター 1 - 2階",
+                "name": "Elevator 1 - 2nd Floor",
                 "type": "elevator-floor"
               }
             ]
@@ -59,11 +55,11 @@
     ]
   },
   {
-    "name": "すべての高度アクセス制御",
+    "name": "All Advanced ACs",
     "type": "access-control",
     "children": [
       {
-        "name": "アクセス制御設定",
+        "name": "Access Control Settings",
         "type": "access-zone"
       }
     ]

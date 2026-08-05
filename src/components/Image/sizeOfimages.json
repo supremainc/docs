@@ -2091,13 +2091,21 @@
     "width": 400,
     "height": 315
   },
+  "/img/biostarx-monitoring-door-ac-details.png": {
+    "width": 1200,
+    "height": 503
+  },
   "/img/biostarx-monitoring-door-arm-popup.png": {
     "width": 857,
     "height": 351
   },
   "/img/biostarx-monitoring-door-arm-status.png": {
     "width": 400,
-    "height": 297
+    "height": 494
+  },
+  "/img/biostarx-monitoring-door-attention-filter.png": {
+    "width": 350,
+    "height": 487
   },
   "/img/biostarx-monitoring-door-camera-details.png": {
     "width": 1200,
@@ -2107,21 +2115,33 @@
     "width": 400,
     "height": 291
   },
+  "/img/biostarx-monitoring-door-details-control.png": {
+    "width": 334,
+    "height": 191
+  },
+  "/img/biostarx-monitoring-door-elevator-details-control.png": {
+    "width": 328,
+    "height": 155
+  },
+  "/img/biostarx-monitoring-door-elevator-details-floor-list.png": {
+    "width": 328,
+    "height": 128
+  },
   "/img/biostarx-monitoring-door-elevator-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 505
   },
   "/img/biostarx-monitoring-door-elevator-floor-popup.png": {
-    "width": 400,
-    "height": 325
+    "width": 442,
+    "height": 411
   },
   "/img/biostarx-monitoring-door-elevator-popup.png": {
     "width": 400,
-    "height": 326
+    "height": 456
   },
   "/img/biostarx-monitoring-door-popup.png": {
-    "width": 400,
-    "height": 313
+    "width": 431,
+    "height": 387
   },
   "/img/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -2129,11 +2149,15 @@
   },
   "/img/biostarx-monitoring-door-view-details.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
+  },
+  "/img/biostarx-monitoring-door-zone-disabled.png": {
+    "width": 442,
+    "height": 244
   },
   "/img/biostarx-monitoring-door-zone-popup.png": {
-    "width": 400,
-    "height": 384
+    "width": 442,
+    "height": 450
   },
   "/img/biostarx-monitoring-event-alert-acknowledge.png": {
     "width": 1200,
@@ -2197,7 +2221,7 @@
   },
   "/img/biostarx-monitoring-group-expand-collapse.png": {
     "width": 400,
-    "height": 259
+    "height": 295
   },
   "/img/biostarx-monitoring-map-camera-popup.png": {
     "width": 1228,
@@ -11635,13 +11659,21 @@
     "width": 400,
     "height": 315
   },
+  "/img/en/biostarx-monitoring-door-ac-details.png": {
+    "width": 1200,
+    "height": 503
+  },
   "/img/en/biostarx-monitoring-door-arm-popup.png": {
     "width": 857,
     "height": 349
   },
   "/img/en/biostarx-monitoring-door-arm-status.png": {
     "width": 400,
-    "height": 298
+    "height": 494
+  },
+  "/img/en/biostarx-monitoring-door-attention-filter.png": {
+    "width": 350,
+    "height": 471
   },
   "/img/en/biostarx-monitoring-door-camera-details.png": {
     "width": 1200,
@@ -11651,21 +11683,33 @@
     "width": 400,
     "height": 298
   },
+  "/img/en/biostarx-monitoring-door-details-control.png": {
+    "width": 334,
+    "height": 191
+  },
+  "/img/en/biostarx-monitoring-door-elevator-details-control.png": {
+    "width": 328,
+    "height": 204
+  },
+  "/img/en/biostarx-monitoring-door-elevator-details-floor-list.png": {
+    "width": 328,
+    "height": 144
+  },
   "/img/en/biostarx-monitoring-door-elevator-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 505
   },
   "/img/en/biostarx-monitoring-door-elevator-floor-popup.png": {
-    "width": 400,
-    "height": 298
+    "width": 442,
+    "height": 411
   },
   "/img/en/biostarx-monitoring-door-elevator-popup.png": {
     "width": 400,
-    "height": 326
+    "height": 456
   },
   "/img/en/biostarx-monitoring-door-popup.png": {
-    "width": 400,
-    "height": 285
+    "width": 450,
+    "height": 387
   },
   "/img/en/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -11673,11 +11717,15 @@
   },
   "/img/en/biostarx-monitoring-door-view-details.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-door-zone-disabled.png": {
+    "width": 442,
+    "height": 244
   },
   "/img/en/biostarx-monitoring-door-zone-popup.png": {
-    "width": 400,
-    "height": 388
+    "width": 442,
+    "height": 450
   },
   "/img/en/biostarx-monitoring-event-alert-acknowledge.png": {
     "width": 1200,
@@ -11741,7 +11789,7 @@
   },
   "/img/en/biostarx-monitoring-group-expand-collapse.png": {
     "width": 400,
-    "height": 255
+    "height": 295
   },
   "/img/en/biostarx-monitoring-map-camera-popup.png": {
     "width": 1228,
@@ -16584,16 +16632,16 @@
     "height": 28
   },
   "/img/en/monitoring-door-camera-control-open-video.png": {
-    "width": 1200,
-    "height": 449
+    "width": 884,
+    "height": 477
   },
   "/img/en/monitoring-door-control-open-video-drag-drop.png": {
     "width": 1200,
     "height": 382
   },
   "/img/en/monitoring-door-control-open-video.png": {
-    "width": 1200,
-    "height": 448
+    "width": 881,
+    "height": 471
   },
   "/img/en/monitoring-door-control.png": {
     "width": 1278,
@@ -16604,12 +16652,12 @@
     "height": 341
   },
   "/img/en/monitoring-door-status-tooltip-device.png": {
-    "width": 350,
-    "height": 227
+    "width": 300,
+    "height": 259
   },
   "/img/en/monitoring-door-status-tooltip.png": {
-    "width": 455,
-    "height": 169
+    "width": 763,
+    "height": 220
   },
   "/img/en/monitoring-map-floor-control-door.png": {
     "width": 800,
@@ -19999,6 +20047,10 @@
     "width": 21,
     "height": 21
   },
+  "/img/menus/ico-door-close-alarm.svg": {
+    "width": 16,
+    "height": 16
+  },
   "/img/menus/ico-door-close.svg": {
     "width": 16,
     "height": 16
@@ -20030,6 +20082,14 @@
   "/img/menus/ico-edit2.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-elevator-floor-open.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-elevator-floor.svg": {
+    "width": 20,
+    "height": 20
   },
   "/img/menus/ico-elevator.svg": {
     "width": 20,
@@ -20077,6 +20137,14 @@
   },
   "/img/menus/ico-first-page2.svg": {
     "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-fixed-lock.svg": {
+    "width": 17,
+    "height": 16
+  },
+  "/img/menus/ico-fixed-unlock.svg": {
+    "width": 17,
     "height": 16
   },
   "/img/menus/ico-flelev.svg": {
@@ -20160,6 +20228,10 @@
     "height": 20
   },
   "/img/menus/ico-minus.svg": {
+    "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-monitor-group.svg": {
     "width": 16,
     "height": 16
   },
@@ -20732,16 +20804,16 @@
     "height": 16
   },
   "/img/monitoring-door-camera-control-open-video.png": {
-    "width": 1200,
-    "height": 446
+    "width": 866,
+    "height": 477
   },
   "/img/monitoring-door-control-open-video-drag-drop.png": {
     "width": 1200,
     "height": 387
   },
   "/img/monitoring-door-control-open-video.png": {
-    "width": 1200,
-    "height": 443
+    "width": 866,
+    "height": 477
   },
   "/img/monitoring-door-control.png": {
     "width": 1278,
@@ -20756,8 +20828,8 @@
     "height": 204
   },
   "/img/monitoring-door-status-tooltip.png": {
-    "width": 400,
-    "height": 194
+    "width": 763,
+    "height": 220
   },
   "/img/monitoring-map-floor-control-door.png": {
     "width": 800,

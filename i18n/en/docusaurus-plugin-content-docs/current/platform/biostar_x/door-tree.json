@@ -1,19 +1,15 @@
 [
   {
-    "name": "All Entry Door Groups",
+    "name": "All Door Groups",
     "children": [
       {
-        "name": "Entry Door Group A",
+        "name": "Door Group A",
         "type": "door-group",
         "children": [
           {
             "name": "Door",
             "type": "door-device",
             "children": [
-              {
-                "name": "Door sensor",
-                "type": "door-sensor"
-              },
               {
                 "name": "Door relay",
                 "type": "door-relay"
@@ -33,7 +29,7 @@
     ]
   },
   {
-    "name": "All Elevator Groups",
+    "name": "All Elevators",
     "type": "elevator",
     "children": [
       {

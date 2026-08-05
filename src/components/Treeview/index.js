@@ -13,6 +13,8 @@ import IcArm from '@site/static/img/menus/ico-arms.svg';
 import IcElev from '@site/static/img/menus/ico-elevator.svg';
 import IcZone from '@site/static/img/menus/ico-zone.svg';
 import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
+import IcGroup from '@site/static/img/menus/ico-monitor-group.svg';
+import IcElevFl from '@site/static/img/menus/ico-elevator-floor.svg';
 
 const dataKo = [
     {
@@ -118,11 +120,12 @@ function TreeNode({ node, level = 0 }) {
         <div className={styles.treeNode}>
             <div 
                 className={`${styles.treeItem} ${styles[`level${level}`]}`}
-                style={{ paddingLeft: `${level > 1 ? (level - 1) * 30 : 0}px` }}
+                style={{ paddingLeft: `${level > 0 ? level * 30 : 0}px` }}
             >
-                {level == 1 && hasChildren && (
+                {hasChildren && (
                     <span className={styles.treeToggle}>
-                        <IcDown />
+                        <IcDown height='20' width='auto' />
+                        {node.type === 'door-group' || node.type === 'elevator-group' ? <IcGroup className={styles.group} height='25' width='auto' /> : null}
                     </span>
                 )}
                 {(level > 1 || node.type === 'access-zone') && (
@@ -139,7 +142,7 @@ function TreeNode({ node, level = 0 }) {
                         {node.type === 'elevator' && <IcFloorElev height='25' width='auto' /> }
                         {node.type === 'elevator-device' && <IcElev height='25' width='auto' /> }
                         {node.type === 'elevator-schedule' && <IcFlElevFl height='25' width='auto' /> }
-                        {node.type === 'elevator-floor' && <div style={{ backgroundColor: '#aaa', width: '10px', height: '10px', borderRadius: '50%', top: '8px', position: 'relative' }} /> }
+                        {node.type === 'elevator-floor' && <IcElevFl height='25' width='auto' /> }
                     </span>
                 )}
                 
