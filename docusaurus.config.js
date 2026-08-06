@@ -164,6 +164,14 @@ const config = {
     ]
   ],
   plugins: [
+    [ '@docusaurus/plugin-client-redirects', {
+      redirects: [
+        {
+          to: '/device/vionyx_webserver',
+          from: '/docs/device/vionyx_webserver',
+        }
+      ]
+    } ],
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
     ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
