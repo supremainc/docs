@@ -839,6 +839,7 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-adding-custom-account',
               ]
             },
+            'platform/biostar_x/settings-account-personal-data',
             'platform/biostar_x/settings-account-scan-passport',
             {
               type: 'category',

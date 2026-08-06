@@ -1,0 +1,138 @@
+---
+id: settings-account-personal-data
+title: 장기 미출입자 조치하기
+description: 일정 기간 출입하지 않은 사용자를 자동으로 비활성화하고, 비활성화 전 사전 알림 이메일을 받도록 설정하는 방법을 안내합니다.
+keywords: [계정, 개인 정보, 자동 비활성화, 장기 미출입]
+---
+
+퇴사, 휴직 등으로 오랫동안 출입하지 않는 사용자의 크리덴셜을 그대로 두면 도용이나 무단 출입과 같은 보안 위협으로 이어질 수 있습니다. 자동 비활성화 기능을 사용하면 마지막 출입 이후 일정 기간이 지난 사용자를 자동으로 비활성화하여 관리자가 매번 수동으로 정리하지 않아도 사용자 계정을 안전하게 관리할 수 있습니다. 자동으로 비활성화되기 전에는 지정한 수신자에게 사전 알림 이메일을 보내 미리 검토하거나 예외 처리할 시간을 확보할 수 있습니다.
+
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.privateData' />를 클릭하세요.
+
+<Image src='/img/biostarx-settings-personal-data.png' />
+
+:::info
+
+<Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.privateData' /> 메뉴는 해당 메뉴 권한이 있는 관리자만 접근할 수 있습니다. 특정 메뉴에 대한 권한을 관리자에게 적용하려면 <DocLink docId='platform/biostar_x/settings-manage-account#addUserPermission' />를 참고하세요.
+
+:::
+
+
+## 자동 비활성화 설정 {/* #enable-auto-deactivation */}
+
+1. <Cmd sid='setting.personalData.autoDeactivation' /> 옵션에서 토글 버튼을 클릭해 활성화하세요.
+
+1. <Cmd sid='setting.personalData.applyTarget' /> 섹션에서 자동 비활성화 적용 대상을 설정하세요.
+
+   <Image src='/img/biostarx-settings-personal-data-enable.png' />
+
+   * 모든 사용자에게 동일한 기준을 적용하려면 <Cmd sid='setting.personalData.basicSettings' /> 옵션에서 토글 버튼을 클릭해 활성화하고 <Cmd sid='setting.personalData.inactivePeriod' />을 입력하세요. 최소 1일부터 최대 365일까지 설정할 수 있습니다.
+
+   * 특정 사용자 그룹에 다른 기준을 적용하려면 <Cmd sid='setting.personalData.exceptionGroup' />을 추가하세요. 추가 방법은 <DocLink inner='#exception-group' />를 참고하세요.
+
+1. 자동 비활성화되기 전에 미리 안내받으려면 <Cmd sid='setting.personalData.preNotificationEmail' />을 설정하세요. 설정 방법은 <DocLink inner='#pre-notification-email' />를 참고하세요.
+
+1. 설정을 완료했다면 화면 가장 아래의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+1. 확인 창이 나타나면 다음 자동 처리 예정일과 비활성화 예정 사용자 수를 확인하고 <Cmd sid='setting.personalData.saveChanges' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-personal-data-change-confirm.png' caption />
+
+:::info
+
+* <Cmd sid='setting.personalData.autoDeactivation' /> 옵션을 활성화해도 <Cmd sid='setting.personalData.basicSettings' /> 옵션은 자동으로 활성화되지 않습니다. <Cmd sid='setting.personalData.exceptionGroup' />만으로 정책을 구성하려면 <Cmd sid='setting.personalData.basicSettings' /> 옵션은 비활성 상태로 두세요.
+
+* 자동 비활성화는 마지막 출입 인증 시각을 기준으로 판정합니다. 출입 기록이 없거나 사용자 등록 이전의 출입 이력만 있는 사용자는 비활성화 대상에서 제외됩니다.
+
+* 한 사용자가 <Cmd sid='setting.personalData.basicSettings' />과 <Cmd sid='setting.personalData.exceptionGroup' />에 모두 해당하면 <Cmd sid='setting.personalData.exceptionGroup' />의 <Cmd sid='setting.personalData.inactivePeriod' />이 우선 적용됩니다. 2개 이상의 <Cmd sid='setting.personalData.exceptionGroup' />에 속한다면 그중 가장 짧은 <Cmd sid='setting.personalData.inactivePeriod' />이 적용됩니다.
+
+* 자동 비활성화는 하루 1회(자정) 실행됩니다. 설정을 변경해도 즉시 반영되지 않고 다음 처리 시점부터 적용되며, 이미 발송된 사전 알림 일정에는 영향을 주지 않습니다.
+
+* <Cmd sid='setting.personalData.autoDeactivation' /> 옵션을 비활성 상태로 변경할 때는 확인 창 없이 바로 저장됩니다.
+
+:::
+
+
+## 그룹별 다른 기준 적용 {/* #exception-group */}
+
+특정 사용자 그룹에는 <Cmd sid='setting.personalData.basicSettings' />과 다른 <Cmd sid='setting.personalData.inactivePeriod' />을 적용할 수 있습니다.
+
+### 그룹별 설정 추가
+
+1. <Cmd sid='setting.personalData.exceptionGroup' /> 목록 오른쪽의 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-personal-data-add-btn.png' />
+
+1. <Cmd sid='setting.personalData.addGroup' /> 창이 나타나면 각 항목을 설정하세요.
+
+   <Image src='/img/biostarx-settings-personal-data-add-group-settings.png' />
+
+   * <Cmd sid='common.name' />: 다른 그룹 설정과 중복되지 않는 이름을 입력하세요. 대소문자와 앞뒤 공백은 구분하지 않습니다.
+
+   * <Cmd sid='setting.personalData.inactivePeriod' />: 최소 1일부터 최대 365일까지 설정할 수 있습니다.
+
+   * <Cmd sid='setting.personalData.userGroup' />: 적용할 사용자 그룹을 선택하세요. 그룹을 선택하면 하위 사용자 그룹도 함께 선택됩니다.
+
+1. 사용자 그룹 선택을 완료하면 <Cmd sid='common.button.confirm' /> 버튼을 클릭하세요.
+
+1. 변경 사항을 저장하려면 화면 가장 아래의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+1. 확인 창이 나타나면 다음 자동 처리 예정일과 비활성화 예정 사용자 수를 확인하고 <Cmd sid='setting.personalData.saveChanges' /> 버튼을 클릭하세요.
+
+### 그룹별 설정 수정 및 삭제하기
+
+<Image src='/img/biostarx-settings-personal-data-group-edit.png' />
+
+* 수정하려면 <Cmd sid='setting.personalData.exceptionGroup' /> 목록에서 원하는 행의 <IcRepoEdit title='Edit' /> 버튼을 클릭하고 값을 변경한 뒤 <Cmd sid='common.button.confirm' /> 버튼을 클릭하세요.
+
+* 삭제하려면 원하는 행의 <IcTrash title='Delete' /> 버튼을 클릭하세요. 확인 메시지가 나타나면 <Cmd sid='common.button.delete' /> 버튼을 클릭하세요.
+
+수정 또는 삭제한 내용을 저장하려면 화면 가장 아래의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* <Cmd sid='setting.personalData.exceptionPriorityNote' />
+
+* <Cmd sid='setting.personalData.exceptionGroup' />을 삭제해도 이미 비활성화된 사용자는 복구되지 않습니다. 삭제 후에는 해당 사용자에게 적용 가능한 다른 설정(<Cmd sid='setting.personalData.basicSettings' /> 등)이 있으면 그 설정으로 전환됩니다.
+
+:::
+
+
+## 사전 알림 이메일 설정하기 {/* #pre-notification-email */}
+
+사용자가 자동으로 비활성화되기 전에 지정한 수신자에게 이메일로 미리 알릴 수 있습니다.
+
+1. <Cmd sid='setting.personalData.preNotificationEmail' /> 옵션에서 토글 버튼을 클릭해 활성화하세요.
+
+   <Image src='/img/biostarx-settings-personal-pre-noti-email-settings.png' />
+
+1. <Cmd sid='setting.personalData.preNotificationDeadline' />을 입력하세요. 입력한 기간만큼 자동 비활성화 알림 메일이 발송됩니다. 최소 1일부터 최대 30일까지 설정할 수 있습니다.
+
+1. <Cmd sid='setting.personalData.preNotificationRecipients' /> 입력 필드에 이름, ID, 이메일로 사용자를 검색해 선택하거나 이메일 주소를 직접 입력하고 <Kbd>Enter</Kbd> 키를 누르세요.
+
+   <Image src='/img/biostarx-settings-personal-pre-noti-email-auto-complete.png' />
+
+1. 설정을 완료했다면 화면 가장 아래의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 사전 알림 이메일을 사용하려면 SMTP 설정이 완료되어 있어야 합니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-email-setting' />를 참고하세요.
+
+* <Cmd sid='setting.personalData.preNotificationDeadline' />은 <Cmd sid='setting.personalData.basicSettings' />과 모든 <Cmd sid='setting.personalData.exceptionGroup' />의 <Cmd sid='setting.personalData.inactivePeriod' />보다 짧게 설정해야 합니다.
+
+* **BioStar X**에 등록되지 않은 이메일 주소도 수신자로 추가할 수 있습니다.
+
+* 비활성화 예정 사용자는 사용자별 개별 메일이 아닌 하루 1회 통합 메일로 발송됩니다.
+
+* <Cmd sid='setting.personalData.basicSettings' />이 비활성 상태이고 <Cmd sid='setting.personalData.exceptionGroup' />도 없는 상태에서 <Cmd sid='setting.personalData.preNotificationEmail' />만 활성화하면, 적용 대상이 없어 실제로 메일이 발송되지 않습니다.
+
+:::
+
+
+## 관련 정보
+
+* 장기 미출입 사용자는 사용자 목록의 <Cmd sid='team.user.table.lastAccessed' /> 열이나 고급 검색으로 조회할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/view-users#advanced-search' />를 참고하세요.
+
+   <Image src='/img/biostarx-settings-personal-user-list-search.png' className='none' />
+
+* 자동 및 수동으로 비활성화된 사용자 이력은 <Cmd sid='data.sidebar.inactiveUsers' /> 리포트에서 확인할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/data-generate-reports#viewUserReport' />를 참고하세요.
