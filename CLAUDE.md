@@ -24,7 +24,7 @@ Docusaurus 기반의 정적 사이트 생성기를 사용하며, 다국어 지�
 
 **스택**
 
-- Docusaurus 3.9.2 (정적 사이트 생성기)
+- Docusaurus 3.10.2 (정적 사이트 생성기)
 - React 19 + TypeScript
 - Tailwind CSS 3.4.3
 - Node.js 20+ (yarn 패키지 매니저)
@@ -34,7 +34,6 @@ Docusaurus 기반의 정적 사이트 생성기를 사용하며, 다국어 지�
 - 다국어 문서 (한국어, 영어, 일본어, 스페인어)
 - 검색 (Algolia)
 - PDF 생성 (princexml 기반)
-- OpenAPI 문서 (Redocusaurus)
 - 이미지 줌, 유튜브 임베드 등
 
 ## 개발 환경 구축
@@ -68,6 +67,10 @@ yarn build:preview
 │   └── css/           # 글로벌 스타일
 ├── blog/              # 블로그 콘텐츠
 ├── static/            # 정적 자산 (로고, 이미지 등)
+├── genpdf/            # PDF 생성 스크립트 (mdx-to-html 변환 등)
+├── utils/             # 코드 샘플, 로컬라이제이션, 이미지 최적화 스크립트
+├── api/               # API 관련 리소스
+├── changelog/         # 변경 이력
 ├── docusaurus.config.js  # Docusaurus 설정
 ├── sidebars.js        # 사이드바 구조
 └── package.json
@@ -140,12 +143,18 @@ yarn build:preview
 **번역 워크플로우**
 - 번역 관련 스크립트: `yarn translate`, `yarn translate:file`
 - Crowdin 통합으로 번역 작업 자동화
-- 영어 번역 시 주의사항은 [skills/english-translation/SKILL.md](.github/skills/english-translation/SKILL.md) 참조
+- 영어 번역 시 주의사항은 [skills/english-translation/SKILL.md](.claude/skills/english-translation/SKILL.md) 참조
 
 ### 6. PDF 생성
 
 - 프린트 스타일: `./genpdf/default.css`
 - 생성 명령어: `generatepdf.bat` (CMD 환경에서 실행, 설정 필요)
+- 상세 워크플로우: [PDF_WORKFLOW_GUIDE.md](PDF_WORKFLOW_GUIDE.md) 참조
+
+### 7. Git 커밋 검사
+
+- `.husky/pre-commit`에서 `lint-staged` 실행 (커밋 전 자동 검사)
+- 커밋 전 실패 시 관련 파일 수정 후 재커밋
 
 ## 일반적인 개발 작업
 
@@ -164,6 +173,14 @@ yarn build:preview
 ### 이미지/자산 최적화
 
 - `yarn sizeOfimages` / `yarn sizeOfimages:preview`
+- 상세 워크플로우: [IMAGE_UPLOAD_README.md](IMAGE_UPLOAD_README.md) 참조
+
+### 기타 스크립트
+
+- `yarn write-translations`: 번역 대상 문자열 추출
+- `yarn write-heading-ids`: 헤딩 ID 생성
+- `yarn build:postman`: Postman 컬렉션 생성
+- `yarn addcodesample`: 코드 샘플 자동 추가
 
 ### 번역/국제화
 
@@ -205,6 +222,10 @@ sh preview.sh
 - **사용자 중심 설계**: 실제 업무 흐름과 일치하는 정보 순서
 - **한국어 문법**: 사용자가 이해하기 쉬운 문장 구조와 표현 사용
 
+## MCP 서버
+
+- `mcp-korean-spell` (`.mcp.json`에 설정): 한국어 맞춤법 검사. 한국어 문서 작성/검수 시 활용
+
 ## 외부 리소스
 
 - [Docusaurus 공식 문서](https://docusaurus.io/)
@@ -224,4 +245,4 @@ A: `yarn sizeOfimages` 실행하여 자동 최적화.
 
 ---
 
-**마지막 업데이트**: 2026-05-04
+**마지막 업데이트**: 2026-08-07
