@@ -3391,6 +3391,42 @@
     "width": 400,
     "height": 266
   },
+  "/img/biostarx-settings-personal-data-add-btn.png": {
+    "width": 924,
+    "height": 137
+  },
+  "/img/biostarx-settings-personal-data-add-group-settings.png": {
+    "width": 960,
+    "height": 648
+  },
+  "/img/biostarx-settings-personal-data-change-confirm.png": {
+    "width": 480,
+    "height": 246
+  },
+  "/img/biostarx-settings-personal-data-enable.png": {
+    "width": 958,
+    "height": 356
+  },
+  "/img/biostarx-settings-personal-data-group-edit.png": {
+    "width": 917,
+    "height": 116
+  },
+  "/img/biostarx-settings-personal-data.png": {
+    "width": 1014,
+    "height": 714
+  },
+  "/img/biostarx-settings-personal-pre-noti-email-auto-complete.png": {
+    "width": 706,
+    "height": 231
+  },
+  "/img/biostarx-settings-personal-pre-noti-email-settings.png": {
+    "width": 918,
+    "height": 149
+  },
+  "/img/biostarx-settings-personal-user-list-search.png": {
+    "width": 1000,
+    "height": 423
+  },
   "/img/biostarx-settings-preference-add-sound.png": {
     "width": 735,
     "height": 338
@@ -4141,7 +4177,7 @@
   },
   "/img/biostarx-users-advanced-search.png": {
     "width": 1500,
-    "height": 533
+    "height": 613
   },
   "/img/biostarx-users-list-column-layout.png": {
     "width": 600,
@@ -12943,6 +12979,42 @@
     "width": 400,
     "height": 250
   },
+  "/img/en/biostarx-settings-personal-data-add-btn.png": {
+    "width": 968,
+    "height": 137
+  },
+  "/img/en/biostarx-settings-personal-data-add-group-settings.png": {
+    "width": 964,
+    "height": 648
+  },
+  "/img/en/biostarx-settings-personal-data-change-confirm.png": {
+    "width": 488,
+    "height": 246
+  },
+  "/img/en/biostarx-settings-personal-data-enable.png": {
+    "width": 958,
+    "height": 356
+  },
+  "/img/en/biostarx-settings-personal-data-group-edit.png": {
+    "width": 917,
+    "height": 116
+  },
+  "/img/en/biostarx-settings-personal-data.png": {
+    "width": 1014,
+    "height": 714
+  },
+  "/img/en/biostarx-settings-personal-pre-noti-email-auto-complete.png": {
+    "width": 706,
+    "height": 231
+  },
+  "/img/en/biostarx-settings-personal-pre-noti-email-settings.png": {
+    "width": 918,
+    "height": 149
+  },
+  "/img/en/biostarx-settings-personal-user-list-search.png": {
+    "width": 1000,
+    "height": 423
+  },
   "/img/en/biostarx-settings-preference-add-sound.png": {
     "width": 735,
     "height": 338
@@ -13669,7 +13741,7 @@
   },
   "/img/en/biostarx-users-advanced-search.png": {
     "width": 1500,
-    "height": 546
+    "height": 613
   },
   "/img/en/biostarx-users-list-column-layout.png": {
     "width": 600,
