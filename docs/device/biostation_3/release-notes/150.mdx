@@ -3,7 +3,7 @@ id: 150
 title: 펌웨어 버전 1.5.0
 ---
 
-# 펌웨어 버전 1.5.0 (빌드 번호 1.5.0_2026XXXX)
+# 펌웨어 버전 1.5.0 (빌드 번호 1.5.0_26XXXX)
 
 릴리즈<Separator/>2026-08-XX
 
@@ -33,12 +33,6 @@ BS3FW-2320 : 인증 성공 아이콘 색상 Blue → Green 변경
 1. 인증 성공 시 표시되는 아이콘 색상을 초록색으로 변경
 1. Changed the authentication success icon color to green.
 
-BS3FW-2333 : OSDP PD Capability 개선
-1. 
-1. 
-
-BS3FW-2343 : Fire Alarm Zone 상태를 메모리에 즉시 저장하도록 개선
-
 BS3FW-2193 : Siemens Panel 연동 환경에서 BS3 재부팅 시 다른 장치의 RS-485 연결 끊김 문제 수정
 
 BS3FW-2290 : BS3 FW v1.3.0 → v1.4.1 업그레이드 후 T&A By Scheduled 동작 오류 수정
@@ -49,15 +43,9 @@ BS3FW-2301 : EV2 SM 활성 + Wiegand Bypass 환경에서 EV1 카드 CSN 전달 �
 
 BS3FW-2332 : iPhone iOS 26 업그레이드 후 Airfob Pass 출입 불가 문제 수정
 
-BS3FW-2332 : Android OnePlus OS 16에서 Suprema Mobile Access 인증 불가 문제 수정
-
 BS3FW-2341 : Wiegand Reader에서 카드 전용 사용자 인증 시 Authentication Fail (Invalid Credential) 발생 문제 수정
 
 BS3FW-2424: [UI 지원 장치] 사용자 이름 및 사용자 ID에 Dot(.) 지원
-
-BS3FW-2356 : Protocol 사용자 Enroll 중 Face Template Update 시 Lock/Reboot 발생 문제 수정
-
-BS3FW-2364 : 사용자 동기화 중 등록 완료 지연(VFMCore 개선) 수정
 
 BS3FW-2369 : Manufacture BLE Version Read 실패 개선
 
@@ -85,6 +73,8 @@ BS3FW-2356 : Protocol 사용자 Enroll 중 Face Template Update 시 Lock/Reboot 
 
 BS3FW-2332 : Android OnePlus OS 16에서 Suprema Mobile Access 인증 불가 문제 수정 - 발생버전 : V1.0.0
 
-BS3FW-2333 : OSDP PD Capability 개선 - 발생버전: V1.0.0
+BS3FW-2333 : OSDP PD Capability 개선
+1. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제 <Badge>1.0.0</Badge>
+1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
 
 </BugLists>
