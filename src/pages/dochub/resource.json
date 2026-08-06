@@ -668,7 +668,7 @@
             "XPD2-GDB",
             "XPD2-GKDB"
         ],
-        "version": "1.8.3",
+        "version": "1.8.4",
         "manuals": {
             "ko": "device/xpass_d2/XPass D2_IG_1.12_KO_260624.pdf",
             "en": "device/xpass_d2/XPass D2_IG_1.12_EN_260624.pdf",
@@ -684,7 +684,7 @@
             "ko": "device/xpass_d2/XPass D2_DrillingTemplate_KO.pdf",
             "en": "device/xpass_d2/XPass D2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-04-21"
+        "release_date": "2026-07-22"
     },
     {
         "category": "rfmobile",
