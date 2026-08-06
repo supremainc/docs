@@ -4,9 +4,9 @@ title: 펌웨어 버전 1.5.3
 draft: true
 ---
 
-# 펌웨어 버전 1.5.3 (빌드 번호 1.5.3_260713)
+# 펌웨어 버전 1.5.3 (빌드 번호 1.5.3_260802)
 
-릴리즈<Separator/>2026-07-30
+릴리즈<Separator/>2026-08-07
 
 :::caution
 
@@ -46,6 +46,14 @@ draft: true
 (XPASSII-705) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경
 1. 화재 알람 발생 후 전원 재기동 시 화재 경보 구역 상태 표시 및 알람 해제 동작 개선
 1. Improved zone status display and alarm clearing behavior after power restart following a fire alarm.
+
+(XPASSII-711) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System)
+1. BLE 동작 안정성 개선
+1. Improved BLE stability.
+
+(XPASSII-558) [BDP-990] Relay가 Lock되었을 때 인증 실패 처리하기
+1. **수동 잠김**으로 설정된 출입문에 인증 시 인증 실패 이벤트가 발생하고 상태 메시지가 표시되도록 개선
+1. Improved so that when authentication is attempted on a door set to **Manual Lock**, an authentication failure event occurs and a locked message appears.
 
 ## 버그 수정
 
