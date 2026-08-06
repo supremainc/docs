@@ -188,6 +188,41 @@
   }
   .import-btn:hover{background:var(--accent-ink);}
   .import-btn.loading{opacity:.6;pointer-events:none;}
+  .notify-note{font-size:11.5px;color:var(--muted);margin:-6px 0 14px 2px;line-height:1.5;}
+  .notify-note.denied{color:var(--warn);}
+  .notify-note b{color:var(--accent-ink);font-weight:700;}
+
+  /* 월별 기준근로시간 버튼 + 모달 */
+  .std-table-btn{
+    margin:2px 0 16px;width:100%;background:#fff;border:1px dashed var(--accent);color:var(--accent-ink);
+    border-radius:9px;padding:9px 12px;font-size:12.5px;font-weight:700;cursor:pointer;
+    font-family:var(--sans);transition:background .15s;
+  }
+  .std-table-btn:hover{background:var(--accent-soft);}
+  .modal-overlay{
+    position:fixed;inset:0;background:rgba(20,22,26,.5);display:flex;align-items:center;justify-content:center;
+    z-index:100;padding:20px;
+  }
+  .modal{
+    background:#fff;border-radius:16px;max-width:520px;width:100%;max-height:85vh;overflow:auto;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+  }
+  .modal-head{
+    display:flex;align-items:center;justify-content:space-between;padding:18px 22px;
+    border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;
+  }
+  .modal-head h3{margin:0;font-size:16px;font-weight:700;}
+  .modal-close{border:none;background:transparent;font-size:20px;color:var(--muted);cursor:pointer;line-height:1;padding:2px 6px;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-body{padding:16px 22px 22px;}
+  .modal-body .modal-desc{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6;}
+  .std-tbl{width:100%;border-collapse:collapse;font-size:13px;}
+  .std-tbl th,.std-tbl td{padding:8px 6px;text-align:center;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;}
+  .std-tbl th{font-size:11.5px;color:var(--muted);font-weight:700;background:#faf9f6;}
+  .std-tbl td.mon{font-weight:700;color:var(--ink);}
+  .std-tbl td.std{font-family:var(--mono);font-weight:700;color:var(--accent-ink);}
+  .std-tbl td.mx{font-family:var(--mono);color:var(--muted);}
+  .std-tbl tr.cur{background:var(--accent-soft);}
   .cal-head .month-lab{font-size:18px;font-weight:700;font-family:var(--mono);letter-spacing:.01em;padding-top:8px;}
   .cal-head-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
   .cal-nav{display:flex;align-items:center;}
@@ -436,6 +471,7 @@
         <div class="stat-v"><div class="num" id="leftNum">–</div></div>
       </div>
     </div>
+    <button class="std-table-btn" id="stdTableBtn">월별 기준근로시간 확인하기</button>
     <div class="progress-shell">
       <div class="progress-track"><div class="progress-bar" id="progBar"></div></div>
       <div class="progress-cap">
@@ -470,6 +506,7 @@
         <input type="file" id="attImport" accept=".xlsx" hidden>
       </label>
     </div>
+    <div class="notify-note" id="notifyNote">이 페이지가 열려 있으면, 오늘 퇴근 시간 10분 전에 Windows 알림을 보냅니다.</div>
     <div class="cal-head">
       <div class="month-lab" id="monthLab">–</div>
       <div class="cal-head-right">
@@ -530,7 +567,7 @@
         <li><em>야근식대</em>: 평일에 <code>11시간 30분 이상</code> 체류하면 인당 12,000원 지원 대상입니다(달력 칸과 계산기에 <span class="chip meal">야근식대</span> 표시).</li>
         <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간). ※ 휴가가 있는 날은 이 자동 경고가 표시되지 않습니다.</li>
         <li><em>근무 미편성 가능일</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">근무 미편성 가능일</span>로 표시됩니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
-        <li><em>공휴일</em>: 2026년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
+        <li><em>공휴일</em>: 2026·2027년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
         <li><em>야간근로수당</em>: 야간(<code>22:00~06:00</code>)에 근무한 시간이 한 달 <code>6시간</code>을 초과하면 그 초과분이 <b>야간근로수당 지급시간</b>으로 요약에 표시됩니다(= 총 야간근로시간 − 6시간). 실 근무시간으로 인정되는 밤 시간은 22:00~23:30까지이며, 그 이후~06:00 근무는 실근무엔 포함되지 않지만 야간근로수당 산정에는 포함됩니다. 자정을 넘겨 근무한 경우 퇴근 시간을 <b>24:00 이후 표기</b>로 입력하세요(예: 익일 01:30 → <code>25:30</code>).</li>
         <li><em>휴일 근무</em>: 주말·공휴일에 한 근무는 기준근로시간에 포함되지 않고 <b>휴일 근무 시간</b>으로 따로 집계됩니다(별도 인정·정산). 휴일근무는 <code>1일 최대 8시간</code>까지만 인정되며, 초과분은 인정되지 않습니다(달력 칸에 <span class="badge core" style="display:inline-block;">8시간 초과 미인정</span> 표시).</li>
       </ul>
@@ -540,7 +577,24 @@
   </main>
   </div>
 
-  <div class="footnote">V2.6 | Technical Writing</div>
+  <div class="footnote">V2.7 | Technical Writing</div>
+</div>
+
+<!-- 월별 기준근로시간 모달 -->
+<div class="modal-overlay" id="stdModal" style="display:none;">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="stdModalTitle">월별 기준근로시간</h3>
+      <button class="modal-close" id="stdModalClose" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-desc">
+        기준근로시간 = (역일수 ÷ 7 × 40) − (평일 공휴일 수 × 8) · 소수점 버림<br>
+        최대근로시간 = (역일수 ÷ 7 × 52) · 소수점 버림
+      </div>
+      <table class="std-tbl" id="stdTbl"></table>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -875,6 +929,20 @@ const HOLIDAYS = {
     '09-24':'추석 연휴','09-25':'추석','09-26':'추석 연휴',
     '10-03':'개천절','10-05':'대체공휴일','10-09':'한글날',
     '12-25':'성탄절'
+  },
+  2027:{
+    '01-01':'신정',
+    '02-06':'설날 연휴','02-07':'설날','02-08':'설날 연휴','02-09':'대체공휴일',
+    '03-01':'삼일절',
+    '05-01':'근로자의 날','05-03':'대체공휴일',
+    '05-05':'어린이날','05-13':'부처님오신날',
+    '06-06':'현충일',
+    '07-17':'제헌절','07-19':'대체공휴일',
+    '08-15':'광복절','08-16':'대체공휴일',
+    '09-14':'추석 연휴','09-15':'추석','09-16':'추석 연휴',
+    '10-03':'개천절','10-04':'대체공휴일',
+    '10-09':'한글날','10-11':'대체공휴일',
+    '12-25':'성탄절','12-27':'대체공휴일'
   }
 };
 function holidayName(year, month, day){
@@ -1612,6 +1680,86 @@ document.getElementById('attImport').addEventListener('change', e=>{
   if(f) importAttendance(f);
   e.target.value = '';   // 같은 파일 다시 선택 가능하도록 초기화
 });
+
+/* =========================================================
+   월별 기준근로시간 모달
+   ========================================================= */
+const stdModal = document.getElementById('stdModal');
+const stdTbl = document.getElementById('stdTbl');
+const stdModalTitle = document.getElementById('stdModalTitle');
+function buildStdTable(year){
+  stdModalTitle.textContent = year + '년 월별 기준근로시간';
+  let html = '<tr><th>월</th><th>역일수</th><th>공휴일<br>(평일)</th><th>기준근로시간</th><th>최대근로시간</th></tr>';
+  for(let m = 0; m < 12; m++){
+    const days = new Date(year, m+1, 0).getDate();
+    const hol  = weekdayHolidayCount(year, m);
+    const std  = standardHours(year, m);
+    const mx   = maxHours(year, m);
+    const cur  = (year === curYear && m === curMonth) ? ' class="cur"' : '';
+    html += `<tr${cur}><td class="mon">${m+1}월</td><td>${days}</td><td>${hol}</td>` +
+            `<td class="std">${std}시간</td><td class="mx">${mx}시간</td></tr>`;
+  }
+  stdTbl.innerHTML = html;
+}
+function openStdModal(){ buildStdTable(curYear); stdModal.style.display = 'flex'; }
+function closeStdModal(){ stdModal.style.display = 'none'; }
+document.getElementById('stdTableBtn').addEventListener('click', openStdModal);
+document.getElementById('stdModalClose').addEventListener('click', closeStdModal);
+stdModal.addEventListener('click', e=>{ if(e.target === stdModal) closeStdModal(); });
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeStdModal(); });
+
+/* =========================================================
+   퇴근 10분 전 Windows 알림 (페이지가 열려 있는 동안)
+   ========================================================= */
+const notifyNote = document.getElementById('notifyNote');
+function updateNotifyNote(){
+  if(!('Notification' in window)){
+    notifyNote.textContent = '이 브라우저는 알림 기능을 지원하지 않습니다.';
+    return;
+  }
+  notifyNote.classList.remove('denied');
+  const p = Notification.permission;
+  if(p === 'granted'){
+    notifyNote.innerHTML = '이 페이지가 열려 있으면, 오늘 퇴근 시간 <b>10분 전</b>에 Windows 알림을 보냅니다.';
+  } else if(p === 'denied'){
+    notifyNote.textContent = '브라우저 알림이 차단되어 오늘 퇴근 알림을 보낼 수 없습니다. (브라우저 사이트 설정에서 알림 허용)';
+    notifyNote.classList.add('denied');
+  } else {
+    notifyNote.innerHTML = '오늘 퇴근 시간 <b>10분 전</b> 알림을 받으려면 브라우저 알림을 <b>허용</b>해 주세요. (페이지를 한 번 클릭하면 허용 창이 뜹니다)';
+  }
+}
+function requestNotify(){
+  if(!('Notification' in window)) return;
+  if(Notification.permission === 'default'){
+    try{ Notification.requestPermission().then(updateNotifyNote); }catch(e){}
+  }
+}
+let notifiedTag = null;   // 이미 알림 보낸 (오늘+퇴근시각) 조합
+function checkLeaveNotify(){
+  if(!('Notification' in window) || Notification.permission !== 'granted') return;
+  const now = new Date();
+  const y = now.getFullYear(), mo = now.getMonth(), da = now.getDate();
+  const key = `${y}-${String(mo+1).padStart(2,'0')}-${String(da).padStart(2,'0')}`;
+  let rec = null;
+  try{ rec = loadMonth(y, mo)[key]; }catch(e){}
+  if(!rec || !rec.out){ notifiedTag = null; return; }
+  const om = toMinOut(rec.out);
+  if(om === null || om > 1440){ notifiedTag = null; return; }   // 자정 넘김은 제외
+  const nowMin = now.getHours()*60 + now.getMinutes();
+  const tag = key + '@' + rec.out;                              // 퇴근 바뀌면 태그가 달라짐
+  if(notifiedTag === tag) return;
+  if(nowMin >= om - 10 && nowMin < om){
+    try{ new Notification('퇴근 10분 전', { body: `오늘 퇴근 시간은 ${rec.out} 입니다.` }); }catch(e){}
+    notifiedTag = tag;
+  }
+}
+updateNotifyNote();
+requestNotify();
+if('Notification' in window && Notification.permission === 'default'){
+  document.addEventListener('click', function askOnce(){ requestNotify(); document.removeEventListener('click', askOnce); }, { once:true });
+}
+setInterval(checkLeaveNotify, 30000);
+checkLeaveNotify();
 
 /* 초기 실행 */
 renderCalc();
