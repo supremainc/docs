@@ -3239,6 +3239,38 @@
     "width": 1014,
     "height": 277
   },
+  "/img/biostarx-settings-device-playback-playVideo-batch-edit.png": {
+    "width": 793,
+    "height": 416
+  },
+  "/img/biostarx-settings-device-playback-playVideo-change-order.png": {
+    "width": 490,
+    "height": 217
+  },
+  "/img/biostarx-settings-device-playback-playVideo-delete.png": {
+    "width": 501,
+    "height": 293
+  },
+  "/img/biostarx-settings-device-playback-playVideo-enable.png": {
+    "width": 677,
+    "height": 265
+  },
+  "/img/biostarx-settings-device-playback-playVideo-fail-transfer.png": {
+    "width": 560,
+    "height": 325
+  },
+  "/img/biostarx-settings-device-playback-playVideo-upload-complete.png": {
+    "width": 340,
+    "height": 205
+  },
+  "/img/biostarx-settings-device-playback-playVideo-upload-progress.png": {
+    "width": 490,
+    "height": 236
+  },
+  "/img/biostarx-settings-device-playback-playVideo-upload.png": {
+    "width": 501,
+    "height": 293
+  },
   "/img/biostarx-settings-email-contents.png": {
     "width": 894,
     "height": 161
@@ -12850,6 +12882,34 @@
   "/img/en/biostarx-settings-device-add-virtual-device.png": {
     "width": 1014,
     "height": 277
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-batch-edit.png": {
+    "width": 793,
+    "height": 416
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-delete.png": {
+    "width": 501,
+    "height": 293
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-enable.png": {
+    "width": 677,
+    "height": 265
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-fail-transfer.png": {
+    "width": 560,
+    "height": 325
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-upload-complete.png": {
+    "width": 340,
+    "height": 205
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-upload-progress.png": {
+    "width": 490,
+    "height": 254
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-upload.png": {
+    "width": 501,
+    "height": 293
   },
   "/img/en/biostarx-settings-email-contents.png": {
     "width": 894,
