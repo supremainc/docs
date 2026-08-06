@@ -49,7 +49,7 @@ keywords: [장치, 고급]
 
 * 최소 두 종류 이상의 크리덴셜을 등록해야 합니다.
 
-* 새 장치와 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다.
+* 마스터 관리자를 지원하는 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다.
 
 * 장치가 지원하는 모든 크리덴셜을 인증 수단으로 사용할 수 있습니다.
 
@@ -61,7 +61,7 @@ keywords: [장치, 고급]
 
 * 펌웨어를 업그레이드한 기존 장치는 **BioStar X**의 장치 설정에 <Cmd sid='device.masterAdmin.title' product='2' /> 메뉴가 나타나지 않습니다.
 
-* 펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 설정 방법은 <DocLink inner='#two-step-authentication' />을 참고하세요.
+* <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않는 장치 중 일부는(예: 펌웨어 업그레이드로 해당 기능이 추가된 장치) <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화할 수 있습니다. 장치 종류에 따라 <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션 자체가 표시되지 않을 수 있습니다.
 
 :::
 
@@ -75,9 +75,11 @@ keywords: [장치, 고급]
 
 :::info
 
-모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 두 종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
+* 모든 관리자에게 2종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 2종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
 
-<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+   <Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+* 장치에 따라 <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션이 화면에 표시되지 않으면서도 이전에 활성화한 설정이 유지되는 경우가 있습니다. 이때는 **BioStar X**에서 비활성화할 수 없으므로 <Support />에 문의하세요.
 
 :::
 
@@ -128,7 +130,27 @@ keywords: [장치, 고급]
 
 * 각 장치에 설정된 관리자는 **BioStar X** 권한에 영향을 미치지 않습니다.
 
+* 마스터 관리자를 지원하는 장치(<Badge only>CE향 제품</Badge>)에 장치 관리자로 등록한 사용자의 PIN이 8자리 미만이면, 해당 사용자의 PIN을 8자리 이상으로 다시 등록해야 합니다. PIN 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/enroll-credential-pin' />를 참고하세요.
+
 :::
+
+:::caution
+
+장치 관리자로 설정하려는 사용자에게 등록된 크리덴셜이 2종류 미만이면 에러 메시지가 표시됩니다. 모든 장치 관리자에게 2종류 이상의 크리덴셜을 등록한 후 다시 시도하세요.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+### 삭제된 사용자의 관리자 등록 처리
+
+장치에 등록된 관리자 중 **BioStar X**에서 이미 삭제된 사용자가 있는 경우, 장치 설정을 저장하기 위해 화면 가장 아래의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하면 다음과 같은 팝업이 나타납니다.
+
+<Image src='/img/biostarx-settings-device-deleted-operator-check.png' />
+
+* <Cmd sid='button.yes' product='2' />: 삭제된 사용자를 관리자 목록에서 제거하고 저장합니다.
+
+* <Cmd sid='button.no' product='2' />: 저장을 취소합니다.
 
 
 ## 근태 관리 {/* #attendance-management */}
