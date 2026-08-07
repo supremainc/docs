@@ -367,20 +367,20 @@
               "label": "PoE",
               "label_id": "specs.interface.poe",
               "value": {
-               "ko": ["최대 12 W", "12 VDC: 1.0 A"],
-               "en": ["Max. 12 W", "12 VDC: 1.0 A"],
-               "es": ["Máx. 12 W", "12 VDC: 1.0 A"],
-               "ja": ["最大 12 W", "12 VDC：1.0 A"]
+               "ko": ["최대 12.95 W", "12 VDC: 1.08 A"],
+               "en": ["Max. 12.95 W", "12 VDC: 1.08 A"],
+               "es": ["Máx. 12.95 W", "12 VDC: 1.08 A"],
+               "ja": ["最大 12.95 W", "12 VDC：1.08 A"]
               }
             },
             "model2": {
               "label": "PoE+",
               "label_id": "specs.interface.poe_plus",
               "value": {
-               "ko": ["최대 22 W", "12 VDC: 1.8 A"],
-               "en": ["Max. 22 W", "12 VDC: 1.8 A"],
-               "es": ["Máx. 22 W", "12 VDC: 1.8 A"],
-               "ja": ["最大 22 W", "12 VDC：1.8 A"]
+               "ko": ["최대 23 W", "12 VDC: 1.92 A"],
+               "en": ["Max. 23 W", "12 VDC: 1.92 A"],
+               "es": ["Máx. 23 W", "12 VDC: 1.92 A"],
+               "ja": ["最大 23 W", "12 VDC：1.92 A"]
               }
             }
           }
