@@ -74,6 +74,22 @@ keywords: [ 모니터링 , 비디오 ]
 
 </Calloutlists>
 
+### 녹화 영상 재생 유지 및 실패 안내 {/* #recording-playback-failure */}
+
+<Cmd sid='arena.video.title' /> 탭에서 다른 화면으로 이동한 뒤(예: 다른 페이지로 이동, <Cmd sid='arena.tree.map.title' /> 탭으로 전환, 새로고침) 다시 <Cmd sid='arena.video.title' /> 탭으로 돌아오면 이전에 재생하던 녹화 영상 상태를 그대로 유지합니다. 이때 각 비디오 타일은 배치된 순서대로 영상을 다시 불러옵니다.
+
+VMS 종류가 **Leopard**이면 녹화 영상 재생 개수 제한으로 인해 재생에 실패하는 타일이 나타날 수 있습니다. 재생에 실패한 타일에는 다음 안내가 표시되며, 재생에 성공한 타일은 녹화 영상을 그대로 재생합니다.
+
+<Image src='/img/biostarx-monitoring-video-limit-notice.png' />
+
+:::info
+
+* <Cmd sid='arena.message.leopardPlaybackLimitAction' /> 버튼을 클릭하면 실시간 영상으로 전환합니다.
+
+* 영상마다 응답 속도가 달라 재생 실패가 표시되는 시점은 타일마다 다를 수 있습니다. 다만 재생에 실패하는 타일은 대체로 타일 순서상 뒤쪽부터 나타나는 경향이 있습니다.
+
+:::
+
 ## 출입문 제어 도구 {/* #door-control-tool */}
 
 영상을 추가한 후 <Cmd sid='arena.map.doorControl' /> 도구를 활용해 추가 작업을 수행할 수 있습니다. 비디오 타일에서 출입문과 연계된 카메라를 선택하면 출입문을 제어할 수 있는 <Cmd sid='arena.map.doorControl' /> 도구가 활성화됩니다. 출입문을 개방하거나 잠금, 해제, 알람 해제 등의 기능을 사용할 수 있습니다.
@@ -126,6 +142,8 @@ keywords: [ 모니터링 , 비디오 ]
 * 출입문에는 최대 4개의 카메라를 연결할 수 있으며, 영상 하단의 카메라 버튼을 클릭해 원하는 카메라의 영상을 재생할 수 있습니다. 연결된 카메라가 한 개라면 카메라 버튼은 표시되지 않습니다.
 
 * 화면 아래의 <Cmd sid='arena.eventTable.event' /> 섹션에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/monitoring-event' />를 참고하세요.
+
+* VMS 종류가 **Leopard**이면 녹화 영상 재생 개수 제한으로 인해 재생에 실패할 수 있습니다. 이때 <Cmd sid='arena.message.leopardPlaybackLimitRetry' /> 버튼을 클릭해 영상을 재생할 수 있습니다.
 
 :::
 
