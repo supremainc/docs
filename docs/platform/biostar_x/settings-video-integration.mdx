@@ -63,6 +63,18 @@ VMS 서버와 **BioStar X**를 연동하려면 다음 단계를 따르세요.
 
    <Image src='/img/biostarx-settings-video-integration.png' />
 
+1. **VMS Type** 옵션에서 연동할 VMS 종류를 선택하세요. **NX Witness** 또는 **Leopard** 중에서 선택할 수 있습니다.
+
+   <Image src='/img/biostarx-settings-video-integration-select-type.png' />
+
+   :::note
+
+   * VMS 종류에 따라 <DocLink inner='#vms-event-bookmark' /> 섹션의 일부 옵션이 자동으로 변경됩니다.
+
+   * **Leopard**를 선택하면 인증서를 설치할 필요가 없습니다. <DocLink inner='#install-vms-certification' /> 및 <DocLink inner='#install-client-certification' /> 단계를 건너뛰고 <DocLink inner='#check-camera-setting' />으로 진행하세요.
+
+   :::
+
 1. VMS 서버 정보를 입력하세요.
 
    <Image src='/img/biostarx-settings-video-vms-server-info.png' />
@@ -89,6 +101,12 @@ VMS 서버와 **BioStar X**를 연동하려면 다음 단계를 따르세요.
 <Step>
 
 ### VMS 서버에 인증서 설치 {/* #install-vms-certification */}
+
+:::note
+
+이 단계는 **NX Witness**를 사용할 때만 필요합니다. **Leopard**를 사용한다면 이 단계와 <DocLink inner='#install-client-certification' /> 단계를 건너뛰고 <DocLink inner='#check-camera-setting' />으로 진행하세요.
+
+:::
 
 VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용해야 합니다. 일반적인 SSL 인증서는 도메인 이름 기반으로 발급되므로, IP 주소로 VMS 서버에 접근하는 환경에서는 유효하지 않습니다. 따라서 VMS 서버의 IP 주소를 포함한 인증서를 별도로 생성해야 합니다.
 
@@ -173,6 +191,12 @@ VMS 서버와 **BioStar X**를 같은 서버에 설치하거나 서로 다른 �
 
 ### 클라이언트 PC에서 인증서 설치 {/* #install-client-certification */}
 
+:::note
+
+이 단계는 **NX Witness**를 사용할 때만 필요합니다. **Leopard**를 사용한다면 이 단계를 건너뛰고 <DocLink inner='#check-camera-setting' />으로 진행하세요.
+
+:::
+
 아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다.
 
 * **Video Management System**(VMS)을 브라우저를 통해서 접속했을 때 '안전하지 않음' 경고가 표시될 때
@@ -210,7 +234,7 @@ VMS 서버에 인증서를 설치하지 않고 클라이언트 PC에만 등록�
 </Step>
 <Step>
 
-### 카메라 확인 및 설정
+### 카메라 확인 및 설정 {/* #check-camera-setting */}
 
 VMS 서버와 정상 연동되었다면 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> 메뉴에서 연결된 카메라를 확인할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-camera' />를 참고하세요.
 
@@ -255,6 +279,14 @@ VMS 서버와 처음 연동하면 **BioStar X**는 자동으로 서비스를 재
 * VMS에서 북마크 기능에 자세한 내용은 [다음 링크](https://resources.vmsproxy.com/nx_vms_help/using_bookmarks.html)를 참고하세요.
 
 * VMS에서 이벤트 기능에 대한 자세한 내용은 [다음 링크](https://resources.vmsproxy.com/nx_vms_help/configuring_events_and_actions.html)를 참고하세요.
+
+* VMS 종류가 **Leopard**이면 <Cmd sid='video.setting.tag.event' product='2' /> 행의 출입문 이름 항목은 선택할 수 없으며 체크박스가 자동 해제됩니다.
+
+* 북마크 태그와 이벤트 태그에 다음 문자가 포함되어 있으면 VMS 서버로 전달할 때 자동 제거됩니다.
+
+   * 이벤트 태그: `\` `'` `,` `#` `%` `=` `&` `<` `>`
+
+   * 북마크 태그: `<` `'`
 
 :::
 
