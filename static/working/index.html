@@ -192,13 +192,33 @@
   .notify-note.denied{color:var(--warn);}
   .notify-note b{color:var(--accent-ink);font-weight:700;}
 
+  /* 시간 일괄 적용 바 */
+  .bulk-bar{
+    display:flex;align-items:flex-end;gap:12px 14px;flex-wrap:wrap;
+    background:#fbfaf6;border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-bottom:14px;
+  }
+  .bulk-title{font-size:12.5px;font-weight:700;color:var(--ink);align-self:center;}
+  .bulk-fields{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;}
+  .bulk-bar .field{gap:5px;}
+  .bulk-bar .field label{font-size:11px;}
+  .bulk-bar .tinput{width:96px;font-size:15px;padding:7px 10px;}
+  .bulk-bar .tilde{align-self:center;color:var(--faint);padding-bottom:8px;}
+  .bulk-check{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);align-self:center;cursor:pointer;}
+  .bulk-check input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer;}
+  .bulk-btn{
+    margin-left:auto;flex:none;background:var(--accent);color:#fff;border:none;border-radius:9px;
+    padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;
+    font-family:var(--sans);transition:background .15s;align-self:center;
+  }
+  .bulk-btn:hover{background:var(--accent-ink);}
+
   /* 월별 기준근로시간 버튼 + 모달 */
   .std-table-btn{
-    margin:2px 0 16px;width:100%;background:#fff;border:1px dashed var(--accent);color:var(--accent-ink);
-    border-radius:9px;padding:9px 12px;font-size:12.5px;font-weight:700;cursor:pointer;
+    margin:2px 0 16px;width:100%;background:#4E9AA6;color:#fff;border:none;
+    border-radius:9px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;
     font-family:var(--sans);transition:background .15s;
   }
-  .std-table-btn:hover{background:var(--accent-soft);}
+  .std-table-btn:hover{background:#3F8894;}
   .modal-overlay{
     position:fixed;inset:0;background:rgba(20,22,26,.5);display:flex;align-items:center;justify-content:center;
     z-index:100;padding:20px;
@@ -507,6 +527,19 @@
       </label>
     </div>
     <div class="notify-note" id="notifyNote">이 페이지가 열려 있으면, 오늘 퇴근 시간 10분 전에 Windows 알림을 보냅니다.</div>
+    <div class="bulk-bar">
+      <span class="bulk-title">시간 일괄 적용</span>
+      <div class="bulk-fields">
+        <div class="field"><label for="bulkIn">출근</label>
+          <input type="text" class="tinput" id="bulkIn" inputmode="numeric" maxlength="5" value="08:00"></div>
+        <span class="tilde">~</span>
+        <div class="field"><label for="bulkOut">퇴근</label>
+          <input type="text" class="tinput" id="bulkOut" inputmode="numeric" maxlength="5" value="17:30"></div>
+        <label class="bulk-check"><input type="checkbox" id="bulkFri" checked> 금요일은 4시간(08:00~12:00)</label>
+        <label class="bulk-check"><input type="checkbox" id="bulkOverwrite"> 기존 값도 덮어쓰기</label>
+      </div>
+      <button class="bulk-btn" id="bulkBtn">이번달 일괄 적용</button>
+    </div>
     <div class="cal-head">
       <div class="month-lab" id="monthLab">–</div>
       <div class="cal-head-right">
@@ -577,7 +610,7 @@
   </main>
   </div>
 
-  <div class="footnote">V2.7 | Technical Writing</div>
+  <div class="footnote">V2.9 | Technical Writing</div>
 </div>
 
 <!-- 월별 기준근로시간 모달 -->
@@ -1679,6 +1712,61 @@ document.getElementById('attImport').addEventListener('change', e=>{
   const f = e.target.files && e.target.files[0];
   if(f) importAttendance(f);
   e.target.value = '';   // 같은 파일 다시 선택 가능하도록 초기화
+});
+
+/* =========================================================
+   시간 일괄 적용 (보고 있는 달의 빈 평일에만 채우기)
+   - 제외: 주말, 공휴일, 근무 미편성 가능일(셋째 주 금요일)
+   - 금요일 옵션: 08:00~12:00(4시간)
+   - 이미 값이 있는 날은 건너뜀
+   ========================================================= */
+const bulkIn = document.getElementById('bulkIn');
+const bulkOut = document.getElementById('bulkOut');
+attachTimeMask(bulkIn, ()=>{});
+attachTimeMask(bulkOut, ()=>{}, {overnight:true});
+
+document.getElementById('bulkBtn').addEventListener('click', ()=>{
+  const inV = bulkIn.value, outV = bulkOut.value;
+  const im = toMin(inV), om = toMinOut(outV);
+  if(im === null || om === null || om <= im){
+    showToast('출근·퇴근 시간을 올바르게 입력해주세요.', true);
+    return;
+  }
+  const friHalf = document.getElementById('bulkFri').checked;
+  const overwrite = document.getElementById('bulkOverwrite').checked;
+  const offDay = optionalOffDate(curYear, curMonth);
+  const days = new Date(curYear, curMonth+1, 0).getDate();
+
+  const targets = [];
+  for(let d = 1; d <= days; d++){
+    const dow = new Date(curYear, curMonth, d).getDay();
+    if(dow === 0 || dow === 6) continue;                 // 주말 제외
+    if(holidayName(curYear, curMonth, d)) continue;      // 공휴일 제외
+    if(d === offDay) continue;                           // 근무 미편성 가능일 제외
+    const key = `${curYear}-${String(curMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const ex = monthData[key];
+    const empty = !ex || (!ex.in && !ex.out && !ex.vac);
+    if(!overwrite && !empty) continue;                   // 덮어쓰기 꺼짐 → 빈 날만
+    targets.push({ key, dow });
+  }
+
+  if(targets.length === 0){
+    showToast('적용할 평일이 없습니다.', true);
+    return;
+  }
+  const msg = overwrite
+    ? `${curYear}년 ${curMonth+1}월 평일 ${targets.length}일에 적용됩니다. 기존에 입력한 값(휴가 포함)도 덮어쓰기됩니다. 계속할까요?`
+    : `${curYear}년 ${curMonth+1}월의 빈 평일 ${targets.length}일에 적용됩니다. 계속할까요?`;
+  if(!window.confirm(msg)) return;
+
+  targets.forEach(t=>{
+    let ci = inV, co = outV;
+    if(friHalf && t.dow === 5){ ci = '08:00'; co = '12:00'; }   // 금요일 4시간
+    monthData[t.key] = { in:ci, out:co, vac:'', vin:'', vout:'' };
+  });
+  saveMonth(curYear, curMonth, monthData);
+  buildCalendar();
+  showToast(`${targets.length}일에 일괄 적용했습니다.`);
 });
 
 /* =========================================================
