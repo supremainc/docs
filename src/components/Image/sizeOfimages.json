@@ -2251,6 +2251,10 @@
     "width": 1200,
     "height": 289
   },
+  "/img/biostarx-monitoring-video-limit-notice.png": {
+    "width": 317,
+    "height": 178
+  },
   "/img/biostarx-monitoring-video-tiles.png": {
     "width": 1200,
     "height": 645
@@ -2487,9 +2491,17 @@
     "width": 800,
     "height": 207
   },
+  "/img/biostarx-setting-device-detail-card-custom-security-force.png": {
+    "width": 1437,
+    "height": 337
+  },
   "/img/biostarx-setting-device-detail-card-custom.png": {
     "width": 800,
     "height": 339
+  },
+  "/img/biostarx-setting-device-detail-card-smart-security-force.png": {
+    "width": 1437,
+    "height": 337
   },
   "/img/biostarx-setting-device-detail-card-smart.png": {
     "width": 800,
@@ -3239,6 +3251,10 @@
     "width": 1014,
     "height": 277
   },
+  "/img/biostarx-settings-device-deleted-operator-check.png": {
+    "width": 340,
+    "height": 205
+  },
   "/img/biostarx-settings-device-playback-playVideo-batch-edit.png": {
     "width": 793,
     "height": 416
@@ -3706,6 +3722,10 @@
   "/img/biostarx-settings-video-integration-login.png": {
     "width": 600,
     "height": 300
+  },
+  "/img/biostarx-settings-video-integration-select-type.png": {
+    "width": 353,
+    "height": 92
   },
   "/img/biostarx-settings-video-integration.png": {
     "width": 1078,
@@ -11895,6 +11915,10 @@
     "width": 1200,
     "height": 289
   },
+  "/img/en/biostarx-monitoring-video-limit-notice.png": {
+    "width": 317,
+    "height": 178
+  },
   "/img/en/biostarx-monitoring-video-tiles.png": {
     "width": 1200,
     "height": 645
@@ -12131,9 +12155,17 @@
     "width": 800,
     "height": 207
   },
+  "/img/en/biostarx-setting-device-detail-card-custom-security-force.png": {
+    "width": 1403,
+    "height": 337
+  },
   "/img/en/biostarx-setting-device-detail-card-custom.png": {
     "width": 800,
     "height": 340
+  },
+  "/img/en/biostarx-setting-device-detail-card-smart-security-force.png": {
+    "width": 1403,
+    "height": 337
   },
   "/img/en/biostarx-setting-device-detail-card-smart.png": {
     "width": 800,
@@ -12883,6 +12915,10 @@
     "width": 1014,
     "height": 277
   },
+  "/img/en/biostarx-settings-device-deleted-operator-check.png": {
+    "width": 340,
+    "height": 205
+  },
   "/img/en/biostarx-settings-device-playback-playVideo-batch-edit.png": {
     "width": 793,
     "height": 416
@@ -13322,6 +13358,10 @@
   "/img/en/biostarx-settings-video-integration-login.png": {
     "width": 600,
     "height": 329
+  },
+  "/img/en/biostarx-settings-video-integration-select-type.png": {
+    "width": 353,
+    "height": 92
   },
   "/img/en/biostarx-settings-video-integration.png": {
     "width": 1078,
