@@ -2595,6 +2595,10 @@
     "width": 1200,
     "height": 204
   },
+  "/img/biostarx-setting-device-export-settings.png": {
+    "width": 1000,
+    "height": 220
+  },
   "/img/biostarx-setting-device-functions.png": {
     "width": 1200,
     "height": 311
@@ -2630,6 +2634,10 @@
   "/img/biostarx-setting-device-imagelog-userprofile.png": {
     "width": 1000,
     "height": 119
+  },
+  "/img/biostarx-setting-device-import-settings.png": {
+    "width": 1000,
+    "height": 220
   },
   "/img/biostarx-setting-device-info-upgrade-firmware.png": {
     "width": 1500,
@@ -12259,6 +12267,10 @@
     "width": 1200,
     "height": 205
   },
+  "/img/en/biostarx-setting-device-export-settings.png": {
+    "width": 1000,
+    "height": 220
+  },
   "/img/en/biostarx-setting-device-functions.png": {
     "width": 1200,
     "height": 312
@@ -12294,6 +12306,10 @@
   "/img/en/biostarx-setting-device-imagelog-userprofile.png": {
     "width": 1000,
     "height": 118
+  },
+  "/img/en/biostarx-setting-device-import-settings.png": {
+    "width": 1000,
+    "height": 220
   },
   "/img/en/biostarx-setting-device-info-upgrade-firmware.png": {
     "width": 1683,
