@@ -1,0 +1,247 @@
+---
+id: tna-audit-trail
+title: 근태 감사 로그 조회하기
+description: 근태 관리와 관련된 생성, 수정, 삭제, 조회 등 모든 활동을 감사 로그에서 확인하고 필터링하는 방법을 안내합니다.
+---
+
+<Cmd sid='setting.menu.auditTrail.taAuditLog' /> 기능은 근무·스케줄·리포트 등 근태 관리와 관련된 모든 활동을 기록합니다. 각 기록은 언제, 누가, 무엇을, 어떻게 변경했는지 함께 보여주므로 보안 감사와 문제 해결에 활용할 수 있습니다.
+
+:::info
+
+<Cmd sid='setting.menu.auditTrail.taAuditLog' /> 메뉴는 근태 관리(T&A) 라이선스가 활성화되어 있고, 운영 관리자에게 이 메뉴 권한이 있어야 합니다. 근태 관리 플러그인 설치 시 기본 생성되는 <Cmd sid='setting.account.taOperator' product='2' /> 계정에는 이 권한이 없으므로, 커스텀 권한을 추가하여 설정해야 합니다.
+
+:::
+
+## 근태 감사 권한 추가 {/* #addTnaAuditLevel */}
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' />을 클릭하세요.
+
+1. <Cmd sid='setting.account.addCustomOperator' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-account-add-custom-permission.png' />
+
+1. 근태 감사 로그 조회를 위한 권한 이름과 설명을 입력하세요.
+
+   <Image src='/img/biostarx-settings-account-add-custom-permission-details.png' />
+
+1. <Cmd sid='settings.account.menu.setting' product='2' />에서 <Cmd sid='common.auditTrail' product='2' /> 메뉴 하위의 <Cmd sid='common.taAuditLog' product='2' /> 및 <Cmd sid='common.retentionSettings' product='2' /> 항목에 권한을 설정하세요.
+
+   <Image src='/img/biostarx-settings-custom-account-level.png' />
+
+1. <Cmd sid='settings.account.addUser' product='2' />에서 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하고 사용자 그룹 또는 사용자를 선택하세요.
+
+1. 커스텀 권한을 저장하려면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 
+
+## 근태 감사 로그 확인
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.taAuditLog' />를 클릭하세요.
+
+1. 근태 관련 감사 로그 목록이 화면에 표시됩니다.
+
+<Image src='/img/biostarx-settings-tna-audit-trail.png' />
+
+:::info
+
+보관 기간 등 감사 로그 정책을 변경하려면 <DocLink docId='platform/biostar_x/tna-audit-trail-settings' />를 참고하세요.
+
+:::
+
+## 테이블 구성
+
+감사 로그 목록 테이블은 10개 컬럼으로 구성되며, 현재 검색 조건에 해당하는 기록을 <Cmd sid='audit.column.datetime' /> 기준 최신순으로 표시합니다.
+
+| 컬럼 | 설명 |
+|---|---|
+| <Cmd sid='audit.column.datetime' /> | 이벤트가 발생한 날짜와 시간입니다. |
+| <Cmd sid='audit.column.user' /> | 이벤트를 수행한 사용자입니다. **id(이름)** 형식으로 표시됩니다. |
+| <Cmd sid='audit.column.accountLevel' /> | 이벤트를 수행한 사용자의 관리자 등급입니다. 시스템이 자동으로 수행한 동작은 비웁니다. |
+| <Cmd sid='audit.column.action' /> | 수행된 동작 종류입니다. <Cmd sid='action.create' />, <Cmd sid='action.update' />, <Cmd sid='action.delete' />, <Cmd sid='action.read' />, <Cmd sid='action.export' />, <Cmd sid='action.operation' /> 중 하나로 분류됩니다. |
+| <Cmd sid='audit.column.category' /> | 이벤트 대상의 도메인 분류입니다. (<Cmd sid='category.shift' />, <Cmd sid='category.schedule' />, <Cmd sid='category.report' />, <Cmd sid='category.ta_audit_log' />, <Cmd sid='category.setting' />, <Cmd sid='category.system' />) |
+| <Cmd sid='audit.column.target' /> | 동작이 적용된 대상입니다. **타입: id(이름)** 형식으로 표시됩니다. |
+| <Cmd sid='audit.column.subAction' /> | <Cmd sid='action.operation' />, <Cmd sid='action.read' />, <Cmd sid='action.export' /> 동작에만 표시되는 세부 동작 이름입니다. 자세한 내용은 <DocLink inner='#tna-audit-trail-sub-actions' />을 참고하세요. |
+| <Cmd sid='audit.column.modifiedFields' /> | 변경되거나 조회된 필드 이름입니다. <Cmd sid='action.operation' />은 항상 비웁니다. |
+| <Cmd sid='audit.column.details' /> | 동작별 상세 정보입니다. (변경 값, 조회 조건, 필드 스냅샷 등) |
+| <Cmd sid='audit.column.ip' /> | 사용자가 접속한 IP 주소입니다. 시스템이 자동으로 발급한 기록은 **127.0.0.1**로 표시됩니다. |
+
+:::info
+
+* <Cmd sid='audit.column.action' />이 <Cmd sid='action.update' />인 기록은 항상 대상 1건만 가리킵니다. 여러 대상을 한 번에 바꾸는 일괄 편집은 근태 관리에 없으므로, 대상이 여러 건으로 묶여 표시되지 않습니다.
+
+* <Cmd sid='audit.column.user' />, <Cmd sid='audit.column.target' />, <Cmd sid='audit.detail.changeDetails' />에 표시되는 이름은 그 기록이 발생한 시점의 값을 그대로 보존합니다. 이후 이름이 바뀌거나 대상이 삭제되어도 과거 기록의 표시명은 바뀌지 않습니다.
+
+* <Cmd sid='audit.column.target' />과 <Cmd sid='audit.column.modifiedFields' /> 값이 2건 이상이면 첫 항목만 표시되고, 나머지는 오른쪽에 잔여 건수 배지(예: **+208**)로 압축됩니다. 잔여 건수가 1,000건 이상이면 **+999**로 표기하며, 정확한 총 건수는 상세 팝업 제목에서 확인할 수 있습니다. 배지를 클릭하면 해당 셀의 상세 팝업이 열립니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-list-badge.png' />
+
+* 셀 값이 길면 한 줄로 말줄임 처리됩니다. 마우스를 오버하면 전체 값이 툴팁으로 표시되며, 툴팁을 벗어나는 길이는 `...`으로 줄여 표기됩니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-list-tooltip.png' />
+
+:::
+
+## 상세 정보 확인
+
+값이 있는 <Cmd sid='audit.column.target' />, <Cmd sid='audit.column.modifiedFields' />, <Cmd sid='audit.column.details' /> 셀은 밑줄로 표시되며 클릭할 수 있습니다. 셀을 클릭하면 해당 행의 동작에 맞는 상세 팝업이 열리고, <Cmd sid='audit.filter.ok' /> 버튼 또는 <IcClose /> 버튼으로 닫을 수 있습니다.
+
+<Image src='/img/biostarx-settings-tna-audit-trail-detail-popup.png' />
+
+팝업 상단의 <Cmd sid='audit.detail.searchPlaceholder' /> 입력 필드에 검색어를 입력하면 일치하는 항목만 강조되거나 필터링됩니다. 대상 팝업은 검색 시 그룹과 그룹별 건수도 함께 갱신되지만, 제목의 전체 건수는 검색과 관계없이 그대로 유지됩니다.
+
+## 필터로 원하는 기록 찾기
+
+<Cmd sid='audit.filter.title' /> 섹션에서 제공하는 필터를 조합해 원하는 기록을 좁혀서 찾으세요. 한 필터 안에서 여러 값을 선택하면 `OR`로, 서로 다른 필터를 함께 적용하면 `AND`로 결합됩니다.
+
+<Image src='/img/biostarx-settings-tna-audit-trail-filtered.png' />
+
+| 필터 | 동작 방식 |
+|---|---|
+| <Cmd sid='audit.filter.datetime' /> | 시작·종료 날짜와 시각을 지정합니다. 조회 기간에는 길이 제한이 없습니다. |
+| <Cmd sid='audit.filter.user' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 사용자를 찾으세요. 처음 열면 목록이 비어 있습니다. |
+| <Cmd sid='audit.filter.accountLevel' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 관리자 등급을 찾으세요. |
+| <Cmd sid='audit.filter.category' /> | 검색 가능한 체크박스 목록에서 하나 이상의 분류를 선택하세요. |
+| <Cmd sid='audit.filter.target' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 대상을 찾으세요. |
+| <Cmd sid='audit.filter.action' /> | 체크박스 목록에서 하나 이상의 동작을 선택하세요. |
+| <Cmd sid='audit.filter.subAction' /> | 검색 가능한 목록에서 세부 작업을 선택하세요. 자세한 내용은 <DocLink inner='#tna-audit-trail-sub-actions' />을 참고하세요. |
+| <Cmd sid='audit.filter.ip' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 IP를 찾으세요. |
+
+* 적용된 필터가 없으면 현재 날짜로부터 30일 전까지의 기록을 기본 표시합니다.
+
+* 각 필터 팝업에서 원하는 값을 선택한 뒤 <Cmd sid='audit.filter.addCondition' /> 버튼을 클릭하면 즉시 검색에 반영됩니다. <Cmd sid='audit.filter.cancel' />을 클릭하면 선택을 취소하고 팝업을 닫습니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-set-filter-popup.png' />
+
+* 적용된 필터는 첫 항목과 추가 건수로 요약되어 표시됩니다. <IcClose title='Disable' />를 클릭하면 해당 필터만 해제됩니다. 값을 선택하지 않은 필터는 <Cmd sid='audit.filter.none' />으로 표시됩니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-seted-filters.png' />
+
+:::info
+
+<Cmd sid='audit.filter.user' />, <Cmd sid='audit.filter.accountLevel' />, <Cmd sid='audit.filter.target' />, <Cmd sid='audit.filter.ip' /> 필터는 검색어를 입력해야 결과가 나타납니다. 부분 일치를 지원하므로 이름이나 아이디의 일부만 입력해도 됩니다. 삭제된 대상은 <Cmd sid='audit.detail.target.deleted' /> 표기로 함께 검색됩니다.
+
+:::
+
+### 조회 기간 지정
+
+<Cmd sid='audit.filter.datetime' />를 클릭하면 <Cmd sid='audit.filter.dateRangeTitle' /> 팝업이 열립니다.
+
+<Image src='/img/biostarx-settings-tna-audit-trail-set-period.png' />
+
+1. <Cmd sid='audit.filter.startDatetime' />과 <Cmd sid='audit.filter.endDatetime' />의 날짜와 시각을 각각 지정하세요. <Cmd sid='audit.filter.today' />를 클릭하면 오늘 날짜로 바로 이동합니다.
+
+1. 조회 기간을 적용하려면 <Cmd sid='audit.filter.ok' /> 버튼을 클릭하세요.
+
+### 세부 작업 목록 {/* #tna-audit-trail-sub-actions */}
+
+<Cmd sid='audit.column.subAction' /> 컬럼과 <Cmd sid='audit.filter.subAction' /> 필터에 나타나는 세부 동작 이름을 그룹별로 정리했습니다.
+
+<details>
+<summary>스케줄</summary>
+
+* <Cmd sid='sub_action.temporary_schedule_created' />, <Cmd sid='sub_action.temporary_schedule_deleted' />, <Cmd sid='sub_action.leave_created' />, <Cmd sid='sub_action.leave_deleted' />
+
+* <Cmd sid='sub_action.punch_log_created' />, <Cmd sid='sub_action.punch_log_modified' />, <Cmd sid='sub_action.punch_log_deleted' />
+
+* 근무 스케줄 수정 및 삭제로 함께 삭제된 임시 스케줄과 부재는 별도 이름으로 표시됩니다. 자세한 내용은 <DocLink inner='#tna-audit-trail-cascade' />을 참고하세요.
+
+</details>
+
+<details>
+<summary>리포트</summary>
+
+* <Cmd sid='sub_action.report_list_viewed' />, <Cmd sid='sub_action.csv_export' />, <Cmd sid='sub_action.print_pdf' />
+
+* 근태 기록 수정 화면의 목록 및 달력 조회에도 별도의 세부 작업 이름이 표시됩니다.
+
+</details>
+
+<details>
+<summary>시스템</summary>
+
+* <Cmd sid='sub_action.login_id_password' />, <Cmd sid='sub_action.sso_login' />, <Cmd sid='sub_action.logout' />, <Cmd sid='sub_action.ta_registered' />
+
+</details>
+
+## 필터 저장
+
+자주 사용하는 검색 조건은 <Cmd sid='audit.filter.savedFilters' />에 저장해 두고 다시 불러올 수 있습니다.
+
+1. 원하는 조건으로 필터를 설정하세요.
+
+1. <Cmd sid='audit.filter.title' /> 섹션의 <Cmd sid='audit.filter.save' /> 버튼을 클릭하세요.
+
+1. 화면 왼쪽 필터 목록에 <Cmd sid='audit.filter.newFilterName' /> 항목이 추가됩니다.
+
+<Image src='/img/biostarx-settings-tna-audit-trail-add-filter.png' />
+
+* 필터 이름을 바꾸려면 <IcAuditEdit title='Edit' /> 버튼을 클릭하고 새 이름을 입력한 뒤 <Kbd>Enter</Kbd> 키를 누르세요.
+
+* 필터를 삭제하려면 <IcAuditDelete title='Delete' /> 버튼을 클릭하세요.
+
+:::info
+
+저장할 수 있는 필터는 최대 20개입니다. 저장한 필터는 브라우저에 보관되므로 다른 PC나 브라우저에서는 표시되지 않습니다.
+
+:::
+
+## 연쇄 삭제로 남는 추가 기록 {/* #tna-audit-trail-cascade */}
+
+근무 스케줄을 수정하거나 삭제하면, 그 스케줄을 쓰던 사용자의 임시 스케줄, 부재가 함께 삭제될 수 있습니다. 이때 시스템은 근무 스케줄 자체의 변경 또는 삭제 기록과는 별개로, 실제로 삭제된 임시 스케줄, 부재마다 추가 기록을 남깁니다.
+
+* 연쇄로 삭제된 항목이 없으면 추가 기록도 남지 않습니다.
+
+* <Cmd sid='audit.column.target' />에는 원인이 된 근무 스케줄 1건과, 실제로 항목이 삭제된 사용자만 포함됩니다. 스케줄에 속한 사용자 전체가 아닙니다.
+
+* <Cmd sid='audit.column.details' />에는 삭제된 건수가 표시되며, 근무 스케줄을 삭제한 경우에는 삭제 대상이 된 기간도 함께 표시됩니다.
+
+## 열 설정
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/biostarx-settings-system-audit-trail-column-setting.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+감사 로그 테이블의 컬럼 위치를 바꾸거나 숨길 수 있습니다. <Cmd sid='audit.filter.title' /> 섹션 오른쪽의 <IcMoreW /> → <Cmd sid='audit.filter.menuColumnSetting' />을 클릭하세요.
+
+* <Cmd sid='audit.columnSettings.listHeading' />에서 숨기려는 항목의 체크박스 선택을 해제하세요.
+
+* 열 순서를 바꾸려면 원하는 항목을 드래그하세요.
+
+* 열 설정을 초기화하려면 <Cmd sid='audit.columnSettings.defaultColumn' /> 버튼을 클릭하세요.
+
+설정을 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+</Column>
+</Columns>
+
+## CSV로 내보내기
+
+감사 로그를 CSV 파일로 내보내 외부 분석 도구에서 활용하세요.
+
+1. <Cmd sid='audit.filter.title' /> 섹션에서 필요한 경우 필터를 설정하세요.
+
+1. 섹션 오른쪽의 <IcMoreW /> → <Cmd sid='audit.filter.menuCsvExport' />를 클릭하세요.
+
+1. <Cmd sid='audit.csvExport.title' /> 창이 나타나면 <Cmd sid='button.download' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-export-csv.png' />
+
+내보낸 CSV 파일은 레코드당 한 줄로 10개 컬럼을 모두 포함하며, 값에 쉼표가 포함된 셀만 인용 부호로 감쌉니다. <Cmd sid='audit.column.target' />과 <Cmd sid='audit.column.modifiedFields' />처럼 여러 값이 들어가는 셀은 버티컬 바(`|`)로 구분(예: **Schedule: 7(Team Schedule)| User: 12(Robert)**)됩니다. <Cmd sid='audit.column.action' />이 <Cmd sid='action.update' />인 기록의 <Cmd sid='audit.column.details' />는 말줄임 없이 전체 필드를 포함합니다.
+
+:::caution
+
+CSV 파일에는 스프레드시트 프로그램이 수식으로 해석할 수 있는 값이 원본 그대로 담깁니다. 내려받은 CSV 파일을 스프레드시트 프로그램에서 곧바로 열지 말고, 필요하면 텍스트 가져오기 기능으로 여세요.
+
+:::
+
+:::tip
+
+필터를 설정했다면 필터링된 결과만 CSV 파일로 내보내집니다.
+
+:::

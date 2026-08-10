@@ -24,60 +24,10 @@ description: 출입 통제 감사 로그의 변경 기록과 조회 기록 보�
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.system.auditTrailRetention' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.system.auditTrailRetention' />을 클릭하세요.
 
 <Image src='/img/biostarx-settings-audit-trail-settings.png' />
 
-## 보관 정책 설정
+import AuditTrailOptions from '@site/docs/common/_bsx-audit-trail-settings-options.mdx';
 
-<Cmd sid='audit.retention.sectionAccessControl' /> 섹션은 다음 두 그룹으로 구성됩니다.
-
-* <Cmd sid='audit.retention.groupChanges' />: 생성, 수정, 삭제 기록입니다. 항상 기록되며 끄거나 켤 수 없습니다.
-
-* <Cmd sid='audit.retention.groupAccess' />: 조회 기록입니다. 기록 여부를 직접 설정할 수 있습니다.
-
-:::info
-
-* <Cmd sid='audit.retention.retentionPeriod' />은 최소 1일, 최대 2,147,483,647까지 정수로 입력할 수 있습니다.
-
-* <Cmd sid='audit.retention.sectionAccessControl' /> 섹션의 설정 변경 사항은 <Cmd sid='setting.menu.auditTrail.acAuditLog' />에 감사 기록으로 확인할 수 있습니다.
-
-:::
-
-### 변경 기록
-
-<Cmd sid='audit.retention.groupChanges' /> 그룹은 항상 기록되므로, 원하는 <Cmd sid='audit.retention.labelRetention' />을 선택하세요.
-
-* <Cmd sid='audit.retention.optionEndless' />: 자동 삭제 없이 기록을 영구 보관합니다.
-
-* <Cmd sid='audit.retention.optionCustom' />: 규정이나 내부 정책에 따라 보관 기간을 제한해야 한다면 이 옵션을 선택하세요. <Cmd sid='audit.retention.retentionPeriod' /> 입력칸이 활성화되면, 보관 기간을 일 단위로 입력하세요.
-
-### 조회 기록
-
-<Cmd sid='audit.retention.groupAccess' /> 그룹에서 조회 기록을 남길지 여부를 직접 정할 수 있습니다.
-
-* <Cmd sid='audit.retention.labelLogging' />: 조회 기록을 남기려면 <Cmd sid='audit.retention.loggingOn' />으로 설정하세요. 필요하지 않으면 <Cmd sid='audit.retention.loggingOff' /> 상태로 설정하세요.
-
-* <Cmd sid='audit.retention.labelRetention' />: 원하는 보관 방식을 선택하세요.
-
-   * <Cmd sid='audit.retention.optionEndless' />: 조회 기록을 자동 삭제 없이 영구 보관합니다.
-
-   * <Cmd sid='audit.retention.optionCustom' />: <Cmd sid='audit.retention.retentionPeriod' /> 입력칸이 활성화됩니다. 원하는 보관 기간을 일 단위로 입력하세요.
-
-:::info
-
-<Cmd sid='audit.retention.labelLogging' />이 <Cmd sid='audit.retention.loggingOff' />으로 설정되어 있다면, 조회 이벤트 자체를 기록하지 않습니다. 이후 <Cmd sid='audit.retention.loggingOn' />으로 설정해도 이전 기간의 기록은 조회할 수 없습니다.
-
-:::
-
-### 설정 저장
-
-<Cmd sid='audit.retention.groupChanges' />와 <Cmd sid='audit.retention.groupAccess' /> 설정을 완료했다면, 화면 하단의 <Cmd sid='common.apply' /> 버튼을 클릭하세요. 두 그룹의 설정값을 함께 저장합니다.
-
-## 자동 삭제 동작 방식
-
-<Cmd sid='audit.retention.optionCustom' />에서 설정한 보관 기간을 초과한 기록은 사용자 조작과 관계없이 서버가 매일 오전 1시에 실행하는 작업에서 자동 삭제합니다. 판정과 삭제는 같은 작업에서 한 번에 일어나며, 이 판정은 하루에 한 번만 이뤄집니다.
-
-> 예를 들어, <Cmd sid='audit.retention.groupAccess' /> 기록을 <Cmd sid='audit.retention.optionCustom' /> 방식으로 30일 적용했다면, 오전 1시 작업 실행 시점을 기준으로 30일을 초과한 기록이 그 작업에서 바로 삭제됩니다. 보관 기간을 막 넘긴 기록이라도 작업이 하루에 한 번만 실행되므로, 그 시점이 지나야 다음 날 오전 1시 작업에서 삭제됩니다.
-
-<Cmd sid='audit.retention.labelRetention' />을 <Cmd sid='audit.retention.optionEndless' />로 설정하면 자동 삭제 작업이 동작하지 않아 기록이 영구 보존됩니다.
+<AuditTrailOptions type='accesscontrol' />

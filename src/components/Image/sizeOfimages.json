@@ -3091,6 +3091,10 @@
     "width": 1500,
     "height": 797
   },
+  "/img/biostarx-settings-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 634
+  },
   "/img/biostarx-settings-card-printer-custom-user.png": {
     "width": 946,
     "height": 168
@@ -3238,6 +3242,10 @@
   "/img/biostarx-settings-credential-wiegand-format.png": {
     "width": 1200,
     "height": 475
+  },
+  "/img/biostarx-settings-custom-account-level.png": {
+    "width": 1001,
+    "height": 356
   },
   "/img/biostarx-settings-custom-interface.png": {
     "width": 1125,
@@ -3678,6 +3686,30 @@
   "/img/biostarx-settings-system-system-backup-general.png": {
     "width": 1235,
     "height": 226
+  },
+  "/img/biostarx-settings-tna-audit-trail-add-filter.png": {
+    "width": 1000,
+    "height": 301
+  },
+  "/img/biostarx-settings-tna-audit-trail-detail-popup.png": {
+    "width": 1000,
+    "height": 475
+  },
+  "/img/biostarx-settings-tna-audit-trail-filtered.png": {
+    "width": 1000,
+    "height": 393
+  },
+  "/img/biostarx-settings-tna-audit-trail-set-period.png": {
+    "width": 1000,
+    "height": 495
+  },
+  "/img/biostarx-settings-tna-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 591
+  },
+  "/img/biostarx-settings-tna-audit-trail.png": {
+    "width": 1000,
+    "height": 478
   },
   "/img/biostarx-settings-trigger-and-action-add.png": {
     "width": 1500,
@@ -12787,6 +12819,10 @@
     "width": 1500,
     "height": 802
   },
+  "/img/en/biostarx-settings-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 634
+  },
   "/img/en/biostarx-settings-card-printer-custom-user.png": {
     "width": 950,
     "height": 170
@@ -12934,6 +12970,10 @@
   "/img/en/biostarx-settings-credential-wiegand-format.png": {
     "width": 1200,
     "height": 488
+  },
+  "/img/en/biostarx-settings-custom-account-level.png": {
+    "width": 1001,
+    "height": 354
   },
   "/img/en/biostarx-settings-custom-interface.png": {
     "width": 1123,
@@ -13346,6 +13386,30 @@
   "/img/en/biostarx-settings-system-system-backup-general.png": {
     "width": 1235,
     "height": 226
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-add-filter.png": {
+    "width": 1000,
+    "height": 301
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-detail-popup.png": {
+    "width": 1000,
+    "height": 475
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-filtered.png": {
+    "width": 1000,
+    "height": 393
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-set-period.png": {
+    "width": 1000,
+    "height": 495
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 591
+  },
+  "/img/en/biostarx-settings-tna-audit-trail.png": {
+    "width": 1000,
+    "height": 478
   },
   "/img/en/biostarx-settings-trigger-and-action-add.png": {
     "width": 1500,

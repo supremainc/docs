@@ -1017,7 +1017,9 @@ function createSidebars(preview) {
                 'platform/biostar_x/tna-rule-schedule',
                 'platform/biostar_x/tna-report',
                 'platform/biostar_x/tna-report-edit',
-                'platform/biostar_x/tna-settings'
+                'platform/biostar_x/tna-settings',
+                'platform/biostar_x/tna-audit-trail',
+                'platform/biostar_x/tna-audit-trail-settings'
               ]
             },
             {
