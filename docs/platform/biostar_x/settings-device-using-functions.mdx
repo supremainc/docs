@@ -1,11 +1,11 @@
 ---
 id: settings-device-using-functions
 title: 장치 관리 기능 사용하기
-description: 장치를 재연결하거나 동기화, 일괄 편집, 설정 내보내기/가져오기 기능에 대해 안내합니다.
+description: 장치를 재연결하거나 동기화, 일괄 편집, 삭제, 설정 내보내기/가져오기 기능에 대해 안내합니다.
 keywords: [장치]
 ---
 
-**BioStar X**에서 장치의 기타 기능을 사용하는 방법을 안내합니다. 장치를 재연결하거나 동기화, 정보 일괄 편집, 설정 내보내기/가져오기, 장치 삭제 기능을 제공합니다.
+**BioStar X**에서 장치의 기타 기능을 사용하는 방법을 안내합니다. 장치를 재연결하거나 동기화, 정보 일괄 편집, 삭제, 설정 내보내기/가져오기 기능을 제공하며, 장치 삭제 시 보안 통신 인증서를 함께 삭제하는 옵션도 함께 안내합니다.
 
 ## 개별 장치의 관리 기능
 
@@ -41,7 +41,7 @@ keywords: [장치]
 
 * <Cmd sid='device.menu.reboot' product='2' />: 선택한 장치를 재시작할 수 있습니다. 이 기능은 장치가 정상 동작하지 않을 때 사용할 수 있습니다.
 
-* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다.
+* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다. 자세한 내용은 <DocLink inner='#deleteDevice' />를 참고하세요.
 
 :::info
 
@@ -88,7 +88,40 @@ keywords: [장치]
 
 * <Cmd sid='button.firmwareUpgrade' product='2' />: 장치의 펌웨어를 간편하게 업그레이드할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />를 참고하세요.
 
-* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다.
+* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다. 자세한 내용은 <DocLink inner='#deleteDevice' />를 참고하세요.
+
+
+## 장치 삭제 {/* #deleteDevice */}
+
+<Cmd sid='button.deleteDevice' product='2' /> 기능으로 장치를 목록에서 삭제할 수 있습니다. 삭제할 때 나타나는 옵션은 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션의 활성화 여부에 따라 다릅니다.
+
+### 장치와 보안 통신을 사용하지 않을 때
+
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션이 <Cmd sid="common.notUse" product='2' /> 상태이면 별도의 옵션 없이 선택한 장치를 삭제할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-delete-none-check.png' />
+
+### 장치와 보안 통신을 사용할 때
+
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션이 <Cmd sid="common.use" product='2' /> 상태이면 <Cmd sid='device.deleteDeviceConfirmTitle' product='2' /> 창에 <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션이 나타납니다.
+
+<Image src='/img/biostarx-setting-device-delete-check.png' />
+
+* <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택하지 않으면(기본값) 인증서는 삭제하지 않고 장치만 삭제합니다.
+
+* <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택하면 장치에 저장된 보안 통신 인증서도 함께 삭제합니다. 삭제한 장치를 다른 **BioStar X** 서버에 연결하려면 이 옵션을 사용하세요.
+
+:::caution
+
+**BioStar X**와 연결이 끊긴 장치는 인증서를 삭제할 수 없으므로, <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택한 상태에서는 장치를 삭제할 수 없습니다. 장치를 삭제하려면 옵션을 선택 해제하거나, 장치를 먼저 재연결한 후 다시 시도하세요.
+
+:::
+
+:::info
+
+<Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션은 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 활성화했을 때만 표시됩니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />를 참고하세요.
+
+:::
 
 
 ## 장치 설정 내보내기/가져오기 {/* #exportImportDeviceConfig */}
