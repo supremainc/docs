@@ -6,13 +6,131 @@ draft: true
 
 # 버전 1.0.3 (빌드 번호 1.0.3.XXX)
 
-릴리스<Separator/>2026-08-31
+릴리스<Separator/>2026-09-21
 
 ## 신규 기능 및 개선
 
 ---
 
+BX-6817	EntraID에서 한 사용자에 여러 그룹이 포함될 경우에 대한 처리 개선
+1. Entra ID에서 여러 그룹에 속한 사용자의 그룹 매핑 개선
+1. Improved group mapping for users belonging to multiple groups in Entra ID.
+
+BX-6805	Visual Face 동기화 중 호환 템플릿 존재, 다른 타입의 템플릿 없는 경우 불필요한 bufferToImage 로직 진행
+1. Visual Face 사용자 동기화 처리 속도 개선
+1. Improved Visual Face user synchronization performance.
+
+BX-6782	동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중 실패 시 발생한 동기화 실패 이벤트에 사용자 ID가 미표기되는 이슈
+1. Visual Face 동기화 실패 이벤트에 사용자 ID가 표시되지 않는 문제 <Badge>1.0.0</Badge>
+1. User ID not displayed in Visual Face synchronization failure events. <Badge>1.0.0</Badge>
+
+BX-6730	Biostar2 2.9.12 취약점에 대해 BioStarX에도 적용
 1. 
+1. 
+
+BX-6729	Log4j 버전 2.25.4 이상, Oracle Java SE 21.0.11 이상 업그레이드 필요
+BX-6727	Visual Face Migration "No registered visual face found." 오탐
+BX-6726	STTDT, EXPDT에 zerodate가 저장 가능한 이슈 수정
+BX-6724	EntraID 그룹 정보 파싱 로직 수정.
+BX-6427	사용자 ID·이름이 SQL에 안전하지 않게 전달되는 문제 수정
+BX-6421	[FISS BioStar X] Extend timeout for BioStar X Remote Access ngrok.exe authenticode validation failure
+BX-6419	미사용 실행파일 삭제 처리 추가
+BX-6398	동기화 사이클안에서 에러가 발생하면 더이상 동기화가 진행안됨
+BX-6381	Zone Tracking 동기화 실패 패치
+BX-6328	[SAST] Remote Access 주소로 접속 하여 Entra ID 로그인 시 Server URL 주소로 변경되는 문제
+BX-6324	AD/EntraID 연동 주소에 non-ASCII 숫자 로캘에서 LDAP URL 포트 파싱 실패 수정
+BX-6215	[DATA]  일부 이벤트가 번역되지 않고 "eventType.6150" 형태의 키로 표시됨
+BX-6211	[Directory Integration] AD/EntraID 대량 사용자 그룹 정보 가져올 시 브라우저 프리징되는 이슈
+BX-6200	Mobile Access - Dynamic Site 환경에서 사용자 모바일 카드 발급 후 CSV Import - Overwrite 를 통해 삭제시 "삭제된 모바일 CSN" 에 추가되는 문제
+BX-6145	[MCS] 커뮤니케이션 서버 2대 중 1대 연결 해제 상태
+BX-6143	TA Calendar View에서 새로고침 버튼 연타 클릭 시 Alert팝업 발생
+BX-6222	Data inconsistency occurs when changing rows per page from 50 to 100 after navigating to the next page.
+BX-6120	AC에 Holiday 등록된 상태에 등록된 Holiday와 동일한 이름으로 신규 생성 시 TA log파일에 errror 발생함
+BX-6119	Shift 생성시 "Allowed a day before/after time" 선택시 팝업 메시지 수정 필요
+BX-6118	Optimized punchlog 를 deactivate 할시 에러가 발생한다.
+BX-6117	Flexible Shift에서 Leave_Not Worked 생성 할 때 Use Time 체크 시 Leave hours 상단 ^버튼 비활성화 안되는 현상 발생
+BX-6116	다수의 사용자로 Leave등록 시 중복으로 등록되는 현상
+BX-6115	코드상 보이는 SSL 인증서 passphrase 의 비밀번호 제거
+BX-6110	TA Winauth에서 csv import 데이터에 사용자와 사용자 그룹이 많을 경우에 사용자 동기화 이슈
+BX-6228	[Mohammed] Custom report query performance improvement
+BX-6083	TA 패키지 Uninstall 시 report 폴더 내 파일 잔존 현상
+BX-6231	Send Face Mobile Enrollment Link 기능으로 얼굴 등록시 Audit 에 사용자 정보 업데이트 기록시 해당 기능으로 인한 수정임을 표기 해야함. 
+BX-6124	TA를 많이 오랫동안 사용할 수록 nodejs의 메모리 점유율이 높아지는 문제 수정
+BX-6049	[Bug] 백업/복원 후 런처에 플러그인 아이콘 미표시
+BX-6230	SQL Server Restore fails with NoClassDefFoundError for IgniteJdbcThinDriver during safety backup
+BX-5991	MSSQL 윈도우 인증 + Custom Port DB 에 설치된 BioStar X 환경에서 Backup 실패 Alert 발생
+BX-5987	[TA] 설치 후 스케줄 생성 시 생성이 안되고 무한 로딩 되는 문제 (서비스 재시작으로 복구)
+BX-5950	MifareEx Config 설정 관련 Parsing 및 DB에 저장하지 않는 문제
+BX-5929	커스텀 경로이면서 폴더 이름이 한글로 설치된 Bs2에서 Bsx로 업그레이드시 설정 메뉴 진입 시 알 수 없는 오류 발생
+BX-5924	[T&A] 근태 기록에서 검색 조건에 이름이 없는 사용자 선택 후 화면 새로 고침 시 null이 출력됨
+BX-5923	[T&A] 세로 모드 모니터 사용 시 일일 근무 규칙 설정 화면에 타이틀이 출력 되지 않음
+BX-5874	BioStar X 최초 설치 시 Timezone 이 로컬 서버 타임 기준이 아닌 UTC+9 로 고정 되는 문제
+BX-5817	미 연결 장치 & image log 가 존재하지 않은 상태에서 이미지로그 아이콘 선택 시 오류
+BX-5807	BioStar X v1.0.2.70 신규 설치(MSSQL) 환경에서 PC 부팅 후 Dump 파일 발생.
+BX-5863	[보안] 개발자 도구에 노출되는 비밀번호 암호화 작업
+BX-5806	[Performance] TemporaryIdTable/KVTable 적용으로 N+1 쿼리 해결 및 배치 SQL 안전성 개선
+BX-5864	장치에 있는 이벤트 로그 가져올 시 최대 버퍼를 넘어선 이벤트 처리에 대한 버그 수정
+BX-5865	/api/v2/users/search 사용했을 때, "disabled" 값이 제대로 돌아오지 않음
+BX-5867	MSSQL 이벤트 로그 조회 속도 개선 건 버그 수정
+BX-5700	Data > User - Users Information 의 Tree 에 사용자 그룹 이름이 긴 경우 라인이 틀어지는 문제
+BX-5868	BioStar2 commons-text-1.2.jar 라이브러리 보안 취약점 수정
+BX-5613	Custom report > image download시 저장 형식이 다른 현상 (Custom report > Different storage format when downloading image)
+BX-5606	[Data] Dashboard > Set Filters > master 하위 장치 선택/해제 시 동작 오류 ([Data] Dashboard > Set Filters > Operation error when selecting/deselecting master sub-device)
+BX-5978	[R&D] 잘못된 정보 (IP,Port 불일치/ID, PW 불일치 /Print Name, Card Template 불일치) Card Printer Apply 시 에러가 발생하지 않는 문제
+BX-5564	분산서버 환경에서 door 삭제 후 장치 삭제 시 다수 장치 SYNC_ERROR 발생
+BX-5521	OpenSSL 3.5 업그레이드
+BX-5502	특정 장치 그룹을 사용하는 커스텀 계정에서 이벤트 조회 성능 개선
+BX-5501	장치 상세 페이지 진입시 간헐적으로 1013 팝업 오류 뜨는 문제 수정
+BX-5572	TASK_GET_DOOR_STATUS 시 모든 doorId 상태 조회하는 문제
+BX-5866	[보안] Advanced Technology 에서 제기한 보안 취약점 작업
+BX-5573	[모하메드병원]대규모 환경(Access Group 다수, Door 4000)에서 출입 통제 상태 메뉴 조회 오래 거리는 문제(1분 이상)
+BX-5457	BioStar 2 에서 BioStar X 업그레이드 시 이미 BioStar X 설치 경로 폴더가 존재하는 경우 폴더 삭제 후 진행하라는 팝업 위치 또는 동작 개선
+BX-5452	[TA] 다수의 User(3000명 이상) 등록된 상태에서 TA Register 완료 및 새로고침 팝업 출력 후 Calendar 화면 출력 됨 
+BX-5574	[모하메드병원]카드스켄화면에서 디바이스 트리 로드 오래 걸리는 이슈
+BX-5679	[모하메드]server to device 에서  단말기 설정 못 갖고오는 현상
+BX-5862	[보안] Apache Log4j TLS MitM 취약점 (2.21.1)
+BX-5677	[성능 개선][mohammed hospital] Door 설정 저장 시 동기화 완료까지 오래 걸리는 문제
+BX-6121	여러대의 장치 사용중 일부 펀치로그 데이터가 누락되는 경우 수정
+BX-5871	BioStar2 Report > 카드관련 리포트 Wiegand Card ID 변환 미적용
+BX-5673	모하메드 병원 등록된 라이센스 많을경우 CORE WEBSERVER 시작 오래 걸리는 문제
+BX-5571	모하메드 병원 사용자 1명에 access group이 많이 할당되어 있으면 사용자 조회시 오래걸리는 이슈
+BX-5570	모하메드 병원 엘레베이터 상세화면 진입시 느림
+BX-5568	Leader-Follower 동기화 개선: follower 장치 필터링 누락 및 대량 사용자 그룹 조회 성능 수정
+BX-5567	devices/sync API 타임아웃 시 sync_ongoing 메시지 즉시 표시 및 중복 에러 팝업 방지
+BX-6299	[Mohammed ] Dashboard 필수 성능 개선 수정
+BX-5566	[성능개선] Guardian permission check 함수들의 N+1 쿼리 문제 해결
+BX-5058	[BioStar 2 이슈] 사용자 상세 페이지 진입 후 발급된 Mobile Access Card 삭제 후 재 발급 시 에러 팝업 발생하는 문제
+BX-6123	휴일 데이터가 100개가 넘어가면 휴일 데이터가 적용안되는 경우가 발생
+BX-5565	디바이스 트리 로드 속도 개선
+BX-5716	장치로 패킷 전송 성능 개선
+BX-5870	USB-Agent 에서 BioMini Slim2 사용 시 지문 스캔 실패했을 경우 crash 발생하는 문제
+BX-5872	[보안] 이전 비밀번호 관련 개발건
+BX-4941	브라우저 배율 확대 시 CSV Import 의 Mapping 화면에 Preserve, Overwrite 옵션이 있는 Drop Box 가 가려져 이후 진행 불가능한 문제
+BX-4898	[협의 된 잔여 이슈] Custom User Field 신규 추가 → User Column Layout 에서 추가한 Custom User Field 설정 후 Print 시 Custom User Field 컬럼 없는 문제
+BX-6122	Node & Library Upgrade
+BX-4714	[Monitoring] Occupancy Limit Zone에 구성한 장치 권한이 없는 관리자로 Occupancy Limit의 Preview 진입 시 Preview의 타이틀 및 상세 내용에 Loading이 종료되지 않음 
+BX-4709	[BioStar 2 이슈] Device Detail 화면에서 Suprema/Custom Smart Card: None 선택시 관련 없는 기능의 일부 UI 가 비활성화 되고 Layout 옆 Info Icon 활성화 되는 문제
+BX-4681	[Monitoring] Image 로그가 생성된 이벤트의 Preivew 영역에서 크게 보기 변경 시 문구 개선 필요
+BX-4506	[BioStar 2 이슈] Mobile Access Card 발급 사용자를 대상으로 Mobile Access Card 정보 없는 CSV Import - Overwrite 시 Mobile Access Card 가 삭제되지만 에어팝 포탈에는 유지되는 문제
+BX-4431	[BioStar 2 이슈] 모바일 카드 정보 포함된 CSV File Import 중 맵핑 화면에 User ID 선택 안된 경우 에어팝 포탈에 카드 발급되고 에러 팝업 발생되는 문제
+BX-4321	[BioStar 2 이슈] 모바일 카드 정보 있는 CSV Import (Preserve) 시 모바일 카드가 에어팝 포탈에만 발급되는 문제
+BX-4193	[Monitoring] 실시간 이벤트 로그의 이벤트 중에 서버에 없는 사용자 정보가 포함된 이벤트의 Preview 출력 시 사용자가 빈 값으로 표시 되는 문제
+BX-3970	[BioStar 2 이슈] User List 에서 (Custom User Field 포함) Column 전체 선택 후 인쇄시 Credential 관련 Column 만 공란으로 출력되는 문제
+BX-3887	[BioStar 2 이슈] 암호화 + 대/소문자 만 구분된 User ID 존재 하는 환경 > User List Column - Order By 실행 시 순서 틀어지는 문제
+BX-3778	[Setting] [Account] Custom Admin 생성 시 아이템 상세 권한에서 그룹 선택 시 UI 개선
+BX-3589	[Monitoring] Preview의 Video 일시정지 상태에서 큰화면 전환, 큰화면의 일시정지 상태에 큰화면 종료 시 Video가 재생상태로 전환 되는 문제
+BX-3479	[협의 된 잔여 이슈] Select All 후 CSV Export 시 사용자 생성 순서로 Export 되는 문제
+BX-3271	[Monitoring] 연결이 해제된 Slave 장치의 Preview에서 그룹이 표시 되지 않는 문제
+BX-2650	[Monitoring] Seekbar에 Time 라인과 Knob 위치의 시간 정보가 일치하지 않음
+BX-936	[Biostar 2 이슈] Manual Lock/Unlock(Permanent), Release 후 Floor Relay아이콘 선택 시 출력 되는 툴팁이 Door Status 탭 재진입 시 Floor Relay 아이콘을 클릭해도 출력 되지 않음
+BX-935	(Biostar 2 이슈)[1차제외]Manual Lock/Unlock(Timed,Permanent), Release 후 Door Relay아이콘 선택 시 출력 되는 Event가 Door Status 탭 재진입 시 Door Relay를 클릭해도 출력 되지 않음
+BX-6141	[Backend] [성능 개선] 전체 장치 동기화 출입그룹 변경시 BS2_CMD_SET_ACCESS_GROUP_MEMBERS 사용하지 않고 SyncUser로 대체
+BX-6138	네트워크 트래픽 제한 설정 버그 수정
+BX-6139	[Backend] [성능 개선] 전체 장치 동기화 출입그룹 정보 장치에 필요한 내용만 전송
+BX-7006	접근그룹 생성/삭제의 멤버 버전 갱신이 MSSQL 교착으로 유실되어 장치 동기화가 영구 정지됨
+BX-6984	Entra ID 상에서 유저 개체 ID를 알면, 연동된 BioStar 로그인이 즉시 가능한 문제
+BX-6871	[1.0.3][System] ZK 재연결 중 미초기화 String_vector 해제로 서버 크래시 (BX-6009 파생)
+
 
 ## 버그 수정
 
