@@ -3591,25 +3591,49 @@
     "width": 1000,
     "height": 252
   },
+  "/img/biostarx-settings-system-audit-trail-change-detail.png": {
+    "width": 1000,
+    "height": 620
+  },
   "/img/biostarx-settings-system-audit-trail-column-setting.png": {
     "width": 400,
-    "height": 574
+    "height": 460
   },
   "/img/biostarx-settings-system-audit-trail-defined-period.png": {
     "width": 510,
     "height": 139
   },
   "/img/biostarx-settings-system-audit-trail-export-csv.png": {
-    "width": 600,
+    "width": 465,
     "height": 279
+  },
+  "/img/biostarx-settings-system-audit-trail-list-badge.png": {
+    "width": 200,
+    "height": 67
+  },
+  "/img/biostarx-settings-system-audit-trail-list-tooltip.png": {
+    "width": 350,
+    "height": 194
   },
   "/img/biostarx-settings-system-audit-trail-list.png": {
     "width": 1000,
     "height": 249
   },
+  "/img/biostarx-settings-system-audit-trail-set-filter-popup.png": {
+    "width": 350,
+    "height": 256
+  },
+  "/img/biostarx-settings-system-audit-trail-set-filter.png": {
+    "width": 1000,
+    "height": 370
+  },
   "/img/biostarx-settings-system-audit-trail-set-period.png": {
     "width": 1000,
-    "height": 602
+    "height": 520
+  },
+  "/img/biostarx-settings-system-audit-trail-seted-filters.png": {
+    "width": 250,
+    "height": 80
   },
   "/img/biostarx-settings-system-audit-trail.png": {
     "width": 1000,
@@ -13233,31 +13257,55 @@
   },
   "/img/en/biostarx-settings-system-audit-trail-add-filter.png": {
     "width": 1000,
-    "height": 244
+    "height": 252
+  },
+  "/img/en/biostarx-settings-system-audit-trail-change-detail.png": {
+    "width": 1000,
+    "height": 620
   },
   "/img/en/biostarx-settings-system-audit-trail-column-setting.png": {
     "width": 400,
-    "height": 588
+    "height": 460
   },
   "/img/en/biostarx-settings-system-audit-trail-defined-period.png": {
     "width": 510,
     "height": 131
   },
   "/img/en/biostarx-settings-system-audit-trail-export-csv.png": {
-    "width": 600,
+    "width": 465,
     "height": 279
+  },
+  "/img/en/biostarx-settings-system-audit-trail-list-badge.png": {
+    "width": 200,
+    "height": 67
+  },
+  "/img/en/biostarx-settings-system-audit-trail-list-tooltip.png": {
+    "width": 350,
+    "height": 195
   },
   "/img/en/biostarx-settings-system-audit-trail-list.png": {
     "width": 1000,
     "height": 240
   },
+  "/img/en/biostarx-settings-system-audit-trail-set-filter-popup.png": {
+    "width": 350,
+    "height": 256
+  },
+  "/img/en/biostarx-settings-system-audit-trail-set-filter.png": {
+    "width": 1000,
+    "height": 370
+  },
   "/img/en/biostarx-settings-system-audit-trail-set-period.png": {
     "width": 1000,
-    "height": 606
+    "height": 520
+  },
+  "/img/en/biostarx-settings-system-audit-trail-seted-filters.png": {
+    "width": 250,
+    "height": 80
   },
   "/img/en/biostarx-settings-system-audit-trail.png": {
     "width": 1000,
-    "height": 447
+    "height": 466
   },
   "/img/en/biostarx-settings-system-daylight-saving-time-edit.png": {
     "width": 738,
@@ -20148,6 +20196,14 @@
     "height": 16
   },
   "/img/menus/ico-ascend.svg": {
+    "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-audit-delete.svg": {
+    "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-audit-edit.svg": {
     "width": 16,
     "height": 16
   },

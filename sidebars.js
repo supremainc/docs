@@ -888,7 +888,18 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-license-device-license'
               ]
             },
-            'platform/biostar_x/settings-system-audit-trail',
+            {
+              type: 'category',
+              label: '감사 추적 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-system-audit-trail',
+              },
+              items: [
+                'platform/biostar_x/settings-system-audit-trail-ac',
+                'platform/biostar_x/settings-system-audit-trail-settings'
+              ]
+            },
             {
               type: 'category',
               label: '시스템 설정하기',

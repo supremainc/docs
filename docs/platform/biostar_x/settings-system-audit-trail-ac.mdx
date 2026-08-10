@@ -1,0 +1,308 @@
+---
+id: settings-system-audit-trail-ac
+title: 출입 통제 감사 로그 조회하기
+description: 출입 통제와 관련된 생성, 수정, 삭제, 조회 등 모든 활동을 감사 로그에서 확인하고 필터링하는 방법을 안내합니다.
+keywords: [감사 추적, AC 감사 로그, audit trail, 출입 통제 감사 로그, 로그 관리, 보안 감사, 감사 필터]
+---
+
+<Cmd sid='setting.menu.auditTrail.acAuditLog' /> 기능은 사용자, 장치, 출입문 등 출입 통제와 관련된 모든 생성 및 수정, 삭제, 조회, 내보내기, 가져오기, 운영 활동을 기록합니다. 각 기록은 언제, 누가, 무엇을, 어떻게 변경했는지 함께 보여주므로 보안 감사와 문제 해결에 활용할 수 있습니다.
+
+* **보안 감사**: 비인가 접속 시도나 권한 남용을 탐지하세요.
+
+* **문제 해결**: 시스템 오류 발생 시점과 설정 변경 이력을 추적하세요.
+
+* **규정 준수**: 개인정보 조회 이력을 포함한 접근 기록을 보관하고 감사 보고서를 작성하세요.
+
+## 출입 통제 감사 로그 확인
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />를 클릭하세요.
+
+1. 감사 로그 목록이 화면에 표시됩니다.
+
+<Image src='/img/biostarx-settings-system-audit-trail.png' />
+
+:::info
+
+보관 기간 등 감사 로그 정책을 변경하려면 <DocLink docId='platform/biostar_x/settings-system-audit-trail-settings' />를 참고하세요.
+
+:::
+
+## 테이블 구성 {/* #audit-trail-columns */}
+
+감사 로그 목록 테이블은 10개 컬럼으로 구성되며, 현재 검색 조건에 해당하는 기록을 <Cmd sid='audit.column.datetime' /> 기준 최신순으로 표시합니다.
+
+| 컬럼 | 설명 |
+|---|---|
+| <Cmd sid='audit.column.datetime' /> | 이벤트가 발생한 날짜와 시간입니다. |
+| <Cmd sid='audit.column.user' /> | 이벤트를 수행한 사용자입니다. **id(이름)** 형식으로 표시됩니다. |
+| <Cmd sid='audit.column.accountLevel' /> | 이벤트를 수행한 사용자의 관리자 등급입니다. |
+| <Cmd sid='audit.column.category' /> | 이벤트 대상의 도메인 분류입니다(예: 사용자, 장치, 출입문). |
+| <Cmd sid='audit.column.action' /> | 수행된 동작 종류입니다. <Cmd sid='action.create' />, <Cmd sid='action.update' />, <Cmd sid='action.delete' />, <Cmd sid='action.read' />, <Cmd sid='action.export' />, <Cmd sid='action.import' />, <Cmd sid='action.operation' /> 중 하나로 분류됩니다. |
+| <Cmd sid='audit.column.subAction' /> | 로그인 방식, 알람 해제처럼 세부 동작 이름이 있는 경우에만 표시됩니다. |
+| <Cmd sid='audit.column.target' /> | 동작이 적용된 대상입니다. **타입: id(이름)** 형식으로 표시됩니다. |
+| <Cmd sid='audit.column.modifiedFields' /> | 변경되거나 조회된 필드 이름입니다. |
+| <Cmd sid='audit.column.details' /> | 동작별 상세 정보입니다. (예: 변경 값, 사유, 조회 조건 등) |
+| <Cmd sid='audit.column.ip' /> | 사용자가 접속한 IP 주소입니다. 시스템이 자동으로 발급한 기록은 **127.0.0.1**로 표시됩니다. |
+
+:::info
+
+* <Cmd sid='audit.column.target' />과 <Cmd sid='audit.column.modifiedFields' /> 값이 2건 이상이면 첫 항목만 표시되고, 나머지는 오른쪽에 잔여 건수 배지(예: **+208**)로 압축됩니다. 잔여 건수가 1,000건 이상이면 **+999**로 표기하며, 정확한 총 건수는 상세 팝업 제목에서 확인할 수 있습니다. 배지를 클릭하면 해당 셀의 상세 팝업이 열립니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-list-badge.png' />
+
+* 셀 값이 길면 한 줄로 말줄임 처리됩니다. 마우스를 오버하면 전체 값이 툴팁으로 표시되며, 툴팁을 벗어나는 길이는 `...`으로 줄여 표기됩니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-list-tooltip.png' />
+
+:::
+
+## 상세 정보 확인
+
+값이 있는 <Cmd sid='audit.column.target' />, <Cmd sid='audit.column.modifiedFields' />, <Cmd sid='audit.column.details' /> 열은 밑줄로 표시되며 클릭할 수 있습니다. 해당 열의 값을 클릭하면 동작에 맞는 상세 팝업이 열리고, 팝업을 닫으려면 <Cmd sid='audit.filter.ok' /> 버튼 또는 <IcClose title='Close' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-settings-system-audit-trail-change-detail.png' />
+
+팝업 상단의 <Cmd sid='audit.detail.searchPlaceholder' /> 입력란에 검색어를 입력하면 일치하는 항목만 강조되거나 필터링됩니다. 대상 팝업은 검색 시 그룹과 그룹별 건수도 함께 갱신되지만, 제목의 전체 건수는 검색과 관계없이 그대로 유지됩니다.
+
+## 필터로 원하는 기록 찾기
+
+<Cmd sid='audit.filter.title' /> 섹션에서 제공하는 필터를 조합해 원하는 기록을 좁혀서 찾으세요. 한 필터 안에서 여러 값을 선택하면 `OR`로, 서로 다른 필터를 함께 적용하면 `AND`로 결합됩니다.
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-filter.png' />
+
+| 필터 | 동작 방식 |
+|---|---|
+| <Cmd sid='audit.filter.datetime' /> | 시작·종료 날짜와 시각을 지정합니다. 조회 기간에는 길이 제한이 없습니다. |
+| <Cmd sid='audit.filter.user' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 사용자를 찾으세요. 처음 열면 목록이 비어 있습니다. |
+| <Cmd sid='audit.filter.accountLevel' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 관리자 등급을 찾으세요. |
+| <Cmd sid='audit.filter.category' /> | 검색 가능한 체크박스 목록에서 하나 이상의 분류를 선택하세요. |
+| <Cmd sid='audit.filter.target' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 대상을 찾으세요. |
+| <Cmd sid='audit.filter.action' /> | 체크박스 목록에서 하나 이상의 동작을 선택하세요. |
+| <Cmd sid='audit.filter.subAction' /> | 검색 가능한 목록에서 세부 작업을 선택하세요. 자세한 내용은 <DocLink inner='#audit-trail-sub-actions' />을 참고하세요. |
+| <Cmd sid='audit.filter.ip' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 IP를 찾으세요. |
+
+* 적용된 필터가 없으면 현재 날짜로부터 30일 전까지의 기록을 기본 표시합니다.
+
+* 각 필터 팝업에서 원하는 값을 선택한 뒤 <Cmd sid='audit.filter.addCondition' /> 버튼을 클릭하면 즉시 검색에 반영됩니다. <Cmd sid='audit.filter.cancel' />을 클릭하면 선택을 취소하고 팝업을 닫습니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-set-filter-popup.png' />
+
+* 적용된 필터는 첫 항목과 추가 건수로 요약되어 표시됩니다. <IcClose title='Disable' /> 버튼을 클릭하면 해당 필터만 해제됩니다. 값을 선택하지 않은 필터는 <Cmd sid='audit.filter.none' />으로 표시됩니다.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-seted-filters.png' />
+
+:::info
+
+<Cmd sid='audit.filter.user' />, <Cmd sid='audit.filter.accountLevel' />, <Cmd sid='audit.filter.target' />, <Cmd sid='audit.filter.ip' /> 필터는 검색어를 입력해야 결과가 나타납니다. 부분 일치를 지원하므로 이름이나 아이디의 일부만 입력해도 됩니다. 삭제된 대상은 <Cmd sid='audit.detail.target.deleted' /> 표기로 함께 검색됩니다.
+
+:::
+
+### 조회 기간 지정
+
+<Cmd sid='audit.filter.datetime' />를 클릭하면 <Cmd sid='audit.filter.dateRangeTitle' /> 팝업이 열립니다.
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-period.png' />
+
+1. <Cmd sid='audit.filter.startDatetime' />과 <Cmd sid='audit.filter.endDatetime' />의 날짜와 시각을 각각 지정하세요. <Cmd sid='audit.filter.today' />를 클릭하면 오늘 날짜로 바로 이동합니다.
+
+1. <Cmd sid='audit.filter.ok' />를 클릭해 적용하세요.
+
+### 세부 작업 목록 {/* #audit-trail-sub-actions */}
+
+<Cmd sid='audit.column.subAction' /> 컬럼과 <Cmd sid='audit.filter.subAction' /> 필터에 나타나는 세부 동작 이름을 주제별로 정리했습니다. 각 항목을 클릭하여 세부 내용을 확인하세요.
+
+<details>
+<summary>로그인 및 인증</summary>
+
+* <Cmd sid='audit.system.login' product='2' />, <Cmd sid='audit.system.fingerprint_login' product='2' />, <Cmd sid='audit.system.loginentra' product='2' />, <Cmd sid='audit.system.logout' product='2' />
+
+* **로그인 실패**: <Cmd sid='audit.system.loginfailedidpw' product='2' />, <Cmd sid='audit.system.loginfailedfingerprint' product='2' />, <Cmd sid='audit.system.loginfailedip' product='2' />, <Cmd sid='audit.system.maximum_invalid_attempts' product='2' />
+
+* **세션·토큰**: <Cmd sid='audit.system.sessionProvide' product='2' />, <Cmd sid='audit.system.serviceToken.success' product='2' />, <Cmd sid='audit.system.serviceToken.authFailed' product='2' />, <Cmd sid='audit.system.serviceToken.rateLimit' product='2' />
+
+</details>
+
+<details>
+<summary>시스템 백업</summary>
+
+* <Cmd sid='audit.system.quick_action' />, <Cmd sid='audit.system.backup_started' />, <Cmd sid='audit.system.backup_finished' />, <Cmd sid='audit.system.backup_cancelled' />, <Cmd sid='audit.system.auto_backup_started' />, <Cmd sid='audit.system.auto_backup_finished' />, <Cmd sid='audit.system.auto_backup_cancelled' />
+
+</details>
+
+<details>
+<summary>사용자 관리</summary>
+
+* <Cmd sid='audit.user.change_password' />, <Cmd sid='audit.user.clear_personal_data' />, <Cmd sid='audit.user.device_display_message' product='2' />
+
+* **얼굴 데이터**: <Cmd sid='audit.user.visualface_import' product='2' />, <Cmd sid='audit.user.migration_visualface' product='2' />
+
+* **장치 연동**: <Cmd sid='audit.user.export' product='2' />, <Cmd sid='audit.user.remove' product='2' />
+
+* **장기 미출입 사용자**: <Cmd sid='audit.user.delete.absence' product='2' />, <Cmd sid='audit.user.search.absence' />, <Cmd sid='audit.user.csv_export.absence' product='2' />
+
+* **데이터 가져오기·내보내기**: <Cmd sid='audit.user.csv_import' product='2' />, <Cmd sid='audit.user.csv_export' product='2' />, <Cmd sid='audit.user.data_import' product='2' />, <Cmd sid='audit.user.data_export' product='2' />
+
+* **이메일**: <Cmd sid='audit.user.emailSentSuccess' product='2' />, <Cmd sid='audit.user.emailSentFail' product='2' />
+
+* **리포트 내보내기**: <Cmd sid='audit.data.pdfExport' product='2' />
+
+</details>
+
+<details>
+<summary>카드 및 방문자</summary>
+
+* <Cmd sid='audit.card.block' />, <Cmd sid='audit.card.unblock' />
+
+* <Cmd sid='audit.visitor.check_in' />, <Cmd sid='audit.visitor.check_out' />, <Cmd sid='audit.visitor.delete_personal_data' />
+
+</details>
+
+<details>
+<summary>장치 관리</summary>
+
+* **연결 및 동기화**: <Cmd sid='audit.device.connect' product='2' />, <Cmd sid='audit.device.disconnect' product='2' />, <Cmd sid='audit.device.sync' product='2' />, <Cmd sid='audit.device.sync_time' product='2' />, <Cmd sid='audit.device.move' />
+
+* **설정**: <Cmd sid='audit.device.config_export' />, <Cmd sid='audit.device.config_import' />, <Cmd sid='audit.device.set_network' />, <Cmd sid='audit.device.update_resource' />, <Cmd sid='audit.device.reset_config' />, <Cmd sid='audit.device.change_device_id' />, <Cmd sid='audit.device.set_fingerprint_format' />, <Cmd sid='audit.device.set_fire_alarm' />
+
+* **OSDP**: <Cmd sid='audit.device.set_osdp_security_key' />, <Cmd sid='audit.device.replace_osdp_device' />, <Cmd sid='audit.device.osdp_bulk_edit' />
+
+* **잠금 및 활성화**: <Cmd sid='audit.device.lock' />, <Cmd sid='audit.device.unlock' />, <Cmd sid='audit.device.activate' />, <Cmd sid='audit.device.inactivate' />, <Cmd sid='audit.device.device_locked' />, <Cmd sid='audit.device.device_unlocked' />
+
+* **유지 보수**: <Cmd sid='audit.device.update' product='2' />, <Cmd sid='audit.device.reset' product='2' />, <Cmd sid='audit.device.factory_reset' product='2' />, <Cmd sid='audit.device.upload_log' />, <Cmd sid='audit.device.clear_log' product='2' />, <Cmd sid='audit.device.discover_wiegand' product='2' />
+
+* **카드 및 인증**: <Cmd sid='audit.device.scan_card' />, <Cmd sid='audit.device.erase_card' />, <Cmd sid='audit.device.write_card' />, <Cmd sid='audit.device.release_auth_fail_lockout' />, <Cmd sid='audit.device.apply_auth_fail_lockout' />
+
+* **영상**: <Cmd sid='audit.device.upload_video' />, <Cmd sid='audit.device.delete_video' />, <Cmd sid='audit.device.cancel_upload_video' />
+
+* **사이트 키 및 라이선스**: <Cmd sid='audit.device.set_site_key' />, <Cmd sid='audit.device.delete_site_key' />, <Cmd sid='audit.device.license' product='2' />, <Cmd sid='audit.device.disable_license' />, <Cmd sid='audit.device.export' product='2' />
+
+</details>
+
+<details>
+<summary>출입 통제 운영(출입문/엘리베이터/구역)</summary>
+
+* **출입문/엘리베이터**: <Cmd sid='audit.door.lock' product='2' />, <Cmd sid='audit.door.unlock' product='2' />, <Cmd sid='audit.elevator.lock' product='2' />, <Cmd sid='audit.elevator.unlock' product='2' />, <Cmd sid='audit.door.clear_timed_apb_ex' product='2' />
+
+* **구역**: <Cmd sid='audit.zone.set_occupancy' product='2' />, <Cmd sid='audit.zone.arm' />, <Cmd sid='audit.zone.disarm' />, <Cmd sid='audit.zone.update_tracking' />, <Cmd sid='audit.zone.start_roll_call' />, <Cmd sid='audit.zone.stop_roll_call' />
+
+* <Cmd sid='audit.event_log.event_log_imported' />
+
+</details>
+
+<details>
+<summary>시스템 설정 및 라이선스</summary>
+
+* <Cmd sid='audit.setting.mobileCredential.registerEnrollmentDevice' />, <Cmd sid='audit.setting.mobileCredential.unregisterEnrollmentDevice' />, <Cmd sid='audit.setting.logConfig.reload' />, <Cmd sid='audit.setting.directoryIntegration.syncNow' />
+
+* <Cmd sid='audit.license.activate' />, <Cmd sid='audit.license.manual_activate' />
+
+* <Cmd sid='audit.alert.event_priorities' />
+
+</details>
+
+:::info
+
+다음과 같이 여러 화면에서 공통으로 쓰이는 이름은 대상에 따라 서로 다른 세부 작업으로 기록되므로 목록에서 개별적으로 다루지 않았습니다. 
+
+> <Cmd sid='common.upload' product='2' />, <Cmd sid='audit.method.4' product='2' />, <Cmd sid='button.print' product='2' />, <Cmd sid='common.use' product='2' />, <Cmd sid='common.notUse' product='2' />, <Cmd sid='button.open' product='2' />, <Cmd sid='button.release' product='2' />, <Cmd sid='button.clearAlarm' product='2' />, <Cmd sid='button.clearAntiPassBackViolation' product='2' />
+
+정확한 대상은 같은 행의 <Cmd sid='audit.column.category' />와 <Cmd sid='audit.column.target' /> 컬럼에서 확인하세요.
+
+:::
+
+## 필터 저장
+
+자주 사용하는 검색 조건은 <Cmd sid='audit.filter.savedFilters' />에 저장해 두고 다시 불러올 수 있습니다.
+
+1. 원하는 조건으로 필터를 설정하세요.
+
+1. <Cmd sid='audit.filter.title' /> 섹션의 <Cmd sid='audit.filter.save' /> 버튼을 클릭하세요.
+
+1. 화면 왼쪽 필터 목록에 <Cmd sid='audit.filter.newFilterName' /> 항목이 추가됩니다.
+
+<Image src='/img/biostarx-settings-system-audit-trail-add-filter.png' />
+
+* 필터 이름을 바꾸려면 <IcAuditEdit title='Edit' /> 버튼을 클릭하고 새 이름을 입력한 뒤 <Kbd>Enter</Kbd> 키를 누르세요.
+
+* 필터를 삭제하려면 <IcAuditDelete title='Delete' /> 버튼을 클릭하세요.
+
+:::info
+
+저장할 수 있는 필터는 최대 20개입니다. 저장한 필터는 브라우저에 보관되므로 다른 PC나 브라우저에서는 표시되지 않습니다.
+
+:::
+
+## 페이지 탐색
+
+페이지를 이동하거나 한 페이지에 표시할 목록 개수를 설정할 수 있습니다.
+
+* <IcFirst />: 처음 페이지로 이동합니다.
+
+* <IcFw />: 이전 페이지로 이동합니다.
+
+* <IcBw />: 다음 페이지로 이동합니다.
+
+* <IcLast />: 마지막 페이지로 이동합니다.
+
+* <Image src='/img/ico-audit-trail-rows-page.png' ico />: 한 페이지에 표시할 목록 개수를 선택합니다.
+
+## 열 설정
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/biostarx-settings-system-audit-trail-column-setting.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+감사 로그 테이블의 컬럼 위치를 바꾸거나 숨길 수 있습니다. <Cmd sid='audit.filter.title' /> 섹션 오른쪽의 <IcMoreW /> → <Cmd sid='audit.filter.menuColumnSetting' />을 클릭하세요.
+
+* <Cmd sid='audit.columnSettings.listHeading' />에서 숨기려는 항목의 체크박스 선택을 해제하세요.
+
+* 열 순서를 바꾸려면 원하는 항목을 드래그하세요.
+
+* 열 설정을 초기화하려면 <Cmd sid='audit.columnSettings.defaultColumn' /> 버튼을 클릭하세요.
+
+설정을 저장하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+</Column>
+</Columns>
+
+## CSV로 내보내기
+
+감사 로그를 CSV 파일로 내보내 외부 분석 도구에서 활용하세요.
+
+1. <Cmd sid='audit.filter.title' /> 섹션에서 필요한 경우 필터를 설정하세요.
+
+1. 섹션 오른쪽의 <IcMoreW /> → <Cmd sid='audit.filter.menuCsvExport' />를 클릭하세요.
+
+1. <Cmd sid='audit.csvExport.title' /> 창이 나타나면 <Cmd sid='audit.csvExport.reasonLabel' />(선택 사항)을 입력하고 <Cmd sid='button.download' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-export-csv.png' />
+
+내보낸 CSV 파일은 레코드당 한 줄로 10개 컬럼을 모두 포함하며, 모든 값은 인용 부호로 감싸 표기됩니다. 대상이 여러 개인 값은 버티컬 바(`|`)로 구분되고(예: **User: 7(Kim)|User: 8(Lee)**), <Cmd sid='audit.column.details' /> 값은 말줄임 없이 전체 대상과 전체 필드를 포함합니다.
+
+:::tip
+
+필터를 설정했다면 필터링된 결과만 CSV 파일로 내보내집니다.
+
+:::
+
+## BioStar 2 기록 확인
+
+이전 버전(BioStar 2)에서 남긴 기록도 같은 테이블에서 함께 조회할 수 있습니다. BioStar 2 기록은 다음과 같이 표시됩니다.
+
+* <Cmd sid='audit.column.user' />와 <Cmd sid='audit.column.target' />은 **이름(id)** 형식(공백 변형 포함)으로 원형 그대로 보존됩니다.
+
+* <Cmd sid='audit.column.modifiedFields' />는 항상 하이픈(`-`)로 표시됩니다.
+
+* 제공되는 필터로 BioStar 2 기록도 동일하게 검색할 수 있으며, <Cmd sid='audit.filter.user' />와 <Cmd sid='audit.filter.target' />은 이름과 아이디 양쪽으로 매칭됩니다.
+
+:::info
+
+레거시 기록에는 지원하지 않는 검색 조건이 포함될 수 있습니다. 저장된 필터를 불러올 때 일부 조건이 제외되면 안내 메시지가 표시됩니다.
+
+:::
