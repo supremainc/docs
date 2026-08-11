@@ -25,14 +25,35 @@ BX-6782	동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중
 1. User ID not displayed in Visual Face synchronization failure events. <Badge>1.0.0</Badge>
 
 BX-6730	Biostar2 2.9.12 취약점에 대해 BioStarX에도 적용
-1. 
+BX-6729	Log4j 버전 2.25.4 이상, Oracle Java SE 21.0.11 이상 업그레이드 필요
+1. 보안 취약점 개선
+   * AngularJS, jQuery 버전 업데이트
+   * Reverse Tabnabbing 취약점 개선
+   * 세션 쿠키 보안 강화
+   * Log4j 라이브러리 버전 업데이트
+   * Java 실행환경(JRE) 버전 업데이트
+1. Security vulnerability improvements
+   * Updated AngularJS and jQuery versions
+   * Improved Reverse Tabnabbing vulnerability
+   * Enhanced session cookie security
+   * Updated Log4j library version
+   * Updated Java Runtime Environment (JRE) version
+
+BX-6727	Visual Face Migration "No registered visual face found." 오탐
+1. 현재 페이지에 얼굴 등록 사용자가 없으면 비주얼 페이스 마이그레이션이 진행되지 않는 문제 <Badge>1.0.0</Badge>
+1. Visual Face migration not proceeding when the current page has no users with enrolled faces. <Badge>1.0.0</Badge>
+
+BX-6726	출입 간에 올바르지 않은 날짜가 저장되는 이슈
+1. API를 이용하여 접근 그룹 수정 시 유효하지 않은 날짜로 인해 오류가 발생하는 문제 <Badge>1.0.0</Badge>
+1. Errors occurring due to invalid dates when modifying access groups via the API. <Badge>1.0.0</Badge>
+
+BX-6724	EntraID 그룹 정보 파싱 로직 수정.
+1. Entra ID 그룹명에 쉼표(,), 등호(=) 등 특수문자가 포함된 경우 동기화가 실패하는 문제 <Badge>1.0.0</Badge>
+1. Synchronization failing when an Entra ID group name contains special characters such as commas (,) or equal signs (=). <Badge>1.0.0</Badge>
+
+BX-6427	사용자 ID·이름이 SQL에 안전하지 않게 전달되는 문제 수정
 1. 
 
-BX-6729	Log4j 버전 2.25.4 이상, Oracle Java SE 21.0.11 이상 업그레이드 필요
-BX-6727	Visual Face Migration "No registered visual face found." 오탐
-BX-6726	STTDT, EXPDT에 zerodate가 저장 가능한 이슈 수정
-BX-6724	EntraID 그룹 정보 파싱 로직 수정.
-BX-6427	사용자 ID·이름이 SQL에 안전하지 않게 전달되는 문제 수정
 BX-6421	[FISS BioStar X] Extend timeout for BioStar X Remote Access ngrok.exe authenticode validation failure
 BX-6419	미사용 실행파일 삭제 처리 추가
 BX-6398	동기화 사이클안에서 에러가 발생하면 더이상 동기화가 진행안됨
