@@ -24,3 +24,15 @@ export function StatusUpdating() {
         <div className={clsx(styles.status, styles.updating)}></div>
     )
 }
+
+export function Mastermark() {
+    return (
+        <span className={clsx(styles.master, styles.mark)}>M</span>
+    )
+}
+
+export function Slavemark() {
+    return (
+        <span className={clsx(styles.slave, styles.mark)}>S</span>
+    )
+}

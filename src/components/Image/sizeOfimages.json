@@ -2087,9 +2087,17 @@
     "width": 400,
     "height": 277
   },
+  "/img/biostarx-monitoring-device-auth-fail-lock.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/biostarx-monitoring-device-details.png": {
     "width": 1200,
     "height": 501
+  },
+  "/img/biostarx-monitoring-device-lock.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-device-popup.png": {
     "width": 418,
@@ -2417,11 +2425,11 @@
   },
   "/img/biostarx-setting-device-adding-slave-device.png": {
     "width": 301,
-    "height": 281
+    "height": 333
   },
   "/img/biostarx-setting-device-adding-slave-list.png": {
     "width": 600,
-    "height": 242
+    "height": 253
   },
   "/img/biostarx-setting-device-adding-wiegand-list.png": {
     "width": 600,
@@ -2483,6 +2491,14 @@
     "width": 1000,
     "height": 317
   },
+  "/img/biostarx-setting-device-delete-check.png": {
+    "width": 400,
+    "height": 188
+  },
+  "/img/biostarx-setting-device-delete-none-check.png": {
+    "width": 400,
+    "height": 168
+  },
   "/img/biostarx-setting-device-detail-card-csn-mobile.png": {
     "width": 800,
     "height": 101
@@ -2515,9 +2531,13 @@
     "width": 800,
     "height": 162
   },
+  "/img/biostarx-setting-device-detail-face-block-duplicate-auth.png": {
+    "width": 473,
+    "height": 111
+  },
   "/img/biostarx-setting-device-detail-face.png": {
     "width": 1000,
-    "height": 419
+    "height": 518
   },
   "/img/biostarx-setting-device-detail-fingerprint.png": {
     "width": 1000,
@@ -2569,7 +2589,7 @@
   },
   "/img/biostarx-setting-device-edit-auth-mode.png": {
     "width": 1200,
-    "height": 354
+    "height": 704
   },
   "/img/biostarx-setting-device-edit-info.png": {
     "width": 1500,
@@ -2662,6 +2682,10 @@
   "/img/biostarx-setting-device-list-print.png": {
     "width": 600,
     "height": 334
+  },
+  "/img/biostarx-setting-device-list-with-slace.png": {
+    "width": 1200,
+    "height": 217
   },
   "/img/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 600,
@@ -4106,6 +4130,50 @@
   "/img/biostarx-ui-user.png": {
     "width": 1500,
     "height": 724
+  },
+  "/img/biostarx-uninstall-apps-list.png": {
+    "width": 1013,
+    "height": 158
+  },
+  "/img/biostarx-uninstall-cert-backup-overwrite.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/biostarx-uninstall-cert-backup-path.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/biostarx-uninstall-cert-backup-success.png": {
+    "width": 247,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-cert-backup.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/biostarx-uninstall-confirm.png": {
+    "width": 368,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-delete-content.png": {
+    "width": 331,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-progress.png": {
+    "width": 499,
+    "height": 392
+  },
+  "/img/biostarx-uninstall-success.png": {
+    "width": 370,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-usb-agent-confirm.png": {
+    "width": 409,
+    "height": 147
+  },
+  "/img/biostarx-uninstall-usb-agent-success.png": {
+    "width": 410,
+    "height": 147
   },
   "/img/biostarx-upgrade-complete.png": {
     "width": 499,
@@ -11815,9 +11883,17 @@
     "width": 418,
     "height": 326
   },
+  "/img/en/biostarx-monitoring-device-auth-fail-lock.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/en/biostarx-monitoring-device-details.png": {
     "width": 1200,
     "height": 501
+  },
+  "/img/en/biostarx-monitoring-device-lock.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-device-popup.png": {
     "width": 418,
@@ -12144,12 +12220,12 @@
     "height": 332
   },
   "/img/en/biostarx-setting-device-adding-slave-device.png": {
-    "width": 322,
-    "height": 274
+    "width": 301,
+    "height": 333
   },
   "/img/en/biostarx-setting-device-adding-slave-list.png": {
-    "width": 710,
-    "height": 285
+    "width": 600,
+    "height": 253
   },
   "/img/en/biostarx-setting-device-adding-wiegand-list.png": {
     "width": 670,
@@ -12211,6 +12287,14 @@
     "width": 1000,
     "height": 317
   },
+  "/img/en/biostarx-setting-device-delete-check.png": {
+    "width": 373,
+    "height": 188
+  },
+  "/img/en/biostarx-setting-device-delete-none-check.png": {
+    "width": 400,
+    "height": 168
+  },
   "/img/en/biostarx-setting-device-detail-card-csn-mobile.png": {
     "width": 800,
     "height": 98
@@ -12243,9 +12327,13 @@
     "width": 800,
     "height": 164
   },
+  "/img/en/biostarx-setting-device-detail-face-block-duplicate-auth.png": {
+    "width": 473,
+    "height": 111
+  },
   "/img/en/biostarx-setting-device-detail-face.png": {
     "width": 1000,
-    "height": 420
+    "height": 518
   },
   "/img/en/biostarx-setting-device-detail-fingerprint.png": {
     "width": 1000,
@@ -12297,7 +12385,7 @@
   },
   "/img/en/biostarx-setting-device-edit-auth-mode.png": {
     "width": 1200,
-    "height": 363
+    "height": 705
   },
   "/img/en/biostarx-setting-device-edit-info.png": {
     "width": 1670,
@@ -12390,6 +12478,10 @@
   "/img/en/biostarx-setting-device-list-print.png": {
     "width": 600,
     "height": 334
+  },
+  "/img/en/biostarx-setting-device-list-with-slace.png": {
+    "width": 1200,
+    "height": 217
   },
   "/img/en/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 750,
@@ -13802,6 +13894,50 @@
   "/img/en/biostarx-ui-user.png": {
     "width": 1500,
     "height": 724
+  },
+  "/img/en/biostarx-uninstall-apps-list.png": {
+    "width": 1013,
+    "height": 158
+  },
+  "/img/en/biostarx-uninstall-cert-backup-overwrite.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/en/biostarx-uninstall-cert-backup-path.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/en/biostarx-uninstall-cert-backup-success.png": {
+    "width": 338,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-cert-backup.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/en/biostarx-uninstall-confirm.png": {
+    "width": 406,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-delete-content.png": {
+    "width": 331,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-progress.png": {
+    "width": 499,
+    "height": 392
+  },
+  "/img/en/biostarx-uninstall-success.png": {
+    "width": 382,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-usb-agent-confirm.png": {
+    "width": 409,
+    "height": 156
+  },
+  "/img/en/biostarx-uninstall-usb-agent-success.png": {
+    "width": 410,
+    "height": 161
   },
   "/img/en/biostarx-upgrade-complete.png": {
     "width": 499,
