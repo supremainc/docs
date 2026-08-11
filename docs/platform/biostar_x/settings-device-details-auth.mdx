@@ -178,7 +178,7 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 :::
 
 
-## 얼굴 인증 설정
+## 얼굴 인증 설정 {/* #faceDetectionSettings */}
 
 <Cmd sid='user.credential.face' product='2' /> 또는 <Cmd sid='user.credential.visualface' product='2' /> 그룹에서는 장치의 얼굴 인증에 대한 세부 사항을 설정할 수 있습니다.
 
@@ -222,6 +222,30 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 
 * <Cmd sid='device.info.storeVisualFaceImage' product='2' />: 얼굴의 실제 이미지와 특징 정보만 추출한 템플릿을 저장합니다. 실제 이미지를 저장하지 않으려면 이 설정을 비활성화하세요.
 
+* <Cmd sid='device.info.reauthPrevention' product='2' />: 같은 사용자의 얼굴이 짧은 시간 안에 다시 감지될 때 중복으로 인증되지 않도록 설정하세요. <Cmd sid='common.use' product='2' />으로 설정하면 <Cmd sid='device.info.reauthPreventionTime' product='2' />을 3\~60초 사이로 설정할 수 있습니다.
+
+   <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
+
+   :::note
+
+   이 설정은 <Cmd sid='device.info.antiTailgating.label' product='2' />과 <Cmd sid='device.info.multiFaceAuth.label' product='2' /> 중 어느 옵션을 사용하더라도 공통 적용됩니다.
+
+   :::
+
+* <Cmd sid='device.info.antiTailgating.label' product='2' />: 장치 카메라 촬영 범위 안에서 2명 이상의 얼굴이 동시에 감지되면 동반 출입으로 판단하여 인증을 중단합니다.
+
+* <Cmd sid='device.info.multiFaceAuth.label' product='2' />: 장치 카메라 촬영 범위 안에 있는 여러 사용자의 얼굴을 순서대로 인증합니다.
+
+   :::note
+
+   * 이 옵션을 사용하려면 별도의 장치 라이선스가 필요합니다. 라이선스가 없는 장치에서는 옵션을 사용으로 설정할 수 없습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-license-device-license' />를 참고하세요.
+
+   * 이 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 장치에 설정된 <Cmd sid='device.info.authenticationMode' product='2' />와 관계없이 얼굴 인증 전용으로 동작합니다.
+
+   * 이 옵션을 사용하는 장치에서는 근태 관리(T&A)와 서버 개인 메시지 기능을 사용할 수 없습니다.
+
+   :::
+
 :::info
 
 * 장치 종류에 따라 설정할 수 있는 옵션은 다를 수 있습니다.
@@ -231,6 +255,16 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 * <Cmd sid='device.authmode.settings.lightBrightness' product='2' /> 옵션은 FaceStation F2 펌웨어 1.1.0 이상 모델에서 지원합니다.
 
 * <Cmd sid='device.info.faceDetectSetting' product='2' />, <Cmd sid='device.info.faceOperationMode' product='2' /> 옵션은 BioStation 3 Max, BioStation 3, FaceStation F2 모델에서 지원합니다.
+
+* <Cmd sid='device.info.antiTailgating.label' product='2' />과 <Cmd sid='device.info.multiFaceAuth.label' product='2' />은 동시에 <Cmd sid='common.use' product='2' />으로 설정할 수 없습니다. 한 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 다른 옵션은 자동으로 <Cmd sid='common.notUse' product='2' />으로 전환됩니다.
+
+* <Cmd sid='device.info.reauthPrevention' product='2' />와 <Cmd sid='device.info.multiFaceAuth.label' product='2' /> 옵션은 마스터 장치에서만 설정할 수 있습니다. <Cmd sid='device.info.antiTailgating.label' product='2' /> 옵션은 마스터, 슬레이브 장치에서 각각 설정할 수 있습니다.
+
+* <Cmd sid='device.info.reauthPrevention' product='2' />, <Cmd sid='device.info.antiTailgating.label' product='2' />, <Cmd sid='device.info.multiFaceAuth.label' product='2' /> 옵션은 장치 종류 및 펌웨어 버전에 따라 지원 여부가 다를 수 있습니다.
+
+   * BioStation 3 펌웨어 1.5.0 이상
+
+   * BioStation 3 Max 펌웨어 1.2.0 이상
 
 :::
 
