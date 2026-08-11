@@ -65,7 +65,7 @@ CLUe 전용 펌웨어를 탑재한 장치 매뉴얼이 추가되었습니다.
 
 ### 릴리스 노트
 
-* [BioStation 2a](../device/biostation_2a/release-notes/122): 1.2.2 버전 릴리스 노트 추가
+* [BioStation 2a](../device/biostation_2a/release-notes/123): 1.2.3 버전 릴리스 노트 추가
 
 * [BioStation 3 Max](../device/biostation_3_max/release-notes/101): 1.0.0, 1.0.1 버전 릴리스 노트 추가
 

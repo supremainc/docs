@@ -65,7 +65,7 @@ Device manuals for products with dedicated CLUe firmware have been added.
 
 ### Release Notes
 
-* [BioStation 2a](../device/biostation_2a/release-notes/122): Added release notes for version 1.2.2
+* [BioStation 2a](../device/biostation_2a/release-notes/123): Added release notes for version 1.2.3
 
 * [BioStation 3 Max](../device/biostation_3_max/release-notes/101): Added release notes for versions 1.0.0 and 1.0.1
 
