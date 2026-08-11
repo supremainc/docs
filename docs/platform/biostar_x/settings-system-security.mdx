@@ -161,6 +161,12 @@ keywords: [시스템 보안, 암호화]
 
     * 비밀키에 암호가 설정되어 있으면 <Cmd sid="setting.sever.secure.comm.extcert.passphrase.menu" product='2' />와 <Cmd sid="setting.sever.secure.comm.extcert.passphraseconfirm.menu" product='2' />에 동일한 값을 입력하세요. (선택 사항)
 
+  :::note
+
+  서버를 제거하면서 백업해 둔 인증서 세트를 재사용하려면, 백업 파일 중 루트 CA는 <Cmd sid="setting.sever.secure.comm.extcert.root.menu" product='2' />에, 서버 인증서는 <Cmd sid="setting.sever.secure.comm.extcert.public.menu" product='2' />에, 키는 <Cmd sid="setting.sever.secure.comm.extcert.private.menu" product='2' />에 업로드하세요. 인증서 백업 방법은 <DocLink docId='platform/biostar_x/remove-server' />를 참고하세요.
+
+  :::
+
   <Image src='/img/biostarx-settings-system-security-advanced-with-device.png' />
 
 * <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />: 장치에 적용하는 해시 키를 사용자가 직접 관리합니다. 이 옵션을 <Cmd sid="common.use" product='2' />으로 설정하면 <Cmd sid="setting.server.secure.comm.encryption_key_device" product='2' /> 값을 확인하고 변경할 수 있습니다. <Cmd sid="setting.server.secure.comm.key_change" product='2' /> 버튼을 클릭하고 새 해시 키 값을 설정하세요.
@@ -188,6 +194,8 @@ keywords: [시스템 보안, 암호화]
 * 이전에 정상적으로 연결되던 장치가 인증서 불일치로 연결에 실패하면 **BioStar X**는 이를 시스템 로그에 기록합니다. 장치가 갑자기 연결되지 않는다면 시스템 로그에서 원인을 확인한 후, 장치를 공장 초기화하거나 이전에 내보내 둔 인증서 세트를 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션으로 다시 등록하여 복구하세요.
 
 * 커뮤니케이션 서버(Com Server)가 연결되어 있지 않으면 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 켜거나 끌 수 없습니다.
+
+* 서버를 제거할 때 인증서를 백업하는 방법은 <DocLink docId='platform/biostar_x/remove-server' />를 참고하세요.
 
 <details>
 <summary><Cmd sid="setting.sever.secure.comm.menu" product='2' /> 기능 지원 장치와 펌웨어 버전 보기</summary>
