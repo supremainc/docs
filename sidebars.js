@@ -508,6 +508,18 @@ function createSidebars(preview) {
           type: 'html',
           value: '<hr />'
         },
+        // 릴리스 노트용 사이드바
+        // {
+        //   type: 'category',
+        //   label: '릴리스 노트',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_air/release-notes/firmware',
+        //   },
+        //   items: [
+        //     'platform/biostar_air/release-notes/cs20-release-notes',
+        //   ]
+        // },
         {
           type: 'category',
           label: 'Release Notes',

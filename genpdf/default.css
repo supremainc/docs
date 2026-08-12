@@ -222,6 +222,18 @@ header p {
   display: none;
 }
 
+.doc-section.releasenotes.biostar-air h3 {
+  font-size: 20pt;
+  color: #0b7bc1;
+  border-bottom: .25pt solid #0b7bc1;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+
+.doc-section.releasenotes.biostar-air h3 + p {
+  text-align: right;
+}
+
 .doc-section h3, .doc-content h3 {
   font-size: 17pt;
   color: #000;

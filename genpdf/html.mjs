@@ -208,7 +208,8 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     translations = {},
     basePath = '',
     rn = false,
-    version = ''
+    version = '',
+    sidebar = ''
   } = options;
 
   const contentSections = [];
@@ -231,7 +232,7 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     let sectionClass = rn ? 'doc-section releasenotes' : 'doc-section';
     if (product === 'biostar_x') {
       sectionClass += ' biostar-x';
-    } else if (product === 'biostar_air') {
+    } else if (sidebar === 'biostar_air') {
       sectionClass += ' biostar-air';
     }
     contentSections.push(`
