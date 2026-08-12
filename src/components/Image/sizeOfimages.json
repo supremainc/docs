@@ -2063,6 +2063,14 @@
     "width": 700,
     "height": 482
   },
+  "/img/biostarx-monitoring-acs-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/biostarx-monitoring-batch-main.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/biostarx-monitoring-camera-clear-alarm-success.png": {
     "width": 1200,
     "height": 675
@@ -2171,6 +2179,34 @@
     "width": 442,
     "height": 450
   },
+  "/img/biostarx-monitoring-doors-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/biostarx-monitoring-doors-control-fail-details.png": {
+    "width": 561,
+    "height": 334
+  },
+  "/img/biostarx-monitoring-doors-control-fail.png": {
+    "width": 1200,
+    "height": 256
+  },
+  "/img/biostarx-monitoring-doors-control-intrusion.png": {
+    "width": 441,
+    "height": 309
+  },
+  "/img/biostarx-monitoring-doors-control-list.png": {
+    "width": 439,
+    "height": 488
+  },
+  "/img/biostarx-monitoring-doors-control-success.png": {
+    "width": 1200,
+    "height": 256
+  },
+  "/img/biostarx-monitoring-elevators-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
   "/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
     "width": 640,
     "height": 357
@@ -2254,6 +2290,14 @@
   "/img/biostarx-monitoring-map-open-camera.png": {
     "width": 1078,
     "height": 347
+  },
+  "/img/biostarx-monitoring-select-multi-items.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/biostarx-monitoring-select-multi-summary.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
@@ -2837,7 +2881,7 @@
   },
   "/img/biostarx-setting-door-adding-aditional-option.png": {
     "width": 1200,
-    "height": 480
+    "height": 503
   },
   "/img/biostarx-setting-door-adding-alarm.png": {
     "width": 1000,
@@ -2858,6 +2902,26 @@
   "/img/biostarx-setting-door-adding.png": {
     "width": 222,
     "height": 247
+  },
+  "/img/biostarx-setting-door-auth-control-monitoring.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/biostarx-setting-door-auth-control-not-allow-users.png": {
+    "width": 700,
+    "height": 133
+  },
+  "/img/biostarx-setting-door-auth-control-use.png": {
+    "width": 1000,
+    "height": 243
+  },
+  "/img/biostarx-setting-door-auth-control-users.png": {
+    "width": 915,
+    "height": 318
+  },
+  "/img/biostarx-setting-door-auth-control.png": {
+    "width": 1000,
+    "height": 419
   },
   "/img/biostarx-setting-door-delete.png": {
     "width": 853,
@@ -11863,6 +11927,14 @@
     "width": 700,
     "height": 481
   },
+  "/img/en/biostarx-monitoring-acs-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/en/biostarx-monitoring-batch-main.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/en/biostarx-monitoring-camera-clear-alarm-success.png": {
     "width": 1200,
     "height": 675
@@ -11967,6 +12039,26 @@
     "width": 442,
     "height": 450
   },
+  "/img/en/biostarx-monitoring-doors-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/en/biostarx-monitoring-doors-control-intrusion.png": {
+    "width": 441,
+    "height": 400
+  },
+  "/img/en/biostarx-monitoring-doors-control-list.png": {
+    "width": 439,
+    "height": 631
+  },
+  "/img/en/biostarx-monitoring-doors-control-success.png": {
+    "width": 1200,
+    "height": 256
+  },
+  "/img/en/biostarx-monitoring-elevators-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
   "/img/en/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
     "width": 640,
     "height": 357
@@ -12050,6 +12142,14 @@
   "/img/en/biostarx-monitoring-map-open-camera.png": {
     "width": 1078,
     "height": 347
+  },
+  "/img/en/biostarx-monitoring-select-multi-items.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-select-multi-summary.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
@@ -12633,7 +12733,7 @@
   },
   "/img/en/biostarx-setting-door-adding-aditional-option.png": {
     "width": 1200,
-    "height": 478
+    "height": 503
   },
   "/img/en/biostarx-setting-door-adding-alarm.png": {
     "width": 1000,
@@ -12654,6 +12754,26 @@
   "/img/en/biostarx-setting-door-adding.png": {
     "width": 240,
     "height": 220
+  },
+  "/img/en/biostarx-setting-door-auth-control-monitoring.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/biostarx-setting-door-auth-control-not-allow-users.png": {
+    "width": 700,
+    "height": 133
+  },
+  "/img/en/biostarx-setting-door-auth-control-use.png": {
+    "width": 1000,
+    "height": 243
+  },
+  "/img/en/biostarx-setting-door-auth-control-users.png": {
+    "width": 915,
+    "height": 318
+  },
+  "/img/en/biostarx-setting-door-auth-control.png": {
+    "width": 1000,
+    "height": 419
   },
   "/img/en/biostarx-setting-door-delete.png": {
     "width": 847,

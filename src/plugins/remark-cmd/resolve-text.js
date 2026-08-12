@@ -80,7 +80,9 @@ function resolveText(data, sid, product, deviceName, replace) {
     if (raw) text = raw
       .replace('<br>', '')
       .replace('{{value}}', 'N')
-      .replace(' ({{count}})', '');
+      .replace(' ({{count}})', '')
+      .replace('({{count}})', '')
+      .replace('{{count}}', replace);
   }
 
   return text ? text.trim() : null;

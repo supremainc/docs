@@ -1,0 +1,200 @@
+---
+id: monitoring-batch-control
+title: 일괄 제어하기
+description: 여러 출입문, 엘리베이터, 고급 출입 통제 설정을 한 번에 선택하여 제어하세요.
+---
+
+여러 출입문, 엘리베이터, 고급 출입 통제 설정을 한 번에 선택해서 개방, 잠금, 알람 해제 등의 명령을 한 번에 실행하는 방법을 안내합니다.
+
+* 상태 트리에서 항목을 두 개 이상 선택하면 화면 오른쪽에 일괄 제어 패널이 나타납니다. 항목을 하나씩 제어할 필요 없이 한 번에 명령을 실행할 수 있습니다.
+
+* 비상 상황이나 여러 출입구를 동시에 통제해야 할 때 신속하게 대응할 수 있습니다.
+
+* 출입문, 엘리베이터(층), 고급 출입 통제 설정을 각각 일괄 선택하여 제어할 수 있습니다. 서로 다른 종류를 함께 선택하면 제어할 수 없습니다.
+
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 화면 왼쪽 사이드바의 상태 트리에서 제어할 항목을 두 개 이상 선택하면 화면 오른쪽에 일괄 제어 패널이 나타납니다.
+
+<Image src='/img/biostarx-monitoring-batch-main.png' />
+
+:::info
+
+* 카메라는 일괄 제어 대상이 아닙니다. 다른 항목과 함께 선택해도 선택 목록에서 제외됩니다.
+
+* 이 문서는 여러 항목을 한 번에 제어하는 방법을 다룹니다. 출입문, 엘리베이터, 고급 출입 통제 중 하나를 선택해서 제어하는 방법은 다음 문서를 참고하세요.
+
+   - <DocLink docId='platform/biostar_x/control-door' />
+
+   - <DocLink docId='platform/biostar_x/control-elevator' />
+
+   - <DocLink docId='platform/biostar_x/control-zone' />
+
+:::
+
+
+## 여러 항목 선택 {/* #select-multiple */}
+
+화면 왼쪽 사이드바의 상태 트리에서 출입문, 엘리베이터, 층, 고급 출입 통제를 선택하는 방법은 다음과 같습니다. Windows 탐색기에서 여러 파일을 선택하는 방식과 같습니다.
+
+* **클릭**: 항목 하나만 선택합니다. 기존 선택은 해제됩니다.
+
+* **<Kbd>Ctrl</Kbd> + 클릭**: 클릭한 항목을 선택 목록에 추가하거나 제외합니다. 나머지 선택은 그대로 유지됩니다.
+
+* **<Kbd>Shift</Kbd> + 클릭**: 마지막으로 클릭한 항목부터 지금 클릭한 항목까지 화면에 보이는 범위를 모두 선택합니다. 기존 선택은 이 범위로 대체됩니다.
+
+* **<Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd> + 클릭**: 기존 선택을 유지한 채로 범위를 추가로 선택합니다. 서로 떨어진 여러 항목을 모아서 선택할 때 사용하세요.
+
+* **그룹 클릭**: 그룹(<IcGroup />) 이름을 클릭하면 그 아래에 있는 모든 출입문, 엘리베이터, 층, 고급 출입 통제 설정이 한 번에 선택됩니다. 그룹을 펼치거나 접으려면 그룹 이름 앞의 화살표(<IcBw />)를 클릭하세요.
+
+:::info
+
+* <Cmd sid='arena.tree.door.entitiesNeedAttention' /> 필터로 숨겨진 항목은 선택 대상에서 제외됩니다. 이미 선택한 항목이 필터로 숨겨지면 선택 목록에서 제외됩니다.
+
+* 선택한 항목이 없거나 한 개뿐이면 일괄 제어 패널이 열리지 않습니다. 항목을 한 개만 남기면 해당 항목의 미리보기가 표시되고, 모두 선택 해제하면 오른쪽에 위치한 패널이 사라집니다.
+
+:::
+
+
+## 일괄 제어 패널 구성 {/* #panel-layout */}
+
+화면 왼쪽 사이드바의 상태 트리에서 여러 항목을 선택하면 화면 오른쪽에 나타나는 일괄 제어 패널은 다음과 같이 구성됩니다.
+
+* **선택 개수와 종류**: 예를 들어 출입문 4개와 엘리베이터 2개, 4개 층을 선택하면 다음과 같이 표시됩니다.
+
+   > <Cmd sid='monitoring.multiControl.selectedCount' replace='10' /> / <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.door' /> <Cmd>2</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.elevator' /> <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.floor' />
+
+   <Image src='/img/biostarx-monitoring-select-multi-items.png' />
+
+   :::note
+
+   서로 다른 종류를 함께 선택하면 제어 기능은 사용할 수 없습니다.
+
+   :::
+
+* **출입문/엘리베이터 제어**: 출입문, 엘리베이터에서 사용할 수 있는 제어 기능이 표시됩니다.
+
+   <Image src='/img/biostarx-monitoring-doors-batch-control.png' />
+
+   <Image src='/img/biostarx-monitoring-elevators-batch-control.png' />
+
+* **고급 출입 통제 제어**: 고급 출입 통제에서 사용할 수 있는 제어 기능이 표시됩니다.
+
+   <Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* **선택된 항목 요약 표**: 화면 오른쪽 패널 하단에는 선택한 각 항목의 이름과 상태를 확인할 수 있습니다. 제어 영역과 요약 표 사이의 구분선을 위아래로 드래그하면 두 영역의 높이를 조절할 수 있습니다. 선택한 항목이 많으면 구분선을 드래그해서 요약 표 영역을 넓게 확인하세요.
+
+   <Image src='/img/biostarx-monitoring-select-multi-summary.png' />
+
+
+## 출입문 일괄 제어 {/* #bulk-door */}
+
+출입문만 두 개 이상 선택하면 단일 출입문 제어와 같은 기본 제어와 고급 제어를 사용할 수 있습니다.
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-monitoring-doors-control-list.png' />
+
+<Image src='/img/biostarx-monitoring-doors-control-intrusion.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+**기본 제어**
+
+* <Cmd sid='monitoring.multiControl.once3sec' />: 개방 상태로 한번만 적용합니다.
+
+* <Cmd sid='monitoring.multiControl.timed' />: 입력한 시간 동안 잠금 또는 개방 상태로 유지하도록 적용합니다.
+
+* <Cmd sid='monitoring.multiControl.permanent' />: 시간에 상관없이 잠금 또는 개방 상태로 적용합니다.
+
+원하는 명령을 선택하고 적용하려면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
+
+**고급 제어**
+
+다음 버튼은 아래 조건에 해당하는 항목이 하나라도 있을 때 사용할 수 있습니다.
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: 선택한 출입문 중 알람이 발생한 항목이 있을 때 사용할 수 있습니다.
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: 선택한 출입문 중 안티패스백 위반 알람이 발생한 항목이 있을 때 사용할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/control-door#apb-reset' />를 참고하세요.
+
+* <Cmd sid='monitoring.multiControl.normalizeOverrides' />: 관리자가 수동으로 개방하거나 잠근 출입문이 있을 때 사용할 수 있습니다. 스케줄이나 비상 상황으로 변경된 상태는 포함하지 않습니다.
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: 고급 출입 통제 설정 중 하나인 경비로 설정된 출입문이 있을 때만 표시됩니다.
+
+</Column>
+</Columns>
+
+:::info
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' /> 버튼을 클릭하면 팝업창이 나타납니다. 팝업창에서 <Cmd sid='common.acknowledge' /> 버튼을 클릭해야 해제할 수 있습니다. 반면 <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> 버튼은 별도 확인 창 없이 상태를 전환할 수 있습니다.
+
+* 고급 출입 통제 설정은 **에센셜**(Essential) 라이선스에서 추가 옵션을 구매하거나 **엔터프라이즈**(Enterprise) 라이선스 이상에서 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing' />을 참고하세요.
+
+:::
+
+
+## 엘리베이터 및 층 일괄 제어 {/* #bulk-elevator */}
+
+엘리베이터를 선택하면 설정된 모든 층을 함께 제어할 수 있습니다. 특정 층만 제어하려면 층을 직접 선택하세요.
+
+출입문과 다른 점은 다음과 같습니다.
+
+| 제어 기능 | 출입문 | 엘리베이터, 층 |
+| -- | -- | -- |
+| <Cmd sid='monitoring.multiControl.unlock' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.lock' /> | <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.normalizeOverrides' /> | 지원 | 지원 |
+| <Cmd sid='monitoring.multiControl.clearAlarm' /> | 지원 | 선택 항목에 엘리베이터가 포함되어 있다면 표시, 층만 선택하면 표시되지 않음 |
+| <Cmd sid='monitoring.multiControl.clearApb' /> | 지원 | 미지원 |
+
+:::info
+
+엘리베이터와 그 하위 층을 함께 선택해서 개방하거나 잠그면, 층마다 각각 명령이 전송되지 않고 엘리베이터 단위로 한 번만 전송됩니다.
+
+:::
+
+
+## 고급 출입 통제 일괄 제어 {/* #bulk-acs */}
+
+고급 출입 통제 설정도 여러 개를 선택해서 한 번에 제어할 수 있습니다. 두 개 이상 선택하면 오른쪽 영역이 일괄 제어 패널로 전환됩니다. 선택, 그룹, 범위, 필터 동작은 출입문, 엘리베이터와 같습니다.
+
+고급 출입 통제 설정은 잠금 릴레이나 관리자 개방/잠금 개념이 없어 출입문, 엘리베이터와 제어 항목이 다릅니다. 선택한 설정의 종류에 따라 다음 제어 버튼이 표시됩니다.
+
+<Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* <Cmd sid='arena.tree.contextMenu.enable' />/<Cmd sid='arena.tree.contextMenu.disable' />: 모든 고급 출입 통제 설정에 공통 표시됩니다.
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: 선택에 경비 설정이 있을 때만 표시됩니다.
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: 선택에 알람이 발생하는 설정(안티패스백, 화재 경보, 스케줄 잠금/개방, 경비, 인터락, 소집)이 있을 때만 표시됩니다. 재실 인원 제한, 인원 점검처럼 알람이 발생하지 않는 설정만 선택하면 표시되지 않습니다.
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: 선택에 안티패스백 설정이 있을 때만 표시됩니다. 클릭하면 위반 사용자를 선택하는 창이 열리고, 이 창에서 선택과 적용을 진행합니다.
+
+:::info
+
+* <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' /> 기능은 일괄 제어에 포함되지 않습니다. 소집 보고서 확인, 재실 인원 제한 모니터링처럼 다른 화면으로 이동하는 기능도 일괄 제어 패널에서는 제공하지 않습니다. 이 기능들은 해당 설정을 하나만 선택했을 때, 상세 정보 화면에서 사용할 수 있습니다.
+
+* 고급 출입 통제 제어에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/control-zone' />를 참고하세요.
+
+:::
+
+
+## 실행 결과 확인 {/* #result */}
+
+* 선택한 모든 항목이 성공하면 화면 상단에 성공 메시지가 표시됩니다.
+
+   <Image src='/img/biostarx-monitoring-doors-control-success.png' />
+
+* 한 항목이라도 실패하면 실패 메시지와 함께 <Cmd sid='arena.batchResult.showDetails' /> 버튼이 표시됩니다. <Cmd sid='arena.batchResult.showDetails' />를 클릭하면 <Cmd sid='arena.batchResult.successChip' />, <Cmd sid='arena.batchResult.failChip' />, <Cmd sid='arena.batchResult.skippedChip' /> 세 그룹으로 구분된 결과를 확인할 수 있습니다.
+
+   <Image src='/img/biostarx-monitoring-doors-control-fail.png' caption />
+
+   실패한 항목의 이름과 사유를 클립보드에 복사하려면 <Cmd sid='arena.batchResult.copyFailList' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-monitoring-doors-control-fail-details.png' caption />
+
+:::info
+
+<Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' />, <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> 기능 실행 시 항목별 결과를 확인할 수 있습니다. 반면 고급 출입 통제 설정과 엘리베이터의 <Cmd sid='monitoring.multiControl.clearAlarm' />, <Cmd sid='monitoring.multiControl.clearApb' /> 기능은 항목별 결과를 제공하지 않고 성공/실패 메시지로 안내합니다.
+
+:::

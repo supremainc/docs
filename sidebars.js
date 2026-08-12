@@ -735,6 +735,7 @@ function createSidebars(preview) {
                 'platform/biostar_x/control-door',
                 'platform/biostar_x/control-elevator',
                 'platform/biostar_x/control-zone',
+                'platform/biostar_x/monitoring-batch-control',
               ]
             },
             'platform/biostar_x/monitoring-map',
