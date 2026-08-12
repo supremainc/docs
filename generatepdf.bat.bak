@@ -42,7 +42,7 @@ if %LANGUAGE%==ko (
 )
 
 @REM Cover 페이지 출력 단계
-node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANGUAGE%" --number="%DOCUMENT_NUMBER%" --output="./pdf/front-cover.html"
+node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANGUAGE%" --number="%DOCUMENT_NUMBER%" --sidebar="%SIDEBAR%" --output="./pdf/front-cover.html"
 
 @REM 문서 생성 단계
 set OUTPUT=%PRODUCT_NAME%_%PRODUCT_TYPE%_%VERSION%_%LANG%_%RELEASE%.pdf
@@ -51,7 +51,11 @@ echo Generating PDF: %OUTPUT%
 if "%PRODUCT_TYPE%"=="RN" (
   node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2 --rn
 ) else if "%PRODUCT_TYPE%"=="Firmware Release Notes" (
-  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2 --rn
+  if "%SIDEBAR%"=="biostar_air" (
+    node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --no-toc --output ./pdf/document.html --max-depth 2 --rn
+  ) else (
+    node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2 --rn
+  )
 ) else (
   node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2
 )
