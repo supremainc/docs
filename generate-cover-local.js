@@ -173,7 +173,8 @@ function generateCoverHTML(params) {
         subtitle = "IG", 
         version = "1.08",
         lang = "한국어",
-        number = "101.00.BS3"
+        number = "101.00.BS3",
+        sidebar = "biostation3"
     } = params;
 
     // 언어 감지
@@ -189,7 +190,7 @@ function generateCoverHTML(params) {
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
 
     // coverpage 클래스 결정
-    const coverpageClass = title === 'BioStar X' || title === 'BioStar X Mobile' ? 'coverpage bsx' : title === 'BioStar Air' ? 'coverpage bsair' : 'coverpage';
+    const coverpageClass = title === 'BioStar X' || title === 'BioStar X Mobile' ? 'coverpage bsx' : title === 'BioStar Air' || sidebar === 'biostar_air' ? 'coverpage bsair' : 'coverpage';
 
     return `<!DOCTYPE html>
 <html lang="${isKorean ? 'ko' : isJapanese ? 'ja' : 'en'}">
@@ -352,7 +353,7 @@ function generateCoverHTML(params) {
             <div class="subtitle">${processedSubtitle}</div>
             <div class="ver">${processedVersion}</div>
             <div class="lang">${langCover}</div>
-            <div class="number">${processedNumber}</div>
+            <div class="number">${subtitle === 'Firmware Release Notes' && sidebar === 'biostar_air' ? '' : processedNumber}</div>
         </div>
         <div class="footer">
             <img src="${logoDataUri}" class="logo" alt="Suprema Logo" />
