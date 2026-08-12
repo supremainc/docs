@@ -679,7 +679,11 @@ details.deviceInfo summary, details.faq summary {
   width: 381px !important;
 }
 
-.doc-content img[src*='installation3-vionyx'] {
+.doc-content img[src*='installation3-sd-vionyx'] {
+  width: 239px !important;
+}
+
+.doc-content img[src*='installation3-usb-vionyx'] {
   width: 239px !important;
 }
 
@@ -689,6 +693,14 @@ details.deviceInfo summary, details.faq summary {
 
 .doc-content img[src*='installation5-vionyx'] {
   width: 512px !important;
+}
+
+.doc-content img[src*='installation6-vionyx'] {
+  width: 315px !important;
+}
+
+.doc-content img[src*='installation7-vionyx'] {
+  width: 298px !important;
 }
 
 .doc-content img[src*='installation-safe-wire'] {
@@ -707,24 +719,16 @@ details.deviceInfo summary, details.faq summary {
   width: 300px !important;
 }
 
-.doc-content img[src*='installation6-vionyx'] {
-  width: 315px !important;
-}
-
-.doc-content img[src*='installation7-vionyx'] {
-  width: 298px !important;
-}
-
 .doc-content img[src*='installation8-vionyx'] {
-  width: 454px !important;
-}
-
-.doc-content img[src*='installation9-vionyx'] {
   width: 240px !important;
 }
 
+.doc-content img[src*='installation9-vionyx'] {
+  width: 817px !important;
+}
+
 .doc-content img[src*='installation10-vionyx'] {
-  width: 551px !important;
+  width: 794px !important;
 }
 
 .doc-content img[src*='cable-waterproofing-vionyx'] {
