@@ -36,6 +36,7 @@ program
   .option('-p, --product <products>', 'Product filter (comma-separated)', '')
   .option('-l, --language <lang>', 'Language for i18n (ko, en, es, ja)', 'ko')
   .option('--toc', 'Generate table of contents', true)
+  .option('--no-toc', 'Do not generate table of contents')
   .option('--max-depth <number>', 'Maximum heading depth for TOC', '3')
   .option('--rn', 'Extract release notes only', false)
   .option('-v, --version <version>', 'Version for release notes (e.g., 1.0.0)', '')
@@ -147,7 +148,8 @@ async function main() {
       translations,
       basePath: ROOT_DIR,
       rn: options.rn,
-      version: options.version
+      version: options.version,
+      sidebar: options.sidebar
     });
 
     // Write output file
