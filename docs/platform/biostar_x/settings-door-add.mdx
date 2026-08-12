@@ -121,7 +121,7 @@ keywords: [출입문, 보안, 출입 통제]
 
   * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: 자동문을 출입문으로 사용하면 출입문 센서의 상태와 상관없이 릴레이를 동작할 수 있습니다. <Cmd sid='door.openOnce' product='2' />을 <Cmd sid='door.openOnceOn' product='2' />으로 설정하면 사용할 수 없습니다.
 
-  :::info
+  :::note
 
   <Cmd sid='door.openTime' product='2' />은 사용하는 출입문 잠금 장치의 종류에 따라 다를 수 있습니다.
 
@@ -143,7 +143,7 @@ keywords: [출입문, 보안, 출입 통제]
 
   * <Cmd sid='door.authenticationTimeout' product='2' />: 첫 번째 인증 후 두 번째 인증까지의 대기 시간을 설정하세요. 설정된 시간 내에 두 번째 인증이 완료되지 않으면 출입문이 열리지 않습니다.
 
-  :::info
+  :::note
 
   * 재실 인원 제한 설정에 구정된 장치의 이중 인증을 변경하려면 다음 메뉴에서 설정을 수정하세요. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
@@ -156,6 +156,14 @@ keywords: [출입문, 보안, 출입 통제]
 * <Cmd sid='door.antiTailSensor' product='2' />: 인증하지 않은 사람이 인증한 사람을 따라 출입하는 테일게이팅을 감지하도록 설정할 수 있습니다.
 
   * <Cmd sid='common.sensor' product='2' />: 테일게이팅을 감지할 센서를 선택하세요.
+
+* <Cmd sid='door.authDoorControl.title' product='2' />: 권한이 있는 사용자가 더블 배지(Double Badge)하면 출입문을 상시 개방 상태로 전환하도록 설정할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-door-auth-control' />를 참고하세요.
+
+  :::note
+
+  새 출입문을 추가하는 화면에서는 출입문이 아직 출입 그룹에 포함되어 있지 않아 이 설정을 사용할 수 없습니다. 출입문을 저장하고 출입 그룹에 포함한 뒤 출입문 정보 수정 화면에서 설정하세요.
+
+  :::
 
 
 ### 안티패스백 설정 {/* #antipassback */}
