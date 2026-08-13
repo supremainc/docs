@@ -1,0 +1,88 @@
+---
+id: 150
+title: Firmware Version 1.5.0
+---
+
+# Firmware Version 1.5.0 (Build No. 1.5.0_260812)
+
+Release<Separator/>2026-08-13
+
+:::caution
+
+- If you are using a device with firmware version v1.4.0, you must upgrade to v1.4.1 before use.<br/>As important security and stability improvements are included, using the latest version after the upgrade is mandatory.
+
+- After upgrading the firmware to v1.4.0, it is not able to downgrade to an earlier version of the firmware.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports new device.
+   * XPass Q2
+
+1. Added **Auth Fail Lockout** feature, which locks the device after repeated PIN authentication failures.
+
+1. Added and improved face authentication features
+   * Improved face authentication performance
+   * Added support for sequential multi-face authentication (device license required)
+   * Added support for Anti-Tailgating
+
+1. Supports feature to set the baud rate of slave devices.
+
+1. Improved **Master Admin** to enforce re-enrollment when fewer than two credentials remain.
+
+1. Improved USB export/import file name handling
+   * Changed the file name generated during USB export to start with BioStarX_
+   * Fixed Files exported from BioStar X not appearing in the import list
+
+1. Improved log display for unsupported events and errors on the device.
+
+1. Changed the authentication success icon color to green.
+
+1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+
+1. Improved zone status display and alarm clearing behavior after power restart following a fire alarm.
+
+1. Improved BLE stability.
+
+1. Expanded allowed characters for User ID and User Name
+   * Added support for periods (.) in User ID
+   * Added support for periods (.) and apostrophes (') in User Name
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Suprema Mobile Access authentication failing on iPhones upgraded to iOS 26 or later. <Badge>1.0.0</Badge>
+
+1. **Manual Lock** failing to release after the set time elapses. <Badge>1.4.0</Badge>
+
+1. When multiple devices are connected to a third-party control panel, rebooting one device causes the RS-485 connections of the other devices to be disconnected. <Badge>1.0.2</Badge>
+
+1. Attendance status not recorded correctly according to the configured schedule times. <Badge>1.0.0</Badge>
+
+1. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.4.3</Badge>
+
+1. An incorrect authentication failure reason is displayed when authenticating with an EV1 card on a slave device with Secure Messaging enabled. <Badge>1.4.3</Badge>
+
+1. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.4.3</Badge>
+
+1. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.4.3</Badge>
+
+1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+
+1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+
+1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+1. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
+
+1. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
+
+</BugLists>
