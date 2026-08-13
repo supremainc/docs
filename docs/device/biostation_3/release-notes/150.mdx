@@ -3,7 +3,7 @@ id: 150
 title: 펌웨어 버전 1.5.0
 ---
 
-# 펌웨어 버전 1.5.0 (빌드 번호 1.5.0_260812)
+# 펌웨어 버전 1.5.0 (빌드 번호 1.5.0_260813)
 
 릴리즈<Separator/>2026-08-13
 
@@ -21,34 +21,46 @@ title: 펌웨어 버전 1.5.0
 
 ---
 
+{/* (BS3FW-2302) XPQ2 지원 */}
 1. 신규 장치 연결 지원
    * XPass Q2
 
+{/* (BS3FW-2257) [BDP-1480] Auth Fail Lockout(EN-60839) */}
 1. PIN 인증 반복 실패 시 장치를 잠그는 **Auth Fail Lockout** 기능 추가
 
+{/* (BS3FW-2262) [BDP-1479] Rapid Face Authentication */}
 1. 얼굴 인증 관련 기능 추가 및 개선
    * 얼굴 인증 성능 개선
    * 다중 얼굴 순차 인증 지원(장치 라이선스 필요)
    * 무단 동행 출입 방지(Anti-Tailgating) 지원
 
+{/* (BS3FW-1568) [BDP-853] Slave 장치의 Baudrate 설정 기능 */}
 1. 슬레이브 장치의 전송 속도를 설정할 수 있는 기능 지원
 
+{/* (BS3FW-2158) Master Admin의 크리덴셜이 2개 미만이 되었을 때 Master Admin 크리덴셜 등록 강제되도록 개선 */}
 1. **마스터 관리자**의 크리덴셜이 2개 미만일 때 재등록이 강제되도록 개선
 
+{/* (BS3FW-2187) USB Export시 생성되는 파일명이 BioStarX_ 로 표시되도록 변경 요청 */}
 1. USB 내보내기/가져오기 파일명 처리 개선
    * USB 내보내기 시 생성되는 파일명이 BioStarX_로 시작하도록 변경
    * BioStar X에서 내보낸 파일이 가져오기 목록에 표시되지 않는 문제 개선
 
+{/* (BS3FW-2268) 장치에서 지원하지 않는 이벤트에 대해 "Undefined Event"로 로그가 남도록 개선 */}
 1. 장치에서 지원하지 않는 이벤트 및 에러에 대한 로그 표시 개선
 
+{/* (BS3FW-2320) [UI지원모델] 인증성공 아이콘 Blue -> Green으로 변경 요청 건 */}
 1. 인증 성공 시 표시되는 아이콘 색상을 초록색으로 변경
 
+{/* (BS3FW-2342) [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
 1. OSDP 리더 모드에서 타사 컨트롤 패널의 출입 거부 시 'Access Denied'로 표시되도록 개선
 
+{/* (BS3FW-2343) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경 - 발생버전 :  V1.0.0 */}
 1. 화재 알람 발생 후 전원 재기동 시 화재 경보 구역 상태 표시 및 알람 해제 동작 개선
 
+{/* (BS3FW-2403) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) - 발생버전 : V1.0.0 */}
 1. BLE 동작 안정성 개선
 
+{/* (BS3FW-2424) [UI 지원 장치]  사용자 이름 및 사용자 ID에 Dot(.) 지원 */}
 1. 사용자 ID 및 사용자 이름의 허용 문자 확장
    * 사용자 ID에 마침표(.) 입력 지원
    * 사용자 이름에 마침표(.)와 아포스트로피(') 입력 지원
@@ -59,30 +71,43 @@ title: 펌웨어 버전 1.5.0
 
 <BugLists>
 
+{/* (BS3FW-2120) [iPhone] iOS26으로 OS 업그레이드 후 Airfob Pass로 출입이 완전 불가한 증상 */}
 1. iOS 26 이상으로 업그레이드한 iPhone에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
 
+{/* (BS3FW-2134) [Lock Override] Timed로 설정해놓은 Manual Lock 상태가 Emergency Unlock 후 Clear Alarm을 하게 되면 Timed로 해제가 안 되는 현상 */}
 1. 시간 설정한 **수동 잠금**이 설정한 시간이 지나도 풀리지 않는 문제 <Badge>1.4.0</Badge>
 
+{/* (BS3FW-2193) [BSF-2574] STC 현장에서 Siemens 패널과 연결된 BioStation 3 장치들 중 하나를 재부팅 시, 나머지 장치의 RS-485 연결 끊김 이슈 */}
 1. 타사 컨트롤 패널에 다수의 장치가 연결된 상태에서 특정 장치를 재시작하면 다른 장치들의 RS-485 연결이 끊기는 문제 <Badge>1.0.2</Badge>
 
+{/* (BS3FW-2290) [FISF-2463] BS3 펌웨어를 v1.3.0에서 v1.4.1로 업그레이드 한 이후 T&A By Scheduled에 따른 동작을 제대로 수행하지 않음 */}
 1. 설정한 스케줄 시간에 따라 근태 상태가 올바르게 기록되지 않는 문제 <Badge>1.0.0</Badge>
 
+{/* (BS3FW-2295) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 */}
 1. 마스터 장치를 보안 메시징(Secure Messaging) 미지원 버전으로 다운그레이드하면 슬레이브 장치에서 카드 인증이 동작하지 않는 문제 <Badge>1.4.3</Badge>
 
+{/* (BS3FW-2297) Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 */}
 1. 슬레이브로 연결된 장치에 보안 메시징(Secure Messaging) 옵션 설정 후 EV1 카드 인증 시, 인증 실패 사유가 올바르지 않게 표시되는 문제 <Badge>1.4.3</Badge>
 
+{/* (BS3FW-2299) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 */}
 1. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 타사 컨트롤러와 OSDP로 연결된 슬레이브 장치에서 EV1 카드의 CSN 값이 출력되는 문제 <Badge>1.4.3</Badge>
 
+{/* (BS3FW-2301) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 */}
 1. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 Bypass가 설정된 Wiegand 장치에서 EV1 카드의 CSN 값이 전달되는 문제 <Badge>1.4.3</Badge>
 
+{/* (BS3FW-2332) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 발생버전 : V1.0.0 */}
 1. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
 
+{/* (BS3FW-2333) [BSF-2925] osdp pdcap 개선 */}
 1. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제 <Badge>1.0.0</Badge>
 
+{/* (BS3FW-2341) [FISF-2436] 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 */}
 1. 연결된 Wiegand 리더에서 카드 인증이 실패하는 문제 <Badge>1.0.0</Badge>
 
+{/* (BS3FW-2356) 프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 - 발생버전 : V1.0.0 */}
 1. 사용자 추가/삭제 중 얼굴 인증이 발생하면 장치가 멈추거나 재부팅되는 문제 <Badge>1.0.0</Badge>
 
+{/* (BS3FW-2364) [FISF-2475] 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 - 발생버전 : V1.0.0 */}
 1. 사용자 동기화 중 장치가 멈추거나 재부팅되고 사용자 등록이 지연되는 문제 <Badge>1.0.0</Badge>
 
 </BugLists>
