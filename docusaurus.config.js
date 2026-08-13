@@ -169,7 +169,7 @@ const config = {
       redirects: [
         {
           to: '/device/vionyx_webserver',
-          from: '/docs/device/device/vionyx_webserver',
+          from: '/docs/device/vionyx_webserver',
         }
       ]
     } ],
