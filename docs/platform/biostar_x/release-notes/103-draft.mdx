@@ -12,59 +12,90 @@ draft: true
 
 ---
 
-BX-6817	EntraID에서 한 사용자에 여러 그룹이 포함될 경우에 대한 처리 개선
+{/* BX-6817	EntraID에서 한 사용자에 여러 그룹이 포함될 경우에 대한 처리 개선 */}
 1. Entra ID에서 여러 그룹에 속한 사용자의 그룹 매핑 개선
 1. Improved group mapping for users belonging to multiple groups in Entra ID.
 
-BX-6805	Visual Face 동기화 중 호환 템플릿 존재, 다른 타입의 템플릿 없는 경우 불필요한 bufferToImage 로직 진행
+{/* BX-6805	Visual Face 동기화 중 호환 템플릿 존재, 다른 타입의 템플릿 없는 경우 불필요한 bufferToImage 로직 진행 */}
 1. Visual Face 사용자 동기화 처리 속도 개선
 1. Improved Visual Face user synchronization performance.
 
-BX-6782	동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중 실패 시 발생한 동기화 실패 이벤트에 사용자 ID가 미표기되는 이슈
+{/* BX-6782	동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중 실패 시 발생한 동기화 실패 이벤트에 사용자 ID가 미표기되는 이슈 */}
 1. Visual Face 동기화 실패 이벤트에 사용자 ID가 표시되지 않는 문제 <Badge>1.0.0</Badge>
 1. User ID not displayed in Visual Face synchronization failure events. <Badge>1.0.0</Badge>
 
-BX-6730	Biostar2 2.9.12 취약점에 대해 BioStarX에도 적용
-BX-6729	Log4j 버전 2.25.4 이상, Oracle Java SE 21.0.11 이상 업그레이드 필요
+BX-6730	Biostar2 2.9.12 취약점에 대해 BioStarX에도 적용 - 담당자 확인 중
+{/* BX-6729	Log4j 버전 2.25.4 이상, Oracle Java SE 21.0.11 이상 업그레이드 필요 */}
+{/* BX-6427	사용자 ID·이름이 SQL에 안전하지 않게 전달되는 문제 수정 */}
+{/* BX-6328	[SAST] Remote Access 주소로 접속 하여 Entra ID 로그인 시 Server URL 주소로 변경되는 문제 */}
 1. 보안 취약점 개선
    * AngularJS, jQuery 버전 업데이트
    * Reverse Tabnabbing 취약점 개선
    * 세션 쿠키 보안 강화
    * Log4j 라이브러리 버전 업데이트
    * Java 실행환경(JRE) 버전 업데이트
+   * SQL Injection 보안 취약점 개선
+   * Entra ID 로그인 시 리다이렉트 주소 관련 보안 취약점 개선
 1. Security vulnerability improvements
    * Updated AngularJS and jQuery versions
    * Improved Reverse Tabnabbing vulnerability
    * Enhanced session cookie security
    * Updated Log4j library version
    * Updated Java Runtime Environment (JRE) version
+   * Improved SQL Injection vulnerability
+   * Improved a redirect URL security vulnerability during Entra ID login
 
-BX-6727	Visual Face Migration "No registered visual face found." 오탐
+{/* BX-6727	Visual Face Migration "No registered visual face found." 오탐 */}
 1. 현재 페이지에 얼굴 등록 사용자가 없으면 비주얼 페이스 마이그레이션이 진행되지 않는 문제 <Badge>1.0.0</Badge>
 1. Visual Face migration not proceeding when the current page has no users with enrolled faces. <Badge>1.0.0</Badge>
 
-BX-6726	출입 간에 올바르지 않은 날짜가 저장되는 이슈
+{/* BX-6726	출입 간에 올바르지 않은 날짜가 저장되는 이슈 */}
 1. API를 이용하여 접근 그룹 수정 시 유효하지 않은 날짜로 인해 오류가 발생하는 문제 <Badge>1.0.0</Badge>
 1. Errors occurring due to invalid dates when modifying access groups via the API. <Badge>1.0.0</Badge>
 
-BX-6724	EntraID 그룹 정보 파싱 로직 수정.
+{/* BX-6724	EntraID 그룹 정보 파싱 로직 수정. */}
 1. Entra ID 그룹명에 쉼표(,), 등호(=) 등 특수문자가 포함된 경우 동기화가 실패하는 문제 <Badge>1.0.0</Badge>
 1. Synchronization failing when an Entra ID group name contains special characters such as commas (,) or equal signs (=). <Badge>1.0.0</Badge>
 
-BX-6427	사용자 ID·이름이 SQL에 안전하지 않게 전달되는 문제 수정
+{/* BX-6421	[FISS BioStar X] Remote Access ngrok.exe Authenticode validation failures: check timeout + rotated signing certificate */}
+1. Remote Access가 정상적으로 시작되거나 저장되지 않는 문제 <Badge>1.0.2</Badge>
+1. Remote Access failing to start or save properly. <Badge>1.0.2</Badge>
+
+{/* BX-6419	미사용 실행파일 삭제 처리 추가 */}
+1. 업그레이드 시 미사용 파일 삭제 처리 추가
+1. Added removal of unused files during upgrade.
+
+{/* BX-6398	동기화 사이클안에서 에러가 발생하면 더이상 동기화가 진행안됨 */}
+1. 근태 동기화 중 오류가 발생하면 이후 동기화가 진행되지 않는 문제 <Badge>1.0.0</Badge>
+1. Time and Attendance synchronization not proceeding after an error occurs during synchronization. <Badge>1.0.0</Badge>
+
+{/* BX-6381	Zone Tracking 동기화 실패 패치 */}
+1. 퇴실한 사용자가 **소집 리포트**에 계속 입실 상태로 표시되는 문제 <Badge>1.0.0</Badge>
+1. Users who have exited still shown as inside in the **Muster Report**. <Badge>1.0.0</Badge>
+
+{/* BX-6324	AD/EntraID 연동 주소에 non-ASCII 숫자 로캘에서 LDAP URL 포트 파싱 실패 수정 */}
+1. 아랍어 등 숫자 표기가 다른 언어권 환경에서 Active Directory/Entra ID 연동이 실패하는 문제 <Badge>1.0.0</Badge>
+1. Active Directory/Entra ID integration failing in language environments with different numeral representations, such as Arabic. <Badge>1.0.0</Badge>
+
+{/* BX-6215	[DATA]  일부 이벤트가 번역되지 않고 "eventType.6150" 형태의 키로 표시됨 */}
+1. 업그레이드 후 일부 이벤트 명칭이 올바르게 표시되지 않는 문제 <Badge>1.0.0</Badge>
+1. Some event names not displayed correctly after upgrade. <Badge>1.0.0</Badge>
+
+{/* BX-6211	[Directory Integration] AD/EntraID 대량 사용자 그룹 정보 가져올 시 브라우저 프리징되는 이슈 */}
+1. Active Directory/Entra ID에서 대량의 사용자 그룹을 가져올 때 브라우저가 멈추는 문제 <Badge>1.0.0</Badge>
+1. Browser freezing when importing a large number of user groups from Active Directory/Entra ID. <Badge>1.0.0</Badge>
+
+{/* BX-6200	Mobile Access - Dynamic Site 환경에서 사용자 모바일 카드 발급 후 CSV Import - Overwrite 를 통해 삭제시 "삭제된 모바일 CSN" 에 추가되는 문제 */}
+1. **다이나믹** 사이트 환경에서 CSV 가져오기로 모바일 카드 삭제 시 **삭제된 CSN 모바일 카드** 목록에 잘못 추가되는 문제 <Badge>1.0.0</Badge>
+1. Mobile cards incorrectly added to the **Deleted CSN Mobile Card** list when deleting them via CSV import in a **Dynamic** site environment. <Badge>1.0.0</Badge>
+
+BX-6145	[MCS] 커뮤니케이션 서버 2대 중 1대 연결 해제 상태 - 담당자 확인 중
+1. 재부팅 후 통신 서버 중 일부가 연결되지 않는 문제 <Badge>1.0.0</Badge>
+1. Some communication servers failing to connect after a reboot. <Badge>1.0.0</Badge>
+
+BX-6143	TA Calendar View에서 새로고침 버튼 연타 클릭 시 Alert팝업 발생
 1. 
 
-BX-6421	[FISS BioStar X] Extend timeout for BioStar X Remote Access ngrok.exe authenticode validation failure
-BX-6419	미사용 실행파일 삭제 처리 추가
-BX-6398	동기화 사이클안에서 에러가 발생하면 더이상 동기화가 진행안됨
-BX-6381	Zone Tracking 동기화 실패 패치
-BX-6328	[SAST] Remote Access 주소로 접속 하여 Entra ID 로그인 시 Server URL 주소로 변경되는 문제
-BX-6324	AD/EntraID 연동 주소에 non-ASCII 숫자 로캘에서 LDAP URL 포트 파싱 실패 수정
-BX-6215	[DATA]  일부 이벤트가 번역되지 않고 "eventType.6150" 형태의 키로 표시됨
-BX-6211	[Directory Integration] AD/EntraID 대량 사용자 그룹 정보 가져올 시 브라우저 프리징되는 이슈
-BX-6200	Mobile Access - Dynamic Site 환경에서 사용자 모바일 카드 발급 후 CSV Import - Overwrite 를 통해 삭제시 "삭제된 모바일 CSN" 에 추가되는 문제
-BX-6145	[MCS] 커뮤니케이션 서버 2대 중 1대 연결 해제 상태
-BX-6143	TA Calendar View에서 새로고침 버튼 연타 클릭 시 Alert팝업 발생
 BX-6222	Data inconsistency occurs when changing rows per page from 50 to 100 after navigating to the next page.
 BX-6120	AC에 Holiday 등록된 상태에 등록된 Holiday와 동일한 이름으로 신규 생성 시 TA log파일에 errror 발생함
 BX-6119	Shift 생성시 "Allowed a day before/after time" 선택시 팝업 메시지 수정 필요
