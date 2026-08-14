@@ -522,6 +522,8 @@ function main() {
         if (operation['x-stability']) item.stability = operation['x-stability'];
         item.request.description = buildDescription(operation, schemas);
         item.request.header = cleanHeaders(item.request.header);
+        // body.options(raw.language 힌트)는 Postman 자체 에디터 전용이라 우리 뷰어는 안 쓴다
+        if (item.request.body) delete item.request.body.options;
 
         const bodyFields = bodyFieldsData(operation.requestBody, schemas);
         if (bodyFields) {
@@ -544,9 +546,10 @@ function main() {
         }
 
         item.response = (item.response || []).map((resp) => {
-          // originalRequest는 ApiDocs 뷰어가 전혀 읽지 않고 파일 용량만 크게 키워서 제거한다
-          // (261곳 기준 약 39% 용량 절감). Postman 앱에 직접 임포트해 쓰는 용도가 아니라면 불필요.
-          const { originalRequest, ...rest } = resp;
+          // originalRequest/status/cookie/_postman_previewlanguage/header는 ApiDocs 뷰어(ResponseExamples.js)가
+          // code/name/body만 읽고 전혀 참조하지 않는 필드라 파일 용량만 키운다. Postman 앱에 직접
+          // 임포트해 쓰는 용도가 아니라면 불필요해서 제거한다.
+          const { originalRequest, status, cookie, _postman_previewlanguage, header, ...rest } = resp;
           const name = firstLine(resp.name);
           return { ...rest, name: name || resp.name };
         });
