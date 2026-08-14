@@ -545,6 +545,10 @@ const config = {
                 to: '/developer/clue'
               },
               {
+                label: 'ViOnyx AI Camera API',
+                to: '/developer/vionyx'
+              },
+              {
                 label: 'BioStar Air Developer',
                 to: 'https://developers.biostarair.com',
                 target: '_blank',

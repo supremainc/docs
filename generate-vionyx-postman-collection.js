@@ -544,24 +544,11 @@ function main() {
         }
 
         item.response = (item.response || []).map((resp) => {
-          const respSegments = resp.originalRequest.url.path || [];
-          resp.originalRequest.url = {
-            raw: buildRaw(resp.originalRequest.url.host, toMustachePath(respSegments), resp.originalRequest.url.query || []),
-            host: resp.originalRequest.url.host,
-            path: toMustachePath(respSegments),
-            ...(resp.originalRequest.url.query && resp.originalRequest.url.query.length
-              ? { query: resp.originalRequest.url.query }
-              : {}),
-          };
-          resp.originalRequest.header = cleanHeaders(resp.originalRequest.header);
-          if (Array.isArray(operation.security) && operation.security.length === 0) {
-            delete resp.originalRequest.auth;
-            resp.originalRequest.header = resp.originalRequest.header.filter(
-              (h) => String(h.key).toLowerCase() !== 'authorization'
-            );
-          }
+          // originalRequest는 ApiDocs 뷰어가 전혀 읽지 않고 파일 용량만 크게 키워서 제거한다
+          // (261곳 기준 약 39% 용량 절감). Postman 앱에 직접 임포트해 쓰는 용도가 아니라면 불필요.
+          const { originalRequest, ...rest } = resp;
           const name = firstLine(resp.name);
-          return { ...resp, name: name || resp.name };
+          return { ...rest, name: name || resp.name };
         });
 
         return item;

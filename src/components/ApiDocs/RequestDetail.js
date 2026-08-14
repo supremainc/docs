@@ -22,8 +22,8 @@ export default function RequestDetail({ item, onSelect, auth, serverUrl }) {
     const folder = item._folder;
     const children = folder.item || [];
     return (
-      <div style={{ padding: '32px 40px', maxWidth: 900 }}>
-        <h1 style={{ fontSize: 26, marginBottom: 8 }}>{folder.name}</h1>
+      <div style={{ padding: '32px 40px', maxWidth: 900 }} className='markdown'>
+        <header><h1 style={{ marginBottom: 8 }}>{folder.name}</h1></header>
         {folder.description && (
           <div style={{ marginBottom: 32 }}>
             <Markdown text={folder.description} />
@@ -60,6 +60,12 @@ export default function RequestDetail({ item, onSelect, auth, serverUrl }) {
   const method = req?.method;
   const url = toDisplayUrl(req?.url, serverUrl);
   const color = METHOD_COLORS[method?.toUpperCase()] || '#0066cc';
+  const hasLeftContent = !!req?.description
+    || req?.header?.length > 0
+    || req?.pathParams?.length > 0
+    || req?.url?.variable?.length > 0
+    || req?.url?.query?.length > 0
+    || req?.bodyFields?.length > 0;
 
   return (
     <div>
@@ -100,24 +106,26 @@ export default function RequestDetail({ item, onSelect, auth, serverUrl }) {
         gridTemplateColumns: isMobile ? '1fr' : 'minmax(0, 3fr) minmax(0, 2fr)',
         minHeight: 0,
       }}>
-        <div style={{
-          padding: isMobile ? '16px 20px' : '24px 32px',
-          borderRight: isMobile ? 'none' : '1px solid var(--ifm-color-emphasis-300)',
-          borderBottom: isMobile ? '1px solid var(--ifm-color-emphasis-300)' : 'none',
-          overflow: 'auto',
-        }}>
-          {req?.description && (
-            <div style={{ marginBottom: 20 }}>
-              <Markdown text={req.description} />
-            </div>
-          )}
-          <ParamTable title="Headers" params={req?.header} />
-          {req?.pathParams?.length
-            ? <FieldsTable title="Path Parameters" fields={req.pathParams} />
-            : <ParamTable title="Path Parameters" params={req?.url?.variable} />}
-          <ParamTable title="Query Parameters" params={req?.url?.query} />
-          <RequestBodyFields fields={req?.bodyFields} contentType={req?.bodyContentType} />
-        </div>
+        {hasLeftContent && (
+          <div style={{
+            padding: isMobile ? '16px 20px' : '24px 32px',
+            borderRight: isMobile ? 'none' : '1px solid var(--ifm-color-emphasis-300)',
+            borderBottom: isMobile ? '1px solid var(--ifm-color-emphasis-300)' : 'none',
+            overflow: 'auto',
+          }}>
+            {req?.description && (
+              <div style={{ marginBottom: 20 }}>
+                <Markdown text={req.description} />
+              </div>
+            )}
+            <ParamTable title="Headers" params={req?.header} />
+            {req?.pathParams?.length
+              ? <FieldsTable title="Path Parameters" fields={req.pathParams} />
+              : <ParamTable title="Path Parameters" params={req?.url?.variable} />}
+            <ParamTable title="Query Parameters" params={req?.url?.query} />
+            <RequestBodyFields fields={req?.bodyFields} contentType={req?.bodyContentType} />
+          </div>
+        )}
 
         <div style={{ padding: isMobile ? '16px 20px' : '24px 24px', background: 'var(--ifm-background-surface-color)', overflow: 'auto' }}>
           {req?.body?.raw && (
