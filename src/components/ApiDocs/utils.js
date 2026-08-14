@@ -5,6 +5,7 @@ export const md = new MarkdownIt({ html: true, breaks: true, linkify: false, typ
 export function toDisplayUrl(url, serverUrl = '{server_url}') {
   if (!url?.raw) return '';
   return url.raw
+    .split('?')[0]
     .replace(/\{\{baseUrl\}\}/g, serverUrl).replace('https://', '')
     .replace(/\{\{([^}]+)\}\}/g, '{$1}');
 }
