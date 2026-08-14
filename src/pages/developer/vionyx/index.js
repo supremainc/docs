@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { useHistory, useLocation } from '@docusaurus/router';
-import collectionData from '@site/static/specs/bsxapi-postman-collection.json';
+import collectionData from '@site/static/specs/vionyx-api-postman-collection.json';
 import { Sidebar, RequestDetail, WelcomeScreen, toSlug, useIsMobile } from '@site/src/components/ApiDocs';
 
 // ─── Data setup ───────────────────────────────────────────────────────
@@ -83,31 +83,31 @@ export default function ApiV2Page() {
   }, [selected, handleSelect]);
 
   const pageTitle = selected
-    ? (selected._folder?.name || selected.name) + ' — BioStar X API'
-    : 'BioStar X API';
+    ? (selected._folder?.name || selected.name) + ' — ViOnyx AI Camera API'
+    : 'ViOnyx AI Camera API';
 
   return (
-    <Layout title={pageTitle} description="BioStar X REST API Reference">
+    <Layout title={pageTitle} description="ViOnyx AI Camera REST API Reference">
       <Head>
-        <title>BioStar X API Reference | Suprema Docs</title>
-        <meta name="description" content="BioStar X REST API documentation. Manage users, access control, doors, devices, and credentials with JSON-based endpoints." />
+        <title>ViOnyx AI Camera API Reference | Suprema Docs</title>
+        <meta name="description" content="ViOnyx AI Camera REST API documentation. Manage live video, AI events, face authentication, and device configuration with JSON-based endpoints." />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <link rel="canonical" href="https://docs.supremainc.com/developer/bsxapi" />
+        <link rel="canonical" href="https://docs.supremainc.com/developer/vionyx" />
 
-        <meta property="og:title" content="BioStar X API Reference | Suprema Docs" />
-        <meta property="og:description" content="Complete REST API documentation for BioStar X access control system. Manage users, doors, devices, and biometric credentials." />
+        <meta property="og:title" content="ViOnyx AI Camera API Reference | Suprema Docs" />
+        <meta property="og:description" content="Complete REST API documentation for the ViOnyx AI camera. Manage live video, AI events, face authentication, and device configuration." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://docs.supremainc.com/developer/bsxapi" />
+        <meta property="og:url" content="https://docs.supremainc.com/developer/vionyx" />
         <meta property="og:site_name" content="Suprema Docs" />
 
-        <meta name="keywords" content="BioStar X API, Suprema API, access control API, biometric API, REST API, user management API, door control API, device management API" />
+        <meta name="keywords" content="ViOnyx API, Suprema API, AI camera API, REST API, face authentication API, AI event API, device management API" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "TechArticle",
-            "headline": "BioStar X API Reference",
-            "description": "Complete REST API documentation for BioStar X access control system",
+            "headline": "ViOnyx AI Camera API Reference",
+            "description": "Complete REST API documentation for the ViOnyx AI camera",
             "author": {
               "@type": "Organization",
               "name": "Suprema Inc.",
@@ -121,11 +121,11 @@ export default function ApiV2Page() {
                 "url": "https://supremainc.com/en/asset/images/common/sns_img02.jpg"
               }
             },
-            "datePublished": "2025-11-11",
+            "datePublished": "2026-08-10",
             "dateModified": new Date().toISOString().split('T')[0],
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://docs.supremainc.com/developer/bsxapi"
+              "@id": "https://docs.supremainc.com/developer/vionyx"
             }
           })}
         </script>
@@ -155,7 +155,7 @@ export default function ApiV2Page() {
               </button>
             )}
             {selected
-              ? <RequestDetail key={selected.name || selected._folder?.name} item={selected} onSelect={handleSelect} auth={collectionData.auth} />
+              ? <RequestDetail key={selected.name || selected._folder?.name} item={selected} onSelect={handleSelect} auth={collectionData.auth} serverUrl="https://{{your-vionyx-ip}}/v1/api" />
               : <WelcomeScreen info={collectionData.info} totalEndpoints={TOTAL_ENDPOINTS} />
             }
           </main>

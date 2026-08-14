@@ -546,6 +546,10 @@ const config = {
                 to: '/developer/clue'
               },
               {
+                label: 'ViOnyx AI Camera API',
+                to: '/developer/vionyx'
+              },
+              {
                 label: 'BioStar Air Developer',
                 to: 'https://developers.biostarair.com',
                 target: '_blank',
@@ -610,7 +614,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini' ],
+        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini', 'http' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },

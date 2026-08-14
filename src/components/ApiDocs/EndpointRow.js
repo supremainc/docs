@@ -5,7 +5,7 @@ import DeprecatedBadge from './DeprecatedBadge';
 export default function EndpointRow({ req, onSelect }) {
   const method = req.request?.method;
   const desc = req.request?.description;
-  const shortDesc = typeof desc === 'string' ? desc.split('\n')[0].replace(/\*\*/g, '').trim() : '';
+  const shortDesc = typeof desc === 'string' ? desc.split('\n')[0].replace(/\*\*/g, '').trim().replace('#### ', '') : '';
   return (
     <button onClick={() => onSelect(req)} style={{
       display: 'flex', alignItems: 'flex-start', gap: 12, width: '100%',

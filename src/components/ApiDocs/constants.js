@@ -12,6 +12,12 @@ export const SNIPPET_LANGS = {
   'Node.js': 'javascript', Go: 'go', Java: 'java',
 };
 
+export const STABILITY_COLORS = {
+  stable: '#2563eb',
+  beta: '#9333ea',
+  internal: '#64748b',
+};
+
 export const SECTION_LABEL = {
   fontSize: 11, fontWeight: 700, color: 'var(--ifm-color-content-secondary)',
   textTransform: 'uppercase', letterSpacing: '0.07em', margin: '0 0 8px',
