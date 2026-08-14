@@ -609,7 +609,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini' ],
+        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini', 'http' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },

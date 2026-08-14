@@ -130,7 +130,7 @@ export default function ApiV2Page() {
           })}
         </script>
       </Head>
-      <div style={{ display: 'flex', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+      <div style={{ display: 'flex', height: 'calc(100vh - var(--ifm-navbar-height, 60px))', overflow: 'hidden' }}>
         {(!isMobile || !selected) && (
           <Sidebar
             allFolders={collectionData.item || []}

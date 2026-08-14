@@ -2,17 +2,17 @@ import MarkdownIt from 'markdown-it';
 
 export const md = new MarkdownIt({ html: true, breaks: true, linkify: false, typographer: false });
 
-export function toDisplayUrl(url) {
+export function toDisplayUrl(url, serverUrl = '{server_url}') {
   if (!url?.raw) return '';
   return url.raw
-    .replace(/\{\{baseUrl\}\}/g, '{server_url}')
+    .replace(/\{\{baseUrl\}\}/g, serverUrl).replace('https://', '')
     .replace(/\{\{([^}]+)\}\}/g, '{$1}');
 }
 
-export function toSnippetUrl(url) {
-  if (!url?.raw) return 'https://your-server.com';
+export function toSnippetUrl(url, serverUrl = 'https://your-server.com') {
+  if (!url?.raw) return serverUrl;
   return url.raw
-    .replace(/\{\{baseUrl\}\}/g, 'https://your-server.com')
+    .replace(/\{\{baseUrl\}\}/g, serverUrl)
     .replace(/\{\{([^}]+)\}\}/g, '{$1}');
 }
 
@@ -65,9 +65,9 @@ export function getAuthHeader(auth) {
   return null;
 }
 
-export function makeSnippets(req, auth) {
+export function makeSnippets(req, auth, serverUrl) {
   const method = req.method || 'GET';
-  const url = toSnippetUrl(req.url);
+  const url = toSnippetUrl(req.url, serverUrl);
   const isLogin = req.url?.raw?.includes('/api/login');
 
   const hdrs = [...(req.header || [])];

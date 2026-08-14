@@ -7,11 +7,14 @@ import CodeSnippets from './CodeSnippets';
 import ResponseExamples from './ResponseExamples';
 import EndpointRow from './EndpointRow';
 import DeprecatedBadge from './DeprecatedBadge';
+import StabilityBadge from './StabilityBadge';
+import RequestBodyFields from './RequestBodyFields';
+import FieldsTable from './FieldsTable';
 import { useIsMobile } from './hooks';
 import { toDisplayUrl, prettyJson } from './utils';
 import { METHOD_COLORS, SECTION_LABEL } from './constants';
 
-export default function RequestDetail({ item, onSelect, auth }) {
+export default function RequestDetail({ item, onSelect, auth, serverUrl }) {
   // hooks는 조건문 이전에 항상 호출
   const isMobile = useIsMobile();
 
@@ -55,13 +58,13 @@ export default function RequestDetail({ item, onSelect, auth }) {
 
   const req = item.request;
   const method = req?.method;
-  const url = toDisplayUrl(req?.url);
+  const url = toDisplayUrl(req?.url, serverUrl);
   const color = METHOD_COLORS[method?.toUpperCase()] || '#0066cc';
 
   return (
     <div>
       <div style={{ padding: '28px 32px 20px', borderBottom: '1px solid var(--ifm-color-emphasis-300)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
           <MethodBadge method={method} />
           <h1 style={{ fontSize: 24, margin: 0, lineHeight: 1.2 }}>{item.name}</h1>
           {item.deprecated && <DeprecatedBadge />}
@@ -73,6 +76,11 @@ export default function RequestDetail({ item, onSelect, auth }) {
           fontSize: 13, wordBreak: 'break-all', color: 'var(--ifm-color-content)',
         }}>
           <strong>{method}</strong>{' '}{url}
+          {item.stability && (
+            <div style={{ position: 'relative', display: 'flow', float: 'right' }}>
+              <StabilityBadge stability={item.stability} />
+            </div>
+          )}
         </div>
         {item.deprecated && (
           <div style={{
@@ -104,18 +112,21 @@ export default function RequestDetail({ item, onSelect, auth }) {
             </div>
           )}
           <ParamTable title="Headers" params={req?.header} />
-          <ParamTable title="Path Parameters" params={req?.url?.variable} />
+          {req?.pathParams?.length
+            ? <FieldsTable title="Path Parameters" fields={req.pathParams} />
+            : <ParamTable title="Path Parameters" params={req?.url?.variable} />}
           <ParamTable title="Query Parameters" params={req?.url?.query} />
+          <RequestBodyFields fields={req?.bodyFields} contentType={req?.bodyContentType} />
         </div>
 
         <div style={{ padding: isMobile ? '16px 20px' : '24px 24px', background: 'var(--ifm-background-surface-color)', overflow: 'auto' }}>
           {req?.body?.raw && (
             <div style={{ marginBottom: 20 }}>
-              <h4 style={SECTION_LABEL}>Request Body</h4>
+              <h4 style={SECTION_LABEL}>Example</h4>
               <CodeBlock language="json">{prettyJson(req.body.raw)}</CodeBlock>
             </div>
           )}
-          <CodeSnippets req={req} auth={auth} />
+          <CodeSnippets req={req} auth={auth} serverUrl={serverUrl} />
           <ResponseExamples responses={item.response} />
         </div>
       </div>
