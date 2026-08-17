@@ -14,7 +14,7 @@ export default function EndpointRow({ req, onSelect }) {
       cursor: 'pointer', textAlign: 'left',
       opacity: req.deprecated ? 0.6 : 1,
     }}>
-      <span style={{ flexShrink: 0, marginTop: 2 }}><MethodBadge method={method} compact /></span>
+      <span style={{ flexShrink: 0, marginTop: 2, width: 50 }}><MethodBadge method={method} compact /></span>
       <span style={{ flex: 1 }}>
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{
