@@ -1,13 +1,12 @@
 ---
 id: check-door-status
 title: 출입문 상태 확인하기
-description: 출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. 또한 출입문에 할당된 장치의 이상 상태를 확인할 수 있습니다.
-keywords: [ 모니터링, 출입문 ]
+description: 출입문, 엘리베이터, 고급 출입 통제 구역의 상태를 실시간으로 모니터링하고, 조치가 필요한 항목만 모아 확인하여 즉시 대응할 수 있습니다.
 ---
 
-출입문의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. <Cmd sid='shell.header.arena' />에서 제공하는 상태 아이콘을 통해 출입문에 할당된 장치의 이상 상태를 한눈에 확인하고, 문제 발생 시 즉시 대응하세요.
+출입문, 엘리베이터, 고급 출입 통제 구역의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. <Cmd sid='shell.header.arena' />에서 제공하는 상태 아이콘을 통해 알람과 이상 상태를 한눈에 확인하고, 조치가 필요한 항목만 모아 즉시 대응하세요.
 
-<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 각 출입문의 상태를 확인할 수 있습니다.
+<Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.arena' />을 선택하세요. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.title' /> 탭에서 각 항목의 상태를 확인할 수 있습니다.
 
 ## 시작하기 전에
 
@@ -19,9 +18,9 @@ keywords: [ 모니터링, 출입문 ]
 
 * 출입문 추가 및 구성에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-manage-door' />를 참고하세요.
 
-* 출입문의 상태를 모니터링하거나 제어하려면 <Cmd sid='setting.server.logUploadType' product='2' /> 기능이 활성화되어 있어야 합니다. 이 기능은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> 메뉴 경로의 <Cmd sid='common.general' product='2' /> 섹션에서 활성화할 수 있습니다.
+* 출입문의 상태를 모니터링하거나 제어하려면 <Cmd sid='setting.server.logUploadType' product='2' /> 기능이 활성화되어 있어야 합니다. 이 기능은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> 메뉴 경로의 <Cmd sid='common.general' product='2' /> 섹션에서 활성화할 수 있습니다.
 
-* VMS 서버와 연동해 카메라를 출입문과 연결하는 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
+* VMS 서버와 연동해 카메라를 출입문과 연결하는 기능은 **에센셜**(Essential) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
 
 :::
 
@@ -66,7 +65,7 @@ import Doortree from './door-tree.json';
 
 상태 아이콘을 클릭하면 툴팁을 통해서 상세 정보를 확인할 수 있습니다. 툴팁에 표시된 오류 메시지의 링크를 클릭하면 출입문 또는 엘리베이터와 연결된 장치 목록으로 이동할 수 있습니다.
 
-<Image src='/img/monitoring-door-status-tooltip.png' />
+<Image src='/img/monitoring-door-status-tooltip.png' className='none' />
 
 해당 장치에서 마우스 오른쪽 버튼을 클릭하고, <Cmd sid='arena.tree.contextMenu.reconnect' /> 또는 <Cmd sid='arena.tree.contextMenu.reboot' /> 옵션을 선택하세요.
 
@@ -78,11 +77,11 @@ import Doortree from './door-tree.json';
 
 * 출입문 또는 엘리베이터에서 발생하는 알람은 다음 설정을 통해 구성할 수 있습니다.
 
-  * [출입문 알람 설정](settings-door-add#alarm)
+   * [출입문 알람 설정](settings-door-add#alarm)
 
-  * [엘리베이터 알람 설정](settings-elevators-add#alarm)
+   * [엘리베이터 알람 설정](settings-elevators-add#alarm)
 
-  * [고급 출입 통제 설정](settings-advanced-ac)
+   * [고급 출입 통제 설정](settings-advanced-ac)
 
 * 비디오 규칙에서 출입문과 카메라를 연결하여 알람을 설정할 수 있습니다. 비디오 규칙 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-rule' />를 참고하세요.
 
@@ -92,6 +91,146 @@ import Doortree from './door-tree.json';
 
 :::
 
+### 주의가 필요한 항목 모아보기 {/* #checkAttentionFilter */}
+
+관리자는 조치가 필요한 출입문과 엘리베이터만 한 번에 모아 볼 수 있습니다. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.entitiesNeedAttention' />을 클릭하세요. 출입문과 엘리베이터의 상태를 확인하고, 문제가 발생한 장치에 대해 즉시 조치를 취할 수 있습니다.
+
+<Image src='/img/biostarx-monitoring-door-attention-filter.png' />
+
+:::info
+
+어떤 상태일 때 출입문과 엘리베이터가 조치 대상으로 표시되는지 <DocLink inner='#check-the-attention-criteria' />을 참고하세요.
+
+:::
+
+### 조치 대상 판정 기준 {/* #check-the-attention-criteria */}
+
+#### 출입문
+
+출입문은 아래 조건 중 하나라도 해당하면 조치가 필요한 항목으로 표시됩니다.
+
+##### 출입문 모드 변경
+
+관리자, 스케줄, 비상 상황에 의해 출입문이 잠기거나 개방된 상태를 포함합니다.
+
+<div className='overflow-x'>
+
+| 사유 | 상태 표시 |
+| -- | -- |
+| 관리자 수동 조작 | <Cmd sid='arena.preview.door.operatorLocked' /> / <Cmd sid='arena.preview.door.operatorUnlocked' /> |
+| 스케줄 | <Cmd sid='arena.preview.door.scheduleLocked' /> / <Cmd sid='arena.preview.door.scheduleUnlocked' /> |
+| 비상 상황 | <Cmd sid='arena.preview.door.emergencyLocked' /> / <Cmd sid='arena.preview.door.emergencyUnlocked' /> |
+
+</div>
+
+##### 알람
+
+해제되지 않은 알람이 하나라도 있으면 조치 대상으로 표시됩니다. 강제 열림, 장시간 열림, 안티패스백 관련 알람은 이상 상태가 아닌 알람으로 분류됩니다.
+
+<div className='overflow-x'>
+
+| 알람 종류 | 설명 |
+| -- | -- |
+| 출입문 강제 열림 | 잠금을 해제하지 않고 강제로 연 상태 |
+| 출입문 장시간 열림 | 설정한 시간을 초과해 열려 있는 상태 |
+| 안티패스백(APB) 알람 | 재입출입 규칙을 위반한 상태 |
+| 시간 제한 안티패스백 알람 | 시간 기준 재입출입 규칙을 위반한 상태 |
+| 잠금 무시 알람 | 잠긴 상태에서 강제로 개방된 상태 |
+| AI 영상 분석 알람 | 테일게이팅, 배회, 침입, 쓰러짐, 방치 등 영상 분석 기반 알람 |
+
+</div>
+
+##### 이상 상태
+
+출입문에 연결된 장치의 연결 상태를 기준으로 판정합니다.
+
+<div className='overflow-x'>
+
+| 이상 상태 종류 | 설명 |
+| -- | -- |
+| 연결 끊김 | 장치와의 네트워크 연결이 끊긴 상태 |
+| 동기화 오류 | 연결은 되어 있으나 데이터 동기화가 어긋난 상태 |
+| 커뮤니케이션 서버 오류 | 장치가 속한 커뮤니케이션 서버에서 오류가 발생한 상태 |
+
+</div>
+
+:::info
+
+* <Cmd sid='arena.tree.door.entitiesNeedAttention' /> 필터에는 위 이상 상태 외에도 장치 잠금, 인증 연속 실패로 인한 잠금(Auth Fail Lockout) 상태가 포함됩니다.
+
+* 알람과 이상 상태가 동시에 발생하면 두 상태 아이콘이 함께 표시되며, 하나가 다른 하나를 가리지 않고 한 행에서 모두 확인할 수 있습니다. 
+
+* 하위 장치에서 발생한 이상 상태는 상위 출입문 노드로 집계되어 표시되므로, 필터가 켜진 상태에서도 문제가 발생한 위치를 계층 구조를 따라 확인할 수 있습니다.
+
+:::
+
+#### 엘리베이터
+
+엘리베이터도 출입문과 같은 조건으로 판정합니다. 다만 이상 상태와 알람 조건에는 아래와 같은 차이가 있습니다.
+
+* **모드 변경**: 출입문과 동일합니다. 관리자, 스케줄, 비상 상황에 의해 잠기거나 개방되면 조치 대상으로 표시됩니다.
+
+* **이상 상태**: 출입문과 같은 기준(연결 끊김, 동기화 오류, 커뮤니케이션 서버 오류, 장치 잠금, 인증 연속 실패 잠금)을 적용합니다. 다만 강제 열림과 장시간 열림은 엘리베이터에 없는 상태이므로 판정 대상에서 제외됩니다.
+
+* **알람**: 엘리베이터에는 출입문과 다른 전용 알람이 있습니다. 아래를 참고하세요.
+
+   <div className='overflow-x'>
+
+   | 엘리베이터 알람 종류 | 설명 |
+   | -- | -- |
+   | 엘리베이터 경보 발생 | 엘리베이터에서 알람이 발생한 상태 |
+   | 엘리베이터 입력 경보 | 외부 입력 신호로 발생한 알람 |
+   | 엘리베이터 전 층 개방 경보 | 모든 층이 강제로 개방된 상태 |
+
+   </div>
+
+:::info
+
+* 층은 엘리베이터 노드 하위의 독립된 노드로 표시되며, 각 층은 잠금(<IcElevClose />)/개방(<IcElevOpen />) 상태만 가집니다. 
+
+* 알람과 이상 상태는 층이 아닌 상위 엘리베이터 노드에 표시됩니다. 엘리베이터를 펼치면 조치가 필요한 층만 표시되고, 정상 층은 숨겨집니다.
+
+:::
+
+#### 고급 출입 통제
+
+고급 출입 통제 그룹의 구역(안티패스백, 화재 경보, 침입, 소집, 재실 인원 제한, 인터락)도 조치 대상 판정에 포함됩니다. 다만 출입문·엘리베이터와 달리 모드 변경이나 이상 상태 조건은 적용되지 않으며, 해제되지 않은 알람이 하나라도 있으면 조치 대상으로 표시됩니다.
+
+<div className='overflow-x'>
+
+| 구역 알람 종류 | 설명 |
+| -- | -- |
+| 안티패스백(APB) 알람 | 재입출입 규칙을 위반한 상태 |
+| 화재 경보 | 화재를 감지해 발생한 알람 |
+| 스케줄 잠금 알람 | 스케줄 잠금을 설정한 상태에서 발생한 알람 |
+| 침입 알람 | 침입을 감지해 발생한 알람 |
+| 인터락 알람 | 인터락 규칙을 위반한 상태 |
+| 소집 알람 | 소집 상황에서 발생한 알람 |
+| 재실 인원 초과 알람 | 설정된 인원 제한을 초과한 상태 |
+
+</div>
+
+:::info
+
+* 경비(Arm) 상태와 비활성화된 구역은 조치 대상으로 표시되지 않습니다. 경비는 정상적으로 운영 중인 상태이고, 비활성화는 의도적으로 꺼둔 상태이기 때문입니다.
+
+* 구역은 고급 출입 통제 그룹의 직계 항목으로 표시되며, 하위에 출입문이 펼쳐지지 않습니다. 조치가 필요한 구역만 트리에 남고, 조치 대상 구역이 없으면 고급 출입 통제 그룹 자체가 트리에서 제외됩니다.
+
+:::
+
+### 출입문 상태 확인 {/* #check-the-door-status */}
+
+출입문의 닫힘 또는 열림, 이상 상태를 확인할 수 있습니다. 출입문 상태는 아래를 참고하세요.
+
+<div className='col2--20-80 overflow-x'>
+
+| 상태 아이콘 | 설명 |
+| :--: | -- |
+| <IcDoorClose width='auto' height='35px' /> | 출입문이 닫힌 상태입니다. |
+| <IcDoorOpen width='auto' height='35px' /> | 출입문이 열린 상태입니다. |
+| <IcDoorAlarm width='auto' height='35px' /> | 출입문 센서가 감지되지 않는 상태입니다. |
+
+</div>
 
 ### 출입문 잠금 확인 {/* #check-the-door-lock */}
 
@@ -102,9 +241,17 @@ import Doortree from './door-tree.json';
 | 상태 아이콘 | 설명 |
 | :--: | -- |
 | <IcRelayLock width='auto' height='35px' /> | 출입문이 잠긴 상태입니다. |
-| <IcRelayUnlock width='auto' height='40px' /> | 출입문이 열린 상태입니다. |
+| <IcFixedLock width='auto' height='35px' /> | 출입문을 <Cmd sid='arena.tree.contextMenu.lockTimed' /> 또는 <Cmd sid='arena.tree.contextMenu.lockPermanent' /> 옵션으로 잠근 상태입니다. |
+| <IcRelayUnlock width='auto' height='40px' /> | 출입문이 개방된 상태입니다. |
+| <IcFixedUnlock width='auto' height='40px' /> | 출입문을 <Cmd sid='arena.tree.contextMenu.lockTimed' /> 또는 <Cmd sid='arena.tree.contextMenu.lockPermanent' /> 옵션으로 개방한 상태입니다. |
 
 </div>
+
+:::info
+
+출입문 제어 옵션에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/control-door#door-open' />를 참고하세요.
+
+:::
 
 
 ### 카메라 상태 확인 {/* #check-the-camera-status */}
@@ -137,9 +284,8 @@ import Doortree from './door-tree.json';
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <IcDisable width='auto' height='30px' /> | 비활성화된 설정의 아이콘입니다. 비활성화된 설정은 알람이 발생하지 않습니다. |
-| <IcArm width='auto' height='35px'/> | 경비가 활성화된 상태입니다. |
-| <IcDisarm width='auto' height='35px'/> | 경비가 비활성화된 상태입니다. |
+| <IcArm width='auto' height='35px'/> | 경비 상태입니다. |
+| <IcDisarm width='auto' height='35px'/> | 경비가 해제된 상태입니다. |
 
 </div>
 
@@ -157,8 +303,8 @@ import Doortree from './door-tree.json';
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <StatusNormal width='auto' height='35px'/> | 엘리베이터를 통해 해당 층이 잠긴 상태입니다. |
-| <StatusOK width='auto' height='35px'/> | 엘리베이터를 통해 해당 층이 해제된 상태입니다. |
+| <IcElevClose width='auto' height='35px'/> | 엘리베이터를 통해 해당 층이 잠긴 상태입니다. |
+| <IcElevOpen width='auto' height='35px'/> | 엘리베이터를 통해 해당 층이 개방된 상태입니다. |
 
 </div>
 

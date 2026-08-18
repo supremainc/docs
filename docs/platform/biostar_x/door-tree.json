@@ -11,10 +11,6 @@
             "type": "door-device",
             "children": [
               {
-                "name": "출입문 센서",
-                "type": "door-sensor"
-              },
-              {
                 "name": "출입문 릴레이",
                 "type": "door-relay"
               },
@@ -33,7 +29,7 @@
     ]
   },
   {
-    "name": "모든 엘리베이터 그룹",
+    "name": "모든 엘리베이터",
     "type": "elevator",
     "children": [
       {

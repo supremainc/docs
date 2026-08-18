@@ -1,29 +1,25 @@
 [
   {
-    "name": "Todos los grupos de puertas de entrada",
+    "name": "All Door Groups",
     "children": [
       {
-        "name": "Grupo de puertas de entrada A",
+        "name": "Door Group A",
         "type": "door-group",
         "children": [
           {
-            "name": "Puerta",
+            "name": "Door",
             "type": "door-device",
             "children": [
               {
-                "name": "Sensor de puerta",
-                "type": "door-sensor"
-              },
-              {
-                "name": "Relé de puerta",
+                "name": "Door relay",
                 "type": "door-relay"
               },
               {
-                "name": "Estado de armado",
+                "name": "Arming status",
                 "type": "door-arm"
               },
               {
-                "name": "Cámara",
+                "name": "Camera",
                 "type": "door-camera"
               }
             ]
@@ -33,23 +29,23 @@
     ]
   },
   {
-    "name": "Todos los grupos de ascensores",
-    "type": "ascensor",
+    "name": "All Elevators",
+    "type": "elevator",
     "children": [
       {
-        "name": "Grupo de ascensores B",
+        "name": "Elevator Group B",
         "type": "elevator-group",
         "children": [
           {
-            "name": "Ascensor 1",
+            "name": "Elevator 1",
             "type": "elevator-device",
             "children": [
               {
-                "name": "Ascensor 1 - primer piso",
+                "name": "Elevator 1 - 1st Floor",
                 "type": "elevator-floor"
               },
               {
-                "name": "Ascensor 1 - segundo piso",
+                "name": "Elevator 1 - 2nd Floor",
                 "type": "elevator-floor"
               }
             ]
@@ -59,11 +55,11 @@
     ]
   },
   {
-    "name": "Todos los AC avanzados",
+    "name": "All Advanced ACs",
     "type": "access-control",
     "children": [
       {
-        "name": "Configuración de Control de Acceso",
+        "name": "Access Control Settings",
         "type": "access-zone"
       }
     ]

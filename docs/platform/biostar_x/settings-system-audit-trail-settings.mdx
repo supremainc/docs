@@ -1,0 +1,33 @@
+---
+id: settings-system-audit-trail-settings
+title: 감사 설정 관리하기
+description: 출입 통제 감사 로그의 변경 기록과 조회 기록 보관 정책을 설정하는 방법을 안내합니다.
+---
+
+감사 로그는 시간이 지날수록 계속 쌓이므로 저장 공간과 개인정보 보호 관점에서 보관 기간을 관리해야 합니다. <Cmd sid='setting.menu.system.auditTrailRetention' />에서 <Cmd sid='setting.menu.auditTrail.acAuditLog' /> 기록의 보관 기간과 조회 기록 여부를 설정하세요.
+
+:::info
+
+근태 관리(T&A) 감사 로그의 보관 정책은 별도 문서에서 다룹니다.
+
+:::
+
+## 권한 안내
+
+<Cmd sid='setting.account.administrator' className='normal' />는 <Cmd sid='setting.menu.system.auditTrailRetention' /> 메뉴에서 항상 조회하고 변경할 수 있습니다. 커스텀 권한 관리자는 <Cmd sid='settings.account.menu.setting' product='2' />에서 <Cmd sid='setting.menu.auditTrail.retentionSettings' /> 권한을 <Cmd sid='settings.account.menu.readOnly' product='2' />으로 적용하면 조회만, <Cmd sid='settings.account.menu.fullAccess' product='2' />으로 적용하면 조회와 변경 모두 할 수 있습니다.
+
+> <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> → <Cmd sid='setting.account.addCustomOperator' product='2' />
+
+<Image src='/img/biostarx-settings-custom-account-level.png' />
+
+## 감사 설정 열기
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.system.auditTrailRetention' />을 클릭하세요.
+
+<Image src='/img/biostarx-settings-audit-trail-settings.png' />
+
+import AuditTrailOptions from '@site/docs/common/_bsx-audit-trail-settings-options.mdx';
+
+<AuditTrailOptions type='accesscontrol' />

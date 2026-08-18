@@ -1737,27 +1737,43 @@
   },
   "/img/biostarx-data-alert-events-disable-filter.png": {
     "width": 1200,
-    "height": 106
+    "height": 182
   },
   "/img/biostarx-data-alert-events-filtered.png": {
     "width": 1200,
-    "height": 412
+    "height": 182
+  },
+  "/img/biostarx-data-alert-history-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
+  },
+  "/img/biostarx-data-alert-lists-save-report.png": {
+    "width": 1680,
+    "height": 266
   },
   "/img/biostarx-data-alert-lists.png": {
-    "width": 1200,
-    "height": 539
+    "width": 1920,
+    "height": 360
   },
   "/img/biostarx-data-all-events-disable-filter.png": {
     "width": 1200,
-    "height": 147
+    "height": 110
+  },
+  "/img/biostarx-data-all-events-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
+  },
+  "/img/biostarx-data-all-events-filtered-save-report.png": {
+    "width": 1200,
+    "height": 276
   },
   "/img/biostarx-data-all-events-filtered.png": {
     "width": 1200,
-    "height": 526
+    "height": 448
   },
   "/img/biostarx-data-all-events-select-period.png": {
     "width": 400,
-    "height": 214
+    "height": 219
   },
   "/img/biostarx-data-all-events-set-custom-period.png": {
     "width": 600,
@@ -1828,8 +1844,8 @@
     "height": 384
   },
   "/img/biostarx-data-generate-report.png": {
-    "width": 1200,
-    "height": 700
+    "width": 1920,
+    "height": 716
   },
   "/img/biostarx-data-information.png": {
     "width": 1000,
@@ -1838,6 +1854,10 @@
   "/img/biostarx-data-main.png": {
     "width": 1200,
     "height": 539
+  },
+  "/img/biostarx-data-report-add-filter.png": {
+    "width": 480,
+    "height": 264
   },
   "/img/biostarx-data-report-format.png": {
     "width": 1000,
@@ -2019,6 +2039,18 @@
     "width": 1500,
     "height": 844
   },
+  "/img/biostarx-license-fail-alone.png": {
+    "width": 380,
+    "height": 189
+  },
+  "/img/biostarx-license-fail.png": {
+    "width": 380,
+    "height": 220
+  },
+  "/img/biostarx-license-success.png": {
+    "width": 215,
+    "height": 130
+  },
   "/img/biostarx-login.png": {
     "width": 800,
     "height": 556
@@ -2031,13 +2063,21 @@
     "width": 700,
     "height": 482
   },
+  "/img/biostarx-monitoring-acs-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/biostarx-monitoring-batch-main.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/biostarx-monitoring-camera-clear-alarm-success.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/biostarx-monitoring-camera-clear-alarm.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/biostarx-monitoring-camera-details.png": {
     "width": 1278,
@@ -2045,19 +2085,35 @@
   },
   "/img/biostarx-monitoring-camera-event-video-log.png": {
     "width": 1200,
-    "height": 682
+    "height": 675
   },
   "/img/biostarx-monitoring-camera-popup.png": {
+    "width": 418,
+    "height": 326
+  },
+  "/img/biostarx-monitoring-device-attention-filter.png": {
     "width": 400,
-    "height": 364
+    "height": 277
+  },
+  "/img/biostarx-monitoring-device-auth-fail-lock.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-device-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 501
+  },
+  "/img/biostarx-monitoring-device-lock.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-device-popup.png": {
-    "width": 400,
-    "height": 315
+    "width": 418,
+    "height": 323
+  },
+  "/img/biostarx-monitoring-door-ac-details.png": {
+    "width": 1200,
+    "height": 503
   },
   "/img/biostarx-monitoring-door-arm-popup.png": {
     "width": 857,
@@ -2065,7 +2121,11 @@
   },
   "/img/biostarx-monitoring-door-arm-status.png": {
     "width": 400,
-    "height": 297
+    "height": 494
+  },
+  "/img/biostarx-monitoring-door-attention-filter.png": {
+    "width": 350,
+    "height": 487
   },
   "/img/biostarx-monitoring-door-camera-details.png": {
     "width": 1200,
@@ -2075,21 +2135,33 @@
     "width": 400,
     "height": 291
   },
+  "/img/biostarx-monitoring-door-details-control.png": {
+    "width": 334,
+    "height": 191
+  },
+  "/img/biostarx-monitoring-door-elevator-details-control.png": {
+    "width": 328,
+    "height": 155
+  },
+  "/img/biostarx-monitoring-door-elevator-details-floor-list.png": {
+    "width": 328,
+    "height": 128
+  },
   "/img/biostarx-monitoring-door-elevator-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 505
   },
   "/img/biostarx-monitoring-door-elevator-floor-popup.png": {
-    "width": 400,
-    "height": 325
+    "width": 442,
+    "height": 411
   },
   "/img/biostarx-monitoring-door-elevator-popup.png": {
     "width": 400,
-    "height": 326
+    "height": 456
   },
   "/img/biostarx-monitoring-door-popup.png": {
-    "width": 400,
-    "height": 313
+    "width": 431,
+    "height": 387
   },
   "/img/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -2097,19 +2169,59 @@
   },
   "/img/biostarx-monitoring-door-view-details.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
+  },
+  "/img/biostarx-monitoring-door-zone-disabled.png": {
+    "width": 442,
+    "height": 244
   },
   "/img/biostarx-monitoring-door-zone-popup.png": {
-    "width": 400,
-    "height": 384
+    "width": 442,
+    "height": 450
+  },
+  "/img/biostarx-monitoring-doors-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/biostarx-monitoring-doors-control-fail-details.png": {
+    "width": 561,
+    "height": 334
+  },
+  "/img/biostarx-monitoring-doors-control-fail.png": {
+    "width": 1200,
+    "height": 256
+  },
+  "/img/biostarx-monitoring-doors-control-intrusion.png": {
+    "width": 441,
+    "height": 309
+  },
+  "/img/biostarx-monitoring-doors-control-list.png": {
+    "width": 439,
+    "height": 488
+  },
+  "/img/biostarx-monitoring-doors-control-success.png": {
+    "width": 1200,
+    "height": 256
+  },
+  "/img/biostarx-monitoring-elevators-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
+    "width": 640,
+    "height": 357
   },
   "/img/biostarx-monitoring-event-alert-acknowledge.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
+  },
+  "/img/biostarx-monitoring-event-alert-message-1.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-event-alert-message.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/biostarx-monitoring-event-list-alarm-active.png": {
     "width": 1000,
@@ -2132,8 +2244,8 @@
     "height": 319
   },
   "/img/biostarx-monitoring-event-list-filter-02.png": {
-    "width": 1200,
-    "height": 539
+    "width": 800,
+    "height": 459
   },
   "/img/biostarx-monitoring-event-list-pause.png": {
     "width": 1000,
@@ -2152,20 +2264,20 @@
     "height": 319
   },
   "/img/biostarx-monitoring-event-list-view-alerts-02.png": {
-    "width": 700,
-    "height": 351
+    "width": 1000,
+    "height": 632
   },
   "/img/biostarx-monitoring-event-list-view-only-alarm.png": {
     "width": 1000,
     "height": 257
   },
   "/img/biostarx-monitoring-event-list.png": {
-    "width": 1500,
-    "height": 745
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-group-expand-collapse.png": {
     "width": 400,
-    "height": 259
+    "height": 295
   },
   "/img/biostarx-monitoring-map-camera-popup.png": {
     "width": 1228,
@@ -2173,19 +2285,31 @@
   },
   "/img/biostarx-monitoring-map-main.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
   },
   "/img/biostarx-monitoring-map-open-camera.png": {
     "width": 1078,
-    "height": 315
+    "height": 347
+  },
+  "/img/biostarx-monitoring-select-multi-items.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/biostarx-monitoring-select-multi-summary.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
-    "height": 539
+    "height": 289
+  },
+  "/img/biostarx-monitoring-video-limit-notice.png": {
+    "width": 317,
+    "height": 178
   },
   "/img/biostarx-monitoring-video-tiles.png": {
     "width": 1200,
-    "height": 539
+    "height": 645
   },
   "/img/biostarx-new-user-credential-authmod-default.png": {
     "width": 1069,
@@ -2345,11 +2469,11 @@
   },
   "/img/biostarx-setting-device-adding-slave-device.png": {
     "width": 301,
-    "height": 281
+    "height": 333
   },
   "/img/biostarx-setting-device-adding-slave-list.png": {
     "width": 600,
-    "height": 242
+    "height": 253
   },
   "/img/biostarx-setting-device-adding-wiegand-list.png": {
     "width": 600,
@@ -2411,6 +2535,14 @@
     "width": 1000,
     "height": 317
   },
+  "/img/biostarx-setting-device-delete-check.png": {
+    "width": 400,
+    "height": 188
+  },
+  "/img/biostarx-setting-device-delete-none-check.png": {
+    "width": 400,
+    "height": 168
+  },
   "/img/biostarx-setting-device-detail-card-csn-mobile.png": {
     "width": 800,
     "height": 101
@@ -2419,9 +2551,17 @@
     "width": 800,
     "height": 207
   },
+  "/img/biostarx-setting-device-detail-card-custom-security-force.png": {
+    "width": 1437,
+    "height": 337
+  },
   "/img/biostarx-setting-device-detail-card-custom.png": {
     "width": 800,
     "height": 339
+  },
+  "/img/biostarx-setting-device-detail-card-smart-security-force.png": {
+    "width": 1437,
+    "height": 337
   },
   "/img/biostarx-setting-device-detail-card-smart.png": {
     "width": 800,
@@ -2435,9 +2575,13 @@
     "width": 800,
     "height": 162
   },
+  "/img/biostarx-setting-device-detail-face-block-duplicate-auth.png": {
+    "width": 473,
+    "height": 111
+  },
   "/img/biostarx-setting-device-detail-face.png": {
     "width": 1000,
-    "height": 419
+    "height": 518
   },
   "/img/biostarx-setting-device-detail-fingerprint.png": {
     "width": 1000,
@@ -2489,7 +2633,7 @@
   },
   "/img/biostarx-setting-device-edit-auth-mode.png": {
     "width": 1200,
-    "height": 354
+    "height": 704
   },
   "/img/biostarx-setting-device-edit-info.png": {
     "width": 1500,
@@ -2514,6 +2658,10 @@
   "/img/biostarx-setting-device-edit-rtsp.png": {
     "width": 1200,
     "height": 204
+  },
+  "/img/biostarx-setting-device-export-settings.png": {
+    "width": 1000,
+    "height": 220
   },
   "/img/biostarx-setting-device-functions.png": {
     "width": 1200,
@@ -2551,6 +2699,10 @@
     "width": 1000,
     "height": 119
   },
+  "/img/biostarx-setting-device-import-settings.png": {
+    "width": 1000,
+    "height": 220
+  },
   "/img/biostarx-setting-device-info-upgrade-firmware.png": {
     "width": 1500,
     "height": 598
@@ -2569,11 +2721,15 @@
   },
   "/img/biostarx-setting-device-list-delete-log.png": {
     "width": 1000,
-    "height": 196
+    "height": 278
   },
   "/img/biostarx-setting-device-list-print.png": {
     "width": 600,
     "height": 334
+  },
+  "/img/biostarx-setting-device-list-with-slace.png": {
+    "width": 1200,
+    "height": 217
   },
   "/img/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 600,
@@ -2720,12 +2876,12 @@
     "height": 268
   },
   "/img/biostarx-setting-door-add-group.png": {
-    "width": 400,
-    "height": 288
+    "width": 490,
+    "height": 233
   },
   "/img/biostarx-setting-door-adding-aditional-option.png": {
     "width": 1200,
-    "height": 480
+    "height": 503
   },
   "/img/biostarx-setting-door-adding-alarm.png": {
     "width": 1000,
@@ -2744,8 +2900,28 @@
     "height": 168
   },
   "/img/biostarx-setting-door-adding.png": {
-    "width": 400,
-    "height": 288
+    "width": 222,
+    "height": 247
+  },
+  "/img/biostarx-setting-door-auth-control-monitoring.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/biostarx-setting-door-auth-control-not-allow-users.png": {
+    "width": 700,
+    "height": 133
+  },
+  "/img/biostarx-setting-door-auth-control-use.png": {
+    "width": 1000,
+    "height": 243
+  },
+  "/img/biostarx-setting-door-auth-control-users.png": {
+    "width": 915,
+    "height": 318
+  },
+  "/img/biostarx-setting-door-auth-control.png": {
+    "width": 1000,
+    "height": 419
   },
   "/img/biostarx-setting-door-delete.png": {
     "width": 853,
@@ -2756,8 +2932,8 @@
     "height": 172
   },
   "/img/biostarx-setting-door-rename-group.png": {
-    "width": 400,
-    "height": 385
+    "width": 240,
+    "height": 271
   },
   "/img/biostarx-setting-door-to-group-info-select.png": {
     "width": 980,
@@ -2774,6 +2950,50 @@
   "/img/biostarx-setting-door-to-group.png": {
     "width": 220,
     "height": 288
+  },
+  "/img/biostarx-setting-elevator-add-alarm.png": {
+    "width": 1150,
+    "height": 98
+  },
+  "/img/biostarx-setting-elevator-add-btn.png": {
+    "width": 534,
+    "height": 228
+  },
+  "/img/biostarx-setting-elevator-add-detail.png": {
+    "width": 1150,
+    "height": 290
+  },
+  "/img/biostarx-setting-elevator-add-group-move.png": {
+    "width": 240,
+    "height": 228
+  },
+  "/img/biostarx-setting-elevator-add-group-naming.png": {
+    "width": 240,
+    "height": 165
+  },
+  "/img/biostarx-setting-elevator-add-group-re-naming.png": {
+    "width": 240,
+    "height": 248
+  },
+  "/img/biostarx-setting-elevator-add-group.png": {
+    "width": 240,
+    "height": 148
+  },
+  "/img/biostarx-setting-elevator-add-info.png": {
+    "width": 1150,
+    "height": 149
+  },
+  "/img/biostarx-setting-elevator-add-options.png": {
+    "width": 1150,
+    "height": 275
+  },
+  "/img/biostarx-setting-elevator-assign-group.png": {
+    "width": 1150,
+    "height": 167
+  },
+  "/img/biostarx-setting-elevator-batch-edit.png": {
+    "width": 539,
+    "height": 232
   },
   "/img/biostarx-settings-access-control-status-column-setting.png": {
     "width": 400,
@@ -2800,52 +3020,68 @@
     "height": 221
   },
   "/img/biostarx-settings-access-floor-level.png": {
-    "width": 400,
-    "height": 316
+    "width": 208,
+    "height": 278
   },
   "/img/biostarx-settings-access-group-tab.png": {
     "width": 200,
     "height": 259
   },
   "/img/biostarx-settings-access-group.png": {
-    "width": 400,
-    "height": 316
+    "width": 208,
+    "height": 278
   },
   "/img/biostarx-settings-access-level-tab.png": {
     "width": 196,
     "height": 249
   },
   "/img/biostarx-settings-access-level.png": {
-    "width": 400,
-    "height": 316
+    "width": 208,
+    "height": 278
   },
   "/img/biostarx-settings-account-add-custom-permission-details-item.png": {
     "width": 500,
     "height": 252
   },
   "/img/biostarx-settings-account-add-custom-permission-details-menus.png": {
-    "width": 933,
-    "height": 240
+    "width": 1555,
+    "height": 487
   },
   "/img/biostarx-settings-account-add-custom-permission-details-users.png": {
-    "width": 477,
-    "height": 305
+    "width": 778,
+    "height": 320
   },
   "/img/biostarx-settings-account-add-custom-permission-details.png": {
-    "width": 1000,
-    "height": 727
+    "width": 1674,
+    "height": 880
+  },
+  "/img/biostarx-settings-account-add-custom-permission-example.png": {
+    "width": 1389,
+    "height": 194
+  },
+  "/img/biostarx-settings-account-add-custom-permission-plugin.png": {
+    "width": 1555,
+    "height": 123
   },
   "/img/biostarx-settings-account-add-custom-permission.png": {
     "width": 1000,
     "height": 241
   },
   "/img/biostarx-settings-account-add-permission.png": {
-    "width": 1000,
-    "height": 970
+    "width": 778,
+    "height": 320
+  },
+  "/img/biostarx-settings-account-detail.png": {
+    "width": 1674,
+    "height": 794
   },
   "/img/biostarx-settings-account-exclude-permission.png": {
-    "width": 1000,
-    "height": 892
+    "width": 778,
+    "height": 237
+  },
+  "/img/biostarx-settings-account-passport-scan-setting.png": {
+    "width": 853,
+    "height": 322
   },
   "/img/biostarx-settings-add-access-floor-level.png": {
     "width": 1200,
@@ -2943,6 +3179,10 @@
     "width": 1500,
     "height": 797
   },
+  "/img/biostarx-settings-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 634
+  },
   "/img/biostarx-settings-card-printer-custom-user.png": {
     "width": 946,
     "height": 168
@@ -2972,8 +3212,8 @@
     "height": 545
   },
   "/img/biostarx-settings-card-printer-user.png": {
-    "width": 1161,
-    "height": 517
+    "width": 1163,
+    "height": 475
   },
   "/img/biostarx-settings-card-printer-user1.png": {
     "width": 570,
@@ -3091,8 +3331,12 @@
     "width": 1200,
     "height": 475
   },
+  "/img/biostarx-settings-custom-account-level.png": {
+    "width": 1001,
+    "height": 356
+  },
   "/img/biostarx-settings-custom-interface.png": {
-    "width": 1000,
+    "width": 1125,
     "height": 300
   },
   "/img/biostarx-settings-delete-access-group.png": {
@@ -3108,8 +3352,44 @@
     "height": 284
   },
   "/img/biostarx-settings-device-add-virtual-device.png": {
-    "width": 1202,
+    "width": 1014,
     "height": 277
+  },
+  "/img/biostarx-settings-device-deleted-operator-check.png": {
+    "width": 340,
+    "height": 205
+  },
+  "/img/biostarx-settings-device-playback-playVideo-batch-edit.png": {
+    "width": 793,
+    "height": 416
+  },
+  "/img/biostarx-settings-device-playback-playVideo-change-order.png": {
+    "width": 490,
+    "height": 217
+  },
+  "/img/biostarx-settings-device-playback-playVideo-delete.png": {
+    "width": 501,
+    "height": 293
+  },
+  "/img/biostarx-settings-device-playback-playVideo-enable.png": {
+    "width": 677,
+    "height": 265
+  },
+  "/img/biostarx-settings-device-playback-playVideo-fail-transfer.png": {
+    "width": 560,
+    "height": 325
+  },
+  "/img/biostarx-settings-device-playback-playVideo-upload-complete.png": {
+    "width": 340,
+    "height": 205
+  },
+  "/img/biostarx-settings-device-playback-playVideo-upload-progress.png": {
+    "width": 490,
+    "height": 236
+  },
+  "/img/biostarx-settings-device-playback-playVideo-upload.png": {
+    "width": 501,
+    "height": 293
   },
   "/img/biostarx-settings-email-contents.png": {
     "width": 894,
@@ -3263,6 +3543,42 @@
     "width": 400,
     "height": 266
   },
+  "/img/biostarx-settings-personal-data-add-btn.png": {
+    "width": 924,
+    "height": 137
+  },
+  "/img/biostarx-settings-personal-data-add-group-settings.png": {
+    "width": 960,
+    "height": 648
+  },
+  "/img/biostarx-settings-personal-data-change-confirm.png": {
+    "width": 480,
+    "height": 246
+  },
+  "/img/biostarx-settings-personal-data-enable.png": {
+    "width": 958,
+    "height": 356
+  },
+  "/img/biostarx-settings-personal-data-group-edit.png": {
+    "width": 917,
+    "height": 116
+  },
+  "/img/biostarx-settings-personal-data.png": {
+    "width": 1014,
+    "height": 714
+  },
+  "/img/biostarx-settings-personal-pre-noti-email-auto-complete.png": {
+    "width": 706,
+    "height": 231
+  },
+  "/img/biostarx-settings-personal-pre-noti-email-settings.png": {
+    "width": 918,
+    "height": 149
+  },
+  "/img/biostarx-settings-personal-user-list-search.png": {
+    "width": 1000,
+    "height": 423
+  },
   "/img/biostarx-settings-preference-add-sound.png": {
     "width": 735,
     "height": 338
@@ -3288,8 +3604,8 @@
     "height": 262
   },
   "/img/biostarx-settings-schedule-add-btn.png": {
-    "width": 1200,
-    "height": 279
+    "width": 1043,
+    "height": 247
   },
   "/img/biostarx-settings-schedule-add-extend.png": {
     "width": 1200,
@@ -3321,7 +3637,7 @@
   },
   "/img/biostarx-settings-server-general.png": {
     "width": 1262,
-    "height": 184
+    "height": 130
   },
   "/img/biostarx-settings-server-https.png": {
     "width": 800,
@@ -3345,7 +3661,7 @@
   },
   "/img/biostarx-settings-server-management.png": {
     "width": 1262,
-    "height": 524
+    "height": 418
   },
   "/img/biostarx-settings-server-not-secure.png": {
     "width": 465,
@@ -3371,25 +3687,49 @@
     "width": 1000,
     "height": 252
   },
+  "/img/biostarx-settings-system-audit-trail-change-detail.png": {
+    "width": 1000,
+    "height": 620
+  },
   "/img/biostarx-settings-system-audit-trail-column-setting.png": {
     "width": 400,
-    "height": 574
+    "height": 460
   },
   "/img/biostarx-settings-system-audit-trail-defined-period.png": {
     "width": 510,
     "height": 139
   },
   "/img/biostarx-settings-system-audit-trail-export-csv.png": {
-    "width": 600,
+    "width": 465,
     "height": 279
+  },
+  "/img/biostarx-settings-system-audit-trail-list-badge.png": {
+    "width": 200,
+    "height": 67
+  },
+  "/img/biostarx-settings-system-audit-trail-list-tooltip.png": {
+    "width": 350,
+    "height": 194
   },
   "/img/biostarx-settings-system-audit-trail-list.png": {
     "width": 1000,
     "height": 249
   },
+  "/img/biostarx-settings-system-audit-trail-set-filter-popup.png": {
+    "width": 350,
+    "height": 256
+  },
+  "/img/biostarx-settings-system-audit-trail-set-filter.png": {
+    "width": 1000,
+    "height": 370
+  },
   "/img/biostarx-settings-system-audit-trail-set-period.png": {
     "width": 1000,
-    "height": 602
+    "height": 520
+  },
+  "/img/biostarx-settings-system-audit-trail-seted-filters.png": {
+    "width": 250,
+    "height": 80
   },
   "/img/biostarx-settings-system-audit-trail.png": {
     "width": 1000,
@@ -3413,7 +3753,7 @@
   },
   "/img/biostarx-settings-system-security-advanced-with-device.png": {
     "width": 1200,
-    "height": 245
+    "height": 186
   },
   "/img/biostarx-settings-system-security-advanced.png": {
     "width": 1480,
@@ -3435,13 +3775,37 @@
     "width": 1235,
     "height": 226
   },
+  "/img/biostarx-settings-tna-audit-trail-add-filter.png": {
+    "width": 1000,
+    "height": 301
+  },
+  "/img/biostarx-settings-tna-audit-trail-detail-popup.png": {
+    "width": 1000,
+    "height": 475
+  },
+  "/img/biostarx-settings-tna-audit-trail-filtered.png": {
+    "width": 1000,
+    "height": 393
+  },
+  "/img/biostarx-settings-tna-audit-trail-set-period.png": {
+    "width": 1000,
+    "height": 495
+  },
+  "/img/biostarx-settings-tna-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 591
+  },
+  "/img/biostarx-settings-tna-audit-trail.png": {
+    "width": 1000,
+    "height": 478
+  },
   "/img/biostarx-settings-trigger-and-action-add.png": {
     "width": 1500,
     "height": 535
   },
   "/img/biostarx-settings-trigger-and-action.png": {
-    "width": 1705,
-    "height": 455
+    "width": 1483,
+    "height": 411
   },
   "/img/biostarx-settings-video-add-camera-group.png": {
     "width": 500,
@@ -3481,7 +3845,7 @@
   },
   "/img/biostarx-settings-video-camera-add-custom-camera-group.png": {
     "width": 538,
-    "height": 170
+    "height": 160
   },
   "/img/biostarx-settings-video-camera-add-custom-permission.png": {
     "width": 1000,
@@ -3505,15 +3869,19 @@
   },
   "/img/biostarx-settings-video-event-bookmark.png": {
     "width": 1077,
-    "height": 549
+    "height": 318
   },
   "/img/biostarx-settings-video-integration-login.png": {
     "width": 600,
     "height": 300
   },
+  "/img/biostarx-settings-video-integration-select-type.png": {
+    "width": 353,
+    "height": 92
+  },
   "/img/biostarx-settings-video-integration.png": {
     "width": 1078,
-    "height": 692
+    "height": 327
   },
   "/img/biostarx-settings-video-move-camera-group.png": {
     "width": 400,
@@ -3522,6 +3890,14 @@
   "/img/biostarx-settings-video-rename-camera-group.png": {
     "width": 300,
     "height": 264
+  },
+  "/img/biostarx-settings-video-set-cert.png": {
+    "width": 1077,
+    "height": 446
+  },
+  "/img/biostarx-settings-video-vms-server-info.png": {
+    "width": 1078,
+    "height": 327
   },
   "/img/biostarx-settings-visitor-custom-visitor-field.png": {
     "width": 1510,
@@ -3553,7 +3929,7 @@
   },
   "/img/biostarx-tna-access-btn.png": {
     "width": 300,
-    "height": 264
+    "height": 346
   },
   "/img/biostarx-tna-initial-setting-device-setting.png": {
     "width": 800,
@@ -3561,15 +3937,15 @@
   },
   "/img/biostarx-tna-initial-setting-register-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 490
   },
   "/img/biostarx-tna-initial-setting-select-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 539
   },
   "/img/biostarx-tna-initial-setting-selected-device.png": {
     "width": 1200,
-    "height": 448
+    "height": 698
   },
   "/img/biostarx-tna-initial-setting.png": {
     "width": 1200,
@@ -3608,16 +3984,16 @@
     "height": 894
   },
   "/img/biostarx-tna-report-edit-calendar.png": {
-    "width": 952,
-    "height": 867
+    "width": 977,
+    "height": 881
   },
   "/img/biostarx-tna-report-edit-list.png": {
     "width": 1009,
-    "height": 321
+    "height": 266
   },
   "/img/biostarx-tna-report-filter-saving.png": {
     "width": 1200,
-    "height": 474
+    "height": 515
   },
   "/img/biostarx-tna-report-filter-setting-column.png": {
     "width": 300,
@@ -3625,39 +4001,39 @@
   },
   "/img/biostarx-tna-report-filter-setting.png": {
     "width": 1000,
-    "height": 295
+    "height": 309
   },
   "/img/biostarx-tna-report-individual-types.png": {
     "width": 900,
-    "height": 352
+    "height": 379
   },
   "/img/biostarx-tna-report-period-setting.png": {
-    "width": 900,
+    "width": 991,
     "height": 191
   },
   "/img/biostarx-tna-report-update-list.png": {
     "width": 1000,
-    "height": 638
+    "height": 625
   },
   "/img/biostarx-tna-report-working-alarm-auto-email-receipt.png": {
     "width": 400,
     "height": 295
   },
   "/img/biostarx-tna-report-working-alarm-auto-email.png": {
-    "width": 800,
+    "width": 873,
     "height": 187
   },
   "/img/biostarx-tna-report-working-alarm.png": {
     "width": 1200,
-    "height": 680
+    "height": 695
   },
   "/img/biostarx-tna-report.png": {
     "width": 1200,
-    "height": 436
+    "height": 473
   },
   "/img/biostarx-tna-schedule-remove-item.png": {
     "width": 1200,
-    "height": 209
+    "height": 176
   },
   "/img/biostarx-tna-schedule-remove-leave-item.png": {
     "width": 200,
@@ -3673,50 +4049,50 @@
   },
   "/img/biostarx-tna-schedule-template-add-temp-schedule.png": {
     "width": 350,
-    "height": 152
+    "height": 192
   },
   "/img/biostarx-tna-schedule-template-add-temp-user.png": {
     "width": 1200,
-    "height": 799
+    "height": 819
   },
   "/img/biostarx-tna-schedule-template-adding.png": {
     "width": 1200,
-    "height": 879
+    "height": 818
   },
   "/img/biostarx-tna-schedule-template.png": {
     "width": 1200,
-    "height": 468
+    "height": 381
   },
   "/img/biostarx-tna-settings-export-csv.png": {
     "width": 1200,
     "height": 144
   },
   "/img/biostarx-tna-settings-register-list.png": {
-    "width": 600,
-    "height": 160
+    "width": 813,
+    "height": 166
   },
   "/img/biostarx-tna-settings-save-period.png": {
     "width": 1200,
-    "height": 152
+    "height": 170
   },
   "/img/biostarx-tna-settings-sender-info.png": {
     "width": 400,
-    "height": 418
+    "height": 416
   },
   "/img/biostarx-tna-settings-unregister-list.png": {
-    "width": 600,
-    "height": 141
+    "width": 812,
+    "height": 160
   },
   "/img/biostarx-tna-settings.png": {
     "width": 1200,
-    "height": 797
+    "height": 526
   },
   "/img/biostarx-tna-shift-day-adding-fixed-allow-time.png": {
-    "width": 800,
+    "width": 904,
     "height": 64
   },
   "/img/biostarx-tna-shift-day-adding-fixed-before-after-time.png": {
-    "width": 800,
+    "width": 1009,
     "height": 99
   },
   "/img/biostarx-tna-shift-day-adding-fixed-roundup.png": {
@@ -3725,39 +4101,39 @@
   },
   "/img/biostarx-tna-shift-day-adding-fixed.png": {
     "width": 1200,
-    "height": 1122
+    "height": 1005
   },
   "/img/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png": {
-    "width": 800,
+    "width": 930,
     "height": 103
   },
   "/img/biostarx-tna-shift-day-adding-flexible.png": {
     "width": 1200,
-    "height": 991
+    "height": 933
   },
   "/img/biostarx-tna-shift-day-adding-floating-timesegment.png": {
-    "width": 300,
-    "height": 98
+    "width": 292,
+    "height": 129
   },
   "/img/biostarx-tna-shift-day-adding-floating.png": {
     "width": 1200,
-    "height": 953
+    "height": 1175
   },
   "/img/biostarx-tna-shift-day.png": {
     "width": 1200,
-    "height": 469
+    "height": 470
   },
   "/img/biostarx-tna-shift-overtime-adding.png": {
     "width": 1200,
-    "height": 841
+    "height": 749
   },
   "/img/biostarx-tna-shift-overtime-example.png": {
     "width": 800,
-    "height": 234
+    "height": 201
   },
   "/img/biostarx-tna-shift-overtime.png": {
     "width": 1200,
-    "height": 472
+    "height": 380
   },
   "/img/biostarx-tna-shift-paycode-adding.png": {
     "width": 1200,
@@ -3769,43 +4145,47 @@
   },
   "/img/biostarx-tna-shift-schedule-adding-daily.png": {
     "width": 400,
-    "height": 110
+    "height": 127
   },
   "/img/biostarx-tna-shift-schedule-adding-drag-shift.png": {
     "width": 1200,
-    "height": 434
+    "height": 573
   },
   "/img/biostarx-tna-shift-schedule-adding.png": {
     "width": 1200,
-    "height": 670
+    "height": 807
   },
   "/img/biostarx-tna-shift-schedule.png": {
     "width": 1200,
-    "height": 468
+    "height": 385
   },
   "/img/biostarx-tutorial-license-offline-popup-filed.png": {
-    "width": 540,
-    "height": 383
+    "width": 500,
+    "height": 288
   },
   "/img/biostarx-tutorial-license-offline-popup.png": {
     "width": 500,
-    "height": 251
+    "height": 288
   },
   "/img/biostarx-tutorial-license-offline.png": {
     "width": 878,
-    "height": 128
+    "height": 184
+  },
+  "/img/biostarx-tutorial-license-online-added.png": {
+    "width": 878,
+    "height": 221
   },
   "/img/biostarx-tutorial-license-online.png": {
     "width": 878,
-    "height": 128
+    "height": 184
   },
   "/img/biostarx-ui-monitoring.png": {
     "width": 1500,
-    "height": 737
+    "height": 829
   },
   "/img/biostarx-ui-settings.png": {
     "width": 1500,
-    "height": 695
+    "height": 787
   },
   "/img/biostarx-ui-user-template.png": {
     "width": 1500,
@@ -3814,6 +4194,50 @@
   "/img/biostarx-ui-user.png": {
     "width": 1500,
     "height": 724
+  },
+  "/img/biostarx-uninstall-apps-list.png": {
+    "width": 1013,
+    "height": 158
+  },
+  "/img/biostarx-uninstall-cert-backup-overwrite.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/biostarx-uninstall-cert-backup-path.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/biostarx-uninstall-cert-backup-success.png": {
+    "width": 247,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-cert-backup.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/biostarx-uninstall-confirm.png": {
+    "width": 368,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-delete-content.png": {
+    "width": 331,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-progress.png": {
+    "width": 499,
+    "height": 392
+  },
+  "/img/biostarx-uninstall-success.png": {
+    "width": 370,
+    "height": 152
+  },
+  "/img/biostarx-uninstall-usb-agent-confirm.png": {
+    "width": 409,
+    "height": 147
+  },
+  "/img/biostarx-uninstall-usb-agent-success.png": {
+    "width": 410,
+    "height": 147
   },
   "/img/biostarx-upgrade-complete.png": {
     "width": 499,
@@ -3859,6 +4283,18 @@
     "width": 200,
     "height": 104
   },
+  "/img/biostarx-user-add-by-scanning-passport-btn.png": {
+    "width": 1117,
+    "height": 451
+  },
+  "/img/biostarx-user-add-face-credential-confirm.png": {
+    "width": 362,
+    "height": 190
+  },
+  "/img/biostarx-user-add-import-passport-data.png": {
+    "width": 560,
+    "height": 338
+  },
   "/img/biostarx-user-add-user-01.png": {
     "width": 1200,
     "height": 182
@@ -3886,6 +4322,10 @@
   "/img/biostarx-user-credential-set-emergency-opening.png": {
     "width": 800,
     "height": 225
+  },
+  "/img/biostarx-user-edit-by-scanning-passport-btn.png": {
+    "width": 1118,
+    "height": 424
   },
   "/img/biostarx-user-export-csv-popup.png": {
     "width": 600,
@@ -3967,6 +4407,10 @@
     "width": 800,
     "height": 483
   },
+  "/img/biostarx-user-scan-passport-error-usb-agent.png": {
+    "width": 362,
+    "height": 230
+  },
   "/img/biostarx-user-sub-group-add.png": {
     "width": 400,
     "height": 272
@@ -3981,7 +4425,7 @@
   },
   "/img/biostarx-users-advanced-search.png": {
     "width": 1500,
-    "height": 533
+    "height": 613
   },
   "/img/biostarx-users-list-column-layout.png": {
     "width": 600,
@@ -4146,6 +4590,34 @@
   "/img/biostarx-visitor-settings-use-card.png": {
     "width": 1000,
     "height": 315
+  },
+  "/img/biostarx-vms-cert-installation-tool-01.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-02-found.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-02-list.png": {
+    "width": 602,
+    "height": 555
+  },
+  "/img/biostarx-vms-cert-installation-tool-02.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-03.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-04.png": {
+    "width": 602,
+    "height": 552
+  },
+  "/img/biostarx-vms-cert-installation-tool-fail.png": {
+    "width": 602,
+    "height": 554
   },
   "/img/biostarx-widget-edit.png": {
     "width": 600,
@@ -5997,11 +6469,11 @@
   },
   "/img/common/monitoring-map-area-tree-example.png": {
     "width": 400,
-    "height": 395
+    "height": 469
   },
   "/img/common/monitoring-map-area-tree.png": {
-    "width": 2743,
-    "height": 1771
+    "width": 1220,
+    "height": 830
   },
   "/img/common/monitoring-map-camera-icon.svg": {
     "width": 45,
@@ -11185,27 +11657,43 @@
   },
   "/img/en/biostarx-data-alert-events-disable-filter.png": {
     "width": 1200,
-    "height": 109
+    "height": 182
   },
   "/img/en/biostarx-data-alert-events-filtered.png": {
     "width": 1200,
-    "height": 410
+    "height": 182
+  },
+  "/img/en/biostarx-data-alert-history-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
+  },
+  "/img/en/biostarx-data-alert-lists-save-report.png": {
+    "width": 1680,
+    "height": 266
   },
   "/img/en/biostarx-data-alert-lists.png": {
-    "width": 1200,
-    "height": 539
+    "width": 1920,
+    "height": 360
   },
   "/img/en/biostarx-data-all-events-disable-filter.png": {
+    "width": 1218,
+    "height": 110
+  },
+  "/img/en/biostarx-data-all-events-filtered-1.png": {
     "width": 1200,
-    "height": 147
+    "height": 276
+  },
+  "/img/en/biostarx-data-all-events-filtered-save-report-result.png": {
+    "width": 1920,
+    "height": 764
   },
   "/img/en/biostarx-data-all-events-filtered.png": {
     "width": 1200,
-    "height": 551
+    "height": 448
   },
   "/img/en/biostarx-data-all-events-select-period.png": {
-    "width": 400,
-    "height": 201
+    "width": 424,
+    "height": 219
   },
   "/img/en/biostarx-data-all-events-set-custom-period.png": {
     "width": 600,
@@ -11276,8 +11764,8 @@
     "height": 384
   },
   "/img/en/biostarx-data-generate-report.png": {
-    "width": 1200,
-    "height": 694
+    "width": 1920,
+    "height": 716
   },
   "/img/en/biostarx-data-information.png": {
     "width": 1000,
@@ -11286,6 +11774,10 @@
   "/img/en/biostarx-data-main.png": {
     "width": 1200,
     "height": 539
+  },
+  "/img/en/biostarx-data-report-add-filter.png": {
+    "width": 480,
+    "height": 264
   },
   "/img/en/biostarx-data-report-format.png": {
     "width": 1000,
@@ -11463,6 +11955,18 @@
     "width": 1500,
     "height": 844
   },
+  "/img/en/biostarx-license-fail-alone.png": {
+    "width": 380,
+    "height": 189
+  },
+  "/img/en/biostarx-license-fail.png": {
+    "width": 380,
+    "height": 220
+  },
+  "/img/en/biostarx-license-success.png": {
+    "width": 215,
+    "height": 130
+  },
   "/img/en/biostarx-login.png": {
     "width": 800,
     "height": 551
@@ -11475,13 +11979,21 @@
     "width": 700,
     "height": 481
   },
+  "/img/en/biostarx-monitoring-acs-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/en/biostarx-monitoring-batch-main.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/en/biostarx-monitoring-camera-clear-alarm-success.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/en/biostarx-monitoring-camera-clear-alarm.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/en/biostarx-monitoring-camera-details.png": {
     "width": 1278,
@@ -11489,19 +12001,31 @@
   },
   "/img/en/biostarx-monitoring-camera-event-video-log.png": {
     "width": 1200,
-    "height": 682
+    "height": 675
   },
   "/img/en/biostarx-monitoring-camera-popup.png": {
-    "width": 400,
-    "height": 365
+    "width": 418,
+    "height": 326
+  },
+  "/img/en/biostarx-monitoring-device-auth-fail-lock.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-device-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 501
+  },
+  "/img/en/biostarx-monitoring-device-lock.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-device-popup.png": {
-    "width": 400,
-    "height": 315
+    "width": 418,
+    "height": 323
+  },
+  "/img/en/biostarx-monitoring-door-ac-details.png": {
+    "width": 1200,
+    "height": 503
   },
   "/img/en/biostarx-monitoring-door-arm-popup.png": {
     "width": 857,
@@ -11509,7 +12033,11 @@
   },
   "/img/en/biostarx-monitoring-door-arm-status.png": {
     "width": 400,
-    "height": 298
+    "height": 494
+  },
+  "/img/en/biostarx-monitoring-door-attention-filter.png": {
+    "width": 350,
+    "height": 471
   },
   "/img/en/biostarx-monitoring-door-camera-details.png": {
     "width": 1200,
@@ -11519,21 +12047,33 @@
     "width": 400,
     "height": 298
   },
+  "/img/en/biostarx-monitoring-door-details-control.png": {
+    "width": 334,
+    "height": 191
+  },
+  "/img/en/biostarx-monitoring-door-elevator-details-control.png": {
+    "width": 328,
+    "height": 204
+  },
+  "/img/en/biostarx-monitoring-door-elevator-details-floor-list.png": {
+    "width": 328,
+    "height": 144
+  },
   "/img/en/biostarx-monitoring-door-elevator-details.png": {
     "width": 1200,
-    "height": 539
+    "height": 505
   },
   "/img/en/biostarx-monitoring-door-elevator-floor-popup.png": {
-    "width": 400,
-    "height": 298
+    "width": 442,
+    "height": 411
   },
   "/img/en/biostarx-monitoring-door-elevator-popup.png": {
     "width": 400,
-    "height": 326
+    "height": 456
   },
   "/img/en/biostarx-monitoring-door-popup.png": {
-    "width": 400,
-    "height": 285
+    "width": 450,
+    "height": 387
   },
   "/img/en/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -11541,19 +12081,51 @@
   },
   "/img/en/biostarx-monitoring-door-view-details.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-door-zone-disabled.png": {
+    "width": 442,
+    "height": 244
   },
   "/img/en/biostarx-monitoring-door-zone-popup.png": {
-    "width": 400,
-    "height": 388
+    "width": 442,
+    "height": 450
+  },
+  "/img/en/biostarx-monitoring-doors-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/en/biostarx-monitoring-doors-control-intrusion.png": {
+    "width": 441,
+    "height": 400
+  },
+  "/img/en/biostarx-monitoring-doors-control-list.png": {
+    "width": 439,
+    "height": 631
+  },
+  "/img/en/biostarx-monitoring-doors-control-success.png": {
+    "width": 1200,
+    "height": 256
+  },
+  "/img/en/biostarx-monitoring-elevators-batch-control.png": {
+    "width": 1200,
+    "height": 250
+  },
+  "/img/en/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
+    "width": 640,
+    "height": 357
   },
   "/img/en/biostarx-monitoring-event-alert-acknowledge.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-event-alert-message-1.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-event-alert-message.png": {
     "width": 1200,
-    "height": 539
+    "height": 675
   },
   "/img/en/biostarx-monitoring-event-list-alarm-active.png": {
     "width": 1000,
@@ -11576,8 +12148,8 @@
     "height": 321
   },
   "/img/en/biostarx-monitoring-event-list-filter-02.png": {
-    "width": 1200,
-    "height": 539
+    "width": 800,
+    "height": 459
   },
   "/img/en/biostarx-monitoring-event-list-pause.png": {
     "width": 1000,
@@ -11596,20 +12168,20 @@
     "height": 321
   },
   "/img/en/biostarx-monitoring-event-list-view-alerts-02.png": {
-    "width": 700,
-    "height": 351
+    "width": 1000,
+    "height": 632
   },
   "/img/en/biostarx-monitoring-event-list-view-only-alarm.png": {
     "width": 1000,
     "height": 257
   },
   "/img/en/biostarx-monitoring-event-list.png": {
-    "width": 1500,
-    "height": 745
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-group-expand-collapse.png": {
     "width": 400,
-    "height": 255
+    "height": 295
   },
   "/img/en/biostarx-monitoring-map-camera-popup.png": {
     "width": 1228,
@@ -11617,19 +12189,31 @@
   },
   "/img/en/biostarx-monitoring-map-main.png": {
     "width": 1200,
-    "height": 596
+    "height": 675
   },
   "/img/en/biostarx-monitoring-map-open-camera.png": {
     "width": 1078,
-    "height": 315
+    "height": 347
+  },
+  "/img/en/biostarx-monitoring-select-multi-items.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-select-multi-summary.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/en/biostarx-monitoring-video-close-all.png": {
     "width": 1200,
-    "height": 539
+    "height": 289
+  },
+  "/img/en/biostarx-monitoring-video-limit-notice.png": {
+    "width": 317,
+    "height": 178
   },
   "/img/en/biostarx-monitoring-video-tiles.png": {
     "width": 1200,
-    "height": 539
+    "height": 645
   },
   "/img/en/biostarx-new-user-credential-1.png": {
     "width": 1069,
@@ -11788,12 +12372,12 @@
     "height": 332
   },
   "/img/en/biostarx-setting-device-adding-slave-device.png": {
-    "width": 322,
-    "height": 274
+    "width": 301,
+    "height": 333
   },
   "/img/en/biostarx-setting-device-adding-slave-list.png": {
-    "width": 710,
-    "height": 285
+    "width": 600,
+    "height": 253
   },
   "/img/en/biostarx-setting-device-adding-wiegand-list.png": {
     "width": 670,
@@ -11855,6 +12439,14 @@
     "width": 1000,
     "height": 317
   },
+  "/img/en/biostarx-setting-device-delete-check.png": {
+    "width": 373,
+    "height": 188
+  },
+  "/img/en/biostarx-setting-device-delete-none-check.png": {
+    "width": 400,
+    "height": 168
+  },
   "/img/en/biostarx-setting-device-detail-card-csn-mobile.png": {
     "width": 800,
     "height": 98
@@ -11863,9 +12455,17 @@
     "width": 800,
     "height": 207
   },
+  "/img/en/biostarx-setting-device-detail-card-custom-security-force.png": {
+    "width": 1403,
+    "height": 337
+  },
   "/img/en/biostarx-setting-device-detail-card-custom.png": {
     "width": 800,
     "height": 340
+  },
+  "/img/en/biostarx-setting-device-detail-card-smart-security-force.png": {
+    "width": 1403,
+    "height": 337
   },
   "/img/en/biostarx-setting-device-detail-card-smart.png": {
     "width": 800,
@@ -11879,9 +12479,13 @@
     "width": 800,
     "height": 164
   },
+  "/img/en/biostarx-setting-device-detail-face-block-duplicate-auth.png": {
+    "width": 473,
+    "height": 111
+  },
   "/img/en/biostarx-setting-device-detail-face.png": {
     "width": 1000,
-    "height": 420
+    "height": 518
   },
   "/img/en/biostarx-setting-device-detail-fingerprint.png": {
     "width": 1000,
@@ -11933,7 +12537,7 @@
   },
   "/img/en/biostarx-setting-device-edit-auth-mode.png": {
     "width": 1200,
-    "height": 363
+    "height": 705
   },
   "/img/en/biostarx-setting-device-edit-info.png": {
     "width": 1670,
@@ -11958,6 +12562,10 @@
   "/img/en/biostarx-setting-device-edit-rtsp.png": {
     "width": 1200,
     "height": 205
+  },
+  "/img/en/biostarx-setting-device-export-settings.png": {
+    "width": 1000,
+    "height": 220
   },
   "/img/en/biostarx-setting-device-functions.png": {
     "width": 1200,
@@ -11995,6 +12603,10 @@
     "width": 1000,
     "height": 118
   },
+  "/img/en/biostarx-setting-device-import-settings.png": {
+    "width": 1000,
+    "height": 220
+  },
   "/img/en/biostarx-setting-device-info-upgrade-firmware.png": {
     "width": 1683,
     "height": 586
@@ -12013,11 +12625,15 @@
   },
   "/img/en/biostarx-setting-device-list-delete-log.png": {
     "width": 1000,
-    "height": 196
+    "height": 278
   },
   "/img/en/biostarx-setting-device-list-print.png": {
     "width": 600,
     "height": 334
+  },
+  "/img/en/biostarx-setting-device-list-with-slace.png": {
+    "width": 1200,
+    "height": 217
   },
   "/img/en/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 750,
@@ -12164,12 +12780,12 @@
     "height": 257
   },
   "/img/en/biostarx-setting-door-add-group.png": {
-    "width": 453,
-    "height": 280
+    "width": 490,
+    "height": 233
   },
   "/img/en/biostarx-setting-door-adding-aditional-option.png": {
     "width": 1200,
-    "height": 478
+    "height": 503
   },
   "/img/en/biostarx-setting-door-adding-alarm.png": {
     "width": 1000,
@@ -12188,8 +12804,28 @@
     "height": 168
   },
   "/img/en/biostarx-setting-door-adding.png": {
-    "width": 393,
-    "height": 264
+    "width": 240,
+    "height": 220
+  },
+  "/img/en/biostarx-setting-door-auth-control-monitoring.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/biostarx-setting-door-auth-control-not-allow-users.png": {
+    "width": 700,
+    "height": 133
+  },
+  "/img/en/biostarx-setting-door-auth-control-use.png": {
+    "width": 1000,
+    "height": 243
+  },
+  "/img/en/biostarx-setting-door-auth-control-users.png": {
+    "width": 915,
+    "height": 318
+  },
+  "/img/en/biostarx-setting-door-auth-control.png": {
+    "width": 1000,
+    "height": 419
   },
   "/img/en/biostarx-setting-door-delete.png": {
     "width": 847,
@@ -12200,8 +12836,8 @@
     "height": 173
   },
   "/img/en/biostarx-setting-door-rename-group.png": {
-    "width": 439,
-    "height": 389
+    "width": 240,
+    "height": 265
   },
   "/img/en/biostarx-setting-door-to-group-info-select.png": {
     "width": 980,
@@ -12218,6 +12854,50 @@
   "/img/en/biostarx-setting-door-to-group.png": {
     "width": 240,
     "height": 276
+  },
+  "/img/en/biostarx-setting-elevator-add-alarm.png": {
+    "width": 1150,
+    "height": 98
+  },
+  "/img/en/biostarx-setting-elevator-add-btn.png": {
+    "width": 534,
+    "height": 206
+  },
+  "/img/en/biostarx-setting-elevator-add-detail.png": {
+    "width": 1150,
+    "height": 290
+  },
+  "/img/en/biostarx-setting-elevator-add-group-move.png": {
+    "width": 240,
+    "height": 228
+  },
+  "/img/en/biostarx-setting-elevator-add-group-naming.png": {
+    "width": 240,
+    "height": 165
+  },
+  "/img/en/biostarx-setting-elevator-add-group-re-naming.png": {
+    "width": 240,
+    "height": 248
+  },
+  "/img/en/biostarx-setting-elevator-add-group.png": {
+    "width": 240,
+    "height": 148
+  },
+  "/img/en/biostarx-setting-elevator-add-info.png": {
+    "width": 1150,
+    "height": 118
+  },
+  "/img/en/biostarx-setting-elevator-add-options.png": {
+    "width": 1150,
+    "height": 275
+  },
+  "/img/en/biostarx-setting-elevator-assign-group.png": {
+    "width": 1150,
+    "height": 167
+  },
+  "/img/en/biostarx-setting-elevator-batch-edit.png": {
+    "width": 539,
+    "height": 232
   },
   "/img/en/biostarx-settings-access-control-status-column-setting.png": {
     "width": 390,
@@ -12244,52 +12924,68 @@
     "height": 223
   },
   "/img/en/biostarx-settings-access-floor-level.png": {
-    "width": 400,
-    "height": 312
+    "width": 208,
+    "height": 275
   },
   "/img/en/biostarx-settings-access-group-tab.png": {
     "width": 200,
     "height": 257
   },
   "/img/en/biostarx-settings-access-group.png": {
-    "width": 400,
-    "height": 312
+    "width": 208,
+    "height": 275
   },
   "/img/en/biostarx-settings-access-level-tab.png": {
     "width": 197,
     "height": 244
   },
   "/img/en/biostarx-settings-access-level.png": {
-    "width": 400,
-    "height": 312
+    "width": 208,
+    "height": 275
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details-item.png": {
     "width": 500,
     "height": 254
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details-menus.png": {
-    "width": 930,
-    "height": 243
+    "width": 1555,
+    "height": 487
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details-users.png": {
-    "width": 470,
-    "height": 297
+    "width": 778,
+    "height": 320
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details.png": {
-    "width": 1000,
-    "height": 725
+    "width": 1674,
+    "height": 880
+  },
+  "/img/en/biostarx-settings-account-add-custom-permission-example.png": {
+    "width": 1389,
+    "height": 194
+  },
+  "/img/en/biostarx-settings-account-add-custom-permission-plugin.png": {
+    "width": 1555,
+    "height": 123
   },
   "/img/en/biostarx-settings-account-add-custom-permission.png": {
     "width": 1000,
     "height": 243
   },
   "/img/en/biostarx-settings-account-add-permission.png": {
-    "width": 1000,
-    "height": 972
+    "width": 778,
+    "height": 320
+  },
+  "/img/en/biostarx-settings-account-detail.png": {
+    "width": 1674,
+    "height": 794
   },
   "/img/en/biostarx-settings-account-exclude-permission.png": {
-    "width": 1000,
-    "height": 893
+    "width": 778,
+    "height": 237
+  },
+  "/img/en/biostarx-settings-account-passport-scan-setting.png": {
+    "width": 853,
+    "height": 322
   },
   "/img/en/biostarx-settings-add-access-floor-level.png": {
     "width": 1200,
@@ -12387,12 +13083,16 @@
     "width": 1500,
     "height": 802
   },
+  "/img/en/biostarx-settings-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 634
+  },
   "/img/en/biostarx-settings-card-printer-custom-user.png": {
     "width": 950,
     "height": 170
   },
   "/img/en/biostarx-settings-card-printer-custom-user1.png": {
-    "width": 1161,
+    "width": 1172,
     "height": 517
   },
   "/img/en/biostarx-settings-card-printer-installation.png": {
@@ -12416,8 +13116,8 @@
     "height": 545
   },
   "/img/en/biostarx-settings-card-printer-user.png": {
-    "width": 1161,
-    "height": 515
+    "width": 1163,
+    "height": 475
   },
   "/img/en/biostarx-settings-card-printer-user1.png": {
     "width": 570,
@@ -12535,8 +13235,12 @@
     "width": 1200,
     "height": 488
   },
+  "/img/en/biostarx-settings-custom-account-level.png": {
+    "width": 1001,
+    "height": 354
+  },
   "/img/en/biostarx-settings-custom-interface.png": {
-    "width": 1000,
+    "width": 1123,
     "height": 294
   },
   "/img/en/biostarx-settings-delete-access-group.png": {
@@ -12552,8 +13256,40 @@
     "height": 285
   },
   "/img/en/biostarx-settings-device-add-virtual-device.png": {
-    "width": 1200,
-    "height": 278
+    "width": 1014,
+    "height": 277
+  },
+  "/img/en/biostarx-settings-device-deleted-operator-check.png": {
+    "width": 340,
+    "height": 205
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-batch-edit.png": {
+    "width": 793,
+    "height": 416
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-delete.png": {
+    "width": 501,
+    "height": 293
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-enable.png": {
+    "width": 677,
+    "height": 265
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-fail-transfer.png": {
+    "width": 560,
+    "height": 325
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-upload-complete.png": {
+    "width": 340,
+    "height": 205
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-upload-progress.png": {
+    "width": 490,
+    "height": 254
+  },
+  "/img/en/biostarx-settings-device-playback-playVideo-upload.png": {
+    "width": 501,
+    "height": 293
   },
   "/img/en/biostarx-settings-email-contents.png": {
     "width": 894,
@@ -12683,6 +13419,42 @@
     "width": 400,
     "height": 250
   },
+  "/img/en/biostarx-settings-personal-data-add-btn.png": {
+    "width": 968,
+    "height": 137
+  },
+  "/img/en/biostarx-settings-personal-data-add-group-settings.png": {
+    "width": 964,
+    "height": 648
+  },
+  "/img/en/biostarx-settings-personal-data-change-confirm.png": {
+    "width": 488,
+    "height": 246
+  },
+  "/img/en/biostarx-settings-personal-data-enable.png": {
+    "width": 958,
+    "height": 356
+  },
+  "/img/en/biostarx-settings-personal-data-group-edit.png": {
+    "width": 917,
+    "height": 116
+  },
+  "/img/en/biostarx-settings-personal-data.png": {
+    "width": 1014,
+    "height": 714
+  },
+  "/img/en/biostarx-settings-personal-pre-noti-email-auto-complete.png": {
+    "width": 706,
+    "height": 231
+  },
+  "/img/en/biostarx-settings-personal-pre-noti-email-settings.png": {
+    "width": 918,
+    "height": 149
+  },
+  "/img/en/biostarx-settings-personal-user-list-search.png": {
+    "width": 1000,
+    "height": 423
+  },
   "/img/en/biostarx-settings-preference-add-sound.png": {
     "width": 735,
     "height": 338
@@ -12708,8 +13480,8 @@
     "height": 264
   },
   "/img/en/biostarx-settings-schedule-add-btn.png": {
-    "width": 1200,
-    "height": 276
+    "width": 1043,
+    "height": 245
   },
   "/img/en/biostarx-settings-schedule-add-extend.png": {
     "width": 1200,
@@ -12741,7 +13513,7 @@
   },
   "/img/en/biostarx-settings-server-general.png": {
     "width": 1262,
-    "height": 181
+    "height": 130
   },
   "/img/en/biostarx-settings-server-https.png": {
     "width": 800,
@@ -12765,7 +13537,7 @@
   },
   "/img/en/biostarx-settings-server-management.png": {
     "width": 1262,
-    "height": 524
+    "height": 418
   },
   "/img/en/biostarx-settings-server-not-secure.png": {
     "width": 456,
@@ -12789,31 +13561,55 @@
   },
   "/img/en/biostarx-settings-system-audit-trail-add-filter.png": {
     "width": 1000,
-    "height": 244
+    "height": 252
+  },
+  "/img/en/biostarx-settings-system-audit-trail-change-detail.png": {
+    "width": 1000,
+    "height": 620
   },
   "/img/en/biostarx-settings-system-audit-trail-column-setting.png": {
     "width": 400,
-    "height": 588
+    "height": 460
   },
   "/img/en/biostarx-settings-system-audit-trail-defined-period.png": {
     "width": 510,
     "height": 131
   },
   "/img/en/biostarx-settings-system-audit-trail-export-csv.png": {
-    "width": 600,
+    "width": 465,
     "height": 279
+  },
+  "/img/en/biostarx-settings-system-audit-trail-list-badge.png": {
+    "width": 200,
+    "height": 67
+  },
+  "/img/en/biostarx-settings-system-audit-trail-list-tooltip.png": {
+    "width": 350,
+    "height": 195
   },
   "/img/en/biostarx-settings-system-audit-trail-list.png": {
     "width": 1000,
     "height": 240
   },
+  "/img/en/biostarx-settings-system-audit-trail-set-filter-popup.png": {
+    "width": 350,
+    "height": 256
+  },
+  "/img/en/biostarx-settings-system-audit-trail-set-filter.png": {
+    "width": 1000,
+    "height": 370
+  },
   "/img/en/biostarx-settings-system-audit-trail-set-period.png": {
     "width": 1000,
-    "height": 606
+    "height": 520
+  },
+  "/img/en/biostarx-settings-system-audit-trail-seted-filters.png": {
+    "width": 250,
+    "height": 80
   },
   "/img/en/biostarx-settings-system-audit-trail.png": {
     "width": 1000,
-    "height": 447
+    "height": 466
   },
   "/img/en/biostarx-settings-system-daylight-saving-time-edit.png": {
     "width": 738,
@@ -12833,7 +13629,7 @@
   },
   "/img/en/biostarx-settings-system-security-advanced-with-device.png": {
     "width": 1200,
-    "height": 254
+    "height": 184
   },
   "/img/en/biostarx-settings-system-security-advanced.png": {
     "width": 1480,
@@ -12855,13 +13651,37 @@
     "width": 1235,
     "height": 226
   },
+  "/img/en/biostarx-settings-tna-audit-trail-add-filter.png": {
+    "width": 1000,
+    "height": 301
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-detail-popup.png": {
+    "width": 1000,
+    "height": 475
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-filtered.png": {
+    "width": 1000,
+    "height": 393
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-set-period.png": {
+    "width": 1000,
+    "height": 495
+  },
+  "/img/en/biostarx-settings-tna-audit-trail-settings.png": {
+    "width": 1000,
+    "height": 591
+  },
+  "/img/en/biostarx-settings-tna-audit-trail.png": {
+    "width": 1000,
+    "height": 478
+  },
   "/img/en/biostarx-settings-trigger-and-action-add.png": {
     "width": 1500,
     "height": 714
   },
   "/img/en/biostarx-settings-trigger-and-action.png": {
-    "width": 1705,
-    "height": 453
+    "width": 1482,
+    "height": 411
   },
   "/img/en/biostarx-settings-video-add-camera-group.png": {
     "width": 500,
@@ -12900,8 +13720,8 @@
     "height": 938
   },
   "/img/en/biostarx-settings-video-camera-add-custom-camera-group.png": {
-    "width": 551,
-    "height": 174
+    "width": 538,
+    "height": 160
   },
   "/img/en/biostarx-settings-video-camera-add-custom-permission.png": {
     "width": 1000,
@@ -12925,19 +13745,31 @@
   },
   "/img/en/biostarx-settings-video-event-bookmark.png": {
     "width": 1077,
-    "height": 549
+    "height": 318
   },
   "/img/en/biostarx-settings-video-integration-login.png": {
     "width": 600,
     "height": 329
   },
+  "/img/en/biostarx-settings-video-integration-select-type.png": {
+    "width": 353,
+    "height": 92
+  },
   "/img/en/biostarx-settings-video-integration.png": {
     "width": 1078,
-    "height": 692
+    "height": 327
   },
   "/img/en/biostarx-settings-video-rename-camera-group.png": {
     "width": 300,
     "height": 263
+  },
+  "/img/en/biostarx-settings-video-set-cert.png": {
+    "width": 1077,
+    "height": 446
+  },
+  "/img/en/biostarx-settings-video-vms-server-info.png": {
+    "width": 1078,
+    "height": 327
   },
   "/img/en/biostarx-settings-visitor-custom-visitor-field.png": {
     "width": 1510,
@@ -12969,23 +13801,23 @@
   },
   "/img/en/biostarx-tna-access-btn.png": {
     "width": 300,
-    "height": 265
+    "height": 346
   },
   "/img/en/biostarx-tna-initial-setting-device-setting.png": {
     "width": 800,
-    "height": 378
+    "height": 376
   },
   "/img/en/biostarx-tna-initial-setting-register-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 490
   },
   "/img/en/biostarx-tna-initial-setting-select-device.png": {
     "width": 1200,
-    "height": 447
+    "height": 539
   },
   "/img/en/biostarx-tna-initial-setting-selected-device.png": {
     "width": 1200,
-    "height": 448
+    "height": 698
   },
   "/img/en/biostarx-tna-initial-setting.png": {
     "width": 1200,
@@ -13024,16 +13856,16 @@
     "height": 894
   },
   "/img/en/biostarx-tna-report-edit-calendar.png": {
-    "width": 946,
-    "height": 835
+    "width": 977,
+    "height": 881
   },
   "/img/en/biostarx-tna-report-edit-list.png": {
     "width": 1009,
-    "height": 316
+    "height": 266
   },
   "/img/en/biostarx-tna-report-filter-saving.png": {
     "width": 1200,
-    "height": 474
+    "height": 515
   },
   "/img/en/biostarx-tna-report-filter-setting-column.png": {
     "width": 300,
@@ -13041,39 +13873,39 @@
   },
   "/img/en/biostarx-tna-report-filter-setting.png": {
     "width": 1000,
-    "height": 293
+    "height": 309
   },
   "/img/en/biostarx-tna-report-individual-types.png": {
     "width": 900,
-    "height": 351
+    "height": 379
   },
   "/img/en/biostarx-tna-report-period-setting.png": {
-    "width": 900,
-    "height": 190
+    "width": 991,
+    "height": 191
   },
   "/img/en/biostarx-tna-report-update-list.png": {
     "width": 1000,
-    "height": 637
+    "height": 625
   },
   "/img/en/biostarx-tna-report-working-alarm-auto-email-receipt.png": {
     "width": 400,
     "height": 295
   },
   "/img/en/biostarx-tna-report-working-alarm-auto-email.png": {
-    "width": 800,
+    "width": 953,
     "height": 187
   },
   "/img/en/biostarx-tna-report-working-alarm.png": {
     "width": 1200,
-    "height": 680
+    "height": 695
   },
   "/img/en/biostarx-tna-report.png": {
     "width": 1200,
-    "height": 436
+    "height": 473
   },
   "/img/en/biostarx-tna-schedule-remove-item.png": {
     "width": 1200,
-    "height": 206
+    "height": 176
   },
   "/img/en/biostarx-tna-schedule-template-add-leave-setting.png": {
     "width": 850,
@@ -13085,91 +13917,91 @@
   },
   "/img/en/biostarx-tna-schedule-template-add-temp-schedule.png": {
     "width": 350,
-    "height": 159
+    "height": 198
   },
   "/img/en/biostarx-tna-schedule-template-add-temp-user.png": {
     "width": 1200,
-    "height": 800
+    "height": 819
   },
   "/img/en/biostarx-tna-schedule-template-adding.png": {
     "width": 1200,
-    "height": 879
+    "height": 818
   },
   "/img/en/biostarx-tna-schedule-template.png": {
     "width": 1200,
-    "height": 473
+    "height": 381
   },
   "/img/en/biostarx-tna-settings-export-csv.png": {
     "width": 1200,
     "height": 138
   },
   "/img/en/biostarx-tna-settings-register-list.png": {
-    "width": 600,
-    "height": 155
+    "width": 813,
+    "height": 166
   },
   "/img/en/biostarx-tna-settings-save-period.png": {
     "width": 1200,
-    "height": 148
+    "height": 170
   },
   "/img/en/biostarx-tna-settings-sender-info.png": {
     "width": 400,
-    "height": 418
+    "height": 416
   },
   "/img/en/biostarx-tna-settings-unregister-list.png": {
-    "width": 600,
-    "height": 144
+    "width": 812,
+    "height": 160
   },
   "/img/en/biostarx-tna-settings.png": {
     "width": 1200,
-    "height": 797
+    "height": 526
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed-allow-time.png": {
-    "width": 800,
-    "height": 59
+    "width": 904,
+    "height": 64
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed-before-after-time.png": {
-    "width": 800,
-    "height": 101
+    "width": 1009,
+    "height": 99
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed-roundup.png": {
     "width": 800,
-    "height": 107
+    "height": 102
   },
   "/img/en/biostarx-tna-shift-day-adding-fixed.png": {
     "width": 1200,
-    "height": 1117
+    "height": 1005
   },
   "/img/en/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png": {
-    "width": 825,
+    "width": 930,
     "height": 103
   },
   "/img/en/biostarx-tna-shift-day-adding-flexible.png": {
     "width": 1200,
-    "height": 975
+    "height": 926
   },
   "/img/en/biostarx-tna-shift-day-adding-floating-timesegment.png": {
-    "width": 226,
-    "height": 98
+    "width": 292,
+    "height": 129
   },
   "/img/en/biostarx-tna-shift-day-adding-floating.png": {
     "width": 1200,
-    "height": 961
+    "height": 1175
   },
   "/img/en/biostarx-tna-shift-day.png": {
     "width": 1200,
-    "height": 470
+    "height": 469
   },
   "/img/en/biostarx-tna-shift-overtime-adding.png": {
     "width": 1200,
-    "height": 845
+    "height": 749
   },
   "/img/en/biostarx-tna-shift-overtime-example.png": {
     "width": 800,
-    "height": 236
+    "height": 201
   },
   "/img/en/biostarx-tna-shift-overtime.png": {
     "width": 1200,
-    "height": 469
+    "height": 380
   },
   "/img/en/biostarx-tna-shift-paycode-adding.png": {
     "width": 1200,
@@ -13181,43 +14013,51 @@
   },
   "/img/en/biostarx-tna-shift-schedule-adding-daily.png": {
     "width": 400,
-    "height": 109
+    "height": 127
   },
   "/img/en/biostarx-tna-shift-schedule-adding-drag-shift.png": {
     "width": 1200,
-    "height": 434
+    "height": 573
   },
   "/img/en/biostarx-tna-shift-schedule-adding.png": {
     "width": 1200,
-    "height": 669
+    "height": 807
   },
   "/img/en/biostarx-tna-shift-schedule.png": {
     "width": 1200,
-    "height": 467
+    "height": 385
   },
   "/img/en/biostarx-tutorial-license-offline-popup-filed.png": {
-    "width": 540,
-    "height": 400
+    "width": 500,
+    "height": 288
   },
   "/img/en/biostarx-tutorial-license-offline-popup.png": {
     "width": 500,
-    "height": 251
+    "height": 288
   },
   "/img/en/biostarx-tutorial-license-offline.png": {
     "width": 878,
-    "height": 127
+    "height": 184
+  },
+  "/img/en/biostarx-tutorial-license-online-1.png": {
+    "width": 878,
+    "height": 184
+  },
+  "/img/en/biostarx-tutorial-license-online-added.png": {
+    "width": 878,
+    "height": 221
   },
   "/img/en/biostarx-tutorial-license-online.png": {
     "width": 878,
-    "height": 127
+    "height": 184
   },
   "/img/en/biostarx-ui-monitoring.png": {
     "width": 1500,
-    "height": 737
+    "height": 829
   },
   "/img/en/biostarx-ui-settings.png": {
     "width": 1500,
-    "height": 695
+    "height": 788
   },
   "/img/en/biostarx-ui-user-template.png": {
     "width": 1500,
@@ -13226,6 +14066,50 @@
   "/img/en/biostarx-ui-user.png": {
     "width": 1500,
     "height": 724
+  },
+  "/img/en/biostarx-uninstall-apps-list.png": {
+    "width": 1013,
+    "height": 158
+  },
+  "/img/en/biostarx-uninstall-cert-backup-overwrite.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/en/biostarx-uninstall-cert-backup-path.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/en/biostarx-uninstall-cert-backup-success.png": {
+    "width": 338,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-cert-backup.png": {
+    "width": 472,
+    "height": 332
+  },
+  "/img/en/biostarx-uninstall-confirm.png": {
+    "width": 406,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-delete-content.png": {
+    "width": 331,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-progress.png": {
+    "width": 499,
+    "height": 392
+  },
+  "/img/en/biostarx-uninstall-success.png": {
+    "width": 382,
+    "height": 152
+  },
+  "/img/en/biostarx-uninstall-usb-agent-confirm.png": {
+    "width": 409,
+    "height": 156
+  },
+  "/img/en/biostarx-uninstall-usb-agent-success.png": {
+    "width": 410,
+    "height": 161
   },
   "/img/en/biostarx-upgrade-complete.png": {
     "width": 499,
@@ -13255,6 +14139,18 @@
     "width": 200,
     "height": 104
   },
+  "/img/en/biostarx-user-add-by-scanning-passport-btn.png": {
+    "width": 1117,
+    "height": 451
+  },
+  "/img/en/biostarx-user-add-face-credential-confirm.png": {
+    "width": 362,
+    "height": 190
+  },
+  "/img/en/biostarx-user-add-import-passport-data.png": {
+    "width": 560,
+    "height": 338
+  },
   "/img/en/biostarx-user-add-user-01.png": {
     "width": 1200,
     "height": 182
@@ -13282,6 +14178,10 @@
   "/img/en/biostarx-user-credential-set-emergency-opening.png": {
     "width": 800,
     "height": 227
+  },
+  "/img/en/biostarx-user-edit-by-scanning-passport-btn.png": {
+    "width": 1118,
+    "height": 424
   },
   "/img/en/biostarx-user-export-csv-popup.png": {
     "width": 600,
@@ -13359,6 +14259,10 @@
     "width": 1200,
     "height": 250
   },
+  "/img/en/biostarx-user-scan-passport-error-usb-agent.png": {
+    "width": 362,
+    "height": 230
+  },
   "/img/en/biostarx-user-sub-group-add.png": {
     "width": 400,
     "height": 272
@@ -13373,7 +14277,7 @@
   },
   "/img/en/biostarx-users-advanced-search.png": {
     "width": 1500,
-    "height": 546
+    "height": 613
   },
   "/img/en/biostarx-users-list-column-layout.png": {
     "width": 600,
@@ -16604,16 +17508,16 @@
     "height": 28
   },
   "/img/en/monitoring-door-camera-control-open-video.png": {
-    "width": 1200,
-    "height": 449
+    "width": 884,
+    "height": 477
   },
   "/img/en/monitoring-door-control-open-video-drag-drop.png": {
-    "width": 1200,
-    "height": 382
+    "width": 1239,
+    "height": 387
   },
   "/img/en/monitoring-door-control-open-video.png": {
-    "width": 1200,
-    "height": 448
+    "width": 881,
+    "height": 471
   },
   "/img/en/monitoring-door-control.png": {
     "width": 1278,
@@ -16624,24 +17528,32 @@
     "height": 341
   },
   "/img/en/monitoring-door-status-tooltip-device.png": {
-    "width": 350,
-    "height": 227
+    "width": 300,
+    "height": 259
   },
   "/img/en/monitoring-door-status-tooltip.png": {
-    "width": 455,
-    "height": 169
+    "width": 763,
+    "height": 220
+  },
+  "/img/en/monitoring-map-area-tree-example.png": {
+    "width": 400,
+    "height": 469
   },
   "/img/en/monitoring-map-floor-control-door.png": {
     "width": 800,
     "height": 450
   },
   "/img/en/monitoring-map-open-map.png": {
-    "width": 1500,
-    "height": 648
+    "width": 1200,
+    "height": 675
   },
   "/img/en/monitoring-map-select-floor.png": {
     "width": 1100,
-    "height": 817
+    "height": 911
+  },
+  "/img/en/monitoring-map-tree-attention-filter.png": {
+    "width": 400,
+    "height": 329
   },
   "/img/en/monitoring-video-adjust-size-01.png": {
     "width": 900,
@@ -16656,8 +17568,8 @@
     "height": 583
   },
   "/img/en/monitoring-video-alarm.png": {
-    "width": 1705,
-    "height": 1270
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/settings-custom-interface-add-quick-action.png": {
     "width": 550,
@@ -16668,12 +17580,28 @@
     "height": 206
   },
   "/img/en/settings-custom-interface-main-quick-action.png": {
-    "width": 277,
-    "height": 136
+    "width": 304,
+    "height": 129
+  },
+  "/img/en/settings-custom-interface-quick-action-change-order-result.png": {
+    "width": 1152,
+    "height": 313
+  },
+  "/img/en/settings-custom-interface-quick-action-change-order.png": {
+    "width": 1152,
+    "height": 245
   },
   "/img/en/settings-custom-interface-quick-action-layout.png": {
-    "width": 1262,
-    "height": 298
+    "width": 1125,
+    "height": 259
+  },
+  "/img/en/settings-custom-interface-quick-action-pin-header-result.png": {
+    "width": 1152,
+    "height": 366
+  },
+  "/img/en/settings-custom-interface-quick-action-pin-header.png": {
+    "width": 1152,
+    "height": 319
   },
   "/img/en/visitor-register-manage-view-term.png": {
     "width": 800,
@@ -20567,6 +21495,14 @@
     "width": 16,
     "height": 16
   },
+  "/img/menus/ico-audit-delete.svg": {
+    "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-audit-edit.svg": {
+    "width": 16,
+    "height": 16
+  },
   "/img/menus/ico-back.svg": {
     "width": 16,
     "height": 16
@@ -20675,6 +21611,14 @@
     "width": 16,
     "height": 16
   },
+  "/img/menus/ico-device-off.svg": {
+    "width": 21,
+    "height": 21
+  },
+  "/img/menus/ico-device-on.svg": {
+    "width": 21,
+    "height": 21
+  },
   "/img/menus/ico-disable.svg": {
     "width": 16,
     "height": 16
@@ -20686,6 +21630,10 @@
   "/img/menus/ico-door-alert.svg": {
     "width": 21,
     "height": 21
+  },
+  "/img/menus/ico-door-close-alarm.svg": {
+    "width": 16,
+    "height": 16
   },
   "/img/menus/ico-door-close.svg": {
     "width": 16,
@@ -20718,6 +21666,14 @@
   "/img/menus/ico-edit2.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-elevator-floor-open.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-elevator-floor.svg": {
+    "width": 20,
+    "height": 20
   },
   "/img/menus/ico-elevator.svg": {
     "width": 20,
@@ -20767,11 +21723,23 @@
     "width": 16,
     "height": 16
   },
+  "/img/menus/ico-fixed-lock.svg": {
+    "width": 17,
+    "height": 16
+  },
+  "/img/menus/ico-fixed-unlock.svg": {
+    "width": 17,
+    "height": 16
+  },
   "/img/menus/ico-flelev.svg": {
     "width": 20,
     "height": 20
   },
   "/img/menus/ico-flelevfl.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-floor-camera.svg": {
     "width": 20,
     "height": 20
   },
@@ -20839,6 +21807,18 @@
     "width": 16,
     "height": 16
   },
+  "/img/menus/ico-map-area.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-map-facility.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-map-floor.svg": {
+    "width": 20,
+    "height": 20
+  },
   "/img/menus/ico-map-more.svg": {
     "width": 20,
     "height": 20
@@ -20848,6 +21828,10 @@
     "height": 20
   },
   "/img/menus/ico-minus.svg": {
+    "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-monitor-group.svg": {
     "width": 16,
     "height": 16
   },
@@ -20894,6 +21878,10 @@
   "/img/menus/ico-pdf.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-pin.svg": {
+    "width": 20,
+    "height": 20
   },
   "/img/menus/ico-play.svg": {
     "width": 16,
@@ -21416,16 +22404,16 @@
     "height": 16
   },
   "/img/monitoring-door-camera-control-open-video.png": {
-    "width": 1200,
-    "height": 446
+    "width": 866,
+    "height": 477
   },
   "/img/monitoring-door-control-open-video-drag-drop.png": {
-    "width": 1200,
+    "width": 1239,
     "height": 387
   },
   "/img/monitoring-door-control-open-video.png": {
-    "width": 1200,
-    "height": 443
+    "width": 866,
+    "height": 477
   },
   "/img/monitoring-door-control.png": {
     "width": 1278,
@@ -21440,20 +22428,32 @@
     "height": 204
   },
   "/img/monitoring-door-status-tooltip.png": {
+    "width": 763,
+    "height": 220
+  },
+  "/img/monitoring-map-area-tree-example.png": {
     "width": 400,
-    "height": 194
+    "height": 469
   },
   "/img/monitoring-map-floor-control-door.png": {
     "width": 800,
     "height": 450
   },
+  "/img/monitoring-map-floor-status-check.png": {
+    "width": 860,
+    "height": 259
+  },
   "/img/monitoring-map-open-map.png": {
-    "width": 1500,
-    "height": 644
+    "width": 1200,
+    "height": 675
   },
   "/img/monitoring-map-select-floor.png": {
     "width": 1100,
-    "height": 817
+    "height": 911
+  },
+  "/img/monitoring-map-tree-attention-filter.png": {
+    "width": 400,
+    "height": 329
   },
   "/img/monitoring-video-adjust-size-01.png": {
     "width": 900,
@@ -21468,8 +22468,8 @@
     "height": 678
   },
   "/img/monitoring-video-alarm.png": {
-    "width": 1705,
-    "height": 1270
+    "width": 1920,
+    "height": 1080
   },
   "/img/monitoring-video-close.png": {
     "width": 730,
@@ -21596,12 +22596,28 @@
     "height": 206
   },
   "/img/settings-custom-interface-main-quick-action.png": {
-    "width": 277,
-    "height": 136
+    "width": 295,
+    "height": 132
+  },
+  "/img/settings-custom-interface-quick-action-change-order-result.png": {
+    "width": 1152,
+    "height": 313
+  },
+  "/img/settings-custom-interface-quick-action-change-order.png": {
+    "width": 1152,
+    "height": 245
   },
   "/img/settings-custom-interface-quick-action-layout.png": {
-    "width": 1267,
-    "height": 300
+    "width": 1125,
+    "height": 235
+  },
+  "/img/settings-custom-interface-quick-action-pin-header-result.png": {
+    "width": 1152,
+    "height": 366
+  },
+  "/img/settings-custom-interface-quick-action-pin-header.png": {
+    "width": 1152,
+    "height": 319
   },
   "/img/sns_img02.jpg": {
     "width": 2335,

@@ -22,7 +22,7 @@ VMS 연동 시 다음과 같은 기능을 사용할 수 있습니다.
 
 **Video Management System**(VMS)과 연동하려면 다음 사항을 확인하세요.
 
-* VMS 연동 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
+* VMS 연동 기능은 **에센셜**(Essential) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
 
 * VMS 서버가 올바르게 설치되고 구성되었는지 확인하세요. VMS 서버는 **BioStar X**와 온라인으로 연결 가능한 상태여야 합니다.
 
@@ -49,68 +49,6 @@ VMS 서버와 **BioStar X**를 연동하려면 다음 단계를 따르세요.
 <Steps>
 <Step>
 
-### VMS 서버에서 인증서 설치 {/* #install-vms-certification */}
-
-VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용해야 합니다. 일반적인 SSL 인증서는 도메인 이름 기반으로 발급되므로, IP 주소로 VMS 서버에 접근하는 환경에서는 유효하지 않습니다. 따라서 VMS 서버의 IP 주소를 포함한 인증서를 별도로 생성해야 합니다.
-
-:::note
-
-* 인증서를 설치하기 전에 VMS를 설치한 PC에 Open JDK 21 이상이 설치되어 있는지 확인하세요.
-
-* VMS 서버와 **BioStar X**를 같은 서버에 설치하거나 서로 다른 서버에 설치하는 경우 모두 인증서를 설치해야 합니다.
-
-:::
-
-1. *C:\Program Files\BioStar X\third* 경로로 이동해 명령 프롬프트를 실행하세요.
-
-   :::note
-
-   VMS가 **BioStar X**와 서로 다른 서버에 설치되어 있다면 *scaleUtil-1.0-all.jar* 파일을 VMS 서버로 복사하고 아래의 과정을 진행하세요.
-
-   :::
-
-1. 다음 명령어를 실행하세요. 
-
-   <Tabs groupId='os' defaultValue='Windows'>
-   <TabItem value="Windows">
-   ```java
-   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
-   ```
-   </TabItem>
-   <TabItem value="Linux">
-   ```java
-   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
-   ```
-   </TabItem>
-   </Tabs>
-
-   - `<%VENDOR.NAME%>` 부분을 VMS의 제품명으로 교체하세요.
-   
-   - `{VMS_IP_ADDRESS}` 부분을 VMS 서버의 IP 주소로 교체하세요.
-
-   - 설치한 VMS 제품에 따라 *ssl* 경로가 다를 수 있습니다.
-
-1. VMS를 설치한 경로에서 인증서 파일(*\*.pem*)이 생성되었는지 확인하세요.
-
-1. VMS 서버를 재부팅하세요.
-
-:::info
-
-VMS에 따라 인증서 설치 경로가 다를 수 있습니다. 아래 예시를 참고하세요.
-
-* **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
-
-* **Digital Watchdog**: *C:\Windows\System32\config\systemprofile\AppData\Local\Digital Watchdog\Digital Watchdog Media Server\ssl*
-
-* **Hanwha Wave**: *C:\Windows\System32\config\systemprofile\AppData\Local\Hanwha\Hanwha Media Server\ssl*
-
-* **NX**: *C:\Windows\System32\config\systemprofile\AppData\Local\Network Optix\Network Optix Media Server\ssl*
-
-:::
-
-</Step>
-<Step>
-
 ### VMS 연동 활성화
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
@@ -125,7 +63,21 @@ VMS에 따라 인증서 설치 경로가 다를 수 있습니다. 아래 예시�
 
    <Image src='/img/biostarx-settings-video-integration.png' />
 
+1. **VMS Type** 옵션에서 연동할 VMS 종류를 선택하세요. **NX Witness** 또는 **Leopard** 중에서 선택할 수 있습니다.
+
+   <Image src='/img/biostarx-settings-video-integration-select-type.png' />
+
+   :::note
+
+   * VMS 종류에 따라 <DocLink inner='#vms-event-bookmark' /> 섹션의 일부 옵션이 자동으로 변경됩니다.
+
+   * **Leopard**를 선택하면 인증서를 설치할 필요가 없습니다. <DocLink inner='#install-vms-certification' /> 및 <DocLink inner='#install-client-certification' /> 단계를 건너뛰고 <DocLink inner='#check-camera-setting' />으로 진행하세요.
+
+   :::
+
 1. VMS 서버 정보를 입력하세요.
+
+   <Image src='/img/biostarx-settings-video-vms-server-info.png' />
 
    * <Cmd sid='video.setting.integration.serverAddress' product='2' />: VMS 서버의 IP 주소를 입력하세요.
 
@@ -148,7 +100,149 @@ VMS에 따라 인증서 설치 경로가 다를 수 있습니다. 아래 예시�
 </Step>
 <Step>
 
-### 서비스 재시작
+### VMS 서버에 인증서 설치 {/* #install-vms-certification */}
+
+:::note
+
+이 단계는 **NX Witness**를 사용할 때만 필요합니다. **Leopard**를 사용한다면 이 단계와 <DocLink inner='#install-client-certification' /> 단계를 건너뛰고 <DocLink inner='#check-camera-setting' />으로 진행하세요.
+
+:::
+
+VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용해야 합니다. 일반적인 SSL 인증서는 도메인 이름 기반으로 발급되므로, IP 주소로 VMS 서버에 접근하는 환경에서는 유효하지 않습니다. 따라서 VMS 서버의 IP 주소를 포함한 인증서를 별도로 생성해야 합니다.
+
+:::info
+
+VMS 서버와 **BioStar X**를 같은 서버에 설치하거나 서로 다른 서버에 설치하는 경우 모두 인증서를 설치해야 합니다.
+
+:::
+
+<Cmd sid='video.setting.integration.title' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 <Cmd sid='video.setting.vmsCert.title' product='2' /> 섹션이 활성화됩니다.
+
+<Image src='/img/biostarx-settings-video-set-cert.png' />
+
+1. 인증서 설치 프로그램을 다운로드하려면 VMS가 설치된 서버에서 <Cmd sid='video.setting.vmsCert.step1.downloadButton' product='2' /> 버튼을 클릭하세요.
+
+1. 다운로드한 *vmsCertMaker.exe* 파일을 실행하세요.
+
+1. **VMS server IP** 입력 필드에 IP 주소를 입력하세요.
+
+   <Image src='/img/biostarx-vms-cert-installation-tool-01.png' alone />
+
+   :::note
+
+   IPv4 주소 형식으로 입력해야 합니다. 예: 192.168.0.10
+
+   :::
+
+1. 올바른 형식의 IP 주소를 입력하면 **Next** 버튼이 활성화됩니다. **Next** 버튼을 클릭하세요.
+
+1. VMS의 인증서 설치 경로를 선택하세요.
+
+   * 호환되는 VMS의 경우 자동으로 설치 경로를 인식합니다.
+
+      <Image src='/img/biostarx-vms-cert-installation-tool-02-found.png' alone />
+
+   * 설치 경로가 자동 인식되지 않는다면 **Browse for folder** 버튼을 클릭하고, 인증서 설치 경로를 직접 선택하세요.
+
+      <Image src='/img/biostarx-vms-cert-installation-tool-02.png' alone />
+
+      :::note
+
+      VMS에 따라 인증서 설치 경로가 다를 수 있습니다. 아래 예시를 참고하세요.
+
+      * **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
+
+      * **Digital Watchdog**: *C:\Windows\System32\config\systemprofile\AppData\Local\Digital Watchdog\Digital Watchdog Media Server\ssl*
+
+      * **Hanwha Wave**: *C:\Windows\System32\config\systemprofile\AppData\Local\Hanwha\Hanwha Media Server\ssl*
+
+      * **NX**: *C:\Windows\System32\config\systemprofile\AppData\Local\Network Optix\Network Optix Media Server\ssl*
+
+      :::
+   
+   * 여러 개의 VMS 인증서 경로가 있다면 모든 경로가 표시됩니다. **Select another folder** 버튼을 클릭하고 원하는 경로를 선택하세요.
+
+      <Image src='/img/biostarx-vms-cert-installation-tool-02-list.png' />
+
+1. **Next** 또는 **Proceed with selected folder** 버튼을 클릭하세요.
+
+1. 인증서 생성을 완료하면 **Certificate generated successfully** 메시지 창이 나타납니다.
+
+   <Image src='/img/biostarx-vms-cert-installation-tool-03.png' alone />
+
+1. **OK** 버튼을 클릭하면 인증서를 설치한 경로가 나타납니다. 인증서 파일(*cert.pem*)이 생성되었는지 확인하세요.
+
+1. 인증서 설치를 완료하면 **Close** 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-vms-cert-installation-tool-04.png' alone />
+
+1. VMS 서버를 재부팅하세요.
+
+:::info
+
+인증서 설치에 실패하면 실패 사유가 메시지에 출력됩니다. 메시지 내용을 확인한 후 필요한 조치를 취하세요.
+
+<Image src='/img/biostarx-vms-cert-installation-tool-fail.png' alone />
+
+:::
+
+</Step>
+<Step>
+
+### 클라이언트 PC에서 인증서 설치 {/* #install-client-certification */}
+
+:::note
+
+이 단계는 **NX Witness**를 사용할 때만 필요합니다. **Leopard**를 사용한다면 이 단계를 건너뛰고 <DocLink inner='#check-camera-setting' />으로 진행하세요.
+
+:::
+
+아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다.
+
+* **Video Management System**(VMS)을 브라우저를 통해서 접속했을 때 '안전하지 않음' 경고가 표시될 때
+
+* <Cmd sid='shell.header.arena' /> 페이지에서 실시간 영상은 재생되나 녹화 영상이 재생되지 않을 때
+
+:::caution
+
+VMS 서버에 인증서를 설치하지 않고 클라이언트 PC에만 등록하면 정상 작동하지 않습니다.
+
+:::
+
+---
+
+1. 웹 브라우저를 통해 **BioStar X**로 접속하세요.
+
+1. 로그인 화면 또는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.https" />에서 HTTPS 인증서 설치 프로그램(*cert-register.zip*)을 다운로드하세요.
+
+1. 다운로드한 파일의 압축을 해제한 뒤 **cert-register.exe** 파일을 실행하세요. **Enroll Certificate** 창이 나타납니다.
+
+1. **Target System**을 **VMS**로 선택하고 다음 정보를 입력하세요.
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
+
+   - **Server Address**: VMS 서버의 IP 주소
+
+   - **Port**: VMS 서버의 포트 번호(기본값: 7001)
+
+1. **Enrollment** 버튼을 클릭하세요.
+
+1. 보안 경고 메시지를 확인한 뒤 **예**를 클릭하세요.
+
+웹 브라우저를 다시 시작한 뒤 <Cmd sid='shell.header.arena' /> 페이지에서 VMS 서버의 녹화 영상이 정상 재생되는지 확인하세요.
+
+</Step>
+<Step>
+
+### 카메라 확인 및 설정 {/* #check-camera-setting */}
+
+VMS 서버와 정상 연동되었다면 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> 메뉴에서 연결된 카메라를 확인할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-camera' />를 참고하세요.
+
+</Step>
+</Steps>
+
+
+### 문제 해결 {/* #video-troubleshooting */}
 
 VMS 서버와 처음 연동하면 **BioStar X**는 자동으로 서비스를 재시작합니다. 만약 자동으로 재시작하지 않는다면 다음 안내에 따라 수동으로 서비스를 재시작하세요.
 
@@ -165,48 +259,6 @@ VMS 서버와 처음 연동하면 **BioStar X**는 자동으로 서비스를 재
 1. 중지 요청한 서비스의 상태가 **Pending**에서 **Stopped**로 변경되면 **Start** 버튼을 클릭해 서비스를 재시작하세요.
 
    <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
-
-</Step>
-<Step>
-
-### 카메라 확인 및 설정
-
-VMS 서버와 정상 연동되었다면 <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> 메뉴에서 연결된 카메라를 확인할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-camera' />를 참고하세요.
-
-</Step>
-</Steps>
-
-
-### 문제 해결 {/* #video-troubleshooting */}
-
-아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다.
-
-* **Video Management System**(VMS)을 브라우저를 통해서 접속했을 때 '안전하지 않음' 경고가 표시될 때
-
-* <Cmd sid='shell.header.arena' /> 페이지에서 실시간 영상은 재생되나 녹화 영상이 재생되지 않을 때
-
-
-#### 클라이언트 PC에서 인증서 설치 {/* #install-client-certification */}
-
-1. 웹 브라우저를 통해 **BioStar X**로 접속하세요.
-
-1. 로그인 화면 또는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' />에서 HTTPS 인증서 설치 프로그램(*cert-register.zip*)을 다운로드하세요.
-
-1. 다운로드한 파일의 압축을 해제한 뒤 **cert-register.exe** 파일을 실행하세요. **Enrollment Certification** 창이 나타납니다.
-
-1. **Target System**을 **VMS**로 선택하고 다음 정보를 입력하세요.
-
-   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
-
-   - **Server Address**: VMS 서버의 IP 주소
-
-   - **Port**: VMS 서버의 포트 번호
-
-1. **Enrollment** 버튼을 클릭하세요.
-
-1. 보안 경고 메시지를 확인한 뒤 **예**를 클릭하세요.
-
-웹 브라우저를 다시 시작한 뒤 <Cmd sid='shell.header.arena' /> 페이지에서 VMS 서버의 녹화 영상이 정상 재생되는지 확인하세요.
 
 
 ## VMS 이벤트 및 북마크 설정 {/* #vms-event-bookmark */}
@@ -227,6 +279,14 @@ VMS 서버와 정상 연동되었다면 <Cmd sid='setting.menu.video.root' /> �
 * VMS에서 북마크 기능에 자세한 내용은 [다음 링크](https://resources.vmsproxy.com/nx_vms_help/using_bookmarks.html)를 참고하세요.
 
 * VMS에서 이벤트 기능에 대한 자세한 내용은 [다음 링크](https://resources.vmsproxy.com/nx_vms_help/configuring_events_and_actions.html)를 참고하세요.
+
+* VMS 종류가 **Leopard**이면 <Cmd sid='video.setting.tag.event' product='2' /> 행의 출입문 이름 항목은 선택할 수 없으며 체크박스가 자동 해제됩니다.
+
+* 북마크 태그와 이벤트 태그에 다음 문자가 포함되어 있으면 VMS 서버로 전달할 때 자동 제거됩니다.
+
+   * 이벤트 태그: `\` `'` `,` `#` `%` `=` `&` `<` `>`
+
+   * 북마크 태그: `<` `'`
 
 :::
 

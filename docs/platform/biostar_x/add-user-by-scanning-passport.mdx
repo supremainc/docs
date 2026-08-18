@@ -1,0 +1,125 @@
+---
+id: add-user-by-scanning-passport
+title: 여권 스캔으로 사용자 등록하기
+description: 여권을 스캔해 사용자 정보를 자동으로 가져와 사용자를 등록하거나 수정하는 방법을 안내합니다.
+---
+
+사용자 정보를 하나하나 입력하는 대신, 여권을 스캔해 이름 및 사진 등의 정보를 자동으로 가져와 사용자를 등록하거나 기존 사용자 정보를 수정할 수 있습니다.
+
+## 시작하기 전에
+
+* 여권 스캔을 위해 DESKO 여권 스캐너를 클라이언트 PC에 연결해야 합니다.
+
+* 여권을 스캔해 사용자를 등록하기 전에 여권에서 가져올 데이터를 설정했는지 확인하세요. 여권 스캔 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-account-scan-passport' />를 참고하세요.
+
+:::info
+
+<Cmd sid='button.passportScan' product='2' /> 기능은 여권 스캔만 지원합니다.
+
+:::
+
+## 여권 스캔으로 사용자 등록
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
+
+1. <Cmd sid='shell.header.user' /> 페이지의 오른쪽 상단의 <Cmd sid='team.user.newUser' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-user-add-user-01.png' />
+
+1. <Cmd sid='user.addNewUser' product='2' /> 화면에서 오른쪽 상단의 <Cmd sid='button.passportScan' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-user-add-by-scanning-passport-btn.png' />
+
+1. <Cmd sid='user.passportScan.dialog.title' product='2' /> 창이 나타나면 스캐너에 여권을 올려놓으세요.
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+1. 여권 스캔 성공 메시지가 나타난 후 여권 사진을 얼굴 크리덴셜로 등록할 지 여부를 선택하세요.
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::note
+
+   이 메시지는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.account.passportScan' />에서 <Cmd sid='setting.passportScan.face' /> 옵션을 <Cmd sid='setting.passportScan.faceAlwaysConfirm' />으로 설정했을 때 나타납니다. <Cmd sid='setting.passportScan.faceDoNotAsk' /> 옵션으로 설정하면 이 메시지가 나타나지 않고 바로 얼굴 크리덴셜로 등록됩니다.
+
+   :::
+
+1. 여권 스캔으로 가져온 정보를 확인하고 필요한 경우 수정하세요.
+
+1. 사용자를 저장하려면 화면 오른쪽 상단의 <Cmd sid='user.save' product='2' /> 버튼을 클릭하세요.
+
+## 여권 스캔으로 사용자 수정
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.user' />를 클릭하세요.
+
+1. 사용자 목록에서 여권 스캔으로 수정할 사용자를 더블 클릭하세요.
+
+1. 사용자 정보 수정 화면의 오른쪽 상단의 <Cmd sid='button.passportScan' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-user-edit-by-scanning-passport-btn.png' />
+
+1. <Cmd sid='user.passportScan.dialog.title' product='2' /> 창이 나타나면 스캐너에 여권을 올려놓으세요.
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+1. 여권 스캔 성공 메시지가 나타난 후 여권 사진을 얼굴 크리덴셜로 등록할 지 여부를 선택하세요.
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::caution
+
+   이 메시지는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.account.passportScan' />에서 <Cmd sid='setting.passportScan.face' /> 옵션을 <Cmd sid='setting.passportScan.faceAlwaysConfirm' />으로 설정했을 때 나타납니다. <Cmd sid='setting.passportScan.faceDoNotAsk' /> 옵션으로 설정하면 이 메시지가 나타나지 않고 바로 얼굴 크리덴셜로 등록됩니다.
+
+   :::
+
+1. 여권 스캔으로 가져온 정보를 확인하고 필요한 경우 수정하세요.
+
+1. 스캔한 정보로 사용자 정보를 수정하려면 화면 오른쪽 상단의 <Cmd sid='user.save' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+여권 스캔으로 수정하려는 사용자의 얼굴 크리덴셜이 2개 이상 등록되어 있다면 첫번째 등록된 얼굴 크리덴셜을 덮어쓰기합니다.
+
+:::
+
+## 오류 안내
+
+여권을 스캔하는 중에 문제가 발생하면 화면에 원인과 해결 방법을 안내하는 메시지가 표시됩니다. 아래 내용을 참고하여 오류를 해결하세요.
+
+### 스캔 실패
+
+여권을 스캐너에 올려놓고 자동으로 인식하는 과정에서 문제가 발생하면 아래 메시지 중 하나가 나타납니다.
+
+| 원인 | 오류 메시지 |
+| --- | --- |
+| 여권의 보안 요소(UV 무늬 등) 검증 실패 | <Cmd sid='user.passportScan.error.invalidPassport' product='2' /> |
+| 지정된 시간 안에 여권이 인식되지 않음 | <Cmd sid='user.passportScan.error.timeout' product='2' /> |
+| 스캔 도중 여권 이탈, 페이지 인식 실패 등 그 외 스캔 오류 | <Cmd sid='user.passportScan.error.cannotScan' product='2' /> |
+
+위 메시지가 나타나면 화면에 표시된 <Cmd sid='button.recognizePassport' product='2' /> 버튼을 클릭해 다시 스캔하세요. 여권을 스캐너에 올바르게 올려놓았는지 확인한 후 재시도하면 정상 인식됩니다.
+
+:::info
+
+<Cmd sid='button.recognizePassport' product='2' /> 버튼을 클릭하면 <Cmd sid='user.passportScan.scanning.title' product='2' /> 안내부터 자동 인식을 다시 시작합니다.
+
+:::
+
+### 스캐너 연결 오류
+
+USB Agent 또는 스캐너 연결에 문제가 있으면 아래 메시지가 나타납니다. 이 오류에는 재시도 버튼이 제공되지 않으므로, 안내에 따라 문제를 해결한 후 <Cmd sid='button.passportScan' product='2' /> 버튼을 다시 클릭해 스캔을 처음부터 진행하세요.
+
+| 상황 | 오류 메시지 | 해결 방법 |
+| --- | --- | --- |
+| USB Agent가 설치되어 있지 않거나 실행 중이 아님 | <Cmd sid='user.passportScan.agentNotInstalled.description' /> | USB Agent를 설치하거나 실행한 후 다시 시도하세요. |
+| 스캐너가 클라이언트 PC에 연결되어 있지 않음 | <Cmd sid='user.passportScan.scannerNotFound' product='2' /> | 여권 스캐너와 클라이언트 PC의 연결 상태를 확인하세요. |
+
+### USB Agent 업그레이드 필요
+
+여권 스캐너를 사용하려면 USB Agent가 최신 버전이어야 합니다. USB Agent 버전이 낮으면 <Cmd sid='button.passportScan' product='2' /> 버튼을 클릭했을 때 다음과 같은 오류 창이 나타납니다.
+
+<Image src='/img/biostarx-user-scan-passport-error-usb-agent.png' />
+
+* <Cmd sid='button.cancel' product='2' />: 오류 창을 닫고 스캔을 진행하지 않습니다.
+
+* <Cmd sid='button.goToSettings' product='2' />: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> 화면으로 이동합니다. 이동한 화면에서 USB Agent를 최신 버전으로 업그레이드한 후 다시 스캔을 시도하세요.
+

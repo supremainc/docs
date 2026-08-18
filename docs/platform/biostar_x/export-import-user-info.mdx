@@ -37,7 +37,7 @@ keywords: [사용자 정보, 내보내기, 가져오기]
 
 :::info
 
-<Cmd sid='team.menu.export.exportReason' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />에서 기록을 확인할 수 있습니다.
+<Cmd sid='team.menu.export.exportReason' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 
@@ -81,6 +81,12 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 * CSV 가져오기를 통해 사용자의 PIN을 등록할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/enroll-credential-pin' />를 참고하세요.
 
 * 저장된 CSV 파일에 매칭되지 않는 열을 추가하면 **BioStar X**에서 파일을 가져올 수 없습니다.
+
+* 사용자 이름이 `&`, `@`, `~` 문자로 시작하는 CSV 항목은 가져오기에 실패합니다.
+
+* 유효 기간(만료 일시)은 2037-12-31 23:59:59까지 설정할 수 있습니다. 이 날짜를 초과하는 값이 있는 항목은 가져오기에 실패합니다.
+
+* 내보낸 CSV 파일은 Excel 등 표 계산 프로그램에서 직접 열지 않는 것을 권장합니다. 사용자 이름이 `=` 문자로 시작하는 경우, 프로그램이 이를 수식으로 인식해 실제 값과 다르게 표시될 수 있습니다.
 
 :::
 
@@ -146,7 +152,7 @@ CSV 파일의 정보를 가져오는 중 오류가 발생했다면 오류가 발
 
 * 데이터 파일을 적용할 장치를 정확하게 선택하지 않으면 해당 장치에서 데이터 파일을 인식할 수 없습니다.
 
-* <Cmd sid='team.menu.export.exportReason' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />에서 기록을 확인할 수 있습니다.
+* <Cmd sid='team.menu.export.exportReason' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 

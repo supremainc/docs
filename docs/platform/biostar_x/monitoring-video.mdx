@@ -13,6 +13,8 @@ keywords: [ 모니터링 , 비디오 ]
 
   <Image src='/img/biostarx-monitoring-video-tiles.png' width='70%' />
 
+* <Cmd sid='arena.title' /> 영역은 시스템에 등록된 장치 카메라가 없거나 맵 구성 요소(구역, 시설, 층)가 등록되어 있지 않으면 활성화되지 않습니다.
+
 * VMS와 연동하고 카메라를 추가 및 관리하는 방법은 <DocLink docId='platform/biostar_x/settings-videos' />를 참고하세요.
 
 * VMS의 녹화 영상을 재생할 때 로드 에러가 발생한다면, VMS 서버에 인증서를 설치하고, 클라이언트 PC에서 VMS 서버의 인증서를 설치해야 합니다. 자세한 내용은 다음 문서를 참고하세요.
@@ -23,7 +25,7 @@ keywords: [ 모니터링 , 비디오 ]
 
 * 구역과 연동된 카메라가 보이지 않는다면 카메라 그룹 권한을 확인하세요. 커스텀 권한의 관리자가 카메라 그룹 권한을 설정하지 않았다면 카메라가 보이지 않을 수 있습니다. 카메라 그룹 권한 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />를 참고하세요.
 
-* 비디오 모니터링은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
+* 비디오 모니터링은 **에센셜**(Essential) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
 
 :::
 
@@ -71,6 +73,22 @@ keywords: [ 모니터링 , 비디오 ]
 1. 현재 영상을 실시간 재생하고 있음을 나타내는 아이콘입니다. 과거 시간의 영상을 재생할 때 다시 실시간 영상으로 전환하려면 이 아이콘을 클릭하세요.
 
 </Calloutlists>
+
+### 녹화 영상 재생 유지 및 실패 안내 {/* #recording-playback-failure */}
+
+<Cmd sid='arena.video.title' /> 탭에서 다른 화면으로 이동한 뒤(예: 다른 페이지로 이동, <Cmd sid='arena.tree.map.title' /> 탭으로 전환, 새로고침) 다시 <Cmd sid='arena.video.title' /> 탭으로 돌아오면 이전에 재생하던 녹화 영상 상태를 그대로 유지합니다. 이때 각 비디오 타일은 배치된 순서대로 영상을 다시 불러옵니다.
+
+VMS 종류가 **Leopard**이면 녹화 영상 재생 개수 제한으로 인해 재생에 실패하는 타일이 나타날 수 있습니다. 재생에 실패한 타일에는 다음 안내가 표시되며, 재생에 성공한 타일은 녹화 영상을 그대로 재생합니다.
+
+<Image src='/img/biostarx-monitoring-video-limit-notice.png' />
+
+:::info
+
+* <Cmd sid='arena.message.leopardPlaybackLimitAction' /> 버튼을 클릭하면 실시간 영상으로 전환합니다.
+
+* 영상마다 응답 속도가 달라 재생 실패가 표시되는 시점은 타일마다 다를 수 있습니다. 다만 재생에 실패하는 타일은 대체로 타일 순서상 뒤쪽부터 나타나는 경향이 있습니다.
+
+:::
 
 ## 출입문 제어 도구 {/* #door-control-tool */}
 
@@ -124,6 +142,8 @@ keywords: [ 모니터링 , 비디오 ]
 * 출입문에는 최대 4개의 카메라를 연결할 수 있으며, 영상 하단의 카메라 버튼을 클릭해 원하는 카메라의 영상을 재생할 수 있습니다. 연결된 카메라가 한 개라면 카메라 버튼은 표시되지 않습니다.
 
 * 화면 아래의 <Cmd sid='arena.eventTable.event' /> 섹션에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/monitoring-event' />를 참고하세요.
+
+* VMS 종류가 **Leopard**이면 녹화 영상 재생 개수 제한으로 인해 재생에 실패할 수 있습니다. 이때 <Cmd sid='arena.message.leopardPlaybackLimitRetry' /> 버튼을 클릭해 영상을 재생할 수 있습니다.
 
 :::
 

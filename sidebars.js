@@ -666,7 +666,8 @@ function createSidebars(preview) {
             'platform/biostar_x/change-ip',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
-            'platform/biostar_x/add-sub-db'
+            'platform/biostar_x/add-sub-db',
+            'platform/biostar_x/remove-server'
           ]
         },
         'platform/biostar_x/ui-launcher',
@@ -702,6 +703,7 @@ function createSidebars(preview) {
             },
             'platform/biostar_x/set-permission',
             'platform/biostar_x/set-user-advanced',
+            'platform/biostar_x/add-user-by-scanning-passport',
             'platform/biostar_x/view-users',
             {
               type: 'category',
@@ -745,9 +747,9 @@ function createSidebars(preview) {
               items: [
                 'platform/biostar_x/check-door-status',
                 'platform/biostar_x/control-door',
-                'platform/biostar_x/control-door-slave-device',
                 'platform/biostar_x/control-elevator',
                 'platform/biostar_x/control-zone',
+                'platform/biostar_x/monitoring-batch-control',
               ]
             },
             'platform/biostar_x/monitoring-map',
@@ -839,6 +841,7 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-manage-door-group',
                 'platform/biostar_x/settings-door-add',
                 'platform/biostar_x/settings-door-edit-info',
+                'platform/biostar_x/settings-door-auth-control',
                 'platform/biostar_x/settings-door-delete'
               ]
             },
@@ -853,6 +856,8 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-adding-custom-account',
               ]
             },
+            'platform/biostar_x/settings-account-personal-data',
+            'platform/biostar_x/settings-account-scan-passport',
             {
               type: 'category',
               label: '출입 통제 설정하기',
@@ -869,6 +874,7 @@ function createSidebars(preview) {
             },
             'platform/biostar_x/settings-schedule',
             'platform/biostar_x/settings-triger-and-action',
+            'platform/biostar_x/settings-custom-interface',
             'platform/biostar_x/settings-event-log-import',
             'platform/biostar_x/settings-alert',
             {
@@ -882,23 +888,9 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-credential-card-manage',
                 'platform/biostar_x/settings-credential-wiegand-format',
                 'platform/biostar_x/settings-credential-smart-format',
+                'platform/biostar_x/settings-card-printer',
                 'platform/biostar_x/settings-credential-mobile-access-card',
                 'platform/biostar_x/settings-credential-ir-face-group-matching'
-              ]
-            },
-            'platform/biostar_x/settings-card-printer',
-            'platform/biostar_x/settings-email-setting',
-            'platform/biostar_x/settings-custom-interface',
-            {
-              type: 'category',
-              label: '서버 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-server',
-              },
-              items: [
-                'platform/biostar_x/settings-server-server',
-                'platform/biostar_x/settings-server-https'
               ]
             },
             {
@@ -915,20 +907,34 @@ function createSidebars(preview) {
             },
             {
               type: 'category',
+              label: '감사 추적 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_x/settings-system-audit-trail',
+              },
+              items: [
+                'platform/biostar_x/settings-system-audit-trail-ac',
+                'platform/biostar_x/settings-system-audit-trail-settings'
+              ]
+            },
+            {
+              type: 'category',
               label: '시스템 설정하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/settings-system'
               },
               items: [
-                'platform/biostar_x/settings-system-audit-trail',
+                'platform/biostar_x/settings-server-server',
+                'platform/biostar_x/settings-server-https',
                 'platform/biostar_x/settings-system-system-backup',
                 'platform/biostar_x/settings-system-system-restore',
                 'platform/biostar_x/settings-system-security',
-                'platform/biostar_x/settings-system-daylight-saving-time'
+                'platform/biostar_x/settings-system-daylight-saving-time',
+                'platform/biostar_x/settings-email-setting',
+                'platform/biostar_x/settings-preferences'
               ]
-            },
-            'platform/biostar_x/settings-preferences'
+            }
           ]
         },
         {
@@ -1028,7 +1034,9 @@ function createSidebars(preview) {
                 'platform/biostar_x/tna-rule-schedule',
                 'platform/biostar_x/tna-report',
                 'platform/biostar_x/tna-report-edit',
-                'platform/biostar_x/tna-settings'
+                'platform/biostar_x/tna-settings',
+                'platform/biostar_x/tna-audit-trail',
+                'platform/biostar_x/tna-audit-trail-settings'
               ]
             },
             {

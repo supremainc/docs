@@ -1,11 +1,11 @@
 ---
 id: settings-device-using-functions
 title: 장치 관리 기능 사용하기
-description: 장치를 재연결하거나 동기화, 일괄 편집 기능에 대해 안내합니다.
+description: 장치를 재연결하거나 동기화, 일괄 편집, 삭제, 설정 내보내기/가져오기 기능에 대해 안내합니다.
 keywords: [장치]
 ---
 
-**BioStar X**에서 장치의 기타 기능을 사용하는 방법을 안내합니다. 장치를 재연결하거나 동기화, 정보 일괄 편집, 장치 삭제 기능을 제공합니다.
+**BioStar X**에서 장치의 기타 기능을 사용하는 방법을 안내합니다. 장치를 재연결하거나 동기화, 정보 일괄 편집, 삭제, 설정 내보내기/가져오기 기능을 제공하며, 장치 삭제 시 보안 통신 인증서를 함께 삭제하는 옵션도 함께 안내합니다.
 
 ## 개별 장치의 관리 기능
 
@@ -13,7 +13,7 @@ keywords: [장치]
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
 
 1. <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록에서 장치를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 또는 장치 목록에서 원하는 장치의 체크박스를 클릭하세요.
 
@@ -25,11 +25,11 @@ keywords: [장치]
 
 * <Cmd sid='button.reconnect' product='2' />: 선택한 장치를 재연결할 수 있습니다. 한 개의 장치를 선택했을 때 사용할 수 있습니다. 이 기능은 **BioStar X**와 연결이 끊겼을 때 사용할 수 있습니다.
 
-  :::info
+   :::info
 
-  이 기능은 <Cmd sid='device.info.deviceToServerConnection' product='2' /> 옵션으로 연결된 장치는 지원하지 않습니다. 장치 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />를 참고하세요.
+   이 기능은 <Cmd sid='device.info.deviceToServerConnection' product='2' /> 옵션으로 연결된 장치는 지원하지 않습니다. 장치 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />를 참고하세요.
 
-  :::
+   :::
 
 * <Cmd sid='button.syncDevice' product='2' />: 등록한 장치와 **BioStar X**의 모든 사용자 정보를 동기화할 수 있습니다. **BioStar X** 데이터베이스 정보를 기준으로 사용자 정보를 동기화하며, 장치에만 등록한 사용자 정보는 삭제합니다. 사용자 정보를 **BioStar X**에 업로드하려면 <Cmd sid='button.manageUsersInDevice' product='2' /> 기능을 사용하세요.
 
@@ -41,7 +41,7 @@ keywords: [장치]
 
 * <Cmd sid='device.menu.reboot' product='2' />: 선택한 장치를 재시작할 수 있습니다. 이 기능은 장치가 정상 동작하지 않을 때 사용할 수 있습니다.
 
-* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다.
+* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다. 자세한 내용은 <DocLink inner='#deleteDevice' />를 참고하세요.
 
 :::info
 
@@ -52,13 +52,13 @@ keywords: [장치]
 :::
 
 
-## 여러 장치의 관리 기능
+## 여러 장치의 관리 기능 {/* #batchEdit */}
 
 한 개 이상의 장치에 대한 관리 기능을 사용하는 방법은 아래와 같습니다.
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
 
 1. 장치 목록에서 원하는 장치의 체크박스를 클릭하세요. 1개 이상의 장치를 선택할 수 있습니다.
 
@@ -72,21 +72,163 @@ keywords: [장치]
 
 * <Cmd sid='button.batchEdit' product='2' />: 선택한 장치의 정보를 일괄 편집할 수 있습니다. 버튼을 클릭하면 <Cmd sid='device.batchEdit' product='2' /> 창이 나타납니다.
 
-  <Image src='/img/biostarx-setting-device-batch-edit.png' />
+   <Image src='/img/biostarx-setting-device-batch-edit.png' />
 
-  :::info
+   :::info
 
-  * 선택한 장치 종류에 따라 <Cmd sid='device.batchEdit' product='2' /> 창에 표시되는 세부 항목이 다를 수 있습니다.
+   * 선택한 장치 종류에 따라 <Cmd sid='device.batchEdit' product='2' /> 창에 표시되는 세부 항목이 다를 수 있습니다.
 
-  * 마스터 장치와 슬레이브 장치를 동시에 선택하고 일괄 편집을 클릭하면 <Cmd sid='device.info.authentication' product='2' />과 <Cmd sid='device.info.displaySound' product='2' /> 항목의 일부만 변경할 수 있습니다.
+   * 마스터 장치와 슬레이브 장치를 동시에 선택하고 일괄 편집을 클릭하면 <Cmd sid='device.info.authentication' product='2' />과 <Cmd sid='device.info.displaySound' product='2' /> 항목의 일부만 변경할 수 있습니다.
 
-  * <Cmd sid='device.info.authenticationMode' product='2' />는 모델명이 동일한 장치를 선택했을 때만 일괄 편집할 수 있습니다.
+   * <Cmd sid='device.info.authenticationMode' product='2' />는 모델명이 동일한 장치를 선택했을 때만 일괄 편집할 수 있습니다.
 
-  :::
+   :::
 
 * <Cmd sid='button.firmwareUpgrade' product='2' />: 장치의 펌웨어를 간편하게 업그레이드할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />를 참고하세요.
 
-* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다.
+* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다. 자세한 내용은 <DocLink inner='#deleteDevice' />를 참고하세요.
+
+
+## 장치 삭제 {/* #deleteDevice */}
+
+<Cmd sid='button.deleteDevice' product='2' /> 기능으로 장치를 목록에서 삭제할 수 있습니다. 삭제할 때 나타나는 옵션은 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션의 활성화 여부에 따라 다릅니다.
+
+### 장치와 보안 통신을 사용하지 않을 때
+
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션이 <Cmd sid="common.notUse" product='2' /> 상태이면 별도의 옵션 없이 선택한 장치를 삭제할 수 있습니다.
+
+<Image src='/img/biostarx-setting-device-delete-none-check.png' />
+
+### 장치와 보안 통신을 사용할 때
+
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션이 <Cmd sid="common.use" product='2' /> 상태이면 <Cmd sid='device.deleteDeviceConfirmTitle' product='2' /> 창에 <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션이 나타납니다.
+
+<Image src='/img/biostarx-setting-device-delete-check.png' />
+
+* <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택하지 않으면(기본값) 인증서는 삭제하지 않고 장치만 삭제합니다.
+
+* <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택하면 장치에 저장된 보안 통신 인증서도 함께 삭제합니다. 삭제한 장치를 다른 **BioStar X** 서버에 연결하려면 이 옵션을 사용하세요.
+
+:::caution
+
+**BioStar X**와 연결이 끊긴 장치는 인증서를 삭제할 수 없으므로, <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택한 상태에서는 장치를 삭제할 수 없습니다. 장치를 삭제하려면 옵션을 선택 해제하거나, 장치를 먼저 재연결한 후 다시 시도하세요.
+
+:::
+
+:::info
+
+<Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션은 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 활성화했을 때만 표시됩니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />를 참고하세요.
+
+:::
+
+
+## 장치 설정 내보내기/가져오기 {/* #exportImportDeviceConfig */}
+
+한 장치의 설정을 파일로 내보낸 후 같은 모델의 다른 장치에 그대로 가져와 적용할 수 있습니다. 여러 대의 장치에 같은 설정을 반복해서 입력하는 대신, 설정을 마친 장치 한 대의 설정 파일을 만들어 나머지 장치에 적용하세요.
+
+:::info
+
+장치 설정 내보내기/가져오기 기능은 장치 설정에 대한 전체 권한이 있는 관리자가 사용할 수 있습니다. 관리자 권한 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-manage-account' />를 참고하세요.
+
+:::
+
+### 장치 설정 내보내기 {/* #exportDeviceConfig */}
+
+장치 한 대의 설정을 파일로 내려받는 방법은 아래와 같습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
+
+1. 장치 목록에서 설정을 내보낼 장치의 체크박스를 클릭하세요. 한 개의 장치만 선택할 수 있습니다.
+
+1. 장치 목록 상단에서 <IcMoreW title='More' /> → <Cmd sid='device.templateExport.label' product='2' />를 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-export-settings.png' />
+
+1. 다운로드 창이 나타나면 설정 파일을 로컬에 저장하세요.
+
+:::caution
+
+다음에 해당하는 장치는 설정을 내보낼 수 없습니다.
+
+* **BioStar X**와 연결이 끊겼거나 응답 시간이 초과된 장치
+
+* 가상 장치(Virtual Device)
+
+* RS-485 통신 모드가 없는 장치(예: Wiegand 장치, IO 모듈, Door Interface, Door 모듈, Secure 모듈, OSDP Antenna/Reader)
+
+:::
+
+:::info
+
+* 장치를 한 개도 선택하지 않거나 두 개 이상 선택한 상태에서는 이 기능을 실행할 수 없습니다.
+
+* 파일 이름은 모델명, 장치 ID, RS-485 통신 모드(Master/Default/Slave), 내보낸 날짜 순서로 자동 지정됩니다. 날짜는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.preferences.root' />에서 지정한 날짜 형식을 따릅니다. 
+
+   예를 들어 모델명이 BS3-DB, 장치 ID가 538001234, 시리얼 통신 모드가 <Cmd sid='device.rs485.master' product='2' />, 내보낸 날짜가 2026년 6월 23일인 장치는 `BS3-DB_538001234_Master_20260623.json` 형태의 파일로 저장됩니다.
+
+:::
+
+:::note
+
+**내보내기에 제외되는 설정** <Anchor id='exportExcludedsettings' />
+
+아래 설정은 장치마다 고유해야 하거나, 장치에만 저장되어 있거나, 인증 정보와 같은 민감한 정보이므로 내보내기 파일에 포함되지 않습니다.
+
+* 장치마다 고유한 설정: 장치 이름, 유/무선 네트워크 설정, 서버 연결 설정, OSDP 식별자, 작업 조건 및 동작
+
+* 장치에만 저장되어 있어 다른 장치로 옮길 수 없는 설정: <Cmd sid='device.info.displaySound' product='2' className='normal' />의 언어 리소스, 홈 화면, 소리, 시리얼 통신의 SCB 키, BioStation 3 Max에 추가한 영상 설정
+
+* 인증 정보 및 민감 정보: IP 인터폰과 RTSP의 사용자 이름 및 비밀번호, <Cmd sid='device.masterAdmin.title' product='2' className='normal' /> 설정 전체
+
+* 관리자 2단계 인증 옵션, 장치 그룹
+
+:::
+
+### 장치 설정 가져오기 {/* #importDeviceConfig */}
+
+내보낸 설정 파일을 같은 모델의 장치 한 대 이상에 적용하는 방법은 아래와 같습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
+
+1. 장치 목록에서 설정을 적용할 장치의 체크박스를 클릭하세요. 한 개 이상의 장치를 선택할 수 있습니다.
+
+1. 장치 목록 상단에서 <IcMoreW title='More' /> → <Cmd sid='device.templateImport.label' product='2' />를 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-import-settings.png' />
+
+1. 웹 브라우저의 열기 창이 나타나면 로컬에 저장한 설정 파일을 선택하세요.
+
+1. 장치 설정 가져오기 결과 메시지가 나타나면 내용을 확인하고, <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+가져오기를 실행하면 설정을 적용하기 전에 시스템이 다음 항목을 차례로 검사합니다. 검사 중 하나라도 조건에 맞지 않으면 설정을 적용하지 않고 사유를 안내합니다.
+
+* 선택한 장치들의 모델명이 모두 같은지
+
+* 선택한 장치들과 파일의 RS-485 통신 모드가 모두 같은지
+
+* 파일에 저장된 모델명이 선택한 장치들의 모델명과 같은지
+
+* 선택한 장치 중에 가상 장치(Virtual Device)가 있는지
+
+검사를 통과하면 시스템은 [내보내기에 제외되는 설정](#exportExcludedsettings)을 뺀 나머지 설정을 선택한 모든 장치에 적용합니다.
+
+:::info
+
+* 장치 라이선스(Device License)가 있어야 동작하는 설정은 해당 라이선스가 적용되지 않은 장치에는 적용되지 않습니다.
+
+* 모든 장치에 성공적으로 적용되면 성공 메시지가 나타납니다. 일부 또는 전체 장치에 적용하지 못하면 실패한 장치 수와 함께 실패 목록을 CSV 파일로 내려받을 수 있는 안내 메시지가 나타납니다. 이 파일에는 실패한 장치의 ID, 이름, 실패 사유가 담겨 있습니다. 
+
+   예를 들어 2026년 6월 23일 15시 45분 30초에 실행한 가져오기가 실패했다면 파일 이름은 `Device_Template_Import_Error_20260623T154530.csv` 형태가 됩니다.
+
+* CoreStation 장치도 적용 대상에 포함됩니다.
+
+* 장치 설정 내보내기와 가져오기 작업 내역은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 확인할 수 있습니다.
+
+:::
 
 
 ## 장치 내 이벤트 로그 삭제 {/* #deleteLogsFromDevice */}
@@ -95,7 +237,7 @@ keywords: [장치]
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
 
 1. 장치 목록에서 원하는 장치의 체크박스를 클릭하세요. 1개 이상의 장치를 선택할 수 있습니다.
 
@@ -117,7 +259,7 @@ keywords: [장치]
 
 * 이 기능은 <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> 권한을 가진 사용자만 사용할 수 있습니다.
 
-* 장치의 이벤트 로그 삭제 이력은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />에서 확인할 수 있습니다.
+* 장치의 이벤트 로그 삭제 이력은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 확인할 수 있습니다.
 
 :::
 
@@ -132,7 +274,7 @@ keywords: [장치]
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
 
 1. 장치 목록 상단의 <IcMoreW title='More' /> 버튼을 클릭하세요.
 
@@ -153,7 +295,7 @@ keywords: [장치]
 
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
 
 1. 장치 목록 상단의 <IcMoreW title='More' /> 버튼을 클릭하세요.
 

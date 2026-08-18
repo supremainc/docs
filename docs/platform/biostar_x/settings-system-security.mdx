@@ -90,6 +90,12 @@ keywords: [시스템 보안, 암호화]
 
 <Image src='/img/biostarx-settings-system-security-advanced.png' className='none' />
 
+:::info
+
+<Cmd sid='setting.server.secure.comm.title' product='2' /> 섹션은 최초 관리자 계정으로 접속한 경우에만 활성화됩니다.
+
+:::
+
 ### 개인 정보 보호 강화
 
 민감한 개인 정보를 암호화하여 데이터 유출 위험을 최소화하려면 아래 옵션을 설정하세요.
@@ -143,23 +149,53 @@ keywords: [시스템 보안, 암호화]
 
 :::
 
-### 장치 간 통신 보안 설정
+### 장치 간 통신 보안 설정 {/* #communicationByDevice */}
 
-**BioStar X** 서버와 출입통제 장치 간의 안전한 통신을 설정하세요.
+**BioStar X** 서버와 출입통제 장치 간 통신을 인증서로 보호해 보안을 강화하세요. 신규로 설치한 **BioStar X** 시스템은 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션이 기본적으로 <Cmd sid="common.use" product='2' /> 상태로 제공되며, 별도의 활성화 조작이 필요하지 않습니다. 기존 시스템을 업그레이드하면 이전 설정을 그대로 유지합니다.
 
-* <Cmd sid="setting.sever.secure.comm.menu" product='2' />: **BioStar X** 서버와 출입통제 장치 간의 통신을 인증서로 보호할 수 있습니다. 이 옵션을 <Cmd sid="common.use" product='2' />으로 설정하면 서버가 자동으로 인증서를 생성하여 장치에 전송하고, 이후 모든 통신이 암호화됩니다. 장치는 이 인증서를 이용하여 **BioStar X** 서버와 데이터를 주고 받을 때 보안 채널을 사용할 수 있습니다. 
+* <Cmd sid="setting.sever.secure.comm.menu" product='2' />: **BioStar X** 서버와 출입통제 장치 간의 통신을 인증서로 보호합니다. 이 옵션이 <Cmd sid="common.use" product='2' /> 상태이면 서버가 자동으로 인증서를 생성하여 장치에 전송하고, 이후 모든 통신이 암호화됩니다. 장치는 이 인증서를 이용하여 **BioStar X** 서버와 데이터를 주고받을 때 보안 채널을 사용합니다.
 
-  외부 인증서를 사용하려면 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션을 켜고 루트 인증서, 공개키 인증서, 비밀키 파일을 업로드 해야 합니다.
+  외부 인증서를 사용하려면 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션을 <Cmd sid="common.use" product='2' />으로 설정하고 아래 항목을 등록하세요.
+
+    * <Cmd sid="setting.sever.secure.comm.extcert.root.menu" product='2' />, <Cmd sid="setting.sever.secure.comm.extcert.public.menu" product='2' />, <Cmd sid="setting.sever.secure.comm.extcert.private.menu" product='2' /> 파일을 각각 업로드하세요.
+
+    * 비밀키에 암호가 설정되어 있으면 <Cmd sid="setting.sever.secure.comm.extcert.passphrase.menu" product='2' />와 <Cmd sid="setting.sever.secure.comm.extcert.passphraseconfirm.menu" product='2' />에 동일한 값을 입력하세요. (선택 사항)
+
+  :::note
+
+  서버를 제거하면서 백업해 둔 인증서 세트를 재사용하려면, 백업 파일 중 루트 CA는 <Cmd sid="setting.sever.secure.comm.extcert.root.menu" product='2' />에, 서버 인증서는 <Cmd sid="setting.sever.secure.comm.extcert.public.menu" product='2' />에, 키는 <Cmd sid="setting.sever.secure.comm.extcert.private.menu" product='2' />에 업로드하세요. 인증서 백업 방법은 <DocLink docId='platform/biostar_x/remove-server' />를 참고하세요.
+
+  :::
 
   <Image src='/img/biostarx-settings-system-security-advanced-with-device.png' />
-  
-* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />: 데이터 암호화 키와 관리자 암호를 새로 지정할 수 있습니다. 
+
+* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />: 장치에 적용하는 해시 키를 사용자가 직접 관리합니다. 이 옵션을 <Cmd sid="common.use" product='2' />으로 설정하면 <Cmd sid="setting.server.secure.comm.encryption_key_device" product='2' /> 값을 확인하고 변경할 수 있습니다. <Cmd sid="setting.server.secure.comm.key_change" product='2' /> 버튼을 클릭하고 새 해시 키 값을 설정하세요.
+
+:::caution
+
+<Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> 옵션을 활성화하기 전에 아래 내용을 반드시 확인하세요.
+
+* 활성화하면 보안을 강화하기 위해 장치에서 템퍼(Tamper) 이벤트가 발생할 때 사용자, 로그, 암호화 키 값이 함께 삭제되도록 설정되므로 주의하세요.
+
+* Administrator 계정을 제외한 사용자에게 로그인 비밀번호 또는 PIN이 설정되어 있으면 해시 키 값을 적용할 수 없습니다. 로그인 비밀번호 또는 PIN을 삭제한 후 다시 시도하세요. 비밀번호와 PIN은 보안 요구 사항을 충족하기 위해 복호화할 수 없는 방식으로 암호화되기 때문입니다.
+
+* 장치 해시 키를 변경하면 장치에 설정된 마스터 관리자 PIN 정보가 삭제됩니다. 크리덴셜 삭제로 인해 장치 관리자 메뉴에 접근하지 못할 수 있으므로 각별히 주의하세요.
+
+* <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' />와 <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />는 동시에 사용할 수 없습니다. 두 옵션 중 하나를 사용 안 함으로 전환한 후 나머지 옵션을 설정하세요.
+
+:::
 
 :::info
 
 * **BioStar X**는 장치와 보안 통신의 설정 상태에 따라 인증서를 생성하거나 삭제하며, 이전과 동일한 인증서를 생성하지 않습니다. 예를 들면, 장치와 보안 통신의 설정을 <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> 순서로 변경하면 생성했던 인증서를 자동으로 삭제합니다. <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> 순서로 변경하면 **A 인증서 생성** → **A 인증서 폐기** → **B 인증서 생성**의 동작을 수행합니다.
 
 * 장치를 네트워크에서 물리적으로 분리한 상태에서 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 <Cmd sid="common.notUse" product='2' />으로 설정하면 장치에 저장된 인증서가 삭제됩니다. 이 경우 장치를 다시 연결할 수 없습니다. 다시 연결하려면 장치에 저장된 인증서를 삭제하거나 공장 초기화해야 합니다. 자세한 내용은 장치의 매뉴얼을 참고하세요.
+
+* 이전에 정상적으로 연결되던 장치가 인증서 불일치로 연결에 실패하면 **BioStar X**는 이를 시스템 로그에 기록합니다. 장치가 갑자기 연결되지 않는다면 시스템 로그에서 원인을 확인한 후, 장치를 공장 초기화하거나 이전에 내보내 둔 인증서 세트를 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션으로 다시 등록하여 복구하세요.
+
+* 커뮤니케이션 서버(Com Server)가 연결되어 있지 않으면 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 켜거나 끌 수 없습니다.
+
+* 서버를 제거할 때 인증서를 백업하는 방법은 <DocLink docId='platform/biostar_x/remove-server' />를 참고하세요.
 
 <details>
 <summary><Cmd sid="setting.sever.secure.comm.menu" product='2' /> 기능 지원 장치와 펌웨어 버전 보기</summary>

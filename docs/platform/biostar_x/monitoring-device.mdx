@@ -2,7 +2,6 @@
 id: monitoring-device
 title: 장치 모니터링하기
 description: 모든 구역과 출입문에 연결된 장치 및 카메라를 실시간으로 모니터링하세요. 장치와 카메라의 상태 점검, 상세 정보 확인, 카메라 영상 재생 등 다양한 기능을 통해 효율적으로 관리할 수 있습니다.
-keywords: [ 모니터링, 장치, 카메라 ]
 ---
 
 장치 및 카메라 모니터링 기능을 사용하는 방법을 안내합니다. 장치와 카메라의 상태를 점검하고, 상세 정보를 확인하며, 카메라 영상을 실시간으로 재생하는 등 다양한 기능을 활용할 수 있습니다. 또한, 최근 발생한 이벤트를 확인하여 장치와 카메라의 상태를 효율적으로 관리하는 방법을 확인하세요.
@@ -17,12 +16,38 @@ keywords: [ 모니터링, 장치, 카메라 ]
 
 | 상태 아이콘 | 설명 |
 | :--: | -- |
-| <StatusOK/> | 장치가 정상 연결된 상태입니다. |
-| <StatusFail /> | 장치가 꺼져 있거나 연결이 해제된 상태입니다. |
+| <IcDeviceOn width='35px' height='35px'/> | 장치가 정상 연결된 상태입니다. |
+| <IcDeviceOff width='35px' height='35px' /> | 장치가 꺼져 있거나 연결이 해제된 상태입니다. |
 | <IcCamOk width='auto' height='35px'/> | 카메라가 연결된 상태입니다. |
 | <IcCamFail width='auto' height='35px'/> | 카메라가 꺼져 있거나 연결이 해제된 상태입니다. |
 
 </div>
+
+### 주의가 필요한 장치 모아보기 {/* #checkAttentionFilter */}
+
+관리자는 조치가 필요한 장치만 한 번에 모아 볼 수 있습니다. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.door.entitiesNeedAttention' />을 클릭하세요. 장치의 상태를 확인하고, 문제가 발생한 대상에 조치를 취할 수 있습니다.
+
+<Image src='/img/biostarx-monitoring-device-attention-filter.png' />
+
+### 조치 대상 판정 기준 {/* #attention-criteria */}
+
+장치 트리에서 정상이 아닌 장치를 조치 대상으로 판정합니다.
+
+| 이상 상태 종류 | 상태 표시 | 설명 |
+| -- | -- | -- |
+| 연결 끊김 | <Cmd sid='arena.tree.disconnected' /> | 장치와의 네트워크 연결이 끊긴 상태 |
+| 동기화 오류 | <Cmd sid='arena.tree.syncError' /> | 연결은 되어 있으니 데이터 동기화가 어긋난 상태 |
+| 커뮤니케이션 서버 오류 | <Cmd sid='arena.tree.communicationError' /> | 장치가 속한 커뮤니케이션 서버에서 오류가 발생한 상태 |
+| 장치 잠금 | <Cmd sid='arena.tree.deviceLocked' /> | 작업 조건 및 동작에 의해 장치가 잠긴 상태 |
+| 인증 실패 잠금 | <Cmd sid='arena.preview.device.authFailLockout.title' /> | 지정한 횟수 이상 인증에 실패하여 장치가 잠긴 상태 |
+
+:::info
+
+* <Cmd sid='arena.tree.deviceLocked' /> 조건은 <DocLink docId='platform/biostar_x/settings-triger-and-action' />에서 설정한 작업 조건 및 동작에 따라 결정됩니다. 이 상태를 확인하고 해제하는 방법은 <DocLink inner='#deviceLockRelease' />를 참고하세요.
+
+* <Cmd sid='arena.preview.device.authFailLockout.title' /> 조건은 장치 설정에서 구성할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />를 참고하세요. 이 상태를 확인하고 해제하는 방법은 <DocLink inner='#authFailLockout' />를 참고하세요.
+
+:::
 
 
 ## 장치 제어
@@ -31,32 +56,71 @@ keywords: [ 모니터링, 장치, 카메라 ]
 
 <Image src='/img/biostarx-monitoring-device-popup.png' />
 
+장치 유형에 따라 표시되는 제어 기능은 다를 수 있습니다.
+
+| 장치 유형 | 제어 기능 |
+| -- | -- |
+| [마스터 장치](../../reference/glossary#master_device), 슬레이브 없이 서버에 직접 연결되는 기본 장치 | <Cmd sid='arena.tree.contextMenu.stopAction' />, <Cmd sid='arena.tree.contextMenu.reboot' />, <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' />, <Cmd sid='arena.tree.contextMenu.reconnect' />(서버에서 장치로 연결하는 방식일 때만) |
+| [슬레이브 장치](../../reference/glossary#slave_device) | <Cmd sid='arena.tree.contextMenu.stopAction' />, <Cmd sid='arena.tree.contextMenu.reboot' />, <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' /> |
+| OSDP 통신 장치 | <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' />, <Cmd sid='arena.tree.contextMenu.reconnect' />(연결 방식에 따라 다름) |
+| Wiegand 장치 | <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' /> |
+| 확장 모듈(Secure I/O 2, DM-20, OM-120, IM-120) | <Cmd sid='arena.tree.contextMenu.stopAction' /> |
+| 장치에서 서버로 연결하는 방식의 장치 | <Cmd sid='arena.tree.contextMenu.stopAction' />, <Cmd sid='arena.tree.contextMenu.reboot' />, <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' /> |
+| 무선 안테나 모듈 | 없음 |
+
 ### 장치 재연결
 
-장치가 꺼져 있거나 연결이 해제된 상태인 경우, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.reconnect' />을 클릭하세요. 장치가 다시 연결되면 상태 아이콘이 <StatusOK/>로 변경됩니다.
+장치의 연결 상태와 관계없이 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.reconnect' />을 클릭하세요. 연결이 끊긴 장치는 다시 연결을 시도하고, 정상 연결된 장치는 설정을 다시 전송하거나 이상 상태를 해소하는 용도로 사용할 수 있습니다. 장치가 다시 연결되면 상태 아이콘이 정상 상태(<IcDeviceOn />)로 변경됩니다.
 
 :::info
 
-<Cmd sid='arena.tree.contextMenu.reconnect' /> 기능은 <Cmd sid='device.info.deviceToServerConnection' product='2' /> 옵션으로 연결된 장치는 지원하지 않습니다. 장치 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />를 참고하세요.
+<Cmd sid='arena.tree.contextMenu.reconnect' /> 기능은 <Cmd sid='device.info.deviceToServerConnection' product='2' /> 옵션으로 설정된 장치는 지원하지 않습니다. 장치 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />를 참고하세요.
 
 :::
 
 
 ### 장치 재시작
 
-장치를 재시작하려면, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.reboot' />을 클릭하세요. 
+장치를 재시작하려면, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.reboot' />을 클릭하세요. 경고 메시지 창이 나타나면 <Cmd sid='common.button.ok' /> 버튼을 클릭하세요.
 
 
-### 장치 잠금
+### 장치 잠금 해제 {/* #deviceLockRelease */}
 
-* 장치를 잠그려면, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.deviceLock' />을 클릭하세요. 화면 상단에 장치 장치 잠금이 실행 중임을 알리는 메시지가 나타납니다. 잠금이 완료되면 메시지가 사라집니다.
+관리자가 설정한 작업 조건 및 동작에 의해 장치가 잠기면, 화면 왼쪽 사이드바의 장치 이름 아래에 <Cmd sid='arena.tree.deviceLocked' /> 상태가 표시됩니다. 장치를 선택하면 화면 오른쪽 미리보기 패널 상단에도 같은 배너가 나타납니다.
 
-* 장치 잠금을 해제하려면, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.deviceUnlock' />를 클릭하세요. 화면 상단에 장치 잠금 해제가 실행 중임을 알리는 메시지가 나타납니다. 잠금 해제가 완료되면 메시지가 사라집니다.
+<Image src='/img/biostarx-monitoring-device-lock.png' />
+
+* 장치가 잠금 상태일 때만 팝업 메뉴에 <Cmd sid='arena.tree.contextMenu.deviceUnlock' />가 표시됩니다. 잠금 상태를 해제하려면 잠긴 장치를 선택하고 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.deviceUnlock' />를 클릭하세요.
+
+* 잠긴 장치를 선택하면 화면 오른쪽 미리보기 패널 상단에 나타나는 배너에서 <Cmd sid='arena.preview.banner.unlock' /> 버튼을 클릭하세요.
+
+:::info
+
+<Cmd sid='arena.tree.contextMenu.deviceUnlock' /> 기능은 <Cmd sid='setting.account.administrator' /> 또는 <Cmd sid='setting.account.monitoringOperator' /> 권한이 있는 사용자에게만 표시됩니다.
+
+:::
+
+
+### 인증 실패 잠금 해제 {/* #authFailLockout */}
+
+<Cmd sid='device.info.authFailLockout.label' product='2' /> 옵션에서 설정한 횟수 이상 인증에 실패하면 장치가 잠금 상태로 전환됩니다. 장치가 잠금 상태이면 화면 왼쪽 사이드바의 장치 이름 아래에 <Cmd sid='arena.preview.device.authFailLockout.title' /> 상태가 표시되고, 장치를 선택하면 화면 오른쪽 미리보기 패널 상단에도 같은 배너가 나타나며 이벤트 발생 시각과 장치 정보를 확인할 수 있습니다.
+
+장치가 인증 실패 잠금 상태일 때만 팝업 메뉴에 <Cmd sid='arena.batchResult.action.clearLockout' />가 표시됩니다. 잠긴 장치를 선택하고 팝업 메뉴에서 <Cmd sid='arena.batchResult.action.clearLockout' />를 클릭하세요.
+
+<Image src='/img/biostarx-monitoring-device-auth-fail-lock.png' />
+
+:::info
+
+* <Cmd sid='arena.batchResult.action.clearLockout' /> 메뉴는 <Cmd sid='setting.account.administrator' /> 또는 <Cmd sid='setting.account.monitoringOperator' /> 권한이 있는 사용자에게만 표시됩니다.
+
+* 설정한 잠금 시간(<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />)이 지나면 장치가 자동으로 잠금을 해제합니다. 이때는 별도 조치 없이도 잠금 상태가 해소됩니다. 잠금 조건 및 잠금 시간 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />를 참고하세요.
+
+:::
 
 
 ### 작업 중지
 
-진행 중인 작업을 중지하려면, 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.stopAction' />를 클릭하세요. 화면 상단에 작업 중지 성공 메시지가 나타납니다. 작업 중지가 완료되면 메시지가 사라집니다.
+장치에서 실행 중인 알람 기반, 트리거 기반 동작을 모두 중지하려면 팝업 메뉴에서 <Cmd sid='arena.tree.contextMenu.stopAction' />를 클릭하세요. 화면 상단에 작업 중지 성공 메시지가 나타납니다.
 
 
 ### 장치 상세 보기
@@ -65,10 +129,100 @@ keywords: [ 모니터링, 장치, 카메라 ]
 
 <Image src='/img/biostarx-monitoring-device-details.png' />
 
-장치의 ID 및 그룹, 모델명, 기동 시간, IP 주소 등의 정보를 확인할 수 있습니다. 하단의 <Cmd sid='arena.recentEvent' /> 목록에서는 최근 발생한 이벤트를 시간 역순으로 확인할 수 있습니다.
+* **장치 제어**: 장치 작업 중지 또는 재시작, 재연결 등의 제어 기능을 실행할 수 있습니다.
+
+* **장치 상세 정보**: 장치의 ID 및 그룹, 모델명, 기동 시간, IP 주소 등의 정보를 확인할 수 있습니다.
+
+* <Cmd sid='arena.recentEvent' />: 선택한 장치에서 발생한 최근 이벤트 목록을 확인할 수 있습니다.
 
 
-## 카메라 제어
+## 여러 장치 한 번에 제어하기 {/* #batch-control */}
+
+여러 장치를 한 번에 선택해서 재연결, 재시작, 잠금 해제 등의 명령을 한 번에 실행하는 방법을 안내합니다. 화면 왼쪽 사이드바의 <Cmd sid='arena.tree.device.title' /> 탭에서 장치를 두 개 이상 선택하면 화면 오른쪽에 일괄 제어 패널이 나타납니다.
+
+<Image src='/img/biostarx-monitoring-device-multi-select.png' />
+
+:::info
+
+카메라는 일괄 제어 대상이 아닙니다. 카메라 제어 방법은 <DocLink inner='#controlCamera' />를 참고하세요.
+
+:::
+
+### 여러 장치 선택하기 {/* #select-multiple-devices */}
+
+화면 왼쪽 사이드바의 <Cmd sid='arena.tree.device.title' /> 탭에서 장치를 선택하는 방법은 다음과 같습니다.
+
+* **<Kbd>Ctrl</Kbd> + 클릭**: 클릭한 장치를 선택 목록에 추가하거나 제외합니다. 나머지 선택은 그대로 유지됩니다.
+
+* **<Kbd>Shift</Kbd> + 클릭**: 마지막으로 클릭한 장치부터 지금 클릭한 장치까지 범위를 선택합니다. 장치 그룹은 범위 선택 대상이 아닙니다.
+
+* **그룹(<IcGroup />) 클릭**: 그룹 이름을 클릭하면 그 아래에 있는 모든 장치가 선택 목록에 추가됩니다. 이미 선택한 장치는 그대로 유지됩니다.
+
+:::info
+
+* 하위에 장치가 없는 빈 그룹만 선택하면 화면 오른쪽 패널이 닫힙니다.
+
+* 장치를 한 개만 선택하면 장치 상세 정보 패널이 나타나고, 두 개 이상 선택하면 일괄 제어 패널로 전환됩니다.
+
+:::
+
+<Columns className='mt--50'>
+<Column className='width--20'>
+
+<Image src='/img/biostarx-monitoring-device-batch-control-panel.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+### 일괄 제어 패널 구성 {/* #batch-panel-layout */}
+
+* <Cmd sid='monitoring.multiControl.unlockDevice' />, <Cmd sid='monitoring.multiControl.clearLockout' />: 선택한 장치 중 각각 잠금·인증 실패 잠금 상태인 장치가 있을 때 활성화되며, 버튼 옆에 대상 장치 수가 함께 표시됩니다.
+
+* <Cmd sid='monitoring.multiControl.stopAction' />, <Cmd sid='monitoring.multiControl.reconnect' />, <Cmd sid='monitoring.multiControl.reboot' />: 대상 장치 수를 표시하지 않고, 선택한 장치 중 해당 제어를 지원하는 장치가 있으면 활성화됩니다.
+
+* **장치 제어**: <Cmd sid='monitoring.multiControl.unlockDevice' />, <Cmd sid='monitoring.multiControl.clearLockout' />, <Cmd sid='monitoring.multiControl.stopAction' />, <Cmd sid='monitoring.multiControl.reconnect' />, <Cmd sid='monitoring.multiControl.reboot' /> 기능 실행 버튼을 사용할 수 있습니다.
+
+* **구분 경계선**: 장치 제어 영역과 <Cmd sid='common.selectedItems' /> 사이의 경계선을 위아래로 드래그하면 두 영역의 높이 배분을 조절할 수 있습니다.
+
+* <Cmd sid='common.selectedItems' />: 선택한 장치의 연결 상태 및 이름, 이상 상태를 확인할 수 있습니다. 이상 상태 종류는 <DocLink inner='#attention-criteria' />을 참고하세요.
+
+
+각 버튼을 클릭하면 확인 창이 나타납니다. 확인 창에서 <Cmd sid='common.cancel' />를 클릭하면 선택한 기능을 실행하지 않고, 선택한 기능이 표시된 버튼을 클릭하면 선택한 장치 전체로 해당 기능을 실행합니다.
+
+:::info
+
+선택한 장치 유형이 섞여 있으면 각 장치가 지원하는 제어를 합쳐서 표시합니다. 선택한 장치 중 어느 장치도 지원하지 않는 제어는 버튼이 나타나지 않으며, 지원하는 제어가 하나도 없으면 안내 문구와 선택 장치 목록 표만 표시됩니다.
+
+:::
+
+</Column>
+</Columns>
+
+
+### 실행 결과 확인하기 {/* #batch-result */}
+
+* 선택한 모든 장치가 성공하면 성공 메시지만 표시됩니다.
+
+   <Image src='/img/biostarx-monitoring-device-batch-action-success.png' caption />
+
+* 한 개의 장치라도 실패하면 실패 메시지와 함께 <Cmd sid='arena.batchResult.showDetails' /> 버튼이 표시됩니다. 
+
+   <Image src='/img/biostarx-monitoring-device-batch-action-fail-toast.png' caption />
+
+   <Cmd sid='arena.batchResult.showDetails' />를 클릭하면 <Cmd sid='arena.batchResult.successChip' />, <Cmd sid='arena.batchResult.failChip' />, <Cmd sid='arena.batchResult.skippedChip' /> 세 그룹으로 구분된 결과를 확인할 수 있습니다. 실패한 항목의 이름과 사유를 클립보드에 복사하려면 <Cmd sid='arena.batchResult.copyFailList' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-monitoring-device-batch-action-fail-detail.png' caption />
+
+:::info
+
+* <Cmd sid='monitoring.multiControl.reconnect' /> 버튼은 예외입니다. 요청이 접수되면 항상 성공 메시지만 표시되며, 실패 여부나 상세 결과 창은 제공되지 않습니다. 실제 연결 성공 여부는 상태 트리에서 확인하세요.
+
+* <Cmd sid='monitoring.multiControl.unlockDevice' />와 <Cmd sid='monitoring.multiControl.clearLockout' />는 각각 별도로 처리되어 결과 창도 따로 표시됩니다.
+
+:::
+
+
+## 카메라 제어 {/* #controlCamera */}
 
 화면 왼쪽 사이드바의 카메라 목록에서 원하는 카메라를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 원하는 기능을 선택할 수 있습니다.
 

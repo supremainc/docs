@@ -16,7 +16,7 @@ keywords: [장치, 고급]
 :::
 
 
-## 마스터 관리자 추가 {/* #master-administrator */}
+## 마스터 관리자 추가 {/* #master-administrator */} <Badge only>CE향 제품</Badge>
 
 <Cmd sid='device.masterAdmin.title' product='2' /> 기능은 장치의 전체 관리자 권한을 강화하여, 장치의 보안을 향상시키고 무단 접근 및 설정 변경을 방지하기 위한 기능입니다. 새 장치는 이 기능을 통해 반드시 마스터 관리자를 등록해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 설정을 변경할 수 있습니다.
 
@@ -37,13 +37,19 @@ keywords: [장치, 고급]
 
 * 등록한 크리덴셜을 삭제하려면 해당 크리덴셜 오른쪽에 <IcTrash2 /> 버튼을 클릭하세요.
 
+:::caution
+
+이 기능은 **LCD 화면을 통한 사용자 인터페이스가 지원되는 슈프리마 제품** 중 **CE향 제품**에서만 사용할 수 있습니다. 지원하는 장치 및 펌웨어 버전에 대한 자세한 내용은 <DocLink docId='how-to/master-admin' />를 참고하세요.
+
+:::
+
 :::note
 
 **등록 조건**
 
 * 최소 두 종류 이상의 크리덴셜을 등록해야 합니다.
 
-* 새 장치와 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다.
+* 마스터 관리자를 지원하는 펌웨어 업그레이드 장치 모두 동일한 조건이 적용됩니다.
 
 * 장치가 지원하는 모든 크리덴셜을 인증 수단으로 사용할 수 있습니다.
 
@@ -55,9 +61,7 @@ keywords: [장치, 고급]
 
 * 펌웨어를 업그레이드한 기존 장치는 **BioStar X**의 장치 설정에 <Cmd sid='device.masterAdmin.title' product='2' /> 메뉴가 나타나지 않습니다.
 
-* 펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 설정 방법은 <DocLink inner='#two-step-authentication' />을 참고하세요.
-
-* 이 기능을 지원하는 장치 및 펌웨어 버전에 대한 자세한 내용은 <DocLink docId='how-to/master-admin' />를 참고하세요.
+* <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않는 장치 중 일부는(예: 펌웨어 업그레이드로 해당 기능이 추가된 장치) <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화할 수 있습니다. 장치 종류에 따라 <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션 자체가 표시되지 않을 수 있습니다.
 
 :::
 
@@ -71,9 +75,11 @@ keywords: [장치, 고급]
 
 :::info
 
-모든 관리자에게 두 종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 두 종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
+* 모든 관리자에게 2종류 이상의 크리덴셜이 등록되어 있지 않을 때 활성화 시 설정이 실패하며 에러 메시지가 표시됩니다. 모든 관리자에게 2종류 이상의 크리덴셜을 등록한 다음 다시 시도하세요.
 
-<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+   <Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+* 장치에 따라 <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션이 화면에 표시되지 않으면서도 이전에 활성화한 설정이 유지되는 경우가 있습니다. 이때는 **BioStar X**에서 비활성화할 수 없으므로 <Support />에 문의하세요.
 
 :::
 
@@ -124,7 +130,27 @@ keywords: [장치, 고급]
 
 * 각 장치에 설정된 관리자는 **BioStar X** 권한에 영향을 미치지 않습니다.
 
+* 마스터 관리자를 지원하는 장치(<Badge only>CE향 제품</Badge>)에 장치 관리자로 등록한 사용자의 PIN이 8자리 미만이면, 해당 사용자의 PIN을 8자리 이상으로 다시 등록해야 합니다. PIN 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/enroll-credential-pin' />를 참고하세요.
+
 :::
+
+:::caution
+
+장치 관리자로 설정하려는 사용자에게 등록된 크리덴셜이 2종류 미만이면 에러 메시지가 표시됩니다. 모든 장치 관리자에게 2종류 이상의 크리덴셜을 등록한 후 다시 시도하세요.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+### 삭제된 사용자의 관리자 등록 처리
+
+장치에 등록된 관리자 중 **BioStar X**에서 이미 삭제된 사용자가 있는 경우, 장치 설정을 저장하기 위해 화면 가장 아래의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하면 다음과 같은 팝업이 나타납니다.
+
+<Image src='/img/biostarx-settings-device-deleted-operator-check.png' />
+
+* <Cmd sid='button.yes' product='2' />: 삭제된 사용자를 관리자 목록에서 제거하고 저장합니다.
+
+* <Cmd sid='button.no' product='2' />: 저장을 취소합니다.
 
 
 ## 근태 관리 {/* #attendance-management */}
@@ -135,39 +161,41 @@ keywords: [장치, 고급]
 
 * <Cmd sid='device.info.tnaMode' product='2' />: 근태 이벤트 등록 방법을 설정하세요.
 
-  * <Cmd sid='device.tna.mode.unused' product='2' />: 근태 이벤트를 기록할 수 없습니다.
+   * <Cmd sid='device.tna.mode.unused' product='2' />: 근태 이벤트를 기록할 수 없습니다.
 
-  * <Cmd sid='device.tna.mode.byUser' product='2' />: 사용자가 인증할 때 원하는 근태 이벤트를 선택할 수 있습니다.
+   * <Cmd sid='device.tna.mode.byUser' product='2' />: 사용자가 인증할 때 원하는 근태 이벤트를 선택할 수 있습니다.
 
-  * <Cmd sid='device.tna.mode.bySchedule' product='2' />: 설정한 스케줄에 따라 근태 이벤트가 자동으로 변경됩니다. 근태 이벤트에 적용할 스케줄을 선택할 수 있습니다.
+   * <Cmd sid='device.tna.mode.bySchedule' product='2' />: 설정한 스케줄에 따라 근태 이벤트가 자동으로 변경됩니다. 근태 이벤트에 적용할 스케줄을 선택할 수 있습니다.
 
-  * <Cmd sid='device.tna.mode.lastChoice' product='2' />: 사용자가 마지막으로 사용한 근태 이벤트를 계속 사용할 수 있습니다.
+   * <Cmd sid='device.tna.mode.lastChoice' product='2' />: 사용자가 마지막으로 사용한 근태 이벤트를 계속 사용할 수 있습니다.
 
-  * <Cmd sid='device.tna.mode.fixed' product='2' />: 선택한 근태 이벤트만 사용할 수 있습니다. 고정으로 사용할 근태 이벤트를 선택하세요.
+   * <Cmd sid='device.tna.mode.fixed' product='2' />: 선택한 근태 이벤트만 사용할 수 있습니다. 고정으로 사용할 근태 이벤트를 선택하세요.
 
 * <Cmd sid='device.info.tnaRequired' product='2' />: 사용자가 인증할 때 반드시 근태 이벤트를 등록하도록 설정하세요.
 
-  :::note
+   :::note
 
-  이 옵션은 <Cmd sid='device.info.tnaMode' product='2' /> 옵션이 <Cmd sid='device.tna.mode.byUser' product='2' />으로 설정되었을 때 사용할 수 있습니다. 
+   이 옵션은 <Cmd sid='device.info.tnaMode' product='2' /> 옵션이 <Cmd sid='device.tna.mode.byUser' product='2' />으로 설정되었을 때 사용할 수 있습니다. 
 
-  :::
+   :::
 
 * <Cmd sid='device.info.tnaEvent' product='2' />: 근태 이벤트의 이름을 수정하거나 <Cmd sid='device.info.tnaMode' product='2' /> 옵션을 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정했을 때 사용되는 스케줄을 추가할 수 있습니다.
 
-  * <Cmd sid='device.tna.eventKey' product='2' />: 근태 등록에 사용할 수 있는 키 목록입니다.
+   * <Cmd sid='device.tna.eventKey' product='2' />: 근태 등록에 사용할 수 있는 키 목록입니다.
 
-  * <Cmd sid='device.tna.label' product='2' />: <Cmd sid='device.tna.eventKey' product='2' />에 따른 근태 이벤트 이름을 변경할 수 있습니다.
+   * <Cmd sid='device.tna.label' product='2' />: <Cmd sid='device.tna.eventKey' product='2' />에 따른 근태 이벤트 이름을 변경할 수 있습니다.
 
-  * <Cmd sid='device.tna.schedule' product='2' />: <Cmd sid='device.info.tnaMode' product='2' /> 옵션을 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정하면 자동으로 변경할 스케줄을 설정할 수 있습니다.
+   * <Cmd sid='device.tna.schedule' product='2' />: <Cmd sid='device.info.tnaMode' product='2' /> 옵션을 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정하면 자동으로 변경할 스케줄을 설정할 수 있습니다.
 
-    <Image src='/img/biostarx-setting-device-edit-advanced-tna-auto.png' />
+      <Image src='/img/biostarx-setting-device-edit-advanced-tna-auto.png' />
 
 :::info
 
 * LCD 화면이 없는 장치는 근태 모드를 <Cmd sid='device.tna.mode.fixed' product='2' />과 <Cmd sid='device.tna.mode.bySchedule' product='2' />으로 설정할 수 있으며, 고정된 근태 이벤트를 등록하거나 미리 설정된 스케줄에 따라 변경되는 근태 이벤트를 등록할 수 있습니다. 지원하는 장치 종류는 XPass Q2, XPass 2, XPass D2, BioEntry P2, BioEntry W2입니다.
 
 * 새 스케줄 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-schedule' />를 참고하세요.
+
+* 장치에서 <Cmd sid='device.info.multiFaceAuth.label' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 이 장치는 근태 관리에 사용할 수 없습니다. <Cmd sid='device.info.multiFaceAuth.label' product='2' />에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />를 참고하세요.
 
 :::
 
@@ -214,29 +242,29 @@ keywords: [장치, 고급]
 
 * <Cmd sid='device.info.background' product='2' />: 장치의 홈 화면 배경에 표시할 항목을 설정하세요.
 
-  * <Cmd sid='device.display.background.logo' product='2' />: 사용자가 등록한 이미지를 장치의 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
+   * <Cmd sid='device.display.background.logo' product='2' />: 사용자가 등록한 이미지를 장치의 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
 
-  * <Cmd sid='device.display.background.notice' product='2' />: 관리자가 입력한 내용을 홈 화면에 표시할 수 있습니다.
+   * <Cmd sid='device.display.background.notice' product='2' />: 관리자가 입력한 내용을 홈 화면에 표시할 수 있습니다.
 
-  * <Cmd sid='device.display.background.slideShow' product='2' />: 사용자가 등록한 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
+   * <Cmd sid='device.display.background.slideShow' product='2' />: 사용자가 등록한 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
 
-  :::note
+   :::note
 
-  * 변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
+   * 변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
 
-  * 배경화면 종류를 변경할 경우 <Cmd sid='button.update' product='2' /> 버튼을 클릭해도 장치에 적용되지 않습니다. 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+   * 배경화면 종류를 변경할 경우 <Cmd sid='button.update' product='2' /> 버튼을 클릭해도 장치에 적용되지 않습니다. 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
-  * <Cmd sid='device.display.background.notice' product='2' />, <Cmd sid='device.display.background.slideShow' product='2' /> 옵션은 BioStation 2 모델에서 지원합니다.
+   * <Cmd sid='device.display.background.notice' product='2' />, <Cmd sid='device.display.background.slideShow' product='2' /> 옵션은 BioStation 2 모델에서 지원합니다.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.sound' product='2' />: 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 *\*.wav* 파일을 선택하세요. <Cmd sid='button.browse' product='2' /> 버튼을 클릭하세요.
 
-  :::note
+   :::note
 
-  변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
+   변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
 
-  :::
+   :::
 
 </details>
 
@@ -260,41 +288,53 @@ keywords: [장치, 고급]
 
 * <Cmd sid='device.info.serverPrivateMsg' product='2' />: 사용자가 인증할 때 화면에 표시할 개인 메시지 사용 여부를 설정할 수 있습니다.
 
-* <Cmd sid='device.info.useScreenSaver' product='2' />: 장치를 사용하지 않을 때 LCD 화면 밝기를 줄여 불피요한 전력 소모를 줄일 수 있습니다. 이 기능을 활성화하지 않은 경우 장치에서 <Cmd sid='device.info.useScreenSaver' product='2' /> 옵션을 활성화더라도 인증 성공 메시지가 표시되지 않습니다.
+   :::note
 
-  :::note
+   장치에서 <Cmd sid='device.info.multiFaceAuth.label' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 이 옵션을 사용할 수 없습니다. <Cmd sid='device.info.multiFaceAuth.label' product='2' />에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />를 참고하세요.
 
-  이 옵션은 BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, FaceStation 2 모델에서 지원합니다.
-
-  :::
+   :::
 
 * <Cmd sid='device.info.useVoice' product='2' />: 알림음 대신 음성 안내를 사용할 수 있습니다.
 
 * <Cmd sid='device.info.homeScreen' product='2' />: 장치의 홈 화면 배경에 표시할 항목을 설정하세요.
 
-  * <Cmd sid='device.display.background.normal' product='2' />: 기본 이미지를 홈 화면에 표시합니다.
+   * <Cmd sid='device.display.background.normal' product='2' />: 기본 이미지를 홈 화면에 표시합니다.
 
-  * <Cmd sid='device.display.background.logo' product='2' />: 사용자가 등록한 이미지를 장치의 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
+   * <Cmd sid='device.display.background.logo' product='2' />: 사용자가 등록한 이미지를 장치의 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
 
-  * <Cmd sid='device.display.background.notice' product='2' />: 관리자가 입력한 내용을 홈 화면에 표시할 수 있습니다.
+   * <Cmd sid='device.display.background.notice' product='2' />: 관리자가 입력한 내용을 홈 화면에 표시할 수 있습니다.
 
-  :::note
+   :::note
 
-  * 변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
+   * 변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
 
-  * 배경화면 종류를 변경할 경우 <Cmd sid='button.update' product='2' /> 버튼을 클릭해도 장치에 적용되지 않습니다. 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+   * 배경화면 종류를 변경할 경우 <Cmd sid='button.update' product='2' /> 버튼을 클릭해도 장치에 적용되지 않습니다. 화면 가장 아래에 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
-  * 홈 화면을 <Cmd sid='device.display.background.logo' product='2' />로 설정하고 <Cmd sid='device.display.background.slideShow' product='2' />로 설정하면 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
+   * 홈 화면을 <Cmd sid='device.display.background.logo' product='2' />로 설정하고 <Cmd sid='device.display.background.slideShow' product='2' />로 설정하면 최대 10장의 이미지를 슬라이드쇼로 홈 화면에 표시할 수 있습니다. 원하는 이미지를 등록하려면 <Cmd sid='common.add' product='2' /> 버튼을 클릭하세요.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.sound' product='2' />: 장치에서 시작, 인증 성공, 인증 실패 이벤트가 발생할 때 재생할 효과음을 설정하세요. 파일 크기가 500Kb 이하인 *\*.wav* 파일을 선택하세요. <Cmd sid='button.browse' product='2' /> 버튼을 클릭하세요.
 
-  :::note
+   :::note
 
-  변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
+   변경 사항을 장치에 실시간으로 반영하려면 <Cmd sid='button.update' product='2' /> 버튼을 클릭하세요.
 
-  :::
+   :::
+
+* <Cmd sid='device.info.defaultIdleScreen' product='2' />: 장치를 사용하지 않는 시간에 화면에 표시할 대기 화면을 선택할 수 있습니다.
+
+   * <Cmd sid='device.idle.video.screenSaver' product='2' />: 화면 보호기를 대기 화면으로 표시합니다.
+
+   * <Cmd sid='device.info.homeScreen' product='2' />: <Cmd sid='device.info.homeScreen' product='2' /> 옵션에서 선택한 항목을 표시합니다.
+
+   :::note
+
+   * 이 옵션은 BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, FaceStation 2 모델에서 지원합니다.
+
+   * <Cmd sid='device.info.playVideo' product='2' /> 옵션에 대한 자세한 내용은 <DocLink inner='#playVideo' />을 참고하세요.
+
+   :::
 
 </details>
 
@@ -305,6 +345,114 @@ keywords: [장치, 고급]
 <Cmd sid='device.info.ledBuzzer' product='2' />: LED나 버저를 작동할 이벤트 항목을 선택하고 설정하세요.
 
 </details>
+
+### 대기 화면에 동영상 재생 {/* #playVideo */}
+
+:::note
+
+대기 화면에 동영상을 재생하는 기능은 **BioStation 3 Max** 모델만 지원합니다. 동영상을 장치에 전송하기 전에 미리 준비하세요.
+
+:::
+
+#### 동영상 추가 및 장치 전송
+
+장치의 대기 화면에 원하는 콘텐츠를 재생할 수 있도록 설정할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
+
+1. 장치 목록에서 BioStation 3 Max를 클릭하세요.
+
+1. <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.displaySound' product='2' /> 섹션으로 이동하세요.
+
+1. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.defaultIdleScreen' product='2' />을 <Cmd sid='device.idle.video.screenSaver' product='2' />로 설정하세요.
+
+1. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하세요.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-enable.png' />
+
+1. <Cmd sid='device.idle.video.add' product='2' /> 버튼을 클릭하세요.
+
+1. 로컬에 저장된 동영상을 선택하세요.
+
+1. 동영상이 업로드되면 <Cmd sid='device.info.videoSchedule' product='2' />과 <Cmd sid='device.info.videoVolume' product='2' />을 설정하세요.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-upload.png' />
+
+1. 업로드한 동영상을 장치로 전송하려면 <Cmd sid='device.idle.video.transfer' product='2' /> 버튼을 클릭하세요.
+
+1. 업데이트 진행 팝업이 나타납니다. 업로드를 완료할 때까지 페이지를 닫지 마세요.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-upload-progress.png' />
+
+1. 업로드 완료 메시지가 나타나면 <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-upload-complete.png' />
+
+1. 변경 사항을 저장하려면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 동영상은 <Cmd sid='device.info.videoSchedule' product='2' /> 옵션에서 지정한 스케줄에 따라 <Cmd sid='device.info.playVideo' product='2' />이 <Cmd sid='common.use' product='2' />으로 설정되어 있고 동영상이 1개 이상 등록되어 있을 때만 재생됩니다. 이 조건을 만족하지 않는 스케줄에는 <Cmd sid='device.info.defaultIdleScreen' product='2' />에서 선택한 화면이 표시됩니다.
+
+* 지원하는 동영상 파일의 크기는 최대 200MB이며, 파일 포맷은 MP4(H.264)입니다. 
+
+* 동영상 파일명 길이는 최대 48자입니다. 파일명에는 마침표(`.`), 홑따옴표(`'`), 백틱(`` ` ``)과 같은 문자가 포함되면 추가할 수 없습니다.
+
+* 동영상은 최대 3개까지 추가할 수 있습니다. 동영상이 3개까지 추가되었다면 <Cmd sid='device.idle.video.add' product='2' /> 버튼은 비활성화됩니다.
+
+* 장치가 슬레이브로 연결된 경우(RS-485로 연결된 경우)에는 동영상을 추가 또는 삭제, 전송할 수 없습니다.
+
+   * 마스터 장치가 동영상 재생 기능을 지원하면 슬레이브 화면에는 마스터 장치에 등록된 동영상 목록이 조회 전용으로 표시됩니다. 목록은 확인만 가능하며 추가 및 삭제, 전송, 순서 변경은 마스터 장치에서만 할 수 있습니다.
+
+   * 마스터 장치가 동영상 재생 기능을 지원하지 않으면 슬레이브 화면에는 동영상 목록이 표시되지 않고 <Cmd sid='device.info.defaultIdleScreen' product='2' /> 옵션만 표시됩니다.
+
+:::
+
+:::tip
+
+<Cmd sid='button.batchEdit' product='2' /> 기능으로 여러 대의 장치에 동영상을 한번에 추가하고 전송할 수 있습니다. <Cmd sid='button.batchEdit' product='2' /> 기능에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-using-functions#batchEdit' />를 참고하세요.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-batch-edit.png' />
+
+:::
+
+#### 동영상 재생 순서 변경
+
+동영상 썸네일 오른쪽 영역을 클릭한 상태로 드래그하여 재생 순서를 변경할 수 있습니다. 순서를 변경한 후 변경 사항을 저장하려면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-change-order.png' alone />
+
+#### 동영상 삭제
+
+업로드한 동영상을 삭제하려면 <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' />에서 삭제하려는 동영상의 <IcClose /> 버튼을 클릭하세요. 이후 <Cmd sid='device.idle.video.transfer' product='2' /> 버튼을 클릭하세요. 변경 사항을 저장하려면 화면 가장 아래에 있는 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-delete.png' />
+
+#### 동영상 전송 실패
+
+동영상을 장치로 전송하는 데 실패하면 실패 사유가 포함된 팝업이 나타납니다. 사유를 확인한 후 다시 시도하세요.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-fail-transfer.png' />
+
+대표적인 전송 실패 사유는 다음과 같습니다.
+
+* 선택한 장치가 대기 화면 동영상 재생 기능을 지원하지 않을 때
+
+* 장치가 RS-485로 연결된 슬레이브일 때
+
+* 동영상 코덱이 H.264가 아니거나 변환에 실패했을 때
+
+* 장치의 응답을 처리하는 중 오류가 발생했을 때
+
+* 위 사유에 해당하지 않는 그 외 오류가 발생했을 때
+
+:::tip
+
+<Cmd sid='button.batchEdit' product='2' /> 기능로 여러 대의 장치에 동영상을 일괄 전송했을 때 일부 장치만 실패했다면, 결과 팝업에서 <Cmd sid='device.idle.video.download.partial.failed.copy' product='2' /> 버튼을 클릭해 실패한 장치 목록과 사유를 클립보드에 복사할 수 있습니다.
+
+:::
 
 
 ## 작업 조건 및 동작 설정 {/* #triggerAction */}
@@ -385,9 +533,9 @@ keywords: [장치, 고급]
 
 * <Cmd sid='device.card.wiegand.out' product='2' />: Wiegand 신호 출력 모드를 설정하세요. 
 
-  * <Cmd sid='device.card.wiegand.out.normal' product='2' />: 설정된 Wiegand 형식으로 카드를 스캔합니다. 오류 코드를 설정할 수 있으며 Wiegand를 사용하는 카드 인증을 실패했을 때 전송할 값을 선택할 수 있습니다.
-  
-  * <Cmd sid='device.card.wiegand.out.bypass' product='2' />: Wiegand 인증과 관계없이 CSN을 전송합니다. 출입문 제어 기능이 없는 장치로 사용할 때 설정하세요.
+   * <Cmd sid='device.card.wiegand.out.normal' product='2' />: 설정된 Wiegand 형식으로 카드를 스캔합니다. 오류 코드를 설정할 수 있으며 Wiegand를 사용하는 카드 인증을 실패했을 때 전송할 값을 선택할 수 있습니다.
+
+   * <Cmd sid='device.card.wiegand.out.bypass' product='2' />: Wiegand 인증과 관계없이 CSN을 전송합니다. 출입문 제어 기능이 없는 장치로 사용할 때 설정하세요.
 
 * <Cmd sid='device.card.wiegand.outputInfo' product='2' />: 인증 시 장치에 출력되는 정보를 선택하세요.
 

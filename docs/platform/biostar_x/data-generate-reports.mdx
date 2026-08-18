@@ -5,6 +5,9 @@ description: 원하는 포맷에 맞게 리포트를 생성할 수 있습니다.
 keywords: [리포트, 템플릿]
 ---
 
+import ReportSaveNotes from '@site/docs/common/_bsx-save-report-notes.mdx';
+import SetPeriod from '@site/docs/common/_bsx-report-set-period.mdx';
+
 **BioStar X**에서 발생한 모든 이벤트를 조회하거나 경보 이력만 조회할 수 있습니다. 사용자가 원하는 조건에 맞게 필터링하여 커스텀 리포트를 생성할 수도 있습니다.
 
 <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.data' />를 클릭하거나 화면 왼쪽 상단의 바로 가기 목록에서 <Cmd sid='shell.header.data' />를 선택하세요.
@@ -13,39 +16,26 @@ keywords: [리포트, 템플릿]
 
 **BioStar X**에서 발생한 모든 이벤트를 조회할 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.allEvents' />를 클릭하세요.
 
-<Image src='/img/biostarx-data-generate-report.png' className='none' />
+<Image src='/img/biostarx-data-generate-report.png' />
 
-* 조회된 목록에서 이전 또는 다음 페이지를 확인하려면 화면 오른쪽 상단의 <IcFw2 /> 또는 <IcBw2 /> 버튼을 클릭하세요.
+* 조회된 목록에서 이전 또는 다음 페이지를 확인하려면 화면 오른쪽 상단의 <IcFw title='Previous' /> 또는 <IcBw title='Next' /> 버튼을 클릭하세요.
 
 * 목록에 표시할 행의 수를 변경하려면 화면 오른쪽 상단의 드랍다운 메뉴를 클릭하고 원하는 값을 선택하세요. 최소 25행부터 최대 200행까지 선택할 수 있습니다.
 
-  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+   <Image src='/img/biostarx-data-all-events-set-rows.png' />
 
-### 기간 설정
-
-화면 왼쪽 상단의 <Cmd sid='data.header.customReport.period' /> 항목에서 원하는 기간을 설정할 수 있습니다. 날짜 영역을 클릭하세요.
-
-<Image src='/img/biostarx-data-all-events-select-period.png' />
-
-* 오늘 날짜를 기준으로 1일부터 6달까지 사전 정의된 기간을 선택할 수 있습니다. 원하는 기간을 선택하면 해당 기간에 발생한 이벤트가 목록에 자동 표시됩니다.
-
-* <Cmd sid='data.dialog.rollCall.userDefined' />을 선택하면 원하는 기간을 직접 설정할 수도 있습니다. 기간 선택 창이 나타나면 시작 날짜와 종료 날짜, 시간을 설정하고 <Cmd sid='common.button.ok' /> 버튼을 클릭하세요. 설정한 기간에 발생한 이벤트가 목록에 자동 표시됩니다.
-
-  <Image src='/img/biostarx-data-all-events-set-custom-period.png' />
-
-  :::info
-
-  오늘 날짜를 선택하려면 <Cmd sid='data.dialog.rollCall.today' /> 버튼을 클릭하세요.
-
-  :::
+{/* 기간 설정 */}
+<SetPeriod />
 
 ### 조회 조건 설정
 
 조회 목록의 헤더 부분에서 원하는 조건을 설정하여 목록을 필터링할 수 있습니다. 날짜를 제외한 모든 항목에 조건을 설정할 수 있습니다. 
 
-1. 이벤트 목록의 헤더 부분에서 원하는 컬럼의 <IcFilter2 /> 버튼을 클릭하세요.
+1. 이벤트 목록의 헤더 부분에서 원하는 컬럼의 <IcFilter title='Filter' /> 버튼을 클릭하세요.
 
 1. 필터 조건 창이 나타나면 원하는 항목을 선택하세요.
+
+   <Image src='/img/biostarx-data-report-add-filter.png' />
 
 1. 선택을 완료했으면 <Cmd sid='button.addCondition' product='2' /> 버튼을 클릭하세요.
 
@@ -59,6 +49,22 @@ keywords: [리포트, 템플릿]
 
 <Image src='/img/biostarx-data-all-events-disable-filter.png' />
 
+### 리포트 저장
+
+사용자가 설정한 조회 기간 및 조건으로 이벤트를 리포트로 저장할 수 있습니다. 
+
+1. 이벤트 목록 왼쪽 상단의 <Cmd sid='data.button.saveReport' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-data-all-events-filtered-save-report.png' />
+
+1. 리포트 템플릿 저장 성공 메시지가 나타나면 <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+1. 화면 왼쪽 사이드바의 <Cmd sid='reportApp.savedReports' product='2' /> 하위에 저장한 리포트가 표시됩니다.
+
+<Image src='/img/biostarx-data-all-events-filtered-save-report-result.png' />
+
+<ReportSaveNotes />
+
 ### 이벤트 영상 확인하기
 
 이벤트 목록에서 특정 이벤트가 발생한 장치에 카메라가 연결되어 있다면 해당 이벤트의 <Cmd sid='data.column.customReport.view' /> 컬럼에 <IcReportVid /> 아이콘이 표시됩니다. 아이콘을 클릭하면 팝업창을 통해 해당 이벤트가 발생한 시점의 영상을 확인할 수 있습니다.
@@ -69,9 +75,11 @@ keywords: [리포트, 템플릿]
 
 * 카메라 규칙 설정에서 한 개 이상의 카메라를 연결했다면 첫 번째 카메라의 영상을 재생합니다. 카메라 규칙 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-rule' />를 참고하세요.
 
-* 이 기능은 **어드밴스**(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
-
 * 출입문과 카메라 연동에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-videos-rule' />를 참고하세요.
+
+* VMS 종류가 **Leopard**이면 녹화 영상 재생 개수 제한으로 인해 재생에 실패할 수 있습니다. 이때 <Cmd sid='arena.message.leopardPlaybackLimitRetry' /> 버튼을 클릭해 영상을 재생할 수 있습니다.
+
+* 이 기능은 **에센셜**(Essential) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#features-add-ons' />을 참고하세요.
 
 :::
 
@@ -92,13 +100,13 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 <Image src='/img/biostarx-data-alert-lists.png' />
 
-* 조회된 목록에서 이전 또는 다음 페이지를 확인하려면 화면 오른쪽 상단의 <IcFw2 /> 또는 <IcBw2 /> 버튼을 클릭하세요.
+* 조회된 목록에서 이전 또는 다음 페이지를 확인하려면 화면 오른쪽 상단의 <IcFw title='Previous' /> 또는 <IcBw title='Next' /> 버튼을 클릭하세요.
 
-* 조회된 목록에서 첫 페이지 또는 마지막 페이지로 이동하려면 화면 오른쪽 상단의 <IcFirst2 /> 또는 <IcLast2 /> 버튼을 클릭하세요.
+* 조회된 목록에서 첫 페이지 또는 마지막 페이지로 이동하려면 화면 오른쪽 상단의 <IcFirst title='First' /> 또는 <IcLast title='Last' /> 버튼을 클릭하세요.
 
 * 목록에 표시할 행의 수를 변경하려면 화면 오른쪽 상단의 드랍다운 메뉴를 클릭하고 원하는 값을 선택하세요. 최소 25행부터 최대 200행까지 선택할 수 있습니다.
 
-  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+   <Image src='/img/biostarx-data-all-events-set-rows.png' />
 
 :::info
 
@@ -106,25 +114,18 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 :::
 
-### 기간 설정
-
-원하는 기간을 설정하고 해당 기간에 발생한 경보 이력을 조회할 수 있습니다. 조회 목록의 <Cmd sid='reportHeader.datetime' product='2' /> 컬럼에서 <IcFilter2 /> 버튼을 클릭하세요. 기간 선택 창이 나타나면 시작 날짜와 종료 날짜, 시간을 설정하고 <Cmd sid='common.button.ok' /> 버튼을 클릭하세요. 설정한 기간에 발생한 이벤트가 목록에 자동 표시됩니다.
-
-<Image src='/img/biostarx-data-all-events-set-custom-period.png' />
-
-:::info
-
-오늘 날짜를 선택하려면 <Cmd sid='data.dialog.rollCall.today' /> 버튼을 클릭하세요.
-
-:::
+{/* 기간 설정 */}
+<SetPeriod />
 
 ### 조회 조건 설정
 
 조회 목록의 헤더 부분에서 원하는 조건을 설정하여 목록을 필터링할 수 있습니다. 날짜를 제외한 모든 항목에 조건을 설정할 수 있습니다. 
 
-1. 이벤트 목록의 헤더 부분에서 원하는 컬럼의 <IcFilter2 /> 버튼을 클릭하세요.
+1. 이벤트 목록의 헤더 부분에서 원하는 컬럼의 <IcFilter title='Filter' /> 버튼을 클릭하세요.
 
 1. 필터 조건 창이 나타나면 원하는 항목을 선택하세요.
+
+   <Image src='/img/biostarx-data-report-add-filter.png' />
 
 1. 선택을 완료했으면 <Cmd sid='button.addCondition' product='2' /> 버튼을 클릭하세요.
 
@@ -138,8 +139,23 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 <Image src='/img/biostarx-data-alert-events-disable-filter.png' />
 
+### 리포트 저장
 
-## 사용자 리포트 조회
+사용자가 설정한 조회 기간 및 조건으로 경보 이력을 리포트로 저장할 수 있습니다. 
+
+1. 경보 이력 목록 왼쪽 상단의 <Cmd sid='data.button.saveReport' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-data-alert-lists-save-report.png' />
+
+1. 리포트 템플릿 저장 성공 메시지가 나타나면 <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+1. 화면 왼쪽 사이드바의 <Cmd sid='reportApp.savedReports' product='2' /> 하위에 저장한 리포트가 표시됩니다.
+
+<Image src='/img/biostarx-data-alert-history-filtered-save-report-result.png' />
+
+<ReportSaveNotes />
+
+## 사용자 리포트 조회 {/* #viewUserReport */}
 
 사용자 관련 템플릿을 선택하여 리포트를 생성할 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='data.sidebar.user' /> 하위에서 원하는 템플릿을 클릭하세요.
 
@@ -231,31 +247,17 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 1. 원하는 컬럼 선택을 완료하면 <Cmd sid='data.button.generate' /> 버튼을 클릭하세요.
 
-커스텀 리포트 생성을 완료합니다.
+1. 설정한 조건으로 리포트를 생성합니다.
 
-<Image src='/img/biostarx-data-custom-report-complete.png' />
+   <Image src='/img/biostarx-data-custom-report-complete.png' />
 
-:::info
+1. 생성한 리포트를 템플릿으로 저장하려면 목록 왼쪽 상단의 <Cmd sid='data.button.saveReport' /> 버튼을 클릭하세요. 저장한 리포트는 화면 왼쪽 사이드바의 <Cmd sid='data.sidebar.savedReports' /> 하위에서 확인할 수 있습니다.
 
-* 리포트 제목, 이벤트 항목, 기간, 필터 조건을 수정하려면, 리포트 상단 영역에서 <IcRepoEdit /> 버튼을 클릭하세요.
+   <Image src='/img/biostarx-data-custom-report-saved.png' />
 
-* 리포트 제목은 화면 왼쪽 사이드바의 <Cmd sid='data.sidebar.savedReports' /> 하위에서도 변경할 수 있습니다. 제목을 변경할 커스텀 리포트를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='data.sidebar.renameSavedReport' />을 선택하세요.
-
-  <Image src='/img/biostarx-data-custom-report-rename.png' />
-
-* 리포트 관리에 대한 자세한 내용은 <DocLink inner='#report-management' />를 참고하세요.
-
-:::
-
+<ReportSaveNotes />
 
 ## 리포트 관리 {/* #report-management */}
-
-### 리포트 저장
-
-생성한 리포트를 템플릿으로 저장하려면 <Cmd sid='data.button.saveReport' /> 버튼을 클릭하세요. 저장한 리포트는 화면 왼쪽 사이드바의 <Cmd sid='data.sidebar.savedReports' /> 하위에서 확인할 수 있습니다.
-
-<Image src='/img/biostarx-data-custom-report-saved.png' />
-
 
 ### 리포트 파일 저장
 
@@ -265,7 +267,7 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />에서 기록을 확인할 수 있습니다.
+<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 
@@ -280,7 +282,7 @@ PC와 연결된 프린터로 리포트를 인쇄하려면 <Cmd sid='data.button.
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />에서 기록을 확인할 수 있습니다.
+<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 
