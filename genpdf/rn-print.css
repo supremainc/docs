@@ -16,7 +16,7 @@
 
 @media print {
   .doc-section h1 { -prince-bookmark-level: none }
-  .doc-section h2 { -prince-bookmark-level: 1 }
+  .doc-section h2, .doc-section.releasenotes.biostar-air .doc-content h3 { -prince-bookmark-level: 1 }
   .toc h2 { -prince-bookmark-level: none }
   .doc-section h3 { -prince-bookmark-level: none }
   .doc-section h4 { -prince-bookmark-level: none }
