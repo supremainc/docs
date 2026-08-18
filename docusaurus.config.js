@@ -285,14 +285,16 @@ const config = {
           backgroundColor: '#FFB27D',
           textColor: '#091E42',
           isCloseable: false,
-      }} : {
-        announcementBar: {
-          id: 'annoucementbar',
-          content: getLocalizedConfigValue('noticeChanglog'),
-          backgroundColor: '#091E42',
-          textColor: '#fff',
-          isCloseable: false,
-      }}),
+      }} : null 
+      // {
+      //   announcementBar: {
+      //     id: 'annoucementbar',
+      //     content: getLocalizedConfigValue('noticeChanglog'),
+      //     backgroundColor: '#091E42',
+      //     textColor: '#fff',
+      //     isCloseable: false,
+      // }}
+      ),
       docs: {
         sidebar: {
           hideable: true,
