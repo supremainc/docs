@@ -21,49 +21,49 @@ Release<Separator/>2026-08-13
 
 ---
 
-   {/* (BS3FW-2302) XPQ2 지원 */}
+{/* (BS3FW-2302) XPQ2 지원 */}
 1. Supports new device.
-   * XPass Q2
+    * XPass Q2
 
-   {/* (BS3FW-2257) [BDP-1480] Auth Fail Lockout(EN-60839) */}
-1. Added **Auth Fail Lockout** feature, which locks the device after repeated PIN authentication failures.
+{/* (BS3FW-2257) [BDP-1480] Auth Fail Lockout(EN-60839) */}
+2. Added **Auth Fail Lockout** feature, which locks the device after repeated PIN authentication failures.
 
-   {/* (BS3FW-2262) [BDP-1479] Rapid Face Authentication */}
-1. Added and improved face authentication features
-   * Improved face authentication performance
-   * Added support for sequential multi-face authentication (device license required)
-   * Added support for Anti-Tailgating
+{/* (BS3FW-2262) [BDP-1479] Rapid Face Authentication */}
+3. Added and improved face authentication features
+    * Improved face authentication performance
+    * Added support for sequential multi-face authentication (device license required)
+    * Added support for Anti-Tailgating
 
-   {/* (BS3FW-1568) [BDP-853] Slave 장치의 Baudrate 설정 기능 */}
-1. Supports feature to set the baud rate of slave devices.
+{/* (BS3FW-1568) [BDP-853] Slave 장치의 Baudrate 설정 기능 */}
+4. Supports feature to set the baud rate of slave devices.
 
-   {/* (BS3FW-2158) Master Admin의 크리덴셜이 2개 미만이 되었을 때 Master Admin 크리덴셜 등록 강제되도록 개선 */}
-1. Improved **Master Admin** to enforce re-enrollment when fewer than two credentials remain.
+{/* (BS3FW-2158) Master Admin의 크리덴셜이 2개 미만이 되었을 때 Master Admin 크리덴셜 등록 강제되도록 개선 */}
+5. Improved **Master Admin** to enforce re-enrollment when fewer than two credentials remain.
 
-   {/* (BS3FW-2187) USB Export시 생성되는 파일명이 BioStarX_ 로 표시되도록 변경 요청 */}
-1. Improved USB export/import file name handling
-   * Changed the file name generated during USB export to start with BioStarX_
-   * Fixed Files exported from BioStar X not appearing in the import list
+{/* (BS3FW-2187) USB Export시 생성되는 파일명이 BioStarX_ 로 표시되도록 변경 요청 */}
+6. Improved USB export/import file name handling
+    * Changed the file name generated during USB export to start with BioStarX_
+    * Fixed Files exported from BioStar X not appearing in the import list
 
-   {/* (BS3FW-2268) 장치에서 지원하지 않는 이벤트에 대해 "Undefined Event"로 로그가 남도록 개선 */}
-1. Improved log display for unsupported events and errors on the device.
+{/* (BS3FW-2268) 장치에서 지원하지 않는 이벤트에 대해 "Undefined Event"로 로그가 남도록 개선 */}
+7. Improved log display for unsupported events and errors on the device.
 
-   {/* (BS3FW-2320) [UI지원모델] 인증성공 아이콘 Blue -> Green으로 변경 요청 건 */}
-1. Changed the authentication success icon color to green.
+{/* (BS3FW-2320) [UI지원모델] 인증성공 아이콘 Blue -> Green으로 변경 요청 건 */}
+8. Changed the authentication success icon color to green.
 
-   {/* (BS3FW-2342) [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
-1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+{/* (BS3FW-2342) [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
+9. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
 
-   {/* (BS3FW-2343) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경 - 발생버전 :  V1.0.0 */}
-1. Improved zone status display and alarm clearing behavior after power restart following a fire alarm.
+{/* (BS3FW-2343) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경 - 발생버전 :  V1.0.0 */}
+10. Improved zone status display and alarm clearing behavior after power restart following a fire alarm.
 
-   {/* (BS3FW-2403) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) - 발생버전 : V1.0.0 */}
-1. Improved BLE stability.
+{/* (BS3FW-2403) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) - 발생버전 : V1.0.0 */}
+11. Improved BLE stability.
 
-   {/* (BS3FW-2424) [UI 지원 장치]  사용자 이름 및 사용자 ID에 Dot(.) 지원 */}
-1. Expanded allowed characters for User ID and User Name
-   * Added support for periods (.) in User ID
-   * Added support for periods (.) and apostrophes (') in User Name
+{/* (BS3FW-2424) [UI 지원 장치]  사용자 이름 및 사용자 ID에 Dot(.) 지원 */}
+12. Expanded allowed characters for User ID and User Name
+    * Added support for periods (.) in User ID
+    * Added support for periods (.) and apostrophes (') in User Name
 
 ## Bug Fixes
 
@@ -71,43 +71,43 @@ Release<Separator/>2026-08-13
 
 <BugLists>
 
-   {/* (BS3FW-2120) [iPhone] iOS26으로 OS 업그레이드 후 Airfob Pass로 출입이 완전 불가한 증상 */}
+{/* (BS3FW-2120) [iPhone] iOS26으로 OS 업그레이드 후 Airfob Pass로 출입이 완전 불가한 증상 */}
 1. Suprema Mobile Access authentication failing on iPhones upgraded to iOS 26 or later. <Badge>1.0.0</Badge>
 
-   {/* (BS3FW-2134) [Lock Override] Timed로 설정해놓은 Manual Lock 상태가 Emergency Unlock 후 Clear Alarm을 하게 되면 Timed로 해제가 안 되는 현상 */}
-1. **Manual Lock** failing to release after the set time elapses. <Badge>1.4.0</Badge>
+{/* (BS3FW-2134) [Lock Override] Timed로 설정해놓은 Manual Lock 상태가 Emergency Unlock 후 Clear Alarm을 하게 되면 Timed로 해제가 안 되는 현상 */}
+2. **Manual Lock** failing to release after the set time elapses. <Badge>1.4.0</Badge>
 
-   {/* (BS3FW-2193) [BSF-2574] STC 현장에서 Siemens 패널과 연결된 BioStation 3 장치들 중 하나를 재부팅 시, 나머지 장치의 RS-485 연결 끊김 이슈 */}
-1. When multiple devices are connected to a third-party control panel, rebooting one device causes the RS-485 connections of the other devices to be disconnected. <Badge>1.0.2</Badge>
+{/* (BS3FW-2193) [BSF-2574] STC 현장에서 Siemens 패널과 연결된 BioStation 3 장치들 중 하나를 재부팅 시, 나머지 장치의 RS-485 연결 끊김 이슈 */}
+3. When multiple devices are connected to a third-party control panel, rebooting one device causes the RS-485 connections of the other devices to be disconnected. <Badge>1.0.2</Badge>
 
-   {/* (BS3FW-2290) [FISF-2463] BS3 펌웨어를 v1.3.0에서 v1.4.1로 업그레이드 한 이후 T&A By Scheduled에 따른 동작을 제대로 수행하지 않음 */}
-1. Attendance status not recorded correctly according to the configured schedule times. <Badge>1.0.0</Badge>
+{/* (BS3FW-2290) [FISF-2463] BS3 펌웨어를 v1.3.0에서 v1.4.1로 업그레이드 한 이후 T&A By Scheduled에 따른 동작을 제대로 수행하지 않음 */}
+4. Attendance status not recorded correctly according to the configured schedule times. <Badge>1.0.0</Badge>
 
-   {/* (BS3FW-2295) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 */}
-1. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.4.3</Badge>
+{/* (BS3FW-2295) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 */}
+5. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.4.3</Badge>
 
-   {/* (BS3FW-2297) Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 */}
-1. An incorrect authentication failure reason is displayed when authenticating with an EV1 card on a slave device with Secure Messaging enabled. <Badge>1.4.3</Badge>
+{/* (BS3FW-2297) Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 */}
+6. An incorrect authentication failure reason is displayed when authenticating with an EV1 card on a slave device with Secure Messaging enabled. <Badge>1.4.3</Badge>
 
-   {/* (BS3FW-2299) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 */}
-1. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.4.3</Badge>
+{/* (BS3FW-2299) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 */}
+7. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.4.3</Badge>
 
-   {/* (BS3FW-2301) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 */}
-1. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.4.3</Badge>
+{/* (BS3FW-2301) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 */}
+8. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.4.3</Badge>
 
-   {/* (BS3FW-2332) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 발생버전 : V1.0.0 */}
-1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+{/* (BS3FW-2332) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 발생버전 : V1.0.0 */}
+9. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
 
-   {/* (BS3FW-2333) [BSF-2925] osdp pdcap 개선 */}
-1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+{/* (BS3FW-2333) [BSF-2925] osdp pdcap 개선 */}
+10. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
 
-   {/* (BS3FW-2341) [FISF-2436] 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 */}
-1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+{/* (BS3FW-2341) [FISF-2436] 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 */}
+11. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
 
-   {/* (BS3FW-2356) 프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 - 발생버전 : V1.0.0 */}
-1. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
+{/* (BS3FW-2356) 프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 - 발생버전 : V1.0.0 */}
+12. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
 
-   {/* (BS3FW-2364) [FISF-2475] 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 - 발생버전 : V1.0.0 */}
-1. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
+{/* (BS3FW-2364) [FISF-2475] 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 - 발생버전 : V1.0.0 */}
+13. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
 
 </BugLists>
