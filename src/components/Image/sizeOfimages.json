@@ -2099,11 +2099,31 @@
     "width": 1200,
     "height": 675
   },
+  "/img/biostarx-monitoring-device-batch-action-fail-detail.png": {
+    "width": 352,
+    "height": 214
+  },
+  "/img/biostarx-monitoring-device-batch-action-fail-toast.png": {
+    "width": 1200,
+    "height": 318
+  },
+  "/img/biostarx-monitoring-device-batch-action-success.png": {
+    "width": 1200,
+    "height": 318
+  },
+  "/img/biostarx-monitoring-device-batch-control-panel.png": {
+    "width": 176,
+    "height": 448
+  },
   "/img/biostarx-monitoring-device-details.png": {
     "width": 1200,
     "height": 501
   },
   "/img/biostarx-monitoring-device-lock.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/biostarx-monitoring-device-multi-select.png": {
     "width": 1200,
     "height": 675
   },
@@ -11959,11 +11979,31 @@
     "width": 1200,
     "height": 675
   },
+  "/img/en/biostarx-monitoring-device-batch-action-fail-detail.png": {
+    "width": 352,
+    "height": 214
+  },
+  "/img/en/biostarx-monitoring-device-batch-action-fail-toast.png": {
+    "width": 1200,
+    "height": 318
+  },
+  "/img/en/biostarx-monitoring-device-batch-action-success.png": {
+    "width": 1200,
+    "height": 318
+  },
+  "/img/en/biostarx-monitoring-device-batch-control-panel.png": {
+    "width": 226,
+    "height": 449
+  },
   "/img/en/biostarx-monitoring-device-details.png": {
     "width": 1200,
     "height": 501
   },
   "/img/en/biostarx-monitoring-device-lock.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/biostarx-monitoring-device-multi-select.png": {
     "width": 1200,
     "height": 675
   },
