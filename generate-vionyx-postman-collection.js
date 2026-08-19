@@ -206,28 +206,6 @@ function cleanHeaders(headers) {
   );
 }
 
-// 태그 이름에 "/"가 있으면(예: "Settings/Camera") 첫 번째 구분자를 기준으로
-// 상위 그룹("Settings")과 하위 그룹("Camera")으로 나눠 중첩 폴더를 구성한다.
-// Sidebar/RequestDetail은 폴더 -> 하위 폴더 -> 요청까지 2단계 중첩만 지원하므로,
-// 두 번째 "/" 이후는 하위 그룹 이름 안에 그대로 남겨둔다(예: "AI & Event/Rule Settings").
-function groupFoldersBySlash(folders) {
-  const topGroups = new Map();
-  for (const folder of folders) {
-    const slashIdx = folder.name.indexOf('/');
-    if (slashIdx === -1) {
-      topGroups.set(folder.name, folder);
-      continue;
-    }
-    const topName = folder.name.slice(0, slashIdx);
-    const subName = folder.name.slice(slashIdx + 1);
-    if (!topGroups.has(topName)) {
-      topGroups.set(topName, { name: topName, item: [] });
-    }
-    topGroups.get(topName).item.push({ ...folder, name: subName });
-  }
-  return [...topGroups.values()];
-}
-
 function autoFolderDescription(summaries) {
   const list = summaries.filter(Boolean);
   if (!list.length) return '';
@@ -587,7 +565,10 @@ function main() {
         description: collectionDescription,
         schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json',
       },
-      item: groupFoldersBySlash(folders.map(({ name, description, item }) => ({ name, description, item }))),
+      // 원본 문서 사이드바는 태그를 중첩 없이 스펙에 처음 등장한 순서 그대로 나열하므로
+      // (예: "Settings/Face"가 "Settings/Camera" 바로 뒤가 아니라 한참 뒤, Relay Control 다음에 나옴),
+      // "/"로 그룹핑하지 않고 flat하게 그 순서를 그대로 유지한다.
+      item: folders.map(({ name, description, item }) => ({ name, description, item })),
       auth: {
         type: 'bearer',
         bearer: [{ key: 'token', value: '{{accessToken}}', type: 'string' }],

@@ -11,6 +11,23 @@ const reqBtnStyle = (isActive) => ({
   fontSize: 14, textAlign: 'left', transition: 'background 0.12s',
 });
 
+const folderBtnStyle = (isActive) => ({
+  display: 'flex', alignItems: 'center', gap: 6, width: '100%',
+  padding: '6px 14px', border: 'none', cursor: 'pointer',
+  background: isActive ? 'rgba(0,102,204,0.25)' : 'transparent',
+  borderLeft: `2px solid ${isActive ? '#0066cc' : 'transparent'}`,
+  color: isActive ? '#fff' : '#8b9099', fontSize: 13, fontWeight: 700,
+  textTransform: 'uppercase', letterSpacing: '0.07em', textAlign: 'left',
+});
+
+const subFolderBtnStyle = (isActive) => ({
+  display: 'flex', alignItems: 'center', gap: 5, width: '100%',
+  padding: '4px 14px 4px 22px', border: 'none', cursor: 'pointer',
+  background: isActive ? 'rgba(0,102,204,0.25)' : 'transparent',
+  borderLeft: `2px solid ${isActive ? '#0066cc' : 'transparent'}`,
+  color: isActive ? '#fff' : '#6b7280', fontSize: 13, fontWeight: 600, textAlign: 'left',
+});
+
 export default function Sidebar({ allFolders, title, selected, onSelect, isMobile }) {
   const [open, setOpen] = useState(() => {
     const init = {};
@@ -85,14 +102,10 @@ export default function Sidebar({ allFolders, title, selected, onSelect, isMobil
         {folders.map(folder => {
           const hasItems = folder.item?.length > 0;
           const isFolderOpen = !!q.trim() || (open[folder.name] ?? false);
+          const isFolderActive = selected?._folder?.name === folder.name;
           return (
             <div key={folder.name}>
-              <button onClick={() => { toggle(folder.name); onSelect({ _folder: folder }); }} style={{
-                display: 'flex', alignItems: 'center', gap: 6, width: '100%',
-                padding: '6px 14px', background: 'transparent', border: 'none', cursor: 'pointer',
-                color: '#8b9099', fontSize: 13, fontWeight: 700,
-                textTransform: 'uppercase', letterSpacing: '0.07em', textAlign: 'left',
-              }}>
+              <button onClick={() => { toggle(folder.name); onSelect({ _folder: folder }); }} style={folderBtnStyle(isFolderActive)}>
                 <span style={{ fontSize: 10, opacity: 0.6 }}>
                   {hasItems ? (isFolderOpen ? '▼' : '▶') : '●'}
                 </span>
@@ -103,14 +116,10 @@ export default function Sidebar({ allFolders, title, selected, onSelect, isMobil
                 if (child.item?.length > 0) {
                   const subKey = `${folder.name}::${child.name}`;
                   const isSubOpen = !!q.trim() || (open[subKey] ?? false);
+                  const isSubActive = selected?._folder?.name === child.name;
                   return (
                     <div key={child.name}>
-                      <button onClick={() => { toggle(subKey); onSelect({ _folder: child }); }} style={{
-                        display: 'flex', alignItems: 'center', gap: 5, width: '100%',
-                        padding: '4px 14px 4px 22px', background: 'transparent',
-                        border: 'none', cursor: 'pointer', color: '#6b7280',
-                        fontSize: 13, fontWeight: 600, textAlign: 'left',
-                      }}>
+                      <button onClick={() => { toggle(subKey); onSelect({ _folder: child }); }} style={subFolderBtnStyle(isSubActive)}>
                         <span style={{ fontSize: 8, opacity: 0.7 }}>{isSubOpen ? '▼' : '▶'}</span>
                         <span>{child.name}</span>
                       </button>
