@@ -2365,11 +2365,11 @@
   },
   "/img/biostarx-new-user-credential-card-readcard.png": {
     "width": 600,
-    "height": 591
+    "height": 568
   },
   "/img/biostarx-new-user-credential-card-smartcard.png": {
     "width": 600,
-    "height": 545
+    "height": 522
   },
   "/img/biostarx-new-user-credential-card-wiegand.png": {
     "width": 600,
@@ -2442,6 +2442,14 @@
   "/img/biostarx-new-user-credential-securitylevle.png": {
     "width": 1069,
     "height": 210
+  },
+  "/img/biostarx-new-user-credential-smartcard-custom.png": {
+    "width": 600,
+    "height": 291
+  },
+  "/img/biostarx-new-user-credential-smartcard-secure.png": {
+    "width": 600,
+    "height": 464
   },
   "/img/biostarx-new-user-credential.png": {
     "width": 1069,
@@ -12325,11 +12333,11 @@
   },
   "/img/en/biostarx-new-user-credential-card-readcard.png": {
     "width": 600,
-    "height": 591
+    "height": 568
   },
   "/img/en/biostarx-new-user-credential-card-smartcard.png": {
     "width": 600,
-    "height": 545
+    "height": 522
   },
   "/img/en/biostarx-new-user-credential-card-wiegand.png": {
     "width": 600,
@@ -12398,6 +12406,14 @@
   "/img/en/biostarx-new-user-credential-securitylevle.png": {
     "width": 1082,
     "height": 238
+  },
+  "/img/en/biostarx-new-user-credential-smartcard-custom.png": {
+    "width": 600,
+    "height": 291
+  },
+  "/img/en/biostarx-new-user-credential-smartcard-secure.png": {
+    "width": 600,
+    "height": 464
   },
   "/img/en/biostarx-new-user-credential.png": {
     "width": 1069,
