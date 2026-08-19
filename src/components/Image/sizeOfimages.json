@@ -3149,11 +3149,11 @@
   },
   "/img/biostarx-settings-adv-ac-add-rollcall-config.png": {
     "width": 1000,
-    "height": 351
+    "height": 208
   },
   "/img/biostarx-settings-adv-ac-add-rollcall.png": {
     "width": 1000,
-    "height": 602
+    "height": 372
   },
   "/img/biostarx-settings-adv-ac-add-schedule-lock.png": {
     "width": 1000,
@@ -3162,6 +3162,26 @@
   "/img/biostarx-settings-adv-ac-add-schedule-unlock.png": {
     "width": 1000,
     "height": 408
+  },
+  "/img/biostarx-settings-adv-ac-rollcall-list-delete.png": {
+    "width": 1000,
+    "height": 156
+  },
+  "/img/biostarx-settings-adv-ac-rollcall-list-enable.png": {
+    "width": 1000,
+    "height": 156
+  },
+  "/img/biostarx-settings-adv-ac-rollcall-list.png": {
+    "width": 1000,
+    "height": 158
+  },
+  "/img/biostarx-settings-adv-ac-rollcall-stop-unaccounted-users.png": {
+    "width": 400,
+    "height": 342
+  },
+  "/img/biostarx-settings-adv-ac-rollcall-stop.png": {
+    "width": 1000,
+    "height": 156
   },
   "/img/biostarx-settings-adv-ac-rollcoll-ended.png": {
     "width": 1000,
@@ -3175,9 +3195,13 @@
     "width": 400,
     "height": 248
   },
+  "/img/biostarx-settings-adv-ac-rollcoll-report-generated-uncounted-reason.png": {
+    "width": 1000,
+    "height": 261
+  },
   "/img/biostarx-settings-adv-ac-rollcoll-report-generated.png": {
     "width": 1000,
-    "height": 470
+    "height": 261
   },
   "/img/biostarx-settings-advanced-ac-intusion-add-device.png": {
     "width": 400,
@@ -5950,6 +5974,14 @@
   "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png": {
     "width": 1697,
     "height": 135
+  },
+  "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end-unaccounted.png": {
+    "width": 720,
+    "height": 1443
+  },
+  "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end.png": {
+    "width": 1576,
+    "height": 1443
   },
   "/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png": {
     "width": 1697,
@@ -13021,11 +13053,11 @@
   },
   "/img/en/biostarx-settings-adv-ac-add-rollcall-config.png": {
     "width": 1000,
-    "height": 353
+    "height": 208
   },
   "/img/en/biostarx-settings-adv-ac-add-rollcall.png": {
     "width": 1000,
-    "height": 602
+    "height": 372
   },
   "/img/en/biostarx-settings-adv-ac-add-schedule-lock.png": {
     "width": 1000,
@@ -13034,6 +13066,22 @@
   "/img/en/biostarx-settings-adv-ac-add-schedule-unlock.png": {
     "width": 1000,
     "height": 411
+  },
+  "/img/en/biostarx-settings-adv-ac-rollcall-list-delete.png": {
+    "width": 1000,
+    "height": 156
+  },
+  "/img/en/biostarx-settings-adv-ac-rollcall-list-enable.png": {
+    "width": 1000,
+    "height": 156
+  },
+  "/img/en/biostarx-settings-adv-ac-rollcall-list.png": {
+    "width": 1000,
+    "height": 158
+  },
+  "/img/en/biostarx-settings-adv-ac-rollcall-stop.png": {
+    "width": 1000,
+    "height": 156
   },
   "/img/en/biostarx-settings-adv-ac-rollcoll-ended.png": {
     "width": 1000,
@@ -13047,9 +13095,13 @@
     "width": 400,
     "height": 248
   },
+  "/img/en/biostarx-settings-adv-ac-rollcoll-report-generated-uncounted-reason.png": {
+    "width": 1000,
+    "height": 261
+  },
   "/img/en/biostarx-settings-adv-ac-rollcoll-report-generated.png": {
     "width": 1000,
-    "height": 465
+    "height": 261
   },
   "/img/en/biostarx-settings-advanced-ac-intusion-add-device.png": {
     "width": 401,
