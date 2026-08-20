@@ -221,6 +221,7 @@ function createSidebars(preview) {
             'platform/biostar_x_mobile/search-users',
           ]
         },
+        'platform/biostar_x_mobile/manage-devices',
         {
           type: 'category', 
           label: '출입문 관리하기',
