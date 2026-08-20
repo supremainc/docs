@@ -219,7 +219,6 @@ function createSidebars(preview) {
             'platform/biostar_x_mobile/search-users',
           ]
         },
-        'platform/biostar_x_mobile/manage-devices',
         {
           type: 'category', 
           label: '출입문 관리하기',
@@ -233,6 +232,7 @@ function createSidebars(preview) {
             'platform/biostar_x_mobile/search-doors',
           ]
         },
+        'platform/biostar_x_mobile/manage-devices',
         'platform/biostar_x_mobile/view-realtime-log',
         'platform/biostar_x_mobile/view-past-events',
         'platform/biostar_x_mobile/check-resolve-alerts',
