@@ -1,0 +1,160 @@
+---
+id: manage-devices
+title: 장치 관리하기
+description: 장치 목록에서 장치 상태를 확인하고, 원격 제어를 통해 관리할 수 있습니다.
+---
+
+장치 목록에서는 개별 장치의 상태를 확인하고, 잠금 상태의 장치를 원격으로 해제할 수 있습니다. 앱 홈 화면에서 <Cmd>DEVICE</Cmd>를 탭하세요.
+
+<Image src='/img/mobile/bsx-mobile-app-device.png' width='500px' className='none' alone />
+
+:::info
+
+* 모바일 앱에서는 장치를 등록하거나 수정할 수 없습니다.
+
+* 사이드 메뉴를 통해 진입할 수도 있습니다. <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Device</Cmd>를 탭하세요.
+
+:::
+
+## 장치 정보 확인
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/mobile/bsx-mobile-app-device-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+장치 목록의 각 장치는 다음 정보를 포함하고 있습니다.
+
+* 장치 이름
+
+* 장치 그룹 이름(그룹에 포함되어 있지 않으면, <Cmd>All Devices</Cmd>로 표시)
+
+* 장치 IP 주소
+
+</Column>
+</Columns>
+
+## 장치 상태 확인
+
+장치 목록에서 상태 아이콘을 통해 장치 상태를 확인할 수 있습니다.
+
+| 상태 아이콘 | 설명 |
+| :--: | -- |
+| <Image src='/img/mobile/bsx-mobile-app-device-ok.png' className='none' ico alone /> | 장치가 정상 연결된 상태입니다. |
+| <Image src='/img/mobile/bsx-mobile-app-device-fail.png' className='none' ico alone /> | 장치가 꺼져 있거나 연결이 해제된 상태입니다. |
+
+:::info
+
+장치 상태를 갱신하려면 장치 목록을 아래로 당겨서 새로고침할 수 있습니다.
+
+:::
+
+## 인증 실패 잠금 해제
+
+연속된 인증 실패로 장치가 잠금 상태로 전환되면 모바일 앱을 통해 잠금을 해제할 수 있습니다.
+
+:::info
+
+**BioStar X**에서 인증 실패 잠금 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />를 참고하세요.
+
+:::
+
+### 개별 장치의 잠금 해제
+
+장치 목록에서 인증 실패 잠금 상태의 장치를 해제할 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock.png' className='none' width='750px' alone />
+
+1. 장치 목록에서 <Cmd>AUTHORIZATION FAIL LOCK</Cmd> 라벨이 표시된 장치를 확인하세요.
+
+1. 해당 장치의 잠금을 해제하려면 <Cmd>RELEASE LOCK OUT</Cmd> 버튼을 탭하세요.
+
+1. 확인 메시지 창이 나타나면 <Cmd>Yes</Cmd> 버튼을 탭하세요.
+
+1. 잠금 해제 성공 메시지가 나타나면 <Cmd>OK</Cmd> 버튼을 탭하세요.
+
+### 여러 장치의 잠금 해제
+
+<Cmd>AUTHORIZATION FAIL LOCK</Cmd> 라벨이 표시된 여러 개의 장치를 동시에 잠금 해제할 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock-multi-release.png' className='none' width='750px' alone />
+
+1. 장치 목록 오른쪽 상단의 <IcAppCheck title='Check box' />를 탭하세요.
+
+1. <Cmd>AUTHORIZATION FAIL LOCK</Cmd> 라벨이 표시된 장치를 하나 이상 선택하세요.
+
+1. 오른쪽 상단의 <Cmd>RELEASE</Cmd> 버튼을 탭하세요.
+
+1. 확인 메시지 창이 나타나면 <Cmd>Yes</Cmd> 버튼을 탭하세요.
+
+1. 잠금 해제 성공 메시지가 나타나면 <Cmd>OK</Cmd> 버튼을 탭하세요.
+
+
+## 장치 검색
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-search.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+장치의 이름, 그룹, IP 주소를 기준으로 검색할 수 있습니다.
+
+1. 장치 목록 상단의 <IcSearch title='Search' width='20px' height='20px' />를 탭하세요.
+
+1. 검색 입력 필드에 검색어를 입력하세요. 장치 이름, 그룹 이름, IP 주소로 검색할 수 있습니다.
+
+1. 검색어 입력을 완료한 후  <IcSearch title='Search' width='20px' height='20px' />를 탭하세요.
+
+검색어와 일치하는 장치가 검색 결과로 표시됩니다.
+
+:::info
+
+* 검색 입력 필드 아래에는 최근 검색 기록이 표시됩니다. 최근 검색 기록을 탭하면 해당 검색어로 다시 검색할 수 있습니다.
+
+* 검색 입력 필드를 닫으려면 <IcClose title='Close' width='20px' height='20px' />를 탭하세요.
+
+:::
+
+</Column>
+</Columns>
+
+## 장치 목록 필터링
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+장치 목록을 장치 그룹 기준으로 필터링할 수 있습니다.
+
+1. 장치 목록 상단의 <IcAppFilter title='Filter' width='20px' height='20px' />를 탭하세요.
+
+1. <Cmd>All Devices</Cmd>를 탭하세요.
+
+1. 장치 그룹 목록에서 원하는 그룹을 선택하세요.
+
+   <Image src='/img/mobile/bsx-mobile-device-filter-device-group.png' width='252px' alone />
+
+1. 장치 그룹 선택을 완료했다면 <Cmd>Yes</Cmd>를 탭하세요.
+
+1. 선택한 조건으로 장치 목록을 필터링하려면 <Cmd>Apply</Cmd>를 탭하세요.
+
+선택한 장치 그룹에 속한 장치들이 목록에 표시됩니다.
+
+:::info
+
+필터링 조건을 초기화하려면 화면 오른쪽 상단의 <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' />을 탭하세요.
+
+:::
+
+</Column>
+</Columns>

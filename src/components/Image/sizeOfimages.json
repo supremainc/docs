@@ -3927,10 +3927,6 @@
     "width": 600,
     "height": 300
   },
-  "/img/biostarx-settings-video-integration-select-type.png": {
-    "width": 353,
-    "height": 92
-  },
   "/img/biostarx-settings-video-integration.png": {
     "width": 1078,
     "height": 327
@@ -13807,10 +13803,6 @@
     "width": 600,
     "height": 329
   },
-  "/img/en/biostarx-settings-video-integration-select-type.png": {
-    "width": 353,
-    "height": 92
-  },
   "/img/en/biostarx-settings-video-integration.png": {
     "width": 1078,
     "height": 327
@@ -21131,6 +21123,10 @@
     "width": 16,
     "height": 16
   },
+  "/img/menus/ico-xapp-check.svg": {
+    "width": 16,
+    "height": 16
+  },
   "/img/menus/ico-xapp-clean.svg": {
     "width": 16,
     "height": 16
@@ -21309,7 +21305,7 @@
   },
   "/img/mobile/bsx-mobile-app-alert.png": {
     "width": 1144,
-    "height": 993
+    "height": 996
   },
   "/img/mobile/bsx-mobile-app-all-users-info.png": {
     "width": 489,
@@ -21326,6 +21322,22 @@
   "/img/mobile/bsx-mobile-app-check-info.png": {
     "width": 489,
     "height": 993
+  },
+  "/img/mobile/bsx-mobile-app-device-fail.png": {
+    "width": 60,
+    "height": 60
+  },
+  "/img/mobile/bsx-mobile-app-device-info.png": {
+    "width": 489,
+    "height": 116
+  },
+  "/img/mobile/bsx-mobile-app-device-ok.png": {
+    "width": 60,
+    "height": 60
+  },
+  "/img/mobile/bsx-mobile-app-device.png": {
+    "width": 1144,
+    "height": 995
   },
   "/img/mobile/bsx-mobile-app-door-control-more.png": {
     "width": 489,
@@ -21417,7 +21429,7 @@
   },
   "/img/mobile/bsx-mobile-app-realtime-log.png": {
     "width": 1144,
-    "height": 993
+    "height": 996
   },
   "/img/mobile/bsx-mobile-app-setting-auto-login.png": {
     "width": 489,
@@ -21478,6 +21490,26 @@
   "/img/mobile/bsx-mobile-app-user-log-filter.png": {
     "width": 489,
     "height": 680
+  },
+  "/img/mobile/bsx-mobile-device-auth-fail-lock-multi-release.png": {
+    "width": 1765,
+    "height": 993
+  },
+  "/img/mobile/bsx-mobile-device-auth-fail-lock.png": {
+    "width": 1765,
+    "height": 993
+  },
+  "/img/mobile/bsx-mobile-device-filter-device-group.png": {
+    "width": 489,
+    "height": 749
+  },
+  "/img/mobile/bsx-mobile-device-filter.png": {
+    "width": 489,
+    "height": 993
+  },
+  "/img/mobile/bsx-mobile-device-search.png": {
+    "width": 489,
+    "height": 993
   },
   "/img/mobile/bsx-mobile-door-status-alarm.png": {
     "width": 80,
