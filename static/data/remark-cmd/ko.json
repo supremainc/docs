@@ -6786,7 +6786,7 @@
   "data.column.predefinedReport.lastAccess": "마지막 출입",
   "device.info.authFailLockout.disableConfirm.batch.title": "인증 실패 잠금 비활성화",
   "device.info.authFailLockout.disableConfirm.device.title": "인증 실패 잠금 비활성화",
-  "device.info.reauthPreventionTime": "간격",
+  "device.info.reauthPreventionTime": "시간",
   "device.info.antiTailgating.label": "안티테일게이팅",
   "device.info.antiTailgating.exclusiveConfirm": "안티 테일게이팅과 멀티 페이스 인증은 동시에 사용할 수 없습니다. 멀티 페이스 인증을 끄고 안티 테일게이팅을 켜시겠습니까?",
   "device.info.multiFaceAuth.label": "다중 얼굴 인증",
@@ -6994,5 +6994,6 @@
   "ACB_ERROR_CODE.1702": "커뮤니케이션 서버와의 연결이 불안정합니다. 네트워크 상태를 확인한 뒤 다시 시도하세요.",
   "device.idle.video.transfervideo.cancel.button.stop": "전송 중단",
   "device.idle.video.transfervideo.cancel.button.goBack": "돌아가기",
-  "device.idle.video.invalid.settings.turnOffPlayVideo": "동영상을 사용하지 않으려면 '동영상 재생'을 끄세요."
+  "device.idle.video.invalid.settings.turnOffPlayVideo": "동영상을 사용하지 않으려면 '동영상 재생'을 끄세요.",
+  "eventType.24069": "출입문 비상 개방 요청 (비상 개방)"
 }
