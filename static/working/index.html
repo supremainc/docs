@@ -598,8 +598,8 @@
           </ul>
         </li>
         <li><em>야근식대</em>: 평일에 <code>11시간 30분 이상</code> 체류하면 인당 12,000원 지원 대상입니다(달력 칸과 계산기에 <span class="chip meal">야근식대</span> 표시).</li>
-        <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간). ※ 휴가가 있는 날은 이 자동 경고가 표시되지 않습니다.</li>
-        <li><em>근무 미편성 가능일</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">근무 미편성 가능일</span>로 표시됩니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
+        <li><em>코어타임</em>: 월~목 10:00~15:00, 금 10:00~12:00. 이 시간을 다 채우지 못하면 달력 칸에 <span class="badge core" style="display:inline-block;">코어타임</span> 경고가 뜹니다(휴가로 메꿔야 하는 시간). ※ 휴가가 있는 날과 근무 미편성 가능일에는 이 자동 경고가 표시되지 않습니다.</li>
+        <li><em>근무 미편성 가능일</em>: 매월 셋째 주 금요일(월요일이 있는 주가 첫째 주)은 선택적 미출근 가능일로, 달력에 <span class="badge off" style="display:inline-block;">근무 미편성 가능일</span>로 표시됩니다. 이 날은 <b>코어타임이 없어 자유롭게 근무</b>할 수 있습니다. 금요일에 출근을 아예 안 하려면 이 날이거나 연차뿐입니다(반반차로 대체 불가).</li>
         <li><em>공휴일</em>: 2026·2027년 한국 공휴일과 대체공휴일이 달력에 <span class="badge hol" style="display:inline-block;">공휴일명</span>으로 표시되고 날짜가 빨간색이 됩니다(제헌절 7/17 포함). 공휴일에는 코어타임·야근식대 규칙이 적용되지 않습니다.</li>
         <li><em>야간근로수당</em>: 야간(<code>22:00~06:00</code>)에 근무한 시간이 한 달 <code>6시간</code>을 초과하면 그 초과분이 <b>야간근로수당 지급시간</b>으로 요약에 표시됩니다(= 총 야간근로시간 − 6시간). 실 근무시간으로 인정되는 밤 시간은 22:00~23:30까지이며, 그 이후~06:00 근무는 실근무엔 포함되지 않지만 야간근로수당 산정에는 포함됩니다. 자정을 넘겨 근무한 경우 퇴근 시간을 <b>24:00 이후 표기</b>로 입력하세요(예: 익일 01:30 → <code>25:30</code>).</li>
         <li><em>휴일 근무</em>: 주말·공휴일에 한 근무는 기준근로시간에 포함되지 않고 <b>휴일 근무 시간</b>으로 따로 집계됩니다(별도 인정·정산). 휴일근무는 <code>1일 최대 8시간</code>까지만 인정되며, 초과분은 인정되지 않습니다(달력 칸에 <span class="badge core" style="display:inline-block;">8시간 초과 미인정</span> 표시).</li>
@@ -610,7 +610,7 @@
   </main>
   </div>
 
-  <div class="footnote">V2.9 | Technical Writing</div>
+  <div class="footnote">V3.0 | Technical Writing</div>
 </div>
 
 <!-- 월별 기준근로시간 모달 -->
@@ -1535,8 +1535,8 @@ function buildCalendar(){
       } else if(r.clamped){
         const b=document.createElement('span'); b.className='badge clamp'; b.textContent='인정시간'; badges.appendChild(b);
       }
-      // 코어타임 미충족 (휴가가 없는 순수 사무실 근무일에만 확인)
-      if(r.officeValid && r.vh === 0 && !meetsCore(dow, im, om, !!hol)){
+      // 코어타임 미충족 (휴가 없는 순수 근무일에만 확인, 근무 미편성 가능일 제외)
+      if(r.officeValid && r.vh === 0 && day !== offDay && !meetsCore(dow, im, om, !!hol)){
         const b=document.createElement('span'); b.className='badge core'; b.textContent='코어타임'; badges.appendChild(b);
       }
       // 휴가 시간대 길이가 휴가 종류와 다르면 경고
