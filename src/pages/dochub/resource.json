@@ -530,7 +530,7 @@
             "FSF2-AB",
             "FSF2-ODB"
         ],
-        "version": "2.2.2",
+        "version": "2.3.0",
         "manuals": {
             "ko": "device/facestation_f2/FaceStation F2_UG_1.13_KO_260624.pdf",
             "en": "device/facestation_f2/FaceStation F2_UG_1.13_EN_260624.pdf",
@@ -611,7 +611,7 @@
             "XP2-GDPB",
             "XP2-GKDPB"
         ],
-        "version": "1.5.2",
+        "version": "1.5.3",
         "manuals": {
             "ko": "device/xpass_2/XPass 2_IG_1.09_KO_260616.pdf",
             "en": "device/xpass_2/XPass 2_IG_1.09_EN_260616.pdf",
