@@ -1,0 +1,73 @@
+---
+id: 153
+title: Firmware Version 1.5.3
+---
+
+# Firmware Version 1.5.3 (Build No. 1.5.3_260818)
+
+Release<Separator/>2026-08-19
+
+:::caution
+
+- Devices with firmware v1.5.1 or later cannot be downgraded to versions earlier than v1.5.1.
+
+- The XP2-MAPB-H model cannot be downgraded to versions earlier than v1.4.3.
+
+- XP2-GKDPB models with hardware v1.2.0 or later cannot be downgraded to versions earlier than v1.4.3. You can check the hardware version in the **Device** menu in BioStar 2.
+
+- Devices with the new BLE chip cannot be downgraded to versions earlier than v1.3.1. This restriction does not apply to devices with the existing BLE chip.
+
+To check whether your device can be downgraded and whether the new BLE chip is installed, verify the serial number and contact [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+{/* (XPASSII-707) [BDP-1593] 출입문 Toggle */}
+1. Added support for unlocking or normalizing a door through user authentication.
+
+{/* (XPASSII-562) [BDP-1561] Extended Door Open Time */}
+2. Supports the **Extended Door Open Time** feature, which allows certain users to have the door remain open longer than the default door open time.
+
+{/* (XPASSII-708) [BDP-1592] Door Unlock/Lock Improvement */}
+3. Improved door control status to accurately display control results and change details in monitoring.
+
+{/* (XPASSII-561) [BDP-962] Realtime Status of all devices connected to BSX */}
+4. Supports real-time monitoring of the device's multiple statuses in BioStar X.
+
+{/* (XPASSII-705) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경 */}
+5. Improved Fire alarm zone status display and alarm clearing behavior after power restart following a fire alarm.
+
+{/* (XPASSII-711) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) */}
+6. Improved BLE stability.
+
+{/* (XPASSII-558) [BDP-990] Relay가 Lock되었을 때 인증 실패 처리하기 */}
+7. Improved so that when authentication is attempted on a door set to **Manual Lock**, an authentication failure event occurs and a locked message appears.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+{/* (XPASSII-704) [FISF-2436] 카드만 등록된 사용자 카드를 위겐드 리더기에서 인증시 Authentication Fail */}
+1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+{/* (XPASSII-698) TiggerAction으로 Slave 장치 Alarm 발생시 Clear Alarm을 하면 Master 장치 연결이 끊어지고 Alarm 해제도 되지 않음 */}
+2. The master device disconnecting or alarms failing to clear when performing **Clear Alarm** on alarms triggered by **Trigger & Action** settings on master or slave devices. <Badge>1.5.2</Badge>
+
+{/* (XPASSII-701) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 */}
+3. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.3.2</Badge>
+
+{/* (XPASSII-709) [FISF-3089] BioStar X Desfre EV2 Secure Credential Card Write 실패 */}
+4. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.5.2</Badge>
+
+{/* (XPASSII-727) [Lock Overrid] 1:1 인증 성공(lock override)로 동작시 실패가 발생하는 현상 - 발생버전 : V1.5.2 */}
+5. Failure sound and failure LED occurring on successful authentication with a Lock Override card. <Badge>1.5.2</Badge>
+
+{/* (XPASSII-730) EV2 Secure Message(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드 할 경우, Slave 장치에서 카드 인증 동작 안됨 - 발생버전 : V1.5.2 */}
+6. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.5.2</Badge>
+
+</BugLists>
