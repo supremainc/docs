@@ -1,0 +1,85 @@
+---
+id: 230
+title: Firmware Version 2.3.0
+---
+
+# Firmware Version 2.3.0 (Build No. 2.3.0_260818)
+
+Release<Separator/>2026-08-19
+
+:::caution
+
+For devices with the new SE processor, after upgrading the firmware to v2.1.0 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version.
+
+Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+{/* (DFW-1216) [BDP-1239] Lock Override(=Fireman's Card) 지원 */}
+1. Supports the **Lock Override** feature, which allows you to enroll a card that can open a door to be opened using a specific card.
+
+{/* (DFW-1218) [BDP-962] Real Time Status of all devices connected to BioStar X */}
+2. Supports real-time monitoring of the device's multiple statuses in BioStar X.
+
+{/* (DFW-1219) [BDP-953] Alternate Access Timer */}
+3. Supports the **Extended Door Open Time** feature, which allows certain users to have the door remain open longer than the default door open time.
+
+{/* (DFW-1221) [BDP-956] 서버 관리자가 출입문을 일정 시간 동안만 Locked/Unlocked로 제어할 수 있는 기능 (Door Mode Override) */}
+4. Supports the **Door Mode Override** feature, which restores the door to its normal state after the administrator changes the door status and a certain period of time has elapsed.
+
+{/* (DFW-1222) [BDP-954] Door control on device */}
+5. Supports controlling the relay of a connected door from the device menu.
+
+{/* (DFW-1283) [BDP-1593] 출입문 Toggle */}
+6. Added support for unlocking or normalizing a door through user authentication.
+
+{/* (DFW-1209) [BDP-990] Relay 가 Locked 되어 있을 때, 인증 시 인증 실패 처리하기 */}
+7. Improved so that when authentication is attempted on a door set to **Manual Lock**, an authentication failure event occurs and a locked message appears.
+
+{/* (DFW-1279) [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
+8. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+
+{/* (DFW-1295) [BDP-1592] Door Lock/Unlock Control Improvement */}
+9. Improved door control status to accurately display control results and change details in monitoring.
+
+{/* (DFW-1310) [FIMA-212] XPASS D2 BLE 이슈 */}
+10. Improved BLE stability.
+
+{/* (DFW-1339) [UI 지원 장치] 사용자 이름 및 사용자 ID에 Dot(.) 지원 */}
+11. Expanded allowed characters for User ID and User Name
+
+    * Added support for periods (.) in User ID
+
+    * Added support for periods (.) and apostrophes (') in User Name
+
+{/* (DFW-1280) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경 */}
+12. Improved Fire alarm zone status display and alarm clearing behavior after power restart following a fire alarm.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+{/* (DFW-1273) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 */}
+1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+
+{/* (DFW-1274) [BSF-2925] osdp pdcap 개선 */}
+2. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+
+{/* (DFW-1278) [FISF-2436] 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 */}
+3. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+{/* (DFW-1282) 프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 */}
+4. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
+
+{/* (DFW-1309) [FISF-2475] 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 */}
+5. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
+
+</BugLists>
