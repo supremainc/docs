@@ -4959,11 +4959,23 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/changelogs/changelog-2607-copy-heading-anchor.png": {
+    "width": 986,
+    "height": 366
+  },
+  "/img/changelogs/changelog-2607-move-page-aroow-key.png": {
+    "width": 1355,
+    "height": 867
+  },
   "/img/changelogs/changelogs-202605.png": {
     "width": 800,
     "height": 394
   },
   "/img/changelogs/changelogs-202606.png": {
+    "width": 800,
+    "height": 394
+  },
+  "/img/changelogs/changelogs-202607.png": {
     "width": 800,
     "height": 394
   },
@@ -5426,6 +5438,10 @@
   "/img/clue/webhook-tester.png": {
     "width": 1920,
     "height": 509
+  },
+  "/img/clue-app.png": {
+    "width": 60,
+    "height": 60
   },
   "/img/common/biostarx-chart.png": {
     "width": 600,
@@ -6168,6 +6184,10 @@
     "height": 40
   },
   "/img/cover-bsx-app.svg": {
+    "width": 40,
+    "height": 40
+  },
+  "/img/cover-clue-api.svg": {
     "width": 40,
     "height": 40
   },
@@ -7130,10 +7150,6 @@
   "/img/device/component-drilling-template-bep2.svg": {
     "width": 172,
     "height": 495
-  },
-  "/img/device/component-drilling-template-bln2.svg": {
-    "width": 66,
-    "height": 200
   },
   "/img/device/component-drilling-template-bs2a.svg": {
     "width": 200,

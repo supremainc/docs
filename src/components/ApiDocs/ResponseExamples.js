@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CodeBlock from '@theme/CodeBlock';
 import { prettyJson } from './utils';
 import { SECTION_LABEL } from './constants';
+import Markdown from './Markdown';
 
 export default function ResponseExamples({ responses }) {
   const [active, setActive] = useState(0);
@@ -24,9 +25,11 @@ export default function ResponseExamples({ responses }) {
                 background: r.code >= 200 && r.code < 300 ? '#49cc90' : r.code >= 400 ? '#f93e3e' : '#fca130',
                 color: '#fff', borderRadius: 10, padding: '1px 7px', fontSize: 11, fontWeight: 700,
               }}>{r.code}</span>
-              {r.name}
             </button>
           ))}
+        </div>
+        <div style={{ fontSize: '9pt', padding: '5px 10px 0 10px'}}>
+          <Markdown text={resp.name} />
         </div>
         {resp.body
           ? <CodeBlock language="json">{prettyJson(resp.body)}</CodeBlock>

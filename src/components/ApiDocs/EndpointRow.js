@@ -5,7 +5,7 @@ import DeprecatedBadge from './DeprecatedBadge';
 export default function EndpointRow({ req, onSelect }) {
   const method = req.request?.method;
   const desc = req.request?.description;
-  const shortDesc = typeof desc === 'string' ? desc.split('\n')[0].replace(/\*\*/g, '').trim() : '';
+  const shortDesc = typeof desc === 'string' ? desc.split('\n')[0].replace(/\*\*/g, '').trim().replace('#### ', '') : '';
   return (
     <button onClick={() => onSelect(req)} style={{
       display: 'flex', alignItems: 'flex-start', gap: 12, width: '100%',
@@ -14,7 +14,7 @@ export default function EndpointRow({ req, onSelect }) {
       cursor: 'pointer', textAlign: 'left',
       opacity: req.deprecated ? 0.6 : 1,
     }}>
-      <span style={{ flexShrink: 0, marginTop: 2 }}><MethodBadge method={method} compact /></span>
+      <span style={{ flexShrink: 0, marginTop: 2, width: 50 }}><MethodBadge method={method} compact /></span>
       <span style={{ flex: 1 }}>
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{
