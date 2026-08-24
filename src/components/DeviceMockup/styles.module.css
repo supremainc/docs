@@ -1,3 +1,7 @@
+:root {
+    --active-color: #B72040;
+}
+
 .wrapper {
     display: flex;
     gap: 24px;
@@ -23,17 +27,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #232323;
+    background-color: #353535;
     color: #fff;
     padding: 10px 8px;
     flex-shrink: 0;
+    z-index: 0;
+    min-height: 50px;
 }
 
 .headerTitle {
     flex: 1;
-    text-align: center;
-    font-size: 13px;
+    text-align: left;
+    font-size: 16px;
     font-weight: 600;
+    padding-left: 7px;
 }
 
 .backBtn {
@@ -47,12 +54,41 @@
     border: none;
     color: #fff;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 .backBtnPlaceholder {
     display: inline-block;
     width: 24px;
     height: 24px;
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    min-width: 24px;
+}
+
+.headerIconBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.headerIcon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .chevron {
@@ -79,22 +115,40 @@
 .bottomBody {
     flex: 1;
     min-height: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .list {
     flex: 1;
+    position: relative;
     overflow-y: auto;
     background-color: #fff;
+    min-height: 509.77px;
 }
 
 .imageScreen {
     position: relative;
     width: 100%;
     flex: 1;
-    overflow-y: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
+.imageScrollArea {
+    flex: 1;
+    min-height: 0;
+    overflow-y: none;
+}
+.tzindex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    pointer-events: none;
+}
 .screenImage {
     width: 100%;
     display: block;
@@ -102,6 +156,7 @@
 
 .hotspot {
     position: absolute;
+    z-index: 1;
     background: rgba(83, 100, 209, 0.12);
     border: 1px dashed rgba(83, 100, 209, 0.5);
     border-radius: 6px;
@@ -141,8 +196,64 @@
     color: #222;
 }
 
-.row:hover {
-    background-color: #f7f7f7;
+:global(.func-add-user) {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 48%;
+    left: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 28%;
+    padding-bottom: 20px;
+}
+
+:global(.func-float-icon) {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-bottom: none;
+}
+
+:global(.func-float-icon)::before {
+    content: "+";
+    width: 40px;
+    height: 40px;
+    background: var(--active-color);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 39px;
+    line-height: 90%;
+}
+
+:global(.func-float-status-info) {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    border-bottom: none;
+}
+
+:global(.func-float-status-info)::before {
+    content: "i";
+    width: 15px;
+    height: 15px;
+    background: #A56023;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+:global(.func-float-status-info) .rowTitle, :global(.func-float-icon) .rowTitle {
+    display: none;
+}
+
+:global(.func-float-icon) .chevron, 
+:global(.func-add-user) .chevron,
+:global(.func-float-status-info) .chevron {
+    display: none;
 }
 
 .rowTitle {
@@ -191,7 +302,7 @@
 }
 
 .toggleOn {
-    background-color: #5364d1;
+    background-color: var(--active-color);
 }
 
 .toggleKnob {
@@ -237,22 +348,35 @@
 
 .bottomTabItem {
     flex: 1;
-    padding: 8px 2px;
+    padding: 12px 2px;
     font-size: 10px;
     text-align: center;
     background: none;
     border: none;
-    color: #888;
+    color: #515151;
     cursor: pointer;
 }
 
 .tabActive {
-    color: #5364d1;
+    color: var(--active-color);
     font-weight: 700;
 }
 
 .topTabItem.tabActive {
-    border-bottom-color: #5364d1;
+    border-bottom-color: var(--active-color);
+    color: var(--active-color);
+}
+
+.bottomTabItem svg {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto 5px auto;
+    display: block;
+}
+
+.bottomTabItem .btnBottom {
+    display: block;
+    margin: 0 auto 5px auto;
 }
 
 .descriptionPanel {

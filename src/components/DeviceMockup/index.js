@@ -1,10 +1,40 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import clsx from 'clsx';
 import styles from './styles.module.css';
+import Dashboard from './ico-dashboard.svg';
+import User from './ico-user.svg';
+import Auth from './ico-auth.svg';
+import Settings from './ico-settings.svg';
+import Exit from './ico-exit.svg';
+import AddUser from './func-add-user.svg';
+import Regulatory from './ico-regulatory.svg';
 
 const MockupContext = createContext(null);
 
 function pathKey(pathNames) {
   return pathNames.join(' > ');
+}
+
+// 현재 활성화된 화면(탭 선택을 따라 내려간 가장 깊은 화면)의 header 배치 항목을 찾는다.
+// ScreenBody의 탭 활성화 로직과 동일한 방식으로 계산해야 한다.
+function collectHeaderItems(node, path, values) {
+  const children = node.children || [];
+  const bottomTabs = children.filter((c) => c.position === 'bottom' && (c.type === 'tab' || c.type === 'list'));
+  const topTabs = children.filter((c) => c.position === 'top' && c.type === 'tab');
+  const bottomKey = pathKey([...path, node.name, '__bottomTab']);
+  const topKey = pathKey([...path, node.name, '__topTab']);
+  const activeBottomNode = bottomTabs[values[bottomKey] ?? 0];
+  const activeTopNode = topTabs[values[topKey] ?? 0];
+  const fullPath = [...path, node.name];
+
+  const deeper = activeBottomNode
+    ? collectHeaderItems(activeBottomNode, fullPath, values)
+    : activeTopNode
+    ? collectHeaderItems(activeTopNode, fullPath, values)
+    : null;
+  if (deeper && deeper.items.length > 0) return deeper;
+
+  return { items: children.filter((c) => c.area === 'header'), path: fullPath };
 }
 
 function ChevronRight() {
@@ -17,8 +47,16 @@ function ChevronRight() {
 
 function ChevronLeft() {
   return (
+    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.42431 0.213965C6.80368 -0.086549 7.397 -0.0683624 7.74951 0.254981C8.10186 0.578686 8.07996 1.08516 7.70068 1.38584L3.13915 5.0001H12.0005C12.5527 5.00012 13.0005 5.44784 13.0005 6.0001C13.0005 6.55238 12.5528 7.00008 12.0005 7.0001H3.13915L7.70068 10.6144C8.07996 10.915 8.10186 11.4215 7.74951 11.7452C7.397 12.0686 6.80369 12.0867 6.42431 11.7862L0.599116 7.17295C-0.199702 6.53994 -0.199709 5.46025 0.599116 4.82725L6.42431 0.213965Z" fill="white"/>
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
     <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M15 6l-6 6 6 6" />
+      <path d="M6 6l12 12M18 6L6 18" />
     </svg>
   );
 }
@@ -54,7 +92,7 @@ function Row({ node, path }) {
 
   if (node.type === 'category') {
     return (
-      <div className={styles.section}>
+      <div className={clsx(styles.section, node.className)}>
         <div className={styles.sectionTitle}>{node.name}</div>
         {(node.children || []).map((child, i) => (
           <Row key={i} node={child} path={[...path, node.name]} />
@@ -66,7 +104,7 @@ function Row({ node, path }) {
   if (node.type === 'toggle') {
     const checked = localValue !== undefined ? localValue : !!node.default;
     return (
-      <div className={styles.row} onClick={select}>
+      <div className={clsx(styles.row, node.className)} onClick={select}>
         <span className={styles.rowTitle}>{node.name}</span>
         <Toggle
           checked={checked}
@@ -83,7 +121,7 @@ function Row({ node, path }) {
     const current = localValue !== undefined ? localValue : defaultOptionName(node);
     return (
       <div
-        className={styles.row}
+        className={clsx(styles.row, node.className)}
         onClick={() => {
           select();
           ctx.push({ name: node.name, type: 'options', __optionsKey: key, children: node.children }, path);
@@ -102,7 +140,7 @@ function Row({ node, path }) {
     const numeric = typeof def === 'number' ? def : parseFloat(def) || 0;
     const current = localValue !== undefined ? localValue : numeric;
     return (
-      <div className={styles.row} onClick={select}>
+      <div className={clsx(styles.row, node.className)} onClick={select}>
         <div className={styles.slideHeader}>
           <span className={styles.rowTitle}>{node.name}</span>
           <span className={styles.rowValue}>
@@ -130,7 +168,7 @@ function Row({ node, path }) {
 
   if (node.type === 'string') {
     return (
-      <div className={styles.row} onClick={select}>
+      <div className={clsx(styles.row, node.className)} onClick={select}>
         <span className={styles.rowTitle}>{node.name}</span>
         <span className={styles.rowValue}>{node.value}</span>
       </div>
@@ -140,7 +178,7 @@ function Row({ node, path }) {
   if (node.type === 'input') {
     const current = localValue !== undefined ? localValue : node.value;
     return (
-      <div className={styles.row} onClick={select}>
+      <div className={clsx(styles.row, node.className)} onClick={select}>
         <span className={styles.rowTitle}>{node.name}</span>
         <input
           className={styles.textInput}
@@ -157,7 +195,7 @@ function Row({ node, path }) {
 
   if (node.type === 'item') {
     return (
-      <div className={styles.row} onClick={select}>
+      <div className={clsx(styles.row, node.className)} onClick={select}>
         <span className={styles.rowTitle}>{node.name}</span>
       </div>
     );
@@ -166,7 +204,7 @@ function Row({ node, path }) {
   if (node.type === 'popup') {
     return (
       <div
-        className={styles.row}
+        className={clsx(styles.row, node.className)}
         onClick={() => {
           select();
           ctx.openPopup(node);
@@ -179,20 +217,24 @@ function Row({ node, path }) {
 
   // parent / list / title / function / icon(좌표 없음) / tab 등: 하위 화면으로 드릴다운
   const hasChildren = node.children && node.children.length > 0;
+  const hasDestFunc = node.type === 'function' && !!node.destFunc;
   return (
     <div
-      className={styles.row}
+      className={clsx(styles.row, node.className)}
       onClick={() => {
         select();
         if (node.target === 'home') {
           ctx.resetToRoot();
+        } else if (hasDestFunc) {
+          ctx.openFunction(node, path);
         } else if (hasChildren) {
           ctx.push(node, path);
         }
       }}
     >
+      {node.id === 'addUserWizard' && <AddUser />}
       <span className={styles.rowTitle}>{node.name}</span>
-      {hasChildren && <ChevronRight />}
+      {(hasChildren || hasDestFunc) && <ChevronRight />}
     </div>
   );
 }
@@ -207,21 +249,26 @@ function Hotspot({ node, path }) {
     height: `${(height / 1280) * 100}%`,
   };
   const hasChildren = node.children && node.children.length > 0;
+  const hasDestFunc = node.type === 'function' && !!node.destFunc;
   return (
     <button
       type="button"
-      className={styles.hotspot}
+      className={clsx(styles.hotspot, node.className)}
       style={style}
       onClick={() => {
         ctx.select(node, path);
         if (node.target === 'home') {
           ctx.resetToRoot();
+        } else if (hasDestFunc) {
+          ctx.openFunction(node, path);
         } else if (hasChildren) {
           ctx.push(node, path);
         }
       }}
       aria-label={node.name}
-    />
+    >
+      {node.icoContent && <img src={node.icoContent} alt="" className={styles.tzindex} />}
+    </button>
   );
 }
 
@@ -271,11 +318,24 @@ function HomeScreen({ node, path }) {
     else if (child.children && child.children.length > 0) ctx.push(child, [...path, node.name]);
   };
 
+  // "모든 메뉴" 진입 시 이전에 선택했던 탭이 남아있을 수 있으므로, 항상 대시보드 탭이 보이도록 초기화한다.
+  const goToAllMenu = () => {
+    if (!allMenu) return;
+    ctx.select(allMenu, path);
+    const bottomTabs = (allMenu.children || []).filter(
+      (c) => c.position === 'bottom' && (c.type === 'tab' || c.type === 'list')
+    );
+    const dashboardIndex = bottomTabs.findIndex((c) => c.id === 'dashboard');
+    const fullPath = [...path, node.name];
+    ctx.setValue(pathKey([...fullPath, allMenu.name, '__bottomTab']), dashboardIndex >= 0 ? dashboardIndex : 0);
+    if (allMenu.children && allMenu.children.length > 0) ctx.push(allMenu, fullPath);
+  };
+
   return (
     <div className={styles.homeScreen}>
       <div className={styles.homeTopBar}>
         {allMenu && (
-          <button className={styles.homeIconBtn} onClick={() => handleClick(allMenu)} aria-label={allMenu.name}>
+          <button className={styles.homeIconBtn} onClick={goToAllMenu} aria-label={allMenu.name}>
             {HOME_ICONS.grid}
           </button>
         )}
@@ -323,6 +383,11 @@ function TabBar({ tabs, active, onChange, kind }) {
           className={`${kind === 'bottom' ? styles.bottomTabItem : styles.topTabItem} ${i === active ? styles.tabActive : ''}`}
           onClick={() => onChange(i)}
         >
+          {t.id === 'dashboard' &&  <Dashboard />}
+          {t.id === 'users' &&  <User />}
+          {t.id === 'auth' &&  <Auth />}
+          {t.id === 'settings' &&  <Settings />}
+          {t.id === 'exit' &&  <Exit />}
           {t.name}
         </button>
       ))}
@@ -336,7 +401,8 @@ function ScreenBody({ node, path, onTitleChange }) {
   const children = node.children || [];
   const bottomTabs = children.filter((c) => c.position === 'bottom' && (c.type === 'tab' || c.type === 'list'));
   const topTabs = children.filter((c) => c.position === 'top' && c.type === 'tab');
-  const rest = children.filter((c) => !bottomTabs.includes(c) && !topTabs.includes(c));
+  const headerItems = children.filter((c) => c.area === 'header');
+  const rest = children.filter((c) => !bottomTabs.includes(c) && !topTabs.includes(c) && !headerItems.includes(c));
 
   // 탭 선택 상태는 스택 push/pop으로 이 화면이 다시 마운트되어도 유지되어야 하므로
   // 컴포넌트 로컬 state가 아니라 공용 values 저장소(경로 기반 key)에 둔다.
@@ -410,20 +476,22 @@ function ScreenBody({ node, path, onTitleChange }) {
 
       {hasImage ? (
         <div className={styles.imageScreen}>
-          <img src={node.content} alt={node.name} className={styles.screenImage} />
+          <div className={styles.imageScrollArea}>
+            <img src={node.content} alt={node.name} className={styles.screenImage} />
+            {rest.some((c) => !(c.type === 'icon' && c.coords)) && (
+              <div className={styles.imageOverlayList}>
+                {rest
+                  .filter((c) => !(c.type === 'icon' && c.coords))
+                  .map((child, i) => (
+                    <Row key={i} node={child} path={[...path, node.name]} />
+                  ))}
+              </div>
+            )}
+          </div>
           {rest.map((child, i) =>
             child.type === 'icon' && child.coords ? (
               <Hotspot key={i} node={child} path={[...path, node.name]} />
             ) : null
-          )}
-          {rest.some((c) => !(c.type === 'icon' && c.coords)) && (
-            <div className={styles.imageOverlayList}>
-              {rest
-                .filter((c) => !(c.type === 'icon' && c.coords))
-                .map((child, i) => (
-                  <Row key={i} node={child} path={[...path, node.name]} />
-                ))}
-            </div>
           )}
         </div>
       ) : (
@@ -473,6 +541,7 @@ export default function DeviceMockup({ data }) {
   const [title, setTitle] = useState(root.name);
 
   const current = stack[stack.length - 1];
+  const headerContext = collectHeaderItems(current.node, current.path, values);
 
   const push = (node, path) => setStack((s) => [...s, { node, path }]);
   const pop = () => setStack((s) => (s.length > 1 ? s.slice(0, -1) : s));
@@ -480,8 +549,13 @@ export default function DeviceMockup({ data }) {
   const select = (node, path) => setSelected({ node, path });
   const setValue = (key, value) => setValuesState((v) => ({ ...v, [key]: value }));
   const openPopup = (node) => setPopup(node);
+  const openFunction = (node, path) => {
+    const func = (data.functions || []).find((f) => f.id === node.destFunc);
+    if (!func) return;
+    push({ ...func, __isFunctionScreen: true }, path);
+  };
 
-  const ctxValue = { push, pop, resetToRoot, select, values, setValue, openPopup };
+  const ctxValue = { push, pop, resetToRoot, select, values, setValue, openPopup, openFunction };
 
   return (
     <MockupContext.Provider value={ctxValue}>
@@ -489,15 +563,40 @@ export default function DeviceMockup({ data }) {
         <div className={styles.device}>
           {current.node.type !== 'home' && (
             <div className={styles.header}>
-              {stack.length > 1 ? (
+              {stack.length > 2 ? (
                 <button className={styles.backBtn} onClick={pop} aria-label="뒤로가기">
                   <ChevronLeft />
                 </button>
+              ) : null}
+              <span className={styles.headerTitle}>{title}</span>
+              {current.node.__isFunctionScreen ? (
+                <button className={styles.backBtn} onClick={pop} aria-label="닫기">
+                  <CloseIcon />
+                </button>
+              ) : headerContext.items.length > 0 ? (
+                <div className={styles.headerActions}>
+                  {headerContext.items.map((item, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      className={styles.headerIconBtn}
+                      aria-label={item.name}
+                      onClick={() => {
+                        select(item, headerContext.path);
+                        if (item.target === 'home') {
+                          resetToRoot();
+                        } else if (item.children && item.children.length > 0) {
+                          push(item, headerContext.path);
+                        }
+                      }}
+                    >
+                      {item.id === 'regulatory' && <Regulatory />}
+                    </button>
+                  ))}
+                </div>
               ) : (
                 <span className={styles.backBtnPlaceholder} />
               )}
-              <span className={styles.headerTitle}>{title}</span>
-              <span className={styles.backBtnPlaceholder} />
             </div>
           )}
           <div className={styles.body}>
