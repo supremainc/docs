@@ -1,0 +1,61 @@
+---
+id: 124
+title: Firmware Version 1.2.4
+---
+
+# Firmware Version 1.2.4 (Build No. 1.2.4_260810)
+
+Release<Separator/>2026-08-25
+
+:::caution
+
+- After upgrading the firmware to v1.2.0, it is not able to downgrade to an earlier version of the firmware.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+{/* (BS2AFW-275) [BDP-805] Intelligent Slave 사용 시 CP 로부터 전송받은 인증 결과(osdp_LED)를 장치 화면에 표시하기 */}
+1. Supports the **Display Result from Controller** feature for displaying authentication success or failure results from a 3rd party controller on the device screen when using **Intelligent Slave**.
+
+{/* (BS2AFW-612) [UI지원모델] 인증성공 LED Blue -> Green으로 변경 */}
+2. Changed the authentication success LED color to green.
+
+{/* (BS2AFW-629) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) */}
+3. Improved BLE stability.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+{/* (BS2AFW-619) [BSF-2925] osdp pdcap 개선 */}
+1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel.
+
+{/* [BSF-3089] BioStar X DESFire EV2 Secure Credential Card Write 실패 - 1.2.1 */}
+2. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-618) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 */}
+3. Suprema Mobile Access authentication failing on certain Android devices.
+
+{/* (BS2AFW-636) Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 */}
+4. An incorrect authentication failure reason is displayed when authenticating with an EV1 card on a slave device with Secure Messaging enabled. <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-637) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 */}
+5. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-638) [SM 강제 옵션 : ON] OSDP Tool 연결 후 DesFire EV1 카드 태깅 시, Exception Code가 출력 되지 않음. */}
+6. Exception codes not being output when tagging an EV1 card on a device connected via OSDP with the Secure Messaging enforcement option enabled. <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-640) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 */}
+7. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-641) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 */}
+8. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.2.1</Badge>
+
+</BusgLists>
