@@ -2609,6 +2609,27 @@ function createSidebars(preview) {
       ],
     },
   ],
+  xpass2_v2: [
+    {
+      type: 'category',
+      label: 'XPass 2 v2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2_v2/index',
+      },
+      items: [
+        'device/xpass_2_v2/safety-instructions',
+        'device/xpass_2_v2/getting-started',
+        'device/xpass_2_v2/installation',
+        'device/xpass_2_v2/product-specifications',
+        'device/xpass_2_v2/regulatory-information',
+        'device/xpass_2_v2/appendices',
+      ],
+    },
+  ],
   xpassd2: [
     {
       type: 'category',
