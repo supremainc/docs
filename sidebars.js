@@ -1915,6 +1915,7 @@ function createSidebars(preview) {
             id: 'device/bioentry_w2/release-notes/index',
           },
           items: [
+            'device/bioentry_w2/release-notes/183',
             'device/bioentry_w2/release-notes/182',
             'device/bioentry_w2/release-notes/181',
             'device/bioentry_w2/release-notes/180',
@@ -2044,6 +2045,7 @@ function createSidebars(preview) {
             id: 'device/bioentry_w3/release-notes/index',
           },
           items: [
+            'device/bioentry_w3/release-notes/104',
             'device/bioentry_w3/release-notes/103',
             'device/bioentry_w3/release-notes/102',
             'device/bioentry_w3/release-notes/101',
@@ -2372,6 +2374,7 @@ function createSidebars(preview) {
             id: 'device/biostation_2a/release-notes/index',
           },
           items: [
+            'device/biostation_2a/release-notes/124',
             'device/biostation_2a/release-notes/123',
             'device/biostation_2a/release-notes/122',
             'device/biostation_2a/release-notes/121',
@@ -2633,6 +2636,27 @@ function createSidebars(preview) {
         'device/xpass_2_ul/product-specifications',
         'device/xpass_2_ul/regulatory-information',
         'device/xpass_2_ul/appendices',
+      ],
+    },
+  ],
+  xpass2_v2: [
+    {
+      type: 'category',
+      label: 'XPass 2 v2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2_v2/index',
+      },
+      items: [
+        'device/xpass_2_v2/safety-instructions',
+        'device/xpass_2_v2/getting-started',
+        'device/xpass_2_v2/installation',
+        'device/xpass_2_v2/product-specifications',
+        'device/xpass_2_v2/regulatory-information',
+        'device/xpass_2_v2/appendices',
       ],
     },
   ],
