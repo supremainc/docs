@@ -442,6 +442,11 @@ const config = {
                },
                {
                   type: 'doc',
+                  label: 'XPass 2 V2',
+                  docId: 'device/xpass_2_v2/index'
+               },
+               {
+                  type: 'doc',
                   label: 'XPass D2',
                   docId: 'device/xpass_d2/index'
                },
