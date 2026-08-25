@@ -1906,6 +1906,7 @@ function createSidebars(preview) {
             id: 'device/bioentry_w2/release-notes/index',
           },
           items: [
+            'device/bioentry_w2/release-notes/183',
             'device/bioentry_w2/release-notes/182',
             'device/bioentry_w2/release-notes/181',
             'device/bioentry_w2/release-notes/180',
