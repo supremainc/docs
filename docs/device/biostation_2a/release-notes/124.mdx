@@ -1,0 +1,61 @@
+---
+id: 124
+title: 펌웨어 버전 1.2.4
+---
+
+# 펌웨어 버전 1.2.4 (빌드 번호 1.2.4_260810)
+
+릴리즈<Separator/>2026-08-25
+
+:::caution
+
+- 펌웨어를 v1.2.0 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다.
+
+- 장치의 펌웨어 다운그레이드 가능 여부 및 신규 BLE 칩 적용 여부는 장치의 시리얼 번호를 확인한 뒤 [슈프리마 홈페이지](https://supremainc.com)에 문의하세요.
+
+:::
+
+## 신규 기능 및 개선
+
+---
+
+{/* (BS2AFW-275) [BDP-805] Intelligent Slave 사용 시 CP 로부터 전송받은 인증 결과(osdp_LED)를 장치 화면에 표시하기 */}
+1. **인텔리전트 슬레이브**를 사용할 경우 타사 컨트롤러의 인증 성공/실패 결과를 장치 화면에 표시하는 **컨트롤러 결과 표시** 기능 지원
+
+{/* (BS2AFW-612) [UI지원모델] 인증성공 LED Blue -> Green으로 변경 */}
+2. 인증 성공 시 표시되는 LED 색상을 초록색으로 변경
+
+{/* (BS2AFW-629) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) */}
+3. BLE 동작 안정성 개선
+
+## 버그 수정
+
+---
+
+<BugLists>
+
+{/* (BS2AFW-619) [BSF-2925] osdp pdcap 개선 */}
+1. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제
+
+{/* [BSF-3089] BioStar X DESFire EV2 Secure Credential Card Write 실패 - 1.2.1 */}
+2. DESFire EV2 카드에 보안 크리덴셜 카드 발급이 실패하는 문제 <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-618) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 */}
+3. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제
+
+{/* (BS2AFW-636) Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 */}
+4. 슬레이브로 연결된 장치에 보안 메시징(Secure Messaging) 옵션 설정 후 EV1 카드 인증 시, 인증 실패 사유가 올바르지 않게 표시되는 문제 <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-637) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 */}
+5. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 타사 컨트롤러와 OSDP로 연결된 슬레이브 장치에서 EV1 카드의 CSN 값이 출력되는 문제 <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-638) [SM 강제 옵션 : ON] OSDP Tool 연결 후 DesFire EV1 카드 태깅 시, Exception Code가 출력 되지 않음. */}
+6. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 OSDP로 연결된 장치에서 EV1 카드 태깅 시 예외 코드가 출력되지 않는 문제 <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-640) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 */}
+7. 마스터 장치를 보안 메시징(Secure Messaging) 미지원 버전으로 다운그레이드하면 슬레이브 장치에서 카드 인증이 동작하지 않는 문제 <Badge>1.2.1</Badge>
+
+{/* (BS2AFW-641) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 */}
+8. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 Bypass가 설정된 Wiegand 장치에서 EV1 카드의 CSN 값이 전달되는 문제 <Badge>1.2.1</Badge>
+
+</BusgLists>
