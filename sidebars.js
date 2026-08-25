@@ -2612,7 +2612,7 @@ function createSidebars(preview) {
   xpass2_v2: [
     {
       type: 'category',
-      label: 'XPass 2 v2',
+      label: 'XPass 2 V2',
       collapsed: false,
       collapsible: false,
       className: 'p-title',

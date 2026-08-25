@@ -10,7 +10,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XP2-MDPB-V2, XP2-GDPB-V2, XP2-GKDPB-V2",
+              "label": "XP2-MDPB-V2,<br/>XP2-GDPB-V2,<br/>XP2-GKDPB-V2",
               "value": {
                "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
                "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
@@ -163,7 +163,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XP2-MDPB-V2, XP2-GDPB-V2",
+              "label": "XP2-MDPB-V2,<br/>XP2-GDPB-V2",
               "value": {
                "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
                "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",

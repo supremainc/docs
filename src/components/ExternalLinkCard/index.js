@@ -281,7 +281,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
   const isPreview = usePreviewContext();
   const defaultProductLinks = useMemo(() => [
     {
-      title: 'XPass 2 v2',
+      title: 'XPass 2 V2',
       url: `/device/xpass_2_v2`,
       img: require('@site/static/img/cover/xpass2.png').default,
       desc:  `${translate({
