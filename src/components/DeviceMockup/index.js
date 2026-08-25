@@ -61,6 +61,14 @@ function CloseIcon() {
   );
 }
 
+function CheckIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+      <path d="M5 12.5l5 5L19 7" />
+    </svg>
+  );
+}
+
 function Toggle({ checked, onChange }) {
   return (
     <button
@@ -118,13 +126,13 @@ function Row({ node, path }) {
   }
 
   if (node.type === 'select') {
-    const current = localValue !== undefined ? localValue : defaultOptionName(node);
+    const current = ctx.values[key] !== undefined ? ctx.values[key] : defaultOptionName(node);
     return (
       <div
         className={clsx(styles.row, node.className)}
         onClick={() => {
           select();
-          ctx.push({ name: node.name, type: 'options', __optionsKey: key, children: node.children }, path);
+          ctx.openSelectPopup(node, path);
         }}
       >
         <span className={styles.rowTitle}>{node.name}</span>
@@ -138,30 +146,17 @@ function Row({ node, path }) {
     const isRange = !!node.range;
     const def = isRange ? '' : node.default;
     const numeric = typeof def === 'number' ? def : parseFloat(def) || 0;
-    const current = localValue !== undefined ? localValue : numeric;
+    const current = ctx.values[key] !== undefined ? ctx.values[key] : numeric;
     return (
-      <div className={clsx(styles.row, node.className)} onClick={select}>
-        <div className={styles.slideHeader}>
-          <span className={styles.rowTitle}>{node.name}</span>
-          <span className={styles.rowValue}>
-            {isRange ? `${node.default.min} ~ ${node.default.max}` : node.default}
-          </span>
-        </div>
-        {!isRange && (
-          <input
-            type="range"
-            className={styles.slider}
-            min="0"
-            max="100"
-            value={current}
-            onClick={(e) => e.stopPropagation()}
-            onChange={(e) => {
-              const v = Number(e.target.value);
-              setLocalValue(v);
-              ctx.setValue(key, v);
-            }}
-          />
-        )}
+      <div
+        className={clsx(styles.row, node.className)}
+        onClick={() => {
+          select();
+          ctx.openSlidePopup(node, path);
+        }}
+      >
+        <span className={styles.rowTitle}>{node.name}</span>
+        <span className={styles.rowValue}>{isRange ? `${node.default.min} ~ ${node.default.max}` : current}</span>
       </div>
     );
   }
@@ -435,27 +430,6 @@ function ScreenBody({ node, path, onTitleChange }) {
     );
   }
 
-  if (node.type === 'options') {
-    return (
-      <div className={styles.list}>
-        {children.map((opt, i) => (
-          <div
-            key={i}
-            className={styles.row}
-            onClick={() => {
-              ctx.select(opt, path);
-              ctx.setValue(node.__optionsKey, opt.name);
-              ctx.pop();
-            }}
-          >
-            <span className={styles.rowTitle}>{opt.name}</span>
-            {opt.default && <span className={styles.rowValue}>기본값</span>}
-          </div>
-        ))}
-      </div>
-    );
-  }
-
   const hasImage = node['content-type'] === 'image' && node.content;
 
   return (
@@ -538,6 +512,8 @@ export default function DeviceMockup({ data }) {
   const [selected, setSelected] = useState({ node: root, path: [] });
   const [values, setValuesState] = useState({});
   const [popup, setPopup] = useState(null);
+  const [slidePopup, setSlidePopup] = useState(null);
+  const [selectPopup, setSelectPopup] = useState(null);
   const [title, setTitle] = useState(root.name);
 
   const current = stack[stack.length - 1];
@@ -554,8 +530,39 @@ export default function DeviceMockup({ data }) {
     if (!func) return;
     push({ ...func, __isFunctionScreen: true }, path);
   };
+  const openSlidePopup = (node, path) => setSlidePopup({ node, path });
+  const openSelectPopup = (node, path) => setSelectPopup({ node, path });
 
-  const ctxValue = { push, pop, resetToRoot, select, values, setValue, openPopup, openFunction };
+  const ctxValue = {
+    push,
+    pop,
+    resetToRoot,
+    select,
+    values,
+    setValue,
+    openPopup,
+    openFunction,
+    openSlidePopup,
+    openSelectPopup,
+  };
+
+  let slideKey = null;
+  let slideCurrent = 0;
+  let slideIsRange = false;
+  if (slidePopup) {
+    slideIsRange = !!slidePopup.node.range;
+    slideKey = pathKey([...slidePopup.path, slidePopup.node.name]);
+    const def = slideIsRange ? 0 : slidePopup.node.default;
+    const numeric = typeof def === 'number' ? def : parseFloat(def) || 0;
+    slideCurrent = values[slideKey] !== undefined ? values[slideKey] : numeric;
+  }
+
+  let selectKey = null;
+  let selectCurrent = null;
+  if (selectPopup) {
+    selectKey = pathKey([...selectPopup.path, selectPopup.node.name]);
+    selectCurrent = values[selectKey] !== undefined ? values[selectKey] : defaultOptionName(selectPopup.node);
+  }
 
   return (
     <MockupContext.Provider value={ctxValue}>
@@ -602,6 +609,89 @@ export default function DeviceMockup({ data }) {
           <div className={styles.body}>
             <ScreenBody node={current.node} path={current.path} onTitleChange={setTitle} />
           </div>
+
+          {popup && (
+            <div className={styles.popupOverlay} onClick={() => setPopup(null)}>
+              <div className={styles.popupBox} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.popupTitle}>{popup.name}</div>
+                <p className={styles.popupText}>{popup.description || '아직 작성된 설명이 없습니다.'}</p>
+                <button className={styles.popupClose} onClick={() => setPopup(null)}>
+                  닫기
+                </button>
+              </div>
+            </div>
+          )}
+
+          {slidePopup && (
+            <div className={styles.popupOverlay} onClick={() => setSlidePopup(null)}>
+              <div className={styles.slidePopupBox} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.slidePopupHeader}>
+                  <span className={styles.slidePopupTitle}>{slidePopup.node.name}</span>
+                  <button className={styles.slidePopupClose} onClick={() => setSlidePopup(null)} aria-label="닫기">
+                    <CloseIcon />
+                  </button>
+                </div>
+                {slideIsRange ? (
+                  <div className={styles.slidePopupValue}>
+                    {`${slidePopup.node.default.min} ~ ${slidePopup.node.default.max}`}
+                  </div>
+                ) : (
+                  <div className={styles.slidePopupSliderWrap}>
+                    <div
+                      className={styles.slidePopupValue}
+                      style={{ left: `${Math.min(96, Math.max(4, slideCurrent))}%` }}
+                    >
+                      {slideCurrent}
+                    </div>
+                    <input
+                      type="range"
+                      className={styles.slidePopupSlider}
+                      min="0"
+                      max="100"
+                      value={slideCurrent}
+                      onChange={(e) => setValue(slideKey, Number(e.target.value))}
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {selectPopup && (
+            <div className={styles.popupOverlay} onClick={() => setSelectPopup(null)}>
+              <div className={styles.selectPopupBox} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.selectPopupHeader}>
+                  <span className={styles.selectPopupTitle}>{selectPopup.node.name}</span>
+                  <button className={styles.selectPopupClose} onClick={() => setSelectPopup(null)} aria-label="닫기">
+                    <CloseIcon />
+                  </button>
+                </div>
+                <div className={styles.selectPopupList}>
+                  {(selectPopup.node.children || []).map((opt, i) => {
+                    const isActive = opt.name === selectCurrent;
+                    return (
+                      <div
+                        key={i}
+                        className={clsx(styles.selectPopupOption, isActive && styles.selectPopupOptionActive)}
+                        onClick={() => {
+                          select(opt, selectPopup.path);
+                          setValue(selectKey, opt.name);
+                          setSelectPopup(null);
+                        }}
+                      >
+                        <span>{opt.name}</span>
+                        {isActive && (
+                          <span className={styles.selectPopupCheck}>
+                            <CheckIcon />
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className={styles.descriptionPanel}>
@@ -609,23 +699,8 @@ export default function DeviceMockup({ data }) {
           <p className={styles.descriptionText}>
             {selected.node.description ? selected.node.description : '아직 작성된 설명이 없습니다.'}
           </p>
-          {selected.node['content-type'] === 'image' && selected.node.content && (
-            <img src={selected.node.content} alt={selected.node.name} className={styles.descriptionImage} />
-          )}
         </div>
       </div>
-
-      {popup && (
-        <div className={styles.popupOverlay} onClick={() => setPopup(null)}>
-          <div className={styles.popupBox} onClick={(e) => e.stopPropagation()}>
-            <div className={styles.popupTitle}>{popup.name}</div>
-            <p className={styles.popupText}>{popup.description || '아직 작성된 설명이 없습니다.'}</p>
-            <button className={styles.popupClose} onClick={() => setPopup(null)}>
-              닫기
-            </button>
-          </div>
-        </div>
-      )}
     </MockupContext.Provider>
   );
 }

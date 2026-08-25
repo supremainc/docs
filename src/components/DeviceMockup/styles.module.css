@@ -11,6 +11,7 @@
 }
 
 .device {
+    position: relative;
     width: 400px;
     max-width: 100%;
     aspect-ratio: 800 / 1280;
@@ -108,6 +109,7 @@
 .screen {
     flex: 1;
     display: flex;
+    position: relative;
     flex-direction: column;
     min-height: 0;
 }
@@ -122,8 +124,10 @@
     flex: 1;
     position: relative;
     overflow-y: auto;
+    scrollbar-width: thin;
     background-color: #fff;
-    min-height: 509.77px;
+    max-height: 467.77px;
+    min-height: 467.77px;
 }
 
 .imageScreen {
@@ -178,11 +182,12 @@
 }
 
 .sectionTitle {
-    padding: 10px 14px 4px;
+    padding: 7px 14px;
     font-size: 11px;
     font-weight: 700;
-    color: #888;
+    color: #773A16;
     text-transform: uppercase;
+    background: #D8DBE3;
 }
 
 .row {
@@ -210,7 +215,7 @@
 
 :global(.func-float-icon) {
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
     right: 5px;
     border-bottom: none;
 }
@@ -321,21 +326,31 @@
 }
 
 .topTabBar {
+    position: relative;
     display: flex;
     border-bottom: 1px solid #e5e5e5;
     background-color: #fafafa;
     flex-shrink: 0;
+    min-width: 400px;
+    z-index: 999;
+    min-height: 45px;
+}
+
+.topTabBar .tabActive {
+    border-bottom: none;
+    background: #252525;
+    color: #fff !important;
 }
 
 .topTabItem {
     flex: 1;
     padding: 8px 4px;
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
-    background: none;
+    background: #4f4f4f;
     border: none;
     border-bottom: 2px solid transparent;
-    color: #888;
+    color: #929292;
     cursor: pointer;
 }
 
@@ -348,7 +363,7 @@
 
 .bottomTabItem {
     flex: 1;
-    padding: 12px 2px;
+    padding: 10px 2px 7px 2px;
     font-size: 10px;
     text-align: center;
     background: none;
@@ -363,7 +378,6 @@
 }
 
 .topTabItem.tabActive {
-    border-bottom-color: var(--active-color);
     color: var(--active-color);
 }
 
@@ -411,11 +425,11 @@
 }
 
 .popupOverlay {
-    position: fixed;
+    position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     z-index: 1000;
 }
@@ -450,6 +464,158 @@
     color: #fff;
     font-size: 13px;
     cursor: pointer;
+}
+
+.slidePopupBox {
+    background: #fff;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 90vw;
+}
+
+.slidePopupHeader {
+    display: block;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slidePopupTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+}
+
+.slidePopupClose {
+    display: block;
+    position: absolute;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 3px;
+    right: -20px;
+}
+
+.slidePopupValue {
+    width: fit-content;
+    margin: 0 auto 24px;
+    padding: 6px 20px;
+    border-radius: 8px;
+    background-color: var(--active-color);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.slidePopupValue::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--active-color);
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+.selectPopupBox {
+    background: #fff;
+    width: 100%;
+    max-width: 90vw;
+    max-height: 80%;
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectPopupHeader {
+    position: relative;
+    text-align: center;
+    padding: 0 40px 20px;
+    flex-shrink: 0;
+}
+
+.selectPopupTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+}
+
+.selectPopupClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -3px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.selectPopupList {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.selectPopupOption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.selectPopupOptionActive {
+    background-color: #f5decf;
+    color: var(--active-color);
+    font-weight: 700;
+}
+
+.selectPopupCheck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--active-color);
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.slidePopupSliderWrap {
+    position: relative;
+    padding: 52px 0 25px 0;
+}
+
+.slidePopupSliderWrap .slidePopupValue {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: left 0.05s linear;
+}
+
+.slidePopupSlider {
+    width: 100%;
+    accent-color: var(--active-color);
+    margin-top: 20px;
 }
 
 .homeScreen {
