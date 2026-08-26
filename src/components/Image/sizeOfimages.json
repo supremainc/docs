@@ -227,6 +227,10 @@
     "width": 1305,
     "height": 1023
   },
+  "/img/air/bsair-admin-list-with-idp.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/air/bsair-adv-rollcall-add-device-group.png": {
     "width": 1920,
     "height": 1080
@@ -1111,6 +1115,10 @@
     "width": 1600,
     "height": 270
   },
+  "/img/air/bsair-settings-admin-deactive-result.png": {
+    "width": 1600,
+    "height": 426
+  },
   "/img/air/bsair-settings-admin-deactive.png": {
     "width": 1920,
     "height": 1080
@@ -1154,6 +1162,10 @@
   "/img/air/bsair-settings-admin-list-signup-complete.png": {
     "width": 1600,
     "height": 206
+  },
+  "/img/air/bsair-settings-admin-relase-override.png": {
+    "width": 1008,
+    "height": 373
   },
   "/img/air/bsair-settings-admin-technician-changes.png": {
     "width": 1920,
@@ -1275,6 +1287,46 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-settings-site-idp-not-use-checked.png": {
+    "width": 382,
+    "height": 454
+  },
+  "/img/air/bsair-settings-site-idp-not-use.png": {
+    "width": 382,
+    "height": 454
+  },
+  "/img/air/bsair-settings-site-idp-okta-connection-success.png": {
+    "width": 962,
+    "height": 312
+  },
+  "/img/air/bsair-settings-site-idp-okta-copy-endpoint-url.png": {
+    "width": 962,
+    "height": 232
+  },
+  "/img/air/bsair-settings-site-idp-okta-group-mapping-add.png": {
+    "width": 790,
+    "height": 394
+  },
+  "/img/air/bsair-settings-site-idp-okta-group-mapping.png": {
+    "width": 962,
+    "height": 202
+  },
+  "/img/air/bsair-settings-site-idp-okta-mappinged-groups.png": {
+    "width": 962,
+    "height": 274
+  },
+  "/img/air/bsair-settings-site-idp-okta-paste-field.png": {
+    "width": 962,
+    "height": 435
+  },
+  "/img/air/bsair-settings-site-idp-okta-save-success.png": {
+    "width": 962,
+    "height": 439
+  },
+  "/img/air/bsair-settings-site-idp-okta.png": {
+    "width": 962,
+    "height": 597
+  },
   "/img/air/bsair-settings-site-info.png": {
     "width": 1920,
     "height": 1080
@@ -1284,6 +1336,10 @@
     "height": 1080
   },
   "/img/air/bsair-settings-site-security.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-setting-sso-scim.png": {
     "width": 1920,
     "height": 1080
   },
@@ -1358,6 +1414,82 @@
   "/img/air/bsair-sp-app-set-twofactor.png": {
     "width": 5392,
     "height": 2445
+  },
+  "/img/air/bsair-sso-okta-applications-browse-app-search.png": {
+    "width": 653,
+    "height": 282
+  },
+  "/img/air/bsair-sso-okta-applications-create-app-assignments.png": {
+    "width": 580,
+    "height": 302
+  },
+  "/img/air/bsair-sso-okta-applications-create-app-general-settings.png": {
+    "width": 580,
+    "height": 582
+  },
+  "/img/air/bsair-sso-okta-applications-create-app.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/air/bsair-sso-okta-applications-create-provisioning-app.png": {
+    "width": 1200,
+    "height": 279
+  },
+  "/img/air/bsair-sso-okta-applications-general.png": {
+    "width": 580,
+    "height": 524
+  },
+  "/img/air/bsair-sso-okta-applications-list.png": {
+    "width": 1200,
+    "height": 320
+  },
+  "/img/air/bsair-sso-okta-applications-profile.png": {
+    "width": 214,
+    "height": 231
+  },
+  "/img/air/bsair-sso-okta-applications.png": {
+    "width": 1200,
+    "height": 279
+  },
+  "/img/air/bsair-sso-okta-scim-app-assign-groups.png": {
+    "width": 653,
+    "height": 494
+  },
+  "/img/air/bsair-sso-okta-scim-app-assigned-group-list.png": {
+    "width": 404,
+    "height": 423
+  },
+  "/img/air/bsair-sso-okta-scim-app-general.png": {
+    "width": 653,
+    "height": 338
+  },
+  "/img/air/bsair-sso-okta-scim-app-provisioning-save.png": {
+    "width": 653,
+    "height": 535
+  },
+  "/img/air/bsair-sso-okta-scim-app-provisioning-set-api.png": {
+    "width": 653,
+    "height": 524
+  },
+  "/img/air/bsair-sso-okta-scim-app-provisioning-set-push.png": {
+    "width": 653,
+    "height": 558
+  },
+  "/img/air/bsair-sso-okta-scim-app-provisioning.png": {
+    "width": 653,
+    "height": 465
+  },
+  "/img/air/bsair-sso-okta-scim-app-push-groups-by-name.png": {
+    "width": 653,
+    "height": 557
+  },
+  "/img/air/bsair-sso-okta-scim-app-push-groups.png": {
+    "width": 653,
+    "height": 532
+  },
+  "/img/air/bsair-sso-okta-scim-app-pushed-group-list.png": {
+    "width": 653,
+    "height": 534
   },
   "/img/air/bsair-technicial-workflow.png": {
     "width": 1920,
@@ -1435,6 +1567,10 @@
     "width": 1591,
     "height": 427
   },
+  "/img/air/bsair-user-group-list-with-idp.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/air/bsair-user-group-remove.png": {
     "width": 1920,
     "height": 1080
@@ -1465,7 +1601,7 @@
   },
   "/img/air/bsair-user-list-search.png": {
     "width": 1614,
-    "height": 711
+    "height": 697
   },
   "/img/air/bsair-user-list-tool-aclevel.png": {
     "width": 311,
@@ -1487,9 +1623,17 @@
     "width": 704,
     "height": 758
   },
+  "/img/air/bsair-user-list-with-idp-override.png": {
+    "width": 1013,
+    "height": 246
+  },
   "/img/air/bsair-user-list.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/air/bsair-user-management-list-with-idp.png": {
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-user-mobile-card-template-adjust-image.png": {
     "width": 750,
@@ -4744,7 +4888,7 @@
     "height": 331
   },
   "/img/camera/carabiner-type.svg": {
-    "width": 151,
+    "width": 150,
     "height": 191
   },
   "/img/camera/change-silicagel-vionyx.svg": {
@@ -4840,7 +4984,7 @@
     "height": 396
   },
   "/img/camera/installation10-vionyx.svg": {
-    "width": 528,
+    "width": 794,
     "height": 281
   },
   "/img/camera/installation11-vionyx.svg": {
@@ -4867,6 +5011,14 @@
     "width": 381,
     "height": 286
   },
+  "/img/camera/installation3-sd-vionyx.svg": {
+    "width": 239,
+    "height": 219
+  },
+  "/img/camera/installation3-usb-vionyx.svg": {
+    "width": 239,
+    "height": 219
+  },
   "/img/camera/installation3-vionyx.svg": {
     "width": 239,
     "height": 219
@@ -4888,12 +5040,12 @@
     "height": 240
   },
   "/img/camera/installation8-vionyx.svg": {
-    "width": 454,
-    "height": 508
+    "width": 240,
+    "height": 211
   },
   "/img/camera/installation9-vionyx.svg": {
-    "width": 240,
-    "height": 317
+    "width": 817,
+    "height": 289
   },
   "/img/camera/led-status-indicator-vionyx.svg": {
     "width": 390,
@@ -4930,6 +5082,18 @@
   "/img/camera/ring-type.svg": {
     "width": 151,
     "height": 190
+  },
+  "/img/camera/safe-wire-ceiling-mounted.svg": {
+    "width": 211,
+    "height": 200
+  },
+  "/img/camera/safe-wire-ceiling-structure.svg": {
+    "width": 200,
+    "height": 200
+  },
+  "/img/camera/safe-wire-wall-mounted.svg": {
+    "width": 200,
+    "height": 200
   },
   "/img/camera/vionyx-dimension.svg": {
     "width": 1238,
@@ -10635,6 +10799,10 @@
     "width": 1600,
     "height": 276
   },
+  "/img/en/air/bsair-settings-admin-deactive-result.png": {
+    "width": 1600,
+    "height": 427
+  },
   "/img/en/air/bsair-settings-admin-deactive.png": {
     "width": 1920,
     "height": 1080
@@ -10678,6 +10846,10 @@
   "/img/en/air/bsair-settings-admin-list-signup-complete.png": {
     "width": 1600,
     "height": 206
+  },
+  "/img/en/air/bsair-settings-admin-relase-override.png": {
+    "width": 1008,
+    "height": 381
   },
   "/img/en/air/bsair-settings-admin-technician-changes.png": {
     "width": 1920,
@@ -10798,6 +10970,10 @@
   "/img/en/air/bsair-settings-site-addtional-feature-video-mangement.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-idp-not-use-checked.png": {
+    "width": 382,
+    "height": 454
   },
   "/img/en/air/bsair-settings-site-info.png": {
     "width": 1920,
@@ -20452,6 +20628,10 @@
     "height": 16
   },
   "/img/menus/ico-air-more.svg": {
+    "width": 16,
+    "height": 16
+  },
+  "/img/menus/ico-air-override.svg": {
     "width": 16,
     "height": 16
   },
