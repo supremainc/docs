@@ -2402,6 +2402,7 @@ function createSidebars(preview) {
             id: 'device/biolite_n2/release-notes/index',
           },
           items: [
+            'device/biolite_n2/release-notes/172',
             'device/biolite_n2/release-notes/171',
             'device/biolite_n2/release-notes/170',
             'device/biolite_n2/release-notes/162',
