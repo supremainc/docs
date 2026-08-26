@@ -940,8 +940,7 @@
     "message": "제품"
   },
   "theme.SearchBar.relatedDocs.title": {
-    "message": "관련 문서",
-    "description": "The title for related documents shown in the search popup when the query is empty"
+    "message": "관련 문서"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "검색어 초기화",

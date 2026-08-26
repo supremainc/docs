@@ -670,5 +670,9 @@
   "sidebar.clueportal.link.CLUe API": {
     "message": "CLUe API",
     "description": "The label for link 'CLUe API' in sidebar 'clueportal', linking to 'pathname:///developer/clue'"
+  },
+  "sidebar.xpass2_v2.category.XPass 2 V2": {
+    "message": "XPass 2 V2",
+    "description": "The label for category 'XPass 2 V2' in sidebar 'xpass2_v2'"
   }
 }
