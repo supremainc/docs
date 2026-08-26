@@ -128,7 +128,7 @@
             "BEW2-ODPB",
             "BEW2-OAPB"
         ],
-        "version": "1.8.2",
+        "version": "1.8.3",
         "manuals": {
             "ko": "device/bioentry_w2/BioEntry W2_IG_1.37_KO_260622.pdf",
             "en": "device/bioentry_w2/BioEntry W2_IG_1.37_EN_260622.pdf",
@@ -136,8 +136,8 @@
             "ja": "device/bioentry_w2/BioEntry W2_IG_1.37_JA_260622.pdf"
         },
         "release_notes": {
-            "ko": "device/bioentry_w2/BioEntry W2_RN_1.8.2_KO_260622.pdf",
-            "en": "device/bioentry_w2/BioEntry W2_RN_1.8.2_EN_260622.pdf"
+            "ko": "device/bioentry_w2/BioEntry W2_ReleaseNotes_1.8.3_KO_260825.pdf",
+            "en": "device/bioentry_w2/BioEntry W2_ReleaseNotes_1.8.3_EN_260825.pdf"
         },
         "a_e": "device/bioentry_w2/SUPREMA_BioEntry_W2_AE-Specification_250723.docx",
         "dt": {
@@ -301,7 +301,7 @@
             "BS2A-ODPB",
             "BS2A-OAPWB"
         ],
-        "version": "1.2.1",
+        "version": "1.2.4",
         "manuals": {
             "ko": "device/biostation_2a/BioStation 2a_UG_1.03_KO_260616.pdf",
             "en": "device/biostation_2a/BioStation 2a_UG_1.03_EN_260616.pdf",
@@ -309,8 +309,8 @@
             "ja": "device/biostation_2a/BioStation 2a_UG_1.03_JA_260616.pdf"
         },
         "release_notes": {
-            "ko": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.1_KO_260417.pdf",
-            "en": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.1_EN_260417.pdf"
+            "ko": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.4_KO_260825.pdf",
+            "en": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.4_EN_260825.pdf"
         },
         "a_e": "device/biostation_2a/SUPREMA_BioStation_2a_AE-Specification_260622.docx",
         "dt": {
@@ -326,7 +326,7 @@
             "BS3-DB",
             "BS3-APWB"
         ],
-        "version": "1.4.3",
+        "version": "1.5.0",
         "manuals": {
             "ko": "device/biostation_3/BioStation 3_UG_1.11_KO_260616.pdf",
             "en": "device/biostation_3/BioStation 3_UG_1.11_EN_260616.pdf",
@@ -334,8 +334,8 @@
             "ja": "device/biostation_3/BioStation 3_UG_1.11_JA_260616.pdf"
         },
         "release_notes": {
-            "ko": "device/biostation_3/BioStation 3_RevisionNotes_1.4.3_KO_260410.pdf",
-            "en": "device/biostation_3/BioStation 3_RevisionNotes_1.4.3_EN_260410.pdf"
+            "ko": "device/biostation_3/BioStation 3_ReleaseNotes_1.5.0_KO_260819.pdf",
+            "en": "device/biostation_3/BioStation 3_ReleaseNotes_1.5.0_EN_260819.pdf"
         },
         "a_e": "device/biostation_3/SUPREMA_BioStation_3_AE-Specification_260622.docx",
         "dt": {
@@ -704,7 +704,7 @@
         "models": [
             "XPQ2-DB"
         ],
-        "version": "1.0.0",
+        "version": "1.0.1",
         "manuals": {
             "ko": "device/xpass_q2/XPass Q2_IG_1.01_KO_260720.pdf",
             "en": "device/xpass_q2/XPass Q2_IG_1.01_EN_260720.pdf",
@@ -712,8 +712,8 @@
             "ja": "device/xpass_q2/XPass Q2_IG_1.01_JA_260720.pdf"
         },
         "release_notes": {
-            "ko": "",
-            "en": ""
+            "ko": "device/xpass_q2/XPass Q2_ReleaseNotes_1.0.1_KO_260811.pdf",
+            "en": "device/xpass_q2/XPass Q2_ReleaseNotes_1.0.1_EN_260811.pdf"
         },
         "a_e": "device/xpass_q2/SUPREMA_XPass_Q2_AE-Specification_260721.docx",
         "dt": {
