@@ -25,10 +25,10 @@ title: 펌웨어 버전 1.4.2
 1. BLE 동작 안정성 개선
 
 {/* (ONYXFW-1024) [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
-1. OSDP 리더 모드에서 타사 컨트롤 패널의 출입 거부 시 'Access Denied'로 표시되도록 개선
+2. OSDP 리더 모드에서 타사 컨트롤 패널의 출입 거부 시 'Access Denied'로 표시되도록 개선
 
 {/* (ONYXFW-1017) [UI지원모델] 인증성공 아이콘 Blue → Green으로 변경 요청 건 */}
-1. 인증 성공 시 표시되는 UI의 색상을 초록색으로 변경
+3. 인증 성공 시 표시되는 UI의 색상을 초록색으로 변경
 
 ## 버그 수정
 
@@ -40,24 +40,24 @@ title: 펌웨어 버전 1.4.2
 1. 슬레이브로 연결된 장치에 보안 메시징(Secure Messaging) 옵션 설정 후 EV1 카드 인증 시, 인증 실패 사유가 올바르지 않게 표시되는 문제 <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1036) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 - 1.4.1 */}
-1. 마스터 장치를 보안 메시징(Secure Messaging) 미지원 버전으로 다운그레이드하면 슬레이브 장치에서 카드 인증이 동작하지 않는 문제 <Badge>1.4.1</Badge>
+2. 마스터 장치를 보안 메시징(Secure Messaging) 미지원 버전으로 다운그레이드하면 슬레이브 장치에서 카드 인증이 동작하지 않는 문제 <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1035) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 - 1.4.1 */}
-1. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 Bypass가 설정된 Wiegand 장치에서 EV1 카드의 CSN 값이 전달되는 문제 <Badge>1.4.1</Badge>
+3. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 Bypass가 설정된 Wiegand 장치에서 EV1 카드의 CSN 값이 전달되는 문제 <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1034) [SM 강제 옵션: ON] OSDP Tool 연결 후 DesFire EV1 카드 태깅 시, Exception Code가 출력 되지 않음 - 1.4.1 */}
-1. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 OSDP로 연결된 장치에서 EV1 카드 태깅 시 예외 코드가 출력되지 않는 문제 <Badge>1.4.1</Badge>
+4. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 OSDP로 연결된 장치에서 EV1 카드 태깅 시 예외 코드가 출력되지 않는 문제 <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1029) [BSF-3089] BioStar X DESFire EV2 Secure Credential Card Write 실패 - 1.4.1 */}
-1. DESFire EV2 카드에 보안 크리덴셜 카드 발급이 실패하는 문제 <Badge>1.4.1</Badge>
+5. DESFire EV2 카드에 보안 크리덴셜 카드 발급이 실패하는 문제 <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1021) [BSF-2925] osdp pdcap 개선 - 1.0.0 */}
-1. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제 <Badge>1.0.0</Badge>
+6. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제 <Badge>1.0.0</Badge>
 
 {/* (ONYXFW-1020) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 1.0.0 */}
-1. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
+7. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
 
 {/* (ONYXFW-996) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 - 1.4.1 */}
-1. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 타사 컨트롤러와 OSDP로 연결된 슬레이브 장치에서 EV1 카드의 CSN 값이 출력되는 문제 <Badge>1.4.1</Badge>
+8. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 타사 컨트롤러와 OSDP로 연결된 슬레이브 장치에서 EV1 카드의 CSN 값이 출력되는 문제 <Badge>1.4.1</Badge>
 
 </BugLists>
