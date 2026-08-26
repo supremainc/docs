@@ -25,10 +25,10 @@ Release<Separator/>2026-08-26
 1. Improved BLE stability.
 
 {/* (ONYXFW-1024) [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
-1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+2. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
 
 {/* (ONYXFW-1017) [UI지원모델] 인증성공 아이콘 Blue → Green으로 변경 요청 건 */}
-1. Changed the authentication success UI color to green.
+3. Changed the authentication success UI color to green.
 
 ## Bug Fixes
 
@@ -40,24 +40,24 @@ Release<Separator/>2026-08-26
 1. An incorrect authentication failure reason is displayed when authenticating with an EV1 card on a slave device with Secure Messaging enabled. <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1036) EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 - 1.4.1 */}
-1. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.4.1</Badge>
+2. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1035) lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 - 1.4.1 */}
-1. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.4.1</Badge>
+3. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1034) [SM 강제 옵션: ON] OSDP Tool 연결 후 DesFire EV1 카드 태깅 시, Exception Code가 출력 되지 않음 - 1.4.1 */}
-1. Exception codes not being output when tagging an EV1 card on a device connected via OSDP with the Secure Messaging enforcement option enabled. <Badge>1.4.1</Badge>
+4. Exception codes not being output when tagging an EV1 card on a device connected via OSDP with the Secure Messaging enforcement option enabled. <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1029) [BSF-3089] BioStar X DESFire EV2 Secure Credential Card Write 실패 - 1.4.1 */}
-1. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.4.1</Badge>
+5. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.4.1</Badge>
 
 {/* (ONYXFW-1021) [BSF-2925] osdp pdcap 개선 - 1.0.0 */}
-1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+6. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
 
 {/* (ONYXFW-1020) [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 1.0.0 */}
-1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+7. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
 
 {/* (ONYXFW-996) 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 - 1.4.1 */}
-1. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.4.1</Badge>
+8. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.4.1</Badge>
 
 </BugLists>
