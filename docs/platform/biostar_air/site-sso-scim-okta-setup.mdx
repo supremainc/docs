@@ -4,6 +4,8 @@ title: Okta 연동 설정하기
 description: BioStar Air에 Okta SSO와 SCIM 프로비저닝을 연결하는 절차를 안내합니다.
 ---
 
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
 import GroupMapping from './_site-sso-scim-group-mapping.mdx'
 import SyncManagement from './_site-sso-scim-sync-management.mdx'
 
@@ -62,7 +64,7 @@ Okta 로그인을 BioStar Air에 연결하려면 조직의 ID 관리자가 Okta�
 </Step>
 <Step>
 
-### Okta: 앱 클라이언트 정보 복사
+### Okta: 앱 클라이언트 정보 복사 {/* #copyClientinfo */}
 
 1. 애플리케이션을 생성하면 **General** 탭에서 **Client ID**와 **Client Secret**을 복사하세요.
 
@@ -72,16 +74,22 @@ Okta 로그인을 BioStar Air에 연결하려면 조직의 ID 관리자가 Okta�
 
    <Image src='/img/air/bsair-sso-okta-applications-profile.png' alone />
 
-복사한 **Client ID**와 **Client Secret**, **Okta Domain** 값은 다음 단계에서 입력합니다.
+복사한 **Client ID**와 **Client Secret**, **Okta Domain** 값을 다음 단계에서 입력합니다.
 
 </Step>
 <Step>
 
 ### BioStar Air: SSO 구성
 
-1. BioStar Air 설정 화면으로 돌아와 Okta 애플리케이션의 **Client ID**와 **Client Secret**, **Okta Domain** 값을 각 필드에 입력하세요.
+1. BioStar Air 설정 화면으로 돌아와 <DocLink inner='#copyClientinfo' /> 단계에서 복사한 값을 각 필드에 입력하세요.
 
    <Image src='/img/air/bsair-settings-site-idp-okta-paste-field.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Client ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Client Secret**
+
+   * <Cmd sid='sso_scim.additional_features.sso.okta_domain' product='air' />: **Okta Domain**
 
 1. <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' /> 필드에 조직의 이메일 도메인을 입력하세요.
 
@@ -99,29 +107,7 @@ Okta 로그인을 BioStar Air에 연결하려면 조직의 ID 관리자가 Okta�
 <Steps>
 <Step>
 
-### BioStar Air: SCIM 토큰 복사 {/* #copyToken */}
-
-1. BioStar Air 화면 왼쪽 사이드에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
-
-1. <Cmd>SSO & SCIM</Cmd> 탭을 클릭하세요.
-
-1. <Cmd sid='sso_scim.additional_features.scim.title' product='air' /> 섹션에서 <Cmd sid='sso_scim.additional_features.scim.endpoint_url' product='air' /> 값을 복사하세요.
-
-   <Image src='/img/air/bsair-settings-site-idp-okta-copy-endpoint-url.png' />
-
-1. <Cmd sid='sso_scim.additional_features.scim.generate_token' product='air' /> 버튼을 클릭하세요.
-
-1. <Cmd sid='sso_scim.additional_features.scim.token_generated_dialog.title' product='air' /> 대화 상자에서 토큰을 복사하세요.
-
-:::info
-
-* 생성된 토큰을 즉시 복사하세요. 토큰을 생성한 시점에만 복사할 수 있습니다. 대화 상자를 닫으면 토큰을 다시 복사할 수 없습니다.
-
-* 토큰을 분실했다면 새 토큰을 생성을 위해 <Cmd sid='sso_scim.additional_features.scim.rotate_token' product='air' /> 버튼을 클릭하세요. 새 토큰을 Okta에 다시 입력해야 합니다.
-
-* 이 단계에서 복사한 SCIM 엔드포인트 URL, SCIM 베어러 토큰을 다음 단계에서 입력해야 합니다.
-
-:::
+<CopyToken />
 
 </Step>
 <Step>
@@ -246,15 +232,7 @@ IdP 그룹을 BioStar Air로 푸시하려면 먼저 사용자 그룹과 사용�
 </Step>
 <Step>
 
-### BioStar Air: 연결 확인
-
-1. BioStar Air 화면 왼쪽 사이드에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
-
-1. <Cmd>SSO & SCIM</Cmd> 탭을 클릭하세요.
-
-1. <Cmd sid='sso_scim.additional_features.scim.title' product='air' /> 섹션에서 <Cmd sid='sso_scim.additional_features.scim.status_connected' product='air' /> 표시를 확인하세요.
-
-<Image src='/img/air/bsair-settings-site-idp-okta-connection-success.png' />
+<CheckConnection />
 
 </Step>
 </Steps>

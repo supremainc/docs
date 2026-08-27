@@ -4,84 +4,211 @@ title: Microsoft Entra ID 연동 설정하기
 description: BioStar Air에 Microsoft Entra ID SSO와 SCIM 프로비저닝을 연결하는 절차를 안내합니다.
 ---
 
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
 import GroupMapping from './_site-sso-scim-group-mapping.mdx'
 import SyncManagement from './_site-sso-scim-sync-management.mdx'
 
-## 1. Entra ID SSO 연결
+Microsoft Entra ID 로그인을 BioStar Air에 연결하려면 조직의 ID 관리자가 Entra ID에 앱을 등록하고 BioStar Air의 SSO 설정과 연결해야 합니다.
 
-**BioStar Air에서**
+## Entra ID SSO 연결
 
-1. **Admin Portal** → **Settings** → **Site** → **SSO & SCIM**으로 이동하세요.
-2. ID 공급자로 **Microsoft Entra ID**를 선택하세요.
-3. 자동으로 표시되는 **리다이렉트 URI**를 복사해 두세요.
+<Steps>
+<Step>
 
-**Microsoft Entra 관리 센터에서**
+### BioStar Air: 리다이렉트 URI 준비 {/* #bsairRedirect */}
 
-1. **Entra ID** → **App registrations** → **New registration**으로 이동하세요.
-2. 앱 이름을 "BioStar Air"로 지정하세요.
-3. **Accounts in this organizational directory only (Single tenant)**를 선택하세요.
-4. Redirect URI 항목에서 **Web**을 선택하고, 복사해 둔 BioStar Air의 Redirect URI를 붙여넣으세요.
-5. **Register**를 클릭하세요.
-6. 등록된 "BioStar Air" 앱의 Overview 화면에서 다음 값을 복사하세요.
-   - Application (client) ID
-   - Directory (tenant) ID
-7. **Certificates & secrets** → **Client secrets** → **New client secret**으로 이동하세요.
-8. 설명을 입력하고 만료 기간을 선택하세요.
-9. **Add**를 클릭하세요.
-10. 생성된 보안 비밀의 **Value**를 즉시 복사하세요.
+1. BioStar Air 화면 왼쪽 사이드에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd>SSO & SCIM</Cmd> 탭을 클릭하세요.
+
+1. <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />에서 <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' />를 선택하세요.
+
+1. <Cmd sid='sso_scim.additional_features.sso.redirect_uri' product='air' /> 항목에 표시되는 URI 값을 복사하세요.
+
+<Image src='/img/air/bsair-settings-site-idp-entraid.png' />
+
+</Step>
+<Step>
+
+### Microsoft Entra 관리 센터: 앱 등록 {/* #appRegistration */}
+
+1. [Microsoft Entra 관리 센터](https://entra.microsoft.com/)로 로그인하세요.
+
+1. **Entra ID** → **App registrations**으로 이동하세요.
+
+1. **New registration** 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-app-reg.png' alone />
+
+1. 앱 이름을 'BioStar Air'로 입력하세요.
+
+1. **Supported account types**에서 **Single tenant only**를 선택하세요.
+
+1. **Redirect URI** 섹션에서 **Web**을 선택하고, <DocLink inner='#bsairRedirect' /> 단계에서 복사한 URI 값을 입력 필드에 붙여넣으세요.
+
+   <Image src='/img/air/bsair-sso-entra-app-reg-new.png' alone />
+
+1. **Register** 버튼을 클릭하세요.
+
+1. 등록한 BioStar Air 앱의 **Overview**에서 다음 값을 복사하세요.
+
+   <Image src='/img/air/bsair-sso-entra-app-overview.png' alone />
+
+   - **Application (client) ID**
+
+   - **Directory (tenant) ID**
+
+1. **Certificates & secrets** → **Client secrets**에서 **New client secret**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-app-certificates-secrets.png' alone />
+
+1. 설명을 입력하고 만료 기간을 선택하세요.
+
+   <Image src='/img/air/bsair-sso-entra-app-add-client-secret.png' alone />
+
+1. **Add** 버튼을 클릭하세요.
+
+1. 생성된 클라이언트 시크릿의 **Value**를 복사하세요.
+
+   <Image src='/img/air/bsair-sso-entra-app-copy-client-secret.png' alone />
+
+복사한 **Application (client) ID**와 **Directory (tenant) ID**, **Value** 값을 다음 단계에서 입력합니다.
 
 :::caution
 
-Secret ID가 아니라 **Value**를 사용해야 합니다. Value는 이 시점 이후에는 다시 표시되지 않으므로 반드시 지금 복사해 두세요.
+**Secret ID**가 아니라 **Value**를 사용해야 합니다. **Value**는 이 시점 이후에는 다시 표시되지 않으므로 반드시 복사해 두세요.
 
 :::
 
-**BioStar Air에서**
+</Step>
+<Step>
 
-1. 복사해 둔 값을 각각 **클라이언트 ID**, **클라이언트 시크릿**, **테넌트 ID** 필드에 입력하고, **이메일 도메인** 필드에 조직의 이메일 도메인을 입력하세요.
-2. **저장 및 검증**을 클릭하세요.
+### Microsoft Entra 관리 센터: 사용자 및 그룹 할당
 
-**Microsoft Entra 관리 센터에서**
+사용자 및 그룹을 할당하기 전에 사용자와 그룹을 먼저 생성해야 합니다.
 
-1. **Enterprise applications** → **BioStar Air** → **Users and groups**로 이동하세요.
-2. BioStar Air 관리자로 로그인할 Entra 사용자 또는 그룹을 할당하세요.
+1. **Enterprise apps**에서 앞서 생성한 앱(BioStar Air)을 클릭하세요.
 
-{/* 이미지: Entra ID SSO 연결 완료 화면 */}
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps.png' alone />
 
-## 2. Entra ID SCIM 프로비저닝 연결
+1. **Assign users and groups**를 클릭하세요.
 
-**BioStar Air에서**
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-overview.png' alone />
 
-**SSO & SCIM** → **SCIM 프로비저닝**으로 이동하세요. SCIM 프로비저닝은 위 SSO 설정을 저장하고 검증해야 활성화됩니다.
+1. 사용자 및 그룹을 할당하려면 **Add user/group**을 클릭하세요.
 
-1. **SCIM 엔드포인트 URL**을 복사해 두세요.
-2. 토큰 생성 버튼을 클릭해 SCIM 토큰을 생성하세요.
-3. 생성된 토큰을 즉시 복사하세요. 토큰은 이 시점에만 확인할 수 있으므로 반드시 직접 복사해 두세요.
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-users-groups.png' alone />
 
-**Microsoft Entra 관리 센터에서**
+1. 사용자 및 그룹 할당을 완료하면 **Assign** 버튼을 클릭하세요.
 
-1. **Entra ID** → **Enterprise applications** → **New application**으로 이동하세요.
-2. **Create your own application**을 선택하세요.
-3. 이름을 "BioStar Air SCIM"으로 입력하세요.
-4. **Integrate any other application you don't find in the gallery (Non-gallery)**를 선택하세요.
-5. **Create**를 클릭하세요.
-6. 생성된 BioStar Air SCIM 앱에서 **Manage** → **Provisioning**으로 이동하세요.
-7. Provisioning Mode를 **Automatic**으로 설정하세요.
-8. **Admin Credentials**의 **Tenant URL**에 복사해 둔 SCIM 엔드포인트 URL을, **Secret Token**에 복사해 둔 토큰을 입력하세요.
-9. **Test Connection**을 클릭해 정상적으로 연결되는지 확인하세요.
-10. **Save**를 클릭하세요.
-11. **Users and groups** → **Add user/group**으로 이동해 프로비저닝할 사용자와 보안 그룹을 할당하세요.
-12. **Mappings**로 이동해 사용자와 그룹 동기화가 모두 활성화되어 있는지 확인하세요.
-13. 속성 매핑을 변경하기 전에 먼저 매핑 내용을 검토하세요.
-14. Provisioning 개요 화면에서 **Start provisioning**을 클릭하세요.
+</Step>
+<Step>
 
-:::tip
+### BioStar Air: SSO 구성
+
+1. BioStar Air 설정 화면으로 돌아와 <DocLink inner='#appRegistration' /> 단계에서 복사한 값을 각 필드에 입력하세요.
+
+   <Image src='/img/air/bsair-settings-site-idp-entraid-sso-config.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Application (client) ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Value**
+
+   * <Cmd sid='sso_scim.additional_features.sso.tenant_id' product='air' />: **Directory (tenant) ID**
+
+1. <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' /> 필드에 조직의 이메일 도메인을 입력하세요.
+
+1. <Cmd sid='sso_scim.additional_features.sso.save' product='air' /> 버튼을 클릭하세요.
+
+저장 및 검증에 성공하면 <Cmd sid='sso_scim.additional_features.sso.discovery_url' product='air' /> 항목의 값이 자동 생성됩니다.
+
+<Image src='/img/air/bsair-settings-site-idp-entraid-sso-config-success.png' />
+
+</Step>
+</Steps>
+
+
+## Entra ID SCIM 프로비저닝 연결
+
+<Steps>
+<Step>
+
+<CopyToken />
+
+</Step>
+<Step>
+
+### Microsoft Entra 관리 센터: SCIM 프로비저닝 앱 생성
+
+1. **Enterprise apps**에서 **New application**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new.png' alone />
+
+1. **Create your own application**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new-own.png' alone />
+
+1. 앱 이름을 'BioStar Air SCIM'으로 입력하세요.
+
+1. **Integrate any other application you don't find in the gallery (Non-gallery)** 옵션을 선택하세요.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new-own-create.png' alone />
+
+1. **Create** 버튼을 클릭하세요.
+
+1. 생성한 BioStar Air SCIM 앱에서 **Manage** → **Provisioning**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-overview.png' alone />
+
+</Step>
+<Step>
+
+### Microsoft Entra 관리 센터: Admin Credentials 설정 및 프로비저닝 시작
+
+1. **New Configuration**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-provisioning.png' alone />
+
+1. <DocLink inner='#copyToken' /> 단계에서 복사한 SCIM 엔드포인트 URL, 토큰 값을 **Admin credentials**의 **Tenant URL**, **Secret token** 필드에 입력하세요.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-new-config.png' alone />
+
+1. 동기화가 정상 동작하는지 테스트하려면 **Test Connection** 버튼을 클릭하세요.
+
+1. **Create** 버튼을 클릭하세요.
+
+1. **Users and groups**에서 **Add user/group**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-users-groups.png' alone />
+
+1. 프로비저닝할 사용자와 보안 그룹을 할당하세요.
+
+1. **Assign** 버튼을 클릭하세요.
+
+1. **Provisioning** → **Mappings**로 이동해 사용자와 그룹 동기화가 모두 활성화되어 있는지 확인하세요.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-mapping.png' alone />
+
+1. 속성 매핑을 변경하기 전에 먼저 매핑 내용을 검토하세요.
+
+1. SCIM 앱 **Overview**에서 **Start provisioning**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-start-provisioning.png' alone />
+
+:::info
 
 소규모 테스트 그룹으로 먼저 시작하는 것을 권장합니다. 그룹 멤버십 변경 사항이 BioStar Air에 반영되기까지 최대 약 40분이 걸릴 수 있습니다.
 
 :::
 
-{/* 이미지: Entra ID SCIM 프로비저닝 연결 완료 화면 */}
+</Step>
+<Step>
+
+<CheckConnection />
+
+</Step>
+</Steps>
 
 <GroupMapping />
 
