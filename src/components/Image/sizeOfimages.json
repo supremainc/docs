@@ -3604,7 +3604,7 @@
     "height": 648
   },
   "/img/biostarx-settings-personal-data-change-confirm.png": {
-    "width": 480,
+    "width": 482,
     "height": 246
   },
   "/img/biostarx-settings-personal-data-enable.png": {
@@ -3929,7 +3929,7 @@
   },
   "/img/biostarx-settings-video-integration.png": {
     "width": 1078,
-    "height": 327
+    "height": 281
   },
   "/img/biostarx-settings-video-move-camera-group.png": {
     "width": 400,
@@ -3945,7 +3945,7 @@
   },
   "/img/biostarx-settings-video-vms-server-info.png": {
     "width": 1078,
-    "height": 327
+    "height": 281
   },
   "/img/biostarx-settings-visitor-custom-visitor-field.png": {
     "width": 1510,
@@ -5264,7 +5264,7 @@
     "height": 331
   },
   "/img/camera/carabiner-type.svg": {
-    "width": 151,
+    "width": 150,
     "height": 191
   },
   "/img/camera/change-silicagel-vionyx.svg": {
@@ -5286,6 +5286,10 @@
   "/img/camera/component-cover-vionyx.svg": {
     "width": 240,
     "height": 203
+  },
+  "/img/camera/component-desiccant-module-vionyx.svg": {
+    "width": 84,
+    "height": 84
   },
   "/img/camera/component-diode1-vionyx.png": {
     "width": 1060,
@@ -5331,6 +5335,18 @@
     "width": 790,
     "height": 507
   },
+  "/img/camera/installation-desiccant-module1-vionyx.svg": {
+    "width": 240,
+    "height": 201
+  },
+  "/img/camera/installation-desiccant-module2-vionyx.svg": {
+    "width": 161,
+    "height": 211
+  },
+  "/img/camera/installation-desiccant-module3-vionyx.svg": {
+    "width": 340,
+    "height": 193
+  },
   "/img/camera/installation-network-hub-connection-vionyx.svg": {
     "width": 740,
     "height": 304
@@ -5360,7 +5376,7 @@
     "height": 396
   },
   "/img/camera/installation10-vionyx.svg": {
-    "width": 528,
+    "width": 794,
     "height": 281
   },
   "/img/camera/installation11-vionyx.svg": {
@@ -5387,6 +5403,14 @@
     "width": 381,
     "height": 286
   },
+  "/img/camera/installation3-sd-vionyx.svg": {
+    "width": 239,
+    "height": 219
+  },
+  "/img/camera/installation3-usb-vionyx.svg": {
+    "width": 239,
+    "height": 219
+  },
   "/img/camera/installation3-vionyx.svg": {
     "width": 239,
     "height": 219
@@ -5408,12 +5432,12 @@
     "height": 240
   },
   "/img/camera/installation8-vionyx.svg": {
-    "width": 454,
-    "height": 508
+    "width": 240,
+    "height": 211
   },
   "/img/camera/installation9-vionyx.svg": {
-    "width": 240,
-    "height": 317
+    "width": 817,
+    "height": 289
   },
   "/img/camera/led-status-indicator-vionyx.svg": {
     "width": 390,
@@ -5450,6 +5474,18 @@
   "/img/camera/ring-type.svg": {
     "width": 151,
     "height": 190
+  },
+  "/img/camera/safe-wire-ceiling-mounted.svg": {
+    "width": 211,
+    "height": 200
+  },
+  "/img/camera/safe-wire-ceiling-structure.svg": {
+    "width": 200,
+    "height": 200
+  },
+  "/img/camera/safe-wire-wall-mounted.svg": {
+    "width": 200,
+    "height": 200
   },
   "/img/camera/vionyx-dimension.svg": {
     "width": 1238,
@@ -7502,6 +7538,10 @@
   "/img/device/cables-layout-xp2.png": {
     "width": 718,
     "height": 770
+  },
+  "/img/device/cables-layout-xp2v2.png": {
+    "width": 711,
+    "height": 774
   },
   "/img/device/cables-layout-xpd2.png": {
     "width": 763,
@@ -9836,6 +9876,14 @@
     "height": 663
   },
   "/img/device/xp2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
+  },
+  "/img/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/device/xp2v2-m-dimension.svg": {
     "width": 1097,
     "height": 663
   },
@@ -13532,7 +13580,7 @@
     "height": 648
   },
   "/img/en/biostarx-settings-personal-data-change-confirm.png": {
-    "width": 488,
+    "width": 482,
     "height": 246
   },
   "/img/en/biostarx-settings-personal-data-enable.png": {
@@ -13857,7 +13905,7 @@
   },
   "/img/en/biostarx-settings-video-integration.png": {
     "width": 1078,
-    "height": 327
+    "height": 284
   },
   "/img/en/biostarx-settings-video-rename-camera-group.png": {
     "width": 300,
@@ -13869,7 +13917,7 @@
   },
   "/img/en/biostarx-settings-video-vms-server-info.png": {
     "width": 1078,
-    "height": 327
+    "height": 284
   },
   "/img/en/biostarx-settings-visitor-custom-visitor-field.png": {
     "width": 1510,
@@ -15084,52 +15132,52 @@
     "height": 443
   },
   "/img/en/clue/add-device-complete.png": {
-    "width": 1711,
-    "height": 294
+    "width": 1511,
+    "height": 151
   },
   "/img/en/clue/add-device-enter-id.png": {
-    "width": 968,
-    "height": 357
+    "width": 915,
+    "height": 266
   },
   "/img/en/clue/add-device-go-device-tap.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 152,
+    "height": 287
   },
   "/img/en/clue/add-device-list-enable-edit-mode.png": {
     "width": 1711,
     "height": 289
   },
   "/img/en/clue/add-device-list-set-place.png": {
-    "width": 1715,
-    "height": 551
+    "width": 1520,
+    "height": 174
   },
   "/img/en/clue/add-device-list.png": {
-    "width": 1711,
-    "height": 349
+    "width": 1515,
+    "height": 175
   },
   "/img/en/clue/add-device-settings.png": {
-    "width": 1920,
-    "height": 403
+    "width": 1589,
+    "height": 139
   },
   "/img/en/clue/assign-device-device-list-assign-place.png": {
     "width": 1709,
     "height": 484
   },
   "/img/en/clue/assign-device-device-list-edit.png": {
-    "width": 1708,
-    "height": 347
+    "width": 1440,
+    "height": 86
   },
   "/img/en/clue/assign-device-device-list-move.png": {
-    "width": 1709,
-    "height": 348
+    "width": 210,
+    "height": 116
   },
   "/img/en/clue/assign-device-device-list.png": {
-    "width": 1920,
-    "height": 494
+    "width": 1547,
+    "height": 287
   },
   "/img/en/clue/assign-device-settings.png": {
-    "width": 1920,
-    "height": 323
+    "width": 1530,
+    "height": 109
   },
   "/img/en/clue/bs3-main-clue.png": {
     "width": 250,
@@ -15152,36 +15200,36 @@
     "height": 927
   },
   "/img/en/clue/clue-basic-setup-access-service-membership.png": {
-    "width": 1920,
-    "height": 485
+    "width": 1000,
+    "height": 275
   },
   "/img/en/clue/clue-basic-setup-access-service-verify.png": {
-    "width": 1157,
-    "height": 554
+    "width": 714,
+    "height": 419
   },
   "/img/en/clue/clue-basic-setup-add-child.png": {
-    "width": 1920,
-    "height": 556
+    "width": 1309,
+    "height": 516
   },
   "/img/en/clue/clue-basic-setup-add-distributor-profile.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1382,
+    "height": 698
   },
   "/img/en/clue/clue-basic-setup-add-distributor.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 655,
+    "height": 499
   },
   "/img/en/clue/clue-basic-setup-admin-information.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1392,
+    "height": 729
   },
   "/img/en/clue/clue-basic-setup-face.png": {
     "width": 1102,
     "height": 518
   },
   "/img/en/clue/clue-basic-setup-invite-admin.png": {
-    "width": 1920,
-    "height": 451
+    "width": 1276,
+    "height": 206
   },
   "/img/en/clue/clue-basic-setup-membership-setup-web-mobile.png": {
     "width": 1175,
@@ -15196,8 +15244,8 @@
     "height": 481
   },
   "/img/en/clue/clue-basic-setup-services.png": {
-    "width": 1920,
-    "height": 501
+    "width": 1321,
+    "height": 336
   },
   "/img/en/clue/clue-fw-device-basic-select-fw-ver.png": {
     "width": 1920,
@@ -17295,6 +17343,14 @@
     "width": 1097,
     "height": 663
   },
+  "/img/en/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/en/device/xp2v2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
+  },
   "/img/en/device/xpd2-gkdb-dimension.svg": {
     "width": 1140,
     "height": 663
@@ -18558,6 +18614,14 @@
   "/img/es/device/name-function-each-part-xpq2.svg": {
     "width": 816,
     "height": 933
+  },
+  "/img/es/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/es/device/xp2v2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
   },
   "/img/es/device/xpq2-dimension.svg": {
     "width": 1097,
@@ -21379,6 +21443,14 @@
     "width": 816,
     "height": 933
   },
+  "/img/ja/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/ja/device/xp2v2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
+  },
   "/img/ja/device/xpq2-dimension.svg": {
     "width": 1097,
     "height": 663
@@ -22289,7 +22361,7 @@
   },
   "/img/mobile/bsx-mobile-app-alert.png": {
     "width": 1144,
-    "height": 996
+    "height": 993
   },
   "/img/mobile/bsx-mobile-app-all-users-info.png": {
     "width": 489,
@@ -22321,7 +22393,7 @@
   },
   "/img/mobile/bsx-mobile-app-device.png": {
     "width": 1144,
-    "height": 995
+    "height": 993
   },
   "/img/mobile/bsx-mobile-app-door-control-more.png": {
     "width": 489,
@@ -22413,7 +22485,7 @@
   },
   "/img/mobile/bsx-mobile-app-realtime-log.png": {
     "width": 1144,
-    "height": 996
+    "height": 993
   },
   "/img/mobile/bsx-mobile-app-setting-auto-login.png": {
     "width": 489,
@@ -22517,7 +22589,7 @@
   },
   "/img/mobile/bsx-mobile-home-screen.png": {
     "width": 489,
-    "height": 995
+    "height": 993
   },
   "/img/mobile/bsx-mobile-init-setting.png": {
     "width": 489,
