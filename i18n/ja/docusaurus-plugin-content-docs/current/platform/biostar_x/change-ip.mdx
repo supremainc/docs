@@ -1,15 +1,10 @@
 ---
 id: change-ip
 title: メインサーバーのIPアドレスを変更する
-description: BioStar X メインサーバーをインストールした後にIPアドレスを変更する方法を説明します。 WindowsサーバーでのIPアドレス変更から、BioStar X Service Managerでの適用、通信サーバーの設定まで、全手順を含みます。
-keywords:
-  - IPアドレスの変更
-  - BioStar X Service Manager
-  - メインサーバー
-  - Communication サーバー
+description: BioStar X メインサーバーをインストールした後にIPアドレスを変更する方法を説明します。 WindowsサーバーでのIPアドレス変更から、BioStar X Service Managerでの適用、マルチコミュニケーションサーバーの設定まで、全手順を含みます。
 ---
 
-サーバーのネットワーク環境が変更された場合や、初期設定後にIPアドレスを変更する必要がある場合は、このドキュメントを参照してください。 BioStar X メインサーバーのIPアドレスを安全に変更し、接続されている通信サーバーを再構成する方法を説明します。
+サーバーのネットワーク環境が変更された場合や、初期設定後にIPアドレスを変更する必要がある場合は、このドキュメントを参照してください。 BioStar X メインサーバーのIPアドレスを安全に変更し、接続されているマルチコミュニケーションサーバーを再構成する方法を説明します。
 
 :::info
 
@@ -87,9 +82,9 @@ IPアドレスの変更が完了したら、すべてのサービスを再起動
 
 ウェブブラウザを開いて、変更後のIPアドレスに正常にアクセスできるか確認してください。
 
-## コミュニケーションサーバーの更新 {/* #communicationServer */}
+## マルチコミュニケーションサーバーの更新 {/* #communicationServer */}
 
-コミュニケーションサーバーを別途インストールしている場合は、メインサーバーで変更したIPアドレスに合わせてコミュニケーションサーバーの設定を変更してください。 コミュニケーションサーバーをインストールしたサーバー上で操作を行ってください。
+マルチコミュニケーションサーバーを別途インストールしている場合は、メインサーバーで変更したIPアドレスに合わせてマルチコミュニケーションサーバーの設定を変更してください。 マルチコミュニケーションサーバーをインストールしたサーバー上で操作を行ってください。
 
 1. *C:\\Program Files\\BioStar X Communications Server* に移動してください。
 
@@ -109,12 +104,12 @@ IPアドレスの変更が完了したら、すべてのサービスを再起動
 
 :::info
 
-* コミュニケーションサーバーをインストールしていない場合は、この手順をスキップしてください。
+* マルチコミュニケーションサーバーをインストールしていない場合は、この手順をスキップしてください。
 
 * BioStar Xをインストールしたメインサーバーのポート番号を変更した場合は、メインサーバーで **BioStar X Service Manager** を起動し、<Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Coordinator Service</Cmd> セクションの <Cmd>Client Port</Cmd> 値を確認してください。
 
   <Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
 
-* 通信サーバーのインストールの詳細については<DocLink docId='platform/biostar_x/install-communication-server' />をご参照ください。
+* マルチ通信サーバーのインストールの詳細については<DocLink docId='platform/biostar_x/install-communication-server' />をご参照ください。
 
 :::

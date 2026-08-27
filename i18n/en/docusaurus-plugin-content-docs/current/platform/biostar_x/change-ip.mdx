@@ -1,15 +1,10 @@
 ---
 id: change-ip
 title: Change the Main Server IP Address
-description: This guide explains how to change the IP address after installing the BioStar X main server. Includes the full procedure, from changing the Windows server IP address to applying it via BioStar X Service Manager and configuring the Communication Server.
-keywords:
-  - IP address change
-  - BioStar X Service Manager
-  - Main server
-  - Communication Server
+description: This guide explains how to change the IP address after installing the BioStar X main server. Covers changing the Windows server IP, applying it in BioStar X Service Manager, and setting up the Multi Communications Server.
 ---
 
-Refer to this document when the server's network environment changes or when you need to change the IP address after initial setup. This guide explains how to safely change the BioStar X main server IP address and reconfigure the connected Communication Server.
+Refer to this document when the server's network environment changes or when you need to change the IP address after initial setup. This guide explains how to safely change the BioStar X main server IP address and reconfigure the connected Multi Communications Server.
 
 :::info
 
@@ -87,9 +82,9 @@ If the database is hosted on the same server as **BioStar X**, stop all services
 
 Open a web browser and verify that you can access the server using the new IP address.
 
-## Communication server update {/* #communicationServer */}
+## Update Multi Communications Server {/* #communicationServer */}
 
-If you installed a Communication Server, update its settings to use the main server's new IP address. Run this on the server where you installed the Communication Server.
+If you installed an additional Multi Communications Server, update its settings to use the main server's new IP address. Run this on the server where you installed the Multi Communications Server.
 
 1. Navigate to *C:\Program Files\BioStar X Communications Server*.
 
@@ -109,12 +104,12 @@ After updating the main server's IP address, a success message appears.
 
 :::info
 
-* If you didn't install a Communication Server, skip this step.
+* If you didn't install a Multi Communications Server, skip this step.
 
 * If you changed the port number on the main server where BioStar X is installed, run **BioStar X Service Manager** on the main server and check the <Cmd>Client Port</Cmd> value under <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Coordinator Service</Cmd>.
 
   <Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
 
-* For more information on installing the communication server, see <DocLink docId='platform/biostar_x/install-communication-server' />.
+* For more information on installing the Multi Communications Server, see <DocLink docId='platform/biostar_x/install-communication-server' />.
 
 :::

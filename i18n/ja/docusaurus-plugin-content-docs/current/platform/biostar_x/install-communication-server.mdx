@@ -1,15 +1,15 @@
 ---
 id: install-communication-server
-title: Communication サーバーをインストールする
-description: Communication サーバーのインストール手順を案内します。
+title: マルチコミュニケーションサーバーをインストールする
+description: マルチコミュニケーションサーバーのインストール手順を案内します。
 keywords:
-  - Communication サーバー
+  - マルチコミュニケーションサーバー
   - インストール
 ---
 
-本ドキュメントでは、**BioStar X** の **Communication サーバー** のインストール方法を案内します。 
+本ドキュメントでは、**BioStar X** の **マルチコミュニケーション（Multi Communications）サーバー** のインストール方法を案内します。 
 
-コミュニケーションサーバーは、入退室管理デバイスとの通信を専任で行うサーバーです。 メインサーバーとは別に設置し、多数のデバイスを安定して管理できるよう支援します。 1 台のコミュニケーションサーバーで最大 1,000 台のデバイスを接続でき、必要に応じて複数台を追加することもできます。
+マルチコミュニケーションサーバーは、入退室管理デバイスとの通信を専任で行うサーバーです。 メインサーバーとは別に設置し、多数のデバイスを安定して管理できるよう支援します。 一台のマルチコミュニケーションサーバーで最大 1,000 台のデバイスを接続でき、必要に応じて複数台のマルチコミュニケーションサーバーを追加することもできます。
 
 :::info
 
@@ -19,17 +19,17 @@ Ethernet (TCP/IP) で接続できるデバイスの最大数は 1,000 台です�
 
 ## 開始前 {/* #start-before */}
 
-Communication サーバーをインストールする前に、次の事項を確認します。
+マルチコミュニケーションサーバーをインストールする前に、次の事項を確認します。
 
-* Communication サーバーは **BioStar X** サーバーと同じサーバーにインストールできません。
+* マルチコミュニケーションサーバーは **BioStar X** サーバーと同じサーバーにインストールできません。
 
-* Communication サーバーは 64 ビットオペレーティングシステムにのみインストールできます。 システムの最低要件の詳細については <DocLink docId='platform/biostar_x/system-requirements#communication-server' /> をご参照ください。
+* マルチコミュニケーションサーバーは 64 ビットオペレーティングシステムにのみインストールできます。 システムの最低要件の詳細については <DocLink docId='platform/biostar_x/system-requirements#communication-server' /> をご参照ください。
 
-* Communication サーバーをインストールして接続するには、マルチ Communication サーバーライセンスが必要です。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+* マルチコミュニケーションサーバーをインストールして接続するには、マルチコミュニケーションサーバーライセンスが必要です。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
 ### インストール前の確認事項 {/* #check-before-install */}
 
-Communication サーバーをインストールする前に **BioStar X Service Manager** を実行し、インストール中に入力が必要な情報を確認します。
+マルチコミュニケーションサーバーをインストールする前に **BioStar X Service Manager** を実行し、インストール中に入力が必要な情報を確認します。
 
 1. Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。
 
@@ -37,13 +37,13 @@ Communication サーバーをインストールする前に **BioStar X Service 
 
 3. <Cmd>SERVICE SETTINGS</Cmd> をクリックします。
 
-以下に、Communication サーバーのインストール時に入力が必要な情報を示します。 各項目を確認して準備します。
+以下に、マルチコミュニケーションサーバーのインストール時に入力が必要な情報を示します。 各項目を確認して準備します。
 
 <Image src='/img/biostarx-cumm-server-matching.png' />
 
 <div className='table-fixed'>
 
-| BioStar X Service Manager | Communication サーバーインストール時の入力情報 |
+| BioStar X Service Manager | マルチコミュニケーションサーバーインストール時の入力情報 |
 | --- | --- |
 | <Cmd>BioStar X Core Service</Cmd> → <Cmd>RPC Port</Cmd> | **BioStar X Server gRPC Port for Communication** |
 | <Cmd>BioStar X Coordinator Service</Cmd> → <Cmd>Client Port</Cmd> | **BioStar X Coordinator Service Port for Communication** |
@@ -59,7 +59,7 @@ Communication サーバーをインストールする前に **BioStar X Service 
 
 ## インストールガイド {/* #install-guide */}
 
-Communication サーバーをインストールするには、次の手順に従います。
+マルチコミュニケーションサーバーをインストールするには、次の手順に従います。
 
 1. [Suprema ダウンロードセンター](https://download.supremainc.com/) にアクセスしてログインし、インストールパッケージ (*BioStar X Communications Server.X.Y.X.BB.exe*) をダウンロードします。
 
@@ -73,7 +73,7 @@ Communication サーバーをインストールするには、次の手順に従
 
    <Image src='/img/biostarx-install-comm-server-license-agree.png' />
 
-5. Communication サーバーをインストールするパスを設定し、<Cmd code='biostar2.install.next' className='bold'/> をクリックします。
+5. マルチコミュニケーションサーバーをインストールするパスを設定し、<Cmd code='biostar2.install.next' className='bold'/> をクリックします。
 
    <Image src='/img/biostarx-install-comm-server-set-path.png' />
 
@@ -81,7 +81,7 @@ Communication サーバーをインストールするには、次の手順に従
 
    <Image src='/img/biostarx-install-comm-server-private-policy.png' />
 
-7. Communication サーバーのコンポーネントを選択し、<Cmd code='biostar2.install.next' className='bold'/> をクリックします。
+7. マルチコミュニケーションサーバーのコンポーネントを選択し、<Cmd code='biostar2.install.next' className='bold'/> をクリックします。
 
    <Image src='/img/biostarx-install-comm-server-select-component.png' />
 
@@ -111,11 +111,11 @@ Communication サーバーをインストールするには、次の手順に従
 
     <Image src='/img/biostarx-install-comm-server-complete.png' />
 
-Communication サーバーのインストールを完了します。 インストールが完了したら、**BioStar X** メインサーバーで Communication サーバーと接続されていることを確認します。
+マルチコミュニケーションサーバーのインストールを完了します。 インストールが完了したら、**BioStar X** メインサーバーでマルチコミュニケーションサーバーと接続されていることを確認します。
 
 ## インストール後の確認事項 {/* #check-after-install */}
 
-Communication サーバーのインストールを完了したら、**BioStar X Service Manager** を使用してメインサーバーと Communication サーバーを接続する必要があります。
+マルチコミュニケーションサーバーのインストールを完了したら、**BioStar X Service Manager** を使用してメインサーバーとマルチコミュニケーションサーバーを接続する必要があります。
 
 1. Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。 
 
@@ -127,13 +127,13 @@ Communication サーバーのインストールを完了したら、**BioStar X 
 
 4. 画面右上の <Cmd>Add Communication Server</Cmd> ボタンをクリックします。
 
-5. <Cmd>Add Communication Server</Cmd> ウィンドウが表示されたら、インストールした Communication サーバーの IP アドレスと一致する項目のチェックボックスをクリックし、<Cmd>Database</Cmd> 列で使用するデータベースを選択します。
+5. <Cmd>Add Communication Server</Cmd> ウィンドウが表示されたら、インストールしたマルチコミュニケーションサーバーの IP アドレスと一致する項目のチェックボックスをクリックし、<Cmd>Database</Cmd> 列で使用するデータベースを選択します。
 
    <Image src='/img/common/biostarx-sm-cluster-main-03.png' alone />
 
 6. <Cmd>Add</Cmd> をクリックします。
 
-Communication サーバー一覧で、追加した Communication サーバーの <Cmd>Server Status</Cmd> 列が <Cmd>Connected</Cmd> 状態であることを確認します。
+マルチコミュニケーションサーバー一覧で、追加したマルチコミュニケーションサーバーの <Cmd>Server Status</Cmd> 列が <Cmd>Connected</Cmd> 状態であることを確認します。
 
 <Image src='/img/common/biostarx-sm-cluster-main-04.png' alone />
 
@@ -141,8 +141,8 @@ Communication サーバー一覧で、追加した Communication サーバーの
 
 * <Cmd>COMMUNICATIONS</Cmd> メニューは、マルチ Communication サーバーライセンスを有効化したときに使用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
-* Communication サーバーを削除するには、一覧で削除するサーバーのチェックボックスをクリックし、画面右上の <Cmd>Delete Commnunication Server</Cmd> ボタンをクリックします。
+* マルチコミュニケーションサーバーを削除するには、一覧で削除するサーバーのチェックボックスをクリックし、画面右上の <Cmd>Delete Commnunication Server</Cmd> ボタンをクリックします。
 
-* Communication サーバーを追加した場合、メインサーバーの負荷を軽減するために、Communication サーバーと連携する補助データベースを追加できます。 補助データベースの追加に関する詳細は <DocLink docId='platform/biostar_x/add-sub-db' /> をご参照ください。
+* マルチコミュニケーションサーバーを追加した場合、メインサーバーの負荷を軽減するために、マルチコミュニケーションサーバーと連携する補助データベースを追加できます。 補助データベースの追加に関する詳細は <DocLink docId='platform/biostar_x/add-sub-db' /> をご参照ください。
 
 :::
