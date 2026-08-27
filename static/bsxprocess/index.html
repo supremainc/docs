@@ -487,18 +487,33 @@
       span.textContent=txt;
     });
   }
+  var STORAGE_KEY='biostarx-release-date';
+  function saveDate(v){
+    try{
+      if(v){localStorage.setItem(STORAGE_KEY,v);}
+      else{localStorage.removeItem(STORAGE_KEY);}
+    }catch(e){/* 저장이 막힌 환경(시크릿 모드 등)에서는 무시 */}
+  }
   function onChange(){
     var v=input.value;
-    if(!v){render(null);echo.textContent=echoBase;echo.classList.remove('on');return;}
+    if(!v){render(null);echo.textContent=echoBase;echo.classList.remove('on');saveDate('');return;}
     var p=v.split('-').map(Number);
     var base=new Date(p[0],p[1]-1,p[2]);
     render(base);
     echo.textContent='기준 제품 출시일: '+v+' ('+DOW[base.getDay()]+') \u2014 아래 시점 칸의 날짜는 이 기준으로 계산된 마감일이다.';
     echo.classList.add('on');
+    saveDate(v);
   }
   input.addEventListener('change',onChange);
   input.addEventListener('input',onChange);
   clearBtn.addEventListener('click',function(){input.value='';onChange();});
+
+  /* 이전에 입력해 둔 출시일이 있으면 복원 */
+  try{
+    var savedDate=localStorage.getItem(STORAGE_KEY);
+    if(savedDate){input.value=savedDate;}
+  }catch(e){/* 저장이 막힌 환경에서는 무시 */}
+  onChange();
 
   /* ---- 목차 현재 위치 표시 ---- */
   var links=[].slice.call(document.querySelectorAll('nav.toc a[href^="#"]'));
