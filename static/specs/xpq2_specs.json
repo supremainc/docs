@@ -189,7 +189,7 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": "213 g"
+              "value": ["XPQ2-DB: 208 g", "XPQ2-DPB: 213 g"]
             },
             "model2": {
               "label": "브래킷",
