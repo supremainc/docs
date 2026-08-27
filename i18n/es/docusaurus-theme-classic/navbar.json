@@ -229,10 +229,18 @@
   },
   "item.label.CLUe": {
     "message": "CLUe",
-    "description": "Navbar item with label CLUe"
+    "description": "Elemento de la barra de navegación etiquetado como «CLUe»"
   },
   "item.label.CLUe API": {
     "message": "CLUe API",
-    "description": "Navbar item with label CLUe API"
+    "description": "Elemento de la barra de navegación etiquetado como «CLUe API»"
+  },
+  "item.label.XPass 2 V2": {
+    "message": "XPass 2 V2",
+    "description": "Elemento de la barra de navegación etiquetado como «XPass 2 V2»"
+  },
+  "item.label.ViOnyx AI Camera API": {
+    "message": "ViOnyx AI Camera API",
+    "description": "Elemento de la barra de navegación etiquetado como «ViOnyx AI Camera API»"
   }
 }

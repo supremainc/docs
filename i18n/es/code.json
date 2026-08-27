@@ -92,7 +92,7 @@
   },
   "theme.admonition.important": {
     "message": "Importante",
-    "description": "The default label used for the Important admonition (:::important)"
+    "description": "La etiqueta predeterminada que se usa para la advertencia Importante (:::important)"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Inicio",
@@ -202,7 +202,7 @@
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Enlace directo y texto para {header}",
+    "message": "Enlace directo y texto para {heading}",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
@@ -940,8 +940,7 @@
     "message": "Productos"
   },
   "theme.SearchBar.relatedDocs.title": {
-    "message": "Documentos relacionados",
-    "description": "The title for related documents shown in the search popup when the query is empty"
+    "message": "Documentos relacionados"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "Borrar la consulta",

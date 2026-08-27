@@ -1,10 +1,10 @@
-## Configurar administrador maestro <Badge only>solo para modelos CE</Badge>
+## Configurar administrador maestro <Badge only>Productos orientados a CE</Badge>
 
-La función <Cmd sid='ui_128' product='dev' /> mejora los privilegios administrativos generales del dispositivo para aumentar la seguridad del dispositivo y evitar el acceso y los cambios de configuración no autorizados. Esta feature se aplica solo a **Productos CE** para la región de la UE, y se requiere el **enrollment del Master Administrator** en **Productos CE**. Solo el Master Administrator enrolled puede acceder al menú de administrador y cambiar los settings del dispositivo.
+La función <Cmd sid='ui_128' product='dev' /> mejora los privilegios administrativos generales del dispositivo para aumentar la seguridad del dispositivo y evitar el acceso y los cambios de configuración no autorizados. Esta característica solo aplica a los **productos orientados a CE** para la región de la UE, y los **productos CE** **requieren inscribir al administrador maestro**. Solo el Master Administrator enrolled puede acceder al menú de administrador y cambiar los settings del dispositivo.
 
 :::info
 
-* Esta feature es una policy obligatoria introducida para mejorar la seguridad de los **Productos CE** en la región de la UE, y no es compatible con **productos Global (No CE)**.
+* Esta característica es una política obligatoria para mejorar la seguridad de los **productos orientados a CE** en la región de la UE, y no es compatible con los **productos globales (no CE)**.
 
 * El administrador maestro no puede eliminarse directamente y solo se eliminará durante <Cmd sid='ui_072' product='dev' />.
 
@@ -15,7 +15,7 @@ import MasterAdminSupportPolicy from './_master-admin-support-policy.mdx';
 
 <MasterAdminSupportPolicy />
 
-### Lógica de comportamiento durante la actualización del firmware {/* #firmware-upgrade-logic */}
+### Comportamiento durante la actualización del firmware {/* #firmware-upgrade-logic */}
 
 Cuando actualiza el firmware de un dispositivo existente, la compatibilidad con <Cmd sid="ui_128" product='dev' /> y <Cmd sid="ui_073" product='dev' /> puede variar según la combinación de la **versión anterior a la actualización** y la **versión objetivo**.
 
