@@ -3,37 +3,44 @@ id: 110
 title: Firmware Version 1.1.0
 ---
 
-# Firmware Version 1.1.0 (Build No. 1.1.0_260728)
+# Firmware Version 1.1.0 (Build No. 1.1.0_260826)
 
-Release<Separator/>2026-07-31
+Release<Separator/>2026-08-27
 
 ## New Features and Improvements
 
 ---
 
+{/* (BS3MFW-451) 대기화면 동영상 플레이 */}
 1. Added support for video playback on the standby screen.
 
-   :::note
+    :::note
 
-   This feature can be configured in BioStar X. For detailed instructions, refer to **Setting Up Video Playback on the Standby Screen** in the BioStar X guide.
+    This feature can be configured in BioStar X. For detailed instructions, refer to **Setting Up Video Playback on the Standby Screen** in the BioStar X guide.
 
-   :::
+    :::
 
-1. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
+{/* (BS3MFW-412) BDP-1343 Desfire EV2 and EV3 features supported by Readers and Software */}
+2. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
 
-1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+{/* (BS3MFW-463) BSF-2925BDP-1634 OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
+3. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
 
-1. Improved BLE stability.
+{/* (BS3MFW-541) [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) */}
+4. Improved BLE stability.
 
-1. Expanded allowed characters for User ID and User Name
+{/* (BS3MFW-562) [UI 지원 장치] 사용자 이름 및 사용자 ID에 Dot(.) 지원 */}
+5. Expanded allowed characters for User ID and User Name
 
-   * Added support for periods (.) in User ID
+    * Added support for periods (.) in User ID
 
-   * Added support for periods (.) and apostrophes (') in User Name
+    * Added support for periods (.) and apostrophes (') in User Name
 
-1. Improved T&A message display to show on two lines.
+{/* (BS3MFW-95) Server / Device Private MSG관련하여 근태 표시 시 아래 이미지 처럼 표시가 되는 현상 - 1.0.0 */}
+6. Improved T&A message display to show on two lines.
 
-1. Improved Fire alarm zone status display and alarm clearing behavior after power restart following a fire alarm.
+{/* (BS3MFW-465) Fire Alarm Zone 상태를 메모리에 바로 쓰도록 변경 */}
+7. Improved Fire alarm zone status display and alarm clearing behavior after power restart following a fire alarm.
 
 ## Bug Fixes
 
@@ -41,44 +48,63 @@ Release<Separator/>2026-07-31
 
 <BugLists>
 
+{/* (BS3MFW-455) ffplay를 통해 tcp로 rtsp 연결하면 30초 Timeout에 발생에 대한 개선 */}
 1. Video streaming stopping after a certain period when connecting to RTSP over TCP. <Badge>1.0.0</Badge>
 
-1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+{/* (BS3MFW-457) BSF-2925 osdp pdcap 개선 */}
+2. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
 
-1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+{/* (BS3MFW-462) FISF-2436 카드만 등록된 사용자 카드를 위갠드 리더기에서 인증 시도 시 Authentication Fail (Invalid Credential) 발생 - 1.0.0 */}
+3. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
 
-1. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
+{/* (BS3MFW-467) 프로토콜로 사용자 enroll 하는 동안 사용자가 Face 인증했을 때 face score가 좋은 template으로 Update 하려고 할 때 lock or Reboot되는 현상 - 1.0.0 */}
+4. Device freezing or rebooting when face authentication occurs while adding or deleting users. <Badge>1.0.0</Badge>
 
-1. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
+{/* (BS3MFW-474) FISF-2475 사용자 동기화 중에, 등록 완료가 수초 걸리는 증상 - VFMCore 수정 - 1.0.0 */}
+5. Device freezing or rebooting and delayed user enrollment during user synchronization. <Badge>1.0.0</Badge>
 
-1. LED effect not working when the screen saver is active. <Badge>1.0.0</Badge>
+{/* (BS3MFW-203) Master LED breathing 수행하지 않는 현상 - 1.0.0 */}
+6. LED effect not working when the screen saver is active. <Badge>1.0.0</Badge>
 
-1. Invalid values being accepted in the device's Ethernet settings. <Badge>1.0.0</Badge>
+{/* (BS3MFW-275) 장치의 Ethernet 설정에서 오류가 나는 현상 - 1.0.0 */}
+7. Invalid values being accepted in the device's Ethernet settings. <Badge>1.0.0</Badge>
 
-1. Improved icon display issues on the master device screen under certain conditions <Badge>1.0.0</Badge>
+{/* (BS3MFW-369) Manual Lock 상태에서 Wiegand Reader에 인증 성공하여 Slave의 Relay 동작 시에, 장치 화면의 자물쇠 Icon이 해제되는 현상 - 1.0.0 */}
+{/* (BS3MFW-370) Master의 자물쇠 Icon이 표시가 안 되는 현상 - 1.0.0 */}
+{/* (BS3MFW-371) Master의 Door Icon이 표시가 사라지는 현상 - 1.0.0 */}
+8. Improved icon display issues on the master device screen under certain conditions <Badge>1.0.0</Badge>
 
-   * Lock icon disappearing when authentication succeeds at another door while in **Manual Lock** state
+    * Lock icon disappearing when authentication succeeds at another door while in **Manual Lock** state
 
-   * Lock icon not displayed on the master device screen while in **Manual Lock** state
+    * Lock icon not displayed on the master device screen while in **Manual Lock** state
 
-   * Door icon disappearing on the master device screen when adding a door configuration
+    * Door icon disappearing on the master device screen when adding a door configuration
 
-1. Video not displayed on the receiving device during a VoIP call. <Badge>1.0.0</Badge>
+{/* (BS3MFW-384) [VoIP] 장치에서 발신 시 BS3M 수신 장치에 통화 화면 영상 미출력 - 1.0.0 */}
+9. Video not displayed on the receiving device during a VoIP call. <Badge>1.0.0</Badge>
 
-1. Fingerprint scan screen appearing when enrolling a fingerprint during a VoIP call. <Badge>1.0.0</Badge>
+{/* (BS3MFW-401) [VoIP] VoIP 통화 중 BioStar에서 지문 등록 시 스캔 화면 출력 - 1.0.0 */}
+10. Fingerprint scan screen appearing when enrolling a fingerprint during a VoIP call. <Badge>1.0.0</Badge>
 
-1. Date and time displayed incorrectly in the event log when the **Time Zone** is set to UTC-1 through UTC-12. <Badge>1.0.0</Badge>
+{/* (BS3MFW-365) 장치 Time Zone을 UTC-1 ~ UTC-12로 설정 후 Event Log 상에서 유효 범위 값을 입력 시 NaN/aN/aN aN:aN으로 표시가 되는 현상 - 1.0.0 */}
+11. Date and time displayed incorrectly in the event log when the **Time Zone** is set to UTC-1 through UTC-12. <Badge>1.0.0</Badge>
 
-1. Incorrect guidance message displayed when enrolling or editing a fingerprint. <Badge>1.0.0</Badge>
+{/* (BS3MFW-414) 지문을 등록하거나 수정할 시에 "지문을 한 번 더 입력하십시오."로 문구가 표시되는 현상 - 1.0.0 */}
+12. Incorrect guidance message displayed when enrolling or editing a fingerprint. <Badge>1.0.0</Badge>
 
-1. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+{/* (BS3MFW-456) FISF-2471 Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 - 1.0.0 */}
+13. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
 
-1. Face authentication failing in bright external lighting conditions. <Badge>1.0.0</Badge>
+{/* (BS3MFW-413) [외부광-자연태양광]외부광 환경에서 순광 상태에서 BS3M의 FD가 불가하여 인증이 안되는 현상 - 1.0.0 */}
+14. Face authentication failing in bright external lighting conditions. <Badge>1.0.0</Badge>
 
-1. Master device's IR LED blinking when scanning a fingerprint on a slave device. <Badge>1.0.1</Badge>
+{/* (BS3MFW-498) [Slave - Scan Finger]Biostar에서 Slave 장치로 Scan Finger 시 Master 장치의 IR이 깜빡이는 현상 - 1.0.1 */}
+15. Master device's IR LED blinking when scanning a fingerprint on a slave device. <Badge>1.0.1</Badge>
 
-1. Reboot occurring when changing the fingerprint template format on standard models. <Badge>1.0.1</Badge>
+{/* (BS3MFW-502) Master Admin 스탠다드향임에도 지문의 포맷을 변경하면 무조건 재부팅이 되는 현상 - 1.0.1 */}
+16. Reboot occurring when changing the fingerprint template format on standard models. <Badge>1.0.1</Badge>
 
-1. Card data being read incorrectly when registering cards on a BS3M device connected as a slave. <Badge>1.0.1</Badge>
+{/* (BS3MFW-545) Slave으로 연결된 BS3M 장치에서 카드 등록 시 카드 데이터가 다른 값으로 읽히는 현상 - 1.0.1 */}
+17. Card data being read incorrectly when registering cards on a BS3M device connected as a slave. <Badge>1.0.1</Badge>
 
 </BugLists>
