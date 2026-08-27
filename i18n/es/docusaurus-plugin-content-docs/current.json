@@ -653,22 +653,26 @@
   },
   "sidebar.biostation3max.category.릴리스 노트": {
     "message": "Notas de la Versión",
-    "description": "The label for category '릴리스 노트' in sidebar 'biostation3max'"
+    "description": "La etiqueta para la categoría 'Notas de la versión' en la barra lateral 'biostation3max'"
   },
   "sidebar.clueportal.category.CLUe": {
     "message": "CLUe",
-    "description": "The label for category 'CLUe' in sidebar 'clueportal'"
+    "description": "La etiqueta de la categoría 'CLUe' en la barra lateral 'clueportal'"
   },
   "sidebar.clueportal.category.CLUe 웹 포털 가이드": {
     "message": "Guía del Portal Web de CLUe",
-    "description": "The label for category 'CLUe 웹 포털 가이드' in sidebar 'clueportal'"
+    "description": "La etiqueta de la categoría 'CLUe Web Portal Guide' en la barra lateral 'clueportal'"
   },
   "sidebar.clueportal.category.개발자": {
-    "message": "Desarrolladores",
-    "description": "The label for category '개발자' in sidebar 'clueportal'"
+    "message": "Desarrollador",
+    "description": "La etiqueta de la categoría 'Developer' en la barra lateral 'clueportal'"
   },
   "sidebar.clueportal.link.CLUe API": {
     "message": "CLUe API",
-    "description": "The label for link 'CLUe API' in sidebar 'clueportal', linking to 'pathname:///developer/clue'"
+    "description": "La etiqueta del enlace 'CLUe API' en la barra lateral 'clueportal', que vincula a 'pathname:///developer/clue'"
+  },
+  "sidebar.xpass2_v2.category.XPass 2 V2": {
+    "message": "XPass 2 V2",
+    "description": "La etiqueta de la categoría 'XPass 2 V2' en la barra lateral 'xpass2_v2'"
   }
 }
