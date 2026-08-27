@@ -145,6 +145,45 @@
             "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
+        "dimensions": {
+          "label": "크기 (W x H x D)",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 48 x 144.7 x 27 (mm)", "XP2-GDPB-V2, XP2-GKDPB-V2: 80 x 130 x 25 (mm)"]
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 39.8 x 132.2 (mm)", "XP2-GDPB-V2, XP2-GKDPB-V2: 72.4 x 116.1 (mm)"]
+            }
+          }
+        },
+        "weight": {
+          "label": "무게",
+          "label_id": "specs.general.weight",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": [ "XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 144 g", "XP2-GDPB-V2: 220 g", "XP2-GKDPB-V2: 235 g" ]
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": {
+                "ko": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (와셔 및 볼트 포함)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (와셔 및 볼트 포함)"],
+                "en": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (including washers and bolts)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (including washers and bolts)"],
+                "es": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (incluye arandelas y tornillos)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (incluye arandelas y tornillos)"],
+                "ja": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (ワッシャーおよびボルトを含む)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (ワッシャーおよびボルトを含む)"]
+              }
+            }
+          }
+        },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
