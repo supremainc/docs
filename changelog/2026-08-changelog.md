@@ -40,7 +40,7 @@ date: 2026-09-01T09:00
 
   * [제품 사양](../device/vionyx/product-specifications) 업데이트
 
-* 친환경 소재 정책에 따른 패키지 구성품 조정
+* 친환경 소재 정책에 따른 구성품 조정
 
   * [BioLite N2](../device/biolite_n2/getting-started)
 
