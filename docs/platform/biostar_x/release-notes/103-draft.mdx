@@ -31,6 +31,7 @@ draft: true
 <Jira bss='BX-5868' /> BioStar2 commons-text-1.2.jar 라이브러리 보안 취약점 수정
 <Jira bss='BX-5521' /> OpenSSL 3.5 업그레이드
 <Jira bss='BX-5866' /> [보안] Advanced Technology 에서 제기한 보안 취약점 작업
+<Jira bss='BX-5862' /> [보안] Apache Log4j TLS MitM 취약점 (2.21.1)
 1. 보안 취약점 개선
    * AngularJS, jQuery 버전 업데이트
    * Reverse Tabnabbing 취약점 개선
@@ -42,6 +43,7 @@ draft: true
    * commons-text 라이브러리 버전 업데이트
    * OpenSSL 라이브러리 버전 업데이트
    * 보안 취약점 관련 라이브러리 업데이트
+   * Log4j 라이브러리 버전 업데이트
 1. Security vulnerability improvements
    * Updated AngularJS and jQuery versions
    * Improved Reverse Tabnabbing vulnerability
@@ -53,6 +55,7 @@ draft: true
    * Updated the commons-text library version
    * Updated the OpenSSL library version
    * Updated security vulnerability-related libraries
+   * Updated the Log4j library version
 
 <Jira bss='BX-6727' /> Visual Face Migration "No registered visual face found." 오탐
 1. 현재 페이지에 얼굴 등록 사용자가 없으면 비주얼 페이스 마이그레이션이 진행되지 않는 문제 <Badge>1.0.0</Badge>
@@ -262,17 +265,40 @@ draft: true
 1. Improved **Door Status** query performance in Multi Communication Server environments.
 
 <Jira bss='BX-5573' /> [모하메드병원]대규모 환경(Access Group 다수, Door 4000)에서 출입 통제 상태 메뉴 조회 오래 거리는 문제(1분 이상)
-1. 
+1. 대규모 환경에서 **출입 그룹** 화면의 상태 탭 조회 성능 개선
+1. Improved the query performance of the Status tab in the **Access Group** screen in large-scale environments.
 
 <Jira bss='BX-5457' /> BioStar 2 에서 BioStar X 업그레이드 시 이미 BioStar X 설치 경로 폴더가 존재하는 경우 폴더 삭제 후 진행하라는 팝업 위치 또는 동작 개선
+1. BioStar 2에서 BioStar X로 업그레이드 시 기존 BioStar X 폴더 관련 안내 팝업의 표시 시점 및 동작 개선
+1. Improved the display timing and behavior of the notification popup for an existing BioStar X folder when upgrading from BioStar 2 to BioStar X.
+
 <Jira bss='BX-5452' /> [TA] 다수의 User(3000명 이상) 등록된 상태에서 TA Register 완료 및 새로고침 팝업 출력 후 Calendar 화면 출력 됨 
+1. **근태 관리**에서 사용자가 많은 환경에서 등록 완료 후 잘못된 화면이 표시되는 문제 <Badge>1.0.0</Badge>
+1. Incorrect screen displayed after completing registration in environments with many users in **T&A**. <Badge>1.0.0</Badge>
+
 <Jira bss='BX-5574' /> [모하메드병원]카드스켄화면에서 디바이스 트리 로드 오래 걸리는 이슈
+1. 크리덴셜 추가 시 장치 목록 조회 성능 개선
+1. Improved device list query performance when adding a credential.
+
 <Jira bss='BX-5679' /> [모하메드]server to device 에서  단말기 설정 못 갖고오는 현상
-<Jira bss='BX-5862' /> [보안] Apache Log4j TLS MitM 취약점 (2.21.1)
+1. 장치에서 **장치 → 서버** 모드 전환 시 저장된 IP 정보가 사라지는 문제 <Badge>1.0.0</Badge>
+1. Saved IP information lost when switching to **Device → Server** mode on a device. <Badge>1.0.0</Badge>
+
 <Jira bss='BX-5677' /> [성능 개선][mohammed hospital] Door 설정 저장 시 동기화 완료까지 오래 걸리는 문제
+1. **출입문** 설정 저장 시 동기화 완료까지 오래 걸리는 문제 개선
+1. Improved the long synchronization time when saving **Door** settings.
+
 <Jira bss='BX-6121' /> 여러대의 장치 사용중 일부 펀치로그 데이터가 누락되는 경우 수정
+1. MSSQL 환경의 **근태 관리**에서 여러 장치 사용 시 일부 근태 기록이 누락되는 문제 <Badge>1.0.0</Badge>
+1. Some attendance records missing when using multiple devices in **T&A** in an MSSQL environment. <Badge>1.0.0</Badge>
+
 <Jira bss='BX-5871' /> BioStar2 Report > 카드관련 리포트 Wiegand Card ID 변환 미적용
+1. **리포트**에서 카드 관련 리포트 생성 시 **Wiegand 카드** ID가 올바르게 표시되지 않는 문제 <Badge>1.0.0</Badge>\
+1. **Wiegand Card** IDs not displayed correctly when generating card-related reports in **Report**. <Badge>1.0.0</Badge>
+
 <Jira bss='BX-5673' /> 모하메드 병원 등록된 라이센스 많을경우 CORE WEBSERVER 시작 오래 걸리는 문제
+1. 
+
 <Jira bss='BX-5571' /> 모하메드 병원 사용자 1명에 access group이 많이 할당되어 있으면 사용자 조회시 오래걸리는 이슈
 <Jira bss='BX-5570' /> 모하메드 병원 엘레베이터 상세화면 진입시 느림
 <Jira bss='BX-5568' /> Leader-Follower 동기화 개선: follower 장치 필터링 누락 및 대량 사용자 그룹 조회 성능 수정
