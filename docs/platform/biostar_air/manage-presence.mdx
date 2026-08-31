@@ -1,0 +1,113 @@
+---
+id: manage-presence
+title: 재실 확인하기
+description: BioStar Air에서 사이트에 현재 있는 사용자를 확인하고, 재실 상태를 수동으로 변경하는 방법을 안내합니다.
+---
+
+<Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' /> 메뉴에서는 현재 사이트에 있는 사용자를 실시간으로 확인할 수 있습니다. 재실(Presence) 상태는 <Cmd sid='apb.zoneList.perimetterZone' product='air' className='bold' />(Perimeter Zone)에 설정한 입실 및 퇴실 장치의 인증 기록을 기준으로 계산되며, <Cmd sid='apb.zoneList.perimetterZone' product='air' className='normal' />을 아직 설정하지 않았다면 먼저 <DocLink docId='platform/biostar_air/manage-zone' />를 참고하세요.
+
+## 재실 상태가 결정되는 방식 {/* #howPresenceIsDetermined */}
+
+사용자는 경계 구역의 입실 장치에서 인증하면 <Cmd sid='presence_on_site' product='air' /> 상태로, 퇴실 장치에서 인증하면 <Cmd sid='presence_off_site' product='air' /> 상태로 전환됩니다.
+
+* 경계 구역에 퇴실 장치를 지정하지 않은 사이트는 <Cmd sid='apb.zoneForm.offsite.label' product='air' />를 반드시 설정해야 합니다. 설정한 시간 동안 활동이 없으면 사용자가 <Cmd sid='presence_off_site' product='air' /> 상태로 자동 전환됩니다.
+
+* 경계 구역의 입실 및 퇴실 장치, <Cmd sid='apb.zoneForm.offsite.label' product='air' /> 설정 방법은 <DocLink docId='platform/biostar_air/manage-zone#addingZone' />를 참고하세요.
+* 재실 상태는 다음 메뉴에서 함께 사용하는 동일한 재실 로직을 기반으로 계산됩니다.
+
+   * <Cmd sid='dashboard_menu' product='air' />
+   
+   * <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />
+   
+   * <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />
+
+## 재실 목록 살펴보기 {/* #presenceListOverview */}
+
+화면 왼쪽 사이드바에서 <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />을 클릭하세요.
+
+<Image src='/img/air/bsair-safety-presence-list.png' />
+
+재실 목록은 기본적으로 <Cmd sid='presence_on_site' product='air' /> 상태인 사용자만 표시합니다.
+
+* <Cmd sid='presence_user_column' product='air' />: 사용자의 프로필 사진과 이름입니다.
+
+* <Cmd sid='presence_entered_through_column' product='air' />: 사용자가 사이트에 들어올 때 인증한 입실 장치와 시각입니다.
+
+* <Cmd sid='presence_last_door_used_column' product='air' />: 사용자가 가장 최근에 사용한 출입문과 시각입니다.
+
+* <Cmd sid='presence_status_column' product='air' />: 사용자의 현재 재실 상태(<Cmd sid='presence_on_site' product='air' />/<Cmd sid='presence_off_site' product='air' />)입니다.
+
+* <Cmd sid='presence_action_column' product='air' />: 개별 사용자의 재실 상태를 변경할 수 있습니다.
+
+## 재실 목록 관리 기능 {/* #managePresence */}
+
+목록 상단 및 하단에서 제공하는 관리 기능으로 다음 작업을 수행할 수 있습니다.
+
+<Image src='/img/air/bsair-safety-presence-mng-tools.png' />
+
+* <Cmd sid='presence_mark_on_site' product='air' /> / <Cmd sid='presence_mark_off_site' product='air' />: 사용자의 재실 상태를 현장 또는 외부로 변경할 수 있습니다. 자세한 내용은 <DocLink inner='#manualOverride' />을 참고하세요.
+
+* <Cmd sid='presence_mask_names' product='air' /> / <Cmd sid='presence_unmask_names' product='air' />: 사용자 이름을 가리거나 다시 표시합니다. 정보가 민감한 환경에서 화면을 공유할 때 유용합니다.
+
+   <Image src='/img/air/bsair-safety-presence-mng-tools-masking.png' />
+
+* <Cmd sid='presence_refresh' product='air' />: 목록을 즉시 새로고침해 최신 상태로 갱신합니다. 목록 하단의 <Cmd sid='presence_refresh' product='air' />에서 자동 새로고침 간격(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)을 선택하면 설정한 주기마다 목록을 자동 갱신합니다.
+
+* <Cmd sid='presence_search_placeholder' product='air' />: 사용자 이름으로 목록을 검색합니다.
+
+### 재실 목록 필터링
+
+<Cmd sid='presence_status_column' product='air' /> 열에 있는 <IcAirFilter title='Filter' /> 버튼을 클릭하면 <Cmd sid='presence_on_site' product='air' />, <Cmd sid='presence_off_site' product='air' />, 전체 사용자 중에서 원하는 조건으로 목록을 필터링할 수 있습니다. 그 외에도 <Cmd sid='presence_entered_through_column' product='air' />, <Cmd sid='presence_last_door_used_column' product='air' /> 열에서 원하는 조건으로 필터링할 수 있습니다. 
+
+<Image src='/img/air/bsair-safety-presence-list-filtering.png' />
+
+:::info
+
+* 전체 사용자를 확인하려면 <Cmd sid='presence_status_column' product='air' /> 열에서 <Cmd sid='presence_on_site' product='air' />, <Cmd sid='presence_off_site' product='air' />를 모두 선택하세요.
+
+* 재실 목록은 <Cmd sid='presence_on_site' product='air' /> 상태의 사용자를 기본 표시합니다.
+
+:::
+
+## 재실 상태 수동 변경 {/* #manualOverride */}
+
+실제 상황과 시스템에 기록된 재실 상태가 다를 때 관리자가 직접 상태를 변경할 수 있습니다.
+
+* 재실 정확도는 사이트의 입실 및 퇴실 장치 구성에 따라 달라집니다. 입실 및 퇴실 장치가 명확하게 구성된 사이트일수록 더 신뢰도 높은 재실 정보를 제공합니다.
+
+* 장치가 오프라인이었거나 이벤트 전달이 지연되면, 재실 상태는 동기화가 끝난 뒤에 갱신될 수 있습니다.
+
+* 재실 상태는 출입 권한과 다릅니다. <Cmd sid='presence_on_site' product='air' /> 상태로 표시된 사용자라도 모든 출입문에 접근할 수 있는 것은 아닙니다.
+
+* 만료, 비활성, 정지 상태인 사용자는 계정이 활성화되기 전까지 재실 상태를 변경할 수 없습니다.
+
+:::info
+
+수동 변경은 시스템에 기록된 상태를 바꿀 뿐, 사용자의 실제 위치를 물리적으로 확인하는 기능이 아닙니다. 변경 이력은 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />에서 확인할 수 있습니다.
+
+:::
+
+### 개별 사용자의 재실 상태 변경
+
+1. 목록에서 상태를 변경할 사용자의 <Cmd sid='presence_action_column' product='air' /> 열에서 <Cmd sid='presence_mark_on_site' product='air' /> 또는 <Cmd sid='presence_mark_off_site' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-safety-presence-action.png' />
+
+1. 확인 메시지가 나타나면 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+### 여러 사용자의 재실 상태 변경
+
+1. 목록에서 상태를 변경할 사용자의 체크박스를 클릭하세요. 한 명 이상의 사용자를 선택할 수 있습니다.
+
+1. 목록 상단의 <Cmd sid='presence_mark_on_site' product='air' /> 또는 <Cmd sid='presence_mark_off_site' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-safety-presence-action-multi-users.png' />
+
+1. 확인 메시지가 나타나면 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+## 대시보드에서 확인 {/* #checkingFromDashboard */}
+
+<Cmd sid='dashboard_menu' product='air' /> 메뉴에서도 <Cmd sid='user_tagged_today' product='air' /> 카드로 현재 사이트에 있는 사용자 수를 빠르게 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-safety-presence-show-dashboard.png' />
+

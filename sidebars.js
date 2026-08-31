@@ -390,7 +390,18 @@ function createSidebars(preview) {
                     'platform/biostar_air/monitoring-door-status',
                   ]
                 },
-                'platform/biostar_air/managing-roll-call-fire-muster',
+                {
+                  type: 'category',
+                  label: '안전',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/safety-management',
+                  },
+                  items: [
+                    'platform/biostar_air/manage-presence',
+                    'platform/biostar_air/managing-roll-call-fire-muster',
+                  ]
+                },
               ]
             },
             {
