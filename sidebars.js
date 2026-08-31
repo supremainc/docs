@@ -366,6 +366,18 @@ function createSidebars(preview) {
                 },
                 {
                   type: 'category',
+                  label: '구역 관리',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/zone-management',
+                  },
+                  items: [
+                    'platform/biostar_air/manage-zone',
+                    'platform/biostar_air/manage-violation',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'Monitoring',
                   link: {
                     type: 'doc',

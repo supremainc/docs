@@ -1847,6 +1847,38 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-zone-mng-add-zone-apb-hard.png": {
+    "width": 637,
+    "height": 446
+  },
+  "/img/air/bsair-zone-mng-add-zone-apb-soft.png": {
+    "width": 637,
+    "height": 446
+  },
+  "/img/air/bsair-zone-mng-add-zone-assign-door-device.png": {
+    "width": 637,
+    "height": 185
+  },
+  "/img/air/bsair-zone-mng-add-zone-details.png": {
+    "width": 637,
+    "height": 277
+  },
+  "/img/air/bsair-zone-mng-add-zone-exception.png": {
+    "width": 637,
+    "height": 102
+  },
+  "/img/air/bsair-zone-mng-add-zone.png": {
+    "width": 1200,
+    "height": 637
+  },
+  "/img/air/bsair-zone-mng-list-tools.png": {
+    "width": 1016,
+    "height": 183
+  },
+  "/img/air/bsair-zone-mng-list.png": {
+    "width": 1200,
+    "height": 637
+  },
   "/img/air-cloud.svg": {
     "width": 44,
     "height": 32

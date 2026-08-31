@@ -1,0 +1,75 @@
+---
+id: manage-violation
+title: 위반
+description: BioStar Air에서 안티패스백(APB) 위반을 조회하고 해제하는 방법을 안내합니다.
+keywords: [BioStar Air, APB 위반, 안티패스백, Anti-Passback Violation]
+---
+
+{/* 이 문서는 내부 기획 문서 docs/platform/biostar_air/_reference/_onsitenow.md(Anti Passback)를 기반으로 작성되었습니다. */}
+
+위반 화면에서는 구역에 설정한 안티패스백(APB) 규칙을 어긴 사용자를 확인하고, 필요할 때 위반 상태를 해제할 수 있습니다. 구역과 APB 모드를 아직 설정하지 않았다면 먼저 <DocLink docId='platform/biostar_air/manage-zone' />를 참고하세요.
+
+## 위반이 발생하는 경우 {/* #whenViolationsOccur */}
+
+APB 위반은 사용자가 구역에 설정된 APB 모드에 따라 순서에 어긋난 출입을 시도할 때 기록됩니다.
+
+* **Hard 모드**인 구역에서는 위반 시 출입이 차단되고, 위반으로 기록됩니다.
+* **Soft 모드**인 구역에서는 출입은 허용되지만, 위반으로 기록됩니다.
+* [APB 예외 그룹](./manage-zone.mdx#exceptionSet)에 속한 사용자는 애초에 APB 규칙이 적용되지 않으므로 위반 목록에 나타나지 않습니다.
+
+## 위반 화면 살펴보기 {/* #violationsOverview */}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zone_violations_menu' product='air' />를 클릭하세요.
+
+   {/* TODO(screenshot): 위반 목록 화면 — 활성 위반이 있는 상태(사용자/APB 위반/구역/출입문/작업 컬럼이 보이는 화면) */}
+
+목록에서는 현재 활성 상태인 APB 위반을 확인할 수 있습니다.
+
+| 컬럼 | 설명 |
+| --- | --- |
+| 사용자 | 위반이 기록된 사용자입니다. |
+| APB 위반 | 위반이 발생한 모드(Hard/Soft)입니다. |
+| 구역 | 위반이 발생한 구역입니다. |
+| 출입문 | 위반이 발생한 출입문입니다. |
+| 작업 | 개별 위반을 해제하는 버튼입니다. |
+
+목록 상단에서는 아래 작업을 수행할 수 있습니다.
+
+* **사용자 이름 검색**: 사용자 이름으로 목록을 검색합니다.
+* **정렬**: A → Z, Z → A, 최신순, 오래된순으로 정렬할 수 있습니다.
+* **새로고침**: 목록을 최신 상태로 갱신합니다.
+
+활성 APB 위반이 없으면 목록 대신 빈 상태 화면이 표시됩니다. 해제된 위반과 과거 위반 이력은 <DocLink docId='platform/biostar_air/monitoring-event-logs' />에서 계속 확인할 수 있습니다.
+
+{/* TODO(screenshot): 위반 목록 화면 — 활성 위반이 없는 빈 상태 화면 */}
+
+## 위반 해제하기 {/* #clearingViolations */}
+
+위반을 해제하면 사용자의 활성 APB 위반 상태가 초기화되어, 다시 정상적으로 구역에 출입할 수 있게 됩니다.
+
+**개별 사용자의 위반 해제**
+
+목록에서 해제할 위반의 작업 컬럼에 있는 위반 해제 버튼을 클릭하고, 확인 대화 상자에서 다시 확인하세요.
+
+**여러 사용자의 위반을 한 번에 해제**
+
+1. 목록에서 위반을 해제할 사용자를 여러 명 선택하세요.
+1. 목록 상단의 위반 해제 버튼을 클릭하세요.
+1. 확인 대화 상자에서 다시 확인하세요.
+
+:::note
+
+위반 해제는 사용자의 활성 APB 위반 상태만 초기화합니다. 위반이 발생한 원본 이벤트는 삭제되지 않고 이벤트 로그에 그대로 남습니다.
+
+:::
+
+## 알아두어야 할 사항 {/* #knownLimitations */}
+
+* 구역이 비활성화되어도 이미 발생한 APB 위반은 그대로 유지되며, 이 화면에서만 해제할 수 있습니다.
+* 위반을 해제해도 이벤트 로그의 원본 기록은 삭제되지 않습니다.
+* APB 예외 그룹에 속한 사용자는 이 목록에 표시되지 않지만, 구역의 내부 인원 수에는 계속 포함됩니다.
+
+## 관련 문서 {/* #relatedDocs */}
+
+* <DocLink docId='platform/biostar_air/manage-zone' />
+* <DocLink docId='platform/biostar_air/monitoring-event-logs' />
