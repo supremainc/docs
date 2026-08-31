@@ -77,7 +77,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 :::
 
-## 구역 관리 기능
+## 구역 관리 기능 {/* #manageZone */}
 
 구역 목록 상단 및 하단에서 제공하는 관리 기능으로 다음 작업을 수행할 수 있습니다.
 
@@ -89,10 +89,15 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * <Cmd sid='zones_pause_btn' product='air' />: 경계 구역을 포함한 사이트의 모든 구역에서 APB 적용을 한 번에 멈출 수 있습니다.
 
-* <Cmd sid='presence_refresh' product='air' />: 목록을 즉시 새로고침해 최신 상태로 갱신합니다. 드롭다운에서 자동 새로고침 간격(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)을 선택하면 설정한 주기마다 목록을 자동 갱신합니다.
+* <Cmd sid='presence_refresh' product='air' />: 목록을 즉시 새로고침해 최신 상태로 갱신합니다. 목록 하단의 <Cmd sid='presence_refresh' product='air' />에서 자동 새로고침 간격(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)을 선택하면 설정한 주기마다 목록을 자동 갱신합니다.
 
 * <Cmd sid='zones_search_placeholder' product='air' />: 구역 이름으로 목록을 검색합니다.
 
+### 구역 목록 필터링
+
+목록 상단 헤더의 <Cmd sid='zones_col_apb_mode' product='air' />, <Cmd sid='zones_col_apb_exemptions' product='air' />, <Cmd sid='zones_col_zone_status' product='air' />, <Cmd sid='zones_col_device_status' product='air' /> 열에 있는 <IcAirFilter title='Filter' /> 버튼을 클릭하면 해당 조건으로 목록을 필터링할 수 있습니다.
+
+<Image src='/img/air/bsair-zone-mng-list-filtering.png' />
 
 ## 구역 추가 {/* #addingZone */}
 
@@ -174,7 +179,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
    * <Cmd sid='apb.zoneForm.mode.soft' product='air' />: 출입은 허용하되 이벤트 로그에 APB 위반으로 기록합니다.
 
-   * <Cmd sid='apb.zoneForm.mode.none' product='air' />: 구역에 APB를 적용하지 않습니다. APB 모드를 설장하지 않은 구역은 내부 인원을 계산하는 용도로 계속 사용됩니다.
+   * <Cmd sid='apb.zoneForm.mode.none' product='air' />: 구역에 APB를 적용하지 않습니다. APB 모드를 설정하지 않은 구역은 내부 인원을 계산하는 용도로 계속 사용됩니다.
 
 * <Cmd sid='apb.zoneForm.auth.label' product='air' />: 네트워크 장애로 BioStar Air 서버와 통신할 수 없을 때 접근을 허용할지 거부할지 선택하세요. **Soft** 모드에서는 출입을 막지 않으므로 접근이 항상 허용되며, 네트워크 연결이 복구될 때까지 위반이 확인되거나 기록되지 않을 수 있습니다.
 
