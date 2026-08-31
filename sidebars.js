@@ -1066,7 +1066,7 @@ function createSidebars(preview) {
             id: 'platform/biostar_x/release-notes'
           },
           items: [
-            'platform/biostar_x/release-notes/103-draft',
+            'platform/biostar_x/release-notes/103',
             'platform/biostar_x/release-notes/102',
             'platform/biostar_x/release-notes/101',
             'platform/biostar_x/release-notes/100',
