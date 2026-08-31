@@ -165,7 +165,7 @@
             "BEW3-DB",
             "BEW3-APB"
         ],
-        "version": "1.0.3",
+        "version": "1.0.4",
         "manuals": {
             "ko": "device/bioentry_w3/BioEntry W3_IG_1.03_KO_260616.pdf",
             "en": "device/bioentry_w3/BioEntry W3_IG_1.03_EN_260616.pdf",
@@ -173,8 +173,8 @@
             "ja": "device/bioentry_w3/BioEntry W3_IG_1.03_JA_260616.pdf"
         },
         "release_notes": {
-            "ko": "device/bioentry_w3/BioEntry W3_ReleaseNotes_1.0.3_KO_260612.pdf",
-            "en": "device/bioentry_w3/BioEntry W3_ReleaseNotes_1.0.3_EN_260612.pdf"
+            "ko": "device/bioentry_w3/BioEntry W3_RN_1.0.4_KO_260825.pdf",
+            "en": "device/bioentry_w3/BioEntry W3_RN_1.0.4_EN_260825.pdf"
         },
         "a_e": "device/bioentry_w3/SUPREMA_BioEntry_W3_AE-Specification_260622.docx",
         "dt": {
