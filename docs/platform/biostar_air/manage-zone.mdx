@@ -35,7 +35,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * <Cmd sid='zone_name' product='air' />: 구역 이름입니다. <Cmd sid='apb.zoneList.perimetterZone' product='air' />은 이름 옆에 <Cmd sid='zones_tag_pinned' product='air' /> 배지가 표시됩니다.
 
-* <Cmd sid='zones_col_people_inside' product='air' />: 현재 해당 구역 안에 있는 것으로 기록된 사용자 수입니다.
+* <Cmd sid='zones_col_people_inside' product='air' />: 현재 해당 구역 안에 있는 것으로 기록된 사용자 수입니다. 자세한 내용은 <DocLink inner='#checkingPeopleInside' />을 참고하세요.
 
 * <Cmd sid='zones_col_apb_mode' product='air' />: 구역에 적용된 APB 모드(<Cmd sid='zones_badge_hard' product='air' />/<Cmd sid='zones_badge_soft' product='air' />/<Cmd sid='zones_badge_none' product='air' />)입니다.
 
@@ -57,6 +57,26 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 :::
 
+## 내부 인원 확인 {/* #checkingPeopleInside */}
+
+구역 목록의 <Cmd sid='zones_col_people_inside' product='air' /> 열에서 각 구역에 현재 몇 명이 있는지 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-zone-mng-inside-people.png' />
+
+* 이 수치는 구역에 설정한 입실 및 퇴실 장치의 인증 기록을 기준으로 계산됩니다. 입실 장치에서 인증하면 인원 수가 늘고, 퇴실 장치에서 인증하면 인원 수가 줄어듭니다.
+
+* APB 예외 그룹에 속한 사용자는 APB 규칙의 적용을 받지 않지만, 내부 인원 수에는 계속 포함됩니다.
+
+* 구역을 비활성화하면 해당 구역의 내부 인원 수는 0으로 초기화됩니다.
+
+* 최신 값을 유지하려면 목록 상단의 <Cmd sid='presence_refresh' product='air' /> 버튼을 클릭하거나 자동 새로고침 간격을 설정하세요.
+
+:::info
+
+구역 목록의 내부 인원 수는 구역별 현황만 보여줍니다. 사이트 전체에서 현재 누가 있는지 사용자 단위로 확인하려면 <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' /> 메뉴를 참고하세요.
+
+:::
+
 ## 구역 관리 기능
 
 구역 목록 상단 및 하단에서 제공하는 관리 기능으로 다음 작업을 수행할 수 있습니다.
@@ -69,11 +89,9 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * <Cmd sid='zones_pause_btn' product='air' />: 경계 구역을 포함한 사이트의 모든 구역에서 APB 적용을 한 번에 멈출 수 있습니다.
 
-* <Cmd sid='presence_refresh' product='air' />: 구역 목록의 상태를 새로고침하여 갱신합니다.
+* <Cmd sid='presence_refresh' product='air' />: 목록을 즉시 새로고침해 최신 상태로 갱신합니다. 드롭다운에서 자동 새로고침 간격(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)을 선택하면 설정한 주기마다 목록을 자동 갱신합니다.
 
 * <Cmd sid='zones_search_placeholder' product='air' />: 구역 이름으로 목록을 검색합니다.
-
-* <Cmd sid='presence_refresh' product='air' />: 구역 목록을 새로고침하는 간격(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)을 선택할 수 있습니다.
 
 
 ## 구역 추가 {/* #addingZone */}
@@ -206,7 +224,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * 동일한 이름의 구역은 만들 수 없습니다.
 
-* 구역 설정 시 <Cmd sid='apb.zoneForm.mode.label' product='air' />를 <Cmd sid='apb.zoneForm.mode.none' product='air' />으로 변경하면 해당 구역에 저장되어 있던 세부 설정(<Cmd sid='apb.zoneForm.mode.label' product='air' />, <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />, <Cmd sid='apb.zoneForm.exceptions.label' product='air' />)이 모두 초기화됩니다. 설정을 유지한 채로 APB 적용만 잠시 멈추려면 [구역 비활성화](./manage-zone.mdx#managingZones) 또는 [APB 일시 비활성화](./manage-zone.mdx#managingZones) 기능을 사용하세요.
+* 구역 설정 시 <Cmd sid='apb.zoneForm.mode.label' product='air' />를 <Cmd sid='apb.zoneForm.mode.none' product='air' />으로 변경하면 해당 구역에 저장되어 있던 세부 설정(<Cmd sid='apb.zoneForm.mode.label' product='air' />, <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />, <Cmd sid='apb.zoneForm.exceptions.label' product='air' />)이 모두 초기화됩니다. 설정을 유지한 채로 APB 적용만 잠시 멈추려면 [구역 비활성화](./manage-zone.mdx#managingZones) 또는 [APB 일시 비활성화](./manage-zone.mdx#zonePause) 기능을 사용하세요.
 
 :::
 
@@ -250,7 +268,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 :::
 
-### <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* # zonePause */}
+### <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* #zonePause */}
 
 사이트 전체의 APB 적용을 잠시 멈춰야 할 때(예: 특별 행사, 대규모 이동이 예상되는 시간대) 목록 상단의 <Cmd sid='zones_pause_btn' product='air' /> 버튼을 사용하세요. 경계 구역을 포함한 모든 구역의 APB 적용이 중지되며, 재개하면 각 구역은 일시 비활성화 전의 활성화/비활성화 상태로 복원됩니다. 일시 비활성화 중에는 구역 목록이 잠겨 다른 변경을 할 수 없습니다.
 

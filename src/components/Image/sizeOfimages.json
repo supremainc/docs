@@ -1875,6 +1875,10 @@
     "width": 1200,
     "height": 637
   },
+  "/img/air/bsair-zone-mng-inside-people.png": {
+    "width": 1017,
+    "height": 167
+  },
   "/img/air/bsair-zone-mng-list-status.png": {
     "width": 1017,
     "height": 167
@@ -11506,6 +11510,10 @@
   "/img/en/air/bsair-zone-mng-edit-zone.png": {
     "width": 1200,
     "height": 637
+  },
+  "/img/en/air/bsair-zone-mng-inside-people.png": {
+    "width": 1017,
+    "height": 167
   },
   "/img/en/air/bsair-zone-mng-list-status.png": {
     "width": 1017,
