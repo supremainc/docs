@@ -11,22 +11,148 @@ Release<Separator/>2026-09-21
 
 ---
 
+{/* <Jira bss='BX-6414' /> [BDP-1638] XPass Q2 PoE 모델(XPQ2-DPB) 지원 */}
+{/* <Jira bss='BX-6511' /> [BDP-1642] XPass 2 HW Revision 신규 모델 BioStar X 디바이스 지원 */}
+1. Supported new device
+    - XPass Q2: XPQ2-DPB
+    - XPass 2 (V2): XP2-GDPB-V2, XP2-GKDPB-V2, XP2-MAPB-V2, XP2-MDPB-V2, XP2-MAPB-H-V2
+
+{/* <Jira bss='BX-5560' /> [BDP-1424] Monitoring Door Tab Preview 상태 표시 및 제어 */}
+2. Added real-time status monitoring and direct control of doors and elevators in the **Monitoring** preview
+
+{/* <Jira bss='BX-5632' /> [BDP-1479] 사용자 체감 얼굴 인증 속도를 높이기, 복수의 얼굴을 순차 인증하기, 화각에 2개 이상의 얼굴 감지 시 인증 중단하기(Anti-tailgating) */}
+{/* (설명도 충분했으며 UI 용어가 본문에 정확하게 나와있어 좋았음) */}
+3. Added face authentication features
+    - Added support for **Multi Face Authentication** (device license required)
+    - Added support for tailgating prevention (**Anti-Tailgating**)
+    - Added support for **Duplicate Authentication Prevention**
+
+{/* <Jira bss='BX-5634' /> [BDP-1489] Roll Call 수행 시 현장에 없는 사람은 제외하기 */}
+4. Added **Include On-Site Users Only** mode to **Roll Call**
+
+{/* <Jira bss='BX-5637' /> [BDP-971] Passport Scanner */}
+5. Added **Scan ID** feature to automatically fill in user information using an ID
+
+{/* <Jira bss='BX-5649' /> [BDP-994] Device Template */}
+6. Added **Export/Import Device Configuration** feature
+
+{/* <Jira bss='BX-5702' /> [BDP-1343] Desfire EV2 Secure Messaging supported by Readers and Software */}
+7. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
+
+{/* <Jira bss='BX-5828' /> [BDP-1485] Batch Stop Action for Devices */}
+8. Added the ability to select and batch control multiple devices in **Monitoring**
+    - Run Unlock Device, Release Lockout, Stop Action, Reconnect, and Reboot on multiple devices at once
+
+{/* <Jira bss='BX-5829' /> [BDP-1468] Add 'Select All' to all partial selection popup menu */}
+9. Added support for Select All and group selection in the **Monitoring** event filter
+
+{/* <Jira bss='BX-5834' /> [BDP-1464] Batch Control of Doors and Elevators */}
+10. Added the ability to select and batch control multiple doors, elevators, and zones in **Monitoring**
+
+{/* <Jira bss='BX-5845' /> [BDP-1483] 장기 미출입자에 대한 후속 조치 기능 */}
+11. Added a feature to manage users with long-term inactivity
+    - View users with long-term inactivity based on Last Access
+    - Set a policy to automatically deactivate users based on conditions
+    - Send a pre-notification email to designated recipients before auto deactivation
+
+{/* <Jira bss='BX-5850' /> [BDP-1509] Master Admin 기능을 제공하지 않는 스탠다드향 동작 추가 */}
+12. Separated firmware builds for **CE** and **Global (Non-CE)** products.
+    :::note
+    **CE** and **Global (Non-CE)** products can be identified via the label sticker on the back of the product. The **Master Admin** feature <Cmd>is enabled only on products with a label bearing the CE mark</Cmd>.
+    :::
+
+{/* <Jira bss='BX-5854' /> [BDP-1480] Auth Fail Lockout 지원 */}
+13. Added **Auth Fail Lockout** feature, which locks the device after repeated PIN authentication failures.
+
+{/* <Jira bss='BX-5859' /> [BDP-1488] BioStar X의 사용자 정보 입력 필드에 특수 문자 입력할 수 있도록 지원 */}
+14. Expanded allowed characters for User ID and User Name
+    - Added support for periods (.) in User ID
+    - Added support for periods (.) and apostrophes (') in User Name
+
+{/* <Jira bss='BX-5860' /> [BDP-1442] BioStar X TA Audit Trail */}
+15. Added the **Audit Trail** feature to T&A
+
+{/* <Jira bss='BX-5883' /> [BDP-1495] Door Mode Overridden 된 출입문, 엘리베이터 또는 Alarm 상태인 요소만 모아서 보여주기 */}
+16. Added a filter to the **Monitoring** status tree that shows only items requiring attention
+
+{/* <Jira bss='BX-5886' /> [BDP-1197] [1.0.3] Account 세부 권한 설정 기능 개발 */}
+17. Added the ability to configure account permissions at the submenu level
+
+{/* <Jira bss='BX-5906' /> [BDP-1517] BioStation 3 Max에서 대기화면 영상 재생 기능 지원하기 */}
+18. Added the **Idle Screen Video Playback** feature
+    - Supported models: BioStation 3 Max
+
+{/* <Jira bss='BX-5908' /> [BDP-1050] XS2-Q모델에서 Camera QR 지원 */}
+19. Supported an option to select QR authentication using the device camera upon **Camera QR** license activation on XS2-QDPB and XS2-QAPB models.
+
+{/* <Jira bss='BX-5914' /> [BDP-1358] Quick Action 중, 원클릭으로 수행될 필요 있는 버튼은 헤더에 바로 표시하기 */}
+20. Added the ability to display frequently used **Quick Actions** directly in the header
+
+{/* <Jira bss='BX-5943' /> [BDP-1593] 인증을 통한 출입문 제어 */}
+21. Added the **Door Control through Authentication** feature, which unlocks or normalizes a door through user authentication
+
+{/* <Jira bss='BX-5952' /> [BDP-1456] Status Tree 에 장치가 Locked 상태임을 표시하기 */}
+22. Added the ability to display and unlock locked devices in the **Monitoring** status tree
+
+{/* <Jira bss='BX-6014' /> [BDP-1597] BioStar X 라이선스 제약 제외 및 여러 개 라이선스 활성화 편의 제공 */}
+23. Improved license policy and added bulk activation
+    - Feature add-on licenses can now be activated on the **Essential** tier
+    - Separated Advanced Access Control into individual licenses
+    - Added the ability to activate multiple license keys at once
+
+{/* <Jira bss='BX-6234' /> [BDP-1516] DATA - Event 리포트 저장 */}
+24. Added the report save feature to **All Events** and **Alert History** in the **Data** menu
+
+{/* <Jira bss='BX-5676' /> [BDP-1459] BioStar X AC Audit Trail Improvement */}
+25. Improved the Access Control **Audit Trail** feature
+    - Expanded logging to capture previously missing actions
+    - Recorded before-and-after values when settings or information change
+    - Added logging of user information access
+
+{/* <Jira bss='BX-5823' /> [BDP-1501] Device 메뉴 트리 상태 기억하기 */}
+26. Improved the **Device** menu tree to remember the expanded/collapsed state per account
+
+{/* <Jira bss='BX-5832' /> [BDP-1340] Map Status Tree 에 요소 별 구분하기 쉽도록 아이콘 추가하기 */}
+27. Added element-specific icons and improved the expand/collapse method in the **Monitoring** status tree
+
+{/* <Jira bss='BX-5835' /> [BDP-1494] 등록된 카메라와 맵이 없는 경우 MONITORING 에서 모니터링 영역을 보여주지 않기 */}
+28. Improved **Monitoring** to display the event log across the full screen when there are no maps or cameras to show
+
+{/* <Jira bss='BX-5836' /> [BDP-1466] Settings Menu UX 개선 */}
+29. Improved the **Settings** menu with a group tree structure
+
+{/* <Jira bss='BX-5885' /> [BDP-1477] 동일 서버 내 BSX, VMS 설치 환경에서 VMS 인증서 생성 및 설치 절차 개선 */}
+30. Improved the VMS certificate installation process
+
+{/* <Jira bss='BX-5913' /> [BDP-1275] BioStar X에서 T&A 지원 (Look & Feel) */}
+31. Improved the T&A screen UI design
+
+{/* <Jira bss='BX-6225' /> [BDP-1471] Map Status Tree 에서 Facility 클릭 시 Area 를 띄우기 */}
+32. Improved the **Monitoring** map status tree to move to the corresponding map when double-clicking a facility
+
+{/* <Jira bss='BX-6412' /> [BDP-1641] 장치 하드웨어 버전 표시 */}
+33. Improved the device hardware version to display the same value as the product label (requires supported firmware)
+
+{/* <Jira bss='BX-6732' /> [BDP-1643] Secure Communication by default */}
+34. Changed **Secure Communication with Device** to be enabled by default
+
 {/* <Jira bss='BX-6817' /> EntraID에서 한 사용자에 여러 그룹이 포함될 경우에 대한 처리 개선 */}
-1. Improved group mapping for users belonging to multiple groups in Entra ID.
+35. Improved group mapping for users belonging to multiple groups in Entra ID.
 
 {/* <Jira bss='BX-6231' /> Send Face Mobile Enrollment Link 기능으로 얼굴 등록시 Audit 에 사용자 정보 업데이트 기록시 해당 기능으로 인한 수정임을 표기 해야함.  */}
-2. Improved **Send Face Mobile Enrollment Link** to indicate in the **Audit Trail** that the change was made via this feature.
+36. Improved **Send Face Mobile Enrollment Link** to indicate in the **Audit Trail** that the change was made via this feature.
 
 {/* <Jira bss='BX-5457' /> BioStar 2 에서 BioStar X 업그레이드 시 이미 BioStar X 설치 경로 폴더가 존재하는 경우 폴더 삭제 후 진행하라는 팝업 위치 또는 동작 개선 */}
-3. Improved the display timing and behavior of the notification popup for an existing BioStar X folder when upgrading from BioStar 2 to BioStar X.
+37. Improved the display timing and behavior of the notification popup for an existing BioStar X folder when upgrading from BioStar 2 to BioStar X.
 
 {/* <Jira bss='BX-5567' /> devices/sync API 타임아웃 시 sync_ongoing 메시지 즉시 표시 및 중복 에러 팝업 방지 */}
-4. Improved the behavior where unnecessary error popups appeared due to response delays during **Sync Device**.
+38. Improved the behavior where unnecessary error popups appeared due to response delays during **Sync Device**.
 
 {/* <Jira bss='BX-3778' /> [Setting] [Account] Custom Admin 생성 시 아이템 상세 권한에서 그룹 선택 시 UI 개선 */}
-5. Improved the group selection UI when creating custom levels.
+39. Improved the group selection UI when creating custom levels.
 
-{/* <Jira bss='BX-6730' /> Biostar2 2.9.12 취약점에 대해 BioStarX에도 적용 - 담당자 확인 중
+{/* <Jira bss='BX-5633' /> [BDP-1481] BioStar X 시스템의 전 통신 구간을 TLS 1.3로 업그레이드 하기
+<Jira bss='BX-6730' /> Biostar2 2.9.12 취약점에 대해 BioStarX에도 적용 - 담당자 확인 중
 <Jira bss='BX-6729' /> Log4j 버전 2.25.4 이상, Oracle Java SE 21.0.11 이상 업그레이드 필요
 <Jira bss='BX-6427' /> 사용자 ID·이름이 SQL에 안전하지 않게 전달되는 문제 수정
 <Jira bss='BX-6328' /> [SAST] Remote Access 주소로 접속 하여 Entra ID 로그인 시 Server URL 주소로 변경되는 문제
@@ -35,7 +161,8 @@ Release<Separator/>2026-09-21
 <Jira bss='BX-5866' /> [보안] Advanced Technology 에서 제기한 보안 취약점 작업
 <Jira bss='BX-5862' /> [보안] Apache Log4j TLS MitM 취약점 (2.21.1)
 <Jira bss='BX-6984' /> Entra ID 상에서 유저 개체 ID를 알면, 연동된 BioStar 로그인이 즉시 가능한 문제 */}
-6. Security vulnerability improvements
+40. Security vulnerability improvements
+    * Upgraded communication channels to TLS 1.3
     * Updated AngularJS and jQuery versions
     * Improved Reverse Tabnabbing vulnerability
     * Enhanced session cookie security
@@ -50,81 +177,81 @@ Release<Separator/>2026-09-21
     * Improved security vulnerabilities in Entra ID integrated login authentication.
 
 {/* <Jira bss='BX-5863' /> [보안] 개발자 도구에 노출되는 비밀번호 암호화 작업 */}
-7. Improved login to transmit passwords in encrypted form.
+41. Improved login to transmit passwords in encrypted form.
 
 {/* <Jira bss='BX-5872' /> [보안] 이전 비밀번호 관련 개발건 */}
-8. Enhanced security by requiring the current password when changing your own password.
+42. Enhanced security by requiring the current password when changing your own password.
 
 {/* <Jira bss='BX-6115' /> 코드상 보이는 SSL 인증서 passphrase 의 비밀번호 제거 */}
 {/* <Jira bss='BX-6122' /> Node & Library Upgrade */}
-9. Time & Attendance security vulnerability improvements
+43. Time & Attendance security vulnerability improvements
     * Improved an SSL certificate-related security vulnerability
     * Updated Node.js and library versions
 
 {/* <Jira bss='BX-6805' /> Visual Face 동기화 중 호환 템플릿 존재, 다른 타입의 템플릿 없는 경우 불필요한 bufferToImage 로직 진행 */}
-10. Improved Visual Face user synchronization performance.
+44. Improved Visual Face user synchronization performance.
 
 {/* <Jira bss='BX-6228' /> [Mohammed] Custom report query performance improvement */}
-11. Improved **Custom Report** query performance when retrieving data over a wide date range.
+45. Improved **Custom Report** query performance when retrieving data over a wide date range.
 
 {/* <Jira bss='BX-5806' /> [Performance] TemporaryIdTable/KVTable 적용으로 N+1 쿼리 해결 및 배치 SQL 안전성 개선 */}
-12. Performance and query improvements in large-scale environments
+46. Performance and query improvements in large-scale environments
     * Improved face authentication performance in environments with many users and face data
     * Improved bulk edit speed for 1,000 or more users
     * Fixed query failures when Device, Access Level, or Credential numbers are large
 
 {/* <Jira bss='BX-5502' /> 특정 장치 그룹을 사용하는 커스텀 계정에서 이벤트 조회 성능 개선 */}
-13. Improved event query performance for custom accounts using specific device groups.
+47. Improved event query performance for custom accounts using specific device groups.
 
 {/* <Jira bss='BX-5572' /> TASK_GET_DOOR_STATUS 시 모든 doorId 상태 조회하는 문제 */}
 {/* (이해하기 어려움) */}
-14. Improved **Door Status** query performance in Multi Communication Server environments.
+48. Improved **Door Status** query performance in Multi Communication Server environments.
 
 {/* <Jira bss='BX-5573' /> [모하메드병원]대규모 환경(Access Group 다수, Door 4000)에서 출입 통제 상태 메뉴 조회 오래 거리는 문제(1분 이상) */}
-15. Improved the query performance of the Status tab in the **Access Group** screen in large-scale environments.
+49. Improved the query performance of the Status tab in the **Access Group** screen in large-scale environments.
 
 {/* <Jira bss='BX-5574' /> [모하메드병원]카드스켄화면에서 디바이스 트리 로드 오래 걸리는 이슈 */}
-16. Improved device list query performance when adding a credential.
+50. Improved device list query performance when adding a credential.
 
 {/* <Jira bss='BX-5677' /> [성능 개선][mohammed hospital] Door 설정 저장 시 동기화 완료까지 오래 걸리는 문제 */}
-17. Improved the long synchronization time when saving **Door** settings.
+51. Improved the long synchronization time when saving **Door** settings.
 
 {/* <Jira bss='BX-5673' /> 모하메드 병원 등록된 라이센스 많을경우 CORE WEBSERVER 시작 오래 걸리는 문제 */}
-18. Improved slow server startup in environments with many registered licenses.
+52. Improved slow server startup in environments with many registered licenses.
 
 {/* <Jira bss='BX-5571' /> [모하메드 병원] access group이 많은수가 생성되어 있으면 사용자 조회시 오래걸리는 이슈 */}
-19. Improved slow user retrieval in environments with many **Access Groups**.
+53. Improved slow user retrieval in environments with many **Access Groups**.
 
 {/* <Jira bss='BX-5570' /> 모하메드 병원 엘레베이터 상세화면 진입시 느림 */}
-20. Improved slow loading of the **Elevator** detail screen in environments with many devices.
+54. Improved slow loading of the **Elevator** detail screen in environments with many devices.
 
 {/* <Jira bss='BX-5568' /> Leader-Follower 동기화 개선: follower 장치 필터링 누락 및 대량 사용자 그룹 조회 성능 수정 */}
-21. Improved synchronization in Multi Communication Server environments
+55. Improved synchronization in Multi Communication Server environments
     * Improved so that each server processes only its own devices for firmware synchronization
     * Improved **User Group** query performance in environments with many users
 
 {/* <Jira bss='BX-6299' /> [Mohammed ] Dashboard 필수 성능 개선 수정 */}
-22. Improved delays in saving settings when the **Dashboard** has many components.
+56. Improved delays in saving settings when the **Dashboard** has many components.
 
 {/* <Jira bss='BX-5566' /> [성능개선] Guardian permission check 함수들의 N+1 쿼리 문제 해결 */}
-23. Improved operator permission check performance and **Zone** permission handling
+57. Improved operator permission check performance and **Zone** permission handling
     * Improved operator permission check performance in environments with many targets
     * Improved **Zone** permissions being applied incorrectly in some cases
 
 {/* <Jira bss='BX-5565' /> 디바이스 트리 로드 속도 개선 */}
-24. Improved device list tree loading speed in environments with many devices.
+58. Improved device list tree loading speed in environments with many devices.
 
 {/* <Jira bss='BX-5716' /> 장치로 패킷 전송 성능 개선 */}
-25. Improved device synchronization speed in environments with many devices.
+59. Improved device synchronization speed in environments with many devices.
 
 {/* <Jira bss='BX-6141' /> [Backend] [성능 개선] 전체 장치 동기화 출입그룹 변경시 BS2_CMD_SET_ACCESS_GROUP_MEMBERS 사용하지 않고 SyncUser로 대체 */}
-26. Improved device synchronization by sending updates only for modified users when Access Group members are changed.
+60. Improved device synchronization by sending updates only for modified users when Access Group members are changed.
 
 {/* <Jira bss='BX-6139' /> [Backend] [성능 개선] 전체 장치 동기화 출입그룹 정보 장치에 필요한 내용만 전송 */}
-27. Improved overall device synchronization performance and resolved device disconnection issues by sending only device-relevant information during sync.
+61. Improved overall device synchronization performance and resolved device disconnection issues by sending only device-relevant information during sync.
 
 {/* <Jira bss='BX-6419' /> 미사용 실행파일 삭제 처리 추가 */}
-28. Added removal of unused files during upgrade.
+62. Added removal of unused files during upgrade.
 
 ## Bug Fixes
 
