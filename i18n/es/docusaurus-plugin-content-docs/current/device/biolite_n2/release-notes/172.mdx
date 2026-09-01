@@ -1,0 +1,60 @@
+---
+id: 172
+title: Firmware Version 1.7.2
+---
+
+# Firmware Version 1.7.2 (Build No. 1.7.2_260818)
+
+Release<Separator/>2026-08-26
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+After upgrading the firmware to v1.7.0, it is not able to downgrade to an earlier version of the firmware.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+{/* BLNIIFW-1296 [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
+1. Improved OSDP reader mode to display "Access Denied" when access is denied by a third-party control panel.
+
+{/* BLNIIFW-1302 [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) - 1.0.0 */}
+2. Improved BLE stability.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+{/* BLNIIFW-1292 [BSF-2925] osdp pdcap 개선 */}
+1. Devices that do not support the buzzer failing to connect when integrated with an OSDP panel. <Badge>1.0.0</Badge>
+
+{/* BLNIIFW-1301[BSF-3089] BioStar X DESFire EV2 Secure Credential Card Write 실패 */}
+2. DESFire EV2 cards failing to write when issuing a Secure Credential Card. <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1291 [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 */}
+3. Suprema Mobile Access authentication failing on certain Android devices. <Badge>1.0.0</Badge>
+
+{/* BLNIIFW-1280 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 - 1.7.1 */}
+4. CSN value being output for EV1 cards on a slave device connected to a third-party controller via OSDP when the Secure Messaging enforcement option is enabled. <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1307 Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 - 1.7.1 */}
+5. An incorrect authentication failure reason is displayed when authenticating with an EV1 card on a slave device with Secure Messaging enabled. <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1306 [SM 강제 옵션 : ON] OSDP Tool 연결 후 DesFire EV1 카드 태깅 시, Exception Code가 출력 되지 않음. - 1.7.1 */}
+6. Exception codes not being output when tagging an EV1 card on a device connected via OSDP with the Secure Messaging enforcement option enabled. <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1304 lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 - 1.7.1 */}
+7. CSN value being transmitted to the Wiegand in device for EV1 cards when the Secure Messaging enforcement option is enabled on a bypass-configured Wiegand device. <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1305 EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 - 1.7.1 */}
+8. Card authentication not working on slave devices when the master device is downgraded to a version that does not support Secure Messaging. <Badge>1.7.1</Badge>
+
+</BugLists>
