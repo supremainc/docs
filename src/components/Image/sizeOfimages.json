@@ -596,16 +596,20 @@
     "height": 757
   },
   "/img/air/bsair-door-mng-registered-door-add.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
+  },
+  "/img/air/bsair-door-mng-registered-door-edit-ac-level.png": {
+    "width": 512,
+    "height": 284
   },
   "/img/air/bsair-door-mng-registered-door-edit.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-door-mng-registered-door-list.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-door-mng-registered-door-report-list.png": {
     "width": 812,
@@ -616,8 +620,8 @@
     "height": 633
   },
   "/img/air/bsair-door-mng-registered-door-schedule.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-door-mng-schedule-add.png": {
     "width": 1920,
@@ -1090,6 +1094,10 @@
   "/img/air/bsair-register-device-step.png": {
     "width": 6901,
     "height": 2372
+  },
+  "/img/air/bsair-registered-multi-door-set-ac-level.png": {
+    "width": 404,
+    "height": 402
   },
   "/img/air/bsair-remove-device-step.png": {
     "width": 6901,
@@ -10484,16 +10492,20 @@
     "height": 817
   },
   "/img/en/air/bsair-door-mng-registered-door-add.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/air/bsair-door-mng-registered-door-edit-ac-level.png": {
+    "width": 512,
+    "height": 284
   },
   "/img/en/air/bsair-door-mng-registered-door-edit.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-door-mng-registered-door-list.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-door-mng-registered-door-report-list.png": {
     "width": 812,
@@ -10504,8 +10516,8 @@
     "height": 633
   },
   "/img/en/air/bsair-door-mng-registered-door-schedule.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-door-mng-schedule-add.png": {
     "width": 1920,
@@ -10974,6 +10986,10 @@
   "/img/en/air/bsair-register-device-step.png": {
     "width": 6901,
     "height": 2372
+  },
+  "/img/en/air/bsair-registered-multi-door-set-ac-level.png": {
+    "width": 404,
+    "height": 402
   },
   "/img/en/air/bsair-remove-device-step.png": {
     "width": 6901,
