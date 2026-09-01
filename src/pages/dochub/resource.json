@@ -191,7 +191,7 @@
             "BLN2-OAB",
             "BLN2-PAB"
         ],
-        "version": "1.7.1",
+        "version": "1.7.2",
         "manuals": {
             "ko": "device/biolite_n2/BioLite N2_UG_1.20_KO_260805.pdf",
             "en": "device/biolite_n2/BioLite N2_UG_1.20_EN_260805.pdf",
@@ -199,8 +199,8 @@
             "ja": "device/biolite_n2/BioLite N2_UG_1.20_JA_260805.pdf"
         },
         "release_notes": {
-            "ko": "device/biolite_n2/BioLite N2_ReleaseNotes_1.7.1_KO_260417.pdf",
-            "en": "device/biolite_n2/BioLite N2_ReleaseNotes_1.7.1_EN_260417.pdf"
+            "ko": "device/biolite_n2/BioLite N2_RN_1.7.2_KO_260826.pdf",
+            "en": "device/biolite_n2/BioLite N2_RN_1.7.2_EN_260826.pdf"
         },
         "a_e": "device/biolite_n2/SUPREMA_BioLite_N2_AE-Specification_260805.docx",
         "dt": {
