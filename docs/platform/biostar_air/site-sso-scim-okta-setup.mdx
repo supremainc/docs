@@ -240,3 +240,25 @@ IdP 그룹을 BioStar Air로 푸시하려면 먼저 사용자 그룹과 사용�
 <GroupMapping />
 
 <SyncManagement />
+
+## Okta에 로그인
+
+Okta SSO 연결을 완료하면 사용자는 BioStar Air 로그인 화면에서 Okta 계정으로 로그인할 수 있습니다.
+
+1. BioStar Air 로그인 화면에서 <Cmd sid='sso_scim.login.sign_in_with_okta' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-login-with-okta.png' />
+
+1. <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' /> 필드에 조직의 이메일 주소 또는 도메인을 입력하세요. (예: `user@company.com` 또는 `company`)
+
+1. <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' /> 버튼을 클릭하세요.
+
+1. Okta 로그인 화면으로 이동하면 조직 계정의 이메일 주소와 비밀번호를 입력하세요.
+
+1. 인증을 완료하면 BioStar Air로 자동 리디렉션되어 로그인이 완료됩니다.
+
+:::info
+
+입력한 이메일 도메인에 대해 Okta SSO가 설정되어 있지 않으면 오류 메시지가 표시됩니다. 이때는 사이트 관리자에게 문의하세요.
+
+:::

@@ -213,3 +213,33 @@ Microsoft Entra ID 로그인을 BioStar Air에 연결하려면 조직의 ID 관�
 <GroupMapping />
 
 <SyncManagement />
+
+## Entra ID로 로그인
+
+Entra ID SSO 연결을 완료하면 사용자는 BioStar Air 로그인 화면에서 Microsoft 계정으로 로그인할 수 있습니다.
+
+1. BioStar Air 로그인 화면에서 <Cmd sid='login_with_microsoft_account' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='sso_scim.login.microsoft_org_dialog.microsoft_entra' product='air' />를 선택하세요.
+
+   <Image src='/img/air/bsair-login-with-entra-id.png' />
+
+   :::note
+
+   이미 Microsoft SSO를 사용 중인 조직은 <Cmd sid='sso_scim.login.microsoft_org_dialog.microsoft_sso' product='air' />를 선택하면 추가 설정 없이 로그인할 수 있습니다.
+
+   :::
+
+1. <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' /> 필드에 조직의 이메일 주소 또는 도메인을 입력하세요. (예: `user@company.com` 또는 `company`)
+
+1. <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' /> 버튼을 클릭하세요.
+
+1. Microsoft Entra ID 로그인 화면으로 이동하면 조직 계정의 이메일 주소와 비밀번호를 입력하세요.
+
+1. 인증을 완료하면 BioStar Air로 자동 리디렉션되어 로그인이 완료됩니다.
+
+:::info
+
+입력한 이메일 도메인에 대해 Entra ID SSO가 설정되어 있지 않으면 오류 메시지가 표시됩니다. 이때는 사이트 관리자에게 문의하세요.
+
+:::
