@@ -27,9 +27,35 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 ## 구역 목록 살펴보기 {/* #zoneListOverview */}
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 화면 왼쪽 사이드바에서 <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' />을 클릭하세요.
 
 <Image src='/img/air/bsair-zone-mng-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-app-zone-mng-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
+
+1. 화면 하단의 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
+
+1. <Cmd sid='zones_menu' product='air' /> 카드를 탭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 구역 목록에서는 사이트에 구성된 모든 구역을 한눈에 확인할 수 있습니다.
 
@@ -61,7 +87,19 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 구역 목록의 <Cmd sid='zones_col_people_inside' product='air' /> 열에서 각 구역에 현재 몇 명이 있는지 확인할 수 있습니다.
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 <Image src='/img/air/bsair-zone-mng-inside-people.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-inside-people.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
 
 * 이 수치는 구역에 설정한 입실 및 퇴실 장치의 인증 기록을 기준으로 계산됩니다. 입실 장치에서 인증하면 인원 수가 늘고, 퇴실 장치에서 인증하면 인원 수가 줄어듭니다.
 
@@ -95,15 +133,81 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 ### 구역 목록 필터링
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 목록 상단 헤더의 <Cmd sid='zones_col_apb_mode' product='air' />, <Cmd sid='zones_col_apb_exemptions' product='air' />, <Cmd sid='zones_col_zone_status' product='air' />, <Cmd sid='zones_col_device_status' product='air' /> 열에 있는 <IcAirFilter title='Filter' /> 버튼을 클릭하면 해당 조건으로 목록을 필터링할 수 있습니다.
 
 <Image src='/img/air/bsair-zone-mng-list-filtering.png' />
 
+:::info
+
+필터링을 해제하려면 <Cmd sid='new_button_reset' product='air' /> 버튼을 클릭하세요.
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-list-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 구역 목록 오른쪽 상단의 <Cmd sid='logs_filters_action_btn' product='air' />를 탭하세요. 
+
+1. <Cmd sid='zones_col_apb_mode' product='air' />, <Cmd sid='zones_col_apb_exemptions' product='air' />, <Cmd sid='zones_col_zone_status' product='air' />, <Cmd sid='zones_col_device_status' product='air' />에서 원하는 조건을 선택하세요.
+
+1. 선택한 조건으로 목록을 필터링하려면 <Cmd sid='save_btn' product='air' /> 버튼을 탭하세요.
+
+:::info
+
+필터링을 해제하려면 <Cmd sid='new_button_reset' product='air' /> 버튼을 탭하세요.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+
+
 ## 구역 추가 {/* #addingZone */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 화면 왼쪽 사이드바에서 <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' />을 클릭하세요. 화면 오른쪽 상단의 <Cmd sid='zones_add_btn' product='air' /> 버튼을 클릭하세요.
 
 <Image src='/img/air/bsair-zone-mng-add-zone.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. BioStar Air 앱 화면 하단의 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
+
+1. <Cmd sid='zones_menu' product='air' /> 카드를 탭하세요.
+
+1. 화면 오른쪽 상단의 <IcAdd title='Add Zone' /> 버튼을 탭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 <Steps>
 <Step>
@@ -112,7 +216,18 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 <Cmd sid='apb.zoneForm.nav.details' product='air' /> 섹션에서 구역의 기본 정보를 입력하세요.
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 <Image src='/img/air/bsair-zone-mng-add-zone-details.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-details.png' width='250px' />
+
+</TabItem>
+</Tabs>
 
 * <Cmd sid='apb.zones.col.zoneStatus' product='air' />: 구역을 바로 활성화할지 선택하세요. 설정을 유지한 채로 나중에 활성하거나 비활성화할 수 있습니다.
 
@@ -133,7 +248,18 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 구역에 할당할 출입문과 장치를 선택하세요.
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 <Image src='/img/air/bsair-zone-mng-add-zone-assign-door-device.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-assign-door-device.png' width='250px' />
+
+</TabItem>
+</Tabs>
 
 * <Cmd sid='door_label' product='air' />: 구역에 포함할 출입문을 선택하세요. 1개 이상의 출입문을 선택할 수 있습니다. 출입문을 선택하면 해당 출입문의 장치가 <Cmd sid='apb.zoneForm.board.label' product='air' />에 나타납니다.
 
@@ -161,14 +287,14 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 <Cmd sid='apb.zoneForm.mode.hard' product='air' />
 
-<Image src='/img/air/bsair-zone-mng-add-zone-apb-hard.png' />
+<Image src='/img/air/bsair-zone-mng-add-zone-apb-hard.png' className='none' />
 
 </TabItem>
 <TabItem value='soft' label='Soft'>
 
 <Cmd sid='apb.zoneForm.mode.soft' product='air' />
 
-<Image src='/img/air/bsair-zone-mng-add-zone-apb-soft.png' />
+<Image src='/img/air/bsair-zone-mng-add-zone-apb-soft.png' className='none' />
 
 </TabItem>
 </Tabs>
@@ -198,7 +324,18 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 <Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> 섹션에서 APB 규칙을 적용하지 않을 사용자 그룹을 선택할 수 있습니다.
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 <Image src='/img/air/bsair-zone-mng-add-zone-exception.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-exception.png' width='250px' />
+
+</TabItem>
+</Tabs>
 
 * 구역당 최대 16개의 사용자 그룹을 예외로 지정할 수 있습니다.
 
@@ -243,6 +380,9 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 구역을 활성화하거나 비활성화할 수 있습니다. 설정 값은 제거되지 않고 그대로 유지됩니다. 구역을 비활성화하면 해당 구역의 내부 인원 수가 0으로 초기화됩니다. 다만 이미 발생한 APB 위반은 그대로 남아 있으며, <DocLink docId='platform/biostar_air/manage-violation' /> 메뉴에서 해제할 수 있습니다.
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 1. 목록에서 활성화 또는 비활성화할 구역의 체크박스를 클릭하세요. 한 개 이상의 구역을 선택할 수 있습니다.
 
 1. 목록 상단의 <Cmd sid='zones_enable_btn' product='air' /> 또는 <Cmd sid='zones_disable_btn' product='air' /> 버튼을 클릭하세요.
@@ -253,9 +393,37 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 <Image src='/img/air/bsair-zone-mng-list-status.png' />
 
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-zone-mng-list-status.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 목록에서 활성화 또는 비활성화할 구역을 길게 누르세요.
+
+1. 활성화하거나 비활성화할 구역을 선택하세요. 한 개 이상의 구역을 선택할 수 있습니다.
+
+1. 화면 하단의 <Cmd sid='zones_enable_btn' product='air' /> 또는 <Cmd sid='zones_disable_btn' product='air' /> 버튼을 탭하세요.
+
+1. 확인 메시지가 나타나면 <Cmd sid='zones_enable_btn' product='air' /> 또는 <Cmd sid='zones_disable_btn' product='air' /> 버튼을 클릭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
 ### 구역 수정
 
 이미 설정된 구역의 상세 정보/APB/예외 설정 등을 수정할 수 있습니다.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. 목록에서 수정할 구역을 클릭하세요.
 
@@ -267,6 +435,31 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 1. 수정 사항을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-edit-zone.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 목록에서 수정할 구역을 탭하세요.
+
+1. <Cmd sid='apb.zoneForm.title.edit' product='air' /> 화면이 나타납니다.
+
+1. <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> 섹션에서 필요한 항목을 수정하세요.
+
+1. 수정 사항을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 탭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
 :::info
 
 <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> 섹션의 세부 설정에 대한 자세한 내용은 <DocLink inner='#addingZone' />를 참고하세요.
@@ -275,11 +468,23 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 ### <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* #zonePause */}
 
-사이트 전체의 APB 적용을 잠시 멈춰야 할 때(예: 특별 행사, 대규모 이동이 예상되는 시간대) 목록 상단의 <Cmd sid='zones_pause_btn' product='air' /> 버튼을 사용하세요. 경계 구역을 포함한 모든 구역의 APB 적용이 중지되며, 재개하면 각 구역은 일시 비활성화 전의 활성화/비활성화 상태로 복원됩니다. 일시 비활성화 중에는 구역 목록이 잠겨 다른 변경을 할 수 없습니다.
+사이트 전체의 APB 적용을 잠시 멈춰야 할 때(예: 특별 행사, 대규모 이동이 예상되는 시간대) 목록 상단의 <Cmd sid='zones_pause_btn' product='air' />(<IcAirPause />) 버튼을 사용하세요. 경계 구역을 포함한 모든 구역의 APB 적용이 중지되며, 재개하면 각 구역은 일시 비활성화 전의 활성화/비활성화 상태로 복원됩니다. 일시 비활성화 중에는 구역 목록이 잠겨 다른 변경을 할 수 없습니다.
 
-구역에 설정된 APB 모드를 다시 시작하려면 <Cmd sid='zones_pause_resume_btn' product='air' /> 버튼을 클릭하세요.
+구역에 설정된 APB 모드를 다시 시작하려면 <Cmd sid='zones_pause_resume_btn' product='air' />(<IcAirResume />) 버튼을 클릭하세요.
+
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 <Image src='/img/air/bsair-zone-mng-pause-zone.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-pause-zone.png' width='250px' />
+
+</TabItem>
+</Tabs>
 
 :::note
 
@@ -289,6 +494,9 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 ## 구역 삭제하기 {/* #deletingAZone */}
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 1. 목록에서 삭제할 구역의 체크박스를 클릭하세요. 한 개 이상의 구역을 선택할 수 있습니다.
 
 1. 목록 상단의 <Cmd sid='zone_delete_btn' product='air' /> 버튼을 클릭하세요.
@@ -296,6 +504,31 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
    <Image src='/img/air/bsair-zone-mng-remove-zone.png' />
 
 1. 확인 메시지 창이 나타나면 <Cmd sid='zone_delete_btn' product='air' /> 버튼을 클릭하세요.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-remove-zone.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 목록에서 삭제할 구역을 길게 누르세요.
+
+1. 삭제할 구역을 선택하세요. 한 개 이상의 구역을 선택할 수 있습니다.
+
+1. 화면 하단의 <Cmd sid='zone_delete_btn' product='air' /> 버튼을 탭하세요.
+
+1. 확인 메시지가 나타나면 <Cmd sid='zone_delete_btn' product='air' /> 버튼을 클릭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 :::info
 

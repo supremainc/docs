@@ -18,9 +18,35 @@ APB 위반은 사용자가 구역에 설정된 APB 모드에 따라 순서에 �
 
 ## 위반 목록 살펴보기 {/* #violationsOverview */}
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 화면 왼쪽 사이드바에서 <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zone_violations_menu' product='air' />를 클릭하세요.
 
 <Image src='/img/air/bsair-zone-violations-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-zone-violations-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
+
+1. 화면 하단의 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
+
+1. <Cmd sid='zone_violations_menu' product='air' /> 카드를 탭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 목록에서는 현재 활성 상태인 APB 위반 사용자를 확인할 수 있습니다. 활성 APB 위반이 없으면 목록 대신 빈 상태 화면이 표시됩니다.
 
@@ -54,9 +80,47 @@ APB 위반은 사용자가 구역에 설정된 APB 모드에 따라 순서에 �
 
 ### 위반 목록 필터링
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 목록 상단 헤더의 <Cmd sid='violations_col_apb_violation' product='air' />, <Cmd sid='violations_col_zone' product='air' />, <Cmd sid='violations_col_door' product='air' /> 열에 있는 <IcAirFilter title='Filter' /> 버튼을 클릭하면 해당 조건으로 목록을 필터링할 수 있습니다.
 
 <Image src='/img/air/bsair-zone-violations-filtering.png' />
+
+:::info
+
+필터링을 해제하려면 <Cmd sid='new_button_reset' product='air' /> 버튼을 클릭하세요.
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 위반 목록 오른쪽 상단의 <Cmd sid='logs_filters_action_btn' product='air' />를 탭하세요. 
+
+1. <Cmd sid='violations_col_apb_violation' product='air' />, <Cmd sid='violations_col_zone' product='air' />, <Cmd sid='violations_col_door' product='air' />에서 원하는 조건을 선택하세요.
+
+1. 선택한 조건으로 목록을 필터링하려면 <Cmd sid='save_btn' product='air' /> 버튼을 탭하세요.
+
+:::info
+
+필터링을 해제하려면 <Cmd sid='new_button_reset' product='air' /> 버튼을 탭하세요.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 ## 위반 해제 {/* #clearingViolations */}
 
@@ -74,14 +138,40 @@ APB 위반을 해제하면 사용자의 활성 APB 위반 상태가 초기화되
 
 ### 개별 사용자의 위반 해제
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 1. 목록에서 APB 위반을 해제할 사용자의 <Cmd sid='violations_col_action' product='air' /> 열에서 <Cmd sid='violations_clear_one_btn' product='air' /> 버튼을 클릭하세요. 
 
    <Image src='/img/air/bsair-zone-violations-clear-apb.png' />
 
 1. 확인 메시지가 나타나면 <Cmd sid='violations_clear_one_btn' product='air' /> 버튼을 클릭하세요.
 
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-clear-apb.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 목록에서 APB 위반을 해제할 사용자의 <IcAirClear width='20px' height='20px' title='Clear Violation' /> 버튼을 탭하세요.
+
+1. 확인 메시지가 나타나면 <Cmd sid='violations_clear_one_btn' product='air' /> 버튼을 탭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 ### 여러 사용자의 위반 해제
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. 목록에서 APB 위반을 해제할 사용자의 체크박스를 클릭하세요. 한 명 이상의 사용자를 선택할 수 있습니다.
 
@@ -90,3 +180,28 @@ APB 위반을 해제하면 사용자의 활성 APB 위반 상태가 초기화되
    <Image src='/img/air/bsair-zone-violations-clear-apb-multi-users.png' />
 
 1. 확인 메시지가 나타나면 <Cmd sid='violations_clear_selected_btn' product='air' /> 버튼을 클릭하세요.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-clear-apb-multi-users.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 목록에서 APB 위반을 해제할 사용자를 길게 누르세요.
+
+1. 위반을 해제할 사용자를 선택하세요. 한 명 이상의 사용자를 선택할 수 있습니다.
+
+1. 화면 하단의 <Cmd sid='violations_clear_selected_btn' product='air' /> 버튼을 탭하세요.
+
+1. 확인 메시지가 나타나면 <Cmd sid='violations_clear_selected_btn' product='air' /> 버튼을 탭하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
