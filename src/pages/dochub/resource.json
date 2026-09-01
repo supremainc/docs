@@ -987,10 +987,10 @@
         ],
         "version": "1.3.1",
         "manuals": {
-            "ko": "device/securemodule/Secure Module_IG_2.14_KO_260624.pdf",
-            "en": "device/securemodule/Secure Module_IG_2.14_EN_260624.pdf",
-            "es": "device/securemodule/Secure Module_IG_2.14_ES_260624.pdf",
-            "ja": "device/securemodule/Secure Module_IG_2.14_JA_260624.pdf"
+            "ko": "device/securemodule/Secure Module_IG_2.15_KO_260901.pdf",
+            "en": "device/securemodule/Secure Module_IG_2.15_EN_260901.pdf",
+            "es": "device/securemodule/Secure Module_IG_2.15_ES_260901.pdf",
+            "ja": "device/securemodule/Secure Module_IG_2.15_JA_260901.pdf"
         },
         "release_notes": {
             "ko": "device/securemodule/Secure Module_RN_1.3.1_KO_260622.pdf",
