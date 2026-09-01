@@ -231,29 +231,33 @@
     "width": 1200,
     "height": 675
   },
+  "/img/air/bsair-adv-rollcall-add-assign-admin.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/air/bsair-adv-rollcall-add-device-group.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-adv-rollcall-add-user-group.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-adv-rollcall-add.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-adv-rollcall-history-details.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-adv-rollcall-history.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-adv-rollcall.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/air/bsair-app-bs3-sip-account-settings-intercom.png": {
     "width": 1266,
@@ -753,14 +757,14 @@
   },
   "/img/air/bsair-mobile-adv-rollcall-complete.png": {
     "width": 1061,
-    "height": 2140
+    "height": 2141
   },
   "/img/air/bsair-mobile-adv-rollcall-start.png": {
     "width": 1061,
     "height": 2142
   },
   "/img/air/bsair-mobile-adv-rollcall.png": {
-    "width": 5609,
+    "width": 8285,
     "height": 2372
   },
   "/img/air/bsair-mobile-card-template-intro.png": {
@@ -790,6 +794,10 @@
   "/img/air/bsair-mobile-monitoring-eventlog.png": {
     "width": 5609,
     "height": 2372
+  },
+  "/img/air/bsair-mobile-rollcall-start-screen.png": {
+    "width": 2414,
+    "height": 2141
   },
   "/img/air/bsair-monitoring-alert-report-history.png": {
     "width": 1920,
@@ -1102,6 +1110,34 @@
   "/img/air/bsair-report-eventlog-report-setting.png": {
     "width": 812,
     "height": 760
+  },
+  "/img/air/bsair-safety-presence-action-multi-users.png": {
+    "width": 1016,
+    "height": 387
+  },
+  "/img/air/bsair-safety-presence-action.png": {
+    "width": 1016,
+    "height": 401
+  },
+  "/img/air/bsair-safety-presence-list-filtering.png": {
+    "width": 1016,
+    "height": 182
+  },
+  "/img/air/bsair-safety-presence-list.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/air/bsair-safety-presence-mng-tools-masking.png": {
+    "width": 324,
+    "height": 169
+  },
+  "/img/air/bsair-safety-presence-mng-tools.png": {
+    "width": 1016,
+    "height": 427
+  },
+  "/img/air/bsair-safety-presence-show-dashboard.png": {
+    "width": 1200,
+    "height": 294
   },
   "/img/air/bsair-settings-admin-allow-technician-unlocked.png": {
     "width": 1583,
@@ -1879,6 +1915,10 @@
     "width": 1017,
     "height": 167
   },
+  "/img/air/bsair-zone-mng-list-filtering.png": {
+    "width": 1022,
+    "height": 206
+  },
   "/img/air/bsair-zone-mng-list-status.png": {
     "width": 1017,
     "height": 167
@@ -1898,6 +1938,26 @@
   "/img/air/bsair-zone-mng-remove-zone.png": {
     "width": 1016,
     "height": 260
+  },
+  "/img/air/bsair-zone-violations-clear-apb-multi-users.png": {
+    "width": 1015,
+    "height": 234
+  },
+  "/img/air/bsair-zone-violations-clear-apb.png": {
+    "width": 1015,
+    "height": 406
+  },
+  "/img/air/bsair-zone-violations-filtering.png": {
+    "width": 1015,
+    "height": 174
+  },
+  "/img/air/bsair-zone-violations-list.png": {
+    "width": 1200,
+    "height": 637
+  },
+  "/img/air/bsair-zone-violations-mng-tools.png": {
+    "width": 1015,
+    "height": 222
   },
   "/img/air-cloud.svg": {
     "width": 44,
@@ -10071,29 +10131,33 @@
     "width": 1200,
     "height": 675
   },
+  "/img/en/air/bsair-adv-rollcall-add-assign-admin.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/en/air/bsair-adv-rollcall-add-device-group.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-adv-rollcall-add-user-group.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-adv-rollcall-add.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-adv-rollcall-history-details.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-adv-rollcall-history.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-adv-rollcall.png": {
-    "width": 1920,
-    "height": 1080
+    "width": 1200,
+    "height": 675
   },
   "/img/en/air/bsair-app-bs3-sip-account-settings.png": {
     "width": 400,
@@ -10584,7 +10648,7 @@
     "height": 2141
   },
   "/img/en/air/bsair-mobile-adv-rollcall.png": {
-    "width": 5609,
+    "width": 8285,
     "height": 2372
   },
   "/img/en/air/bsair-mobile-card-template-intro.png": {
@@ -10614,6 +10678,10 @@
   "/img/en/air/bsair-mobile-monitoring-eventlog.png": {
     "width": 5609,
     "height": 2372
+  },
+  "/img/en/air/bsair-mobile-rollcall-start-screen.png": {
+    "width": 2414,
+    "height": 2141
   },
   "/img/en/air/bsair-monitoring-alert-report-history.png": {
     "width": 1920,
@@ -10926,6 +10994,34 @@
   "/img/en/air/bsair-report-eventlog-report-setting.png": {
     "width": 812,
     "height": 760
+  },
+  "/img/en/air/bsair-safety-presence-action-multi-users.png": {
+    "width": 1016,
+    "height": 387
+  },
+  "/img/en/air/bsair-safety-presence-action.png": {
+    "width": 1016,
+    "height": 401
+  },
+  "/img/en/air/bsair-safety-presence-list-filtering.png": {
+    "width": 1016,
+    "height": 182
+  },
+  "/img/en/air/bsair-safety-presence-list.png": {
+    "width": 1200,
+    "height": 675
+  },
+  "/img/en/air/bsair-safety-presence-mng-tools-masking.png": {
+    "width": 367,
+    "height": 168
+  },
+  "/img/en/air/bsair-safety-presence-mng-tools.png": {
+    "width": 1016,
+    "height": 427
+  },
+  "/img/en/air/bsair-safety-presence-show-dashboard.png": {
+    "width": 1200,
+    "height": 294
   },
   "/img/en/air/bsair-settings-admin-allow-technician-unlocked.png": {
     "width": 1585,
@@ -11515,6 +11611,10 @@
     "width": 1017,
     "height": 167
   },
+  "/img/en/air/bsair-zone-mng-list-filtering.png": {
+    "width": 1022,
+    "height": 206
+  },
   "/img/en/air/bsair-zone-mng-list-status.png": {
     "width": 1017,
     "height": 167
@@ -11534,6 +11634,26 @@
   "/img/en/air/bsair-zone-mng-remove-zone.png": {
     "width": 1016,
     "height": 260
+  },
+  "/img/en/air/bsair-zone-violations-clear-apb-multi-users.png": {
+    "width": 1015,
+    "height": 234
+  },
+  "/img/en/air/bsair-zone-violations-clear-apb.png": {
+    "width": 1015,
+    "height": 406
+  },
+  "/img/en/air/bsair-zone-violations-filtering.png": {
+    "width": 1015,
+    "height": 174
+  },
+  "/img/en/air/bsair-zone-violations-list.png": {
+    "width": 1200,
+    "height": 637
+  },
+  "/img/en/air/bsair-zone-violations-mng-tools.png": {
+    "width": 1017,
+    "height": 222
   },
   "/img/en/biostar-298-deleted-csn-mobile-card-1.png": {
     "width": 340,
