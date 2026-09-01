@@ -1,0 +1,60 @@
+---
+id: 172
+title: 펌웨어 버전 1.7.2
+---
+
+# 펌웨어 버전 1.7.2 (빌드 번호 1.7.2_260818)
+
+릴리즈<Separator/>2026-08-26
+
+:::caution
+
+신규 BLE 칩 및 SE 프로세서가 적용된 장치의 경우 펌웨어를 v1.5.0 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다. 기존 BLE 칩 및 SE 프로세서가 적용된 장치는 하위 버전으로 다운그레이드할 수 있습니다.
+
+펌웨어를 v1.7.0 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다.
+
+장치의 신규 BLE 칩 및 SE 프로세서 적용 여부 및 펌웨어 다운그레이드 가능 여부는 장치의 시리얼 번호를 확인한 뒤 [슈프리마 홈페이지](https://supremainc.com)에 문의하세요.
+
+:::
+
+## 신규 기능 및 개선
+
+---
+
+{/* BLNIIFW-1296 [BSF-2925][BDP-1634] OSDP 연동 시 CP 로부터 인증 실패 LED CMD 를 전송받으면 Access Denied 로 표시하기 */}
+1. OSDP 리더 모드에서 타사 컨트롤 패널의 출입 거부 시 'Access Denied'로 표시되도록 개선
+
+{/* BLNIIFW-1302 [FIMA-212] XPASS D2 BLE 이슈 (Up2 Code System) - 1.0.0 */}
+2. BLE 동작 안정성 개선
+
+## 버그 수정
+
+---
+
+<BugLists>
+
+{/* BLNIIFW-1292 [BSF-2925] osdp pdcap 개선 */}
+1. 버저(Buzzer) 미지원 장치가 OSDP 패널 연동 시 연결되지 않는 문제 <Badge>1.0.0</Badge>
+
+{/* BLNIIFW-1301[BSF-3089] BioStar X DESFire EV2 Secure Credential Card Write 실패 */}
+2. DESFire EV2 카드에 보안 크리덴셜 카드 발급이 실패하는 문제 <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1291 [FISF-2471] Android OnePlus 모바일 OS 16버전 폰으로 Suprema Mobile Access 인증 불가 */}
+3. 특정 Android 기기에서 Suprema Mobile Access 인증이 되지 않는 문제 <Badge>1.0.0</Badge>
+
+{/* BLNIIFW-1280 타사 ACU와 Slave 모드 OSDP 통신 중, SM 강제 옵션: 활성화 상태에서 EV1 카드 리드 시 CSN 값이 출력 - 1.7.1 */}
+4. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 타사 컨트롤러와 OSDP로 연결된 슬레이브 장치에서 EV1 카드의 CSN 값이 출력되는 문제 <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1307 Security Level: DES/3DES 로 발급한 DESFire EV1 카드를 SM 강제 옵션이 활성화된 장치에 태깅할 경우 인증 실패 발생 - 1.7.1 */}
+5. 슬레이브로 연결된 장치에 보안 메시징(Secure Messaging) 옵션 설정 후 EV1 카드 인증 시, 인증 실패 사유가 올바르지 않게 표시되는 문제 <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1306 [SM 강제 옵션 : ON] OSDP Tool 연결 후 DesFire EV1 카드 태깅 시, Exception Code가 출력 되지 않음. - 1.7.1 */}
+6. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 OSDP로 연결된 장치에서 EV1 카드 태깅 시 예외 코드가 출력되지 않는 문제 <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1304 lockEV2SM 옵션 활성화한 Wiegand out 장치에 bypass 설정한 상태에서 EV1 스마트 카드 인증시 Wiegand in 장치로 CSN 카드 값이 입력됨 - 1.7.1 */}
+7. 보안 메시징(Secure Messaging) 강제 옵션 활성화 시 Bypass가 설정된 Wiegand 장치에서 EV1 카드의 CSN 값이 전달되는 문제 <Badge>1.7.1</Badge>
+
+{/* BLNIIFW-1305 EV2 Secure Messaging(SM)을 지원하는 Master 장치를 미지원 버전으로 다운그레이드할 경우, Slave 장치에서 카드 인증 동작 안함 - 1.7.1 */}
+8. 마스터 장치를 보안 메시징(Secure Messaging) 미지원 버전으로 다운그레이드하면 슬레이브 장치에서 카드 인증이 동작하지 않는 문제 <Badge>1.7.1</Badge>
+
+</BugLists>
