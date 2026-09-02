@@ -275,6 +275,26 @@ BioStar Air의 각 관리자 레벨은 특정 권한을 가지며, 높은 레벨
 
 :::
 
+## 오버라이드 상태 해제
+
+SCIM으로 동기화된 관리자의 권한이나 잠금 상태를 로컬에서 수동으로 변경하면 <Cmd sid='sso_scim.identity_source.override' product='air' /> 상태가 됩니다. 로컬 변경 사항을 취소하고 다시 SCIM 관리 상태로 복구할 수 있습니다.
+
+1. 관리자 목록에서 <Cmd sid='sso_scim.identity_source.override' product='air' /> 상태인 관리자의 체크박스를 클릭하세요. 1명 이상의 관리자를 선택할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <IcAirOver title='Release Override' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-relase-override.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+선택한 관리자 계정의 <Cmd sid='sso_scim.identity_source.override' product='air' /> 상태가 해제되고, <Cmd sid='sso_scim.identity_source.scim_synced' product='air' /> 상태로 변경됩니다.
+
+:::info
+
+SSO & SCIM 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/site-sso-scim-settings' />를 참고하세요.
+
+:::
+
 
 ## 관리자 계정 삭제 {/* #deleteAdmin */}
 

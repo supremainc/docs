@@ -1,13 +1,10 @@
 ---
 id: managing-registered-doors
 title: Manage Registered Doors
-description: Assign access devices to registered doors, configure relays, and manage access schedules. Control access for security, fire evacuation, and time and attendance management.
-keywords:
-  - Door Management
-  - BioStar Air
+description: Assign access devices to registered doors, set relays and access levels, and manage access schedules for one or more doors. Systematically control access for security, fire evacuation, and time and attendance (T&A).
 ---
 
-Assign access devices to registered doors, configure relays, and set access schedules. Systematically control access for security, fire evacuation, and time and attendance (T&A).
+Assign access devices to registered doors, configure relays and access levels, and set access schedules. Systematically control access for security, fire evacuation, and time and attendance (T&A).
 
 :::tip
 
@@ -17,13 +14,13 @@ Watch the following video for a tutorial on registering and managing doors.
 
 :::
 
-## View Door List
+## Explore the door list
 
 The door list displays all doors registered in BioStar Air at a glance. View key information for each door, such as its name, assigned devices, and group. Click a door in the list to view details and modify settings.
 
-<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
-
 Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar to view registered doors.
+
+<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
 
 ### Door information
 
@@ -45,11 +42,11 @@ The door list provides the following information.
 
 When one or more doors are selected in the list, administrators can manage them using the following tools.
 
-* <IcAirEdit width='24px' height='24px' title='Edit' />: Edit door information or change the settings of assigned devices. This option is available only when one door is selected. For more information, see <DocLink inner='#editingDoors' />.
-
 * <IcAirRef width='24px' height='24px' title='Refresh' />: Refresh the door list.
 
 * <IcAirRemove width='24px' height='24px' title='Delete' />: Remove the selected doors from the list.
+
+* <IcAirLock width='24px' height='24px' title='Set Access' />: Set access levels for the selected doors. For more information, see <DocLink inner='#batchDoorAccessLevels' />.
 
 * <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />: Set a schedule for door open and locked states. For more information on managing door schedules, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
 
@@ -113,9 +110,9 @@ Doors that use primary/secondary devices
 
 * An XPass 2 configured as a primary can be assigned to only one door, regardless of how many secondary devices or modules are assigned.
 
-* An XPass 2 configured as a primary can have up to 31 secondary devices assigned, and it can add a new door whose relay is controlled by a secondary Secure Module (SIO2).
+* An XPass 2 configured as a primary can have up to 31 slave devices assigned, and it can add a new door whose relay is controlled by a slave Secure I/O 2 (SIO2).
 
-* Doors that use a CoreStation 20 (CS-20) together with a Secure Module (SIO2) cannot be created.
+* Doors that use a CoreStation 20 (CS-20) together with a Secure I/O 2 (SIO2) cannot be created.
 
 :::
 
@@ -173,7 +170,11 @@ Follow these steps to edit door details and settings.
 
    * Set how long the door remains open in <Cmd sid="add_doors.open_time" product="air" />. (Default: 3 seconds)
 
-7. Click <Cmd sid="save_btn" product="air" /> to apply the changes.
+7. In the <Cmd sid='dcal.web.doors.alColumnHeader' product='air' /> section, click the check boxes for the access levels to assign to or remove from the door.
+
+   <Image src='/img/air/bsair-door-mng-registered-door-edit-ac-level.png' />
+
+8. Click <Cmd sid="save_btn" product="air" /> to apply the changes.
 
 :::info
 
@@ -184,6 +185,40 @@ Follow these steps to edit door details and settings.
 * When using a primary-secondary configuration, the primary device (usually the exit device) needs a network connection and the secondary device connects to the primary via RS-485.
 
 * For more information on configuring the SIO2 secure module, see <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />.
+
+:::
+
+## Batch set access levels {/* #batchDoorAccessLevels */}
+
+To apply the same access level to multiple doors, assign or remove access levels for all selected doors at once from the list.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. Select the check box for at least one door to set access levels.
+
+3. Click <IcAirLock width='24px' height='24px' title='Set Access' /> at the top of the door list.
+
+4. When the <Cmd sid='set_access_header1' product='air' /> pop-up menu appears, click the check boxes for the access levels to apply to the selected doors.
+
+   <Image src='/img/air/bsair-registered-multi-door-set-ac-level.png' />
+
+   * Also search for access levels in the search field.
+
+   * <Cmd sid='dcal.web.setAccess.legendNone' product='air' />: The system removes the access level from the selected doors.
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />: Only certain selected doors have the access level assigned.
+
+   * <Cmd sid='dcal.web.setAccess.legendAll' product='air' />: All selected doors have the access level assigned.
+
+5. To finish, click <Cmd sid='set_access_done_btn' product='air' />.
+
+:::info
+
+* If one or more doors are offline, the system applies the changes when the device reconnects.
+
+* The <Cmd sid='full_access' product='air' /> access level is managed automatically by the system, so it cannot be changed.
+
+* Errors on certain doors may prevent the system from applying access levels. A dialog shows doors where the access level change failed. To try again, click <Cmd sid='dcal.web.setAccess.partialRetry' product='air' />.
 
 :::
 

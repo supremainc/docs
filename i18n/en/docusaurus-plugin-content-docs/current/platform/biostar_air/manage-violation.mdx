@@ -1,0 +1,207 @@
+---
+id: manage-violation
+title: Check APB Violations
+description: This guide explains how to view and clear anti-passback (APB) violations in BioStar Air.
+---
+
+In the <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zone_violations_menu' product='air' /> menu, review users who violate the zone anti-passback (APB) rules and clear violations as needed. If you have not set zones and APB mode yet, first refer to <DocLink docId='platform/biostar_air/manage-zone' />.
+
+## When violations occur {/* #whenViolationsOccur */}
+
+The system records an APB violation when a user tries to enter or exit out of sequence based on the zone’s APB mode.
+
+* In zones set to **Hard mode**, an APB violation blocks access, and the system records the violation.
+
+* In zones set to **Soft mode**, the system allows access, but records an APB violation.
+
+* APB rules do not apply to users in the [APB exception group](./manage-zone.mdx#exceptionSet), so they do not appear in the violations list.
+
+## Review the violations list {/* #violationsOverview */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+In the left sidebar, click <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zone_violations_menu' product='air' />.
+
+<Image src='/img/air/bsair-zone-violations-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-zone-violations-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. Tap <Cmd sid='site_setting_tab_management' product='air' /> at the bottom of the screen.
+
+3. Tap the <Cmd sid='zone_violations_menu' product='air' /> card.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+The list shows users with active APB violations. If no active APB violations exist, an empty state screen appears instead of the list.
+
+* <Cmd sid='violations_col_user' product='air' />: User with a recorded APB violation.
+
+* <Cmd sid='violations_col_apb_violation' product='air' />: Mode (Hard/Soft) where the APB violation occurred.
+
+* <Cmd sid='violations_col_zone' product='air' />: The zone where the APB violation occurred.
+
+* <Cmd sid='violations_col_door' product='air' />: The door where the APB violation occurred.
+
+* <Cmd sid='violations_col_action' product='air' />: Clear an individual APB violation.
+
+:::info
+
+Review cleared APB violations and past APB violation history in <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />.
+
+:::
+
+## Manage the violations list {/* #manageViolations */}
+
+Use the management features at the top and bottom of the list to perform the following tasks.
+
+<Image src='/img/air/bsair-zone-violations-mng-tools.png' />
+
+* <Cmd sid='violations_clear_one_btn' product='air' />: Clear APB violations for the selected user in the list. For more information, see <DocLink inner='#clearingViolations' />.
+
+* <Cmd sid='presence_refresh' product='air' />: Refresh the list immediately to show the latest status. In <Cmd sid='auto_refresh_btn' product='air' /> at the bottom of the list, select an auto refresh interval (<Cmd sid='auto_refresh_option1' product='air' /> / <Cmd sid='auto_refresh_option2' product='air' /> / <Cmd sid='auto_refresh_option3' product='air' />). The list refreshes automatically at the set interval.
+
+* <Cmd sid='violations_search_placeholder' product='air' />: Search by user name.
+
+### Filter the violation list
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+In the list header, click the <IcAirFilter title='Filter' /> button in the <Cmd sid='violations_col_apb_violation' product='air' />, <Cmd sid='violations_col_zone' product='air' />, or <Cmd sid='violations_col_door' product='air' /> column to filter the list by that condition.
+
+<Image src='/img/air/bsair-zone-violations-filtering.png' />
+
+:::info
+
+Click <Cmd sid='new_button_reset' product='air' /> to clear the filter.
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Tap <Cmd sid='logs_filters_action_btn' product='air' /> at the top right of the violation list. 
+
+2. Select a filter condition in <Cmd sid='violations_col_apb_violation' product='air' />, <Cmd sid='violations_col_zone' product='air' />, or <Cmd sid='violations_col_door' product='air' />.
+
+3. Tap <Cmd sid='save_btn' product='air' /> to filter the list by the selected criteria.
+
+:::info
+
+Tap <Cmd sid='new_button_reset' product='air' /> to clear the filter.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## Clear violations {/* #clearingViolations */}
+
+Clearing an APB violation initializes the user's active APB violation status and restores normal zone access.
+
+:::info
+
+* <Cmd sid='violations_clear_one_btn' product='air' /> initializes only the user's active APB violation status. The event that triggered the APB violation remains in the event log.
+
+* Existing APB violations remain after the zone is disabled. Clear them in the violation list.
+
+* Users in an APB exception group do not appear in this list, but remain included in the zone presence count.
+
+:::
+
+### Clear a violation for an individual user
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. In the list, click <Cmd sid='violations_clear_one_btn' product='air' /> in the <Cmd sid='violations_col_action' product='air' /> column for the user whose APB violation to clear. 
+
+   <Image src='/img/air/bsair-zone-violations-clear-apb.png' />
+
+2. When the confirmation message appears, click <Cmd sid='violations_clear_one_btn' product='air' />.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-clear-apb.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. In the list, tap <IcAirClear width='20px' height='20px' title='Clear Violation' /> in the user's row to clear the APB violation.
+
+2. When the confirmation message appears, tap <Cmd sid='violations_clear_one_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+### Clear violations for multiple users
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Select the checkboxes next to users with APB violations to clear. Select one or more users.
+
+2. Click <Cmd sid='violations_clear_selected_btn' product='air' /> at the top of the list.
+
+   <Image src='/img/air/bsair-zone-violations-clear-apb-multi-users.png' />
+
+3. When the confirmation message appears, click <Cmd sid='violations_clear_selected_btn' product='air' />.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-clear-apb-multi-users.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Touch and hold a user in the list.
+
+2. Select users whose violations to clear. Select one or more users.
+
+3. Tap <Cmd sid='violations_clear_selected_btn' product='air' /> at the bottom of the screen.
+
+4. When the confirmation message appears, tap <Cmd sid='violations_clear_selected_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>

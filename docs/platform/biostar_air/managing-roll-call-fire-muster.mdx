@@ -1,19 +1,30 @@
 ---
 id: managing-roll-call-fire-muster
 title: 비상 호출
-description: BioStar Air에서 소집 구역 설정, 비상 점호 시작, 사용자 안전 상태 추적, 점호 내역 보고서를 생성하는 방법을 안내합니다.
-keywords: [Roll call, 비상 호출, 화재 소집 구역, BioStar Air]
+description: BioStar Air에서 소집 구역을 설정하고, 재실 정보를 기반으로 비상 호출을 시작해 사용자의 안전 상태를 추적하며, 비상 호출 내역을 확인하는 방법을 안내합니다.
 ---
 
-BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통해 조직은 비상 상황 발생 시 어떤 직원이 안전하게 건물에서 대피했는지 추적할 수 있습니다. 소집 구역을 설정하고 BioStar Air 모바일 앱을 사용하면 관리자는 모든 사용자를 신속하게 파악하고 점호 내역 보고서를 생성할 수 있습니다.
+BioStar Air의 비상 호출(Roll Call) 기능을 통해 조직은 비상 상황 발생 시 어떤 사용자가 안전하게 대피했는지 추적할 수 있습니다. 소집 구역을 설정하고 BioStar Air 모바일 앱으로 비상 호출을 진행하면, 관리자는 재실 정보를 기반으로 실제 현장에 있던 사용자를 신속하게 파악하고 안전 여부를 확인할 수 있습니다.
+
+:::note
+
+**재실(Presence) 기반의 정확한 소집 명단**
+
+* 비상 호출은 모든 사용자가 현장에 있다고 가정하지 않습니다. 재실(Presence) 로직을 함께 사용해, 비상 상황이 발생한 시점에 실제로 현장에 있는 것으로 확인된 사용자만 소집 대상으로 표시합니다.
+
+* 사용자 그룹을 특정 소집 구역에 배정하고 전담 관리자를 지정할 수 있어, 안전 담당자는 자신이 맡은 사용자만 집중해서 관리할 수 있습니다.
+
+* Suprema Pass 앱은 현장에 있는 모바일 크리덴셜 사용자에게 올바른 소집 구역을 안내하고, 외부에 있는 사용자에게는 비상 상황이 진행되는 동안 시설에 들어오지 말라고 경고합니다.
+
+:::
 
 :::info
 
-* **사용자 그룹에 소집 구역이 올바르게 할당되었는지 확인**하여 혼란을 방지하세요.
+* 사용자 그룹에 소집 구역이 올바르게 할당되었는지 확인하여 혼란을 방지하세요.
 
-* 실제 비상 상황 발생 시 원활한 진행을 위해 비상 호출 기능을 **정기적으로 테스트하세요**.
+* 실제 비상 상황 발생 시 원활한 진행을 위해 비상 호출 기능을 정기적으로 테스트하세요.
 
-* **출입 기록**을 통해 안전 규정 준수를 위한 출석을 확인할 수 있습니다.
+* 출입 기록을 통해 안전 규정 준수를 위한 출석을 확인할 수 있습니다.
 
 :::
 
@@ -25,18 +36,38 @@ BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통�
 
 :::
 
+## 시작하기 전에 {/* #beforeStart */}
+
+* 비상 호출의 정확도는 재실 감지에 따라 달라집니다. <Cmd sid='apb.zoneList.perimetterZone' product='air' />이 올바르게 구성되지 않으면 비상 호출 목록이 실제 현장 인원과 다를 수 있습니다.
+
+* 모바일 알림에는 Suprema Pass 앱이 필요합니다. RF 카드나 바이오메트릭 크리덴셜만 사용하는 사용자는 모바일 비상 호출 알림을 받을 수 없습니다.
+
+* 소집 구역에 배정되지 않은 현장 사용자는 소집 장소 안내를 받지 못할 수 있습니다.
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> 설정이 올바르지 않으면 담당자가 예상한 비상 호출 화면이 나타나지 않을 수 있습니다.
+
+* 장치가 오프라인이었거나 이벤트 전달이 지연되면 재실 정보와 비상 호출 정확도에 영향을 줄 수 있습니다.
+
+* 비활성 상태인 사용자는 비상 호출 알림을 받지 못합니다.
+
+:::info
+
+이전 버전의 Suprema Pass 또는 BioStar Air 앱을 사용하는 사용자와 관리자는 기존 비상 호출 방식을 계속 사용할 수 있지만, 새로운 기능을 사용하려면 최신 버전으로 업데이트해야 합니다.
+
+:::
+
 
 ## 소집 구역 설정 {/* #settingMusterPoints */}
 
 소집 구역은 사용자가 비상 상황에서 자신이 안전하다는 것을 표시하기 위해 크리덴셜을 인증할 수 있는 지정된 장소입니다.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />을 클릭하세요.
 
 1. 화면 오른쪽 상단의 <Cmd sid='add_muster_point_btn' product='air' /> 버튼을 클릭하세요.
 
    <Image src='/img/air/bsair-adv-rollcall.png' />
 
-1. <Cmd sid='add_muster_point_title' product='air' /> 패널이 나타나면 이름과 설명(선택 사항)을 입력하세요.
+1. <Cmd sid='add_muster_point_title' product='air' /> 패널이 나타나면 소집 장소 이름과 설명(선택 사항)을 입력하세요.
 
    <Image src='/img/air/bsair-adv-rollcall-add.png' />
 
@@ -44,9 +75,27 @@ BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통�
 
    <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
 
-1. <Cmd sid='add_muster_point_user_groups_title' product='air' /> 섹션에서 소집 구역에 도착했을 때 보고해야할 사용자 그룹을 선택하세요. 사용자 그룹의 체크박스를 클릭하고 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+1. <Cmd sid='add_muster_point_user_groups_title' product='air' /> 섹션에서 소집 구역에 도착했을 때 보고해야할 사용자 그룹을 선택하세요.
 
    <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
+
+   * 특정 사용자 그룹을 선택하려면 원하는 그룹의 체크박스를 선택하고 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+   * <Cmd sid='fm.musterForm.allUsers.name' product='air' />: 특정 사용자 그룹을 선택하는 대신, 현재 활성화된 모든 사용자를 이 소집 구역에 포함합니다. 실제 비상 호출을 실행하면 모든 사용자를 현장에 있다고 가정하지 않고, 재실 감지를 기반으로 사이트에 있는 것으로 확인된 사용자만 소집 대상으로 합니다. 이 옵션을 켜면 개별 사용자 그룹 선택은 비활성화되며, 특정 그룹만 선택하려면 이 옵션을 먼저 꺼야 합니다.
+
+1. <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> 섹션에서 해당 소집 장소에서 비상 호출을 진행할 관리자의 체크박스를 선택하고 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-adv-rollcall-add-assign-admin.png' />
+
+   :::note
+
+   * <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />를 선택했다면, 선택된 관리자만 해당 비상호출을 시작할 수 있으며, 진행 중인 비상 호출에서도 자신이 담당하는 소집 구역의 사용자만 확인하고 관리할 수 있습니다.
+
+   * <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />를 지정하지 않으면 <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' /> 또는 <Cmd sid='operator_role' product='air' /> 등급의 사용자가 비상 호출을 시작할 수 있습니다.
+
+   * 한 명의 관리자는 동시에 여러 소집 구역에 지정 관리자로 배정될 수 없습니다.
+
+   :::
 
 1. 소집 구역 설정을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
@@ -65,7 +114,9 @@ BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통�
 :::
 
 
-## 모바일에서 비상 호출 시작 {/* #startingRollcallonMobile */}
+## 비상 호출 시작 {/* #startingRollcallonMobile */}
+
+### 모바일에서 시작
 
 BioStar Air 모바일 앱에서 비상 호출을 시작하고 출석을 확인하세요.
 
@@ -75,10 +126,54 @@ BioStar Air 모바일 앱에서 비상 호출을 시작하고 출석을 확인�
 
 1. 화면 하단의 <Cmd en='All Menu'>전체 메뉴</Cmd> → <Cmd sid='roll_call_submenu' product='air' />을 차례로 탭하세요.
 
-1. <Cmd en='Roll Call Start'>비상 호출 시작</Cmd> 버튼을 탭하세요.
+1. <Cmd en='Start Roll Call'>비상 호출 시작</Cmd> 버튼을 탭하세요.
+
+1. 비상 호출을 시작할 소집 구역을 선택하고, <Cmd en='Continue'>계속</Cmd> 버튼을 클릭하세요.
+
+   모든 소집 구역에서 비상 호출을 진행하려면 <Cmd en='Site-wide'>사이트 전체</Cmd>를 선택하고, <Cmd en='Continue'>계속</Cmd> 버튼을 클릭하세요.
+
+1. 진행 중인 비상 호출 목록에서 소집 구역을 선택하세요.
 
 1. 소집 장소에 모여야할 모든 사용자 목록이 표시됩니다.
 
+:::note
+
+**관리자 역할에 따른 차이**
+
+* 소집 구역의 <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />로 지정되지 않은 <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' />, <Cmd sid='operator_role' product='air' />는 위 순서대로 비상 호출 목록을 직접 확인하고 새 비상 호출을 시작합니다.
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />는 자신이 담당하는 소집 구역에서 비상 호출이 시작되면 알림을 받습니다. 알림을 탭하면 목록을 거치지 않고 담당 소집 구역의 진행 화면으로 바로 이동합니다.
+
+:::
+
+### 진행 중인 비상 호출 화면 살펴보기 {/* #activeRollCallScreen */}
+
+비상 호출이 시작되면 소집 구역 이름과 함께 진행 현황이 표시됩니다.
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-mobile-rollcall-start-screen.png' className='none' />
+
+</Column>
+<Column className='padding--l20'>
+
+* 화면 상단에 <Cmd en='Unaccounted Users'>미출석</Cmd>과 <Cmd en='All Activated Users'>모든 활성화 사용자</Cmd> 인원 수를 확인할 수 있습니다.
+
+   인원 수 아래에 **안전하다고 표시된 인원**/**전체 인원**과 **비상 호출 시작 시각**이 표시됩니다. 새로고침(<IcAirRef />) 버튼으로 최신 상태를 확인할 수 있습니다.
+
+* 목록에 표시할 사용자 범위를 전환할 수 있습니다.
+
+   * <Cmd en='On Site'>사이트 내</Cmd>: 현재 재실 상태가 현장(On Site)인 사용자만 표시합니다.
+
+   * <Cmd en='All assigned'>전체 지정</Cmd>: 재실 상태와 관계없이 이 소집 구역에 배정된 사용자 전체를 표시합니다. 안전하다고 표시된 사용자는 목록의 맨 아래로 이동합니다.
+
+* 검색 기능으로 특정 사용자를 찾을 수 있습니다.
+
+* 목록의 각 사용자 오른쪽에서 재실 상태(<Cmd sid='presence_on_site' product='air' />/<Cmd sid='presence_off_site' product='air' />)를 확인할 수 있습니다.
+
+</Column>
+</Columns>
 
 ### 사용자가 안전하다고 표시하기 {/* #marking-users-safe */}
 
@@ -96,10 +191,6 @@ BioStar Air 모바일 앱에서 비상 호출을 시작하고 출석을 확인�
 
 * 사용자는 지정된 소집 구역에서 장치에 자신의 크리덴셜을 태깅하세요.
 
-* 사용자는 **소집 그룹**에 따라 필터링할 수 있습니다.
-
-* 검색 기능을 사용하여 특정 개인을 찾을 수 있습니다.
-
 </Column>
 </Columns>
 
@@ -116,21 +207,36 @@ BioStar Air 모바일 앱에서 비상 호출을 시작하고 출석을 확인�
 
 아래의 사항이 충족되면 비상 호출을 완료합니다.
 
-* 모든 사용자가 소집 구역에 도착하여 안전하다고 표시될 때
+* 소집 범위에 포함된 <Cmd sid='presence_on_site' product='air' className='normal' /> 사용자, 즉 <Cmd en='Unaccounted Users'>미출석</Cmd> 인원이 0이 되어 나타나는 완료 메시지 창에서 <Cmd en='Yes'>예</Cmd> 버튼을 탭할 때
 
-* 관리자가 모든 사용자를 수동으로 안전하다고 표시할 때
+* 관리자가 모든 사용자를 수동으로 안전하다고 표시하고, <Cmd en='Finish Roll Call'>비상 호출 종료</Cmd> 버튼을 탭할 때
 
 * 24시간이 경과했을 때
 
 </Column>
 </Columns>
 
+:::note
+
+**역할별 종료 범위**
+
+* 사이트 마스터는 비상 호출을 하나씩 개별적으로 종료하거나, 여러 건을 선택해 한 번에 종료하거나, 사이트에서 진행 중인 모든 비상 호출을 한 번에 종료할 수 있습니다.
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />로 선택된 <Cmd sid='admin_role' product='air' className='normal' /> 또는 <Cmd sid='operator_role' product='air' className='normal' />는 자신이 담당하는 소집 구역의 비상 호출만 종료할 수 있습니다.
+
+:::
+
+:::info
+
+<Cmd sid='presence_off_site' product='air' /> 상태인 사용자도 수동으로 안전하다고 표시할 수 있습니다. 예를 들어 당일 재택근무 중인 사용자를 안전하다고 미리 확인해 둘 수 있습니다.
+
+:::
 
 ## 비상 호출 내역 보기 {/* #viewingRollCallHistory */}
 
 이전에 실시한 비상 호출 내역을 확인할 수 있습니다.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />을 클릭하세요.
 
 1. <Cmd sid='roll_call_history_tab' product='air' /> 탭을 클릭하세요.
 
