@@ -22,7 +22,7 @@
       "Output Module": {
         "OM-120": "ㅡ"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "ㅡ"
       }
     }
@@ -50,7 +50,7 @@
       "Output Module": {
         "OM-120": "ㅡ"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "ㅡ"
       }
     }
@@ -78,7 +78,7 @@
       "Output Module": {
         "OM-120": "ㅡ"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "ㅡ"
       }
     }
@@ -106,7 +106,7 @@
       "Output Module": {
         "OM-120": "ㅡ"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "ㅡ"
       }
     }
@@ -134,7 +134,7 @@
       "Output Module": {
         "OM-120": "ㅡ"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "ㅡ"
       }
     }
@@ -162,7 +162,7 @@
       "Output Module": {
         "OM-120": "Cortex M3 72 MHz"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "Cortex M3 72 MHz"
       }
     }
@@ -190,7 +190,7 @@
       "Output Module": {
         "OM-120": "128 KB Flash + 20 KB SRAM"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "128 KB Flash + 20 KB RAM"
       }
     }
@@ -218,7 +218,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -246,7 +246,7 @@
       "Output Module": {
         "OM-120": "multiColor"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "multiColor"
       }
     }
@@ -274,7 +274,7 @@
       "Output Module": {
         "OM-120": "-20℃ ~ 60℃"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "-20℃ ~ 50℃"
       }
     }
@@ -302,7 +302,7 @@
       "Output Module": {
         "OM-120": "-40℃ ~ 70℃"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "-40℃ ~ 70℃"
       }
     }
@@ -330,7 +330,7 @@
       "Output Module": {
         "OM-120": "operating-humidity-spec95"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "operating-humidity-spec"
       }
     }
@@ -358,7 +358,7 @@
       "Output Module": {
         "OM-120": "storage-humidity-spec95"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "storage-humidity-spec"
       }
     }
@@ -386,7 +386,7 @@
       "Output Module": {
         "OM-120": "300g"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "37g"
       }
     }
@@ -414,7 +414,7 @@
       "Output Module": {
         "OM-120": "90 x 190 x 21"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "36 x 65 x 18"
       }
     }
@@ -442,7 +442,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -470,7 +470,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -498,7 +498,7 @@
       "Output Module": {
         "OM-120": "1ch"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "1ch"
       }
     }
@@ -526,7 +526,7 @@
       "Output Module": {
         "OM-120": "osdpv2"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "osdpv2"
       }
     }
@@ -554,7 +554,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -582,7 +582,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "2chwiegand"
       }
     }
@@ -610,7 +610,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -638,7 +638,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -666,7 +666,7 @@
       "Output Module": {
         "OM-120": "12relay"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "1relay"
       }
     }
@@ -694,7 +694,7 @@
       "Output Module": {
         "OM-120": "2chDry"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -722,7 +722,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -750,7 +750,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -778,7 +778,7 @@
       "Output Module": {
         "OM-120": false
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": false
       }
     }
@@ -806,7 +806,7 @@
       "Output Module": {
         "OM-120": "p12ve6a"
       },
-      "Secure Module": {
+      "Secure I/O 2": {
         "SIO2": "p12ve5a"
       }
     }

@@ -123,9 +123,9 @@
     "message": "Door Module",
     "description": "Navbar item with label Door Module"
   },
-  "item.label.Secure Module": {
-    "message": "Secure Module",
-    "description": "Navbar item with label Secure Module"
+  "item.label.Secure I/O 2": {
+    "message": "Secure I/O 2",
+    "description": "Navbar item with label Secure I/O 2"
   },
   "item.label.Extended Module": {
     "message": "Extended Module",
