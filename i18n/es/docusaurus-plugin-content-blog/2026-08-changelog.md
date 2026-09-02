@@ -17,7 +17,7 @@ In the **Developers** section, we have also newly released the **ViOnyx AI Camer
 
 ## Document Hub Update
 
-![](/img/changelogs/document_hub_banner.png)
+![](/img/changelogs/document_hub_banner_en.png)
 
 The [**Document Hub**](../dochub) has been updated, so you can now download the newly organized product manuals and release notes.
 
