@@ -17,7 +17,7 @@ In the **Developers** section, we have also newly released the **ViOnyx AI Camer
 
 ## Document Hub Update
 
-![](/img/changelogs/document_hub_banner.png)
+![](/img/changelogs/document_hub_banner_en.png)
 
 The [**Document Hub**](../dochub) has been updated, so you can now download the newly organized product manuals and release notes.
 
@@ -64,7 +64,6 @@ The [**Document Hub**](../dochub) has been updated, so you can now download the 
 * [FaceStation F2](../device/facestation_f2/release-notes/230): Added release notes for version 2.3.0
 
 * [XPass Q2](../device/xpass_q2/release-notes/101): Added release notes for versions 1.0.0 and 1.0.1
-
 
 ## Developer
 
