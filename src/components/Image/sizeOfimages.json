@@ -7745,7 +7745,7 @@
   },
   "/img/device/bs3-rtsp.png": {
     "width": 250,
-    "height": 311
+    "height": 444
   },
   "/img/device/bs3-usb.png": {
     "width": 250,
@@ -9492,8 +9492,8 @@
     "height": 539
   },
   "/img/device/installation-power-connection-sio2.png": {
-    "width": 646,
-    "height": 443
+    "width": 639,
+    "height": 432
   },
   "/img/device/installation-power-connection-xp2.png": {
     "width": 1004,
@@ -17380,8 +17380,8 @@
     "height": 537
   },
   "/img/en/device/installation-power-connection-sio2.png": {
-    "width": 706,
-    "height": 484
+    "width": 639,
+    "height": 437
   },
   "/img/en/device/installation-power-connection-xp2.png": {
     "width": 1007,
