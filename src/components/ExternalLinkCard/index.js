@@ -433,7 +433,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
       tags: ['Door Control', 'I/O Module']
     },
     {
-      title: 'Secure Module',
+      title: 'Secure I/O 2',
       url: '/device/securemodule',
       img: require('@site/static/img/cover/securemodule.png').default,
       desc: `${translate({

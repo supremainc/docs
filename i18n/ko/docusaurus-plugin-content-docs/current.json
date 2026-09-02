@@ -307,9 +307,9 @@
     "message": "릴리스 노트",
     "description": "The label for category '릴리스 노트' in sidebar 'outputmodule'"
   },
-  "sidebar.securemodule.category.Secure Module": {
-    "message": "Secure Module",
-    "description": "The label for category 'Secure Module' in sidebar 'securemodule'"
+  "sidebar.securemodule.category.Secure I/O 2": {
+    "message": "Secure I/O 2",
+    "description": "The label for category 'Secure I/O 2' in sidebar 'securemodule'"
   },
   "sidebar.securemodule.category.릴리스 노트": {
     "message": "릴리스 노트",
@@ -587,9 +587,9 @@
     "message": "Door Interface UL",
     "description": "The label for category 'Door Interface UL' in sidebar 'doorinterface_ul'"
   },
-  "sidebar.securemodule_ul.category.Secure Module UL": {
-    "message": "Secure Module UL",
-    "description": "The label for category 'Secure Module UL' in sidebar 'securemodule_ul'"
+  "sidebar.securemodule_ul.category.Secure I/O 2 UL": {
+    "message": "Secure I/O 2 UL",
+    "description": "The label for category 'Secure I/O 2 UL' in sidebar 'securemodule_ul'"
   },
   "sidebar.bioentryw2_ul.category.BioEntry W2 UL": {
     "message": "BioEntry W2 UL",

@@ -89,7 +89,7 @@ slug: 2026-01-02-changelog
 * [Input Module](../device/inputmodule)
 * [Output Module](../device/outputmodule)
 * [Door Module](../device/doormodule)
-* [Secure Module](../device/securemodule)
+* [Secure I/O 2](../device/securemodule)
 * [Extended Module](../device/extendedmodule)
 * [Extended Module-SC](../device/extendedmodule_sc)
 

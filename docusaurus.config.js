@@ -486,7 +486,7 @@ const config = {
                },
                {
                   type: 'doc',
-                  label: 'Secure Module',
+                  label: 'Secure I/O 2',
                   docId: 'device/securemodule/index'
                },
                {

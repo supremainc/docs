@@ -8,7 +8,7 @@
     "Door Interface": false,
     "Input Module": false,
     "Output Module": false,
-    "Secure Module": false
+    "Secure I/O 2": false
   },
   {
     "category": "basic",
@@ -19,7 +19,7 @@
     "Door Interface": false,
     "Input Module": false,
     "Output Module": false,
-    "Secure Module": false
+    "Secure I/O 2": false
   },
   {
     "category": "basic",
@@ -30,7 +30,7 @@
     "Door Interface": true,
     "Input Module": true,
     "Output Module": true,
-    "Secure Module": true
+    "Secure I/O 2": true
   },
   {
     "category": "basic",
@@ -41,7 +41,7 @@
     "Door Interface": true,
     "Input Module": false,
     "Output Module": false,
-    "Secure Module": false
+    "Secure I/O 2": false
   },
   {
     "category": "basic",
@@ -52,6 +52,6 @@
     "Door Interface": true,
     "Input Module": true,
     "Output Module": false,
-    "Secure Module": false
+    "Secure I/O 2": false
   }
 ]
