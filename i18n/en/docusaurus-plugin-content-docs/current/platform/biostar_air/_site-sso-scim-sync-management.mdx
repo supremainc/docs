@@ -1,0 +1,31 @@
+## Manage synchronized admins, users, and groups
+
+With provisioning enabled, BioStar Air shows whether each admin, user, and group is local or synchronized from the identity provider.
+
+* In <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />, check the <Cmd sid='sso_scim.identity_source.title' product='air' /> column in the admin list.
+
+  <Image src='/img/air/bsair-admin-list-with-idp.png' />
+
+* In <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />, check the <Cmd sid='sso_scim.identity_source.title' product='air' /> column in the user list.
+
+  <Image src='/img/air/bsair-user-management-list-with-idp.png' />
+
+* In <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' />, check the <Cmd sid='sso_scim.identity_source.title' product='air' /> column in the user group list.
+
+  <Image src='/img/air/bsair-user-group-list-with-idp.png' />
+
+:::note
+
+**How SCIM-synced entries work**
+
+* Manually created users and admins remain manually managed.
+
+* BioStar Air prevents manual deletion of SCIM-synced entries.
+
+* BioStar Air prevents manually adding or removing users from SCIM-synced groups.
+
+* Manually changing a synchronized entry locally sets the status to <Cmd sid='sso_scim.identity_source.override' product='air' />. Run <Cmd sid='sso_scim.override.release_override' product='air' /> to cancel local changes and return the entry to SCIM management.
+
+  <Image src='/img/air/bsair-user-list-with-idp-override.png' />
+
+:::

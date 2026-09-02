@@ -1,0 +1,244 @@
+---
+id: site-sso-scim-entra-id-setup
+title: Set Up Microsoft Entra ID Integration
+description: This procedure explains how to connect Microsoft Entra ID SSO and SCIM provisioning to BioStar Air.
+---
+
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
+import GroupMapping from './_site-sso-scim-group-mapping.mdx'
+import SyncManagement from './_site-sso-scim-sync-management.mdx'
+
+To sign in to BioStar Air with Microsoft Entra ID, an ID administrator creates an app registration in Entra ID. Then the administrator links it to the BioStar Air SSO settings.
+
+## Connect Entra ID SSO
+
+<Steps>
+<Step>
+
+### BioStar Air: Prepare redirect URI {/* #bsairRedirect */}
+
+1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> in the left sidebar of BioStar Air.
+
+2. Click the <Cmd>SSO & SCIM</Cmd> tab.
+
+3. Under <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />, select <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' />.
+
+4. Copy the URI value shown in the <Cmd sid='sso_scim.additional_features.sso.redirect_uri' product='air' /> field.
+
+<Image src='/img/air/bsair-settings-site-idp-entraid.png' />
+
+</Step>
+<Step>
+
+### Microsoft Entra admin center: Register app {/* #appRegistration */}
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+
+2. Go to **Entra ID** → **App registrations**.
+
+3. Click **New registration**.
+
+   <Image src='/img/air/bsair-sso-entra-app-reg.png' alone />
+
+4. Enter 'BioStar Air' for the app name.
+
+5. Under **Supported account types**, select **Single tenant only**.
+
+6. In **Redirect URI**, select **Web**. Paste the URI from step <DocLink inner='#bsairRedirect' /> into the field.
+
+   <Image src='/img/air/bsair-sso-entra-app-reg-new.png' alone />
+
+7. Click **Register**.
+
+8. In the BioStar Air app **Overview**, copy the following values.
+
+   <Image src='/img/air/bsair-sso-entra-app-overview.png' alone />
+
+   * **Application (client) ID**
+
+   * **Directory (tenant) ID**
+
+9. Under **Certificates & secrets** → **Client secrets**, click **New client secret**.
+
+   <Image src='/img/air/bsair-sso-entra-app-certificates-secrets.png' alone />
+
+10. Enter a description and select an expiration period.
+
+    <Image src='/img/air/bsair-sso-entra-app-add-client-secret.png' alone />
+
+11. Click **Add**.
+
+12. Copy the **Value** of the generated client secret.
+
+    <Image src='/img/air/bsair-sso-entra-app-copy-client-secret.png' alone />
+
+Enter the copied **Application (client) ID**, **Directory (tenant) ID**, and **Value** in the next step.
+
+:::caution
+
+Use **Value**, not **Secret ID**. The **Value** appears only once, so copy it now.
+
+:::
+
+</Step>
+<Step>
+
+### Microsoft Entra admin center: Assign users and groups
+
+Create users and groups before assigning them.
+
+1. In **Enterprise apps**, click the app created earlier (BioStar Air).
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps.png' alone />
+
+2. Click **Assign users and groups**.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-overview.png' alone />
+
+3. Click **Add user/group** to assign users and groups.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-users-groups.png' alone />
+
+4. After assigning users and groups, click **Assign**.
+
+</Step>
+<Step>
+
+### BioStar Air: Configure SSO
+
+1. Return to the BioStar Air Settings screen and enter the values copied in <DocLink inner='#appRegistration' /> into each field.
+
+   <Image src='/img/air/bsair-settings-site-idp-entraid-sso-config.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Application (client) ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Value**
+
+   * <Cmd sid='sso_scim.additional_features.sso.tenant_id' product='air' />: **Directory (tenant) ID**
+
+2. In the <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' /> field, enter your organization's email domain.
+
+3. Click <Cmd sid='sso_scim.additional_features.sso.save' product='air' />.
+
+After the system saves and verifies successfully, it automatically generates the value for <Cmd sid='sso_scim.additional_features.sso.discovery_url' product='air' />.
+
+<Image src='/img/air/bsair-settings-site-idp-entraid-sso-config-success.png' />
+
+</Step>
+</Steps>
+
+## Connect Entra ID SCIM provisioning
+
+<Steps>
+<Step>
+
+<CopyToken />
+
+</Step>
+<Step>
+
+### Microsoft Entra admin center: Create a SCIM provisioning app
+
+1. In **Enterprise apps**, click **New application**.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new.png' alone />
+
+2. Click **Create your own application**.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new-own.png' alone />
+
+3. Enter the app name as 'BioStar Air SCIM'.
+
+4. Select **Integrate any other application you don't find in the gallery (Non-gallery)**.
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new-own-create.png' alone />
+
+5. Click **Create**.
+
+6. In the BioStar Air SCIM app, click **Manage** → **Provisioning**.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-overview.png' alone />
+
+</Step>
+<Step>
+
+### Microsoft Entra admin center: Set admin credentials and start provisioning
+
+1. Click **New Configuration**.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-provisioning.png' alone />
+
+2. In **Admin credentials**, enter the SCIM endpoint URL and token copied in <DocLink inner='#copyToken' /> into **Tenant URL** and **Secret token**.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-new-config.png' alone />
+
+3. Click **Test Connection** to test synchronization.
+
+4. Click **Create**.
+
+5. In **Users and groups**, click **Add user/group**.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-users-groups.png' alone />
+
+6. Assign the users and security groups to provision.
+
+7. Click **Assign**.
+
+8. Go to **Provisioning** → **Mappings** and confirm that user and group synchronization is enabled.
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-mapping.png' alone />
+
+9. Review the mappings before changing attributes.
+
+10. In the SCIM app **Overview**, click **Start provisioning**.
+
+    <Image src='/img/air/bsair-sso-entra-scim-app-start-provisioning.png' alone />
+
+:::info
+
+It is recommended to start with a small test group. BioStar Air can take up to 40 minutes to reflect group membership changes.
+
+:::
+
+</Step>
+<Step>
+
+<CheckConnection />
+
+</Step>
+</Steps>
+
+<GroupMapping />
+
+<SyncManagement />
+
+## Sign in with Entra ID
+
+After completing Entra ID SSO connection, users sign in to BioStar Air with a Microsoft account on the sign-in screen.
+
+1. On the BioStar Air sign-in screen, click <Cmd sid='login_with_microsoft_account' product='air' />.
+
+2. Select <Cmd sid='sso_scim.login.microsoft_org_dialog.microsoft_entra' product='air' />.
+
+   <Image src='/img/air/bsair-login-with-entra-id.png' />
+
+   :::note
+
+   If your organization already uses Microsoft SSO, select <Cmd sid='sso_scim.login.microsoft_org_dialog.microsoft_sso' product='air' /> to sign in without additional settings.
+
+   :::
+
+3. Enter the organization's email address or domain in the <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' /> field. (For example, `user@company.com` or `company`)
+
+4. Click <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' />.
+
+5. On the Microsoft Entra ID sign-in screen, enter your organization's account email address and password.
+
+6. After authentication is complete, you are automatically redirected to BioStar Air, completing the sign-in process.
+
+:::info
+
+If Entra ID SSO is not set up for the entered email domain, an error message appears. Contact the site administrator.
+
+:::

@@ -10831,6 +10831,10 @@
     "width": 1286,
     "height": 734
   },
+  "/img/en/air/bsair-login-with-entra-id.png": {
+    "width": 1200,
+    "height": 675
+  },
   "/img/en/air/bsair-login-with-okta.png": {
     "width": 1200,
     "height": 675
@@ -11468,6 +11472,10 @@
     "height": 1080
   },
   "/img/en/air/bsair-settings-site-security.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-setting-sso-scim.png": {
     "width": 1920,
     "height": 1080
   },

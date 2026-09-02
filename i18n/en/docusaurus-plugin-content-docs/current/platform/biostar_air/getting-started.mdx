@@ -22,13 +22,17 @@ You cannot create an account by signing up. The system installer or an existing 
 
 :::
 
-## Review the dashboard {/* #dashboard-overview */}
+## Explore the dashboard {/* #dashboard-overview */}
 
 After logging in, the <Cmd sid="dashboard_menu" product="air" /> appears and shows key site information.
 
 <Image src='/img/air/bsair-gettingstarted-dashboard.png' />
 
-* <Cmd sid="user_tagged_today" product="air" />: View the number of users who accessed the site today.
+* <Cmd sid='user_tagged_today' product='air' />: View on-site users in real time. Presence status is calculated based on authentication logs from the entry and exit devices configured in <Cmd sid='apb.zoneList.perimetterZone' product='air' className='bold' />. For more information, refer to the followings.
+
+  * <DocLink docId='platform/biostar_air/manage-zone' />
+
+  * <DocLink docId='platform/biostar_air/manage-presence' />
 
 * <Cmd sid="users_card" product="air" />: View the total number of registered and active users. Click the card to open <Cmd sid="user_menu" product="air" />.
 
@@ -74,7 +78,21 @@ Site administrators can manage the site, and authenticated users can only access
 
 ### Register devices {/* #registering-devices */}
 
-Review registered devices or add new ones. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+Use the BioStar Air mobile app to register devices. Register devices using Bluetooth Low Energy (BLE), and manage them through the BioStar Air portal.
+
+<Image src='/img/air/bsair-register-device-step.png' className='none' />
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. Tap the <Cmd sid="devices_card" product="air" /> card.
+
+3. Tap <IcAdd /> at the top right of the screen.
+
+4. In the device search screen, tap <Cmd sid="button.register" product="2" /> for the device to register.
+
+5. When the device registration window appears, tap <Cmd sid="device_btn_ok" product="air" />.
+
+Return to the device list and confirm the added device. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
 
 <Image src='/img/air/bsair-gettingstarted-device-mng.png' />
 
