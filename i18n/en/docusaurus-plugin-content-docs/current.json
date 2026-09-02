@@ -672,7 +672,7 @@
     "description": "The label for link 'CLUe API' in sidebar 'clueportal', linking to 'pathname:///developer/clue'"
   },
   "sidebar.biostar_air.category.구역 관리": {
-    "message": "Manage Zones",
+    "message": "Zone Management",
     "description": "The label for category '구역 관리' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.안전": {
