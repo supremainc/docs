@@ -5,15 +5,21 @@ slug: 2026-08-changelog
 date: 2026-09-01T09:00
 ---
 
-8월 **Suprema Docs**에는 다양한 장치 릴리스 노트 소식과 새로운 개발자 문서 소식이 가득했습니다.
+8월 **Suprema Docs**에는 다양한 장치 릴리스 노트 소식과 새로운 개발자 문서 소식이 가득합니다.
 
-**BioStation 3**의 새 펌웨어(1.5.0)는 **XPass Q2** 연동, 안티 테일게이팅(Anti-Tailgating) 등 다양한 기능을 새롭게 지원하며, **BioEntry W2**, **BioStation 2a**, **XPass 2**, **XPass D2**, **FaceStation F2**의 릴리스 노트도 새롭게 추가되었습니다. 특히 **XPass Q2**의 릴리스 노트 페이지도 이번 달 처음 공개했습니다.
+**BioStation 3**의 새 펌웨어(1.5.0 버전)는 **XPass Q2** 연동, 다중 얼굴 순차 인증, 무단 동행 출입 방지(Anti-Tailgating) 등 다양한 기능을 새롭게 지원하며, **BioEntry W3**, **BioEntry W2**, **BioLite N2**, **BioStation 2a**, **XPass 2**, **XPass D2**, **FaceStation F2**의 새 펌웨어에 대한 릴리스 노트도 업데이트 되었습니다. 특히 **XPass Q2**의 릴리스 노트는 이번 달에 처음 공개되었습니다.
 
-Developer 섹션에서는 **ViOnyx AI 카메라**의 실시간 영상, AI 이벤트, 얼굴 인증, 장치 설정 관리를 위한 REST + WebRTC 기반의 **ViOnyx AI Camera API** 문서도 새롭게 공개했습니다. 지금 바로 확인해보세요.
+**개발자 센터** 섹션에서는 AI 카메라 **ViOnyx**의 실시간 영상, AI 이벤트, 얼굴 인증, 장치 설정 관리를 위한 REST + WebRTC 기반의 **ViOnyx AI Camera API** 문서도 새롭게 공개했습니다. 지금 바로 확인해보세요.
 
 ![Suprema Docs 26.08 Changelogs](/img/changelogs/changelogs-202608.png)
 
 {/*truncate*/}
+
+## Document Hub 업데이트
+
+![](/img/changelogs/document_hub_banner.png)
+
+[**Document Hub**](../dochub)가 업데이트되어, 새롭게 정리된 제품 매뉴얼과 릴리스 노트를 다운로드할 수 있습니다.
 
 ## 플랫폼
 
@@ -43,7 +49,11 @@ Developer 섹션에서는 **ViOnyx AI 카메라**의 실시간 영상, AI 이벤
 
 * [BioStation 3](../device/biostation_3/release-notes/150): 1.5.0 버전 릴리스 노트 추가
 
-* [BioStation 2a](../device/biostation_2a/release-notes/124): 1.2.3, 1.2.4 버전 릴리스 노트 추가
+* [BioEntry W3](../device/bioentry_w3/release-notes/104): 1.0.4 버전 릴리스 노트 추가
+
+* [BioLite N2](../device/biolite_n2/release-notes/172): 1.7.2 버전 릴리스 노트 추가
+
+* [BioStation 2a](../device/biostation_2a/release-notes/124): 1.2.4 버전 릴리스 노트 추가
 
 * [BioEntry W2](../device/bioentry_w2/release-notes/183): 1.8.3 버전 릴리스 노트 추가
 
