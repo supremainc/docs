@@ -1534,7 +1534,7 @@ function createSidebars(preview) {
   securemodule: [
     {
       type: 'category',
-      label: 'Secure Module',
+      label: 'Secure I/O 2',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
@@ -1580,7 +1580,7 @@ function createSidebars(preview) {
   securemodule_ul: [
     {
       type: 'category',
-      label: 'Secure Module UL',
+      label: 'Secure I/O 2 UL',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
