@@ -678,5 +678,17 @@
   "sidebar.xpassq2.category.릴리스 노트": {
     "message": "릴리스 노트",
     "description": "The label for category '릴리스 노트' in sidebar 'xpassq2'"
+  },
+  "sidebar.biostar_air.category.구역 관리": {
+    "message": "구역 관리",
+    "description": "The label for category '구역 관리' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.안전": {
+    "message": "안전",
+    "description": "The label for category '안전' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.SSO & SCIM 설정하기": {
+    "message": "SSO & SCIM 설정하기",
+    "description": "The label for category 'SSO & SCIM 설정하기' in sidebar 'biostar_air'"
   }
 }

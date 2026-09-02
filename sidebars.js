@@ -367,6 +367,18 @@ function createSidebars(preview) {
                 },
                 {
                   type: 'category',
+                  label: '구역 관리',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/zone-management',
+                  },
+                  items: [
+                    'platform/biostar_air/manage-zone',
+                    'platform/biostar_air/manage-violation',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'Monitoring',
                   link: {
                     type: 'doc',
@@ -379,7 +391,18 @@ function createSidebars(preview) {
                     'platform/biostar_air/monitoring-door-status',
                   ]
                 },
-                'platform/biostar_air/managing-roll-call-fire-muster',
+                {
+                  type: 'category',
+                  label: '안전',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/safety-management',
+                  },
+                  items: [
+                    'platform/biostar_air/manage-presence',
+                    'platform/biostar_air/managing-roll-call-fire-muster',
+                  ]
+                },
               ]
             },
             {
@@ -393,6 +416,18 @@ function createSidebars(preview) {
                 'platform/biostar_air/site-basic-settings',
                 'platform/biostar_air/site-advanced-settings',
                 'platform/biostar_air/site-security-settings',
+                {
+                  type: 'category',
+                  label: 'SSO & SCIM 설정하기',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/site-sso-scim-settings',
+                  },
+                  items: [
+                    'platform/biostar_air/site-sso-scim-entra-id-setup',
+                    'platform/biostar_air/site-sso-scim-okta-setup',
+                  ]
+                },
                 'platform/biostar_air/site-additional-settings',
                 'platform/biostar_air/managing-administrators',
                 'platform/biostar_air/managing-technician',

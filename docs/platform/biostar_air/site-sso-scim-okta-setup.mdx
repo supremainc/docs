@@ -1,0 +1,264 @@
+---
+id: site-sso-scim-okta-setup
+title: Okta 연동 설정하기
+description: BioStar Air에 Okta SSO와 SCIM 프로비저닝을 연결하는 절차를 안내합니다.
+---
+
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
+import GroupMapping from './_site-sso-scim-group-mapping.mdx'
+import SyncManagement from './_site-sso-scim-sync-management.mdx'
+
+BioStar Air에 Okta로 로그인하려면, 조직의 ID 관리자가 Okta에 OIDC 애플리케이션을 생성하고 BioStar Air의 SSO 설정과 연결해야 합니다.
+
+## Okta SSO 연결
+
+<Steps>
+<Step>
+
+### BioStar Air: 리다이렉트 URI 준비 {/* #bsairRedirect */}
+
+1. BioStar Air 화면 왼쪽 사이드에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd>SSO & SCIM</Cmd> 탭을 클릭하세요.
+
+1. <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />에서 <Cmd sid='sso_scim.additional_features.sso.okta' product='air' />를 선택하세요.
+
+1. <Cmd sid='sso_scim.additional_features.sso.redirect_uri' product='air' /> 항목에 표시되는 URI 값을 복사하세요.
+
+<Image src='/img/air/bsair-settings-site-idp-okta.png' />
+
+</Step>
+<Step>
+
+### Okta: 앱 생성
+
+1. **Okta 관리자 콘솔**에 로그인하세요.
+
+1. **Applications and Resources** → **Applications** 메뉴로 이동하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications.png' alone />
+
+1. **Create App Integration** 버튼을 클릭하세요.
+
+1. **Sign-in method**에서 **OIDC - OpenID Connet**를 선택하세요.
+
+1. **Application type**에서 클라이언트 시크릿(Client secret)을 발급받을 수 있도록 **Web Application**을 선택하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app.png' alone />
+
+1. **Next** 버튼을 클릭하세요.
+
+1. **App Integration name** 항목에서 'BioStar Air'를 입력하세요.
+
+1. <DocLink inner='#bsairRedirect' /> 단계에서 복사한 URI 값을 **Sign-in redirect URIs** 섹션의 입력 필드에 붙여넣으세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app-general-settings.png' alone />
+
+1. **Assignments** 섹션으로 이동해 조직 내 사용자가 애플리케이션에 접근할 수 있도록 **Allow everyone in your organization to access**를 선택하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app-assignments.png' alone />
+
+1. **Save**를 클릭하세요.
+
+</Step>
+<Step>
+
+### Okta: 앱 클라이언트 정보 복사 {/* #copyClientinfo */}
+
+1. 애플리케이션을 생성하면 **General** 탭에서 **Client ID**와 **Client Secret**을 복사하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-general.png' alone />
+
+1. 화면 오른쪽 상단의 프로필을 클릭하고 **Okta Domain**을 복사하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-profile.png' alone />
+
+복사한 **Client ID**와 **Client Secret**, **Okta Domain** 값을 다음 단계에서 입력합니다.
+
+</Step>
+<Step>
+
+### BioStar Air: SSO 구성
+
+1. BioStar Air 설정 화면으로 돌아와 <DocLink inner='#copyClientinfo' /> 단계에서 복사한 값을 각 필드에 입력하세요.
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-paste-field.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Client ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Client Secret**
+
+   * <Cmd sid='sso_scim.additional_features.sso.okta_domain' product='air' />: **Okta Domain**
+
+1. <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' /> 필드에 조직의 이메일 도메인을 입력하세요.
+
+1. <Cmd sid='sso_scim.additional_features.sso.save' product='air' /> 버튼을 클릭하세요.
+
+저장 및 검증에 성공하면 <Cmd sid='sso_scim.additional_features.sso.discovery_url' product='air' /> 항목의 값이 자동 생성됩니다.
+
+<Image src='/img/air/bsair-settings-site-idp-okta-save-success.png' />
+
+</Step>
+</Steps>
+
+## Okta SCIM 프로비저닝 연결
+
+<Steps>
+<Step>
+
+<CopyToken />
+
+</Step>
+<Step>
+
+### Okta: SCIM 프로비저닝 앱 생성
+
+1. **Okta 관리자 콘솔**에서 **Applications and Resources** → **Applications** 메뉴로 이동하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-provisioning-app.png' alone />
+
+1. **Browse App Catalog** 버튼을 클릭하세요.
+
+1. 'SCIM 2.0 Test App'을 검색하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-browse-app-search.png' alone />
+
+1. 검색 결과에서 <b>SCIM 2.0 Test App (Header Auth)</b>을 선택하세요.
+
+1. **Add Integration** 버튼을 클릭하세요.
+
+1. **Application label** 입력 필드에 'BioStar Air SCIM'을 입력하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-general.png' alone />
+
+1. **Next** 버튼을 클릭하세요.
+
+1. **Sign-on options** 단계에서는 별도 설정 없이 아래로 스크롤한 후 **Done** 버튼을 클릭하세요.
+
+</Step>
+<Step>
+
+### Okta: API 통합 설정
+
+1. 프로비저닝 앱 생성을 완료하면 **Provisioning** 탭을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning.png' alone />
+
+1. **Configure API Integration** 버튼을 클릭하세요.
+
+1. **Enable API integration**을 클릭하세요.
+
+1. <DocLink inner='#copyToken' /> 단계에서 복사한 SCIM 엔드포인트 URL, SCIM 베어러 토큰 값을 **Base URL**, **API Token** 필드에 입력하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-set-api.png' alone />
+
+1. 동기화가 정상 동작하는지 테스트하려면 **Test API Credentials** 버튼을 클릭하세요.
+
+1. **Save** 버튼을 클릭하세요.
+
+1. 그룹 푸시 동작 설정을 위해 **Provision** 탭을 클릭하세요.
+
+1. **Edit**를 클릭한 다음 아래 속성을 활성화하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-set-push.png' alone />
+
+   * **Create Users**
+
+   * **Update User Attributes**
+
+   * **Deactivate Users**
+
+1. 변경한 설정을 저장하려면 **Save** 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-save.png' alone />
+
+</Step>
+</Steps>
+
+
+## IdP 그룹을 BioStar Air로 푸시
+
+IdP 그룹을 BioStar Air로 푸시하려면 먼저 사용자 그룹과 사용자가 Okta에 준비되어 있어야 합니다. 사용자 그룹과 사용자가 준비되었다면 SCIM을 통해 BioStar Air로 푸시할 수 있습니다.
+
+<Steps>
+<Step>
+
+### Okta: 사용자 그룹 할당
+
+1. **Okta 관리자 콘솔**에 로그인하세요.
+
+1. **Applications and Resources** → **Applications** 메뉴로 이동하세요.
+
+1. SCIM 애플리케이션을 선택하세요.
+
+   <Image src='/img/air/bsair-sso-okta-applications-list.png' alone />
+
+1. **Assignments** 탭을 클릭하세요.
+
+1. **Assign** → **Assign to Groups**를 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-assign-groups.png' alone />
+
+1. SCIM 애플리케이션에 할당할 사용자 그룹에서 **Assign**을 클릭하세요.
+
+1. 그룹 할당을 완료하면 **Done** 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-assigned-group-list.png' alone />
+
+</Step>
+<Step>
+
+### Okta: 사용자 그룹 푸시
+
+1. **Push Groups** 탭을 클릭하세요.
+
+1. **Push Groups** → **Find groups by name**을 클릭하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-push-groups.png' alone />
+
+1. 입력 필드에 푸시할 그룹 이름을 입력하세요. 
+
+1. 일치하는 사용자 그룹이 나타나면 선택하세요.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-push-groups-by-name.png' alone />
+
+1. 사용자 그룹 선택을 완료하면 **Save** 버튼을 클릭하거나 **Save & Another** 버튼을 클릭해 사용자 그룹을 추가할 수 있습니다.
+
+1. **Push Groups** 탭에서 푸시된 사용자 그룹을 확인할 수 있습니다.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-pushed-group-list.png' alone />
+
+</Step>
+<Step>
+
+<CheckConnection />
+
+</Step>
+</Steps>
+
+<GroupMapping />
+
+<SyncManagement />
+
+## Okta에 로그인
+
+Okta SSO 연결을 완료하면 사용자는 BioStar Air 로그인 화면에서 Okta 계정으로 로그인할 수 있습니다.
+
+1. BioStar Air 로그인 화면에서 <Cmd sid='sso_scim.login.sign_in_with_okta' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-login-with-okta.png' />
+
+1. <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' /> 필드에 조직의 이메일 주소 또는 도메인을 입력하세요. (예: `user@company.com` 또는 `company`)
+
+1. <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' /> 버튼을 클릭하세요.
+
+1. Okta 로그인 화면으로 이동하면 조직 계정의 이메일 주소와 비밀번호를 입력하세요.
+
+1. 인증을 완료하면 BioStar Air로 자동 리디렉션되어 로그인이 완료됩니다.
+
+:::info
+
+입력한 이메일 도메인에 대해 Okta SSO가 설정되어 있지 않으면 오류 메시지가 표시됩니다. 이때는 사이트 관리자에게 문의하세요.
+
+:::

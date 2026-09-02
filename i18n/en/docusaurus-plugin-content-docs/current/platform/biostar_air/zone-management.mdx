@@ -1,0 +1,33 @@
+---
+id: zone-management
+title: Zone
+description: This guide explains how to create zones in BioStar Air, control user access flow with Anti-Passback (APB) rules, review violations, and clear them.
+---
+
+BioStar Air **zone management** groups doors into logical zones. It applies **Anti-Passback** (APB) rules to enforce the correct entry and exit order. It prevents access-control bypass through credential sharing and tracks on-site and off-site presence more accurately.
+
+## Understanding zones and Anti-Passback (APB) {/* #understandingZoneAndApb */}
+
+**Zone** is a space defined by a combination of an entry device and an exit device. When a user authenticates a credential on the entry device, the system records the user as <Cmd sid='presence_on_site' product='air' />. When a user authenticates on the exit device, it records <Cmd sid='presence_off_site' product='air' />. 
+
+**Anti-Passback** (APB) uses these entry and exit records. It detects out-of-sequence access. For example, a user in <Cmd sid='presence_on_site' product='air' /> is trying to enter again. A user in <Cmd sid='presence_off_site' product='air' /> is trying to exit.
+
+It prevents people from sharing credentials to enter together, which is useful in the following environments.
+
+* Offices with internal controlled areas
+
+* Labs and production facilities
+
+* Warehouses
+
+* Membership-based facilities, such as gyms and coworking spaces
+
+* Buildings used by multiple tenants
+
+* Sites where entry and exit order matters for security
+
+Refer to the following documents to learn how to manage zones and APB violations in the BioStar Air portal.
+
+---
+
+<DocCardList />
