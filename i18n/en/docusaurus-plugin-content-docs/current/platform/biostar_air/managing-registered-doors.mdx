@@ -16,7 +16,7 @@ Watch the following video for a tutorial on registering and managing doors.
 
 ## Explore the door list
 
-The door list displays all doors registered in BioStar Air at a glance. View key information for each door, such as its name, assigned devices, and group. Click a door in the list to view details and modify settings.
+The door list displays all doors registered in BioStar Air at a glance. View key information for each door, such as its name, assigned devices, group, and access levels. Click a door in the list to view details and modify settings.
 
 Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar to view registered doors.
 
@@ -33,6 +33,8 @@ The door list provides the following information.
 * <Cmd sid="door_product_column3" product="air" />: Device that authenticates users exiting the door.
 
 * <Cmd sid="door_product_column4" product="air" />: Name of the group assigned to the door.
+
+* <Cmd sid='dcal.web.doors.alColumnHeader' product='air' />: Access level the system assigns to the door. For more information on assigning access levels, see <DocLink inner='#batchDoorAccessLevels' />.
 
 * <Cmd sid='door_product_column5' product='air' />: Description of the door.
 
@@ -188,9 +190,9 @@ Follow these steps to edit door details and settings.
 
 :::
 
-## Batch set access levels {/* #batchDoorAccessLevels */}
+## Batch assign access levels {/* #batchDoorAccessLevels */}
 
-To apply the same access level to multiple doors, assign or remove access levels for all selected doors at once from the list.
+Assign or unassign an access level for multiple doors at once, instead of editing doors one by one.
 
 1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
 
@@ -202,7 +204,7 @@ To apply the same access level to multiple doors, assign or remove access levels
 
    <Image src='/img/air/bsair-registered-multi-door-set-ac-level.png' />
 
-   * Also search for access levels in the search field.
+   Search for the access level in the search field, if needed.
 
    * <Cmd sid='dcal.web.setAccess.legendNone' product='air' />: The system removes the access level from the selected doors.
 

@@ -415,22 +415,23 @@ function createSidebars(preview) {
                 'platform/biostar_air/site-basic-settings',
                 'platform/biostar_air/site-advanced-settings',
                 'platform/biostar_air/site-security-settings',
-                {
-                  type: 'category',
-                  label: 'SSO & SCIM 설정하기',
-                  link: {
-                    type: 'doc',
-                    id: 'platform/biostar_air/site-sso-scim-settings',
-                  },
-                  items: [
-                    'platform/biostar_air/site-sso-scim-entra-id-setup',
-                    'platform/biostar_air/site-sso-scim-okta-setup',
-                  ]
-                },
                 'platform/biostar_air/site-additional-settings',
                 'platform/biostar_air/managing-administrators',
                 'platform/biostar_air/managing-technician',
                 'platform/biostar_air/account-settings'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'SSO & SCIM 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/site-sso-scim-settings',
+              },
+              items: [
+                'platform/biostar_air/site-sso-scim-basic-settings',
+                'platform/biostar_air/site-sso-scim-entra-id-setup',
+                'platform/biostar_air/site-sso-scim-okta-setup',
               ]
             },
             {

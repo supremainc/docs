@@ -1,0 +1,235 @@
+## Version 2.13.0 {/* #2130 */}
+
+Release<Separator/>2026-08-25
+
+BioStar Air v2.13.0 continues our commitment to making cloud access control flexible, practical, and ready for more complex sites.
+
+Until now, BioStar Air has primarily served sites with relatively straightforward access control requirements. With this release, we are beginning to expand beyond those scenarios by adding more advanced identity management, movement enforcement, presence monitoring, and emergency-response capabilities.
+
+**Anti-Passback** and **Zones** give customers more control over how users move through secured areas. **On Site Now** provides a real-time view of who is currently on site, while **Roll Call** uses the same presence information to provide more useful emergency lists.
+
+This release also introduces **SSO** and **SCIM** integration for larger or IT-managed organizations, a **Stripe Billing proof of concept** for selected sites, and an easier way to manage access levels directly from door workflows.
+
+Whether you are managing an office, laboratory, warehouse, school, gym, multi-tenant building, or multi-building site, version 2.13.0 gives you stronger identity control, better movement enforcement, clearer emergency workflows, and more efficient configuration.
+
+### Anti-Passback and Zones
+
+BioStar Air now supports **zone-based Anti-Passback**.
+
+Anti-Passback checks whether users enter and exit controlled areas in the correct sequence. This helps prevent credential sharing, unauthorized re-entry, and invalid movement between secured areas.
+
+Administrators can create zones, assign entry and exit devices, and choose how Anti-Passback should respond when a violation occurs.
+
+Available modes include:
+
+* **Hard Anti-Passback**, which denies access when a user violates the configured rule.
+
+* **Soft Anti-Passback**, which allows access but records the violation.
+
+* **None**, which applies no Anti-Passback enforcement.
+
+Additional settings include Anti-Passback exception groups, re-entry delays, automatic violation clearing, and door-sensor confirmation.
+
+The new **Zones** page provides a central place to configure Anti-Passback and review zone information. Administrators can see how many people are currently considered inside each zone, check the status of assigned devices, and review the Anti-Passback mode applied to each zone.
+
+A separate **Violations** page shows users with active Anti-Passback violations. Administrators can review the affected user, zone, and door, then clear violations individually or in bulk.
+
+This gives customers better control over movement through site perimeters and internal areas while improving the accuracy of presence records.
+
+:::info
+
+* Anti-Passback behavior and zone counts depend on the correct configuration of entry and exit devices.
+
+* Clearing an active violation does not remove the original event from Event Logs.
+
+* For more information on configuring zones and Anti-Passback, see:
+
+   * <DocLink docId='platform/biostar_air/manage-zone' />
+
+   * <DocLink docId='platform/biostar_air/manage-violation' />
+
+:::
+
+### On Site Now and Presence
+
+**On Site Now** gives administrators a real-time view of which active users are currently considered on site.
+
+The feature uses access events and the site’s **Perimeter Zone** to determine whether a user is **On Site** or **Off Site**. This allows administrators to check current presence without having to reconstruct user movements from Event Logs.
+
+With this update:
+
+* The **Dashboard** shows the current number of users **On Site**.
+
+* A new **Presence** page shows On Site and Off Site users.
+
+* Administrators can see the last door used by each user.
+
+* Administrators can search and review detailed presence information.
+
+* Presence status can be corrected manually when needed.
+
+* Manual presence changes are recorded in **Audit Logs**.
+
+* Sites without exit readers can use an **off-site timer** to update presence after a defined period.
+
+The **Perimeter Zone** defines the entry and exit devices used for site-level presence. A user is marked On Site after entering through an entry device and Off Site after exiting through an exit device.
+
+The same presence information is used across the **Dashboard**, **Presence** page, **Zones**, and **Roll Call**. This gives administrators and safety personnel a more consistent understanding of who is currently considered on site.
+
+:::info
+
+* Presence information depends on access events and correct Perimeter Zone configuration. If events are delayed while a device is offline, presence information may update after the device reconnects.
+
+* For more information on the Presence feature, see <DocLink docId='platform/biostar_air/manage-presence' />.
+
+:::
+
+### Roll Call Improvements
+
+We’ve improved **Roll Call** to use the same presence information as **On Site Now**.
+
+Previously, Roll Call could assume that all active users were present. With this update, safety personnel can distinguish between users who are currently considered on site and other users assigned to the selected muster point.
+
+Muster responsibilities can also be assigned to specific administrators and operators. This helps divide responsibility during an emergency and allows each responder to focus on the users associated with their muster point.
+
+This update adds or improves:
+
+* On Site and All Assigned user views during an active Roll Call.
+
+* Site-wide and individual muster point Roll Call workflows.
+
+* Administrator and operator assignment by muster point.
+
+* Roll Call history with additional safe-count information.
+
+* Notifications that guide on-site mobile credential users to the correct muster point.
+
+* Notifications that warn off-site mobile credential users not to enter during an active Roll Call.
+
+* Roll Call activity in Event Logs and Audit Logs.
+
+Site Masters and unassigned administrators or operators can manage a site-wide Roll Call or select individual muster points. Assigned administrators and operators can focus on their own muster point and the users within their responsibility.
+
+This helps safety personnel work from a more useful emergency list while maintaining clear responsibility across multiple muster locations.
+
+:::info
+
+* Mobile Roll Call notifications require the Suprema Pass app and a valid mobile credential. Users who use only RF cards or biometric credentials do not receive these notifications.
+
+* For more information on Roll Call, see <DocLink docId='platform/biostar_air/managing-roll-call-fire-muster' />.
+
+:::
+
+### SSO and SCIM Integration
+
+BioStar Air now supports **SSO** and **SCIM** integration with **Microsoft Entra ID** and **Okta**.
+
+SSO allows administrators to sign in through the organization’s existing identity provider. This helps customers apply their existing authentication policies to BioStar Air and reduces the number of separate credentials administrators need to manage.
+
+SCIM allows users, user groups, and administrators to be provisioned from the same identity provider. This reduces manual account management and helps organizations keep BioStar Air identities aligned with their central identity system.
+
+With this update, administrators can:
+
+* Configure Microsoft Entra ID or Okta as the site’s identity provider.
+
+* Allow SSO login for BioStar Air administrators.
+
+* Choose between SSO and local login policies.
+
+* Provision users, user groups, and administrators through SCIM.
+
+* Map identity-provider groups to BioStar Air user groups and administrator roles.
+
+* View whether an account is managed locally or through SCIM.
+
+This makes BioStar Air better suited to larger organizations and customers with centralized IT and identity-management requirements.
+
+:::info
+
+* SSO and SCIM are available in the [BioStar Air Admin Portal](https://admin.biostarair.com). The [Partner Portal](https://partner.biostarair.com) is not included.
+
+* Only one identity provider can be connected to a site at a time. At least one Site Master must retain local login access.
+
+* SSO and SCIM are available as a paid feature.
+
+* For more information on SSO and SCIM, see <DocLink docId='platform/biostar_air/site-sso-scim-settings' />.
+
+:::
+
+### Stripe Billing Proof of Concept
+
+BioStar Air 2.13.0 introduces a **Stripe Billing proof of concept** for selected sites in the United States. The proof of concept creates a foundation for subscription-based billing while allowing the existing Credit System to remain available where needed.
+
+Depending on the billing mode, customers can pay through the BioStar Air Admin Portal or distributors can pay on behalf of their customers through the Partner Portal.
+
+The proof of concept supports:
+
+* A 30-day free trial for new sites.
+
+* One-year, two-year, and three-year subscription periods.
+
+* Customer-paid and distributor-paid billing modes.
+
+* Credit card payments through Stripe.
+
+* Optional automatic renewal.
+
+* Discount codes and subscription add-ons.
+
+* Billing status, renewal information, and invoice history.
+
+Available add-ons may include SMS Invitations, BS3 QR License, Dynamic QR Credential Subscription, SIP Intercom, Video Management, and SSO and SCIM.
+
+This gives partners and customers better visibility into subscription information and reduces the manual work required to calculate and process payments.
+
+:::info
+
+Stripe Billing is available only for selected sites as part of this proof of concept. It does not fully replace the existing Credit System in this release.
+
+:::
+
+### Door and Access Level Improvements
+
+We’ve made it easier to manage access levels while configuring doors.
+
+Access levels can now be assigned or removed directly from an individual door. Administrators and technicians can also select multiple doors and update their access-level assignments in bulk.
+
+Previously, these relationships were managed primarily from the Access Levels page. This update allows administrators and installers to start from the door they are already configuring.
+
+With this update, you can:
+
+* Assign or remove access levels from the Edit Door page.
+
+* Update access levels for multiple doors from the Registered Doors list.
+
+* See whether an access level is assigned to all, some, or none of the selected doors.
+
+This reduces navigation between Door Management and Access Management and makes configuration easier for sites with many doors and access levels.
+
+:::info
+
+For information on how to assign or remove access levels to doors, see <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+
+:::
+
+### Notes on Firmware and App Upgrades
+
+Some features in this release require updated device firmware or mobile applications.
+
+* **Device firmware**: Devices must be updated to firmware v2.13 to use APB, Zones, and On-site Now. If you use an SIO2, read the [important information below](#forSIO2user) before updating.
+
+* **Applications**: Administrators must update the BioStar Air app to the latest version to configure APB and Zones, view On-site Now, and use the enhanced Roll Call features. Mobile credential users must update Suprema Pass to the latest version to receive emergency notifications.
+
+### For SIO2 Users {/* #forSIO2user */}
+
+BioStar Air v2.12 introduced primary and secondary devices, previously referred to as master and slave devices.
+
+Readers running firmware v2.11 or earlier continue to discover and configure connected SIO2 devices through the device configuration screen. Upgrading a reader to firmware v2.12 does not affect an SIO2 already registered to it; the SIO2 continues to operate in legacy mode.
+
+When upgrading a reader to firmware v2.13, however, you must use the new process to discover and register the SIO2 as a secondary device. This requires physical access to the SIO2 so that you can press its **Reset** and **Init** buttons. For instructions, see Add a secondary device in the BioStar Air Manual.
+
+:::info
+
+Do not upgrade a reader connected to an SIO2 to firmware v2.13 unless you have physical access to the SIO2 and can press its **Reset** and **Init** buttons.
+
+:::

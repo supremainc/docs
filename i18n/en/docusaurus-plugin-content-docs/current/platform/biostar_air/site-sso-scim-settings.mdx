@@ -8,53 +8,11 @@ Many organizations already manage internal system access with Microsoft Entra ID
 
 SSO (Single Sign-On) applies your organization’s existing ID policies to BioStar Air admin logins, enhancing security. SCIM (System for Cross-domain Identity Management) automatically creates and deletes user accounts, reducing security risks from accounts left active without access. This reduces repetitive work to create, edit, and delete users, user groups, and admin accounts.
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. On the <Cmd>SSO & SCIM</Cmd> tab, select the login policy and ID provider, and configure settings.
+In the left sidebar, click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />. On the <Cmd>SSO & SCIM</Cmd> tab, select the sign-in policy and identity provider, and configure them. For basic settings, see <DocLink docId='platform/biostar_air/site-sso-scim-basic-settings' />.
 
-<Image src='/img/air/bsair-settings-site-setting-sso-scim.png' />
+If <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' className='bold' /> or <Cmd sid='sso_scim.additional_features.sso.okta' product='air' className='bold' /> is the identity provider, use the documents below. Set up SSO and SCIM provisioning.
 
-:::caution
-
-Before changing ID provider settings, keep at least one master administrator account that can log in locally. Otherwise, ID provider integration problems can lock administrators out of the site.
-
-:::
-
-:::info
-
-* Only the site master administrator can manage SSO and SCIM settings.
-
-* Credential users do not log in to BioStar Air, so SSO and SCIM settings do not affect them.
-
-* The [Partner Portal](https://partner.biostarair.com/) is not included in the scope of SSO and SCIM settings.
-
-:::
-
-## Login policy
-
-In <Cmd sid='sso_scim.security.login_policy.title' product='air' />, set how BioStar Air administrators log in.
-
-* **SSO**: Administrators authenticate through an ID provider.
-
-* **Local**: Administrators authenticate with the email address and password set in BioStar Air.
-
-Select one of the following three options.
-
-* <Cmd sid='sso_scim.security.login_policy.sso_local' product='air' />: Both SSO login and local login are available.
-
-* <Cmd sid='sso_scim.security.login_policy.local_only' product='air' />: Only local login is available.
-
-* <Cmd sid='sso_scim.security.login_policy.sso_only' product='air' />: Only SSO login is available.
-
-## ID provider integration settings
-
-In <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />, select an external ID provider for BioStar Air administrator accounts. A site can have only one ID provider active at a time.
-
-* <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' />
-
-* <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' />
-
-* <Cmd sid='sso_scim.additional_features.sso.okta' product='air' />
-
-After selecting <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' /> or <Cmd sid='sso_scim.additional_features.sso.okta' product='air' /> as the ID provider, refer to the documents below to set up the SSO connection and SCIM provisioning.
+---
 
 <DocCardList />
 
@@ -73,29 +31,3 @@ After selecting <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' p
 * Master permissions in BioStar Air
 
 :::
-
-:::info
-
-To change the connected ID provider, select <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' /> to disconnect, then select a new ID provider. Disconnect first, then switch to another ID provider.
-
-:::
-
-## Disable SSO & SCIM settings
-
-Disable the ID provider integration.
-
-1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> in the left sidebar of BioStar Air.
-
-2. Click the <Cmd>SSO & SCIM</Cmd> tab.
-
-3. Select <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' /> in the <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' /> section.
-
-4. Review the message in the warning pop-up.
-
-   <Image src='/img/air/bsair-settings-site-idp-not-use.png' />
-
-5. Review the impact of the setting change, and click the checkbox.
-
-   <Image src='/img/air/bsair-settings-site-idp-not-use-checked.png' />
-
-6. Click <Cmd sid='sso_scim.additional_features.sso.caution_dialog.confirm' product='air' />.
