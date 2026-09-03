@@ -2796,6 +2796,7 @@ function createSidebars(preview) {
             id: 'device/xstation_2/release-notes/index',
           },
           items: [
+            'device/xstation_2/release-notes/142',
             'device/xstation_2/release-notes/141',
             'device/xstation_2/release-notes/140',
             'device/xstation_2/release-notes/132',
