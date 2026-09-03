@@ -648,6 +648,9 @@
   "specs.storage.max_users": {
     "message": "Max. User"
   },
+  "specs.storage.max_user_profile_images": {
+    "message": "Max. User Profile Images"
+  },
   "specs.storage.max_credentials_1n": {
     "message": "Max. Credentials (1:N)"
   },

@@ -263,6 +263,11 @@
           "value": "100,000",
           "annotation_value": "anno6"
         },
+        "max_user_profile_images": {
+          "label": "최대 사용자 프로필 이미지 수",
+          "label_id": "specs.storage.max_user_profile_images",
+          "value": "100,000"
+        },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
           "label_id": "specs.storage.max_credentials_1n",
