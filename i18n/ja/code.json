@@ -648,6 +648,9 @@
   "specs.storage.max_users": {
     "message": "最大ユーザー数"
   },
+  "specs.storage.max_user_profile_images": {
+    "message": "最大ユーザープロフィール画像数"
+  },
   "specs.storage.max_credentials_1n": {
     "message": "最大クレデンシャル数（1:N）"
   },

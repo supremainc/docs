@@ -184,7 +184,8 @@
   "ui_161": "Enabled",
   "ui_162": {
     "common": "Never",
-    "facestation_f2": "Not Use"
+    "facestation_f2": "Not Use",
+    "biostation_3": "Not used"
   },
   "ui_163": "Not Use",
   "ui_164": "Enabled (Soft)",
@@ -478,5 +479,6 @@
   "ui_393": "CLUe Resource",
   "ui_394": "Log",
   "ui_395": "Face Detection",
-  "ui_396": "OSS Notice"
+  "ui_396": "OSS Notice",
+  "ui_397": "Duplicate Auth Prevention Timeout"
 }
