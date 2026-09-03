@@ -16,7 +16,7 @@ description: 등록된 출입문에 입출입 장치를 할당하고, 릴레이�
 
 ## 출입문 목록 살펴보기
 
-출입문 목록에서는 BioStar Air에 등록된 모든 출입문을 확인할 수 있습니다. 각 출입문의 이름, 할당된 장치, 그룹 등 주요 정보를 확인할 수 있습니다. 또한 개별 출입문을 클릭하여 세부 정보를 확인하고 설정을 수정할 수 있습니다.
+출입문 목록에서는 BioStar Air에 등록된 모든 출입문을 확인할 수 있습니다. 각 출입문의 이름, 할당된 장치, 그룹, 출입 레벨 등 주요 정보를 확인할 수 있습니다. 또한 개별 출입문을 클릭하여 세부 정보를 확인하고 설정을 수정할 수 있습니다.
 
 등록된 출입문을 확인하려면 화면 왼쪽 사이드바에서 <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' />을 클릭하세요.
 
@@ -33,6 +33,8 @@ description: 등록된 출입문에 입출입 장치를 할당하고, 릴레이�
 * <Cmd sid='door_product_column3' product='air' />: 출입문에서 나가는 사용자를 인증하는 장치입니다.
 
 * <Cmd sid='door_product_column4' product='air' />: 출입문에 할당된 그룹 이름입니다.
+
+* <Cmd sid='dcal.web.doors.alColumnHeader' product='air' />: 출입문에 할당된 출입 레벨입니다. 출입 레벨 할당에 대한 자세한 내용은 <DocLink inner='#batchDoorAccessLevels' />을 참고하세요.
 
 * <Cmd sid='door_product_column5' product='air' />: 출입문에 대한 설명입니다.
 
@@ -194,9 +196,9 @@ BioStar Air 포털에서 새 출입문을 추가하려면 다음 단계를 따�
 :::
 
 
-## 출입 레벨 일괄 설정 {/* #batchDoorAccessLevels */}
+## 출입 레벨 일괄 할당 {/* #batchDoorAccessLevels */}
 
-여러 출입문에 같은 출입 레벨을 적용해야 할 때, 출입문을 하나씩 수정하는 대신 목록에서 한 번에 출입 레벨을 할당하거나 해제할 수 있습니다.
+여러 출입문에 같은 출입 레벨을 할당해야 할 때, 출입문을 하나씩 수정하는 대신 목록에서 한 번에 출입 레벨을 할당하거나 해제할 수 있습니다.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' />을 클릭하세요.
 
@@ -208,7 +210,7 @@ BioStar Air 포털에서 새 출입문을 추가하려면 다음 단계를 따�
 
    <Image src='/img/air/bsair-registered-multi-door-set-ac-level.png' />
 
-   * 검색 입력 필드에서 원하는 출입 레벨을 검색할 수도 있습니다.
+   필요한 경우 검색 필드에서 액세스 레벨을 검색하세요.
 
    * <Cmd sid='dcal.web.setAccess.legendNone' product='air' />: 선택한 출입문에서 해당 출입 레벨이 제거됩니다.
 
