@@ -940,8 +940,7 @@
     "message": "製品"
   },
   "theme.SearchBar.relatedDocs.title": {
-    "message": "関連ドキュメント",
-    "description": "The title for related documents shown in the search popup when the query is empty"
+    "message": "関連ドキュメント"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "検索語をリセット",
@@ -1246,7 +1245,7 @@
     "message": "BioStar XのすべてのAPIを一目で確認できるAPIドキュメント"
   },
   "externalLinks.dev.clueapi.desc": {
-    "message": "CLUeのAPIをひと目で確認できるAPIドキュメントです"
+    "message": "CLUe の API をひと目で確認できる API ドキュメントです"
   },
   "externalLinks.dev.2api.desc": {
     "message": "BioStar 2のすべてのAPIを一目で確認できるAPIドキュメント"

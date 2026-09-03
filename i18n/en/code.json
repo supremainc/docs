@@ -727,7 +727,7 @@
     "message": "Tamper"
   },
   "specs.interface.micro_sd": {
-    "message": "Micro SD card slot"
+    "message": "Micro SD Card Slot"
   },
   "specs.interface.samSlot": {
     "message": "SAM Slot"
@@ -940,8 +940,7 @@
     "message": "Products"
   },
   "theme.SearchBar.relatedDocs.title": {
-    "message": "Related Documents",
-    "description": "The title for related documents shown in the search popup when the query is empty"
+    "message": "Related Documents"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "Clear the query",

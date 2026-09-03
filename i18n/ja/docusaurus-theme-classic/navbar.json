@@ -234,5 +234,13 @@
   "item.label.CLUe API": {
     "message": "CLUe API",
     "description": "Navbar item with label CLUe API"
+  },
+  "item.label.XPass 2 V2": {
+    "message": "XPass 2 V2",
+    "description": "Navbar item with label XPass 2 V2"
+  },
+  "item.label.ViOnyx AI Camera API": {
+    "message": "ViOnyx AIカメラAPI",
+    "description": "Navbar item with label ViOnyx AI Camera API"
   }
 }
