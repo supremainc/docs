@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioStar X 제품 출시 프로세스 v2.8</title>
+<style>
+  :root{
+    --accent:#9E2B3E; --accent-dark:#7C2231; --accent-bg:#FBF3F4;
+    --ink:#1F2328; --muted:#6B7280; --line:#E3E5E8; --row:#F7F8F9;
+    --note-bg:#FBF3F4; --note-line:#9E2B3E;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#FFFFFF;color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    font-size:15px;line-height:1.65;-webkit-text-size-adjust:100%;
+    word-break:keep-all;overflow-wrap:break-word}
+  .layout{max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:40px}
+  @media(max-width:1023px){.layout{grid-template-columns:minmax(0,1fr)}nav.toc{display:none}}
+
+  nav.toc{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding:28px 0 40px;font-size:13px}
+  nav.toc .toc-title{font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:11px;margin:0 0 10px}
+  nav.toc .toc-title-2{margin:16px 0 8px;padding-top:12px;border-top:1px solid var(--line)}
+  nav.toc a.active{color:var(--accent);border-left-color:var(--accent);font-weight:700;background:var(--accent-bg)}
+  nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:3px 10px;border-left:2px solid var(--line);line-height:1.5}
+  nav.toc a:hover{color:var(--accent);border-left-color:var(--accent)}
+  nav.toc a.sub{padding-left:22px;font-size:12px}
+
+  main{padding:36px 0 80px;min-width:0}
+  h1{font-size:26px;line-height:1.3;margin:0 0 6px;color:var(--accent-dark)}
+  h2{font-size:19px;color:var(--accent-dark);margin:44px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+  h3{font-size:15.5px;color:var(--accent-dark);margin:28px 0 8px}
+  p{margin:8px 0}
+  a{color:var(--accent)}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:13.5px;line-height:1.55}
+  th{background:var(--accent);color:#fff;text-align:left;font-weight:600;padding:7px 10px;border:1px solid var(--accent-dark);white-space:nowrap;
+    position:sticky;top:0;z-index:2}
+  td{border:1px solid var(--line);padding:7px 10px;vertical-align:top}
+  tbody tr:nth-child(even) td{background:var(--row)}
+  td.owner{white-space:nowrap;font-weight:600}
+  td.when{white-space:nowrap}
+  th.num{width:52px;text-align:center}
+  td.num{color:var(--muted);text-align:center;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .meta{max-width:720px}
+  .meta td:first-child{font-weight:700;white-space:nowrap;background:var(--row);width:110px}
+  .note{background:var(--note-bg);border-left:3px solid var(--note-line);padding:10px 14px;margin:14px 0;font-size:13.5px}
+  ul{margin:8px 0;padding-left:22px}
+  li{margin:4px 0}
+  .chip{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:700;border-radius:4px;padding:2px 8px;vertical-align:middle;margin-left:8px}
+    .filter{margin:14px 0 10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .filter-label{font-size:13px;color:var(--muted);font-weight:600;margin-right:2px}
+  .chip-btn{border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12.5px;font-weight:600;border-radius:99px;padding:4px 12px;cursor:pointer}
+  .chip-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .chip-btn.active{background:var(--accent);border-color:var(--accent-dark);color:#fff}
+  #timeline tbody tr:nth-child(even) td{background:transparent}
+  #timeline tbody tr.odd td{background:var(--row)}
+  #timeline tbody tr.phase-row td{background:var(--accent-dark);color:#fff;font-weight:700;font-size:13px;letter-spacing:.02em}
+  tr.hidden{display:none}
+#tagtable tbody td:nth-child(2){white-space:nowrap}
+  .wdate{display:block;font-size:12px;font-weight:700;color:var(--accent);margin-top:2px}
+  #timeline tbody tr.phase-row .wdate{display:inline;color:#fff;font-weight:600;margin-left:8px;opacity:.85}
+  .datebox input[type=date]{border:1px solid var(--line);border-radius:6px;padding:4px 8px;font:inherit;font-size:12.5px;color:var(--ink)}
+  .date-echo{font-size:12.5px;color:var(--muted);margin:2px 0 10px}
+  .date-echo.on{color:var(--accent-dark);font-weight:600}
+  /* 조직별 색 */
+  #timeline tr[data-owner="XPS"],#ownerFilter .chip-btn[data-owner="XPS"]{--org:#9E2B3E;--org-bg:#FBF1F3}
+  #timeline tr[data-owner="BSS"],#ownerFilter .chip-btn[data-owner="BSS"]{--org:#2F6F8F;--org-bg:#EEF5F9}
+  #timeline tr[data-owner="QES"],#ownerFilter .chip-btn[data-owner="QES"]{--org:#3F7A5A;--org-bg:#EFF6F2}
+  #timeline tr[data-owner="TSS TS"],#ownerFilter .chip-btn[data-owner="TSS TS"]{--org:#9E5E1C;--org-bg:#FBF3E9}
+  #timeline tr[data-owner="TSS TW"],#ownerFilter .chip-btn[data-owner="TSS TW"]{--org:#5F4E9B;--org-bg:#F2F0F9}
+  #timeline tr[data-owner="MCS"],#ownerFilter .chip-btn[data-owner="MCS"]{--org:#98407A;--org-bg:#FAEFF6}
+  .orgdot::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;
+    background:var(--org,#9CA3AF);margin-right:6px;vertical-align:middle;flex:none}
+  /* 담당 = 태그 UI (배경색으로 조직 구분) */
+  #timeline td.owner{padding-top:9px;padding-bottom:9px}
+  .otag{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--org,#6B7280);
+    color:#fff;font-size:12px;font-weight:700;line-height:1.55;white-space:nowrap;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  /* 필터 칩도 같은 색 체계 — 켜면 표 안의 태그와 같은 색이 된다 */
+  #ownerFilter .chip-btn[data-owner]:not([data-owner="ALL"]){border-color:var(--org);color:var(--org)}
+  #ownerFilter .chip-btn[data-owner]:not([data-owner="ALL"]):hover{background:var(--org-bg)}
+  #ownerFilter .chip-btn[data-owner]:not([data-owner="ALL"]).active{background:var(--org);border-color:var(--org);color:#fff}
+  #timeline tbody tr:not(.phase-row):hover td{background:var(--accent-bg)}
+  @media print{.filter{display:none}}
+  .lastupd{color:var(--muted);font-style:italic;font-size:13px;margin-top:32px}
+  .appendix-divider{display:flex;align-items:center;gap:14px;margin:64px 0 8px;color:var(--muted)}
+  .appendix-divider::before,.appendix-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+  .appendix-divider span{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+  .appendix-lead{font-size:13.5px;color:var(--muted);margin:0 0 4px}
+  #sA,#sB{margin-top:28px}
+
+  @media(max-width:640px){
+    table{display:block;overflow-x:auto}
+    thead th{position:static}
+  }
+
+  @media print{
+    thead{display:table-header-group}
+    thead th{position:static}
+    .appendix-divider{break-before:page}
+    nav.toc{display:none}
+    .layout{display:block;max-width:100%;padding:0}
+    body{font-size:11pt}
+    h2{break-after:avoid}
+    table,tr{break-inside:avoid}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+<nav class="toc" aria-label="목차">
+  <p class="toc-title">목차</p>
+  <a href="#s1">1. 개요</a>
+  <a href="#s2">2. 전체 구조</a>
+  <a class="sub" href="#s2-1">2-1. 단계 구성</a>
+  <a class="sub" href="#s2-2">2-2. 역할과 책임</a>
+  <a href="#s3">3. 산출물과 담당</a>
+  <a href="#s4">4. 상세 일정</a>
+  <a class="sub" href="#s4-prepare">4-1. PREPARE (W-6~W-5)</a>
+  <a class="sub" href="#s4-ready">4-2. READY (W-4~W-3)</a>
+  <a class="sub" href="#s4-set">4-3. SET (W-2~W-1)</a>
+  <a class="sub" href="#s4-go">4-4. GO (W0~W+1)</a>
+  <a href="#s5">5. Revision Note 프로세스</a>
+  <a class="sub" href="#s5-1">5-1. RN 범위 설정</a>
+  <a class="sub" href="#s5-2">5-2. 영향도 태그 기준</a>
+  <a class="sub" href="#s5-3">5-3. 빌드 이후 변경 커뮤니케이션</a>
+  <a class="sub" href="#s5-4">5-4. RN 최종 확정</a>
+  <a href="#s6">6. 매뉴얼 업데이트 프로세스</a>
+  <a class="sub" href="#s6-1">6-1. 범위 설정</a>
+  <a class="sub" href="#s6-2">6-2. 작업 시작 전제조건</a>
+  <a class="sub" href="#s6-3">6-3. 초안 기술 확인</a>
+  <a href="#s7">7. Known Issues 합동 회의</a>
+  <a href="#s8">8. 제품 출시 미팅</a>
+  <a class="sub" href="#s8-1">8-1. 어젠다</a>
+  <a class="sub" href="#s8-2">8-2. 출시 판정 기준</a>
+  <a class="sub" href="#s8-3">8-3. BSS 조기 경보 의무</a>
+  <p class="toc-title toc-title-2">부록</p>
+  <a href="#sA">부록 A. R&amp;D 협의 사항</a>
+  <a href="#sB">부록 B. 단계별 담당 근거</a>
+  <a class="sub" href="#sB-1">B-1. Revision Note</a>
+  <a class="sub" href="#sB-2">B-2. 매뉴얼 업데이트</a>
+  <a href="#history">변경 이력</a>
+</nav>
+<main>
+
+<h1>BioStar X 제품 출시 프로세스 <span class="chip">v2.8</span></h1>
+<table class="meta">
+  <tbody>
+    <tr><td>버전</td><td>2.8</td></tr>
+    <tr><td>기반</td><td>제품 출시 프로세스 v1.2 (XPS-TSS-MCS 합의) + R&amp;D(BSS/QES) 협의 반영</td></tr>
+    <tr><td>상태</td><td>확정 (v1.0.3 파일럿 적용)</td></tr>
+    <tr><td>작성 시점</td><td>2026년 7월</td></tr>
+  </tbody>
+</table>
+
+<h2 id="s1">1. 개요</h2>
+<p>BioStar X 릴리스에 대한 표준 출시 프로세스를 정의한다. XPS, BSS, QES, TSS TS, TSS TW, MCS 간 역할과 일정을 명확히 하여 일관된 품질의 릴리스를 보장한다.</p>
+
+<h2 id="s2">2. 전체 구조</h2>
+
+<h3 id="s2-1">2-1. 단계 구성</h3>
+<table>
+  <thead><tr><th class="num">#</th><th>단계</th><th>기간</th><th>핵심 활동</th></tr></thead>
+  <tbody>
+    <tr><td class="num">2-1-1</td><td class="owner">PREPARE</td><td class="when">W-6 ~ W-5</td><td>R&amp;D 입력물 준비. BSS JIRA 필터 정리 및 누락 검토, BSS 변경 내역/매뉴얼 콘텐츠/API 정보 전달. XPS PLI 배포.</td></tr>
+    <tr><td class="num">2-1-2</td><td class="owner">READY</td><td class="when">W-4 ~ W-3</td><td>RN 범위 1차(잠정) 확정 및 TSS 공유, TSS TW RN 초안 작성 및 PM 승인, 내부 온보딩 트레이닝 + 잠정 Revision Note 공유.</td></tr>
+    <tr><td class="num">2-1-3</td><td class="owner">SET</td><td class="when">W-2 ~ W-1</td><td>TSS TS 외부 교육 자료 완성, MCS 외부 자료 검수/최종화, Known Issues 합동 회의, 매뉴얼 완성, RN 최종 확정(테스트 종료), 제품 출시 미팅.</td></tr>
+    <tr><td class="num">2-1-4</td><td class="owner">GO</td><td class="when">W0 ~ W+1</td><td>제품 출시, 매뉴얼/교육 자료 배포, 마케팅 캠페인 런치, 포스트런치 모니터링.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s2-2">2-2. 조직별 역할과 책임</h3>
+<table>
+  <thead><tr><th class="num">#</th><th>조직</th><th>역할</th><th>핵심 책임</th></tr></thead>
+  <tbody>
+    <tr><td class="num">2-2-1</td><td class="owner">XPS (PM)</td><td>제품 기획</td><td>전반적인 프로세스 리드. PLI 작성, RN/매뉴얼 범위 결정 및 검토, 내부 인원 온보딩, 전체 일정 오케스트레이션</td></tr>
+    <tr><td class="num">2-2-2</td><td class="owner">BSS (개발)</td><td>연구개발</td><td>기능 변경 내역, 매뉴얼 콘텐츠, API 변경 내역 작성. JIRA 필터 정리. 매뉴얼 초안 기술 확인. 제품 출시. 사내 베타 빌드 이후 변경 발생 시 TSS TW에 즉시 공유. 출시일 변동 예상 시 XPS에 즉시 공유.</td></tr>
+    <tr><td class="num">2-2-3</td><td class="owner">QES (검증)</td><td>연구개발</td><td>버그 영향도 분류 (기존 QES 분류체계 활용), RN 범위 1차 확정 및 최종 반영 이슈 판단, Known Issues 정리, 사내 베타 빌드 전달, 릴리스 품질 판정</td></tr>
+    <tr><td class="num">2-2-4</td><td class="owner">TSS TS (교육/서포트)</td><td>기술 서비스</td><td>외부 교육 자료 개발 및 실시, 고객 교육, 서포트 채널 모니터링</td></tr>
+    <tr><td class="num">2-2-5</td><td class="owner">TSS TW (기술 문서)</td><td>기술 문서</td><td>Revision Note 작성, 사용자 매뉴얼 업데이트, API 매뉴얼 업데이트</td></tr>
+    <tr><td class="num">2-2-6</td><td class="owner">MCS</td><td>마케팅·커뮤니케이션</td><td>마케팅 캠페인 기획/실행, 외부 교육 자료 검수/최종화, 외부 커뮤니케이션</td></tr>
+  </tbody>
+</table>
+<div class="note"><b>표기 규칙:</b> TSS 부서 산하에 TS(Technical Services) 팀과 TW(Technical Writing) 팀이 있다. 본 문서에서 각 팀은 <b>TSS TS</b>, <b>TSS TW</b>로, 부서 전체는 <b>TSS</b>로 표기한다.</div>
+
+<h2 id="s3">3. 산출물과 담당</h2>
+<table>
+  <thead><tr><th class="num">#</th><th>산출물</th><th>주관</th><th>지원</th><th>대상</th></tr></thead>
+  <tbody>
+    <tr><td class="num">3-1</td><td><b>PLI (Product Launch Information)</b></td><td class="owner">XPS</td><td>—</td><td>내부</td></tr>
+    <tr><td class="num">3-2</td><td><b>Revision Note</b></td><td class="owner">TSS TW</td><td>XPS (검토/승인), BSS (JIRA 필터/변경 내역), QES (Known Issues)</td><td>내부 · 외부</td></tr>
+    <tr><td class="num">3-3</td><td><b>매뉴얼 (사용자/API)</b></td><td class="owner">TSS TW</td><td>XPS (검토/승인), BSS (JIRA 필터/매뉴얼 콘텐츠/API 변경), QES (빌드)</td><td>내부 · 외부</td></tr>
+    <tr><td class="num">3-4</td><td><b>외부 교육 자료 (개발/실시)</b></td><td class="owner">TSS TS</td><td>XPS (콘텐츠 입력), BSS (기술 검토)</td><td>내부 · 외부</td></tr>
+    <tr><td class="num">3-5</td><td><b>외부 교육 자료 (검수/최종화)</b></td><td class="owner">MCS</td><td>TSS TS (원안 제공)</td><td>내부 · 외부</td></tr>
+    <tr><td class="num">3-6</td><td><b>마케팅 자료 (웹사이트, eDM 등)</b></td><td class="owner">MCS</td><td>XPS (콘텐츠 입력)</td><td>외부</td></tr>
+  </tbody>
+</table>
+
+<h2 id="s4">4. 상세 일정</h2>
+
+<div class="filter datebox">
+  <span class="filter-label">제품 출시일 (W0):</span>
+  <input type="date" id="releaseDate" aria-label="제품 출시일">
+  <button class="chip-btn" id="clearDate" type="button">지우기</button>
+</div>
+<p class="date-echo" id="dateEcho">제품 출시일을 입력하면 각 항목의 마감일이 자동 계산되어 시점 칸에 표시된다. (W-n = 출시일 &minus; n주)</p>
+<div class="filter" id="ownerFilter" aria-label="담당 필터">
+  <span class="filter-label">담당 필터:</span>
+  <button class="chip-btn active" data-owner="ALL" type="button">전체</button>
+  <button class="chip-btn" data-owner="XPS" type="button">XPS</button>
+  <button class="chip-btn" data-owner="BSS" type="button">BSS</button>
+  <button class="chip-btn" data-owner="QES" type="button">QES</button>
+  <button class="chip-btn" data-owner="TSS TS" type="button">TSS TS</button>
+  <button class="chip-btn" data-owner="TSS TW" type="button">TSS TW</button>
+  <button class="chip-btn" data-owner="MCS" type="button">MCS</button>
+</div>
+<table id="timeline">
+  <thead><tr><th class="num">#</th><th>시점</th><th>활동</th><th>담당</th><th>산출물</th></tr></thead>
+  <tbody>
+    <tr class="phase-row" id="s4-prepare" data-phase="p1"><td colspan="5" data-w="-6,-5">PREPARE 단계 (W-6 ~ W-5)<span class="wdate"></span></td></tr>
+    <tr data-phase="p1" data-owner="XPS"><td class="num">4-1-1</td><td class="when" data-w="-6">W-6<span class="wdate"></span></td><td>PLI를 작성하여 MCS, TSS, KBS Sales, GBS, 지사에 배포</td><td class="owner"><span class="otag">XPS</span></td><td>PLI 문서</td></tr>
+    <tr data-phase="p1" data-owner="BSS"><td class="num">4-1-2</td><td class="when" data-w="-6">W-6<span class="wdate"></span></td><td>해당 릴리스의 신규 기능/개선/버그 픽스 전체 목록을 담은 JIRA 필터를 생성하고, 누락 항목을 검토한 뒤, 매뉴얼 반영 대상 관점의 PM 리뷰를 거쳐 TSS TW에 공유</td><td class="owner"><span class="otag">BSS</span></td><td>JIRA 필터 (TSS TW 작업 범위 공유 완료)</td></tr>
+    <tr data-phase="p1" data-owner="MCS"><td class="num">4-1-3</td><td class="when" data-w="-6">W-6<span class="wdate"></span></td><td>마케팅 캠페인 기획 시작</td><td class="owner"><span class="otag">MCS</span></td><td>캠페인 전략</td></tr>
+    <tr data-phase="p1" data-owner="BSS"><td class="num">4-1-4</td><td class="when" data-w="-5">W-5<span class="wdate"></span></td><td>매뉴얼·RN 작성에 필요한 자료를 정리하여 TSS TW에 전달 — ① 항목별 변경 내역 초안 ② 매뉴얼 반영 콘텐츠 ③ 신규/수정/삭제 API 정보</td><td class="owner"><span class="otag">BSS</span></td><td>변경 내역 초안, 매뉴얼용 콘텐츠, API 변경 내역</td></tr>
+    <tr data-phase="p1" data-owner="TSS TW"><td class="num">4-1-5</td><td class="when" data-w="-5">W-5<span class="wdate"></span></td><td>BSS 전달 자료 기반으로 매뉴얼 초안 텍스트 작업 시작</td><td class="owner"><span class="otag">TSS TW</span></td><td>매뉴얼 초안</td></tr>
+    <tr class="phase-row" id="s4-ready" data-phase="p2"><td colspan="5" data-w="-4,-3">READY 단계 (W-4 ~ W-3)<span class="wdate"></span></td></tr>
+    <tr data-phase="p2" data-owner="QES"><td class="num">4-2-1</td><td class="when" data-w="-5,-4">W-5~W-4<span class="wdate"></span></td><td>버그별 RN 공개 여부를 작성하고, 전체 목록에 대한 PM 리뷰를 거쳐 RN 범위를 1차(잠정) 확정. 확정 완료는 PM이 TSS에 공유</td><td class="owner"><span class="otag">QES</span></td><td>확정된 RN 범위 (잠정)</td></tr>
+    <tr data-phase="p2" data-owner="QES"><td class="num">4-2-2</td><td class="when" data-w="-4">W-4<span class="wdate"></span></td><td>사내 베타 빌드를 TSS TW에 전달</td><td class="owner"><span class="otag">QES</span></td><td>매뉴얼 작업용 빌드</td></tr>
+    <tr data-phase="p2" data-owner="TSS TW"><td class="num">4-2-3</td><td class="when" data-w="-4">W-4<span class="wdate"></span></td><td>사내 베타 빌드 기반으로 매뉴얼 초안 본격 작성 (스크린샷 포함)</td><td class="owner"><span class="otag">TSS TW</span></td><td>매뉴얼 초안</td></tr>
+    <tr data-phase="p2" data-owner="TSS TW"><td class="num">4-2-4</td><td class="when" data-w="-4,-3">W-4~W-3<span class="wdate"></span></td><td>잠정 확정된 RN 범위 기반으로 RN 초안을 작성하고, PM 1차 검토/승인을 거쳐 잠정 Revision Note 확정</td><td class="owner"><span class="otag">TSS TW</span></td><td>잠정 Revision Note</td></tr>
+    <tr data-phase="p2" data-owner="XPS"><td class="num">4-2-5</td><td class="when" data-w="-3">W-3<span class="wdate"></span></td><td><b>내부 인원 대상 온보딩 트레이닝(Webinar)</b>을 실시하고 잠정 Revision Note를 사내 공유</td><td class="owner"><span class="otag">XPS</span></td><td>내부 온보딩 완료, 잠정 Revision Note 사내 공유</td></tr>
+    <tr class="phase-row" id="s4-set" data-phase="p3"><td colspan="5" data-w="-2,-1">SET 단계 (W-2 ~ W-1)<span class="wdate"></span></td></tr>
+    <tr data-phase="p3" data-owner="TSS TS"><td class="num">4-3-1</td><td class="when" data-w="-2">W-2<span class="wdate"></span></td><td>외부 교육 자료를 완성하여 내부에 배포</td><td class="owner"><span class="otag">TSS TS</span></td><td>외부 교육 자료</td></tr>
+    <tr data-phase="p3" data-owner="QES"><td class="num">4-3-2</td><td class="when" data-w="-2">W-2<span class="wdate"></span></td><td>Known Issues 리스트를 정리</td><td class="owner"><span class="otag">QES</span></td><td>Known Issues 리스트</td></tr>
+    <tr data-phase="p3" data-owner="BSS"><td class="num">4-3-3</td><td class="when" data-w="-2">W-2<span class="wdate"></span></td><td>매뉴얼 초안의 신규/변경 기능 섹션을 기술 정확성(동작 절차·설정값·API) 관점에서 확인</td><td class="owner"><span class="otag">BSS</span></td><td>기술 확인 완료된 초안</td></tr>
+    <tr data-phase="p3" data-owner="XPS"><td class="num">4-3-4</td><td class="when" data-w="-2,-1">W-2~W-1<span class="wdate"></span></td><td><b>Known Issues 합동 회의</b>를 주관하여 Known Issues 검토 및 대응 방향 협의</td><td class="owner"><span class="otag">XPS</span></td><td>합의된 Known Issues 목록</td></tr>
+    <tr data-phase="p3" data-owner="MCS"><td class="num">4-3-5</td><td class="when" data-w="-2,-1">W-2~W-1<span class="wdate"></span></td><td>외부 교육 자료를 검수·최종화하고 마케팅 메시지 정합성 확인</td><td class="owner"><span class="otag">MCS</span></td><td>최종화된 외부 자료</td></tr>
+    <tr data-phase="p3" data-owner="TSS TW"><td class="num">4-3-6</td><td class="when" data-w="-1">W-1<span class="wdate"></span></td><td>매뉴얼 작성을 완료하고, 시장 메시지/고객 경험 관점의 PM 최종 검토·승인을 거쳐 배포본 확정</td><td class="owner"><span class="otag">TSS TW</span></td><td>승인된 매뉴얼</td></tr>
+    <tr data-phase="p3" data-owner="QES"><td class="num">4-3-7</td><td class="when" data-w="-1">W-1<span class="wdate"></span></td><td>테스트 종료 후 RN 반영 이슈를 최종 판단하고, PM의 반영 결정·최종 승인을 거쳐 RN 최종 반영 범위 확정</td><td class="owner"><span class="otag">QES</span></td><td>확정된 RN 최종 반영 범위</td></tr>
+    <tr data-phase="p3" data-owner="XPS"><td class="num">4-3-8</td><td class="when" data-w="-1">W-1<span class="wdate"></span></td><td><b>제품 출시 미팅</b>을 주관하여 출시 준비 상태 점검 및 Go/No-Go 판정</td><td class="owner"><span class="otag">XPS</span></td><td>Go/No-Go 판정</td></tr>
+    <tr class="phase-row" id="s4-go" data-phase="p4"><td colspan="5" data-w="0,1">GO 단계 (W0 ~ W+1)<span class="wdate"></span></td></tr>
+    <tr data-phase="p4" data-owner="BSS"><td class="num">4-4-1</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>제품 출시</td><td class="owner"><span class="otag">BSS</span></td><td>출시된 제품</td></tr>
+    <tr data-phase="p4" data-owner="TSS TW"><td class="num">4-4-2</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>확정된 최종 반영 범위를 RN에 반영하여 최종 Revision Note와 업데이트된 매뉴얼 배포</td><td class="owner"><span class="otag">TSS TW</span></td><td>배포된 Revision Note, 매뉴얼</td></tr>
+    <tr data-phase="p4" data-owner="TSS TS"><td class="num">4-4-3</td><td class="when" data-w="0,1">W0~W+1<span class="wdate"></span></td><td>외부 교육 자료를 퍼블리시하고 고객 교육 실시 (출시 이후 지속)</td><td class="owner"><span class="otag">TSS TS</span></td><td>퍼블리시된 교육 자료, 고객 교육 실시</td></tr>
+    <tr data-phase="p4" data-owner="MCS"><td class="num">4-4-4</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>마케팅 캠페인 런치</td><td class="owner"><span class="otag">MCS</span></td><td>런치된 캠페인</td></tr>
+    <tr data-phase="p4" data-owner="XPS"><td class="num">4-4-5</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>지역 커뮤니케이션</td><td class="owner"><span class="otag">XPS</span></td><td>—</td></tr>
+    <tr data-phase="p4" data-owner="TSS TS"><td class="num">4-4-6</td><td class="when" data-w="0,1">W0~W+1<span class="wdate"></span></td><td>서포트 채널을 모니터링하고 접수된 이슈 대응</td><td class="owner"><span class="otag">TSS TS</span></td><td>서포트 이슈 대응 현황</td></tr>
+    <tr data-phase="p4" data-owner="XPS"><td class="num">4-4-7</td><td class="when" data-w="1">W+1<span class="wdate"></span></td><td>고객 피드백 모니터링</td><td class="owner"><span class="otag">XPS</span></td><td>—</td></tr>
+    <tr data-phase="p4" data-owner="MCS"><td class="num">4-4-8</td><td class="when" data-w="1">W+1<span class="wdate"></span></td><td>마케팅 캠페인 성과 추적</td><td class="owner"><span class="otag">MCS</span></td><td>캠페인 성과 리포트</td></tr>
+  </tbody>
+</table>
+<div class="note"><b>표 읽는 법.</b> <b>담당</b>은 해당 미션이 완료되는 것에 최종 책임을 지는 조직이다. 활동 문장 안에 포함된 PM 리뷰·승인은 그 미션의 한 단계이며 별도 행으로 두지 않는다. 단계별 세부 담당은 <a href="#s5-1">5-1</a>, <a href="#sB">부록 B</a> 참조.</div>
+
+<h2 id="s5">5. Revision Note 프로세스</h2>
+
+<h3 id="s5-1">5-1. RN 범위 설정</h3>
+<p>BSS가 JIRA 필터를 통해 해당 릴리스의 신규 기능, 기능 개선, 버그 픽스를 모두 정리한다. QES가 버그별 RN 공개 여부를 작성한 후, PM이 리뷰하여 확정하는 구조. RN 범위는 W-4에 1차(잠정) 확정하고, 테스트 종료 시점(W-1)에 최종 재확정한다 (<a href="#s5-4">5-4 참조</a>).</p>
+<table>
+  <thead><tr><th class="num">#</th><th>단계</th><th>활동</th><th>담당</th></tr></thead>
+  <tbody>
+    <tr><td class="num">5-1-1</td><td class="when">1차 정리</td><td>JIRA 필터로 신규 기능/개선/버그 픽스 전체 목록 정리 + 누락 검토</td><td class="owner">BSS</td></tr>
+    <tr><td class="num">5-1-2</td><td class="when">공개 여부</td><td>버그별 RN 공개 여부 작성</td><td class="owner">QES</td></tr>
+    <tr><td class="num">5-1-3</td><td class="when">PM 리뷰 (1차)</td><td>전체 목록 리뷰 → RN 포함/제외 결정 → 1차(잠정) 확정 (W-4까지)</td><td class="owner">XPS (PM)</td></tr>
+    <tr><td class="num">5-1-4</td><td class="when">TSS 알림</td><td>RN 범위 1차 확정 완료를 TSS에 알림</td><td class="owner">XPS (PM)</td></tr>
+    <tr><td class="num">5-1-5</td><td class="when">최종 판단</td><td>테스트 종료 후 RN 반영 이슈 최종 판단 (W-1)</td><td class="owner">QES</td></tr>
+    <tr><td class="num">5-1-6</td><td class="when">최종 승인</td><td>변경분 반영 결정·최종 승인 (W-1)</td><td class="owner">XPS (PM)</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s5-2">5-2. 버그 픽스 영향도 태그 기준</h3>
+<p>QES 기존 분류체계에 아래 기준을 병합하여 운영한다. 별도의 새로운 태그 체계를 만들지 않는다.</p>
+<table id="tagtable">
+  <thead><tr><th class="num">#</th><th>태그</th><th>기준</th><th>RN 반영</th><th>예시</th></tr></thead>
+  <tbody>
+    <tr><td class="num">5-2-1</td><td><b>A — 고객 체감</b></td><td>기본 동작 변경, UI 변화, 기존 워크플로우 영향</td><td>PM이 개별 검토 → RN 포함 여부 결정</td><td>로그인 실패 수정, 이벤트 누락 수정</td></tr>
+    <tr><td class="num">5-2-2</td><td><b>B — 특정 조건</b></td><td>특정 설정/환경에서만 발생, 엣지 케이스</td><td>RN에 한 줄 요약으로 묶음 ("기타 안정성 개선 XX건")</td><td>특정 디바이스 조합 싱크 오류</td></tr>
+    <tr><td class="num">5-2-3</td><td><b>C — 내부/미미</b></td><td>고객이 인지하기 어려운 수정, 내부 로직</td><td>RN에서 제외</td><td>로그 포맷 변경, 메모리 최적화</td></tr>
+  </tbody>
+</table>
+<p>RN 범위 확정 시 제외 항목은 JIRA에 "RN 제외" 태그로 이력을 관리한다.</p>
+<div class="note"><b>수가 적을 때도 동일 구조를 유지한다.</b> 일관된 프로세스가 모두의 부담을 줄인다.</div>
+
+<h3 id="s5-3">5-3. 사내 베타 빌드 이후 변경 발생 시 커뮤니케이션</h3>
+<p>사내 베타 빌드(W-4) 전달 이후 버그 픽스로 인한 변경이 발생하는 경우, BSS 개발 담당자가 TSS TW에 직접 공유한다.</p>
+<ul>
+  <li>이력 관리: JIRA 이슈 코멘트 병행 (추적용)</li>
+  <li>타이밍: 변경 발생 즉시</li>
+  <li>내용: 변경된 동작, 영향받는 매뉴얼/RN 항목, 스크린샷 재촬영 필요 여부</li>
+</ul>
+
+<h3 id="s5-4">5-4. RN 최종 확정 (테스트 종료, W-1)</h3>
+<p>W-4 RN 범위 확정은 그 시점의 이슈 리스트 기준 <b>1차(잠정) 확정</b>이다. 테스트 과정에서 이슈가 추가·제외·변경될 수 있으므로, QES가 테스트를 마무리하는 W-1에 RN 반영 이슈를 최종 판단하여 확정한다.</p>
+<ul>
+  <li>W-3 <b>내부 온보딩 트레이닝(Webinar)</b>은 <b>Suprema 내부 대상</b>이며, 여기서 공유하는 Revision Note는 <b>잠정본(프리뷰)</b>이다. 테스트 결과에 따라 조정될 수 있다.</li>
+  <li>W-1에 QES가 테스트 종료 후 최종 반영 이슈를 판단 → PM이 반영 여부를 결정하고 최종 승인 → <b>최종 RN 확정</b>.</li>
+  <li><b>고객·파트너 대상 최종 RN</b>은 W0 릴리스와 함께 배포한다.</li>
+  <li>근거: 테스트 종료 전에는 RN 반영 이슈가 유동적. 확정을 W-4에 고정하면 테스트 중 발생한 변경(버그 재분류, must-fix 추가/제외 등)이 RN에 반영되지 못한다.</li>
+</ul>
+<div class="note"><b>적용 조건.</b> 테스트 기간이 RN 공개(W-3) 이후까지 이어지는 릴리스에 적용한다. 테스트가 W-3 전에 끝나면 1차 확정이 곧 최종 확정이다.</div>
+
+<h2 id="s6">6. 매뉴얼 업데이트 프로세스</h2>
+
+<h3 id="s6-1">6-1. 범위 설정</h3>
+<p>BSS가 JIRA 필터로 신규 기능/기능 개선 목록을 정리하고 누락 여부를 검토한다. 이후 XPS가 고객 사용 시나리오 관점에서 최종 검토하며, 검토를 마친 목록은 BSS가 TSS TW에 공유한다.</p>
+
+<h3 id="s6-2">6-2. TSS TW 작업 시작 전제조건 — 사내 베타 빌드 (W-4)</h3>
+<p>TSS TW가 매뉴얼 초안 작성을 시작하려면 사내 베타 빌드가 전달되어야 한다.</p>
+<p>사내 베타 빌드 정의 (Suprema 내부):</p>
+<ul>
+  <li>모든 신규 기능 포함 (기능 누락 없음)</li>
+  <li>QES가 본격 QA 테스트를 시작할 수 있는 상태</li>
+  <li>이후 변경은 버그 픽스만 (신규 기능 추가 없음)</li>
+</ul>
+<div class="note">TSS TW가 겪는 핵심 문제는 빌드 전달 이후에도 변경과 버그 수정이 계속 발생하여 작성 내용이 무효화되는 것. 사내 베타 빌드 이후 버그 픽스로 인한 변경이 발생하면 BSS 개발 담당자가 TSS TW에 즉시 공유한다 (<a href="#s5-3">5-3 참조</a>).</div>
+
+<h3 id="s6-3">6-3. 매뉴얼 초안 기술 확인 (W-2)</h3>
+<p>TSS TW가 사내 베타 빌드 기반으로 작성한 매뉴얼 초안을 BSS 개발 담당자가 기술 정확성(동작 절차, 설정값, API) 관점에서 확인한다.</p>
+<ul>
+  <li>범위: 신규/변경 기능 관련 섹션 한정</li>
+  <li>타이밍: W-2, PM 최종 검토(W-1) 전 완료</li>
+  <li>W-1 PM 최종 검토는 시장 메시지/고객 경험 관점, 기술 정확성은 본 단계에서 확보</li>
+</ul>
+
+<h2 id="s7">7. Known Issues 합동 회의</h2>
+<p>릴리스 W-2~W-1 시점에 Known Issues를 전체적으로 검토하고 대응 방향을 협의하는 회의.</p>
+<p><b>참석:</b> XPS (PM) + BSS + QES + TSS</p>
+<p><b>목적:</b></p>
+<ul>
+  <li>QES가 정리한 Known Issues 리스트 전체 검토</li>
+  <li>각 이슈별 대응 방향 협의: 릴리스 전 수정 / Known Issue로 문서화 / 다음 버전으로 이관</li>
+  <li>RN 및 매뉴얼에 반영할 Known Issues 범위 확정</li>
+  <li>고객 커뮤니케이션 방향 합의</li>
+</ul>
+
+<h2 id="s8">8. 제품 출시 미팅</h2>
+<p>릴리스 직전(W-1) 전체 출시 준비 상태를 점검하는 미팅. 기존 제품등록 미팅을 확장하여 출시 프로세스 전반을 다룬다.</p>
+<p><b>참석:</b> XPS (PM) + BSS + QES + TSS</p>
+<h3 id="s8-1">8-1. 어젠다</h3>
+<table>
+  <thead><tr><th class="num">#</th><th>항목</th><th>내용</th></tr></thead>
+  <tbody>
+    <tr><td class="num">8-1-1</td><td><b>계획 대비 실제 일정 비교</b></td><td>각 부서 전달물이 데드라인 대비 실제로 언제 나왔는지 전체 점검</td></tr>
+    <tr><td class="num">8-1-2</td><td><b>XPS 출시 프로세스 현황</b></td><td>PLI, 내부 온보딩 트레이닝, Revision Note 상태</td></tr>
+    <tr><td class="num">8-1-3</td><td><b>TSS TW 산출물 현황</b></td><td>Revision Note, 매뉴얼 상태</td></tr>
+    <tr><td class="num">8-1-4</td><td><b>TSS TS 산출물 현황</b></td><td>외부 교육 자료 상태</td></tr>
+    <tr><td class="num">8-1-5</td><td><b>미완료/지연 항목 식별</b></td><td>릴리스 전 해결과 Known Issue 처리 중 판단</td></tr>
+    <tr><td class="num">8-1-6</td><td><b>출시 판정 확인</b></td><td>아래 기준 기반 출시 가능 여부 최종 판정</td></tr>
+  </tbody>
+</table>
+<h3 id="s8-2">8-2. 출시 판정 기준</h3>
+<table>
+  <thead><tr><th class="num">#</th><th>구분</th><th>판정 기준</th></tr></thead>
+  <tbody>
+    <tr><td class="num">8-2-1</td><td class="owner">품질</td><td>must-fix 이슈 해결 완료. P0 버그 없음. Known Issues 문서화 완료.</td></tr>
+    <tr><td class="num">8-2-2</td><td class="owner">출시 자료</td><td>PLI, Revision Note 배포 완료.</td></tr>
+    <tr><td class="num">8-2-3</td><td class="owner">내부 온보딩</td><td>내부 인원 대상 온보딩 트레이닝 실시 완료. 잠정 Revision Note 사내 공유 완료. (XPS)</td></tr>
+    <tr><td class="num">8-2-4</td><td class="owner">문서</td><td>Revision Note + 매뉴얼 최종 승인 완료. (TSS TW)</td></tr>
+    <tr><td class="num">8-2-5</td><td class="owner">교육</td><td>외부 교육 자료 TSS TS + MCS 최종화.</td></tr>
+    <tr><td class="num">8-2-6</td><td class="owner">마케팅</td><td>마케팅 캠페인 자산 준비 완료. 일정 확정.</td></tr>
+    <tr><td class="num">8-2-7</td><td class="owner">서포트</td><td>TSS TS에 변경 사항 및 Known Issues 전달 완료. 고객 교육 일정 확정.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s8-3">8-3. BSS 조기 경보 의무</h3>
+<p>BSS는 출시일 변동이 생기겠다고 판단되는 시점에 XPS에 즉시 공유해야 한다. 제품 출시 미팅 시점이 아니라 판단 즉시 공유하여 전체 일정 조정이 가능하도록 한다.</p>
+
+<div class="appendix-divider"><span>부록 — 프로세스 수립 근거</span></div>
+<p class="appendix-lead">아래 두 부록은 본 프로세스를 수립하면서 각 조직과 협의한 <b>근거 기록</b>이다. 실행 지침은 1~8장을 따르고, 부록은 "왜 이 담당·이 시점인가"를 확인해야 할 때 참조한다.</p>
+
+<h2 id="sA">부록 A. R&amp;D 협의 사항</h2>
+<table>
+  <thead><tr><th class="num">#</th><th>항목</th><th>대상</th><th>내용</th></tr></thead>
+  <tbody>
+    <tr><td class="num">A-1</td><td><b>BSS W-6 JIRA 필터 정리</b></td><td class="owner">BSS</td><td>신규/개선/버그 전체 JIRA 필터 정리 + 누락 검토를 W-6까지 완료. 완료 후 TSS TW에 알림.</td></tr>
+    <tr><td class="num">A-2</td><td><b>BSS W-5 전달물</b></td><td class="owner">BSS</td><td>변경 내역 초안 + 매뉴얼 콘텐츠 + API 변경 내역(신규/수정/삭제)을 W-5까지 전달</td></tr>
+    <tr><td class="num">A-3</td><td><b>QES W-5 버그 RN 공개 여부</b></td><td class="owner">QES</td><td>버그별 RN 공개 여부를 W-5까지 작성</td></tr>
+    <tr><td class="num">A-4</td><td><b>QES W-4 사내 베타 빌드 전달</b></td><td class="owner">QES</td><td>사내 베타 빌드를 W-4까지 TSS TW에 제공</td></tr>
+    <tr><td class="num">A-5</td><td><b>입력 포맷 표준화</b></td><td class="owner">BSS</td><td>변경 내역 템플릿 + API 변경 내역 템플릿 합의</td></tr>
+    <tr><td class="num">A-6</td><td><b>사내 베타 빌드 이후 TSS TW 알림</b></td><td class="owner">BSS</td><td>변경 발생 시 TSS TW에 즉시 공유 (공유 방식은 담당자 판단), JIRA 이슈 코멘트로 이력 관리</td></tr>
+    <tr><td class="num">A-7</td><td><b>BSS 조기 경보</b></td><td class="owner">BSS</td><td>출시일 변동이 예상되는 시점에 XPS에 즉시 공유</td></tr>
+    <tr><td class="num">A-8</td><td><b>BSS 매뉴얼 초안 기술 확인</b></td><td class="owner">BSS</td><td>TSS TW 매뉴얼 초안을 W-2까지 기술 정확성 관점에서 확인 (신규/변경 기능 섹션 한정)</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sB">부록 B. 단계별 담당 근거</h2>
+
+<h3 id="sB-1">B-1. Revision Note</h3>
+<table>
+  <thead><tr><th class="num">#</th><th>시점</th><th>담당</th><th>왜 이 담당인가</th></tr></thead>
+  <tbody>
+    <tr><td class="num">B-1-1</td><td>W-6: JIRA 필터 정리 + 누락 검토</td><td class="owner">BSS</td><td>개발한 기능이 빠짐없이 목록에 있는지는 개발자가 가장 정확하게 확인 가능.</td></tr>
+    <tr><td class="num">B-1-2</td><td>W-5: 변경 내역 초안</td><td class="owner">BSS</td><td>만든 사람이 가장 정확하게 설명 가능. PM이 대신 쓰면 확인 왕복 3~4회.</td></tr>
+    <tr><td class="num">B-1-3</td><td>W-5: 버그 RN 공개 여부 작성</td><td class="owner">QES</td><td>검증 과정에서 각 버그의 영향 범위를 이미 파악. 공개 여부 판단의 1차 입력.</td></tr>
+    <tr><td class="num">B-1-4</td><td>W-4: PM 리뷰 → RN 범위 확정</td><td class="owner">XPS (PM)</td><td>고객 전달 항목 최종 판단은 시장 관점의 결정.</td></tr>
+    <tr><td class="num">B-1-5</td><td>W-4: TSS에 완료 알림</td><td class="owner">XPS (PM)</td><td>PM이 범위를 확정했으므로 PM이 직접 TSS(TS+TW)에 알림. RN 범위는 교육/서포트 준비에도 직결.</td></tr>
+    <tr><td class="num">B-1-6</td><td>W-4~W-3: RN 초안 작성</td><td class="owner">TSS TW</td><td>기술 문서 작성 전문가의 영역.</td></tr>
+    <tr><td class="num">B-1-7</td><td>W-3: 1차 검토/승인</td><td class="owner">XPS (PM)</td><td>잠정 RN의 시장 관점 게이트키퍼. 내부 온보딩 공유본.</td></tr>
+    <tr><td class="num">B-1-8</td><td>W-1: RN 반영 이슈 최종 판단</td><td class="owner">QES</td><td>테스트 종료 전 RN 반영 이슈는 유동적. 테스트 결과 기반 최종 판단은 검증 주체인 QES만 가능.</td></tr>
+    <tr><td class="num">B-1-9</td><td>W-1: RN 변경분 반영 결정·최종 승인</td><td class="owner">XPS (PM)</td><td>고객 전달 범위의 최종 승인은 시장 관점의 결정.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="sB-2">B-2. 매뉴얼 업데이트</h3>
+<table>
+  <thead><tr><th class="num">#</th><th>시점</th><th>담당</th><th>왜 이 담당인가</th></tr></thead>
+  <tbody>
+    <tr><td class="num">B-2-1</td><td>W-6: JIRA 필터 정리</td><td class="owner">BSS</td><td>개발한 기능이 빠짐없이 목록에 있는지는 개발자가 가장 정확하게 확인 가능.</td></tr>
+    <tr><td class="num">B-2-2</td><td>W-6: 매뉴얼 대상 목록 검토</td><td class="owner">XPS (PM)</td><td>고객 사용 시나리오 관점에서 누락/불필요 항목 검토.</td></tr>
+    <tr><td class="num">B-2-3</td><td>W-5: 매뉴얼 콘텐츠 + API 변경</td><td class="owner">BSS</td><td>동작 절차와 API 변경은 개발자가 아니면 정확히 정리 불가.</td></tr>
+    <tr><td class="num">B-2-4</td><td>W-5: 매뉴얼 초안 시작</td><td class="owner">TSS TW</td><td>BSS 자료 기반으로 텍스트 작업 시작.</td></tr>
+    <tr><td class="num">B-2-5</td><td>W-4: 사내 베타 빌드 전달</td><td class="owner">QES</td><td>사내 베타 빌드 판정은 QES만 가능.</td></tr>
+    <tr><td class="num">B-2-6</td><td>W-2: 초안 기술 확인</td><td class="owner">BSS</td><td>동작 절차·설정값·API의 정확성은 개발자만 검증 가능. PM 검토 전 기술 오류 제거.</td></tr>
+    <tr><td class="num">B-2-7</td><td>W-1: 최종 검토</td><td class="owner">XPS (PM)</td><td>시장 메시지 정합성과 고객 경험 관점 최종 확인.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="history">변경 이력</h2>
+<table>
+  <thead><tr><th class="num">#</th><th>버전</th><th>날짜</th><th>작성자</th><th>변경 내용</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td class="when">1.2</td><td class="when">2026-02-26</td><td class="owner">Julien JOO - XPS</td><td>TSS 교육 자료 완성 W-2로 이동; XPS 내부 교육 일반/기술 분리</td></tr>
+    <tr><td class="num">2</td><td class="when">2.0 초안</td><td class="when">2026-03-06</td><td class="owner">Michael Lee - XPS</td><td>R&amp;D(BSS/QES) RN/매뉴얼 프로세스 추가. TSS/TW 역할 분리. PREPARE 단계 신설. 제품 출시 미팅 도입.</td></tr>
+    <tr><td class="num">3</td><td class="when">2.0 초안 (최종)</td><td class="when">2026-05-13</td><td class="owner">Michael Lee - XPS</td><td>JIRA 필터 정리 BSS 이관. 사내 베타 빌드 용어 통일. 내부 교육 삭제. QES 버그 RN 공개 여부. 매뉴얼 초안 W-5 시작. BSS 제품 등록 추가.</td></tr>
+    <tr><td class="num">4</td><td class="when">2.0 정식 ~ 2.8</td><td class="when">2026-06-08 ~ 2026-07-27</td><td class="owner">Michael Lee · Julien JOO - XPS</td><td>정식 v2.0 확정 이후 운영 피드백을 반영하여 문서 전반 개선. 항목명 국문 통일 (v2.8).</td></tr>
+  </tbody>
+</table>
+
+<p class="lastupd">최종 수정: 2026년 7월</p>
+
+</main>
+</div>
+<script>
+(function(){
+  var btns=document.querySelectorAll('#ownerFilter .chip-btn');
+  var rows=document.querySelectorAll('#timeline tbody tr:not(.phase-row)');
+  var phaseRows=document.querySelectorAll('#timeline tbody tr.phase-row');
+  function restripe(){
+    var i=0;
+    document.querySelectorAll('#timeline tbody tr:not(.hidden):not(.phase-row)').forEach(function(tr){
+      tr.classList.toggle('odd', (i++)%2===1);
+    });
+  }
+  function apply(owner){
+    rows.forEach(function(tr){
+      tr.classList.toggle('hidden', owner!=='ALL' && tr.dataset.owner!==owner);
+    });
+    phaseRows.forEach(function(pr){
+      var any=document.querySelector('#timeline tbody tr:not(.phase-row):not(.hidden)[data-phase="'+pr.dataset.phase+'"]');
+      pr.classList.toggle('hidden', !any);
+    });
+    restripe();
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      apply(b.dataset.owner);
+    });
+  });
+  restripe();
+
+  /* ---- 제품 출시일 기반 마감일 계산 ---- */
+  var DOW=['일','월','화','수','목','금','토'];
+  var input=document.getElementById('releaseDate');
+  var clearBtn=document.getElementById('clearDate');
+  var echo=document.getElementById('dateEcho');
+  var echoBase='제품 출시일을 입력하면 각 항목의 마감일이 자동 계산되어 시점 칸에 표시된다. (W-n = 출시일 \u2212 n주)';
+  var cells=document.querySelectorAll('#timeline [data-w]');
+
+  function fmt(d){return (d.getMonth()+1)+'/'+d.getDate()+'('+DOW[d.getDay()]+')';}
+  function shift(base,weeks){
+    var d=new Date(base.getFullYear(),base.getMonth(),base.getDate());
+    d.setDate(d.getDate()+weeks*7);
+    return d;
+  }
+  function render(base){
+    cells.forEach(function(td){
+      var span=td.querySelector('.wdate');
+      if(!span) return;
+      if(!base){span.textContent='';return;}
+      var ws=td.dataset.w.split(',').map(Number);
+      var txt=ws.map(function(w){return fmt(shift(base,w));}).join(' ~ ');
+      span.textContent=txt;
+    });
+  }
+  var STORAGE_KEY='biostarx-release-date';
+  function saveDate(v){
+    try{
+      if(v){localStorage.setItem(STORAGE_KEY,v);}
+      else{localStorage.removeItem(STORAGE_KEY);}
+    }catch(e){/* 저장이 막힌 환경(시크릿 모드 등)에서는 무시 */}
+  }
+  function onChange(){
+    var v=input.value;
+    if(!v){render(null);echo.textContent=echoBase;echo.classList.remove('on');saveDate('');return;}
+    var p=v.split('-').map(Number);
+    var base=new Date(p[0],p[1]-1,p[2]);
+    render(base);
+    echo.textContent='기준 제품 출시일: '+v+' ('+DOW[base.getDay()]+') \u2014 아래 시점 칸의 날짜는 이 기준으로 계산된 마감일이다.';
+    echo.classList.add('on');
+    saveDate(v);
+  }
+  input.addEventListener('change',onChange);
+  input.addEventListener('input',onChange);
+  clearBtn.addEventListener('click',function(){input.value='';onChange();});
+
+  /* 이전에 입력해 둔 출시일이 있으면 복원 */
+  try{
+    var savedDate=localStorage.getItem(STORAGE_KEY);
+    if(savedDate){input.value=savedDate;}
+  }catch(e){/* 저장이 막힌 환경에서는 무시 */}
+  onChange();
+
+  /* ---- 목차 현재 위치 표시 ---- */
+  var links=[].slice.call(document.querySelectorAll('nav.toc a[href^="#"]'));
+  var targets=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){
+    var best=-1, bestTop=-1e9;
+    targets.forEach(function(el,idx){
+      if(!el) return;
+      var t=el.getBoundingClientRect().top-90;
+      if(t<=0 && t>bestTop){bestTop=t;best=idx;}
+    });
+    links.forEach(function(a,idx){a.classList.toggle('active',idx===best);});
+  }
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking) return;
+    ticking=true;
+    window.requestAnimationFrame(function(){spy();ticking=false;});
+  },{passive:true});
+  spy();
+})();
+</script>
+</body>
+</html>

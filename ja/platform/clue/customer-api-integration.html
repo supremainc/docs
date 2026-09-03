@@ -1,0 +1,446 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-platform/clue/customer-api-integration" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>顧客API連携 | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremadocs.blob.core.windows.net/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration /><meta data-rh=true property=og:locale content=ja_JP /><meta data-rh=true property=og:locale:alternate content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="顧客API連携 | Suprema Docs"/><meta data-rh=true name=description content="CLUeプレース グループで顧客社（Vendor）APIを登録し、クレデンシャルに連携して、顧客社の入退室判定ロジックをCLUe入退室制御と連携する方法を案内します。"/><meta data-rh=true property=og:description content="CLUeプレース グループで顧客社（Vendor）APIを登録し、クレデンシャルに連携して、顧客社の入退室判定ロジックをCLUe入退室制御と連携する方法を案内します。"/><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/platform/clue/customer-api-integration hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/platform/clue/customer-api-integration hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/platform/clue/customer-api-integration hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/platform/clue/customer-api-integration hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration/#webpage","@type":"WebPage","breadcrumb":{"@id":"https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration/#breadcrumb"},"datePublished":"2026-01-02","description":"CLUeプレース グループで顧客社（Vendor）APIを登録し、クレデンシャルに連携して、顧客社の入退室判定ロジックをCLUe入退室制御と連携する方法を案内します。","inLanguage":"ja-JP","isPartOf":{"@id":"https://supremainc.github.io/#website"},"name":"顧客API連携","potentialAction":[{"@type":"ReadAction","target":["https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration"]}],"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","article p:first-of-type","[data-speakable]"]},"url":"https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration"},{"@id":"https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/platform/clue/","name":"CLUe","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/ja/platform/clue/customer-api-integration","name":"顧客API連携","position":2}]},{"@id":"https://supremainc.github.io/#website","@type":"WebSite","description":"Supremaのすべての製品およびBioStar関連情報をここで確認してください。","inLanguage":"ja-JP","name":"Suprema Docs","potentialAction":[{"@type":"SearchAction","query-input":"required name=searchTerms","target":{"@type":"EntryPoint","urlTemplate":"https://supremainc.github.io/search?q={searchTerms}"}}],"publisher":{"@id":"https://supremainc.github.io/#organization"},"url":"https://supremainc.github.io"},{"@id":"https://supremainc.github.io/#organization","@type":"Organization","address":{"@type":"PostalAddress","addressCountry":"KR","postalCode":"13554","streetAddress":"L17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://support.supremainc.com"},"logo":{"@id":"https://supremainc.com/#logo","@type":"ImageObject","caption":"Suprema - Security & Biometrics","contentUrl":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","height":900,"url":"https://supremadocs.blob.core.windows.net/img/sns_img02.jpg","width":1440},"name":"Suprema","sameAs":["https://blog.naver.com/supremakr","https://www.facebook.com/supremaglobal","https://www.youtube.com/user/supremainc","https://www.instagram.com/official.suprema","https://pf.kakao.com/_xnkPxes","https://www.linkedin.com/company/suprema-inc-/"],"url":"https://supremainc.com"}]}</script><link rel=alternate type=application/rss+xml href=/docs/ja/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/ja/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/ja/opensearch.xml><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.2e77ac5a.css /><script src=/docs/ja/assets/js/runtime~main.3bdf9320.js defer></script><script src=/docs/ja/assets/js/main.ac41238a.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg /><link rel=preload as=image href=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg /><div role=region aria-label=本文へスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>本文へスキップ</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>このドキュメントには、まだサービスバージョンにリリースされていないコンテンツが含まれています。公式にリリースされた機能のドキュメントについては、<a href=https://docs.supremainc.com/ja/platform/clue/customer-api-integration/ target=_blank>次のリンク</a>をご覧ください。</b></div></div><nav aria-label=メイン class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=サイドバーを展開/折りたたむ aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>プラットフォーム</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_x_mobile>BioStar X Mobile</a><li><a class=dropdown__link href=/docs/ja/platform/biostar_air>BioStar Air</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/platform/clue>CLUe</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI カメラ</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/ja/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar-devices">デバイス</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/ja/device/biostation_3_clue>BioStation 3 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/ja/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/ja/device/biolite_n2_clue>BioLite N2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/ja/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/ja/device/xstation_2_clue>X-Station 2 (CLUe)</a><li><a class=dropdown__link href=/docs/ja/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_2_v2>XPass 2 V2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/ja/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/ja/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/ja/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/ja/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/ja/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/ja/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/ja/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/ja/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/ja/device/securemodule>Secure I/O 2</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/ja/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/ja/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/ja/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>インテグレーション</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/integration/genetec>Genetec</a><li><a class=dropdown__link href=/docs/ja/integration/gallagher>Gallagher</a><li><a class=dropdown__link href=/docs/ja/integration/ccure>Software House</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>開発者センター</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/developer/bsxapi>BioStar X API</a><li><a class=dropdown__link href=/docs/ja/developer/clue>CLUe API</a><li><a class=dropdown__link href=/docs/ja/developer/vionyx>ViOnyx AIカメラAPI</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/ja/reference>リファレンス</a><a class="navbar__item navbar__link" href=/docs/ja/changelog>更新履歴</a><a class="navbar__item navbar__link" href=/docs/ja/legal/disclaimers>法的情報</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=検索><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>日本語</a><ul class=dropdown__menu><li><a href=/docs/platform/clue/customer-api-integration target=_self rel="noopener noreferrer" class=dropdown__link lang=ko-KR>한국어</a><li><a href=/docs/en/platform/clue/customer-api-integration target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/platform/clue/customer-api-integration target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/platform/clue/customer-api-integration target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title=システムモード aria-label="ダークモードとライトモードを切り替え (現在 システムモード)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=トップへスクロール class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=ドキュメントサイドバー class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/ja/platform/clue><span class=categoryLinkLabel_W154>CLUe</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/ja/platform/clue/web-portal-getting-started><span class=categoryLinkLabel_W154>CLUeウェブポータルガイド</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/web-portal-getting-started><span class=linkLabel_WmDU>CLUe Webポータルの始め方</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/service-settings><span class=linkLabel_WmDU>サービスを設定する</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/ja/platform/clue/customer-api-integration><span class=linkLabel_WmDU>顧客API連携</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/fw-update><span class=linkLabel_WmDU>ファームウェアを変更する</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/add-device><span class=linkLabel_WmDU>デバイスを追加する</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/allocate-device-to-place><span class=linkLabel_WmDU>デバイスのセルフ登録</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/add-door><span class=linkLabel_WmDU>ドアの追加</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/fw-upgrade><span class=linkLabel_WmDU>ファームウェアをアップグレードする</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/device-web-hook-settings><span class=linkLabel_WmDU>デバイス Webhook 設定</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/view-audit-log><span class=linkLabel_WmDU>監査ログを確認する</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/ja/platform/clue/mobile-app-start><span class=linkLabel_WmDU>モバイルアプリの使用方法</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/ja/platform/clue/clue-api-guide><span class=categoryLinkLabel_W154>開発者</span></a></div></ul></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label=パンくずリスト><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホーム class=breadcrumbs__link href=/docs/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/ja/platform/clue><span>CLUe</span></a><li class="breadcrumbs__item item-2"><span class=breadcrumbs__link>CLUeウェブポータルガイド</span><li class="breadcrumbs__item breadcrumbs__item--active item-3"><span class=breadcrumbs__link>顧客API連携</span></ul><div class=btnprint_MOIq><div class=pdfDropdown_hR9S><button disabled class=printbtn_FzsH aria-haspopup=true aria-expanded=false><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m4 6 4 4 4-4"/></svg> PDF</button><button class=feedbackTrigger_JVwE aria-label=フィードバックを送信>Feedback</button></div></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">目次を表示</button></div><div class="theme-doc-markdown markdown"><header><h1>顧客API連携</h1></header><p>顧客社API連携は、CLUeデバイスが認識したクレデンシャル（顔、指紋、RFカード、PIN、CLUe QR、カスタムQRなど）を顧客社が運用する外部APIに送信し、その応答に応じて入室を許可または拒否する入退室方式です。 この方式を使うと、入室権限、勤怠、訪問者管理などの顧客社固有のポリシーを、個別開発なしでCLUe入退室制御に直接反映できます。</p>
+<p>CLUeはクレデンシャルを認識して顧客社APIへ送信する役割のみを担い、実際の入室許可可否は顧客社APIの応答で決まります。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=開始する前に>開始する前に<a href=#開始する前に class=hash-link aria-label="開始する前に への直接リンクとコピー" title="開始する前に への直接リンクとコピー" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=対象>対象<a href=#対象 class=hash-link aria-label="対象 への直接リンクとコピー" title="対象 への直接リンクとコピー" translate=no>​</a></h3>
+<p>この文書は<strong>プレース グループ管理者</strong>と<strong>プレース管理者</strong>を対象にしています。</p>
+<ul>
+<li class="">
+<p><strong>プレース グループ管理者</strong>: 顧客社（Vendor）APIを登録、編集、削除し、クレデンシャルタイプとAPIをマッピングし、設定を下位プレースに適用します。</p>
+</li>
+<li class="">
+<p><strong>プレース管理者</strong>: プレース グループから継承した設定を確認し、必要なときにプレース別の上書きを適用します。</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>この文書は、<strong>HTTPS</strong>、<strong>HTTPステータスコード</strong>、<strong>Webhook</strong>（HTTP POST）、<strong>JSON</strong>、<strong>JSONPath</strong>に慣れたIT管理者を対象にしています。 顧客社API仕様（URL、認証ヘッダー、リクエスト/レスポンスJSON構造）は、事前に顧客担当者と相談してください。</div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=事前準備>事前準備<a href=#事前準備 class=hash-link aria-label="事前準備 への直接リンクとコピー" title="事前準備 への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>このメニューにアクセスするには、対象のプレース グループ（またはプレース）に管理者として招待されている必要があります。</p>
+</li>
+<li class="">
+<p>顧客社の認証用Webhook URL（<strong>HTTPS必須</strong>、<strong>HTTP POST受信</strong>）と必要な認証ヘッダー値を事前に準備してください。</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=主な用語>主な用語<a href=#主な用語 class=hash-link aria-label="主な用語 への直接リンクとコピー" title="主な用語 への直接リンクとコピー" translate=no>​</a></h3>
+<table><thead><tr><th>用語<th>説明<tbody><tr><td>顧客社API連携（Customer API Integration）<td>ユーザーがデバイスにクレデンシャルを提示すると、クレデンシャルデータを顧客社（Vendor）が運用する外部APIへ送信して検証する入退室方式です。<tr><td>クレデンシャル（Credential）<td>顔 / 指紋 / RFカード / ユーザーPIN / CLUe QR / カスタムQR<tr><td><span class="cmd normal">Webhook URL</span><td>CLUeからの認証リクエスト（HTTP <strong>POST</strong>、<code>Content-Type: application/json</code>）を受信するために、顧客社サーバーが公開するHTTPSエンドポイントです。<tr><td>リクエストヘッダー（Request Header）<td>認証と権限付与のために、リクエストと一緒に送信するKey/Valueペアです。 （例: <code>Authorization</code>トークン）<tr><td><span class="cmd normal">自動フィールド</span><td>システムがリクエスト本文に自動で入力する値です。 必要なフィールドだけを選択してください。<tr><td><span class="cmd normal">手動フィールド</span><td>管理者がリクエスト本文に含めるために直接入力する固定値です。<tr><td>判定基準（Judgment Criteria）<td>顧客社応答を入室許可または拒否として解釈するルールセット（statusCode、成功結果Key/Value、成功/失敗メッセージキー）です。 画面では <span class=cmd>レスポンス解析</span> セクションとして表示されます。<tr><td>判定モード（Judgment Mode）<td>判定基準を構成する要素です。 HTTP応答コードのみ使用 / 応答本文フィールドのみ使用 / 両方の組み合わせから1つを選択します。</table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=顧客社api連携>顧客社API連携<a href=#顧客社api連携 class=hash-link aria-label="顧客社API連携 への直接リンクとコピー" title="顧客社API連携 への直接リンクとコピー" translate=no>​</a></h2>
+<p>顧客社API連携は、CLUeデバイスが認識したクレデンシャルデータを顧客社が運用するHTTPS APIへ送信し、その応答を基に入室の許可/拒否を判定する入退室方式です。 これにより、入室権限、勤怠、訪問者管理などの顧客社固有のポリシーをCLUe入退室制御に直接反映できます。</p>
+<ul>
+<li class="">
+<p>顔、指紋、RFカード、PIN、CLUe QR、カスタムQRなど、クレデンシャルタイプごとに異なる顧客社APIを連携できます。</p>
+</li>
+<li class="">
+<p>登録を保存する前に、テスト呼び出しで連携動作を事前に確認できます。</p>
+</li>
+<li class="">
+<p>CLUeはクレデンシャルを識別して送信する役割のみを担い、実際の許可または拒否の判断は顧客社APIの応答で決まります。</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=対応クレデンシャル>対応クレデンシャル<a href=#対応クレデンシャル class=hash-link aria-label="対応クレデンシャル への直接リンクとコピー" title="対応クレデンシャル への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>顔</p>
+</li>
+<li class="">
+<p>指紋</p>
+</li>
+<li class="">
+<p>RFカード</p>
+</li>
+<li class="">
+<p>ユーザーPIN</p>
+</li>
+<li class="">
+<p>CLUe QR</p>
+</li>
+<li class="">
+<p>カスタムQR</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=プレース-グループとプレースの役割>プレース グループとプレースの役割<a href=#プレース-グループとプレースの役割 class=hash-link aria-label="プレース グループとプレースの役割 への直接リンクとコピー" title="プレース グループとプレースの役割 への直接リンクとコピー" translate=no>​</a></h3>
+<table><thead><tr><th>レベル<th>役割<th>担当業務<tbody><tr><td>プレース グループ<td>プレース グループ管理者<td>顧客社APIの登録/編集/削除、APIとクレデンシャルの連携<tr><td>プレース<td>プレース管理者<td>継承した設定の確認、必要に応じたプレース別上書きの適用</table>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>適用ルール</strong><ul>
+<li class="">
+<p><strong>プレース グループレベルで保存</strong>: 同じ設定が、そのプレース グループのすべての下位プレースに即時適用されます。 既存のプレース別上書きは、プレース グループ値で上書きされます。</p>
+</li>
+<li class="">
+<p><strong>プレースレベルで保存</strong>: そのプレースにのみ適用されます。 他のプレースや上位のプレース グループには影響しません。</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=主な作業ワークフロー>主な作業ワークフロー<a href=#主な作業ワークフロー class=hash-link aria-label="主な作業ワークフロー への直接リンクとコピー" title="主な作業ワークフロー への直接リンクとコピー" translate=no>​</a></h2>
+<p>顧客社API連携は、大きく2つのワークフロー（Workflow）で構成されます。 管理者が最初に行う<strong>設定ワークフロー</strong>と、ユーザーが実際に入室を試行したときに進行する<strong>入室イベントワークフロー</strong>です。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=settingWorkflow>設定ワークフローの概要<a href=#settingWorkflow class=hash-link aria-label="設定ワークフローの概要 への直接リンクとコピー" title="設定ワークフローの概要 への直接リンクとコピー" translate=no>​</a></h3>
+<p>管理者が実行するステップです。 各ステップは第4章から詳しく説明します。</p>
+<ol>
+<li class="">
+<p>（プレース グループ）入退室方式を選択してください。</p>
+<ul>
+<li class="">
+<p><span class=cmd>お客様の確認</span> または <span class=cmd>混合 / 高度な方法</span></p>
+</li>
+<li class="">
+<p>左サイドバーで <span class=cmd>顧客先API連携</span> 項目が有効になります。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>（プレース グループ）<span class=cmd>顧客先API連携</span> でAPIを登録してください。</p>
+<p>基本情報 → カスタムヘッダー → 自動フィールド → 手動フィールド → テスト実行 → 応答パース設定 → 保存</p>
+</li>
+<li class="">
+<p>（プレース グループ）登録したAPIを各クレデンシャルに連携してください。</p>
+<p>保存すると、同じ設定がすべての下位プレースに自動適用されます。</p>
+</li>
+<li class="">
+<p>（オプション）プレース別の上書きを設定してください。</p>
+<p>選択したプレースにのみ適用されます。 既定値はプレース グループ設定をそのまま使用します。</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=入室イベントワークフローの概要>入室イベントワークフローの概要<a href=#入室イベントワークフローの概要 class=hash-link aria-label="入室イベントワークフローの概要 への直接リンクとコピー" title="入室イベントワークフローの概要 への直接リンクとコピー" translate=no>​</a></h3>
+<p>設定完了後、ユーザーが実際に入室を試行するときの処理順です。</p>
+<ol>
+<li class="">
+<p>ユーザーがデバイスにクレデンシャルを提示します。 （顔 / 指紋 / RFカード / PIN / CLUe QR / カスタムQR）</p>
+</li>
+<li class="">
+<p>デバイス → CLUeサーバーへ検証リクエストを送信します。</p>
+</li>
+<li class="">
+<p>CLUeサーバー → 顧客社サーバーへ検証リクエストを送信します。</p>
+<p>登録済みWebhook URL、カスタムヘッダー、自動フィールド、手動フィールドを含みます</p>
+</li>
+<li class="">
+<p>CLUeサーバーが顧客社応答を基に入室可否を判定します。</p>
+<p>設定した判定基準に従って、許可/拒否を決定します。</p>
+</li>
+<li class="">
+<p>結果をデバイスへ返します。</p>
+<p>応答にメッセージが含まれている場合、デバイス画面に表示されます。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=設定ワークフロー>設定ワークフロー<a href=#設定ワークフロー class=hash-link aria-label="設定ワークフロー への直接リンクとコピー" title="設定ワークフロー への直接リンクとコピー" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=1段階--顧客社api連携を有効化>1段階 — 顧客社API連携を有効化<a href=#1段階--顧客社api連携を有効化 class=hash-link aria-label="1段階 — 顧客社API連携を有効化 への直接リンクとコピー" title="1段階 — 顧客社API連携を有効化 への直接リンクとコピー" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p><a href=https://clue.moon.supremainc.com target=_blank rel="noopener noreferrer" class="">CLUe Webポータル</a>にログインしてください。</p>
+</li>
+<li class="">
+<p>プレース グループを選択してください。</p>
+</li>
+<li class="">
+<p>画面右上の <svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><title>more</title><path fill=currentColor d="M8.4 3.8a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8m0 5.6a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8m0 5.6a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8"/></svg> → <span class=cmd>詳細設定</span> をクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-place-group-settings.png width=1742 height=497 /></p>
+</li>
+<li class="">
+<p>画面左側のサイドバーで <span class=cmd>サービス設定</span> をクリックします。</p>
+<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p>初期状態では <span class=cmd>アクセス方法</span> は <span class=cmd>選択無し</span> に設定されています。 この状態では、どの設定も有効になりません。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-place-group-service-none.png width=1920 height=510 /></div></div>
+</li>
+<li class="">
+<p><span class=cmd>アクセス方法</span> で <span class=cmd>お客様の確認</span> を選択してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>確認対象</span> セクションが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-place-group-service-select-vendor.png width=1920 height=737 /></p>
+<p><span class=cmd>確認対象</span> セクションには、対応する6つのクレデンシャルがすべて表示されます。 その後、各クレデンシャルに登録した顧客社APIを連携できます。</p>
+</li>
+<li class="">
+<p>左サイドバーで <span class=cmd>顧客先API連携</span> が有効になったらクリックしてください。</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p><span class=cmd>顧客先API連携</span> は、<span class=cmd>アクセス方法</span> が <span class=cmd>お客様の確認</span> または <span class=cmd>混合 / 高度な方法</span> に設定されているときに有効になります。</p>
+</li>
+<li class="">
+<p>この段階では保存は不要です。 連携するAPIを登録するには、<a href=#vendorApiregistration>#vendorApiregistration</a>を参照してください。</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=vendorApiregistration>2段階 — 顧客社API登録<a href=#vendorApiregistration class=hash-link aria-label="2段階 — 顧客社API登録 への直接リンクとコピー" title="2段階 — 顧客社API登録 への直接リンクとコピー" translate=no>​</a></h3>
+<div class=fdsteps_tUGx><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=api追加>API追加<a href=#api追加 class=hash-link aria-label="API追加 への直接リンクとコピー" title="API追加 への直接リンクとコピー" translate=no>​</a></h4><ol>
+<li class="">
+<p>画面右上の <span class=cmd>API</span> ボタンをクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-place-group-service-vendor-api.png width=1920 height=623 /></p>
+</li>
+<li class="">
+<p><span class=cmd>API</span> パネルが表示されたら、必要な情報を入力してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-place-group-service-vendor-api-set-pannel.png width=1920 height=1080 /></p>
+</li>
+</ol></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=基本情報入力>基本情報入力<a href=#基本情報入力 class=hash-link aria-label="基本情報入力 への直接リンクとコピー" title="基本情報入力 への直接リンクとコピー" translate=no>​</a></h4><table><thead><tr><th>フィールド<th>説明<th style=text-align:center>必須かどうか<th>入力ルール<tbody><tr><td><span class=cmd>コネクタ名</span><td>この連携を識別する名前を入力してください。<td style=text-align:center>必須<td>最大64文字まで入力できます。<tr><td><span class=cmd>認証方式</span><td>このAPIを使用するクレデンシャルを選択してください。<td style=text-align:center>必須<td>6つのタイプから1つを選択してください。<tr><td><span class=cmd>Webhook URL</span><td>顧客社Webhook URLです。<td style=text-align:center>必須<td><code>https://</code>で始まる必要があり、最大512文字です。 <code>http://</code> URLは保存できません。</table><div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p><span class=cmd>認証方式</span> は一度設定すると変更できません。 他のクレデンシャルタイプで使うには、新しいAPIを登録してください。</div></div><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=リクエスト仕様>リクエスト仕様<a href=#リクエスト仕様 class=hash-link aria-label="リクエスト仕様 への直接リンクとコピー" title="リクエスト仕様 への直接リンクとコピー" translate=no>​</a></h4><p>CLUeは、登録したURLに<strong>HTTP POST</strong>、<code>Content-Type: application/json</code>リクエストのみ送信します。 顧客社APIはこの形式のリクエストを受信できる必要があり、<code>GET</code>、<code>PUT</code> など他のメソッドのみを許可するエンドポイントは使用できません。<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=responseSpec>応答仕様<a href=#responseSpec class=hash-link aria-label="応答仕様 への直接リンクとコピー" title="応答仕様 への直接リンクとコピー" translate=no>​</a></h4><p>顧客社APIは応答ヘッダーに <code>Content-Type: application/json</code> を含め、応答本文をJSON形式で返す必要があります。 HTMLエラーページ、プレーンテキスト、XMLなどのJSON以外の応答はCLUeがパースできないため、テストと実際の入室検証の両方が失敗します。<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockTitle_OeMC>Example response body</div><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-json codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">   </span><span class="token property" style=color:#36acaa>"valid"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token boolean" style=color:#36acaa>true</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">   </span><span class="token property" style=color:#36acaa>"message"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"Access granted."</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></div></code></pre></div></div><p>上の例では、判定基準の <code>Key</code> を <code>$.valid</code>、<code>Value</code> を <code>true</code>（<code>BOOLEAN</code>）に設定して成功条件を定義し、<span class=cmd>成功メッセージ JSONPath</span> を <code>$.message</code> に設定して成功メッセージを表示できます。 実際のキー名と構造は、顧客社API仕様に合わせてください。<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>登録制限</strong><p>クレデンシャルタイプごとに最大<strong>3件</strong>のAPIを登録できます。 つまり、顔、指紋、RFカード、PIN、CLUe QR、カスタムQRの6タイプを合わせて、プレース グループごとに最大18件のAPIを登録できます。 すでに3件登録されているクレデンシャルタイプには、追加登録できません。 各クレデンシャルで実際に使用するAPIは、<a href=#credentialApiAssignment>#credentialApiAssignment</a>で選択します。</div></div></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=カスタムヘッダー追加>カスタムヘッダー追加<a href=#カスタムヘッダー追加 class=hash-link aria-label="カスタムヘッダー追加 への直接リンクとコピー" title="カスタムヘッダー追加 への直接リンクとコピー" translate=no>​</a></h4><p>顧客社APIで<strong>Authentication</strong>/<strong>Authorization headers</strong>を要求する場合は、カスタムヘッダーを追加してください。<blockquote>
+<p>例: <code>Authorization</code>トークン、APIキー</p>
+</blockquote><p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-custom-header.png width=598 height=212 /><table><thead><tr><th>フィールド<th>説明<tbody><tr><td><span class=cmd>ヘッダー名</span><td>ヘッダー名（例: <code>Authorization</code>）を入力してください。 重複した名前は許可されません。<tr><td><span class=cmd>ヘッダー値</span><td>ヘッダー値を入力してください。</table><ul>
+<li class="">
+<p>カスタムヘッダーは最大<strong>10件</strong>まで追加できます。</p>
+</li>
+<li class="">
+<p>顧客社APIが公開エンドポイントである場合や、別途ヘッダーが不要な場合は、このセクションを空のままにしてください。</p>
+</li>
+<li class="">
+<p>行を挿入するには <span class=cmd>追加</span> ボタンをクリックし、削除するには <svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 16 16"><title>Delete</title><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=1.333 d="m12 4-8 8m0-8 8 8"/></svg> ボタンをクリックしてください。</p>
+</li>
+</ul><div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>固定ヘッダーは設定できません</strong><p><code>Content-Type</code> と <code>Accept</code> はカスタムヘッダーとして追加できません。 CLUeが内部的に <code>Content-Type: application/json</code> と <code>Accept: application/json</code> を固定値で送信するため、管理者が別途指定する必要はありません。 この名前でヘッダーを追加しようとしても保存されません。 顧客社APIは、この2つのヘッダーを前提に設計してください。</div></div></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=自動フィールド選択>自動フィールド選択<a href=#自動フィールド選択 class=hash-link aria-label="自動フィールド選択 への直接リンクとコピー" title="自動フィールド選択 への直接リンクとコピー" translate=no>​</a></h4><p><span class=cmd>自動フィールド</span>は、システムがリクエスト本文に<strong>自動で入力する値</strong>です。 使用できる自動フィールドは、クレデンシャルタイプによって異なります。 各フィールドの値の位置は <code>{{...}}</code> <strong>プレースホルダー</strong>で表示され、リクエスト時に実際のデバイス/ユーザー値に置き換えられます。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-auto-field.png width=598 height=281 /><table><thead><tr><th>基本キー<th>プレースホルダー（値の位置）<th>使用可能対象<th>実際の値<tbody><tr><td><code>deviceId</code><td><code>{{DEVICE_SERIAL}}</code><td>すべてのクレデンシャルタイプ<td>要求したデバイスのシリアル番号<tr><td><code>userKey</code><td><code>{{USER_KEY}}</code><td>顔 / 指紋 / CLUe QR<td>CLUeが管理するユーザー識別子<tr><td><code>rfCard</code><td><code>{{CARD_NUMBER}}</code><td>RFカード<td>提示したカード番号<tr><td><code>uniquePin</code><td><code>{{UNIQUE_PIN}}</code><td>ユーザーPIN<td>入力したPIN値<tr><td><code>qrCode</code><td><code>{{QR_CODE}}</code><td>カスタムQR<td>QRペイロード</table><div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>フィールド選択ルール</strong><ul>
+<li class="">
+<p>各フィールド左側のチェックボックスで、<strong>リクエストに含めるかどうかを決定</strong>します。</p>
+</li>
+<li class="">
+<p>すべてを選択する必要はありません。 顧客社APIが判定に実際に必要とする値だけを選択してください。 不要なデータを減らすと、問題の診断が容易になります。</p>
+</li>
+<li class="">
+<p>キー（フィールド名）は編集できます。 顧客社APIが要求する名前（例: <code>userKey → employeeId</code>）に合わせて変更してください。 値の位置のプレースホルダーはシステムで固定されるため、変更できません。</p>
+</li>
+<li class="">
+<p>各フィールドのデータ形式（例: <code>STRING</code>）は、フィールド右側に表示されます。</p>
+</li>
+</ul></div></div><div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>5つ以外のプレースホルダーは追加できません。 顧客社APIが追加値を要求する場合は、<a href=#manualField>#manualField</a>を参照して固定値を追加するか、顧客社と相談してデバイスシリアル番号やユーザーキーから顧客社側で派生させるようにしてください。</p>
+</li>
+<li class="">
+<p>自動フィールドと手動フィールドを合わせて、リクエスト本文に最大<strong>10件</strong>のフィールドを含められます。 自動フィールドを多く選択するほど、使用できる手動フィールド数は減ります。</p>
+</li>
+</ul></div></div></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=manualField>手動フィールド追加<a href=#manualField class=hash-link aria-label="手動フィールド追加 への直接リンクとコピー" title="手動フィールド追加 への直接リンクとコピー" translate=no>​</a></h4><p>顧客社APIが固定値をリクエストに含めるよう要求する場合は、手動フィールドを追加してください。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-manual-field.png width=598 height=204 /><table><thead><tr><th>フィールド<th>説明<tbody><tr><td><span class=cmd>フィールド名</span><td>フィールド名は一意である必要があり、自動フィールド名とも異なる必要があります。<tr><td><strong>フィールドタイプ</strong><td><code>STRING</code>、<code>NUMBER</code>、<code>BOOLEAN</code> から選択してください。<tr><td><span class=cmd>値</span><td>このフィールドの値を入力してください。 選択したタイプに応じて、適切なJSONデータ型に変換されます。<br/> 例: <code>NUMBER: 123</code>、<code>STRING: \"123\"</code>、<code>BOOLEAN: true/false</code></table><ul>
+<li class="">
+<p>自動フィールドと手動フィールドを合わせて、最大<strong>10件</strong>まで含められます。</p>
+</li>
+<li class="">
+<p>追加された手動フィールドがない場合は、<span class=cmd>手動フィールドが定義されていません。</span> メッセージが表示されます。</p>
+</li>
+<li class="">
+<p>行を挿入するには <span class=cmd>追加</span> ボタンをクリックし、削除するには <svg xmlns=http://www.w3.org/2000/svg width=20 height=20 fill=none viewBox="0 0 18 18"><title>Delete</title><path fill=#ff5252 d="M12.193 6.387H5.806v-.58H7.55v-.581h2.903v.58h1.741z"/><path fill=#ff5c5c d="M11.613 11.613a1.16 1.16 0 0 1-1.043 1.155l-.119.006H7.548l-.118-.006a1.16 1.16 0 0 1-1.037-1.037l-.006-.118V6.968h5.226zm-4.645 0c0 .32.26.58.58.58h2.903c.321 0 .581-.26.582-.58V7.55H6.968z"/><path fill=#ff5c5c d="M15.246.004A2.903 2.903 0 0 1 18 2.904v12.193l-.004.15a2.903 2.903 0 0 1-2.9 2.753H2.904A2.903 2.903 0 0 1 0 15.097V2.903a2.903 2.903 0 0 1 2.754-2.9L2.904 0h12.193zM2.903.58A2.32 2.32 0 0 0 .581 2.903v12.194a2.32 2.32 0 0 0 2.322 2.322h12.194a2.32 2.32 0 0 0 2.322-2.322V2.903A2.32 2.32 0 0 0 15.097.581z"/></svg> ボタンをクリックしてください。</p>
+</li>
+</ul></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=apiTest>APIテスト実行<a href=#apiTest class=hash-link aria-label="APIテスト実行 への直接リンクとコピー" title="APIテスト実行 への直接リンクとコピー" translate=no>​</a></h4><p>基本情報、カスタムヘッダー、自動フィールド、手動フィールドを完了したら、判定基準（judgment criteria）を構成する前にテストを実行してください。 テストで得た実際の応答（response）は、判定基準の構成（<a href=#responseParsing>#responseParsing</a>）に必要です。<p><span class=cmd>API</span> パネル右側の <span class=cmd>API テストコンソール</span> を使用してください。<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=テストパラメーター>テストパラメーター<a href=#テストパラメーター class=hash-link aria-label="テストパラメーター への直接リンクとコピー" title="テストパラメーター への直接リンクとコピー" translate=no>​</a></h5><p>テストコンソールに表示される入力フィールドは、クレデンシャルタイプによって異なります。 <span class=cmd>端末 ID</span>（デバイスシリアル番号）はすべてのタイプで必須です。残りの入力値は、該当クレデンシャルタイプで使う値を顧客社が管理する形式のまま入力してください。<table><thead><tr><th>認証方式<th>入力する値<th>対応するプレースホルダー<tbody><tr><td>すべてのタイプ<td><span class=cmd>端末 ID</span> — 9~12桁の数字、デバイスシリアル番号<td><code>{{DEVICE_SERIAL}}</code><tr><td>顔 / 指紋 / CLUe QR<td><span class=cmd>ユーザー キー</span> — 1~64文字、CLUeが管理するユーザー識別子<td><code>{{USER_KEY}}</code><tr><td>RFカード<td>顧客社が管理する<strong>カード番号</strong><td><code>{{CARD_NUMBER}}</code><tr><td>ユーザーPIN<td>顧客社が管理する<strong>ユーザーPIN</strong><td><code>{{UNIQUE_PIN}}</code><tr><td>カスタムQR<td>顧客社が管理する<strong>QRペイロード</strong><td><code>{{QR_CODE}}</code></table><p>テストコンソールに入力した値は、自動フィールドのプレースホルダーを置き換え、実際のリクエスト本文として送信されます。 テストでは、顧客社データベースに実際に存在する値を入力し、許可と拒否の応答の両方を確認してください。 実運用環境では、デバイスが認識した値が自動で代入されます。<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=テスト実行>テスト実行<a href=#テスト実行 class=hash-link aria-label="テスト実行 への直接リンクとコピー" title="テスト実行 への直接リンクとコピー" translate=no>​</a></h5><ol>
+<li class="">
+<p>コンソール下部の <span class=cmd>テスト実行</span> ボタンをクリックしてください。</p>
+</li>
+<li class="">
+<p>テスト実行中は進行表示が出ます。</p>
+</li>
+<li class="">
+<p>結果を受け取ると、リクエスト/レスポンス内容が <span class=cmd>ターミナル出力</span> コンソール領域に表示されます。</p>
+</li>
+</ol><p>実行中にパネルを閉じるか、前のステップへ移動するとテストは中断されます。<p>応答を正常に受信したら、次のステップに進み、応答内容を基に判定基準（judgment criteria）を構成してください。 URL、ヘッダー、フィールド設定の問題で応答を受信できなかった場合は、該当入力値を確認してから再度テストしてください。<div class="theme-admonition theme-admonition-note admonition_Gfwi alert alert--secondary"><div class=admonitionContent_UjKb><div class=admNote><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div><p><strong>保存前の必須条件</strong><p><span class=cmd>設定を保存</span> ボタンは、少なくとも1回テストに成功すると有効になります。 ここでの成功とは、顧客社サーバーから何らかのHTTP応答（4xx、5xxを含む）を受信したことを意味します。 ネットワークエラーで応答を受信できなかった場合は保存できません。</div></div><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=テスト失敗例--応答本文がjsonではない場合>テスト失敗例 — 応答本文がJSONではない場合<a href=#テスト失敗例--応答本文がjsonではない場合 class=hash-link aria-label="テスト失敗例 — 応答本文がJSONではない場合 への直接リンクとコピー" title="テスト失敗例 — 応答本文がJSONではない場合 への直接リンクとコピー" translate=no>​</a></h5><p>顧客社サーバーが応答を返しても、本文がJSON形式でないか、応答ヘッダーの <code>Content-Type</code> が <code>application/json</code> でない場合は、テストコンソールにエラーと失敗ログが表示され、<span class=cmd>設定を保存</span> ボタンは有効になりません。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-test-fail-sample.png width=1920 height=1080 /><p><a href=#responseSpec>#responseSpec</a>を参照し、顧客担当者と一緒にAPIが次の2条件を両方満たすか確認してください。<ul>
+<li class="">
+<p>応答ヘッダーに <code>Content-Type: application/json</code> が含まれているか</p>
+</li>
+<li class="">
+<p>応答本文が有効なJSONか（HTMLエラーページ、プレーンテキスト、XMLなどではないか）</p>
+</li>
+</ul></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=responseParsing>応答パース設定<a href=#responseParsing class=hash-link aria-label="応答パース設定 への直接リンクとコピー" title="応答パース設定 への直接リンクとコピー" translate=no>​</a></h4><p>受信した応答を基に、この段階でどの応答を入室許可（成功）として解釈するかを定義します。 設定した基準に一致する応答は入室許可として、それ以外はすべて入室拒否として処理します。<p>判定モードは、入力したフィールドに応じて自動で決まります。 <span class=cmd>statusCode</span> と <span class=cmd>成功結果</span> <span class=cmd>JSONPath</span> の少なくとも1つは必ず入力する必要があり、両方空のままでは保存できません。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-test-success.png width=1022 height=380 /><table><thead><tr><th>#<th>モード<th>入力<th>成功基準<tbody><tr><td>1<td>応答コード検証<td><span class=cmd>statusCode</span> のみ<td>HTTPステータスコードが一覧の値のいずれかと一致すると成功します。<tr><td>2<td>応答本文検証<td><span class=cmd>成功結果</span> <span class=cmd>JSONPath</span> のみ<td>HTTP応答コードに関係なく、本文の <code>Key = Value</code> 条件を満たすと成功します。 条件を満たせば、4xx/5xx応答でも許可されます。<tr><td>3<td>結合検証<td>両方<td>ステータスコードが一致し、同時に本文条件も満たすと成功します。 ステータスコードが一致しない場合は、本文を評価しません。</table><p><span class=cmd>statusCode</span>（モード1、3で使用）<ul>
+<li class="">
+<p>100〜399の範囲の整数のみ指定できます。 <code>4xx</code>、<code>5xx</code>コードは成功として指定できません。</p>
+</li>
+<li class="">
+<p>最大3件まで指定でき、重複値は許可されません。</p>
+</li>
+<li class="">
+<p>複数値を指定した場合は、いずれか1つでも一致すれば成功（例: <code>200</code>、<code>201</code>）として処理します。</p>
+</li>
+</ul><p><span class=cmd>成功結果</span> <span class=cmd>JSONPath</span>（モード2、3で使用）<ul>
+<li class="">
+<p>成功応答を識別する <code>Key</code>、<code>Value</code>、データ形式（<code>BOOLEAN</code>、<code>STRING</code>、<code>NUMBER</code>）を入力します。</p>
+</li>
+<li class="">
+<p>成功キー条件は1件だけ設定できます。</p>
+</li>
+<li class="">
+<p>この条件に一致しない応答は入室拒否として処理されます。</p>
+</li>
+</ul><p><span class=cmd>成功メッセージ JSONPath</span> / <span class=cmd>失敗メッセージ JSONPath</span>（オプション）<ul>
+<li class="">
+<p>認証成功/失敗時に、それぞれデバイス画面に表示する文字列を抽出するキーを指定します。 通常は <code>$.message</code> を使用します。</p>
+</li>
+<li class="">
+<p>指定しなくても保存できます。 空のままにすると、許可/拒否のみ判定し、デバイス画面にメッセージは表示されません。</p>
+</li>
+<li class="">
+<p>成功と失敗で異なるキーを指定できます。</p>
+</li>
+<li class="">
+<p>指定したキーの値は必ず文字列である必要があり、デバイス画面サイズを考慮して長すぎないようにしてください。</p>
+</li>
+</ul><div class="theme-admonition theme-admonition-tip admonition_Gfwi alert alert--success"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>ヒント</div><div class=admonitionContent_UjKb><p><strong>JSONPathを直接入力しづらい場合</strong><p>応答領域からフィールドを <span class=cmd>成功結果</span> <span class=cmd>JSONPath</span>、<span class=cmd>成功メッセージ JSONPath</span>、<span class=cmd>失敗メッセージ JSONPath</span> の入力欄へドラッグ＆ドロップすると、JSONパスが自動で入力されます。 JSONPathを直接書く必要はありません。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-test-success-sample.png width=1920 height=1080 /></div></div></div><div class=fdstep_hOfH><h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=save>保存<a href=#save class=hash-link aria-label="保存 への直接リンクとコピー" title="保存 への直接リンクとコピー" translate=no>​</a></h4><p><span class=cmd>API</span> パネル下部の <span class=cmd>設定を保存</span> ボタンは、すべての必須項目と判定基準が正しく入力され、APIテストが少なくとも1回成功したときに有効になります。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-test-success-save.png width=1920 height=1080 /><ul>
+<li class="">
+<p>必須フィールドの不足、URL形式エラー、指定タイプに変換できない手動フィールド値、判定基準の未入力、テスト未成功（ネットワークエラー含む）のいずれかがある場合、<span class=cmd>設定を保存</span> ボタンは無効のままです。</p>
+</li>
+<li class="">
+<p>登録を完了するには、<span class=cmd>設定を保存</span> ボタンをクリックしてください。</p>
+</li>
+</ul><p>APIを保存するとパネルが閉じ、新しく登録したAPIが一覧にカードとして表示されます。 カードには、名前、クレデンシャルタイプ、登録済みURLなどの情報が表示されます。<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-list.png width=1920 height=569 /><ul>
+<li class="">
+<p>APIを編集するには、カードをクリックしてください。 編集パネルが開きます。 <span class=cmd>コネクタ名</span>、<span class=cmd>Webhook URL</span>、<span class=cmd>自動フィールド</span>、<span class=cmd>手動フィールド</span>、<span class=cmd>レスポンス解析</span> を編集できます。 <span class=cmd>認証方式</span> は編集できません。</p>
+</li>
+<li class="">
+<p><span class=cmd>削除</span>: 登録したAPIを削除します。 このAPIがクレデンシャルに連携されていた場合、その連携も自動で解除され、変更はすぐにデバイスへ適用されます。 連携解除されたクレデンシャルは、その後は顧客社検証なしでデバイス本体認証のみで動作します。 運用の空白が心配な場合は、削除前に代替APIを先に登録して連携してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-integ-list-edit.png width=1920 height=1080 /></p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=credentialApiAssignment>3段階 — 各クレデンシャルへのAPI割り当て<a href=#credentialApiAssignment class=hash-link aria-label="3段階 — 各クレデンシャルへのAPI割り当て への直接リンクとコピー" title="3段階 — 各クレデンシャルへのAPI割り当て への直接リンクとコピー" translate=no>​</a></h3>
+<p>画面左側のサイドバーで <span class=cmd>サービス設定</span> → <span class=cmd>サービス設定</span> をクリックしてください。 <span class=cmd>確認対象</span> セクションで、各クレデンシャルに使用するAPIを指定してください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-service-verify-vendor.png width=1920 height=1080 /></p>
+<ul>
+<li class="">
+<p>各クレデンシャル横のドロップダウンをクリックすると、登録済みAPIの一覧が表示されます。 選択したクレデンシャルと<span class=cmd>認証方式</span>が一致するAPIのみ表示されます。</p>
+</li>
+<li class="">
+<p>顔、指紋、RFカード、PIN、CLUe QR、カスタムQRの各クレデンシャルに使用するAPIを選択してください。 クレデンシャルごとに異なるAPIを指定できます。</p>
+</li>
+<li class="">
+<p>APIを指定していないクレデンシャルは、デバイス本体認証のみで動作します。 そのクレデンシャルには顧客社APIへの検証リクエストは送信されません。 顧客社検証が不要と判断したクレデンシャルだけを、未指定のままにしてください。</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=保存と適用ルール>保存と適用ルール<a href=#保存と適用ルール class=hash-link aria-label="保存と適用ルール への直接リンクとコピー" title="保存と適用ルール への直接リンクとコピー" translate=no>​</a></h4>
+<p>クレデンシャルに登録したAPIを指定して <span class=cmd>修正</span> ボタンをクリックすると、変更を下位プレースに適用するかどうかの確認ダイアログが表示されます。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-service-verify-vendor-edit-save.png width=1920 height=1080 /></p>
+<ul>
+<li class="">
+<p><span class=cmd>確認</span>: 同じ設定が現在のプレース グループのすべての下位プレースに即時適用されます。 既存のプレース別上書きは、プレース グループ値で上書きされます。</p>
+</li>
+<li class="">
+<p><span class=cmd>キャンセル</span>: 変更を保存しません。</p>
+</li>
+</ul>
+<p>ほとんどの場合、プレース グループレベルの設定だけで、すべての下位プレースを同じように運用できます。 特定のプレースに別のAPIを上書きする方法は、<a href=#spaceOverride>#spaceOverride</a>を参照してください。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=spaceOverride>4段階 — プレース別上書き設定（オプション）<a href=#spaceOverride class=hash-link aria-label="4段階 — プレース別上書き設定（オプション） への直接リンクとコピー" title="4段階 — プレース別上書き設定（オプション） への直接リンクとコピー" translate=no>​</a></h3>
+<p>プレース グループから継承した設定とは別に、特定のプレースにだけ別のAPIを指定する方法を案内します。 特定のプレースにのみ適用した設定は、他のプレースや上位のプレース グループに影響しません。</p>
+<ol>
+<li class="">
+<p>プレース グループ配下の特定のプレースへ移動してください。</p>
+</li>
+<li class="">
+<p>画面左側のサイドバーで <span class=cmd>設定</span> → <span class=cmd>サービス設定</span> をクリックしてください。</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/ja/clue/clue-vendor-api-place-service-assign-api.png width=1920 height=1080 /></p>
+</li>
+<li class="">
+<p><span class=cmd>確認対象</span> セクションの各クレデンシャルのドロップダウンで、<strong>このプレースでのみ使用する別のAPI</strong>を選択してください。</p>
+</li>
+<li class="">
+<p>変更を保存するには、<span class=cmd>修正</span> ボタンをクリックしてください。</p>
+</li>
+</ol>
+<p>変更は現在のプレースにのみ保存されます。 他のプレースには適用されません。</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><p>そのプレースに管理者として招待されたプレース管理者だけが、<span class=cmd>設定</span> → <span class=cmd>サービス設定</span> にアクセスできます。</div></div>
+<div class="theme-admonition theme-admonition-caution admonition_Gfwi alert alert--warning"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_UjKb><p>特定のプレースにAPIを指定した後、上位のプレース グループでクレデンシャル-API指定を変更して保存すると、プレース別上書きはプレース グループ値で上書きされます。 プレース グループ変更後もプレース別設定を維持する必要がある場合は、プレース グループ更新後に特定のプレースの <span class=cmd>設定</span> → <span class=cmd>サービス設定</span> で再指定してください。</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=入力ルール要約>入力ルール要約<a href=#入力ルール要約 class=hash-link aria-label="入力ルール要約 への直接リンクとコピー" title="入力ルール要約 への直接リンクとコピー" translate=no>​</a></h2>
+<table><thead><tr><th>フィールド<th style=text-align:center>必須かどうか<th>ルール<tbody><tr><td><span class=cmd>コネクタ名</span><td style=text-align:center>必須<td>最大64文字<tr><td><span class=cmd>認証方式</span><td style=text-align:center>必須<td>保存後は変更不可<tr><td><span class=cmd>Webhook URL</span><td style=text-align:center>必須<td><code>https://</code>必須 / 最大512文字 / CLUeはこのURLに<strong>HTTP POST</strong>/<code>application/json</code>リクエストのみ送信<tr><td><span class=cmd>認証方式</span> API数<td style=text-align:center>-<td>クレデンシャルタイプごとに最大<strong>3件</strong>のAPI登録が可能<tr><td><span class=cmd>カスタムヘッダー</span><td style=text-align:center>任意<td>Key/Valueペアは最大10件 / 重複名不可（大文字小文字を区別しない）<tr><td><span class=cmd>自動フィールド</span><td style=text-align:center>任意<td>チェックした項目のみリクエストに含める / キー（名前）は編集可能 / 値はシステムが自動入力<tr><td><span class=cmd>手動フィールド</span><td style=text-align:center>任意<td>自動フィールドと合わせて最大<strong>10件</strong>登録 / 重複名不可 / 値は指定したタイプ（<code>STRING</code>/<code>NUMBER</code>/<code>BOOLEAN</code>）に応じてJSONデータに変換される<tr><td><span class=cmd>ユーザー キー</span>(テスト)<td style=text-align:center><span class=cmd>認証方式</span>によって異なる<td>1〜64文字<tr><td><span class=cmd>端末 ID</span>(テスト)<td style=text-align:center>必須<td>9〜12桁の数字のみ<tr><td><span class=cmd>レスポンス解析</span><td style=text-align:center>-<td><span class=cmd>statusCode</span> または <span class=cmd>成功結果</span> <span class=cmd>JSONPath</span> の少なくとも1つが<strong>必須</strong>（両方入力すると結合検証が有効化）<tr><td><span class=cmd>statusCode</span><td style=text-align:center>-<td>100〜399の範囲の整数 / 最大3件 / 重複不可<tr><td><span class=cmd>成功結果</span> <span class=cmd>JSONPath</span><td style=text-align:center>-<td>1件: <code>Key</code> + <code>Value</code> + データ形式（<code>BOOLEAN</code>/<code>STRING</code>/<code>NUMBER</code>）<tr><td><span class=cmd>成功メッセージ JSONPath</span>/<span class=cmd>失敗メッセージ JSONPath</span><td style=text-align:center>任意<td>指定すると応答本文から抽出するキー（値は文字列である必要があり、デバイス画面サイズを考慮する必要あり）、指定しないとデバイスにメッセージは表示されない<tr><td>保存条件<td style=text-align:center>-<td>テスト成功時のみ保存可能</table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=troubleshooting>トラブルシューティング<a href=#troubleshooting class=hash-link aria-label="トラブルシューティング への直接リンクとコピー" title="トラブルシューティング への直接リンクとコピー" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=accessTroubleshooting>入室問題（段階別診断）<a href=#accessTroubleshooting class=hash-link aria-label="入室問題（段階別診断） への直接リンクとコピー" title="入室問題（段階別診断） への直接リンクとコピー" translate=no>​</a></h3>
+<p><a href=#settingWorkflow>#settingWorkflow</a>を参照して、問題箇所を絞り込んでください。</p>
+<table><thead><tr><th style=text-align:center>手順<th>症状<th>確認事項<tbody><tr><td style=text-align:center>1<td>特定のクレデンシャルが認識されない<td>クレデンシャルがデバイスに登録され、有効になっているか確認してください。<tr><td style=text-align:center>2<td>デバイス-サーバー間の通信失敗<td>ネットワーク接続状態、デバイス登録状態を確認してください。<tr><td style=text-align:center>3<td>リクエストが顧客社サーバーに到達しない<td>登録済みURL（HTTPS）、カスタムヘッダー、ファイアウォールルールを確認してください。<tr><td style=text-align:center>4<td>顧客社は応答するが、すべての試行が拒否される<td>判定基準（判定モード、成功キー/値、HTTPステータスコード）を確認してください。<tr><td style=text-align:center>5<td>許可/拒否は正しく動作するが、メッセージが表示されない<td><span class=cmd>成功メッセージ JSONPath</span>/<span class=cmd>失敗メッセージ JSONPath</span>、応答本文のメッセージ文字列を確認してください。</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=-ボタン無効><span class="cmd normal">設定を保存</span> ボタン無効<a href=#-ボタン無効 class=hash-link aria-label="-ボタン無効 への直接リンクとコピー" title="-ボタン無効 への直接リンクとコピー" translate=no>​</a></h3>
+<p><span class=cmd>設定を保存</span> ボタンをクリックできない場合は、次の項目を順番に確認してください。</p>
+<ul>
+<li class="">
+<p><strong>必須フィールド</strong>: <span class=cmd>コネクタ名</span>、<span class=cmd>認証方式</span>、<span class=cmd>Webhook URL</span> のうち空の項目がないか確認してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>Webhook URL</span>: <code>https://</code>で始まり、最大長（512文字）を超えていないか確認してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>手動フィールド</span>: 値を指定したタイプ（<code>STRING</code>/<code>NUMBER</code>/<code>BOOLEAN</code>）に変換できるか確認してください</p>
+<blockquote>
+<p>例: <code>NUMBER</code>に数字以外の文字を入力した場合</p>
+</blockquote>
+</li>
+<li class="">
+<p><span class=cmd>レスポンス解析</span>: <span class=cmd>statusCode</span> または <span class=cmd>成功結果</span> <span class=cmd>JSONPath</span> の少なくとも1つを入力したか確認してください。</p>
+<ul>
+<li class="">
+<p><span class=cmd>成功結果</span> <span class=cmd>JSONPath</span>を使用する場合は、<code>Key</code>、<code>Value</code>、データ形式をすべて入力したか確認してください。</p>
+</li>
+<li class="">
+<p><span class=cmd>成功メッセージ JSONPath</span>/<span class=cmd>失敗メッセージ JSONPath</span>はオプションで、保存に影響しません。</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>APIテスト</strong>: 少なくとも1回テストに成功したか確認してください。 テスト成功なしでは保存できません。</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=テスト失敗>テスト失敗<a href=#テスト失敗 class=hash-link aria-label="テスト失敗 への直接リンクとコピー" title="テスト失敗 への直接リンクとコピー" translate=no>​</a></h3>
+<p>テスト失敗は3種類に分かれます。</p>
+<ul>
+<li class="">
+<a href=#inputValidation>#inputValidation</a>
+</li>
+<li class="">
+<a href=#requestFailure>#requestFailure</a>
+</li>
+<li class="">
+<a href=#responseMismatch>#responseMismatch</a>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=inputValidation>（A）入力値検証段階でブロックされた<a href=#inputValidation class=hash-link aria-label="（A）入力値検証段階でブロックされた への直接リンクとコピー" title="（A）入力値検証段階でブロックされた への直接リンクとコピー" translate=no>​</a></h4>
+<p>入力値がルールに合わず、リクエスト自体が送信されません。</p>
+<table><thead><tr><th>症状<th>確認事項<tbody><tr><td>Webhook URL形式エラー<td><span class=cmd>Webhook URL</span> が <code>https://</code>で始まり、512文字を超えないか確認してください。<tr><td>判定基準キー形式エラー<td><span class=cmd>成功結果</span> <span class=cmd>JSONPath</span>/<span class=cmd>成功メッセージ JSONPath</span>/<span class=cmd>失敗メッセージ JSONPath</span> が <code>$.</code> で始まるJSONPath形式（最大128文字）か確認してください。<tr><td>判定基準未指定<td><span class=cmd>statusCode</span> または <span class=cmd>成功結果</span> <span class=cmd>JSONPath</span> の少なくとも1つを入力したか確認してください。<tr><td>成功ステータスコード範囲/件数エラー<td>各値が100〜399の範囲内か、3件以下か、重複がないか確認してください。<tr><td>フィールドキー重複<td><span class=cmd>自動フィールド</span> と <span class=cmd>手動フィールド</span> のキーが互いに重複なく一意か確認してください。<tr><td>リクエストヘッダーキー重複<td>リクエストヘッダーキーが互いに重複なく一意か（大文字小文字を区別しない）確認してください。<tr><td>制限されたヘッダー名を使用<td><code>Content-Type</code> または <code>Accept</code> をカスタムヘッダーとして追加していないか（大文字小文字を区別しないシステム固定値）確認してください。<tr><td>フィールド/ヘッダー数超過<td><span class=cmd>自動フィールド</span> と <span class=cmd>手動フィールド</span> のフィールドが最大10件、カスタムヘッダーが最大10件か確認してください。<tr><td><span class=cmd>認証方式</span> 登録件数超過<td>該当クレデンシャルタイプにすでに3件のAPIが登録されているか確認してください。<tr><td><span class=cmd>ユーザー キー</span> 形式エラー<td>テストコンソールの <span class=cmd>ユーザー キー</span> が、許可文字（英字、数字、<code>-</code>、<code>_</code>、<code>@</code>、<code>.</code>）の範囲と1〜64文字の長さを満たすか確認してください。<tr><td><span class=cmd>端末 ID</span> 形式エラー<td>テストコンソールの <span class=cmd>端末 ID</span> が9〜12桁の数字か確認してください。</table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=requestFailure>（B）リクエストは送信されたがテスト失敗<a href=#requestFailure class=hash-link aria-label="（B）リクエストは送信されたがテスト失敗 への直接リンクとコピー" title="（B）リクエストは送信されたがテスト失敗 への直接リンクとコピー" translate=no>​</a></h4>
+<p>テスト結果が <code>success = false</code> と表示され、この状態では保存できません。</p>
+<table><thead><tr><th>症状<th>確認事項<tbody><tr><td>接続失敗/ネットワークエラー（顧客社サーバーから応答を受信できない）<td>顧客社サーバーの外部アクセス可否、HTTPS証明書の有効性、ファイアウォール/ポート設定、カスタムヘッダー（期限切れトークン、 টাইポ）<tr><td>タイムアウト（応答なし）<td>顧客社サーバーの応答遅延、ネットワーク状態。 テストは数秒以内に応答がないと失敗として処理します<tr><td>応答は受信したが、本文がJSONではない<td>顧客社がJSON応答を返すか、応答 <code>Content-Type</code> が <code>application/json</code> に設定されているか。 HTMLエラーページ、空テキストなどが該当します</table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=responseMismatch>（C）応答は受信したが期待した結果ではない<a href=#responseMismatch class=hash-link aria-label="（C）応答は受信したが期待した結果ではない への直接リンクとコピー" title="（C）応答は受信したが期待した結果ではない への直接リンクとコピー" translate=no>​</a></h4>
+<p><code>success = true</code> とともに、実際のHTTPステータスコードが <span class=cmd>statusCode</span> に、顧客社の元応答が <span class=cmd>ターミナル出力</span> に表示されます。 保存可能であり、この段階で応答を基に応答パースを構成する必要があります。</p>
+<table><thead><tr><th>症状<th>確認事項<tbody><tr><td>ステータスコードは受信したが、すべての入室が拒否される<td><strong>モード1、3</strong>: 成功として認めるステータスコード一覧を確認してください。 <strong>モード2</strong>: 本文のキー/値条件を確認してください。 ステータスコードは無視されます。<tr><td>本文フィールド条件が一致しない<td><span class=cmd>成功結果</span> <span class=cmd>JSONPath</span> に入力した <code>Key</code>、<code>Value</code>、データ形式（<code>BOOLEAN</code>/<code>STRING</code>/<code>NUMBER</code>）を再確認してください。 応答が <code>"true"</code>（STRING）か <code>true</code>（BOOLEAN）かを確認してください。 タイプが一致している必要があります。<tr><td><span class=cmd>手動フィールド</span> がリクエスト本文で不正な形式として表示される<td><span class=cmd>手動フィールド</span> のタイプ（<code>STRING</code>/<code>NUMBER</code>/<code>BOOLEAN</code>）が実際の入力値と一致しているか再確認してください。</table>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>情報</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>テストAPIは応答本文をパースせずそのまま表示するため、<span class=cmd>ターミナル出力</span> に表示された実際の応答JSONを基に、JSONPath、キー、値の設定を合わせてください。</p>
+</li>
+<li class="">
+<p>デバイス側で失敗原因を特定するには、<a href=#accessTroubleshooting>#accessTroubleshooting</a>を参照してください。</p>
+</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=名前重複の問題>名前重複の問題<a href=#名前重複の問題 class=hash-link aria-label="名前重複の問題 への直接リンクとコピー" title="名前重複の問題 への直接リンクとコピー" translate=no>​</a></h3>
+<p><span class=cmd>自動フィールド</span> と <span class=cmd>手動フィールド</span> のキー名は互いに重複できません。 リクエストヘッダーキーも互いに重複できません。 <span class=cmd>自動フィールド</span> のキー名を変更した場合は、<span class=cmd>手動フィールド</span> と衝突しないか確認してください。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=デバイスにメッセージが表示されない>デバイスにメッセージが表示されない<a href=#デバイスにメッセージが表示されない class=hash-link aria-label="デバイスにメッセージが表示されない への直接リンクとコピー" title="デバイスにメッセージが表示されない への直接リンクとコピー" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>応答本文に <span class=cmd>成功メッセージ JSONPath</span> または <span class=cmd>失敗メッセージ JSONPath</span> で指定したフィールドが実際に存在するか確認してください。</p>
+</li>
+<li class="">
+<p>そのキーの値が<strong>文字列</strong>か確認してください。 数値、オブジェクト、配列は表示されません。</p>
+</li>
+<li class="">
+<p>設定した <span class=cmd>成功メッセージ JSONPath</span> / <span class=cmd>失敗メッセージ JSONPath</span> 名が、実際の応答のキーと正確に一致するか確認してください。</p>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>このページは役に立ちましたか？</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>役に立ちました。</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>改善が必要です。</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/platform/clue/service-settings><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>サービスを設定する</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/platform/clue/fw-update><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>ファームウェアを変更する</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=https://www.linkedin.com/company/suprema-inc- target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVR42u3XPUoEQRCG4WdVTEw1M1UET2BiZKKRJ/AMgjChB5gjGAoGgtGaaayhgWBgZGAqg8Iu4g+OSQWLKP6wO7NIfVF30VS//RXVTXfqujYumjBGSpiESZh/CTP1k0VlWa5jH3fYwM1vNimKYqjObGMWS9hqu0zHqPGI01bLhAOcoY/biM1gOsZvePiQ93VUzlS4wDV2I7YX8QqXWEMX93iJtZujcOY7zX9SvkUcYRXnTbb2V3kmsdPGPXMYbizgaiC+0nSZqmj555ifYDnGc0070xsAgae/HDjfpoRJmGGpk5+4hEmYhEmYlvQO+74srj8PcOoAAAAASUVORK5CYII="/></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR42u2XOwrCQBCGv5UQy2DAJr3gLcRzeI8tbez2IJ4lt4mIViJrk2IZSCGYzYL/DwvzYOGDmdmHizFSilYUJMEIRjC/UvXthhCCDe2AM3AEOuAFPL337ewwRnugB5okVo8re5kuBmTRnjkY/wSsAZelZ4y2if0ArqVM0/u/RxuYenM0Jud0Ai9ZpiGxN6Z8t9ww7UT/3E1Ot7ZgBCMYAKfvrWAEI5iZ9QEdXBhIqJQhWAAAAABJRU5ErkJggg=="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIUlEQVR42u3XP0pDQRDH8U9EIdFCtFARbGJnobWVhwhoYeufA4g5xBNPIJ4g4iU8hIiipVgoahEVwWez1cO8vJgNpNgfbLM7DN+dmZ1ha3meGxdNGCMlmASTYBLMqDXZzyDLshqO0MIC6mhg9o/L/OANH/jEEy5x2m6386FhsIeTASI9FxY0sRkAz2KkaSdCBrZj1Uyzx/49HivCrMaCme+xf421EP78nz4GhpkuOXvFAbZwU2I3EwtmqoLNFTaQDfFQqhlVUB372B1pn8F3SXQaOMQxlvv4iALTDQ2uqHU8YLGijygwLz1gVgbIwHOsAr6NUFN3sWA6EWA6sdJ0Hgq4haXCkCwOyy6+wpB8D4PyIvjoq1r6NyWYBJNgEkyC4Rd70TD9XaltowAAAABJRU5ErkJggg=="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVR42u1WQVLiQBR9/zelBRtzhMwNnBNMPIHMCcATjGwse0VYNdEFzAnQG+AJDCeQGwxHiCssNf+76ViRASXgzMLiVaUq0A15ef/91x/YYYcdviCoymbnXAggYuZARIJV+5g5y/N8RkRTa+3sU8k450IiGhFRVPVtVTVV1ZN1SNE6RIwxd6oaAJgAGItIVihQ3PvPr4oxcwCgCeAHgExEvn9EqPYRGWPMSFUDEelZa+OKwgyTJIkBdIloBOBoY2WccyEz/xGRibU2quItY8ydiEzPz8+PLi4ublU1EpFv76nzrjLMfOjrPl7x0AhAk4gOVPUewNhamwIIVTUgotD//gZA5K+rTcsUAgARZeUv4zgOGo3GQFXbrxITAcCvJEmG8/m8V6/XfxLRDABEJGNmeN9t5hkRCZgZzPyGzP7+/lBVWwCmAHpENMvz/JCZuwBOG41GcHZ2dvKXJ4iCrQxcvFm5NMzcAjCbz+dHcRwXa9PBYDB+enq6VdW2c+7alwwA1soarpySRE1PsFciAgDodDqZqvbK+6qANwixwJOZLlt/fn4uVDj452QKM9dqtfC9DgRw/z+UKdq8G8dxsNhl3sQr42BrAxctDgDW2jRJkmsArXq9fuec64nIlIhCY0zXZ8zvknmLo2E7MostXWBvb+/08fERAFrMPGJ+I/D1w8NDvCwiVDXbJmeWhlWn08kAtJ1zV0TU9Gmbqeq4rMiiMsaYrQ7K1P/ZMYDh4qJ/cLqG6Y9VdWUHrmVga+2MiFIiipIk6W4yvV1eXnb9ITnZeoTI8/zEzzNxv9+PiOimnMgL6RqWS6OqxyIS+Thof9qkx8xXflCqiomItD9l0ltC6hBA+NEM7NVLq8zAO+yww5fEC4LXWfVMU1ZGAAAAAElFTkSuQmCC width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"localStorage"},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>
