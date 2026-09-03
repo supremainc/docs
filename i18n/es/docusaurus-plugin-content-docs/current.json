@@ -309,7 +309,7 @@
   },
   "sidebar.securemodule.category.Secure I/O 2": {
     "message": "Secure I/O 2",
-    "description": "The label for category 'Secure I/O 2' in sidebar 'securemodule'"
+    "description": "La etiqueta de la categoría 'Secure I/O 2' en la barra lateral 'securemodule'"
   },
   "sidebar.securemodule.category.릴리스 노트": {
     "message": "Notas de la Versión",
@@ -589,7 +589,7 @@
   },
   "sidebar.securemodule_ul.category.Secure I/O 2 UL": {
     "message": "Secure I/O 2 UL",
-    "description": "La etiqueta para la categoría 'Secure I/O 2 UL' en la barra lateral 'securemodule_ul'"
+    "description": "La etiqueta de la categoría 'Secure I/O 2 UL' en la barra lateral 'securemodule_ul'"
   },
   "sidebar.bioentryw2_ul.category.BioEntry W2 UL": {
     "message": "BioEntry W2 UL",
@@ -677,6 +677,6 @@
   },
   "sidebar.xpassq2.category.릴리스 노트": {
     "message": "Notas de la Versión",
-    "description": "The label for category '릴리스 노트' in sidebar 'xpassq2'"
+    "description": "La etiqueta de la categoría 'Notas de la versión' en la barra lateral 'xpassq2'"
   }
 }
