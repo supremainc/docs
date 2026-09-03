@@ -145,6 +145,10 @@ const REGEX_PATTERNS = {
  */
 function cleanMdxContent(content) {
   return content
+    // Convert {/* #anchor */} to [#anchor] BEFORE stripping comments, so that
+    // heading anchors defined inside imported partial files (e.g. common/_*.mdx)
+    // survive this cleanup instead of being deleted along with real comments.
+    .replace(REGEX_PATTERNS.anchors, '[#$1]')
     .replace(REGEX_PATTERNS.mdxComments, '')
     .replace(REGEX_PATTERNS.importDeclarations, '')
     .replace(REGEX_PATTERNS.jsxExpressions, '');
