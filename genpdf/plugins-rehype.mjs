@@ -678,7 +678,16 @@ export function rehypeProcessAdmonitions() {
  * Create a rehype plugin that processes <Cmd> components
  * Converts MDX Cmd JSX elements to span elements with proper locale text
  */
-export function rehypeProcessCmdComponent(language = 'ko') {
+function getDeviceNameFromDocPath(docPath) {
+  // device/biostation_3/settings -> biostation_3
+  if (!docPath) return null;
+  const match = docPath.replace(/\\/g, '/').match(/(?:^|\/)device\/([^/]+)\//);
+  return match ? match[1] : null;
+}
+
+export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
+  const deviceName = getDeviceNameFromDocPath(docPath);
+
   const cmdLocaleMap = {
     ko: cmdKo,
     en: cmdEn,
@@ -768,14 +777,12 @@ export function rehypeProcessCmdComponent(language = 'ko') {
         } else if (productAttr === 'dev') {
           const locale = deviceLocaleMap[language] || deviceLocaleMap.en;
           const sidValue = locale[sidAttr];
-          
+
           if (sidValue) {
             const isGroupType = typeof sidValue === 'object' && !Array.isArray(sidValue);
-            if (isGroupType) {
-              localeText = sidValue['common'] || null;
-            } else {
-              localeText = sidValue;
-            }
+            localeText = isGroupType
+              ? (deviceName && sidValue[deviceName]) || sidValue['common'] || null
+              : sidValue;
           }
         } else if (productAttr === 'air') {
           const locale = airLocaleMap[language] || airLocaleMap.en;

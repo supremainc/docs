@@ -184,7 +184,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessTreeviewComponent, language)
     .use(rehypeProcessFaqsComponent, docPath, language)
     .use(rehypeProcessMdxElements, translations, basePath, language)
-    .use(rehypeProcessCmdComponent, language)
+    .use(rehypeProcessCmdComponent, docPath, language)
     .use(rehypeProcessColumnsComponent)
     .use(rehypeProcessBugListsComponent)
     .use(rehypeAddCalloutIcons)
