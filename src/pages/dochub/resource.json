@@ -559,7 +559,7 @@
             "XS2-DPB",
             "XS2-APB"
         ],
-        "version": "1.4.1",
+        "version": "1.4.2",
         "manuals": {
             "ko": "device/xstation_2/X-Station 2_UG_1.11_KO_260616.pdf",
             "en": "device/xstation_2/X-Station 2_UG_1.11_EN_260616.pdf",
@@ -567,8 +567,8 @@
             "ja": "device/xstation_2/X-Station 2_UG_1.11_JA_260616.pdf"
         },
         "release_notes": {
-            "ko": "device/xstation_2/X-Station 2_ReleaseNotes_1.4.1_KO_260417.pdf",
-            "en": "device/xstation_2/X-Station 2_ReleaseNotes_1.4.1_EN_260417.pdf"
+            "ko": "device/xstation_2/X-Station 2_RN_1.4.2_KO_260826.pdf",
+            "en": "device/xstation_2/X-Station 2_RN_1.4.2_EN_260826.pdf"
         },
         "a_e": "device/xstation_2/SUPREMA_X-Station_2_AE-Specification_260622.docx",
         "dt": {
