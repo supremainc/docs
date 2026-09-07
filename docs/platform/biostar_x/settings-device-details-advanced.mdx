@@ -16,7 +16,7 @@ keywords: [장치, 고급]
 :::
 
 
-## 마스터 관리자 추가 {/* #master-administrator */} <Badge only>CE향 제품</Badge>
+## 마스터 관리자 추가 <Badge only>CE향 제품</Badge> {/* #master-administrator */}
 
 <Cmd sid='device.masterAdmin.title' product='2' /> 기능은 장치의 전체 관리자 권한을 강화하여, 장치의 보안을 향상시키고 무단 접근 및 설정 변경을 방지하기 위한 기능입니다. 새 장치는 이 기능을 통해 반드시 마스터 관리자를 등록해야 하며, 등록된 마스터 관리자만 관리자 메뉴에 진입하여 설정을 변경할 수 있습니다.
 
@@ -63,11 +63,13 @@ keywords: [장치, 고급]
 
 * <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않는 장치 중 일부는(예: 펌웨어 업그레이드로 해당 기능이 추가된 장치) <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화할 수 있습니다. 장치 종류에 따라 <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션 자체가 표시되지 않을 수 있습니다.
 
+* 마스터 관리자의 크리덴셜은 장치 내 별도로 저장되어, 일반 사용자의 PIN과는 독립적으로 관리됩니다. 따라서 사용자 PIN을 변경하거나 삭제해도 마스터 관리자 크리덴셜에는 영향을 미치지 않습니다.
+
 :::
 
-## 2단계 인증 설정 {/* #two-step-authentication */}
+## 2단계 인증 설정 <Badge only>CE향 제품</Badge> {/* #two-step-authentication */} 
 
-펌웨어를 업그레이드한 기존 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
+펌웨어를 업그레이드한 CE향 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
 
 <Image src='/img/biostarx-setting-device-adv-two-step.png' />
 
@@ -131,6 +133,8 @@ keywords: [장치, 고급]
 * 각 장치에 설정된 관리자는 **BioStar X** 권한에 영향을 미치지 않습니다.
 
 * 마스터 관리자를 지원하는 장치(<Badge only>CE향 제품</Badge>)에 장치 관리자로 등록한 사용자의 PIN이 8자리 미만이면, 해당 사용자의 PIN을 8자리 이상으로 다시 등록해야 합니다. PIN 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/enroll-credential-pin' />를 참고하세요.
+
+* <Cmd sid='device.operatorLevel.configuration' product='2' /> 권한이 부여된 사용자의 PIN을 4자리로 변경하려면 먼저 모든 장치의 관리자 권한에서 제외해야 합니다.
 
 :::
 

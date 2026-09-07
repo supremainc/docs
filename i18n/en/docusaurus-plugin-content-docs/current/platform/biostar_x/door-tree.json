@@ -29,7 +29,7 @@
     ]
   },
   {
-    "name": "All Elevators",
+    "name": "All Elevator Groups",
     "type": "elevator",
     "children": [
       {

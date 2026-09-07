@@ -37,10 +37,10 @@ description: 출입 통제와 관련된 생성, 수정, 삭제, 조회 등 모�
 | <Cmd sid='audit.column.datetime' /> | 이벤트가 발생한 날짜와 시간입니다. |
 | <Cmd sid='audit.column.user' /> | 이벤트를 수행한 사용자입니다. **id(이름)** 형식으로 표시됩니다. |
 | <Cmd sid='audit.column.accountLevel' /> | 이벤트를 수행한 사용자의 관리자 등급입니다. |
-| <Cmd sid='audit.column.category' /> | 이벤트 대상의 도메인 분류입니다(예: 사용자, 장치, 출입문). |
 | <Cmd sid='audit.column.action' /> | 수행된 동작 종류입니다. <Cmd sid='action.create' />, <Cmd sid='action.update' />, <Cmd sid='action.delete' />, <Cmd sid='action.read' />, <Cmd sid='action.export' />, <Cmd sid='action.import' />, <Cmd sid='action.operation' /> 중 하나로 분류됩니다. |
-| <Cmd sid='audit.column.subAction' /> | 로그인 방식, 알람 해제처럼 세부 동작 이름이 있는 경우에만 표시됩니다. |
+| <Cmd sid='audit.column.category' /> | 이벤트 대상의 도메인 분류입니다(예: 사용자, 장치, 출입문). |
 | <Cmd sid='audit.column.target' /> | 동작이 적용된 대상입니다. **타입: id(이름)** 형식으로 표시됩니다. |
+| <Cmd sid='audit.column.subAction' /> | 로그인 방식, 알람 해제처럼 세부 동작 이름이 있는 경우에만 표시됩니다. |
 | <Cmd sid='audit.column.modifiedFields' /> | 변경되거나 조회된 필드 이름입니다. |
 | <Cmd sid='audit.column.details' /> | 동작별 상세 정보입니다. (예: 변경 값, 사유, 조회 조건 등) |
 | <Cmd sid='audit.column.ip' /> | 사용자가 접속한 IP 주소입니다. 시스템이 자동으로 발급한 기록은 **127.0.0.1**로 표시됩니다. |
@@ -79,7 +79,7 @@ description: 출입 통제와 관련된 생성, 수정, 삭제, 조회 등 모�
 | <Cmd sid='audit.filter.category' /> | 검색 가능한 체크박스 목록에서 하나 이상의 분류를 선택하세요. |
 | <Cmd sid='audit.filter.target' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 대상을 찾으세요. |
 | <Cmd sid='audit.filter.action' /> | 체크박스 목록에서 하나 이상의 동작을 선택하세요. |
-| <Cmd sid='audit.filter.subAction' /> | 검색 가능한 목록에서 세부 작업을 선택하세요. 자세한 내용은 <DocLink inner='#audit-trail-sub-actions' />을 참고하세요. |
+| <Cmd sid='audit.filter.subAction' /> | 검색 가능한 목록에서 세부 작업을 선택하세요. |
 | <Cmd sid='audit.filter.ip' /> | 검색어를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 일치하는 IP를 찾으세요. |
 
 * 적용된 필터가 없으면 현재 날짜로부터 30일 전까지의 기록을 기본 표시합니다.
@@ -107,109 +107,6 @@ description: 출입 통제와 관련된 생성, 수정, 삭제, 조회 등 모�
 1. <Cmd sid='audit.filter.startDatetime' />과 <Cmd sid='audit.filter.endDatetime' />의 날짜와 시각을 각각 지정하세요. <Cmd sid='audit.filter.today' />를 클릭하면 오늘 날짜로 바로 이동합니다.
 
 1. 조회 기간을 적용하려면 <Cmd sid='audit.filter.ok' /> 버튼을 클릭하세요.
-
-### 세부 작업 목록 {/* #audit-trail-sub-actions */}
-
-<Cmd sid='audit.column.subAction' /> 컬럼과 <Cmd sid='audit.filter.subAction' /> 필터에 나타나는 세부 동작 이름을 주제별로 정리했습니다. 각 항목을 클릭하여 세부 내용을 확인하세요.
-
-<details>
-<summary>로그인 및 인증</summary>
-
-* <Cmd sid='audit.system.login' product='2' />, <Cmd sid='audit.system.fingerprint_login' product='2' />, <Cmd sid='audit.system.loginentra' product='2' />, <Cmd sid='audit.system.logout' product='2' />
-
-* **로그인 실패**: <Cmd sid='audit.system.loginfailedidpw' product='2' />, <Cmd sid='audit.system.loginfailedfingerprint' product='2' />, <Cmd sid='audit.system.loginfailedip' product='2' />, <Cmd sid='audit.system.maximum_invalid_attempts' product='2' />
-
-* **세션·토큰**: <Cmd sid='audit.system.sessionProvide' product='2' />, <Cmd sid='audit.system.serviceToken.success' product='2' />, <Cmd sid='audit.system.serviceToken.authFailed' product='2' />, <Cmd sid='audit.system.serviceToken.rateLimit' product='2' />
-
-</details>
-
-<details>
-<summary>시스템 백업</summary>
-
-* <Cmd sid='audit.system.quick_action' />, <Cmd sid='audit.system.backup_started' />, <Cmd sid='audit.system.backup_finished' />, <Cmd sid='audit.system.backup_cancelled' />, <Cmd sid='audit.system.auto_backup_started' />, <Cmd sid='audit.system.auto_backup_finished' />, <Cmd sid='audit.system.auto_backup_cancelled' />
-
-</details>
-
-<details>
-<summary>사용자 관리</summary>
-
-* <Cmd sid='audit.user.change_password' />, <Cmd sid='audit.user.clear_personal_data' />, <Cmd sid='audit.user.device_display_message' product='2' />
-
-* **얼굴 데이터**: <Cmd sid='audit.user.visualface_import' product='2' />, <Cmd sid='audit.user.migration_visualface' product='2' />
-
-* **장치 연동**: <Cmd sid='audit.user.export' product='2' />, <Cmd sid='audit.user.remove' product='2' />
-
-* **장기 미출입 사용자**: <Cmd sid='audit.user.delete.absence' product='2' />, <Cmd sid='audit.user.search.absence' />, <Cmd sid='audit.user.csv_export.absence' product='2' />
-
-* **데이터 가져오기·내보내기**: <Cmd sid='audit.user.csv_import' product='2' />, <Cmd sid='audit.user.csv_export' product='2' />, <Cmd sid='audit.user.data_import' product='2' />, <Cmd sid='audit.user.data_export' product='2' />
-
-* **이메일**: <Cmd sid='audit.user.emailSentSuccess' product='2' />, <Cmd sid='audit.user.emailSentFail' product='2' />
-
-* **리포트 내보내기**: <Cmd sid='audit.data.pdfExport' product='2' />
-
-</details>
-
-<details>
-<summary>카드 및 방문자</summary>
-
-* <Cmd sid='audit.card.block' />, <Cmd sid='audit.card.unblock' />
-
-* <Cmd sid='audit.visitor.check_in' />, <Cmd sid='audit.visitor.check_out' />, <Cmd sid='audit.visitor.delete_personal_data' />
-
-</details>
-
-<details>
-<summary>장치 관리</summary>
-
-* **연결 및 동기화**: <Cmd sid='audit.device.connect' product='2' />, <Cmd sid='audit.device.disconnect' product='2' />, <Cmd sid='audit.device.sync' product='2' />, <Cmd sid='audit.device.sync_time' product='2' />, <Cmd sid='audit.device.move' />
-
-* **설정**: <Cmd sid='audit.device.config_export' />, <Cmd sid='audit.device.config_import' />, <Cmd sid='audit.device.set_network' />, <Cmd sid='audit.device.update_resource' />, <Cmd sid='audit.device.reset_config' />, <Cmd sid='audit.device.change_device_id' />, <Cmd sid='audit.device.set_fingerprint_format' />, <Cmd sid='audit.device.set_fire_alarm' />
-
-* **OSDP**: <Cmd sid='audit.device.set_osdp_security_key' />, <Cmd sid='audit.device.replace_osdp_device' />, <Cmd sid='audit.device.osdp_bulk_edit' />
-
-* **잠금 및 활성화**: <Cmd sid='audit.device.lock' />, <Cmd sid='audit.device.unlock' />, <Cmd sid='audit.device.activate' />, <Cmd sid='audit.device.inactivate' />, <Cmd sid='audit.device.device_locked' />, <Cmd sid='audit.device.device_unlocked' />
-
-* **유지 보수**: <Cmd sid='audit.device.update' product='2' />, <Cmd sid='audit.device.reset' product='2' />, <Cmd sid='audit.device.factory_reset' product='2' />, <Cmd sid='audit.device.upload_log' />, <Cmd sid='audit.device.clear_log' product='2' />, <Cmd sid='audit.device.discover_wiegand' product='2' />
-
-* **카드 및 인증**: <Cmd sid='audit.device.scan_card' />, <Cmd sid='audit.device.erase_card' />, <Cmd sid='audit.device.write_card' />, <Cmd sid='audit.device.release_auth_fail_lockout' />, <Cmd sid='audit.device.apply_auth_fail_lockout' />
-
-* **영상**: <Cmd sid='audit.device.upload_video' />, <Cmd sid='audit.device.delete_video' />, <Cmd sid='audit.device.cancel_upload_video' />
-
-* **사이트 키 및 라이선스**: <Cmd sid='audit.device.set_site_key' />, <Cmd sid='audit.device.delete_site_key' />, <Cmd sid='audit.device.license' product='2' />, <Cmd sid='audit.device.disable_license' />, <Cmd sid='audit.device.export' product='2' />
-
-</details>
-
-<details>
-<summary>출입 통제 운영(출입문/엘리베이터/구역)</summary>
-
-* **출입문/엘리베이터**: <Cmd sid='audit.door.lock' product='2' />, <Cmd sid='audit.door.unlock' product='2' />, <Cmd sid='audit.elevator.lock' product='2' />, <Cmd sid='audit.elevator.unlock' product='2' />, <Cmd sid='audit.door.clear_timed_apb_ex' product='2' />
-
-* **구역**: <Cmd sid='audit.zone.set_occupancy' product='2' />, <Cmd sid='audit.zone.arm' />, <Cmd sid='audit.zone.disarm' />, <Cmd sid='audit.zone.update_tracking' />, <Cmd sid='audit.zone.start_roll_call' />, <Cmd sid='audit.zone.stop_roll_call' />
-
-* <Cmd sid='audit.event_log.event_log_imported' />
-
-</details>
-
-<details>
-<summary>시스템 설정 및 라이선스</summary>
-
-* <Cmd sid='audit.setting.mobileCredential.registerEnrollmentDevice' />, <Cmd sid='audit.setting.mobileCredential.unregisterEnrollmentDevice' />, <Cmd sid='audit.setting.logConfig.reload' />, <Cmd sid='audit.setting.directoryIntegration.syncNow' />
-
-* <Cmd sid='audit.license.activate' />, <Cmd sid='audit.license.manual_activate' />
-
-* <Cmd sid='audit.alert.event_priorities' />
-
-</details>
-
-:::info
-
-다음과 같이 여러 화면에서 공통으로 쓰이는 이름은 대상에 따라 서로 다른 세부 작업으로 기록되므로 목록에서 개별적으로 다루지 않았습니다. 
-
-> <Cmd sid='common.upload' product='2' />, <Cmd sid='audit.method.4' product='2' />, <Cmd sid='button.print' product='2' />, <Cmd sid='common.use' product='2' />, <Cmd sid='common.notUse' product='2' />, <Cmd sid='button.open' product='2' />, <Cmd sid='button.release' product='2' />, <Cmd sid='button.clearAlarm' product='2' />, <Cmd sid='button.clearAntiPassBackViolation' product='2' />
-
-정확한 대상은 같은 행의 <Cmd sid='audit.column.category' />와 <Cmd sid='audit.column.target' /> 컬럼에서 확인하세요.
-
-:::
 
 ## 필터 저장
 
