@@ -351,7 +351,7 @@
           ],
           "question": "¿Es compatible la configuración de Administrador maestro después de una actualización de firmware desde un dispositivo existente?",
           "answer": [
-            "<b>Master Administrator</b> <b>solo es compatible en productos orientados a CE con una etiqueta con marca CE</b>. Use la etiqueta adhesiva en la parte posterior del producto para identificar productos <b>orientados a CE / globales (no CE)</b>. Para obtener detalles, consulte la <a href='getting-started#master-admin-support-policy'>Política de soporte del Master Administrator</a>."
+            "<b>Master Administrator</b> <b>solo es compatible en productos orientados a CE con una etiqueta con marca CE</b>. Use la etiqueta adhesiva en la parte posterior del producto para identificar productos <b>orientados a CE / globales (no CE)</b>. Para obtener detalles, consulte la <a href='getting-started#master-admin-support-policy'>Política de soporte del administrador maestro</a>."
           ]
         }
       ]
