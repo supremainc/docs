@@ -328,16 +328,16 @@
         ],
         "version": "1.5.0",
         "manuals": {
-            "ko": "device/biostation_3/BioStation 3_UG_1.11_KO_260616.pdf",
-            "en": "device/biostation_3/BioStation 3_UG_1.11_EN_260616.pdf",
-            "es": "device/biostation_3/BioStation 3_UG_1.11_ES_260616.pdf",
-            "ja": "device/biostation_3/BioStation 3_UG_1.11_JA_260616.pdf"
+            "ko": "device/biostation_3/BioStation 3_UG_1.12_KO_260904.pdf",
+            "en": "device/biostation_3/BioStation 3_UG_1.12_EN_260904.pdf",
+            "es": "device/biostation_3/BioStation 3_UG_1.12_ES_260904.pdf",
+            "ja": "device/biostation_3/BioStation 3_UG_1.12_JA_260904.pdf"
         },
         "release_notes": {
             "ko": "device/biostation_3/BioStation 3_ReleaseNotes_1.5.0_KO_260819.pdf",
             "en": "device/biostation_3/BioStation 3_ReleaseNotes_1.5.0_EN_260819.pdf"
         },
-        "a_e": "device/biostation_3/SUPREMA_BioStation_3_AE-Specification_260622.docx",
+        "a_e": "device/biostation_3/SUPREMA_BioStation_3_AE-Specification_260907.docx",
         "dt": {
             "ko": "device/biostation_3/BioStation 3_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3/BioStation 3_DrillingTemplate_EN.pdf"
