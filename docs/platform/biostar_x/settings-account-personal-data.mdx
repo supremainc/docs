@@ -79,6 +79,14 @@ keywords: [계정, 개인 정보, 자동 비활성화, 장기 미출입]
 
 1. 확인 창이 나타나면 다음 자동 처리 예정일과 비활성화 예정 사용자 수를 확인하고 <Cmd sid='setting.personalData.saveChanges' /> 버튼을 클릭하세요.
 
+:::info
+
+* <Cmd sid='setting.personalData.userGroup' />에서 관리자의 권한 범위를 벗어난 사용자 그룹은 선택할 수 없도록 비활성화되어 표시되며, 목록에서 숨겨지지는 않습니다. 이 그룹은 펼쳐볼 수 있으며, 하위 그룹 중 권한 범위 안에 있는 그룹은 선택할 수 있습니다.
+
+* 관리자 권한이 **모든 사용자**로 설정된 관리자 또는 전체 관리자는 사용자 그룹 선택에 제한이 없습니다. 관리자 권한에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-manage-account' />를 참고하세요.
+
+:::
+
 ### 그룹 설정 수정 및 삭제
 
 <Image src='/img/biostarx-settings-personal-data-group-edit.png' />
@@ -91,7 +99,9 @@ keywords: [계정, 개인 정보, 자동 비활성화, 장기 미출입]
 
 :::info
 
-* <Cmd sid='setting.personalData.exceptionPriorityNote' />
+* <Cmd sid='setting.personalData.exceptionGroup' />에 관리자의 권한 범위를 벗어난 사용자 그룹이 포함되어 있다면, 목록에는 계속 표시되지만 수정 및 삭제할 수 없습니다.
+
+* 그룹 설정이 기본 설정에 우선합니다.
 
 * <Cmd sid='setting.personalData.exceptionGroup' />을 삭제해도 이미 비활성화된 사용자는 복구되지 않습니다. 삭제 후에는 해당 사용자에게 적용 가능한 다른 설정(<Cmd sid='setting.personalData.basicSettings' /> 등)이 있으면 그 설정으로 전환됩니다.
 

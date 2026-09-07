@@ -29,7 +29,7 @@
     ]
   },
   {
-    "name": "모든 엘리베이터",
+    "name": "모든 엘리베이터 그룹",
     "type": "elevator",
     "children": [
       {
