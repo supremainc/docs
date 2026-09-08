@@ -130,3 +130,37 @@ IP 設定を完了して変更を保存するには、<Cmd sid='button.apply' pr
 6. デバイスを登録するには、<Cmd sid='button.add' product='2' /> をクリックします。
 
 追加したデバイスがデバイス一覧に表示されます。 追加したデバイスを選択し、<Cmd sid='button.syncDevice' product='2' /> をクリックします。
+
+## 待機中のデバイスの登録 {/* #addingWaitingDevices */}
+
+<Cmd sid='ui_283' product='dev' /> オプションで設定したデバイスは、サーバーのIPアドレスとポート番号を使用して **BioStar X** サーバーへの接続を試みます。 この方法で接続したデバイスは、アクティブデバイス一覧に自動で追加されません。 デバイスは <Cmd sid='menu.device.waitingDevice' product='2' /> グループに表示され、権限のある管理者が手動で登録する必要があります。
+
+1. デバイスの <Cmd sid='ui_283' product='dev' /> オプションで **BioStar X** のIPアドレスとポート番号を設定します。
+
+2. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+3. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+4. <Cmd sid='menu.device.waitingDevice' product='2' /> グループに表示されたデバイスを確認します。
+
+   <Image src='/img/biostarx-settings-device-waiting-list.png' />
+
+5. 個別のデバイスを登録するには、<Cmd sid='menu.device.waitingDevice' product='2' /> グループのデバイス名を右クリックします。
+
+   <Cmd sid='menu.device.waitingDevice' product='2' /> グループのすべてのデバイスを登録するには、<Cmd sid='menu.device.waitingDevice' product='2' /> グループを右クリックします。
+
+   <Image src='/img/biostarx-settings-device-waiting-list-add.png' />
+
+6. ポップアップメニューで <Cmd sid='device.menu.addWaitingDevice' product='2' />(個別デバイス) または <Cmd sid='device.menu.addAllWaitingDevices' product='2' />(すべてのデバイス) をクリックします。
+
+<Cmd sid='menu.device.waitingDevice' product='2' /> グループのデバイスを登録すると、デバイスは <Cmd sid='menu.device.allDeviceGroups' product='2' /> 一覧に移動します。
+
+:::info
+
+* デバイスの <Cmd sid='ui_283' product='dev' /> オプションは <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' /> で設定できます。 メニューのパスはデバイスによって異なる場合があります。
+
+* **BioStar X** では、<Cmd sid='button.setIp' product='2' /> → <Cmd sid='device.info.deviceToServerConnection' product='2' /> オプション(<DocLink inner='#setipaddress' />)でも設定できます。
+
+* システムは <Cmd sid='menu.device.waitingDevice' product='2' /> グループのデバイスを同期しません。 システムは、デバイスを登録してデバイス同期が実行されるまで、ユーザーデータ、アクセスレベル、アクセスグループ、およびデバイス設定をそのデバイスに送信しません。
+
+:::

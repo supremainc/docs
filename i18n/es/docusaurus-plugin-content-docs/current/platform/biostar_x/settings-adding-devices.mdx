@@ -43,7 +43,7 @@ Los dispositivos en la misma red que **BioStar X** se pueden buscar y registrar 
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='device.searchDevice' product='2' /> en la lista de dispositivos.
 
@@ -113,7 +113,7 @@ Puede especificar la dirección IP y el número de puerto de un dispositivo espe
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='button.func.advancedSearch' product='2' /> en la lista de dispositivos.
 
@@ -130,3 +130,37 @@ Puede especificar la dirección IP y el número de puerto de un dispositivo espe
 6. Para registrar el dispositivo, haga clic en <Cmd sid='button.add' product='2' />.
 
 Los dispositivos añadidos aparecerán en la lista de dispositivos. Seleccione el dispositivo añadido y haga clic en <Cmd sid='button.syncDevice' product='2' />.
+
+## Registrar dispositivos en espera {/* #addingWaitingDevices */}
+
+Los dispositivos con la opción <Cmd sid='ui_283' product='dev' /> configurada tratan de conectarse al servidor **BioStar X** mediante la dirección IP y el puerto del servidor. **BioStar X** no registra automáticamente estos dispositivos en la lista de dispositivos activos. Estos dispositivos aparecen en el grupo <Cmd sid='menu.device.waitingDevice' product='2' />, y un administrador autorizado debe registrarlos manualmente.
+
+1. En la opción <Cmd sid='ui_283' product='dev' /> del dispositivo, establezca la dirección IP y el número de puerto de **BioStar X**.
+
+2. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+3. Haz clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+
+4. Marque los dispositivos que aparecen en el grupo <Cmd sid='menu.device.waitingDevice' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-waiting-list.png' />
+
+5. Haga clic con el botón derecho en el nombre del dispositivo en el grupo <Cmd sid='menu.device.waitingDevice' product='2' /> para registrarlo individualmente.
+
+   Para registrar todos los dispositivos en el grupo <Cmd sid='menu.device.waitingDevice' product='2' />, haga clic con el botón derecho en el grupo <Cmd sid='menu.device.waitingDevice' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-waiting-list-add.png' />
+
+6. En el menú emergente, haga clic en <Cmd sid='device.menu.addWaitingDevice' product='2' />(dispositivo individual) o <Cmd sid='device.menu.addAllWaitingDevices' product='2' />(todos los dispositivos).
+
+Después de que un administrador registre un dispositivo en el grupo <Cmd sid='menu.device.waitingDevice' product='2' />, el dispositivo pasa a la lista <Cmd sid='menu.device.allDeviceGroups' product='2' />.
+
+:::info
+
+* Configure la opción <Cmd sid='ui_283' product='dev' /> del dispositivo en <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' />. Las rutas de menú pueden variar según el dispositivo.
+
+* Configure este ajuste también en **BioStar X** mediante <Cmd sid='button.setIp' product='2' /> → <Cmd sid='device.info.deviceToServerConnection' product='2' /> (<DocLink inner='#setipaddress' />).
+
+* **BioStar X** no sincroniza los dispositivos que permanecen en el grupo <Cmd sid='menu.device.waitingDevice' product='2' />. El sistema transfiere los datos de usuario, los niveles de acceso, los grupos de acceso y los ajustes del dispositivo solo después de registrar el dispositivo y sincronizarlo.
+
+:::
