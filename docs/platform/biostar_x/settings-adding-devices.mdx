@@ -47,21 +47,21 @@ keywords: [ 장치, 장치 추가 ]
 
 1. 장치 목록에서 <Cmd sid='device.searchDevice' product='2' /> 버튼을 클릭하세요.
 
-    <Image src='/img/biostarx-setting-device-search-device.png' />
+   <Image src='/img/biostarx-setting-device-search-device.png' />
 
 1. <Cmd sid='device.searchDevice' product='2' /> 창이 나타나면 등록할 수 있는 모든 장치 목록이 표시됩니다. 원하는 장치가 목록에 없다면 오른쪽 상단의 <Cmd sid='button.search' product='2' /> 버튼을 클릭하세요.
 
-    <Image src='/img/biostarx-setting-add-device.png' />
+   <Image src='/img/biostarx-setting-add-device.png' />
 
 1. 장치 목록에서 등록할 장치를 선택하거나 등록하지 않을 장치는 선택을 해제하세요.
 
 1. 등록할 장치의 이름을 변경하려면 <Cmd sid='device.info.name' product='2' /> 열에서 <IcEdit /> 버튼을 클릭한 뒤 변경하세요.
 
-    <Image src='/img/biostarx-setting-add-device-rename.png' />
+   <Image src='/img/biostarx-setting-add-device-rename.png' />
 
 1. 등록할 장치의 그룹을 설명하려면 <Cmd sid='device.info.group' product='2' /> 열에서 선택하세요.
 
-    <Image src='/img/biostarx-setting-add-device-group.png' />
+   <Image src='/img/biostarx-setting-add-device-group.png' />
 
 1. 선택한 장치에 대한 설정을 모두 완료했다면 <Cmd sid='button.add' product='2' /> 버튼을 클릭하세요.
 
@@ -119,16 +119,50 @@ IP 설정을 모두 완료하고 변경 사항을 저장하려면 <Cmd sid='butt
 
 1. 장치 목록에서 <Cmd sid='button.func.advancedSearch' product='2' /> 버튼을 클릭하세요.
 
-    <Image src='/img/biostarx-setting-device-adv-search-device.png' />
+   <Image src='/img/biostarx-setting-device-adv-search-device.png' />
 
 1. <Cmd sid='button.func.advancedSearch' product='2' /> 창이 나타나면 등록할 장치의 IP 주소와 포트 번호를 입력하세요.
 
-    <Image src='/img/biostarx-setting-device-advanced-search.png' />
+   <Image src='/img/biostarx-setting-device-advanced-search.png' />
 
 1. <Cmd sid='button.search' product='2' /> 버튼을 클릭하면 입력한 조건과 일치하는 장치가 목록에 표시됩니다.
 
-    <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
+   <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
 
 1. 장치를 등록하려면 <Cmd sid='button.add' product='2' /> 버튼을 클릭하세요.
 
 장치 목록에 추가한 장치가 나타납니다. 추가한 장치를 선택하고 <Cmd sid='button.syncDevice' product='2' /> 버튼을 클릭하세요.
+
+## 대기 중인 장치 등록 {/* #addingWaitingDevices */}
+
+<Cmd sid='ui_283' product='dev' /> 옵션으로 구성된 장치는 서버의 IP 주소와 포트 번호를 사용해 **BioStar X** 서버로 연결을 시도합니다. 이와 같은 방식으로 연결된 장치는 활성 장치 목록에 자동 추가되지 않습니다. 해당 장치는 <Cmd sid='menu.device.waitingDevice' product='2' /> 그룹에 표시되며, 권한이 있는 관리자가 직접 등록해야 합니다.
+
+1. 장치의 <Cmd sid='ui_283' product='dev' /> 옵션에서 **BioStar X**의 IP 주소와 포트 번호를 설정하세요.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+
+1. <Cmd sid='menu.device.waitingDevice' product='2' /> 그룹에 표시된 장치를 확인하세요.
+
+   <Image src='/img/biostarx-settings-device-waiting-list.png' />
+
+1. 개별 장치를 등록하려면 <Cmd sid='menu.device.waitingDevice' product='2' /> 그룹의 장치 이름에서 마우스 오른쪽 버튼을 클릭하세요.
+
+   <Cmd sid='menu.device.waitingDevice' product='2' /> 그룹의 모든 장치를 등록하려면 <Cmd sid='menu.device.waitingDevice' product='2' /> 그룹에서 마우스 오른쪽 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-device-waiting-list-add.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='device.menu.addWaitingDevice' product='2' />(개별 장치) 또는 <Cmd sid='device.menu.addAllWaitingDevices' product='2' />(모든 장치)을 클릭하세요.
+
+<Cmd sid='menu.device.waitingDevice' product='2' /> 그룹의 장치가 등록되면 <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록으로 이동합니다.
+
+:::info
+
+* 장치의 <Cmd sid='ui_283' product='dev' /> 옵션은 <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' />에서 설정할 수 있습니다. 메뉴 경로는 장치에 따라 다를 수 있습니다.
+
+* **BioStar X**에서 <Cmd sid='button.setIp' product='2' /> → <Cmd sid='device.info.deviceToServerConnection' product='2' /> 옵션(<DocLink inner='#setipaddress' />)으로 설정할 수도 있습니다.
+
+* <Cmd sid='menu.device.waitingDevice' product='2' /> 그룹의 장치는 동기화되지 않습니다. 장치를 등록하고 장치 동기화가 실행되기 전까지 사용자 데이터, 출입 등급, 출입 그룹 및 장치 설정 등은 해당 장치로 전송되지 않습니다.
+
+:::

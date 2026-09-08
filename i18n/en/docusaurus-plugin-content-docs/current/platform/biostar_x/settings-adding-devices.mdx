@@ -130,3 +130,37 @@ You can specify the IP address and port number of a specific device to register 
 6. To register the device, click <Cmd sid='button.add' product='2' />.
 
 The added devices will appear in the device list. Select the added device and click <Cmd sid='button.syncDevice' product='2' />.
+
+## Register waiting devices {/* #addingWaitingDevices */}
+
+Devices with the <Cmd sid='ui_283' product='dev' /> option set try to connect to the **BioStar X** server using the server IP address and port number. Devices connected this way do not automatically register in the active device list. These devices appear in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, and an authorized administrator must register them manually.
+
+1. In the device's <Cmd sid='ui_283' product='dev' /> option, set the IP address and port number of **BioStar X**.
+
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+3. Click <Cmd sid='setting.menu.device.root' /> on the left sidebar.
+
+4. Check the devices shown in the <Cmd sid='menu.device.waitingDevice' product='2' /> group.
+
+   <Image src='/img/biostarx-settings-device-waiting-list.png' />
+
+5. To register an individual device, right-click the device name in the <Cmd sid='menu.device.waitingDevice' product='2' /> group.
+
+   To register all devices in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, right-click the <Cmd sid='menu.device.waitingDevice' product='2' /> group.
+
+   <Image src='/img/biostarx-settings-device-waiting-list-add.png' />
+
+6. In the popup menu, click <Cmd sid='device.menu.addWaitingDevice' product='2' />(individual device) or <Cmd sid='device.menu.addAllWaitingDevices' product='2' />(all devices).
+
+After an administrator registers a device in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, it moves to the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list.
+
+:::info
+
+* Set the device <Cmd sid='ui_283' product='dev' /> option at <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' />. Menu paths may vary by device.
+
+* You can also configure this setting in **BioStar X** via <Cmd sid='button.setIp' product='2' /> → <Cmd sid='device.info.deviceToServerConnection' product='2' /> (<DocLink inner='#setipaddress' />).
+
+* Devices that remain in the <Cmd sid='menu.device.waitingDevice' product='2' /> group are not synchronized. User data, access levels, access groups, and device settings are not transferred to a device until it has been registered and sync device has been performed.
+
+:::
