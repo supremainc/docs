@@ -6,7 +6,7 @@ description: BioStar X 서버를 제거하는 절차와 보안 통신 인증서�
 
 **BioStar X** 서버를 컴퓨터에서 제거하는 절차를 안내합니다. <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 사용 중이 아니라면 인증서 백업 및 복구 절차 없이 제거를 진행할 수 있습니다.
 
-<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 사용 중이라면, **BioStar X**를 제거하기 전에 서버의 보안 인증서 세트(루트 CA/서버 인증서/키)를 반드시 백업해야 합니다. 이 백업은 같은 서버를 다시 설치한 뒤 기존 장치를 재연결할 수 있는 유일한 복구 수단입니다. 시스템에서 제공하는 [복원 기능](settings-system-system-restore)과 달리, 데이터베이스나 설정은 그대로 두고 보안 통신 인증서만 재사용하려고 한다면 <DocLink inner='#restore-certificate' />를 참고하세요.
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 사용 중이라면, **BioStar X**를 제거하기 전에 서버의 보안 인증서 세트(루트 CA/서버 인증서/키)를 반드시 백업해야 합니다. 이 백업은 같은 서버를 다시 설치한 뒤 기존 장치를 재연결할 수 있는 유일한 복구 수단입니다. 시스템에서 제공하는 [복원 기능](settings-system-system-restore)과 달리, 데이터베이스나 설정은 그대로 두고 보안 통신 인증서만 재사용하려고 한다면 <DocLink inner='#restoreCertificate' />를 참고하세요.
 
 ## BioStar X 서버 제거 {/* #uninstallServer */}
 
@@ -82,7 +82,7 @@ description: BioStar X 서버를 제거하는 절차와 보안 통신 인증서�
 
 ## 백업한 보안 인증서 복구 {/* #restoreCertificate */}
 
-<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 사용하던 서버를 재설치한 뒤, 기존 장치를 다시 연결하려면 보안 통신 인증서를 복구해야 합니다. [시스템 복원 도구](settings-system-system-restore)가 데이터베이스와 설정을 포함한 시스템 전체를 이전 상태로 되돌리는 기능이라면, 이 과정은 시스템 복원 없이 보안 통신 인증서만 재사용하려는 경우에 사용하는 방식입니다. 전용 도구 없이 백업해 둔 인증서 파일을 설치 경로에 직접 복구해야 합니다.
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 사용하던 서버를 재설치한 뒤, 기존 장치를 다시 연결하려면 보안 통신 인증서를 복구해야 합니다. [시스템 복원 도구](settings-system-system-restore)가 데이터베이스와 설정을 포함한 시스템 전체를 이전 상태로 되돌리는 기능이라면, 이 과정은 시스템 복원 없이 보안 통신 인증서만 재사용할 때 사용하는 방식입니다. 전용 도구 없이 백업해 둔 인증서 파일을 설치 경로에 직접 복구해야 합니다.
 
 :::info
 
@@ -114,7 +114,7 @@ description: BioStar X 서버를 제거하는 절차와 보안 통신 인증서�
 
 :::caution
 
-인증서를 복구하기 전(3\~5단계 이전)에 멀티 커뮤니케이션 서버를 먼저 설치하고 추가했다면, 멀티 커뮤니케이션 서버에는 복구 전의 인증서가 이미 복사된 상태입니다. 이 경우 아래 절차에 따라 멀티 커뮤니케이션 서버의 인증서도 별도로 교체하세요.
+인증서를 복구하기 전(4\~6단계 이전)에 멀티 커뮤니케이션 서버를 먼저 설치하고 추가했다면, 멀티 커뮤니케이션 서버에는 복구 전의 인증서가 이미 복사된 상태입니다. 이때는 아래 절차에 따라 멀티 커뮤니케이션 서버의 인증서도 별도로 교체하세요.
 
 1. 멀티 커뮤니케이션 서버를 설치한 환경에서 **BioStar X Service Manager**를 실행하고 모든 서비스를 종료하세요.
 
