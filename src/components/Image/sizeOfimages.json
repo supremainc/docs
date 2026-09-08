@@ -3907,6 +3907,14 @@
     "width": 501,
     "height": 293
   },
+  "/img/biostarx-settings-device-waiting-list-add.png": {
+    "width": 800,
+    "height": 247
+  },
+  "/img/biostarx-settings-device-waiting-list.png": {
+    "width": 800,
+    "height": 247
+  },
   "/img/biostarx-settings-email-contents.png": {
     "width": 894,
     "height": 161
@@ -5996,6 +6004,10 @@
     "height": 394
   },
   "/img/changelogs/changelogs-202607.png": {
+    "width": 800,
+    "height": 394
+  },
+  "/img/changelogs/changelogs-202608.png": {
     "width": 800,
     "height": 394
   },
@@ -14226,6 +14238,14 @@
   "/img/en/biostarx-settings-device-playback-playVideo-upload.png": {
     "width": 501,
     "height": 293
+  },
+  "/img/en/biostarx-settings-device-waiting-list-add.png": {
+    "width": 800,
+    "height": 247
+  },
+  "/img/en/biostarx-settings-device-waiting-list.png": {
+    "width": 800,
+    "height": 247
   },
   "/img/en/biostarx-settings-email-contents.png": {
     "width": 894,
