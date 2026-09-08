@@ -163,7 +163,7 @@ keywords: [시스템 보안, 암호화]
 
   :::note
 
-  외부 인증서가 아닌, 서버를 제거하면서 백업해 둔 보안 인증서를 그대로 복구하려면 **BioStar X** 설치 경로에 직접 복사해야 합니다. 보안 인증서 백업 및 복구 방법은 <DocLink docId='platform/biostar_x/remove-server#restore-certificate' />를 참고하세요.
+  외부 인증서가 아닌, 서버를 제거하면서 백업해 둔 보안 인증서를 그대로 복구하려면 **BioStar X** 설치 경로에 직접 복사해야 합니다. 보안 인증서 백업 및 복구 방법은 <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />를 참고하세요.
 
   :::
 
@@ -177,7 +177,7 @@ keywords: [시스템 보안, 암호화]
 
 * 활성화하면 보안을 강화하기 위해 장치에서 템퍼(Tamper) 이벤트가 발생할 때 사용자, 로그, 암호화 키 값이 함께 삭제되도록 설정되므로 주의하세요.
 
-* Administrator 계정을 제외한 사용자에게 로그인 비밀번호 또는 PIN이 설정되어 있으면 해시 키 값을 적용할 수 없습니다. 로그인 비밀번호 또는 PIN을 삭제한 후 다시 시도하세요. 비밀번호와 PIN은 보안 요구 사항을 충족하기 위해 복호화할 수 없는 방식으로 암호화되기 때문입니다.
+* <Cmd sid='ROLE_CODE_ADMIN' product='2' className='normal' /> 계정을 제외한 사용자에게 로그인 비밀번호 또는 PIN이 설정되어 있으면 해시 키 값을 적용할 수 없습니다. 로그인 비밀번호 또는 PIN을 삭제한 후 다시 시도하세요. 비밀번호와 PIN은 보안 요구 사항을 충족하기 위해 복호화할 수 없는 방식으로 암호화되기 때문입니다.
 
 * 장치 해시 키를 변경하면 장치에 설정된 마스터 관리자 PIN 정보가 삭제됩니다. 크리덴셜 삭제로 인해 장치 관리자 메뉴에 접근하지 못할 수 있으므로 각별히 주의하세요.
 
@@ -191,7 +191,7 @@ keywords: [시스템 보안, 암호화]
 
 * 장치를 네트워크에서 물리적으로 분리한 상태에서 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 <Cmd sid="common.notUse" product='2' />으로 설정하면 장치에 저장된 인증서가 삭제됩니다. 이 경우 장치를 다시 연결할 수 없습니다. 다시 연결하려면 장치에 저장된 인증서를 삭제하거나 공장 초기화해야 합니다. 자세한 내용은 장치의 매뉴얼을 참고하세요.
 
-* 이전에 정상적으로 연결되던 장치가 인증서 불일치로 연결에 실패하면 **BioStar X**는 이를 시스템 로그에 기록합니다. 장치가 갑자기 연결되지 않는다면 시스템 로그에서 원인을 확인한 후, 장치를 공장 초기화하거나 이전에 내보내 둔 인증서 세트를 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션으로 다시 등록하여 복구하세요.
+* 이전에 정상적으로 연결되던 장치가 인증서 불일치로 연결에 실패하면 **BioStar X**는 이를 시스템 로그에 기록합니다. 장치가 갑자기 연결되지 않는다면 시스템 로그에서 원인을 확인한 후, 장치를 공장 초기화하거나 이전에 내보내 둔 인증서 세트를 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션으로 다시 등록하여 복구하세요. 단, 서버를 제거한 뒤 재설치했다면 <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />를 참고하세요.
 
 * 멀티 커뮤니케이션 서버가 연결되어 있지 않으면 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 켜거나 끌 수 없습니다.
 
