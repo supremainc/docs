@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { LicenseInput, LicenseResult as LicenseResultType, recommendLicense } from '@site/src/components/bsx-license-calculator/core';
 import { LicenseResult } from './license-result';
-import '../styles.module.css';
 
 const initialInput: LicenseInput = {
   door: 0,
@@ -22,7 +21,13 @@ const initialInput: LicenseInput = {
     'BioStar X Plugin': false,
   },
   packages: {
-    'Advanced AC': false,
+    'Fire Alarm': false,
+    'Global Anti-Passback': false,
+    'Intrusion Alarm': false,
+    'Interlock': false,
+    'Occupancy Limit': false,
+    'Mustering': false,
+    'Elevator Control': false,
   },
 };
 
@@ -41,7 +46,13 @@ export function LicenseForm() {
   const featureAddonDescriptions: Record<string, string> = {
     'Map Monitoring': 'Monitor sites visually using a map-based interface.',
     'Video Monitoring': 'Monitor video feeds from cameras installed on the site. Supports integration with 3rd-party VMS systems. Please specify the number of cameras at the time of ordering.',
-    'Advanced AC': 'Use advanced access control features such as Global APB, Fire Alarm, Intrusion, Mustering, Occupancy, Elevator control, and Interlock.',
+    'Fire Alarm': 'Automatically release all doors in a zone when a fire alarm input is triggered, ensuring emergency egress.',
+    'Global Anti-Passback': 'Enforce anti-passback across multiple doors and devices at the server level. Prevents re-entry without a prior exit, tailgating, and credential sharing across the entire zone.',
+    'Intrusion Alarm': 'Arm and disarm zones using devices or credentials, detect intrusion through sensor inputs, and trigger alarm outputs.',
+    'Interlock': 'Allow only one door in a group to open at a time, for airlocks, mantraps, and cleanroom or secure entry areas.',
+    'Occupancy Limit': 'Count the number of users inside a zone in real time and restrict entry when the maximum occupancy is reached.',
+    'Mustering': 'Track who has reached designated assembly points during an emergency and identify users who are still unaccounted for.',
+    'Elevator Control': 'Control floor-level access through elevator integration. Restrict which floors each user can select based on their access level.',
     'GIS Map Monitoring': 'Monitor sites using GIS-based map visualization.',
     'Server Matching': 'Perform credential authentication (ID, Card, Fingerprint, IR Face) on the server instead of the device.',
     'Visitor': 'Visitor management system.',
@@ -160,7 +171,13 @@ export function LicenseForm() {
             {[
               { name: 'Map Monitoring', description: featureAddonDescriptions['Map Monitoring'] },
               { name: 'Video Monitoring', description: featureAddonDescriptions['Video Monitoring'] },
-              { name: 'Advanced AC', description: featureAddonDescriptions['Advanced AC'], isPackage: true },
+              { name: 'Fire Alarm', description: featureAddonDescriptions['Fire Alarm'], isPackage: true },
+              { name: 'Global Anti-Passback', description: featureAddonDescriptions['Global Anti-Passback'], isPackage: true },
+              { name: 'Intrusion Alarm', description: featureAddonDescriptions['Intrusion Alarm'], isPackage: true },
+              { name: 'Interlock', description: featureAddonDescriptions['Interlock'], isPackage: true },
+              { name: 'Occupancy Limit', description: featureAddonDescriptions['Occupancy Limit'], isPackage: true },
+              { name: 'Mustering', description: featureAddonDescriptions['Mustering'], isPackage: true },
+              { name: 'Elevator Control', description: featureAddonDescriptions['Elevator Control'], isPackage: true },
               { name: 'GIS Map Monitoring', description: featureAddonDescriptions['GIS Map Monitoring'] },
               { name: 'Server Matching', description: featureAddonDescriptions['Server Matching'] },
               { name: 'Visitor', description: featureAddonDescriptions['Visitor'] },
