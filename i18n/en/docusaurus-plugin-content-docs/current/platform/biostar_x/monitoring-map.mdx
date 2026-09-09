@@ -19,17 +19,46 @@ Multiple facilities can be configured within a single area in **BioStar X**. Eac
 
 You can access the configured area on the GIS map in the order of Area → Facility → Floor, as shown in the image, to monitor and control doors and cameras. This structure can also be seen in the sidebar of the <Cmd sid='arena.title' /> page.
 
-![Monitoring sidebar](/img/common/monitoring-map-area-tree-example.png)
-
 :::info
 
-For more information on configuring the map, see <DocLink docId='platform/biostar_x/settings-map-management' />.
+* For more information on configuring the map, see <DocLink docId='platform/biostar_x/settings-map-management' />.
+
+* The <Cmd sid='arena.title' /> area remains disabled if the system has no registered device cameras or no registered map components (areas, facilities, or floors).
+
+* The GIS-integrated map monitoring feature is available as an add-on with an **Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
 ## Components and options {/* #component-and-options */}
 
-### Component {/* #component */}
+### Map tree components {/* #mapTreeComponent */}
+
+The left sidebar shows the map tree components. Each icon in the map tree identifies areas, facilities, floors, and doors.
+
+<Columns>
+<Column>
+
+<Image src='/img/monitoring-map-area-tree-example.png' />
+
+</Column>
+<Column>
+
+<div className='table-fixed'>
+
+| Icon | Name |
+| :-: | :-: |
+| <IcArea width='35px' height='35px' /> | Area (Area) |
+| <IcFacility width='35px' height='35px' /> | Facility (Facility) |
+| <IcFloor width='35px' height='35px' /> | Floor (Floor) |
+| <IcDoorClose width='35px' height='35px' /> | Door |
+| <IcCamOk width='auto' height='35px'/> | Camera |
+
+</div>
+
+</Column>
+</Columns>
+
+### Map area components {/* #mapCmponent */}
 
 Components displayed on the map include the area, facilities, and cameras connected to the facilities. You can access the floor through the facility. You can check the door and camera on the floor.
 
@@ -43,8 +72,6 @@ Components displayed on the map include the area, facilities, and cameras connec
 | ![Door icon](/img/common/monitoring-map-floor-door-icon.svg) | **Door**: Click on a door placed on the map to display a popup menu for controlling that door. For more information on the available features, see <DocLink docId='platform/biostar_x/control-door' />. |
 | ![Camera icon](/img/common/monitoring-map-camera-icon.svg) | **Camera**: Click on the camera to play the video of the corresponding facility or floor. |
 | ![Camera error icon](/img/common/monitoring-map-err-camera-icon.svg) | **Camera Error**: This message appears when the camera is not connected or powered off. |
-| <IcFUlockDr width='45' height='45' /> | **Open Door**: The door placed on the floor is in an open state. |
-| <IcFLockDr width='45' height='45' /> | **Locked Door**: The door placed on the floor is in a locked state. |
 
 </div>
 
@@ -74,24 +101,36 @@ The options feature provided in the map or layer is as follows.
 
 ### Check status
 
-In the left sidebar, you can check the status of each door and camera for the facilities or floors. Refer to the information below for the status of each icon.
+On the left sidebar, you can check the status of each door and camera for the facilities or floors. Refer to the information below for the status of each icon.
 
 <div className='col2--20-80'>
 
 | Status Icon | Description |
 | :-: | --- |
-| <IcErr width='35px' height='35px' /> | There is a communication server error or the connection is lost. |
+| <IcErr width='35px' height='35px' /> | Multi Communications Server error or connection lost. |
 | <IcAlert width='40px' height='40px' /> | An alarm has occurred at the door. If loitering or intrusion is detected, the corresponding icon will be displayed. |
 | <IcCamOk width='auto' height='35px'/> | The camera is connected. |
 | <IcCamFail width='auto' height='35px'/> | The camera is off or disconnected. |
 
 </div>
 
+### View entries that need attention {/* #checkAttentionFilter */}
+
+Administrators can filter the list to show only entries that require action. In the left sidebar, click the <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Check door status by area, facility, and floor, and take action on problem doors.
+
+<Image src='/img/monitoring-map-tree-attention-filter.png' />
+
+:::info
+
+For the criteria used to determine door actions, see <DocLink docId='platform/biostar_x/check-door-status#check-the-attention-criteria' />.
+
+:::
+
 ## Open map {/* #open-map */}
 
 If the area is linked to the GIS map, you can display the map in the <Cmd sid='arena.title' /> section.
 
-1. In the left sidebar, select the facility to view on the map.
+1. On the left sidebar, select the facility to view on the map.
 
 2. Right-click. 
 
@@ -103,7 +142,7 @@ The map of the selected area will be displayed in the video tile of the <Cmd sid
 
 :::info
 
-* You can also open the map by double-clicking the corresponding facility in the left sidebar.
+* Double-click the facility on the left sidebar to open the map where the facility is located.
 
 * The image is an example screen. The actual screen may differ.
 
@@ -125,9 +164,19 @@ To move the map to another location while resizing, click on the <IcMove /> icon
 
 To enter a floor on the map, click on the facility. When the list of floors accessible from the popup menu is displayed, select the desired floor. You can check the drawings, doors, and cameras on the selected floor.
 
-Or, double-click the floor in the left sidebar or right-click it and select <Cmd sid='arena.tree.contextMenu.openMap' /> from the popup menu.
+Or, double-click the floor on the left sidebar or right-click it and select <Cmd sid='arena.tree.contextMenu.openMap' /> from the popup menu.
 
 <Image src='/img/monitoring-map-select-floor.png' />
+
+| Component | Description |
+| :-: | --- |
+| <IcFUlockDr width='45' height='45' /> | **Open Door**: The door placed on the floor is in an open state. |
+| <IcFLockDr width='45' height='45' /> | **Locked Door**: The door placed on the floor is in a locked state. |
+| <IcFloorCam width='45' height='45' /> | **Camera**: Click on the camera to play the video of the corresponding facility or floor. |
+
+* Hover over a door or camera to check its current status.
+
+  <Image src='/img/monitoring-map-floor-status-check.png' className='none' />
 
 * Clicking the door will display a popup menu that allows you to control that door. For more information on the available features, see <DocLink docId='platform/biostar_x/control-door' />.
 
@@ -139,9 +188,9 @@ Or, double-click the floor in the left sidebar or right-click it and select <Cmd
 
 :::info
 
-* For more information on setting up doors and cameras on a floor (Floor), see <DocLink docId='platform/biostar_x/settings-map-manage-floor' />.
+* To navigate to the map displaying the facility, click <IcBack/> at the top left.
 
-* To navigate to the map displaying the facility, click the <IcBack/> button at the top left.
+* For more information on setting up doors and cameras on a floor (Floor), see <DocLink docId='platform/biostar_x/settings-map-manage-floor' />.
 
 * For more information on video controls and the tools displayed in the video, see <DocLink docId='platform/biostar_x/monitoring-video#control-video' />.
 
@@ -157,7 +206,7 @@ To move to a different floor, click on the selection option in the upper left co
 
 :::info
 
-* To navigate to the map displaying the facility, click the <IcBack/> button at the top left.
+* To navigate to the map displaying the facility, click <IcBack/> at the top left.
 
 * The floor selection option at the top left of the map displays only the floors configured for the facility. If the floor is not configured in the facility, it will not be displayed in the list. For more information on configuring floors within a facility, see <DocLink docId='platform/biostar_x/settings-map-manage-facility' />.
 
@@ -167,7 +216,7 @@ To move to a different floor, click on the selection option in the upper left co
 
 * To control the camera on the map or floor, click the camera icon. Select the desired feature from the pop-up menu.
 
-  <Image src='/img/biostarx-monitoring-map-camera-popup.png' />
+  <Image src='/img/biostarx-monitoring-map-camera-popup.png' className='none' />
 
   * <Cmd sid='map.menu.camera.playVideo' />: You can check the camera video in real-time.
 

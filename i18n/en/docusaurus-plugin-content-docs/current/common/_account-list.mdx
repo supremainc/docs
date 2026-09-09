@@ -1,12 +1,12 @@
 * <Cmd sid='setting.account.administrator' product='2' />: This is an administrator level that can use all menus.
 
-* <Cmd sid='setting.account.userOperator' product='2' />: <Cmd sid='shell.header.user' /> menu has **read** and **write** permissions.
+* <Cmd sid='setting.account.userOperator' product='2' />: <Cmd sid='shell.header.user' /> menu has **read** and **edit** permissions. No permissions for user groups.
 
-* <Cmd sid='setting.account.monitoringOperator' product='2' />: <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, and <Cmd sid='shell.header.dashboard' /> menus have **read** and **write** permissions.
+* <Cmd sid='setting.account.monitoringOperator' product='2' />: <Cmd sid='shell.header.arena' /> and <Cmd sid='shell.header.data' /> menus have **read** and **edit** permissions. <Cmd sid='shell.header.dashboard' /> menu has **read** permission.
 
-* <Cmd sid='setting.account.taOperator' product='2' />: <Cmd sid='common.gnb.time_attendance' product='2' /> menu has **read** and **write** permissions.
+* <Cmd sid='setting.account.taOperator' product='2' />: <Cmd sid='common.gnb.time_attendance' product='2' /> menu has **read** and **edit** permissions. <Cmd sid='shell.header.user' /> menu has **read** permission.
 
-* <Cmd sid='setting.account.visitorOperator' product='2' />: <Cmd sid='common.gnb.visitor' product='2' /> menu has **read** and **write** permissions.
+* <Cmd sid='setting.account.visitorOperator' product='2' />: <Cmd sid='common.gnb.visitor' product='2' /> menu has **read** and **edit** permissions.
 
 :::info
 
@@ -15,6 +15,10 @@
 * Select <Cmd sid='common.selectNone' /> if you do not want to set an admin level. In this case, the user cannot log in to **BioStar X**.
 
 </Include>
+
+* **Edit** permission for the <Cmd sid='shell.header.arena' /> menu allows adding tabs or controlling status tree entries.
+
+* **Edit** permission for the <Cmd sid='shell.header.data' /> menu allows saving reports, adding automated report schedules, and accessing settings.
 
 * For information on adding custom user permissions, see <DocLink docId='platform/biostar_x/settings-adding-custom-account' />.
 

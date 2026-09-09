@@ -14,7 +14,7 @@ This guide describes how to add the desired permission level. Custom permissions
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.account.root' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> on the left sidebar.
 
 3. Click <Cmd sid='setting.account.addCustomOperator' product='2' />.
 
@@ -60,31 +60,59 @@ Set detailed permissions for items. You can select groups to grant edit and view
 
   * <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />
 
-* The permissions for <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='setting.account.item.advAC' product='2' />, <Cmd sid='setting.account.item.map' product='2' />, <Cmd sid='setting.account.item.map' product='2' /> are available with an **Advanced** license or higher. For more information on the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
+* The permissions for <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='setting.account.item.advAC' product='2' />, <Cmd sid='setting.account.item.map' product='2' /> are available with an **Essential** license or higher. For more information on the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
 
-* The <Cmd sid='common.permission.module.cameraGroup' product='2' /> permission can be enabled as an additional option with an **Advanced** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* The <Cmd sid='common.permission.module.cameraGroup' product='2' /> permission is available as an add-on option with an **Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
 ### <Cmd sid='settings.account.menu.setting' product='2' className='normal' /> {/* #menuSetting */}
 
-Set **edit** and **view** permissions for individual menus. Different permissions can be configured for each menu.
+Select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' /> for each menu. Assign different permissions to each menu. Click the <Cmd sid='settings.account.menu.permission' product='2' /> checkbox, then select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' />.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-menus.png' />
 
-* <Cmd sid='common.editRead' product='2' />: Grants permission to add, edit, or delete items in the menu.
+* <Cmd sid='settings.account.menu.readOnly' product='2' />: Grants permission to enter the menu and only view the settings.
 
-* <Cmd sid='common.read' product='2' />: Grants permission to enter the menu and only view the settings.
+* <Cmd sid='settings.account.menu.fullAccess' product='2' />: Grants permission to add, edit, or delete entries in the menu.
 
 :::info
 
-Granting **edit** permissions for each menu activates the <Cmd sid='button.add' product='2' /> button. However, for the <Cmd sid='shell.header.dashboard' /> and <Cmd sid='shell.header.setting' /> menus, since there are no additional features, they will be displayed as <Cmd sid='setting.account.menu.canCreate.na' product='2' />. For the <Cmd sid='common.permission.module.ac' product='2' /> menu, the <Cmd sid='settings.account.menu.detailSetting' product='2' /> must have <Cmd sid='common.permission.module.accessGroup' product='2' /> set to <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' /> and **edit** permissions granted in order for the <Cmd sid='button.add' product='2' /> button to be activated.
+* In the <Cmd sid='shell.header.arena' /> menu, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> allows adding tabs or controlling state tree entries.
+
+* In the <Cmd sid='shell.header.data' /> menu, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> allows saving reports, adding automatic report schedules, and accessing settings.
+
+* In the <Cmd sid='shell.header.dashboard' /> menu, <Cmd sid='settings.account.menu.readOnly' product='2' className='bold' /> permission allows creating new dashboards and widgets.
+
+* Menus not listed in <Cmd sid='settings.account.menu.item' product='2' /> are accessible regardless of permissions.
+
+:::
+
+:::tip
+
+Click a parent menu permission to enable permissions for all submenus.
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-example.png' />
+
+:::
+
+### Plugin
+
+After adding a plugin, configure plugin permissions. Users without plugin permissions cannot access the plugin, and the plugin does not appear on the home screen or launcher.
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-plugin.png' />
+
+:::info
+
+* A plugin license is required to use plugin features. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+
+* Apply <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' /> only to the <Cmd sid='common.permission.module.time_attendance' product='2' /> plugin.
 
 :::
 
 ### <Cmd sid='settings.account.addUser' product='2' className='normal' /> {/* #addUser */}
 
-You can add or verify user information for granting permissions. Click the <Cmd sid='button.plusAdd' product='2' /> button to add a user. Select the user to grant permissions from the user list.
+You can add or verify user information for granting permissions. Click <Cmd sid='button.plusAdd' product='2' /> to add a user. Select the user to grant permissions from the user list.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-users.png' />
 

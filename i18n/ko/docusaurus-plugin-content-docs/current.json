@@ -662,5 +662,9 @@
   "sidebar.biostation3max.category.릴리스 노트": {
     "message": "릴리스 노트",
     "description": "The label for category '릴리스 노트' in sidebar 'biostation3max'"
+  },
+  "sidebar.biostarx.category.감사 추적 관리하기": {
+    "message": "감사 추적 관리하기",
+    "description": "The label for category '감사 추적 관리하기' in sidebar 'biostarx'"
   }
 }

@@ -3463,6 +3463,14 @@
     "width": 501,
     "height": 293
   },
+  "/img/biostarx-settings-device-waiting-list-add.png": {
+    "width": 800,
+    "height": 247
+  },
+  "/img/biostarx-settings-device-waiting-list.png": {
+    "width": 800,
+    "height": 247
+  },
   "/img/biostarx-settings-email-contents.png": {
     "width": 894,
     "height": 161
@@ -11711,6 +11719,10 @@
     "width": 1920,
     "height": 764
   },
+  "/img/en/biostarx-data-all-events-filtered-save-report.png": {
+    "width": 1200,
+    "height": 276
+  },
   "/img/en/biostarx-data-all-events-filtered.png": {
     "width": 1200,
     "height": 448
@@ -12030,6 +12042,10 @@
   "/img/en/biostarx-monitoring-camera-popup.png": {
     "width": 418,
     "height": 326
+  },
+  "/img/en/biostarx-monitoring-device-attention-filter.png": {
+    "width": 400,
+    "height": 304
   },
   "/img/en/biostarx-monitoring-device-auth-fail-lock.png": {
     "width": 1200,
@@ -13139,6 +13155,10 @@
     "width": 1000,
     "height": 158
   },
+  "/img/en/biostarx-settings-adv-ac-rollcall-stop-unaccounted-users.png": {
+    "width": 400,
+    "height": 342
+  },
   "/img/en/biostarx-settings-adv-ac-rollcall-stop.png": {
     "width": 1000,
     "height": 156
@@ -13390,6 +13410,14 @@
   "/img/en/biostarx-settings-device-playback-playVideo-upload.png": {
     "width": 501,
     "height": 293
+  },
+  "/img/en/biostarx-settings-device-waiting-list-add.png": {
+    "width": 800,
+    "height": 247
+  },
+  "/img/en/biostarx-settings-device-waiting-list.png": {
+    "width": 800,
+    "height": 247
   },
   "/img/en/biostarx-settings-email-contents.png": {
     "width": 894,
@@ -17390,6 +17418,10 @@
   "/img/en/monitoring-map-floor-control-door.png": {
     "width": 800,
     "height": 450
+  },
+  "/img/en/monitoring-map-floor-status-check.png": {
+    "width": 860,
+    "height": 259
   },
   "/img/en/monitoring-map-open-map.png": {
     "width": 1200,

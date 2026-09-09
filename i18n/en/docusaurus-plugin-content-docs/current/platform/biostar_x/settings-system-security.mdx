@@ -89,6 +89,12 @@ In the <Cmd sid='setting.server.secure.comm.title' product='2' /> section, you c
 
 <Image src='/img/biostarx-settings-system-security-advanced.png' className='none' />
 
+:::info
+
+The <Cmd sid='setting.server.secure.comm.title' product='2' /> section activates only when you log in with the initial administrator account.
+
+:::
+
 ### Enhance personal data protection
 
 To minimize the risk of data breaches, set the options below to encrypt sensitive personal information.
@@ -99,7 +105,7 @@ To minimize the risk of data breaches, set the options below to encrypt sensitiv
 
   * <Cmd sid="common.notUse" product='2' />: Store user personal information without encryption. Data that is already encrypted will be stored decrypted, and new data will not be encrypted.
 
-* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />: Used to encrypt or decrypt information stored in the database to securely protect user personal information. Click the <Cmd sid="setting.server.secure.comm.key_change" product='2' /> button and set a new encryption key value. Changing the encryption key re-encrypts the data that was previously encrypted.
+* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />: Used to encrypt or decrypt information stored in the database to securely protect user personal information. Click <Cmd sid="setting.server.secure.comm.key_change" product='2' /> and set a new encryption key value. Changing the encryption key re-encrypts the data that was previously encrypted.
 
 :::info
 
@@ -142,22 +148,53 @@ To minimize the risk of data breaches, set the options below to encrypt sensitiv
 
 :::
 
-### Set communication security between devices
+### Set secure communication between devices {/* #communicationByDevice */}
 
-Set up secure communication between the **BioStar X** server and access control devices.
+Protect communication between the **BioStar X** server and access control devices with certificates to enhance security. A newly installed **BioStar X** system sets the <Cmd sid="setting.sever.secure.comm.menu" product='2' /> option to <Cmd sid="common.use" product='2' /> by default, so no additional activation steps are required. When you upgrade an existing system, it keeps previous settings, reuses the security certificate, and reconnects registered devices.
 
-* <Cmd sid="setting.sever.secure.comm.menu" product='2' />: Communication between the **BioStar X** server and access control devices can be protected with certificates. If you set this option to <Cmd sid="common.use" product='2' />, the server automatically generates a certificate to send to the devices, and all communication is encrypted thereafter. Devices can use this certificate to establish a secure channel when exchanging data with the **BioStar X** server.
+* <Cmd sid="setting.sever.secure.comm.menu" product='2' />: Protect communication between the **BioStar X** server and access control devices with certificates. When this option is set to <Cmd sid="common.use" product='2' />, the server automatically generates a certificate, sends it to devices, and encrypts all communication thereafter. Devices use this certificate to establish a secure channel when exchanging data with the **BioStar X** server.
 
-  To use external certificates, enable the <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> option and upload the root certificate, public key certificate, and private key file.
+  To use an external certificate, set the <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> option to <Cmd sid="common.use" product='2' />, and register the following.
+
+  * Upload the <Cmd sid="setting.sever.secure.comm.extcert.root.menu" product='2' />, <Cmd sid="setting.sever.secure.comm.extcert.public.menu" product='2' />, and <Cmd sid="setting.sever.secure.comm.extcert.private.menu" product='2' /> files separately.
+
+  * If a passphrase is set for the private key, enter the same value in <Cmd sid="setting.sever.secure.comm.extcert.passphrase.menu" product='2' /> and <Cmd sid="setting.sever.secure.comm.extcert.passphraseconfirm.menu" product='2' />. (Optional)
+
+  :::note
+
+  To restore the security certificate backed up during server removal, copy it directly to the **BioStar X** installation path. For instructions on backing up and restoring security certificates, see <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />.
+
+  :::
 
   <Image src='/img/biostarx-settings-system-security-advanced-with-device.png' />
-* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />: You can redefine the data encryption key and administrator password.
+
+* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />: Manually manage the hash key applied to devices. Set this option to <Cmd sid="common.use" product='2' /> to check and change the <Cmd sid="setting.server.secure.comm.encryption_key_device" product='2' /> value. Click <Cmd sid="setting.server.secure.comm.key_change" product='2' /> and set a new hash key value.
+
+:::caution
+
+Before enabling the <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> option, check the following.
+
+* When enabled, the device is set to delete user data, logs, and encryption key values together when a tamper (Tamper) event occurs to enhance security, so use caution.
+
+* If a user other than the <Cmd sid='ROLE_CODE_ADMIN' product='2' className='normal' /> account has a password or PIN, the system cannot apply the hash key. Delete the login password or PIN, then try again. The system encrypts passwords and PINs in a non-decryptable way to meet security requirements.
+
+* Changing the device hash key deletes the master administrator PIN information stored on the device. Use extra caution because deleting credentials may prevent access to the Device Manager menu.
+
+* <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' /> and <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> settings cannot be enabled at the same time. Disable one of the two options, then set the other.
+
+:::
 
 :::info
 
 * **BioStar X** generates or deletes certificates according to the configuration status of device and secure communication settings, and does not recreate the same certificate as before. For example, if the setting of Secure communication with device is changed in the order of <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' />, the created certificate will be deleted automatically. When the setting is changed in the order of <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' />, the operation of **Create A certificate** → **Delete A certificate** → **Create B certificate** is carried out.
 
 * If you set the <Cmd sid="setting.sever.secure.comm.menu" product='2' /> option to <Cmd sid="common.notUse" product='2' /> while the device is physically separated from the network, the certificate stored in the device will be deleted. In this case, the device cannot be reconnected. To connect it again, the certificate saved in the device must be deleted or the device must be reset to factory default. For more information, refer to the manual of the device.
+
+* If a previously connected device fails to connect due to a certificate mismatch, **BioStar X** records it in the system log. If the device suddenly fails to connect, check the system log. Then initialize the device or re-enroll the exported certificate set with <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' />. If you remove and reinstall the server, see <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />.
+
+* If the multi-communication server is not connected, the system disables the <Cmd sid="setting.sever.secure.comm.menu" product='2' /> option and blocks changes to it.
+
+* For instructions on backing up certificates when removing a server, see <DocLink docId='platform/biostar_x/remove-server' />.
 
 <details>
 <summary>View supported devices and firmware versions for <Cmd sid="setting.sever.secure.comm.menu" product='2' /> feature</summary>

@@ -1,0 +1,33 @@
+---
+id: settings-system-audit-trail-settings
+title: Manage Audit Trail Retention Settings
+description: Learn how to set retention policies for access control audit log change history and query history.
+---
+
+Audit logs accumulate over time, so manage the retention period to save storage space and protect privacy. In <Cmd sid='setting.menu.system.auditTrailRetention' />, set the retention period for <Cmd sid='setting.menu.auditTrail.acAuditLog' /> logs and whether to keep query history.
+
+:::info
+
+A separate document covers the retention policy for Time and Attendance (T&A) audit logs.
+
+:::
+
+## Privilege information
+
+<Cmd sid='setting.account.administrator' className='normal' /> can always view and change settings in the <Cmd sid='setting.menu.system.auditTrailRetention' /> menu. For a custom privilege administrator, in <Cmd sid='settings.account.menu.setting' product='2' />, set <Cmd sid='setting.menu.auditTrail.retentionSettings' /> to <Cmd sid='settings.account.menu.readOnly' product='2' /> for view-only, or to <Cmd sid='settings.account.menu.fullAccess' product='2' /> for view and change.
+
+> <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> → <Cmd sid='setting.account.addCustomOperator' product='2' />
+
+<Image src='/img/biostarx-settings-custom-account-level.png' />
+
+## Open audit settings
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. On the left sidebar, click <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.system.auditTrailRetention' />.
+
+<Image src='/img/biostarx-settings-audit-trail-settings.png' />
+
+import AuditTrailOptions from '../../common/_bsx-audit-trail-settings-options.mdx';
+
+<AuditTrailOptions type='accesscontrol' />

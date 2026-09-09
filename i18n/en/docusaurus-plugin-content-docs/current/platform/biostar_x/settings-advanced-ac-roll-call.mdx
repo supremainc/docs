@@ -2,9 +2,6 @@
 id: settings-advanced-ac-roll-call
 title: Roll Call
 description: This guides how to set up roll call.
-keywords:
-  - Advanced access control
-  - Roll call
 ---
 
 Roll Call quickly generates a personnel list based on entry records within a specific time and place. When an emergency occurs, the system can determine whether a user has arrived at the roll call location by authenticating through the entry or exit device at a predesignated location.
@@ -13,7 +10,7 @@ Can be used for emergency response, safety checks, and providing rescue team inf
 
 :::info
 
-Roll call settings can be used through additional options available with an **Advanced** license or above. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+Roll call settings can be used through an add-on option with an *Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -21,7 +18,7 @@ Roll call settings can be used through additional options available with an **Ad
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> on the left sidebar.
 
 3. Click <Cmd sid='button.func.addZone' product='2' />.
 
@@ -51,19 +48,35 @@ The details for roll call settings are as follows.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: You can activate or temporarily deactivate the settings.
 
+* <Cmd sid='zone.rollCall.onSiteOnly' product='2' />: Set to <Cmd sid='common.use' product='2' />. The system locks roll call targets to **users who last authenticated at an on-site entry device** when roll call starts. The default is <Cmd sid='common.notUse' product='2' />. In this case, all configured users (user groups and individual users) become roll call targets.
+
+   :::note
+
+   The system determines whether each user is on site based on authentication records from on-site entry or exit devices within the last 7 days. If the most recent authentication before roll call starts occurred at an on-site entry device, the system considers the user on site. If it occurred at an on-site exit device, the system considers the user off site. The system considers users without authentication records within the last 7 days off site and excludes them from the target list.
+
+   The target list is finalized only once when roll call starts, and it does not change if users enter or exit while roll call is in progress.
+
+   :::
+
+  The following options are available when <Cmd sid='zone.rollCall.onSiteOnly' product='2' /> is set to <Cmd sid='common.use' product='2' />.
+
+  * <Cmd sid='zone.rollCall.siteEntryDevices' product='2' />: Select the device for on-site entry authentication.
+
+  * <Cmd sid='zone.rollCall.siteExitDevices' product='2' />: Select the device for on-site exit authentication.
+
 * <Cmd sid='zone.rollCall.manualStatusChange' product='2' />: You can set it to change the status manually.
 
-* <Cmd sid='zone.entryDevices' product='2' />: Select the device to be used when entering. You can choose from the list of registered devices.
+* <Cmd sid='zone.rollCall.entryDevices' product='2' />: Select the device to be used when entering. You can choose from the list of registered devices.
 
-* <Cmd sid='zone.exitDevices' product='2' />: Select the device to be used when exiting. You can choose from the list of registered devices.
+* <Cmd sid='zone.rollCall.exitDevices' product='2' />: Select the device to be used when exiting. You can choose from the list of registered devices.
 
 * <Cmd sid='common.users' product='2' />: You can select user groups or individual users who are allowed to enter.
 
 :::info
 
-* The same device cannot be set for both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' /> at the same time.
+* The same device cannot be set for both <Cmd sid='zone.rollCall.entryDevices' product='2' /> and <Cmd sid='zone.rollCall.exitDevices' product='2' /> at the same time.
 
-* You can select up to 10 devices for <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+* Select up to 10 devices for <Cmd sid='zone.rollCall.entryDevices' product='2' /> and <Cmd sid='zone.rollCall.exitDevices' product='2' />.
 
 * For more information about device registration, refer to the following.
 
@@ -75,49 +88,91 @@ The details for roll call settings are as follows.
 
 :::
 
-## Activate/deactivate {/* #activateDeactivateOccupancyZone */}
+## Check roll call list status {/* #rollCallZoneList */}
+
+The roll call list shows details and status for each roll call setting.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcall-list.png' />
+
+* <Cmd sid='common.name' product='2' />: Shows the name.
+
+* <Cmd sid='zone.rollCall.entryDevices' product='2' /> / <Cmd sid='zone.rollCall.exitDevices' product='2' />: Shows the selected devices.
+
+* <Cmd sid='common.userGroup' product='2' /> / <Cmd sid='common.users' product='2' />: Shows the selected targets.
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Shows the activation status.
+
+* <Cmd sid='zone.rollCall.onSiteOnly' product='2' />: Shows whether it is enabled.
+
+* <Cmd sid='zone.rollCall.siteEntryDevices' product='2' /> / <Cmd sid='zone.rollCall.siteExitDevices' product='2' />: Shows the selected on-site entry or exit devices.
+
+* <Cmd sid='common.status' product='2' />: Shows the roll call status (<Cmd sid='zone.rollCall.notStart' product='2' />, <Cmd sid='zone.rollCall.inProgress' product='2' />, etc.).
+
+* <Cmd sid='common.description' product='2' />: Shows the description.
+
+## Activate/deactivate {/* #activateDeactivateRollCall */}
 
 You can activate disabled roll call settings or deactivate activated settings.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> on the left sidebar.
 
 3. Click <Cmd sid='zone.rollCall' product='2' /> from the list.
 
 4. Click the checkbox for the item you want to activate or deactivate in the roll call settings list.
 
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-list-enable.png' />
+
 5. Click <Cmd sid='zone.pause.activate' product='2' /> or <Cmd sid='zone.pause.deactivate' product='2' /> in the upper right corner of the screen.
 
-## Delete {/* #deleteOccupancyZone */}
+:::info
+
+* Select <Cmd sid='zone.pause.deactivate' product='2' />, and a confirmation message appears. Select <Cmd sid='button.yes' product='2' /> or <Cmd sid='button.no' product='2' />.
+
+* Cannot deactivate an ongoing roll call. Check and try again.
+
+:::
+
+## Delete {/* #deleteRollCall */}
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.advancedAc.root' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> on the left sidebar.
 
 3. Click <Cmd sid='zone.rollCall' product='2' /> from the list.
 
 4. Click the checkbox for the item you want to delete from the roll call settings list.
 
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-list-delete.png' />
+
 5. Click <Cmd sid='button.deleteZone' product='2' /> at the top right of the screen.
 
 6. When the warning message appears, click the <Cmd sid='button.continue' product='2' /> button.
 
+:::info
+
+Cannot delete an ongoing roll call. End the roll call and try again.
+
+:::
+
 import ExploreListPages from '../../common/_explore-list-pages.mdx';
+import RollCall from '../../common/_bsx-rollcall.mdx';
+import EndRollCall from '../../common/_bsx-end-rollcall.mdx';
 
 <ExploreListPages />
 
-import RollCall from '../../common/_bsx-rollcall.mdx';
-
 <RollCall />
+
+<EndRollCall />
 
 ## View roll call reports {/* #viewRollCallReport */}
 
 To check the roll call report, follow these steps.
 
-1. Click <Cmd sid='shell.header.launcher' /> on the page of <Cmd sid='shell.header.data' />.
+1. Click <Cmd sid='shell.header.data' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. On the left sidebar of the screen, click <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' />.
+2. Click <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' /> on the left sidebar.
 
 3. When the <Cmd sid='data.dialog.rollCall.selectRollCall' /> window appears, select the roll call item you want to check in the report, then click the <Cmd sid='data.button.next' /> button.
 
@@ -136,3 +191,7 @@ To check the roll call report, follow these steps.
 Generating the report. The report provides information on each user, including their entry time, exit time, last location, and notes.
 
 <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated.png' caption />
+
+Check <Cmd sid='data.header.rollCall.endReason' product='2' /> in roll call reports with unconfirmed users.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated-uncounted-reason.png' caption />

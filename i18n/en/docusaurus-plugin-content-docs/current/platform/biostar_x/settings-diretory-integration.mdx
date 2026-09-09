@@ -23,11 +23,11 @@ Integrating with **Entra ID** or **Active Directory** provides the following con
 
 :::info
 
-The **Entra ID** or **Active Directory** settings feature is available through additional options on the **Advance** license and above. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+The **Entra ID** or **Active Directory** settings feature is available as an add-on with the **Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
-## Directory Integration Settings {/* #intergratewithentraid */}
+## Directory integration settings {/* #intergratewithentraid */}
 
 <Tabs>
 <TabItem label='Entra ID' value='entraid'>
@@ -36,7 +36,7 @@ The **Entra ID** or **Active Directory** settings feature is available through a
 
 2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-3. Click <Cmd sid='setting.menu.directoryIntegration.root' /> in the left sidebar of the screen.
+3. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> on the left sidebar.
 
 4. Select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
@@ -46,7 +46,7 @@ The **Entra ID** or **Active Directory** settings feature is available through a
 
 :::info
 
-To integrate with Entra ID, go to <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> and set <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
+To integrate with Entra ID, go to <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.server' product='2' /> and set <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
 
 :::
 
@@ -93,7 +93,7 @@ Enter the server information for **Entra ID** and click <Cmd sid='settings.activ
 
 :::info
 
-Each user field of **BioStar X** is set by default to map to items that match the user information of <strong>Entra ID</strong>. To select a field value other than the default, click the field in <Cmd sid='settings.activeDirectory.FieldNameEI' product='2' /> and select the desired field value.
+By default, **BioStar X** maps each user field to a matching user information field in <strong>Entra ID</strong>. To use a field value other than the default, click an entry in the <Cmd sid='settings.activeDirectory.FieldNameEI' product='2' /> column and select a different field value.
 
 <Image src='/img/biostarx-setting-directory-userfield-select-other.png' />
 
@@ -154,7 +154,7 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 
 2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-3. Click <Cmd sid='setting.menu.directoryIntegration.root' /> in the left sidebar of the screen.
+3. Click <Cmd sid='setting.menu.directoryIntegration.root' /> on the left sidebar of the screen.
 
 4. Select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 
@@ -215,7 +215,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
 :::info
 
-Each user field of **BioStar X** is set by default to map to items that match the user information of <strong>Active Directory</strong>. To select a field value other than the default, click the field in <Cmd sid='settings.activeDirectory.FieldNameAD' product='2' /> and select the desired field value.
+By default, **BioStar X** maps each user field to a matching user information field in <strong>Active Directory</strong>. To use a field value other than the default, click an entry in the <Cmd sid='settings.activeDirectory.FieldNameAD' product='2' /> column and select a different field value.
 
 <Image src='/img/biostarx-setting-directory-userfield-select-other-ad.png' />
 
@@ -256,7 +256,7 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 </TabItem>
 </Tabs>
 
-## View settings results {/* #checksettings */}
+## Check settings results {/* #checksettings */}
 
 After completing the integration settings with **Entra ID** or **Active Directory**, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. Refer to the following to check the synchronized settings.
 
@@ -265,6 +265,29 @@ After completing the integration settings with **Entra ID** or **Active Director
 * After completing the login settings with **Entra ID** or **Active Directory**, you can see <Cmd sid='login.entraidLoginBtn' product='2' /> when logging in to **BioStar X**.
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
+
+## Handle unsupported characters {/* #unsupportedcharacter */}
+
+If a user ID or name in **Entra ID** or **Active Directory** includes unsupported characters, the system synchronizes the user after removing them.
+
+> For example, if a directory service user id is `john/doe` and the user name is `John<Doe>`, **BioStar X** registers them as `johndoe` and `JohnDoe`.
+
+:::info
+
+* The system excludes periods(`.`) and apostrophes(`'`) in user names from unsupported characters and saves the original directory service values. 
+
+  > Example: `O'Brien`, `John.Doe` → Saved with the original directory service values
+
+* The system excludes periods(`.`) from unsupported characters in user IDs and saves the original directory service values, but removes apostrophes(`'`) because user IDs cannot include them. 
+
+  > Directory service user ID examples:
+  >
+  > * `O'Brien` → Saved as `OBrien` 
+  > * `john.doe` → Saved as `john.doe`
+
+* For more information about user ID and name input rules, see <DocLink docId='platform/biostar_x/add-user-basic-info' />.
+
+:::
 
 ## Exclude from directory integration {/* #excludeintegration */}
 
@@ -280,17 +303,33 @@ When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='set
 
    <Image src='/img/biostarx-user-advance-exclude-sync.png' />
 
-5. Click the <Cmd sid='button.apply' product='2' /> button.
+5. Click <Cmd sid='button.apply' product='2' />.
 
 The selected users will be excluded from integration when using the <Cmd sid='setting.menu.directoryIntegration.root' /> feature.
 
-## Disable Directory Integration {/* #disableIntegration */}
+:::info
+
+The system automatically excludes these users from integration.
+
+* When a user name starts with `&@~` consecutively at the beginning
+
+* User id or user name is blank
+
+* The user ID (up to 32 characters) or user name (up to 48 characters) exceeds the length limit
+
+* user id matches a system-reserved value, such as `admin`
+
+* The user ID is a single period (`.`) or two periods (`..`)
+
+:::
+
+## Disable directory integration {/* #disableIntegration */}
 
 To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature, follow the steps:
 
 1. Log in to **BioStar X** with an administrator account.
 
-2. Click <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
+2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
 
 3. Select <Cmd sid='settings.activeDirectory.notUse' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
 

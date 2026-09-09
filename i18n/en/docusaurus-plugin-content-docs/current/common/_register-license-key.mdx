@@ -1,33 +1,85 @@
-## Registering in an online state {/* #registering-online */}
+## Register online {/* #registering-online */}
+
+:::info
+
+The license key accepts only numbers and hyphens (`-`). Enter up to 16 digits in the `1111-1111-1111-1111` format.
+
+:::
+
+### Register a single license
 
 To activate the **BioStar X** license while online with an internet connection, enter your name and the received license key, then click <Cmd sid='setting.server.license.button.activate' product='2' />.
 
 <Image src='/img/biostarx-tutorial-license-online.png' />
 
-## Registering in offline {/* #registering-offline */}
+### Register multiple licenses
+
+Add up to 30 licenses at a time. Click the <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> button. After entering all licenses, click <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+<Image src='/img/biostarx-tutorial-license-online-added.png' />
+
+:::note
+
+* When the number of fields reaches 30, the <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> button becomes disabled. You cannot add more licenses.
+
+* Paste multiple license keys into the fields at once. The system detects only keys in the `1111-1111-1111-1111` format and splits them into each field.
+
+* If the pasted keys exceed 30, only the first 30 are entered automatically. Extra keys are ignored.
+
+:::
+
+### Activation progress
+
+Click <Cmd sid='setting.server.license.button.activate' product='2' /> to open the progress pop-up. Do not close the page or popup until activation completes.
+
+## Register offline {/* #registering-offline */}
 
 To activate the **BioStar X** license in a closed network environment or in an offline state with limited internet access, please follow the instructions below.
 
-1. In the <Cmd sid='setting.xlicense.activation' product='2' /> section, click <Cmd sid='setting.xlicense.offlineActivation' product='2' />.
+1. Enter an administrator name for registration and the license key in the <Cmd sid='setting.xlicense.activation' product='2' /> section.
+
+   :::note
+
+   * The license key accepts only numbers and hyphens (`-`). Enter up to 16 digits in the `1111-1111-1111-1111` format.
+
+   * Save or write down the administrator name and license key.
+
+   * If you need multiple licenses, click the <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> button to add them.
+
+   :::
+
+2. Click <Cmd sid='setting.xlicense.offlineActivation' product='2' />.
 
    <Image src='/img/biostarx-tutorial-license-offline.png' />
 
-2. When the <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' /> window appears, click <Cmd sid='setting.xlicense.button.requestOfflineKey' product='2' />.
+3. When the <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' /> window appears, click <Cmd sid='setting.xlicense.offlineActivation.needFile' product='2' />.
 
    <Image src='/img/biostarx-tutorial-license-offline-popup.png' />
 
-3. When the dialog appears, enter <Cmd sid='setting.xlicense.offlineActivation.requestBy' product='2' /> and <Cmd sid='setting.xlicense.offlineActivation.activationKey' product='2' />.
+   :::note
+
+   If an issued license file is available, click <Cmd sid='setting.xlicense.offlineActivation.haveFile' product='2' /> on this screen, then go to step 9.
+
+   :::
+
+4. When the license request file (\*.req) is created, download it to the local disk.
+
+5. Send the downloaded request file to the reseller and request an offline activation file (\*.lic).
+
+6. After receiving the offline activation file, enter the administrator name and license key from step 1 in the <Cmd sid='setting.xlicense.activation' product='2' /> section.
+
+7. Click <Cmd sid='setting.xlicense.offlineActivation' product='2' />.
+
+8. When the <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' /> window appears, click <Cmd sid='setting.xlicense.offlineActivation.haveFile' product='2' />.
 
    <Image src='/img/biostarx-tutorial-license-offline-popup-filed.png' className='none' />
 
-4. Click the <Cmd sid='setting.server.license.button.download' product='2' /> button to download the license request file (*\*.req*).
+9. When the Open File window appears, select the offline activation file (\*.lic) or the compressed file (\*.zip) stored locally.
 
-5. Send it to the purchase location.
+   :::note
 
-Once you receive the license file (*\*.lic*) from the purchase location, click the <Cmd sid='setting.xlicense.offlineActivationTitle' product='2' /> button to upload the license file.
+   If you request multiple licenses, you may receive a compressed file.
 
-:::info
+   :::
 
-If you do not have a license key, only enter <Cmd sid='setting.xlicense.offlineActivation.requestBy' product='2' />.
-
-:::
+10. A progress status pop-up appears. Do not close the page or popup until activation completes.

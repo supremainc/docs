@@ -1,0 +1,143 @@
+---
+id: remove-server
+title: Uninstall BioStar X Server and Restore Security Certificates
+description: This guide explains how to uninstall the BioStar X server, back up security certificates, and restore them after reinstalling.
+---
+
+This section explains how to uninstall the **BioStar X** server from a computer. If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is not in use, uninstall **BioStar X** without backing up or restoring certificates.
+
+If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is in use, back up the server security certificate set (root CA/server certificate/key) before uninstalling **BioStar X**. This backup provides the only way to reconnect existing devices after reinstalling the same server. To reuse only the secure communication certificates and keep the database and settings, see <DocLink inner='#restoreCertificate' />. This differs from the system [restore feature](settings-system-system-restore).
+
+## Uninstall the BioStar X server {/* #uninstallServer */}
+
+:::caution
+
+Uninstalling **BioStar X** deletes all installation files, including certificates, and may also delete content (user information). To preserve the database, settings, and keys, back up the system before uninstalling. See <DocLink docId='platform/biostar_x/settings-system-system-backup' />.
+
+:::
+
+1. In Windows, go to **Settings** → **Apps** → **Installed apps**.
+
+2. Find **BioStar X** in the list, click <IcMoreB title='More' />, and select **Uninstall**.
+
+   <Image src='/img/biostarx-uninstall-apps-list.png' />
+
+3. If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is in use, the certificate backup dialog appears. Click **Location...** and set the backup path. If this option is not in use, continue to step 7 without the certificate backup procedure.
+
+   <Image src='/img/biostarx-uninstall-cert-backup.png' />
+
+   :::caution
+
+   Do not use the **BioStar X** installation path as the backup location. Uninstalling **BioStar X** deletes it along with the **BioStar X** installation folder. Select a path other than the **BioStar X** installation path.
+
+   :::
+
+4. After selecting a path and **Back up and uninstall** becomes active, click it.
+
+   <Image src='/img/biostarx-uninstall-cert-backup-path.png' />
+
+5. If a certificate backup file already exists in the selected location, a dialog asks whether to overwrite it. To overwrite the existing backup, click **Yes**. To select a different path, click **No**.
+
+   <Image src='/img/biostarx-uninstall-cert-backup-overwrite.png' />
+
+6. When the certificate backup completes, an information dialog appears. Click **OK** to save the settings.
+
+   <Image src='/img/biostarx-uninstall-cert-backup-success.png' />
+
+7. When prompted to confirm uninstalling **BioStar X** and all related components, click **Yes**.
+
+   <Image src='/img/biostarx-uninstall-confirm.png' />
+
+8. Wait while uninstallation completes.
+
+   <Image src='/img/biostarx-uninstall-progress.png' />
+
+9. A dialog asks whether to delete all content (user information). To delete all data, including user information stored in the database, click **Yes**. To keep the data, click **No**.
+
+   <Image src='/img/biostarx-uninstall-delete-content.png' />
+
+   :::caution
+
+   Click **Yes** to delete all data, including user information stored in the database. You cannot recover the data. To keep the data, click **No**. Before removing **BioStar X**, back up the system. See <DocLink docId='platform/biostar_x/settings-system-system-backup' />.
+
+   :::
+
+10. If **USB Device Agent** is installed, a dialog appears asking whether to remove it as well. Click **Yes**.
+
+    <Image src='/img/biostarx-uninstall-usb-agent-confirm.png' />
+
+    :::note
+
+    Depending on the components in use, additional uninstall dialogs for related drivers may appear. Follow the instructions on the screen to complete the uninstallation.
+
+    :::
+
+11. When component removal completes, a dialog appears. Click **OK** to save the settings.
+
+    <Image src='/img/biostarx-uninstall-usb-agent-success.png' />
+
+12. After the system removes **BioStar X**, a dialog appears. Click **OK** to save the settings.
+
+    <Image src='/img/biostarx-uninstall-success.png' />
+
+## Restore backed-up security certificates {/* #restoreCertificate */}
+
+After reinstalling the server that used the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option, restore the secure communication certificate. This enables reconnection of existing devices. The [System restore tool](settings-system-system-restore) returns the entire system, including the database and settings, to a previous state. Use this method to reuse only the secure communication certificate without a system restore. Without a dedicated tool, restore the backed-up certificate files directly to the installation path.
+
+:::info
+
+In an environment with a main server and a Multi Communication Server, each server uses its own secure communication certificate. After restoring the certificate, install and add the Multi Communication Server. The system copies its certificate automatically, so no separate restore is required.
+
+:::
+
+1. Install **BioStar X** again. For installation instructions, see <DocLink docId='platform/biostar_x/express-install' /> or <DocLink docId='platform/biostar_x/custom-install' />.
+
+2. After installing **BioStar X**, click <Start/> → **BioStar X** → **BioStar X Service Manager** on Windows.
+
+3. When the **BioStar X Service Manager** window appears in the web browser, click the <Cmd>SERVICES</Cmd> menu.
+
+4. To stop all services, click <Cmd>Stop All</Cmd> in the top right corner of the screen.
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
+
+5. Copy all backed-up certificate files (root CA, server certificate, and key) to the *cert* folder under the **BioStar X** installation path.
+
+   > Example: *C:\\Program Files\\BioStar X\\cert*
+
+   :::note
+
+   The file names match the certificates created during the new installation. When a prompt asks to overwrite files, click **Yes** to replace the existing files.
+
+   :::
+
+6. In <Cmd>SERVICES</Cmd>, click <Cmd>Start All</Cmd> to restart all services.
+
+7. If you use the Multi Communication Server, install it in a separate environment. For installation instructions, see <DocLink docId='platform/biostar_x/install-communication-server' />.
+
+8. In **BioStar X Service Manager** on the main server, add the Multi Communication Server. For instructions on adding the Multi Communications Server, see <DocLink docId='platform/biostar_x/install-communication-server#check-after-install' />.
+
+When you add the Multi Communications Server, the system copies the security certificate files from the main server *cert* folder. It copies them to the Multi Communications Server automatically.
+
+:::caution
+
+If you added the Multi Communications Server before restoring the certificate (steps 4\~6), it already has the old certificate. In this case, replace the Multi Communications Server certificate separately. Follow the procedure below.
+
+1. On the server where the Multi Communications Server is installed, run **BioStar X Service Manager** and stop all services.
+
+2. Copy the backed-up certificate files to the *cert* folder under the Multi Communications Server installation path.
+
+   > Example: *C:\\Program Files\\BioStar X Communications Server\\cert*
+
+3. On both the main server and the Multi Communications Server, restart all services in **BioStar X Service Manager**.
+
+:::
+
+:::info
+
+* For more information on using **BioStar X Service Manager**, see <DocLink docId='platform/biostar_x/manage-server' />.
+
+* For more information about the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option, see <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />.
+
+* A Multi Communications Server license is required to install and connect the server. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+
+:::

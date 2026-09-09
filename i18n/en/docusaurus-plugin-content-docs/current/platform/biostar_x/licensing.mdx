@@ -30,9 +30,9 @@ Use the **BioStar X License Calculator** to resolve complex licensing requiremen
 | **Maximum Users** | 200 | 100 | 1,000 | 50,000 | 100,000 | 500,000 |
 | **Maximum Operators** | 1 | 1 | 10 | 20 | 40 | 100 |
 | **Maximum Connected IP Devices** | 1,000 | 1,000 | 1,000 | 1,000 | 1,000 | 1,000 |
-| **Maps** | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ |
-| **Video** | ❌ | ❌ | ❌ | Add on | Add on | Add on |
-| [**Advanced Access Control**](#package)<br/>*(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)* | ❌ | ❌ | ❌ | Add on | ✔️ | ✔️ |
+| **Maps** | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ |
+| **Video** | ❌ | ❌ | Add on | Add on | Add on | Add on |
+| [**Advanced Access Control**](#advanced-access-control)<br/>*(Anti-passback, Fire Alarm, Intrusion Alarm, Muster, Occupancy Limit, Elevator, Interlock)* | ❌ | ❌ | Add on | Add on | ✔️ | ✔️ |
 | [**Capacity Upgrade**](#capacity-upgrade)<br/>*(Doors/Users/Operators)* | Users, Operators only | ❌ | Add on | Add on | Add on | Add on |
 
 </div>
@@ -59,14 +59,14 @@ License upgrades are available for holders of **Essential**, **Advanced**, **Ent
 
 ## Feature add-ons {/* #features-add-ons */}
 
-The following items can be purchased individually and can be additionally applied to **Advanced**, **Enterprise**, and **Elite** license tiers.
+The following options are available for individual purchase and can be added to **Essential**, **Advanced**, **Enterprise**, and **Elite** license tiers.
 
 <div className='cols3--20-20-60 overflow-x'>
 
 | Feature | License Type | Remarks |
 | --- | --- | --- |
-| **Multi Communications Server Init** | Base License | Includes 1 communication server. Supports up to 1,000 IP devices. |
-| **Multi Communications Server Add-on** | Additional Server | Adds 1 additional communication server. Extends IP device capacity by 1,000 per add-on. |
+| **Multi Communications Server Init** | Base License | Includes 1 Multi Communications Server. Supports up to 1,000 IP devices. |
+| **Multi Communications Server Add-on** | Additional Server | Required to add 1 additional Multi Communications Server. Extends IP device capacity by 1,000 per add-on. |
 | **GIS Map** | System | You can use the GIS map to set up areas, facilities, and floors. |
 | **Video** | Camera | Required when integrating third-party VMS. Supports up to 1,000 integrated cameras per system. |
 | **Server Matching** | ID, Card, Fingerprint, IR face | Server matching method compares the ID, card, fingerprint, and IR face stored on the device to the credentials stored in the server database. |
@@ -101,13 +101,31 @@ The following items can be purchased individually and can be added regardless of
 
 {/* | **사용자 리모트 액세스** | 시스템 | 사용자의 ngrok 서비스 계정을 사용해 **BioStar X**를 터널링합니다. This allows access to **BioStar X** from an external network. | */}
 
-## Package {/* #package */}
+## Advanced Access Control {/* #advanced-access-control */}
 
-The following item can be purchased as add-ons from the **Advanced** license tier, and are included by default in **Enterprise** and **Elite** license tiers.
+**Advanced access control** consists of the following 7 individual features, and you can select and purchase only the features you need. **Essential** and **Advanced** license tiers offer these as add-on options, while **Enterprise** and **Elite** license tiers include all 7 features by default.
 
-* **Advanced Access Control**: A package of advanced access control features - Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator Control, and Interlock.
+<div className='table-fixed overflow-x'>
 
-{/* Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock */}
+| Feature | License Type | Remarks |
+| --- | :-: | --- |
+| **APB**(Anti-passback) | System | - |
+| **Fire Alarm** | System | - |
+| **Intrusion Alarm** | System | - |
+| **Muster** | System | - |
+| **Occupancy Limit** | System | - |
+| **Elevator** | System | - |
+| **Interlock** | System | - |
+
+</div>
+
+:::note
+
+* Scheduled Lock(Scheduled Lock) and Scheduled Unlock(Scheduled Unlock) are basic access control features that do not require a license and are always available separately from the 7 features above.
+
+* Customers who previously purchased the Advanced Access Control package can continue to use it. From new purchases onward, the 7 features can be selected and purchased individually.
+
+:::
 
 ## Device License
 
@@ -116,6 +134,7 @@ Device licenses can be purchased individually and can be added regardless of the
 | Feature | License Type | Supported models | Remarks |
 | --- | --- | --- | --- |
 | **Camera QR** | Device | BioStation 3 Max, XPass Q2, BioStation 3, X-Station 2 (no QR code reader) | - |
+| <Cmd sid='device.info.multiFaceAuth.label' product='2' className='bold' /> | Device | BioStation 3 Max, BioStation 3 | - |
 | **Wireless Lock** | Device | CoreStation 40 | - |
 
 {/* | **얼굴 서버 매칭** | 장치 | - | 고급 지원을 위해 유지보수 계약이 필요합니다. | */}

@@ -60,19 +60,17 @@ The fields that can be set in the <Cmd sid='team.user.information' /> section ar
 
 Click <Cmd sid='user.save' product='2' /> in the upper right corner of the screen to save the basic information you entered.
 
+import UserNameIDrule from '../../common/_bsx-user-id-name-rule.mdx';
+
+<UserNameIDrule />
+
 :::info
 
-* <Cmd sid='team.user.table.id' /> may have different values that can be set according to the <Cmd sid='setting.menu.server.server' /> menu under <Cmd sid='shell.header.setting' /> → <Cmd sid="setting.userDevice.useridType" product='2' /> option. For more information, see <DocLink docId='platform/biostar_x/settings-server-server#userid-type' />.
+* The available values for <Cmd sid='team.user.table.id' /> vary by the <Cmd sid="setting.userDevice.useridType" product='2' /> option in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> menu. For more information, see <DocLink docId='platform/biostar_x/settings-server-server#userid-type' />.
 
   * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />: Enter a number from 1 to 4294967294.
 
   * <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />: Enter a combination of letters and numbers.
-
-* Spaces cannot be included with the value of <Cmd sid='team.user.table.id' />.
-
-* The username can be up to 48 characters, including special characters.
-
-  > Special characters: `~` `!` `@` `#` `$` `%` `^` `&` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}` `;` <code>\`</code>
 
 * To display the user's photo, department, and position on the mobile access card, ensure to add a photo and enter the department and position.
 
