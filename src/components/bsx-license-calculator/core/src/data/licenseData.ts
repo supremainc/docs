@@ -1,4 +1,4 @@
-import { LicenseConfig, BaseLicenseType, CapacityType } from '../types/license';
+import { LicenseConfig, BaseLicenseType, CapacityType, PackageType } from '../types/license';
 
 export const licenseConfigs: Record<BaseLicenseType, LicenseConfig> = {
   'Device Manager': {
@@ -42,10 +42,10 @@ export const licenseConfigs: Record<BaseLicenseType, LicenseConfig> = {
     },
     upgradableCapacities: ['Door', 'User', 'Operator'],
     includesAdvancedAC: false,
-    supportsAdvancedAC: false,
-    includesMapMonitoring: false,
+    supportsAdvancedAC: true,
+    includesMapMonitoring: true,
     supportsFeatureAddons: true,
-    supportsVideo: false,
+    supportsVideo: true,
     supportsTA: true,
     msrp: 1000,
   },
@@ -126,7 +126,23 @@ export function getTAType(quantity: number): 'Standard' | 'Enterprise' | null {
   return 'Enterprise';
 }
 
+export const advancedACPackages: PackageType[] = [
+  'Fire Alarm',
+  'Global Anti-Passback',
+  'Intrusion Alarm',
+  'Interlock',
+  'Occupancy Limit',
+  'Mustering',
+  'Elevator Control',
+];
+
 export const packagePrices: Record<string, number> = {
-  'Advanced AC': 3000, 
+  'Fire Alarm': 200,
+  'Global Anti-Passback': 200,
+  'Intrusion Alarm': 200,
+  'Interlock': 500,
+  'Occupancy Limit': 500,
+  'Mustering': 700,
+  'Elevator Control': 700,
 };
 
