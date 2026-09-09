@@ -1,0 +1,150 @@
+---
+id: settings-account-personal-data
+title: Manage Long-Term Inactive Users
+description: This guide explains how to automatically deactivate users who have not accessed the system for a set period and how to receive a pre-notification email before deactivation.
+keywords:
+  - Account
+  - Personal data
+  - Auto deactivation
+  - Long-term inactivity
+---
+
+Leaving credentials active for users who have not accessed for a long time, such as after resignation or leave, can lead to security threats, including credential theft and unauthorized access. The auto deactivation feature automatically deactivates users after a set period since their last access, so administrators can manage accounts securely without manual cleanup each time. Before auto deactivation, the system sends a pre-notification email to the specified recipients, giving time to review or make exceptions.
+
+Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page. Click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.privateData' /> on the left sidebar.
+
+<Image src='/img/biostarx-settings-personal-data.png' />
+
+:::info
+
+Only administrators with permission for this menu can access <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.privateData' />. To grant an administrator permission for a specific menu, see <DocLink docId='platform/biostar_x/settings-manage-account#addUserPermission' />.
+
+:::
+
+## Configure auto deactivation {/* #enable-auto-deactivation */}
+
+1. In <Cmd sid='setting.personalData.autoDeactivation' />, click the toggle button to enable it.
+
+2. In the <Cmd sid='setting.personalData.applyTarget' /> section, set the targets for auto deactivation.
+
+   <Image src='/img/biostarx-settings-personal-data-enable.png' />
+
+   * To apply the same criteria to all users, enable <Cmd sid='setting.personalData.basicSettings' /> and enter <Cmd sid='setting.personalData.inactivePeriod' />. Set a value from 1 to 365 days.
+
+   * To apply different criteria to certain user groups, add <Cmd sid='setting.personalData.exceptionGroup' />. For more information, see <DocLink inner='#exception-group' />.
+
+3. Once you complete the settings, click <Cmd sid='button.apply' product='2' /> at the very bottom of the screen.
+
+4. When the confirmation window appears, check the next scheduled date for automatic processing and the number of users scheduled for deactivation, then click <Cmd sid='setting.personalData.saveChanges' />.
+
+   <Image src='/img/biostarx-settings-personal-data-change-confirm.png' caption />
+
+:::info
+
+* To email the specified recipients before a user is automatically deactivated, configure <Cmd sid='setting.personalData.preNotificationEmail' />. See <DocLink inner='#pre-notification-email' /> for details.
+
+* Enabling the <Cmd sid='setting.personalData.autoDeactivation' /> option does not automatically enable <Cmd sid='setting.personalData.basicSettings' />. To build the policy using only <Cmd sid='setting.personalData.exceptionGroup' />, leave <Cmd sid='setting.personalData.basicSettings' /> disabled.
+
+* Auto deactivation uses the last access authentication time. The system excludes users with no access history or only pre-registration access history.
+
+* If a user meets both <Cmd sid='setting.personalData.basicSettings' /> and <Cmd sid='setting.personalData.exceptionGroup' />, <Cmd sid='setting.personalData.inactivePeriod' /> in <Cmd sid='setting.personalData.exceptionGroup' /> takes precedence. If the user belongs to 2 or more <Cmd sid='setting.personalData.exceptionGroup' />, the shortest <Cmd sid='setting.personalData.inactivePeriod' /> applies.
+
+* Automatic deactivation runs 1 time a day (midnight). Setting changes apply at the next processing time and do not affect advance notice schedules already sent.
+
+* When you set the <Cmd sid='setting.personalData.autoDeactivation' /> option to inactive, the system saves it immediately without a confirmation dialog.
+
+:::
+
+## Apply different criteria by group {/* #exception-group */}
+
+Apply a different <Cmd sid='setting.personalData.inactivePeriod' /> to certain user groups than <Cmd sid='setting.personalData.basicSettings' />.
+
+### Add group settings
+
+1. Click <Cmd sid='button.plusAdd' product='2' /> to the right of the <Cmd sid='setting.personalData.exceptionGroup' /> list.
+
+   <Image src='/img/biostarx-settings-personal-data-add-btn.png' />
+
+2. When the <Cmd sid='setting.personalData.addGroup' /> window appears, set each field.
+
+   <Image src='/img/biostarx-settings-personal-data-add-group-settings.png' />
+
+   * <Cmd sid='common.name' />: Enter a name that does not duplicate other group settings. Case and leading or trailing spaces do not matter.
+
+   * <Cmd sid='setting.personalData.inactivePeriod' />: Set from 1 to 365 days.
+
+   * <Cmd sid='setting.personalData.userGroup' />: Select the user groups to apply this setting to. Selecting a group also selects its subgroups.
+
+3. After selecting user groups, click <Cmd sid='common.button.confirm' />.
+
+4. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save changes.
+
+5. When the confirmation window appears, check the next scheduled date for automatic processing and the number of users scheduled for deactivation, then click <Cmd sid='setting.personalData.saveChanges' />.
+
+:::info
+
+* In <Cmd sid='setting.personalData.userGroup' />, user groups outside the administrator's permission scope appear disabled, but remain visible in the list. Expand this group. Select subgroups within the permission scope.
+
+* Administrators with administrator privileges set to **All users**, or full administrators, have no limits on user group selection. For more information on administrator roles, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
+
+:::
+
+### Edit and delete group settings
+
+<Image src='/img/biostarx-settings-personal-data-group-edit.png' />
+
+* To edit, in the <Cmd sid='setting.personalData.exceptionGroup' /> list, click <IcRepoEdit title='Edit' /> for the desired row, change the value, and then click <Cmd sid='common.button.confirm' />.
+
+* Click <IcTrash title='Delete' /> for the row to delete. When the confirmation message appears, click <Cmd sid='common.button.delete' />.
+
+To save your edits or deletions, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. When the confirmation window appears, check the next scheduled date for automatic processing and the number of users scheduled for deactivation, then click <Cmd sid='setting.personalData.saveChanges' />.
+
+:::info
+
+* If <Cmd sid='setting.personalData.exceptionGroup' /> includes user groups outside the administrator’s permission scope, the list still shows them. The system disables editing and deletion.
+
+* Group settings override the default settings.
+
+* Deleting <Cmd sid='setting.personalData.exceptionGroup' /> does not restore users already deactivated. After deletion, the system switches to another applicable setting (such as <Cmd sid='setting.personalData.basicSettings' />).
+
+:::
+
+## Pre-notification email settings {/* #pre-notification-email */}
+
+This feature sends an email notice to specified recipients before users are automatically deactivated.
+
+1. Click the toggle in the <Cmd sid='setting.personalData.preNotificationEmail' /> option to enable it.
+
+   <Image src='/img/biostarx-settings-personal-pre-noti-email-settings.png' />
+
+2. Enter a value for <Cmd sid='setting.personalData.preNotificationDeadline' />. The system sends auto-deactivation notice emails for the entered period. Set the period from 1 to 30 days.
+
+3. In the <Cmd sid='setting.personalData.preNotificationRecipients' /> field, search and select a user by name, ID, or email, or enter an email address, then press <Kbd>Enter</Kbd>.
+
+   <Image src='/img/biostarx-settings-personal-pre-noti-email-auto-complete.png' />
+
+4. Once you complete the settings, click <Cmd sid='button.apply' product='2' /> at the very bottom of the screen.
+
+5. When the confirmation window appears, check the next scheduled date for automatic processing and the number of users scheduled for deactivation, then click <Cmd sid='setting.personalData.saveChanges' />.
+
+:::info
+
+* Set up SMTP settings to use pre-notification emails. For more information, see <DocLink docId='platform/biostar_x/settings-email-setting' />.
+
+* Set <Cmd sid='setting.personalData.preNotificationDeadline' /> shorter than the no-access period in <Cmd sid='setting.personalData.basicSettings' /> and every <Cmd sid='setting.personalData.exceptionGroup' />.
+
+* Add email addresses not in **BioStar X** as recipients.
+
+* The system sends a consolidated email 1 time per day, not separate emails for each user.
+
+* If <Cmd sid='setting.personalData.basicSettings' /> is disabled and no <Cmd sid='setting.personalData.exceptionGroup' /> exists, enabling only <Cmd sid='setting.personalData.preNotificationEmail' /> leaves no targets, so the system sends no emails.
+
+:::
+
+## Related information
+
+* View long-term inactive users in the <Cmd sid='team.user.table.lastAccessed' /> column of the user list or use Advanced Search. For more information on selecting view options, refer to <DocLink docId='platform/biostar_x/view-users#advanced-search' />.
+
+  <Image src='/img/biostarx-settings-personal-user-list-search.png' className='none' />
+
+* Check the history of users deactivated automatically or manually in the <Cmd sid='data.sidebar.inactiveUsers' /> report. For more information on selecting view options, refer to <DocLink docId='platform/biostar_x/data-generate-reports#viewUserReport' />.

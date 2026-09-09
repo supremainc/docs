@@ -93,7 +93,9 @@ Users can filter the event list according to their desired criteria, allowing fo
 
    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
-   To deselect an item, click <span className='text-blue-500'><IcClose /></span>. To clear all items, click <Cmd sid='common.removeAll' />.
+   * Select a parent option to select all child options.
+
+   * Click <IcClose title='Remove' /> to deselect the selected option. To clear all items, click <Cmd sid='common.removeAll' />.
 
 3. Once all settings are complete, click <Cmd sid='common.apply' />.
 
@@ -107,7 +109,7 @@ Only events that meet the set conditions will be displayed in the event list.
 
 * The items that can be filtered may vary by header column.
 
-* When filtering conditions are applied, the <span className='text-blue-500'><IcFilter /></span> icon color in the header column changes to blue.
+* When you set filter conditions, the <IcFilter2 title='Filter' /> icon in the header column changes color.
 
 :::
 
@@ -115,9 +117,9 @@ Only events that meet the set conditions will be displayed in the event list.
 
 You can clear the applied filter conditions.
 
-1. Click <span className='text-blue-500'><IcFilter /></span> on the header column where filters were applied in the <Cmd sid='arena.eventTable.title' /> section.
+1. In the <Cmd sid='arena.eventTable.title' /> section list, click the <IcFilter2 title='Filter' /> icon on the header column where filters have been applied.
 
-2. When the filter window appears, click <span className='text-blue-500'><IcClose /></span> next to the item you wish to remove from the right list. To clear all filters, click <Cmd sid='common.removeAll' />.
+2. When the filter window appears, click <IcClose title='Remove' /> to the right of the option to deselect in the right list. To clear all filters, click <Cmd sid='common.removeAll' />.
 
    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
@@ -153,7 +155,9 @@ The <Cmd sid='common.ignoreAll' /> button is displayed only when two or more ala
 
 Enter actions regarding the alarm event in the message input field. You can enter up to 500 characters. Enter actions and click the <Cmd sid='common.acknowledge' /> button. Records acknowledgement and actions regarding the alarm event. The alarm message window will close.
 
-### Pending acknowledgment of alarm event {/* #deferalarmeventacknowledgment */}
+<Image src='/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png' />
+
+### Defer acknowledgment of an alarm event {/* #deferalarmeventacknowledgment */}
 
 You can also defer acknowledgement of the alarm event by clicking the <Cmd sid='common.ignore' /> button. Actions taken can be recorded. The alarm message window will close. Deferred alarm events are displayed in the event list as <Cmd sid='arena.preview.event.active' /> status, and the <Cmd sid='common.acknowledge' /> button can be used.
 

@@ -5,7 +5,7 @@ description: 장치의 사용자 인증과 관련된 다양한 설정 방법을 
 keywords: [장치, 인증]
 ---
 
-import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-message-force.mdx';
+import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-force.mdx';
 
 장치의 사용자 인증과 관련된 다양한 설정 방법을 안내합니다. <Cmd sid='device.info.authentication' product='2' /> 섹션에서는 인증 방식과 장치에서 지원하는 주요 인증 옵션을 단계별로 확인할 수 있습니다. 설정을 변경하면 실제 장치에 적용되는 점을 유의하고, 각 옵션의 기능과 주의 사항을 참고하여 환경에 맞는 인증 정책을 구성하세요.
 
@@ -110,7 +110,7 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 
    * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-* <Cmd sid='device.info.authFailLockout.label' product='2' />: 짧은 시간 안에 인증을 반복해서 실패하면 장치를 일정 시간 동안 잠가 무차별 대입 공격을 차단합니다. 이 옵션을 <Cmd sid='common.use' product='2' />으로 설정하면 아래 항목을 설정할 수 있습니다. 기본값은 <Cmd sid='common.notUse' product='2' />입니다.
+* <Cmd sid='device.info.authFailLockout.label' product='2' />: 짧은 시간 안에 인증을 반복해서 실패하면 장치를 일정 시간 동안 잠가 무차별 대입 공격을 차단합니다. 이 옵션을 <Cmd sid='device.info.enable' product='2' />으로 설정하면 아래 항목을 설정할 수 있습니다. 기본값은 <Cmd sid='device.info.disable' product='2' />입니다.
 
    * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />: 장치를 잠그기까지 허용하는 인증 실패 횟수를 3\~15회 사이로 설정하세요. 기본값은 5회입니다.
 
@@ -122,7 +122,7 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 
       :::note
 
-      이 옵션을 <Cmd sid='common.notUse' product='2' />으로 설정하면 2차 잠금 없이 1차 잠금만 반복해서 적용합니다.
+      이 옵션을 <Cmd sid='device.info.disable' product='2' />으로 설정하면 2차 잠금 없이 1차 잠금만 반복해서 적용합니다.
 
       :::
 
@@ -130,7 +130,7 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 
    :::info
 
-   * <Cmd sid='device.info.authFailLockout.label' product='2' />을 <Cmd sid='common.notUse' product='2' />으로 변경하고 저장하면, 이 장치가 현재 잠금 상태일 때 잠금이 즉시 해제됩니다. <Cmd sid='device.info.authFailLockout.secondLockout' product='2' /> 변경은 이 안내에 해당하지 않습니다.
+   * <Cmd sid='device.info.authFailLockout.label' product='2' />을 <Cmd sid='device.info.disable' product='2' />으로 변경하고 저장하면, 이 장치가 현재 잠금 상태일 때 잠금이 즉시 해제됩니다. <Cmd sid='device.info.authFailLockout.secondLockout' product='2' /> 변경은 이 안내에 해당하지 않습니다.
 
    * <Cmd sid='device.info.authFailLockout.label' product='2' /> 옵션은 BioStation 3 펌웨어 1.5.0 이상에서 지원합니다.
 
@@ -248,7 +248,7 @@ import EV2EV3SecurityMessage from '@site/docs/common/_bsx-ev2-ev3-security-messa
 
 * <Cmd sid='device.info.storeVisualFaceImage' product='2' />: 얼굴의 실제 이미지와 특징 정보만 추출한 템플릿을 저장합니다. 실제 이미지를 저장하지 않으려면 이 설정을 비활성화하세요.
 
-* <Cmd sid='device.info.reauthPrevention' product='2' />: 같은 사용자의 얼굴이 짧은 시간 안에 다시 감지될 때 중복으로 인증되지 않도록 설정하세요. <Cmd sid='common.use' product='2' />으로 설정하면 <Cmd sid='device.info.reauthPreventionTime' product='2' />을 3\~60초 사이로 설정할 수 있습니다.
+* <Cmd sid='device.info.reauthPrevention' product='2' />: 같은 사용자의 얼굴이 짧은 시간 안에 다시 감지될 때 중복으로 인증되지 않도록 설정하세요. <Cmd sid='device.info.enable' product='2' />으로 설정하면 <Cmd sid='device.info.reauthPreventionTime' product='2' />을 3\~60초 사이로 설정할 수 있습니다.
 
    <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
 

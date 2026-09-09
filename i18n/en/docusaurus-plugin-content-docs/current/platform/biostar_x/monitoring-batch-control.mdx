@@ -1,0 +1,194 @@
+---
+id: monitoring-batch-control
+title: Bulk Control
+description: Select multiple doors, elevators, and advanced access control settings to control them at once.
+---
+
+This guide explains selecting multiple doors, elevators, or advanced access control settings and running Unlock, Lock, or Disarm at once.
+
+* If you select two or more entries in the status tree, the bulk control panel appears on the right side of the screen. Execute commands at once without controlling each entry individually.
+
+* Respond quickly during emergencies or when controlling multiple entrances at the same time.
+
+* Select doors, elevators (floors), or advanced access control settings in bulk and control them. The system does not allow bulk control for mixed types.
+
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. If you select two or more entries in the status tree on the left sidebar, the bulk control panel appears on the right side of the screen.
+
+<Image src='/img/biostarx-monitoring-batch-main.png' />
+
+:::info
+
+* Bulk control does not include cameras. If you select cameras with other entries, the system removes them from the selection list.
+
+* This document covers how to control multiple entries at once. To control a single door, elevator, or advanced access control setting, see the following document.
+
+  * <DocLink docId='platform/biostar_x/control-door' />
+
+  * <DocLink docId='platform/biostar_x/control-elevator' />
+
+  * <DocLink docId='platform/biostar_x/control-zone' />
+
+:::
+
+## Select multiple entries {/* #select-multiple */}
+
+To select doors, elevators, floors, or advanced access control in the status tree on the left sidebar, do the following. This works the same way as selecting multiple files in Windows File Explorer.
+
+* **Click**: Select one entry. This clears the previous selection.
+
+* **<Kbd>Ctrl</Kbd> + Click**: Add the clicked entry to the selection list or remove it. This keeps the remaining selection.
+
+* **<Kbd>Shift</Kbd> + Click**: Select the visible range from the last clicked entry to the current entry. Replace the current selection with this range.
+
+* **<Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd> + Click**: Add a range without clearing the current selection. Use this to select multiple nonadjacent entries.
+
+* **Click a group**: Click a group (<IcGroup />) name to select all doors, elevators, floors, and advanced access control settings under it. To expand or collapse a group, click the arrow (<IcBw />) before the group name.
+
+:::info
+
+* The <Cmd sid='arena.tree.door.entitiesNeedAttention' /> filter excludes hidden entries from selection. When a filter hides a selected entry, the system removes it from the selection list.
+
+* The bulk control panel does not open when none or only one entry is selected. When only one entry remains selected, its preview appears. When all selections are cleared, the right panel disappears.
+
+:::
+
+## Bulk control panel layout {/* #panel-layout */}
+
+Select multiple entries in the status tree on the left sidebar. The bulk control panel appears on the right as follows.
+
+* **Selection count and types**: For example, if you select 4 doors, 2 elevators, and 4 floors, it is displayed as follows.
+
+  > <Cmd sid='monitoring.multiControl.selectedCount' replace='10' /> / <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.door' /> <Cmd>2</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.elevator' /> <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.floor' />
+
+  <Image src='/img/biostarx-monitoring-select-multi-items.png' />
+
+   :::note
+
+   Control features are unavailable when you select different types together.
+
+   :::
+
+* **Door/Elevator control**: Shows control features available for doors and elevators.
+
+  <Image src='/img/biostarx-monitoring-doors-batch-control.png' />
+
+  <Image src='/img/biostarx-monitoring-elevators-batch-control.png' />
+
+* **Advanced access control**: Shows control features available in advanced access control.
+
+  <Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* **Summary table of selected entries**: The bottom of the right panel shows the name and status of each selected entry. Drag the divider between the control area and the summary table up or down to adjust their heights. If many entries are selected, drag the divider to expand the summary table area.
+
+  <Image src='/img/biostarx-monitoring-select-multi-summary.png' />
+
+## Bulk door control {/* #bulk-door */}
+
+When at least two doors are selected, use the same basic and advanced controls as single-door control.
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-monitoring-doors-control-list.png' />
+
+<Image src='/img/biostarx-monitoring-doors-control-intrusion.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+**Basic control**
+
+* <Cmd sid='monitoring.multiControl.once3sec' />: Applies the open state once.
+
+* <Cmd sid='monitoring.multiControl.timed' />: Keeps the locked or open state for the specified time.
+
+* <Cmd sid='monitoring.multiControl.permanent' />: Sets the locked or open state regardless of time.
+
+Select a command to apply, and click <Cmd sid='common.apply' />.
+
+**Advanced control**
+
+Use the following buttons when at least one selected entry meets the conditions below.
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: Use this button when at least one selected door has an active alarm.
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: Use this button when at least one selected door has an anti-passback violation alarm. For more information, refer to <DocLink docId='platform/biostar_x/control-door#apb-reset' />.
+
+* <Cmd sid='monitoring.multiControl.normalizeOverrides' />: Use this when an administrator manually unlocks or locks a door. This excludes statuses changed by schedules or emergencies.
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: Appears only when a door is set to security, an advanced access control setting.
+
+</Column>
+</Columns>
+
+:::info
+
+* Click <Cmd sid='monitoring.multiControl.clearAlarm' /> or <Cmd sid='monitoring.multiControl.normalizeOverrides' />. A pop-up appears. In the pop-up, click <Cmd sid='common.acknowledge' /> to clear it. In contrast, <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> changes the status without a confirmation dialog.
+
+* Advanced access control settings are available by purchasing an add-on with an *Essential** license, or with an **Enterprise** license or higher. For more information on the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
+
+:::
+
+## Bulk control of elevators and floors {/* #bulk-elevator */}
+
+Select an elevator to control all configured floors together. To control only certain floors, select the floors directly.
+
+The differences from doors are as follows.
+
+| Control feature | Door | Elevator, floor |
+| --- | --- | --- |
+| <Cmd sid='monitoring.multiControl.unlock' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.lock' /> | <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.normalizeOverrides' /> | Supported | Supported |
+| <Cmd sid='monitoring.multiControl.clearAlarm' /> | Supported | Appears when the selection includes an elevator; does not appear when only floors are selected |
+| <Cmd sid='monitoring.multiControl.clearApb' /> | Supported | Not supported |
+
+:::info
+
+If you select an elevator and its floors, the system sends one unlock/lock command per elevator.
+
+:::
+
+## Bulk control of advanced access control {/* #bulk-acs */}
+
+Select multiple advanced access control settings to control them at once. When selecting two or more, the right pane switches to the bulk control panel. Selection, grouping, range, and filter actions match doors and elevators.
+
+Advanced access control settings lack lock relays and admin unlock/lock, so control options differ from doors and elevators. The following control buttons appear depending on the selected setting type.
+
+<Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* <Cmd sid='arena.tree.contextMenu.enable' />/<Cmd sid='arena.tree.contextMenu.disable' />: Appears for all advanced access control settings.
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: Appears only when the selection includes security settings.
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: Appears only when the selection includes alarm-triggering settings (anti-passback, fire alarm, schedule lock/unlock, security, interlock, or muster). It does not appear when you select only non-alarm settings, such as Occupancy limit or Headcount check.
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: Appears only when the selection includes an anti-passback setting. Click this option to open the Select Violators window. Select violating users, and apply the selection.
+
+:::info
+
+* Batch control does not include <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, or <Cmd sid='monitoring.multiControl.normalizeOverrides' />. The batch control panel also excludes features that open other screens, such as Muster report and Occupancy limit monitoring. Use these features on the details screen when one setting is selected.
+
+* For more information on advanced access control, see <DocLink docId='platform/biostar_x/control-zone' />.
+
+:::
+
+## Check execution results {/* #result */}
+
+* If all selected entries succeed, a success message appears at the top of the screen.
+
+  <Image src='/img/biostarx-monitoring-doors-control-success.png' caption />
+
+* If any entry fails, a failure message appears with the <Cmd sid='arena.batchResult.showDetails' /> button.
+
+  <Image src='/img/biostarx-monitoring-doors-control-fail.png' caption />
+
+  Click <Cmd sid='arena.batchResult.showDetails' /> to view results grouped into <Cmd sid='arena.batchResult.successChip' />, <Cmd sid='arena.batchResult.failChip' />, and <Cmd sid='arena.batchResult.skippedChip' />. Click <Cmd sid='arena.batchResult.copyFailList' /> to copy the names and reasons for failed entries to the clipboard.
+
+  <Image src='/img/biostarx-monitoring-doors-control-fail-details.png' caption />
+
+:::info
+
+Check per-entry results when executing <Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' />, or <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />. In contrast, advanced access control settings and the elevator <Cmd sid='monitoring.multiControl.clearAlarm' /> and <Cmd sid='monitoring.multiControl.clearApb' /> features provide only success or failure messages.
+
+:::

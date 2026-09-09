@@ -1,15 +1,12 @@
 ---
 id: check-door-status
-title: Check Door Status
-description: You can monitor the status of the entrance door in real-time to operate the security system reliably. You can also check the abnormal status of the device assigned to the entrance door.
-keywords:
-  - Monitoring
-  - Door
+title: Check status
+description: Monitor the status of doors, elevators, and advanced access control areas in real time. Review only entries that need action and respond immediately.
 ---
 
-You can monitor the status of the entrance door in real-time to operate the security system reliably. Check the abnormal status of the device assigned to the entrance door at a glance through the status icon provided in <Cmd sid='shell.header.arena' /> and respond immediately when a problem occurs.
+Monitor door, elevator, and advanced access control area status in real time to operate the security system reliably. Use the status icons in <Cmd sid='shell.header.arena' /> to check alarms and abnormal status at a glance. Review only entries that need action and respond immediately.
 
-Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. You can check the status of each entrance door in the <Cmd sid='arena.tree.door.title' /> tab located in the left sidebar of the screen.
+Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. Check the status of each entry in the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar of the screen.
 
 ## Before you start
 
@@ -21,9 +18,9 @@ Ensure that the devices connected to the door are correctly configured. It is im
 
 * For more information on adding and configuring doors, see <DocLink docId='platform/biostar_x/settings-manage-door' />.
 
-* The <Cmd sid='setting.server.logUploadType' product='2' /> feature must be enabled to monitor or control the status of the access door. This feature can be enabled in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> menu path under the <Cmd sid='common.general' product='2' /> section.
+* The <Cmd sid='setting.server.logUploadType' product='2' /> feature must be enabled to monitor or control the status of the access door. Enable this feature under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> in the <Cmd sid='common.general' product='2' /> section.
 
-* The feature to connect cameras to the door through the VMS server is available as an additional option with an **Advanced** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* The feature to connect cameras to doors through the VMS server is available as an additional option with an **Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -59,7 +56,7 @@ You can check the status of the door or elevator to verify proper operation. Ref
 
 | Status Icon | Description |
 | :-: | --- |
-| <IcErr width='35px' height='35px' /> | Displays device abnormal statuses such as disconnection, communication server errors, and synchronization errors. |
+| <IcErr width='35px' height='35px' /> | Displays device abnormal statuses such as disconnection, Multi Communications Server errors, and synchronization errors. |
 | <IcAlert width='40px' height='40px' /> | Displays the status when entrance door alarms (forced door opening, prolonged door opening, APB, fire alarms, emergency openings) or AI video analysis alarms (loitering detection, intrusion detection, etc.) occur. |
 
 </div>
@@ -68,7 +65,7 @@ You can check the status of the door or elevator to verify proper operation. Ref
 
 Click a status icon to view detailed information in a tooltip. Click the link in the tooltip error message to navigate to the list of devices connected to the door or elevator.
 
-<Image src='/img/monitoring-door-status-tooltip.png' />
+<Image src='/img/monitoring-door-status-tooltip.png' className='none' />
 
 Right-click on the device and select the <Cmd sid='arena.tree.contextMenu.reconnect' /> or <Cmd sid='arena.tree.contextMenu.reboot' /> option.
 
@@ -94,6 +91,167 @@ Right-click on the device and select the <Cmd sid='arena.tree.contextMenu.reconn
 
 :::
 
+### Check alarms in the preview panel {/* #check-alarm-in-preview */}
+
+In the <Cmd sid='arena.eventTable.door' /> tab, select a door, elevator, or advanced access control area with an alarm(<IcAlert width='20px' height='20px' />) icon. Review alarm details at the top of the preview panel on the right. For doors and elevators, the top of the panel also shows abnormal status (<IcErr width='20px' height='20px' />).
+
+<Image src='/img/biostarx-monitoring-door-alarm-banner.png' />
+
+A banner at the top of the panel shows current status details, such as the alarm name and time. It also provides buttons to execute the appropriate action.
+
+:::info
+
+* Even if multiple alarms occur at the same time, the banner displays only 1 alarm—the most recent one.
+
+* For doors or elevators, alarms triggered while the device is disconnected show only the alarm type, without a timestamp.
+
+* The buttons on the banner vary by alarm type. Click a button to take the action for the alarm.
+
+* Door controls, such as locking and unlocking, remain available while an alarm appears. For more information on door control, see <DocLink docId='platform/biostar_x/control-door' />.
+
+:::
+
+### View entries that need attention {/* #checkAttentionFilter */}
+
+Administrators can view only doors and elevators that need action at a glance. In the left sidebar, click the <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Check door and elevator status and take immediate action when problems occur.
+
+<Image src='/img/biostarx-monitoring-door-attention-filter.png' />
+
+:::info
+
+See <DocLink inner='#check-the-attention-criteria' /> for the conditions that mark doors and elevators as requiring attention.
+
+:::
+
+### Attention criteria {/* #check-the-attention-criteria */}
+
+#### Door
+
+A door requires attention if any condition below applies.
+
+##### Door mode change
+
+This includes doors locked or unlocked by an administrator, a schedule, or an emergency.
+
+<div className='overflow-x'>
+
+| Reason | Status indicator |
+| --- | --- |
+| Manual operation by an administrator | <Cmd sid='arena.preview.door.operatorLocked' /> / <Cmd sid='arena.preview.door.operatorUnlocked' /> |
+| Schedule | <Cmd sid='arena.preview.door.scheduleLocked' /> / <Cmd sid='arena.preview.door.scheduleUnlocked' /> |
+| Emergency | <Cmd sid='arena.preview.door.emergencyLocked' /> / <Cmd sid='arena.preview.door.emergencyUnlocked' /> |
+
+</div>
+
+##### Alarm
+
+If any alarm remains uncleared, the system marks it as needing attention. Forced open, door held open, and anti-passback alarms are classified as alarms, not abnormal statuses.
+
+<div className='overflow-x'>
+
+| Alarm types | Description |
+| --- | --- |
+| Door forced open | Door opened by force without unlocking |
+| Door held open too long | Door remains open longer than the set time |
+| Anti-passback (APB) alarm | Anti-passback rule violated |
+| Timed anti-passback alarm | Time-based anti-passback rule violated |
+| Lock bypass alarm | Door forced open while locked |
+| AI video analytics alarm | Video analytics-based alarms, such as tailgating, loitering, intrusion, falls, and abandoned objects |
+
+</div>
+
+##### Abnormal status
+
+The system determines it based on the connection status of devices connected to the door.
+
+<div className='overflow-x'>
+
+| Abnormal status type | Description |
+| --- | --- |
+| Disconnected | The device is disconnected from the network |
+| Synchronization error | Connected, but data is out of sync |
+| Multi Communications Server error | An error has occurred on the device's Multi Communications Server |
+
+</div>
+
+:::info
+
+* The <Cmd sid='arena.tree.door.entitiesNeedAttention' /> filter includes device lock and lockout due to consecutive authentication failures (Auth Fail Lockout), in addition to the abnormal statuses above.
+
+* If an alarm and an abnormal status occur together, both icons appear in one row without overlap. 
+
+* Abnormal statuses from child devices roll up to the parent door node. Follow the hierarchy to find the problem while the filter is on.
+
+:::
+
+#### Elevator
+
+Evaluate elevators under the same conditions as doors. However, abnormal status and alarm conditions differ as follows.
+
+* **Mode change**: Same as doors. The system marks the elevator as needing attention when an admin, schedule, or emergency locks or unlocks it.
+
+* **Abnormal status**: Use door criteria (disconnection, synchronization error, multi-communication server error, device lock, and lockout after consecutive authentication failures). However, elevators do not have forced open or long-held open status, so exclude them from evaluation.
+
+* **Alarm**: Elevators have dedicated alarms that differ from door alarms. Please refer to the below.
+
+  <div className='overflow-x'>
+
+  | Elevator alarm types | Description |
+  | --- | --- |
+  | Elevator alarm triggered | Elevator alarm activated |
+  | Elevator input alarm | Alarm triggered by an external input signal |
+  | Elevator all-floor unlock alarm | All floors forcibly opened |
+
+  </div>
+
+:::info
+
+* Floors appear as independent nodes under the elevator node, and each floor has only locked (<IcElevClose />) or unlocked (<IcElevOpen />) status. 
+
+* Alarms and abnormal statuses appear on the parent elevator node, not on floors. When the elevator expands, only floors that require action appear, and the system hides normal floors.
+
+:::
+
+#### Advanced access control
+
+Zones in an advanced access control group (anti-passback, fire alarm, intrusion, muster, occupancy limit, and interlock) are also included when determining whether action is required. However, unlike doors and elevators, mode changes and abnormal status conditions do not apply. If at least one alarm remains uncleared, the zone appears as requiring action.
+
+<div className='overflow-x'>
+
+| Zone alarm types | Description |
+| --- | --- |
+| Anti-passback (APB) alarm | Anti-passback rule violated |
+| Fire Alarm | Alarm triggered by detecting a fire |
+| Scheduled lock alarm | Alarm triggered while scheduled lock is set |
+| Intrusion alarm | Alarm triggered by detecting an intrusion |
+| Interlock alarm | Interlock rule violation |
+| Muster alarm | Alarm triggered during a muster event |
+| Occupancy limit exceeded alarm | Occupancy exceeds the set limit |
+
+</div>
+
+:::info
+
+* Zones in Armed (Arm) status and disabled zones are not displayed as requiring action. Armed means the zone operates normally, and Disabled means it is intentionally off.
+
+* Zones appear as direct children of the Advanced Access Control group, and doors do not expand under them. Only zones that require action remain in the tree. If none exist, the Advanced Access Control group is removed from the tree.
+
+:::
+
+### Checking door status {/* #check-the-door-status */}
+
+Check whether the door is closed, open, or in an abnormal state. Refer to the following for door status.
+
+<div className='col2--20-80 overflow-x'>
+
+| Status Icon | Description |
+| :-: | --- |
+| <IcDoorClose width='auto' height='35px' /> | The door is closed. |
+| <IcDoorOpen width='auto' height='35px' /> | The door is open. |
+| <IcDoorAlarm width='auto' height='35px' /> | The system does not detect the door sensor. |
+
+</div>
+
 ### Checking door lock status {/* #check-the-door-lock */}
 
 You can check the locking status of the door through the door relay status. Refer to the following for the status of the door relay.
@@ -103,9 +261,17 @@ You can check the locking status of the door through the door relay status. Refe
 | Status Icon | Description |
 | :-: | --- |
 | <IcRelayLock width='auto' height='35px' /> | The entrance door is locked. |
-| <IcRelayUnlock width='auto' height='40px' /> | The door is open. |
+| <IcFixedLock width='auto' height='35px' /> | The system locks the door using the <Cmd sid='arena.tree.contextMenu.lockTimed' /> or <Cmd sid='arena.tree.contextMenu.lockPermanent' /> option. |
+| <IcRelayUnlock width='auto' height='40px' /> | The entrance door is open. |
+| <IcFixedUnlock width='auto' height='40px' /> | The system unlocks the door using the <Cmd sid='arena.tree.contextMenu.lockTimed' /> or <Cmd sid='arena.tree.contextMenu.lockPermanent' /> option. |
 
 </div>
+
+:::info
+
+For more information about door control options, see <DocLink docId='platform/biostar_x/control-door#door-open' />.
+
+:::
 
 ### Checking camera status {/* #check-the-camera-status */}
 
@@ -136,7 +302,6 @@ You can check the security status of the entrance door or advanced access contro
 
 | Status Icon | Description |
 | :-: | --- |
-| <IcDisable width='auto' height='30px' /> | This is the icon for inactive settings. Inactive settings do not generate alarms. |
 | <IcArm width='auto' height='35px'/> | The door is armed. |
 | <IcDisarm width='auto' height='35px'/> | The door is disarmed. |
 
@@ -156,8 +321,8 @@ You can check the floor access control status via the elevator.
 
 | Status Icon | Description |
 | :-: | --- |
-| <StatusNormal width='auto' height='35px'/> | The corresponding floor is locked via the elevator. |
-| <StatusOK width='auto' height='35px'/> | The corresponding floor is unlocked via the elevator. |
+| <IcElevClose width='auto' height='35px'/> | The corresponding floor is locked via the elevator. |
+| <IcElevOpen width='auto' height='35px'/> | The corresponding floor is unlocked via the elevator. |
 
 </div>
 

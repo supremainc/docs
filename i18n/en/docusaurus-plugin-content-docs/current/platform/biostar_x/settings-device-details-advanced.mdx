@@ -13,11 +13,11 @@ This section provides guidance on configuring items in the <Cmd sid='device.info
 
 * The available network options may differ depending on the device type.
 
-* If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
+* If the user has made any arbitrary changes, click <Cmd sid='button.apply' product='2' />. Changes will not be applied to the device if not saved.
 
 :::
 
-## Add master administrator {/* #master-administrator */}
+## Add master administrator <Badge only>CE products</Badge> {/* #master-administrator */}
 
 <Cmd sid='device.masterAdmin.title' product='2' /> feature enhances the overall administrator permissions of the device to improve security and prevent unauthorized access and settings changes. A new device must register a Master Administrator through this feature, and only the registered Master Administrator can enter the administrator menu and change settings.
 
@@ -34,9 +34,15 @@ The credentials that can be enrolled as <Cmd sid='device.masterAdmin.title' prod
 | Fingerprint | Up to 2 | - |
 | PIN | 1 | Must enter at least 8 digits. |
 
-* To change the enrolled credential, click the <IcEdit /> button to the right of that credential.
+* To change the enrolled credential, click <IcEdit /> to the right of that credential.
 
-* To delete the enrolled credential, click the <IcTrash2 /> button to the right of that credential.
+* To delete the enrolled credential, click <IcTrash2 /> to the right of that credential.
+
+:::caution
+
+This feature is available only on **CE products** that support an LCD user interface. For more information on supported devices and firmware versions, see <DocLink docId='how-to/master-admin' />.
+
+:::
 
 :::note
 
@@ -44,7 +50,7 @@ The credentials that can be enrolled as <Cmd sid='device.masterAdmin.title' prod
 
 * You must enroll at least two types of credentials.
 
-* The same conditions apply to both new devices and firmware upgrade devices.
+* The same conditions apply to all firmware-upgraded devices that support master administrators.
 
 * All credentials supported by the device can be used as authentication means.
 
@@ -56,15 +62,15 @@ The credentials that can be enrolled as <Cmd sid='device.masterAdmin.title' prod
 
 * Existing devices that have had their firmware upgraded do not show the <Cmd sid='device.masterAdmin.title' product='2' /> menu in BioStar X's device settings.
 
-* Existing devices that have been upgraded do not provide <Cmd sid='device.masterAdmin.title' product='2' /> settings, however, you can enhance the overall administrator permissions to improve device security using the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option. For more information on setting up <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />, see <DocLink inner='#two-step-authentication' />.
+* Certain devices do not include the <Cmd sid='device.masterAdmin.title' product='2' /> setting (for example, devices updated by a firmware upgrade). Use the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option to enhance administrator permissions. Depending on the device, the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option may not appear.
 
-* For more information on devices and firmware versions that support this feature, see <DocLink docId='how-to/master-admin' />.
+* Master administrator credentials are stored separately on the device and managed independently of user PINs. Changing or deleting a user PIN does not affect master administrator credentials.
 
 :::
 
-## Two-step authentication setting {/* #two-step-authentication */}
+## 2-step authentication settings <Badge only>CE products</Badge> {/* #two-step-authentication */}
 
-Existing devices that have been upgraded do not provide <Cmd sid='device.masterAdmin.title' product='2' /> settings, however, you can enhance the overall administrator permissions to improve device security using the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option.
+CE products with upgraded firmware do not include the <Cmd sid='device.masterAdmin.title' product='2' /> setting. The <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option enhances administrator permissions and improves device security.
 
 <Image src='/img/biostarx-setting-device-adv-two-step.png' />
 
@@ -72,9 +78,11 @@ If you set the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> op
 
 :::info
 
-If there are not two types of credentials enrolled for all administrators, activation fails and an error message is displayed. Enroll two types of credentials for all administrators and try again.
+* If fewer than 2 types of credentials are enrolled for all administrators, activation fails and an error message is displayed. Enroll 2 or more types of credentials for all administrators and try again.
 
-<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+  <Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+* Depending on the device, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> may not appear, but the previously enabled setting remains active. BioStar X does not let users disable this setting. Contact <Support />.
 
 :::
 
@@ -98,7 +106,7 @@ In the <Cmd sid='device.info.administrator' product='2' /> group, you can manage
 
 <Image src='/img/biostarx-setting-device-edit-advanced-administrator.png' />
 
-To add an administrator by permission level, click the <Cmd sid='button.plusAdd' product='2' /> button. When the user list appears, select the desired user. You can also search for the desired user by clicking the <IcSearch /> button in the user list.
+To add an administrator by permission level, click <Cmd sid='button.plusAdd' product='2' />. When the user list appears, select the desired user. You can also search for the desired user by clicking <IcSearch /> in the user list.
 
 Refer to the permissions for each level below.
 
@@ -116,15 +124,37 @@ Refer to the permissions for each level below.
 
 * Up to 1,000 administrators can be added. The number of administrators that can be added may vary depending on the device firmware version.
 
-* To search for the registered user, click the <IcSearch /> button in <Cmd sid='device.info.admin.searchTitle' product='2' />.
+* To search for the registered user, click <IcSearch /> in <Cmd sid='device.info.admin.searchTitle' product='2' />.
 
 * **Device Settings** allows changes to settings for screen and sound, network, RS-485, etc.
 
-* To delete an administrator, click the <IcTrash2 /> button to the right of the administrator.
+* To delete an administrator, click <IcTrash2 /> to the right of the administrator.
 
 * Administrators set for each device do not affect **BioStar X** permissions.
 
+* If a device administrator registered on a device that supports master administrators (<Badge only>CE products</Badge>) has a PIN shorter than 8 digits, enroll the PIN again with at least 8 digits. For more information on enrolling PINs, see <DocLink docId='platform/biostar_x/enroll-credential-pin' />.
+
+* First, remove the user from administrator roles on all devices. Then change the PIN to 4 digits for the user with <Cmd sid='device.operatorLevel.configuration' product='2' /> permissions.
+
 :::
+
+:::caution
+
+If the user being set as a device administrator has fewer than 2 types of credentials enrolled, an error message appears. Enroll 2 or more types of credentials for all device administrators and try again.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+### Handle administrator registration for deleted users
+
+If the device administrator list includes a user deleted from **BioStar X**, a pop-up appears when you save the settings. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+
+<Image src='/img/biostarx-settings-device-deleted-operator-check.png' />
+
+* <Cmd sid='button.yes' product='2' />: Remove the deleted user from the administrator list and save the settings.
+
+* <Cmd sid='button.no' product='2' />: Cancel saving.
 
 ## Attendance management {/* #attendance-management */}
 
@@ -146,11 +176,11 @@ The <Cmd sid='device.info.tna' product='2' /> group allows you to change attenda
 
 * <Cmd sid='device.info.tnaRequired' product='2' />: Set it to require the user to register an attendance event when authenticating.
 
-  :::note
+   :::note
 
-  This option can be used when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.byUser' product='2' />. 
+   This option can be used when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.byUser' product='2' />. 
 
-  :::
+   :::
 
 * <Cmd sid='device.info.tnaEvent' product='2' />: You can modify the names of attendance events or add schedules used when the <Cmd sid='device.info.tnaMode' product='2' /> option is set to <Cmd sid='device.tna.mode.bySchedule' product='2' />.
 
@@ -167,6 +197,8 @@ The <Cmd sid='device.info.tna' product='2' /> group allows you to change attenda
 * Devices without an LCD screen can set attendance modes to <Cmd sid='device.tna.mode.fixed' product='2' /> and <Cmd sid='device.tna.mode.bySchedule' product='2' /> and can register fixed attendance events or attendance events that change according to a pre-set schedule. Supported devices are XPass Q2, XPass 2, XPass D2, BioEntry P2 and BioEntry W2.
 
 * For more information on setting up a new schedule, see <DocLink docId='platform/biostar_x/settings-schedule' />.
+
+* Setting <Cmd sid='device.info.multiFaceAuth.label' product='2' /> to <Cmd sid='common.use' product='2' /> on the device disables time and attendance management. For more information on <Cmd sid='device.info.multiFaceAuth.label' product='2' />, see <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />.
 
 :::
 
@@ -212,29 +244,28 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
 
 * <Cmd sid='device.info.background' product='2' />: Set items to be displayed in the device's home screen background.
 
-  * <Cmd sid='device.display.background.logo' product='2' />: Users can display images they registered on the device's home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+  * <Cmd sid='device.display.background.logo' product='2' />: Users can display images they registered on the device's home screen. Click <Cmd sid='common.add' product='2' /> to register an image.
 
   * <Cmd sid='device.display.background.notice' product='2' />: Administrators can display their input on the home screen.
 
-  * <Cmd sid='device.display.background.slideShow' product='2' />: Users can display up to 10 registered images as a slideshow on the home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+  * <Cmd sid='device.display.background.slideShow' product='2' />: Users can display up to 10 registered images as a slideshow on the home screen. Click <Cmd sid='common.add' product='2' /> to register an image.
 
-  :::note
+   :::note
 
-  * To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+  * To reflect changes in real time on the device, click <Cmd sid='button.update' product='2' />.
 
-  * If you change the type of background wallpaper, clicking the <Cmd sid='button.update' product='2' /> button will not apply it to the device. At the bottom of the screen, click the <Cmd sid='button.apply' product='2' /> button.
+  * If you change the type of background wallpaper, clicking <Cmd sid='button.update' product='2' /> will not apply it to the device. At the bottom of the screen, click <Cmd sid='button.apply' product='2' />.
 
   * The options <Cmd sid='device.display.background.notice' product='2' /> and <Cmd sid='device.display.background.slideShow' product='2' /> are supported by the BioStation 2 model.
 
-  :::
+   :::
 
-* <Cmd sid='device.info.sound' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
+* <Cmd sid='device.info.sound' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click <Cmd sid='button.browse' product='2' />.
 
-  :::note
+   :::note
 
-  To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
-
-  :::
+   To reflect changes in real time on the device, click <Cmd sid='button.update' product='2' />.
+   :::
 
 </details>
 
@@ -258,13 +289,11 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
 
 * <Cmd sid='device.info.serverPrivateMsg' product='2' />: Set whether to use a private message that will be displayed on the screen when the user authenticates.
 
-* <Cmd sid='device.info.useScreenSaver' product='2' />: Reduces unnecessary power consumption by reducing LCD screen brightness when the device is not in use. If this feature is not enabled, even if the <Cmd sid='device.info.useScreenSaver' product='2' /> option is enabled on the device, authentication success messages will not be displayed.
+   :::note
 
-  :::note
+   Setting <Cmd sid='device.info.multiFaceAuth.label' product='2' /> to <Cmd sid='common.use' product='2' /> on the device disables this option. For more information on <Cmd sid='device.info.multiFaceAuth.label' product='2' />, see <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />.
 
-  This option is supported on BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, and FaceStation 2.
-
-  :::
+   :::
 
 * <Cmd sid='device.info.useVoice' product='2' />: You can use voice guidance instead of notification tones.
 
@@ -272,27 +301,41 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
 
   * <Cmd sid='device.display.background.normal' product='2' />: Displays the default image on the home screen.
 
-  * <Cmd sid='device.display.background.logo' product='2' />: Users can display images they registered on the device's home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+  * <Cmd sid='device.display.background.logo' product='2' />: Users can display images they registered on the device's home screen. Click <Cmd sid='common.add' product='2' /> to register an image.
 
   * <Cmd sid='device.display.background.notice' product='2' />: Administrators can display their input on the home screen.
 
-  :::note
+   :::note
 
-  * To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+  * To reflect changes in real time on the device, click <Cmd sid='button.update' product='2' />.
 
-  * If you change the type of background wallpaper, clicking the <Cmd sid='button.update' product='2' /> button will not apply it to the device. At the bottom of the screen, click the <Cmd sid='button.apply' product='2' /> button.
+  * If you change the type of background wallpaper, clicking <Cmd sid='button.update' product='2' /> will not apply it to the device. At the bottom of the screen, click <Cmd sid='button.apply' product='2' />.
 
-  * Setting the home screen as <Cmd sid='device.display.background.logo' product='2' /> and <Cmd sid='device.display.background.slideShow' product='2' /> allows displaying up to 10 images as a slideshow on the home screen. Click the <Cmd sid='common.add' product='2' /> button to register an image.
+  * Setting the home screen as <Cmd sid='device.display.background.logo' product='2' /> and <Cmd sid='device.display.background.slideShow' product='2' /> allows displaying up to 10 images as a slideshow on the home screen. Click <Cmd sid='common.add' product='2' /> to register an image.
 
-  :::
+   :::
 
-* <Cmd sid='device.info.sound' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click the <Cmd sid='button.browse' product='2' /> button.
+* <Cmd sid='device.info.sound' product='2' />: Set sound effects to play upon starting, successful authentication, and authentication failure events. Select *\*.wav* files up to 500Kb in file size. Click <Cmd sid='button.browse' product='2' />.
 
-  :::note
+   :::note
 
-  To reflect changes in real time on the device, click the <Cmd sid='button.update' product='2' /> button.
+   To reflect changes in real time on the device, click <Cmd sid='button.update' product='2' />.
 
-  :::
+   :::
+
+* <Cmd sid='device.info.defaultIdleScreen' product='2' />: Select the idle screen that appears when the device is not in use.
+
+  * <Cmd sid='device.idle.video.screenSaver' product='2' />: Shows the screen saver as the idle screen.
+
+  * <Cmd sid='device.info.homeScreen' product='2' />: Shows the option selected under <Cmd sid='device.info.homeScreen' product='2' />.
+
+   :::note
+
+  * This option is supported on BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, and FaceStation 2.
+
+  * For more information on the <Cmd sid='device.info.playVideo' product='2' /> option, see <DocLink inner='#playVideo' />.
+
+   :::
 
 </details>
 
@@ -304,11 +347,119 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
 
 </details>
 
-## Trigger conditions and actions settings {/* #triggerAction */}
+### Play a video on the idle screen {/* #playVideo */}
+
+:::note
+
+Only **BioStation 3 Max** supports playing videos on the idle screen. Prepare the video before sending it to the device.
+
+:::
+
+#### Add a video and transfer it to the device
+
+Set the device to play specific content on the idle screen.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
+
+3. In the device list, click **BioStation 3 Max**.
+
+4. Go to the <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.displaySound' product='2' /> section.
+
+5. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.defaultIdleScreen' product='2' />: Set it to <Cmd sid='device.idle.video.screenSaver' product='2' />.
+
+6. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' /> option: Set it to <Cmd sid='common.use' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-enable.png' />
+
+7. Click <Cmd sid='device.idle.video.add' product='2' />.
+
+8. Select the video saved locally.
+
+9. After the video uploads, set <Cmd sid='device.info.videoSchedule' product='2' /> and <Cmd sid='device.info.videoVolume' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-upload.png' />
+
+10. Click <Cmd sid='device.idle.video.transfer' product='2' /> to transfer the uploaded video to the device.
+
+11. The update progress pop-up appears. Do not close the page until the upload completes.
+
+    <Image src='/img/biostarx-settings-device-playback-playVideo-upload-progress.png' />
+
+12. When the upload complete message appears, click <Cmd sid='button.ok' product='2' />.
+
+    <Image src='/img/biostarx-settings-device-playback-playVideo-upload-complete.png' />
+
+13. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the changes.
+
+:::info
+
+* Videos play only when <Cmd sid='device.info.playVideo' product='2' /> is set to <Cmd sid='common.use' product='2' />, at least 1 video is registered, and the schedule is configured in <Cmd sid='device.info.videoSchedule' product='2' />. For schedules that do not meet these conditions, the screen selected in <Cmd sid='device.info.defaultIdleScreen' product='2' /> appears.
+
+* The maximum supported video file size is 200 MB, and the file format is MP4 (H.264). 
+
+* Video file names can be up to 48 characters long. The file name cannot include characters such as a period(`.`), apostrophe(`'`), or backtick(`` ` ``).
+
+* Add up to 3 videos. When 3 videos are added, the <Cmd sid='device.idle.video.add' product='2' /> button is disabled.
+
+* If the device is connected as a slave (via RS-485), you cannot add, delete, or transfer videos.
+
+  * If the master device supports video playback, the slave screen shows the master’s video list as read-only. The list is read-only. Add, delete, transfer, and reorder videos on the master device only.
+
+  * If the master device does not support video playback, the slave screen shows only <Cmd sid='device.info.defaultIdleScreen' product='2' />.
+
+:::
+
+:::tip
+
+Use <Cmd sid='button.batchEdit' product='2' /> to add and transfer videos to multiple devices at once. For more information on the <Cmd sid='button.batchEdit' product='2' /> feature, see <DocLink docId='platform/biostar_x/settings-device-using-functions#batchEdit' />.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-batch-edit.png' />
+
+:::
+
+#### Change video playback order
+
+Drag the area to the right of a video thumbnail to change the playback order. To save changes, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-change-order.png' alone />
+
+#### Delete videos
+
+In <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' />, click <IcClose /> for the video to delete. Then click <Cmd sid='device.idle.video.transfer' product='2' />. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the changes.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-delete.png' />
+
+#### Video transfer failure
+
+If the system fails to transfer a video to the device, a pop-up appears with the reason. Check the reason, then try again.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-fail-transfer.png' />
+
+The main reasons for transfer failure are as follows.
+
+* The selected device does not support idle screen video playback
+
+* When the device is a slave connected via RS-485
+
+* When the video codec is not H.264 or conversion fails
+
+* When an error occurs while processing the device response
+
+* When an error occurs for reasons other than those above
+
+:::tip
+
+If video batch transfer to multiple devices using the <Cmd sid='button.batchEdit' product='2' /> feature fails on only certain devices, click <Cmd sid='device.idle.video.download.partial.failed.copy' product='2' /> in the results pop-up to copy the list of failed devices and reasons to the clipboard.
+
+:::
+
+## Trigger conditions and action settings {/* #triggerAction */}
 
 In the <Cmd sid='device.info.triggerNAction' product='2' /> group, you can set action conditions and actions based on specific situations. For example, you can configure all alarms to sound when authentication fails or the device becomes unusable if the RS-485 connection is lost.
 
-You can register events by selecting them for action conditions and actions or set conditions and actions according to user preferences. Click the <Cmd sid='device.info.triggerNAction' product='2' /> group and then click the <IcAdd /> <Cmd sid='common.add' product='2' /> button on the right.
+You can register events by selecting them for action conditions and actions or set conditions and actions according to user preferences. Click the <Cmd sid='device.info.triggerNAction' product='2' /> group and then click <IcAdd /> <Cmd sid='common.add' product='2' /> on the right.
 
 <Image src='/img/biostarx-setting-device-edit-advanced-triggernaction.png' />
 

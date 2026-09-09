@@ -1,18 +1,18 @@
 ---
 id: settings-license-biostar-x-license
 title: BioStar X License
-description: You can activate the purchased BioStar X license.
+description: Register the purchased BioStar X license.
 keywords:
   - License
 ---
 
-You can activate the purchased **BioStar X** license.
+Register the purchased **BioStar X** license.
 
-The method to activate <Cmd sid='setting.menu.license.biostarXLicense' /> varies depending on your network environment. Check your network status and activate your license according to the provided instructions.
+How to register <Cmd sid='setting.menu.license.biostarXLicense' /> varies depending on the network environment. Check your network status and activate your license according to the provided instructions.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.menu.license.biostarXLicense' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.menu.license.biostarXLicense' /> on the left sidebar.
 
 :::info
 
@@ -26,8 +26,31 @@ import DocumentA from '../../common/_register-license-key.mdx'
 
 <DocumentA />
 
+## Check license activation results {/* #checkResult */}
+
+Depending on the activation results for the entered license key, the following message appears.
+
+* If all entered license keys are valid, a success message appears.
+
+  <Image src='/img/biostarx-license-success.png' />
+
+* If the system activates only certain keys or fails to activate all keys, check each key’s status and failure reason. The fields for successful keys clear, and failed keys remain for reentry.
+
+  <Columns>
+   <Column><Image src='/img/biostarx-license-fail.png' /></Column>
+   <Column><Image src='/img/biostarx-license-fail-alone.png' /></Column>
+   </Columns>
+
+* If all keys fail without an internet connection, a message tells you to check the connection and retry. The <Cmd sid='setting.xlicense.offlineActivation' product='2' /> button appears. If the network is closed, click this button to register offline.
+
+:::info
+
+Click <Cmd sid='setting.xlicense.activation.copyFailedKeys' product='2' /> to copy the failed keys.
+
+:::
+
 ## Verify activated license
 
-You can check the information of the activated **BioStar X** license at <Cmd sid='setting.xlicense.myLicense' product='2' />.
+Check the registered **BioStar X** license information in <Cmd sid='setting.xlicense.myLicense' product='2' />.
 
 <Image src='/img/biostarx-settings-license-active-license.png' />

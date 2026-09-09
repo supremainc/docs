@@ -40,7 +40,7 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
 :::info
 
-<Cmd sid='team.menu.export.exportReason' /> is optional. View <Cmd sid='team.menu.export.exportReason' /> records under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+<Cmd sid='team.menu.export.exportReason' /> is optional. Check <Cmd sid='team.menu.export.exportReason' /> records in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -60,7 +60,7 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
    <Image src='/img/biostarx-user-import-02.png' width='50%' />
 
-6. Choose whether to keep user data already registered with user IDs in **BioStar X** or to overwrite it with the information from the CSV file and click <Cmd sid='common.apply' />.
+6. Select whether to keep user data already registered with user IDs in **BioStar X** or to overwrite it with the information from the CSV file and click <Cmd sid='common.apply' />.
 
    <Image src='/img/biostarx-user-import-03.png' />
 
@@ -83,6 +83,12 @@ If an error occurs while importing the CSV file, you can recheck and upload only
 * User PINs can be enrolled through CSV import. For more information, see <DocLink docId='platform/biostar_x/enroll-credential-pin' />.
 
 * If you add columns that do not match the saved CSV file, you cannot import the file into **BioStar X**.
+
+* If a username starts with `&@~`, importing that CSV entry fails.
+
+* Set the validity period (expiration date and time) up to 2037-12-31 23:59:59. Import fails for entries with values after this date.
+
+* Avoid opening the exported CSV file directly in spreadsheet programs such as Excel. If a username starts with the `=` character, the program may treat it as a formula and show a different value.
 
 :::
 
@@ -145,7 +151,7 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 * Selecting the incorrect device to apply the data file may cause it to be unrecognized by that device.
 
-* <Cmd sid='team.menu.export.exportReason' /> is optional. View <Cmd sid='team.menu.export.exportReason' /> records under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+* <Cmd sid='team.menu.export.exportReason' /> is optional. Check <Cmd sid='team.menu.export.exportReason' /> records in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -154,8 +160,6 @@ User information can be stored on external storage (USB) for import into **BioSt
 To import file exported from **BioStar X** into devices, you must rename the file as follows so that the device can recognize it. The file name format will be adjusted to be automatically recognized through future device firmware updates.
 
 *<b>BioStarX</b>_YYYYMMDD_HHMMSS.tgz* → *<b>BioStar2</b>_YYYYMMDD_HHMMSS.tgz*
-
-* <Cmd sid='team.menu.export.exportReason' /> is optional. View <Cmd sid='team.menu.export.exportReason' /> records under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
 
 :::
 

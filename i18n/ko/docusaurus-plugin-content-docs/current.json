@@ -690,5 +690,9 @@
   "sidebar.biostar_air.category.SSO & SCIM 설정하기": {
     "message": "SSO & SCIM 설정하기",
     "description": "The label for category 'SSO & SCIM 설정하기' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostarx.category.감사 추적 관리하기": {
+    "message": "감사 추적 관리하기",
+    "description": "The label for category '감사 추적 관리하기' in sidebar 'biostarx'"
   }
 }

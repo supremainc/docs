@@ -26,7 +26,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. Click <Cmd sid='setting.menu.door.root' /> in the left sidebar.
+2. Click <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> on the left sidebar.
 
 3. Click <Cmd sid='button.func.addDoor' product='2' />.
 
@@ -46,7 +46,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
    * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, see <DocLink inner='#alarm' />.
 
-5. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
+5. Once all configurations are complete, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 ### Set basic information {/* #info */}
 
@@ -68,7 +68,7 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 :::
 
-### Set door configuration {/* #configdoor */}
+### Set door settings {/* #configdoor */}
 
 In the <Cmd sid='device.info.configuration' product='2' /> section, you can set the devices connected to the door, exit buttons, and door sensors.
 
@@ -122,7 +122,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: If using an automatic door as the door, the relay can operate regardless of the door sensor's status. If set to <Cmd sid='door.openOnceOn' product='2' />, the <Cmd sid='door.openOnce' product='2' /> option cannot be used.
 
-  :::info
+  :::note
 
   The <Cmd sid='door.openTime' product='2' /> may vary depending on the type of door locking device being used.
 
@@ -144,7 +144,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. If the second authentication is not completed within the set time, the door will not open.
 
-  :::info
+  :::note
 
   * To change the dual authentication of the device configured with the occupant limit setting, modify the settings in the following menu. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
@@ -157,6 +157,14 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 * <Cmd sid='door.antiTailSensor' product='2' />: Set to detect tailgating where an unauthorized person follows an authorized person to enter.
 
   * <Cmd sid='common.sensor' product='2' />: Select a sensor to detect tailgating.
+
+* <Cmd sid='door.authDoorControl.title' product='2' />: Enable the door to remain unlocked when an authorized user performs a Double Badge (Double Badge). For more information, refer to <DocLink docId='platform/biostar_x/settings-door-auth-control' />.
+
+  :::note
+
+  This setting is unavailable on the Add Door screen because the door is not in an access group. Save the door, add it to an access group, then set this on the Edit Door Information screen.
+
+  :::
 
 ### Set anti-passback {/* #antipassback */}
 
@@ -198,7 +206,7 @@ When a user attempts to re-authenticate on the same device after entry authentic
 
 ### Set alarms {/* #alarm */}
 
-In the <Cmd sid='door.alarm' product='2' /> section, you can configure to sound an alarm or block device usage when the door is forcibly opened, left open, or when an anti-passback violation occurs. Click the <Cmd sid='button.addplus' product='2' /> button for the item to add an alarm.
+In the <Cmd sid='door.alarm' product='2' /> section, you can configure to sound an alarm or block device usage when the door is forcibly opened, left open, or when an anti-passback violation occurs. Click <Cmd sid='button.addplus' product='2' /> for the item to add an alarm.
 
 <Image src='/img/biostarx-setting-door-adding-alarm.png' />
 

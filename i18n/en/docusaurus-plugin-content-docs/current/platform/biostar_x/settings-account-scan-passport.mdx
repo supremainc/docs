@@ -1,0 +1,35 @@
+---
+id: settings-account-scan-passport
+title: Set Up ID (Passport) Scan
+description: This article explains selecting user data to import during passport scans and setting the face credential enrollment method.
+---
+
+Before registering users by scanning passports, choose the user name and profile image to import. Then choose the face credential enrollment method. This article explains setting up ID (passport) scanning.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. On the left sidebar, click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.passportScan' />.
+
+   <Image src='/img/biostarx-settings-account-passport-scan-setting.png' />
+
+3. Select the data to import when scanning a passport.
+
+   * <Cmd sid='setting.passportScan.name' />: Imports the name listed on the passport.
+
+   * <Cmd sid='setting.passportScan.profileImage' />: Imports the profile image listed on the passport.
+
+   * <Cmd sid='setting.passportScan.face' />: Enrolls the face image listed on the passport as a face credential.
+
+     * <Cmd sid='setting.passportScan.faceAlwaysConfirm' />: Always asks for confirmation when enrolling the face image listed on the passport as a face credential.
+
+     * <Cmd sid='setting.passportScan.faceDoNotAsk' />: Enrolls the face image listed on the passport as a face credential without asking for confirmation.
+
+4. Click <Cmd sid='button.apply' product='2' /> to save the settings.
+
+:::info
+
+* Select <Cmd sid='setting.passportScan.profileImage' /> to enable <Cmd sid='setting.passportScan.face' />.
+
+* For more information about registering or updating users by scanning passports, see <DocLink docId='platform/biostar_x/add-user-by-scanning-passport' />.
+
+:::

@@ -1,0 +1,29 @@
+* <Cmd sid='device.card.secureMessaging.enforce' product='2' />: Set this option to <Cmd sid='common.on' product='2' /> to authenticate only with cards that support EV2 secure messaging (DESFire EV2/EV3). The device rejects DESFire EV1 cards that do not support EV2 secure messaging.
+
+  <Include type={props.type} ref='suprema'>
+
+   This option becomes available when you select <Cmd sid='device.card.desfire_ev1' product='2' /> and <Cmd sid='setting.cardFormat.encryptionType' product='2' /> of the selected <Cmd sid='device.card.supremaSmartCard' product='2' /> is <Cmd>AES</Cmd>. If <Cmd sid='common.supremaSmartCard' product='2' /> is not in use, this option appears as <Cmd sid='common.off' product='2' />.
+
+  <Image src='/img/biostarx-setting-device-detail-card-smart-security-force.png' className='none' />
+
+  </Include>
+
+  <Include type={props.type} ref='custom'>
+
+   This option becomes available when you select <Cmd sid='device.card.desfire_ev1' product='2' /> and <Cmd sid='setting.cardFormat.encryptionType' product='2' /> of the selected <Cmd sid='device.card.customSmartCard' product='2' /> is <Cmd>AES</Cmd>. If <Cmd sid='common.customSmartCard' product='2' /> is not in use, this option appears as <Cmd sid='common.off' product='2' />.
+
+  <Image src='/img/biostarx-setting-device-detail-card-custom-security-force.png' className='none' />
+
+  </Include>
+
+   :::note
+
+  * If a smart card is in use for either <Cmd sid='common.supremaSmartCard' product='2' /> or <Cmd sid='common.customSmartCard' product='2' />, a confirmation dialog appears when you change either value. Click <Cmd sid='button.ok' product='2' /> in the dialog to change both options together. If either option does not use a smart card, change the value without a confirmation dialog.
+
+  * Secure messaging is available only on DESFire EV2 and EV3 cards. Enable DESFire, and set the card layout encryption type to AES.
+
+  * If the device does not support EV2 secure messaging, the <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option does not appear.
+
+  * To set this option for multiple devices, use <Cmd sid='device.batchEdit' product='2' />. Batch editing automatically excludes devices that do not support EV2 secure messaging.
+
+   :::

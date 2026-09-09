@@ -1,0 +1,124 @@
+---
+id: add-user-by-scanning-passport
+title: Register and Edit Users by Scanning a Passport
+description: This guide explains how to scan a passport to automatically get user information and register or edit a user.
+---
+
+Skip manual entry. Scan a passport to get the user’s name and photo, then register or edit the user.
+
+## Before you start
+
+* Connect the DESKO passport scanner to the client PC for passport scanning.
+
+* Before registering a user with a passport scan, select the data to get from the passport. For more information on passport-scan settings, see <DocLink docId='platform/biostar_x/settings-account-scan-passport' />.
+
+:::info
+
+The <Cmd sid='button.passportScan' product='2' /> feature supports only passport scanning.
+
+:::
+
+## Register a user by passport scan
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='team.user.newUser' /> button in the upper right corner of the <Cmd sid='shell.header.user' /> page.
+
+   <Image src='/img/biostarx-user-add-user-01.png' />
+
+3. Click <Cmd sid='button.passportScan' product='2' /> in the upper right of the <Cmd sid='user.addNewUser' product='2' /> screen.
+
+   <Image src='/img/biostarx-user-add-by-scanning-passport-btn.png' />
+
+4. When the <Cmd sid='user.passportScan.dialog.title' product='2' /> window appears, place the passport on the scanner.
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+5. After the passport scan success message appears, select whether to enroll the passport photo as a facial credential.
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::note
+
+   This message appears when <Cmd sid='setting.passportScan.face' /> is set to <Cmd sid='setting.passportScan.faceAlwaysConfirm' /> under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.account.passportScan' />. If you set the <Cmd sid='setting.passportScan.faceDoNotAsk' /> option, this message will not appear and it will be enrolled immediately as a facial credential.
+
+   :::
+
+6. Review the information from the passport scan and edit it if needed.
+
+7. Click <Cmd sid='user.save' product='2' /> in the upper right corner of the screen to save the user.
+
+## Edit a user by passport scan
+
+1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. In the user list, double-click the user to edit with a passport scan.
+
+3. Click <Cmd sid='button.passportScan' product='2' /> in the upper right of the Edit User screen.
+
+   <Image src='/img/biostarx-user-edit-by-scanning-passport-btn.png' />
+
+4. When the <Cmd sid='user.passportScan.dialog.title' product='2' /> window appears, place the passport on the scanner.
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+5. After the passport scan success message appears, select whether to enroll the passport photo as a facial credential.
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::caution
+
+   This message appears when <Cmd sid='setting.passportScan.face' /> is set to <Cmd sid='setting.passportScan.faceAlwaysConfirm' /> under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.account.passportScan' />. If you set the <Cmd sid='setting.passportScan.faceDoNotAsk' /> option, this message will not appear and it will be enrolled immediately as a facial credential.
+
+   :::
+
+6. Review the information from the passport scan and edit it if needed.
+
+7. Click <Cmd sid='user.save' product='2' /> in the upper right corner of the screen to save the updates from the scan.
+
+:::info
+
+If the user has 2 or more facial credentials enrolled, editing via passport scan overwrites the first enrolled facial credential.
+
+:::
+
+## Error messages
+
+If a problem occurs while scanning a passport, a message appears with the cause and solution. Use the information below to resolve the error.
+
+### Scan failed
+
+If a problem occurs while the scanner automatically reads the passport, one of the messages below appears.
+
+| Cause | Error message |
+| --- | --- |
+| The system failed to verify passport security features (UV patterns, etc.) | <Cmd sid='user.passportScan.error.invalidPassport' product='2' /> |
+| The system did not recognize the passport within the specified time | <Cmd sid='user.passportScan.error.timeout' product='2' /> |
+| Other scan errors, such as the passport moving during scanning or page recognition failing | <Cmd sid='user.passportScan.error.cannotScan' product='2' /> |
+
+If this message appears, click <Cmd sid='button.recognizePassport' product='2' /> and scan again. Check that the passport is placed correctly on the scanner, then try again.
+
+:::info
+
+Click <Cmd sid='button.recognizePassport' product='2' /> to restart automatic recognition from the <Cmd sid='user.passportScan.scanning.title' product='2' /> instructions.
+
+:::
+
+### Scanner connection error
+
+If a problem occurs with the USB Agent or the scanner connection, the message below appears. This error does not provide a Retry button. Follow the instructions, then click <Cmd sid='button.passportScan' product='2' /> again to start scanning from the beginning.
+
+| Scenario | Error message | Solution |
+| --- | --- | --- |
+| USB Agent is not installed or not running | <Cmd sid='user.passportScan.agentNotInstalled.description' product='2' /> | Install or run USB Agent, then try again. |
+| The scanner is not connected to the client PC | <Cmd sid='user.passportScan.scannerNotFound.description' product='2' /> | Check the connection between the passport scanner and the client PC. |
+
+### USB Agent upgrade required
+
+To use the passport scanner, USB Agent must be up to date. If the USB Agent version is outdated, the following error window appears when you click <Cmd sid='button.passportScan' product='2' />.
+
+<Image src='/img/biostarx-user-scan-passport-error-usb-agent.png' />
+
+* <Cmd sid='button.cancel' product='2' />: Close the error window and do not scan.
+
+* <Cmd sid='button.goToSettings' product='2' />: Go to the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> screen. On that screen, upgrade USB Agent to the latest version, then try scanning again.

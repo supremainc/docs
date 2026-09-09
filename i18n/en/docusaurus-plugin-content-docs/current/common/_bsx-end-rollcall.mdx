@@ -1,0 +1,41 @@
+## End roll call {/* #endRollCall */}
+
+End ongoing roll calls in both the **BioStar X** mobile app and on the web.
+
+### End in the mobile app
+
+1. To end a roll call, tap the <IcRCstop title='End' width={20} height={20} /> button in the roll call list screen, or tap the <Cmd>END</Cmd> button in the roll call status screen.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end.png' className='none' width='600px' alone />
+
+2. If unaccounted users remain, a warning pop-up appears. Enter an end reason, and tap <Cmd>Yes</Cmd>.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end-unaccounted.png' width='272px' alone />
+
+### End on the web
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> on the left sidebar.
+
+3. Click <Cmd sid='zone.rollCall' product='2' /> from the list.
+
+4. In the roll call list, click the checkbox for the roll call to end.
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-stop.png' />
+
+5. Click <Cmd sid='zone.pause.end' product='2' /> at the top right of the screen.
+
+6. When the confirmation message appears, click <Cmd sid='button.yes' product='2' />.
+
+A roll call with no unaccounted users ends immediately. For a roll call with unaccounted users, a dialog appears with the <Cmd sid='zone.rollCall.unaccountedUsers' product='2' /> list and the <Cmd sid='zone.rollCall.endReason' product='2' /> field. Enter a reason, and click <Cmd sid='zone.rollCall.endButton' product='2' /> to end the roll call.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcall-stop-unaccounted-users.png' />
+
+:::info
+
+* <Cmd sid='zone.rollCall.endReason' product='2' />: Enter up to 500 characters.
+
+* The system cannot end multiple roll calls at once if any roll call has unaccounted users. End roll calls one at a time.
+
+:::

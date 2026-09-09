@@ -1,0 +1,40 @@
+---
+id: tna-audit-trail-settings
+title: Set Time & Attendance Audit
+description: This section describes how to set retention policies for change history and view history in Time & Attendance audit logs.
+keywords:
+  - audit settings
+  - T&A audit settings
+  - retention settings
+  - retention period
+  - Time & Attendance audit log retention policy
+  - automatic deletion
+---
+
+Audit logs accumulate over time, so manage the retention period to save storage space and protect privacy. In <Cmd sid='setting.menu.system.auditTrailRetention' />, set the retention period for <Cmd sid='setting.menu.auditTrail.taAuditLog' /> records and whether to keep view history.
+
+## Privilege information
+
+<Cmd sid='setting.account.administrator' className='normal' /> can always view and change settings in the <Cmd sid='setting.menu.system.auditTrailRetention' /> menu. For a custom privilege administrator, in <Cmd sid='settings.account.menu.setting' product='2' />, set <Cmd sid='setting.menu.auditTrail.retentionSettings' /> to <Cmd sid='settings.account.menu.readOnly' product='2' /> for view-only, or to <Cmd sid='settings.account.menu.fullAccess' product='2' /> for view and change.
+
+:::info
+
+* The default Time & Attendance admin account lacks this permission. The system creates this account when you install the Time & Attendance plugin. Grant the permission separately if needed.
+
+* For more information on adding Time & Attendance audit permissions, see <DocLink docId='platform/biostar_x/tna-audit-trail#addTnaAuditLevel' />.
+
+:::
+
+## Open audit settings
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. On the left sidebar, click <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.system.auditTrailRetention' />.
+
+3. Scroll down to the <Cmd sid='audit.retention.sectionTimeAttendance' /> section.
+
+<Image src='/img/biostarx-settings-tna-audit-trail-settings.png' />
+
+import AuditTrailOptions from '../../common/_bsx-audit-trail-settings-options.mdx';
+
+<AuditTrailOptions type='timeattendance' />

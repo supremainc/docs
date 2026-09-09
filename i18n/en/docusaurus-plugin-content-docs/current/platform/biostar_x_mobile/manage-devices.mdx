@@ -1,0 +1,159 @@
+---
+id: manage-devices
+title: Manage Devices
+description: Check device status in the device list, and manage devices remotely.
+---
+
+In the device list, check each device’s status and remotely release locked devices. From the app home screen, tap <Cmd>DEVICE</Cmd>.
+
+<Image src='/img/mobile/bsx-mobile-app-device.png' width='500px' className='none' alone />
+
+:::info
+
+* The mobile app does not allow adding or editing devices.
+
+* You can also access it through the side menu. Tap <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Device</Cmd>.
+
+:::
+
+## Check device information
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/mobile/bsx-mobile-app-device-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Each device in the device list includes the following information.
+
+* Device name
+
+* Device group name (shows as <Cmd>All Devices</Cmd> if not in a group)
+
+* Device IP address
+
+</Column>
+</Columns>
+
+## Check device status
+
+Check device status from the status icons in the device list.
+
+| Status Icon | Description |
+| :-: | --- |
+| <Image src='/img/mobile/bsx-mobile-app-device-ok.png' className='none' ico alone /> | The device is connected properly. |
+| <Image src='/img/mobile/bsx-mobile-app-device-fail.png' className='none' ico alone /> | The device is off or disconnected. |
+
+:::info
+
+Pull down the device list to refresh device status.
+
+:::
+
+## Release authentication failure lockout
+
+If consecutive authentication failures lock a device, use the mobile app to release the lockout.
+
+:::info
+
+For more information on the authentication failure lockout setting in **BioStar X**, see <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
+
+:::
+
+### Release lockout for an individual device
+
+Release authentication failure lockouts for devices in the device list.
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock.png' className='none' width='750px' alone />
+
+1. In the device list, find devices labeled <Cmd>AUTHORIZATION FAIL LOCK</Cmd>.
+
+2. Tap <Cmd>RELEASE LOCK OUT</Cmd> to release the lockout.
+
+3. When the confirmation message appears, tap <Cmd>Yes</Cmd>.
+
+4. When the lockout release success message appears, tap <Cmd>OK</Cmd>.
+
+### Release lockout for multiple devices
+
+Release lockouts for multiple devices labeled <Cmd>AUTHORIZATION FAIL LOCK</Cmd> at the same time.
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock-multi-release.png' className='none' width='750px' alone />
+
+1. Tap <IcAppCheck title='Check box' /> at the top right of the device list.
+
+2. Select at least one device labeled <Cmd>AUTHORIZATION FAIL LOCK</Cmd>.
+
+3. Tap <Cmd>RELEASE</Cmd> in the top right.
+
+4. When the confirmation message appears, tap <Cmd>Yes</Cmd>.
+
+5. When the lockout release success message appears, tap <Cmd>OK</Cmd>.
+
+## Device search
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-search.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Search by device name, group, or IP address.
+
+1. Tap <IcSearch title='Search' width='20px' height='20px' /> at the top of the device list.
+
+2. Enter a search term in the search field. Search by device name, group name, or IP address.
+
+3. After you finish entering the search term, tap <IcSearch title='Search' width='20px' height='20px' />.
+
+Devices that match the search term appear in the results.
+
+:::info
+
+* Recent search history appears below the search input field. Tap a recent search entry to search again with that term.
+
+* To close the search input field, tap <IcClose title='Close' width='20px' height='20px' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Filter the device list
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Filter the device list by device group.
+
+1. Tap <IcAppFilter title='Filter' width='20px' height='20px' /> at the top of the device list.
+
+2. Tap <Cmd>All Devices</Cmd>.
+
+3. Select the desired group from the device group list.
+
+   <Image src='/img/mobile/bsx-mobile-device-filter-device-group.png' width='252px' alone />
+
+4. After selecting a device group, tap <Cmd>Yes</Cmd>.
+
+5. Tap <Cmd>Apply</Cmd> to filter the device list based on the selected criteria.
+
+The list shows devices in the selected device group.
+
+:::info
+
+To reset the filter conditions, tap <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> in the upper right corner of the screen.
+
+:::
+
+</Column>
+</Columns>

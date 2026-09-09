@@ -104,6 +104,10 @@ To delete an enrolled profile image, tap <Cmd>Remove Picture</Cmd>.
 
 * <Cmd>Access Group</Cmd>: Select the user's access group.
 
+import UserNameIDrule from '@site/docs/common/_bsx-user-id-name-rule.mdx';
+
+<UserNameIDrule />
+
 :::info
 
 * The available user ID values may vary depending on the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> menu's <Cmd sid="setting.userDevice.useridType" product='2' /> option. For more information, refer to <DocLink docId='platform/biostar_x/settings-server-server#userid-type' target='_blank' />.
@@ -129,7 +133,7 @@ When you register a user, you can also enroll a credential so the user can acces
 </Column>
 <Column className='padding--l40'>
 
-### Enroll PIN {/* #enrollPin */}
+### Enroll a PIN {/* #enrollPin */}
 
 You can enroll a PIN credential so the user can gain access by entering a PIN on the device.
 
@@ -141,7 +145,7 @@ You can enroll a PIN credential so the user can gain access by entering a PIN on
 
 :::info
 
-* The PIN must be at least 8 characters long and can only contain numbers.
+* The PIN must be 4\~16 digits long and contain only numbers.
 
 * You can enroll a maximum of one PIN credential per user.
 
@@ -158,7 +162,7 @@ You can enroll a PIN credential so the user can gain access by entering a PIN on
 </Column>
 <Column className='padding--l40'>
 
-### Enroll fingerprint {/* #enrollFingerprint */}
+### Enroll fingerprints {/* #enrollFingerprint */}
 
 You can enroll the user's fingerprint as a means of authentication for access control. Enroll the user's fingerprint information through a device that supports fingerprint authentication.
 
