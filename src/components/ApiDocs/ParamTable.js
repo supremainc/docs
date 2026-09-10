@@ -14,7 +14,7 @@ export default function ParamTable({ title, params }) {
         <thead>
           <tr style={{ background: 'var(--ifm-color-emphasis-100)' }}>
             <th style={{ ...TH }}>Name</th>
-            <th style={{ ...TH }}>Type</th>
+            <th style={{ ...TH }}>Type / Example</th>
             <th style={TH}>Description</th>
           </tr>
         </thead>
