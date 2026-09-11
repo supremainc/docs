@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksuprema_docs=self.webpackChunksuprema_docs||[]).push([["93220"],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/docs/ja/changelog","blogTitle":"\u66F4\u65B0\u5C65\u6B74","authorsListPath":"/docs/ja/changelog/authors"}')}}]);
