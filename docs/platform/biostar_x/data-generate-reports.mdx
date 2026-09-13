@@ -85,11 +85,23 @@ import SetPeriod from '../../common/_bsx-report-set-period.mdx';
 
 ### CSV 내보내기
 
-조회된 이벤트 목록을 CSV 파일로 내보낼 수 있습니다. 화면 오른쪽 상단의 <IcMoreW /> → <Cmd sid='menu.csvDownload' product='2' />를 클릭하세요. 사용자의 PC에 CSV 파일을 다운로드할 수 있습니다.
+조회된 이벤트 목록을 CSV 파일로 내보낼 수 있습니다. 
+
+1. 화면 오른쪽 상단의 <Cmd sid='reportApp.export' product='2' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='reportApp.exportReport' product='2' /> 창이 나타나면 <Cmd sid='reportApp.fileFormat' product='2' />에서 <Cmd>CSV</Cmd>를 선택하세요.
+
+   <Image src='/img/biostarx-data-export-all-report-csv.png' />
+
+1. <Cmd sid='reportApp.fileName' product='2' />에서 저장할 파일 이름을 수정할 수 있습니다.
+
+1. <Cmd sid='auditTrail.export.reason' product='2' />(선택 사항)를 입력하고 <Cmd sid='reportApp.export' product='2' /> 버튼을 클릭하세요.
+
+1. 로컬의 원하는 경로에 CSV 파일을 저장하세요.
 
 :::info
 
-CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Report_20251002_94a85b7519664378b4b39b879f1e81b7.csv*)
+<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. 내보내기 사유는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 
@@ -267,7 +279,7 @@ CSV 파일의 이름 형식은 `Report_YYYYMMDD_hash.csv`입니다. (예, *Repor
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
+<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. 내보내기 사유는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 
@@ -282,7 +294,7 @@ PC와 연결된 프린터로 리포트를 인쇄하려면 <Cmd sid='data.button.
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' />는 필수 입력 항목이 아닙니다. <Cmd sid='team.menu.export.exportReason' />는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
+<Cmd sid='printOption.printReason' product='2' />는 필수 입력 항목이 아닙니다. 인쇄 사유는 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />에서 기록을 확인할 수 있습니다.
 
 :::
 

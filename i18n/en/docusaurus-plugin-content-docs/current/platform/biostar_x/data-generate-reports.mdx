@@ -82,17 +82,29 @@ If a camera is connected to a device where a specific event occurred in the even
 
 * If the VMS type is **Leopard**, playback may fail due to the recorded video playback limit. Click <Cmd sid='arena.message.leopardPlaybackLimitRetry' /> to play the video.
 
-* This feature is available by purchasing add-on options with an *Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* This feature is available by purchasing add-on options with an **Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
 ### Export to CSV
 
-You can export the queried event list as a CSV file. Click <IcMoreW /> → <Cmd sid='menu.csvDownload' product='2' /> at the top right of the screen. You can download the CSV file to your PC.
+You can export the queried event list as a CSV file. 
+
+1. Click <Cmd sid='reportApp.export' product='2' /> at the top right of the screen.
+
+2. When the <Cmd sid='reportApp.exportReport' product='2' /> window appears, select <Cmd>CSN</Cmd> from <Cmd sid='reportApp.fileFormat' product='2' />.
+
+   <Image src='/img/biostarx-data-export-all-report-csv.png' />
+
+3. You can edit the file name to be saved in <Cmd sid='reportApp.fileName' product='2' />.
+
+4. Enter <Cmd sid='auditTrail.export.reason' product='2' /> (optional) and click <Cmd sid='reportApp.export' product='2' />.
+
+5. Save the CSV file to your desired location on your local path.
 
 :::info
 
-The name format of the CSV file is `Report_YYYYMMDD_hash.csv`. (For example, *Report_20251002_94a85b7519664378b4b39b879f1e81b7.csv*)
+<Cmd sid='auditTrail.export.reason' product='2' /> is optional. Check records for export reasons in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -270,7 +282,7 @@ To export the report as a PDF or CSV file, click the <Cmd sid='data.button.expor
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' /> is optional. Check <Cmd sid='team.menu.export.exportReason' /> records in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+<Cmd sid='auditTrail.export.reason' product='2' /> is optional. Check records for export reasons in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -284,7 +296,7 @@ The print preview screen will appear in a new tab of your web browser. Click the
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' /> is optional. Check <Cmd sid='team.menu.export.exportReason' /> records in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+<Cmd sid='printOption.printReason' product='2' /> is optional. Check records for print reasons in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
