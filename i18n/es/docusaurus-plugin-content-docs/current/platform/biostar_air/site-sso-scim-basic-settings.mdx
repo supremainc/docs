@@ -1,0 +1,73 @@
+---
+id: site-sso-scim-basic-settings
+title: Habilitar SSO y SCIM
+description: Cambie la política de inicio de sesión y habilite o deshabilite el soporte para SSO y SCIM en sitios de BioStar Air.
+---
+
+Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda. En la pestaña <Cmd>SSO & SCIM</Cmd>, seleccione la política de inicio de sesión y el proveedor de ID, o bórrelos.
+
+<Image src='/img/air/bsair-settings-site-setting-sso-scim.png' />
+
+:::caution
+
+Antes de cambiar los ajustes del proveedor de ID, mantenga al menos una cuenta de administrador maestro que pueda iniciar sesión localmente. De lo contrario, los problemas de integración del proveedor de identidad pueden impedir que los administradores accedan al sitio.
+
+:::
+
+:::info
+
+* Solo el administrador maestro del sitio puede administrar los ajustes de SSO y SCIM.
+
+* Los usuarios con credenciales no inician sesión en BioStar Air; los ajustes de SSO y SCIM no los afectan.
+
+* El [Partner Portal](https://partner.biostarair.com/) no está incluido en el alcance de los ajustes de SSO y SCIM.
+
+:::
+
+## Política de inicio de sesión
+
+En <Cmd sid='sso_scim.security.login_policy.title' product='air' />, defina cómo inician sesión los administradores de BioStar Air.
+
+* **SSO**: Los administradores se autentican mediante un proveedor de identidad.
+
+* **Local**: Los administradores se autentican con la dirección de correo electrónico y la contraseña definidas en BioStar Air.
+
+Seleccione una de las tres opciones siguientes.
+
+* <Cmd sid='sso_scim.security.login_policy.sso_local' product='air' />: Permite el inicio de sesión con SSO y el inicio de sesión local.
+
+* <Cmd sid='sso_scim.security.login_policy.local_only' product='air' />: Permite solo el inicio de sesión local.
+
+* <Cmd sid='sso_scim.security.login_policy.sso_only' product='air' />: Permite solo el inicio de sesión con SSO.
+
+## Ajustes de integración del proveedor de identidad
+
+En <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />, seleccione un proveedor de ID externo para las cuentas de administrador de BioStar Air. Un sitio solo puede tener un proveedor de identidad activo a la vez.
+
+* <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' />
+
+* <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' />: <DocLink docId='platform/biostar_air/site-sso-scim-entra-id-setup' />
+
+* <Cmd sid='sso_scim.additional_features.sso.okta' product='air' />: <DocLink docId='platform/biostar_air/site-sso-scim-okta-setup' />
+
+:::info
+
+Para cambiar el proveedor de ID conectado, seleccione <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' /> para desconectar y, luego, seleccione un nuevo proveedor de ID. Sin desconectarse, el sitio no puede cambiar directamente a otro proveedor de ID.
+
+:::
+
+## Desactivar ajustes de SSO y SCIM
+
+Desactive la integración del proveedor de ID.
+
+1. Seleccione <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' /> en la sección <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />.
+
+2. Revise el mensaje en la ventana emergente de advertencia.
+
+   <Image src='/img/air/bsair-settings-site-idp-not-use.png' />
+
+3. Revise el impacto del cambio de ajuste y marque la casilla de verificación.
+
+   <Image src='/img/air/bsair-settings-site-idp-not-use-checked.png' />
+
+4. Haga clic en <Cmd sid='sso_scim.additional_features.sso.caution_dialog.confirm' product='air' />.

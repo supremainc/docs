@@ -1,0 +1,31 @@
+## 同期された管理者/ユーザー/グループの管理
+
+プロビジョニングを有効にすると、BioStar Airは各管理者、ユーザー、ユーザーグループがローカルで直接管理されているか、IDプロバイダーから同期されているかを画面に表示します。
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> メニューの管理者リストで、<Cmd sid='sso_scim.identity_source.title' product='air' /> 列を確認してください。
+
+  <Image src='/img/air/bsair-admin-list-with-idp.png' />
+
+* <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> メニューのユーザーリストで、<Cmd sid='sso_scim.identity_source.title' product='air' /> 列を確認してください。
+
+  <Image src='/img/air/bsair-user-management-list-with-idp.png' />
+
+* <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> メニューのユーザーグループリストで、<Cmd sid='sso_scim.identity_source.title' product='air' /> 列を確認してください。
+
+  <Image src='/img/air/bsair-user-group-list-with-idp.png' />
+
+:::note
+
+**SCIM同期項目の動作の仕組み**
+
+* 既存の手動で作成したユーザーと管理者は、引き続き手動管理のままです。
+
+* SCIMで同期された項目は、BioStar Airで手動で削除できません。
+
+* SCIMで同期されたグループでは、ユーザーを手動で追加または削除できません。
+
+* 同期された項目をローカルで手動で変更すると、<Cmd sid='sso_scim.identity_source.override' product='air' /> 状態になります。 <Cmd sid='sso_scim.override.release_override' product='air' /> を実行すると、ローカルの変更が取り消され、項目が再びSCIM管理状態に戻ります。
+
+  <Image src='/img/air/bsair-user-list-with-idp-override.png' />
+
+:::

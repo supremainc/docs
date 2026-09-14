@@ -1,0 +1,251 @@
+---
+id: manage-presence
+title: 在席を確認
+description: BioStar Airでサイトに現在いるユーザーを確認し、在席状態を手動で変更する方法を案内します。
+---
+
+<Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' /> メニューでは、現在サイトにいるユーザーをリアルタイムで確認できます。 在席（Presence）状態は <Cmd sid='apb.zoneList.perimetterZone' product='air' className='bold' />(Perimeter Zone) に設定した入室および退室装置の認証記録に基づいて計算します。<Cmd sid='apb.zoneList.perimetterZone' product='air' className='normal' />をまだ設定していない場合は、先に <DocLink docId='platform/biostar_air/manage-zone' />を参照してください。
+
+## 在席状態の決定方法 {/* #howPresenceIsDetermined */}
+
+ユーザーは境界の入室装置で認証すると <Cmd sid='presence_on_site' product='air' /> 状態に、退室装置で認証すると <Cmd sid='presence_off_site' product='air' /> 状態に切り替わります。
+
+* 境界に退室装置を指定していないサイトでは、<Cmd sid='apb.zoneForm.offsite.label' product='air' />を必ず設定してください。 設定した時間の間に活動がない場合、ユーザーは <Cmd sid='presence_off_site' product='air' /> 状態に自動で切り替わります。
+
+* 境界の入室および退室装置と <Cmd sid='apb.zoneForm.offsite.label' product='air' /> の設定方法は <DocLink docId='platform/biostar_air/manage-zone#addingZone' />を参照してください。
+
+* 管理者は複数のメニューから現場にいる人の一覧と人数を確認できます。
+
+  * <Cmd sid='dashboard_menu' product='air' /> ウィジェット
+
+  * <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />
+
+  * <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> → <Cmd sid='zones_col_people_inside' product='air' /> (<Cmd sid='apb.zoneList.perimetterZone' product='air' className='normal' />)
+
+## ダッシュボードで確認 {/* #checkingFromDashboard */}
+
+<Cmd sid='dashboard_menu' product='air' /> メニューでも <Cmd sid='user_tagged_today' product='air' /> カードで現在のサイトに在席しているユーザー数をすばやく確認できます。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-safety-presence-show-dashboard.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-safety-presence-show-dashboard.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+## 在席リストを確認 {/* #presenceListOverview */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+画面左側のサイドバーで <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' /> をクリックしてください。
+
+<Image src='/img/air/bsair-safety-presence-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-safety-presence-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. モバイル端末でBioStar Airアプリを起動してログインします。
+
+2. 画面下部の <Cmd en='All Menu'>All Menu</Cmd> → <Cmd sid='presence_submenu' product='air' /> をタップしてください。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+在席リストは、デフォルトで <Cmd sid='presence_on_site' product='air' /> 状態のユーザーのみを表示します。
+
+* <Cmd sid='presence_user_column' product='air' />：ユーザーのプロフィール写真と名前です。
+
+* <Cmd sid='presence_entered_through_column' product='air' />：ユーザーがサイトに入るときに認証した入室装置と時刻です。
+
+* <Cmd sid='presence_last_door_used_column' product='air' />：ユーザーが最後に使用した出入口と時刻です。
+
+* <Cmd sid='presence_status_column' product='air' />：ユーザーの現在の在席状態（<Cmd sid='presence_on_site' product='air' />/<Cmd sid='presence_off_site' product='air' />）です。
+
+* <Cmd sid='presence_action_column' product='air' />：ユーザーごとの在席状態を変更できます。
+
+## 在席リストの管理機能 {/* #managePresence */}
+
+一覧の上部と下部にある管理機能で、次の作業を実行できます。
+
+<Image src='/img/air/bsair-safety-presence-mng-tools.png' />
+
+* <Cmd sid='presence_mark_on_site' product='air' /> / <Cmd sid='presence_mark_off_site' product='air' />：ユーザーの在席状態をサイト内またはサイト外に変更できます。 詳細については、<DocLink inner='#manualOverride' />をご参照ください。
+
+* <Cmd sid='presence_mask_names' product='air' /> / <Cmd sid='presence_unmask_names' product='air' /> (<IcAirMask width='25px' height='25px' />)：ユーザー名を非表示にしたり、再表示したりします。 情報が機微な環境で画面を共有するときに役立ちます。
+
+  <Tabs groupId='platform'>
+   <TabItem value='web' label='Web'>
+   
+   <Image src='/img/air/bsair-safety-presence-mng-tools-masking.png' />
+   
+   </TabItem>
+   <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-safety-presence-mng-tools-masking.png' width='250px' />
+   
+   </TabItem>
+   </Tabs>
+
+* <Cmd sid='presence_refresh' product='air' />：一覧をすぐに更新し、最新状態にします。 一覧下部の<Cmd sid='auto_refresh_btn' product='air' />で自動更新間隔(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)を選択すると、設定した周期で一覧を自動更新します。
+
+* <Cmd sid='presence_search_placeholder' product='air' />：ユーザー名でリストを検索します。
+
+### 在席一覧のフィルタリング
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Cmd sid='presence_status_column' product='air' /> 列の <IcAirFilter title='Filter' /> ボタンをクリックし、<Cmd sid='presence_on_site' product='air' />、<Cmd sid='presence_off_site' product='air' />、または全ユーザーを選択して一覧をフィルタリングします。 さらに、<Cmd sid='presence_entered_through_column' product='air' />、<Cmd sid='presence_last_door_used_column' product='air' /> 列でも条件を選択してフィルタリングします。
+
+<Image src='/img/air/bsair-safety-presence-list-filtering.png' />
+
+:::info
+
+フィルターを解除するには <Cmd sid='new_button_reset' product='air' /> ボタンをクリックします。
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-safety-presence-list-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 在席一覧の右上にある <Cmd sid='logs_filters_action_btn' product='air' /> をタップします。 
+
+2. <Cmd sid='presence_on_site' product='air' /> または <Cmd sid='presence_off_site' product='air' /> の状態を選択するか、両方を選択します。
+
+3. <Cmd en='Entered Through'>Entered Through</Cmd>、<Cmd en='Last Door Used'>Last Door Used</Cmd>で条件を選択します。
+
+4. 選択した条件で一覧をフィルタリングするには <Cmd sid='save_btn' product='air' /> ボタンをタップします。
+
+:::info
+
+フィルターを解除するには <Cmd sid='new_button_reset' product='air' /> ボタンをタップします。
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+* 全ユーザーを確認するには、<Cmd sid='presence_status_column' product='air' /> 列で <Cmd sid='presence_on_site' product='air' />、<Cmd sid='presence_off_site' product='air' /> を両方選択します。
+
+* 在席一覧は <Cmd sid='presence_on_site' product='air' /> 状態のユーザーをデフォルトで表示します。
+
+:::
+
+## 在席状態の手動変更 {/* #manualOverride */}
+
+実際の状況とシステムに記録された在席状態が異なる場合、管理者が状態を直接変更できます。
+
+* 在席の精度は、サイトの入室および退室デバイス設定によって異なります。 入室および退室デバイスを明確に設定したサイトほど、信頼性の高い在席情報を提供します。
+
+* デバイスがオフラインだった場合、またはイベント送信が遅延した場合、同期完了後に在席状態が更新されることがあります。
+
+* 在席状態は入退室権限とは異なります。 <Cmd sid='presence_on_site' product='air' /> 状態で表示されたユーザーでも、すべてのドアにアクセスできるとは限りません。
+
+* 期限切れ、無効、停止状態のユーザーは、アカウントが有効になるまで在席状態を変更できません。
+
+:::info
+
+手動変更はシステムに記録された状態を変更するだけで、ユーザーの実際の位置を物理的に確認する機能ではありません。 変更履歴は <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />で確認できます。
+
+:::
+
+### 個別ユーザーの在席状態の変更
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. 一覧で状態を変更するユーザーの <Cmd sid='presence_action_column' product='air' /> 列にある <Cmd sid='presence_mark_on_site' product='air' /> または <Cmd sid='presence_mark_off_site' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-safety-presence-action.png' />
+
+2. 確認メッセージが表示されたら <Cmd sid='btn_yes' product='air' /> ボタンをクリックします。
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-safety-presence-action.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 一覧で状態を変更するユーザーの <IcAirOff width='20' height='20' title='Off Site' /> または <IcAirOn width='20' height='20' title='On Site' /> ボタンをタップします。
+
+2. 確認メッセージが表示されたら <Cmd sid='btn_yes' product='air' /> ボタンをタップします。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+### 複数ユーザーの在席状態の変更
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. 一覧で状態を変更するユーザーのチェックボックスをクリックします。 一人以上のユーザーを選択できます。
+
+2. 一覧上部の <Cmd sid='presence_mark_on_site' product='air' /> または <Cmd sid='presence_mark_off_site' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-safety-presence-action-multi-users.png' />
+
+3. 確認メッセージが表示されたら <Cmd sid='btn_yes' product='air' /> ボタンをクリックします。
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-safety-presence-action-multi-users.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 一覧で状態を変更するユーザーを長押しします。
+
+2. 状態を変更するユーザーを選択します。 一人以上のユーザーを選択できます。
+
+3. 画面下部の <Cmd en='Mark On Site'>Mark On Site</Cmd>(<IcAirOn width='20' height='20' />) または <Cmd en='Mark Off Site'>Mark Off Site</Cmd>(<IcAirOff width='20' height='20' />) ボタンをタップします。
+
+4. 確認メッセージが表示されたら <Cmd sid='btn_yes' product='air' /> ボタンをクリックします。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>

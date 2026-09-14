@@ -1,0 +1,529 @@
+---
+id: manage-zone
+title: ゾーン管理
+description: BioStar Airでゾーンを作成し、アンチパスバック（APB）ルールを設定して、ユーザーの入退室フローを管理する方法を説明します。
+---
+
+BioStar Airの**ゾーン**(Zone)機能を使用すると、出入口を論理的なゾーンに分け、必要に応じて**アンチパスバック**(Anti-Passback, APB)ルールを適用し、ユーザーが正しい順序で入室・退室するように強制します。 アンチパスバックルールはゾーンごとに任意で適用でき、適用しないゾーンでも在席者の確認など、他のゾーン機能はそのまま使用できます。 **ゾーン**は、サイト全体を対象にする境界ゾーンから、建物内の特定エリアまで自由に構成できます。
+
+## 開始前に {/* #beforeStart */}
+
+ゾーンを作成する前に、次の事項を確認してください。
+
+* ゾーンに割り当てるドアを先に登録する必要があります。 ドアの登録方法については、<DocLink docId='platform/biostar_air/managing-registered-doors' />をご参照ください。
+
+* 一台のデバイスは、一度に一つのゾーンでしか使用できません。
+
+* ゾーンの入室/退室デバイスを変更しても、ドア自体の設定は変更されません。
+
+* ゾーンの入室/退室デバイスを正しく設定しないと、APBの動作と在席人数が実際の移動と異なって表示される場合があります。
+
+* オフラインデバイスは、オンラインデバイスより変更内容の反映が遅れる場合があります。 変更内容はオンラインデバイスに先に適用され、オフラインデバイスはオンラインに再接続した後に適用されます。
+
+* ファームウェアが **v2.13** 以上のデバイスのみ、ゾーンに割り当てできます。 ゾーンに割り当てるデバイスが最新ファームウェアであることを確認してください。
+
+* APBゾーンで使用中のドアは、設定の競合を防ぐために保護されます。 ドア設定でAPBの動作に影響する内容を変更する前に、該当ドアをゾーンから除外してください。
+
+## ゾーン一覧の概要 {/* #zoneListOverview */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+画面左側のサイドバーで <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> をクリックしてください。
+
+<Image src='/img/air/bsair-zone-mng-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-app-zone-mng-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. モバイル端末でBioStar Airアプリを起動してログインします。
+
+2. 画面の下部にある <Cmd sid='site_setting_tab_management' product='air' /> をタップします。
+
+3. <Cmd sid='zones_menu' product='air' /> カードをタップしてください。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+ゾーン一覧では、サイトに設定したすべてのゾーンを一目で確認できます。
+
+* <Cmd sid='zone_name' product='air' />：ゾーン名です。 <Cmd sid='apb.zoneList.perimetterZone' product='air' /> では、名前の横に <Cmd sid='zones_tag_pinned' product='air' /> バッジが表示されます。
+
+* <Cmd sid='zones_col_people_inside' product='air' />：現在、そのゾーン内に在席していると記録されたユーザー数です。 詳細については、<DocLink inner='#checkingPeopleInside' />をご参照ください。
+
+* <Cmd sid='zones_col_apb_mode' product='air' />：ゾーンに適用したAPBモード（<Cmd sid='zones_badge_hard' product='air' />/<Cmd sid='zones_badge_soft' product='air' />/<Cmd sid='zones_badge_none' product='air' />）です。
+
+* <Cmd sid='zones_col_apb_exemptions' product='air' />：ゾーンに指定したAPB例外グループです。
+
+* <Cmd sid='zones_col_zone_status' product='air' />：ゾーンの有効化状況です。
+
+* <Cmd sid='zones_col_device_status' product='air' />：ゾーンに割り当てたデバイスのオンライン状態です。
+
+:::note
+
+**境界と内部ゾーン**
+
+サイトを最初に設定すると、<Cmd sid='apb.zoneList.perimetterZone' product='air' />(Perimeter Zone)がデフォルトで提供されます。 <Cmd sid='apb.zoneList.perimetterZone' product='air' />はサイトの正門のようなゾーンです。名前の変更や削除はできず、一覧では<Cmd sid='zones_tag_pinned' product='air' />バッジで表示されます。 
+
+* <Cmd sid='apb.zoneList.perimetterZone' product='air' />で使用する入室・退室デバイスは、<Cmd sid='dashboard_menu' product='air' />メニューの<Cmd sid='user_tagged_today' product='air' />と、<Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />メニューで在席状態を算出する基準にもなります。
+
+* 境界以外にも、内部統制が必要な領域（例：サーバールーム、特定の階）ごとに別のゾーンを追加作成し、サイト内でも細かな移動制御を適用できます。
+
+:::
+
+## 内部在席人数の確認 {/* #checkingPeopleInside */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+ゾーン一覧の<Cmd sid='zones_col_people_inside' product='air' />列で、各ゾーンの現在の在席人数を確認します。
+
+<Image src='/img/air/bsair-zone-mng-inside-people.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+ゾーン一覧の<Cmd en='People'>People</Cmd>項目で、各ゾーンに現在何人いるかを確認できます。
+
+<Image src='/img/air/bsair-app-zone-mng-inside-people.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* この数値は、ゾーンに設定した入室・退室デバイスの認証記録を基に算出します。 入室デバイスで認証すると人数が増え、退室デバイスで認証すると人数が減ります。
+
+* APB例外グループに属するユーザーはAPBルールの適用対象外ですが、在席人数には引き続き含めます。
+
+* ゾーンを無効化すると、そのゾーンの在席人数を0に初期化します。
+
+* 最新の値を維持するには、一覧上部の<Cmd sid='presence_refresh' product='air' />ボタンをクリックするか、自動更新間隔を設定してください。
+
+## ゾーン管理機能 {/* #manageZone */}
+
+ゾーン一覧の上部と下部にある管理機能で、次の作業を実行します。
+
+<Image src='/img/air/bsair-zone-mng-list-tools.png' />
+
+* <Cmd sid='zones_enable_btn' product='air' /> / <Cmd sid='zones_disable_btn' product='air' />: 選択したゾーンを有効化または無効化します。
+
+* <Cmd sid='zones_delete_btn' product='air' />：選択したゾーンを削除します。 <Cmd sid='apb.zoneList.perimetterZone' product='air' />は削除できません。
+
+* <Cmd sid='zones_pause_btn' product='air' />：境界を含むサイトのすべてのゾーンで、APBの適用を一括で停止します。
+
+* <Cmd sid='presence_refresh' product='air' />：一覧をすぐに更新し、最新状態にします。 一覧下部の<Cmd sid='auto_refresh_btn' product='air' />で自動更新間隔(<Cmd sid='auto_refresh_option1' product='air' />/<Cmd sid='auto_refresh_option2' product='air' />/<Cmd sid='auto_refresh_option3' product='air' />)を選択すると、設定した周期で一覧を自動更新します。
+
+* <Cmd sid='zones_search_placeholder' product='air' />：ゾーン名で一覧を検索します。
+
+### ゾーンリストのフィルタリング
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+リスト上部ヘッダーの <Cmd sid='zones_col_apb_mode' product='air' />, <Cmd sid='zones_col_apb_exemptions' product='air' />, <Cmd sid='zones_col_zone_status' product='air' />, <Cmd sid='zones_col_device_status' product='air' /> 列にある <IcAirFilter title='Filter' /> ボタンをクリックすると、該当条件でリストをフィルタリングします。
+
+<Image src='/img/air/bsair-zone-mng-list-filtering.png' />
+
+:::info
+
+フィルターを解除するには <Cmd sid='new_button_reset' product='air' /> ボタンをクリックします。
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-list-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. ゾーン一覧の右上にある <Cmd sid='logs_filters_action_btn' product='air' /> をタップします。 
+
+2. <Cmd sid='zones_col_apb_mode' product='air' />、<Cmd sid='zones_col_apb_exemptions' product='air' />、<Cmd sid='zones_col_zone_status' product='air' />、<Cmd sid='zones_col_device_status' product='air' />で必要な条件を選択します。
+
+3. 選択した条件で一覧をフィルタリングするには <Cmd sid='save_btn' product='air' /> ボタンをタップします。
+
+:::info
+
+フィルターを解除するには <Cmd sid='new_button_reset' product='air' /> ボタンをタップします。
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## ゾーンの追加 {/* #addingZone */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+画面左側のサイドバーで <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> をクリックしてください。 画面右上の<Cmd sid='zones_add_btn' product='air' />ボタンをクリックしてください。
+
+<Image src='/img/air/bsair-zone-mng-add-zone.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. BioStar Air アプリ画面下部の <Cmd sid='site_setting_tab_management' product='air' />をタップします。
+
+2. <Cmd sid='zones_menu' product='air' /> カードをタップしてください。
+
+3. 画面右上の <IcAdd title='Add Zone' /> ボタンをタップします。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+<Steps>
+<Step>
+
+### 基本情報の入力 {/* #basicInfo */}
+
+<Cmd sid='apb.zoneForm.nav.details' product='air' /> セクションでゾーンの基本情報を入力します。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-add-zone-details.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-details.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid='apb.zones.col.zoneStatus' product='air' />：ゾーンをすぐに有効化するか選択します。 設定を保持したまま、後で有効化または無効化できます。
+
+* <Cmd sid='apb.zones.col.zoneName' product='air' />：32文字以内で入力してください。 複数の建物があるサイトでは、場所がすぐ分かる名前の使用を推奨します。
+
+* <Cmd sid='apb.zoneForm.offsite.label' product='air' />: 設定した時間、アクティビティがなく、退室デバイスも使用しないユーザーは <Cmd sid='presence_off_site' product='air' /> 状態に自動的に切り替わります。 境界に退室デバイスを指定していない場合は、必ず設定してください。
+
+:::info
+
+<Cmd sid='apb.zoneForm.offsite.label' product='air' /> オプションは、境界の設定時にだけ表示される専用オプションです。
+
+:::
+
+</Step>
+<Step>
+
+### ドアとデバイスの割り当て {/* #assignDoorDevice */}
+
+ゾーンに割り当てるドアとデバイスを選択します。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-add-zone-assign-door-device.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-assign-door-device.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid='door_label' product='air' />：ゾーンに含めるドアを選択します。 1つ以上のドアを選択できます。 ドアを選択すると、システムはそのドアのデバイスを <Cmd sid='apb.zoneForm.board.label' product='air' /> に表示します。
+
+* <Cmd sid='apb.zoneForm.board.label' product='air' />：各デバイスを <Cmd sid='apb.zoneForm.board.entryLabel' product='air' /> または <Cmd sid='apb.zoneForm.board.exitLabel' product='air' /> に指定します。 装置は<Cmd sid='device_id_column' product='air' />で区別して表示します。 「移動（⇄）」ボタンをクリックして、装置を入室装置または退室装置に移動します。
+
+:::info
+
+* システムは、ファームウェアがv2.13以降の装置のみを<Cmd sid='apb.zoneForm.board.label' product='air' />に表示します。 ゾーンに割り当てるデバイスのファームウェアが最新であることを必ず確認してください。
+
+* 装置管理の詳細は、<DocLink docId='platform/biostar_air/manage-device-group' />をご参照ください。
+
+* ドアの管理に関する詳細は、<DocLink docId='platform/biostar_air/managing-registered-doors' />をご参照ください。
+
+:::
+
+</Step>
+<Step>
+
+### APBモードの設定 {/* #setAPBmode */}
+
+<Cmd sid='apb.zoneForm.nav.apb' product='air' /> セクションでアンチパスバックルールを設定してください。 アンチパスバックルールの適用は任意のため、ゾーン内の移動を厳格に管理する必要がなければ <Cmd sid='apb.zoneForm.mode.none' product='air' /> モードを選択し、在席者の確認にのみゾーンを使用します。
+
+<Tabs>
+<TabItem value='hard' label='Hard'>
+
+<Cmd sid='apb.zoneForm.mode.hard' product='air' />
+
+<Image src='/img/air/bsair-zone-mng-add-zone-apb-hard.png' className='none' />
+
+</TabItem>
+<TabItem value='soft' label='Soft'>
+
+<Cmd sid='apb.zoneForm.mode.soft' product='air' />
+
+<Image src='/img/air/bsair-zone-mng-add-zone-apb-soft.png' className='none' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid='apb.zoneForm.mode.label' product='air' />：希望するAPBモードを選択します。
+
+  * <Cmd sid='apb.zoneForm.mode.hard' product='air' />：ユーザーがAPBルールに違反すると、入退室を遮断し、イベントログに違反として記録します。
+
+  * <Cmd sid='apb.zoneForm.mode.soft' product='air' />：入退室は許可しますが、イベントログにAPB違反として記録します。
+
+  * <Cmd sid='apb.zoneForm.mode.none' product='air' />：ゾーンにAPBを適用しません。 APBモードを設定していないゾーンは、在席人数を計算する用途で引き続き使用されます。
+
+* <Cmd sid='apb.zoneForm.auth.label' product='air' />：ネットワーク障害でBioStar Airサーバーと通信できない場合に、アクセスを許可するか拒否するかを選択します。 **Soft** モードでは入退室を遮断しないため、アクセスは常に許可されます。ネットワーク接続が復旧するまで、違反を確認または記録できない場合があります。
+
+* <Cmd sid='apb.zoneForm.sensor.label' product='air' />：このオプションを有効にすると、ドアセンサーが出入口ドアの開放を確認した後にのみ、ユーザーを <Cmd sid='presence_on_site' product='air' /> または <Cmd sid='presence_off_site' product='air' /> 状態として表示します。
+
+* <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />
+
+  * <Cmd sid='apb.zoneForm.timer.autoReset.label' product='air' />：設定した時間が経過すると、APB違反を自動解除します。
+
+  * <Cmd sid='apb.zoneForm.timer.enfDelay.label' product='air' />：ユーザーが同じゾーンに再入室できるまでの待機時間です。
+
+</Step>
+<Step>
+
+### 例外の設定 {/* #exceptionSet */}
+
+<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> セクションで、APBルールを適用しないユーザーグループを選択してください。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-add-zone-exception.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-exception.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* ゾーンごとに最大16個のユーザーグループを例外に指定できます。
+
+* 例外グループに属するユーザーにはAPBルールが適用されませんが、在席人数には引き続き含まれます。
+
+* <Cmd sid='apb.zoneForm.mode.label' product='air' /> が <Cmd sid='apb.zoneForm.mode.none' product='air' /> の場合、<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> セクションは無効になります。
+
+:::info
+
+ユーザーグループ管理の詳細については、<DocLink docId='platform/biostar_air/managing-user-groups' />を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### ゾーンの保存 {/* #saveZone */}
+
+ゾーン設定を保存するには、<Cmd sid='save_btn' product='air' />をクリックしてください。
+
+:::note
+
+**ゾーン追加時の注意事項**
+
+* ドア選択リストには、すでに別のAPBゾーンに割り当てられているドア、装置がないドア、エアフォブパッチ（Airfob Patch）専用ドアを表示しません。
+
+* 退室装置を指定しないゾーンは、<Cmd sid='apb.zoneForm.timer.autoReset.label' product='air' />(境界でない場合) または <Cmd sid='apb.zoneForm.offsite.label' product='air' />(境界の場合) を必ず有効にしないと保存できません。
+
+* 同じ名前のゾーンは作成できません。
+
+* ゾーン設定で <Cmd sid='apb.zoneForm.mode.label' product='air' /> を <Cmd sid='apb.zoneForm.mode.none' product='air' /> に変更すると、そのゾーンの詳細設定(<Cmd sid='apb.zoneForm.mode.label' product='air' />, <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />, <Cmd sid='apb.zoneForm.exceptions.label' product='air' />)がすべて初期化されます。 設定を保持したままAPBの適用だけを一時停止するには、[ゾーンの無効化](#enableDisableZone)または[APBの一時無効化](#zonePause)を使用してください。
+
+:::
+
+</Step>
+</Steps>
+
+## ゾーンの有効化/無効化 {/* #enableDisableZone */}
+
+ゾーンを有効化または無効化できます。 設定値は削除されず、そのまま保持されます。 ゾーンを無効化すると、そのゾーンの在席人数が0に初期化されます。 ただし、すでに発生したAPB違反は残り、<DocLink docId='platform/biostar_air/manage-violation' /> メニューで解除できます。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. 一覧で有効化または無効化するゾーンのチェックボックスをクリックします。 一つ以上のゾーンを選択できます。
+
+2. 一覧上部の <Cmd sid='zones_enable_btn' product='air' /> または <Cmd sid='zones_disable_btn' product='air' /> ボタンをクリックします。
+
+3. 確認メッセージが表示されたら <Cmd sid='zones_enable_btn' product='air' /> または <Cmd sid='zones_disable_btn' product='air' /> ボタンをクリックします。
+
+各ゾーンの有効化状態は、一覧の <Cmd sid='zones_col_zone_status' product='air' /> 列で確認できます。
+
+<Image src='/img/air/bsair-zone-mng-list-status.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-zone-mng-list-status.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 一覧で有効化または無効化するゾーンを長押しします。
+
+2. 有効化または無効化するゾーンを選択します。 一つ以上のゾーンを選択できます。
+
+3. 画面下部の <Cmd sid='zones_enable_btn' product='air' /> または <Cmd sid='zones_disable_btn' product='air' /> ボタンをタップします。
+
+4. 確認メッセージが表示されたら <Cmd sid='zones_enable_btn' product='air' /> または <Cmd sid='zones_disable_btn' product='air' /> ボタンをクリックします。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## ゾーンを編集
+
+設定済みゾーンの詳細情報、APB、例外設定などを編集できます。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. 一覧で編集するゾーンをクリックします。
+
+2. <Cmd sid='apb.zoneForm.title.edit' product='air' /> ウィンドウが表示されます。
+
+   <Image src='/img/air/bsair-zone-mng-edit-zone.png' />
+
+3. <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> セクションで必要な項目を編集します。
+
+4. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-edit-zone.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 一覧で編集するゾーンをタップします。
+
+2. <Cmd sid='apb.zoneForm.title.edit' product='air' /> 画面が表示されます。
+
+3. <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> セクションで必要な項目を編集します。
+
+4. 変更を保存するには <Cmd sid='save_btn' product='air' /> をタップします。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+<Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' /> セクションの設定の詳細は、<DocLink inner='#addingZone' />をご参照ください。
+
+:::
+
+## <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* #zonePause */}
+
+サイト全体へのAPB適用を一時停止する場合（例: 特別行事、大規模な移動が予想される時間帯）は、一覧上部の<Cmd sid='zones_pause_btn' product='air' />(<IcAirPause />) ボタンをクリックしてください。 境界を含むすべてのゾーンのAPB適用を停止します。再開すると、各ゾーンは一時無効化前の有効化/無効化状態に復元されます。 一時無効化中はゾーン一覧がロックされ、変更できません。
+
+ゾーンに設定したAPBモードを再開するには、<Cmd sid='zones_pause_resume_btn' product='air' />(<IcAirResume />) ボタンをクリックしてください。
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-pause-zone.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-pause-zone.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+:::note
+
+点呼(Roll Call)の実施中は、アンチパスバックゾーンを有効化できません。 点呼が終了したら、再試行してください。 点呼の詳細については、<DocLink docId='platform/biostar_air/managing-roll-call-fire-muster' />をご参照ください。
+
+:::
+
+## ゾーンを削除する {/* #deletingAZone */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. 一覧で削除するゾーンのチェックボックスをクリックします。 一つ以上のゾーンを選択できます。
+
+2. 一覧上部の<Cmd sid='zone_delete_btn' product='air' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-zone-mng-remove-zone.png' />
+
+3. 確認メッセージが表示されたら、<Cmd sid='zone_delete_btn' product='air' /> ボタンをクリックします。
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-remove-zone.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. 一覧で削除するゾーンを長押しします。
+
+2. 削除するゾーンを選択してください。 一つ以上のゾーンを選択できます。
+
+3. 画面下部の <Cmd sid='zone_delete_btn' product='air' /> ボタンをタップします。
+
+4. 確認メッセージが表示されたら、<Cmd sid='zone_delete_btn' product='air' /> ボタンをクリックします。
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+* <Cmd sid='apb.zoneList.perimetterZone' product='air' />は削除できません。
+
+* 選択したゾーンのみ削除され、ゾーンに割り当てられたドアとデバイスは削除されません。 削除操作は取り消せません。
+
+* ゾーンに割り当てたデバイスがオフライン、同期中、またはファームウェアアップグレード中の場合、ゾーンを削除できません。 デバイスが再接続されるまで待つか、ゾーンから該当デバイスを先に削除してから再試行してください。
+
+:::

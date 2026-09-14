@@ -1,0 +1,244 @@
+---
+id: site-sso-scim-entra-id-setup
+title: Microsoft Entra ID 連携を設定する
+description: BioStar Air を Microsoft Entra ID の SSO と SCIM プロビジョニングに接続する手順を説明します。
+---
+
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
+import GroupMapping from './_site-sso-scim-group-mapping.mdx'
+import SyncManagement from './_site-sso-scim-sync-management.mdx'
+
+BioStar AirにMicrosoft Entra IDでログインするには、組織のID管理者がEntra IDにアプリを登録し、BioStar AirのSSO設定に接続する必要があります。
+
+## Entra ID SSO 接続
+
+<Steps>
+<Step>
+
+### BioStar Air: リダイレクト URI の準備 {/* #bsairRedirect */}
+
+1. BioStar Air 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
+
+2. <Cmd>SSO & SCIM</Cmd> タブをクリックします。
+
+3. <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' /> で <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' /> を選択します。
+
+4. <Cmd sid='sso_scim.additional_features.sso.redirect_uri' product='air' /> フィールドに URI が表示されます。その値をコピーします。
+
+<Image src='/img/air/bsair-settings-site-idp-entraid.png' />
+
+</Step>
+<Step>
+
+### Microsoft Entra 管理センター: アプリ登録 {/* #appRegistration */}
+
+1. [Microsoft Entra 管理センター](https://entra.microsoft.com/) にサインインします。
+
+2. **Entra ID** → **App registrations** に移動します。
+
+3. **New registration** ボタンをクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-app-reg.png' alone />
+
+4. アプリ名を「BioStar Air」に入力します。
+
+5. **Supported account types** で **Single tenant only** を選択します。
+
+6. **Redirect URI** セクションで **Web** を選択し、<DocLink inner='#bsairRedirect' /> の手順でコピーした URI を入力欄に貼り付けます。
+
+   <Image src='/img/air/bsair-sso-entra-app-reg-new.png' alone />
+
+7. **Register** ボタンをクリックします。
+
+8. 登録した BioStar Air アプリの **Overview** で、次の値をコピーします。
+
+   <Image src='/img/air/bsair-sso-entra-app-overview.png' alone />
+
+   * **Application (client) ID**
+
+   * **Directory (tenant) ID**
+
+9. **Certificates & secrets** → **Client secrets** で **New client secret** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-app-certificates-secrets.png' alone />
+
+10. 説明を入力し、有効期限を選択します。
+
+    <Image src='/img/air/bsair-sso-entra-app-add-client-secret.png' alone />
+
+11. 「**Add**」ボタンをクリックする。
+
+12. 生成したクライアント シークレットの **Value** をコピーします。
+
+    <Image src='/img/air/bsair-sso-entra-app-copy-client-secret.png' alone />
+
+コピーした **Application (client) ID**、**Directory (tenant) ID**、**Value** を次の手順で入力します。
+
+:::caution
+
+**Secret ID** ではなく **Value** を使用します。 **Value** はこの後再表示されないため、必ずコピーしてください。
+
+:::
+
+</Step>
+<Step>
+
+### Microsoft Entra 管理センター: ユーザーとグループの割り当て
+
+ユーザーとグループを割り当てる前に、ユーザーとグループを先に作成する必要があります。
+
+1. **Enterprise apps** で、先ほど作成したアプリ（BioStar Air）をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps.png' alone />
+
+2. **Assign users and groups** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-overview.png' alone />
+
+3. ユーザーとグループを割り当てるには、**Add user/group** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-users-groups.png' alone />
+
+4. ユーザーとグループの割り当てが完了したら、**Assign** ボタンをクリックします。
+
+</Step>
+<Step>
+
+### BioStar Air：SSO 設定
+
+1. BioStar Airの設定画面に戻り、<DocLink inner='#appRegistration' /> 手順でコピーした値を各フィールドに入力します。
+
+   <Image src='/img/air/bsair-settings-site-idp-entraid-sso-config.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Application (client) ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Value**
+
+   * <Cmd sid='sso_scim.additional_features.sso.tenant_id' product='air' />: **Directory (tenant) ID**
+
+2. <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' /> フィールドに、組織のメールドメインを入力します。
+
+3. <Cmd sid='sso_scim.additional_features.sso.save' product='air' /> ボタンをクリックします。
+
+保存と検証に成功すると、システムが <Cmd sid='sso_scim.additional_features.sso.discovery_url' product='air' /> フィールドの値を自動的に生成します。
+
+<Image src='/img/air/bsair-settings-site-idp-entraid-sso-config-success.png' />
+
+</Step>
+</Steps>
+
+## Entra ID SCIM プロビジョニング接続
+
+<Steps>
+<Step>
+
+<CopyToken />
+
+</Step>
+<Step>
+
+### Microsoft Entra 管理センター：SCIM プロビジョニングアプリの作成
+
+1. **Enterprise apps** で **New application** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new.png' alone />
+
+2. **Create your own application** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new-own.png' alone />
+
+3. アプリ名に「BioStar Air SCIM」を入力します。
+
+4. **Integrate any other application you don't find in the gallery (Non-gallery)** オプションを選択します。
+
+   <Image src='/img/air/bsair-sso-entra-enterprise-apps-new-own-create.png' alone />
+
+5. **Create** ボタンをクリックします。
+
+6. 作成した BioStar Air SCIM アプリで、**Manage** → **Provisioning** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-overview.png' alone />
+
+</Step>
+<Step>
+
+### Microsoft Entra 管理センター：管理者資格情報の設定とプロビジョニングの開始
+
+1. **New Configuration** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-provisioning.png' alone />
+
+2. <DocLink inner='#copyToken' /> 手順でコピーした SCIM エンドポイント URL とトークン値を、**Admin credentials** の **Tenant URL** と **Secret token** フィールドに入力します。
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-new-config.png' alone />
+
+3. 同期が正常に動作するかテストするには、**Test Connection** ボタンをクリックします。
+
+4. **Create** ボタンをクリックします。
+
+5. **Users and groups** で **Add user/group** をクリックします。
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-users-groups.png' alone />
+
+6. プロビジョニングするユーザーとセキュリティグループを割り当てます。
+
+7. **Assign** ボタンをクリックします。
+
+8. **Provisioning** → **Mappings** に移動し、ユーザーとグループの同期が有効になっているか確認します。
+
+   <Image src='/img/air/bsair-sso-entra-scim-app-mapping.png' alone />
+
+9. 属性マッピングを変更する前に、マッピング内容を確認します。
+
+10. SCIM アプリの **Overview** で **Start provisioning** をクリックします。
+
+    <Image src='/img/air/bsair-sso-entra-scim-app-start-provisioning.png' alone />
+
+:::info
+
+小規模なテストグループから先に開始することを推奨します。 グループメンバーシップの変更がBioStar Airに反映されるまで、最大約40分かかる場合があります。
+
+:::
+
+</Step>
+<Step>
+
+<CheckConnection />
+
+</Step>
+</Steps>
+
+<GroupMapping />
+
+<SyncManagement />
+
+## Entra IDでログイン
+
+Entra ID SSO接続を完了すると、ユーザーはBioStar Airのログイン画面でMicrosoftアカウントでログインできるようになります。
+
+1. BioStar Airのログイン画面で <Cmd sid='login_with_microsoft_account' product='air' /> ボタンをクリックします。
+
+2. <Cmd sid='sso_scim.login.microsoft_org_dialog.microsoft_entra' product='air' /> を選択します。
+
+   <Image src='/img/air/bsair-login-with-entra-id.png' />
+
+   :::note
+
+   すでにMicrosoft SSOを使用している組織は、<Cmd sid='sso_scim.login.microsoft_org_dialog.microsoft_sso' product='air' /> を選択すると、追加の設定なしでログインできます。
+
+   :::
+
+3. <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' /> フィールドに組織のメールアドレスまたはドメインを入力します。 （例: `user@company.com` または `company`）
+
+4. <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' /> ボタンをクリックします。
+
+5. Microsoft Entra IDのログイン画面に移動したら、組織アカウントのメールアドレスとパスワードを入力します。
+
+6. 認証を完了すると、BioStar Airに自動的にリダイレクトされ、ログインが完了します。
+
+:::info
+
+入力したメールドメインに対してEntra ID SSOが設定されていない場合、エラーメッセージが表示されます。 この場合は、サイト管理者に問い合わせてください。
+
+:::

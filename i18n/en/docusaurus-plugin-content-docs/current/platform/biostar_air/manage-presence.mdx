@@ -14,13 +14,30 @@ When users authenticate at an entry device in the perimeter zone, their status c
 
 * For how to set entry and exit devices for the perimeter zone and the <Cmd sid='apb.zoneForm.offsite.label' product='air' /> setting, see <DocLink docId='platform/biostar_air/manage-zone#addingZone' />.
 
-* Presence status is calculated based on the same rules used in the menus below.
+* Administrators can see the list and number of people on site from several menus:
 
-  * <Cmd sid='dashboard_menu' product='air' />
+  * <Cmd sid='dashboard_menu' product='air' /> widget
 
   * <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />
 
-  * <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />
+  * <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> → <Cmd sid='zones_col_people_inside' product='air' /> (<Cmd sid='apb.zoneList.perimetterZone' product='air' className='normal' />)
+
+## Check on the dashboard {/* #checkingFromDashboard */}
+
+The <Cmd sid='dashboard_menu' product='air' /> menu also shows the number of users currently on site in the <Cmd sid='user_tagged_today' product='air' /> card.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-safety-presence-show-dashboard.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-safety-presence-show-dashboard.png' width='250px' />
+
+</TabItem>
+</Tabs>
 
 ## Explore presence list {/* #presenceListOverview */}
 
@@ -229,23 +246,6 @@ Manual changes only update the status recorded in the system. They do not physic
 
 </Column>
 </Columns>
-
-</TabItem>
-</Tabs>
-
-## Check on the dashboard {/* #checkingFromDashboard */}
-
-The <Cmd sid='dashboard_menu' product='air' /> menu also shows the number of users currently on site in the <Cmd sid='user_tagged_today' product='air' /> card.
-
-<Tabs groupId='platform'>
-<TabItem value='web' label='Web'>
-
-<Image src='/img/air/bsair-safety-presence-show-dashboard.png' />
-
-</TabItem>
-<TabItem value='mobile' label='Mobile'>
-
-<Image src='/img/air/bsair-app-safety-presence-show-dashboard.png' width='250px' />
 
 </TabItem>
 </Tabs>

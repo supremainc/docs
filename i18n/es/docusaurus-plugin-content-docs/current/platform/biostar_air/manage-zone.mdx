@@ -1,0 +1,529 @@
+---
+id: manage-zone
+title: Administrar Zonas
+description: Esta guía explica cómo crear zonas en BioStar Air y definir reglas Anti-Passback (APB) para gestionar el flujo de acceso.
+---
+
+Con la feature **Zona** de BioStar Air, agrupe puertas en zonas lógicas. Aplique reglas de **Anti-Passback (APB)** para que los usuarios entren y salgan en el orden correcto. Aplique reglas de Anti-Passback por zona, de forma opcional. Las zonas sin APB aún pueden usar otras features de Zona, como Presencia, para ver quién está dentro. Las **zonas** pueden abarcar desde zonas de perímetro que cubren todo un sitio hasta áreas específicas dentro de un edificio.
+
+## Antes de comenzar {/* #beforeStart */}
+
+Revise lo siguiente antes de crear una zona.
+
+* Agregue las puertas al sistema antes de asignarlas a una zona. Para obtener más información sobre el registro de puertas, consulte <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+
+* Un dispositivo solo puede usarse en una zona a la vez.
+
+* Cambiar los dispositivos de entrada y salida de la zona no cambia los ajustes de la puerta.
+
+* Si los dispositivos de entrada y salida de la zona no se ajustan correctamente, el comportamiento de APB y el conteo de presencia pueden diferir del movimiento real.
+
+* Los dispositivos sin conexión pueden aplicar los cambios más tarde que los dispositivos en línea. El sistema aplica los cambios primero a los dispositivos en línea. Los dispositivos sin conexión aplican los cambios después de volver a conectarse.
+
+* El sistema solo asigna a una zona dispositivos con firmware **v2.13** o posterior. Verifique que el dispositivo asignado a la zona use el firmware más reciente.
+
+* El sistema protege las puertas usadas en una zona APB para evitar conflictos de ajustes. Para cambiar los ajustes de la puerta que afectan el comportamiento de APB, primero quite la puerta de la zona.
+
+## Explorar la lista de zonas {/* #zoneListOverview */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Haz clic en <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> en la barra lateral izquierda.
+
+<Image src='/img/air/bsair-zone-mng-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-app-zone-mng-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
+
+2. Toque <Cmd sid='site_setting_tab_management' product='air' /> en la parte inferior de la pantalla.
+
+3. Toque la tarjeta <Cmd sid='zones_menu' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+La lista de zonas muestra de un vistazo todas las zonas configuradas para el sitio.
+
+* <Cmd sid='zone_name' product='air' />: Nombre de la zona. <Cmd sid='apb.zoneList.perimetterZone' product='air' /> muestra la insignia <Cmd sid='zones_tag_pinned' product='air' /> junto al nombre.
+
+* <Cmd sid='zones_col_people_inside' product='air' />: Número de usuarios registrados como presentes en la zona. Para obtener más información, consulte <DocLink inner='#checkingPeopleInside' />.
+
+* <Cmd sid='zones_col_apb_mode' product='air' />: El modo APB aplicado a la zona (<Cmd sid='zones_badge_hard' product='air' /> / <Cmd sid='zones_badge_soft' product='air' /> / <Cmd sid='zones_badge_none' product='air' />).
+
+* <Cmd sid='zones_col_apb_exemptions' product='air' />: El grupo de exención de APB asignado a la zona.
+
+* <Cmd sid='zones_col_zone_status' product='air' />: Indica si la zona está activada.
+
+* <Cmd sid='zones_col_device_status' product='air' />: Indica si los dispositivos asignados a la zona están en línea.
+
+:::note
+
+**Zonas perimetrales y zonas internas**
+
+En la configuración inicial del sitio, el sistema proporciona <Cmd sid='apb.zoneList.perimetterZone' product='air' /> de forma predeterminada. <Cmd sid='apb.zoneList.perimetterZone' product='air' /> es como la puerta principal del sitio. Renombrar y eliminar no están disponibles, y la lista muestra la insignia <Cmd sid='zones_tag_pinned' product='air' />. 
+
+* Los dispositivos de entrada y salida en <Cmd sid='apb.zoneList.perimetterZone' product='air' /> ayudan a calcular la presencia en <Cmd sid='dashboard_menu' product='air' /> > <Cmd sid='user_tagged_today' product='air' /> y <Cmd sid='safety_menu' product='air' /> > <Cmd sid='presence_submenu' product='air' />.
+
+* Cree zonas separadas para áreas que requieren control interno (p. ej., salas de servidores, ciertos pisos) además de zonas de perímetro, para habilitar un control de movimiento detallado en el sitio.
+
+:::
+
+## Comprobar personas en el interior {/* #checkingPeopleInside */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Revise cuántas personas hay actualmente en cada zona en la columna <Cmd sid='zones_col_people_inside' product='air' /> de la lista de zonas.
+
+<Image src='/img/air/bsair-zone-mng-inside-people.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+Revise cuántas personas hay actualmente en cada zona en la opción <Cmd en='People'>People</Cmd> de la lista de zonas.
+
+<Image src='/img/air/bsair-app-zone-mng-inside-people.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* El sistema calcula este número según los registros de autenticación de los dispositivos de entrada y salida definidos para la zona. Autentíquese en un dispositivo de entrada para aumentar el conteo, y autentíquese en un dispositivo de salida para disminuirlo.
+
+* Los usuarios en un grupo de exención de APB no están sujetos a las reglas de APB, pero se incluyen en el recuento de personas dentro.
+
+* Desactivar una zona inicializa el recuento de personas dentro de la zona en 0.
+
+* Para mantener el valor más reciente, haga clic en <Cmd sid='presence_refresh' product='air' /> en la parte superior de la lista o defina un intervalo de actualización automática.
+
+## Feature para gestionar zonas {/* #manageZone */}
+
+Use los features de gestión en la parte superior e inferior de la lista de zonas para completar las siguientes tareas.
+
+<Image src='/img/air/bsair-zone-mng-list-tools.png' />
+
+* <Cmd sid='zones_enable_btn' product='air' /> / <Cmd sid='zones_disable_btn' product='air' />: Habilite o deshabilite las zonas seleccionadas.
+
+* <Cmd sid='zones_delete_btn' product='air' />: Elimine las zonas seleccionadas. <Cmd sid='apb.zoneList.perimetterZone' product='air' /> no se puede eliminar.
+
+* <Cmd sid='zones_pause_btn' product='air' />: Pausa APB para todas las zonas del sitio, incluida la zona de perímetro.
+
+* <Cmd sid='presence_refresh' product='air' />: Actualiza la lista de inmediato para mostrar el estado más reciente. En <Cmd sid='auto_refresh_btn' product='air' /> en la parte inferior de la lista, seleccione un intervalo de actualización automática (<Cmd sid='auto_refresh_option1' product='air' /> / <Cmd sid='auto_refresh_option2' product='air' /> / <Cmd sid='auto_refresh_option3' product='air' />). El sistema actualiza la lista automáticamente según el intervalo establecido.
+
+* <Cmd sid='zones_search_placeholder' product='air' />: Busca en la lista por nombre de zona.
+
+### Filtrar lista de zonas
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+En el encabezado de la lista, haga clic en el botón <IcAirFilter title='Filter' /> en la columna <Cmd sid='zones_col_apb_mode' product='air' />, <Cmd sid='zones_col_apb_exemptions' product='air' />, <Cmd sid='zones_col_zone_status' product='air' /> o <Cmd sid='zones_col_device_status' product='air' /> para filtrar la lista por esa condición.
+
+<Image src='/img/air/bsair-zone-mng-list-filtering.png' />
+
+:::info
+
+Haga clic en <Cmd sid='new_button_reset' product='air' /> para borrar el filtro.
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-list-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toque <Cmd sid='logs_filters_action_btn' product='air' /> en la esquina superior derecha de la lista de zonas. 
+
+2. Seleccione criterios en <Cmd sid='zones_col_apb_mode' product='air' />, <Cmd sid='zones_col_apb_exemptions' product='air' />, <Cmd sid='zones_col_zone_status' product='air' /> o <Cmd sid='zones_col_device_status' product='air' />.
+
+3. Toque <Cmd sid='save_btn' product='air' /> para filtrar la lista según los criterios seleccionados.
+
+:::info
+
+Toque <Cmd sid='new_button_reset' product='air' /> para borrar el filtro.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## Agregar zonas {/* #addingZone */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Haz clic en <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> en la barra lateral izquierda. Haz clic en <Cmd sid='zones_add_btn' product='air' /> en la esquina superior derecha de la pantalla.
+
+<Image src='/img/air/bsair-zone-mng-add-zone.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. En la app BioStar Air, toque <Cmd sid='site_setting_tab_management' product='air' /> en la parte inferior de la pantalla.
+
+2. Toque la tarjeta <Cmd sid='zones_menu' product='air' />.
+
+3. Toca <IcAdd title='Add Zone' /> en la esquina superior derecha de la pantalla.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+<Steps>
+<Step>
+
+### Ingresar información básica {/* #basicInfo */}
+
+Ingrese la información básica de la zona en la sección <Cmd sid='apb.zoneForm.nav.details' product='air' />.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-add-zone-details.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-details.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid='apb.zones.col.zoneStatus' product='air' />: Seleccione si activa la zona de inmediato. Activa o desactiva la zona más adelante sin cambiar los ajustes.
+
+* <Cmd sid='apb.zones.col.zoneName' product='air' />: Ingrese hasta 32 caracteres. En sitios con varios edificios, usa un nombre que indique claramente la ubicación.
+
+* <Cmd sid='apb.zoneForm.offsite.label' product='air' />: Los usuarios sin actividad durante el tiempo establecido, y que no usaron un dispositivo de salida, cambian automáticamente al estado <Cmd sid='presence_off_site' product='air' />. Si no se asigna ningún dispositivo de salida a la zona de perímetro, establece esta opción.
+
+:::info
+
+La opción <Cmd sid='apb.zoneForm.offsite.label' product='air' /> aparece solo al establecer una zona de perímetro.
+
+:::
+
+</Step>
+<Step>
+
+### Asignar puertas y dispositivos {/* #assignDoorDevice */}
+
+Seleccione las puertas y los dispositivos para asignarlos a la zona.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-add-zone-assign-door-device.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-assign-door-device.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid='door_label' product='air' />: Seleccione las puertas para incluirlas en la zona. Se pueden seleccionar varias puertas. Seleccione una puerta. Sus dispositivos aparecen en <Cmd sid='apb.zoneForm.board.label' product='air' />.
+
+* <Cmd sid='apb.zoneForm.board.label' product='air' />: Asigne cada dispositivo como <Cmd sid='apb.zoneForm.board.entryLabel' product='air' /> o <Cmd sid='apb.zoneForm.board.exitLabel' product='air' />. Los dispositivos aparecen con <Cmd sid='device_id_column' product='air' /> para distinguirlos. Haga clic en el botón Mover (⇄) para establecer el dispositivo como dispositivo de entrada o salida.
+
+:::info
+
+* Solo los dispositivos con firmware v2.13 o posterior aparecen en <Cmd sid='apb.zoneForm.board.label' product='air' />. Verifique que el dispositivo asignado a la zona use el firmware más reciente.
+
+* Para más información sobre la gestión de dispositivos, consulte <DocLink docId='platform/biostar_air/manage-device-group' />.
+
+* Para obtener más información sobre la gestión de puertas registradas, consulte <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+
+:::
+
+</Step>
+<Step>
+
+### Establecer el modo APB {/* #setAPBmode */}
+
+En la sección <Cmd sid='apb.zoneForm.nav.apb' product='air' />, establezca las reglas de antirretorno. Las reglas de Anti-Passback son opcionales. Si no necesita un control estricto, seleccione el modo <Cmd sid='apb.zoneForm.mode.none' product='air' /> para usar las zonas solo para comprobaciones de Presencia.
+
+<Tabs>
+<TabItem value='hard' label='Hard'>
+
+<Cmd sid='apb.zoneForm.mode.hard' product='air' />
+
+<Image src='/img/air/bsair-zone-mng-add-zone-apb-hard.png' className='none' />
+
+</TabItem>
+<TabItem value='soft' label='Soft'>
+
+<Cmd sid='apb.zoneForm.mode.soft' product='air' />
+
+<Image src='/img/air/bsair-zone-mng-add-zone-apb-soft.png' className='none' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid='apb.zoneForm.mode.label' product='air' />: Seleccione el modo APB.
+
+  * <Cmd sid='apb.zoneForm.mode.hard' product='air' />: Bloquea el acceso cuando un usuario infringe una regla APB y registra un evento de infracción.
+
+  * <Cmd sid='apb.zoneForm.mode.soft' product='air' />: Permite el acceso, pero registra una infracción de APB en el registro de eventos.
+
+  * <Cmd sid='apb.zoneForm.mode.none' product='air' />: No aplica APB a la zona. Las zonas sin un modo APB siguen contabilizando la presencia.
+
+* <Cmd sid='apb.zoneForm.auth.label' product='air' />: Seleccione si permitir o denegar el acceso si el servidor BioStar Air no está disponible por una falla de red. El modo **Soft** no bloquea el acceso; siempre lo permite. El sistema quizá no verifique ni registre infracciones hasta que se recupere la conexión de red.
+
+* <Cmd sid='apb.zoneForm.sensor.label' product='air' />: Cuando se habilita, el sensor de puerta debe confirmar que la puerta se abre antes de marcar a los usuarios como <Cmd sid='presence_on_site' product='air' /> o <Cmd sid='presence_off_site' product='air' />.
+
+* <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />
+
+  * <Cmd sid='apb.zoneForm.timer.autoReset.label' product='air' />: Borra automáticamente una infracción de APB después del tiempo establecido.
+
+  * <Cmd sid='apb.zoneForm.timer.enfDelay.label' product='air' />: El tiempo de espera antes de que un usuario pueda entrar en la misma zona otra vez.
+
+</Step>
+<Step>
+
+### Establecer excepciones {/* #exceptionSet */}
+
+En la sección <Cmd sid='apb.zoneForm.nav.exceptions' product='air' />, seleccione grupos de usuarios exentos de las reglas de APB.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-add-zone-exception.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-add-zone-exception.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+* Especifique hasta 16 grupos de usuarios como excepciones por zona.
+
+* Los usuarios de un grupo de excepciones quedan exentos de las reglas de APB, pero permanecen en el conteo de presencia.
+
+* Si <Cmd sid='apb.zoneForm.mode.label' product='air' /> es <Cmd sid='apb.zoneForm.mode.none' product='air' />, el sistema deshabilita la sección <Cmd sid='apb.zoneForm.nav.exceptions' product='air' />.
+
+:::info
+
+Para obtener más información sobre la gestión de grupos de usuarios, consulta <DocLink docId='platform/biostar_air/managing-user-groups' />.
+
+:::
+
+</Step>
+<Step>
+
+### Guardar zona {/* #saveZone */}
+
+Haga clic en <Cmd sid='save_btn' product='air' /> para guardar los ajustes de la zona.
+
+:::note
+
+**Notas para agregar una zona**
+
+* Las puertas ya asignadas a otra zona APB, las puertas sin dispositivo o las puertas dedicadas a Airfob Patch no aparecen en la lista de selección de puertas.
+
+* Habilite <Cmd sid='apb.zoneForm.timer.autoReset.label' product='air' /> (si la zona no es un perímetro) o <Cmd sid='apb.zoneForm.offsite.label' product='air' /> (si la zona es un perímetro) para guardar una zona sin un dispositivo de salida.
+
+* Las zonas deben tener nombres únicos.
+
+* Cambiar <Cmd sid='apb.zoneForm.mode.label' product='air' /> a <Cmd sid='apb.zoneForm.mode.none' product='air' /> inicializa todos los ajustes detallados guardados (<Cmd sid='apb.zoneForm.mode.label' product='air' />, <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />, <Cmd sid='apb.zoneForm.exceptions.label' product='air' />) de la zona. Use la característica [Deshabilitar zona](#enableDisableZone) o [Pausar APB](#zonePause) para pausar la aplicación de APB sin cambiar los ajustes.
+
+:::
+
+</Step>
+</Steps>
+
+## Habilitar o deshabilitar zonas {/* #enableDisableZone */}
+
+Esta característica permite a los administradores habilitar o deshabilitar zonas. Los ajustes no cambian. Deshabilitar una zona inicializa el conteo de presencia de la zona en 0. Sin embargo, las infracciones de APB existentes se mantienen. Elimínelas en el menú <DocLink docId='platform/biostar_air/manage-violation' />.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Haga clic en la casilla de verificación de la zona para habilitarla o deshabilitarla en la lista. Seleccione una o más zonas.
+
+2. Haga clic en <Cmd sid='zones_enable_btn' product='air' /> o <Cmd sid='zones_disable_btn' product='air' /> en la parte superior de la lista.
+
+3. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='zones_enable_btn' product='air' /> o <Cmd sid='zones_disable_btn' product='air' />.
+
+Verifique el estado de cada zona en la columna <Cmd sid='zones_col_zone_status' product='air' /> de la lista.
+
+<Image src='/img/air/bsair-zone-mng-list-status.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-zone-mng-list-status.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Mantenga presionada la zona para habilitarla o deshabilitarla en la lista.
+
+2. Seleccione la zona para habilitarla o deshabilitarla. Seleccione una o más zonas.
+
+3. Toque <Cmd sid='zones_enable_btn' product='air' /> o <Cmd sid='zones_disable_btn' product='air' /> en la parte inferior de la pantalla.
+
+4. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='zones_enable_btn' product='air' /> o <Cmd sid='zones_disable_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## Editar zona
+
+Edita los detalles, los ajustes de APB y de excepciones de una zona existente.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Haga clic en la zona que desea editar en la lista.
+
+2. Aparece la ventana <Cmd sid='apb.zoneForm.title.edit' product='air' />.
+
+   <Image src='/img/air/bsair-zone-mng-edit-zone.png' />
+
+3. Edite los campos obligatorios en la sección <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' />.
+
+4. Haga clic en <Cmd sid='save_btn' product='air' /> para guardar los cambios.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-edit-zone.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toque la zona que va a editar en la lista.
+
+2. Aparece la pantalla <Cmd sid='apb.zoneForm.title.edit' product='air' />.
+
+3. Edite los campos obligatorios en la sección <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' />.
+
+4. Para guardar los cambios, toque <Cmd sid='save_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+Para obtener más información sobre los ajustes detallados en la sección <Cmd sid='apb.zoneForm.nav.details' product='air' />/<Cmd sid='apb.zoneForm.nav.apb' product='air' />/<Cmd sid='apb.zoneForm.nav.exceptions' product='air' />, consulte <DocLink inner='#addingZone' />.
+
+:::
+
+## <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* #zonePause */}
+
+Seleccione <Cmd sid='zones_pause_btn' product='air' />(<IcAirPause />) en la parte superior de la lista para pausar el APB en todo el sitio (para eventos especiales o tráfico pico). APB se pausa en todas las zonas, incluidas las zonas de perímetro. Después de reanudar, cada zona vuelve a su estado anterior. Durante la pausa, la lista de zonas se bloquea, así que no haga otros cambios.
+
+Haga clic en <Cmd sid='zones_pause_resume_btn' product='air' />(<IcAirResume />) para reanudar el modo APB configurado para las zonas.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-zone-mng-pause-zone.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-zone-mng-pause-zone.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+:::note
+
+El sistema no permite habilitar una zona antipassback mientras un Roll Call está en curso. Inténtelo de nuevo cuando finalice el Roll Call. Para obtener más información sobre Roll Call, consulte <DocLink docId='platform/biostar_air/managing-roll-call-fire-muster' />.
+
+:::
+
+## Eliminar una zona {/* #deletingAZone */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Marque la casilla de la zona que va a eliminar en la lista. Seleccione una o más zonas.
+
+2. Haz clic en <Cmd sid='zone_delete_btn' product='air' /> en la parte superior de la lista.
+
+   <Image src='/img/air/bsair-zone-mng-remove-zone.png' />
+
+3. Haz clic en el botón <Cmd sid='zone_delete_btn' product='air' /> cuando aparezca la ventana del mensaje de confirmación.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-mng-remove-zone.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Mantenga presionada la zona que va a eliminar en la lista.
+
+2. Seleccione la zona que va a eliminar. Seleccione una o más zonas.
+
+3. Toque <Cmd sid='zone_delete_btn' product='air' /> en la parte inferior de la pantalla.
+
+4. Cuando aparezca el mensaje de confirmación, haz clic en <Cmd sid='zone_delete_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+* <Cmd sid='apb.zoneList.perimetterZone' product='air' /> no se puede eliminar.
+
+* El sistema elimina solo la zona seleccionada. Las puertas y los dispositivos asignados a la zona permanecen. La eliminación es irreversible.
+
+* El sistema no puede eliminar una zona mientras los dispositivos asignados están sin conexión, sincronizando o actualizando el firmware. Espere hasta que los dispositivos se reconecten, o elimínelos de la zona y vuelva a intentarlo.
+
+:::

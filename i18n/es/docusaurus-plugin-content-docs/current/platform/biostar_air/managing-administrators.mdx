@@ -142,7 +142,7 @@ Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="obs
 
 * Este rol suele recomendarse para el personal de TI responsable de la gestión del sistema.
 
-#### <Cmd sid="master_role" product="air" className="normal" /> (Nivel más alto) {/* #master */}
+#### <Cmd sid='master_role' product='air' className='normal' /> (Nivel más alto) {/* #master */}
 
 * Tiene **acceso total** a todas las configuraciones y funciones.
 
@@ -269,6 +269,26 @@ Los administradores pueden cambiar los roles de administradores de nivel inferio
 :::note
 
 Solo los administradores con el rol <Cmd sid="master_role" product="air" className="bold" /> pueden asignar o modificar el rol <Cmd sid="master_role" product="air" className="bold" /> para otros administradores.
+
+:::
+
+## Liberar el estado de sobrescritura
+
+Cambiar manualmente los permisos o el estado de bloqueo de un administrador sincronizado con SCIM establece localmente <Cmd sid='sso_scim.identity_source.override' product='air' />. Cancela los cambios locales y restaura la gestión de SCIM.
+
+1. En la lista de administradores, haz clic en la casilla junto al administrador cuyo estado sea <Cmd sid='sso_scim.identity_source.override' product='air' />. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirOver title='Release Override' /> en la parte superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-settings-admin-relase-override.png' />
+
+3. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+El sistema borra el estado <Cmd sid='sso_scim.identity_source.override' product='air' /> de la cuenta de administrador seleccionada y lo cambia a <Cmd sid='sso_scim.identity_source.scim_synced' product='air' />.
+
+:::info
+
+Para obtener más información sobre los ajustes de SSO y SCIM, consulte <DocLink docId='platform/biostar_air/site-sso-scim-settings' />.
 
 :::
 

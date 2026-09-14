@@ -272,6 +272,26 @@ BioStar Airの各管理者レベルは特定の権限を持ち、高いレベル
 
 :::
 
+## オーバーライド状態の解除
+
+SCIMで同期された管理者の権限またはロック状態をローカルで手動で変更すると、<Cmd sid='sso_scim.identity_source.override' product='air' /> 状態になります。 ローカルの変更を取り消し、SCIM管理状態に戻せます。
+
+1. 管理者一覧で <Cmd sid='sso_scim.identity_source.override' product='air' /> 状態の管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 画面左上の <IcAirOver title='Release Override' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-settings-admin-relase-override.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+選択した管理者アカウントの <Cmd sid='sso_scim.identity_source.override' product='air' /> 状態が解除され、<Cmd sid='sso_scim.identity_source.scim_synced' product='air' /> 状態に変わります。
+
+:::info
+
+SSOとSCIM設定の詳細については<DocLink docId='platform/biostar_air/site-sso-scim-settings' />を参照してください。
+
+:::
+
 ## 管理者アカウントの削除 {/* #deleteAdmin */}
 
 管理者アカウントを削除すると、該当の管理者はサイトにログインできなくなり、削除されたアカウント情報は復元できません。
