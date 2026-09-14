@@ -1,0 +1,47 @@
+## Asignación de grupos {/* #groupMapping */}
+
+Después de conectar SSO y SCIM y enviar los grupos del IdP, el administrador del sitio debe asignarlos a grupos de BioStar Air.
+
+### Reglas de asignación {/* #mappingRule */}
+
+* Puede asignar varios grupos de IdP a un solo grupo de usuarios de BioStar Air.
+
+* Un grupo de usuarios de BioStar Air debe estar vacío antes de la asignación.
+
+* Los grupos de BioStar Air con miembros no pueden ser destinos de asignación.
+
+* Solo el administrador maestro del sitio puede gestionar la asignación de grupos del IdP.
+
+* El sistema bloquea el rol después de asignar un grupo del IdP al rol maestro.
+
+### Asignar roles de administrador y grupos de usuarios
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> en la barra lateral izquierda de BioStar Air.
+
+2. Haga clic en la pestaña <Cmd>SSO & SCIM</Cmd>.
+
+3. Vaya a la sección <Cmd sid='sso_scim.group_mapping.title' product='air' /> y haga clic en <Cmd sid='add_btn' product='air' />.
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-group-mapping.png' />
+
+4. En <Cmd sid='sso_scim.group_mapping.idp_group' product='air' />, seleccione un grupo de IdP.
+
+5. En <Cmd sid='sso_scim.group_mapping.mapping_target' product='air' />, seleccione <Cmd sid='sso_scim.group_mapping.admin_role' product='air' /> o <Cmd sid='sso_scim.group_mapping.local_user_group' product='air' /> según el grupo de IdP seleccionado.
+
+6. Según el destino de asignación, asigne un rol de administrador o seleccione un grupo de usuarios.
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-group-mapping-add.png' className='none' />
+
+7. Haga clic en <Cmd sid='save_btn' product='air' /> para guardar la asignación.
+
+La sección <Cmd sid='sso_scim.group_mapping.title' product='air' /> muestra los grupos del IdP y los grupos de BioStar Air asignados.
+
+<Image src='/img/air/bsair-settings-site-idp-okta-mappinged-groups.png' />
+
+:::info
+
+* Para obtener más información sobre los roles de administrador, consulte <DocLink docId='platform/biostar_air/managing-administrators' />.
+
+* Para obtener más información sobre los grupos de usuarios, consulte <DocLink docId='platform/biostar_air/managing-user-groups' />.
+
+:::

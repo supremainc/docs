@@ -1,13 +1,10 @@
 ---
 id: managing-registered-doors
 title: Administrar puertas registradas
-description: Asigne dispositivos de acceso a las puertas registradas, configure relés y administre los horarios de acceso. Controle el acceso para seguridad, evacuación en caso de incendio y control de tiempo y asistencia.
-keywords:
-  - Administración de Puertas
-  - BioStar Air
+description: Asigne dispositivos de acceso a las puertas registradas. Configure relés, niveles de acceso y horarios para una o más puertas. Controle el acceso para seguridad, evacuación por incendio y control de tiempo y asistencia (T&A).
 ---
 
-Asigne dispositivos de acceso a las puertas registradas, configure relés y establezca los horarios de acceso. Controle el acceso de forma sistemática para la seguridad, la evacuación en caso de incendio y el control de tiempo y asistencia (T&A).
+Asigne dispositivos de acceso a las puertas registradas, configure relés y niveles de acceso, y establezca los horarios de acceso. Controle el acceso para seguridad, evacuación por incendio y control de tiempo y asistencia (T&A).
 
 :::tip
 
@@ -17,13 +14,13 @@ Vea el siguiente video para aprender a registrar y administrar puertas.
 
 :::
 
-## Ver la lista de puertas
+## Explorar la lista de puertas
 
-La lista de puertas muestra todas las puertas registradas en BioStar Air de un vistazo. Vea información clave de cada puerta, como su nombre, los dispositivos asignados y el grupo. Haga clic en una puerta de la lista para ver los detalles y modificar la configuración.
-
-<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
+La lista de puertas muestra todas las puertas registradas en BioStar Air de un vistazo. Consulte la información clave de cada puerta, como su nombre, los dispositivos asignados, el grupo y los niveles de acceso. Haga clic en una puerta de la lista para ver los detalles y modificar los ajustes.
 
 Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda para ver las puertas registradas.
+
+<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
 
 ### Información de la puerta
 
@@ -37,6 +34,8 @@ La lista de puertas muestra la siguiente información.
 
 * <Cmd sid="door_product_column4" product="air" />: Nombre del grupo asignado a la puerta.
 
+* <Cmd sid='dcal.web.doors.alColumnHeader' product='air' />: El nivel de acceso que el sistema asigna a la puerta. Para obtener más información sobre la asignación de niveles de acceso, consulte <DocLink inner='#batchDoorAccessLevels' />.
+
 * <Cmd sid='door_product_column5' product='air' />: Descripción de la puerta.
 
 * <Cmd sid='door_product_column6' product='air' />: Muestra la información de la cámara asociada a la puerta. La columna <Cmd sid='door_product_column6' product='air' /> aparece solo después de habilitar la función <Cmd sid='site_setting_video_management' product='air' /> en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
@@ -45,11 +44,11 @@ La lista de puertas muestra la siguiente información.
 
 Cuando se selecciona una o más puertas en la lista, los administradores pueden gestionarlas mediante las siguientes herramientas.
 
-* <IcAirEdit width='24px' height='24px' title='Edit' />: Editar la información de la puerta o cambiar la configuración de los dispositivos asignados. Esta opción está disponible solo cuando se selecciona una puerta. Para obtener más información, consulte <DocLink inner='#editingDoors' />.
-
 * <IcAirRef width='24px' height='24px' title='Refresh' />: Actualizar la lista de puertas.
 
 * <IcAirRemove width='24px' height='24px' title='Delete' />: Eliminar las puertas seleccionadas de la lista.
+
+* <IcAirLock width='24px' height='24px' title='Set Access' />: Establecer niveles de acceso para las puertas seleccionadas. Para más información, consulte <DocLink inner='#batchDoorAccessLevels' />.
 
 * <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />: Establecer un horario para los estados de apertura y bloqueo de la puerta. Para obtener más información sobre cómo gestionar los horarios de las puertas, consulte <DocLink docId='platform/biostar_air/managing-door-schedules' />.
 
@@ -113,9 +112,9 @@ Puertas que usan dispositivos primario/secundario
 
 * Un XPass 2 configurado como primario puede asignarse a una sola puerta, sin importar cuántos dispositivos o módulos secundarios tenga asignados.
 
-* Un XPass 2 configurado como primario puede tener hasta 31 dispositivos secundarios asignados y puede agregar una nueva puerta cuyo relé sea controlado por un módulo Secure secundario (SIO2).
+* Un XPass 2 configurado como primario puede tener hasta 31 dispositivos secundarios asignados. Puede agregar una nueva puerta cuyo relé controla un módulo Secure I/O 2 (SIO2) secundario.
 
-* No se pueden crear puertas que usen una CoreStation 20 (CS-20) junto con un Módulo Seguro (SIO2).
+* No se pueden crear puertas que usen una CoreStation 20 (CS-20) junto con un módulo Secure I/O 2 (SIO2).
 
 :::
 
@@ -173,7 +172,11 @@ Siga estos pasos para editar los detalles y la configuración de la puerta.
 
    * Establezca el tiempo que la puerta permanece abierta en <Cmd sid="add_doors.open_time" product="air" />. (Predeterminado: 3 segundos)
 
-7. Haz clic en <Cmd sid="save_btn" product="air" /> para aplicar los cambios.
+7. En la sección <Cmd sid='dcal.web.doors.alColumnHeader' product='air' />, haga clic en las casillas de los niveles de acceso para asignarlos a la puerta o quitarlos de ella.
+
+   <Image src='/img/air/bsair-door-mng-registered-door-edit-ac-level.png' />
+
+8. Haz clic en <Cmd sid="save_btn" product="air" /> para aplicar los cambios.
 
 :::info
 
@@ -184,6 +187,40 @@ Siga estos pasos para editar los detalles y la configuración de la puerta.
 * Al usar una configuración primario-secundario, el dispositivo primario (generalmente el de salida) necesita una conexión de red y el dispositivo secundario se conecta al primario mediante RS-485.
 
 * Para obtener más información sobre cómo configurar el módulo SIO2 Secure, consulte <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />.
+
+:::
+
+## Establecer niveles de acceso por lotes {/* #batchDoorAccessLevels */}
+
+Asigne o anule la asignación de un nivel de acceso a varias puertas a la vez. Evite editar puertas una por una.
+
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Seleccione la casilla de al menos una puerta para establecer niveles de acceso.
+
+3. Haga clic en <IcAirLock width='24px' height='24px' title='Set Access' /> en la parte superior de la lista de puertas.
+
+4. Cuando aparezca el menú emergente <Cmd sid='set_access_header1' product='air' />, seleccione las casillas de los niveles de acceso para aplicarlos a las puertas seleccionadas.
+
+   <Image src='/img/air/bsair-registered-multi-door-set-ac-level.png' />
+
+   Busque el nivel de acceso en el campo de búsqueda, si es necesario.
+
+   * <Cmd sid='dcal.web.setAccess.legendNone' product='air' />: El sistema quita el nivel de acceso de las puertas seleccionadas.
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />: Solo ciertas puertas seleccionadas tienen asignado el nivel de acceso.
+
+   * <Cmd sid='dcal.web.setAccess.legendAll' product='air' />: Todas las puertas seleccionadas tienen asignado el nivel de acceso.
+
+5. Para finalizar, haga clic en <Cmd sid='set_access_done_btn' product='air' />.
+
+:::info
+
+* Si una o más puertas están sin conexión, el sistema aplica los cambios cuando se reconecten.
+
+* El nivel de acceso <Cmd sid='full_access' product='air' /> lo administra automáticamente el sistema, por lo que no se puede cambiar.
+
+* Los errores en ciertas puertas pueden impedir que el sistema aplique niveles de acceso. Un cuadro de diálogo muestra las puertas donde falló el cambio de nivel de acceso. Para volver a intentarlo, haga clic en <Cmd sid='dcal.web.setAccess.partialRetry' product='air' />.
 
 :::
 

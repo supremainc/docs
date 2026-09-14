@@ -1,0 +1,263 @@
+---
+id: site-sso-scim-okta-setup
+title: Configurar Integración con Okta
+description: Este documento explica cómo conectar Okta SSO y el aprovisionamiento de SCIM a BioStar Air.
+---
+
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
+import GroupMapping from './_site-sso-scim-group-mapping.mdx'
+import SyncManagement from './_site-sso-scim-sync-management.mdx'
+
+Para iniciar sesión en BioStar Air con Okta, el administrador de identidades debe crear una aplicación OIDC en Okta. Vincúlelo con los ajustes de SSO en BioStar Air.
+
+## Conectar SSO de Okta
+
+<Steps>
+<Step>
+
+### BioStar Air: Preparar URI de redirección {/* #bsairRedirect */}
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> en la barra lateral izquierda de BioStar Air.
+
+2. Haga clic en la pestaña <Cmd>SSO & SCIM</Cmd>.
+
+3. Seleccione <Cmd sid='sso_scim.additional_features.sso.okta' product='air' /> en <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />.
+
+4. Copie el valor de URI que aparece en el campo <Cmd sid='sso_scim.additional_features.sso.redirect_uri' product='air' />.
+
+<Image src='/img/air/bsair-settings-site-idp-okta.png' />
+
+</Step>
+<Step>
+
+### Okta: Crear una aplicación
+
+1. Inicie sesión en la **Okta Admin Console**.
+
+2. Vaya a **Applications and Resources** → **Applications**.
+
+   <Image src='/img/air/bsair-sso-okta-applications.png' alone />
+
+3. Haga clic en **Create App Integration**.
+
+4. En **Sign-in method**, seleccione **OIDC - OpenID Connect**.
+
+5. En **Application type**, selecciona **Web Application** para obtener un secreto de cliente.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app.png' alone />
+
+6. Haga clic en **Next**.
+
+7. En **App Integration name**, ingrese 'BioStar Air'.
+
+8. Pegue el URI del paso <DocLink inner='#bsairRedirect' /> en el campo **Sign-in redirect URIs**.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app-general-settings.png' alone />
+
+9. Vaya a **Assignments** y seleccione **Allow everyone in your organization to access**.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app-assignments.png' alone />
+
+10. Haga clic en **Save**.
+
+</Step>
+<Step>
+
+### Okta: Copiar información del cliente de la aplicación {/* #copyClientinfo */}
+
+1. Después de crear la aplicación, copie **Client ID** y **Client Secret** desde la pestaña **General**.
+
+   <Image src='/img/air/bsair-sso-okta-applications-general.png' alone />
+
+2. Haga clic en el perfil en la esquina superior derecha y copie **Okta Domain**.
+
+   <Image src='/img/air/bsair-sso-okta-applications-profile.png' alone />
+
+Ingrese el **Client ID**, el **Client Secret** y el **Okta Domain** copiados en el siguiente paso.
+
+</Step>
+<Step>
+
+### BioStar Air: Configurar SSO
+
+1. Vuelve a la página de ajustes de BioStar Air y escribe en cada campo los valores copiados en el paso <DocLink inner='#copyClientinfo' />.
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-paste-field.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Client ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Client Secret**
+
+   * <Cmd sid='sso_scim.additional_features.sso.okta_domain' product='air' />: **Okta Domain**
+
+2. En el campo <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' />, escribe el dominio de correo electrónico de la organización.
+
+3. Haz clic en <Cmd sid='sso_scim.additional_features.sso.save' product='air' />.
+
+Cuando el sistema guarda y verifica correctamente, genera automáticamente el valor de <Cmd sid='sso_scim.additional_features.sso.discovery_url' product='air' />.
+
+<Image src='/img/air/bsair-settings-site-idp-okta-save-success.png' />
+
+</Step>
+</Steps>
+
+## Conectar aprovisionamiento SCIM de Okta
+
+<Steps>
+<Step>
+
+<CopyToken />
+
+</Step>
+<Step>
+
+### Okta: Crear una aplicación de aprovisionamiento SCIM
+
+1. En la **Okta Admin Console**, ve a **Applications and Resources** → **Applications**.
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-provisioning-app.png' alone />
+
+2. Haz clic en **Browse App Catalog**.
+
+3. Busca 'SCIM 2.0 Test App'.
+
+   <Image src='/img/air/bsair-sso-okta-applications-browse-app-search.png' alone />
+
+4. En los resultados de búsqueda, selecciona <b>SCIM 2.0 Test App (Header Auth)</b>.
+
+5. Haz clic en **Add Integration**.
+
+6. En el campo **Application label**, escribe 'BioStar Air SCIM'.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-general.png' alone />
+
+7. Haga clic en **Next**.
+
+8. En **Sign-on options**, desplázate hacia abajo sin cambiar los ajustes y haz clic en **Done**.
+
+</Step>
+<Step>
+
+### Okta: Ajustes de integración de la API
+
+1. Después de crear la aplicación de aprovisionamiento, haz clic en la pestaña **Provisioning**.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning.png' alone />
+
+2. Haz clic en **Configure API Integration**.
+
+3. Haz clic en **Enable API integration**.
+
+4. Introduce la URL del endpoint SCIM y el bearer token de <DocLink inner='#copyToken' /> en **Base URL** y **API Token**.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-set-api.png' alone />
+
+5. Para probar la sincronización, haz clic en **Test API Credentials**.
+
+6. Haga clic en **Save**.
+
+7. Haz clic en la pestaña **Provision** para definir el comportamiento de envío de grupos.
+
+8. Haz clic en **Edit** y habilita los siguientes atributos.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-set-push.png' alone />
+
+   * **Create Users**
+
+   * **Update User Attributes**
+
+   * **Deactivate Users**
+
+9. Haz clic en **Save** para aplicar los cambios.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-save.png' alone />
+
+</Step>
+</Steps>
+
+## Enviar grupos de IdP a BioStar Air
+
+Para enviar grupos de IdP a BioStar Air, primero prepara los grupos de usuarios y los usuarios en Okta. Después de preparar los grupos de usuarios y los usuarios, envíalos a BioStar Air mediante SCIM.
+
+<Steps>
+<Step>
+
+### Okta: Asignar grupos de usuarios
+
+1. Inicie sesión en la **Okta Admin Console**.
+
+2. Vaya a **Applications and Resources** → **Applications**.
+
+3. Selecciona la aplicación SCIM.
+
+   <Image src='/img/air/bsair-sso-okta-applications-list.png' alone />
+
+4. Haz clic en la pestaña **Assignments**.
+
+5. Haz clic en **Assign** → **Assign to Groups**.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-assign-groups.png' alone />
+
+6. En el grupo de usuarios que asignarás a la aplicación SCIM, haz clic en **Assign**.
+
+7. Después de asignar el grupo, haz clic en **Done**.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-assigned-group-list.png' alone />
+
+</Step>
+<Step>
+
+### Okta: Enviar grupos de usuarios
+
+1. Haz clic en la pestaña **Push Groups**.
+
+2. Haz clic en **Push Groups** → **Find groups by name**.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-push-groups.png' alone />
+
+3. En el campo de entrada, ingresa el nombre del grupo que vas a enviar. 
+
+4. Cuando aparezca un grupo de usuarios coincidente, selecciónalo.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-push-groups-by-name.png' alone />
+
+5. Después de seleccionar un grupo de usuarios, haz clic en **Save** o **Save & Another** para agregarlo.
+
+6. Revisa los grupos de usuarios enviados en la pestaña **Push Groups**.
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-pushed-group-list.png' alone />
+
+</Step>
+<Step>
+
+<CheckConnection />
+
+</Step>
+</Steps>
+
+<GroupMapping />
+
+<SyncManagement />
+
+## Iniciar sesión en Okta
+
+Tras completar la conexión SSO de Okta, los usuarios inician sesión con su cuenta de Okta en BioStar Air.
+
+1. En la pantalla de inicio de sesión de BioStar Air, haz clic en <Cmd sid='sso_scim.login.sign_in_with_okta' product='air' />.
+
+   <Image src='/img/air/bsair-login-with-okta.png' />
+
+2. Ingresa la dirección de correo electrónico o el dominio de la organización en el campo <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' />. (Por ejemplo, `user@company.com` o `company`)
+
+3. Haz clic en <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' />.
+
+4. Cuando se abra la página de inicio de sesión de Okta, ingresa el correo electrónico y la contraseña de la cuenta de la organización.
+
+5. Después de completar la autenticación, el sistema te redirige automáticamente a BioStar Air y finaliza el inicio de sesión.
+
+:::info
+
+Si SSO de Okta no está configurado para el dominio de correo ingresado, aparece un mensaje de error. Comuníquese con el administrador del sitio.
+
+:::
