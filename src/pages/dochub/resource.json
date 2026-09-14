@@ -702,25 +702,26 @@
         "category": "rfmobile",
         "product": "XPass Q2",
         "models": [
-            "XPQ2-DB"
+            "XPQ2-DB",
+            "XPQ2-DPB"
         ],
         "version": "1.0.1",
         "manuals": {
-            "ko": "device/xpass_q2/XPass Q2_IG_1.01_KO_260720.pdf",
-            "en": "device/xpass_q2/XPass Q2_IG_1.01_EN_260720.pdf",
-            "es": "device/xpass_q2/XPass Q2_IG_1.01_ES_260720.pdf",
-            "ja": "device/xpass_q2/XPass Q2_IG_1.01_JA_260720.pdf"
+            "ko": "device/xpass_q2/XPass Q2_IG_1.02_KO_260827.pdf",
+            "en": "device/xpass_q2/XPass Q2_IG_1.02_EN_260827.pdf",
+            "es": "device/xpass_q2/XPass Q2_IG_1.02_ES_260827.pdf",
+            "ja": "device/xpass_q2/XPass Q2_IG_1.02_JA_260827.pdf"
         },
         "release_notes": {
             "ko": "device/xpass_q2/XPass Q2_ReleaseNotes_1.0.1_KO_260811.pdf",
             "en": "device/xpass_q2/XPass Q2_ReleaseNotes_1.0.1_EN_260811.pdf"
         },
-        "a_e": "device/xpass_q2/SUPREMA_XPass_Q2_AE-Specification_260721.docx",
+        "a_e": "device/xpass_q2/SUPREMA_XPass_Q2_AE-Specification_260828.docx",
         "dt": {
             "ko": "device/xpass_q2/XPass Q2_DrillingTemplate_KO.pdf",
             "en": "device/xpass_q2/XPass Q2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-02-27"
+        "release_date": "2026-08-25"
     },
     {
         "category": "rfmobile",
