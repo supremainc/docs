@@ -1843,6 +1843,10 @@
     "width": 927,
     "height": 384
   },
+  "/img/biostarx-data-export-all-report-csv.png": {
+    "width": 600,
+    "height": 295
+  },
   "/img/biostarx-data-generate-report.png": {
     "width": 1920,
     "height": 716
@@ -3129,7 +3133,7 @@
   },
   "/img/biostarx-settings-account-passport-scan-setting.png": {
     "width": 853,
-    "height": 322
+    "height": 278
   },
   "/img/biostarx-settings-add-access-floor-level.png": {
     "width": 1200,
@@ -3253,7 +3257,7 @@
   },
   "/img/biostarx-settings-audit-trail-settings.png": {
     "width": 1000,
-    "height": 634
+    "height": 625
   },
   "/img/biostarx-settings-card-printer-custom-user.png": {
     "width": 946,
@@ -3433,7 +3437,7 @@
   },
   "/img/biostarx-settings-device-playback-playVideo-batch-edit.png": {
     "width": 793,
-    "height": 416
+    "height": 383
   },
   "/img/biostarx-settings-device-playback-playVideo-change-order.png": {
     "width": 490,
@@ -11799,6 +11803,10 @@
     "width": 927,
     "height": 384
   },
+  "/img/en/biostarx-data-export-all-report-csv.png": {
+    "width": 600,
+    "height": 293
+  },
   "/img/en/biostarx-data-generate-report.png": {
     "width": 1920,
     "height": 716
@@ -13081,7 +13089,7 @@
   },
   "/img/en/biostarx-settings-account-passport-scan-setting.png": {
     "width": 853,
-    "height": 322
+    "height": 274
   },
   "/img/en/biostarx-settings-add-access-floor-level.png": {
     "width": 1200,
@@ -13205,7 +13213,7 @@
   },
   "/img/en/biostarx-settings-audit-trail-settings.png": {
     "width": 1000,
-    "height": 634
+    "height": 620
   },
   "/img/en/biostarx-settings-card-printer-custom-user.png": {
     "width": 950,
@@ -13385,7 +13393,7 @@
   },
   "/img/en/biostarx-settings-device-playback-playVideo-batch-edit.png": {
     "width": 793,
-    "height": 416
+    "height": 373
   },
   "/img/en/biostarx-settings-device-playback-playVideo-delete.png": {
     "width": 501,
