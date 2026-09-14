@@ -122,39 +122,39 @@ If a device disconnects from **BioStar X**, it cannot delete its certificate. If
 
 :::
 
-## Export/import device settings {/* #exportImportDeviceConfig */}
+## Export/import device configuration {/* #exportImportDeviceConfig */}
 
-Export settings from one device to a file, then import and apply them to another device of the same model. Instead of entering the same settings on multiple devices, create a settings file from a configured device and apply it to the others.
+Export configurations from one device to a file, then import and apply them to another device of the same model. Instead of entering the same configurations on multiple devices, create a configuration file from a configured device and apply it to the others.
 
 :::info
 
-Only administrators with full permissions for device settings can use this feature. For more information about administrator permission settings, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
+The export/import device configuration feature is available to administrators with full permissions for device settings. For more information about administrator permission settings, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
 
 :::
 
-### Export device settings {/* #exportDeviceConfig */}
+### Export device configuration {/* #exportDeviceConfig */}
 
-To download the settings for a single device as a file, follow these steps.
+To download the configurations for a single device as a file, follow these steps.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
 
-3. In the device list, click the checkbox for the device whose settings to export. You can select only one device.
+3. In the device list, click the checkbox for the device whose configurations to export. You can select only one device.
 
 4. Click <IcMoreW title='More' /> → <Cmd sid='device.templateExport.label' product='2' /> at the top of the device list.
 
    <Image src='/img/biostarx-setting-device-export-settings.png' />
 
-5. When the download window appears, save the settings file locally.
+5. When the download window appears, save the configurations file locally.
 
 :::caution
 
-Settings export is unavailable for the following devices.
+Configurations export is unavailable for the following devices.
 
 * Devices disconnected from **BioStar X** or with a response timeout
 
-* Virtual device (Virtual Device)
+* Virtual device
 
 * Devices without RS-485 communication mode (for example, Wiegand devices, I/O modules, Door Interface, Door modules, Secure modules, and OSDP Antenna/Reader)
 
@@ -172,39 +172,39 @@ Settings export is unavailable for the following devices.
 
 :::note
 
-**Settings excluded from export** <Anchor id='exportExcludedsettings' />
+**Configurations excluded from export** <Anchor id='exportExcludedsettings' />
 
-The following settings are not included in the export file because they must be unique per device, are stored only on the device, or contain sensitive information such as credentials.
+The following configurations are not included in the export file because they must be unique per device, are stored only on the device, or contain sensitive information such as credentials.
 
-* Device-specific settings: <Cmd sid='device.info.name' product='2' className='normal' />, <Cmd sid='device.info.group' product='2' className='normal' />, wired and wireless network settings, server connection settings, OSDP identifier, and <Cmd sid='device.info.triggerNAction' product='2' className='normal' />
+* Device-specific configurations: <Cmd sid='device.info.name' product='2' className='normal' />, <Cmd sid='device.info.group' product='2' className='normal' />, wired and wireless network, server connection, OSDP identifier, and <Cmd sid='device.info.triggerNAction' product='2' className='normal' />
 
-* These settings are stored only on the device. You cannot move them to another device: language resources, Home screen, and sound settings in <Cmd sid='device.info.displaySound' product='2' className='normal' />, the SCB key for serial communication, and video settings added to BioStation 3 Max
+* These configurations are stored only on the device. You cannot move them to another device: language resources, Home screen, and sound options in <Cmd sid='device.info.displaySound' product='2' className='normal' />, the SCB key for serial communication, and video options added to BioStation 3 Max
 
-* Credentials and sensitive information: usernames and passwords for IP intercom and RTSP, <Cmd sid='device.masterAdmin.title' product='2' className='normal' /> settings, and the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' className='normal' /> option
+* Credentials and sensitive information: usernames and passwords for IP intercom and RTSP, <Cmd sid='device.masterAdmin.title' product='2' className='normal' />, and the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' className='normal' /> option
 
 :::
 
-### Import device settings {/* #importDeviceConfig */}
+### Import device configuration {/* #importDeviceConfig */}
 
-To apply the exported settings file to one or more devices of the same model, follow these steps.
+To apply the exported configurations file to one or more devices of the same model, follow these steps.
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
 
-3. In the device list, click the checkbox for the device that will receive the settings. You can select one or more devices.
+3. In the device list, click the checkbox for the device that will receive the configurations. You can select one or more devices.
 
 4. Click <IcMoreW title='More' /> → <Cmd sid='device.templateImport.label' product='2' /> at the top of the device list.
 
    <Image src='/img/biostarx-setting-device-import-settings.png' />
 
-5. When the Open window appears in the web browser, select the settings file saved locally.
+5. When the Open window appears in the web browser, select the configurations file saved locally.
 
-6. When the Import device settings result message appears, review it and click <Cmd sid='button.ok' product='2' />.
+6. When the Import device configurations result message appears, review it and click <Cmd sid='button.ok' product='2' />.
 
 :::caution
 
-The system accepts setting files created on other sites or servers as valid files without verifying the source or showing a warning. Verify that a trusted source created the file to import.
+The system accepts configuration files created on other sites or servers as valid files without verifying the source or showing a warning. Verify that a trusted source created the file to import.
 
 :::
 
@@ -214,7 +214,7 @@ Select at least one device to run this feature.
 
 :::
 
-When you run Import, the system checks the following in order before applying the settings. If any check fails, the system does not apply the settings and shows the reason.
+When you run Import, the system checks the following in order before applying the configurations. If any check fails, the system does not apply the configurations and shows the reason.
 
 * Whether all selected devices share the same model name
 
@@ -224,21 +224,21 @@ When you run Import, the system checks the following in order before applying th
 
 * Whether any of the selected devices is a virtual device (Virtual Device)
 
-If the checks pass, the system applies all settings except [Settings excluded from export](#exportExcludedsettings) to all selected devices.
+If the checks pass, the system applies all configurations except [Configurations excluded from export](#exportExcludedsettings) to all selected devices.
 
 :::info
 
-* Importing a file from an unsupported device sets the feature Off and turns off enabled options. Importing a file from a supported device into an unsupported device skips the feature and applies the remaining settings. In both cases, the system does not mark the import as failed or add it to the failure list.
+* Importing a file from an unsupported device sets the feature Off and turns off enabled options. Importing a file from a supported device into an unsupported device skips the feature and applies the remaining configurations. In both cases, the system does not mark the import as failed or add it to the failure list.
 
-* Settings that require a device license do not apply to devices without that license. Importing a file from an unlicensed device sets the setting Off and turns off enabled options. In both cases, the system does not mark the import as failed or add it to the failure list.
+* Configurations that require a device license do not apply to devices without that license. Importing a file from an unlicensed device sets the configuration Off and turns off enabled options. In both cases, the system does not mark the import as failed or add it to the failure list.
 
-* The system shows a success message after it applies the settings to all devices. If settings fail to apply, a message shows failed device count and a link to download the CSV failure list. The file lists each failed device ID, name, and reason (disconnected, or access groups block full access permissions).
+* The system shows a success message after it applies the configurations to all devices. If configurations fail to apply, a message shows failed device count and a link to download the CSV failure list. The file lists each failed device ID, name, and reason (disconnected, or access groups block full access permissions).
 
   > For example, if an import run at 15:45:30 on 6/23/2026 fails, the file name is `Device_Template_Import_Error_20260623T154530.csv`.
 
 * CoreStation devices are also included.
 
-* View the export and import history for device settings at <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+* View the export and import history for device configurations at <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
