@@ -3555,6 +3555,14 @@
     "width": 1202,
     "height": 277
   },
+  "/img/biostarx-settings-device-waiting-list-add.png": {
+    "width": 800,
+    "height": 247
+  },
+  "/img/biostarx-settings-device-waiting-list.png": {
+    "width": 800,
+    "height": 247
+  },
   "/img/biostarx-settings-email-contents.png": {
     "width": 894,
     "height": 161
@@ -5211,6 +5219,10 @@
     "width": 240,
     "height": 203
   },
+  "/img/camera/component-desiccant-module-vionyx.svg": {
+    "width": 84,
+    "height": 84
+  },
   "/img/camera/component-diode1-vionyx.png": {
     "width": 1060,
     "height": 420
@@ -5254,6 +5266,18 @@
   "/img/camera/installation-automatic-door-vionyx.svg": {
     "width": 790,
     "height": 507
+  },
+  "/img/camera/installation-desiccant-module1-vionyx.svg": {
+    "width": 240,
+    "height": 201
+  },
+  "/img/camera/installation-desiccant-module2-vionyx.svg": {
+    "width": 161,
+    "height": 211
+  },
+  "/img/camera/installation-desiccant-module3-vionyx.svg": {
+    "width": 340,
+    "height": 193
   },
   "/img/camera/installation-network-hub-connection-vionyx.svg": {
     "width": 740,
@@ -5440,6 +5464,10 @@
     "height": 394
   },
   "/img/changelogs/changelogs-202607.png": {
+    "width": 800,
+    "height": 394
+  },
+  "/img/changelogs/changelogs-202608.png": {
     "width": 800,
     "height": 394
   },
@@ -7193,7 +7221,7 @@
   },
   "/img/device/bs3-rtsp.png": {
     "width": 250,
-    "height": 311
+    "height": 444
   },
   "/img/device/bs3-usb.png": {
     "width": 250,
@@ -7430,6 +7458,10 @@
   "/img/device/cables-layout-xp2.png": {
     "width": 718,
     "height": 770
+  },
+  "/img/device/cables-layout-xp2v2.png": {
+    "width": 711,
+    "height": 774
   },
   "/img/device/cables-layout-xpd2.png": {
     "width": 763,
@@ -8936,8 +8968,8 @@
     "height": 539
   },
   "/img/device/installation-power-connection-sio2.png": {
-    "width": 646,
-    "height": 443
+    "width": 639,
+    "height": 432
   },
   "/img/device/installation-power-connection-xp2.png": {
     "width": 1004,
@@ -9764,6 +9796,14 @@
     "height": 663
   },
   "/img/device/xp2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
+  },
+  "/img/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/device/xp2v2-m-dimension.svg": {
     "width": 1097,
     "height": 663
   },
@@ -13303,6 +13343,14 @@
     "width": 1200,
     "height": 278
   },
+  "/img/en/biostarx-settings-device-waiting-list-add.png": {
+    "width": 800,
+    "height": 247
+  },
+  "/img/en/biostarx-settings-device-waiting-list.png": {
+    "width": 800,
+    "height": 247
+  },
   "/img/en/biostarx-settings-email-contents.png": {
     "width": 894,
     "height": 161
@@ -16340,8 +16388,8 @@
     "height": 537
   },
   "/img/en/device/installation-power-connection-sio2.png": {
-    "width": 706,
-    "height": 484
+    "width": 639,
+    "height": 437
   },
   "/img/en/device/installation-power-connection-xp2.png": {
     "width": 1007,
@@ -17036,6 +17084,14 @@
     "height": 663
   },
   "/img/en/device/xp2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
+  },
+  "/img/en/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/en/device/xp2v2-m-dimension.svg": {
     "width": 1097,
     "height": 663
   },
@@ -18278,6 +18334,14 @@
   "/img/es/device/name-function-each-part-xpq2.svg": {
     "width": 816,
     "height": 933
+  },
+  "/img/es/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/es/device/xp2v2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
   },
   "/img/es/device/xpq2-dimension.svg": {
     "width": 1097,
@@ -21098,6 +21162,14 @@
   "/img/ja/device/name-function-each-part-xpq2.svg": {
     "width": 816,
     "height": 933
+  },
+  "/img/ja/device/xp2v2-g-dimension.svg": {
+    "width": 1140,
+    "height": 663
+  },
+  "/img/ja/device/xp2v2-m-dimension.svg": {
+    "width": 1097,
+    "height": 663
   },
   "/img/ja/device/xpq2-dimension.svg": {
     "width": 1097,
