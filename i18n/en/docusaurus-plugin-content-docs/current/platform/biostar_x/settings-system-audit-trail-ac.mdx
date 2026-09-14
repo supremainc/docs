@@ -181,6 +181,12 @@ Export audit logs to a CSV file for use with external analysis tools.
 
 The exported CSV includes 10 columns, one row per record, and quotes all values. Values with multiple targets use a vertical bar (`|`) (e.g., **User: 7(Kim)|User: 8(Lee)**). The <Cmd sid='audit.column.details' /> value includes all targets and fields without truncation.
 
+:::caution
+
+The CSV file includes values as-is, including values a spreadsheet program may interpret as formulas. Do not open the downloaded CSV file directly in a spreadsheet program. If needed, open it with the text import feature.
+
+:::
+
 :::tip
 
 If you set filters, the export includes only the filtered results in the CSV file.
