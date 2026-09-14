@@ -1060,7 +1060,7 @@
             "BioEntry W3",
             "XPass Q2"
         ],
-        "version": "1.2.3",
+        "version": "1.2.4",
         "manuals": {
             "ko": "device/device_manager/Suprema Device Manager_UG_1.08_KO_260515.pdf",
             "en": "device/device_manager/Suprema Device Manager_UG_1.08_EN_260515.pdf",
@@ -1068,8 +1068,8 @@
             "ja": "device/device_manager/Suprema Device Manager_UG_1.08_JA_260515.pdf"
         },
         "release_notes": {
-            "ko": "device/device_manager/Device Manager_ReleaseNotes_1.2.3_KO_260513.pdf",
-            "en": "device/device_manager/Device Manager_ReleaseNotes_1.2.3_EN_260513.pdf"
+            "ko": "device/device_manager/Suprema Device Manager_RN_1.2.4_KO_260901.pdf",
+            "en": "device/device_manager/Suprema Device Manager_RN_1.2.4_EN_260901.pdf"
         },
         "a_e": "",
         "dt": {
