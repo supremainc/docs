@@ -1,10 +1,10 @@
 ---
 id: managing-roll-call-fire-muster
 title: Roll Call
-description: Learn how to set muster zones, start roll calls based on presence information, track user safety status, and review roll call history in BioStar Air.
+description: Learn how to set muster points, start roll calls based on presence information, track user safety status, and review roll call history in BioStar Air.
 ---
 
-With BioStar Air's Roll Call feature, organizations can track which users have safely evacuated during an emergency. Set muster zones and run a roll call in the BioStar Air mobile app. Administrators can quickly identify on-site users based on presence information and confirm safety.
+With BioStar Air's Roll Call feature, organizations can track which users have safely evacuated during an emergency. Set muster points and run a roll call in the BioStar Air mobile app. Administrators can quickly identify on-site users based on presence information and confirm safety.
 
 :::note
 
@@ -12,15 +12,15 @@ With BioStar Air's Roll Call feature, organizations can track which users have s
 
 * Roll call does not assume all users are on site. Using Presence logic, include only users confirmed to be on site at the time of the emergency as roll call targets.
 
-* Assign user groups to certain muster zones and designate dedicated administrators. Safety managers can focus on assigned users.
+* Assign user groups to muster points and designate dedicated administrators. Safety managers can focus on assigned users.
 
-* The Suprema Pass app guides mobile credential users on site to the correct muster zone and warns off-site users not to enter the facility during an emergency.
+* The Suprema Pass app guides mobile credential users on site to the correct muster point and warns off-site users not to enter the facility during an emergency.
 
 :::
 
 :::info
 
-* Ensure that muster zones are correctly assigned to user groups to avoid confusion.
+* Ensure that muster points are correctly assigned to user groups to avoid confusion.
 
 * Regularly test the roll call feature to ensure smooth operation during a real emergency.
 
@@ -30,7 +30,7 @@ With BioStar Air's Roll Call feature, organizations can track which users have s
 
 :::tip
 
-Watch the following video for a roll call and muster zone guide.
+Watch the following video for a roll call and muster point guide.
 
 <YouTube className='fit--content' videoId="F0dnR7VmfAo" />
 
@@ -42,7 +42,7 @@ Watch the following video for a roll call and muster zone guide.
 
 * Mobile notifications require the Suprema Pass app. Users who use only RF cards or biometric credentials cannot receive mobile roll call notifications.
 
-* On-site users not assigned to a muster zone may not receive muster point guidance.
+* On-site users not assigned to a muster point may not receive guidance.
 
 * If the <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> setting is incorrect, the expected roll call screen may not appear for administrators.
 
@@ -56,9 +56,9 @@ Users and administrators who use earlier versions of the Suprema Pass or BioStar
 
 :::
 
-## Set muster zones {/* #settingMusterPoints */}
+## Set muster points {/* #settingMusterPoints */}
 
-A muster zone is a designated location where users authenticate their credentials to indicate they are safe during an emergency.
+A muster point is a designated location where users authenticate their credentials to indicate they are safe during an emergency.
 
 1. Click <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> on the left sidebar.
 
@@ -70,17 +70,17 @@ A muster zone is a designated location where users authenticate their credential
 
    <Image src='/img/air/bsair-adv-rollcall-add.png' />
 
-4. In the <Cmd sid="add_muster_point_devices_title" product="air" /> section, add the device group or device to assign to the muster zone. Select the checkbox for the device group or device, and click <Cmd sid="add_btn" product="air" />.
+4. In the <Cmd sid="add_muster_point_devices_title" product="air" /> section, add the device group or device to assign to the muster point. Select the checkbox for the device group or device, and click <Cmd sid="add_btn" product="air" />.
 
    <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
 
-5. In the <Cmd sid="add_muster_point_user_groups_title" product="air" /> section, select the user groups that must report when they arrive at the muster zone.
+5. In the <Cmd sid="add_muster_point_user_groups_title" product="air" /> section, select the user groups that must report when they arrive at the muster point.
 
    <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
 
    * Select the checkbox for the group, and click <Cmd sid='add_btn' product='air' />.
 
-   * <Cmd sid='fm.musterForm.allUsers.name' product='air' />: Includes all currently active users in this muster zone instead of selecting specific user groups. Running a roll call does not assume all users are on site. It targets only users confirmed on site based on presence detection. Enabling this option disables individual user group selection. Disable this option first to select only certain groups.
+   * <Cmd sid='fm.musterForm.allUsers.name' product='air' />: Assigns all currently active users on BioStar Air site to a chosen muster point. Running a roll call does not assume all active users are on site. It targets only users with confirmed on site status based on presence detection. Enabling this option disables the ability to choose individual user groups. Disable this option first to select only certain user groups.
 
 6. In the <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> section, select the checkbox for the administrator who will run Roll Call at the muster location, then click <Cmd sid='add_btn' product='air' />.
 
@@ -88,25 +88,25 @@ A muster zone is a designated location where users authenticate their credential
 
    :::note
 
-   * If you select <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />, only the selected administrators can start the Roll Call. During an ongoing Roll Call, they can view and manage only users in their assigned muster zones.
+   * If you select <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />, only the selected administrators can start the Roll Call. During an ongoing Roll Call, they can view and manage only users in their assigned muster points.
 
    * If you do not assign <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />, users with the <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' />, or <Cmd sid='operator_role' product='air' /> role can start Roll Call.
 
-   * An administrator cannot be assigned as the designated administrator for multiple muster zones at the same time.
+   * An administrator cannot be assigned as the designated administrator for multiple muster points at the same time.
 
    :::
 
-7. Click <Cmd sid="save_btn" product="air" /> to save the muster zone settings.
+7. Click <Cmd sid="save_btn" product="air" /> to save the muster point settings.
 
 :::note
 
-**Best practices for muster zones**
+**Best practices for muster points**
 
-* Make the muster zone name and description clear and easy to understand. For example, use names like 'East Parking Lot' or 'Main Building Lobby'.
+* Make the muster point name and description clear and easy to understand. For example, use names like 'East Parking Lot' or 'Main Building Lobby'.
 
-* When adding multiple devices to a muster zone, select a device group instead of individual devices. Device groups let you manage multiple devices at once. For more information on device group management, refer to <DocLink docId='platform/biostar_air/manage-device-group' />.
+* When adding multiple devices to a muster point, select a device group instead of individual devices. Device groups let you manage multiple devices at once. For more information on device group management, refer to <DocLink docId='platform/biostar_air/manage-device-group' />.
 
-* In a large campus with multiple buildings, assign **only relevant users** to a specific muster zone.
+* In a large campus with multiple buildings, assign **only relevant users** to a specific muster point.
 
 * Wired access control devices support both mobile and card authentication, whereas Airfob Tag and Airfob Patch support only mobile credentials.
 
@@ -126,11 +126,11 @@ Start a roll call and check attendance in the BioStar Air mobile app.
 
 3. Tap <Cmd en='Start Roll Call'>Start Roll Call</Cmd>.
 
-4. Select the muster zone to start Roll Call, then tap <Cmd en='Continue'>Continue</Cmd>.
+4. Select the muster point to start Roll Call, then tap <Cmd en='Continue'>Continue</Cmd>.
 
-   To run Roll Call in all muster zones, select <Cmd en='Site-wide'>Site-wide</Cmd>, then tap <Cmd en='Continue'>Continue</Cmd>.
+   To run Roll Call in all muster points, select <Cmd en='Site-wide'>Site-wide</Cmd>, then tap <Cmd en='Continue'>Continue</Cmd>.
 
-5. Select a muster zone in the ongoing Roll Call list.
+5. Select a muster point in the ongoing Roll Call list.
 
 6. A list of all users who must gather at the muster location appears.
 
@@ -138,15 +138,15 @@ Start a roll call and check attendance in the BioStar Air mobile app.
 
 **Differences by administrator role**
 
-* <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' />, and <Cmd sid='operator_role' product='air' /> users can view the Roll Call list. This applies when they are not assigned as <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> for the muster zone. They start new Roll Calls in the order listed above.
+* <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' />, and <Cmd sid='operator_role' product='air' /> users can view the Roll Call list. This applies when they are not assigned as <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> for the muster point. They start new Roll Calls in the order listed above.
 
-* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> receives a notification when Roll Call starts in the assigned muster zone. Tap the notification to go directly to the progress screen for the assigned muster zone.
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> receives a notification when Roll Call starts in the assigned muster point. Tap the notification to go directly to the progress screen for the assigned muster point.
 
 :::
 
 ### Explore the active Roll Call screen {/* #activeRollCallScreen */}
 
-When Roll Call starts, the progress status appears with the muster zone name.
+When Roll Call starts, the progress status appears with the muster point name.
 
 <Columns>
 <Column className='width--50'>
@@ -164,7 +164,7 @@ When Roll Call starts, the progress status appears with the muster zone name.
 
   * <Cmd en='On Site'>On Site</Cmd>: Shows only users whose Presence status is On Site.
 
-  * <Cmd en='All assigned'>All assigned</Cmd>: Shows all users assigned to this muster zone, regardless of Presence status. Users marked Safe move to the bottom of the list.
+  * <Cmd en='All assigned'>All assigned</Cmd>: Shows all users assigned to this muster point, regardless of Presence status. Users marked Safe move to the bottom of the list.
 
 * Use search to find a certain user.
 
@@ -187,7 +187,7 @@ Administrators or users can mark themselves safe in the following ways.
 
 * An administrator can touch and hold the **check mark** next to a user’s name in the mobile app to mark the user safe.
 
-* Users tag their credential on a device at the assigned muster zone.
+* Users tag their credential on a device at the assigned muster point.
 
 </Column>
 </Columns>

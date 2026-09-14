@@ -111,12 +111,6 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * 최신 값을 유지하려면 목록 상단의 <Cmd sid='presence_refresh' product='air' /> 버튼을 클릭하거나 자동 새로고침 간격을 설정하세요.
 
-:::info
-
-구역 목록의 내부 인원 수는 구역별 현황만 보여줍니다. 사이트 전체에서 현재 누가 있는지 사용자 단위로 확인하려면 <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' /> 메뉴를 참고하세요.
-
-:::
-
 ## 구역 관리 기능 {/* #manageZone */}
 
 구역 목록 상단 및 하단에서 제공하는 관리 기능으로 다음 작업을 수행할 수 있습니다.
@@ -269,7 +263,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 :::info
 
-* 펌웨어가 v2.13 이상인 장치만 <Cmd sid='apb.zoneForm.board.label' product='air' />에 나타납니다. 구역에 할당하려는 장치가 최신 펌웨어인지 확인하세요.
+* 펌웨어가 v2.13 이상인 장치만 <Cmd sid='apb.zoneForm.board.label' product='air' />에 나타납니다. 구역에 할당하려는 장치가 최신 펌웨어인지 반드시 확인하세요.
 
 * 장치 관리에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/manage-device-group' />를 참고하세요.
 
@@ -368,17 +362,14 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * 동일한 이름의 구역은 만들 수 없습니다.
 
-* 구역 설정 시 <Cmd sid='apb.zoneForm.mode.label' product='air' />를 <Cmd sid='apb.zoneForm.mode.none' product='air' />으로 변경하면 해당 구역에 저장되어 있던 세부 설정(<Cmd sid='apb.zoneForm.mode.label' product='air' />, <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />, <Cmd sid='apb.zoneForm.exceptions.label' product='air' />)이 모두 초기화됩니다. 설정을 유지한 채로 APB 적용만 잠시 멈추려면 [구역 비활성화](./manage-zone.mdx#managingZones) 또는 [APB 일시 비활성화](./manage-zone.mdx#zonePause) 기능을 사용하세요.
+* 구역 설정 시 <Cmd sid='apb.zoneForm.mode.label' product='air' />를 <Cmd sid='apb.zoneForm.mode.none' product='air' />으로 변경하면 해당 구역에 저장되어 있던 세부 설정(<Cmd sid='apb.zoneForm.mode.label' product='air' />, <Cmd sid='apb.zoneForm.timer.sectionLabel' product='air' />, <Cmd sid='apb.zoneForm.exceptions.label' product='air' />)이 모두 초기화됩니다. 설정을 유지한 채로 APB 적용만 잠시 멈추려면 [구역 비활성화](#enableDisableZone) 또는 [APB 일시 비활성화](#zonePause) 기능을 사용하세요.
 
 :::
 
 </Step>
 </Steps>
 
-
-## 구역 관리하기 {/* #managingZones */}
-
-### 구역 활성화/비활성화
+## 구역 활성화/비활성화 {/* #enableDisableZone */}
 
 구역을 활성화하거나 비활성화할 수 있습니다. 설정 값은 제거되지 않고 그대로 유지됩니다. 구역을 비활성화하면 해당 구역의 내부 인원 수가 0으로 초기화됩니다. 다만 이미 발생한 APB 위반은 그대로 남아 있으며, <DocLink docId='platform/biostar_air/manage-violation' /> 메뉴에서 해제할 수 있습니다.
 
@@ -420,7 +411,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 </TabItem>
 </Tabs>
 
-### 구역 수정
+## 구역 수정
 
 이미 설정된 구역의 상세 정보/APB/예외 설정 등을 수정할 수 있습니다.
 
@@ -468,7 +459,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 :::
 
-### <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* #zonePause */}
+## <Cmd sid='zones_pause_btn' product='air' className='normal' /> {/* #zonePause */}
 
 사이트 전체의 APB 적용을 잠시 멈춰야 할 때(예: 특별 행사, 대규모 이동이 예상되는 시간대) 목록 상단의 <Cmd sid='zones_pause_btn' product='air' />(<IcAirPause />) 버튼을 사용하세요. 경계 구역을 포함한 모든 구역의 APB 적용이 중지되며, 재개하면 각 구역은 일시 비활성화 전의 활성화/비활성화 상태로 복원됩니다. 일시 비활성화 중에는 구역 목록이 잠겨 다른 변경을 할 수 없습니다.
 
@@ -536,7 +527,7 @@ BioStar Air의 **구역**(Zone) 기능을 사용하면 출입문을 논리적인
 
 * <Cmd sid='apb.zoneList.perimetterZone' product='air' />은 삭제할 수 없습니다.
 
-* 선택한 구역의 APB 내부/외부 상태만 삭제되며, 구역에 할당된 출입문과 장치는 삭제되지 않습니다. 삭제 작업은 취소할 수 없습니다.
+* 선택한 구역만 삭제되며, 구역에 할당된 출입문과 장치는 삭제되지 않습니다. 삭제 작업은 취소할 수 없습니다.
 
 * 구역에 할당된 장치가 오프라인이거나, 동기화 중, 펌웨어 업그레이드 중이면 구역을 삭제할 수 없습니다. 장치가 다시 연결될 때까지 기다리거나, 구역에서 해당 장치를 먼저 제거한 후 다시 시도하세요.
 
