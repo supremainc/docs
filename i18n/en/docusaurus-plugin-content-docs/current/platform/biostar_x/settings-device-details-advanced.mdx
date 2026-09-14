@@ -68,9 +68,9 @@ This feature is available only on **CE products** that support an LCD user inter
 
 :::
 
-## 2-step authentication settings <Badge only>CE products</Badge> {/* #two-step-authentication */}
+## Two-step authentication setting {/* #two-step-authentication */}
 
-CE products with upgraded firmware do not include the <Cmd sid='device.masterAdmin.title' product='2' /> setting. The <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option enhances administrator permissions and improves device security.
+After upgrading firmware on a global device that does not support <Cmd sid='device.masterAdmin.title' product='2' />, enable the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> option. This enhances full administrator permissions and improves security.
 
 <Image src='/img/biostarx-setting-device-adv-two-step.png' />
 
@@ -228,7 +228,7 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
 
 <summary>FaceLite, BioLite N2, BioStation L2, BioStation 2</summary>
 
-* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click the <Cmd sid='device.updateResource' product='2' /> button to send language resource files to the device.
+* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click <Cmd sid='device.updateResource' product='2' /> to send language resource files to the device.
 
 * <Cmd sid='device.info.volume' product='2' />: Set the default sound level produced by the device.
 
@@ -265,6 +265,7 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
    :::note
 
    To reflect changes in real time on the device, click <Cmd sid='button.update' product='2' />.
+
    :::
 
 </details>
@@ -273,7 +274,7 @@ The <Cmd sid='device.info.keypadBackLight' product='2' /> option is available on
 
 <summary>BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, FaceStation 2, BioStation A2</summary>
 
-* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click the <Cmd sid='device.updateResource' product='2' /> button to send language resource files to the device.
+* <Cmd sid='device.info.language' product='2' />: Set the language to be displayed on the device's screen. Click <Cmd sid='device.updateResource' product='2' /> to send language resource files to the device.
 
 * <Cmd sid='device.info.volume' product='2' />: Set the default sound level produced by the device.
 
@@ -367,31 +368,29 @@ Set the device to play specific content on the idle screen.
 
 4. Go to the <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.displaySound' product='2' /> section.
 
-5. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.defaultIdleScreen' product='2' />: Set it to <Cmd sid='device.idle.video.screenSaver' product='2' />.
-
-6. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' /> option: Set it to <Cmd sid='common.use' product='2' />.
+5. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' /> option: Set it to <Cmd sid='common.use' product='2' />.
 
    <Image src='/img/biostarx-settings-device-playback-playVideo-enable.png' />
 
-7. Click <Cmd sid='device.idle.video.add' product='2' />.
+6. Click <Cmd sid='device.idle.video.add' product='2' />.
 
-8. Select the video saved locally.
+7. Select the video saved locally.
 
-9. After the video uploads, set <Cmd sid='device.info.videoSchedule' product='2' /> and <Cmd sid='device.info.videoVolume' product='2' />.
+8. After the video uploads, set <Cmd sid='device.info.videoSchedule' product='2' /> and <Cmd sid='device.info.videoVolume' product='2' />.
 
    <Image src='/img/biostarx-settings-device-playback-playVideo-upload.png' />
 
-10. Click <Cmd sid='device.idle.video.transfer' product='2' /> to transfer the uploaded video to the device.
+9. Click <Cmd sid='device.idle.video.transfer' product='2' /> to transfer the uploaded video to the device.
 
-11. The update progress pop-up appears. Do not close the page until the upload completes.
+10. The update progress pop-up appears. Do not close the page until the upload completes.
 
     <Image src='/img/biostarx-settings-device-playback-playVideo-upload-progress.png' />
 
-12. When the upload complete message appears, click <Cmd sid='button.ok' product='2' />.
+11. When the upload complete message appears, click <Cmd sid='button.ok' product='2' />.
 
     <Image src='/img/biostarx-settings-device-playback-playVideo-upload-complete.png' />
 
-13. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the changes.
+12. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the changes.
 
 :::info
 
@@ -438,12 +437,6 @@ If the system fails to transfer a video to the device, a pop-up appears with the
 <Image src='/img/biostarx-settings-device-playback-playVideo-fail-transfer.png' />
 
 The main reasons for transfer failure are as follows.
-
-* The selected device does not support idle screen video playback
-
-* When the device is a slave connected via RS-485
-
-* When the video codec is not H.264 or conversion fails
 
 * When an error occurs while processing the device response
 

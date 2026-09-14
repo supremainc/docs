@@ -103,7 +103,7 @@ To save your edits or deletions, click <Cmd sid='button.apply' product='2' /> at
 
 * If <Cmd sid='setting.personalData.exceptionGroup' /> includes user groups outside the administrator’s permission scope, the list still shows them. The system disables editing and deletion.
 
-* Group settings override the default settings.
+* <Cmd sid='setting.personalData.exceptionGroup' /> takes precedence over <Cmd sid='setting.personalData.basicSettings' />.
 
 * Deleting <Cmd sid='setting.personalData.exceptionGroup' /> does not restore users already deactivated. After deletion, the system switches to another applicable setting (such as <Cmd sid='setting.personalData.basicSettings' />).
 
@@ -131,7 +131,7 @@ This feature sends an email notice to specified recipients before users are auto
 
 * Set up SMTP settings to use pre-notification emails. For more information, see <DocLink docId='platform/biostar_x/settings-email-setting' />.
 
-* Set <Cmd sid='setting.personalData.preNotificationDeadline' /> shorter than the no-access period in <Cmd sid='setting.personalData.basicSettings' /> and every <Cmd sid='setting.personalData.exceptionGroup' />.
+* Set <Cmd sid='setting.personalData.preNotificationDeadline' /> shorter than the inactive period in <Cmd sid='setting.personalData.basicSettings' /> and every <Cmd sid='setting.personalData.exceptionGroup' />.
 
 * Add email addresses not in **BioStar X** as recipients.
 

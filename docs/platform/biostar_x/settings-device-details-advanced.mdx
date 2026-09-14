@@ -67,9 +67,9 @@ keywords: [장치, 고급]
 
 :::
 
-## 2단계 인증 설정 <Badge only>CE향 제품</Badge> {/* #two-step-authentication */} 
+## 2단계 인증 설정 {/* #two-step-authentication */} 
 
-펌웨어를 업그레이드한 CE향 장치는 <Cmd sid='device.masterAdmin.title' product='2' /> 설정을 제공하지 않지만, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
+<Cmd sid='device.masterAdmin.title' product='2' />를 지원하지 않는 글로벌 장치에서 펌웨어를 업그레이드한 경우, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다.
 
 <Image src='/img/biostarx-setting-device-adv-two-step.png' />
 
@@ -370,8 +370,6 @@ keywords: [장치, 고급]
 
 1. <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.displaySound' product='2' /> 섹션으로 이동하세요.
 
-1. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.defaultIdleScreen' product='2' />을 <Cmd sid='device.idle.video.screenSaver' product='2' />로 설정하세요.
-
 1. <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하세요.
 
    <Image src='/img/biostarx-settings-device-playback-playVideo-enable.png' />
@@ -441,12 +439,6 @@ keywords: [장치, 고급]
 <Image src='/img/biostarx-settings-device-playback-playVideo-fail-transfer.png' />
 
 대표적인 전송 실패 사유는 다음과 같습니다.
-
-* 선택한 장치가 대기 화면 동영상 재생 기능을 지원하지 않을 때
-
-* 장치가 RS-485로 연결된 슬레이브일 때
-
-* 동영상 코덱이 H.264가 아니거나 변환에 실패했을 때
 
 * 장치의 응답을 처리하는 중 오류가 발생했을 때
 
