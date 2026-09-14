@@ -59,6 +59,11 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "XPQ2-DB, XPQ2-DPB"
+        },
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
@@ -102,11 +107,26 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": {
-            "ko": "-20 °C ~ 60 °C",
-            "en": "-20 °C ~ 60 °C",
-            "es": "De -20 °C a 60 °C",
-            "ja": "-20 °C ~ 60 °C"
+          "type": "model",
+          "items": {
+            "model1": {
+               "label": "XPQ2-DB",
+               "value": {
+                  "ko": "-20 °C ~ 60 °C",
+                  "en": "-20 °C ~ 60 °C",
+                  "es": "De -20 °C a 60 °C",
+                  "ja": "-20 °C ~ 60 °C"
+               }
+            },
+            "model2": {
+               "label": "XPQ2-DPB",
+               "value": {
+                  "ko": [ "DC 전원: -20 °C ~ 60 °C", "PoE 전원: -20 °C ~ 50 °C" ],
+                  "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ],
+                  "es": [ "Energía DC: De -20 °C a 60 °C", "Energía PoE: De -20 °C a 50 °C" ],
+                  "ja": [ "DC 電源：-20 °C ~ 60 °C", "PoE 電源：-20 °C ~ 50 °C" ]
+               }
+            }
           }
         },
         "storage_temp": {
@@ -174,7 +194,7 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": "213 g"
+              "value": ["XPQ2-DB: 208 g", "XPQ2-DPB: 213 g"]
             },
             "model2": {
               "label": "브래킷",
@@ -317,6 +337,26 @@
             "ja": "1 リレー"
           }
         },
+        "poe": {
+          "label": "PoE",
+          "label_id": "specs.interface.poe",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "XPQ2-DB",
+              "value": false
+            },
+            "model2": {
+              "label": "XPQ2-DPB",
+              "value": {
+                "ko": "지원 (IEEE 802.3af 호환)",
+                "en": "Supported (IEEE 802.3af compliant)",
+                "es": "Compatible (compatible con IEEE 802.3af)",
+                "ja": "対応（IEEE 802.3af 互換）"
+              }
+            }
+          }
+        },
         "usb": {
           "label": "USB",
           "label_id": "specs.interface.usb",
@@ -389,6 +429,16 @@
                 "en": [ "Reader: Max. 0.25 A", "Lock: Max. 0.6 A" ],
                 "es": [ "Lector: Máx. 0.25 A", "Bloqueo: Máx. 0.6 A" ],
                 "ja": [ "リーダー：最大 0.25 A", "ロック：最大 0.6 A" ]
+              }
+            },
+            "poe12vout": {
+              "label": "PoE (12V 출력)",
+              "label_id": "specs.power.poe12vout",
+              "value": {
+                "ko": [ "리더: 최대 0.5 A" ],
+                "en": [ "Reader: Max. 0.5 A" ],
+                "es": [ "Lector: Máx. 0.5 A" ],
+                "ja": [ "リーダー：最大 0.5 A" ]
               }
             }
           }
