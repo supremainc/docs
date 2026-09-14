@@ -1,73 +1,120 @@
 ---
 id: managing-roll-call-fire-muster
-title: Llamada Roll
-description: Aprenda a configurar zonas de reunión, iniciar listas de asistencia, supervisar el estado de seguridad de los usuarios y generar informes históricos de listas de asistencia en BioStar Air.
-keywords:
-  - Llamada Roll
-  - Llamada Roll
-  - Zona de alarma contra incendios
-  - BioStar Air
+title: Pase de lista
+description: Aprenda a establecer puntos de reunión, iniciar Roll Call según la información de Presencia, supervisar el estado de seguridad de los usuarios y revisar el historial de Roll Call en BioStar Air.
 ---
 
-Con las funciones de lista de asistencia y guía de evacuación contra incendios de BioStar Air, las organizaciones pueden comprobar qué empleados han evacuado el edificio de forma segura durante una emergencia. Al configurar zonas de reunión y usar la aplicación móvil de BioStar Air, los administradores pueden contabilizar rápidamente a todos los usuarios y generar informes históricos de las listas de asistencia.
+Con la feature Roll Call de BioStar Air, las organizaciones pueden supervisar qué usuarios evacuaron de forma segura durante una emergencia. Configure puntos de reunión y ejecute un Roll Call en la app móvil de BioStar Air. Los administradores identifican rápidamente a los usuarios en el sitio según la información de Presencia y confirman su seguridad.
+
+:::note
+
+**Listas de reunión precisas basadas en Presencia**
+
+* Roll Call no asume que todos los usuarios están en el sitio. Use la información de Presencia para incluir solo a los usuarios confirmados en el sitio al momento de la emergencia como objetivos de Roll Call.
+
+* Asigne grupos de usuarios a ciertos puntos de reunión y designe administradores dedicados. Los responsables de seguridad se enfocan en los usuarios asignados.
+
+* La app Suprema Pass guía a los usuarios con credenciales móviles en el sitio al punto de reunión correcto y advierte a los usuarios fuera del sitio que no ingresen a la instalación durante una emergencia.
+
+:::
 
 :::info
 
-* **Asegúrese de que las zonas de reunión estén asignadas correctamente a los grupos de usuarios** para evitar confusiones.
+* Asegúrese de que los puntos de reunión estén asignados correctamente a los grupos de usuarios para evitar confusiones.
 
-* **Pruebe regularmente** la función de lista de asistencia para garantizar un funcionamiento fluido durante una emergencia real.
+* Pruebe regularmente la función de Roll Call para asegurar un funcionamiento sin problemas durante una emergencia real.
 
-* Utilice los **eventos de acceso** para verificar la asistencia y cumplir con las normas de seguridad.
+* Utilice los eventos de acceso para verificar la asistencia y cumplir con las normas de seguridad.
 
 :::
 
 :::tip
 
-Vea el siguiente video para obtener una guía sobre la lista de asistencia y las zonas de reunión.
+Vea el siguiente video para obtener una guía sobre el Roll Call y los puntos de reunión.
 
 <YouTube className='fit--content' videoId="F0dnR7VmfAo" />
 
 :::
 
-## Configurar zonas de reunión {/* #settingMusterPoints */}
+## Antes de comenzar {/* #beforeStart */}
 
-Una zona de reunión es un lugar designado donde los usuarios autentican sus credenciales para indicar que están seguros durante una emergencia.
+* La precisión de Roll Call depende de la detección de Presencia. Si configura <Cmd sid='apb.zoneList.perimetterZone' product='air' /> de forma incorrecta, la lista de Roll Call puede diferir del conteo real de personas en el sitio.
 
-1. Haga clic en <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> en la barra lateral izquierda.
+* Las notificaciones móviles requieren la app Suprema Pass. Los usuarios que usan solo tarjetas RF o credenciales biométricas no reciben notificaciones móviles de Roll Call.
+
+* Los usuarios en el sitio sin un punto de reunión asignado podrían no recibir indicaciones.
+
+* Si configura el ajuste <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> de forma incorrecta, la pantalla de Roll Call esperada podría no aparecer para los administradores.
+
+* Si un dispositivo queda sin conexión o la entrega de eventos se retrasa, esto puede afectar la información de Presencia y la precisión de Roll Call.
+
+* Los usuarios inactivos no reciben notificaciones de Roll Call.
+
+:::info
+
+Los usuarios y administradores que usan versiones anteriores de la app Suprema Pass o BioStar Air pueden seguir usando el método de Roll Call heredado. Actualice a la versión más reciente para usar las nuevas características.
+
+:::
+
+## Configurar puntos de reunión {/* #settingMusterPoints */}
+
+Un punto de reunión es un lugar designado donde los usuarios autentican sus credenciales para indicar que están seguros durante una emergencia.
+
+1. Haga clic en <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> en la barra lateral izquierda.
 
 2. Haga clic en <Cmd sid="add_muster_point_btn" product="air" /> en la esquina superior derecha de la pantalla.
 
    <Image src='/img/air/bsair-adv-rollcall.png' />
 
-3. Ingrese un nombre y una descripción opcional cuando aparezca el panel <Cmd sid="add_muster_point_title" product="air" />.
+3. Ingrese el nombre del punto de reunión y la descripción (opcional) cuando aparezca el panel <Cmd sid='add_muster_point_title' product='air' />.
 
    <Image src='/img/air/bsair-adv-rollcall-add.png' />
 
-4. En la sección <Cmd sid="add_muster_point_devices_title" product="air" />, agregue el grupo de dispositivos o el dispositivo que desea asignar a la zona de reunión. Seleccione la casilla del grupo de dispositivos o del dispositivo y haga clic en <Cmd sid="add_btn" product="air" />.
+4. En la sección <Cmd sid="add_muster_point_devices_title" product="air" />, agregue el grupo de dispositivos o el dispositivo para asignarlo al punto de reunión. Seleccione la casilla del grupo de dispositivos o del dispositivo y haga clic en <Cmd sid="add_btn" product="air" />.
 
    <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
 
-5. En la sección <Cmd sid="add_muster_point_user_groups_title" product="air" />, seleccione los grupos de usuarios que deben reportarse al llegar a la zona de reunión. Seleccione la casilla del grupo de usuarios y haga clic en <Cmd sid="add_btn" product="air" />.
+5. En la sección <Cmd sid="add_muster_point_user_groups_title" product="air" />, seleccione los grupos de usuarios que deben reportar cuando llegan al punto de reunión.
 
    <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
 
-6. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar la configuración de la zona de reunión.
+   * Seleccione la casilla del grupo y haga clic en <Cmd sid='add_btn' product='air' />.
+
+   * <Cmd sid='fm.musterForm.allUsers.name' product='air' />: Asigna todos los usuarios activos del sitio de BioStar Air a un punto de reunión seleccionado. Ejecutar un Roll Call no supone que todos los usuarios activos estén en el sitio. Se dirige solo a los usuarios con estado en el sitio confirmado según la detección de presencia. Habilitar esta opción desactiva la selección de grupos de usuarios individuales. Primero deshabilite esta opción para seleccionar solo ciertos grupos de usuarios.
+
+6. En la sección <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />, seleccione la casilla del administrador que ejecutará el Roll Call en la ubicación de reunión y haga clic en <Cmd sid='add_btn' product='air' />.
+
+   <Image src='/img/air/bsair-adv-rollcall-add-assign-admin.png' />
+
+   :::note
+
+   * Si selecciona <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />, solo los administradores seleccionados pueden iniciar el Roll Call. Durante un Roll Call en curso, solo pueden ver y administrar a los usuarios de sus puntos de reunión asignados.
+
+   * Si no asigna <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />, los usuarios con el rol <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' /> o <Cmd sid='operator_role' product='air' /> pueden iniciar el Roll Call.
+
+   * Un administrador no se puede asignar como administrador designado para varios puntos de reunión al mismo tiempo.
+
+   :::
+
+7. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar los ajustes del punto de reunión.
 
 :::note
 
-**Mejores prácticas para las zonas de reunión**
+**Mejores prácticas para los puntos de reunión**
 
-* Haga que el nombre y la descripción de la zona de reunión sean claros y fáciles de entender. Por ejemplo, use nombres como "Estacionamiento Este" o "Vestíbulo del Edificio Principal".
+* Haga que el nombre y la descripción del punto de reunión sean claros y fáciles de entender. Por ejemplo, use nombres como "Estacionamiento Este" o "Vestíbulo del Edificio Principal".
 
-* Al añadir varios dispositivos a una zona de reunión, seleccione un grupo de dispositivos en lugar de dispositivos individuales. Los grupos de dispositivos le permiten gestionar varios dispositivos a la vez. Para más información sobre la gestión de grupos de dispositivos, consulte <DocLink docId='platform/biostar_air/manage-device-group' />.
+* Al agregar varios dispositivos a un punto de reunión, seleccione un grupo de dispositivos en lugar de dispositivos individuales. Los grupos de dispositivos permiten administrar varios dispositivos a la vez. Para obtener más información sobre la administración de grupos de dispositivos, consulte <DocLink docId='platform/biostar_air/manage-device-group' />.
 
-* En un campus grande con varios edificios, asigne **solo a los usuarios relevantes** a una zona de reunión específica.
+* En un campus grande con varios edificios, asigne **solo a los usuarios relevantes** a un punto de reunión específico.
 
 * Los dispositivos de control de acceso cableados admiten tanto la autenticación móvil como por tarjeta, mientras que Airfob Tag y Airfob Patch admiten solo credenciales móviles.
 
 :::
 
-## Iniciar lista de asistencia en la aplicación móvil {/* #startingRollcallonMobile */}
+## Iniciar Roll Call {/* #startingRollcallonMobile */}
+
+### Iniciar en la aplicación móvil
 
 Inicie una lista de asistencia y verifique la asistencia en la aplicación móvil BioStar Air.
 
@@ -77,9 +124,54 @@ Inicie una lista de asistencia y verifique la asistencia en la aplicación móvi
 
 2. Toque <Cmd en="All Menu">All Menu</Cmd> → <Cmd sid="roll_call_submenu" product="air" /> en la parte inferior de la pantalla.
 
-3. Toque <Cmd en="Roll Call Start">Roll Call Start</Cmd>.
+3. Toca <Cmd en='Start Roll Call'>Start Roll Call</Cmd>.
 
-4. Se muestra una lista con todos los usuarios que deben reunirse en el punto de encuentro.
+4. Seleccione el punto de reunión para iniciar Roll Call y, luego, toque <Cmd en='Continue'>Continue</Cmd>.
+
+   Para ejecutar Roll Call en todos los puntos de reunión, seleccione <Cmd en='Site-wide'>Site-wide</Cmd> y, luego, toque <Cmd en='Continue'>Continue</Cmd>.
+
+5. Seleccione un punto de reunión en la lista de Roll Call en curso.
+
+6. Se muestra una lista con todos los usuarios que deben reunirse en el punto de encuentro.
+
+:::note
+
+**Diferencias por rol de administrador**
+
+* Los usuarios <Cmd sid='master_role' product='air' />, <Cmd sid='admin_role' product='air' /> y <Cmd sid='operator_role' product='air' /> pueden ver la lista de Roll Call. Esto aplica cuando no están asignados como <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> para el punto de reunión. Inician nuevos Roll Calls en el orden indicado arriba.
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> recibe una notificación cuando inicia el Roll Call en el punto de reunión asignado. Toque la notificación para ir directamente a la pantalla de progreso del punto de reunión asignado.
+
+:::
+
+### Explorar la pantalla de Roll Call activa {/* #activeRollCallScreen */}
+
+Cuando inicia el Roll Call, aparece el estado de progreso con el nombre del punto de reunión.
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-mobile-rollcall-start-screen.png' className='none' />
+
+</Column>
+<Column className='padding--l20'>
+
+* En la parte superior de la pantalla, revisa el número de <Cmd en='Unaccounted Users'>Unaccounted Users</Cmd> y <Cmd en='All Activated Users'>All Activated Users</Cmd>.
+
+   Debajo del conteo, aparecen **personas marcadas como seguras**/**total de personas** y la **hora de inicio del Roll Call**. Toca el botón de actualizar (<IcAirRef />) para revisar el estado más reciente.
+
+* Cambia el rango de usuarios que se muestra en la lista.
+
+  * <Cmd en='On Site'>On Site</Cmd>: Muestra solo a los usuarios cuyo estado de Presencia es En el sitio.
+
+  * <Cmd en='All assigned'>All assigned</Cmd>: Muestra todos los usuarios asignados a esta zona de reunión, sin importar el estado de presencia. Los usuarios marcados como Seguro se mueven al final de la lista.
+
+* Usa la búsqueda para encontrar a un usuario específico.
+
+* A la derecha de cada usuario en la lista, revisa el estado de Presencia (<Cmd sid='presence_on_site' product='air' /> / <Cmd sid='presence_off_site' product='air' />).
+
+</Column>
+</Columns>
 
 ### Marcar a los usuarios como seguros {/* #marking-users-safe */}
 
@@ -97,10 +189,6 @@ Los administradores o los usuarios pueden marcarse como seguros de las siguiente
 
 * Los usuarios acercan su credencial a un dispositivo en la zona de reunión asignada.
 
-* Filtrar usuarios por **grupo de reunión**.
-
-* Usa la búsqueda para encontrar a una persona concreta.
-
 </Column>
 </Columns>
 
@@ -116,20 +204,36 @@ Los administradores o los usuarios pueden marcarse como seguros de las siguiente
 
 Completa el pase de lista cuando se cumpla cualquiera de las siguientes condiciones.
 
-* Todos los usuarios han llegado al punto de encuentro y han sido marcados como seguros
+* Cuando aparezca la ventana del mensaje de finalización porque el número de usuarios <Cmd sid='presence_on_site' product='air' className='normal' /> —es decir, <Cmd en='Unaccounted Users'>Unaccounted Users</Cmd>— incluidos en el alcance del Roll Call sea 0, toca el botón <Cmd en='Yes'>Yes</Cmd>
 
-* El administrador marca manualmente a todos los usuarios como seguros
+* Cuando el administrador marque manualmente a todos los usuarios como seguros y toque el botón <Cmd en='Finish Roll Call'>Finish Roll Call</Cmd>
 
 * Han pasado 24 horas
 
 </Column>
 </Columns>
 
+:::note
+
+**Finalizar alcance por rol**
+
+* El maestro del sitio puede finalizar los Roll Calls uno por uno, finalizar varios a la vez, o finalizar todos los Roll Calls en curso del sitio.
+
+* <Cmd sid='admin_role' product='air' className='normal' /> o <Cmd sid='operator_role' product='air' className='normal' /> seleccionados en <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> solo pueden finalizar Roll Calls de las zonas que gestionan.
+
+:::
+
+:::info
+
+Marque manualmente como a salvo a los usuarios con el estado <Cmd sid='presence_off_site' product='air' />. Por ejemplo, marque con anticipación como a salvo a los usuarios que trabajen desde casa ese día.
+
+:::
+
 ## Ver el historial de pases de lista {/* #viewingRollCallHistory */}
 
 Ver el historial de pases de lista anteriores.
 
-1. Haga clic en <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> en la barra lateral izquierda.
+1. Haga clic en <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> en la barra lateral izquierda.
 
 2. Haz clic en la pestaña <Cmd sid="roll_call_history_tab" product="air" />.
 

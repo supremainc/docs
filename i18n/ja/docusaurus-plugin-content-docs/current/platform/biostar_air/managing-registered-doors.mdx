@@ -1,13 +1,10 @@
 ---
 id: managing-registered-doors
 title: 登録済みドアの管理
-description: 登録済みのドアに入退室用デバイスを割り当て、リレーを設定して入退室スケジュールを管理します。 セキュリティ、避難、勤怠管理のために入退室を制御できます。
-keywords:
-  - ドア管理
-  - BioStar Air
+description: 登録済みのドアに入退室デバイスを割り当て、リレーと出入レベルを設定し、個別または複数ドアの入退室スケジュールを管理します。 セキュリティ、避難、勤怠管理（T&A）のために、体系的に入退室を制御できます。
 ---
 
-登録済みのドアに入退室デバイスを割り当て、リレーを構成し、入退室スケジュールを設定します。 セキュリティ、避難、勤怠管理（T&A）のために、体系的に入退室を制御できます。
+登録済みのドアに入退室デバイスを割り当て、リレーと出入レベルを設定し、入退室スケジュールを設定します。 セキュリティ、避難、勤怠管理（T&A）のために、体系的に入退室を制御できます。
 
 :::tip
 
@@ -17,13 +14,13 @@ keywords:
 
 :::
 
-## ドア一覧
+## ドア一覧を確認
 
-ドア一覧では、BioStar Airに登録されたすべてのドアを一目で確認できます。 各ドアの名前、割り当てられたデバイス、グループなどの主要な情報を確認できます。 また、各ドアをクリックして詳細を確認し、設定を変更できます。
-
-<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
+ドア一覧では、BioStar Airに登録されたすべてのドアを一目で確認できます。 各ドアの名前、割り当てられたデバイス、グループ、アクセスレベルなどの主要な情報を確認できます。 また、各ドアをクリックして詳細を確認し、設定を変更できます。
 
 登録済みドアを確認するには、画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックします。
+
+<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
 
 ### ドア情報
 
@@ -37,6 +34,8 @@ keywords:
 
 * <Cmd sid='door_product_column4' product='air' />：ドアに割り当てられたグループ名です。
 
+* <Cmd sid='dcal.web.doors.alColumnHeader' product='air' />：ドアに割り当てられたアクセスレベルです。 アクセスレベルの割り当ての詳細は <DocLink inner='#batchDoorAccessLevels' /> を参照してください。
+
 * <Cmd sid='door_product_column5' product='air' />：ドアに関する説明です。
 
 * <Cmd sid='door_product_column6' product='air' />：ドアに接続されているカメラ情報が表示されます。 <Cmd sid='door_product_column6' product='air' /> 列は <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />で <Cmd sid='site_setting_video_management' product='air' /> 機能を有効にする必要があります。
@@ -45,11 +44,11 @@ keywords:
 
 一覧で1つまたは複数のドアを選択すると、管理者は以下の追加機能を使ってドアを管理できます。
 
-* <IcAirEdit width='24px' height='24px' title='Edit' />：ドア情報を編集したり、割り当てられたデバイスの設定を変更できます。 この機能を使用するには、1つのドアのみを選択する必要があります。 詳細については <DocLink inner='#editingDoors' /> を参照してください。
-
 * <IcAirRef width='24px' height='24px' title='Refresh' />：ドア一覧を更新できます。
 
 * <IcAirRemove width='24px' height='24px' title='Delete' />：一覧で選択したドアを削除します。
+
+* <IcAirLock width='24px' height='24px' title='Set Access' />：一覧で選択したドアの出入レベルを設定できます。 詳しくは <DocLink inner='#batchDoorAccessLevels' /> をご参照ください。
 
 * <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />：ドアの開閉状態のスケジュールを設定します。 詳細については <DocLink docId='platform/biostar_air/managing-door-schedules' /> を参照してください。
 
@@ -113,9 +112,9 @@ BioStar Air ポータルで新しいドアを追加するには、次の手順�
 
 * マスター装置に設定されたXPass 2は、割り当てられた補助装置やモジュールの数に関係なく、1つの出入口にのみ割り当て可能です。
 
-* マスター装置に設定されたXPass 2は最大31台の補助装置を割り当て可能で、補助のSecure Module（SIO2）でリレーを制御する新しい出入口を追加できます。
+* XPass 2をマスター装置に設定すると、最大31台の補助装置を割り当て、補助Secure I/O 2（SIO2）でリレーを制御する新しいドアを追加できます。
 
-* CoreStation 20（CS-20）とSecure Module（SIO2）を使用する出入口は作成できません。
+* CoreStation 20（CS-20）とSecure I/O 2（SIO2）を使用するドアは作成できません。
 
 :::
 
@@ -173,7 +172,11 @@ BioStar Air ポータルで新しいドアを追加するには、次の手順�
 
    * <Cmd sid='add_doors.open_time' product='air' /> でドアが開いた状態を保つ時間を設定します。 （既定値：3秒）
 
-7. 変更を適用するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+7. <Cmd sid='dcal.web.doors.alColumnHeader' product='air' /> セクションで、該当ドアに割り当てる、または解除する出入レベルのチェックボックスをクリックしてください。
+
+   <Image src='/img/air/bsair-door-mng-registered-door-edit-ac-level.png' />
+
+8. 変更を適用するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
 
 :::info
 
@@ -184,6 +187,40 @@ BioStar Air ポータルで新しいドアを追加するには、次の手順�
 * マスター-補助装置構成では、マスター（通常は出口装置）はネットワーク接続が必要で、補助装置はRS-485を介してマスターに接続されます。
 
 * SIO2セキュリティモジュールの構成に関する詳細は、<DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' /> ご参照ください。
+
+:::
+
+## アクセスレベルの一括割り当て {/* #batchDoorAccessLevels */}
+
+複数のドアに同じアクセスレベルを割り当てる場合、ドアを個別に編集せず、一覧でアクセスレベルを一括で割り当て、または解除できます。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 出入レベルを設定するドアのチェックボックスを一つ以上選択してください。
+
+3. ドア一覧の上部にある <IcAirLock width='24px' height='24px' title='Set Access' /> ボタンをクリックしてください。
+
+4. <Cmd sid='set_access_header1' product='air' /> ポップアップメニューが表示されたら、選択したドアに適用する出入レベルのチェックボックスをクリックしてください。
+
+   <Image src='/img/air/bsair-registered-multi-door-set-ac-level.png' />
+
+   必要に応じて、検索フィールドでアクセスレベルを検索してください。
+
+   * <Cmd sid='dcal.web.setAccess.legendNone' product='air' />：選択したドアからこの出入レベルが解除されます。
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />：選択したドアの一部にのみ、この出入レベルが割り当てられています。
+
+   * <Cmd sid='dcal.web.setAccess.legendAll' product='air' />：選択したすべてのドアに、この出入レベルが割り当てられます。
+
+5. 設定を完了するには、<Cmd sid='set_access_done_btn' product='air' /> をクリックしてください。
+
+:::info
+
+* ドアの一つ以上がオフライン状態の場合、変更した出入レベルはデバイスが再接続されたときに適用されます。
+
+* <Cmd sid='full_access' product='air' /> 出入レベルはシステムが自動管理するため、変更できません。
+
+* 設定変更中に一部のドアでエラーが発生し、出入レベルの一部が適用されない場合があります。 出入レベルの変更に失敗したドアは、案内ウィンドウに表示されます。 再試行するには、<Cmd sid='dcal.web.setAccess.partialRetry' product='air' /> ボタンをクリックしてください。
 
 :::
 

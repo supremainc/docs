@@ -1,0 +1,35 @@
+---
+id: site-sso-scim-settings
+title: SSO & SCIM 설정하기
+description: Microsoft Entra ID 및 Okta와 연동하여 BioStar Air 관리자 로그인 보안을 강화하고, 크리덴셜 사용자와 관리자 계정의 생성과 삭제를 자동화하는 SSO 및 SCIM 설정 방법을 안내합니다.
+---
+
+기업 규모와 관계없이 많은 조직이 이미 Microsoft Entra ID나 Okta로 사내 시스템의 접근 권한을 관리하고 있습니다. BioStar Air는 이러한 기존 ID 공급자와 연동하여 관리자 계정과 크리덴셜 사용자를 하나의 소스에서 통합 관리할 수 있도록 지원합니다.
+
+SSO(Single Sign-On)를 적용하면 조직에서 이미 사용 중인 ID 정책을 BioStar Air 관리자 로그인에도 그대로 적용해 보안을 강화할 수 있습니다. SCIM(System for Cross-domain Identity Management)을 통해 사용자 계정을 자동으로 만들고 삭제하면, 권한이 없어진 사용자의 계정을 미처 정지하지 못해 발생하는 보안 사고를 줄일 수 있습니다. 이를 통해 관리자는 사용자, 사용자 그룹, 관리자 계정을 일일이 생성하고 수정하고 삭제하는 반복 작업의 부담을 줄일 수 있습니다.
+
+화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하면 <Cmd>SSO & SCIM</Cmd> 탭에서 로그인 정책과 ID 공급자를 선택하고 설정할 수 있습니다. 기본 설정 방법은 <DocLink docId='platform/biostar_air/site-sso-scim-basic-settings' />를 참고하세요.
+
+ID 공급자로 <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' className='bold' /> 또는 <Cmd sid='sso_scim.additional_features.sso.okta' product='air' className='bold' />를 사용한다면, 아래 문서를 참고해 SSO 연결과 SCIM 프로비저닝을 설정하세요.
+
+BioStar Air는 **Microsoft Entra ID** 또는 **Okta**를 통한 사이트 관리자 및 크리덴셜 사용자 프로비저닝을 지원합니다. 해당 ID 공급자를 사용한다면, 아래 문서를 참조하여 BioStar Air 사이트의 SSO 및 SCIM을 설정하세요.
+
+:::note
+
+**최소 요구 사항**
+
+* BioStar Air SSO & SCIM 라이선스
+
+* Microsoft Entra ID 또는 Okta 유효 구독
+
+* ID 공급자에서 새 애플리케이션을 생성할 수 있는 권한
+
+* ID 공급자에서 그룹을 생성 및 푸시, 할당할 수 있는 권한
+
+* BioStar Air 마스터 권한
+
+:::
+
+---
+
+<DocCardList />

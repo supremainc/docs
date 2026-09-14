@@ -1,0 +1,47 @@
+## グループマッピング {/* #groupMapping */}
+
+SSO と SCIM の接続を完了し、ID プロバイダーのグループを BioStar Air にプッシュした場合、サイト管理者はプッシュされたグループを BioStar Air のグループにマッピングする必要があります。
+
+### マッピングルール {/* #mappingRule */}
+
+* 一つの BioStar Air ユーザーグループに複数の ID プロバイダーグループをマッピングできます。
+
+* BioStar Air ユーザーグループは、マッピングする前に空である必要があります。
+
+* すでにメンバーがいる BioStar Air グループは、マッピング先として選択できません。
+
+* ID プロバイダーグループのマッピングは、サイトマスター管理者のみ管理できます。
+
+* ID プロバイダーグループをマスターロールにマッピングすると、その後ロールを変更できません。
+
+### 管理者/ユーザーグループをマッピングする
+
+1. BioStar Air 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
+
+2. <Cmd>SSO & SCIM</Cmd> タブをクリックします。
+
+3. <Cmd sid='sso_scim.group_mapping.title' product='air' /> セクションに移動し、<Cmd sid='add_btn' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-group-mapping.png' />
+
+4. <Cmd sid='sso_scim.group_mapping.idp_group' product='air' /> で ID プロバイダーグループを選択します。
+
+5. <Cmd sid='sso_scim.group_mapping.mapping_target' product='air' /> で、選択した IdP グループに応じて <Cmd sid='sso_scim.group_mapping.admin_role' product='air' /> または <Cmd sid='sso_scim.group_mapping.local_user_group' product='air' /> を選択します。
+
+6. マッピング先に応じて、管理者ロールを指定するか、ユーザーグループを選択します。
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-group-mapping-add.png' className='none' />
+
+7. マッピングを保存するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+<Cmd sid='sso_scim.group_mapping.title' product='air' /> セクションで、ID プロバイダーグループとマッピングされた BioStar Air グループを確認できます。
+
+<Image src='/img/air/bsair-settings-site-idp-okta-mappinged-groups.png' />
+
+:::info
+
+* 管理者ロールの詳細については <DocLink docId='platform/biostar_air/managing-administrators' /> をご覧ください。
+
+* ユーザーグループの詳細は <DocLink docId='platform/biostar_air/managing-user-groups' /> を参照してください。
+
+:::

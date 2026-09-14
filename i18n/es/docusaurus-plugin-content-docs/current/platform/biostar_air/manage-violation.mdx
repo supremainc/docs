@@ -1,0 +1,207 @@
+---
+id: manage-violation
+title: Revisar Infracciones De APB
+description: Esta guía explica cómo ver y borrar infracciones de anti-passback (APB) en BioStar Air.
+---
+
+En el menú <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zone_violations_menu' product='air' />, revise los usuarios que infringen las reglas de anti-passback (APB) de la zona. Borre las infracciones según sea necesario. Si aún no ha definido zonas ni el modo APB, consulte primero <DocLink docId='platform/biostar_air/manage-zone' />.
+
+## Cuando ocurren infracciones {/* #whenViolationsOccur */}
+
+El sistema registra una infracción de APB cuando un usuario trata de entrar o salir fuera de secuencia, según el modo APB de la zona.
+
+* En zonas con **modo estricto**, una infracción de APB bloquea el acceso y el sistema registra la infracción.
+
+* En zonas con **modo flexible**, el sistema permite el acceso, pero registra una infracción de APB.
+
+* Las reglas de APB no aplican a los usuarios del [grupo de excepción de APB](./manage-zone.mdx#exceptionSet), así que no aparecen en la lista de infracciones.
+
+## Revise la lista de infracciones {/* #violationsOverview */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+En la barra lateral izquierda, haz clic en <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zone_violations_menu' product='air' />.
+
+<Image src='/img/air/bsair-zone-violations-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-zone-violations-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
+
+2. Toque <Cmd sid='site_setting_tab_management' product='air' /> en la parte inferior de la pantalla.
+
+3. Toque la tarjeta <Cmd sid='zone_violations_menu' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+La lista muestra usuarios con infracciones de APB activas. Si no existen infracciones de APB activas, aparece una pantalla de estado vacío en lugar de la lista.
+
+* <Cmd sid='violations_col_user' product='air' />: Usuario con una infracción de APB registrada.
+
+* <Cmd sid='violations_col_apb_violation' product='air' />: Modo (estricto/flexible) en el que ocurrió la infracción de APB.
+
+* <Cmd sid='violations_col_zone' product='air' />: Zona donde ocurrió la infracción de APB.
+
+* <Cmd sid='violations_col_door' product='air' />: Puerta donde ocurrió la infracción de APB.
+
+* <Cmd sid='violations_col_action' product='air' />: Borre una infracción de APB específica.
+
+:::info
+
+Revise las infracciones de APB borradas y el historial de infracciones de APB anteriores en <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />.
+
+:::
+
+## Administre la lista de infracciones {/* #manageViolations */}
+
+Use las características de administración de la parte superior e inferior de la lista para estas tareas.
+
+<Image src='/img/air/bsair-zone-violations-mng-tools.png' />
+
+* <Cmd sid='violations_clear_one_btn' product='air' />: Borre las infracciones de APB del usuario seleccionado en la lista. Para más información, consulte <DocLink inner='#clearingViolations' />.
+
+* <Cmd sid='presence_refresh' product='air' />: Actualiza la lista de inmediato para mostrar el estado más reciente. En <Cmd sid='auto_refresh_btn' product='air' /> en la parte inferior de la lista, seleccione un intervalo de actualización automática (<Cmd sid='auto_refresh_option1' product='air' /> / <Cmd sid='auto_refresh_option2' product='air' /> / <Cmd sid='auto_refresh_option3' product='air' />). El sistema actualiza la lista automáticamente según el intervalo establecido.
+
+* <Cmd sid='violations_search_placeholder' product='air' />: Buscar por nombre de usuario.
+
+### Filtrar la lista de infracciones
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+En el encabezado de la lista, haga clic en el botón <IcAirFilter title='Filter' /> de la columna <Cmd sid='violations_col_apb_violation' product='air' />, <Cmd sid='violations_col_zone' product='air' /> o <Cmd sid='violations_col_door' product='air' /> para filtrar la lista por esa condición.
+
+<Image src='/img/air/bsair-zone-violations-filtering.png' />
+
+:::info
+
+Haga clic en <Cmd sid='new_button_reset' product='air' /> para borrar el filtro.
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toque <Cmd sid='logs_filters_action_btn' product='air' /> en la esquina superior derecha de la lista de infracciones. 
+
+2. Seleccione una condición de filtro en <Cmd sid='violations_col_apb_violation' product='air' />, <Cmd sid='violations_col_zone' product='air' /> o <Cmd sid='violations_col_door' product='air' />.
+
+3. Toque <Cmd sid='save_btn' product='air' /> para filtrar la lista según los criterios seleccionados.
+
+:::info
+
+Toque <Cmd sid='new_button_reset' product='air' /> para borrar el filtro.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## Borrar infracciones {/* #clearingViolations */}
+
+Borrar una infracción de APB inicializa el estado de infracción APB activa del usuario y restablece el acceso normal a la zona.
+
+:::info
+
+* <Cmd sid='violations_clear_one_btn' product='air' /> inicializa solo el estado de infracción APB activa del usuario. El evento que activó la infracción de APB permanece en el registro de eventos.
+
+* Las infracciones de APB existentes permanecen después de deshabilitar la zona. Bórralas de la lista de infracciones.
+
+* Los usuarios en un grupo de excepciones de APB no aparecen en esta lista, pero siguen incluidos en el conteo de presencia de la zona.
+
+:::
+
+### Borrar una infracción de un usuario específico
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. En la lista, haga clic en <Cmd sid='violations_clear_one_btn' product='air' /> en la columna <Cmd sid='violations_col_action' product='air' /> para borrar la infracción de APB del usuario seleccionado. 
+
+   <Image src='/img/air/bsair-zone-violations-clear-apb.png' />
+
+2. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='violations_clear_one_btn' product='air' />.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-clear-apb.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. En la lista, toque <IcAirClear width='20px' height='20px' title='Clear Violation' /> en la fila del usuario para borrar la infracción de APB.
+
+2. Cuando aparezca el mensaje de confirmación, toque <Cmd sid='violations_clear_one_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+### Borrar infracciones de varios usuarios
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Seleccione las casillas junto a los usuarios con infracciones de APB para borrarlas. Selecciona uno o más usuarios.
+
+2. Haz clic en <Cmd sid='violations_clear_selected_btn' product='air' /> en la parte superior de la lista.
+
+   <Image src='/img/air/bsair-zone-violations-clear-apb-multi-users.png' />
+
+3. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='violations_clear_selected_btn' product='air' />.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-zone-violations-clear-apb-multi-users.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Mantenga presionado un usuario en la lista.
+
+2. Seleccione los usuarios cuyas infracciones va a borrar. Selecciona uno o más usuarios.
+
+3. Toque <Cmd sid='violations_clear_selected_btn' product='air' /> en la parte inferior de la pantalla.
+
+4. Cuando aparezca el mensaje de confirmación, toque <Cmd sid='violations_clear_selected_btn' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>

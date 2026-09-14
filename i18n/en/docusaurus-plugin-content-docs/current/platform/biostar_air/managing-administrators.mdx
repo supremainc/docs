@@ -54,7 +54,7 @@ The <Cmd sid='title_techincians_settings' product='air' /> menu shows a list of 
 
 * <Cmd sid='column_admin_account_status' product='air' />: The lock status of the administrator account. You can lock or unlock an account. For more information, see <DocLink inner='#deactiveAdmin' />.
 
-### Invitation Status {/* #invitationStatus */}
+### Invitation status {/* #invitationStatus */}
 
 The administrator list shows each administrator's invitation status.
 
@@ -142,7 +142,7 @@ Each administrator role has different permissions across BioStar Air. <Cmd sid="
 
 * This role is typically recommended for IT staff responsible for system management.
 
-#### <Cmd sid="master_role" product="air" className="normal" /> (Highest Level) {/* #master */}
+#### <Cmd sid='master_role' product='air' className='normal' /> (Highest Level) {/* #master */}
 
 * Has **full access** to all settings and features.
 
@@ -269,6 +269,26 @@ Administrators can change the roles of administrators at a lower level. Adjust r
 :::note
 
 Only <Cmd sid="master_role" product="air" className="bold" /> administrators can assign or modify the <Cmd sid="master_role" product="air" className="bold" /> role for other administrators.
+
+:::
+
+## Release override status
+
+Manually changing a SCIM-synced administrator’s permissions or lock status locally sets <Cmd sid='sso_scim.identity_source.override' product='air' />. Cancel local changes and restore SCIM management.
+
+1. In the administrators list, click the checkbox next to the administrator whose status is <Cmd sid='sso_scim.identity_source.override' product='air' />. You can select 1 or more administrators.
+
+2. Click <IcAirOver title='Release Override' /> in the upper left of the screen.
+
+   <Image src='/img/air/bsair-settings-admin-relase-override.png' />
+
+3. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+The system clears the <Cmd sid='sso_scim.identity_source.override' product='air' /> status for the selected administrator account and changes it to <Cmd sid='sso_scim.identity_source.scim_synced' product='air' />.
+
+:::info
+
+For more information on SSO & SCIM settings, see <DocLink docId='platform/biostar_air/site-sso-scim-settings' />.
 
 :::
 

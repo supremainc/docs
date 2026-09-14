@@ -1,0 +1,73 @@
+---
+id: site-sso-scim-basic-settings
+title: SSO と SCIM を有効にする
+description: BioStar Air サイトのログインポリシーを変更し、SSO と SCIM のサポートを有効または無効にする方法を説明します。
+---
+
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。 <Cmd>SSO & SCIM</Cmd> タブでログインポリシーと ID プロバイダーを選択し、設定または解除してください。
+
+<Image src='/img/air/bsair-settings-site-setting-sso-scim.png' />
+
+:::caution
+
+IDプロバイダーの設定を変更する前に、ローカルログイン可能なマスター管理者アカウントを少なくとも一つは維持してください。 そうしないと、ID プロバイダー連携に問題が発生した場合、サイトにアクセスできないロック状態になることがあります。
+
+:::
+
+:::info
+
+* SSO および SCIM の設定は、サイトのマスター管理者のみが管理できます。
+
+* クレデンシャルユーザーは BioStar Air にログインしないため、SSO および SCIM の設定の影響を受けません。
+
+* [パートナーポータル](https://partner.biostarair.com/)は、SSO および SCIM の設定の適用範囲に含まれません。
+
+:::
+
+## ログインポリシー
+
+<Cmd sid='sso_scim.security.login_policy.title' product='air' />では BioStar Air 管理者のログイン方法を設定できます。
+
+* **SSO**：管理者は ID プロバイダーを通じて認証します。
+
+* **ローカル**：管理者は BioStar Air に設定したメールアドレスとパスワードで認証します。
+
+次の三つのオプションのいずれかを選択してください。
+
+* <Cmd sid='sso_scim.security.login_policy.sso_local' product='air' />：SSO ログインとローカルログインの両方を使用できます。
+
+* <Cmd sid='sso_scim.security.login_policy.local_only' product='air' />：ローカルログインのみ使用できます。
+
+* <Cmd sid='sso_scim.security.login_policy.sso_only' product='air' />：SSO ログインのみ使用できます。
+
+## ID プロバイダー連携の設定
+
+<Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' />では BioStar Air 管理者アカウントと連携する外部 ID プロバイダーを選択できます。 サイトでは同時に有効化できるIDプロバイダーは一つだけです。
+
+* <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' />
+
+* <Cmd sid='sso_scim.additional_features.sso.microsoft_entra_id' product='air' />: <DocLink docId='platform/biostar_air/site-sso-scim-entra-id-setup' />
+
+* <Cmd sid='sso_scim.additional_features.sso.okta' product='air' />: <DocLink docId='platform/biostar_air/site-sso-scim-okta-setup' />
+
+:::info
+
+接続済みの ID プロバイダーを別のプロバイダーに変更する場合は、先に <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' /> に設定して既存の接続を解除し、次に新しい ID プロバイダーを選択してください。 接続を解除しないと、別の ID プロバイダーへ直接切り替えられません。
+
+:::
+
+## SSO & SCIM 設定の解除
+
+ID プロバイダー連携設定を解除してください。
+
+1. <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' /> セクションで <Cmd sid='sso_scim.additional_features.sso.not_use' product='air' /> を選択してください。
+
+2. 警告ポップアップのメッセージを確認してください。
+
+   <Image src='/img/air/bsair-settings-site-idp-not-use.png' />
+
+3. 設定変更による影響範囲を確認し、チェックボックスをクリックしてください。
+
+   <Image src='/img/air/bsair-settings-site-idp-not-use-checked.png' />
+
+4. <Cmd sid='sso_scim.additional_features.sso.caution_dialog.confirm' product='air' /> ボタンをクリックします。

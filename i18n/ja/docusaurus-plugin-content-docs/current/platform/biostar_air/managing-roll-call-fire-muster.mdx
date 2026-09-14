@@ -1,21 +1,28 @@
 ---
 id: managing-roll-call-fire-muster
 title: ロールコール
-description: BioStar Airで集結地点の設定、ロールコールの開始、ユーザーの安全状態の追跡、ロールコール履歴レポートの作成方法を案内します。
-keywords:
-  - ロールコール
-  - ロールコール
-  - 火災集結地点
-  - BioStar Air
+description: BioStar Airで集結ゾーンを設定し、在席情報に基づいて点呼を開始してユーザーの安全状態を追跡し、点呼履歴を確認する方法を案内します。
 ---
 
-BioStar Airのロールコールおよび火災避難案内機能により、緊急時にどの従業員が安全に建物から避難したかを追跡できます。 集結地点を設定し、BioStar Airのモバイルアプリを使用すると、管理者はすべてのユーザーを迅速に把握し、ロールコール履歴レポートを作成できます。
+BioStar Airの点呼（Roll Call）機能により、組織は緊急時にどのユーザーが安全に避難したかを追跡できます。 集結ゾーンを設定し、BioStar Airモバイルアプリで点呼を実施すると、管理者は在席情報に基づき現場にいたユーザーを迅速に把握し、安全を確認できます。
+
+:::note
+
+**在席（Presence）に基づく正確な集結名簿**
+
+* 点呼は、すべてのユーザーが現場にいる前提ではありません。 在席（Presence）判定を併用し、緊急発生時点で現場にいると確認されたユーザーだけを集結対象として表示します。
+
+* ユーザーグループを特定の集結ゾーンに割り当て、担当管理者を指定できます。安全担当者は担当ユーザーだけを集中的に管理できます。
+
+* Suprema Passアプリは、現場にいるモバイルクレデンシャル利用者に正しい集結ゾーンを案内し、外部にいるユーザーには緊急中は施設へ入らないよう警告します。
+
+:::
 
 :::info
 
-* 混乱を避けるため、ユーザーグループに集結地点が正しく割り当てられていることを確認してください。
+* 混乱を防ぐため、ユーザーグループに集結ゾーンが正しく割り当てられていることを確認してください。
 
-* 実際の緊急時に備え、ロールコール機能を定期的にテストしてください。
+* 実際の緊急時に備え、点呼機能を定期的にテストしてください。
 
 * 出入記録により、出席を確認できます。
 
@@ -29,17 +36,37 @@ BioStar Airのロールコールおよび火災避難案内機能により、緊
 
 :::
 
+## 開始前に {/* #beforeStart */}
+
+* 点呼の精度は在席検知に左右されます。 <Cmd sid='apb.zoneList.perimetterZone' product='air' />が正しく設定されていない場合、点呼リストが実際の現場人数と異なることがあります。
+
+* モバイル通知にはSuprema Passアプリが必要です。 RFカードまたはバイオメトリッククレデンシャルのみを使用するユーザーは、モバイルの点呼通知を受け取れません。
+
+* 集結ゾーンに割り当てられていない現場ユーザーは、集結場所の案内を受け取れないことがあります。
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> 設定が正しくない場合、担当者は想定した点呼画面を表示できないことがあります。
+
+* デバイスがオフラインになったり、イベント送信が遅延したりすると、在席情報と点呼精度に影響することがあります。
+
+* 無効なユーザーは点呼通知を受け取りません。
+
+:::info
+
+旧バージョンのSuprema PassまたはBioStar Airアプリを使うユーザーと管理者は従来の点呼方式を継続できます。ただし、新機能を使うには最新版へ更新してください。
+
+:::
+
 ## 集結地点の設定 {/* #settingMusterPoints */}
 
 集結地点は、ユーザーが緊急時に自身の安全を示すためにクレデンシャルを認証できる指定場所です。
 
-1. 画面左のサイドバーで <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> をクリックします。
+1. 画面左側のサイドバーで <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> をクリックしてください。
 
 2. 画面右上の <Cmd sid='add_muster_point_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-adv-rollcall.png' />
 
-3. <Cmd sid='add_muster_point_title' product='air' /> パネルが表示されたら、名前と説明（任意）を入力します。
+3. <Cmd sid='add_muster_point_title' product='air' /> パネルが開いたら、集結地点の名前と説明（任意）を入力してください。
 
    <Image src='/img/air/bsair-adv-rollcall-add.png' />
 
@@ -47,11 +74,29 @@ BioStar Airのロールコールおよび火災避難案内機能により、緊
 
    <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
 
-5. <Cmd sid='add_muster_point_user_groups_title' product='air' /> セクションで、集結地点に到着した際に報告すべきユーザーグループを選択します。 ユーザーグループのチェックボックスをクリックし、<Cmd sid='add_btn' product='air' /> をクリックします。
+5. <Cmd sid='add_muster_point_user_groups_title' product='air' /> セクションで、集結地点に到着した際に報告すべきユーザーグループを選択します。
 
    <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
 
-6. 集結地点の設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+   * 特定のユーザーグループを選択するには、該当グループのチェックボックスを選択し、<Cmd sid='add_btn' product='air' /> ボタンをクリックしてください。
+
+   * <Cmd sid='fm.musterForm.allUsers.name' product='air' />: BioStar Air サイトで、現在アクティブな全ユーザーを選択した招集エリアに割り当てます。 実際に緊急招集を実行すると、全アクティブユーザーが現場にいるとみなさず、在室検知に基づいてサイトにいることが確認されたユーザーのみを招集対象にします。 このオプションをオンにすると、ユーザーグループを個別に選択する機能は無効になります。特定のグループのみを選択するには、先にこのオプションをオフにしてください。
+
+6. <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> セクションで、該当する集合場所で点呼を実施する管理者のチェックボックスを選択し、<Cmd sid='add_btn' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-adv-rollcall-add-assign-admin.png' />
+
+   :::note
+
+   * <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />を選択した場合、選択した管理者のみが該当する点呼を開始できます。また、進行中の点呼でも、自分が担当するゾーンのユーザーだけを確認して管理できます。
+
+   * <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />を指定しない場合、<Cmd sid='master_role' product='air' />、<Cmd sid='admin_role' product='air' />、<Cmd sid='operator_role' product='air' /> などのロールのユーザーが点呼を開始できます。
+
+   * 管理者は同時に複数の点呼ゾーンの指定管理者として割り当てられることはできません。
+
+   :::
+
+7. 集結地点の設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 :::note
 
@@ -67,7 +112,9 @@ BioStar Airのロールコールおよび火災避難案内機能により、緊
 
 :::
 
-## モバイルでロールコールを開始する {/* #startingRollcallonMobile */}
+## 点呼を開始する {/* #startingRollcallonMobile */}
+
+### モバイルで開始
 
 BioStar Airモバイルアプリでロールコールを開始し、出席を確認します。
 
@@ -77,9 +124,54 @@ BioStar Airモバイルアプリでロールコールを開始し、出席を確
 
 2. 画面下部の <Cmd en='All Menu'>すべてのメニュー</Cmd> → <Cmd sid='roll_call_submenu' product='air' /> を順にタップします。
 
-3. <Cmd en='Roll Call Start'>ロールコール開始</Cmd> ボタンをタップします。
+3. <Cmd en='Start Roll Call'>Start Roll Call</Cmd> ボタンをタップします。
 
-4. 集結場所に集まるべきすべてのユーザーの一覧が表示されます。
+4. 点呼を開始するゾーンを選択し、<Cmd en='Continue'>Continue</Cmd> ボタンをクリックします。
+
+   すべてのゾーンで点呼を実施する場合、<Cmd en='Site-wide'>Site-wide</Cmd>を選択し、<Cmd en='Continue'>Continue</Cmd> ボタンをクリックします。
+
+5. 進行中の点呼一覧でゾーンを選択します。
+
+6. 集結場所に集まるべきすべてのユーザーの一覧が表示されます。
+
+:::note
+
+**管理者の役割による違い**
+
+* ゾーンの <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />に指定されていない <Cmd sid='master_role' product='air' />、<Cmd sid='admin_role' product='air' />、<Cmd sid='operator_role' product='air' /> は、上記の順に点呼一覧を直接確認し、新しい点呼を開始します。
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' /> は、自分が担当するゾーンで点呼が開始されると通知を受け取ります。 通知をタップすると、一覧を開かずに担当ゾーンの進行画面へ移動します。
+
+:::
+
+### 進行中の点呼画面を確認する {/* #activeRollCallScreen */}
+
+点呼が開始されると、ゾーン名とともに進行状況が表示されます。
+
+<Columns>
+<Column className='width--50'>
+
+<Image src='/img/air/bsair-mobile-rollcall-start-screen.png' className='none' />
+
+</Column>
+<Column className='padding--l20'>
+
+* 画面上部で <Cmd en='Unaccounted Users'>Unaccounted Users</Cmd> と <Cmd en='All Activated Users'>All Activated Users'</Cmd> の人数を確認できます。
+
+   人数の下に **安全と表示された人数**/**総人数** と **点呼開始時刻** が表示されます。 更新(<IcAirRef />) ボタンをタップして最新状態を確認します。
+
+* 一覧に表示するユーザー範囲を切り替えられます。
+
+  * <Cmd en='On Site'>On Site</Cmd>: 現在、在席状態が現場（On Site）のユーザーのみを表示します。
+
+  * <Cmd en='All assigned'>All assigned</Cmd>: 在席状態に関係なく、このゾーンに割り当てられたユーザー全員を表示します。 安全と表示されたユーザーは、一覧の末尾に移動します。
+
+* 検索機能で特定のユーザーを探せます。
+
+* 一覧の各ユーザーの右側で在席状態（<Cmd sid='presence_on_site' product='air' />/<Cmd sid='presence_off_site' product='air' />）を確認できます。
+
+</Column>
+</Columns>
 
 ### ユーザーを安全とマークする {/* #marking-users-safe */}
 
@@ -97,10 +189,6 @@ BioStar Airモバイルアプリでロールコールを開始し、出席を確
 
 * ユーザーは指定された集結地点でデバイスに自身のクレデンシャルをタグ付けします。
 
-* ユーザーは**集結グループ**でフィルタできます。
-
-* 検索機能を使用して特定の個人を探せます。
-
 </Column>
 </Columns>
 
@@ -116,20 +204,36 @@ BioStar Airモバイルアプリでロールコールを開始し、出席を確
 
 以下の条件を満たしたら、ロールコールを完了します。
 
-* すべてのユーザーが集結地点に到着し、安全とマークされたとき
+* 点呼範囲に含まれる <Cmd sid='presence_on_site' product='air' className='normal' /> ユーザー、つまり <Cmd en='Unaccounted Users'>Unaccounted Users</Cmd> が0になった完了メッセージ画面で <Cmd en='Yes'>Yes</Cmd> をタップするとき
 
-* 管理者がすべてのユーザーを手動で安全とマークしたとき
+* 管理者が全ユーザーを手動で安全とマークし、<Cmd en='Finish Roll Call'>Finish Roll Call</Cmd> をタップするとき
 
 * 24時間経過したとき
 
 </Column>
 </Columns>
 
+:::note
+
+**役割別の終了範囲**
+
+* サイトマスターは、点呼を個別に終了するか、複数件を選択して一括で終了するか、サイトで進行中のすべての点呼を一括で終了できます。
+
+* <Cmd sid='fm.musterForm.assignedAdmins.title' product='air' />で選択した <Cmd sid='admin_role' product='air' className='normal' /> または <Cmd sid='operator_role' product='air' className='normal' /> は、自分が担当する点呼ゾーンの点呼のみ終了できます。
+
+:::
+
+:::info
+
+<Cmd sid='presence_off_site' product='air' /> 状態のユーザーも手動で安全とマークできます。 例えば、当日在宅勤務のユーザーの安全を事前に確認できます。
+
+:::
+
 ## ロールコール履歴の表示 {/* #viewingRollCallHistory */}
 
 以前に実施したロールコールの履歴を確認できます。
 
-1. 画面左のサイドバーで <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> をクリックします。
+1. 画面左側のサイドバーで <Cmd sid='safety_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> をクリックしてください。
 
 2. <Cmd sid='roll_call_history_tab' product='air' /> タブをクリックしてください。
 

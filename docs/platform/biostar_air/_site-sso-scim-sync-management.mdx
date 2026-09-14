@@ -1,0 +1,31 @@
+## 동기화된 관리자/사용자/그룹 관리
+
+프로비저닝이 활성화되면 BioStar Air는 각 관리자, 사용자, 사용자 그룹이 로컬에서 직접 관리되는지, ID 공급자에서 동기화된 것인지 화면에 표시합니다.
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> 메뉴의 관리자 목록에서 <Cmd sid='sso_scim.identity_source.title' product='air' /> 열을 확인하세요.
+
+   <Image src='/img/air/bsair-admin-list-with-idp.png' />
+
+* <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> 메뉴의 사용자 목록에서 <Cmd sid='sso_scim.identity_source.title' product='air' /> 열을 확인하세요.
+
+   <Image src='/img/air/bsair-user-management-list-with-idp.png' />
+
+* <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> 메뉴의 사용자 그룹 목록에서 <Cmd sid='sso_scim.identity_source.title' product='air' /> 열을 확인하세요.
+
+   <Image src='/img/air/bsair-user-group-list-with-idp.png' />
+
+:::note
+
+**SCIM 동기화 항목의 동작 방식**
+
+* 기존에 수동으로 생성한 사용자와 관리자는 계속 수동 관리 상태로 유지됩니다.
+
+* SCIM으로 동기화된 항목은 BioStar Air에서 수동으로 삭제할 수 없습니다.
+
+* SCIM으로 동기화된 그룹은 사용자를 수동으로 추가하거나 제거할 수 없습니다.
+
+* 동기화된 항목을 로컬에서 수동으로 변경하면 <Cmd sid='sso_scim.identity_source.override' product='air' /> 상태가 됩니다. <Cmd sid='sso_scim.override.release_override' product='air' />를 실행하면 로컬 변경 사항이 취소되고 항목이 다시 SCIM 관리 상태로 돌아갑니다.
+
+   <Image src='/img/air/bsair-user-list-with-idp-override.png' />
+
+:::

@@ -1,0 +1,251 @@
+---
+id: manage-presence
+title: Comprobar Presencia
+description: Compruebe los usuarios en el sitio en BioStar Air y cambie manualmente su estado de presencia.
+---
+
+El menú <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' /> muestra en tiempo real a los usuarios en el sitio. El sistema calcula el estado de presencia según los registros de autenticación de los dispositivos de entrada y salida definidos en <Cmd sid='apb.zoneList.perimetterZone' product='air' className='bold' />. Si <Cmd sid='apb.zoneList.perimetterZone' product='air' className='normal' /> aún no está definido, consulte primero <DocLink docId='platform/biostar_air/manage-zone' />.
+
+## Cómo se determina el estado de presencia {/* #howPresenceIsDetermined */}
+
+Cuando los usuarios se autentican en un dispositivo de entrada en la zona de perímetro, su estado cambia a <Cmd sid='presence_on_site' product='air' />. Cuando se autentican en un dispositivo de salida, su estado cambia a <Cmd sid='presence_off_site' product='air' />.
+
+* Para sitios sin un dispositivo de salida en la zona de perímetro, establece siempre <Cmd sid='apb.zoneForm.offsite.label' product='air' />. Si los usuarios permanecen inactivos durante el tiempo establecido, su estado cambia automáticamente a <Cmd sid='presence_off_site' product='air' />.
+
+* Para saber cómo establecer los dispositivos de entrada y salida para la zona de perímetro y el ajuste <Cmd sid='apb.zoneForm.offsite.label' product='air' />, consulte <DocLink docId='platform/biostar_air/manage-zone#addingZone' />.
+
+* Los administradores pueden ver la lista y la cantidad de personas en el sitio desde varios menús:
+
+  * <Cmd sid='dashboard_menu' product='air' /> widget
+
+  * <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />
+
+  * <Cmd sid='zone_management_menu' product='air' /> → <Cmd sid='zones_menu' product='air' /> → <Cmd sid='zones_col_people_inside' product='air' /> (<Cmd sid='apb.zoneList.perimetterZone' product='air' className='normal' />)
+
+## Comprobar en el panel {/* #checkingFromDashboard */}
+
+El menú <Cmd sid='dashboard_menu' product='air' /> también muestra el número de usuarios actualmente en el sitio en la tarjeta <Cmd sid='user_tagged_today' product='air' />.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-safety-presence-show-dashboard.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-safety-presence-show-dashboard.png' width='250px' />
+
+</TabItem>
+</Tabs>
+
+## Explorar la lista de presencia {/* #presenceListOverview */}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+En la barra lateral izquierda, haz clic en <Cmd sid='safety_menu' product='air' /> → <Cmd sid='presence_submenu' product='air' />.
+
+<Image src='/img/air/bsair-safety-presence-list.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-safety-presence-list.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
+
+2. Toque <Cmd en='All Menu'>All Menu</Cmd> → <Cmd sid='presence_submenu' product='air' /> en la parte inferior de la pantalla.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+De forma predeterminada, la lista de presencia muestra solo a los usuarios con el estado <Cmd sid='presence_on_site' product='air' />.
+
+* <Cmd sid='presence_user_column' product='air' />: La foto de perfil y el nombre del usuario.
+
+* <Cmd sid='presence_entered_through_column' product='air' />: El dispositivo de entrada y la hora en que el usuario se autenticó para entrar al sitio.
+
+* <Cmd sid='presence_last_door_used_column' product='air' />: La puerta más reciente y la hora.
+
+* <Cmd sid='presence_status_column' product='air' />: El estado de presencia actual del usuario (<Cmd sid='presence_on_site' product='air' /> / <Cmd sid='presence_off_site' product='air' />).
+
+* <Cmd sid='presence_action_column' product='air' />: Cambia el estado de presencia del usuario.
+
+## Gestión de la lista de presencia {/* #managePresence */}
+
+Use las características de administración de la parte superior e inferior de la lista para estas tareas.
+
+<Image src='/img/air/bsair-safety-presence-mng-tools.png' />
+
+* <Cmd sid='presence_mark_on_site' product='air' /> / <Cmd sid='presence_mark_off_site' product='air' />: Cambia el estado de presencia del usuario a En el sitio o Fuera del sitio. Para más información, consulte <DocLink inner='#manualOverride' />.
+
+* <Cmd sid='presence_mask_names' product='air' /> / <Cmd sid='presence_unmask_names' product='air' /> (<IcAirMask width='25px' height='25px' />): Oculta o muestra nombres de usuario. Útil al compartir la pantalla en entornos sensibles.
+
+  <Tabs groupId='platform'>
+   <TabItem value='web' label='Web'>
+   
+   <Image src='/img/air/bsair-safety-presence-mng-tools-masking.png' />
+   
+   </TabItem>
+   <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-safety-presence-mng-tools-masking.png' width='250px' />
+   
+   </TabItem>
+   </Tabs>
+
+* <Cmd sid='presence_refresh' product='air' />: Actualiza la lista de inmediato para mostrar el estado más reciente. En <Cmd sid='auto_refresh_btn' product='air' /> en la parte inferior de la lista, seleccione un intervalo de actualización automática (<Cmd sid='auto_refresh_option1' product='air' /> / <Cmd sid='auto_refresh_option2' product='air' /> / <Cmd sid='auto_refresh_option3' product='air' />). El sistema actualiza la lista automáticamente según el intervalo establecido.
+
+* <Cmd sid='presence_search_placeholder' product='air' />: Busca en la lista por nombre de usuario.
+
+### Filtrar lista de presencia
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+En la columna <Cmd sid='presence_status_column' product='air' />, haga clic en el botón <IcAirFilter title='Filter' /> para filtrar la lista por <Cmd sid='presence_on_site' product='air' />, <Cmd sid='presence_off_site' product='air' /> o todos los usuarios. También filtra por los criterios seleccionados en las columnas <Cmd sid='presence_entered_through_column' product='air' /> y <Cmd sid='presence_last_door_used_column' product='air' />.
+
+<Image src='/img/air/bsair-safety-presence-list-filtering.png' />
+
+:::info
+
+Haga clic en <Cmd sid='new_button_reset' product='air' /> para borrar el filtro.
+
+:::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-safety-presence-list-filtering.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toque <Cmd sid='logs_filters_action_btn' product='air' /> en la esquina superior derecha de la lista de presencia. 
+
+2. Seleccione <Cmd sid='presence_on_site' product='air' /> o <Cmd sid='presence_off_site' product='air' />, o ambos.
+
+3. Seleccione criterios en <Cmd en='Entered Through'>Entered Through</Cmd> y <Cmd en='Last Door Used'>Last Door Used</Cmd>.
+
+4. Toque <Cmd sid='save_btn' product='air' /> para filtrar la lista según los criterios seleccionados.
+
+:::info
+
+Toque <Cmd sid='new_button_reset' product='air' /> para borrar el filtro.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+* Para ver a todos los usuarios, seleccione <Cmd sid='presence_on_site' product='air' /> y <Cmd sid='presence_off_site' product='air' /> en la columna <Cmd sid='presence_status_column' product='air' />.
+
+* La lista de presencia muestra a los usuarios con el estado <Cmd sid='presence_on_site' product='air' /> de forma predeterminada.
+
+:::
+
+## Cambiar manualmente el estado de presencia {/* #manualOverride */}
+
+Cuando las condiciones reales difieren del estado de presencia registrado en el sistema, un administrador puede cambiarlo.
+
+* La precisión de la presencia varía según la instalación de los dispositivos de entrada y salida del sitio. Los sitios con dispositivos de entrada y salida bien definidos proporcionan información de presencia más confiable.
+
+* Si un dispositivo queda sin conexión o se retrasa la entrega de eventos, el estado de presencia se actualiza tras la sincronización.
+
+* El estado de presencia difiere de los permisos de acceso. Los usuarios que aparecen como <Cmd sid='presence_on_site' product='air' /> no necesariamente pueden acceder a todas las puertas.
+
+* Los usuarios con cuentas vencidas, inactivas o suspendidas no pueden cambiar el estado de presencia hasta que la cuenta esté activa.
+
+:::info
+
+Los cambios manuales solo actualizan el estado registrado en el sistema. No verifican físicamente la ubicación del usuario. Consulte el historial de cambios en <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />.
+
+:::
+
+### Cambiar el estado de presencia de un usuario
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. En la columna <Cmd sid='presence_action_column' product='air' /> del usuario, haga clic en <Cmd sid='presence_mark_on_site' product='air' /> o <Cmd sid='presence_mark_off_site' product='air' />.
+
+   <Image src='/img/air/bsair-safety-presence-action.png' />
+
+2. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='btn_yes' product='air' />.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-safety-presence-action.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. En la lista, toque <IcAirOff width='20' height='20' title='Off Site' /> o <IcAirOn width='20' height='20' title='On Site' /> junto al usuario para cambiar el estado.
+
+2. Cuando aparezca el mensaje de confirmación, toque <Cmd sid='btn_yes' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+### Cambiar el estado de presencia de varios usuarios
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Haga clic en la casilla de verificación de cada usuario para cambiar el estado de presencia. Selecciona uno o más usuarios.
+
+2. Haga clic en <Cmd sid='presence_mark_on_site' product='air' /> o <Cmd sid='presence_mark_off_site' product='air' /> en la parte superior de la lista.
+
+   <Image src='/img/air/bsair-safety-presence-action-multi-users.png' />
+
+3. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='btn_yes' product='air' />.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-app-safety-presence-action-multi-users.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Mantenga presionado al usuario en la lista para cambiar su estado.
+
+2. Seleccione al usuario para cambiar el estado. Selecciona uno o más usuarios.
+
+3. Toque <Cmd en='Mark On Site'>Mark On Site</Cmd>(<IcAirOn width='20' height='20' />) o <Cmd en='Mark Off Site'>Mark Off Site</Cmd>(<IcAirOff width='20' height='20' />) en la parte inferior de la pantalla.
+
+4. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='btn_yes' product='air' />.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>

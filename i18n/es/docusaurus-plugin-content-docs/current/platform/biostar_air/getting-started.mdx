@@ -22,13 +22,17 @@ No puedes crear una cuenta registrándote. El instalador del sistema o un admini
 
 :::
 
-## Revisa el panel {/* #dashboard-overview */}
+## Explora el panel {/* #dashboard-overview */}
 
 Después de iniciar sesión, aparece <Cmd sid="dashboard_menu" product="air" /> y muestra información clave del sitio.
 
 <Image src='/img/air/bsair-gettingstarted-dashboard.png' />
 
-* <Cmd sid="user_tagged_today" product="air" />: Muestra el número de usuarios que accedieron al sitio hoy.
+* <Cmd sid='user_tagged_today' product='air' />: Ver usuarios en el sitio en tiempo real. El sistema calcula el estado de presencia según los registros de autenticación de los dispositivos de entrada y salida configurados en <Cmd sid='apb.zoneList.perimetterZone' product='air' className='bold' />. Para más información, consulta lo siguiente.
+
+  * <DocLink docId='platform/biostar_air/manage-zone' />
+
+  * <DocLink docId='platform/biostar_air/manage-presence' />
 
 * <Cmd sid="users_card" product="air" />: Muestra el número total de usuarios registrados y activos. Haz clic en la tarjeta para abrir <Cmd sid="user_menu" product="air" />.
 
@@ -74,7 +78,21 @@ Los administradores del sitio pueden gestionarlo, y los usuarios autenticados so
 
 ### Registrar dispositivos {/* #registering-devices */}
 
-Revisa los dispositivos registrados o añade nuevos. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+Utilice la aplicación móvil BioStar Air para registrar dispositivos. Registre los dispositivos mediante Bluetooth Low Energy (BLE) y adminístrelos desde el portal BioStar Air.
+
+<Image src='/img/air/bsair-register-device-step.png' className='none' />
+
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
+
+2. Toque la tarjeta <Cmd sid="devices_card" product="air" />.
+
+3. Toque <IcAdd /> en la esquina superior derecha de la pantalla.
+
+4. En la pantalla de búsqueda de dispositivos, toque <Cmd sid="button.register" product="2" /> en el dispositivo que desea registrar.
+
+5. Cuando aparezca la ventana de registro del dispositivo, toque <Cmd sid="device_btn_ok" product="air" />.
+
+Vuelve a la lista de dispositivos y confirma que se agregó el dispositivo. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
 
 <Image src='/img/air/bsair-gettingstarted-device-mng.png' />
 
