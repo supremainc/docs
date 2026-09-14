@@ -1,0 +1,263 @@
+---
+id: site-sso-scim-okta-setup
+title: Okta連携を設定する
+description: BioStar AirにOkta SSOとSCIMプロビジョニングを連携する手順を説明します。
+---
+
+import CopyToken from './_bsair-scim-token-copy.mdx';
+import CheckConnection from './_bsair-scim-connection-check.mdx';
+import GroupMapping from './_site-sso-scim-group-mapping.mdx'
+import SyncManagement from './_site-sso-scim-sync-management.mdx'
+
+BioStar Air に Okta でログインするには、組織の ID 管理者が Okta で OIDC アプリケーションを作成し、BioStar Air の SSO 設定と連携する必要があります。
+
+## Okta SSO連携
+
+<Steps>
+<Step>
+
+### BioStar Air: リダイレクト URI の準備 {/* #bsairRedirect */}
+
+1. BioStar Air 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
+
+2. <Cmd>SSO & SCIM</Cmd> タブをクリックします。
+
+3. <Cmd sid='sso_scim.additional_features.sso.identity_provider' product='air' /> で <Cmd sid='sso_scim.additional_features.sso.okta' product='air' /> を選択します。
+
+4. <Cmd sid='sso_scim.additional_features.sso.redirect_uri' product='air' /> フィールドに URI が表示されます。その値をコピーします。
+
+<Image src='/img/air/bsair-settings-site-idp-okta.png' />
+
+</Step>
+<Step>
+
+### Okta：アプリを作成する
+
+1. **Okta管理者コンソール**にログインします。
+
+2. **Applications and Resources** → **Applications** メニューに移動します。
+
+   <Image src='/img/air/bsair-sso-okta-applications.png' alone />
+
+3. **Create App Integration** ボタンをクリックします。
+
+4. **Sign-in method** で **OIDC - OpenID Connect** を選択します。
+
+5. **Application type** でクライアントシークレット（Client secret）を発行できるように、**Web Application** を選択します。
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app.png' alone />
+
+6. **Next** ボタンをクリックします。
+
+7. **App Integration name** フィールドに「BioStar Air」を入力します。
+
+8. <DocLink inner='#bsairRedirect' /> の手順でコピーしたURI値を、**Sign-in redirect URIs** セクションの入力フィールドに貼り付けます。
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app-general-settings.png' alone />
+
+9. **Assignments** セクションに移動し、組織内のユーザーがアプリケーションにアクセスできるように **Allow everyone in your organization to access** を選択します。
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-app-assignments.png' alone />
+
+10. **Save** をクリックします。
+
+</Step>
+<Step>
+
+### Okta：アプリのクライアント情報をコピーする {/* #copyClientinfo */}
+
+1. アプリケーションを作成したら、**General** タブで **Client ID** と **Client Secret** をコピーします。
+
+   <Image src='/img/air/bsair-sso-okta-applications-general.png' alone />
+
+2. 画面右上のプロフィールをクリックし、**Okta Domain** をコピーします。
+
+   <Image src='/img/air/bsair-sso-okta-applications-profile.png' alone />
+
+コピーした **Client ID**、**Client Secret**、**Okta Domain** の値を次の手順で入力します。
+
+</Step>
+<Step>
+
+### BioStar Air：SSO 設定
+
+1. BioStar Airの設定画面に戻り、<DocLink inner='#copyClientinfo' /> の手順でコピーした値を各フィールドに入力します。
+
+   <Image src='/img/air/bsair-settings-site-idp-okta-paste-field.png' />
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_id' product='air' />: **Client ID**
+
+   * <Cmd sid='sso_scim.additional_features.sso.client_secret' product='air' />: **Client Secret**
+
+   * <Cmd sid='sso_scim.additional_features.sso.okta_domain' product='air' />: **Okta Domain**
+
+2. <Cmd sid='sso_scim.additional_features.sso.email_domain' product='air' /> フィールドに、組織のメールドメインを入力します。
+
+3. <Cmd sid='sso_scim.additional_features.sso.save' product='air' /> ボタンをクリックします。
+
+保存と検証に成功すると、システムが <Cmd sid='sso_scim.additional_features.sso.discovery_url' product='air' /> フィールドの値を自動的に生成します。
+
+<Image src='/img/air/bsair-settings-site-idp-okta-save-success.png' />
+
+</Step>
+</Steps>
+
+## Okta SCIMプロビジョニング連携
+
+<Steps>
+<Step>
+
+<CopyToken />
+
+</Step>
+<Step>
+
+### Okta：SCIMプロビジョニングアプリを作成する
+
+1. **Okta管理者コンソール**で **Applications and Resources** → **Applications** メニューに移動します。
+
+   <Image src='/img/air/bsair-sso-okta-applications-create-provisioning-app.png' alone />
+
+2. **Browse App Catalog** ボタンをクリックします。
+
+3. 「SCIM 2.0 Test App」を検索します。
+
+   <Image src='/img/air/bsair-sso-okta-applications-browse-app-search.png' alone />
+
+4. 検索結果で<b>SCIM 2.0 Test App (Header Auth)</b>を選択してください。
+
+5. **Add Integration**ボタンをクリックしてください。
+
+6. **Application label**入力フィールドに「BioStar Air SCIM」と入力してください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-general.png' alone />
+
+7. **Next** ボタンをクリックします。
+
+8. **Sign-on options**ステップでは、設定を変更せずに下へスクロールし、**Done**ボタンをクリックしてください。
+
+</Step>
+<Step>
+
+### Okta: API統合の設定
+
+1. プロビジョニングアプリの作成が完了したら、**Provisioning**タブをクリックしてください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning.png' alone />
+
+2. **Configure API Integration**ボタンをクリックしてください。
+
+3. **Enable API integration**をクリックしてください。
+
+4. <DocLink inner='#copyToken' />ステップでコピーしたSCIMエンドポイントURLとSCIMベアラートークンの値を、**Base URL**フィールドと**API Token**フィールドに入力してください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-set-api.png' alone />
+
+5. 同期が正常に動作するかをテストするには、**Test API Credentials**ボタンをクリックしてください。
+
+6. **Save**ボタンをクリックしてください。
+
+7. グループプッシュの動作を設定するには、**Provision**タブをクリックしてください。
+
+8. **Edit**をクリックし、次の属性を有効にしてください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-set-push.png' alone />
+
+   * **Create Users**
+
+   * **Update User Attributes**
+
+   * **Deactivate Users**
+
+9. 変更した設定を保存するには、**Save**ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-provisioning-save.png' alone />
+
+</Step>
+</Steps>
+
+## IdP グループを BioStar Air にプッシュ
+
+IdP グループを BioStar Air にプッシュするには、先にユーザーグループとユーザーを Okta に用意する必要があります。 ユーザーグループとユーザーを用意したら、SCIM を通じて BioStar Air にプッシュできます。
+
+<Steps>
+<Step>
+
+### Okta: ユーザーグループの割り当て
+
+1. **Okta管理者コンソール**にログインします。
+
+2. **Applications and Resources** → **Applications** メニューに移動します。
+
+3. SCIMアプリケーションを選択してください。
+
+   <Image src='/img/air/bsair-sso-okta-applications-list.png' alone />
+
+4. **Assignments**タブをクリックしてください。
+
+5. **Assign** → **Assign to Groups**をクリックしてください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-assign-groups.png' alone />
+
+6. SCIMアプリケーションに割り当てるユーザーグループで**Assign**をクリックしてください。
+
+7. グループの割り当てが完了したら、**Done** ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-assigned-group-list.png' alone />
+
+</Step>
+<Step>
+
+### Okta: ユーザーグループのプッシュ
+
+1. **Push Groups** タブをクリックしてください。
+
+2. **Push Groups** → **Find groups by name** をクリックしてください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-push-groups.png' alone />
+
+3. 入力欄にプッシュするグループ名を入力してください。 
+
+4. 一致するユーザーグループが表示されたら、選択してください。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-push-groups-by-name.png' alone />
+
+5. ユーザーグループの選択が完了したら、**Save** ボタンをクリックしてください。続けてユーザーグループを追加する場合は、**Save & Another** ボタンをクリックしてください。
+
+6. **Push Groups** タブで、プッシュされたユーザーグループを確認できます。
+
+   <Image src='/img/air/bsair-sso-okta-scim-app-pushed-group-list.png' alone />
+
+</Step>
+<Step>
+
+<CheckConnection />
+
+</Step>
+</Steps>
+
+<GroupMapping />
+
+<SyncManagement />
+
+## Okta にログイン
+
+Okta SSO 連携を完了すると、ユーザーは BioStar Air のログイン画面で Okta アカウントを使用してログインできます。
+
+1. BioStar Air のログイン画面で <Cmd sid='sso_scim.login.sign_in_with_okta' product='air' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-login-with-okta.png' />
+
+2. <Cmd sid='sso_scim.login.sso_scim_org_dialog.label' product='air' /> フィールドに組織のメールアドレスまたはドメインを入力します。 （例: `user@company.com` または `company`）
+
+3. <Cmd sid='sso_scim.login.sso_scim_org_dialog.continue' product='air' /> ボタンをクリックします。
+
+4. Okta のログイン画面に移動したら、組織アカウントのメールアドレスとパスワードを入力してください。
+
+5. 認証を完了すると、BioStar Airに自動的にリダイレクトされ、ログインが完了します。
+
+:::info
+
+入力したメールドメインに Okta SSO が設定されていない場合、エラーメッセージが表示されます。 この場合は、サイト管理者に問い合わせてください。
+
+:::
