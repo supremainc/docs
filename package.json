@@ -42,6 +42,7 @@
     "@docusaurus/theme-mermaid": "3.10.2",
     "@saucelabs/theme-github-codeblock": "^0.3.0",
     "@signalwire/docusaurus-plugin-llms-txt": "^2.0.0-alpha.6",
+    "@tanstack/react-table": "^8.21.3",
     "algoliasearch": "^5.50.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-cookie-consent": "^4.6.0",

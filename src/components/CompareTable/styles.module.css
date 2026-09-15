@@ -6,18 +6,84 @@
   display: block;
 }
 
-.tableContainer {
-  margin: .5rem 0 2rem 0;
-}
-
 .subtitle {
   margin-top: 2.5rem;
 }
 
+.tableWrapper {
+  margin: .5rem 0 2rem 0;
+  max-height: calc(100vh - 350px);
+  overflow: auto;
+  border: 1px solid var(--ifm-table-border-color);
+}
 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .8rem;
+}
+
+.th,
+.td {
+  border: 1px solid var(--ifm-table-border-color);
+  padding: .5rem .75rem;
+  text-align: center;
+  white-space: normal;
+  min-width: 120px;
+  /* --ifm-background-color 는 기본값이 transparent라 sticky 컬럼 뒤로 다른 컬럼이 비쳐 보임 */
+  background: var(--ifm-background-surface-color);
+}
+
+.fixedhead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+.pinnedCell {
+  text-align: right;
+  min-width: 180px;
+  background: var(--ifm-background-surface-color);
+}
+
+.groupRow {
+  cursor: pointer;
+  background: var(--ifm-table-stripe-background, rgba(0, 0, 0, .03));
+}
+
+.groupCell {
+  text-align: left;
+  font-weight: 600;
+  padding: .5rem .75rem;
+}
+
+.tableWrapper :global(span.before) {
+  font-size: .5rem;
+}
+
+.tableWrapper :global(span.before)::after {
+  content: "\A";
+  white-space: pre;
+}
+
+.tableWrapper :global(span.after) {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
 
 @media print {
-  .tableContainer {
+  .tableWrapper {
     break-inside: avoid;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .th {
+    position: static;
+  }
+
+  .pinnedCell {
+    position: static !important;
   }
 }

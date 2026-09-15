@@ -1,241 +1,250 @@
-import React, { useRef, useEffect, useCallback, useMemo } from "react";
-import { TabulatorFull as Tabulator } from "tabulator-tables";
-import  "tabulator-tables/dist/css/tabulator.min.css";
+import React, { useCallback, useMemo, useState } from "react";
+import clsx from "clsx";
+import {
+  useReactTable,
+  getCoreRowModel,
+  createColumnHelper,
+  flexRender,
+} from "@tanstack/react-table";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import Locale from './resources.json';
 
-// 공통 상수 정의
-const COMMON_COLUMN_PROPS = {
-  hozAlign: "center",
-  headerHozAlign: "center", 
-  headerVertical: false,
-  headerSort: false,
-};
-
-const FROZEN_COLUMN_PROPS = {
-  hozAlign: "right",
-  headerHozAlign: "center",
-  headerVertical: false,
-  headerSort: false,
-  width: 180,
-  frozen: true
-};
-
 // 커스텀 Hook으로 getLocale 함수 제공
 function useLocale() {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  
+
   const getLocale = useCallback((id) => {
     return Locale[currentLocale]?.[id] || Locale["en"]?.[id];
   }, [currentLocale]);
-  
+
   return getLocale;
 }
 
-// 공통 포매터 함수
-function useCustomLocaleFormatter() {
+// 값을 로케일/불리언/before-after 규칙에 따라 HTML 문자열로 변환
+function useCellHtml() {
   const getLocale = useLocale();
-  
-  return useCallback((cell) => {
-    const value = cell.getValue();
-    // value가 before/after 오브젝트일 때 분기
+
+  return useCallback((value) => {
     if (typeof value === "object" && value !== null && "before" in value && "after" in value) {
-      const before = value.before;
-      const after = value.after;
+      const { before, after } = value;
       const beforeText = before === true ? "✔️" : before === false ? "❌" : getLocale(before);
       const afterText = after === true ? "✔️" : after === false ? "❌" : getLocale(after);
       return `<span class="before">${beforeText}</span><span class="after">${afterText}</span>`;
-    } else if (value === true) {
-      return "✔️";
-    } else if (value === false) {
-      return "❌";
-    } else {
-      return getLocale(value) || value;
     }
+    if (value === true) return "✔️";
+    if (value === false) return "❌";
+    return getLocale(value) || value || "";
   }, [getLocale]);
+}
+
+// 로케일 값에 <br/> 등 HTML이 포함되어 있어 innerHTML로 렌더링
+function HtmlCell({ html }) {
+  return <span dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
+// 고정(frozen) 컬럼을 좌측에 sticky 처리하기 위한 스타일
+function getPinningStyle(column, isHeader) {
+  if (column.getIsPinned() !== "left") return undefined;
+  return {
+    position: "sticky",
+    left: `${column.getStart("left")}px`,
+    zIndex: isHeader ? 3 : 1,
+  };
+}
+
+// category 필드를 기준으로 원본 데이터 등장 순서를 유지한 채 행을 그룹핑
+function groupRowsByCategory(rows) {
+  const order = [];
+  const map = new Map();
+  rows.forEach((row) => {
+    const key = row.original.category;
+    if (!map.has(key)) {
+      map.set(key, []);
+      order.push(key);
+    }
+    map.get(key).push(row);
+  });
+  return order.map((category) => ({ category, rows: map.get(category) }));
+}
+
+// category별 접기/펼치기 + 고정 컬럼을 지원하는 공용 테이블 렌더러
+function GroupedTable({ table }) {
+  const getLocale = useLocale();
+  const [collapsed, setCollapsed] = useState(() => new Set());
+
+  const toggleGroup = useCallback((category) => {
+    setCollapsed((prev) => {
+      const next = new Set(prev);
+      if (next.has(category)) next.delete(category);
+      else next.add(category);
+      return next;
+    });
+  }, []);
+
+  const groups = useMemo(
+    () => groupRowsByCategory(table.getRowModel().rows),
+    [table]
+  );
+  const columnCount = table.getVisibleLeafColumns().length;
+  const headerGroups = table.getHeaderGroups();
+
+  return (
+    <div className={styles.tableWrapper}>
+      <table className={styles.table}>
+        <thead className={styles.fixedhead}>
+          {headerGroups.map((headerGroup) => (
+            <tr key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <th
+                  key={header.id}
+                  colSpan={header.colSpan}
+                  className={clsx(
+                    styles.th,
+                    header.column.getIsPinned() && styles.pinnedCell
+                  )}
+                  style={getPinningStyle(header.column, true)}
+                >
+                  {header.isPlaceholder
+                    ? null
+                    : flexRender(header.column.columnDef.header, header.getContext())}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody>
+          {groups.map(({ category, rows }) => {
+            const isCollapsed = collapsed.has(category);
+            return (
+              <React.Fragment key={category}>
+                <tr className={styles.groupRow} onClick={() => toggleGroup(category)}>
+                  <td colSpan={columnCount} className={styles.groupCell}>
+                    {(isCollapsed ? "▸" : "▾") + " " +
+                      (getLocale(String(category).toLowerCase()) || category) +
+                      ` (${rows.length})`}
+                  </td>
+                </tr>
+                {!isCollapsed &&
+                  rows.map((row) => (
+                    <tr key={row.id}>
+                      {row.getVisibleCells().map((cell) => (
+                        <td
+                          key={cell.id}
+                          className={clsx(
+                            styles.td,
+                            cell.column.getIsPinned() && styles.pinnedCell
+                          )}
+                          style={getPinningStyle(cell.column, false)}
+                        >
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export function RenderTableSpecs({ data }) {
   const getLocale = useLocale();
-  const customFormatter = useCustomLocaleFormatter();
-  const tableRef = useRef(null);
-  const tabulatorInstance = useRef(null);
+  const cellHtml = useCellHtml();
+  const columnHelper = useMemo(() => createColumnHelper(), []);
 
-  // 중첩된 구조의 데이터를 평면화된 형태로 변환
-  const transformedData = useMemo(() => {
-    if (!data || data.length === 0) {
-      return [];
-    }
-    
-    // 각 데이터 항목을 평면화
-    const flattenedData = data.map(item => {
+  // 중첩된 models 구조를 { function, [variant]: value } 형태로 평면화
+  const rows = useMemo(() => {
+    if (!data || data.length === 0) return [];
+    return data.map((item) => {
       const { category, function: functionName, models } = item;
-      
-      const rowData = {
-        category,
-        function: functionName
-      };
-      
-      // 각 모델의 모든 변형을 해당 필드에 매핑
-      Object.entries(models).forEach(([modelName, modelVariants]) => {
-        Object.entries(modelVariants).forEach(([variant, value]) => {
-          const fieldName = variant.replace(/[-]/g, ''); // 하이픈 제거하여 필드명 생성
-          rowData[fieldName] = value;
+      const rowData = { category, function: functionName };
+      Object.values(models).forEach((variants) => {
+        Object.entries(variants).forEach(([variant, value]) => {
+          rowData[variant.replace(/[-]/g, "")] = value;
         });
       });
-      
       return rowData;
     });
-    
-    return flattenedData;
   }, [data]);
 
-  // 컬럼 정의를 원본 JSON 구조 기반으로 동적 생성
-  const columns = useMemo(() => {
-    if (!data || data.length === 0) {
-      return [];
-    }
-
-    const createColumn = (title, field) => ({
-      title,
-      field,
-      ...COMMON_COLUMN_PROPS,
-      // width: 120,
-      minWidth: 120,
-      formatter: customFormatter
-    });
-
-    const createColumnGroup = (title, columns) => ({
-      title,
-      headerHozAlign: "center",
-      columns
-    });
-
-    // 첫 번째 데이터 항목에서 모델 구조를 가져옴
-    const firstItem = data[0];
-    const { models } = firstItem;
-
-    // 컬럼 구성
-    const columns = [
-      { 
-        title: getLocale("product_specs"), 
-        field: "function",
-        ...FROZEN_COLUMN_PROPS,
-        formatter: customFormatter
-      }
-    ];
-
-    // 각 제품(모델)별로 컬럼 그룹 생성
-    Object.entries(models).forEach(([productName, variants]) => {
-      const productColumns = Object.keys(variants).map(variant => {
-        const fieldName = variant.replace(/[-]/g, ''); // 하이픈 제거하여 필드명 생성
-        return createColumn(variant, fieldName);
-      });
-      
-      if (productColumns.length > 0) {
-        columns.push(createColumnGroup(productName, productColumns));
-      }
-    });
-
-    return columns;
-  }, [data, getLocale, customFormatter]);
-
-  const groupHeader = useCallback((value, count) => {
-    return getLocale(value.toLowerCase()) + " (" + count + ")";
-  }, [getLocale]);
-
-  useEffect(() => {
-    if (tableRef.current && !tabulatorInstance.current) {
-      tabulatorInstance.current = new Tabulator(tableRef.current, {
-        height: "calc(100vh - 350px)",
-        autoResize: false,
-        data: transformedData,
-        layout: "fitColumns",
-        groupBy: "category",
-        groupToggleElement: "header",
-        groupHeader,
-        columns
-      });
-    }
-
-    return () => {
-      if (tabulatorInstance.current) {
-        tabulatorInstance.current.destroy();
-        tabulatorInstance.current = null;
-      }
-    };
-  }, [transformedData, columns, groupHeader]);
-
-  return (
-    <div ref={tableRef} className={styles.tableContainer}></div>
-  );
-}
-
-export function RenderTableFuncs({ data, width }) {
-  const getLocale = useLocale();
-  const customFormatter = useCustomLocaleFormatter();
-  const tableRef = useRef(null);
-  const tabulatorInstance = useRef(null);
-
-  // 데이터에서 동적으로 컬럼 정의를 생성
   const columns = useMemo(() => {
     if (!data || data.length === 0) return [];
+    const { models } = data[0];
 
-    const createColumn = (title, field) => ({
-      title,
-      field,
-      width: width || null, // 기본 너비를 120으로 설정, props로 전달된 경우 사용
-      minWidth: 150,
-      ...COMMON_COLUMN_PROPS,
-      formatter: customFormatter
-    });
-
-    // 첫 번째 데이터 항목에서 제품 컬럼들을 추출
-    const firstItem = data[0];
-    const productColumns = Object.keys(firstItem).filter(
-      key => key !== 'category' && key !== 'function'
+    const productGroups = Object.entries(models).map(([productName, variants]) =>
+      columnHelper.group({
+        id: productName,
+        header: productName,
+        columns: Object.keys(variants).map((variant) => {
+          const fieldName = variant.replace(/[-]/g, "");
+          return columnHelper.accessor(fieldName, {
+            id: fieldName,
+            header: variant,
+            cell: (info) => <HtmlCell html={cellHtml(info.getValue())} />,
+          });
+        }),
+      })
     );
 
     return [
-      { 
-        title: getLocale("main_function"), 
-        field: "function", 
-        ...FROZEN_COLUMN_PROPS,
-        formatter: (cell) => {
-          const value = cell.getValue();
-          return getLocale(value) || value;
-        }
-      },
-      ...productColumns.map(product => createColumn(product, product))
+      columnHelper.accessor("function", {
+        id: "function",
+        header: () => getLocale("product_specs"),
+        cell: (info) => <HtmlCell html={cellHtml(info.getValue())} />,
+      }),
+      ...productGroups,
     ];
-  }, [data, getLocale, customFormatter]);
+  }, [data, columnHelper, getLocale, cellHtml]);
 
-  const groupHeader = useCallback((value, count) => {
-    return getLocale(value.toLowerCase()) + " (" + count + ")";
-  }, [getLocale]);
+  const table = useReactTable({
+    data: rows,
+    columns,
+    initialState: { columnPinning: { left: ["function"] } },
+    getCoreRowModel: getCoreRowModel(),
+  });
 
-  useEffect(() => {
-    if (tableRef.current && !tabulatorInstance.current) {
-      tabulatorInstance.current = new Tabulator(tableRef.current, {
-        height: "calc(100vh - 350px)",
-        data: data,
-        layout:"fitColumns",
-        resizableColumnFit:true,
-        groupBy: "category",
-        groupToggleElement: "header",
-        groupHeader,
-        columns
-      });
-    }
+  if (!data || data.length === 0) return null;
 
-    return () => {
-      if (tabulatorInstance.current) {
-        tabulatorInstance.current.destroy();
-        tabulatorInstance.current = null;
-      }
-    };
-  }, [data, columns, groupHeader]);
+  return <GroupedTable table={table} />;
+}
 
-  return <div ref={tableRef} className={styles.tableContainer}></div>;
+export function RenderTableFuncs({ data }) {
+  const getLocale = useLocale();
+  const cellHtml = useCellHtml();
+  const columnHelper = useMemo(() => createColumnHelper(), []);
+
+  const productKeys = useMemo(() => {
+    if (!data || data.length === 0) return [];
+    return Object.keys(data[0]).filter((key) => key !== "category" && key !== "function");
+  }, [data]);
+
+  const columns = useMemo(() => [
+    columnHelper.accessor("function", {
+      id: "function",
+      header: () => getLocale("main_function"),
+      cell: (info) => <HtmlCell html={getLocale(info.getValue()) || info.getValue()} />,
+    }),
+    ...productKeys.map((key) =>
+      columnHelper.accessor(key, {
+        id: key,
+        header: key,
+        cell: (info) => <HtmlCell html={cellHtml(info.getValue())} />,
+      })
+    ),
+  ], [columnHelper, productKeys, getLocale, cellHtml]);
+
+  const table = useReactTable({
+    data: data ?? [],
+    columns,
+    initialState: { columnPinning: { left: ["function"] } },
+    getCoreRowModel: getCoreRowModel(),
+  });
+
+  if (!data || data.length === 0) return null;
+
+  return <GroupedTable table={table} />;
 }
