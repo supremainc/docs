@@ -29,3 +29,66 @@ import DocumentB from '../../common/_disclaimers-copyright-notice.mdx'
 
 이 제품에 포함된 오픈 소스 소프트웨어에 대한 필수 고지 사항과 라이선스는 [다음 링크](/opensource/opensourcelicenses.txt)를 참고하세요.
 
+### ffmpeg
+
+**BioStar X**는 동영상 파일 변환 및 정보 확인을 위해 ffmpeg([https://ffmpeg.org](https://ffmpeg.org))를 포함합니다. *ffmpeg.exe*와 *ffprobe.exe* 두 개의 커맨드라인 바이너리를 제공하며, 두 바이너리는 모두 아래의 ffmpeg 소스 tarball 하나로부터 빌드됩니다. ffprobe는 별도 구성 요소가 아니라 ffmpeg 프로젝트에 포함된 도구입니다.
+
+* Component: ffmpeg (ffmpeg.exe, ffprobe.exe)
+
+* Version: 8.1
+
+* License: GNU Lesser General Public License v2.1
+
+   전문: [COPYING.LGPLv2.1](./opensource/opensourcelicenses.txt) 참고
+
+* Source code: ffmpeg-8.1.tar.xz
+
+* Upstream URL: [ffmpeg-8.1.tar.xz](https://supremadocs.blob.core.windows.net/opensource/ffmpeg-8.1.tar.xz)
+
+* SHA-256: b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a
+
+```txt title="Build configuration:"
+./configure \
+    --arch=x86_64 \
+    --target-os=mingw64 \
+    --disable-gpl \
+    --disable-nonfree \
+    --disable-libx264 \
+    --disable-libx265 \
+    --disable-libxvid \
+    --enable-mediafoundation \
+    --enable-libmp3lame \
+    --disable-doc \
+    --disable-debug \
+    --enable-small \
+    --pkg-config-flags=--static \
+    --extra-ldflags="-static" 
+```
+
+수정 사항: 없음. 업스트림 소스 tarball을 변경 없이 그대로 사용하여 빌드했습니다.
+
+**BioStar X**가 사용하는 인코더는 다음과 같습니다.
+
+* h264_mf (Windows Media Foundation을 통한 H.264)
+
+* libmp3lame (MP3 오디오, LGPL)
+
+### libmp3lame
+
+**BioStar X**는 MP3 오디오 인코딩을 위해 libmp3lame을 사용합니다.
+
+* Component: libmp3lame (LAME MP3 Encoder)
+
+* Version: 3.100
+
+* License: GNU Lesser General Public License v2.1
+
+   전문: [COPYING.LGPLv2.1](./opensource/opensourcelicenses.txt) 참고 (ffmpeg와 동일한 LGPL v2.1 버전)
+
+* Source code: lame-3.100.tar.gz
+
+* Upstream URL: [lame-3.100.tar.gz](https://supremadocs.blob.core.windows.net/opensource/lame-3.100.tar.gz)
+
+* SHA-256: ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e
+
+수정 사항: 없음. 업스트림 소스 tarball을 변경 없이 그대로 사용했으며, 빌드 시 `--enable-libmp3lame` 옵션을 통해 *ffmpeg.exe*와 *ffprobe.exe*에 정적으로 링크되었습니다.
