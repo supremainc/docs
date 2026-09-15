@@ -2172,7 +2172,7 @@
     "height": 155
   },
   "/img/biostarx-monitoring-door-elevator-details-floor-list.png": {
-    "width": 328,
+    "width": 673,
     "height": 128
   },
   "/img/biostarx-monitoring-door-elevator-details.png": {
@@ -4488,8 +4488,8 @@
     "height": 483
   },
   "/img/biostarx-user-scan-passport-error-usb-agent.png": {
-    "width": 362,
-    "height": 230
+    "width": 400,
+    "height": 200
   },
   "/img/biostarx-user-sub-group-add.png": {
     "width": 400,
@@ -12128,8 +12128,8 @@
     "height": 204
   },
   "/img/en/biostarx-monitoring-door-elevator-details-floor-list.png": {
-    "width": 328,
-    "height": 144
+    "width": 673,
+    "height": 128
   },
   "/img/en/biostarx-monitoring-door-elevator-details.png": {
     "width": 1200,
@@ -14392,8 +14392,8 @@
     "height": 250
   },
   "/img/en/biostarx-user-scan-passport-error-usb-agent.png": {
-    "width": 362,
-    "height": 230
+    "width": 400,
+    "height": 200
   },
   "/img/en/biostarx-user-sub-group-add.png": {
     "width": 400,
