@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styles from './styles.module.css';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -7,12 +7,22 @@ import FeedbackWidget from '@site/src/components/Feedback';
 import IcoDown from '@site/static/img/menus/ico-down-arrow.svg';
 import DocPrint from './dochub-print.svg';
 import DocHubLink from './dochub-down.svg';
+import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
+import Resources from "@site/src/pages/dochub/resource.json";
 
 const DocuementButton = () => {
   const { siteConfig } = useDocusaurusContext();
   const [isClient, setIsClient] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const currentSidebar = useDocsSidebar() || null;
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+
+  const currentResource = useMemo(
+    () => Resources.find((item) => item.sidebar === currentSidebar?.name),
+    [currentSidebar]
+  );
+  const currentManual = currentResource?.manuals?.[currentLocale] || currentResource?.manuals?.en || null;
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
@@ -50,7 +60,18 @@ const DocuementButton = () => {
   const handleDownload = () => {
     if (!isClient) return;
     setIsDropdownOpen(false);
-    window.location.href = `${siteConfig.url}${siteConfig.baseUrl}dochub`;
+    const fullUrl = `https://supremadocs.blob.core.windows.net/dochub/${currentManual}`;
+
+    window.gtag?.("event", "file_download", {
+      file_name: fullUrl.split("/").pop(),
+      file_extension: fullUrl.split(".").pop(),
+      link_url: fullUrl,
+      link_text: translate({ message: 'component.DocbreadcrumOption.download' }),
+      doc_type: "manuals",
+      product_name: currentResource?.product,
+    });
+
+    window.location.href = fullUrl;
   };
 
   const curLocation = isClient ? window.location.href : '';
@@ -82,11 +103,13 @@ const DocuementButton = () => {
                 <DocPrint width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.print' })}
               </button>
             </li>
-            <li role="menuitem">
-              <button onClick={handleDownload} className={styles.dropdownItem}>
-                <DocHubLink width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.download' })}
-              </button>
-            </li>
+            {currentManual && (
+              <li role="menuitem">
+                <button onClick={handleDownload} className={styles.dropdownItem}>
+                  <DocHubLink width='18' height='18' /> {translate({ message: 'component.DocbreadcrumOption.download' })}
+                </button>
+              </li>
+            )}
           </ul>
         )}
         <FeedbackWidget

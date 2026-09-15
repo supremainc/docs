@@ -2,6 +2,7 @@
     {
         "category": "platform",
         "product": "BioStar X",
+        "sidebar": "biostarx",
         "version": "1.0.2",
         "manuals": {
             "ko": "platform/bsx/BioStar X_Administrator_Guide_1.0.2_KO_260507.pdf",
@@ -19,6 +20,7 @@
     {
         "category": "platform",
         "product": "BioStar Air",
+        "sidebar": "biostar_air",
         "version": "2.13.0",
         "manuals": {
             "ko": "platform/bsair/BioStar Air_AG_2.13.0_KO_260915.pdf",
@@ -35,6 +37,7 @@
     {
         "category": "aicamera",
         "product": "ViOnyx",
+        "sidebar": "vionyx",
         "models": [
             "VQF12-R"
         ],
@@ -59,6 +62,7 @@
     {
         "category": "aicamera",
         "product": "ViOnyx Web Server",
+        "sidebar": "aicamwebserver",
         "models": [
             "VQF12-R"
         ],
@@ -74,6 +78,7 @@
     {
         "category": "biometric",
         "product": "BioEntry P2",
+        "sidebar": "bioentryp2",
         "models": [
             "BEP2-OD",
             "BEP2-OA"
@@ -99,6 +104,7 @@
     {
         "category": "biometric",
         "product": "BioEntry R2",
+        "sidebar": "bioentryr2",
         "models": [
             "BER2-OD"
         ],
@@ -123,6 +129,7 @@
     {
         "category": "biometric",
         "product": "BioEntry W2",
+        "sidebar": "bioentryw2",
         "models": [
             "BEW2-OHPB",
             "BEW2-ODPB",
@@ -149,6 +156,7 @@
     {
         "category": "biometric",
         "product": "BioEntry W2 UL",
+        "sidebar": "bioentryw2_ul",
         "models": [
             "BEW2-OHPB",
             "BEW2-ODPB",
@@ -161,6 +169,7 @@
     {
         "category": "biometric",
         "product": "BioEntry W3",
+        "sidebar": "bioentryw3",
         "models": [
             "BEW3-DB",
             "BEW3-APB"
@@ -186,6 +195,7 @@
     {
         "category": "biometric",
         "product": "BioLite N2",
+        "sidebar": "bioliten2",
         "models": [
             "BLN2-ODB",
             "BLN2-OAB",
@@ -212,6 +222,7 @@
     {
         "category": "biometric",
         "product": "BioLite N2 CLUe",
+        "sidebar": "bioliten2_clue",
         "models": [
             "BLN2-ODB",
             "BLN2-OAB",
@@ -233,6 +244,7 @@
     {
         "category": "biometric",
         "product": "BioLite N2 UL",
+        "sidebar": "bioliten2_ul",
         "models": [
             "BLN2-ODB",
             "BLN2-OAB",
@@ -297,6 +309,7 @@
     {
         "category": "biometric",
         "product": "BioStation 2a",
+        "sidebar": "biostation2a",
         "models": [
             "BS2A-ODPB",
             "BS2A-OAPWB"
@@ -322,6 +335,7 @@
     {
         "category": "biometric",
         "product": "BioStation 3",
+        "sidebar": "biostation3",
         "models": [
             "BS3-DB",
             "BS3-APWB"
@@ -347,6 +361,7 @@
     {
         "category": "biometric",
         "product": "BioStation 3 CLUe",
+        "sidebar": "biostation3_clue",
         "models": [
             "BS3-DB",
             "BS3-APWB"
@@ -367,6 +382,7 @@
     {
         "category": "biometric",
         "product": "BioStation 3 UL",
+        "sidebar": "biostation3_ul",
         "models": [
             "BS3-DB",
             "BS3-APWB"
@@ -378,6 +394,7 @@
     {
         "category": "biometric",
         "product": "BioStation 3 Max",
+        "sidebar": "biostation3max",
         "models": [
             "BS3M-ODB",
             "BS3M-OAPB",
@@ -500,6 +517,7 @@
     {
         "category": "biometric",
         "product": "FaceStation 2",
+        "sidebar": "facestation2",
         "models": [
             "FS2-D",
             "FS2-AWB"
@@ -525,6 +543,7 @@
     {
         "category": "biometric",
         "product": "FaceStation F2",
+        "sidebar": "facestationf2",
         "models": [
             "FSF2-DB",
             "FSF2-AB",
@@ -551,6 +570,7 @@
     {
         "category": "biometric",
         "product": "X-Station 2",
+        "sidebar": "xstation2",
         "models": [
             "XS2-ODPB",
             "XS2-OAPB",
@@ -580,6 +600,7 @@
     {
         "category": "biometric",
         "product": "X-Station 2 CLUe",
+        "sidebar": "xstation2_clue",
         "models": [
             "XS2-ODPB",
             "XS2-OAPB",
@@ -604,6 +625,7 @@
     {
         "category": "rfmobile",
         "product": "XPass 2",
+        "sidebar": "xpass2",
         "models": [
             "XP2-MDPB",
             "XP2-MAPB",
@@ -649,6 +671,7 @@
     {
         "category": "rfmobile",
         "product": "XPass 2 UL",
+        "sidebar": "xpass2_ul",
         "models": [
             "XP2-MDPB",
             "XP2-MAPB",
@@ -663,6 +686,7 @@
     {
         "category": "rfmobile",
         "product": "XPass D2",
+        "sidebar": "xpassd2",
         "models": [
             "XPD2-MDB",
             "XPD2-GDB",
@@ -689,6 +713,7 @@
     {
         "category": "rfmobile",
         "product": "XPass D2 UL",
+        "sidebar": "xpassd2_ul",
         "models": [
             "XPD2-MDB",
             "XPD2-GDB",
@@ -701,6 +726,7 @@
     {
         "category": "rfmobile",
         "product": "XPass Q2",
+        "sidebar": "xpassq2",
         "models": [
             "XPQ2-DB",
             "XPQ2-DPB"
@@ -726,6 +752,7 @@
     {
         "category": "rfmobile",
         "product": "XPass S2",
+        "sidebar": "xpasss2",
         "models": [
             "XPS2M"
         ],
@@ -750,6 +777,7 @@
     {
         "category": "intelligent",
         "product": "CoreStation 20",
+        "sidebar": "corestation20",
         "models": [
             "CS-20",
             "CS-20P"
@@ -775,6 +803,7 @@
     {
         "category": "intelligent",
         "product": "CoreStation 20 UL",
+        "sidebar": "corestation20_ul",
         "models": [
             "CS-20",
             "CS-20P"
@@ -786,6 +815,7 @@
     {
         "category": "intelligent",
         "product": "CoreStation",
+        "sidebar": "corestation",
         "models": [
             "CS-40"
         ],
@@ -810,6 +840,7 @@
     {
         "category": "intelligent",
         "product": "CoreStation UL",
+        "sidebar": "corestation_ul",
         "models": [
             "CS-40"
         ],
@@ -820,6 +851,7 @@
     {
         "category": "intelligent",
         "product": "Enclosure",
+        "sidebar": "enclosure",
         "models": [
             "ENCR-10"
         ],
@@ -835,6 +867,7 @@
     {
         "category": "peripherals",
         "product": "Door Interface",
+        "sidebar": "doorinterface",
         "models": [
             "DI-24"
         ],
@@ -859,6 +892,7 @@
     {
         "category": "peripherals",
         "product": "Door Interface UL",
+        "sidebar": "doorinterface_ul",
         "models": [
             "DI-24"
         ],
@@ -869,6 +903,7 @@
     {
         "category": "peripherals",
         "product": "Door Module",
+        "sidebar": "doormodule",
         "models": [
             "DM-20"
         ],
@@ -893,6 +928,7 @@
     {
         "category": "peripherals",
         "product": "Extended Module",
+        "sidebar": "extendedmodule",
         "version": "",
         "manuals": {
             "ko": "device/extendedmodule/Extended Module_IG_1.00_KO_260622.pdf",
@@ -914,6 +950,7 @@
     {
         "category": "peripherals",
         "product": "Extended Module-SC",
+        "sidebar": "extendedmodule_sc",
         "version": "",
         "manuals": {
             "ko": "device/extendedmodule_sc/Extended Module-SC_IG_1.00_KO_260622.pdf",
@@ -935,6 +972,7 @@
     {
         "category": "peripherals",
         "product": "Input Module",
+        "sidebar": "inputmodule",
         "models": [
             "IM-120"
         ],
@@ -959,6 +997,7 @@
     {
         "category": "peripherals",
         "product": "Output Module",
+        "sidebar": "outputmodule",
         "models": [
             "OM-120"
         ],
@@ -983,6 +1022,7 @@
     {
         "category": "peripherals",
         "product": "Secure I/O 2",
+        "sidebar": "securemodule",
         "models": [
             "SIO2"
         ],
@@ -1007,6 +1047,7 @@
     {
         "category": "peripherals",
         "product": "Secure I/O 2 UL",
+        "sidebar": "securemodule_ul",
         "models": [
             "SIO2"
         ],
@@ -1017,6 +1058,7 @@
     {
         "category": "apps",
         "product": "BioStar X Mobile",
+        "sidebar": "biostarx_mobile",
         "version": "1.0.4",
         "manuals": {
             "ko": "platform/bsx-mobile/BioStar X Mobile_UG_1.0.4_KO_260701.pdf",
@@ -1029,6 +1071,7 @@
     {
         "category": "apps",
         "product": "CoreStation Setup Manager",
+        "sidebar": "corestation_setup_manager",
         "models": [
             "CoreStation",
             "CoreStation 20"
@@ -1054,6 +1097,7 @@
     {
         "category": "apps",
         "product": "Device Manager",
+        "sidebar": "device_manager",
         "models": [
             "XPass D2",
             "XPass 2",
@@ -1081,6 +1125,7 @@
     {
         "category": "integration",
         "product": "Genetec",
+        "sidebar": "genetec",
         "version": "",
         "manuals": {
             "en": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
@@ -1101,6 +1146,7 @@
     {
         "category": "integration",
         "product": "Gallagher",
+        "sidebar": "gallagher",
         "version": "",
         "manuals": {
             "en": "Integration/gallagher/Suprema Integration with Gallagher Command Centre_AG_2.0_EN_260629.pdf",
@@ -1121,6 +1167,7 @@
     {
         "category": "integration",
         "product": "Software House",
+        "sidebar": "ccure",
         "version": "",
         "manuals": {
             "en": "Integration/ccure/Suprema - CCURE Integration (Advanced Version)_AG_1.2_EN_260629.pdf",
