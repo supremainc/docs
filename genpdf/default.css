@@ -1169,6 +1169,9 @@ footer {
 
 .callout-content {
   margin-left: 36px;
+  min-width: 0; /* flex item 기본 min-width:auto 방지 */
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .callout-content p + p {
@@ -1193,6 +1196,11 @@ footer {
   padding-left: 0;
 }
 
+.callout-content ul,
+.callout-content ol {
+  width: auto !important;    /* fit-content 제거 */
+}
+
 .callout-content ul + p, .callout-content ol + p {
   margin-top: 8px;
 }
@@ -1203,6 +1211,12 @@ footer {
 
 .callout-content li p {
   margin-bottom: 8px;
+}
+
+.callout-content p.hasimg img {
+  max-width: 100%;       /* width → max-width로 */
+  height: auto;
+  display: block;
 }
 
 /* Callout Type Variants */
@@ -1527,7 +1541,7 @@ span.text-blue-500 {
   .doc-content table.component p.hasimg img {
     margin: 0 auto;
   }
-  .docs-content img {
+  .doc-content img {
     max-width: 65% !important;
   }
   img[src*='monitoring-map-area-tree'] {
@@ -1677,7 +1691,6 @@ span.text-blue-500 {
   margin-bottom: 0.7in;
   margin-left: 0.5in;
   margin-right: 0.5in;
-  prince-shrink-to-fit: none;
   @top-right { 
     content: string(doctitle);
     font-size: 10pt;
