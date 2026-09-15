@@ -34,6 +34,10 @@ const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd
 const cmdCamKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/ko.json`, 'utf-8'));
 const cmdCamEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/en.json`, 'utf-8'));
 
+const cmdClueKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/ko.json`, 'utf-8'));
+const cmdClueEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/en.json`, 'utf-8'));
+const cmdClueJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/ja.json`, 'utf-8'));
+
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
 const glossaryEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/glossary.json`, 'utf-8'));
@@ -711,6 +715,12 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
     en: cmdCamEn,
   };
 
+  const clueLocaleMap = {
+    ko: cmdClueKo,
+    en: cmdClueEn,
+    ja: cmdClueJa,
+  };
+
   const glossaryMap = {
     ko: glossaryKo,
     en: glossaryEn,
@@ -781,6 +791,9 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
           localeText = locale[sidAttr];
         } else if (productAttr === 'cam') {
           const locale = camLocaleMap[language] || camLocaleMap.en;
+          localeText = locale[sidAttr];
+        } else if (productAttr === 'clue') {
+          const locale = clueLocaleMap[language] || clueLocaleMap.en;
           localeText = locale[sidAttr];
         } else {
           const locale = cmdXLocaleMap[language] || cmdXEn;

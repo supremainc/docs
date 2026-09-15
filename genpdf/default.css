@@ -180,7 +180,7 @@ header p {
   display: none;
 }
 
-.doc-section.biostar-x > h2 {
+.doc-section.biostar-x > h2, .doc-section.clueportal > h3 {
   break-before: page;
 }
 
@@ -1522,7 +1522,7 @@ span.text-blue-500 {
 }
 
 @media print {
-  h2 { string-set: doctitle content() }
+  h2, .clueportal h3 { string-set: doctitle content() }
   body {
     max-width: none;
     margin: 0;

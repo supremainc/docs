@@ -234,6 +234,8 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
       sectionClass += ' biostar-x';
     } else if (sidebar === 'biostar_air') {
       sectionClass += ' biostar-air';
+    } else if (sidebar === 'clueportal') {
+      sectionClass += ' clueportal';
     }
     contentSections.push(`
     <section class="${sectionClass}" id="${file.headingId}">
