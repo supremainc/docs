@@ -35,6 +35,18 @@
         "release_date": "2026-08-25"
     },
     {
+        "category": "platform",
+        "product": "CLUe",
+        "sidebar": "clueportal",
+        "version": "R_2026-09-28",
+        "manuals": {
+            "ko": "platform/clue/CLUe_AG_R_2026-09-28_KO_260915.pdf",
+            "en": "platform/clue/CLUe_AG_R_2026-09-28_EN_260915.pdf",
+            "ja": "platform/clue/CLUe_AG_R_2026-09-28_JA_260915.pdf"
+        },
+        "release_date": "2026-09-28"
+    },
+    {
         "category": "aicamera",
         "product": "ViOnyx",
         "sidebar": "vionyx",
