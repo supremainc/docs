@@ -3,6 +3,18 @@
     {
       "route": "/",
       "rewrite": "/api/detect-language"
+    },
+    {
+      "route": "/en/api/bsxapi",
+      "rewrite": "/api/bsxapi"
+    },
+    {
+      "route": "/es/api/bsxapi",
+      "rewrite": "/api/bsxapi"
+    },
+    {
+      "route": "/ja/api/bsxapi",
+      "rewrite": "/api/bsxapi"
     }
   ]
 }
