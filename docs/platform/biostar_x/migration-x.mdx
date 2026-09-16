@@ -45,6 +45,26 @@ BioStar 2에서 **BioStar X**로 업그레이드하기 전에 다음 사항을 �
 
 :::
 
+:::warning 
+
+### 인증서 확인 {/* #checkCert */}
+
+BioStar 2에서 BioStar X로 업그레이드했을 때, `nginx\conf` 경로와 `nginx\cert` 경로에 있는 `biostar_cert.crt` 파일이 서로 다를 수 있습니다. 이 상태로 업그레이드하면 다음과 같은 문제가 발생합니다.
+
+* 감사 로그가 일부 기록되지 않습니다.
+
+* 사용자 그룹 생성, Wiegand 추가, 트리 갱신에 실패합니다.
+
+BioStar X로 업그레이드하기 전에 인증서 파일을 일치시키려면 다음 단계를 따르세요.
+
+1. BioStar 2 서비스를 중지하세요.
+
+1. `nginx\conf` 경로의 `biostar_cert.crt`, `biostar_cert.key` 파일을 `nginx\cert` 경로에 덮어쓰세요.
+
+1. BioStar 2 서비스를 다시 시작하세요.
+
+:::
+
 ## 업그레이드 설치 안내 {/* #upgrade-install */}
 
 1. [슈프리마 다운로드 센터](https://download.supremainc.com/)로 접속해 로그인한 후 설치 패키지(*BioStar X Setup.X.Y.Z.BB.exe*)를 다운로드하세요.
