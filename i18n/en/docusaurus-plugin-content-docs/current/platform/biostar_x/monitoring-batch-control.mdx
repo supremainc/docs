@@ -46,7 +46,7 @@ To select doors, elevators, floors, or advanced access control in the status tre
 
 :::info
 
-The bulk control panel does not open when none or only one entry is selected. When only one entry remains selected, its preview appears. When all selections are cleared, the right panel disappears.
+The bulk control panel does not open when none or only one entry is selected. When only one entry remains selected, its view detail appears. When all selections are cleared, the right panel disappears.
 
 :::
 
@@ -114,7 +114,7 @@ Use the following buttons when at least one selected entry meets the conditions 
 
 * <Cmd sid='monitoring.multiControl.normalizeOverrides' />: Available when an administrator manually unlocks or locks a door. This excludes statuses changed by schedules or emergencies.
 
-* <Cmd sid='monitoring.multiControl.arm' /> / <Cmd sid='monitoring.multiControl.disarm' />: Appears only when a door is set to security, an advanced access control setting.
+* <Cmd sid='monitoring.multiControl.arm' /> / <Cmd sid='monitoring.multiControl.disarm' />: Appears only when a door is set to intrusion alarm, an advanced access control setting.
 
 </Column>
 </Columns>
@@ -149,7 +149,7 @@ If you select an elevator and its floors, the system sends one unlock/lock comma
 
 ## Bulk control of advanced access control {/* #bulk-acs */}
 
-Select multiple advanced access control settings to control them at once. When selecting two or more, the right pane switches to the bulk control panel. Selection, grouping, range, and filter actions match doors and elevators.
+Select multiple advanced access control settings to control them at once. When selecting two or more, the right pane switches to the bulk control panel. Selection, range, and filter actions match doors and elevators.
 
 Advanced access control settings lack lock relays and admin unlock/lock, so control options differ from doors and elevators. The following control buttons appear depending on the selected setting type.
 
@@ -157,15 +157,15 @@ Advanced access control settings lack lock relays and admin unlock/lock, so cont
 
 * <Cmd sid='arena.tree.contextMenu.enable' />/<Cmd sid='arena.tree.contextMenu.disable' />: Appears for all advanced access control settings.
 
-* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: Appears only when the selection includes security settings.
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: Appears only when the selection is set to intrusion alarm.
 
-* <Cmd sid='monitoring.multiControl.clearAlarm' />: Appears only when the selection includes alarm-triggering settings (anti-passback, fire alarm, schedule lock, security, interlock, or muster). It does not appear when you select only non-alarm settings, such as Occupancy limit or Headcount check.
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: Appears only when the selection includes alarm-triggering settings (anti-passback, fire alarm, schedule lock, intrusion alarm, interlock, or muster). It does not appear when you select only non-alarm settings, such as Occupancy limit or Headcount check.
 
-* <Cmd sid='monitoring.multiControl.clearApb' />: Appears only when the selection includes the anti-passback setting. Click this button. In the user selection window, select a user who violated anti-passback, and clear the APB alarm. For more information, refer to <DocLink docId='platform/biostar_x/control-door#apb-reset' />.
+* <Cmd sid='monitoring.multiControl.clearApb' />: Appears only when the selection includes the anti-passback setting. Click this button. In the user selection window, select a user who violated anti-passback, and clear the APB alarm. For more information, see <DocLink docId='platform/biostar_x/control-zone#apb-release' />.
 
 :::info
 
-* Bulk control does not include <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, or <Cmd sid='monitoring.multiControl.normalizeOverrides' />. The bulk control panel also excludes features that open other screens, such as Muster report and Occupancy limit monitoring. Use these features on the details screen when one setting is selected.
+* Bulk control does not include <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, or <Cmd sid='monitoring.multiControl.normalizeOverrides' />. The bulk control panel also excludes features that open other screens, such as muster report and occupancy limit monitoring. Use these features on the details screen when one setting is selected.
 
 * For more information on advanced access control, see <DocLink docId='platform/biostar_x/control-zone' />.
 
@@ -187,6 +187,6 @@ Advanced access control settings lack lock relays and admin unlock/lock, so cont
 
 :::info
 
-Check per-entry results when executing <Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' />, or <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />. In contrast, advanced access control settings and the elevator <Cmd sid='monitoring.multiControl.clearAlarm' /> and <Cmd sid='monitoring.multiControl.clearApb' /> features provide only success or failure messages.
+Check per-entry results when executing <Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' />, or <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />.
 
 :::
