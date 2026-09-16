@@ -47,7 +47,7 @@ description: 여러 출입문, 엘리베이터, 고급 출입 통제 설정을 �
 
 :::info
 
-선택한 항목이 없거나 한 개뿐이면 일괄 제어 패널이 열리지 않습니다. 항목을 한 개만 남기면 해당 항목의 미리보기가 표시되고, 모두 선택 해제하면 오른쪽에 위치한 패널이 사라집니다.
+선택한 항목이 없거나 한 개뿐이면 일괄 제어 패널이 열리지 않습니다. 항목을 한 개만 남기면 해당 항목의 상세 보기가 표시되고, 모두 선택 해제하면 오른쪽에 위치한 패널이 사라집니다.
 
 :::
 
@@ -154,7 +154,7 @@ description: 여러 출입문, 엘리베이터, 고급 출입 통제 설정을 �
 
 ## 고급 출입 통제 일괄 제어 {/* #bulk-acs */}
 
-고급 출입 통제 설정도 여러 개를 선택해서 한 번에 제어할 수 있습니다. 두 개 이상 선택하면 오른쪽 영역이 일괄 제어 패널로 전환됩니다. 선택, 그룹, 범위, 필터 동작은 출입문, 엘리베이터와 같습니다.
+고급 출입 통제 설정도 여러 개를 선택해서 한 번에 제어할 수 있습니다. 두 개 이상 선택하면 오른쪽 영역이 일괄 제어 패널로 전환됩니다. 선택, 범위, 필터 동작은 출입문, 엘리베이터와 같습니다.
 
 고급 출입 통제 설정은 잠금 릴레이나 관리자 개방/잠금 개념이 없어 출입문, 엘리베이터와 제어 항목이 다릅니다. 선택한 설정의 종류에 따라 다음 제어 버튼이 표시됩니다.
 
@@ -166,11 +166,11 @@ description: 여러 출입문, 엘리베이터, 고급 출입 통제 설정을 �
 
 * <Cmd sid='monitoring.multiControl.clearAlarm' />: 선택한 항목에 알람이 발생하는 설정(안티패스백, 화재 경보, 스케줄 잠금, 경비, 인터락, 소집)이 있을 때만 표시됩니다. 재실 인원 제한, 인원 점검처럼 알람이 발생하지 않는 설정만 선택하면 표시되지 않습니다.
 
-* <Cmd sid='monitoring.multiControl.clearApb' />: 선택한 항목에 안티패스백 설정이 있을 때만 표시됩니다. 이 버튼을 클릭하면 사용자를 선택하는 창을 통해 안티패스백을 위반한 사용자의 APB 알람을 해제할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/control-door#apb-reset' />를 참고하세요.
+* <Cmd sid='monitoring.multiControl.clearApb' />: 선택한 항목에 안티패스백 설정이 있을 때만 표시됩니다. 이 버튼을 클릭하면 사용자를 선택하는 창을 통해 안티패스백을 위반한 사용자의 APB 알람을 해제할 수 있습니다. 자세한 내용은 <DocLink docId='platform/biostar_x/control-zone#apb-release' />를 참고하세요.
 
 :::info
 
-* <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' /> 기능은 일괄 제어에 포함되지 않습니다. 소집 보고서 확인, 재실 인원 제한 모니터링처럼 다른 화면으로 이동하는 기능도 일괄 제어 패널에서는 제공하지 않습니다. 이 기능들은 해당 설정을 하나만 선택했을 때, 상세 정보 화면에서 사용할 수 있습니다.
+* <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' /> 기능은 일괄 제어에 포함되지 않습니다. 소집 리포트 확인, 재실 인원 제한 모니터링처럼 다른 화면으로 이동하는 기능도 일괄 제어 패널에서는 제공하지 않습니다. 이 기능들은 해당 설정을 하나만 선택했을 때, 상세 정보 화면에서 사용할 수 있습니다.
 
 * 고급 출입 통제 제어에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/control-zone' />를 참고하세요.
 
@@ -193,6 +193,6 @@ description: 여러 출입문, 엘리베이터, 고급 출입 통제 설정을 �
 
 :::info
 
-<Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' />, <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> 기능 실행 시 항목별 결과를 확인할 수 있습니다. 반면 고급 출입 통제 설정과 엘리베이터의 <Cmd sid='monitoring.multiControl.clearAlarm' />, <Cmd sid='monitoring.multiControl.clearApb' /> 기능은 항목별 결과를 제공하지 않고 성공/실패 메시지로 안내합니다.
+<Cmd sid='monitoring.multiControl.unlock' />, <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' />, <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> 기능 실행 시 항목별 결과를 확인할 수 있습니다.
 
 :::
