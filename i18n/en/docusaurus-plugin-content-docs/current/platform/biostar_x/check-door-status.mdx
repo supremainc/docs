@@ -1,10 +1,10 @@
 ---
 id: check-door-status
 title: Check status
-description: Monitor the status of doors, elevators, and advanced access control areas in real time. Review only entries that need action and respond immediately.
+description: 출입문, 엘리베이터, 고급 출입 통제의 상태를 실시간으로 모니터링하고, 조치가 필요한 항목만 모아 확인하여 즉시 대응할 수 있습니다.
 ---
 
-Monitor door, elevator, and advanced access control area status in real time to operate the security system reliably. Use the status icons in <Cmd sid='shell.header.arena' /> to check alarms and abnormal status at a glance. Review only entries that need action and respond immediately.
+출입문, 엘리베이터, 고급 출입 통제의 상태를 실시간으로 모니터링하여 보안 시스템을 안정적으로 운영할 수 있습니다. Use the status icons in <Cmd sid='shell.header.arena' /> to check alarms and abnormal status at a glance. Review only entries that need action and respond immediately.
 
 Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. Check the status of each entry in the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar of the screen.
 
@@ -57,7 +57,7 @@ You can check the status of the door or elevator to verify proper operation. Ref
 | Status Icon | Description |
 | :-: | --- |
 | <IcErr width='35px' height='35px' /> | Displays device abnormal statuses such as disconnection, Multi Communications Server errors, and synchronization errors. |
-| <IcAlert width='40px' height='40px' /> | Displays the status when entrance door alarms (forced door opening, prolonged door opening, APB, fire alarms, emergency openings) or AI video analysis alarms (loitering detection, intrusion detection, etc.) occur. |
+| <IcAlert width='40px' height='40px' /> | 출입문, 엘리베이터, 고급 출입 통제, AI 영상 분석 알람이 발생한 상태를 표시합니다. |
 
 </div>
 
@@ -196,7 +196,7 @@ Evaluate elevators under the same conditions as doors. However, abnormal status 
 
   <div className='overflow-x'>
 
-  | Elevator alarm types | Description |
+  | Alarm types | Description |
   | --- | --- |
   | Elevator alarm triggered | Elevator alarm activated |
   | Elevator input alarm | Alarm triggered by an external input signal |
@@ -214,11 +214,11 @@ Evaluate elevators under the same conditions as doors. However, abnormal status 
 
 #### Advanced access control
 
-Zones in an advanced access control group (anti-passback, fire alarm, intrusion, muster, occupancy limit, and interlock) are also included when determining whether action is required. However, unlike doors and elevators, mode changes and abnormal status conditions do not apply. If at least one alarm remains uncleared, the zone appears as requiring action.
+고급 출입 통제 그룹의 항목(안티패스백, 화재 경보, 침입, 소집, 재실 인원 제한, 인터락)도 조치 대상 판정에 포함됩니다. 다만 출입문이나 엘리베이터와 달리 모드 변경이나 이상 상태 조건은 적용되지 않으며, 해제되지 않은 알람이 하나라도 있으면 조치 대상으로 표시됩니다.
 
 <div className='overflow-x'>
 
-| Zone alarm types | Description |
+| Alarm types | Description |
 | --- | --- |
 | Anti-passback (APB) alarm | Anti-passback rule violated |
 | Fire Alarm | Alarm triggered by detecting a fire |
@@ -231,9 +231,9 @@ Zones in an advanced access control group (anti-passback, fire alarm, intrusion,
 
 :::info
 
-* Zones in Armed (Arm) status and disabled zones are not displayed as requiring action. Armed means the zone operates normally, and Disabled means it is intentionally off.
+* 경비(Arm) 상태와 비활성화된 항목은 조치 대상으로 표시되지 않습니다. Armed means the zone operates normally, and Disabled means it is intentionally off.
 
-* Zones appear as direct children of the Advanced Access Control group, and doors do not expand under them. Only zones that require action remain in the tree. If none exist, the Advanced Access Control group is removed from the tree.
+* 각 항목은 고급 출입 통제 그룹의 직계 하위로 표시되며, 하위에 출입문이 펼쳐지지 않습니다. 조치가 필요한 항목만 트리에 남고, 조치 대상이 없으면 고급 출입 통제 그룹 자체가 트리에서 제외됩니다.
 
 :::
 
