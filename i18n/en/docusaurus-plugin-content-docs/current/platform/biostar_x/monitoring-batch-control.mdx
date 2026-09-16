@@ -4,7 +4,7 @@ title: Bulk Control
 description: Select multiple doors, elevators, and advanced access control settings to control them at once.
 ---
 
-This guide explains selecting multiple doors, elevators, or advanced access control settings and running Unlock, Lock, or Disarm at once.
+This guide explains selecting multiple doors, elevators, or advanced access control settings and running Unlock, Lock, or Clear Alarm at once.
 
 * If you select two or more entries in the status tree, the bulk control panel appears on the right side of the screen. Execute commands at once without controlling each entry individually.
 
@@ -161,11 +161,11 @@ Advanced access control settings lack lock relays and admin unlock/lock, so cont
 
 * <Cmd sid='monitoring.multiControl.clearAlarm' />: Appears only when the selection includes alarm-triggering settings (anti-passback, fire alarm, schedule lock, security, interlock, or muster). It does not appear when you select only non-alarm settings, such as Occupancy limit or Headcount check.
 
-* <Cmd sid='monitoring.multiControl.clearApb' />: Appears only when the selection includes an anti-passback setting. Click this option to open the Select Violators window. Select violating users, and apply the selection.
+* <Cmd sid='monitoring.multiControl.clearApb' />: Appears only when the selection includes the anti-passback setting. Click this button. In the user selection window, select a user who violated anti-passback, and clear the APB alarm. For more information, refer to <DocLink docId='platform/biostar_x/control-door#apb-reset' />.
 
 :::info
 
-* Batch control does not include <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, or <Cmd sid='monitoring.multiControl.normalizeOverrides' />. The batch control panel also excludes features that open other screens, such as Muster report and Occupancy limit monitoring. Use these features on the details screen when one setting is selected.
+* Bulk control does not include <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' />, or <Cmd sid='monitoring.multiControl.normalizeOverrides' />. The bulk control panel also excludes features that open other screens, such as Muster report and Occupancy limit monitoring. Use these features on the details screen when one setting is selected.
 
 * For more information on advanced access control, see <DocLink docId='platform/biostar_x/control-zone' />.
 

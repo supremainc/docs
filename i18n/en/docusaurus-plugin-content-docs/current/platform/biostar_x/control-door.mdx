@@ -41,7 +41,7 @@ The opened door can be accessed by anyone. Click <Cmd sid='arena.tree.contextMen
 
 * <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Unlocks the door regardless of time.
 
-Temporarily opening the door changes the door relay icon from <IcRelayLock title='Lock' height='20' width='20' /> to <IcRelayUnlock title='UnLock' height='20' width='20' />. Opening the door with the <Cmd sid='arena.tree.contextMenu.lockTimed' /> or <Cmd sid='arena.tree.contextMenu.lockPermanent' /> option changes the icon to <IcRelayUnlock height='20' width='20' />.
+Temporarily opening the door changes the door relay icon from <IcFixedLock title='Lock' height='20' width='20' /> to <IcFixedUnlock title='UnLock' height='20' width='20' />. Opening the door with the <Cmd sid='arena.tree.contextMenu.lockTimed' /> or <Cmd sid='arena.tree.contextMenu.lockPermanent' /> option changes the icon to <IcFixedUnlock height='20' width='20' />.
 
 :::tip
 
@@ -65,7 +65,7 @@ Changing the door to <Cmd sid='arena.tree.contextMenu.lock' /> status will preve
 
 * <Cmd sid='arena.tree.contextMenu.lockPermanent' />: Changes the door to a locked state regardless of time.
 
-Locking the door changes the door relay icon to <IcRelayLock width='20' height='20' />.
+Locking the door changes the door relay icon to <IcFixedLock width='20' height='20' />.
 
 ## Check door camera {/* #door-camera */}
 
@@ -105,11 +105,11 @@ You can deactivate the APB alarm when an anti-passback violation occurs.
 
    <Image src='/img/biostarx-monitoring-door-popup-clear-apb.png' />
 
-2. When the <Cmd sid='arena.tree.contextMenu.clearApb' /> window appears, check the list of users who have violated anti-passback.
+2. When the <Cmd sid='arena.tree.contextMenu.clearApb' /> window appears, check the list of all users.
 
    <Image src='/img/monitoring-door-monitoring-disable-apb.png' />
 
-3. Select a user and click the <Cmd sid='common.apply' /> button.
+3. Select the user who have violated anti-passback and click <Cmd sid='common.apply' />.
 
 A completion message appears in the upper right corner of the screen.
 
