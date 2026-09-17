@@ -11,7 +11,7 @@
             "type": "door-device",
             "children": [
               {
-                "name": "Camera",
+                "name": "카메라",
                 "type": "door-camera"
               }
             ]
