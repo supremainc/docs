@@ -62,7 +62,8 @@ const treeviewSvgIcons = {
   'access-zone': readFileSync(`${__dirname}/../static/img/menus/ico-zone.svg`, 'utf-8'),
   'elevator': readFileSync(`${__dirname}/../static/img/menus/ico-flelev.svg`, 'utf-8'),
   'elevator-device': readFileSync(`${__dirname}/../static/img/menus/ico-elevator.svg`, 'utf-8'),
-  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8')
+  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8'),
+  'elevator-floor': readFileSync(`${__dirname}/../static/img/menus/ico-elevator-floor.svg`, 'utf-8')
 };
 
 /**
@@ -2737,18 +2738,7 @@ function buildTreeviewHtml(data) {
     
     // Add icon for level > 1 or specific types
     if (level > 1 || node.type === 'access-zone') {
-      // Special handling for elevator-floor (rendered as a circle dot)
-      if (node.type === 'elevator-floor') {
-        nodeElements.push({
-          type: 'element',
-          tagName: 'span',
-          properties: { 
-            className: ['tree-icon'],
-            style: 'display: inline-block; width: 10px; height: 10px; background-color: #aaa; border-radius: 50%; position: relative; top: 2px;'
-          },
-          children: []
-        });
-      } else if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
+      if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
         const svgIcon = getSvgIcon(node.type);
         if (svgIcon) {
           nodeElements.push({
