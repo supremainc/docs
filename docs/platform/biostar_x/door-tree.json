@@ -8,21 +8,7 @@
         "children": [
           {
             "name": "출입문",
-            "type": "door-device",
-            "children": [
-              {
-                "name": "출입문 릴레이",
-                "type": "door-relay"
-              },
-              {
-                "name": "경비 상태",
-                "type": "door-arm"
-              },
-              {
-                "name": "Camera",
-                "type": "door-camera"
-              }
-            ]
+            "type": "door-device"
           }
         ]
       }

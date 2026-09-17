@@ -190,7 +190,7 @@ Evaluate elevators under the same conditions as doors. However, abnormal status 
 
 * **Mode change**: Same as doors. The system marks the elevator as needing attention when an admin, schedule, or emergency locks or unlocks it.
 
-* **Abnormal status**: Use door criteria (disconnection, synchronization error, multi-communication server error, device lock, and lockout after consecutive authentication failures). However, elevators do not have forced open or long-held open status, so exclude them from evaluation.
+* **Abnormal status**: Use door criteria. However, elevators do not have forced open or long-held open status, so exclude them from evaluation.
 
 * **Alarm**: Elevators have dedicated alarms that differ from door alarms. Please refer to the below.
 
@@ -247,7 +247,7 @@ Check whether the door is closed, open, or in an abnormal state. Refer to the fo
 | :-: | --- |
 | <IcDoorClose width='auto' height='35px' /> | The door is closed. |
 | <IcDoorOpen width='auto' height='35px' /> | The door is open. |
-| <IcDoorAlarm width='auto' height='35px' /> | The system does not detect the door sensor. |
+| <IcDoorAlarm width='auto' height='35px' /> | The door sensor is not set up. |
 
 </div>
 

@@ -117,6 +117,8 @@ keywords: [장치]
 
 :::info
 
+* <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 사용 중인 상태에서 <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션을 선택하지 않고 장치를 삭제하면 장치에 인증서가 남습니다. 이후 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 <Cmd sid="common.notUse" product='2' />으로 변경하고, 해당 장치를 다시 **BioStar X**에 등록하면 장치에 남은 인증서 때문에 연결되지 않습니다. 기본 인증서를 사용하고 있다면 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 다시 <Cmd sid='common.use' product='2' />으로 변경하세요.
+
 * 선택한 장치가 모두 슬레이브 장치이거나 보안 통신을 지원하지 않는 장치라면 <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션 없이 장치를 삭제할 수 있습니다.
 
 * <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> 옵션은 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> 옵션을 활성화했을 때만 표시됩니다. 자세한 내용은 <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />를 참고하세요.
@@ -130,7 +132,9 @@ keywords: [장치]
 
 :::info
 
-장치 설정 내보내기/가져오기 기능은 장치 설정에 대한 전체 권한이 있는 관리자가 사용할 수 있습니다. 관리자 권한 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-manage-account' />를 참고하세요.
+* 같은 모델이란 장치의 세부 모델명과 파트 넘버(예: XPD2-XXX에서 XXX 부분)까지 모두 일치하는 장치를 의미합니다.
+
+* 장치 설정 내보내기/가져오기 기능은 장치 설정에 대한 전체 권한이 있는 관리자가 사용할 수 있습니다. 관리자 권한 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-manage-account' />를 참고하세요.
 
 :::
 
@@ -218,11 +222,11 @@ keywords: [장치]
 
 가져오기를 실행하면 설정을 적용하기 전에 시스템이 다음 항목을 차례로 검사합니다. 검사 중 하나라도 조건에 맞지 않으면 설정을 적용하지 않고 사유를 안내합니다.
 
-* 선택한 장치들의 모델명이 모두 같은지
+* 선택한 장치들의 모델명(파트 넘버 포함)이 모두 같은지
 
 * 선택한 장치들과 파일의 RS-485 통신 모드가 모두 같은지
 
-* 파일에 저장된 모델명이 선택한 장치들의 모델명과 같은지
+* 파일에 저장된 모델명(파트 넘버 포함)이 선택한 장치들의 모델명(파트 넘버 포함)과 같은지
 
 * 선택한 장치 중에 가상 장치(Virtual Device)가 있는지
 

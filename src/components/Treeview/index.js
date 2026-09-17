@@ -132,11 +132,8 @@ function TreeNode({ node, level = 0 }) {
                     <span className={styles.treeIcon}>
                         {node.type === 'access-level' && <IcAcLevel height='25' width='auto' /> }
                         {node.type === 'door' && <IcAcDoor height='25' width='auto' /> }
-                        {node.type === 'door-device' && <IcDoorClose height='21' width='auto' /> }
+                        {node.type === 'door-device' && <><IcDoorClose height='21' width='auto' /></> }
                         {node.type === 'door-sensor' && <IcDoorSensor height='25' width='auto' /> }
-                        {node.type === 'door-relay' && <IcRelayLock height='25' width='auto' /> }
-                        {node.type === 'door-arm' && <IcArm height='25' width='auto' /> }
-                        {node.type === 'door-camera' && <IcCamOk height='25' width='auto' /> }
                         {node.type === 'floor-level' && <IcFloorLevel height='25' width='auto' /> }
                         {node.type === 'access-zone' && <IcZone height='25' width='auto' /> }
                         {node.type === 'elevator' && <IcFloorElev height='25' width='auto' /> }
@@ -146,7 +143,10 @@ function TreeNode({ node, level = 0 }) {
                     </span>
                 )}
                 
-                <span className={styles.treeLabel}>{node.name}</span>
+                <span className={styles.treeLabel}>
+                    {node.name}
+                </span>
+                {(node.name === '출입문' || node.name === 'Door') && <><IcRelayLock height='auto' width='25' /> <IcArm height='auto' width='25' /> <IcCamOk height='auto' width='25' /></>}
             </div>
             
             {hasChildren && (

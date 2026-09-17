@@ -2228,8 +2228,8 @@
     "height": 162
   },
   "/img/biostarx-data-all-events-video-log.png": {
-    "width": 400,
-    "height": 329
+    "width": 600,
+    "height": 414
   },
   "/img/biostarx-data-auto-schedule-main.png": {
     "width": 1200,
@@ -2649,7 +2649,7 @@
   },
   "/img/biostarx-monitoring-door-popup.png": {
     "width": 431,
-    "height": 387
+    "height": 361
   },
   "/img/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -2693,7 +2693,7 @@
   },
   "/img/biostarx-monitoring-elevators-batch-control.png": {
     "width": 1200,
-    "height": 250
+    "height": 259
   },
   "/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
     "width": 640,
@@ -2764,7 +2764,7 @@
     "height": 675
   },
   "/img/biostarx-monitoring-group-expand-collapse.png": {
-    "width": 400,
+    "width": 451,
     "height": 295
   },
   "/img/biostarx-monitoring-map-camera-popup.png": {
@@ -3548,8 +3548,8 @@
     "height": 320
   },
   "/img/biostarx-settings-account-add-custom-permission-details.png": {
-    "width": 1674,
-    "height": 880
+    "width": 1653,
+    "height": 895
   },
   "/img/biostarx-settings-account-add-custom-permission-example.png": {
     "width": 1389,
@@ -3852,8 +3852,8 @@
     "height": 475
   },
   "/img/biostarx-settings-custom-account-level.png": {
-    "width": 1001,
-    "height": 356
+    "width": 1000,
+    "height": 365
   },
   "/img/biostarx-settings-custom-interface.png": {
     "width": 1125,
@@ -12584,8 +12584,8 @@
     "height": 162
   },
   "/img/en/biostarx-data-all-events-video-log.png": {
-    "width": 400,
-    "height": 328
+    "width": 600,
+    "height": 414
   },
   "/img/en/biostarx-data-auto-schedule-main.png": {
     "width": 1200,
@@ -13001,7 +13001,7 @@
   },
   "/img/en/biostarx-monitoring-door-popup.png": {
     "width": 450,
-    "height": 387
+    "height": 354
   },
   "/img/en/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -13045,7 +13045,7 @@
   },
   "/img/en/biostarx-monitoring-elevators-batch-control.png": {
     "width": 1200,
-    "height": 250
+    "height": 259
   },
   "/img/en/biostarx-monitoring-event-alert-acknowledge-input-detail.png": {
     "width": 640,
@@ -13116,7 +13116,7 @@
     "height": 675
   },
   "/img/en/biostarx-monitoring-group-expand-collapse.png": {
-    "width": 400,
+    "width": 453,
     "height": 295
   },
   "/img/en/biostarx-monitoring-map-camera-popup.png": {
@@ -13900,8 +13900,8 @@
     "height": 320
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details.png": {
-    "width": 1674,
-    "height": 880
+    "width": 1653,
+    "height": 895
   },
   "/img/en/biostarx-settings-account-add-custom-permission-example.png": {
     "width": 1389,
@@ -14204,8 +14204,8 @@
     "height": 488
   },
   "/img/en/biostarx-settings-custom-account-level.png": {
-    "width": 1001,
-    "height": 354
+    "width": 1000,
+    "height": 365
   },
   "/img/en/biostarx-settings-custom-interface.png": {
     "width": 1123,
