@@ -34,6 +34,10 @@ const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd
 const cmdCamKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/ko.json`, 'utf-8'));
 const cmdCamEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/en.json`, 'utf-8'));
 
+const cmdClueKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/ko.json`, 'utf-8'));
+const cmdClueEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/en.json`, 'utf-8'));
+const cmdClueJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/ja.json`, 'utf-8'));
+
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
 const glossaryEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/glossary.json`, 'utf-8'));
@@ -58,7 +62,8 @@ const treeviewSvgIcons = {
   'access-zone': readFileSync(`${__dirname}/../static/img/menus/ico-zone.svg`, 'utf-8'),
   'elevator': readFileSync(`${__dirname}/../static/img/menus/ico-flelev.svg`, 'utf-8'),
   'elevator-device': readFileSync(`${__dirname}/../static/img/menus/ico-elevator.svg`, 'utf-8'),
-  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8')
+  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8'),
+  'elevator-floor': readFileSync(`${__dirname}/../static/img/menus/ico-elevator-floor.svg`, 'utf-8')
 };
 
 /**
@@ -674,7 +679,16 @@ export function rehypeProcessAdmonitions() {
  * Create a rehype plugin that processes <Cmd> components
  * Converts MDX Cmd JSX elements to span elements with proper locale text
  */
-export function rehypeProcessCmdComponent(language = 'ko') {
+function getDeviceNameFromDocPath(docPath) {
+  // device/biostation_3/settings -> biostation_3
+  if (!docPath) return null;
+  const match = docPath.replace(/\\/g, '/').match(/(?:^|\/)device\/([^/]+)\//);
+  return match ? match[1] : null;
+}
+
+export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
+  const deviceName = getDeviceNameFromDocPath(docPath);
+
   const cmdLocaleMap = {
     ko: cmdKo,
     en: cmdEn
@@ -700,6 +714,12 @@ export function rehypeProcessCmdComponent(language = 'ko') {
   const camLocaleMap = {
     ko: cmdCamKo,
     en: cmdCamEn,
+  };
+
+  const clueLocaleMap = {
+    ko: cmdClueKo,
+    en: cmdClueEn,
+    ja: cmdClueJa,
   };
 
   const glossaryMap = {
@@ -760,20 +780,21 @@ export function rehypeProcessCmdComponent(language = 'ko') {
         } else if (productAttr === 'dev') {
           const locale = deviceLocaleMap[language] || deviceLocaleMap.en;
           const sidValue = locale[sidAttr];
-          
+
           if (sidValue) {
             const isGroupType = typeof sidValue === 'object' && !Array.isArray(sidValue);
-            if (isGroupType) {
-              localeText = sidValue['common'] || null;
-            } else {
-              localeText = sidValue;
-            }
+            localeText = isGroupType
+              ? (deviceName && sidValue[deviceName]) || sidValue['common'] || null
+              : sidValue;
           }
         } else if (productAttr === 'air') {
           const locale = airLocaleMap[language] || airLocaleMap.en;
           localeText = locale[sidAttr];
         } else if (productAttr === 'cam') {
           const locale = camLocaleMap[language] || camLocaleMap.en;
+          localeText = locale[sidAttr];
+        } else if (productAttr === 'clue') {
+          const locale = clueLocaleMap[language] || clueLocaleMap.en;
           localeText = locale[sidAttr];
         } else {
           const locale = cmdXLocaleMap[language] || cmdXEn;
@@ -2717,18 +2738,7 @@ function buildTreeviewHtml(data) {
     
     // Add icon for level > 1 or specific types
     if (level > 1 || node.type === 'access-zone') {
-      // Special handling for elevator-floor (rendered as a circle dot)
-      if (node.type === 'elevator-floor') {
-        nodeElements.push({
-          type: 'element',
-          tagName: 'span',
-          properties: { 
-            className: ['tree-icon'],
-            style: 'display: inline-block; width: 10px; height: 10px; background-color: #aaa; border-radius: 50%; position: relative; top: 2px;'
-          },
-          children: []
-        });
-      } else if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
+      if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
         const svgIcon = getSvgIcon(node.type);
         if (svgIcon) {
           nodeElements.push({
