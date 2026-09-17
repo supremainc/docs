@@ -1,9 +1,9 @@
 ---
 id: 103
-title: (Draft) Version 1.0.3
+title: Version 1.0.3
 ---
 
-# (Draft) Version 1.0.3 (Build No. 1.0.3.130)
+# Version 1.0.3 (Build No. 1.0.3.170)
 
 Release<Separator/>2026-09-21
 
@@ -210,48 +210,45 @@ Release<Separator/>2026-09-21
 {/* <Jira bss='BX-5573' /> [모하메드병원]대규모 환경(Access Group 다수, Door 4000)에서 출입 통제 상태 메뉴 조회 오래 거리는 문제(1분 이상) */}
 49. Improved the query performance of the Status tab in the **Access Group** screen in large-scale environments.
 
-{/* <Jira bss='BX-5574' /> [모하메드병원]카드스켄화면에서 디바이스 트리 로드 오래 걸리는 이슈 */}
-50. Improved device list query performance when adding a credential.
-
 {/* <Jira bss='BX-5677' /> [성능 개선][mohammed hospital] Door 설정 저장 시 동기화 완료까지 오래 걸리는 문제 */}
-51. Improved the long synchronization time when saving **Door** settings.
+50. Improved the long synchronization time when saving **Door** settings.
 
 {/* <Jira bss='BX-5673' /> 모하메드 병원 등록된 라이센스 많을경우 CORE WEBSERVER 시작 오래 걸리는 문제 */}
-52. Improved slow server startup in environments with many registered licenses.
+51. Improved slow server startup in environments with many registered licenses.
 
 {/* <Jira bss='BX-5571' /> [모하메드 병원] access group이 많은수가 생성되어 있으면 사용자 조회시 오래걸리는 이슈 */}
-53. Improved slow user retrieval in environments with many **Access Groups**.
+52. Improved slow user retrieval in environments with many **Access Groups**.
 
 {/* <Jira bss='BX-5570' /> 모하메드 병원 엘레베이터 상세화면 진입시 느림 */}
-54. Improved slow loading of the **Elevator** detail screen in environments with many devices.
+53. Improved slow loading of the **Elevator** detail screen in environments with many devices.
 
 {/* <Jira bss='BX-5568' /> Leader-Follower 동기화 개선: follower 장치 필터링 누락 및 대량 사용자 그룹 조회 성능 수정 */}
-55. Improved synchronization in Multi Communication Server environments
+54. Improved synchronization in Multi Communication Server environments
     * Improved so that each server processes only its own devices for firmware synchronization
     * Improved **User Group** query performance in environments with many users
 
 {/* <Jira bss='BX-6299' /> [Mohammed ] Dashboard 필수 성능 개선 수정 */}
-56. Improved delays in saving settings when the **Dashboard** has many components.
+55. Improved delays in saving settings when the **Dashboard** has many components.
 
 {/* <Jira bss='BX-5566' /> [성능개선] Guardian permission check 함수들의 N+1 쿼리 문제 해결 */}
-57. Improved operator permission check performance and **Zone** permission handling
+56. Improved operator permission check performance and **Zone** permission handling
     * Improved operator permission check performance in environments with many targets
     * Improved **Zone** permissions being applied incorrectly in some cases
 
 {/* <Jira bss='BX-5565' /> 디바이스 트리 로드 속도 개선 */}
-58. Improved device list tree loading speed in environments with many devices.
+57. Improved device list tree loading speed in environments with many devices.
 
 {/* <Jira bss='BX-5716' /> 장치로 패킷 전송 성능 개선 */}
-59. Improved device synchronization speed in environments with many devices.
+58. Improved device synchronization speed in environments with many devices.
 
 {/* <Jira bss='BX-6141' /> [Backend] [성능 개선] 전체 장치 동기화 출입그룹 변경시 BS2_CMD_SET_ACCESS_GROUP_MEMBERS 사용하지 않고 SyncUser로 대체 */}
-60. Improved device synchronization by sending updates only for modified users when Access Group members are changed.
+59. Improved device synchronization by sending updates only for modified users when Access Group members are changed.
 
 {/* <Jira bss='BX-6139' /> [Backend] [성능 개선] 전체 장치 동기화 출입그룹 정보 장치에 필요한 내용만 전송 */}
-61. Improved overall device synchronization performance and resolved device disconnection issues by sending only device-relevant information during sync.
+60. Improved overall device synchronization performance and resolved device disconnection issues by sending only device-relevant information during sync.
 
 {/* <Jira bss='BX-6419' /> 미사용 실행파일 삭제 처리 추가 */}
-62. Added removal of unused files during upgrade.
+61. Added removal of unused files during upgrade.
 
 ## Bug Fixes
 
@@ -259,213 +256,267 @@ Release<Separator/>2026-09-21
 
 <BugLists>
 
-{/* <Jira bss='BX-6782' /> 동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중 실패 시 발생한 동기화 실패 이벤트에 사용자 ID가 미표기되는 이슈 */}
-1. User ID not displayed in Visual Face synchronization failure events. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-2650' /> [Monitoring] Seekbar에 Time 라인과 Knob 위치의 시간 정보가 일치하지 않음 */}
+1. During video playback, the seekbar timeline and the time information at the knob position do not match. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6727' /> Visual Face Migration "No registered visual face found." 오탐 */}
-2. Visual Face migration not proceeding when the current page has no users with enrolled faces. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-3271' /> [Monitoring] 연결이 해제된 Slave 장치의 Preview에서 그룹이 표시 되지 않는 문제 */}
+2. Viewing the preview of a disconnected Slave device does not display the device group. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6726' /> 출입 간에 올바르지 않은 날짜가 저장되는 이슈 */}
-3. Errors occurring due to invalid dates when modifying access groups via the API. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-3479' /> [협의 된 잔여 이슈] Select All 후 CSV Export 시 사용자 생성 순서로 Export 되는 문제 */}
+3. Exporting to CSV after selecting all users exports them in user creation order instead of User ID order. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6724' /> EntraID 그룹 정보 파싱 로직 수정. */}
-4. Synchronization failing when an Entra ID group name contains special characters such as commas (,) or equal signs (=). <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-3589' /> [Monitoring] Preview의 Video 일시정지 상태에서 큰화면 전환, 큰화면의 일시정지 상태에 큰화면 종료 시 Video가 재생상태로 전환 되는 문제 */}
+4. Switching views or exiting full screen while a video is paused causes the video to switch to playing. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6421' /> [FISS BioStar X] Remote Access ngrok.exe Authenticode validation failures: check timeout + rotated signing certificate */}
-5. Remote Access failing to start or save properly. <Badge>1.0.2</Badge>
+{/* <Jira bss='BX-3887' /> [BioStar 2 이슈] 암호화 + 대/소문자 만 구분된 User ID 존재 하는 환경 > User List Column - Order By 실행 시 순서 틀어지는 문제 */}
+5. When sorting (Order By) columns in the User List in an encrypted environment with User IDs that differ only by case, the sort order is applied incorrectly. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6398' /> 동기화 사이클안에서 에러가 발생하면 더이상 동기화가 진행안됨 */}
-6. Time and Attendance synchronization not proceeding after an error occurs during synchronization. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-3970' /> [BioStar 2 이슈] User List 에서 (Custom User Field 포함) Column 전체 선택 후 인쇄시 Credential 관련 Column 만 공란으로 출력되는 문제 */}
+6. When printing the User List after selecting all columns including **Custom User Fields**, Credential-related columns appear blank. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6381' /> Zone Tracking 동기화 실패 패치 */}
-7. Users who have exited still shown as inside in the **Muster Report**. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4193' /> [Monitoring] 실시간 이벤트 로그의 이벤트 중에 서버에 없는 사용자 정보가 포함된 이벤트의 Preview 출력 시 사용자가 빈 값으로 표시 되는 문제 */}
+7. Viewing the preview of real-time event logs containing user information that does not exist on the server displays an empty User field. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6324' /> AD/EntraID 연동 주소에 non-ASCII 숫자 로캘에서 LDAP URL 포트 파싱 실패 수정 */}
-8. Active Directory/Entra ID integration failing in language environments with different numeral representations, such as Arabic. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4321' /> [BioStar 2 이슈] 모바일 카드 정보 있는 CSV Import (Preserve) 시 모바일 카드가 에어팝 포탈에만 발급되는 문제 */}
+8. When importing a CSV file with Mobile Access Card information, the card is issued only in the Airfob Portal even if user creation fails. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6215' /> [DATA]  일부 이벤트가 번역되지 않고 "eventType.6150" 형태의 키로 표시됨 */}
-9. Some event names not displayed correctly after upgrade. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4431' /> [BioStar 2 이슈] 모바일 카드 정보 포함된 CSV File Import 중 맵핑 화면에 User ID 선택 안된 경우 에어팝 포탈에 카드 발급되고 에러 팝업 발생되는 문제 */}
+9. When importing a CSV file with Mobile Access Card information, a card is issued in the Airfob Portal and an error occurs if User ID is not selected on the column mapping screen. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6211' /> [Directory Integration] AD/EntraID 대량 사용자 그룹 정보 가져올 시 브라우저 프리징되는 이슈 */}
-10. Browser freezing when importing a large number of user groups from Active Directory/Entra ID. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4506' /> [BioStar 2 이슈] Mobile Access Card 발급 사용자를 대상으로 Mobile Access Card 정보 없는 CSV Import - Overwrite 시 Mobile Access Card 가 삭제되지만 에어팝 포탈에는 유지되는 문제 */}
+10. Importing a CSV file without Mobile Access Card information deletes the card from BioStar 2 while retaining it in the Airfob Portal. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6200' /> Mobile Access - Dynamic Site 환경에서 사용자 모바일 카드 발급 후 CSV Import - Overwrite 를 통해 삭제시 "삭제된 모바일 CSN" 에 추가되는 문제 */}
-11. Mobile cards incorrectly added to the **Deleted CSN Mobile Card** list when deleting them via CSV import in a **Dynamic** site environment. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4681' /> [Monitoring] Image 로그가 생성된 이벤트의 Preivew 영역에서 크게 보기 변경 시 문구 개선 필요 */}
+11. The enlarge image button label in the **Monitoring** event preview area was displayed in English even when the language was set to Korean. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6145' /> [MCS] 커뮤니케이션 서버 2대 중 1대 연결 해제 상태 */}
-12. Some communication servers failing to connect after a reboot. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4709' /> [BioStar 2 이슈] Device Detail 화면에서 Suprema/Custom Smart Card: None 선택시 관련 없는 기능의 일부 UI 가 비활성화 되고 Layout 옆 Info Icon 활성화 되는 문제 */}
+12. Unrelated settings were disabled or an info icon was incorrectly displayed when setting **Suprema Smart Card Layout** or **Custom Smart Card Layout** to **None** in Device Detail page. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6143' /> TA Calendar View에서 새로고침 버튼 연타 클릭 시 Alert팝업 발생 */}
-13. Warning popup appearing when the refresh button is clicked repeatedly in the Time & Attendance calendar view. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4714' /> [Monitoring] Occupancy Limit Zone에 구성한 장치 권한이 없는 관리자로 Occupancy Limit의 Preview 진입 시 Preview의 타이틀 및 상세 내용에 Loading이 종료되지 않음  */}
+13. Loading not completing when an administrator without device permissions accesses the **Occupancy Limit** zone **Preview** in **Monitoring**. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6222' /> Data inconsistency occurs when changing rows per page from 50 to 100 after navigating to the next page. */}
-14. Incorrect data displayed in **Custom Report** when changing rows per page after navigating pages. <Badge>1.0.2</Badge>
+{/* <Jira bss='BX-4898' /> [협의 된 잔여 이슈] Custom User Field 신규 추가 → User Column Layout 에서 추가한 Custom User Field 설정 후 Print 시 Custom User Field 컬럼 없는 문제 */}
+14. Column not printed when a **Custom User Field** is added and included in the **Column Layout** before printing. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6120' /> AC에 Holiday 등록된 상태에 등록된 Holiday와 동일한 이름으로 신규 생성 시 TA log파일에 errror 발생함 */}
-15. Error logged when creating a holiday in **T&A** menu with the same name as a holiday created in **Schedule** setting menu. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-4941' /> 브라우저 배율 확대 시 CSV Import 의 Mapping 화면에 Preserve, Overwrite 옵션이 있는 Drop Box 가 가려져 이후 진행 불가능한 문제 */}
+15. Options in **CSV Import** hidden and unable to proceed when the browser zoom level is increased. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6119' /> Shift 생성시 "Allowed a day before/after time" 선택시 팝업 메시지 수정 필요 */}
-16. Unnecessary characters displayed in the popup message when creating a schedule in **T&A**. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-5058' /> [BioStar 2 이슈] 사용자 상세 페이지 진입 후 발급된 Mobile Access Card 삭제 후 재 발급 시 에러 팝업 발생하는 문제 */}
+16. Error popup occurring when reissuing a **Mobile Access Card** after deleting it on the user detail page. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6118' /> Optimized punchlog 를 deactivate 할시 에러가 발생한다. */}
-{/* (이해하기 어려움) */}
-17. Errors occurring when disabling Optimized Punchlog in **T&A** in MSSQL environments. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-5452' /> [TA] 다수의 User(3000명 이상) 등록된 상태에서 TA Register 완료 및 새로고침 팝업 출력 후 Calendar 화면 출력 됨  */}
+17. Incorrect screen displayed after completing registration in environments with many users in **T&A**. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5501' /> 장치 상세 페이지 진입시 간헐적으로 1013 팝업 오류 뜨는 문제 수정 */}
+18. Error popup occurring intermittently when accessing the device detail page. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5564' /> 분산서버 환경에서 door 삭제 후 장치 삭제 시 다수 장치 SYNC_ERROR 발생 */}
+19. Synchronization errors occurring on multiple devices when deleting a device after deleting a door in a Multi Communication Server environment. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5606' /> [Data] Dashboard > Set Filters > master 하위 장치 선택/해제 시 동작 오류 ([Data] Dashboard > Set Filters > Operation error when selecting/deselecting master sub-device) */}
+20. Checkboxes not working correctly when selecting/deselecting master sub-devices in **Set Filters** of the **Dashboard**. <Badge>1.0.2</Badge>
+
+{/* <Jira bss='BX-5613' /> Custom report > image download시 저장 형식이 다른 현상 (Custom report > Different storage format when downloading image) */}
+21. Image files saved without detailed information in the filename when downloading images in **Custom Report**. <Badge>1.0.2</Badge>
+
+{/* <Jira bss='BX-5700' /> Data > User - Users Information 의 Tree 에 사용자 그룹 이름이 긴 경우 라인이 틀어지는 문제 */}
+22. Lines misaligned when a **User Group** name is long in the tree of the **Users Information** screen. <Badge>1.0.2</Badge>
+
+{/* <Jira bss='BX-5807' /> BioStar X v1.0.2.70 신규 설치(MSSQL) 환경에서 PC 부팅 후 Dump 파일 발생. */}
+23. Dump files generated after PC boot in an MSSQL environment. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5817' /> 미 연결 장치 & image log 가 존재하지 않은 상태에서 이미지로그 아이콘 선택 시 오류 */}
+24. No action or error message occurring when viewing the **Image Log** of a disconnected device in **All Events**. <Badge>1.0.2</Badge>
+
+{/* <Jira bss='BX-5864' /> 장치에 있는 이벤트 로그 가져올 시 최대 버퍼를 넘어선 이벤트 처리에 대한 버그 수정 */}
+25. Errors occurring when importing a device's **Event Log** that exceeds the maximum storage capacity. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5865' /> /api/v2/users/search 사용했을 때, "disabled" 값이 제대로 돌아오지 않음 */}
+26. Inactive users incorrectly shown as active when searching users via the API. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5867' /> MSSQL 이벤트 로그 조회 속도 개선 건 버그 수정 */}
+27. Logs from certain devices not appearing in the **Event Log** and **Real-time Log** in an MSSQL environment. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5870' /> USB-Agent 에서 BioMini Slim2 사용 시 지문 스캔 실패했을 경우 crash 발생하는 문제 */}
+28. App crashing when fingerprint scanning fails with BioMini Slim2 in USB Agent. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5871' /> BioStar2 Report > 카드관련 리포트 Wiegand Card ID 변환 미적용 */}
+29. **Wiegand Card** IDs not displayed correctly when generating card-related reports in **Report**. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5874' /> BioStar X 최초 설치 시 Timezone 이 로컬 서버 타임 기준이 아닌 UTC+9 로 고정 되는 문제 */}
+30. **Time Zone** fixed to UTC+9 instead of the local server time on the first installation of BioStar X. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5923' /> [T&A] 세로 모드 모니터 사용 시 일일 근무 규칙 설정 화면에 타이틀이 출력 되지 않음 */}
+31. Titles not displayed on some screens when using a monitor in portrait mode. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5924' /> [T&A] 근태 기록에서 검색 조건에 이름이 없는 사용자 선택 후 화면 새로 고침 시 null이 출력됨 */}
+32. Null displayed in the name field when a user without a name is selected as a search condition and the screen is refreshed in T&A **Report**. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5929' /> 커스텀 경로이면서 폴더 이름이 한글로 설치된 Bs2에서 Bsx로 업그레이드시 설정 메뉴 진입 시 알 수 없는 오류 발생 */}
+33. Errors occurring when accessing the Settings menu after upgrading BioStar 2 installed in a Korean-named folder path to BioStar X. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5950' /> MifareEx Config 설정 관련 Parsing 및 DB에 저장하지 않는 문제 */}
+34. Errors occurring and the service shutting down when applying settings to certain devices. <Badge>1.0.1</Badge>
+
+{/* <Jira bss='BX-5987' /> [TA] 설치 후 스케줄 생성 시 생성이 안되고 무한 로딩 되는 문제 (서비스 재시작으로 복구) */}
+35. **Schedules** failing to be created and the loading state persisting in **T&A**. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-5991' /> MSSQL 윈도우 인증 + Custom Port DB 에 설치된 BioStar X 환경에서 Backup 실패 Alert 발생 */}
+36. Backup failing when using a custom port in an MSSQL (Windows Authentication) environment. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-6049' /> [Bug] 백업/복원 후 런처에 플러그인 아이콘 미표시 */}
+37. Plugin icons not appearing in the Launcher after backup and restore. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-6083' /> TA 패키지 Uninstall 시 report 폴더 내 파일 잔존 현상 */}
+38. Some files remaining undeleted after uninstalling the T&A package. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-6110' /> TA Winauth에서 csv import 데이터에 사용자와 사용자 그룹이 많을 경우에 사용자 동기화 이슈 */}
+39. Users not synchronizing correctly to Time & Attendance when adding a large number of users and User Groups via **CSV Import** in a Windows Authentication environment. <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-6116' /> 다수의 사용자로 Leave등록 시 중복으로 등록되는 현상 */}
+40. Duplicate leave entries created when registering **Leave** for multiple users in **T&A**. <Badge>1.0.0</Badge>
 
 {/* <Jira bss='BX-6117' /> Flexible Shift에서 Leave_Not Worked 생성 할 때 Use Time 체크 시 Leave hours 상단 ^버튼 비활성화 안되는 현상 발생 */}
 {/* (이해하기 어려움) */}
-18. Time adjustment buttons not being disabled when adding a non-worked leave in a T&A **Schedule**. <Badge>1.0.0</Badge>
+41. Time adjustment buttons not being disabled when adding a non-worked leave in a T&A **Schedule**. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6116' /> 다수의 사용자로 Leave등록 시 중복으로 등록되는 현상 */}
-19. Duplicate leave entries created when registering **Leave** for multiple users in **T&A**. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6118' /> Optimized punchlog 를 deactivate 할시 에러가 발생한다. */}
+{/* (이해하기 어려움) */}
+42. Errors occurring when disabling Optimized Punchlog in **T&A** in MSSQL environments. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6110' /> TA Winauth에서 csv import 데이터에 사용자와 사용자 그룹이 많을 경우에 사용자 동기화 이슈 */}
-20. Users not synchronizing correctly to Time & Attendance when adding a large number of users and User Groups via **CSV Import** in a Windows Authentication environment. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6119' /> Shift 생성시 "Allowed a day before/after time" 선택시 팝업 메시지 수정 필요 */}
+43. Unnecessary characters displayed in the popup message when creating a schedule in **T&A**. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6083' /> TA 패키지 Uninstall 시 report 폴더 내 파일 잔존 현상 */}
-21. Some files remaining undeleted after uninstalling the T&A package. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-6124' /> TA를 많이 오랫동안 사용할 수록 nodejs의 메모리 점유율이 높아지는 문제 수정 */}
-22. Memory usage increasing abnormally when using **T&A** for extended periods. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-6049' /> [Bug] 백업/복원 후 런처에 플러그인 아이콘 미표시 */}
-23. Plugin icons not appearing in the Launcher after backup and restore. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-6230' /> SQL Server Restore fails with NoClassDefFoundError for IgniteJdbcThinDriver during safety backup */}
-24. Intermittent errors occurring during restore in an MSSQL (Windows Authentication) environment. <Badge>1.0.2</Badge>
-
-{/* <Jira bss='BX-5991' /> MSSQL 윈도우 인증 + Custom Port DB 에 설치된 BioStar X 환경에서 Backup 실패 Alert 발생 */}
-25. Backup failing when using a custom port in an MSSQL (Windows Authentication) environment. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5987' /> [TA] 설치 후 스케줄 생성 시 생성이 안되고 무한 로딩 되는 문제 (서비스 재시작으로 복구) */}
-26. **Schedules** failing to be created and the loading state persisting in **T&A**. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5950' /> MifareEx Config 설정 관련 Parsing 및 DB에 저장하지 않는 문제 */}
-27. Errors occurring and the service shutting down when applying settings to certain devices. <Badge>1.0.1</Badge>
-
-{/* <Jira bss='BX-5929' /> 커스텀 경로이면서 폴더 이름이 한글로 설치된 Bs2에서 Bsx로 업그레이드시 설정 메뉴 진입 시 알 수 없는 오류 발생 */}
-28. Errors occurring when accessing the Settings menu after upgrading BioStar 2 installed in a Korean-named folder path to BioStar X. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5924' /> [T&A] 근태 기록에서 검색 조건에 이름이 없는 사용자 선택 후 화면 새로 고침 시 null이 출력됨 */}
-29. Null displayed in the name field when a user without a name is selected as a search condition and the screen is refreshed in T&A **Report**. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5923' /> [T&A] 세로 모드 모니터 사용 시 일일 근무 규칙 설정 화면에 타이틀이 출력 되지 않음 */}
-30. Titles not displayed on some screens when using a monitor in portrait mode. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5874' /> BioStar X 최초 설치 시 Timezone 이 로컬 서버 타임 기준이 아닌 UTC+9 로 고정 되는 문제 */}
-31. **Time Zone** fixed to UTC+9 instead of the local server time on the first installation of BioStar X. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5817' /> 미 연결 장치 & image log 가 존재하지 않은 상태에서 이미지로그 아이콘 선택 시 오류 */}
-32. No action or error message occurring when viewing the **Image Log** of a disconnected device in **All Events**. <Badge>1.0.2</Badge>
-
-{/* <Jira bss='BX-5807' /> BioStar X v1.0.2.70 신규 설치(MSSQL) 환경에서 PC 부팅 후 Dump 파일 발생. */}
-33. Dump files generated after PC boot in an MSSQL environment. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5864' /> 장치에 있는 이벤트 로그 가져올 시 최대 버퍼를 넘어선 이벤트 처리에 대한 버그 수정 */}
-34. Errors occurring when importing a device's **Event Log** that exceeds the maximum storage capacity. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5865' /> /api/v2/users/search 사용했을 때, "disabled" 값이 제대로 돌아오지 않음 */}
-35. Inactive users incorrectly shown as active when searching users via the API. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5867' /> MSSQL 이벤트 로그 조회 속도 개선 건 버그 수정 */}
-36. Logs from certain devices not appearing in the **Event Log** and **Real-time Log** in an MSSQL environment. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5700' /> Data > User - Users Information 의 Tree 에 사용자 그룹 이름이 긴 경우 라인이 틀어지는 문제 */}
-37. Lines misaligned when a **User Group** name is long in the tree of the **Users Information** screen. <Badge>1.0.2</Badge>
-
-{/* <Jira bss='BX-5613' /> Custom report > image download시 저장 형식이 다른 현상 (Custom report > Different storage format when downloading image) */}
-38. Image files saved without detailed information in the filename when downloading images in **Custom Report**. <Badge>1.0.2</Badge>
-
-{/* <Jira bss='BX-5606' /> [Data] Dashboard > Set Filters > master 하위 장치 선택/해제 시 동작 오류 ([Data] Dashboard > Set Filters > Operation error when selecting/deselecting master sub-device) */}
-39. Checkboxes not working correctly when selecting/deselecting master sub-devices in **Set Filters** of the **Dashboard**. <Badge>1.0.2</Badge>
-
-{/* <Jira bss='BX-5978' /> [R&D] 잘못된 정보 (IP,Port 불일치/ID, PW 불일치 /Print Name, Card Template 불일치) Card Printer Apply 시 에러가 발생하지 않는 문제 */}
-40. No error displayed when applying invalid information in **Card Printer** settings. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5564' /> 분산서버 환경에서 door 삭제 후 장치 삭제 시 다수 장치 SYNC_ERROR 발생 */}
-41. Synchronization errors occurring on multiple devices when deleting a device after deleting a door in a Multi Communication Server environment. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5501' /> 장치 상세 페이지 진입시 간헐적으로 1013 팝업 오류 뜨는 문제 수정 */}
-42. Error popup occurring intermittently when accessing the device detail page. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5452' /> [TA] 다수의 User(3000명 이상) 등록된 상태에서 TA Register 완료 및 새로고침 팝업 출력 후 Calendar 화면 출력 됨  */}
-43. Incorrect screen displayed after completing registration in environments with many users in **T&A**. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5679' /> [모하메드]server to device 에서  단말기 설정 못 갖고오는 현상 */}
-44. Saved IP information lost when switching to **Device → Server** mode on a device. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6120' /> AC에 Holiday 등록된 상태에 등록된 Holiday와 동일한 이름으로 신규 생성 시 TA log파일에 errror 발생함 */}
+44. Error logged when creating a holiday in **T&A** menu with the same name as a holiday created in **Schedule** setting menu. <Badge>1.0.0</Badge>
 
 {/* <Jira bss='BX-6121' /> 여러대의 장치 사용중 일부 펀치로그 데이터가 누락되는 경우 수정 */}
 45. Some attendance records missing when using multiple devices in **T&A** in an MSSQL environment. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-5871' /> BioStar2 Report > 카드관련 리포트 Wiegand Card ID 변환 미적용 */}
-46. **Wiegand Card** IDs not displayed correctly when generating card-related reports in **Report**. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-5058' /> [BioStar 2 이슈] 사용자 상세 페이지 진입 후 발급된 Mobile Access Card 삭제 후 재 발급 시 에러 팝업 발생하는 문제 */}
-47. Error popup occurring when reissuing a **Mobile Access Card** after deleting it on the user detail page. <Badge>1.0.0</Badge>
-
 {/* <Jira bss='BX-6123' /> 휴일 데이터가 100개가 넘어가면 휴일 데이터가 적용안되는 경우가 발생 */}
-48. **Holidays** not applied to schedules and processed as absences when there are more than 100 holidays in **T&A**. <Badge>1.0.0</Badge>
+46. **Holidays** not applied to schedules and processed as absences when there are more than 100 holidays in **T&A**. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-5870' /> USB-Agent 에서 BioMini Slim2 사용 시 지문 스캔 실패했을 경우 crash 발생하는 문제 */}
-49. App crashing when fingerprint scanning fails with BioMini Slim2 in USB Agent. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6124' /> TA를 많이 오랫동안 사용할 수록 nodejs의 메모리 점유율이 높아지는 문제 수정 */}
+47. Memory usage increasing abnormally when using **T&A** for extended periods. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-4941' /> 브라우저 배율 확대 시 CSV Import 의 Mapping 화면에 Preserve, Overwrite 옵션이 있는 Drop Box 가 가려져 이후 진행 불가능한 문제 */}
-50. Options in **CSV Import** hidden and unable to proceed when the browser zoom level is increased. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6143' /> TA Calendar View에서 새로고침 버튼 연타 클릭 시 Alert팝업 발생 */}
+48. Warning popup appearing when the refresh button is clicked repeatedly in the Time & Attendance calendar view. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-4898' /> [협의 된 잔여 이슈] Custom User Field 신규 추가 → User Column Layout 에서 추가한 Custom User Field 설정 후 Print 시 Custom User Field 컬럼 없는 문제 */}
-51. Column not printed when a **Custom User Field** is added and included in the **Column Layout** before printing. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6145' /> [MCS] 커뮤니케이션 서버 2대 중 1대 연결 해제 상태 */}
+49. Some communication servers failing to connect after a reboot. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-4714' /> [Monitoring] Occupancy Limit Zone에 구성한 장치 권한이 없는 관리자로 Occupancy Limit의 Preview 진입 시 Preview의 타이틀 및 상세 내용에 Loading이 종료되지 않음  */}
-52. Loading not completing when an administrator without device permissions accesses the **Occupancy Limit** zone **Preview** in **Monitoring**. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6200' /> Mobile Access - Dynamic Site 환경에서 사용자 모바일 카드 발급 후 CSV Import - Overwrite 를 통해 삭제시 "삭제된 모바일 CSN" 에 추가되는 문제 */}
+50. Mobile cards incorrectly added to the **Deleted CSN Mobile Card** list when deleting them via CSV import in a **Dynamic** site environment. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-4709' /> [BioStar 2 이슈] Device Detail 화면에서 Suprema/Custom Smart Card: None 선택시 관련 없는 기능의 일부 UI 가 비활성화 되고 Layout 옆 Info Icon 활성화 되는 문제 */}
-53. Unrelated settings were disabled or an info icon was incorrectly displayed when setting **Suprema Smart Card Layout** or **Custom Smart Card Layout** to **None** in Device Detail page. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6211' /> [Directory Integration] AD/EntraID 대량 사용자 그룹 정보 가져올 시 브라우저 프리징되는 이슈 */}
+51. Browser freezing when importing a large number of user groups from Active Directory/Entra ID. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-4681' /> [Monitoring] Image 로그가 생성된 이벤트의 Preivew 영역에서 크게 보기 변경 시 문구 개선 필요 */}
-54. The enlarge image button label in the **Monitoring** event preview area was displayed in English even when the language was set to Korean. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6215' /> [DATA]  일부 이벤트가 번역되지 않고 "eventType.6150" 형태의 키로 표시됨 */}
+52. Some event names not displayed correctly after upgrade. <Badge>1.0.0</Badge>
 
-{/* {/* <Jira bss='BX-4506' /> [BioStar 2 이슈] Mobile Access Card 발급 사용자를 대상으로 Mobile Access Card 정보 없는 CSV Import - Overwrite 시 Mobile Access Card 가 삭제되지만 에어팝 포탈에는 유지되는 문제 */}
-55. Importing a CSV file without Mobile Access Card information deletes the card from BioStar 2 while retaining it in the Airfob Portal. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6222' /> Data inconsistency occurs when changing rows per page from 50 to 100 after navigating to the next page. */}
+53. Incorrect data displayed in **Custom Report** when changing rows per page after navigating pages. <Badge>1.0.2</Badge>
 
-{/* <Jira bss='BX-4431' /> [BioStar 2 이슈] 모바일 카드 정보 포함된 CSV File Import 중 맵핑 화면에 User ID 선택 안된 경우 에어팝 포탈에 카드 발급되고 에러 팝업 발생되는 문제 */}
-56. When importing a CSV file with Mobile Access Card information, a card is issued in the Airfob Portal and an error occurs if User ID is not selected on the column mapping screen. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6230' /> SQL Server Restore fails with NoClassDefFoundError for IgniteJdbcThinDriver during safety backup */}
+54. Intermittent errors occurring during restore in an MSSQL (Windows Authentication) environment. <Badge>1.0.2</Badge>
 
-{/* <Jira bss='BX-4321' /> [BioStar 2 이슈] 모바일 카드 정보 있는 CSV Import (Preserve) 시 모바일 카드가 에어팝 포탈에만 발급되는 문제 */}
-57. When importing a CSV file with Mobile Access Card information, the card is issued only in the Airfob Portal even if user creation fails. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6324' /> AD/EntraID 연동 주소에 non-ASCII 숫자 로캘에서 LDAP URL 포트 파싱 실패 수정 */}
+55. Active Directory/Entra ID integration failing in language environments with different numeral representations, such as Arabic. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-4193' /> [Monitoring] 실시간 이벤트 로그의 이벤트 중에 서버에 없는 사용자 정보가 포함된 이벤트의 Preview 출력 시 사용자가 빈 값으로 표시 되는 문제 */}
-58. Viewing the preview of real-time event logs containing user information that does not exist on the server displays an empty User field. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6381' /> Zone Tracking 동기화 실패 패치 */}
+56. Users who have exited still shown as inside in the **Muster Report**. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-3970' /> [BioStar 2 이슈] User List 에서 (Custom User Field 포함) Column 전체 선택 후 인쇄시 Credential 관련 Column 만 공란으로 출력되는 문제 */}
-59. When printing the User List after selecting all columns including **Custom User Fields**, Credential-related columns appear blank. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6398' /> 동기화 사이클안에서 에러가 발생하면 더이상 동기화가 진행안됨 */}
+57. Time and Attendance synchronization not proceeding after an error occurs during synchronization. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-3887' /> [BioStar 2 이슈] 암호화 + 대/소문자 만 구분된 User ID 존재 하는 환경 > User List Column - Order By 실행 시 순서 틀어지는 문제 */}
-60. When sorting (Order By) columns in the User List in an encrypted environment with User IDs that differ only by case, the sort order is applied incorrectly. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6421' /> [FISS BioStar X] Remote Access ngrok.exe Authenticode validation failures: check timeout + rotated signing certificate */}
+58. Remote Access failing to start or save properly. <Badge>1.0.2</Badge>
 
-{/* <Jira bss='BX-3589' /> [Monitoring] Preview의 Video 일시정지 상태에서 큰화면 전환, 큰화면의 일시정지 상태에 큰화면 종료 시 Video가 재생상태로 전환 되는 문제 */}
-61. Switching views or exiting full screen while a video is paused causes the video to switch to playing. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6644' /> [Restore with IP Change] Fix Multiple Zookeeper nodes (old IP and new IP) */}
+59. Old IP information remained and caused improper operation when restoring with a changed server IP <Badge>1.0.2</Badge>
 
-{/* <Jira bss='BX-3479' /> [협의 된 잔여 이슈] Select All 후 CSV Export 시 사용자 생성 순서로 Export 되는 문제 */}
-62. Exporting to CSV after selecting all users exports them in user creation order instead of User ID order. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6724' /> EntraID 그룹 정보 파싱 로직 수정. */}
+60. Synchronization failing when an Entra ID group name contains special characters such as commas (,) or equal signs (=). <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-3271' /> [Monitoring] 연결이 해제된 Slave 장치의 Preview에서 그룹이 표시 되지 않는 문제 */}
-63. Viewing the preview of a disconnected Slave device does not display the device group. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6726' /> 출입 간에 올바르지 않은 날짜가 저장되는 이슈 */}
+61. Errors occurring due to invalid dates when modifying access groups via the API. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-2650' /> [Monitoring] Seekbar에 Time 라인과 Knob 위치의 시간 정보가 일치하지 않음 */}
-64. During video playback, the seekbar timeline and the time information at the knob position do not match. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6782' /> 동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중 실패 시 발생한 동기화 실패 이벤트에 사용자 ID가 미표기되는 이슈 */}
+62. User ID not displayed in Visual Face synchronization failure events. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-936' /> [Biostar 2 이슈] Manual Lock/Unlock(Permanent), Release 후 Floor Relay아이콘 선택 시 출력 되는 툴팁이 Door Status 탭 재진입 시 Floor Relay 아이콘을 클릭해도 출력 되지 않음 */}
-65. Re-entering the Door Status tab after applying a manual Lock/Unlock (Permanent) to a floor relay does not display the status change tooltip when clicking the Floor Relay icon. <Badge>1.0.0</Badge>
+{/* <Jira bss='BX-6912' /> [Device] 장치리스트에서 XPass2(V2)와 XPass2 Keypad(V2) 장치를 체크후 Firmware Upgrade 선택 시 동일한 FW를 두개의 목록으로 출력하는 문제 */}
+63. The same firmware appeared twice when upgrading firmware with both XPass 2 (V2) and XPass 2 Keypad (V2) selected in the **Device** list <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7011' /> [BS3/OSDP] 장치 상세 RS485 Intelligent PD — failCode Hex 형식에서 Apply 버튼 무응답 (BigInt 변환 오류) */}
+64. The **Apply** button did not work when saving RS485 settings on the device detail screen <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7122' /> 서버가 비정상 종료되며 흔적 프로세스를 남기면 이후 자동 재기동이 영구히 동작하지 않음 */}
+65. The server did not restart automatically after an abnormal shutdown <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7177' /> FW 업그레이드시 해당 FW 의 기능으로 인해 지원하는 기능이 UI 노출되지 않는 문제 */}
+66. Features supported by the new firmware were not displayed on the screen after a firmware upgrade <Badge>1.0.1</Badge>
+
+{/* <Jira bss='BX-7186' /> 인원 점검(Roll Call) 리포트 제목이 태국어인 경우 출력(Print)·내보내기(PDF)에 제목이 표시되지 않음 */}
+67. The report title was not displayed when printing or exporting to PDF if the **Roll Call** report title was in Thai <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7307' /> DB에 없는 사용자 조회 시 빈 결과 역참조로 서버 비정상 종료(덤프) 발생 */}
+68. The server shut down abnormally and interrupted service for all users when a logged-in user was deleted <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7325' /> 모니터링 진입 후 Preview 영역 활성화 이력이 없는 상태에서 Timed 동작 시 이벤트 로그에 DOOR_OPERATOR_ID 출력 안됨 */}
+69. The event was not displayed in the event log when controlling a door in **Monitoring** without ever opening the preview <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7435' /> System backup Kotest failure on BS2-upgraded systems - T&A DB dump blocked by stored-routine definer mismatch */}
+70. No system backup file was created in **Time & Attendance** environments upgraded from BioStar 2 <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7449' /> 출력 신호를 전체 삭제하면 데이터베이스 처리 실패로 끝남 */}
+71. Deleting all Output Signals in the Alert settings failed to process <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7651' /> [SETTING] Muster 구역 생성 후 Advanced AC 진입 시 Anti-passback 목록 조회가 10분 뒤에야 응답 (결과 0건, 사실상 진입 불가) */}
+72. **Anti-Passback** list retrieval was delayed when entering the **Advanced Access Control** screen after creating a **Muster** zone, making the menu inaccessible <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7653' /> BioStar 설치 시 웹앱의 포트를 기본으로 사용하지 않으면 videoplugin 에서 이벤트를 제대로 받지 못하는 문제 */}
+73. Bookmarks and notifications were not recorded in the VMS when the web port was set to a non-default port during installation <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7676' /> [USER] 사용자 그룹 정리가 한 번 실패하면 그 뒤 사용자 변경이 장치에 반영되지 않고 재시작 전까지 회복되지 않음 */}
+74. After a user group operation failed once, subsequent user changes were not applied to devices until the server was restarted <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7708' /> BS3 Max - Device Detail > Display/Sound - Home Screen: Logo 선택 - Slide Show 이미지 추가안되는 문제 */}
+75. Images could not be added when setting the BioStation 3 Max home screen logo to a slide show <Badge>1.0.2</Badge>
+
+{/* <Jira bss='BX-7800' /> [SYNC] 장치 연결 해제 중 두 출입그룹의 출입등급을 서로 맞바꾸면, 재연결 후 두 그룹에 공통으로 속한 사용자가 장치에서 사라진다 */}
+76. Users belonging to both **Access Group** disappeared from devices after reconnection when the **Access Level** of the two groups were swapped while the devices were disconnected <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7810' /> 삭제한 장치의 이벤트가 서버에 남아 다른 장치의 이벤트가 수 분 늦게 기록됨 — 접속을 유지하면 거절 로그도 폭증 */}
+77. Events from a deleted device remained and delayed event logging for other devices, and the server log grew rapidly if the deleted device stayed connected <Badge>1.0.2</Badge>
+
+{/* <Jira bss='BX-7814' /> 실시간 이벤트·알람·작업 완료 알림이 전송에 한 번 실패하면 사라져 화면에 표시되지 않음 */}
+78. Real-time event, alarm, and task completion notifications were not displayed on the screen when their delivery failed <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7836' /> 로그인 실패 횟수 초과 시 발생하는 이벤트 로그를 커스텀 리포트를 통해 조회하는 경우 사용자 컬럼에 IP 정보가 출력되지 않는 문제 */}
+79. IP information was not displayed in the User column when viewing login failure lockout events in **Custom Report** <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-7919' /> User Tree 의 스크롤 바, Settings 의 스크롤 바 마우스 선택을 통한 스크롤 이동 불가능한 문제 */}
+80. The scroll bar in the **User** tree and the **Settings** screen could not be moved with the mouse <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-8408' /> 전체 장치 동기화에서 일부 사용자가 장치에 전달되지 않는데 동기화는 완료로 표시되고, 다시 동기화해도 영영 채워지지 않음 */}
+81. Some users were not delivered to devices during full device synchronization, yet the synchronization was marked as complete, and they were still not delivered even after resynchronizing <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-8431' /> Encrypt Personal Data on Database 또는 Personal Data Encryption Key 설정 변경 시, 로그아웃 되는 문제 */}
+82. Changing the personal data encryption settings logged the user out <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-8441' /> 재실 인원 제한 Alert 에 인증한 사용자 이름이 표시되지 않음 */}
+83. The authenticated user name was not displayed in the **Occupancy Limit** alert <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-8489' /> Custom Report - drop the user ID prefix from the User Name column, since User ID has its own column */}
+84. On the **Custom Report** screen, the User Name column also displayed the user ID, duplicating the User ID column <Badge>1.0.0</Badge>
+
+{/* <Jira bss='BX-8557' /> 특정 장치 동기화 모드 환경에서 BioStation 3 Max 사용자 동기화 속도가 느린 문제 */}
+85. User synchronization on BioStation 3 Max was slow in specific device synchronization mode environments <Badge>1.0.2</Badge>
 
 {/* <Jira bss='BX-935' /> (Biostar 2 이슈)[1차제외]Manual Lock/Unlock(Timed,Permanent), Release 후 Door Relay아이콘 선택 시 출력 되는 Event가 Door Status 탭 재진입 시 Door Relay를 클릭해도 출력 되지 않음 */}
-66. Re-entering the Door Status tab after applying a manual Lock/Unlock (Timed, Permanent) to a door relay does not display the status change tooltip when clicking the Door Relay icon. <Badge>1.0.0</Badge>
+86. Re-entering the Door Status tab after applying a manual Lock/Unlock (Timed, Permanent) to a door relay does not display the status change tooltip when clicking the Door Relay icon. <Badge>1.0.0</Badge>
 
-{/* <Jira bss='BX-6138' /> 네트워크 트래픽 제한 설정 버그 수정 */}
-67. When transferring large amounts of data in an environment with multiple devices, devices appear offline or the transfer rate limit is not applied properly. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-7006' /> 접근그룹 생성/삭제의 멤버 버전 갱신이 MSSQL 교착으로 유실되어 장치 동기화가 영구 정지됨 */}
-68. When creating or deleting a large **Access Group** under concurrent load in an MS SQL Server environment, user permission changes are occasionally not reflected on devices. <Badge>1.0.0</Badge>
-
-{/* <Jira bss='BX-6871' /> [1.0.3][System] ZK 재연결 중 미초기화 String_vector 해제로 서버 크래시 (BX-6009 파생) */}
-69. In a Multi Communications Server or Standby Server configuration, the **Core Service** terminates unexpectedly upon network reconnection. <Badge>1.0.2</Badge>
+{/* <Jira bss='BX-936' /> [Biostar 2 이슈] Manual Lock/Unlock(Permanent), Release 후 Floor Relay아이콘 선택 시 출력 되는 툴팁이 Door Status 탭 재진입 시 Floor Relay 아이콘을 클릭해도 출력 되지 않음 */}
+87. Re-entering the Door Status tab after applying a manual Lock/Unlock (Permanent) to a floor relay does not display the status change tooltip when clicking the Floor Relay icon. <Badge>1.0.0</Badge>
 
 </BugLists>
