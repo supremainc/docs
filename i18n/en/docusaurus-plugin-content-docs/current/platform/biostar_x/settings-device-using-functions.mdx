@@ -130,7 +130,9 @@ Export configurations from one device to a file, then import and apply them to a
 
 :::info
 
-The export/import device configuration feature is available to administrators with full permissions for device settings. For more information about administrator permission settings, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
+* Same model means the detailed model name and part number match (for example, XXX in XPD2-XXX).
+
+* The export/import device configuration feature is available to administrators with full permissions for device settings. For more information about administrator permission settings, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
 
 :::
 
@@ -218,11 +220,11 @@ Select at least one device to run this feature.
 
 When you run Import, the system checks the following in order before applying the configurations. If any check fails, the system does not apply the configurations and shows the reason.
 
-* Whether all selected devices share the same model name
+* Whether all selected devices have the same model name (including the part number)
 
 * Whether the RS-485 communication mode matches between the selected devices and the file
 
-* Whether the model name saved in the file matches the model name of the selected devices
+* Whether the model name saved in the file (including the part number) matches the model names of the selected devices (including the part number)
 
 * Whether any of the selected devices is a virtual device (Virtual Device)
 
