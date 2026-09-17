@@ -43,8 +43,15 @@
     height: 23px;
 }
 
+.treeIcons {
+    margin-left: 8px;
+    height: 23px;
+    top: -5px;
+}
+
 .treeLabel {
     line-height: 1.4;
+    display: inline;
 }
 
 .level0 .treeLabel {

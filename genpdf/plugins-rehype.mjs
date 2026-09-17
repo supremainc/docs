@@ -2728,7 +2728,7 @@ function buildTreeviewHtml(data) {
           },
           children: []
         });
-      } else {
+      } else if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
         const svgIcon = getSvgIcon(node.type);
         if (svgIcon) {
           nodeElements.push({
@@ -2740,7 +2740,7 @@ function buildTreeviewHtml(data) {
         }
       }
     }
-    
+
     // Add label
     nodeElements.push({
       type: 'element',
@@ -2748,7 +2748,29 @@ function buildTreeviewHtml(data) {
       properties: { className: ['tree-label'] },
       children: [{ type: 'text', value: node.name || 'Unnamed' }]
     });
-    
+
+    // Add relay/arm/camera icons together for door nodes (matches Treeview/index.js)
+    if (node.name === '출입문' || node.name === 'Door') {
+      ['door-relay', 'door-arm', 'door-camera'].forEach((iconType, idx) => {
+        const svgIcon = getSvgIcon(iconType);
+        if (svgIcon) {
+          if (svgIcon.properties) {
+            svgIcon.properties.height = 'auto';
+            svgIcon.properties.width = '25';
+          }
+          if (idx > 0) {
+            nodeElements.push({ type: 'text', value: ' ' });
+          }
+          nodeElements.push({
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['tree-icon', 'tree-svg-icon'] },
+            children: [svgIcon]
+          });
+        }
+      });
+    }
+
     // Build tree item
     const treeItem = {
       type: 'element',
