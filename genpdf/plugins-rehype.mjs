@@ -763,6 +763,7 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
       const productAttr = attributes.find(attr => attr.name === 'product')?.value;
       const classNameAttr = attributes.find(attr => attr.name === 'className')?.value || '';
       const tipAttr = attributes.find(attr => attr.name === 'tip')?.value;
+      const replaceAttr = attributes.find(attr => attr.name === 'replace')?.value;
 
       const classNames = classNameAttr ? ['cmd', classNameAttr] : ['cmd'];
       let textContent = '';
@@ -805,7 +806,7 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
               .replace('{{value}}', 'N')
               .replace(' ({{count}})', '')
               .replace('({{count}})', '')
-              .replace('{{count}}', '');
+              .replace('{{count}}', replaceAttr);
           }
         }
 
