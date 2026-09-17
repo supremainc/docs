@@ -8,7 +8,13 @@
         "children": [
           {
             "name": "출입문",
-            "type": "door-device"
+            "type": "door-device",
+            "children": [
+              {
+                "name": "Camera",
+                "type": "door-camera"
+              }
+            ]
           }
         ]
       }

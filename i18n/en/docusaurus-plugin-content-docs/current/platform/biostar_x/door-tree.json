@@ -11,14 +11,6 @@
             "type": "door-device",
             "children": [
               {
-                "name": "Door relay",
-                "type": "door-relay"
-              },
-              {
-                "name": "Arming status",
-                "type": "door-arm"
-              },
-              {
                 "name": "Camera",
                 "type": "door-camera"
               }
