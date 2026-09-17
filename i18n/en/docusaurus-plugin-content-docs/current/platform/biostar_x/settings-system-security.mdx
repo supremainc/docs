@@ -188,13 +188,11 @@ Before enabling the <Cmd sid="setting.server.secure.comm.data_encryption" produc
 
 :::info
 
-* **BioStar X** generates or deletes certificates according to the configuration status of device and secure communication settings, and does not recreate the same certificate as before. For example, if the setting of Secure communication with device is changed in the order of <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' />, the created certificate will be deleted automatically. When the setting is changed in the order of <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' />, the operation of **Create A certificate** → **Delete A certificate** → **Create B certificate** is carried out.
+* **BioStar X** keeps the server-generated default certificate after setting <Cmd sid="setting.sever.secure.comm.menu" product='2' /> to <Cmd sid="common.notUse" product='2' />. Changing the option back to <Cmd sid="common.use" product='2' /> reuses the existing certificate. It creates a new one only if none exists. Changing <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> keeps the same certificate. Previously added devices reconnect without extra steps. Switching to <Cmd sid="common.notUse" product='2' /> while using an external certificate deletes the external certificate (root certificate, public key certificate, private key) from the server. It also deletes the private key password from the server.
 
-* If you set the <Cmd sid="setting.sever.secure.comm.menu" product='2' /> option to <Cmd sid="common.notUse" product='2' /> while the device is physically separated from the network, the certificate stored in the device will be deleted. In this case, the device cannot be reconnected. To connect it again, the certificate saved in the device must be deleted or the device must be reset to factory default. For more information, refer to the manual of the device.
+* Change <Cmd sid="setting.sever.secure.comm.menu" product='2' /> and <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> only when all added devices and the multi-communication server are connected to the server. If any device disconnects or the multi-communication server is not connected, the system rejects the change and shows an error message. Reconnect the device or the multi-communication server, then try again. If you no longer use the device, delete it from the device list, then try again.
 
 * If a previously connected device fails to connect due to a certificate mismatch, **BioStar X** records it in the system log. If the device suddenly fails to connect, check the system log. Then initialize the device or re-enroll the exported certificate set with <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' />. If you remove and reinstall the server, see <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />.
-
-* If the multi-communication server is not connected, the system disables the <Cmd sid="setting.sever.secure.comm.menu" product='2' /> option and blocks changes to it.
 
 * For instructions on backing up certificates when removing a server, see <DocLink docId='platform/biostar_x/remove-server' />.
 
@@ -206,6 +204,8 @@ Before enabling the <Cmd sid="setting.server.secure.comm.data_encryption" produc
 * XPass Q2 firmware 1.0.0 or later
 
 * BioStation 3 firmware 1.0.0 or higher
+
+* BioStation 2a Firmware 1.0.0 or higher
 
 * X-Station 2 firmware 1.0.0 or higher
 

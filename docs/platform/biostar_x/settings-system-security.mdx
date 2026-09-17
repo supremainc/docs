@@ -189,13 +189,11 @@ keywords: [시스템 보안, 암호화]
 
 :::info
 
-* **BioStar X**는 장치와 보안 통신의 설정 상태에 따라 인증서를 생성하거나 삭제하며, 이전과 동일한 인증서를 생성하지 않습니다. 예를 들면, 장치와 보안 통신의 설정을 <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> 순서로 변경하면 생성했던 인증서를 자동으로 삭제합니다. <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> 순서로 변경하면 **A 인증서 생성** → **A 인증서 폐기** → **B 인증서 생성**의 동작을 수행합니다.
+* **BioStar X**는 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 <Cmd sid="common.notUse" product='2' />으로 변경해도 서버가 생성한 기본 인증서를 삭제하지 않습니다. 옵션을 다시 <Cmd sid="common.use" product='2' />으로 변경하면 기존 인증서를 그대로 재사용하며, 인증서가 없는 경우에만 새로 생성합니다. 따라서 <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> 순서로 변경해도 같은 인증서가 유지되어, 이전에 등록된 장치를 추가 조치 없이 다시 연결할 수 있습니다. 단, 외부 인증서를 사용하는 상태에서 <Cmd sid="common.notUse" product='2' />으로 변경하면 등록했던 외부 인증서(루트 인증서, 공개키 인증서, 비밀키)와 비밀키 암호는 서버에서 삭제됩니다.
 
-* 장치를 네트워크에서 물리적으로 분리한 상태에서 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 <Cmd sid="common.notUse" product='2' />으로 설정하면 장치에 저장된 인증서가 삭제됩니다. 이 경우 장치를 다시 연결할 수 없습니다. 다시 연결하려면 장치에 저장된 인증서를 삭제하거나 공장 초기화해야 합니다. 자세한 내용은 장치의 매뉴얼을 참고하세요.
+* 등록된 모든 장치와 멀티 커뮤니케이션 서버가 서버에 연결된 상태에서만 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션과 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션을 변경할 수 있습니다. 연결이 끊긴 장치가 있거나 멀티 커뮤니케이션 서버가 연결되어 있지 않으면 변경이 거부되고 오류 메시지가 표시됩니다. 장치 또는 멀티 커뮤니케이션 서버를 다시 연결한 후 시도하고, 더 이상 사용하지 않는 장치라면 장치 목록에서 삭제한 후 다시 시도하세요.
 
 * 이전에 정상적으로 연결되던 장치가 인증서 불일치로 연결에 실패하면 **BioStar X**는 이를 시스템 로그에 기록합니다. 장치가 갑자기 연결되지 않는다면 시스템 로그에서 원인을 확인한 후, 장치를 공장 초기화하거나 이전에 내보내 둔 인증서 세트를 <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> 옵션으로 다시 등록하여 복구하세요. 단, 서버를 제거한 뒤 재설치했다면 <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />를 참고하세요.
-
-* 멀티 커뮤니케이션 서버가 연결되어 있지 않으면 <Cmd sid="setting.sever.secure.comm.menu" product='2' /> 옵션을 켜거나 끌 수 없습니다.
 
 * 서버를 제거할 때 인증서를 백업하는 방법은 <DocLink docId='platform/biostar_x/remove-server' />를 참고하세요.
 
@@ -207,6 +205,8 @@ keywords: [시스템 보안, 암호화]
 * XPass Q2 펌웨어 1.0.0 이상
 
 * BioStation 3 펌웨어 1.0.0 이상
+
+* BioStation 2a 펌웨어 1.0.0 이상
 
 * X-Station 2 펌웨어 1.0.0 이상
 

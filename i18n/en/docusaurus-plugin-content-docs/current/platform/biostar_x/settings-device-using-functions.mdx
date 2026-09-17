@@ -116,6 +116,8 @@ If a device disconnects from **BioStar X**, it cannot delete its certificate. If
 
 :::info
 
+* If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is enabled, deleting the device without selecting <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> leaves the certificate on the device. Then change the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option to <Cmd sid="common.notUse" product='2' />, and enroll the device in **BioStar X** again. The device fails to connect because the certificate remains. If you use the default certificate, change the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option back to <Cmd sid='common.use' product='2' />.
+
 * If all selected devices are slave devices or do not support secure communication, delete devices without the <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option.
 
 * The <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option appears only when <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is enabled. For more information, see <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />.
