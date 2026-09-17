@@ -2769,7 +2769,7 @@ function buildTreeviewHtml(data) {
 
     // Add relay/arm/camera icons together for door nodes (matches Treeview/index.js)
     if (node.name === '출입문' || node.name === 'Door') {
-      ['door-relay', 'door-arm', 'door-camera'].forEach((iconType, idx) => {
+      ['door-relay', 'door-arm'].forEach((iconType, idx) => {
         const svgIcon = getSvgIcon(iconType);
         if (svgIcon) {
           if (svgIcon.properties) {
