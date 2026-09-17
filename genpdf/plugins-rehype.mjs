@@ -800,7 +800,12 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
           const locale = cmdXLocaleMap[language] || cmdXEn;
           localeText = locale[sidAttr];
           if (localeText) {
-            localeText = localeText.replace('{{value}}', 'N');
+            localeText = localeText
+              .replace('<br>', '')
+              .replace('{{value}}', 'N')
+              .replace(' ({{count}})', '')
+              .replace('({{count}})', '')
+              .replace('{{count}}', '');
           }
         }
 
@@ -821,6 +826,8 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
             .replace(/&sol;/g, '/')
             .replace(/\\xB0\\x43/g, '℃')
             .replace(/\\xB0\\x46/g, '℉')
+            .replace(' <font size="1">※ｵﾝ時 ﾘﾚｰ非動作</font>', '')
+            .replace(/\\n/g, ' ')
             .trim();
         }
 
