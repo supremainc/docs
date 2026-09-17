@@ -19,15 +19,19 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 ## ブラケットと製品の固定
 
+### 一般ブラケット
+
 1. 製品を取り付ける位置を決めてください。
 
    <Image src='/img/device/installation-recommended-bew3.svg' className='none' alone />
 
    <InstallationBracketNotes height={137} />
 
+   <PageBreak />
+
 2. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
 
-   <Image src='/img/device/installation-device1-bew3.svg' className='none' alone />
+   <Image src='/img/device/installation-device1-bew3.svg' className='none' width={240} alone />
 
    :::info
 
@@ -63,13 +67,17 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
    :::
 
+   <PageBreak />
+
 3. 固定したブラケット上に製品を取り付けます。
 
-   <Image src='/img/device/installation-device2-bew3.svg' className='none' alone />
+   <Image src='/img/device/installation-device2-bew3.svg' className='none' width={360} alone />
+
+   <PageBreak />
 
 4. 製品固定ネジを締めて、製品とブラケットを組み付けてください。
 
-   <Image src='/img/device/installation-device3-bew3.svg' className='none' alone />
+   <Image src='/img/device/installation-device3-bew3.svg' className='none' width={150} alone />
 
    :::info
 
@@ -79,12 +87,112 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 <PageBreak />
 
+### チルトブラケット
+
+専用チルトブラケットを使用すると、設置環境に合わせて認証角度を調整できます。 チルトブラケットは別売です。
+
+1. 付属のドリル用テンプレートを使用して、製品を設置する位置を決めます。
+
+   <Image src='/img/device/installation-recommended-bew3.svg' className='none' alone />
+
+   <InstallationBracketNotes height={137} />
+
+   <PageBreak />
+
+2. チルトブラケット固定用ネジを使用して、取り付け位置の壁面にチルトブラケットの背面をしっかり固定します。
+
+   <Image src='/img/device/installation-device-tilt_bracket1-bs3.svg' className='none' width={300} alone />
+
+   :::note
+
+   設置位置に応じて、チルトブラケットの上下方向を次のように区別して取り付けます。
+
+   * 出入口の左側に設置する場合: "R TOP" の刻印が上向きになるように取り付けます
+
+   * 出入口の右側に設置する場合: "L TOP" の刻印が上向きになるように取り付けます
+
+   <Image src='/img/device/installation-device-tilt_bracket0-bew3.svg' className='none' width={700} alone />
+
+   :::
+
+   :::info
+
+   * 製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   * RF信号干渉を回避するため、最小離隔距離を確認して設置してください。
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/bew3-installation_distance1.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   | 壁の厚さ | 距離 |
+   | :-: | :-: |
+   | 100 mm | 270 mm |
+   | 120 mm | 250 mm |
+   | 150 mm | 170 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/bew3-installation_distance.png' className='none' width='65%' />
+
+   </Column>
+   </Columns>
+
+   * モバイルアクセスカードを使用する場合、BLE信号の干渉を回避するため、デバイス間に1 m以上の距離を空けて設置してください。
+
+   :::
+
+3. チルトブラケットの前面を背面の溝にはめて閉じた後、上下のネジ穴にネジ2本を使って固定します。
+
+   <Image src='/img/device/installation-device-tilt_bracket2-bs3.svg' className='none' width={550} alone />
+
+   :::info
+
+   ネジを締めすぎると、角度を調整できません。 適切な強さでネジを締めます。
+
+   :::
+
+4. チルトブラケットの上に壁掛け用ブラケットをしっかり固定します。
+
+   <Image src='/img/device/installation-device-tilt_bracket3-bew3.svg' className='none' width={400} alone />
+
+   <PageBreak />
+
+5. 固定した壁掛け用ブラケットの上に製品を取り付けます。
+
+   <Image src='/img/device/installation-device-tilt_bracket4-bew3.svg' className='none' width={400} alone />
+
+   <PageBreak />
+
+6. 製品固定用ネジを回して、製品と壁掛け用ブラケットを組み立てます。
+
+   <Image src='/img/device/installation-device-tilt_bracket5-bew3.svg' className='none' width={210} alone />
+
+   :::info
+
+   ブラケットと製品を組み立てる際は、セキュリティを向上させるため、製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。
+
+   :::
+
+7. チルトブラケットを希望の角度に調整します。
+
+   <Image src='/img/device/installation-device-tilt_bracket6-bew3.svg' className='none' width={300} alone />
+
+<PageBreak />
+
 {/* ## 전원 연결 */}
 import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
 
-<div className='page-break' />
+<PageBreak />
 
 {/* ## 네트워크 연결 */}
 import NetworkConnection from "../../common/_device-network-connection.mdx";
@@ -103,7 +211,7 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 <RelayConnectioin />
 
-<div className='page-break' />
+<PageBreak />
 
 {/* ## 독립형 연결 */}
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
@@ -115,7 +223,7 @@ import CommonNotes from "../../common/_device-connection-standalone-secure-notes
 
 <CommonNotes />
 
-<div className='page-break' />
+<PageBreak />
 
 {/* ## Secure I/O 2 연결 */}
 import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
