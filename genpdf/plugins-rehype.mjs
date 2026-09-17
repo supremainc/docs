@@ -2746,7 +2746,7 @@ function buildTreeviewHtml(data) {
     
     // Add icon for level > 1 or specific types
     if (level > 1 || node.type === 'access-zone') {
-      if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
+      if (node.type !== 'door-relay' && node.type !== 'door-arm') {
         const svgIcon = getSvgIcon(node.type);
         if (svgIcon) {
           nodeElements.push({
