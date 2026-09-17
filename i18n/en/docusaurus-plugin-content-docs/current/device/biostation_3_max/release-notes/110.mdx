@@ -3,9 +3,9 @@ id: 110
 title: Firmware Version 1.1.0
 ---
 
-# Firmware Version 1.1.0 (Build No. 1.1.0_260903)
+# Firmware Version 1.1.0 (Build No. 1.1.0_260917)
 
-Release<Separator/>2026-09-14
+Release<Separator/>2026-09-17
 
 ## New Features and Improvements
 
@@ -103,5 +103,8 @@ Release<Separator/>2026-09-14
 
 {/* (BS3MFW-502) Master Admin 스탠다드향임에도 지문의 포맷을 변경하면 무조건 재부팅이 되는 현상 - 1.0.1 */}
 16. Reboot occurring when changing the fingerprint template format on standard models. <Badge>1.0.0</Badge>
+
+{/* (BS3MFW-596) [Lock override] wiegand reader로 door 생성 후, wiegand 장치가 disable 상태일때, Lock override 카드 인증이 안되는 현상 - 발생버전 : V1.0.0 */}
+17. **Lock Override** card authentication not working on a door created with a Wiegand reader when the reader is disabled. <Badge>1.0.0</Badge>
 
 </BugLists>
