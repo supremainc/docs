@@ -2205,7 +2205,7 @@
   },
   "/img/biostarx-monitoring-door-popup.png": {
     "width": 431,
-    "height": 387
+    "height": 361
   },
   "/img/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -2320,7 +2320,7 @@
     "height": 675
   },
   "/img/biostarx-monitoring-group-expand-collapse.png": {
-    "width": 400,
+    "width": 451,
     "height": 295
   },
   "/img/biostarx-monitoring-map-camera-popup.png": {
@@ -12161,7 +12161,7 @@
   },
   "/img/en/biostarx-monitoring-door-popup.png": {
     "width": 450,
-    "height": 387
+    "height": 354
   },
   "/img/en/biostarx-monitoring-door-relay-popup.png": {
     "width": 400,
@@ -12276,7 +12276,7 @@
     "height": 675
   },
   "/img/en/biostarx-monitoring-group-expand-collapse.png": {
-    "width": 400,
+    "width": 453,
     "height": 295
   },
   "/img/en/biostarx-monitoring-map-camera-popup.png": {
