@@ -106,5 +106,11 @@
     "en": "<b><a href='https://docs.supremainc.com/en/platform/biostar_air/release-notes/bsair-release-notes'>BioStar Air v2.13</a> is out!</b>",
     "ja": "<b><a href='https://docs.supremainc.com/ja/platform/biostar_air/release-notes/bsair-release-notes'>BioStar Air v2.13</a>が更新されました。</b>",
     "es": "<b>¡<a href='https://docs.supremainc.com/es/platform/biostar_air/release-notes/bsair-release-notes'>BioStar Air v2.13</a> ya está disponible!</b>"
+  },
+  "noticeX": {
+    "ko": "<b><a href='https://docs.supremainc.com/platform/biostar_x/release-notes/102'>BioStar X v1.0.3</a>이 업데이트되었습니다.</b>",
+    "en": "<b><a href='https://docs.supremainc.com/en/platform/biostar_x/release-notes/102'>BioStar X v1.0.3</a> is out!</b>",
+    "ja": "<b><a href='https://docs.supremainc.com/ja/platform/biostar_x/release-notes/102'>BioStar X v1.0.3</a>が更新されました。</b>",
+    "es": "<b>¡<a href='https://docs.supremainc.com/es/platform/biostar_x/release-notes/102'>BioStar X v1.0.3</a> ya está disponible!</b>"
   }
 }
