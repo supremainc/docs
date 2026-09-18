@@ -8971,6 +8971,10 @@
     "width": 496,
     "height": 598
   },
+  "/img/device/installation-device-tilt_bracket0-bew3.svg": {
+    "width": 825,
+    "height": 380
+  },
   "/img/device/installation-device-tilt_bracket0-bs3.svg": {
     "width": 825,
     "height": 380
@@ -8991,6 +8995,10 @@
     "width": 483,
     "height": 348
   },
+  "/img/device/installation-device-tilt_bracket3-bew3.svg": {
+    "width": 487,
+    "height": 545
+  },
   "/img/device/installation-device-tilt_bracket3-bs3.svg": {
     "width": 466,
     "height": 524
@@ -8998,6 +9006,10 @@
   "/img/device/installation-device-tilt_bracket3-fs2.svg": {
     "width": 483,
     "height": 406
+  },
+  "/img/device/installation-device-tilt_bracket4-bew3.svg": {
+    "width": 501,
+    "height": 576
   },
   "/img/device/installation-device-tilt_bracket4-bs3.svg": {
     "width": 509,
@@ -9007,9 +9019,17 @@
     "width": 421,
     "height": 476
   },
+  "/img/device/installation-device-tilt_bracket5-bew3.svg": {
+    "width": 254,
+    "height": 616
+  },
   "/img/device/installation-device-tilt_bracket5-bs3.svg": {
     "width": 233,
     "height": 611
+  },
+  "/img/device/installation-device-tilt_bracket6-bew3.svg": {
+    "width": 473,
+    "height": 411
   },
   "/img/device/installation-device-tilt_bracket6-bs3.svg": {
     "width": 473,
@@ -9024,8 +9044,8 @@
     "height": 331
   },
   "/img/device/installation-device1-bew3.svg": {
-    "width": 209,
-    "height": 396
+    "width": 276,
+    "height": 496
   },
   "/img/device/installation-device1-bln2.svg": {
     "width": 200,
@@ -9076,8 +9096,8 @@
     "height": 362
   },
   "/img/device/installation-device2-bew3.svg": {
-    "width": 405,
-    "height": 400
+    "width": 448,
+    "height": 568
   },
   "/img/device/installation-device2-bln2.svg": {
     "width": 200,
@@ -9124,8 +9144,8 @@
     "height": 215
   },
   "/img/device/installation-device3-bew3.svg": {
-    "width": 219,
-    "height": 151
+    "width": 185,
+    "height": 618
   },
   "/img/device/installation-device3-bln2.svg": {
     "width": 150,
@@ -23401,7 +23421,7 @@
   },
   "/img/mobile/bsx-mobile-device-auth-fail-lock-multi-release.png": {
     "width": 1765,
-    "height": 993
+    "height": 994
   },
   "/img/mobile/bsx-mobile-device-auth-fail-lock.png": {
     "width": 1765,
