@@ -1,12 +1,12 @@
 * <Cmd sid='setting.account.administrator' product='2' />: Este es un nivel de administrador que puede usar todos los menús.
 
-* <Cmd sid='setting.account.userOperator' product='2' />: El menú <Cmd sid='shell.header.user' /> tiene permisos de **lectura** y **escritura**.
+* <Cmd sid='setting.account.userOperator' product='2' />: El menú <Cmd sid='shell.header.user' /> tiene permisos de **lectura** y **edición**. Otros grupos de ajustes no tienen permisos, excepto el menú <Cmd sid='shell.header.user' />.
 
-* <Cmd sid='setting.account.monitoringOperator' product='2' />: Los menús <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' /> y <Cmd sid='shell.header.dashboard' /> tienen permisos de **lectura** y **escritura**.
+* <Cmd sid='setting.account.monitoringOperator' product='2' />: Los menús <Cmd sid='shell.header.arena' /> y <Cmd sid='shell.header.data' /> tienen permisos de **lectura** y **edición**, y el menú <Cmd sid='shell.header.dashboard' /> tiene permiso de **lectura**.
 
-* <Cmd sid='setting.account.taOperator' product='2' />: El menú <Cmd sid='common.gnb.time_attendance' product='2' /> tiene permisos de **lectura** y **escritura**.
+* <Cmd sid='setting.account.taOperator' product='2' />: El menú <Cmd sid='common.gnb.time_attendance' product='2' /> tiene permisos de **lectura** y **edición**, y el menú <Cmd sid='shell.header.user' /> tiene permiso de **lectura**.
 
-* <Cmd sid='setting.account.visitorOperator' product='2' />: El menú <Cmd sid='common.gnb.visitor' product='2' /> tiene permisos de **lectura** y **escritura**.
+* <Cmd sid='setting.account.visitorOperator' product='2' />: El menú <Cmd sid='common.gnb.visitor' product='2' /> tiene permisos de **lectura** y **edición**.
 
 :::info
 
@@ -15,6 +15,10 @@
 * Seleccione <Cmd sid='common.selectNone' /> si no desea establecer un nivel de administrador. En este caso, el usuario no puede iniciar sesión en **BioStar X**.
 
 </Include>
+
+* El permiso de **edición** del menú <Cmd sid='shell.header.arena' /> permite agregar pestañas o controlar las entradas del árbol de estado.
+
+* El permiso de **edición** del menú <Cmd sid='shell.header.data' /> permite guardar informes, agregar programaciones automáticas de informes y acceder a los ajustes.
 
 * Para obtener más información sobre cómo agregar permisos de usuario personalizados, consulte <DocLink docId='platform/biostar_x/settings-adding-custom-account' />.
 

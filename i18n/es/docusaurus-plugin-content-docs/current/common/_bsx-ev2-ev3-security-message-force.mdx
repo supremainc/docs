@@ -1,0 +1,29 @@
+* <Cmd sid='device.card.secureMessaging.enforce' product='2' />: Establezca esta opción en <Cmd sid='common.on' product='2' /> para autenticar solo con tarjetas compatibles con mensajería segura EV2 (DESFire EV2/EV3). El dispositivo rechaza las tarjetas DESFire EV1 que no admiten mensajería segura EV2.
+
+  <Include type={props.type} ref='suprema'>
+
+   Esta opción está disponible cuando selecciona <Cmd sid='device.card.desfire_ev1' product='2' /> y el <Cmd sid='setting.cardFormat.encryptionType' product='2' /> de la <Cmd sid='device.card.supremaSmartCard' product='2' /> seleccionada es <Cmd>AES</Cmd>. Si <Cmd sid='common.supremaSmartCard' product='2' /> no está en uso, esta opción aparece como <Cmd sid='common.off' product='2' />.
+
+  <Image src='/img/biostarx-setting-device-detail-card-smart-security-force.png' className='none' />
+
+  </Include>
+
+  <Include type={props.type} ref='custom'>
+
+   Esta opción está disponible cuando selecciona <Cmd sid='device.card.desfire_ev1' product='2' /> y el <Cmd sid='setting.cardFormat.encryptionType' product='2' /> de la <Cmd sid='device.card.customSmartCard' product='2' /> seleccionada es <Cmd>AES</Cmd>. Si <Cmd sid='common.customSmartCard' product='2' /> no está en uso, esta opción aparece como <Cmd sid='common.off' product='2' />.
+
+  <Image src='/img/biostarx-setting-device-detail-card-custom-security-force.png' className='none' />
+
+  </Include>
+
+   :::note
+
+  * <Cmd sid='common.supremaSmartCard' product='2' /> y <Cmd sid='common.customSmartCard' product='2' /> comparten los mismos ajustes. Si alguno está en uso, aparece un mensaje de confirmación al cambiar cualquiera de los valores. Haga clic en <Cmd sid='button.ok' product='2' /> en el cuadro de diálogo para cambiar ambas opciones a la vez. Si alguna de las opciones no usa una tarjeta inteligente, cambie el valor sin un cuadro de diálogo de confirmación.
+
+  * La mensajería segura está disponible solo en tarjetas DESFire EV2 y EV3. Habilite DESFire y establezca el tipo de cifrado del diseño de la tarjeta en AES.
+
+  * Si el dispositivo no admite mensajería segura EV2, no aparece la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' />.
+
+  * Para establecer esta opción en varios dispositivos, use <Cmd sid='device.batchEdit' product='2' />. La edición por lotes excluye automáticamente los dispositivos que no admiten mensajería segura EV2.
+
+   :::

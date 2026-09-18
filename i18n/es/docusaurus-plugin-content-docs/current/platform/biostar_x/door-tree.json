@@ -1,9 +1,9 @@
 [
   {
-    "name": "Todos los grupos de puertas de entrada",
+    "name": "Todos los grupos de puertas",
     "children": [
       {
-        "name": "Grupo de puertas de entrada A",
+        "name": "Grupo de puertas A",
         "type": "door-group",
         "children": [
           {
