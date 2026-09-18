@@ -11,7 +11,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 **Microsoft Entra ID**（以下 **Entra ID**）または **アクティブ ディレクトリ**（Active Directory）と **BioStar X** を連携し、ユーザーを同期・管理する方法を案内します。 
 
-**Entra ID** または **Active Directory** と連携すると、以下の便利な機能を利用できます。 これにより、セキュリティと利便性を向上できます。
+**Entra ID** または **Active Directory** と連携すると、以下の便利な機能を利用できます。これにより、セキュリティと利便性を向上できます。
 
 * **Entra ID** が提供するシングル サインオン（SSO）機能を使用して、**Entra ID** アカウントで **BioStar X** にログインできます。
 
@@ -23,7 +23,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 :::info
 
-**Entra ID** または **Active Directory** 設定機能は、**アドバンス** ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+**Entra ID** または **Active Directory** 設定機能は、**エッセンシャル**(Essential)ライセンス以上で追加オプションとして利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
 :::
 
@@ -36,7 +36,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 2. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-3. 画面左のサイドバーで <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
+3. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
 
 4. <Cmd sid='settings.activeDirectory.title' product='2' /> 項目で <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> を選択します。
 
@@ -46,7 +46,7 @@ import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
 :::info
 
-Entra IDと連携するには、<Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> メニューで<Cmd sid='setting.userDevice.useridType' product='2' />項目を<Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />に設定する必要があります。
+Entra IDと連携するには、<Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.server' product='2' /> メニューで<Cmd sid='setting.userDevice.useridType' product='2' />項目を<Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />に設定する必要があります。
 
 :::
 
@@ -93,7 +93,7 @@ Entra IDと連携するには、<Cmd sid='common.setting' product='2' /> → <Cm
 
 :::info
 
-BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> のユーザー情報と一致する項目にマッピングできるようデフォルト設定されています。 デフォルト設定されたフィールド値ではなく別のフィールド値を選択するには、<Cmd sid='settings.activeDirectory.FieldNameEI' product='2' /> 列の項目をクリックして、目的のフィールド値を選択します。
+**BioStar X**の各ユーザーフィールドは、<strong>Entra ID</strong>のユーザー情報と一致する項目にマッピングできるようデフォルト設定されています。デフォルト設定されたフィールド値ではなく別のフィールド値を選択するには、<Cmd sid='settings.activeDirectory.FieldNameEI' product='2' /> 列の項目をクリックして、目的のフィールド値を選択します。
 
 <Image src='/img/biostarx-setting-directory-userfield-select-other.png' />
 
@@ -115,7 +115,7 @@ BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> の�
 
 <Image src='/img/biostarx-setting-directory-login-with-entraid.png' />
 
-<Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> 項目のリダイレクト URL をコピー（<IcCopy2 />）し、**Entra ID** ポータルの SSO リダイレクト設定に貼り付けます。 ユーザーが **Entra ID** でのログインに成功すると、このアドレスへリダイレクトされます。
+<Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> 項目のリダイレクト URL をコピー（<IcCopy2 />）し、**Entra ID** ポータルの SSO リダイレクト設定に貼り付けます。ユーザーが **Entra ID** でのログインに成功すると、このアドレスへリダイレクトされます。
 
 :::info
 
@@ -140,7 +140,7 @@ BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> の�
 
 ### 設定を保存
 
-<Cmd sid='setting.menu.directoryIntegration.root' /> の設定をすべて完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして保存します。 設定結果を確認するには、<DocLink inner='#checksettings' />を参照してください。
+<Cmd sid='setting.menu.directoryIntegration.root' /> の設定をすべて完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして保存します。設定結果を確認するには、<DocLink inner='#checksettings' />を参照してください。
 
 </Step>
 
@@ -154,7 +154,7 @@ BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> の�
 
 2. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-3. 画面左のサイドバーで <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
+3. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
 
 4. <Cmd sid='settings.activeDirectory.title' product='2' /> 項目で <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> を選択します。
 
@@ -166,7 +166,7 @@ BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> の�
 
 * Active Directory は Windows Server 2008 R2 以降のシステム環境で使用できます。
 
-* Active Directoryと連携するには、<Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> メニューで<Cmd sid='setting.userDevice.useridType' product='2' />項目を<Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />に設定する必要があります。
+* Active Directoryと連携するには、<Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.server' product='2' />メニューで<Cmd sid='setting.userDevice.useridType' product='2' />項目を<Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />に設定してください。
 
 :::
 
@@ -186,7 +186,7 @@ BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> の�
 
 * <Cmd sid='settings.activeDirectory.Password' product='2' />：Windows Active Directory のログインパスワードを入力します。
 
-* <Cmd sid='settings.activeDirectory.DomainNode' product='2' />：Windows Active Directory の既定ドメイン名を入力します。 既定ドメイン名は下記の手順で確認できます。
+* <Cmd sid='settings.activeDirectory.DomainNode' product='2' />：Windows Active Directory の既定ドメイン名を入力します。既定ドメイン名は下記の手順で確認できます。
 
   1. **Active Directory 管理センター** を起動します。
 
@@ -214,7 +214,7 @@ BioStar X の各ユーザーフィールドは、<strong>Entra ID</strong> の�
 
 :::info
 
-BioStar X の各ユーザーフィールドは、<strong>Active Directory</strong> のユーザー情報と一致する項目にマッピングできるようデフォルト設定されています。 デフォルト設定されたフィールド値ではなく別のフィールド値を選択するには、<Cmd sid='settings.activeDirectory.FieldNameAD' product='2' /> 列の項目をクリックして、目的のフィールド値を選択します。
+**BioStar X**の各ユーザーフィールドは、<strong>Active Directory</strong>のユーザー情報と一致する項目にマッピングできるようデフォルト設定されています。デフォルト設定されたフィールド値ではなく別のフィールド値を選択するには、<Cmd sid='settings.activeDirectory.FieldNameAD' product='2' /> 列の項目をクリックして、目的のフィールド値を選択します。
 
 <Image src='/img/biostarx-setting-directory-userfield-select-other-ad.png' />
 
@@ -247,7 +247,7 @@ Active Directory サーバーのユーザー ID でログインできるよう�
 
 ### 設定を保存
 
-<Cmd sid='setting.menu.directoryIntegration.root' /> の設定をすべて完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして保存します。 設定結果を確認するには、<DocLink inner='#checksettings' />を参照してください。
+<Cmd sid='setting.menu.directoryIntegration.root' /> の設定をすべて完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして保存します。設定結果を確認するには、<DocLink inner='#checksettings' />を参照してください。
 
 </Step>
 </Steps>
@@ -257,7 +257,7 @@ Active Directory サーバーのユーザー ID でログインできるよう�
 
 ## 設定結果の確認 {/* #checksettings */}
 
-**Entra ID** または **Active Directory** との連携設定を完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。 以下の項目を参考に同期された設定を確認します。
+**Entra ID** または **Active Directory** との連携設定を完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。以下の項目を参考に同期された設定を確認します。
 
 * <Cmd sid='common.user' product='2' /> メニューで同期されたユーザーの一覧を確認します。
 
@@ -265,9 +265,32 @@ Active Directory サーバーのユーザー ID でログインできるよう�
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
+## サポートされない文字の処理 {/* #unsupportedcharacter */}
+
+**Entra ID**または**Active Directory**のユーザーIDまたはユーザー名に**BioStar X**でサポートされない文字が含まれる場合、システムはサポートされない文字のみを削除した値でユーザーを同期します。
+
+> 例えば、ディレクトリサービスのユーザーIDが `john/doe` で、ユーザー名が `John<Doe>` の場合、**BioStar X**にはそれぞれ `johndoe`、`JohnDoe` として登録します。
+
+:::info
+
+* ユーザー名のピリオド(`.`)とアポストロフィ(`'`)はサポートされない文字から除外され、ディレクトリサービスの値のまま登録します。 
+
+  > 例: `O'Brien`、`John.Doe` → ディレクトリサービスの値のまま登録
+
+* ユーザーIDのピリオド(`.`)はサポートされない文字から除外され、ディレクトリサービスの値のまま登録します。ただし、アポストロフィ(`'`)はユーザーIDで使用できないため、削除した値で登録します。 
+
+  > ディレクトリサービスのユーザーIDの例：
+  >
+  > * `O'Brien` → `OBrien` として登録 
+  > * `john.doe` → `john.doe` のまま登録
+
+* ユーザーIDおよび名前の入力規則について詳しくは、<DocLink docId='platform/biostar_x/add-user-basic-info' />を参照してください。
+
+:::
+
 ## ディレクトリ連携の除外 {/* #excludeintegration */}
 
-<Cmd sid='setting.menu.directoryIntegration.root' /> 機能を使用して **Entra ID** または **Active Directory** と連携する場合、ディレクトリサービスに存在しないユーザーは **BioStar X** から削除されることがあります。 削除したくないユーザーがいる場合、次の方法で連携から除外できます。
+<Cmd sid='setting.menu.directoryIntegration.root' /> 機能を使用して **Entra ID** または **Active Directory** と連携する場合、ディレクトリサービスに存在しないユーザーは **BioStar X** から削除されることがあります。削除したくないユーザーがいる場合、次の方法で連携から除外できます。
 
 1. **BioStar X** に管理者 ID でログインします。
 
@@ -283,13 +306,29 @@ Active Directory サーバーのユーザー ID でログインできるよう�
 
 選択したユーザーは <Cmd sid='setting.menu.directoryIntegration.root' /> 機能を使用するときに連携から除外されます。
 
+:::info
+
+次に該当するユーザーは、自動的に連携から除外されます。
+
+* ユーザー名の先頭が `&@~` の連続で始まる場合
+
+* ユーザーIDまたはユーザー名の値が空の場合
+
+* ユーザーID（最大32文字）またはユーザー名（最大48文字）の長さ制限を超える場合
+
+* ユーザーIDが `admin` のように、システムで予約された値と同じ場合
+
+* ユーザーIDがピリオドが一つ（`.`）または二つ（`..`）の場合
+
+:::
+
 ## ディレクトリ連携の解除 {/* #disableIntegration */}
 
 <Cmd sid='settings.activeDirectory.title' product='2' /> 機能を無効にする場合、次の手順に従います。
 
 1. **BioStar X** に管理者 ID でログインします。
 
-2. <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
+2. <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
 
 3. <Cmd sid='settings.activeDirectory.title' product='2' /> 項目で <Cmd sid='settings.activeDirectory.notUse' product='2' /> を選択します。
 
@@ -303,6 +342,6 @@ Active Directory サーバーのユーザー ID でログインできるよう�
 
 :::caution
 
-<Cmd sid='settings.activeDirectory.title' product='2' /> 機能を <Cmd sid='settings.activeDirectory.notUse' product='2' /> に設定すると、**BioStar X** で **Entra ID** または **Active Directory** と連携しているすべての設定が解除されます。 連携されたユーザーおよびグループ情報は削除されませんが、以降は同期されません。 連携を解除する前に必ず確認してください。
+<Cmd sid='settings.activeDirectory.title' product='2' /> 機能を <Cmd sid='settings.activeDirectory.notUse' product='2' /> に設定すると、**BioStar X** で **Entra ID** または **Active Directory** と連携しているすべての設定が解除されます。連携されたユーザーおよびグループ情報は削除されませんが、以降は同期されません。連携を解除する前に必ず確認してください。
 
 :::

@@ -38,6 +38,16 @@
 
 * <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Configure el tipo de cifrado en <Cmd>DES/3DES</Cmd> o <Cmd>AES</Cmd>.
 
+:::info
+
+Al cambiar un diseño de tarjeta guardado con cifrado <Cmd>AES</Cmd> a <Cmd>DES/3DES</Cmd>, aparece esta advertencia.
+
+> <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
+
+Haz clic en el botón <Cmd sid='button.ok' product='2' /> para guardar los cambios. El sistema desactiva automáticamente la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' /> en los dispositivos que usan este diseño de tarjeta. Para más información sobre la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' />, consulta <DocLink docId='platform/biostar_x/settings-device-details-auth' />.
+
+:::
+
 </Include>
 
 <Include type={props.type} ref='custom-mifare,custom-iclass,custom-desfire'>

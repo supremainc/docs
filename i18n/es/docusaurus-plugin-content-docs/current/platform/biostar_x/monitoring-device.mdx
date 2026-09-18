@@ -2,10 +2,6 @@
 id: monitoring-device
 title: Monitorear Dispositivo
 description: Supervisa en tiempo real los dispositivos y cámaras conectados a todas las áreas y puertas. La gestión eficiente es posible mediante varias funciones, incluidas la verificación del estado de dispositivos y cámaras, la visualización de información detallada y la reproducción de video de la cámara.
-keywords:
-  - Monitorizar
-  - Dispositivo
-  - Cámara
 ---
 
 Este documento proporciona orientación sobre cómo usar las funciones de supervisión de dispositivos y cámaras. Puedes verificar el estado de dispositivos y cámaras, ver información detallada y reproducir video de la cámara en tiempo real, entre otras funciones. Además, revisa los eventos recientes para gestionar de manera eficiente el estado de dispositivos y cámaras.
@@ -20,12 +16,38 @@ Haz clic en la pestaña <Cmd sid='arena.tree.device.title' /> en la barra latera
 
 | Ícono de estado | Descripción |
 | :-: | --- |
-| <StatusOK/> | El dispositivo está conectado correctamente. |
-| <StatusFail /> | El dispositivo está apagado o desconectado. |
+| <IcDeviceOn width='35px' height='35px'/> | El dispositivo está conectado correctamente. |
+| <IcDeviceOff width='35px' height='35px' /> | El dispositivo está apagado o desconectado. |
 | <IcCamOk width='auto' height='35px'/> | La cámara está conectada. |
 | <IcCamFail width='auto' height='35px'/> | La cámara está apagada o desconectada. |
 
 </div>
+
+### Ver dispositivos que requieren atención {/* #checkAttentionFilter */}
+
+Los administradores pueden ver solo los dispositivos que requieren acción en una lista. En la barra lateral izquierda, haz clic en <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Revise el estado del dispositivo y tome medidas en dispositivos con problemas.
+
+<Image src='/img/biostarx-monitoring-device-attention-filter.png' />
+
+### Criterios para dispositivos que requieren acción {/* #attention-criteria */}
+
+En el árbol de dispositivos, el sistema marca los dispositivos anómalos como dispositivos que requieren acción.
+
+| Tipo de estado anormal | Indicador de estado | Descripción |
+| --- | --- | --- |
+| Desconectado | <Cmd sid='arena.tree.disconnected' /> | El dispositivo está desconectado de la red |
+| Error de sincronización | <Cmd sid='arena.tree.syncError' /> | Conectado, pero los datos no están sincronizados |
+| Error de Multi Communications Server | <Cmd sid='arena.tree.communicationError' /> | El Multi Communications Server del dispositivo presenta un error |
+| Bloquear dispositivo | <Cmd sid='arena.tree.deviceLocked' /> | El dispositivo está bloqueado debido a las condiciones y acciones del trabajo |
+| Bloqueo por fallo de autenticación | <Cmd sid='arena.preview.device.authFailLockout.title' /> | El dispositivo se bloquea cuando la autenticación falla más del número especificado de veces |
+
+:::info
+
+* La condición <Cmd sid='arena.tree.deviceLocked' /> depende de las condiciones y acciones del trabajo establecidas en <DocLink docId='platform/biostar_x/settings-triger-and-action' />. Para obtener información sobre cómo revisar y liberar este estado, consulte <DocLink inner='#deviceLockRelease' />.
+
+* Configure la condición <Cmd sid='arena.preview.device.authFailLockout.title' /> en los ajustes del dispositivo. Para obtener detalles, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />. Para obtener información sobre cómo revisar y liberar este estado, consulte <DocLink inner='#authFailLockout' />.
+
+:::
 
 ## Control del dispositivo
 
@@ -33,29 +55,67 @@ Selecciona el dispositivo deseado de la lista en la barra lateral izquierda y ha
 
 <Image src='/img/biostarx-monitoring-device-popup.png' />
 
+Las características de control que aparecen pueden variar según el tipo de dispositivo.
+
+| Tipo de dispositivo | Característica de control |
+| --- | --- |
+| [Dispositivo maestro](../../reference/glossary#master_device), un dispositivo principal que se conecta directamente al servidor sin esclavos | <Cmd sid='arena.tree.contextMenu.stopAction' />, <Cmd sid='arena.tree.contextMenu.reboot' />, <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' />, <Cmd sid='arena.tree.contextMenu.reconnect' />(solo cuando el servidor se conecta al dispositivo) |
+| [Dispositivo esclavo](../../reference/glossary#slave_device) | <Cmd sid='arena.tree.contextMenu.stopAction' />, <Cmd sid='arena.tree.contextMenu.reboot' />, <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' /> |
+| Dispositivo de comunicación OSDP | <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.tree.contextMenu.reconnect' /> (depende del método de conexión) |
+| Dispositivo Wiegand | <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> |
+| Módulos de expansión (Secure I/O 2, DM-20, OM-120, IM-120) | <Cmd sid='arena.tree.contextMenu.stopAction' /> |
+| Dispositivos que usan conexiones de dispositivo a servidor | <Cmd sid='arena.tree.contextMenu.stopAction' />, <Cmd sid='arena.tree.contextMenu.reboot' />, <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.batchResult.action.clearLockout' /> |
+| Módulo de antena inalámbrica | Ninguno |
+
 ### Reconectar dispositivo
 
-Si el dispositivo está apagado o desconectado, haz clic en <Cmd sid='arena.tree.contextMenu.reconnect' /> en el menú emergente. Cuando el dispositivo se reconecte, el ícono de estado cambiará a <StatusOK />.
+Independientemente del estado de conexión del dispositivo, haga clic en <Cmd sid='arena.tree.contextMenu.reconnect' /> en el menú emergente. Úselo para volver a conectar dispositivos desconectados o reenviar ajustes y borrar estados anómalos en dispositivos conectados. Cuando el dispositivo se reconecta, el ícono de estado cambia al estado normal (<IcDeviceOn />).
 
 :::info
 
-La función <Cmd sid='arena.tree.contextMenu.reconnect' /> no es compatible con dispositivos conectados mediante la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />. Para obtener más información sobre el registro de dispositivos, consulte <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
+La característica <Cmd sid='arena.tree.contextMenu.reconnect' /> no es compatible con dispositivos conectados mediante la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />. Para obtener más información sobre el registro de dispositivos, consulte <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
 
 :::
 
 ### Reiniciar dispositivo
 
-Para reiniciar el dispositivo, haz clic en <Cmd sid='arena.tree.contextMenu.reboot' /> en el menú emergente. 
+Para reiniciar el dispositivo, haz clic en <Cmd sid='arena.tree.contextMenu.reboot' /> en el menú emergente. Cuando aparezca la ventana de mensaje de advertencia, haga clic en <Cmd sid='common.button.ok' />.
 
-### Bloquear dispositivo
+### Desbloquear el dispositivo {/* #deviceLockRelease */}
 
-* Para bloquear el dispositivo, haz clic en <Cmd sid='arena.tree.contextMenu.deviceLock' /> en el menú emergente. Aparecerá un mensaje en la parte superior de la pantalla que indica que el bloqueo del dispositivo está en curso. Cuando se complete el bloqueo, el mensaje desaparecerá.
+Cuando el dispositivo se bloquea según condiciones definidas por el administrador, <Cmd sid='arena.tree.deviceLocked' /> aparece debajo del nombre del dispositivo en la barra lateral izquierda. Al seleccionar el dispositivo, el panel de vista previa derecho muestra el mismo banner en la parte superior.
 
-* Para desbloquear el dispositivo, haz clic en <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> en el menú emergente. Aparecerá un mensaje en la parte superior de la pantalla que indica que el desbloqueo del dispositivo está en curso. Cuando se complete el desbloqueo, el mensaje desaparecerá.
+<Image src='/img/biostarx-monitoring-device-lock.png' />
+
+* El menú emergente muestra <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> solo cuando el dispositivo está bloqueado. Seleccione el dispositivo bloqueado y, luego, haga clic en <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> en el menú emergente.
+
+* Seleccione el dispositivo bloqueado. En el banner en la parte superior del panel de vista previa derecho, haga clic en <Cmd sid='arena.preview.banner.unlock' />.
+
+:::info
+
+Solo los usuarios con privilegios de <Cmd sid='setting.account.administrator' /> o <Cmd sid='setting.account.monitoringOperator' /> ven <Cmd sid='arena.tree.contextMenu.deviceUnlock' />.
+
+:::
+
+### Borrar el bloqueo por fallas de autenticación {/* #authFailLockout */}
+
+Si la autenticación falla la cantidad de veces establecida en <Cmd sid='device.info.authFailLockout.label' product='2' />, el dispositivo cambia al estado bloqueado. Cuando el dispositivo está en bloqueo por fallas de autenticación, <Cmd sid='arena.preview.device.authFailLockout.title' /> aparece debajo del nombre del dispositivo en la barra lateral izquierda. Al seleccionar el dispositivo, el panel de vista previa derecho muestra el mismo banner en la parte superior. El banner muestra la hora del evento y la información del dispositivo.
+
+El menú emergente muestra <Cmd sid='arena.batchResult.action.clearLockout' /> solo cuando el dispositivo está en bloqueo por fallas de autenticación. Seleccione el dispositivo bloqueado y, luego, haga clic en <Cmd sid='arena.batchResult.action.clearLockout' /> en el menú emergente.
+
+<Image src='/img/biostarx-monitoring-device-auth-fail-lock.png' />
+
+:::info
+
+* Solo los usuarios con privilegios de <Cmd sid='setting.account.administrator' /> o <Cmd sid='setting.account.monitoringOperator' /> ven el menú <Cmd sid='arena.batchResult.action.clearLockout' />.
+
+* Después de que transcurra el tiempo de bloqueo establecido (<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />), el dispositivo se desbloquea automáticamente. El dispositivo elimina el bloqueo sin acciones adicionales. Para más información sobre condiciones y ajustes del tiempo de bloqueo, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
+
+:::
 
 ### Detener acción
 
-Para detener una acción en curso, haz clic en <Cmd sid='arena.tree.contextMenu.stopAction' /> en el menú emergente. Aparecerá un mensaje de éxito en la parte superior de la pantalla indicando que la acción se detuvo. Cuando la acción se detenga, el mensaje desaparecerá.
+Para detener todas las acciones basadas en alarmas y activadores del dispositivo, haga clic en <Cmd sid='arena.tree.contextMenu.stopAction' /> en el menú contextual. Aparecerá un mensaje de éxito en la parte superior de la pantalla indicando que la acción se detuvo.
 
 ### Vista detallada del dispositivo
 
@@ -63,9 +123,96 @@ Para ver información detallada del dispositivo, haz clic en <Cmd sid='arena.tre
 
 <Image src='/img/biostarx-monitoring-device-details.png' />
 
-Puedes ver el ID del dispositivo, grupo, nombre del modelo, tiempo de actividad, dirección IP y otros detalles. La lista <Cmd sid='arena.recentEvent' /> en la parte inferior muestra los eventos recientes en orden cronológico inverso.
+* **Control del dispositivo**: Use los controles para detener tareas, reiniciar o reconectar.
 
-## Control de la cámara
+* **Detalles del dispositivo**: Verifique el ID del dispositivo, el grupo, el nombre del modelo, el tiempo de actividad y la dirección IP.
+
+* <Cmd sid='arena.recentEvent' />: Vea la lista de eventos recientes en el dispositivo seleccionado.
+
+## Controle varios dispositivos a la vez {/* #batch-control */}
+
+Esta sección describe cómo seleccionar varios dispositivos y ejecutar comandos como reconectar, reiniciar o desbloquear. Seleccione dos o más dispositivos en la pestaña <Cmd sid='arena.tree.device.title' /> de la barra lateral izquierda. El panel de control por lotes aparece a la derecha.
+
+<Image src='/img/biostarx-monitoring-device-multi-select.png' />
+
+:::info
+
+El control masivo no incluye cámaras. Para el control de la cámara, consulte <DocLink inner='#controlCamera' />.
+
+:::
+
+### Seleccione varios dispositivos {/* #select-multiple-devices */}
+
+Use los siguientes métodos para seleccionar dispositivos en la pestaña <Cmd sid='arena.tree.device.title' /> de la barra lateral izquierda.
+
+* **<Kbd>Ctrl</Kbd> + clic**: Agregue o quite de la lista de selección el dispositivo en el que hizo clic. Esto mantiene el resto de la selección.
+
+* **<Kbd>Shift</Kbd> + clic**: Seleccione un rango desde el último dispositivo en el que hizo clic hasta el dispositivo en el que hizo clic. La selección de rango excluye los grupos de dispositivos.
+
+* **Haga clic en un grupo (<IcGroup />)**: Haga clic en el nombre de un grupo para agregar a la lista de selección todos los dispositivos del grupo. Mantenga seleccionados los dispositivos ya seleccionados.
+
+:::info
+
+* Si selecciona solo un grupo vacío sin dispositivos, el panel derecho se cierra.
+
+* La aplicación abre el panel de detalles del dispositivo al seleccionar un dispositivo. La aplicación cambia al panel de control por lotes al seleccionar dos o más dispositivos.
+
+:::
+
+<Columns className='mt--50'>
+<Column className='width--20'>
+
+<Image src='/img/biostarx-monitoring-device-batch-control-panel.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+### Diseño del panel de control por lotes {/* #batch-panel-layout */}
+
+* <Cmd sid='monitoring.multiControl.unlockDevice' />, <Cmd sid='monitoring.multiControl.clearLockout' />: Estos botones se activan cuando los dispositivos seleccionados están bloqueados o en bloqueo por fallas de autenticación. La cantidad de dispositivos objetivo aparece junto a cada botón.
+
+* <Cmd sid='monitoring.multiControl.stopAction' />, <Cmd sid='monitoring.multiControl.reconnect' />, <Cmd sid='monitoring.multiControl.reboot' />: Estos botones se activan si los dispositivos seleccionados admiten este control. No muestran la cantidad de dispositivos objetivo.
+
+* **Control del dispositivo**: Use estos botones: <Cmd sid='monitoring.multiControl.unlockDevice' />, <Cmd sid='monitoring.multiControl.clearLockout' />, <Cmd sid='monitoring.multiControl.stopAction' />, <Cmd sid='monitoring.multiControl.reconnect' /> y <Cmd sid='monitoring.multiControl.reboot' />.
+
+* **Divisor**: Arrastre el divisor entre el control del dispositivo y <Cmd sid='common.selectedItems' /> hacia arriba o abajo para ajustar la altura de cada área.
+
+* <Cmd sid='common.selectedItems' />: Verifique el estado de conexión, el nombre y el estado anormal de los dispositivos seleccionados. Consulte <DocLink inner='#attention-criteria' /> para ver los tipos de estado anormal.
+
+Haga clic en cada botón para abrir el cuadro de diálogo de confirmación. En el cuadro de diálogo de confirmación, haz clic en <Cmd sid='common.cancel' /> para cerrar sin ejecutar la característica seleccionada. Haz clic en el botón de la característica seleccionada para ejecutarla en todos los dispositivos seleccionados.
+
+:::info
+
+Si la selección incluye distintos tipos de dispositivos, el sistema muestra los controles compatibles combinados. El sistema no muestra botones para controles que ninguno de los dispositivos seleccionados admite. Si no hay controles compatibles, el sistema muestra solo el texto de orientación y la tabla de la lista de dispositivos seleccionados.
+
+:::
+
+</Column>
+</Columns>
+
+### Revisar resultados de ejecución {/* #batch-result */}
+
+* Si la ejecución tiene éxito en todos los dispositivos seleccionados, el sistema muestra solo un mensaje de éxito.
+
+  <Image src='/img/biostarx-monitoring-device-batch-action-success.png' caption />
+
+* Si falla algún dispositivo, el sistema muestra un mensaje de fallo junto con el botón <Cmd sid='arena.batchResult.showDetails' />. 
+
+  <Image src='/img/biostarx-monitoring-device-batch-action-fail-toast.png' caption />
+
+  Haga clic en <Cmd sid='arena.batchResult.showDetails' /> para ver los resultados agrupados en <Cmd sid='arena.batchResult.successChip' />, <Cmd sid='arena.batchResult.failChip' /> y <Cmd sid='arena.batchResult.skippedChip' />. Haga clic en <Cmd sid='arena.batchResult.copyFailList' /> para copiar al portapapeles los nombres y los motivos de las entradas fallidas.
+
+  <Image src='/img/biostarx-monitoring-device-batch-action-fail-detail.png' caption />
+
+:::info
+
+* El botón <Cmd sid='monitoring.multiControl.reconnect' /> es una excepción. Después de que el sistema acepte la solicitud, solo muestra un mensaje de éxito. No proporciona el estado de fallo ni una ventana de resultados detallados. Revisa el árbol de estado para confirmar si la conexión se completó correctamente.
+
+* El sistema ejecuta <Cmd sid='monitoring.multiControl.unlockDevice' /> y <Cmd sid='monitoring.multiControl.clearLockout' /> por separado y muestra ventanas de resultados independientes.
+
+:::
+
+## Controlar la cámara {/* #controlCamera */}
 
 Selecciona la cámara deseada de la lista en la barra lateral izquierda y haz clic derecho. Seleccione la función deseada en el menú emergente.
 

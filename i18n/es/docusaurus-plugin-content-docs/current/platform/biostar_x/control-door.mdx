@@ -21,15 +21,19 @@ Haga clic en <Cmd sid='shell.header.arena' /> en la página <Cmd sid='shell.head
 
 :::info
 
-* La función <Cmd sid='setting.server.logUploadType' product='2' /> debe estar habilitada para supervisar o controlar el estado de la puerta de acceso. Activa esta función en la ruta de menú <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' />, en la sección <Cmd sid='common.general' product='2' />.
+* La función <Cmd sid='setting.server.logUploadType' product='2' /> debe estar habilitada para supervisar o controlar el estado de la puerta de acceso. Habilita esta función en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> en la sección <Cmd sid='common.general' product='2' />.
 
-* La opción <Cmd sid='arena.tree.contextMenu.openVideo' /> está vinculada al VMS y requiere la integración de la puerta de acceso y la cámara para poder usarse. Además, esta función está disponible mediante la compra de opciones adicionales con una licencia **Avanzado** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
+* La opción <Cmd sid='arena.tree.contextMenu.openVideo' /> está vinculada al VMS y requiere la integración de la puerta de acceso y la cámara para poder usarse. Además, esta funcionalidad está disponible mediante la compra de opciones adicionales con una licencia **Essential** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
+
+* Para controlar varias puertas a la vez, consulte <DocLink docId='platform/biostar_x/monitoring-batch-control' />.
 
 :::
 
 ## Abrir puerta {/* #door-open */}
 
-Cualquiera puede acceder a la puerta cuando está abierta. Haga clic en <Cmd sid='arena.tree.contextMenu.unlock' /> en el menú emergente y seleccione la opción deseada. 
+Cualquiera puede acceder a la puerta cuando está abierta. Haga clic en <Cmd sid='arena.tree.contextMenu.unlock' /> en el menú emergente y seleccione la opción deseada.
+
+<Image src='/img/biostarx-monitoring-door-popup.png' />
 
 * <Cmd sid='arena.tree.contextMenu.unlockOnce' />: Desbloquea la puerta una vez.
 
@@ -37,7 +41,7 @@ Cualquiera puede acceder a la puerta cuando está abierta. Haga clic en <Cmd sid
 
 * <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Desbloquea la puerta sin límite de tiempo.
 
-Cuando la puerta de acceso se abre, el ícono de relé de la puerta cambia del estado <IcRelayLock /> a <IcRelayUnlock />.
+Al abrir temporalmente la puerta, el icono del relé de la puerta cambia de <IcFixedLock title='Lock' height='20' width='20' /> a <IcFixedUnlock title='UnLock' height='20' width='20' />. Al abrir la puerta con la opción <Cmd sid='arena.tree.contextMenu.lockTimed' /> o <Cmd sid='arena.tree.contextMenu.lockPermanent' />, el icono cambia a <IcFixedUnlock height='20' width='20' />.
 
 :::tip
 
@@ -49,13 +53,19 @@ La puerta puede abrirse temporalmente para la comodidad de los visitantes extern
 
 Cambiar la puerta al estado <Cmd sid='arena.tree.contextMenu.normalize' /> permitirá el acceso solo a usuarios autorizados. Haga clic en <Cmd sid='arena.tree.contextMenu.normalize' /> en el menú emergente.
 
+<Image src='/img/biostarx-monitoring-door-popup-normalize.png' />
+
 ## Bloquear puerta {/* #door-lock */}
 
 Cambiar la puerta al estado <Cmd sid='arena.tree.contextMenu.lock' /> impedirá el acceso a cualquier persona. Haz clic en <Cmd sid='arena.tree.contextMenu.lock' /> en el menú emergente y selecciona la opción deseada.
 
+<Image src='/img/biostarx-monitoring-door-popup-lock.png' />
+
 * <Cmd sid='arena.tree.contextMenu.unlockTimed' />: Cambia la puerta a un estado bloqueado durante un período determinado. Ingresa el tiempo deseado en segundos.
 
 * <Cmd sid='arena.tree.contextMenu.lockPermanent' />: Cambia la puerta a un estado bloqueado sin límite de tiempo.
+
+Al bloquear la puerta, el icono del relé de la puerta cambia a <IcFixedLock width='20' height='20' />.
 
 ## Ver cámara de la puerta {/* #door-camera */}
 
@@ -77,7 +87,7 @@ O selecciona la cámara deseada y haz clic con el botón derecho del ratón. Haz
 
 * Si no ves la cámara vinculada a la puerta de acceso, comprueba los permisos del grupo de cámaras. Si el administrador de un permiso personalizado no ha configurado los permisos del grupo de cámaras, la cámara podría no ser visible. Para obtener más información sobre cómo configurar los permisos de los grupos de cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
 
-* Esta función está disponible con opciones adicionales en la licencia **Avanzado** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* Esta característica está disponible al comprar opciones adicionales con una licencia **Essential** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -85,17 +95,21 @@ O selecciona la cámara deseada y haz clic con el botón derecho del ratón. Haz
 
 Desactiva la alarma que se generó en la puerta. Haga clic en <Cmd sid='arena.tree.contextMenu.clearAlarm' /> en el menú emergente. Un mensaje de alarma aparece en la esquina superior derecha de la pantalla.
 
+<Image src='/img/biostarx-monitoring-door-popup-clear-alarm.png' />
+
 ## Restablecer anti-passback {/* #apb-reset */}
 
 Desactiva la alarma APB cuando se produzca una violación de anti-passback. 
 
 1. Haz clic en <Cmd sid='arena.tree.contextMenu.clearApb' /> en el menú emergente. 
 
-2. Cuando aparezca la ventana <Cmd sid='arena.tree.contextMenu.clearApb' />, revisa la lista de usuarios que han infringido el anti-passback.
+   <Image src='/img/biostarx-monitoring-door-popup-clear-apb.png' />
+
+2. Cuando aparezca la ventana <Cmd sid='arena.tree.contextMenu.clearApb' />, revisa la lista de todos los usuarios.
 
    <Image src='/img/monitoring-door-monitoring-disable-apb.png' />
 
-3. Selecciona un usuario y haz clic en el botón <Cmd sid='common.apply' />.
+3. Selecciona al usuario que violó la regla anti-passback y haz clic en <Cmd sid='common.apply' />.
 
 Un mensaje de finalización aparece en la esquina superior derecha de la pantalla.
 
@@ -113,19 +127,25 @@ Si la puerta está configurada en modo seguridad, activa o desactiva la segurida
 
 <Image src='/img/biostarx-monitoring-door-arm-status.png' />
 
-Una puerta de acceso en estado de alarma cambia el ícono de estado de alarma de <IcDisarm /> a <IcArm />. En ese momento, el ícono <IcArm /> también se aplica a la configuración de control de acceso correspondiente.
+Una puerta armada cambia el icono de estado de armado de <IcDisarm title='Disarm' width='20' height='20' /> a <IcArm title='Arm' width='20' height='20' />. El icono <IcArm title='Arm' width='20' height='20' /> también se aplica al ajuste de control de acceso correspondiente.
 
 :::info
 
-Esta función está disponible al adquirir opciones adicionales con una licencia **Avanzado** o superior, o con una licencia **Enterprise** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
+Esta funcionalidad está disponible al adquirir opciones adicionales con una licencia **Essential** o con una licencia **Enterprise** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
 
 :::
 
 ## Ver detalles {/* #detail-view */}
 
-Consulta la información detallada de la puerta y el historial de eventos. Haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. La información detallada y el historial de eventos de la puerta aparecen en el lado derecho de la pantalla.
+Consulta la información detallada de la puerta y el historial de eventos. Haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. Aparece un panel en el lado derecho de la pantalla que muestra el control de la puerta, los detalles de la puerta y el historial de eventos.
 
 <Image src='/img/biostarx-monitoring-door-view-details.png' />
+
+* **Control de la puerta**: Cambie el estado de la puerta a bloqueada, abierta, armada o desarmada.
+
+  <Image src='/img/biostarx-monitoring-door-details-control.png' className='none' />
+
+* <Cmd sid='monitoring.multiControl.normalizeOverrides' />: Use esta opción si un administrador abre o bloquea la puerta manualmente.
 
 * **Información detallada de la puerta**: Consulta el nombre, la ubicación, el estado y la información de los subdispositivos conectados a la puerta.
 

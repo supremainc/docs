@@ -6,9 +6,9 @@ keywords:
   - Licencia
 ---
 
-Active la licencia adquirida de **BioStar X**.
+Active la licencia de **BioStar X** adquirida.
 
-El método para activar <Cmd sid='setting.menu.license.biostarXLicense' /> varía según el entorno de red. Verifique el estado de la red y active la licencia según las instrucciones proporcionadas.
+La forma de activar <Cmd sid='setting.menu.license.biostarXLicense' /> varía según el entorno de red. Verifique el estado de la red y active la licencia según las instrucciones proporcionadas.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
@@ -26,8 +26,31 @@ import DocumentA from '../../common/_register-license-key.mdx'
 
 <DocumentA />
 
+## Verifique los resultados de activación de la licencia {/* #checkResult */}
+
+Según los resultados de activación de la clave de licencia ingresada, aparece el siguiente mensaje.
+
+* Si todas las claves de licencia ingresadas son válidas, aparece un mensaje de éxito.
+
+  <Image src='/img/biostarx-license-success.png' />
+
+* Si el sistema activa solo ciertas claves o no activa todas, revise el estado y el motivo de falla de cada clave. El sistema borra los campos de las claves activadas y mantiene las fallidas para volver a ingresarlas.
+
+   <Columns>
+   <Column><Image src='/img/biostarx-license-fail.png' /></Column>
+   <Column><Image src='/img/biostarx-license-fail-alone.png' /></Column>
+   </Columns>
+
+* Si todas las claves fallan sin conexión a Internet, aparece un mensaje para verificar la conexión y reintentar. Aparece el botón <Cmd sid='setting.xlicense.offlineActivation' product='2' />. Si la red está aislada, haga clic en este botón para activar sin conexión.
+
+:::info
+
+Haga clic en <Cmd sid='setting.xlicense.activation.copyFailedKeys' product='2' /> para copiar las claves fallidas.
+
+:::
+
 ## Verificar licencia activada
 
-Compruebe la información de la licencia **BioStar X** activada en <Cmd sid='setting.xlicense.myLicense' product='2' />.
+Consulte la información de la licencia de **BioStar X** activada en <Cmd sid='setting.xlicense.myLicense' product='2' />.
 
 <Image src='/img/biostarx-settings-license-active-license.png' />

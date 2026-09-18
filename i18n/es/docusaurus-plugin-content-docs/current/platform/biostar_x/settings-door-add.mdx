@@ -26,7 +26,7 @@ Esta guía describe cómo registrar y configurar puertas. Conecte dispositivos d
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haz clic en <Cmd sid='setting.menu.door.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='button.func.addDoor' product='2' />.
 
@@ -46,7 +46,7 @@ Esta guía describe cómo registrar y configurar puertas. Conecte dispositivos d
 
    * <Cmd sid='door.alarm' product='2' />: Configure la alarma para activar o bloquear el uso del dispositivo cuando ocurra una violación de anti-passback. Para obtener más información, consulte <DocLink inner='#alarm' />.
 
-5. Una vez completadas todas las configuraciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+5. Una vez completados todos los ajustes, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 ### Configurar información básica {/* #info */}
 
@@ -68,7 +68,7 @@ En la sección <Cmd sid='common.information' product='2' />, ingrese o cambie el
 
 :::
 
-### Configurar la puerta {/* #configdoor */}
+### Configurar los ajustes de la puerta {/* #configdoor */}
 
 En la sección <Cmd sid='device.info.configuration' product='2' />, configure los dispositivos conectados a la puerta, los botones de salida y los sensores de puerta.
 
@@ -122,7 +122,7 @@ En la sección <Cmd sid='common.option' product='2' />, configure opciones adici
 
   * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: Si se usa una puerta automática, el relevador puede operar independientemente del estado del sensor de puerta. Si se establece en <Cmd sid='door.openOnceOn' product='2' />, no se podrá usar la opción <Cmd sid='door.openOnce' product='2' />.
 
-  :::info
+  :::note
 
   El valor de <Cmd sid='door.openTime' product='2' /> puede variar según el tipo de dispositivo de cierre de puerta que se use.
 
@@ -144,9 +144,9 @@ En la sección <Cmd sid='common.option' product='2' />, configure opciones adici
 
   * <Cmd sid='door.authenticationTimeout' product='2' />: Define el tiempo de espera entre la primera y la segunda autenticación. Si la segunda autenticación no se completa dentro del tiempo establecido, la puerta no se abrirá.
 
-  :::info
+  :::note
 
-  * Modifica la configuración en el siguiente menú para cambiar la autenticación dual del dispositivo configurado con el límite de ocupantes. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
+  * Modifique los ajustes en el siguiente menú para cambiar la autenticación dual del dispositivo configurado para los ajustes de límite de ocupación. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
     Para obtener más información sobre la configuración de <Cmd sid='zone.occupancy.title' product='2' />, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
@@ -157,6 +157,14 @@ En la sección <Cmd sid='common.option' product='2' />, configure opciones adici
 * <Cmd sid='door.antiTailSensor' product='2' />: Configura para detectar tailgating cuando una persona no autorizada sigue a una autorizada para entrar.
 
   * <Cmd sid='common.sensor' product='2' />: Selecciona un sensor para detectar tailgating.
+
+* <Cmd sid='door.authDoorControl.title' product='2' />: Permite que la puerta permanezca desbloqueada cuando un usuario autorizado realiza un Double Badge (Double Badge). Para más información, consulte <DocLink docId='platform/biostar_x/settings-door-auth-control' />.
+
+  :::note
+
+  Este ajuste no está disponible en la pantalla Agregar puerta porque la puerta no está en un grupo de acceso. Guarda la puerta, agrégala a un grupo de acceso y, luego, configura este ajuste en la pantalla Editar información de la puerta.
+
+  :::
 
 ### Configurar anti-passback {/* #antipassback */}
 
@@ -198,7 +206,7 @@ Cuando un usuario intenta volver a autenticarse en el mismo dispositivo después
 
 ### Configurar alarmas {/* #alarm */}
 
-En la sección <Cmd sid='door.alarm' product='2' />, configura que se active una alarma o se bloquee el uso del dispositivo cuando la puerta se abra por la fuerza, quede abierta o ocurra una violación de anti-passback. Haz clic en <Cmd sid='button.addplus' product='2' /> para agregar una alarma al elemento.
+En la sección <Cmd sid='door.alarm' product='2' />, configura que se active una alarma o se bloquee el uso del dispositivo cuando la puerta se abra por la fuerza, quede abierta o ocurra una violación de anti-passback. Haz clic en <Cmd sid='button.addplus' product='2' /> en la opción para agregar una alarma.
 
 <Image src='/img/biostarx-setting-door-adding-alarm.png' />
 

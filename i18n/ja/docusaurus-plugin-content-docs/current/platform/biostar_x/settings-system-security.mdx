@@ -7,7 +7,7 @@ keywords:
   - 暗号化
 ---
 
-組織のセキュリティポリシーに合わせて **BioStar X** のセキュリティ設定を構成します。 パスワードポリシー、個人情報の暗号化、デバイス間通信のセキュリティ、同時接続制御などを選択的に設定できます。
+組織のセキュリティポリシーに合わせて **BioStar X** のセキュリティ設定を構成します。パスワードポリシー、個人情報の暗号化、デバイス間通信のセキュリティ、同時接続制御などを選択的に設定できます。
 
 :::info
 
@@ -23,11 +23,11 @@ keywords:
 
 3. セキュリティに関する各項目を設定します。
 
-   * <Cmd sid='setting.systemSecurity.loginPassword' product='2' />：ログインパスワードに関するセキュリティレベルを設定します。 詳細については、<DocLink inner='#password-policy-configuration' />ご参照ください。
+   * <Cmd sid='setting.systemSecurity.loginPassword' product='2' />：ログインパスワードに関するセキュリティレベルを設定します。詳細については、<DocLink inner='#password-policy-configuration' />ご参照ください。
 
-   * <Cmd sid='setting.server.secure.comm.title' product='2' />：個人情報とデバイス間通信のセキュリティを強化できます。 詳細については、<DocLink inner='#advanced-security-configuration' />ご参照ください。
+   * <Cmd sid='setting.server.secure.comm.title' product='2' />：個人情報とデバイス間通信のセキュリティを強化できます。詳細については、<DocLink inner='#advanced-security-configuration' />ご参照ください。
 
-   * <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' />：セッションセキュリティを強化できます。 詳細については、<DocLink inner='#session-security-configuration' />ご参照ください。
+   * <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' />：セッションセキュリティを強化できます。詳細については、<DocLink inner='#session-security-configuration' />ご参照ください。
 
 4. 設定を保存するには、画面右下の <Cmd sid="button.apply" product='2' /> をクリックします。
 
@@ -39,7 +39,7 @@ keywords:
 
 ## パスワードポリシーの設定 {/* #password-policy-configuration */}
 
-<Cmd sid='setting.systemSecurity.loginPassword' product='2' /> セクションでは、ログインパスワードに関するセキュリティレベルを設定します。 組織のセキュリティ要件に合わせてパスワードポリシーを設定します。
+<Cmd sid='setting.systemSecurity.loginPassword' product='2' /> セクションでは、ログインパスワードに関するセキュリティレベルを設定します。組織のセキュリティ要件に合わせてパスワードポリシーを設定します。
 
 <Image src='/img/biostarx-settings-system-security-password.png' className='none' />
 
@@ -55,7 +55,7 @@ keywords:
 
 ### パスワード変更周期の設定
 
-パスワードの使用期間を制限するには、<Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' /> オプションでトグルボタンをクリックして <Cmd sid="common.active" product='2' /> 状態に切り替えます。 ユーザーは設定した期間ごとにパスワードを変更する必要があります。 パスワード変更周期を超えると、ログイン時にパスワード変更要求メッセージが表示されます。
+パスワードの使用期間を制限するには、<Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' /> オプションでトグルボタンをクリックして <Cmd sid="common.active" product='2' /> 状態に切り替えます。ユーザーは設定した期間ごとにパスワードを変更する必要があります。パスワード変更周期を超えると、ログイン時にパスワード変更要求メッセージが表示されます。
 
 :::info
 
@@ -69,13 +69,13 @@ keywords:
 
 :::info
 
-このオプションはデフォルトで有効になっており、100 回失敗すると 10 分間ログインが制限されます。 必要に応じて値を調整するか、無効化できます。
+このオプションはデフォルトで有効になっており、100 回失敗すると 10 分間ログインが制限されます。必要に応じて値を調整するか、無効化できます。
 
 :::
 
 ### パスワード変更回数制限の設定
 
-ユーザーが 1 日にパスワードを変更できる回数を制限するには、<Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' /> オプションでトグルボタンをクリックして <Cmd sid="common.active" product='2' /> 状態に切り替えます。 ユーザーは設定した回数だけパスワードを変更できます。
+ユーザーが 1 日にパスワードを変更できる回数を制限するには、<Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' /> オプションでトグルボタンをクリックして <Cmd sid="common.active" product='2' /> 状態に切り替えます。ユーザーは設定した回数だけパスワードを変更できます。
 
 :::info
 
@@ -89,6 +89,12 @@ keywords:
 
 <Image src='/img/biostarx-settings-system-security-advanced.png' className='none' />
 
+:::info
+
+<Cmd sid='setting.server.secure.comm.title' product='2' /> セクションは、初回の管理者アカウントでログインした場合にのみ有効になります。
+
+:::
+
 ### 個人情報保護の強化
 
 機微な個人情報を暗号化してデータ漏えいのリスクを最小化するには、以下のオプションを設定してください。
@@ -97,13 +103,13 @@ keywords:
 
   * <Cmd sid="common.use" product='2' />：クレデンシャルデータを含むユーザーの個人情報を暗号化して保存します。
 
-  * <Cmd sid="common.notUse" product='2' />：ユーザーの個人情報を暗号化せずに保存します。 既に暗号化されているデータは復号して保存し、新しいデータは暗号化しません。
+  * <Cmd sid="common.notUse" product='2' />：ユーザーの個人情報を暗号化せずに保存します。既に暗号化されているデータは復号して保存し、新しいデータは暗号化しません。
 
-* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />：データベースに保存された情報を暗号化または復号してユーザーの個人情報を安全に保護するために使用します。 「<Cmd sid="setting.server.secure.comm.key_change" product='2' />」ボタンをクリックして、新しい暗号化キー値を設定してください。 暗号化キーを変更すると、既に暗号化されているデータを再暗号化します。
+* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />：データベースに保存された情報を暗号化または復号してユーザーの個人情報を安全に保護するために使用します。「<Cmd sid="setting.server.secure.comm.key_change" product='2' />」ボタンをクリックして、新しい暗号化キー値を設定してください。暗号化キーを変更すると、既に暗号化されているデータを再暗号化します。
 
 :::info
 
-* 個人情報 DB の暗号化または復号処理の実行中にサーバーを強制的に起動しないでください。 ログイン失敗やデータ破損などのエラーが発生する可能性があります。 データベースのサイズとサーバーの性能によっては時間がかかる場合があります。
+* 個人情報 DB の暗号化または復号処理の実行中にサーバーを強制的に起動しないでください。ログイン失敗やデータ破損などのエラーが発生する可能性があります。データベースのサイズとサーバーの性能によっては時間がかかる場合があります。
 
   <details>
   <summary>個人情報暗号化項目を表示</summary>
@@ -138,26 +144,57 @@ keywords:
 
   </details>
 
-* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' />は英数字と記号を使用して32 文字で入力できます。
+* <Cmd sid="setting.server.secure.comm.encryption_key_db" product='2' /> は英数字と記号を使用して 32 文字で入力できます。
+
+* 1.0.3バージョンにアップグレードした後、新しく作成される監査ログは、<Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' /> オプションの設定に関係なく、暗号化して保存します。
 
 :::
 
-### デバイス間通信セキュリティ設定
+### デバイス間通信のセキュリティ設定 {/* #communicationByDevice */}
 
-**BioStar X** サーバーとアクセス制御デバイス間の安全な通信を設定してください。
+**BioStar X** サーバーとアクセス制御デバイス間の通信を証明書で保護して、セキュリティを強化してください。新規にインストールした **BioStar X** システムでは、<Cmd sid="setting.sever.secure.comm.menu" product='2' /> オプションはデフォルトで <Cmd sid="common.use" product='2' /> に設定されており、追加の有効化操作は不要です。既存システムをアップグレードすると、以前の設定を維持し、既存のセキュリティ証明書もそのまま再利用して、登録済みのデバイスを追加操作なしで再接続します。
 
-* <Cmd sid="setting.sever.secure.comm.menu" product='2' />：**BioStar X** サーバーとアクセス制御デバイス間の通信を証明書で保護できます。 このオプションを <Cmd sid="common.use" product='2' /> に設定すると、サーバーが自動で証明書を生成してデバイスに送信し、その後すべての通信が暗号化されます。 デバイスはこの証明書を使用して **BioStar X** サーバーとのデータ送受信時にセキュアチャネルを利用できます。
+* <Cmd sid="setting.sever.secure.comm.menu" product='2' />：**BioStar X** サーバーとアクセス制御デバイス間の通信を証明書で保護します。このオプションが <Cmd sid="common.use" product='2' /> の場合、サーバーが自動で証明書を生成してデバイスに送信し、その後すべての通信が暗号化されます。デバイスはこの証明書を使用して、**BioStar X** サーバーとデータを送受信するときにセキュアチャネルを使用します。
 
-  外部証明書を使用する場合は、<Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> オプションをオンにして、ルート証明書、公開鍵証明書、秘密鍵ファイルをアップロードする必要があります。
+  外部証明書を使用するには、<Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> オプションを <Cmd sid="common.use" product='2' /> に設定し、以下の項目を登録してください。
+
+  * <Cmd sid="setting.sever.secure.comm.extcert.root.menu" product='2' />、<Cmd sid="setting.sever.secure.comm.extcert.public.menu" product='2' />、<Cmd sid="setting.sever.secure.comm.extcert.private.menu" product='2' /> ファイルをそれぞれアップロードしてください。
+
+  * 秘密鍵にパスフレーズが設定されている場合は、<Cmd sid="setting.sever.secure.comm.extcert.passphrase.menu" product='2' /> と <Cmd sid="setting.sever.secure.comm.extcert.passphraseconfirm.menu" product='2' /> に同じ値を入力してください。(オプション)
+
+  :::note
+
+  外部証明書ではなく、サーバーを削除する際にバックアップしたセキュリティ証明書を復元するには、**BioStar X** のインストールパスに直接コピーしてください。セキュリティ証明書のバックアップと復元方法については<DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />をご参照ください。
+
+  :::
 
   <Image src='/img/biostarx-settings-system-security-advanced-with-device.png' />
-* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />：データ暗号化キーと管理者パスワードを新たに指定できます。
+
+* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />：デバイスに適用するハッシュキーは管理者が直接管理します。このオプションを <Cmd sid="common.use" product='2' /> に設定すると、<Cmd sid="setting.server.secure.comm.encryption_key_device" product='2' /> の値を確認し、変更できます。「<Cmd sid="setting.server.secure.comm.key_change" product='2' />」ボタンをクリックし、新しいハッシュキーの値を設定してください。
+
+:::caution
+
+<Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> オプションを有効化する前に、以下を必ず確認してください。
+
+* 有効化すると、セキュリティ強化のため、デバイスはタンパー（Tamper）イベント発生時にユーザー、ログ、暗号化キーの値を削除します。注意してください。
+
+* <Cmd sid='ROLE_CODE_ADMIN' product='2' className='normal' /> アカウント以外のユーザーにログインパスワードまたはPINが設定されている場合、ハッシュキー値を適用できません。ログインパスワードまたはPINを削除してから、再試行してください。パスワードとPINは、セキュリティ要件を満たすために復号できない方式で暗号化されるためです。
+
+* デバイスのハッシュキーを変更すると、デバイスに設定されたマスター管理者PIN情報が削除されます。クレデンシャルを削除するとデバイスマネージャーメニューにアクセスできなくなる場合があるため、十分に注意してください。
+
+* <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' />と<Cmd sid="setting.server.secure.comm.data_encryption" product='2' />は同時に使用できません。二つのオプションのいずれかを［使用しない］に切り替えてから、残りのオプションを設定してください。
+
+:::
 
 :::info
 
-* **BioStar X** は、デバイスとのセキュア通信の設定状態に応じて証明書を生成または削除し、以前と同一の証明書を再生成しません。 例えば、デバイスとセキュア通信の設定を <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> の順に変更すると、生成された証明書は自動的に削除されます。 <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> の順に変更すると、**A 証明書の生成** → **A 証明書の破棄** → **B 証明書の生成** が実行されます。
+* **BioStar X** は、<Cmd sid="setting.sever.secure.comm.menu" product='2' /> オプションを <Cmd sid="common.notUse" product='2' /> に変更しても、サーバーが生成した既定の証明書を削除しません。オプションを再び <Cmd sid="common.use" product='2' /> に変更すると、既存の証明書をそのまま再利用し、証明書がない場合のみ新規に生成します。そのため、<Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> の順に変更しても同じ証明書が維持され、以前に登録したデバイスを追加の操作なしで再接続できます。ただし、外部証明書を使用中に <Cmd sid="common.notUse" product='2' /> に変更すると、サーバーが登録済みの外部証明書（ルート証明書、公開鍵証明書、秘密鍵）と秘密鍵パスワードを削除します。
 
-* デバイスをネットワークから物理的に切り離した状態で <Cmd sid="setting.sever.secure.comm.menu" product='2' /> オプションを <Cmd sid="common.notUse" product='2' /> に設定すると、デバイスに保存されている証明書が削除されます。 この場合、デバイスを再接続できません。 再接続するには、デバイスに保存されている証明書を削除するか、工場出荷時設定に初期化する必要があります。 詳細についてはデバイスのマニュアルを参照してください。
+* システムは、登録済みのすべてのデバイスとマルチコミュニケーションサーバーがサーバーに接続されている場合にのみ、<Cmd sid="setting.sever.secure.comm.menu" product='2' /> オプションと <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> オプションの変更を許可します。接続が切れたデバイスがある、またはマルチコミュニケーションサーバーが接続されていない場合、システムは変更を拒否し、エラーメッセージを表示します。デバイスまたはマルチコミュニケーションサーバーを再接続してから再試行してください。使用しなくなったデバイスはデバイスリストから削除し、再試行してください。
+
+* 以前は正常に接続されていたデバイスが証明書の不一致で接続に失敗すると、**BioStar X**はこれをシステムログに記録します。デバイスが突然接続できなくなった場合は、システムログで原因を確認した後、デバイスを工場出荷時設定に初期化するか、以前にエクスポートした証明書セットを<Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' />オプションで再登録して復旧してください。ただし、サーバーを削除してから再インストールした場合は、<DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />をご参照ください。
+
+* サーバーを削除する際に証明書をバックアップする方法は、<DocLink docId='platform/biostar_x/remove-server' />をご参照ください。
 
 <details>
 <summary><Cmd sid="setting.sever.secure.comm.menu" product='2' /> 機能対応デバイスとファームウェアバージョンを表示</summary>
@@ -167,6 +204,8 @@ keywords:
 * XPass Q2のファームウェアバージョン1.0.0以降
 
 * BioStation 3 ファームウェア 1.0.0 以上
+
+* BioStation 2a ファームウェア 1.0.0 以上
 
 * X-Station 2 ファームウェア 1.0.0 以上
 
@@ -196,6 +235,6 @@ keywords:
 
 ## 同時接続制御 {/* #session-security-configuration */}
 
-<Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> セクションでは、セキュリティを強化するために同一アカウントの重複ログインを制限できます。 <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' /> オプションを <Cmd sid="common.inactive" product='2' /> に設定してください。 同一アカウントで同時接続が試行されると、既に接続しているユーザーはログアウトされます。
+<Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> セクションでは、セキュリティを強化するために同一アカウントの重複ログインを制限できます。 <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' /> オプションを <Cmd sid="common.inactive" product='2' /> に設定してください。同一アカウントで同時接続が試行されると、既に接続しているユーザーはログアウトされます。
 
 <Image src='/img/biostarx-settings-system-security-session.png' className='none' />

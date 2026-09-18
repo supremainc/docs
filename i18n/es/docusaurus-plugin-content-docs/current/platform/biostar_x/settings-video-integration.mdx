@@ -25,7 +25,7 @@ La integración con VMS ofrece las siguientes funciones.
 
 Antes de integrar el **Sistema de Gestión de Video** (VMS), verifica lo siguiente.
 
-* La función de integración de VMS está disponible como opción adicional para licencias superiores a **Avanzado**. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* La característica de integración con VMS está disponible como complemento para licencias **Essential** o superiores. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 * Asegúrate de que el servidor VMS esté instalado y configurado correctamente. El servidor VMS debe estar en un estado que permita la conexión en línea con **BioStar X**.
 
@@ -50,73 +50,11 @@ Sigue los pasos a continuación para integrar el servidor VMS con **BioStar X**.
 <Steps>
 <Step>
 
-### Instalar el certificado en el servidor VMS {/* #install-vms-certification */}
-
-Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Los certificados SSL estándar se emiten para nombres de dominio, por lo que no son válidos si se accede al servidor VMS mediante su dirección IP. Por lo tanto, debes crear un certificado aparte que incluya la dirección IP del servidor VMS.
-
-:::note
-
-* Antes de instalar el certificado, asegúrate de que Open JDK 21 o superior esté instalado en el PC donde se encuentra instalado el VMS.
-
-* Debes instalar un certificado tanto si el servidor VMS y **BioStar X** están instalados en el mismo servidor como si están en servidores distintos.
-
-:::
-
-1. Ve a la ruta *C:\Program Files\BioStar X\third* y ejecuta la consola de comandos.
-
-   :::note
-
-   Si el VMS está instalado en un servidor distinto de **BioStar X**, copia el archivo *scaleUtil-1.0-all.jar* al servidor VMS y sigue los pasos que aparecen a continuación.
-
-   :::
-
-2. Ejecuta el siguiente comando. 
-
-   <Tabs groupId='os' defaultValue='Windows'>
-   <TabItem value="Windows">
-   ```java
-   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
-   ```
-   </TabItem>
-   <TabItem value="Linux">
-   ```java
-   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
-   ```
-   </TabItem>
-   </Tabs>
-
-   * Reemplaza la sección `<%VENDOR.NAME%>` con el nombre del producto de tu VMS.
-
-   * Reemplaza la sección `{VMS_IP_ADDRESS}` con la dirección IP del servidor VMS.
-
-   * La ruta *ssl* puede variar según el producto VMS instalado.
-
-3. Verifica si el archivo de certificado (*.pem*) se creó en la ruta donde está instalado el VMS.
-
-4. Reinicia el servidor VMS.
-
-:::info
-
-La ruta de instalación del certificado puede variar según el sistema VMS. Consulte los ejemplos a continuación.
-
-* **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
-
-* **Digital Watchdog**: *C:\Windows\System32\config\systemprofile\AppData\Local\Digital Watchdog\Digital Watchdog Media Server\ssl*
-
-* **Hanwha Wave**: *C:\Windows\System32\config\systemprofile\AppData\Local\Hanwha\Hanwha Media Server\ssl*
-
-* **NX**: *C:\Windows\System32\config\systemprofile\AppData\Local\Network Optix\Network Optix Media Server\ssl*
-
-:::
-
-</Step>
-<Step>
-
 ### Activar la integración de VMS
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. En la barra lateral izquierda, haz clic en <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' />.
+2. Haga clic en <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' /> en la barra lateral izquierda.
 
 3. Si es la primera vez que accedes, inicia sesión con la cuenta de administrador de **BioStar X**.
 
@@ -127,6 +65,8 @@ La ruta de instalación del certificado puede variar según el sistema VMS. Cons
    <Image src='/img/biostarx-settings-video-integration.png' />
 
 5. Ingresa la información del servidor VMS.
+
+   <Image src='/img/biostarx-settings-video-vms-server-info.png' />
 
    * <Cmd sid='video.setting.integration.serverAddress' product='2' />: Ingresa la dirección IP del servidor VMS.
 
@@ -149,28 +89,129 @@ La ruta de instalación del certificado puede variar según el sistema VMS. Cons
 </Step>
 <Step>
 
-### Reiniciar el servicio
+### Instalar el certificado en el servidor VMS {/* #install-vms-certification */}
 
-La primera vez que integres con el servidor VMS, **BioStar X** reiniciará automáticamente el servicio. Si no se reinicia automáticamente, sigue las instrucciones a continuación para reiniciar el servicio manualmente.
+Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Los certificados SSL estándar se emiten para nombres de dominio, por lo que no son válidos si se accede al servidor VMS mediante su dirección IP. Por lo tanto, debes crear un certificado aparte que incluya la dirección IP del servidor VMS.
 
-1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+:::info
 
-2. En la lista **All Services**, haz clic en el botón **Stop** de los siguientes servicios para detenerlos.
+Debes instalar un certificado tanto si el servidor VMS y **BioStar X** están instalados en el mismo servidor como si están en servidores distintos.
 
-   <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
+:::
 
-   * **BioStar X Unified Gateway Service**
+La sección <Cmd sid='video.setting.vmsCert.title' product='2' /> está disponible solo cuando la opción <Cmd sid='video.setting.integration.title' product='2' /> está configurada en <Cmd sid='common.use' product='2' />.
 
-   * **BioStar X Core Web Service**
+<Image src='/img/biostarx-settings-video-set-cert.png' />
 
-3. Cuando el estado del servicio solicitado cambie de **Pending** a **Stopped**, haz clic en el botón **Start** para reiniciar el servicio.
+1. En el servidor donde está instalado VMS, haga clic en <Cmd sid='video.setting.vmsCert.step1.downloadButton' product='2' /> para descargar el instalador del certificado.
 
-   <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
+2. Ejecute el archivo *vmsCertMaker.exe* descargado.
+
+3. Ingrese la dirección IP en el campo **IP del servidor VMS**.
+
+   <Image src='/img/biostarx-vms-cert-installation-tool-01.png' alone />
+
+   :::note
+
+   Use el formato de dirección IPv4. por ejemplo, 192.168.0.10
+
+   :::
+
+4. Ingrese una dirección IP con el formato correcto para habilitar el botón **Siguiente**. Haga clic en **Next**.
+
+5. Seleccione la ruta de instalación del certificado VMS.
+
+   * Para VMS compatibles, el instalador detecta la ruta de instalación automáticamente.
+
+     <Image src='/img/biostarx-vms-cert-installation-tool-02-found.png' alone />
+
+   * Si el instalador no detecta la ruta de instalación automáticamente, haga clic en **Buscar carpeta** y seleccione la ruta manualmente.
+
+     <Image src='/img/biostarx-vms-cert-installation-tool-02.png' alone />
+
+      :::note
+
+      La ruta de instalación del certificado puede variar según el sistema VMS. Consulte los ejemplos a continuación.
+
+     * **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
+
+     * **Digital Watchdog**: *C:\Windows\System32\config\systemprofile\AppData\Local\Digital Watchdog\Digital Watchdog Media Server\ssl*
+
+     * **Hanwha Wave**: *C:\Windows\System32\config\systemprofile\AppData\Local\Hanwha\Hanwha Media Server\ssl*
+
+     * **NX**: *C:\Windows\System32\config\systemprofile\AppData\Local\Network Optix\Network Optix Media Server\ssl*
+
+      :::
+
+   * Si existen varias rutas de certificados de VMS, aparecen todas. Haga clic en **Seleccionar otra carpeta** y seleccione la ruta deseada.
+
+     <Image src='/img/biostarx-vms-cert-installation-tool-02-list.png' alone />
+
+6. Haga clic en **Siguiente** o en **Continuar con la carpeta seleccionada**.
+
+7. Cuando finaliza la generación del certificado, aparece el mensaje **Certificado generado correctamente**.
+
+   <Image src='/img/biostarx-vms-cert-installation-tool-03.png' alone />
+
+8. La ruta de instalación del certificado aparece al hacer clic en **Aceptar**. Confirme que el archivo de certificado (*cert.pem*) existe.
+
+9. Cuando finaliza la instalación del certificado, haga clic en **Cerrar**.
+
+   <Image src='/img/biostarx-vms-cert-installation-tool-04.png' alone />
+
+10. Reinicia el servidor VMS.
+
+:::info
+
+Si falla la instalación del certificado, el mensaje muestra el motivo. Revise el mensaje y luego realice la acción requerida.
+
+<Image src='/img/biostarx-vms-cert-installation-tool-fail.png' alone />
+
+:::
 
 </Step>
 <Step>
 
-### Comprobar y configurar cámaras
+### Instalar el certificado en la PC cliente {/* #install-client-certification */}
+
+Si se presentan las siguientes situaciones, instala el certificado desde el servidor VMS en el PC cliente para resolver el problema.
+
+* Al acceder al **Sistema de Gestión de Video** (VMS) a través del navegador y aparece una advertencia "No es seguro"
+
+* Cuando el video en tiempo real se reproduce en la página <Cmd sid='shell.header.arena' /> pero el video grabado no se reproduce
+
+:::caution
+
+Inscribir el certificado solo en la PC cliente, sin instalarlo en el servidor VMS, impide el funcionamiento normal.
+
+:::
+
+---
+
+1. Acceda a **BioStar X** desde el navegador web.
+
+2. Descargue el instalador del certificado HTTPS (*cert-register.zip*) desde la pantalla de inicio de sesión o desde <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.https" />.
+
+3. Descomprima el archivo descargado y ejecute el archivo **cert-register.exe**. Aparece la ventana **Enroll Certificate**.
+
+4. Seleccione **VMS** en **Target System** e ingrese la siguiente información.
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
+
+   * **Server Address**: dirección IP del servidor VMS
+
+   * **Puerto**: número de puerto del servidor VMS (predeterminado: 7001)
+
+5. Haga clic en **Inscripción**.
+
+6. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
+
+Reinicie el navegador web y verifique que el video grabado del servidor VMS se reproduzca normalmente en la página <Cmd sid='shell.header.arena' />.
+
+</Step>
+<Step>
+
+### Revise y ajuste la cámara {/* #check-camera-setting */}
 
 Si el servidor VMS se integra correctamente, verifica las cámaras conectadas en el menú <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-videos-camera' />.
 
@@ -179,37 +220,25 @@ Si el servidor VMS se integra correctamente, verifica las cámaras conectadas en
 
 ### Solución de problemas {/* #video-troubleshooting */}
 
-Si se presentan las siguientes situaciones, instala el certificado desde el servidor VMS en el PC cliente para resolver el problema.
+Si el servicio no funciona después de la primera integración con el servidor VMS, reinícielo manualmente de la siguiente manera.
 
-* Al acceder al **Sistema de Gestión de Video** (VMS) a través del navegador y aparece una advertencia "No es seguro"
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
 
-* Cuando el video en tiempo real se reproduce en la página <Cmd sid='shell.header.arena' /> pero el video grabado no se reproduce
+2. En la lista **Todos los servicios**, haga clic en **Detener** para los siguientes servicios.
 
-#### Instalación de certificado en PC cliente {/* #install-client-certification */}
+   <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
 
-1. Acceda a **BioStar X** desde el navegador web.
+   * **BioStar X Unified Gateway Service**
 
-2. Descargue el instalador del certificado HTTPS (*cert-register.zip*) desde la pantalla de inicio de sesión o desde <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' />.
+   * **BioStar X Core Web Service**
 
-3. Descomprima el archivo descargado y ejecute el archivo **cert-register.exe**. Aparecerá la ventana **Enrollment Certification**.
+3. Cuando el estado del servicio solicitado cambie de **Pendiente** a **Detenido**, haga clic en **Iniciar** para reiniciar el servicio.
 
-4. Seleccione **VMS** en **Target System** e ingrese la siguiente información.
-
-   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
-
-   * **Server Address**: dirección IP del servidor VMS
-
-   * **Port**: número de puerto del servidor VMS
-
-5. Haga clic en el botón **Enrollment**.
-
-6. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
-
-Reinicie el navegador web y verifique que el video grabado del servidor VMS se reproduzca normalmente en la página <Cmd sid='shell.header.arena' />.
+   <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
 
 ## Configuración de eventos y marcadores de VMS {/* #vms-event-bookmark */}
 
-Transmita etiquetas de marcador e información de etiquetas de eventos al servidor VMS integrado. En este punto, elija transmitir también los registros de eventos, nombres de puertas, nombres de dispositivos e ID de usuario. Seleccione las opciones deseadas y haga clic en el botón <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla.
+Transmita etiquetas de marcador e información de etiquetas de eventos al servidor VMS integrado. En este punto, elija transmitir también los registros de eventos, nombres de puertas, nombres de dispositivos e ID de usuario. Seleccione las opciones deseadas y haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla.
 
 <Image src='/img/biostarx-settings-video-event-bookmark.png' />
 
@@ -225,6 +254,12 @@ Transmita etiquetas de marcador e información de etiquetas de eventos al servid
 
 * Para obtener más información sobre la función de eventos en VMS, consulte [el siguiente enlace](https://resources.vmsproxy.com/nx_vms_help/configuring_events_and_actions.html).
 
+* Si las etiquetas de marcadores o eventos incluyen los siguientes caracteres, el sistema los elimina antes de enviarlas al servidor VMS.
+
+  * Etiqueta de evento: `\` `'` `,` `#` `%` `=` `&` `<` `>`
+
+  * Etiqueta de marcador: `<` `'`
+
 :::
 
 ## Desconectar la integración del servidor VMS
@@ -233,10 +268,10 @@ Siga los siguientes pasos para desconectar el servidor VMS integrado. Al descone
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. En la barra lateral izquierda, haz clic en <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' />.
+2. Haga clic en <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' /> en la barra lateral izquierda.
 
 3. Configure la opción <Cmd sid='video.setting.integration.title' product='2' /> en <Cmd sid='common.notUse' product='2' />.
 
-4. Haga clic en el botón <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla.
+4. Haga clic en <Cmd sid='button.apply' product='2' /> en la esquina inferior derecha de la pantalla.
 
-5. Revise el contenido de la ventana de mensajes y haga clic en el botón <Cmd sid='button.yes' product='2' />.
+5. Revise el contenido de la ventana de mensajes y haga clic en <Cmd sid='button.yes' product='2' />.

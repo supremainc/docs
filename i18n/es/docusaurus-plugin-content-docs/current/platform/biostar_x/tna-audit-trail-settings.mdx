@@ -1,0 +1,40 @@
+---
+id: tna-audit-trail-settings
+title: Configurar Auditoría de Tiempo y Asistencia
+description: Esta sección describe cómo definir la retención de cambios y vistas en los registros de auditoría de Tiempo y Asistencia.
+keywords:
+  - ajustes de auditoría
+  - Ajustes de auditoría de T&A
+  - ajustes de retención
+  - período de retención
+  - Política de retención de registros de auditoría de Tiempo y Asistencia
+  - eliminación automática
+---
+
+Los registros de auditoría aumentan con el tiempo. Gestiona el período de retención para ahorrar almacenamiento y proteger la privacidad. En <Cmd sid='setting.menu.system.auditTrailRetention' />, define el período de retención de <Cmd sid='setting.menu.auditTrail.taAuditLog' /> y si conserva el historial de vistas.
+
+## Información de privilegios
+
+<Cmd sid='setting.account.administrator' className='normal' /> siempre puede ver y cambiar los ajustes en el menú <Cmd sid='setting.menu.system.auditTrailRetention' />. Para un administrador con privilegios personalizados, en <Cmd sid='settings.account.menu.setting' product='2' />, establezca <Cmd sid='setting.menu.system.auditTrailRetention' /> en <Cmd sid='settings.account.menu.readOnly' product='2' /> para solo lectura, o en <Cmd sid='settings.account.menu.fullAccess' product='2' /> para ver y cambiar.
+
+:::info
+
+* La cuenta de administrador predeterminada de Tiempo y Asistencia no tiene este permiso. El sistema crea esta cuenta cuando instalas el complemento de Tiempo y Asistencia. Concede el permiso por separado si es necesario.
+
+* Para obtener más información sobre cómo agregar permisos de auditoría de Tiempo y Asistencia, consulta <DocLink docId='platform/biostar_x/tna-audit-trail#addTnaAuditLevel' />.
+
+:::
+
+## Abrir ajustes de auditoría
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. En la barra lateral izquierda, haz clic en <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.system.auditTrailRetention' />.
+
+3. Desplázate hacia abajo hasta la sección <Cmd sid='audit.retention.sectionTimeAttendance' />.
+
+<Image src='/img/biostarx-settings-tna-audit-trail-settings.png' />
+
+import AuditTrailOptions from '../../common/_bsx-audit-trail-settings-options.mdx';
+
+<AuditTrailOptions type='timeattendance' />

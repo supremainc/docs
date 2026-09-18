@@ -1,0 +1,83 @@
+## 保管ポリシーの設定
+
+<Include type={props.type} ref='accesscontrol'>
+
+<Cmd sid='audit.retention.sectionAccessControl' /> セクションは次の二つのグループで構成されます。
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+<Cmd sid='audit.retention.sectionTimeAttendance' /> セクションは次の二つのグループで構成されます。
+
+</Include>
+
+* <Cmd sid='audit.retention.groupChanges' />：作成、修正、削除の記録です。システムは常に記録するため、オン/オフを切り替えられません。
+
+* <Cmd sid='audit.retention.groupAccess' />：参照記録です。記録するかどうかを設定します。
+
+:::info
+
+* <Cmd sid='audit.retention.retentionPeriod' /> は、最小1日から最大2,147,483,647までの整数で入力してください。
+
+<Include type={props.type} ref='accesscontrol'>
+
+* <Cmd sid='audit.retention.sectionAccessControl' /> セクションの設定変更は、<Cmd sid='setting.menu.auditTrail.acAuditLog' /> で監査記録として確認してください。
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+* <Cmd sid='audit.retention.sectionTimeAttendance' /> セクションの設定変更は、<Cmd sid='setting.menu.auditTrail.taAuditLog' /> で <Cmd sid='action.update' /> 記録として確認してください。
+
+</Include>
+
+:::
+
+### 変更記録
+
+<Cmd sid='audit.retention.groupChanges' /> グループは常に記録されるため、<Cmd sid='audit.retention.labelRetention' /> を選択してください。
+
+* <Cmd sid='audit.retention.optionEndless' />：自動削除せず、記録を永久に保管します。
+
+* <Cmd sid='audit.retention.optionCustom' />：規制や社内ポリシーにより保管期間を制限する必要がある場合は、このオプションを選択してください。 <Cmd sid='audit.retention.retentionPeriod' /> 入力欄が有効になったら、保管期間を日単位で入力してください。
+
+### 参照記録
+
+<Cmd sid='audit.retention.groupAccess' /> グループでは、参照記録を残すかどうかを設定します。
+
+* <Cmd sid='audit.retention.labelLogging' />：参照記録を残すには <Cmd sid='audit.retention.loggingOn' /> に設定してください。不要な場合は <Cmd sid='audit.retention.loggingOff' /> に設定してください。
+
+* <Cmd sid='audit.retention.labelRetention' />：保管方法を選択してください。
+
+  * <Cmd sid='audit.retention.optionEndless' />：参照記録を自動削除せず、永久に保管します。
+
+  * <Cmd sid='audit.retention.optionCustom' />：<Cmd sid='audit.retention.retentionPeriod' /> 入力欄が有効になります。保管期間を日単位で入力してください。
+
+:::info
+
+<Cmd sid='audit.retention.labelLogging' /> を <Cmd sid='audit.retention.loggingOff' /> に設定すると、参照イベント自体を記録しません。その後 <Cmd sid='audit.retention.loggingOn' /> に設定しても、以前の期間の記録は参照できません。
+
+:::
+
+### 設定を保存
+
+<Include type={props.type} ref='accesscontrol'>
+
+<Cmd sid='audit.retention.groupChanges' /> と <Cmd sid='audit.retention.groupAccess' /> の設定が完了したら、<Cmd sid='audit.retention.sectionAccessControl' /> セクション下部の <Cmd sid='common.apply' /> ボタンをクリックしてください。二つのグループの設定値をまとめて保存します。
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+<Cmd sid='audit.retention.groupChanges' /> と <Cmd sid='audit.retention.groupAccess' /> の設定が完了したら、<Cmd sid='audit.retention.sectionTimeAttendance' /> セクション下部の <Cmd sid='common.apply' /> ボタンをクリックしてください。二つのグループの設定値をまとめて保存します。
+
+</Include>
+
+## 自動削除の動作方法
+
+<Cmd sid='audit.retention.optionCustom' /> で設定した保管期間を超えた記録は、ユーザー操作に関係なく、サーバーが毎日午前1時に実行するジョブで自動削除します。判定と削除は同じジョブで一度に行われ、この判定は一日一回だけ行います。
+
+> たとえば、<Cmd sid='audit.retention.groupAccess' /> の記録に <Cmd sid='audit.retention.optionCustom' /> 方式で30日を適用した場合、午前1時のジョブ実行時点を基準に30日を超えた記録を、そのジョブで直ちに削除します。保管期間を超えた直後の記録でも、ジョブは一日に一度だけ実行されるため、その時点を過ぎると次の日の午前1時のジョブで削除されます。
+
+<Cmd sid='audit.retention.labelRetention' /> を <Cmd sid='audit.retention.optionEndless' /> に設定すると自動削除ジョブが実行されず、記録が永久に残ります。

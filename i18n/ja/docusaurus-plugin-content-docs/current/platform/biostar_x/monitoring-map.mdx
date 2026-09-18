@@ -9,29 +9,58 @@ keywords:
   - フロア
 ---
 
-マップモニタリング機能を使用して、エリアおよびそのフロアごとのドアとカメラの状況をリアルタイムで確認し、制御する方法を説明します。 マップモニタリングは Google マップと連携したビジュアルインターフェースを通じて、エリア (Area) とフロア (Floor) を簡単に探索し、ドア制御やカメラ映像再生などの多様な機能を利用できます。
+マップモニタリング機能を使用して、エリアおよびそのフロアごとのドアとカメラの状況をリアルタイムで確認し、制御する方法を説明します。マップモニタリングは Google マップと連携したビジュアルインターフェースを通じて、エリア (Area) とフロア (Floor) を簡単に探索し、ドア制御やカメラ映像再生などの多様な機能を利用できます。
 
 <Cmd sid='arena.title' /> ページには、<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='arena.title' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='arena.title' /> を選択してアクセスできます。
 
-**BioStar X** では、1 つのエリアに複数の施設（Facility）を構成できます。 各施設には複数のフロアを構成できます。 1 つのフロアでは、図面を基準にドアとカメラを設定してモニタリングできます。 次の図を参照してください。
+**BioStar X** では、1 つのエリアに複数の施設（Facility）を構成できます。各施設には複数のフロアを構成できます。 1 つのフロアでは、図面を基準にドアとカメラを設定してモニタリングできます。次の図を参照してください。
 
 ![Area structure](/img/common/monitoring-map-area-tree.png)
 
-図のように構成した地域をGISマップと連携し、マップ上のエリア（Area）→ 施設（Facility）→ 階（Floor）の順に移動して、ドアとカメラを監視および制御します。 この構造は、<Cmd sid='arena.title' /> ページのサイドバーでも同じように確認できます。
-
-![Monitoring sidebar](/img/common/monitoring-map-area-tree-example.png)
+図のように構成した地域をGISマップと連携し、マップ上のエリア（Area）→ 施設（Facility）→ 階（Floor）の順に移動して、ドアとカメラを監視および制御します。この構造は、<Cmd sid='arena.title' /> ページのサイドバーでも同じように確認できます。
 
 :::info
 
-マップを構成する方法の詳細については<DocLink docId='platform/biostar_x/settings-map-management' />を参照してください。
+* マップを構成する方法の詳細については<DocLink docId='platform/biostar_x/settings-map-management' />を参照してください。
+
+* <Cmd sid='arena.title' /> エリアは、システムに登録されたデバイスカメラがない、またはマップ構成要素（エリア、施設、階）が登録されていない場合、有効になりません。
+
+* GISと連動したマップモニタリング機能は、**エッセンシャル**（Essential）ライセンス以上で追加オプションとして利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
 :::
 
 ## 構成要素とオプション {/* #component-and-options */}
 
-### 構成要素 {/* #component */}
+### マップツリーの構成要素 {/* #mapTreeComponent */}
 
-マップに表示される構成要素は、エリア（Area）、施設（Facility）、および施設に接続されたカメラです。 施設からフロア（Floor）にアクセスできます。 フロアではドアとカメラを確認できます。
+画面左のサイドバーにマップツリーの構成要素が表示されます。マップツリー上の各構成要素のアイコンで、エリア、施設、階、出入口、カメラを区別できます。
+
+<Columns>
+<Column>
+
+<Image src='/img/monitoring-map-area-tree-example.png' />
+
+</Column>
+<Column>
+
+<div className='table-fixed'>
+
+| アイコン | 名前 |
+| :-: | :-: |
+| <IcArea width='35px' height='35px' /> | エリア（Area） |
+| <IcFacility width='35px' height='35px' /> | 施設（Facility） |
+| <IcFloor width='35px' height='35px' /> | 階（Floor） |
+| <IcDoorClose width='35px' height='35px' /> | ドア |
+| <IcCamOk width='auto' height='35px'/> | カメラ |
+
+</div>
+
+</Column>
+</Columns>
+
+### マップエリアの構成要素 {/* #mapCmponent */}
+
+マップに表示される構成要素は、エリア（Area）、施設（Facility）、および施設に接続されたカメラです。施設からフロア（Floor）にアクセスできます。フロアではドアとカメラを確認できます。
 
 <Image src='/img/biostarx-monitoring-map-main.png' />
 
@@ -40,7 +69,7 @@ keywords:
 | 構成要素 | 説明 |
 | :-: | --- |
 | ![施設アイコン](/img/common/monitoring-map-area-icon.svg) | **施設** (Facility)：マップに配置された施設をクリックすると、その施設に設定されているフロア（Floor）へ入ることができます。 |
-| ![出入口アイコン](/img/common/monitoring-map-floor-door-icon.svg) | **ドア**：マップに配置されたドアをクリックすると、そのドアを制御できるポップアップメニューが表示されます。 提供する機能の詳細については<DocLink docId='platform/biostar_x/control-door' />を参照してください。 |
+| ![出入口アイコン](/img/common/monitoring-map-floor-door-icon.svg) | **ドア**：マップに配置されたドアをクリックすると、そのドアを制御できるポップアップメニューが表示されます。提供する機能の詳細については<DocLink docId='platform/biostar_x/control-door' />を参照してください。 |
 | ![カメラアイコン](/img/common/monitoring-map-camera-icon.svg) | **カメラ**：カメラをクリックすると、その施設またはフロアの映像を再生できます。 |
 | ![カメラエラーアイコン](/img/common/monitoring-map-err-camera-icon.svg) | **カメラエラー**：カメラが接続されていない、または電源がオフになっている場合に表示されます。 |
 | <IcFUlockDr width='45' height='45' /> | **開いているドア**：フロア（Floor）に配置されたドアが開いている状態です。 |
@@ -56,7 +85,7 @@ keywords:
 
 | 機能 | 説明 |
 | :-: | --- |
-| ![拡大/縮小](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![拡大/縮小](/img/common/monitoring-map-zoom-reduce-horizon.svg) | マップ左上または右下にあるボタンをクリックして拡大／縮小できます。 また、マウスホイールでマップを拡大／縮小できます。 |
+| ![拡大/縮小](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![拡大/縮小](/img/common/monitoring-map-zoom-reduce-horizon.svg) | マップ左上または右下にあるボタンをクリックして拡大／縮小できます。また、マウスホイールでマップを拡大／縮小できます。 |
 | <IcZoom /> | フロアの右下にあるボタンをクリックすると、拡大／縮小できます。 |
 | <IcMapmore width='30' height='30' /> | ボタンをクリックすると、追加機能を利用できます。 |
 | <IcClose width='30' height='30'/> | ビデオタイル上のマップまたはフロアを閉じるには、右上のボタンをクリックします。 |
@@ -66,26 +95,38 @@ keywords:
 
 :::info
 
-* マップ上でマウスをクリックしたままドラッグすると位置を移動できます。 マウスホイールで拡大または縮小できます。
+* マップ上でマウスをクリックしたままドラッグすると位置を移動できます。マウスホイールで拡大または縮小できます。
 
-* マップをダブルクリックすると全画面表示に拡大されます。 もう一度ダブルクリックするか、<Kbd>ESC</Kbd> キーを押すと元のサイズに戻ります。
+* マップをダブルクリックすると全画面表示に拡大されます。もう一度ダブルクリックするか、<Kbd>ESC</Kbd> キーを押すと元のサイズに戻ります。
 
 :::
 
 ### 状態を確認する
 
-画面左のサイドバーで各施設またはフロアのドアとカメラの状態を確認できます。 各アイコンの状態は以下を参照してください。
+画面左のサイドバーで各施設またはフロアのドアとカメラの状態を確認できます。各アイコンの状態は以下を参照してください。
 
 <div className='col2--20-80'>
 
 | ステータスアイコン | 説明 |
 | :-: | --- |
-| <IcErr width='35px' height='35px' /> | 通信サーバーのエラー、または接続が切断されています。 |
-| <IcAlert width='40px' height='40px' /> | ドアでアラームが発生している状態です。 徘徊検知、侵入検知などが発生すると該当アイコンが表示されます。 |
+| <IcErr width='35px' height='35px' /> | マルチ通信サーバーでエラーが発生したか、接続が切断されています。 |
+| <IcAlert width='40px' height='40px' /> | ドアでアラームが発生している状態です。徘徊検知、侵入検知などが発生すると該当アイコンが表示されます。 |
 | <IcCamOk width='auto' height='35px'/> | カメラが接続されています。 |
 | <IcCamFail width='auto' height='35px'/> | カメラの電源がオフ、または接続が解除されています。 |
 
 </div>
+
+### 注意が必要な対象をまとめて表示 {/* #checkAttentionFilter */}
+
+管理者は、対応が必要な対象だけをまとめて確認できます。画面左のサイドバーの <Cmd sid='arena.tree.door.entitiesNeedAttention' /> をクリックします。エリア、施設、階の階層に配置されたドアの状態を確認し、問題が発生した対象に対応できます。
+
+<Image src='/img/monitoring-map-tree-attention-filter.png' />
+
+:::info
+
+ドアへの対応が必要かどうかの判定基準は、<DocLink docId='platform/biostar_x/check-door-status#check-the-attention-criteria' />を参照してください。
+
+:::
 
 ## マップを開く {/* #open-map */}
 
@@ -103,9 +144,9 @@ keywords:
 
 :::info
 
-* 画面左のサイドバーでその施設をダブルクリックしてもマップを開けます。
+* 画面左のサイドバーで該当する施設をダブルクリックすると、その施設があるマップが開きます。
 
-* 画像は例示用の画面です。 実際の画面とは異なる場合があります。
+* 画像は例示用の画面です。実際の画面とは異なる場合があります。
 
 * GISマップと連携してエリアを構成する方法の詳細については<DocLink docId='platform/biostar_x/settings-map-manage-area' />を参照してください。
 
@@ -113,7 +154,7 @@ keywords:
 
 ## マップのサイズ調整と位置移動 {/* #resize-map */}
 
-マップのサイズを調整するには、地図上の空白部分をクリックします。 各コーナーにサイズ調整用ハンドルが表示されます。 ハンドルをクリックしたままドラッグして、目的のサイズに調整します。
+マップのサイズを調整するには、地図上の空白部分をクリックします。各コーナーにサイズ調整用ハンドルが表示されます。ハンドルをクリックしたままドラッグして、目的のサイズに調整します。
 
 <Image src='/img/common/biostarx-monitoring-map-resize.gif' alone />
 
@@ -123,13 +164,23 @@ keywords:
 
 ## フロアに入る {/* #entry-floor */}
 
-マップからフロアへ入るには、Facility をクリックします。 ポップアップメニューにアクセス可能なフロアの一覧が表示されたら、目的のフロアを選択します。 選択したフロアの図面、ドア、カメラを確認できます。
+マップからフロアへ入るには、Facility をクリックします。ポップアップメニューにアクセス可能なフロアの一覧が表示されたら、目的のフロアを選択します。選択したフロアの図面、ドア、カメラを確認できます。
 
 または、画面左のサイドバーでフロアをダブルクリックするか、右クリックしてポップアップメニューから<Cmd sid='arena.tree.contextMenu.openMap' />をクリックします。
 
 <Image src='/img/monitoring-map-select-floor.png' />
 
-* ドアをクリックすると、そのドアを制御できるポップアップメニューが表示されます。 提供する機能の詳細については<DocLink docId='platform/biostar_x/control-door' />を参照してください。
+| 構成要素 | 説明 |
+| :-: | --- |
+| <IcFUlockDr width='45' height='45' /> | **開いているドア**：フロア（Floor）に配置されたドアが開いている状態です。 |
+| <IcFLockDr width='45' height='45' /> | **施錠されたドア**：フロア（Floor）に配置されたドアが施錠されている状態です。 |
+| <IcFloorCam width='45' height='45' /> | **カメラ**：カメラをクリックすると、その施設またはフロアの映像を再生できます。 |
+
+* ドアまたはカメラにマウスを合わせると、現在の状態が表示されます。
+
+  <Image src='/img/monitoring-map-floor-status-check.png' className='none' />
+
+* ドアをクリックすると、そのドアを制御できるポップアップメニューが表示されます。提供する機能の詳細については<DocLink docId='platform/biostar_x/control-door' />を参照してください。
 
   <Image src='/img/monitoring-map-floor-control-door.png' />
 
@@ -139,13 +190,13 @@ keywords:
 
 :::info
 
-* フロア(Floor)に出入口とカメラを設定する方法の詳細については <DocLink docId='platform/biostar_x/settings-map-manage-floor' />を参照してください。
-
 * 施設が表示されるマップに戻るには、左上の<IcBack/>ボタンをクリックします。
+
+* フロア(Floor)に出入口とカメラを設定する方法の詳細については <DocLink docId='platform/biostar_x/settings-map-manage-floor' />を参照してください。
 
 * 映像の制御方法および映像に表示されるツールの詳細については<DocLink docId='platform/biostar_x/monitoring-video#control-video' />を参照してください。
 
-* 画像は例示用の画面です。 実際の画面とは異なる場合があります。
+* 画像は例示用の画面です。実際の画面とは異なる場合があります。
 
 :::
 
@@ -159,23 +210,23 @@ keywords:
 
 * 施設が表示されるマップに戻るには、左上の<IcBack/>ボタンをクリックします。
 
-* マップ左上のフロア選択オプションには、Facility に設定されているフロアのみが表示されます。 そのフロアが Facility に設定されていない場合、リストに表示されません。 施設にフロアを設定する方法の詳細については<DocLink docId='platform/biostar_x/settings-map-manage-facility' />を参照してください。
+* マップ左上のフロア選択オプションには、Facility に設定されているフロアのみが表示されます。そのフロアが Facility に設定されていない場合、リストに表示されません。施設にフロアを設定する方法の詳細については<DocLink docId='platform/biostar_x/settings-map-manage-facility' />を参照してください。
 
 :::
 
 ## カメラを制御する {/* #control-camera */}
 
-* マップまたはフロアでカメラを制御するには、カメラアイコンをクリックします。 ポップアップメニューから目的の機能を選択します。
+* マップまたはフロアでカメラを制御するには、カメラアイコンをクリックします。ポップアップメニューから目的の機能を選択します。
 
-  <Image src='/img/biostarx-monitoring-map-camera-popup.png' />
+  <Image src='/img/biostarx-monitoring-map-camera-popup.png' className='none' />
 
   * <Cmd sid='map.menu.camera.playVideo' />：カメラ映像をリアルタイムで確認できます。
 
   * <Cmd sid='map.menu.camera.showCoverage' /> / <Cmd sid='map.menu.camera.hideCoverage' />：カメラの撮影範囲を表示または非表示にできます。
 
-  * <Cmd sid='map.menu.door.viewDetail' />：カメラの詳細情報を確認できます。 画面右のパネルにカメラの名前、グループ、ID、IPアドレスなどが表示されます。
+  * <Cmd sid='map.menu.door.viewDetail' />：カメラの詳細情報を確認できます。画面右のパネルにカメラの名前、グループ、ID、IPアドレスなどが表示されます。
 
-* ビデオタイルにカメラ映像を配置して再生するには、画面左のサイドバーにある <Cmd sid='arena.map.title' /> リストでカメラをダブルクリックします。 またはマウスの右ボタンをクリックし、ポップアップメニューで <Cmd sid='arena.tree.contextMenu.openVideo' /> をクリックします。
+* ビデオタイルにカメラ映像を配置して再生するには、画面左のサイドバーにある <Cmd sid='arena.map.title' /> リストでカメラをダブルクリックします。またはマウスの右ボタンをクリックし、ポップアップメニューで <Cmd sid='arena.tree.contextMenu.openVideo' /> をクリックします。
 
   <Image src='/img/biostarx-monitoring-map-open-camera.png' />
 
@@ -187,6 +238,6 @@ keywords:
 
 * 映像の制御方法および映像に表示されるツールの詳細については<DocLink docId='platform/biostar_x/monitoring-video#control-video' />を参照してください。
 
-* マップ上でカメラが表示されない場合は、カメラグループの権限を確認してください。 カスタム権限を持つ管理者がカメラグループの権限を設定していないと、カメラが表示されないことがあります。 カメラグループの権限設定の詳細については <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />ご参照ください。
+* マップ上でカメラが表示されない場合は、カメラグループの権限を確認してください。カスタム権限を持つ管理者がカメラグループの権限を設定していないと、カメラが表示されないことがあります。カメラグループの権限設定の詳細については <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />ご参照ください。
 
 :::

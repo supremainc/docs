@@ -1,0 +1,186 @@
+---
+id: monitoring-batch-control
+title: 一括制御
+description: 複数の出入ドア、エレベーター、高度な入退室管理の設定を一度に選択して制御してください。
+---
+
+複数の出入ドア、エレベーター、高度な入退室管理の設定を一度に選択し、解錠、施錠、アラーム解除などのコマンドをまとめて実行する方法を説明します。
+
+* ステータスツリーで二つ以上の対象を選択すると、画面右側に一括制御パネルが表示されます。対象を個別に制御せず、一度にコマンドを実行します。
+
+* 緊急時や複数の出入口を同時に制御する場合、迅速に対応します。
+
+* 出入ドア、エレベーター（階）、高度な入退室管理の設定をそれぞれ一括選択して制御します。異なる種類を同時に選択すると制御できません。
+
+<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.arena' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.arena' /> を選択してください。画面左側のサイドバーのステータスツリーで、制御する対象を二つ以上選択すると、画面右側に一括制御パネルが表示されます。
+
+<Image src='/img/biostarx-monitoring-batch-main.png' />
+
+:::info
+
+* カメラは一括制御の対象ではありません。ほかの対象と一緒に選択しても、選択リストから除外されます。
+
+* この文書では、複数の対象を一度に制御する方法を説明します。出入ドア、エレベーター、高度な入退室管理のいずれかを選択して制御する方法は、次の文書を参照してください。
+
+  * <DocLink docId='platform/biostar_x/control-door' />
+
+  * <DocLink docId='platform/biostar_x/control-elevator' />
+
+  * <DocLink docId='platform/biostar_x/control-zone' />
+
+:::
+
+## 複数の対象の選択 {/* #select-multiple */}
+
+画面左側のサイドバーにあるステータスツリーで、出入ドア、エレベーター、階、高度な入退室管理を選択する方法は次のとおりです。 Windows エクスプローラーで複数のファイルを選択する方法と同じです。
+
+* **クリック**: 対象を一つだけ選択します。既存の選択は解除されます。
+
+* **<Kbd>Ctrl</Kbd> + クリック**: クリックした対象を選択リストに追加または除外します。ほかの選択はそのまま残ります。
+
+* **<Kbd>Shift</Kbd> + クリック**: 最後にクリックした対象から、今回クリックした対象までの表示範囲をすべて選択します。既存の選択はこの範囲に置き換わります。
+
+* **<Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd> + クリック**: 既存の選択を保持したまま、範囲を追加で選択します。離れた複数の対象をまとめて選択するときに使用してください。
+
+* **グループクリック**: グループ（<IcGroup />）名をクリックすると、その配下のすべての出入ドア、エレベーター、階、高度な入退室管理設定が一度に選択されます。グループを展開または折りたたむには、グループ名の前の矢印(<IcBw />)をクリックしてください。
+
+:::info
+
+選択した対象がない、または一つだけの場合、一括制御パネルは開きません。項目を一つだけ残すと、その項目の詳細ビューが表示され、すべての選択を解除すると右側のパネルが消えます。
+
+:::
+
+## 一括制御パネルの構成 {/* #panel-layout */}
+
+画面左側のサイドバーにある状態ツリーで複数の対象を選択すると、画面右側に表示される一括制御パネルは次のように構成されます。
+
+* **選択数と種類**：例として、ドア4つ、エレベーター2つ、4フロアを選択すると、次のように表示されます。
+
+  > <Cmd sid='monitoring.multiControl.selectedCount' replace='10' /> / <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.door' /> <Cmd>2</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.elevator' /> <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.floor' />
+
+  <Image src='/img/biostarx-monitoring-select-multi-items.png' />
+
+   :::note
+
+   異なる種類を同時に選択すると、制御機能は使用できません。
+
+   :::
+
+* **ドア/エレベーター制御**：ドアとエレベーターで使用できる制御機能が表示されます。
+
+  <Image src='/img/biostarx-monitoring-doors-batch-control.png' />
+
+  <Image src='/img/biostarx-monitoring-elevators-batch-control.png' />
+
+* **高度なアクセスコントロール制御**：高度なアクセスコントロールで使用できる制御機能が表示されます。
+
+  <Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* **選択対象のサマリー表**：画面右側のパネル下部で、選択した各対象の名前と状態を確認できます。制御エリアとサマリー表の間の境界線を上下にドラッグすると、両エリアの高さを調整できます。選択対象が多い場合、境界線をドラッグしてサマリー表エリアを広げて確認してください。
+
+  <Image src='/img/biostarx-monitoring-select-multi-summary.png' />
+
+## ドアの一括制御 {/* #bulk-door */}
+
+ドアのみを二つ以上選択すると、単一ドア制御と同じ基本制御と高度な制御を使用できます。
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-monitoring-doors-control-list.png' />
+
+<Image src='/img/biostarx-monitoring-doors-control-intrusion.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+**基本制御**
+
+* <Cmd sid='monitoring.multiControl.once3sec' />：開放状態で一度だけ適用します。
+
+* <Cmd sid='monitoring.multiControl.timed' />：入力した時間の間、施錠または開放状態を維持します。
+
+* <Cmd sid='monitoring.multiControl.permanent' />：時間に関係なく、施錠または開放状態にします。
+
+必要なコマンドを選択して適用するには <Cmd sid='common.apply' /> ボタンをクリックしてください。
+
+**高度な制御**
+
+次のボタンは、下の条件に該当する対象が一つでもある場合に使用できます。
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />：選択したドアにアラームが発生している対象がある場合に使用できます。
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: 選択したドアの中にアンチパスバックが設定されているものがある場合に使用できます。詳しくは <DocLink docId='platform/biostar_x/control-door#apb-reset' /> をご参照ください。
+
+* <Cmd sid='monitoring.multiControl.normalizeOverrides' />: 管理者が手動で開放または施錠したドアがある場合に使用します。スケジュールまたは非常事態によって変更された状態は含まれません。
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: 高度な入退室制御設定の一種である警備に設定されたドアがある場合にのみ表示されます。
+
+</Column>
+</Columns>
+
+:::info
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />, <Cmd sid='monitoring.multiControl.normalizeOverrides' /> ボタンをクリックすると、ポップアップウィンドウが開きます。解除するには、ポップアップウィンドウで <Cmd sid='monitoring.multiControl.clearAlarm' /> または <Cmd sid='monitoring.multiControl.normalizeOverrides' /> ボタンをクリックする必要があります。一方、<Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> ボタンは、確認ウィンドウを表示せずに状態を切り替えます。
+
+* 高度な入退室制御設定は、**エッセンシャル**（Essential）ライセンスで追加オプションを購入するか、**エンタープライズ**（Enterprise）ライセンス以上で利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+
+:::
+
+## エレベーターおよび階の一括制御 {/* #bulk-elevator */}
+
+エレベーターを選択すると、設定済みのすべての階をまとめて制御できます。特定の階のみを制御するには、階を直接選択してください。
+
+ドアとの違いは次のとおりです。
+
+| 制御機能 | ドア | エレベーター、階 |
+| --- | --- | --- |
+| <Cmd sid='monitoring.multiControl.unlock' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.lock' /> | <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.normalizeOverrides' /> | 対応 | 対応 |
+| <Cmd sid='monitoring.multiControl.clearAlarm' /> | 対応 | 選択にエレベーターが含まれる場合は表示され、階のみを選択すると表示されません |
+| <Cmd sid='monitoring.multiControl.clearApb' /> | 対応 | 非対応 |
+
+:::info
+
+エレベーターとその配下の階をまとめて選択し、開放または施錠すると、階ごとにコマンドが送信されず、エレベーター単位で一度だけ送信されます。
+
+:::
+
+## 高度な入退室制御の一括制御 {/* #bulk-acs */}
+
+高度な入退室制御設定も複数選択して、一度に制御できます。二つ以上選択すると、右側の領域が一括制御パネルに切り替わります。選択、範囲、フィルターの動作は、ドアとエレベーターと同じです。
+
+高度な入退室制御設定にはロックリレーや管理者による開放/施錠の概念がないため、ドア、エレベーターとは制御項目が異なります。選択した設定の種類に応じて、次の制御ボタンが表示されます。
+
+<Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* <Cmd sid='arena.tree.contextMenu.enable' />/<Cmd sid='arena.tree.contextMenu.disable' />: すべての高度な入退室制御設定に共通で表示されます。
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: 選択した項目に警備設定がある場合にのみ表示されます。
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: 選択した項目にアラームが発生する設定（アンチパスバック、火災警報、スケジュールロック、警備、インターロック、招集）がある場合にのみ表示されます。在室人数制限や人数点検など、アラームが発生しない設定のみを選択すると表示されません。
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: 選択した項目にアンチパスバック設定がある場合にのみ表示されます。このボタンをクリックし、ユーザー選択画面でアンチパスバックに違反したユーザーのAPBアラームを解除します。詳しくは <DocLink docId='platform/biostar_x/control-zone#apb-release' /> をご参照ください。
+
+:::info
+
+* <Cmd sid='monitoring.multiControl.lock' />、<Cmd sid='monitoring.multiControl.unlock' />、<Cmd sid='monitoring.multiControl.normalizeOverrides' /> 機能は一括制御に含まれません。招集レポートの確認、在室人数の制限モニタリングなど、別画面へ移動する機能は一括制御パネルでは提供しません。これらの機能は、該当する設定を一つだけ選択した場合、詳細情報画面で使用できます。
+
+* 高度なアクセス制御の詳細は<DocLink docId='platform/biostar_x/control-zone' />をご覧ください。
+
+:::
+
+## 実行結果の確認 {/* #result */}
+
+* 選択したすべての対象が成功すると、画面上部に成功メッセージが表示されます。
+
+  <Image src='/img/biostarx-monitoring-doors-control-success.png' caption />
+
+* 一つでも失敗すると、失敗メッセージとともに <Cmd sid='arena.batchResult.showDetails' /> ボタンが表示されます。
+
+  <Image src='/img/biostarx-monitoring-doors-control-fail.png' caption />
+
+  <Cmd sid='arena.batchResult.showDetails' />をクリックすると、<Cmd sid='arena.batchResult.successChip' />、<Cmd sid='arena.batchResult.failChip' />、<Cmd sid='arena.batchResult.skippedChip' />の三つのグループに区分された結果を確認できます。失敗した対象の名前と理由をクリップボードにコピーするには、<Cmd sid='arena.batchResult.copyFailList' />ボタンをクリックします。
+
+  <Image src='/img/biostarx-monitoring-doors-control-fail-details.png' caption />

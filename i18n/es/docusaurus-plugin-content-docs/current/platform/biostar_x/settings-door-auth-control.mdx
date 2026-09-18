@@ -1,0 +1,101 @@
+---
+id: settings-door-auth-control
+title: Configurar El Control De Puerta Mediante Autenticación
+description: En este tema se explica cómo configurar una característica de control de puerta mediante autenticación que cambia una puerta a Siempre abierta cuando un usuario autorizado pasa la misma tarjeta dos veces (Double Badge).
+---
+
+El control de puerta mediante autenticación cambia una puerta a siempre abierta cuando un usuario designado se autentica dos veces seguidas (Double Badge) con la misma tarjeta en un dispositivo compatible. En el modo Siempre abierta, pase la tarjeta dos veces de nuevo. La puerta vuelve a su modo original cuando termina el horario permitido.
+
+## Antes de comenzar {/* #before-start */}
+
+* La puerta debe pertenecer a un grupo de acceso. En la pantalla Agregar puerta, esta característica no está disponible porque la puerta todavía no está en un grupo de acceso. Guarde la puerta, agréguela a un grupo de acceso, y configure esta característica en la pantalla Editar información de puerta. Para obtener más información sobre la configuración de grupos de acceso, consulte <DocLink docId='platform/biostar_x/settings-access-control' />.
+
+* Para obtener más información sobre agregar puertas y editar información de puerta, consulte los siguientes documentos.
+
+  * <DocLink docId='platform/biostar_x/settings-door-add' />
+
+  * <DocLink docId='platform/biostar_x/settings-door-edit-info' />
+
+:::info
+
+* El soporte para el control de puerta mediante autenticación comienza con los siguientes dispositivos y versiones de firmware. Use esta característica solo en puertas que usen dispositivos compatibles.
+
+  * XPass 2 versión de firmware 1.5.3 o superior
+
+  * FaceStation F2 versión de firmware 2.3.0 o superior
+
+* Esta característica funciona solo con credenciales de tipo tarjeta (CSN, Wiegand, tarjetas inteligentes, y CSN/ToM de tarjeta móvil). Esta característica no aplica a credenciales de plantilla ni a autenticación biométrica, como huella digital y autenticación facial. El sistema las procesa como autenticación de acceso estándar.
+
+* El control de puerta mediante autenticación funciona solo cuando el modo de autenticación del dispositivo se establece en Tarjeta. **BioStar X** no verifica el modo de autenticación del dispositivo. Verifique el modo de autenticación del dispositivo antes de usar esta característica.
+
+* El dispositivo reconoce una doble credencial solo cuando ambas autenticaciones ocurren dentro de 3 segundos. Si el intervalo supera 3 segundos, el dispositivo trata cada autenticación como una autenticación de acceso independiente.
+
+:::
+
+## Configurar el control de puerta mediante autenticación {/* #setting */}
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> en la barra lateral izquierda.
+
+3. En la lista de puertas, haz clic en la puerta que vas a configurar.
+
+4. En la sección <Cmd sid='common.option' product='2' />, ve a <Cmd sid='door.authDoorControl.title' product='2' />.
+
+   <Image src='/img/biostarx-setting-door-auth-control.png' />
+
+5. Establezca la opción <Cmd sid='common.use' product='2' /> en <Cmd sid='common.on' product='2' />.
+
+   <Image src='/img/biostarx-setting-door-auth-control-use.png' />
+
+6. En <Cmd sid='common.schedule' product='2' />, seleccione el horario para usar esta función. El valor predeterminado es <Cmd>Siempre</Cmd>. Si el horario no está disponible, agregue un horario primero.
+
+7. Para agregar usuarios que pueden controlar la puerta con Double Badge, haga clic en <Cmd sid='button.plusAdd' product='2' /> y seleccione usuarios en la lista de <Cmd sid='common.user' product='2' />.
+
+   <Image src='/img/biostarx-setting-door-auth-control-users.png' />
+
+   :::note
+
+   * La lista de <Cmd sid='common.user' product='2' /> muestra solo usuarios con acceso a la puerta. Verifique los grupos de acceso y los niveles de acceso en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.accessControl.root' />.
+
+   * Especifique hasta 12 usuarios.
+
+   * Haga clic en <IcSearch title='Search' /> para buscar un usuario específico.
+
+   * Seleccione solo usuarios individuales. La selección de grupos de usuarios no está disponible.
+
+   :::
+
+8. Una vez completados todos los ajustes, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+
+:::info
+
+* Para obtener más información sobre cómo agregar horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
+
+* Para obtener más información sobre cómo establecer grupos de acceso y niveles de acceso, consulte <DocLink docId='platform/biostar_x/settings-access-control' />.
+
+:::
+
+## Notas {/* #note */}
+
+* Las puertas que usan control de puerta mediante autenticación no pueden cambiar el dispositivo de entrada o salida por un modelo no compatible. Antes de cambiar el dispositivo, establezca <Cmd sid='door.authDoorControl.title' product='2' /> en <Cmd sid='common.off' product='2' />.
+
+* Si un usuario de control pierde el acceso a la puerta, la lista lo marca como <Cmd sid='door.authDoorControl.noAccessBadge' product='2' />. Este estado impide guardar. Otorgue el acceso de nuevo o elimine al usuario de la lista.
+
+  <Image src='/img/biostarx-setting-door-auth-control-not-allow-users.png' />
+
+* Guardar requiere al menos un usuario de control.
+
+* Si se elimina el horario seleccionado, el campo <Cmd sid='common.schedule' product='2' /> muestra <Cmd sid='door.authDoorControl.deletedSchedule' product='2' />. Este estado impide guardar. Seleccione otro horario.
+
+* En el modo estricto, el sistema niega el acceso cuando ocurre una infracción de [antirretorno](../../reference/glossary#apb), por lo que el control de puerta mediante autenticación no funciona. En el modo flexible, el sistema permite el acceso, por lo que sí funciona.
+
+* Cuando se aplican otras funciones avanzadas de control de acceso, tienen prioridad.
+
+## Información relacionada {/* #related */}
+
+* Verifique el control de puerta mediante autenticación en el panel de vista previa de la puerta en <Cmd sid='shell.header.arena' />. Los eventos relacionados aparecen como <Cmd sid='eventType.23824' product='2' /> en <Cmd sid='arena.eventTable.title' />. Para obtener más información sobre el monitoreo de puertas, consulte <DocLink docId='platform/biostar_x/monitoring-door' />.
+
+  <Image src='/img/biostarx-setting-door-auth-control-monitoring.png' />
+
+* El registro de auditoría registra los cambios en los ajustes. Para más información, consulte <DocLink docId='platform/biostar_x/settings-system-audit-trail-ac' />.

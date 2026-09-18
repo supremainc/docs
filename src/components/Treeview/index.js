@@ -147,7 +147,7 @@ function TreeNode({ node, level = 0 }) {
                 <span className={styles.treeLabel}>
                     {node.name}
                 </span>
-                {(node.name === '출입문' || node.name === 'Door') && <><IcRelayLock height='auto' width='25' /> <IcArm height='auto' width='25' /></>}
+                {(node.name === '출입문' || node.name === 'Door' || node.name === 'Puerta' || node.name === 'ドア' ) && <><IcRelayLock height='auto' width='25' /> <IcArm height='auto' width='25' /></>}
             </div>
             
             {hasChildren && (

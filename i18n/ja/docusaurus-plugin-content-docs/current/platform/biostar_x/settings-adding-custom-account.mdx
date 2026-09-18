@@ -8,13 +8,13 @@ keywords:
   - カスタム権限
 ---
 
-ユーザーが希望する権限レベルを追加する方法を説明します。 カスタム権限は、基本の運用権限に加えて追加の権限を設定できるユーザー向けの機能です。
+ユーザーが希望する権限レベルを追加する方法を説明します。カスタム権限は、基本の運用権限に加えて追加の権限を設定できるユーザー向けの機能です。
 
 ## カスタム権限の追加
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.account.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> をクリックします。
 
 3. <Cmd sid='setting.account.addCustomOperator' product='2' /> をクリックします。
 
@@ -42,13 +42,13 @@ keywords:
 
 ### <Cmd sid='settings.account.menu.detailSetting' product='2' className='normal' /> {/* #detailSetting */}
 
-アイテムの詳細な権限を設定します。 各メニューに対して編集権限および閲覧権限を付与するグループを選択できます。 アイテム詳細権限は <Cmd sid='common.permission.module.userGroup' product='2' />、<Cmd sid='common.permission.module.deviceGroup' product='2' />、<Cmd sid='common.permission.module.doorGroup' product='2' />、<Cmd sid='common.permission.module.accessGroup' product='2' /> に対して設定でき、各メニューで既に作成されているグループ情報を基に設定できます。
+アイテムの詳細な権限を設定します。各メニューに対して編集権限および閲覧権限を付与するグループを選択できます。アイテム詳細権限は <Cmd sid='common.permission.module.userGroup' product='2' />、<Cmd sid='common.permission.module.deviceGroup' product='2' />、<Cmd sid='common.permission.module.doorGroup' product='2' />、<Cmd sid='common.permission.module.accessGroup' product='2' /> に対して設定でき、各メニューで既に作成されているグループ情報を基に設定できます。
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-item.png' />
 
 :::info
 
-* 目的のグループがない場合は、該当メニューに移動して新しいグループを追加します。 グループの追加の詳細については、次のドキュメントを参照してください。
+* 目的のグループがない場合は、該当メニューに移動して新しいグループを追加します。グループの追加の詳細については、次のドキュメントを参照してください。
 
   * <DocLink docId='platform/biostar_x/user-group-manage' />
 
@@ -60,31 +60,59 @@ keywords:
 
   * <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />
 
-* <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='setting.account.item.advAC' product='2' />, <Cmd sid='setting.account.item.map' product='2' />, <Cmd sid='setting.account.item.map' product='2' /> の権限は、**アドバンス**（Advanced）ライセンス以上で利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+* <Cmd sid='setting.account.item.map' product='2' /> 権限は **エッセンシャル**（Essential）ライセンス以上で利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
 
-* <Cmd sid='common.permission.module.cameraGroup' product='2' /> の権限は、**アドバンス**（Advanced）ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+* <Cmd sid='common.permission.module.elevatorGroup' product='2' />、<Cmd sid='setting.account.item.advAC' product='2' />、<Cmd sid='common.permission.module.cameraGroup' product='2' /> 権限は **エッセンシャル**（Essential）ライセンス以上で、追加オプションにより利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
 :::
 
 ### <Cmd sid='settings.account.menu.setting' product='2' className='normal' /> {/* #menuSetting */}
 
-個別メニューに対する **編集** と **閲覧** 権限を設定します。 メニューごとに異なる権限を設定できます。
+個別メニューに対して <Cmd sid='settings.account.menu.readOnly' product='2' /> または <Cmd sid='settings.account.menu.fullAccess' product='2' /> を選択できます。メニューごとに異なる権限を設定できます。権限を付与するメニューの <Cmd sid='settings.account.menu.permission' product='2' /> チェックボックスをクリックし、<Cmd sid='settings.account.menu.readOnly' product='2' /> または <Cmd sid='settings.account.menu.fullAccess' product='2' /> を選択します。
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-menus.png' />
 
-* <Cmd sid='common.editRead' product='2' />：該当メニューの項目を追加、編集、削除できる権限を付与します。
+* <Cmd sid='settings.account.menu.readOnly' product='2' />：該当メニューへアクセスし、設定内容を確認のみできる権限を付与します。
 
-* <Cmd sid='common.read' product='2' />：該当メニューへアクセスし、設定内容を確認のみできる権限を付与します。
+* <Cmd sid='settings.account.menu.fullAccess' product='2' />：該当メニューの項目を追加、編集、削除できる権限を付与します。
 
 :::info
 
-各メニューに **編集** 権限を付与すると、<Cmd sid='button.add' product='2' /> が有効になります。 ただし、<Cmd sid='shell.header.dashboard' /> および <Cmd sid='shell.header.setting' /> メニューには追加機能がないため <Cmd sid='setting.account.menu.canCreate.na' product='2' /> と表示されます。<Cmd sid='common.permission.module.ac' product='2' /> メニューでは、<Cmd sid='settings.account.menu.detailSetting' product='2' /> で <Cmd sid='common.permission.module.accessGroup' product='2' /> を <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' /> に設定し、**編集** 権限を付与した場合にのみ <Cmd sid='button.add' product='2' /> が有効になります。
+* <Cmd sid='shell.header.arena' /> メニューの <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> は、タブを追加したり、状態ツリーの項目を制御したりできます。
+
+* <Cmd sid='shell.header.data' /> メニューの <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> は、レポートを保存し、自動レポートのスケジュールを追加し、設定にアクセスできます。
+
+* <Cmd sid='shell.header.dashboard' /> メニューでは、<Cmd sid='settings.account.menu.readOnly' product='2' className='bold' /> 権限だけでも新しいダッシュボードとウィジェットを作成できます。
+
+* <Cmd sid='settings.account.menu.item' product='2' /> 一覧にないメニューは、権限に関係なくアクセスできます。
+
+:::
+
+:::tip
+
+上位メニューの権限をクリックすると、下位のすべてのメニューの権限が有効になります。
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-example.png' />
+
+:::
+
+### プラグイン
+
+プラグインを追加した場合、プラグイン権限を設定できます。プラグイン権限がないユーザーは該当プラグインにアクセスできず、初期画面やランチャーに表示されません。
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-plugin.png' />
+
+:::info
+
+* プラグイン機能を使用するには、プラグインライセンスが必要です。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+
+* <Cmd sid='common.permission.module.time_attendance' product='2' /> プラグインにのみ <Cmd sid='settings.account.menu.readOnly' product='2' /> または <Cmd sid='settings.account.menu.fullAccess' product='2' /> を適用できます。
 
 :::
 
 ### <Cmd sid='settings.account.addUser' product='2' className='normal' /> {/* #addUser */}
 
-権限を付与するユーザー情報を追加または確認できます。 ユーザーを追加するには <Cmd sid='button.plusAdd' product='2' /> をクリックします。 ユーザー一覧から権限を付与するユーザーを選択します。
+権限を付与するユーザー情報を追加または確認できます。ユーザーを追加するには <Cmd sid='button.plusAdd' product='2' /> をクリックします。ユーザー一覧から権限を付与するユーザーを選択します。
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-users.png' />
 

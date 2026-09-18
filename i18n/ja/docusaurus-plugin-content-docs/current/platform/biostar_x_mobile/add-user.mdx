@@ -69,7 +69,7 @@ keywords:
 </Column>
 <Column className='padding--l40'>
 
-* <Cmd>ID</Cmd>：ユーザーに付与される固有 ID です。 システムで自動生成された値が既定で入力されています。 直接入力することもできます。
+* <Cmd>ID</Cmd>：ユーザーに付与される固有 ID です。システムで自動生成された値が既定で入力されています。直接入力することもできます。
 
 * <Cmd>Name</Cmd>：ユーザー名を入力します。
 
@@ -100,15 +100,19 @@ keywords:
 
 * <Cmd>Status</Cmd>：ユーザーアカウントを有効または無効にできます。
 
-* <Cmd>Period</Cmd>：ユーザーアカウントを使用する期間を設定します。 開始日と終了日を設定すると、その期間内だけユーザーアカウントを使用できます。
+* <Cmd>Period</Cmd>：ユーザーアカウントを使用する期間を設定します。開始日と終了日を設定すると、その期間内だけユーザーアカウントを使用できます。
 
 * <Cmd>Access Group</Cmd>：ユーザーの入退室グループを選択できます。
 
+import UserNameIDrule from '@site/docs/common/_bsx-user-id-name-rule.mdx';
+
+<UserNameIDrule />
+
 :::info
 
-* ユーザー ID は、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> メニューの <Cmd sid="setting.userDevice.useridType" product='2' /> オプションによって、設定できる値が異なる場合があります。 詳しくは <DocLink docId='platform/biostar_x/settings-server-server#userid-type' target='_blank' /> を参照してください。
+* ユーザー ID は、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> メニューの <Cmd sid="setting.userDevice.useridType" product='2' /> オプションによって、設定できる値が異なる場合があります。詳しくは <DocLink docId='platform/biostar_x/settings-server-server#userid-type' target='_blank' /> を参照してください。
 
-* <Cmd>T&A Operator</Cmd> および <Cmd>Visitor Operator</Cmd> レベルには、別途ライセンスが必要です。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' target='_blank' />を参照してください。
+* <Cmd>T&A Operator</Cmd> および <Cmd>Visitor Operator</Cmd> レベルには、別途ライセンスが必要です。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' target='_blank' />を参照してください。
 
 * 入退室グループの追加と設定の詳細は、<DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' target='_blank' /> を参照してください。
 
@@ -119,7 +123,7 @@ keywords:
 
 ## クレデンシャルの登録
 
-ユーザーを登録するとき、入退室制御システムにアクセスできるようにクレデンシャルも登録できます。 ユーザーの指紋や顔、カード情報、パスワードなどをクレデンシャルとして登録できます。 クレデンシャルはユーザーを新規登録または編集する際に追加または変更できます。
+ユーザーを登録するとき、入退室制御システムにアクセスできるようにクレデンシャルも登録できます。ユーザーの指紋や顔、カード情報、パスワードなどをクレデンシャルとして登録できます。クレデンシャルはユーザーを新規登録または編集する際に追加または変更できます。
 
 <Columns className='mt--50'>
 <Column className='width--23'>
@@ -129,7 +133,7 @@ keywords:
 </Column>
 <Column className='padding--l40'>
 
-### PIN の登録 {/* #enrollPin */}
+### PIN登録 {/* #enrollPin */}
 
 ユーザーがデバイスに PIN を入力して入退室できるように、PIN クレデンシャルを登録できます。
 
@@ -141,7 +145,7 @@ keywords:
 
 :::info
 
-* PINは8桁以上で、数字のみ入力できます。
+* PINは4\~16桁で、数字のみを入力してください。
 
 * ユーザーごとに登録できるPINクレデンシャルは最大1つです。
 
@@ -158,9 +162,9 @@ keywords:
 </Column>
 <Column className='padding--l40'>
 
-### 指紋の登録 {/* #enrollFingerprint */}
+### 指紋登録 {/* #enrollFingerprint */}
 
-入退室の認証手段としてユーザーの指紋を登録して使用できます。 指紋認証をサポートするデバイスでユーザーの指紋情報を登録します。
+入退室の認証手段としてユーザーの指紋を登録して使用できます。指紋認証をサポートするデバイスでユーザーの指紋情報を登録します。
 
 :::note
 
@@ -178,7 +182,7 @@ keywords:
 
 3. <Cmd>Add Device</Cmd> ポップアップで、指紋登録デバイスを選択し、<Cmd>Yes</Cmd> をタップします。
 
-4. <Cmd>Scan Quality</Cmd> で指紋の品質を調整できます。 既定値は **80** です。 設定した品質レベルに達しない場合、指紋情報を登録できません。
+4. <Cmd>Scan Quality</Cmd> で指紋の品質を調整できます。既定値は **80** です。設定した品質レベルに達しない場合、指紋情報を登録できません。
 
 5. 画面右上の <IcAdd title='Add' /> をタップします。
 
@@ -196,7 +200,7 @@ keywords:
 
 * デバイス一覧には、BioStar X サーバーに登録された指紋認証デバイスのうち、指紋登録が可能なデバイスのみ表示されます。
 
-* 指紋を追加登録するには、手順 5 ～ 9 を繰り返します。 ユーザーごとに最大 10 個まで指紋を登録できます。
+* 指紋を追加登録するには、手順 5 ～ 9 を繰り返します。ユーザーごとに最大 10 個まで指紋を登録できます。
 
 * 登録した指紋を編集するには、該当する指紋クレデンシャルをタップして、上記の手順を繰り返します。
 
@@ -221,13 +225,13 @@ keywords:
 
 2. <Cmd>Device</Cmd> をタップし、IR フェイスを登録できるデバイスを選択して、<Cmd>Yes</Cmd> をタップします。
 
-3. 顔の位置、角度、距離に対する感度を設定するには、<Cmd>Face Pose Variation</Cmd> を調整します。 既定値は **4** です。 精度の高いIRフェイステンプレートを取得するには、高く設定します。
+3. 顔の位置、角度、距離に対する感度を設定するには、<Cmd>Face Pose Variation</Cmd> を調整します。既定値は **4** です。精度の高いIRフェイステンプレートを取得するには、高く設定します。
 
 4. 画面右上の <IcAdd title='Add' /> をタップします。
 
 5. 一覧に <Cmd>1st IR Face</Cmd> が追加されたら、それをタップします。
 
-6. 顔登録のポップアップが表示されたら、選択したデバイスで顔をスキャンします。 顔が認識されると、ポップアップに顔画像が表示されます。
+6. 顔登録のポップアップが表示されたら、選択したデバイスで顔をスキャンします。顔が認識されると、ポップアップに顔画像が表示されます。
 
    <Image src='/img/mobile/bsx-mobile-app-add-user-credential-ir-face-success.png' width='30%' alone />
 
@@ -262,7 +266,7 @@ keywords:
 
 ### 顔登録
 
-入退室の認証手段としてユーザーの顔を登録して使用できます。 顔登録は、ユーザーの顔をカメラで撮影して行う認証手段です。 BioStar X モバイルアプリでは、モバイル端末に保存された顔画像を読み込むか、カメラで撮影して顔を登録できます。また、顔認識対応デバイスで顔をスキャンして登録することもできます。
+入退室の認証手段としてユーザーの顔を登録して使用できます。顔登録は、ユーザーの顔をカメラで撮影して行う認証手段です。 BioStar X モバイルアプリでは、モバイル端末に保存された顔画像を読み込むか、カメラで撮影して顔を登録できます。また、顔認識対応デバイスで顔をスキャンして登録することもできます。
 
 1. <Cmd>Credential</Cmd> → <Cmd>Face</Cmd> をタップします。
 
@@ -298,7 +302,7 @@ keywords:
 
 * 登録した顔画像をプロフィール画像として使用するには、<Cmd>Use as Profile Image?</Cmd> オプションを有効にします。
 
-* モバイル端末のカメラで顔写真を撮影する場合や、保存済みの写真を読み込む場合は、アクセス権限が必要です。 権限リクエストのポップアップで許可を選ぶと、顔写真を登録できます。
+* モバイル端末のカメラで顔写真を撮影する場合や、保存済みの写真を読み込む場合は、アクセス権限が必要です。権限リクエストのポップアップで許可を選ぶと、顔写真を登録できます。
 
 * 登録した顔を編集するには、該当する顔クレデンシャルをタップして、上記の手順を繰り返します。
 
@@ -309,7 +313,7 @@ keywords:
 
 ### 入退室カードの登録
 
-入退室用の認証情報として、新しい入退室カードを登録したり、登録済みの入退室カードを割り当てたりできます。 入退室カードの登録には、カードリーダーでスキャンして登録する方法、登録済みのカードを割り当てる方法、カード番号を手動で入力する方法があります。
+入退室用の認証情報として、新しい入退室カードを登録したり、登録済みの入退室カードを割り当てたりできます。入退室カードの登録には、カードリーダーでスキャンして登録する方法、登録済みのカードを割り当てる方法、カード番号を手動で入力する方法があります。
 
 #### CSN カード
 
@@ -323,11 +327,11 @@ keywords:
 
    <Image src='/img/mobile/bsx-mobile-app-add-user-credential-csn.png' className='none' width='70%' alone />
 
-   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>：カードリーダーでカードをスキャンして登録できます。 <Cmd>Device</Cmd> でカードを読み取るデバイスを選択し、<Cmd>Read Card</Cmd> をタップします。 カードリーダーにカードをかざしてスキャンします。 カードのスキャンに成功すると、<Cmd>Card ID</Cmd> にカード番号が入力されます。
+   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>：カードリーダーでカードをスキャンして登録できます。 <Cmd>Device</Cmd> でカードを読み取るデバイスを選択し、<Cmd>Read Card</Cmd> をタップします。カードリーダーにカードをかざしてスキャンします。カードのスキャンに成功すると、<Cmd>Card ID</Cmd> にカード番号が入力されます。
 
-   * <Num num='2' /> <Cmd>Assign Card</Cmd>：登録済みの入退室カードをユーザーに割り当てられます。 一覧から登録済みのカード番号を 1 つ選択します。
+   * <Num num='2' /> <Cmd>Assign Card</Cmd>：登録済みの入退室カードをユーザーに割り当てられます。一覧から登録済みのカード番号を 1 つ選択します。
 
-   * <Num num='3' /> <Cmd>Enter Manually</Cmd>：カード番号を手動で入力できます。 <Cmd>Card ID</Cmd> 入力欄にカード番号を入力します。 ユーザー ID をカード番号として使用するには、<Cmd>Use User ID</Cmd> をタップします。
+   * <Num num='3' /> <Cmd>Enter Manually</Cmd>：カード番号を手動で入力できます。 <Cmd>Card ID</Cmd> 入力欄にカード番号を入力します。ユーザー ID をカード番号として使用するには、<Cmd>Use User ID</Cmd> をタップします。
 
 5. カード登録を完了するには、画面右上の <Cmd>OK</Cmd> をタップします。
 
@@ -355,9 +359,9 @@ keywords:
 
    <Image src='/img/mobile/bsx-mobile-app-add-user-credential-wiegand.png' className='none' width='70%' alone />
 
-   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>：カードリーダーでカードをスキャンして登録できます。 <Cmd>Device</Cmd> でカードを読み取るデバイスを選択し、<Cmd>Read Card</Cmd> をタップします。 カードリーダーにカードをかざしてスキャンします。 カードのスキャンに成功すると、<Cmd>Facility Code</Cmd> と <Cmd>Card ID</Cmd> にカード番号が入力されます。
+   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>：カードリーダーでカードをスキャンして登録できます。 <Cmd>Device</Cmd> でカードを読み取るデバイスを選択し、<Cmd>Read Card</Cmd> をタップします。カードリーダーにカードをかざしてスキャンします。カードのスキャンに成功すると、<Cmd>Facility Code</Cmd> と <Cmd>Card ID</Cmd> にカード番号が入力されます。
 
-   * <Num num='2' /> <Cmd>Assign Card</Cmd>：登録済みの入退室カードをユーザーに割り当てられます。 一覧から登録済みのカード番号を 1 つ選択します。
+   * <Num num='2' /> <Cmd>Assign Card</Cmd>：登録済みの入退室カードをユーザーに割り当てられます。一覧から登録済みのカード番号を 1 つ選択します。
 
    * <Num num='3' /> <Cmd>Enter Manually</Cmd>：カード番号を手動で入力できます。 <Cmd>Facility Code</Cmd> と <Cmd>Card ID</Cmd> の入力欄にカード番号を入力します。
 
@@ -377,13 +381,13 @@ keywords:
 
 :::info
 
-* スマートカードを発行するには、正しいカードフォーマットを設定する必要があります。 カード形式の詳細は、<DocLink docId='platform/biostar_x/settings-credential-smart-format' target='_blank' /> を参照してください。
+* スマートカードを発行するには、正しいカードフォーマットを設定する必要があります。カード形式の詳細は、<DocLink docId='platform/biostar_x/settings-credential-smart-format' target='_blank' /> を参照してください。
 
-* スマートカードに保存されるユーザー情報は **BioStar X** に保存された情報を使用します。 変更したユーザー情報を保存しない場合、スマートカードに誤ったユーザー情報が保存される可能性があります。 また、変更したユーザー情報をデバイスと同期しないと、デバイスが認証を実行できない場合があります。
+* スマートカードに保存されるユーザー情報は **BioStar X** に保存された情報を使用します。変更したユーザー情報を保存しない場合、スマートカードに誤ったユーザー情報が保存される可能性があります。また、変更したユーザー情報をデバイスと同期しないと、デバイスが認証を実行できない場合があります。
 
 * PIN 認証情報を追加するには、先に PIN を登録する必要があります。 PIN 登録の詳細は、<DocLink inner='#enrollPin' /> を参照してください。
 
-* 指紋クレデンシャル情報を追加するには、先に指紋を登録する必要があります。 指紋登録の詳細は、<DocLink inner='#enrollFingerprint' /> を参照してください。
+* 指紋クレデンシャル情報を追加するには、先に指紋を登録する必要があります。指紋登録の詳細は、<DocLink inner='#enrollFingerprint' /> を参照してください。
 
 :::
 
@@ -503,7 +507,7 @@ keywords:
 
 * <Cmd>Credential</Cmd> セクションでは、各クレデンシャルの登録数を確認できます。
 
-* 登録済みクレデンシャルを削除するには、削除するクレデンシャル項目をタップし、画面右上の <IcAppDelete title='Delete' /> をタップします。 削除するクレデンシャルを選択し、<Cmd>OK</Cmd> をタップします。
+* 登録済みクレデンシャルを削除するには、削除するクレデンシャル項目をタップし、画面右上の <IcAppDelete title='Delete' /> をタップします。削除するクレデンシャルを選択し、<Cmd>OK</Cmd> をタップします。
 
   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-remove.png' width='70%' className='none' alone />
 
@@ -518,7 +522,7 @@ BioStar X でのユーザー登録と管理の詳細は、<DocLink docId='platfo
 
 ## ユーザー情報の確認
 
-登録したユーザーは、ユーザー一覧で確認できます。 各ユーザーには、次の情報が含まれます。
+登録したユーザーは、ユーザー一覧で確認できます。各ユーザーには、次の情報が含まれます。
 
 <Image src='/img/mobile/bsx-mobile-app-all-users-info.png' width='500px' className='none' alone />
 

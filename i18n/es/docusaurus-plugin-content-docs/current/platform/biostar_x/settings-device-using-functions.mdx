@@ -1,12 +1,12 @@
 ---
 id: settings-device-using-functions
 title: Usar la Función de Administración de Dispositivos
-description: Instrucciones para reconectar el dispositivo, sincronizar y editar información por lotes.
+description: Instrucciones para reconectar dispositivos, sincronizar, editar en lote, eliminar, y exportar o importar ajustes.
 keywords:
   - Dispositivo
 ---
 
-Esta guía explica cómo usar funciones adicionales de **BioStar X**. Ofrece opciones para reconectar el dispositivo, sincronizar, editar información por lotes y eliminar el dispositivo.
+Esta guía explica cómo usar funciones adicionales de **BioStar X**. Esta sección explica cómo reconectar dispositivos, sincronizar, editar en lote la información de los dispositivos, eliminar dispositivos, y exportar o importar ajustes. También explica cómo eliminar certificados de comunicación segura al eliminar dispositivos.
 
 ## Administrar un dispositivo
 
@@ -14,7 +14,7 @@ Siga los pasos a continuación para administrar un solo dispositivo.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
 3. Selecciona el dispositivo en la lista <Cmd sid='menu.device.allDeviceGroups' product='2' /> y haz clic con el botón derecho. O haga clic en la casilla de verificación junto al dispositivo que desea en la lista de dispositivos.
 
@@ -24,13 +24,13 @@ Siga los pasos a continuación para administrar un solo dispositivo.
 
 Consulte las funciones que se indican a continuación. Las funciones disponibles pueden variar según el dispositivo.
 
-* <Cmd sid='button.reconnect' product='2' />: Reconectar el dispositivo seleccionado. Esta opción está disponible cuando se selecciona un dispositivo. Por lo general, el dispositivo vuelve a estar en línea automáticamente, sin necesidad de intervención del usuario, una vez restablecida la conexión de red. Utiliza esta función cuando el dispositivo no se reconecte automáticamente después de restablecerse la red.
+* <Cmd sid='button.reconnect' product='2' />: Reconectar el dispositivo seleccionado. Esta opción está disponible cuando se selecciona un dispositivo. En general, el dispositivo vuelve automáticamente a estar en línea cuando se restablece la conexión de red, sin intervención del usuario. Use esta característica cuando el dispositivo no se reconecte automáticamente después de restablecer la conexión de red.
 
-  :::info
+   :::info
 
-  Esta función no es compatible con los dispositivos conectados con la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />. Para obtener más información sobre el registro de dispositivos, consulte <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
+   Esta función no es compatible con los dispositivos conectados con la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />. Para obtener más información sobre el registro de dispositivos, consulte <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
 
-  :::
+   :::
 
 * <Cmd sid='button.syncDevice' product='2' />: Sincronizar toda la información de usuario registrada en el dispositivo con **BioStar X**. Esta sincronización se basa en la base de datos de **BioStar X** y eliminará la información de usuario registrada únicamente en el dispositivo. Utiliza la función <Cmd sid='button.manageUsersInDevice' product='2' /> para cargar la información de usuario en **BioStar X**.
 
@@ -42,7 +42,7 @@ Consulte las funciones que se indican a continuación. Las funciones disponibles
 
 * <Cmd sid='device.menu.reboot' product='2' />: Reiniciar el dispositivo seleccionado. Utiliza esta función cuando el dispositivo no funcione con normalidad.
 
-* <Cmd sid='button.deleteDevice' product='2' />: Eliminar el dispositivo seleccionado de la lista. Los dispositivos configurados como puertas o zonas no se pueden eliminar.
+* <Cmd sid='button.deleteDevice' product='2' />: Eliminar el dispositivo seleccionado de la lista. Los dispositivos configurados como puertas o zonas no se pueden eliminar. Para más información, consulte <DocLink inner='#deleteDevice' />.
 
 :::info
 
@@ -52,13 +52,13 @@ Consulte las funciones que se indican a continuación. Las funciones disponibles
 
 :::
 
-## Administrar varios dispositivos
+## Administrar varios dispositivos {/* #batchEdit */}
 
 Siga los pasos a continuación para administrar uno o más dispositivos.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
 3. Haga clic en la casilla de verificación junto al dispositivo que desea en la lista de dispositivos. Puede seleccionar 1 o más dispositivos.
 
@@ -74,7 +74,7 @@ Consulte las funciones que se indican a continuación. Las funciones disponibles
 
   <Image src='/img/biostarx-setting-device-batch-edit.png' />
 
-  :::info
+   :::info
 
   * Los detalles que se muestran en la ventana <Cmd sid='device.batchEdit' product='2' /> pueden variar según los tipos de dispositivo seleccionados.
 
@@ -82,11 +82,169 @@ Consulte las funciones que se indican a continuación. Las funciones disponibles
 
   * <Cmd sid='device.info.authenticationMode' product='2' /> solo se puede editar por lotes cuando se seleccionan dispositivos con el mismo nombre de modelo.
 
-  :::
+   :::
 
 * <Cmd sid='button.firmwareUpgrade' product='2' />: Actualizar fácilmente el firmware del dispositivo. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />.
 
-* <Cmd sid='button.deleteDevice' product='2' />: Eliminar el dispositivo seleccionado de la lista. Los dispositivos configurados como puertas o zonas no se pueden eliminar.
+* <Cmd sid='button.deleteDevice' product='2' />: Eliminar el dispositivo seleccionado de la lista. Los dispositivos configurados como puertas o zonas no se pueden eliminar. Para más información, consulte <DocLink inner='#deleteDevice' />.
+
+## Eliminar dispositivos {/* #deleteDevice */}
+
+Use <Cmd sid='button.deleteDevice' product='2' /> para eliminar dispositivos de la lista. Las opciones que aparecen durante la eliminación dependen de si <Cmd sid='setting.sever.secure.comm.menu' product='2' /> está habilitado.
+
+### Cuando la comunicación segura está deshabilitada
+
+Cuando <Cmd sid='setting.sever.secure.comm.menu' product='2' /> está establecido en <Cmd sid="common.notUse" product='2' />, elimine el dispositivo seleccionado sin opciones adicionales.
+
+<Image src='/img/biostarx-setting-device-delete-none-check.png' />
+
+### Cuando la comunicación segura está habilitada
+
+Cuando <Cmd sid='setting.sever.secure.comm.menu' product='2' /> está establecido en <Cmd sid="common.use" product='2' />, el cuadro de diálogo <Cmd sid='device.deleteDeviceConfirmTitle' product='2' /> muestra la opción <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' />.
+
+<Image src='/img/biostarx-setting-device-delete-check.png' />
+
+* Si <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> está desmarcada (predeterminado), elimine solo el dispositivo y conserve el certificado.
+
+* Si <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> está seleccionada, elimine también el certificado de comunicación segura almacenado en el dispositivo. Use esta opción para conectar el dispositivo a otro servidor **BioStar X** después de eliminarlo.
+
+:::caution
+
+Si un dispositivo se desconecta de **BioStar X**, no puede eliminar su certificado. Si <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> está seleccionada, falla la eliminación del dispositivo. Para eliminar el dispositivo, desmarque la opción o reconecte el dispositivo y vuelva a intentarlo.
+
+:::
+
+:::info
+
+* Si <Cmd sid='setting.sever.secure.comm.menu' product='2' /> está habilitado, al eliminar el dispositivo sin seleccionar <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' />, el certificado permanece en el dispositivo. Luego, cambie la opción <Cmd sid='setting.sever.secure.comm.menu' product='2' /> a <Cmd sid="common.notUse" product='2' /> y vuelva a inscribir el dispositivo en **BioStar X**. El dispositivo no se conecta porque el certificado permanece en el dispositivo. Si usa el certificado predeterminado, cambie la opción <Cmd sid='setting.sever.secure.comm.menu' product='2' /> de nuevo a <Cmd sid='common.use' product='2' />.
+
+* Si todos los dispositivos seleccionados son dispositivos secundarios o no admiten comunicación segura, elimine los dispositivos sin la opción <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' />.
+
+* La opción <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> aparece solo cuando <Cmd sid='setting.sever.secure.comm.menu' product='2' /> está habilitado. Para más información, consulte <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />.
+
+:::
+
+## Exportar/importar la configuración del dispositivo {/* #exportImportDeviceConfig */}
+
+Exporte la configuración de un dispositivo a un archivo y luego impórtela y aplíquela a otro dispositivo del mismo modelo. En lugar de repetir la configuración en varios dispositivos, cree un archivo desde uno configurado y aplíquelo a los demás.
+
+:::info
+
+* El mismo modelo significa que el nombre detallado del modelo y el número de parte coinciden (por ejemplo, XXX en XPD2-XXX).
+
+* La característica de exportar/importar la configuración está disponible para administradores con permisos completos para los ajustes del dispositivo. Para obtener más información sobre la configuración de permisos de administrador, consulte <DocLink docId='platform/biostar_x/settings-manage-account' />.
+
+:::
+
+### Exportar la configuración del dispositivo {/* #exportDeviceConfig */}
+
+Para descargar las configuraciones de un solo dispositivo como archivo, siga estos pasos.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+
+3. En la lista de dispositivos, seleccione la casilla del dispositivo cuya configuración se exportará. Seleccione solo un dispositivo.
+
+4. Haga clic en <IcMoreW title='More' /> → <Cmd sid='device.templateExport.label' product='2' /> en la parte superior de la lista de dispositivos.
+
+   <Image src='/img/biostarx-setting-device-export-settings.png' />
+
+5. Cuando aparezca la ventana de descarga, guarde el archivo de configuración localmente.
+
+:::caution
+
+La exportación de configuraciones no está disponible para los siguientes dispositivos.
+
+* Dispositivos desconectados de **BioStar X** o con tiempo de espera de respuesta
+
+* Dispositivo Virtual
+
+* Dispositivos sin modo de comunicación RS-485 (por ejemplo, dispositivos Wiegand, módulos de E/S, interfaz de puerta, módulos de puerta, módulos Secure y antena/lector OSDP)
+
+:::
+
+:::info
+
+* No puede ejecutar esta característica a menos que seleccione exactamente un dispositivo.
+
+* El sistema establece el nombre del archivo automáticamente en este orden: nombre del modelo, ID del dispositivo, modo de comunicación RS-485 (Master/Default/Slave) y fecha de exportación. La fecha sigue el formato de fecha establecido en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.preferences.root' />. 
+
+   Por ejemplo, si el nombre del modelo es BS3-DB, el ID del dispositivo es 538001234, el modo de comunicación serial es <Cmd sid='device.rs485.master' product='2' />, y la fecha de exportación es 6/23/2026, el archivo se guarda como `BS3-DB_538001234_Master_20260623.json`.
+
+:::
+
+:::note
+
+**Configuraciones excluidas de la exportación** <Anchor id='exportExcludedsettings' />
+
+El archivo de exportación no incluye las siguientes configuraciones porque deben ser únicas por dispositivo, se guardan solo en el dispositivo o contienen información confidencial, como credenciales.
+
+* Configuraciones específicas del dispositivo: <Cmd sid='device.info.name' product='2' className='normal' />, <Cmd sid='device.info.group' product='2' className='normal' />, red cableada e inalámbrica, conexión al servidor, identificador OSDP y <Cmd sid='device.info.triggerNAction' product='2' className='normal' />
+
+* Estas configuraciones se guardan solo en el dispositivo. No es posible trasladarlas a otro dispositivo: recursos de idioma, pantalla de inicio y opciones de sonido en <Cmd sid='device.info.displaySound' product='2' className='normal' />, la clave SCB para comunicación serial y opciones de video agregadas a BioStation 3 Max
+
+* Credenciales e información confidencial: nombres de usuario y contraseñas para el intercomunicador IP y RTSP, <Cmd sid='device.masterAdmin.title' product='2' className='normal' /> y la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' className='normal' />
+
+:::
+
+### Importar la configuración del dispositivo {/* #importDeviceConfig */}
+
+Para aplicar el archivo de configuración exportado a uno o más dispositivos del mismo modelo, siga estos pasos.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+
+3. En la lista de dispositivos, seleccione la casilla del dispositivo que recibirá las configuraciones. Seleccione uno o más dispositivos.
+
+4. Haga clic en <IcMoreW title='More' /> → <Cmd sid='device.templateImport.label' product='2' /> en la parte superior de la lista de dispositivos.
+
+   <Image src='/img/biostarx-setting-device-import-settings.png' />
+
+5. Cuando aparezca la ventana Abrir en el navegador web, seleccione el archivo de configuración guardado localmente.
+
+6. Cuando aparezca el mensaje de resultado de Importar configuraciones del dispositivo, revíselo y haga clic en <Cmd sid='button.ok' product='2' />.
+
+:::caution
+
+El sistema acepta como válidos los archivos de configuración creados en otros sitios o servidores, sin verificar el origen ni mostrar una advertencia. Verifique que una fuente confiable haya creado el archivo que importará.
+
+:::
+
+:::info
+
+Seleccione al menos un dispositivo para ejecutar esta característica.
+
+:::
+
+Al ejecutar Importar, el sistema verifica lo siguiente, en este orden, antes de aplicar la configuración. Si falla alguna verificación, el sistema no aplica las configuraciones y muestra el motivo.
+
+* Si todos los dispositivos seleccionados tienen el mismo nombre de modelo (incluido el número de parte)
+
+* Si el modo de comunicación RS-485 coincide entre los dispositivos seleccionados y el archivo
+
+* Si el nombre de modelo guardado en el archivo (incluido el número de parte) coincide con los nombres de modelo de los dispositivos seleccionados (incluido el número de parte)
+
+* Si alguno de los dispositivos seleccionados es un dispositivo virtual (Virtual Device)
+
+Si las verificaciones se completan, el sistema aplica las configuraciones, excepto [Configuraciones excluidas de la exportación](#exportExcludedsettings), a dispositivos seleccionados.
+
+:::info
+
+* Importar un archivo de un dispositivo no compatible pone la característica en Desactivado y desactiva las opciones habilitadas. Importar un archivo de un dispositivo compatible en uno no compatible omite la funcionalidad y aplica los ajustes restantes. En ambos casos, el sistema no marca la importación como fallida ni la agrega a la lista de fallas.
+
+* Los ajustes que requieren una licencia del dispositivo no se aplican a dispositivos sin esa licencia. Importar un archivo de un dispositivo sin licencia establece el ajuste en "Desactivado" y desactiva las opciones habilitadas. En ambos casos, el sistema no marca la importación como fallida ni la agrega a la lista de fallas.
+
+* El sistema muestra un mensaje de éxito después de que aplica los ajustes a todos los dispositivos. Si el sistema no aplica los ajustes, aparece un mensaje con el recuento de fallas y un enlace al CSV. El archivo enumera el ID, el nombre y el motivo de cada dispositivo con error (desconectado o porque los grupos de acceso bloquean los permisos de acceso completo).
+
+  > Por ejemplo, si ejecuta una importación a las 15:45:30 el 6/23/2026 y falla, el nombre del archivo es `Device_Template_Import_Error_20260623T154530.csv`.
+
+* También se incluyen los dispositivos CoreStation.
+
+* Vea el historial de exportación e importación de ajustes del dispositivo en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+
+:::
 
 ## Eliminar registros de eventos de un dispositivo {/* #deleteLogsFromDevice */}
 
@@ -94,7 +252,7 @@ Puede eliminar los registros de eventos almacenados en el dispositivo.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
 3. Haga clic en la casilla de verificación junto al dispositivo que desea en la lista de dispositivos. Puede seleccionar 1 o más dispositivos.
 
@@ -102,7 +260,7 @@ Puede eliminar los registros de eventos almacenados en el dispositivo.
 
    <Image src='/img/biostarx-setting-device-list-delete-log.png' />
 
-5. Si aparece un cuadro de advertencia, revise el mensaje y haga clic en el botón <Cmd sid='button.continue' product='2' />.
+5. Si aparece un cuadro de diálogo de advertencia, revise el mensaje y haga clic en el botón <Cmd sid='button.continue' product='2' />.
 
 Cuando se complete la eliminación de los registros de eventos del dispositivo, aparecerá un mensaje emergente. Vea la cantidad de dispositivos objetivo, los exitosos y los que fallaron.
 
@@ -116,7 +274,7 @@ Los registros de eventos eliminados de un dispositivo no se pueden recuperar ni 
 
 * Solo los usuarios con el permiso <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> pueden usar esta función.
 
-* Vea el historial de eliminación de registros de eventos del dispositivo en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+* Vea el historial de eliminación de registros de eventos del dispositivo en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -130,7 +288,7 @@ Guarde la lista de dispositivos como un archivo PDF o SVG para imprimir.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
 3. Haga clic en <IcMoreW title='More' /> en la parte superior de la lista de dispositivos.
 
@@ -146,11 +304,11 @@ Imprima el archivo PDF o SVG que se abre en el navegador.
 
 ### Configuración de la columna (Columna) de la lista de dispositivos
 
-Puede cambiar la configuración de la columna (Columna) que se muestra en la lista de dispositivos. En la configuración de columnas, seleccione las columnas que se mostrarán o cambie su orden.
+Puede cambiar la configuración de la columna (Columna) que se muestra en la lista de dispositivos. En los ajustes de columnas, seleccione las columnas que aparecerán o cambie su orden.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
 3. Haga clic en <IcMoreW title='More' /> en la parte superior de la lista de dispositivos.
 
@@ -166,6 +324,6 @@ Puede cambiar la configuración de la columna (Columna) que se muestra en la lis
 
 :::info
 
-Haz clic en el botón <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para inicializar la configuración de columnas.
+Haz clic en <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para inicializar la configuración de columnas.
 
 :::

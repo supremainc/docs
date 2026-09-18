@@ -7,7 +7,7 @@ keywords:
   - 権限
 ---
 
-組織のセキュリティポリシーに応じて、ユーザーごとに **BioStar X** の運用権限と入退室権限を区別して設定できます。 管理者グレードで主要メニューへのアクセスを制限し、入退室グループで物理的スペースへのアクセスを制御できます。 さらに、IP アドレス制限と多要素認証によりセキュリティを強化できます。
+組織のセキュリティポリシーに応じて、ユーザーごとに **BioStar X** の運用権限と入退室権限を区別して設定できます。管理者グレードで主要メニューへのアクセスを制限し、入退室グループで物理的スペースへのアクセスを制御できます。さらに、IP アドレス制限と多要素認証によりセキュリティを強化できます。
 
 <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> ページに移動し、次の 2 つの方法で入退室権限を設定します。
 
@@ -15,13 +15,13 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <EnterUserPage />
 
-<Cmd sid='team.user.permission.title' /> セクションで設定できる項目は次のとおりです。 各項目の説明を参考に適切なユーザー権限を設定します。
+<Cmd sid='team.user.permission.title' /> セクションで設定できる項目は次のとおりです。各項目の説明を参考に適切なユーザー権限を設定します。
 
 <Image src='/img/biostarx-new-user-permission.png' />
 
 ## 管理者グレードを選択 {/* #operatorLevel */}
 
-管理者グレードによってアクセスできるメニューが制限されます。 <Cmd sid='team.user.permission.title' /> セクションの <Cmd sid='user.bioStarOperator' product='2' /> 項目で、ユーザーの管理者グレードを選択します。 ユーザーに割り当てられる管理者グレードは次の一覧を参照してください。
+管理者グレードによってアクセスできるメニューが制限されます。 <Cmd sid='team.user.permission.title' /> セクションの <Cmd sid='user.bioStarOperator' product='2' /> 項目で、ユーザーの管理者グレードを選択します。ユーザーに割り当てられる管理者グレードは次の一覧を参照してください。
 
 import AccountList from '../../common/_account-list.mdx';
 
@@ -37,7 +37,7 @@ import AccountList from '../../common/_account-list.mdx';
 
 **ID とパスワードを設定する際の注意事項**
 
-* ID は英字と数字の組み合わせで 8～32 文字以内に設定します。
+* IDは英字、数字、ピリオド(`.`)を組み合わせて8\~32文字以内に設定してください。ただし、アポストロフィ(`'`)は使用できません。
 
 * パスワードポリシーの設定に関する詳細は<DocLink docId='platform/biostar_x/settings-system-security#password-policy-configuration' />を参照してください。
 
@@ -67,7 +67,7 @@ import AccountList from '../../common/_account-list.mdx';
 
 5. すべての項目を入力したら <Cmd sid='common.button.change' /> ボタンをクリックします。
 
-## 多要素認証を設定 {/* #multiFactorAuth */}
+## 多要素認証の設定 {/* #multiFactorAuth */}
 
 <Cmd sid='common.fingerprintLogin' product='2' /> を有効にすると、ユーザーは **BioStar X** にログインする際に指紋認証を追加してログインできます。
 
@@ -77,9 +77,9 @@ import AccountList from '../../common/_account-list.mdx';
 
 :::
 
-## ユーザー IP アドレスでログインを設定 {/* #userIp */}
+## ユーザーIPアドレスによるログイン設定 {/* #userIp */}
 
-ユーザー IP アドレスを登録すると、アカウントに登録した IP 情報と一致する場合にのみ PC にログインできます。 これによりセキュリティが向上します。 <Cmd sid='team.user.permission.title' /> セクションの <Cmd sid='team.user.permission.userIp' /> 項目にユーザーの IP アドレスを入力します。
+ユーザー IP アドレスを登録すると、アカウントに登録した IP 情報と一致する場合にのみ PC にログインできます。これによりセキュリティが向上します。 <Cmd sid='team.user.permission.title' /> セクションの <Cmd sid='team.user.permission.userIp' /> 項目にユーザーの IP アドレスを入力します。
 
 :::info
 

@@ -1,0 +1,123 @@
+---
+id: add-user-by-scanning-passport
+title: Inscribir Y Editar Usuarios Al Escanear Un ID
+description: Esta guía explica cómo escanear un ID para obtener automáticamente la información del usuario e inscribirlo o editarlo.
+---
+
+En lugar de ingresar los datos del usuario uno por uno, escanea un ID para obtener el nombre y la foto del ID del usuario y, luego, inscribe o edita al usuario.
+
+## Antes de comenzar
+
+* Conecta el escáner de ID DESKO a la PC cliente para usar Escanear ID.
+
+* Antes de inscribir a un usuario mediante un escaneo de ID, selecciona los datos que se obtendrán del ID. Para obtener más información sobre los ajustes de Escanear ID, consulta <DocLink docId='platform/biostar_x/settings-account-scan-passport' />.
+
+:::info
+
+La característica <Cmd sid='button.passportScan' product='2' /> actualmente solo admite escaneos de pasaporte.
+
+:::
+
+## Inscribir un usuario mediante un escaneo de ID
+
+1. Haz clic en <Cmd sid='shell.header.user' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='team.user.newUser' /> en la esquina superior derecha de la página <Cmd sid='shell.header.user' />.
+
+   <Image src='/img/biostarx-user-add-user-01.png' />
+
+3. Haz clic en <Cmd sid='button.passportScan' product='2' /> en la esquina superior derecha de la pantalla <Cmd sid='user.addNewUser' product='2' />.
+
+   <Image src='/img/biostarx-user-add-by-scanning-passport-btn.png' />
+
+4. Cuando aparezca la ventana <Cmd sid='user.passportScan.dialog.title' product='2' />, coloca el ID en el escáner.
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+5. Después de que aparezca el mensaje de escaneo de ID exitoso, selecciona si inscribes la foto del ID como credencial facial.
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::note
+
+   Este mensaje aparece cuando <Cmd sid='setting.passportScan.face' /> se establece en <Cmd sid='setting.passportScan.faceAlwaysConfirm' /> en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.passportScan' />. Si establece la opción <Cmd sid='setting.passportScan.faceDoNotAsk' />, este mensaje no aparece y el sistema inscribe la foto de inmediato como credencial facial.
+
+   :::
+
+6. Revisa la información del escaneo de ID y edítala si es necesario.
+
+7. Haz clic en <Cmd sid='user.save' product='2' /> en la esquina superior derecha de la pantalla para guardar al usuario.
+
+## Editar un usuario mediante un escaneo de ID
+
+1. Haz clic en <Cmd sid='shell.header.user' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. En la lista de usuarios, haz doble clic en el usuario para editarlo mediante un escaneo de ID.
+
+3. Haz clic en <Cmd sid='button.passportScan' product='2' /> en la esquina superior derecha de la pantalla de edición de usuario.
+
+   <Image src='/img/biostarx-user-edit-by-scanning-passport-btn.png' />
+
+4. Cuando aparezca la ventana <Cmd sid='user.passportScan.dialog.title' product='2' />, coloca el ID en el escáner.
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+5. Después de que aparezca el mensaje de escaneo de ID exitoso, selecciona si inscribes la foto del ID como credencial facial.
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::note
+
+   Este mensaje aparece cuando <Cmd sid='setting.passportScan.face' /> se establece en <Cmd sid='setting.passportScan.faceAlwaysConfirm' /> en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.passportScan' />. Si establece la opción <Cmd sid='setting.passportScan.faceDoNotAsk' />, este mensaje no aparece y el sistema inscribe la foto de inmediato como credencial facial.
+
+   :::
+
+6. Revisa la información del escaneo de ID y edítala si es necesario.
+
+7. Haz clic en <Cmd sid='user.save' product='2' /> en la esquina superior derecha de la pantalla para guardar las actualizaciones del escaneo.
+
+:::info
+
+Si el usuario tiene 2 o más credenciales faciales inscritas, la edición mediante un escaneo de ID sobrescribe la primera credencial facial inscrita.
+
+:::
+
+## Mensajes de error
+
+Si ocurre un problema al escanear un ID, el sistema muestra un mensaje con la causa y la solución. Usa la información a continuación para resolver el error.
+
+### Falló el escaneo
+
+Si ocurre un problema cuando el sistema lee automáticamente el ID en el escáner, aparece uno de los siguientes mensajes.
+
+| Causa | Mensaje de error |
+| --- | --- |
+| Característica de seguridad del ID (patrón UV, etc.) la verificación falló | <Cmd sid='user.passportScan.error.invalidPassport' product='2' /> |
+| El sistema no reconoció el ID dentro del tiempo especificado | <Cmd sid='user.passportScan.error.timeout' product='2' /> |
+| Otros errores de escaneo, como que el ID se mueva durante el escaneo o falle la detección de páginas | <Cmd sid='user.passportScan.error.cannotScan' product='2' /> |
+
+Si aparece este mensaje, haga clic en <Cmd sid='button.recognizePassport' product='2' /> y escanee de nuevo. Comprueba que el ID esté colocado correctamente en el escáner y vuelve a intentarlo.
+
+:::info
+
+Haga clic en <Cmd sid='button.recognizePassport' product='2' /> para reiniciar el reconocimiento automático siguiendo las instrucciones de <Cmd sid='user.passportScan.scanning.title' product='2' />.
+
+:::
+
+### Error de conexión del escáner
+
+Si falla la conexión del escáner, aparece el siguiente mensaje. Este error no incluye un botón para reintentar. Siga las instrucciones y, luego, haga clic en <Cmd sid='button.passportScan' product='2' /> de nuevo para iniciar el escaneo desde el principio.
+
+| Escenario | Mensaje de error | Solución |
+| --- | --- | --- |
+| El escáner no está conectado a la PC cliente | <Cmd sid='user.passportScan.scannerNotFound.description' product='2' /> | Verifique la conexión entre el Escáner de ID y la PC cliente. |
+
+### Agente USB requerido
+
+Instale la versión más reciente del Agente USB antes de usar el Escáner de ID. Si falta el Agente USB o está desactualizado, aparece un cuadro de diálogo de error después de hacer clic en el botón <Cmd sid='button.passportScan' product='2' />.
+
+<Image src='/img/biostarx-user-scan-passport-error-usb-agent.png' />
+
+* <Cmd sid='button.cancel' product='2' />: Cierre la ventana de error y no escanee.
+
+* <Cmd sid='button.goToUsbAgentSettings' product='2' />: Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' />. En esa pantalla, actualice el Agente USB a la versión más reciente y luego vuelva a escanear.

@@ -13,7 +13,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
 
-2. 画面左のサイドバーで <IcSet /> ボタンをクリックします。
+2. 画面左のサイドバーで <IcSet /> <Cmd sid='common.setting' product='2' /> ボタンをクリックします。
 
    <Image src='/img/biostarx-tna-access-btn.png' />
 
@@ -25,7 +25,7 @@ keywords:
 
 ### <Cmd sid='setting.devices' product='2' className='normal' />
 
-勤怠管理に使用できる端末の一覧です。 端末を勤怠管理用に登録するには、対象端末を選択して <Cmd sid='setting.register' product='2' /> ボタンをクリックします。
+勤怠管理に使用できる端末の一覧です。端末を勤怠管理用に登録するには、対象端末を選択して <Cmd sid='setting.register' product='2' /> ボタンをクリックします。
 
 <Image src='/img/biostarx-tna-settings-unregister-list.png' />
 
@@ -37,11 +37,11 @@ keywords:
 
   <Image src='/img/biostarx-tna-settings-register-list.png' />
 
-* 登録済み端末の勤怠設定を編集するには、<Cmd sid='setting.setting' product='2' /> ボタンをクリックします。 勤怠設定の詳細については<DocLink docId='platform/biostar_x/settings-device-details-advanced#attendance-management' />をご参照ください。
+* 登録済み端末の勤怠設定を編集するには、<Cmd sid='setting.setting' product='2' /> ボタンをクリックします。勤怠設定の詳細については<DocLink docId='platform/biostar_x/settings-device-details-advanced#attendance-management' />をご参照ください。
 
   <Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
 
-  <Cmd sid='setting.typeCode' product='2' /> は、<Cmd sid='device.tna.eventKey' product='2' /> と勤怠イベント種別をマッピングする設定です。 勤怠イベントの種類は次のとおりです。
+  <Cmd sid='setting.typeCode' product='2' /> は、<Cmd sid='device.tna.eventKey' product='2' /> と勤怠イベント種別をマッピングする設定です。勤怠イベントの種類は次のとおりです。
 
   * <Cmd sid='PUNCH_TYPE_CHECK_IN' product='2' />
 
@@ -59,7 +59,9 @@ keywords:
 
 * 端末が接続されている状態でのみ、端末の勤怠設定を編集できます。
 
-* <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> メニューで登録した端末を削除すると、登録された勤怠管理端末も自動的に削除されます。
+* <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> メニューで登録した端末を削除すると、システムは登録済みの勤怠管理端末も自動的に削除します。
+
+* 端末で <Cmd sid='device.info.multiFaceAuth.label' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定すると、勤怠管理に使用できません。 <Cmd sid='device.info.multiFaceAuth.label' product='2' /> について詳しくは、<DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />を参照してください。
 
 :::
 
@@ -81,6 +83,6 @@ import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
 
 ### <Cmd sid='tna.settings.punchlogs.optionTitle' product='2' className='normal' />
 
-勤怠記録を保存する期間を設定できます。 <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> オプションを <Cmd sid='common.active' product='2' /> に設定し、期間を入力します。 設定を保存するには、<Cmd sid='tna.settings.apply' product='2' /> をクリックします。
+勤怠記録を保存する期間を設定できます。 <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> オプションを <Cmd sid='common.active' product='2' /> に設定し、期間を入力します。設定を保存するには、<Cmd sid='tna.settings.apply' product='2' /> をクリックします。
 
 <Image src='/img/biostarx-tna-settings-save-period.png' />

@@ -1,7 +1,7 @@
 ---
 id: add-sub-db
 title: 補助データベースを追加する
-description: 通信サーバーを追加した際にメインサーバーの負荷を軽減するため、通信サーバーと連携する補助データベースを追加して接続する方法を説明します。
+description: マルチ通信サーバーを追加した際にメインサーバーの負荷を軽減するため、マルチ通信サーバーと連携する補助データベースを追加して接続する方法を説明します。
 keywords:
   - データベース
   - 追加
@@ -11,13 +11,13 @@ keywords:
 import DbQueryCreate from "../../common/_bsx-sub-db-create-table-query-mariadb.mdx";
 import DbQueryCreateSQL from "../../common/_bsx-sub-db-create-table-query-mssql.mdx";
 
-通信サーバーを追加した際にメインサーバーの負荷を軽減するため、通信サーバーと連携する補助データベースを追加して接続する方法を説明します。
+マルチ通信サーバーを追加した際にメインサーバーの負荷を軽減するため、マルチ通信サーバーと連携する補助データベースを追加して接続する方法を説明します。
 
 :::info
 
-* 補助データベースを追加するには **マルチ通信サーバー** ライセンスが必要です。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+* 補助データベースを追加するには **マルチ通信サーバー** ライセンスが必要です。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
-* 通信サーバーのインストールの詳細については<DocLink docId='platform/biostar_x/install-communication-server' />をご参照ください。
+* マルチ通信サーバーのインストールの詳細については<DocLink docId='platform/biostar_x/install-communication-server' />をご参照ください。
 
 :::
 
@@ -102,7 +102,7 @@ MariaDB を使用する環境でデータベース間通信に IP アドレス�
 
 ## 補助データベースを追加 {/* #add-sub-db */}
 
-補助データベースを追加する方法を説明します。 使用するデータベースの種類に応じて、MariaDB と SQL Server の 2 通りの方法があります。
+補助データベースを追加する方法を説明します。使用するデータベースの種類に応じて、MariaDB と SQL Server の 2 通りの方法があります。
 
 ### MariaDB {/* #mariadb */}
 
@@ -167,7 +167,7 @@ INSTALL PLUGIN federated SONAME 'ha_federatedx';
 
 :::info
 
-MariaDB をインストールしたパス配下の *lib/plugin* フォルダーに *ha_federatedx.dll* ファイルがあるか確認してください。 通常、*C:\Program Files\MariaDB \{version}\lib\plugin* パスに dll ファイルが存在します。
+MariaDB をインストールしたパス配下の *lib/plugin* フォルダーに *ha_federatedx.dll* ファイルがあるか確認してください。通常、*C:\Program Files\MariaDB \{version}\lib\plugin* パスに dll ファイルが存在します。
 
 :::
 
@@ -185,7 +185,7 @@ CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>',
 SELECT * FROM mysql.servers;
 ```
 
-既に登録したサーバー名の Host、Port、DB、User、Password の情報を変更する必要がある場合は、`ALTER` 文で修正できます。 一部の情報のみを変更することもできます。
+既に登録したサーバー名の Host、Port、DB、User、Password の情報を変更する必要がある場合は、`ALTER` 文で修正できます。一部の情報のみを変更することもできます。
 
 ```sql
 ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
@@ -294,7 +294,7 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 
 #### 補助データベース権限付与
 
-1. sysadmin 権限を持つアカウントで補助データベースにテーブルおよびユーザーの User Mapping 接続が必要です。 このとき `db_owner` ロールの追加が必要です。
+1. sysadmin 権限を持つアカウントで補助データベースにテーブルおよびユーザーの User Mapping 接続が必要です。このとき `db_owner` ロールの追加が必要です。
 
    <Image src='/img/common/biostarx-subdb-user-mapping.png' alone />
 
@@ -347,7 +347,7 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 
 * 設定を完了すると、メインデータベースと補助データベースそれぞれに Linked Server 設定が自動で実行されます。
 
-* データベース情報を修正する際も、Linked Server 設定は自動で更新されます。 メインデータベースを修正すると、登録されているすべての補助データベースに対して Linked Server 設定が変更内容で反映されます。 補助データベースを修正すると、メインデータベースとその補助データベースのみに変更内容が反映されます。
+* データベース情報を修正する際も、Linked Server 設定は自動で更新されます。メインデータベースを修正すると、登録されているすべての補助データベースに対して Linked Server 設定が変更内容で反映されます。補助データベースを修正すると、メインデータベースとその補助データベースのみに変更内容が反映されます。
 
 :::
 
@@ -424,7 +424,7 @@ ORDER BY t.name;
 
 #### 補助データベースでクエリを実行
 
-先ほど生成した `CREATE SYNONYM` クエリをすべてコピーします。 追加する補助データベースサーバーに接続し、以下のようにクエリを作成して実行します。 補助データベースの AC スキーマ内の Synonyms に保存されます。
+先ほど生成した `CREATE SYNONYM` クエリをすべてコピーします。追加する補助データベースサーバーに接続し、以下のようにクエリを作成して実行します。補助データベースの AC スキーマ内の Synonyms に保存されます。
 
 ```sql
 use [<Sub DB AC Database>];

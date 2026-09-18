@@ -33,7 +33,7 @@ En la lista de puertas, el icono de estado te permite ver de un vistazo las cond
 
 | Ícono de estado | Descripción |
 | :-: | --- |
-| ![Door Error](/img/mobile/bsx-mobile-door-status-error.png) | La puerta tiene un problema. La puerta está en un estado anómalo, como un dispositivo desconectado, un error del servidor de comunicación o un error de sincronización. |
+| ![Door Error](/img/mobile/bsx-mobile-door-status-error.png) | La puerta tiene un problema. Estado anormal: el sistema perdió la conexión con el dispositivo asignado a la puerta. Ocurrió un error en Multi Communications Server o de sincronización. |
 | ![Door Opened](/img/mobile/bsx-mobile-door-status-unlock.png) | La puerta está abierta. |
 | ![Door Closed](/img/mobile/bsx-mobile-door-status-lock.png) | La puerta está cerrada. |
 | ![Door Alarm](/img/mobile/bsx-mobile-door-status-alarm.png) | Se ha producido una alarma en la puerta. |
@@ -56,9 +56,9 @@ En la lista de puertas, el icono de estado te permite ver de un vistazo las cond
 
 La función de control remoto de puertas te permite abrir o bloquear la puerta para permitir o bloquear el acceso.
 
-* <Cmd>Abrir</Cmd>: Abre temporalmente la puerta para permitir el acceso. La puerta se cierra automáticamente después del tiempo configurado.
+* <Cmd>Open</Cmd>: Abre temporalmente la puerta para permitir el acceso. La puerta se cierra automáticamente después del tiempo configurado.
 
-* <Cmd>Liberar</Cmd>: Configura la puerta para permitir el acceso solo a usuarios autenticados. El estado de la puerta cambia según el horario configurado para la puerta.
+* <Cmd>Release</Cmd>: Configura la puerta para permitir el acceso solo a usuarios autenticados. El estado de la puerta cambia según el horario configurado para la puerta.
 
 :::info
 
@@ -83,17 +83,17 @@ Cuando se necesita mayor seguridad o controlar el acceso durante mucho tiempo, b
 
 Toca <IcAirMore title='More' /> en el extremo derecho de la puerta para usar opciones de control adicionales.
 
-* <Cmd>Bloqueo manual</Cmd>: Bloquea la puerta manualmente para impedir el acceso. Esta función bloquea la puerta sin límite de tiempo. En este estado, el acceso queda bloqueado para todos los usuarios.
+* <Cmd>Manual Lock</Cmd>: Bloquea la puerta manualmente para impedir el acceso. Esta función bloquea la puerta sin límite de tiempo. En este estado, el acceso queda bloqueado para todos los usuarios.
 
-* <Cmd>Desbloqueo manual</Cmd>: Desbloquea la puerta manualmente para permitir el acceso. Esta función desbloquea la puerta sin límite de tiempo. En este estado, el acceso queda permitido para todos los usuarios.
+* <Cmd>Manual Unlock</Cmd>: Desbloquea la puerta manualmente para permitir el acceso. Esta función desbloquea la puerta sin límite de tiempo. En este estado, el acceso queda permitido para todos los usuarios.
 
-* <Cmd>Borrar alarma</Cmd>: Borra la alarma que se produjo en la puerta.
+* <Cmd>Clear Alarm</Cmd>: Borra la alarma que se produjo en la puerta.
 
-* <Cmd>Borrar APB</Cmd>: Borra el estado APB para todos los usuarios en la puerta seleccionada.
+* <Cmd>Clear APB</Cmd>: Borra el estado APB para todos los usuarios en la puerta seleccionada.
 
 :::info
 
-Después de bloquear o desbloquear una puerta manualmente, el estado de la puerta no cambia automáticamente. Por seguridad, usa <Cmd>Liberar</Cmd> para que la puerta funcione según el horario configurado.
+Después de bloquear o desbloquear una puerta manualmente, el estado de la puerta no cambia automáticamente. Por seguridad, usa <Cmd>Release</Cmd> para que la puerta funcione según el horario configurado.
 
 :::
 

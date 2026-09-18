@@ -35,7 +35,7 @@ Las licencias de código abierto y los términos de licencia correspondientes pa
 
 ### ffmpeg
 
-**BioStar X** includes ffmpeg ([https://ffmpeg.org](https://ffmpeg.org)) for video file conversion and probing. It ships two ffmpeg command-line binaries, *ffmpeg.exe* and *ffprobe.exe*; both are built from the single ffmpeg source tarball below (ffprobe is part of the ffmpeg project, not a separate component).
+**BioStar X** incluye ffmpeg ([https://ffmpeg.org](https://ffmpeg.org)) para convertir y sondear archivos de video. Incluye dos binarios de línea de comandos de ffmpeg: *ffmpeg.exe* y *ffprobe.exe*. Ambos se compilan a partir del tarball único de código fuente upstream de ffmpeg que se indica abajo (ffprobe forma parte del proyecto ffmpeg, no es un componente aparte).
 
 * Component: ffmpeg (ffmpeg.exe, ffprobe.exe)
 
@@ -43,7 +43,7 @@ Las licencias de código abierto y los términos de licencia correspondientes pa
 
 * License: GNU Lesser General Public License v2.1
 
-   Full text: see [COPYING.LGPLv2.1](/opensource/opensourcelicenses.txt)
+   Texto completo: consulte [COPYING.LGPLv2.1](/opensource/opensourcelicenses.txt)
 
 * Source code: ffmpeg-8.1.tar.xz
 
@@ -69,9 +69,9 @@ Las licencias de código abierto y los términos de licencia correspondientes pa
     --extra-ldflags="-static" 
 ```
 
-Modifications: None. Binary built from vanilla upstream source tarball.
+Modificaciones: ninguna. Binario compilado a partir del tarball de código fuente upstream sin modificaciones.
 
-Encoders used by **BioStar X**:
+Codificadores que usa **BioStar X**:
 
 * h264_mf (H.264 via Windows Media Foundation)
 
@@ -79,7 +79,7 @@ Encoders used by **BioStar X**:
 
 ### libmp3lame
 
-**BioStar X** uses libmp3lame for MP3 audio encoding.
+**BioStar X** usa libmp3lame para la codificación de audio MP3.
 
 * Component: libmp3lame (LAME MP3 Encoder)
 
@@ -87,7 +87,7 @@ Encoders used by **BioStar X**:
 
 * License: GNU Lesser General Public License v2.1
 
-   Full text: see [COPYING.LGPLv2.1](/opensource/opensourcelicenses.txt) (same LGPL v2.1 version as ffmpeg)
+   Texto completo: consulte [COPYING.LGPLv2.1](/opensource/opensourcelicenses.txt) (la misma versión LGPL v2.1 que ffmpeg)
 
 * Source code: lame-3.100.tar.gz
 
@@ -95,4 +95,4 @@ Encoders used by **BioStar X**:
 
 * SHA-256: ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e
 
-Modifications: None. Vanilla upstream source tarball, statically linked into both *ffmpeg.exe* and *ffprobe.exe* via `--enable-libmp3lame` at build time.
+Modificaciones: ninguna. Tarball de código fuente upstream sin modificaciones, vinculado estáticamente a *ffmpeg.exe* y *ffprobe.exe* con `--enable-libmp3lame` durante la compilación.
