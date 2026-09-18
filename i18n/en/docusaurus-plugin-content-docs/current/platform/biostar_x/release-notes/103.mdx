@@ -37,7 +37,7 @@ Release<Separator/>2026-09-21
 6. Added **Export/Import Device Configuration** feature
 
 {/* <Jira bss='BX-5702' /> [BDP-1343] Desfire EV2 Secure Messaging supported by Readers and Software */}
-7. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
+7. Supported EV2 Secure Messaging authentication for DESFire EV2 and EV3 cards.
 
 {/* <Jira bss='BX-5828' /> [BDP-1485] Batch Stop Action for Devices */}
 8. Added the ability to select and batch control multiple devices in **Monitoring**
@@ -47,7 +47,7 @@ Release<Separator/>2026-09-21
 9. Added support for Select All and group selection in the **Monitoring** event filter
 
 {/* <Jira bss='BX-5834' /> [BDP-1464] Batch Control of Doors and Elevators */}
-10. Added the ability to select and batch control multiple doors, elevators, and zones in **Monitoring**
+10. Added the ability to select and batch control multiple doors, elevators, and advanced access control in **Monitoring**
 
 {/* <Jira bss='BX-5845' /> [BDP-1483] 장기 미출입자에 대한 후속 조치 기능 */}
 11. Added a feature to manage users with long-term inactivity
@@ -162,18 +162,17 @@ Release<Separator/>2026-09-21
 <Jira bss='BX-5862' /> [보안] Apache Log4j TLS MitM 취약점 (2.21.1)
 <Jira bss='BX-6984' /> Entra ID 상에서 유저 개체 ID를 알면, 연동된 BioStar 로그인이 즉시 가능한 문제 */}
 40. Security vulnerability improvements
-    * Upgraded communication channels to TLS 1.3
+    * Upgraded internal server and client communication channels to TLS 1.3
     * Updated AngularJS and jQuery versions
     * Improved Reverse Tabnabbing vulnerability
     * Enhanced session cookie security
-    * Updated Log4j library version
+    * Updated the Log4j library version
     * Updated Java Runtime Environment (JRE) version
     * Improved SQL Injection vulnerability
     * Improved a redirect URL security vulnerability during Entra ID login
     * Updated the commons-text library version
     * Updated the OpenSSL library version
     * Updated security vulnerability-related libraries
-    * Updated the Log4j library version
     * Improved security vulnerabilities in Entra ID integrated login authentication.
 
 {/* <Jira bss='BX-5863' /> [보안] 개발자 도구에 노출되는 비밀번호 암호화 작업 */}
@@ -189,7 +188,7 @@ Release<Separator/>2026-09-21
     * Updated Node.js and library versions
 
 {/* <Jira bss='BX-6805' /> Visual Face 동기화 중 호환 템플릿 존재, 다른 타입의 템플릿 없는 경우 불필요한 bufferToImage 로직 진행 */}
-44. Improved Visual Face user synchronization performance.
+44. Improved Face user synchronization performance.
 
 {/* <Jira bss='BX-6228' /> [Mohammed] Custom report query performance improvement */}
 45. Improved **Custom Report** query performance when retrieving data over a wide date range.
@@ -442,7 +441,7 @@ Release<Separator/>2026-09-21
 61. Errors occurring due to invalid dates when modifying access groups via the API. <Badge>1.0.0</Badge>
 
 {/* <Jira bss='BX-6782' /> 동기화 시 Visual Face Image 에서 Template 추출 로직 진행 중 실패 시 발생한 동기화 실패 이벤트에 사용자 ID가 미표기되는 이슈 */}
-62. User ID not displayed in Visual Face synchronization failure events. <Badge>1.0.0</Badge>
+62. User ID not displayed in Face synchronization failure events. <Badge>1.0.0</Badge>
 
 {/* <Jira bss='BX-6912' /> [Device] 장치리스트에서 XPass2(V2)와 XPass2 Keypad(V2) 장치를 체크후 Firmware Upgrade 선택 시 동일한 FW를 두개의 목록으로 출력하는 문제 */}
 63. The same firmware appeared twice when upgrading firmware with both XPass 2 (V2) and XPass 2 Keypad (V2) selected in the **Device** list <Badge>1.0.0</Badge>
