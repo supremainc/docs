@@ -4,7 +4,7 @@
 
 * <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />：希望する同期モードを選択してください。
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />：連携先のディレクトリサービスからユーザーを同期する際、**BioStar X**に存在しないユーザーを追加し、情報が変更されたユーザーを更新します。 ただし、次のユーザーは削除せずに保持します。
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />：連携先のディレクトリサービスからユーザーを同期する際、**BioStar X**に存在しないユーザーを追加し、情報が変更されたユーザーを更新します。ただし、次のユーザーは削除せずに保持します。
 
     * **BioStar X** にのみ登録されているユーザー
 
@@ -16,7 +16,7 @@
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
 
-* <Cmd sid='settings.activeDirectory.autoSync.label' product='2' />：自動同期の間隔を設定できます。 <Cmd sid='settings.activeDirectory.syncInterval.label' product='2' />に設定した間隔で自動的に同期されます。 分単位で入力できます。 最小設定値は **30** 分、最大設定値は **10,080** 分（7 日）です。
+* <Cmd sid='settings.activeDirectory.autoSync.label' product='2' />：自動同期の間隔を設定できます。<Cmd sid='settings.activeDirectory.syncInterval.label' product='2' />に設定した間隔で自動的に同期されます。分単位で入力できます。最小設定値は **30** 分、最大設定値は **10,080** 分（7 日）です。
 
   <Image src='/img/biostarx-setting-directory-sync-auto-sync-interval.png' />
 
@@ -38,9 +38,9 @@
 
 * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モードでは：
 
-  * **同名のグループが既に存在する場合**：グループは新たに作成されず、既存グループの情報を保持します。 ただし、該当グループに所属するユーザーはディレクトリサービスの最新情報を反映させるため、一旦すべて削除してから再度追加します。 ただし、該当グループ内の同名ユーザーは維持されます。
+  * **同名のグループが既に存在する場合**：グループは新たに作成されず、既存グループの情報を保持します。ただし、該当グループに所属するユーザーはディレクトリサービスの最新情報を反映させるため、一旦すべて削除してから再度追加します。ただし、該当グループ内の同名ユーザーは維持されます。
 
-  * **BioStar Xで作成されたユーザー**：**BioStar X** 上で直接作成したユーザーはディレクトリサービスとは連携されていません。 同期時にこれらのユーザーの情報をディレクトリサービスと紐付けるように更新します。
+  * **BioStar Xで作成されたユーザー**：**BioStar X** 上で直接作成したユーザーはディレクトリサービスとは連携されていません。同期時にこれらのユーザーの情報をディレクトリサービスと紐付けるように更新します。
 
   * **制限事項**：同期後に同名のグループが既に存在する場合、当該グループの情報と所属ユーザーが正常に同期されない可能性があります。
 
@@ -52,10 +52,12 @@
 
 * <Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックするたびに、選択した同期モードでディレクトリサービスとユーザー情報を同期します。
 
-* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モードを選択すると警告メッセージが表示されます。 メッセージを確認して続行する場合は <Cmd sid='button.continue' product='2' /> ボタンを、キャンセルする場合は <Cmd sid='button.cancel' product='2' /> ボタンをクリックします。
+* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モードを選択すると警告メッセージが表示されます。メッセージを確認して続行する場合は <Cmd sid='button.continue' product='2' /> ボタンを、キャンセルする場合は <Cmd sid='button.cancel' product='2' /> ボタンをクリックします。
 
   <Image src='/img/biostarx-setting-directory-sync-warn-message.png' />
 
 * 同期機能で連携する際に、特定のユーザーを同期対象から除外する方法については、<DocLink inner='#excludeintegration' />を参照してください。
+
+* 同期するユーザーIDまたはユーザー名に、**BioStar X**で許可されていない文字が含まれる場合は、その文字だけを除いた値で登録します。ただし、ユーザーIDのピリオド(`.`)、ユーザー名のピリオド(`.`)およびアポストロフィ(`'`)は除外対象ではないため、元のまま保持します。使用できない文字の詳細は、[ユーザーIDおよび名前の入力規則](add-user-basic-info#ruleUseridName)を参照してください。
 
 :::

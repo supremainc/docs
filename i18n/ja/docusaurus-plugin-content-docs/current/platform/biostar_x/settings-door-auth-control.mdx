@@ -1,0 +1,101 @@
+---
+id: settings-door-auth-control
+title: 認証による出入口制御を設定する
+description: 権限のあるユーザーがカードでダブルバッジ（Double Badge）すると、出入口を常時開放状態に切り替える「認証による出入口制御」機能の設定方法を説明します。
+---
+
+認証による出入口制御は、指定ユーザーが対応デバイスで同じカードを連続して二回認証（ダブルバッジ、Double Badge）すると、該当する出入口を常時開放状態に切り替える機能です。常時開放状態で再度ダブルバッジするか、許可されたスケジュールが終了すると、出入口は元のモードに自動で戻ります。
+
+## 開始前に {/* #before-start */}
+
+* 出入口を出入グループに含める必要があります。新しい出入口の追加画面では、まだ出入グループに含まれていないため、この機能を使用できません。出入口を保存した後に出入グループへ追加し、出入口情報の編集画面でこの機能を設定してください。出入グループの設定については、<DocLink docId='platform/biostar_x/settings-access-control' />ご参照ください。
+
+* 出入口の登録と情報の編集の詳細については、次の文書を参照してください。
+
+  * <DocLink docId='platform/biostar_x/settings-door-add' />
+
+  * <DocLink docId='platform/biostar_x/settings-door-edit-info' />
+
+:::info
+
+* 認証による出入口制御は、次のデバイスとファームウェア バージョン以降で利用できます。この機能は、対応デバイスで構成された出入口で利用できます。
+
+  * XPass 2 ファームウェア 1.5.3 以上
+
+  * FaceStation F2 ファームウェア 2.3.0 以上
+
+* カード系クレデンシャル（CSN、Wiegand、スマートカード、モバイルカードの CSN/ToM）でのみ動作します。テンプレートクレデンシャルや指紋、顔などの生体認証は対象外です。通常の出入口認証として処理します。
+
+* 認証による出入口制御は、デバイスの認証モードがカード認証モードの場合にのみ動作します。 **BioStar X**はデバイスの認証モードを確認しないため、機能を使用する前にデバイスの認証モードを直接確認してください。
+
+* デバイスは、最初の認証と次の認証の間隔が3秒以内の場合にのみ、ダブルバッジとして認識されます。認証間隔が3秒を超えると、デバイスは二度の認証をそれぞれ個別の入退室認証として処理します。
+
+:::
+
+## 認証による出入口制御を設定する {/* #setting */}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> をクリックしてください。
+
+3. 出入口リストで設定する出入口をクリックします。
+
+4. <Cmd sid='common.option' product='2' /> セクションで <Cmd sid='door.authDoorControl.title' product='2' /> 項目へ移動します。
+
+   <Image src='/img/biostarx-setting-door-auth-control.png' />
+
+5. <Cmd sid='common.use' product='2' /> オプションを <Cmd sid='common.on' product='2' /> に設定してください。
+
+   <Image src='/img/biostarx-setting-door-auth-control-use.png' />
+
+6. <Cmd sid='common.schedule' product='2' /> で、この機能を適用するスケジュールを選択してください。デフォルトは <Cmd>Always</Cmd> です。適用するスケジュールがない場合は、先にスケジュールを追加してください。
+
+7. ダブルバッジで出入口を制御できるユーザーを追加するには、<Cmd sid='button.plusAdd' product='2' /> ボタンをクリックし、<Cmd sid='common.user' product='2' /> リストで選択してください。
+
+   <Image src='/img/biostarx-setting-door-auth-control-users.png' />
+
+   :::note
+
+   * <Cmd sid='common.user' product='2' /> 一覧には、該当ドアの入退室権限を持つユーザーのみを表示します。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.accessControl.root' />で入退室グループとアクセスレベルを確認してください。
+
+   * ユーザーは最大12人まで指定できます。
+
+   * ユーザーを検索するには、<IcSearch title='Search' /> ボタンをクリックしてください。
+
+   * ユーザーグループ単位では指定できず、個別ユーザーのみ選択できます。
+
+   :::
+
+8. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+* スケジュール追加の詳細は <DocLink docId='platform/biostar_x/settings-schedule' />を参照してください。
+
+* 入退室グループとアクセスレベル設定の詳細は <DocLink docId='platform/biostar_x/settings-access-control' />を参照してください。
+
+:::
+
+## 注意事項 {/* #note */}
+
+* 認証によるドア制御を使用中のドアは、入室デバイスまたは退室デバイスを非対応モデルに変更できません。デバイスを変更する前に、<Cmd sid='door.authDoorControl.title' product='2' /> オプションを <Cmd sid='common.off' product='2' /> に設定してください。
+
+* 制御権限ユーザーとして指定されたユーザーが、入退室グループの変更などで該当ドアの入退室権限を失うと、一覧では <Cmd sid='door.authDoorControl.noAccessBadge' product='2' /> 状態として区別して表示します。この状態では保存できません。入退室権限を再付与するか、一覧から削除してください。
+
+  <Image src='/img/biostarx-setting-door-auth-control-not-allow-users.png' />
+
+* 制御権限ユーザーを誰も指定していない状態では保存できません。
+
+* 指定したスケジュールが削除されると、<Cmd sid='common.schedule' product='2' /> フィールドに <Cmd sid='door.authDoorControl.deletedSchedule' product='2' /> と表示します。この状態では保存できません。別のスケジュールを選択してください。
+
+* [アンチパスバック](../../reference/glossary#apb)違反が発生すると入室を拒否するハード（Hard）モードでは、認証による扉制御は動作しません。入室を許可するソフト（Soft）モードでは動作します。
+
+* 火災警報、スケジュールロック、スケジュール開放など他の高度な入退室管理機能が適用されている場合、適用済みの高度な入退室管理機能が優先されます。
+
+## 関連情報 {/* #related */}
+
+* 認証によるドア制御の状態は、<Cmd sid='shell.header.arena' /> 画面のドアプレビューパネルで確認できます。認証によるドア制御で発生した記録は、<Cmd sid='arena.eventTable.title' /> 一覧で <Cmd sid='eventType.23824' product='2' /> として表示します。ドアモニタリングの詳細については、<DocLink docId='platform/biostar_x/monitoring-door' />を参照してください。
+
+  <Image src='/img/biostarx-setting-door-auth-control-monitoring.png' />
+
+* 設定変更履歴は監査証跡に記録します。詳しくは <DocLink docId='platform/biostar_x/settings-system-audit-trail-ac' /> をご参照ください。

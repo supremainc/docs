@@ -1,0 +1,159 @@
+---
+id: manage-devices
+title: デバイス管理
+description: デバイス一覧でデバイスの状態を確認し、リモート制御で管理できます。
+---
+
+デバイス一覧で各デバイスの状態を確認し、ロック状態のデバイスをリモートで解除できます。アプリのホーム画面で <Cmd>DEVICE</Cmd> をタップしてください。
+
+<Image src='/img/mobile/bsx-mobile-app-device.png' width='500px' className='none' alone />
+
+:::info
+
+* モバイルアプリではデバイスを登録または編集できません。
+
+* サイドメニューからも開けます。 <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Device</Cmd> をタップしてください。
+
+:::
+
+## デバイス情報の確認
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/mobile/bsx-mobile-app-device-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+デバイス一覧の各デバイスには、以下の情報が含まれます。
+
+* デバイス名
+
+* デバイスグループ名（グループに含まれていない場合は、<Cmd>All Devices</Cmd> と表示）
+
+* デバイス IP アドレス
+
+</Column>
+</Columns>
+
+## デバイス状態の確認
+
+デバイス一覧のステータスアイコンでデバイスの状態を確認できます。
+
+| ステータスアイコン | 説明 |
+| :-: | --- |
+| <Image src='/img/mobile/bsx-mobile-app-device-ok.png' className='none' ico alone /> | デバイスが正常に接続されています。 |
+| <Image src='/img/mobile/bsx-mobile-app-device-fail.png' className='none' ico alone /> | デバイスの電源がオフ、または接続が解除されています。 |
+
+:::info
+
+デバイス状態を更新するには、デバイス一覧を下にスワイプしてください。
+
+:::
+
+## 認証失敗ロックの解除
+
+認証が連続して失敗してデバイスがロック状態に切り替わった場合、モバイルアプリでロックを解除できます。
+
+:::info
+
+**BioStar X** で認証失敗ロック設定の詳細については <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' /> を参照してください。
+
+:::
+
+### 個別のデバイスのロック解除
+
+デバイス一覧で認証失敗ロック状態のデバイスを解除できます。
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock.png' className='none' width='750px' alone />
+
+1. デバイス一覧で、<Cmd>AUTH FAILURE LOCKOUT</Cmd> ラベルが表示されたデバイスを確認してください。
+
+2. 該当デバイスのロックを解除するには、<Cmd>RELEASE AUTH FAILURE LOCKOUT</Cmd> ボタンをタップしてください。
+
+3. 確認メッセージが表示されたら、<Cmd>Yes</Cmd> をタップしてください。
+
+4. ロック解除成功メッセージが表示されたら、<Cmd>OK</Cmd> をタップしてください。
+
+### 複数のデバイスのロック解除
+
+<Cmd>AUTHORIZATION FAIL LOCK</Cmd> ラベルが表示された複数のデバイスを同時にロック解除できます。
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock-multi-release.png' className='none' width='750px' alone />
+
+1. デバイス一覧の右上にある <IcAppCheck title='Check box' /> をタップしてください。
+
+2. <Cmd>AUTH FAILURE LOCKOUT</Cmd> ラベルが表示されたデバイスを一台以上選択してください。
+
+3. 右上の <Cmd>RELEASE</Cmd> ボタンをタップしてください。
+
+4. 確認メッセージが表示されたら、<Cmd>Yes</Cmd> をタップしてください。
+
+5. ロック解除成功メッセージが表示されたら、<Cmd>OK</Cmd> をタップしてください。
+
+## デバイス検索
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-search.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+デバイス名、グループ、IPアドレスで検索できます。
+
+1. デバイス一覧の上部にある <IcSearch title='Search' width='20px' height='20px' />をタップしてください。
+
+2. 検索入力フィールドに検索語を入力します。デバイス名、グループ名、IPアドレスで検索できます。
+
+3. 検索語の入力を完了したら、 <IcSearch title='Search' width='20px' height='20px' /> をタップします。
+
+検索結果に、検索語に一致するデバイスを表示します。
+
+:::info
+
+* 検索入力フィールドの下には、最近の検索履歴が表示されます。最近の検索履歴をタップすると、その検索語で再度検索できます。
+
+* 検索入力フィールドを閉じるには <IcClose title='Close' width='20px' height='20px' /> をタップします。
+
+:::
+
+</Column>
+</Columns>
+
+## デバイス一覧をフィルタリングする
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+デバイス一覧をデバイスグループでフィルタリングできます。
+
+1. デバイス一覧の上部にある <IcAppFilter title='Filter' width='20px' height='20px' />をタップしてください。
+
+2. <Cmd>All Devices</Cmd>をタップしてください。
+
+3. デバイスグループ一覧から目的のグループを選択します。
+
+   <Image src='/img/mobile/bsx-mobile-device-filter-device-group.png' width='252px' alone />
+
+4. デバイスグループの選択を完了したら <Cmd>Yes</Cmd> をタップします。
+
+5. 選択した条件でデバイス一覧をフィルタリングするには <Cmd>Apply</Cmd> をタップしてください。
+
+一覧に、選択したデバイスグループに属するデバイスを表示します。
+
+:::info
+
+フィルタリング条件を初期化するには、画面右上の <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> をタップします。
+
+:::
+
+</Column>
+</Columns>

@@ -11,7 +11,7 @@ keywords:
 
 :::tip
 
-**BioStar X** を開始する前に知っておくべき事項を案内します。 **BioStar X** は 64 ビットオペレーティングシステムをサポートします。 インストールする前に、**BioStar X** をインストールする PC のシステム仕様を確認してください。
+**BioStar X** を開始する前に知っておくべき事項を案内します。 **BioStar X** は 64 ビットオペレーティングシステムをサポートします。インストールする前に、**BioStar X** をインストールする PC のシステム仕様を確認してください。
 
 :::
 
@@ -27,11 +27,11 @@ keywords:
 
 * MS SQL Server を使用する場合は、サーバーと各テーブルの `Collation` オプションを CI（大文字小文字を区別しない）に設定してください。
 
-* 旧バージョンの **BioStar X** でデータベースをバックアップする際は、すべてのサービスを停止してから実行してください。 また、AC データベースと TA データベースを同時にバックアップして復元しないと、TA データベースを使用できません。
+* 旧バージョンの **BioStar X** でデータベースをバックアップする際は、すべてのサービスを停止してから実行してください。また、AC データベースと TA データベースを同時にバックアップして復元しないと、TA データベースを使用できません。
 
-* **BioStar X** データベースをバックアップする際は、*\\Program Files\\BioStar X\\util* フォルダーの *enckey* ファイルと *\\Program Files\\BioStar X* フォルダーの *system.conf*、*setting.conf* ファイルも必ず一緒にバックアップしてください。 これを行わないと、データベースが使用できなくなります。
+* **BioStar X** データベースをバックアップする際は、*\\Program Files\\BioStar X\\util* フォルダーの *enckey* ファイルと *\\Program Files\\BioStar X* フォルダーの *system.conf*、*setting.conf* ファイルも必ず一緒にバックアップしてください。これを行わないと、データベースが使用できなくなります。
 
-* **BioStar X** が使用するポートの既定値については、<DocLink docId='platform/biostar_x/service-settings' />をご参照ください。 他のプログラムが同じポートを占有している場合、**BioStar X** が正常に動作しない可能性があります。
+* **BioStar X** が使用するポートの既定値については、<DocLink docId='platform/biostar_x/service-settings' />をご参照ください。他のプログラムが同じポートを占有している場合、**BioStar X** が正常に動作しない可能性があります。
 
 ## データベースの確認 {/* #checkdb */}
 
@@ -97,7 +97,7 @@ keywords:
 
 :::tip
 
-**データベース ファイル** セクションで、以下の推奨値に設定します。 **自動増加** はパーセンテージではなく固定サイズ (MB/GB) で設定し、あまりにも小さい単位で頻繁に増加しないよう注意してください。
+**データベース ファイル** セクションで、以下の推奨値に設定します。**自動増加** はパーセンテージではなく固定サイズ (MB/GB) で設定し、あまりにも小さい単位で頻繁に増加しないよう注意してください。
 
 <Image src='/img/biostarx-before-start-new-database.png' caption />
 
@@ -141,7 +141,7 @@ keywords:
 
 :::
 
-#### Windows 認証データベース設定 {/* #windows-authentication-database-settings */}
+#### Windows 認証のデータベース設定 {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>

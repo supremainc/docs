@@ -1,0 +1,143 @@
+---
+id: remove-server
+title: BioStar Xサーバーのアンインストールとセキュリティ証明書の復元
+description: BioStar Xサーバーをアンインストールする手順と、セキュア通信証明書をバックアップし、再インストール後に復元する方法を説明します。
+---
+
+コンピューターから **BioStar X** サーバーをアンインストールする手順を説明します。 <Cmd sid='setting.sever.secure.comm.menu' product='2' /> オプションを使用していない場合、証明書のバックアップと復元を行わずにアンインストールを進めてください。
+
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> オプションを使用している場合、**BioStar X** をアンインストールする前に、サーバーのセキュリティ証明書セット（ルートCA／サーバー証明書／キー）を必ずバックアップしてください。このバックアップは、同じサーバーを再インストールした後に既存デバイスを再接続する唯一の復元手段です。システムが提供する[復元機能](settings-system-system-restore)と異なり、データベースや設定は保持したままセキュア通信証明書のみを再利用する場合は、<DocLink inner='#restoreCertificate' />を参照してください。
+
+## BioStar Xサーバーのアンインストール {/* #uninstallServer */}
+
+:::caution
+
+**BioStar X** をアンインストールすると、証明書を含むインストールファイルがすべて削除され、コンテンツ（ユーザー情報）も削除される場合があります。データベース、設定、キーなどを保持するには、アンインストールの前に<DocLink docId='platform/biostar_x/settings-system-system-backup' />を参照し、先にシステムをバックアップしてください。
+
+:::
+
+1. Windowsで **設定** → **アプリ** → **インストールされているアプリ** に移動してください。
+
+2. 一覧で **BioStar X** を探し、<IcMoreB title='More' /> ボタンをクリックして **アンインストール** を選択してください。
+
+   <Image src='/img/biostarx-uninstall-apps-list.png' />
+
+3. <Cmd sid='setting.sever.secure.comm.menu' product='2' /> オプションを使用している場合、証明書バックアップの案内ウィンドウが表示されます。**参照...** ボタンをクリックし、バックアップ先のパスを指定してください。このオプションを使用していない場合、証明書のバックアップ手順なしで手順7に進みます。
+
+   <Image src='/img/biostarx-uninstall-cert-backup.png' />
+
+   :::caution
+
+   **BioStar X** のインストールパスはバックアップ先として使用できません。アンインストール時に **BioStar X** のインストールフォルダーと一緒に削除されるためです。必ず **BioStar X** のインストールパス以外を指定してください。
+
+   :::
+
+4. パスを指定し、**バックアップしてアンインストール** ボタンが有効になったらクリックしてください。
+
+   <Image src='/img/biostarx-uninstall-cert-backup-path.png' />
+
+5. 指定した場所にすでに証明書のバックアップファイルがある場合、上書きするか確認するウィンドウが表示されます。既存のバックアップを上書きする場合は **はい**、別のパスを再指定する場合は **いいえ** をクリックしてください。
+
+   <Image src='/img/biostarx-uninstall-cert-backup-overwrite.png' />
+
+6. 証明書のバックアップが完了すると、案内ウィンドウが表示されます。 **OK** をクリックしてください。
+
+   <Image src='/img/biostarx-uninstall-cert-backup-success.png' />
+
+7. **BioStar X** と関連コンポーネントをすべてアンインストールするか確認するウィンドウが表示されたら、**はい** をクリックしてください。
+
+   <Image src='/img/biostarx-uninstall-confirm.png' />
+
+8. アンインストールが完了するまで待ってください。
+
+   <Image src='/img/biostarx-uninstall-progress.png' />
+
+9. すべてのコンテンツ（ユーザー情報）を削除するか確認するウィンドウが表示されます。データベースに保存されたユーザー情報もすべて削除する場合は **はい** を、残す場合は **いいえ** をクリックしてください。
+
+   <Image src='/img/biostarx-uninstall-delete-content.png' />
+
+   :::caution
+
+   **はい** をクリックすると、データベースに保存されたユーザー情報を含むすべてのデータが削除され、復元できません。データを保持する必要がある場合は **いいえ** をクリックするか、削除する前に <DocLink docId='platform/biostar_x/settings-system-system-backup' /> を参照してシステムを先にバックアップしてください。
+
+   :::
+
+10. **USB Device Agent** がインストールされている場合、一緒に削除するか確認する画面が表示されます。**はい** をクリックしてください。
+
+    <Image src='/img/biostarx-uninstall-usb-agent-confirm.png' />
+
+    :::note
+
+    使用中のコンポーネントによっては、関連ドライバーの削除画面が追加で表示されることがあります。画面の指示に従って削除を完了してください。
+
+    :::
+
+11. コンポーネントの削除が完了すると、案内画面が表示されます。 **OK** をクリックしてください。
+
+    <Image src='/img/biostarx-uninstall-usb-agent-success.png' />
+
+12. **BioStar X** の削除が完了すると、案内画面が表示されます。 **OK** をクリックしてください。
+
+    <Image src='/img/biostarx-uninstall-success.png' />
+
+## バックアップしたセキュア通信証明書の復元 {/* #restoreCertificate */}
+
+<Cmd sid='setting.sever.secure.comm.menu' product='2' /> オプションを使用していたサーバーを再インストールした後、既存のデバイスを再接続するには、セキュア通信証明書を復元する必要があります。[システム復元ツール](settings-system-system-restore) は、データベースと設定を含むシステム全体を以前の状態に戻します。この手順は、システムを復元せずにセキュア通信証明書だけを再利用する場合に使用します。専用ツールを使わず、バックアップした証明書ファイルをインストールパスに直接復元する必要があります。
+
+:::info
+
+メインサーバーとマルチコミュニケーションサーバーで構成された環境では、各サーバーが個別のセキュア通信証明書を使用します。証明書を復元した後にマルチコミュニケーションサーバーをインストールして追加すると、マルチコミュニケーションサーバーの証明書が自動でコピーされるため、個別に復元する必要はありません。
+
+:::
+
+1. **BioStar X** を新しくインストールしてください。インストール方法は <DocLink docId='platform/biostar_x/express-install' /> または <DocLink docId='platform/biostar_x/custom-install' /> をご参照ください。
+
+2. **BioStar X** のインストール完了後、Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックしてください。
+
+3. Web ブラウザーで **BioStar X Service Manager** ウィンドウが表示されたら、<Cmd>SERVICES</Cmd> メニューをクリックします。
+
+4. すべてのサービスを終了するには、画面右上にある <Cmd>Stop All</Cmd> ボタンをクリックしてください。
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
+
+5. バックアップした証明書ファイル（ルート CA、サーバー証明書、キー）をすべて、**BioStar X** のインストールパス配下の *cert* フォルダーにコピーしてください。
+
+   > 例: *C:\\Program Files\\BioStar X\\cert*
+
+   :::note
+
+   新規インストール時に自動生成された証明書ファイルと名前が同じです。上書きするか確認する画面が表示されたら、**はい** をクリックして既存ファイルを上書きしてください。
+
+   :::
+
+6. <Cmd>SERVICES</Cmd> メニューで全サービスを再起動するには、<Cmd>Start All</Cmd> ボタンをクリックしてください。
+
+7. マルチコミュニケーションサーバーを使用する場合は、別の環境にマルチコミュニケーションサーバーをインストールしてください。インストール方法は <DocLink docId='platform/biostar_x/install-communication-server' /> をご参照ください。
+
+8. メインサーバーの **BioStar X Service Manager** でマルチコミュニケーションサーバーを追加してください。追加方法は <DocLink docId='platform/biostar_x/install-communication-server#check-after-install' /> をご参照ください。
+
+マルチコミュニケーションサーバーを追加すると、メインサーバーの *cert* フォルダにあるセキュリティ証明書ファイルがマルチコミュニケーションサーバーに自動でコピーされます。
+
+:::caution
+
+証明書を復元する前（手順4\\~6の前）にマルチコミュニケーションサーバーを先にインストールして追加した場合、マルチコミュニケーションサーバーには復元前の証明書がすでにコピーされています。この場合、以下の手順に従ってマルチコミュニケーションサーバーの証明書も個別に交換してください。
+
+1. マルチコミュニケーションサーバーをインストールした環境で **BioStar X Service Manager** を実行し、すべてのサービスを停止してください。
+
+2. バックアップした証明書ファイルを、マルチコミュニケーションサーバーのインストールパス配下の *cert* フォルダに同じようにコピーしてください。
+
+   > 例: *C:\\Program Files\\BioStar X Communications Server\\cert*
+
+3. メインサーバーとマルチコミュニケーションサーバーの両方で、**BioStar X Service Manager** を使用してすべてのサービスを再起動してください。
+
+:::
+
+:::info
+
+* **BioStar X Service Manager** の使用方法の詳細については <DocLink docId='platform/biostar_x/manage-server' /> をご参照ください。
+
+* <Cmd sid='setting.sever.secure.comm.menu' product='2' /> オプションの詳細については、<DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />をご参照ください。
+
+* マルチコミュニケーションサーバーをインストールして接続するには、マルチコミュニケーションサーバーライセンスが必要です。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+
+:::

@@ -1,0 +1,35 @@
+---
+id: settings-account-scan-passport
+title: 身分証明書スキャンを設定する
+description: 身分証明書スキャン時に取得するユーザー情報と、顔クレデンシャルの登録方式を設定する方法を案内します。
+---
+
+身分証明書スキャンでユーザーを登録する前に、スキャン時に取得するユーザー名、プロフィール画像、顔クレデンシャルの登録方式を事前に設定してください。本ドキュメントでは身分証明書スキャンの設定方法を案内します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.passportScan' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-account-passport-scan-setting.png' />
+
+3. 身分証明書をスキャンする際に取得するデータを選択してください。
+
+   * <Cmd sid='setting.passportScan.name' />：身分証明書に記載された氏名を取得します。
+
+   * <Cmd sid='setting.passportScan.profileImage' />：身分証明書に記載されたプロフィール画像を取得します。
+
+   * <Cmd sid='setting.passportScan.face' />：身分証明書に記載された顔画像を顔クレデンシャルとして登録します。
+
+     * <Cmd sid='setting.passportScan.faceAlwaysConfirm' />：身分証明書に記載された顔画像を顔クレデンシャルとして登録する際、毎回確認します。
+
+     * <Cmd sid='setting.passportScan.faceDoNotAsk' />：身分証明書に記載された顔画像を顔クレデンシャルとして登録する際、確認せずに登録します。
+
+4. 設定を保存するには、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* <Cmd sid='setting.passportScan.profileImage' /> オプションが選択されていない場合、<Cmd sid='setting.passportScan.face' /> オプションは選択できません。
+
+* 身分証明書をスキャンしてユーザーを登録または修正する方法の詳細については、<DocLink docId='platform/biostar_x/add-user-by-scanning-passport' />を参照してください。
+
+:::

@@ -7,7 +7,7 @@ keywords:
   - ユーザーグループ
 ---
 
-ユーザーの基本情報の入力方法について詳しく説明します。 入力したユーザー情報は検索および管理に使用されます。 ユーザー情報を明確に管理することで、組織のセキュリティポリシーや個人情報保護ポリシーの遵守に役立ちます。
+ユーザーの基本情報の入力方法について詳しく説明します。入力したユーザー情報は検索および管理に使用されます。ユーザー情報を明確に管理することで、組織のセキュリティポリシーや個人情報保護ポリシーの遵守に役立ちます。
 
 * 氏名、部署、役職、グループなどの基本情報を体系的に入力すると、ユーザーを簡単に検索・分類・管理できます。
 
@@ -21,11 +21,11 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <EnterUserPage />
 
-<Cmd sid='team.user.information' /> セクションで設定できる項目は次のとおりです。 各項目の説明を参照してユーザー情報を入力してください。
+<Cmd sid='team.user.information' /> セクションで設定できる項目は次のとおりです。各項目の説明を参照してユーザー情報を入力してください。
 
 <Image src='/img/biostarx-new-user-information.png' />
 
-* **写真**：ユーザーの写真を登録してください。 ウェブカメラで写真を撮影するか、PCから写真をアップロードできます。 プロフィールにマウスを合わせると使用可能なツールが表示されます。
+* **写真**：ユーザーの写真を登録してください。ウェブカメラで写真を撮影するか、PCから写真をアップロードできます。プロフィールにマウスを合わせると使用可能なツールが表示されます。
 
   <Columns>
   <Column className='width--20'><Image src='/img/common/biostarx-new-user-photo.png' alone /></Column>
@@ -52,27 +52,25 @@ import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 * <Cmd sid='team.user.table.title' />：ユーザーの役職を入力してください。
 
-* <Cmd sid='team.user.table.group' />：ユーザーのグループを選択してください。 ユーザーグループの追加および管理の詳細については <DocLink docId='platform/biostar_x/user-group-manage' /> を参照してください。
+* <Cmd sid='team.user.table.group' />：ユーザーのグループを選択してください。ユーザーグループの追加および管理の詳細については <DocLink docId='platform/biostar_x/user-group-manage' /> を参照してください。
 
-* <Cmd sid='team.user.table.period' />：ユーザーアカウントの使用期間を設定してください。 日付および時間フィールドをクリックして直接入力するか、<IcCalc /> ボタンをクリックして希望の日付と時間を選択できます。
+* <Cmd sid='team.user.table.period' />：ユーザーアカウントの使用期間を設定してください。日付および時間フィールドをクリックして直接入力するか、<IcCalc /> ボタンをクリックして希望の日付と時間を選択できます。
 
 * <Cmd sid='team.user.table.status' />：ユーザーアカウントを一時的に無効に設定できます。
 
 入力した基本情報を保存するには、画面右上の <Cmd sid='user.save' product='2' /> ボタンをクリックしてください。
 
+import UserNameIDrule from '../../common/_bsx-user-id-name-rule.mdx';
+
+<UserNameIDrule />
+
 :::info
 
-* <Cmd sid='team.user.table.id' /> は <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> メニューの <Cmd sid="setting.userDevice.useridType" product='2' /> オプションによって設定できる値が異なる場合があります。 詳細については、<DocLink docId='platform/biostar_x/settings-server-server#userid-type' />をご参照ください。
+* <Cmd sid='team.user.table.id' /> は <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> メニューの <Cmd sid="setting.userDevice.useridType" product='2' /> オプションによって設定できる値が異なる場合があります。詳細については、<DocLink docId='platform/biostar_x/settings-server-server#userid-type' />をご参照ください。
 
   * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />：1 ～ 4294967294 の数字で入力できます。
 
   * <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />：英字と数字を組み合わせて入力できます。
-
-* <Cmd sid='team.user.table.id' /> の値には空白を含めることはできません。
-
-* ユーザー名は特殊記号を含めて最大 48 文字まで入力できます。
-
-  > 特殊記号：`~` `!` `@` `#` `$` `%` `^` `&` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}` `;` <code>\`</code>
 
 * モバイル入退室カードにユーザーの写真、部署、役職を表示するには、必ず写真を追加し、部署と役職を入力してください。
 

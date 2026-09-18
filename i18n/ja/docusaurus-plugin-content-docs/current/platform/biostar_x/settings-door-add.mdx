@@ -1,20 +1,20 @@
 ---
 id: settings-door-add
 title: ドアを登録する
-description: 入退室管理に使用するドアを設定してください。 ドアに応じて入室/退室デバイスを選択したり、アンチパスバックを設定してセキュリティを強化したり、アラームを構成できます。
+description: 入退室管理に使用するドアを設定してください。ドアに応じて入室/退室デバイスを選択したり、アンチパスバックを設定してセキュリティを強化したり、アラームを構成できます。
 keywords:
   - ドア
   - セキュリティ
   - アクセス制御
 ---
 
-ドアを登録して設定する手順を案内します。 ドアごとに入室・退室デバイスを接続し、アンチパスバックや二重認証などのセキュリティ機能を設定することで、体系的な入退室管理環境を構築できます。 さらに、ドアの状態に基づくアラーム設定によりセキュリティ事故を事前に防止できます。
+ドアを登録して設定する手順を案内します。ドアごとに入室・退室デバイスを接続し、アンチパスバックや二重認証などのセキュリティ機能を設定することで、体系的な入退室管理環境を構築できます。さらに、ドアの状態に基づくアラーム設定によりセキュリティ事故を事前に防止できます。
 
 ## 開始前に {/* #before-start */}
 
-* ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。 詳しくは <DocLink docId='platform/biostar_x/settings-access-control' /> をご参照ください。
+* ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。詳しくは <DocLink docId='platform/biostar_x/settings-access-control' /> をご参照ください。
 
-* ドアを登録する前にデバイスを登録してください。 デバイス登録の詳細は、以下のドキュメントを参照してください。
+* ドアを登録する前にデバイスを登録してください。デバイス登録の詳細は、以下のドキュメントを参照してください。
 
   * <DocLink docId='platform/biostar_x/settings-adding-devices' />
 
@@ -26,7 +26,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.door.root' /> をクリックします。
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> をクリックしてください。
 
 3. <Cmd sid='button.func.addDoor' product='2' /> ボタンをクリックします。
 
@@ -34,17 +34,17 @@ keywords:
 
 4. <Cmd sid='door.addNewDoor' product='2' /> 画面が表示されたら、各セクション項目を順に設定してください。
 
-   * <Cmd sid='common.information' product='2' />：ドアの基本情報を設定します。 詳しくは <DocLink inner='#info' /> をご参照ください。
+   * <Cmd sid='common.information' product='2' />：ドアの基本情報を設定します。詳しくは <DocLink inner='#info' /> をご参照ください。
 
-   * <Cmd sid='device.info.configuration' product='2' />：ドアに接続されたデバイス、入室および退室ボタン、ドアセンサーを設定します。 詳しくは <DocLink inner='#configdoor' /> をご参照ください。
+   * <Cmd sid='device.info.configuration' product='2' />：ドアに接続されたデバイス、入室および退室ボタン、ドアセンサーを設定します。詳しくは <DocLink inner='#configdoor' /> をご参照ください。
 
-   * <Cmd sid='common.option' product='2' />：追加オプションを設定してください。 詳しくは <DocLink inner='#option' /> をご参照ください。
+   * <Cmd sid='common.option' product='2' />：追加オプションを設定してください。詳しくは <DocLink inner='#option' /> をご参照ください。
 
-   * <Cmd sid='door.antiPassBack' product='2' />：入退室履歴を管理しセキュリティを強化するアンチパスバック機能を設定します。 詳しくは <DocLink inner='#antipassback' /> をご参照ください。
+   * <Cmd sid='door.antiPassBack' product='2' />：入退室履歴を管理しセキュリティを強化するアンチパスバック機能を設定します。詳しくは <DocLink inner='#antipassback' /> をご参照ください。
 
-   * <Cmd sid='timedAPB.title' product='2' />：アンチパスバック機能の初期化時間を設定できます。 詳しくは <DocLink inner='#timed-apb' /> をご参照ください。
+   * <Cmd sid='timedAPB.title' product='2' />：アンチパスバック機能の初期化時間を設定できます。詳しくは <DocLink inner='#timed-apb' /> をご参照ください。
 
-   * <Cmd sid='door.alarm' product='2' />：アンチパスバック違反が発生した際に警報を鳴らしたりデバイスを使用不可にする設定ができます。 詳しくは <DocLink inner='#alarm' /> をご参照ください。
+   * <Cmd sid='door.alarm' product='2' />：アンチパスバック違反が発生した際に警報を鳴らしたりデバイスを使用不可にする設定ができます。詳しくは <DocLink inner='#alarm' /> をご参照ください。
 
 5. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
 
@@ -54,7 +54,7 @@ keywords:
 
 <Image src='/img/biostarx-setting-door-adding-info.png' />
 
-* <Cmd sid='common.name' product='2' />：ドア名を入力します。 管理を容易にするために識別しやすい名前を入力してください。
+* <Cmd sid='common.name' product='2' />：ドア名を入力します。管理を容易にするために識別しやすい名前を入力してください。
 
 * <Cmd sid='common.group' product='2' />：ドアグループを選択します。
 
@@ -74,7 +74,7 @@ keywords:
 
 <Image src='/img/biostarx-setting-door-adding-configuration.png' />
 
-* <Cmd sid='door.entryDevice' product='2' />：入室時に使用するデバイスを選択します。 デバイスが一覧にない場合は、先にデバイスを登録してください。
+* <Cmd sid='door.entryDevice' product='2' />：入室時に使用するデバイスを選択します。デバイスが一覧にない場合は、先にデバイスを登録してください。
 
 * <Cmd sid='common.doorRelay' product='2' />：ドアロックとして動作する[リレー](../../reference/glossary#relay)を選択します。
 
@@ -116,13 +116,13 @@ keywords:
 
 * <Cmd sid='common.open' product='2' />：ドア解錠に関するオプションを設定します。
 
-  * <Cmd sid='door.openTime' product='2' />：認証完了後に出入口が開いたままになる時間を設定します。 この時間を過ぎると、ドアは自動的にロックされます。
+  * <Cmd sid='door.openTime' product='2' />：認証完了後に出入口が開いたままになる時間を設定します。この時間を過ぎると、ドアは自動的にロックされます。
 
   * <Cmd sid='door.openOnce' product='2' />：ドアセンサーがドアの閉鎖を検知すると、ドアが施錠されます。 <Cmd sid='door.option.openCondition.useAutoDoor' product='2' /> を <Cmd sid='door.openOnceOn' product='2' /> に設定すると使用できません。
 
   * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />：自動ドアをドアとして使用する場合、ドアセンサーの状態に関係なくリレーを動作させることができます。 <Cmd sid='door.openOnce' product='2' /> を <Cmd sid='door.openOnceOn' product='2' /> に設定すると使用できません。
 
-  :::info
+  :::note
 
   <Cmd sid='door.openTime' product='2' /> は使用するドアロック装置の種類によって異なる場合があります。
 
@@ -130,9 +130,9 @@ keywords:
 
 * <Cmd sid='door.dualAuthentication' product='2' />：2人（一般ユーザーと管理者）がクレデンシャルを認証してドアを解錠するよう設定できます。
 
-  * <Cmd sid='common.device' product='2' />：二重認証を使用するデバイスを選択してください。 二重認証を使用しない場合は<Cmd sid='door.dualAuthentication.approvalType.none' product='2' />を選択してください。
+  * <Cmd sid='common.device' product='2' />：二重認証を使用するデバイスを選択してください。二重認証を使用しない場合は<Cmd sid='door.dualAuthentication.approvalType.none' product='2' />を選択してください。
 
-  * <Cmd sid='door.schedule' product='2' />：二重認証を適用するスケジュールを選択してください。 目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。
+  * <Cmd sid='door.schedule' product='2' />：二重認証を適用するスケジュールを選択してください。目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。
 
   * <Cmd sid='door.dualAuthentication.approvalType' product='2' />：管理者認証の順序を設定してください。
 
@@ -140,13 +140,13 @@ keywords:
 
     * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />：一般ユーザーが認証し、設定した認証グループに属するユーザーが認証する必要があります。
 
-  * <Cmd sid='door.approvalGroup' product='2' />：管理者が所属するグループを設定します。 このオプションは、<Cmd sid='door.dualAuthentication.approvalType' product='2' /> を <Cmd sid='door.dualAuthentication.approvalType.last' product='2' /> に選択した場合に使用できます。
+  * <Cmd sid='door.approvalGroup' product='2' />：管理者が所属するグループを設定します。このオプションは、<Cmd sid='door.dualAuthentication.approvalType' product='2' /> を <Cmd sid='door.dualAuthentication.approvalType.last' product='2' /> に選択した場合に使用できます。
 
-  * <Cmd sid='door.authenticationTimeout' product='2' />：1回目の認証後から2回目の認証までの待機時間を設定します。 設定した時間内に2回目の認証が完了しない場合、階ボタンは有効になりません。
+  * <Cmd sid='door.authenticationTimeout' product='2' />：1回目の認証後から2回目の認証までの待機時間を設定します。設定した時間内に2回目の認証が完了しない場合、階ボタンは有効になりません。
 
-  :::info
+  :::note
 
-  * 再室人数制限設定で構成されたデバイスの二重認証を変更するには、次のメニューで設定を修正してください。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
+  * 在室人数制限設定に構成されているデバイスのデュアル認証を変更するには、次のメニューで設定を編集します。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
     <Cmd sid='zone.occupancy.title' product='2' /> の設定について詳しくは <DocLink docId='platform/biostar_x/settings-advanced-ac' /> をご参照ください。
 
@@ -158,9 +158,17 @@ keywords:
 
   * <Cmd sid='common.sensor' product='2' />：テイルゲーティングを検知するセンサーを選択してください。
 
+* <Cmd sid='door.authDoorControl.title' product='2' />: 権限のあるユーザーがダブルバッジ（Double Badge）すると、ドアが常時開放状態に切り替わるように設定します。詳しくは <DocLink docId='platform/biostar_x/settings-door-auth-control' /> をご参照ください。
+
+  :::note
+
+  新しいドアを追加する画面では、ドアがまだアクセスグループに含まれていないため、この設定は使用できません。ドアを保存してアクセスグループに追加した後、ドア情報の編集画面で設定してください。
+
+  :::
+
 ### アンチパスバック設定 {/* #antipassback */}
 
-[アンチパスバック](../../reference/glossary#apb)は入退室履歴を管理し、セキュリティを強化するために使用します。 利用者が入室後にカードを他の利用者へ渡す悪用事例を防止でき、権限を持つ利用者に続いて外部者が入室した場合に退出できないように阻止できます。
+[アンチパスバック](../../reference/glossary#apb)は入退室履歴を管理し、セキュリティを強化するために使用します。利用者が入室後にカードを他の利用者へ渡す悪用事例を防止でき、権限を持つ利用者に続いて外部者が入室した場合に退出できないように阻止できます。
 
 以下を参考にして、<Cmd sid='door.antiPassBack' product='2' /> セクションで設定を完了してください。
 
@@ -172,11 +180,11 @@ keywords:
 
   * <Cmd sid='door.apbType.hard' product='2' />：アンチパスバック違反時には入退室できず、アラームを鳴らすか **BioStar X** にログを生成します。
 
-* <Cmd sid='door.resetTime' product='2' />：アンチパスバック機能が初期化されるまでの時間を設定してください。 最大で7日（10080分）まで設定でき、0に設定すると初期化されません。
+* <Cmd sid='door.resetTime' product='2' />：アンチパスバック機能が初期化されるまでの時間を設定してください。最大で7日（10080分）まで設定でき、0に設定すると初期化されません。
 
 :::info
 
-* 入室デバイスと退室デバイスの両方が設置されている場合に使用でき、<Cmd sid='device.info.configuration' product='2' /> セクションで <Cmd sid='door.exitDevice' product='2' /> オプションを <Cmd sid='common.none' product='2' /> に設定すると使用できません。 退室デバイスの設定方法については <DocLink inner='#configdoor' /> をご参照ください。
+* 入室デバイスと退室デバイスの両方が設置されている場合に使用でき、<Cmd sid='device.info.configuration' product='2' /> セクションで <Cmd sid='door.exitDevice' product='2' /> オプションを <Cmd sid='common.none' product='2' /> に設定すると使用できません。退室デバイスの設定方法については <DocLink inner='#configdoor' /> をご参照ください。
 
 * <Cmd sid='door.antiPassBack' product='2' /> セクションを有効にするには、RS-485で接続されたマスター装置とスレーブ装置が必要です。
 
@@ -192,19 +200,19 @@ keywords:
 
 * <Cmd sid='timedAPB.field' product='2' />：時間制限アンチパスバック機能を使用するデバイスを選択してください。
 
-* <Cmd sid='door.resetTime' product='2' />：アンチパスバック機能が初期化されるまでの時間を設定してください。 入力単位は分（min）で、デフォルトは10分です。 最大で60分まで設定できます。
+* <Cmd sid='door.resetTime' product='2' />：アンチパスバック機能が初期化されるまでの時間を設定してください。入力単位は分（min）で、デフォルトは10分です。最大で60分まで設定できます。
 
 * <Cmd sid='zone.apb.bypassGroup' product='2' />：時間制限アンチパスバックの制限を受けず常に通行できる入退室グループを選択できます。
 
 ### アラーム設定 {/* #alarm */}
 
-<Cmd sid='door.alarm' product='2' /> セクションでは、ドアが強制的に開けられた場合、開いたまま放置された場合、またはアンチパスバック違反が発生した場合にアラームを鳴らすかデバイスの使用をブロックできます。 アラームを追加する項目で <Cmd sid='button.addplus' product='2' /> ボタンをクリックしてください。
+<Cmd sid='door.alarm' product='2' /> セクションでは、ドアが強制的に開けられた場合、開いたまま放置された場合、またはアンチパスバック違反が発生した場合にアラームを鳴らすかデバイスの使用をブロックできます。アラームを追加する項目で <Cmd sid='button.addplus' product='2' /> ボタンをクリックしてください。
 
 <Image src='/img/biostarx-setting-door-adding-alarm.png' />
 
 * <Cmd sid='door.heldOpen' product='2' />：ドアが開いたまま放置されたときのアラーム動作を設定してください。
 
-* <Cmd sid='door.heldOpenTime' product='2' />：ドアが長時間開いている場合にアラームを鳴らす時間を設定してください。 ドアが開いたままで許容される最大時間を設定してください。
+* <Cmd sid='door.heldOpenTime' product='2' />：ドアが長時間開いている場合にアラームを鳴らす時間を設定してください。ドアが開いたままで許容される最大時間を設定してください。
 
 * <Cmd sid='door.forcedOpen' product='2' />：ドアが強制的に開けられたときのアラーム動作を設定してください。
 

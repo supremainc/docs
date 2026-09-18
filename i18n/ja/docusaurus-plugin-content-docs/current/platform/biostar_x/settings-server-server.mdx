@@ -14,7 +14,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで<Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />をクリックしてください。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.server" /> をクリック。
 
 3. 各セクションで必要な項目を設定してください。
 
@@ -36,13 +36,17 @@ keywords:
 
 * <Cmd sid="setting.server.biostarIPAdress" product='2' />：サーバー IP アドレスを確認できます。
 
-* <Cmd sid="setting.server.logUploadType" product='2' />：イベントログのアップロード方法を選択できます。 サーバーとリアルタイム通信が困難な場合は、<Cmd sid="common.manual" product='2' />に設定してください。
-
-* <Cmd sid="setting.server.biostarPort" product='2' />：サーバーポートを変更できます。 希望するポート番号を入力します。
+* <Cmd sid="setting.server.logUploadType" product='2' />：イベントログのアップロード方法を選択できます。サーバーとリアルタイム通信が困難な場合は、<Cmd sid="common.manual" product='2' />に設定してください。
 
 * <Cmd sid="setting.server.logRetainDays" product='2' />：ログ保存期間は1〜120まで設定できます。
 
 * <Cmd sid="common.sessionTimeout" product='2' />：セッションのタイムアウト時間を設定できます。 **BioStar X** にログインした後、設定した時間操作がないと自動でログアウトします。
+
+:::info
+
+<Cmd sid="setting.server.logUploadType" product='2' /> オプションを <Cmd sid='common.auto' product='2' /> に設定すると、サーバーと装置間の接続が切断され、再接続時に装置に保存されたイベントログがサーバーに自動アップロードされます。
+
+:::
 
 ## ユーザーおよびデバイス管理 {/* #user-and-device-management */}
 
@@ -52,17 +56,17 @@ keywords:
 
 ### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {/* #user-sync */}
 
-<Cmd sid="setting.server.automaticUserSync" product='2' /> オプションでは、サーバーとデバイス間でユーザー情報を同期する方法を選択できます。
+<Cmd sid="setting.server.automaticUserSync" product='2' /> オプションでは、サーバーとデバイス間でユーザー情報を同期する方法を選択できます。同期にはユーザーに割り当てられたアクセスレベルとアクセスグループも含まれるため、**BioStar X**サーバーでアクセスレベルまたはアクセスグループを変更すると、システムはその変更を関連デバイスに自動的に適用します。
 
 * <Cmd sid="setting.server.syncOption.allDevices" product='2' />：ユーザー情報がサーバーとデバイス間で自動的に同期されます。
 
-* <Cmd sid="setting.server.syncOption.deviceSync" product='2' />：サーバーのユーザー情報がサーバーに登録されたすべてのデバイスと同期されます。 ただし、デバイスで修正したユーザー情報はサーバーに同期されず、デバイスで追加したユーザー情報のみがサーバーに同期されます。
+* <Cmd sid="setting.server.syncOption.deviceSync" product='2' />：サーバーのユーザー情報がサーバーに登録されたすべてのデバイスと同期されます。ただし、デバイスで修正したユーザー情報はサーバーに同期されず、デバイスで追加したユーザー情報のみがサーバーに同期されます。
 
 * <Cmd sid="setting.server.syncOption.smartSync" product='2' />：変更があるアクセスグループに属するデバイスのみがサーバーと自動同期されます。
 
 :::info
 
-* <Cmd sid="setting.server.syncOption.smartSync" product='2' /> オプションを選択すると、デバイスに保存されているユーザーのうちアクセスグループに属していないユーザーはサーバーで管理できません。 このオプションを使用するには、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> メニューで各デバイスを選択し、<Cmd sid="device.sync_all" product='2' /> をクリックして同期を実行します。 <Cmd sid="device.sync_all" product='2' /> 機能の詳細については <DocLink docId='platform/biostar_x/settings-device-using-functions' /> を参照してください。
+* <Cmd sid="setting.server.syncOption.smartSync" product='2' /> オプションを選択すると、デバイスに保存されているユーザーのうちアクセスグループに属していないユーザーはサーバーで管理できません。このオプションを使用するには、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> メニューで各デバイスを選択し、<Cmd sid="device.sync_all" product='2' /> をクリックして同期を実行します。 <Cmd sid="device.sync_all" product='2' /> 機能の詳細については <DocLink docId='platform/biostar_x/settings-device-using-functions' /> を参照してください。
 
 * <Cmd sid="setting.server.syncOption.smartSync" product='2' /> オプションを選択しても、以下のように特別な目的で指定されたアクセスグループの場合、デバイスのアクセスグループに関係なく同期されます。
 
@@ -82,7 +86,7 @@ keywords:
 
 ### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {/* #fingerprint-template-format */}
 
-<Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> オプションでは、指紋テンプレート形式を選択できます。 次の項目から選択します。
+<Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> オプションでは、指紋テンプレート形式を選択できます。次の項目から選択します。
 
 * <Cmd>SUPREMA</Cmd>：Suprema指紋テンプレート形式です。 Supremaデバイスで指紋を登録する際に使用します。
 
@@ -160,7 +164,7 @@ keywords:
 
 :::info
 
-* 登録デバイスが多く一覧から見つけにくい場合は、検索入力フィールドにキーワードを入力してデバイスを検索します。 デバイスID、デバイス名、デバイスグループ、IPアドレスを入力できます。
+* 登録デバイスが多く一覧から見つけにくい場合は、検索入力フィールドにキーワードを入力してデバイスを検索します。デバイスID、デバイス名、デバイスグループ、IPアドレスを入力できます。
 
 * ユーザー情報を登録する際の指紋または顔、カードクレデンシャル登録の詳細は次のドキュメントを参照してください。
 
@@ -176,7 +180,7 @@ keywords:
 
 ### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {/* #custom-field */}
 
-<Cmd sid="setting.server.custom_field.title" product='2' /> オプションでは、ユーザーの付加情報を入力するフィールドを追加できます。 追加したフィールドはユーザー情報画面に表示されます。
+<Cmd sid="setting.server.custom_field.title" product='2' /> オプションでは、ユーザーの付加情報を入力するフィールドを追加できます。追加したフィールドはユーザー情報画面に表示されます。
 
 1. カスタムユーザーフィールドを追加するには、<Cmd sid="button.plusAdd" product='2' /> ボタンをクリックします。
 
@@ -186,9 +190,9 @@ keywords:
 
    * <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />：0 から 4294962795 まで入力でき、文字は入力できません。
 
-   * <Cmd sid="setting.server.custom_field.type.textbox" product='2' />：最大32文字の数字および文字を入力できます。
+   * <Cmd sid="setting.server.custom_field.type.textbox" product='2' />：最大 32 文字の数字および文字を入力できます。
 
-   * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />：最大20個のサブ項目を32文字で追加でき、各項目はセミコロン（;）で区切ります。 (例：選択1;選択2;選択3)
+   * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />：最大 20 個のサブ項目を 32 文字で追加でき、各項目はセミコロン（;）で区切ります。(例：選択1;選択2;選択3)
 
      <Image src='/img/biostarx-settings-server-management-custome-field-select.png' />
 
@@ -210,15 +214,15 @@ keywords:
 
 :::info
 
-* カスタムユーザーフィールドの順序を変更するには、<Cmd sid='setting.server.custom_field.order' product='2' /> 列の数字を変更します。 該当フィールドの位置が変更されます。
+* カスタムユーザーフィールドの順序を変更するには、<Cmd sid='setting.server.custom_field.order' product='2' /> 列の数字を変更します。該当フィールドの位置が変更されます。
 
 * カスタムユーザーフィールドを修正した後、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
 
-* カスタムユーザーフィールドを削除するには、<IcTrash2 /> ボタンをクリックします。 削除したフィールドは復元できません。
+* カスタムユーザーフィールドを削除するには、<IcTrash2 /> ボタンをクリックします。削除したフィールドは復元できません。
 
 * ユーザー情報の登録・編集の詳細については <DocLink docId='platform/biostar_x/how-to-guide-user' /> を参照してください。
 
-* カスタムユーザーフィールドを追加したユーザー情報をカードに印刷できます。 詳細については <DocLink docId='platform/biostar_x/settings-card-printer#adding-custom-user-fields' /> を参照してください。
+* カスタムユーザーフィールドを追加したユーザー情報をカードに印刷できます。詳細については <DocLink docId='platform/biostar_x/settings-card-printer#adding-custom-user-fields' /> を参照してください。
 
 :::
 
@@ -229,60 +233,60 @@ keywords:
 :::info
 
 <details>
-<summary>**NFCモバイルカード**をサポートするデバイスとファームウェアバージョンを表示</summary>
+<summary>**NFCモバイルカード**をサポートするデバイスを表示</summary>
 
-* モバイルデバイス OS：Android 5.0 Lollipop 以上、Android 10 以下
+* モバイルデバイスのOS：Android 7.0 以上
 
-* BioStar X Mobile 1.0.0 以上
+* BioStar X Mobile
 
-* BioStation 3 Maxのファームウェアバージョン1.0.0以降
+* BioStation 3 Max
 
-* XPass Q2のファームウェアバージョン1.0.0以降
+* XPass Q2
 
-* XPass 2：XP2-MDPB、XP2-GDPB、XP2-GKDPB、XP2-MAPB ファームウェア 1.0 以上
+* XPass 2
 
-* FaceLite：FL-DB ファームウェア 1.1 以下
+* FaceLite
 
-* BioLite N2：BLN2-ODB、BLN2-OAB、BLN2-PAB ファームウェア 1.2 以下
+* BioLite N2
 
-* XPass D2：XPD2-MDB、XPD2-GDB、XPD2-GKDB ファームウェア 1.3 以下
+* XPass D2
 
-* BioEntry R2：BER2-OD ファームウェア 1.1.0 以上
+* BioEntry R2
 
-* BioEntry P2：BEP2-OD、BEP2-OA ファームウェア 1.0 以上
+* BioEntry P2
 
-* FaceStation 2：FS2-D、FS2-AWB ファームウェア 1.3.1 以下
+* FaceStation 2
 
-* BioEntry W2：BEW2-OAP、BEW2-ODP ファームウェア 1.1 以上、1.5 以下
+* BioEntry W2
 
-* BioStation L2：BSL2-OM ファームウェア 1.2 以上
+* BioStation L2：BSL2-OM
 
-* BioStation A2：BSA2-OMPW、BSA2-OIPW ファームウェア 1.3 以上、1.7.1 以下
+* BioStation A2：BSA2-OMPW、BSA2-OIPW
 
-* BioStation 2：BS2-OMPW、BS2-OIPW ファームウェア 1.4 以上、1.8 以下
+* BioStation 2：BS2-OMPW、BS2-OIPW
 
 </details>
 
 <details>
-<summary>**BLEモバイルカード**をサポートするデバイスとファームウェアバージョンを表示</summary>
+<summary>**BLEモバイルカード**をサポートするデバイスを表示</summary>
 
-* モバイルデバイス OS：Android 5.0 Lollipop 以上、Android 10 以下 / iOS 9.0 以上
+* モバイルデバイスのOS：Android 7.0 以上 / iOS 13.0 以上
 
-* BioStar X Mobile 1.0.0 以上
+* BioStar X Mobile
 
-* FaceStation 2：FS2-AWB ファームウェア 1.3.1 以下
+* BioStation 3 Max
 
-* BioLite N2：BLN2-ODB、BLN2-OAB、BLN2-PAB ファームウェア 1.2 以下
+* XPass Q2
 
-* XPass D2：XPD2-MDB、XPD2-GDB、XPD2-GKDB ファームウェア 1.3 以下
+* XPass 2
 
-* FaceLite：FL-DB ファームウェア 1.1 以下
+* FaceLite：FL-DB
 
-* XPass 2：XP2-MDPB、XP2-GDPB、XP2-GKDPB、XP2-MAPB ファームウェア 1.0 以上
+* BioLite N2
 
-* BioStation 3 Maxのファームウェアバージョン1.0.0以降
+* XPass D2
 
-* XPass Q2のファームウェアバージョン1.0.0以降
+* FaceStation 2：FS2-AWB
 
 </details>
 
@@ -294,7 +298,13 @@ keywords:
 
 * <Cmd sid="setting.server.eventLogRetainDays" product='2' />：出入管理イベントログを保存する期間を設定します。
 
-* <Cmd sid="setting.server.hideCredentialFaces" product='2' />：ユーザーのプライバシーを保護するため、顔クレデンシャルを登録する際にプレビュー画像を非表示にできます。 このオプションを有効にすると、ユーザーの顔クレデンシャルを登録する際にプレビュー画面が表示されません。
+  :::info
+
+  入退室管理イベントログの保存期間の設定は、サーバーログにのみ適用されます。デバイスイベントログには、この設定が適用されません。デバイスイベントログを削除する場合は、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> メニューでデバイスイベントログを個別に削除してください。
+
+  :::
+
+* <Cmd sid="setting.server.hideCredentialFaces" product='2' />：ユーザーのプライバシーを保護するため、顔クレデンシャルを登録する際にプレビュー画像を非表示にできます。このオプションを有効にすると、ユーザーの顔クレデンシャルを登録する際にプレビュー画面が表示されません。
 
 ## サーバーマッチングを設定する {/* #servermatching */}
 
@@ -316,15 +326,15 @@ keywords:
 
   * <Cmd sid="setting.server.serverMatching.fastMode" product='2' />：指紋マッチング速度を調整できます。
 
-  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />：指紋に対するサーバーマッチングのセキュリティレベルを設定できます。 セキュリティレベルが高いほど本人拒否率（FRR）が増加します。
+  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />：指紋に対するサーバーマッチングのセキュリティレベルを設定できます。セキュリティレベルが高いほど本人拒否率（FRR）が増加します。
 
 * <Cmd sid='common.face' product='2' />
 
-  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />：IRフェイスに対するサーバーマッチングのセキュリティレベルを設定できます。 セキュリティレベルが高いほど本人拒否率（FRR）が増加します。
+  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />：IRフェイスに対するサーバーマッチングのセキュリティレベルを設定できます。セキュリティレベルが高いほど本人拒否率（FRR）が増加します。
 
 :::info
 
-<Cmd sid='common.serverMatching' product='2' /> は **アドバンス**(Advanced) 以上のライセンスで機能追加オプション(Feature Add-ons)を有効にした場合に使用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+<Cmd sid='common.serverMatching' product='2' /> 機能は、**エッセンシャル**(Essential) ライセンス以上で追加オプションとして利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
 
 :::
 
@@ -334,7 +344,7 @@ keywords:
 
 <Image src='/img/biostarx-settings-server-system-log-level.png' className='none' />
 
-システムログはあらかじめ定義されたカテゴリーで管理され、ログレベルは <Cmd sid="setting.server.logLevel.trace" product='2' />、<Cmd sid="setting.server.logLevel.debug" product='2' />、<Cmd sid="setting.server.logLevel.info" product='2' />、<Cmd sid="setting.server.logLevel.warning" product='2' />、<Cmd sid="setting.server.logLevel.error" product='2' />に分類されます。 上位レベルには下位レベルのログがすべて含まれます。 例えば、システムログレベルを <Cmd sid="setting.server.logLevel.trace" product='2' /> に選択すると、下位レベルである <Cmd sid="setting.server.logLevel.debug" product='2' />、<Cmd sid="setting.server.logLevel.info" product='2' />、<Cmd sid="setting.server.logLevel.warning" product='2' />、<Cmd sid="setting.server.logLevel.error" product='2' /> のログもすべて含めて保存されます。
+システムログはあらかじめ定義されたカテゴリーで管理され、ログレベルは <Cmd sid="setting.server.logLevel.trace" product='2' />、<Cmd sid="setting.server.logLevel.debug" product='2' />、<Cmd sid="setting.server.logLevel.info" product='2' />、<Cmd sid="setting.server.logLevel.warning" product='2' />、<Cmd sid="setting.server.logLevel.error" product='2' />に分類されます。上位レベルには下位レベルのログがすべて含まれます。例えば、システムログレベルを <Cmd sid="setting.server.logLevel.trace" product='2' /> に選択すると、下位レベルである <Cmd sid="setting.server.logLevel.debug" product='2' />、<Cmd sid="setting.server.logLevel.info" product='2' />、<Cmd sid="setting.server.logLevel.warning" product='2' />、<Cmd sid="setting.server.logLevel.error" product='2' /> のログもすべて含めて保存されます。
 
 ## 顔画像の保存 {/* #storevisualfaceimage */}
 
@@ -344,7 +354,7 @@ keywords:
 
 **使用前に**
 
-<Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> オプションを有効にする前に、<Cmd sid="common.server" product='2' /> メニューで行った変更がある場合は、先に変更内容を保存する必要があります。 画面右下の <Cmd sid="button.apply" product='2' /> ボタンをクリックします。
+<Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> オプションを有効にする前に、<Cmd sid="setting.menu.server.server" /> メニューで行った変更がある場合は、先に変更内容を保存する必要があります。画面右下の <Cmd sid="button.apply" product='2' /> ボタンをクリックします。
 
 :::
 
@@ -358,9 +368,9 @@ keywords:
 
    <Image src='/img/biostarx-settings-server-expert2.png' />
 
-   * <Cmd sid="common.use" product='2' />：既定値です。 顔クレデンシャルの実際の画像とテンプレートを両方保存します。
+   * <Cmd sid="common.use" product='2' />：既定値です。顔クレデンシャルの実際の画像とテンプレートを両方保存します。
 
-   * <Cmd sid="common.notUse" product='2' />：顔クレデンシャルの実際の画像は保存せず、テンプレートのみ保存します。 このオプションを選択したら表示される警告ポップアップをよく読み、設定してください。
+   * <Cmd sid="common.notUse" product='2' />：顔クレデンシャルの実際の画像は保存せず、テンプレートのみ保存します。このオプションを選択したら表示される警告ポップアップをよく読み、設定してください。
 
 4. <Cmd sid="button.apply" product='2' /> をクリックして設定を保存します。
 
@@ -372,6 +382,6 @@ keywords:
 
 * 登録済みの顔画像が2種類のテンプレートを持っていない場合、この機能を無効にできません。 <Cmd sid='team.menu.faceMigration' /> 機能の詳細については <DocLink docId='platform/biostar_x/migration-face' /> を参照してください。
 
-* この機能を無効にした後、<Cmd sid="menu.dataImport" product='2' /> で無効な顔画像テンプレートが含まれている場合、データファイルをインポートできません。 問題を解決するには、この機能を一時的に有効にしてからデータファイルをインポートしてください。
+* この機能を無効にした後、<Cmd sid="menu.dataImport" product='2' /> で無効な顔画像テンプレートが含まれている場合、データファイルをインポートできません。問題を解決するには、この機能を一時的に有効にしてからデータファイルをインポートしてください。
 
 :::

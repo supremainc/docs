@@ -1,73 +1,220 @@
 ---
 id: monitoring-device
 title: デバイスをモニタリングする
-description: すべてのエリアと出入口に接続されたデバイスとカメラをリアルタイムでモニタリングします。 デバイスとカメラの状態チェック、詳細情報の確認、カメラ映像の再生など、さまざまな機能で効率的に管理できます。
-keywords:
-  - モニタリング
-  - デバイス
-  - カメラ
+description: すべてのエリアと出入口に接続されたデバイスとカメラをリアルタイムでモニタリングします。デバイスとカメラの状態チェック、詳細情報の確認、カメラ映像の再生など、さまざまな機能で効率的に管理できます。
 ---
 
-デバイスおよびカメラのモニタリング機能の使用方法を説明します。 デバイスとカメラの状態をチェックし、詳細情報を確認し、カメラ映像をリアルタイム再生するなど、さまざまな機能を利用できます。 さらに、最近発生したイベントを確認してデバイスとカメラの状態を効率的に管理する方法もご確認ください。
+デバイスおよびカメラのモニタリング機能の使用方法を説明します。デバイスとカメラの状態をチェックし、詳細情報を確認し、カメラ映像をリアルタイム再生するなど、さまざまな機能を利用できます。さらに、最近発生したイベントを確認してデバイスとカメラの状態を効率的に管理する方法もご確認ください。
 
 <Cmd sid='arena.title' /> ページには、<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='arena.title' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='arena.title' /> を選択してアクセスできます。
 
 ## デバイスおよびカメラの状態チェック
 
-画面左側のサイドバーで<Cmd sid='arena.tree.device.title' />タブをクリックします。 すべてのデバイスとカメラの状態をチェックできます。 デバイスとカメラの状態は以下を参照してください。
+画面左側のサイドバーで<Cmd sid='arena.tree.device.title' />タブをクリックします。すべてのデバイスとカメラの状態をチェックできます。デバイスとカメラの状態は以下を参照してください。
 
 <div className='col2--20-80 overflow-x'>
 
 | ステータスアイコン | 説明 |
 | :-: | --- |
-| <StatusOK/> | デバイスが正常に接続されています。 |
-| <StatusFail /> | デバイスの電源がオフ、または接続が解除されています。 |
+| <IcDeviceOn width='35px' height='35px'/> | デバイスが正常に接続されています。 |
+| <IcDeviceOff width='35px' height='35px' /> | デバイスの電源がオフ、または接続が解除されています。 |
 | <IcCamOk width='auto' height='35px'/> | カメラが接続されています。 |
 | <IcCamFail width='auto' height='35px'/> | カメラの電源がオフ、または接続が解除されています。 |
 
 </div>
 
-## デバイス制御
+### 注意が必要なデバイスをまとめて表示 {/* #checkAttentionFilter */}
 
-画面左側のサイドバーのデバイス一覧で目的のデバイスを選択し、右クリックします。 ポップアップメニューで必要な機能を選択できます。
+管理者は対応が必要なデバイスだけを一度にまとめて表示できます。画面左のサイドバーの <Cmd sid='arena.tree.door.entitiesNeedAttention' /> をクリックします。デバイスの状態を確認し、問題が発生した対象に対応できます。
 
-<Image src='/img/biostarx-monitoring-device-popup.png' />
+<Image src='/img/biostarx-monitoring-device-attention-filter.png' />
 
-### デバイス再接続
+### 対応対象の判定基準 {/* #attention-criteria */}
 
-デバイスの電源がオフまたは接続が解除されている場合は、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.reconnect' />をクリックします。 デバイスが再接続されると、ステータスアイコンが<StatusOK/>に変わります。
+デバイスツリーで正常ではないデバイスを対応対象として判定します。
+
+| 異常状態の種類 | 状態表示 | 説明 |
+| --- | --- | --- |
+| 接続切断 | <Cmd sid='arena.tree.disconnected' /> | デバイスとのネットワーク接続が切断された状態 |
+| 同期化エラー | <Cmd sid='arena.tree.syncError' /> | 接続はされているが、データ同期がずれている状態 |
+| マルチコミュニケーションサーバーエラー | <Cmd sid='arena.tree.communicationError' /> | デバイスが属するマルチコミュニケーションサーバーでエラーが発生した状態 |
+| デバイスロック | <Cmd sid='arena.tree.deviceLocked' /> | 作業条件と動作によりデバイスがロックされた状態 |
+| 認証失敗ロック | <Cmd sid='arena.preview.device.authFailLockout.title' /> | 指定回数以上の認証失敗によりデバイスがロックされた状態 |
 
 :::info
 
-<Cmd sid='arena.tree.contextMenu.reconnect' />機能は、<Cmd sid='device.info.deviceToServerConnection' product='2' />オプションで接続されたデバイスではサポートされません。 デバイスの登録に関する詳細は、<DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />をご参照ください。
+* <Cmd sid='arena.tree.deviceLocked' /> 条件は <DocLink docId='platform/biostar_x/settings-triger-and-action' />で設定した作業条件および動作に基づいて決まります。この状態の確認と解除方法は <DocLink inner='#deviceLockRelease' /> をご参照ください。
+
+* <Cmd sid='arena.preview.device.authFailLockout.title' /> 条件はデバイス設定で設定できます。詳しくは <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' /> をご参照ください。この状態の確認と解除方法は <DocLink inner='#authFailLockout' /> をご参照ください。
+
+:::
+
+## デバイス制御
+
+画面左側のサイドバーのデバイス一覧で目的のデバイスを選択し、右クリックします。ポップアップメニューで必要な機能を選択できます。
+
+<Image src='/img/biostarx-monitoring-device-popup.png' />
+
+デバイスタイプによって表示される制御機能が異なる場合があります。
+
+| 機器タイプ | 制御機能 |
+| --- | --- |
+| [マスター デバイス](../../reference/glossary#master_device)、スレーブなしでサーバーに直接接続される基本デバイス | <Cmd sid='arena.tree.contextMenu.stopAction' />、 <Cmd sid='arena.tree.contextMenu.reboot' />、 <Cmd sid='arena.tree.contextMenu.deviceUnlock' />、 <Cmd sid='arena.batchResult.action.clearLockout' />、 <Cmd sid='arena.tree.contextMenu.reconnect' />(サーバーからデバイスに接続する方式の場合のみ) |
+| [スレーブ デバイス](../../reference/glossary#slave_device) | <Cmd sid='arena.tree.contextMenu.stopAction' />、<Cmd sid='arena.tree.contextMenu.reboot' />、<Cmd sid='arena.tree.contextMenu.deviceUnlock' />、<Cmd sid='arena.batchResult.action.clearLockout' /> |
+| OSDP 通信デバイス | <Cmd sid='arena.tree.contextMenu.deviceUnlock' />, <Cmd sid='arena.tree.contextMenu.reconnect' />(接続方式によって異なる) |
+| Wiegand 機器 | <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> |
+| 拡張モジュール（Secure I/O 2、DM-20、OM-120、IM-120） | <Cmd sid='arena.tree.contextMenu.stopAction' /> |
+| デバイスからサーバーへ接続する方式のデバイス | <Cmd sid='arena.tree.contextMenu.stopAction' />、<Cmd sid='arena.tree.contextMenu.reboot' />、<Cmd sid='arena.tree.contextMenu.deviceUnlock' />、<Cmd sid='arena.batchResult.action.clearLockout' /> |
+| ワイヤレスアンテナモジュール | なし |
+
+### デバイス再接続
+
+デバイスの接続状態に関係なく、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.reconnect' />をクリックしてください。接続が切れたデバイスは再接続を試みます。正常に接続されたデバイスは、設定を再送信し、異常状態を解消します。デバイスが再接続されると、ステータスアイコンが正常状態（<IcDeviceOn />）に変わります。
+
+:::info
+
+<Cmd sid='arena.tree.contextMenu.reconnect' />機能は、<Cmd sid='device.info.deviceToServerConnection' product='2' />オプションに設定したデバイスをサポートしません。デバイスの登録に関する詳細は、<DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />をご参照ください。
 
 :::
 
 ### デバイス再起動
 
-デバイスを再起動するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.reboot' />をクリックします。 
+デバイスを再起動するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.reboot' />をクリックします。警告メッセージウィンドウが表示されたら、<Cmd sid='common.button.ok' /> ボタンをクリックしてください。
 
-### デバイスロック
+### デバイスロック解除 {/* #deviceLockRelease */}
 
-* デバイスをロックするには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.deviceLock' />をクリックします。 画面上部にデバイスロックが実行中であることを知らせるメッセージが表示されます。 ロックが完了するとメッセージが消えます。
+管理者が設定した動作条件と動作によってデバイスがロックされると、画面左側のサイドバーでデバイス名の下に<Cmd sid='arena.tree.deviceLocked' />状態が表示されます。デバイスを選択すると、画面右側のプレビューパネル上部にも同じバナーが表示されます。
 
-* デバイスロックを解除するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.deviceUnlock' />をクリックします。 画面上部にデバイスロック解除が実行中であることを知らせるメッセージが表示されます。 ロック解除が完了するとメッセージが消えます。
+<Image src='/img/biostarx-monitoring-device-lock.png' />
+
+* デバイスがロック状態のときだけ、ポップアップメニューに<Cmd sid='arena.tree.contextMenu.deviceUnlock' />が表示されます。ロック状態を解除するには、ロックされたデバイスを選択し、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.deviceUnlock' />をクリックします。
+
+* ロックされたデバイスを選択し、画面右側のプレビューパネル上部に表示されるバナーで<Cmd sid='arena.preview.banner.unlock' />ボタンをクリックします。
+
+:::info
+
+<Cmd sid='arena.tree.contextMenu.deviceUnlock' />機能は、<Cmd sid='setting.account.administrator' />または<Cmd sid='setting.account.monitoringOperator' />権限を持つユーザーにだけ表示されます。
+
+:::
+
+### 認証失敗ロックアウト解除 {/* #authFailLockout */}
+
+<Cmd sid='device.info.authFailLockout.label' product='2' />オプションで設定した回数以上、認証に失敗するとデバイスがロック状態に切り替わります。デバイスがロックアウト状態になると、画面左側のサイドバーでデバイス名の下に<Cmd sid='arena.preview.device.authFailLockout.title' />状態が表示されます。デバイスを選択すると、画面右側のプレビューパネル上部にも同じバナーが表示され、イベント発生時刻とデバイス情報を確認できます。
+
+デバイスが認証失敗ロックアウト状態のときだけ、ポップアップメニューに<Cmd sid='arena.batchResult.action.clearLockout' />が表示されます。ロックされたデバイスを選択し、ポップアップメニューで<Cmd sid='arena.batchResult.action.clearLockout' />をクリックしてください。
+
+<Image src='/img/biostarx-monitoring-device-auth-fail-lock.png' />
+
+:::info
+
+* <Cmd sid='arena.batchResult.action.clearLockout' />メニューは、<Cmd sid='setting.account.administrator' />または<Cmd sid='setting.account.monitoringOperator' />権限を持つユーザーにだけ表示されます。
+
+* 設定したロック時間（<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />）が経過すると、デバイスが自動的にロックを解除します。この場合、追加の操作なしでロック状態が解除されます。ロック条件およびロック時間設定の詳細は<DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />を参照してください。
+
+:::
 
 ### 作業停止
 
-進行中の作業を停止するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.stopAction' />をクリックします。 画面上部に作業停止成功のメッセージが表示されます。 作業停止が完了するとメッセージが消えます。
+デバイスで実行中のアラームベースおよびトリガーベースの動作をすべて停止するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.stopAction' />をクリックしてください。画面上部に作業停止成功のメッセージが表示されます。
 
 ### デバイスの詳細表示
 
-デバイスの詳細情報を確認するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.viewDetail' />をクリックします。 またはデバイスをダブルクリックします。 画面右側にデバイスの詳細情報が表示されます。
+デバイスの詳細情報を確認するには、ポップアップメニューで<Cmd sid='arena.tree.contextMenu.viewDetail' />をクリックします。またはデバイスをダブルクリックします。画面右側にデバイスの詳細情報が表示されます。
 
 <Image src='/img/biostarx-monitoring-device-details.png' />
 
-デバイスのIDとグループ、モデル名、起動時間、IPアドレスなどの情報を確認できます。 下部の<Cmd sid='arena.recentEvent' />リストでは、最近発生したイベントを時系列の降順で確認できます。
+* **デバイス制御**：デバイスの動作を停止、再起動、再接続するなどの制御を実行できます。
 
-## カメラ制御
+* **デバイス詳細情報**：デバイスのIDとグループ、モデル名、起動時間、IPアドレスなどの情報を確認できます。
 
-画面左側のサイドバーのカメラ一覧で目的のカメラを選択し、右クリックします。 ポップアップメニューで必要な機能を選択できます。
+* <Cmd sid='arena.recentEvent' />：選択したデバイスで発生した最近のイベント一覧を確認できます。
+
+## 複数のデバイスを一括で制御する {/* #batch-control */}
+
+複数のデバイスをまとめて選択し、再接続、再起動、ロック解除などのコマンドを一括で実行する方法を説明します。画面左のサイドバーにある <Cmd sid='arena.tree.device.title' /> タブでデバイスを二台以上選択すると、画面右に一括制御パネルが表示されます。
+
+<Image src='/img/biostarx-monitoring-device-multi-select.png' />
+
+:::info
+
+カメラは一括制御の対象ではありません。カメラの制御方法については、<DocLink inner='#controlCamera' />をご参照ください。
+
+:::
+
+### 複数のデバイスを選択する {/* #select-multiple-devices */}
+
+画面左のサイドバーにある<Cmd sid='arena.tree.device.title' />タブでデバイスを選択する方法は次のとおりです。
+
+* **<Kbd>Ctrl</Kbd> + クリック**：クリックしたデバイスを選択リストに追加または除外します。ほかの選択はそのまま残ります。
+
+* **<Kbd>Shift</Kbd> + クリック**：最後にクリックしたデバイスから、今クリックしたデバイスまでの範囲を選択します。デバイスグループは範囲選択の対象外です。
+
+* **グループ（<IcGroup />）をクリック**：グループ名をクリックすると、その下のすべてのデバイスが選択リストに追加されます。すでに選択したデバイスはそのままです。
+
+:::info
+
+* 配下にデバイスがない空のグループだけを選択すると、画面右のパネルが閉じます。
+
+* デバイスを一台だけ選択するとデバイス詳細情報パネルが表示され、二台以上選択すると一括制御パネルに切り替わります。
+
+:::
+
+<Columns className='mt--50'>
+<Column className='width--20'>
+
+<Image src='/img/biostarx-monitoring-device-batch-control-panel.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+### 一括制御パネルの構成 {/* #batch-panel-layout */}
+
+* <Cmd sid='monitoring.multiControl.unlockDevice' />, <Cmd sid='monitoring.multiControl.clearLockout' />：選択したデバイスの中にロック、または認証失敗によるロックアウト状態のデバイスがある場合に有効になり、ボタンの横に対象デバイス数が表示されます。
+
+* <Cmd sid='monitoring.multiControl.stopAction' />, <Cmd sid='monitoring.multiControl.reconnect' />, <Cmd sid='monitoring.multiControl.reboot' />：対象デバイス数は表示せず、選択したデバイスの中に該当する制御をサポートするデバイスがある場合に有効になります。
+
+* **デバイス制御**：<Cmd sid='monitoring.multiControl.unlockDevice' />、<Cmd sid='monitoring.multiControl.clearLockout' />、<Cmd sid='monitoring.multiControl.stopAction' />、<Cmd sid='monitoring.multiControl.reconnect' />、<Cmd sid='monitoring.multiControl.reboot' />の実行ボタンを使用できます。
+
+* **区切り線**：デバイス制御領域と<Cmd sid='common.selectedItems' />の間の境界線を上下にドラッグすると、両領域の高さ配分を調整できます。
+
+* <Cmd sid='common.selectedItems' />: 選択したデバイスの接続状態、名前、異常状態を表示します。異常状態の種類は <DocLink inner='#attention-criteria' /> をご参照ください。
+
+各ボタンをクリックすると、確認ウィンドウを表示します。確認ウィンドウで <Cmd sid='common.cancel' /> をクリックすると、選択した操作を実行しません。選択した操作が表示されたボタンをクリックすると、選択したすべてのデバイスに対してその操作を実行します。
+
+:::info
+
+選択したデバイスの種類が混在している場合、各デバイスがサポートする制御をまとめて表示します。選択したデバイスのいずれでもサポートされていない制御のボタンは表示されません。サポートする制御が一つもない場合は、案内文と選択デバイス一覧表のみが表示されます。
+
+:::
+
+</Column>
+</Columns>
+
+### 実行結果を確認する {/* #batch-result */}
+
+* 選択したすべてのデバイスが成功した場合、成功メッセージのみを表示します。
+
+  <Image src='/img/biostarx-monitoring-device-batch-action-success.png' caption />
+
+* 一台でも失敗した場合、失敗メッセージとともに <Cmd sid='arena.batchResult.showDetails' /> ボタンが表示されます。 
+
+  <Image src='/img/biostarx-monitoring-device-batch-action-fail-toast.png' caption />
+
+  <Cmd sid='arena.batchResult.showDetails' />をクリックすると、<Cmd sid='arena.batchResult.successChip' />、<Cmd sid='arena.batchResult.failChip' />、<Cmd sid='arena.batchResult.skippedChip' />の三つのグループに区分された結果を確認できます。失敗した対象の名前と理由をクリップボードにコピーするには、<Cmd sid='arena.batchResult.copyFailList' />ボタンをクリックします。
+
+  <Image src='/img/biostarx-monitoring-device-batch-action-fail-detail.png' caption />
+
+:::info
+
+* <Cmd sid='monitoring.multiControl.reconnect' /> ボタンは例外です。リクエストを受け付けると、常に成功メッセージのみを表示します。失敗の有無や詳細結果ウィンドウは提供しません。実際に接続できたかどうかは、ステータスツリーで確認してください。
+
+* <Cmd sid='monitoring.multiControl.unlockDevice' /> と <Cmd sid='monitoring.multiControl.clearLockout' /> はそれぞれ別に処理され、結果ウィンドウも別々に表示します。
+
+:::
+
+## カメラを制御する {/* #controlCamera */}
+
+画面左側のサイドバーのカメラ一覧で目的のカメラを選択し、右クリックします。ポップアップメニューで必要な機能を選択できます。
 
 <Image src='/img/biostarx-monitoring-camera-popup.png' />
 
@@ -91,12 +238,12 @@ keywords:
 
 * 映像の制御方法や、映像上に表示されるツールの詳細については、<DocLink docId='platform/biostar_x/monitoring-video' />をご参照ください。
 
-* <Cmd sid='arena.tree.device.allCameraGroups' />の一覧にカメラが表示されない場合は、カメラグループの権限を確認してください。 カスタム権限を持つ管理者がカメラグループの権限を設定していないと、カメラが表示されないことがあります。 カメラグループの権限設定の詳細については <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />ご参照ください。
+* <Cmd sid='arena.tree.device.allCameraGroups' />の一覧にカメラが表示されない場合は、カメラグループの権限を確認してください。カスタム権限を持つ管理者がカメラグループの権限を設定していないと、カメラが表示されないことがあります。カメラグループの権限設定の詳細については <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />ご参照ください。
 
 :::
 
 ### カメラの詳細表示
 
-カメラの詳細情報を確認するには、ポップアップメニューで <Cmd sid='arena.tree.contextMenu.viewDetail' /> をクリックしてください。 カメラのグループ、説明、ID、IPアドレスを確認できます。
+カメラの詳細情報を確認するには、ポップアップメニューで <Cmd sid='arena.tree.contextMenu.viewDetail' /> をクリックしてください。カメラのグループ、説明、ID、IP アドレスを確認できます。
 
 <Image src='/img/biostarx-monitoring-camera-details.png' />

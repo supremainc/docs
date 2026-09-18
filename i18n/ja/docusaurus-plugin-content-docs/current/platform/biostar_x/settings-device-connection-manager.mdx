@@ -1,24 +1,24 @@
 ---
 id: settings-device-connection-manager
 title: デバイス接続管理を設定する
-description: BioStar Xで通信サーバーを介して多数のデバイスを接続し管理する方法を案内します。 最大3,000台のネットワークデバイスを複数のサーバーに分散して管理できます。
+description: BioStar Xで通信サーバーを介して多数のデバイスを接続し管理する方法を案内します。最大3,000台のネットワークデバイスを複数のサーバーに分散して管理できます。
 keywords:
   - デバイス接続マネージャー
   - Communication サーバー
   - 設定
 ---
 
-**BioStar X** の <Cmd sid='settings.deviceConnectionManager.settingMenuTitle' product='2' /> は、企業や大型ビルで多数のデバイスを効率的に管理するために作られた機能です。 従来は1台のサーバーで最大1,000台のデバイスしか接続できませんでしたが、現在は **Communication** サーバーを複数のコンピューターにインストールすることで、最大3,000台のネットワークデバイスを管理できます。
+**BioStar X** の <Cmd sid='settings.deviceConnectionManager.settingMenuTitle' product='2' /> は、企業や大型ビルで多数のデバイスを効率的に管理するために作られた機能です。従来は1台のサーバーで最大1,000台のデバイスしか接続できませんでしたが、現在は **Communication** サーバーを複数のコンピューターにインストールすることで、最大3,000台のネットワークデバイスを管理できます。
 
 :::info
 
-* この機能は **Device Manager** ライセンスを有効化すると利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+* この機能は **Device Manager** ライセンスを有効化すると利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
 
-* Communication サーバーの仕様とインストールの詳細については次のドキュメントを参照してください。
+* マルチコミュニケーションサーバーの仕様とインストールの詳細については次のドキュメントを参照してください。
 
-  * [Communication サーバーの仕様](system-requirements#communication-server)
+  * <DocLink docId='platform/biostar_x/system-requirements#communication-server' />
 
-  * [Communication サーバーのインストール案内](install-communication-server)
+  * <DocLink docId='platform/biostar_x/install-communication-server' />
 
 :::
 
@@ -32,11 +32,11 @@ keywords:
 
 * **大規模環境サポート**：大規模な事業所や建物で必要とされる多数のデバイスを安定して運用できます。
 
-Communication サーバーは、BioStar X の統合サーバーからデバイス接続機能のみを分離した専用サービスです。 デバイスとの安定した通信に特化し、システム全体のパフォーマンスを向上させます。
+マルチコミュニケーションサーバーは、BioStar X の統合サーバーからデバイス接続機能のみを分離した専用サービスです。デバイスとの安定した通信に特化し、システム全体のパフォーマンスを向上させます。
 
 ## 別のサーバーへデバイスを移動する
 
-メインサーバーまたは別の Communication サーバーに登録されているデバイスを、別の Communication サーバーへ移動できます。 この機能により、デバイスの接続状態を維持したままサーバー間でデバイスを移動できます。
+メインサーバーまたは別のマルチコミュニケーションサーバーに登録されているデバイスを、別のマルチコミュニケーションサーバーへ移動できます。この機能により、デバイスの接続状態を維持したままサーバー間でデバイスを移動できます。
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
@@ -50,13 +50,13 @@ Communication サーバーは、BioStar X の統合サーバーからデバイ�
 
    <Image src='/img/biostarx-setting-device-connection-manager-02.png' />
 
-5. デバイス一覧から移動するデバイスを選択します。 複数のデバイスを選択できます。
+5. デバイス一覧から移動するデバイスを選択します。複数のデバイスを選択できます。
 
    <Image src='/img/biostarx-setting-device-connection-manager-03.png' />
 
    :::note
 
-   特定のデバイスを検索するには、上部の入力フィールドにキーワードを入力します。 デバイス名やシリアル番号で検索できます。
+   特定のデバイスを検索するには、上部の入力フィールドにキーワードを入力します。デバイス名やシリアル番号で検索できます。
 
    :::
 
@@ -70,7 +70,7 @@ Communication サーバーは、BioStar X の統合サーバーからデバイ�
 
 移動が完了すると、メッセージウィンドウで移動されたデバイス総数、TCP/IP 接続デバイス数、移動先サーバーの名前と IP アドレスを確認できます。 
 
-移動に失敗したデバイスがある場合、メッセージウィンドウで失敗したデバイス数と TCP/IP 接続デバイス数を確認できます。 移動に失敗したデバイスの一覧と失敗理由を CSV ファイルで確認するには、<Cmd sid='button.download' product='2' /> ボタンをクリックします。
+移動に失敗したデバイスがある場合、メッセージウィンドウで失敗したデバイス数と TCP/IP 接続デバイス数を確認できます。移動に失敗したデバイスの一覧と失敗理由を CSV ファイルで確認するには、<Cmd sid='button.download' product='2' /> ボタンをクリックします。
 
 :::info
 
