@@ -1634,9 +1634,15 @@ span.text-blue-500 {
     width: 30% !important;
   }
   img[src*='name-function-each-part'], img[src*='product-part'] {
-    width: 75% !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   img[src*='dimension.svg'] {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  img[src*='bew3-cables-layout.png'] {
+    max-width: 100% !important;
     width: 100% !important;
   }
   img[src*='ico-menu1.svg'] {
