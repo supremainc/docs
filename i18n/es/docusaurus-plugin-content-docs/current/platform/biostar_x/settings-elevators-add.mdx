@@ -25,9 +25,13 @@ Este documento ofrece orientación sobre cómo registrar y configurar un ascenso
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haz clic en <Cmd sid='setting.menu.elevator.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.elevator.root' /> en la barra lateral izquierda.
 
-3. Cuando aparezca la pantalla <Cmd sid='elevator.new.title' product='2' />, configure cada elemento de la sección en orden.
+3. Haz clic en <Cmd sid='elevator.add.button' product='2' /> en la parte superior izquierda de la pantalla.
+
+   <Image src='/img/biostarx-setting-elevator-add-btn.png' />
+
+4. Cuando aparezca la pantalla <Cmd sid='elevator.new.title' product='2' />, configure cada elemento de la sección en orden.
 
    * <Cmd sid='common.information' product='2' />: Configure la información básica del ascensor. Para obtener más información, consulte <DocLink inner='#info' />.
 
@@ -37,11 +41,13 @@ Este documento ofrece orientación sobre cómo registrar y configurar un ascenso
 
    * <Cmd sid='door.alarm' product='2' />: Configure la alarma para activar o bloquear el uso del dispositivo cuando ocurra una violación de anti-passback. Para obtener más información, consulte <DocLink inner='#alarm' />.
 
-4. Una vez completadas todas las configuraciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+5. Una vez completados todos los ajustes, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 ### Configurar información básica {/* #info */}
 
 En la sección <Cmd sid='common.information' product='2' />, ingrese o cambie el nombre, el grupo y la descripción del ascensor.
+
+<Image src='/img/biostarx-setting-elevator-add-info.png' />
 
 * <Cmd sid='common.name' product='2' />: Ingrese el nombre del ascensor. Es conveniente ingresar un nombre que especifique la ubicación del ascensor para facilitar la gestión.
 
@@ -61,6 +67,8 @@ En la sección <Cmd sid='common.information' product='2' />, ingrese o cambie el
 
 En la sección <Cmd sid='common.detail' product='2' />, configure la información detallada del ascensor, como los dispositivos conectados al ascensor y la información de los pisos. Configure la información de dispositivos y pisos para conectarlos al ascensor.
 
+<Image src='/img/biostarx-setting-elevator-add-detail.png' />
+
 * <Cmd sid='elevator.list.column.controller' product='2' />: Seleccione el dispositivo que controlará los permisos de acceso del ascensor.
 
 * <Cmd sid='elevator.list.column.reader' product='2' />: Seleccione el dispositivo que se utilizará para la autenticación.
@@ -79,7 +87,7 @@ En la sección <Cmd sid='common.detail' product='2' />, configure la informació
 
 * Para la opción <Cmd sid='elevator.list.column.reader' product='2' />, solo se pueden seleccionar dispositivos maestro, dispositivos esclavo y dispositivos Wiegand, con un máximo de 4 selecciones permitidas.
 
-  El modelo OM-120 no se puede configurar como lector.
+   El modelo OM-120 no se puede configurar como lector.
 
 * Para la opción <Cmd sid='elevator.list.column.module' product='2' />, solo se pueden seleccionar los modelos OM-120, DM-20, IM-120 y SIO2.
 
@@ -88,6 +96,8 @@ En la sección <Cmd sid='common.detail' product='2' />, configure la informació
 ### Configurar opciones adicionales {/* #option */}
 
 En la sección <Cmd sid='common.option' product='2' />, configure las opciones adicionales del ascensor.
+
+<Image src='/img/biostarx-setting-elevator-add-options.png' />
 
 * <Cmd sid='elevator.option.relayTime' product='2' />: Configure las opciones para el relé del botón de piso.
 
@@ -101,29 +111,31 @@ En la sección <Cmd sid='common.option' product='2' />, configure las opciones a
 
   * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Define el orden de la autenticación del administrador.
 
-    * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Se requieren dos autenticaciones sin importar el grupo de autenticación.
+  * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Se requieren dos autenticaciones sin importar el grupo de autenticación.
 
-    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: El usuario general debe autenticarse primero, seguido de un usuario autenticado incluido en el grupo de autenticación establecido.
+  * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: El usuario general debe autenticarse primero, seguido de un usuario autenticado incluido en el grupo de autenticación establecido.
 
   * <Cmd sid='door.approvalGroup' product='2' />: Define el grupo al que pertenece el administrador. Esta opción está disponible cuando <Cmd sid='door.dualAuthentication.approvalType' product='2' /> se establece en <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
 
   * <Cmd sid='door.authenticationTimeout' product='2' />: Define el tiempo de espera entre la primera y la segunda autenticación. Si la segunda autenticación no se completa dentro del tiempo establecido, el botón de piso no se activará.
 
-  :::info
+   :::info
 
-  * Modifique los ajustes en el siguiente menú para cambiar la autenticación dual del dispositivo configurado para los ajustes de límite de ocupación. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
+  * Modifique los ajustes en el siguiente menú para cambiar la autenticación dual del dispositivo configurado para los ajustes de límite de ocupación. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
     Para obtener más información sobre la configuración de <Cmd sid='zone.occupancy.title' product='2' />, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
   * Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.wiegandTamper' product='2' />: Configure el puerto para emitir la señal de sabotaje.
 
 ### Configurar alarmas {/* #alarm */}
 
-En la sección <Cmd sid='door.alarm' product='2' />, configure las acciones a realizar cuando se detecten entradas de sabotaje o señales de entrada independientes.
+En la sección <Cmd sid='door.alarm' product='2' />, configure las acciones a realizar cuando se detecten entradas de sabotaje o señales de entrada independientes. Haz clic en <Cmd sid='button.plusAdd' product='2' /> para agregar condiciones de trabajo y acciones.
+
+<Image src='/img/biostarx-setting-elevator-add-alarm.png' />
 
 * <Cmd sid='triggerAction.trigger' product='2' />: Configure la detección de entradas de sabotaje o señales de entrada independientes.
 

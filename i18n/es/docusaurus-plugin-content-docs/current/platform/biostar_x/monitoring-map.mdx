@@ -19,17 +19,46 @@ En **BioStar X** se pueden configurar múltiples instalaciones dentro de una sol
 
 Puede acceder al área configurada en el mapa GIS en el orden Área → Instalación → Piso, como se muestra en la imagen, para monitorear y controlar puertas y cámaras. Esta estructura también se puede ver en la barra lateral de la página <Cmd sid='arena.title' />.
 
-![Barra lateral de seguimiento](/img/common/monitoring-map-area-tree-example.png)
-
 :::info
 
-Para obtener más información sobre cómo configurar el mapa, consulte <DocLink docId='platform/biostar_x/settings-map-management' />.
+* Para obtener más información sobre cómo configurar el mapa, consulte <DocLink docId='platform/biostar_x/settings-map-management' />.
+
+* El área <Cmd sid='arena.title' /> permanece deshabilitada si el sistema no tiene cámaras registradas o no tiene componentes del mapa registrados (áreas, instalaciones o pisos).
+
+* La característica de monitoreo de mapas integrada con GIS está disponible como complemento con una licencia **Essential** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
 ## Componentes y opciones {/* #component-and-options */}
 
-### Componente {/* #component */}
+### Componentes del árbol del mapa {/* #mapTreeComponent */}
+
+La barra lateral izquierda muestra los componentes del árbol del mapa. Cada ícono de componente en el árbol del mapa indica si es una zona, una instalación, un piso, una puerta o una cámara.
+
+<Columns>
+<Column>
+
+<Image src='/img/monitoring-map-area-tree-example.png' />
+
+</Column>
+<Column>
+
+<div className='table-fixed'>
+
+| Ícono | Nombre |
+| :-: | :-: |
+| <IcArea width='35px' height='35px' /> | Área |
+| <IcFacility width='35px' height='35px' /> | Instalación |
+| <IcFloor width='35px' height='35px' /> | Planta |
+| <IcDoorClose width='35px' height='35px' /> | Puerta |
+| <IcCamOk width='auto' height='35px'/> | Cámara |
+
+</div>
+
+</Column>
+</Columns>
+
+### Componentes del área del mapa {/* #mapCmponent */}
 
 Los componentes que se muestran en el mapa incluyen el área, las instalaciones y las cámaras conectadas a las instalaciones. Puede acceder al piso a través de la instalación. Puede verificar la puerta y la cámara en el piso.
 
@@ -74,18 +103,30 @@ Las opciones disponibles en el mapa o la capa son las siguientes.
 
 ### Verifica el estado
 
-En la barra lateral izquierda puede verificar el estado de cada puerta y cámara de las instalaciones o pisos. Consulta la información siguiente para el estado de cada icono.
+En la barra lateral izquierda, verifique el estado de cada puerta y cámara de las instalaciones o pisos. Consulta la información siguiente para el estado de cada icono.
 
 <div className='col2--20-80'>
 
 | Ícono de estado | Descripción |
 | :-: | --- |
-| <IcErr width='35px' height='35px' /> | Hay un error del servidor de comunicación o se perdió la conexión. |
+| <IcErr width='35px' height='35px' /> | Error del servidor de comunicaciones múltiples o conexión perdida. |
 | <IcAlert width='40px' height='40px' /> | Se ha producido una alarma en la puerta. Si se detecta merodeo o intrusión, se mostrará el icono correspondiente. |
 | <IcCamOk width='auto' height='35px'/> | La cámara está conectada. |
 | <IcCamFail width='auto' height='35px'/> | La cámara está apagada o desconectada. |
 
 </div>
+
+### Ver entradas que requieren atención {/* #checkAttentionFilter */}
+
+Los administradores pueden filtrar la lista para mostrar solo las entradas que requieren acción. En la barra lateral izquierda, haz clic en <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Verifique el estado de las puertas por área, instalación y piso, y actúe sobre las puertas con problemas.
+
+<Image src='/img/monitoring-map-tree-attention-filter.png' />
+
+:::info
+
+Para conocer los criterios que determinan las acciones de la puerta, consulte <DocLink docId='platform/biostar_x/check-door-status#check-the-attention-criteria' />.
+
+:::
 
 ## Abrir mapa {/* #open-map */}
 
@@ -103,7 +144,7 @@ El mapa del área seleccionada se mostrará en la ventana de video de la secció
 
 :::info
 
-* También puede abrir el mapa haciendo doble clic en la instalación correspondiente en la barra lateral izquierda.
+* Haga doble clic en la instalación en la barra lateral izquierda para abrir el mapa donde se encuentra la instalación.
 
 * La imagen es una pantalla de ejemplo. La pantalla real puede diferir.
 
@@ -129,6 +170,16 @@ O bien, haga doble clic en el piso en la barra lateral izquierda o haga clic con
 
 <Image src='/img/monitoring-map-select-floor.png' />
 
+| Componente | Descripción |
+| :-: | --- |
+| <IcFUlockDr width='45' height='45' /> | **Puerta abierta**: La puerta ubicada en el piso está en estado abierto. |
+| <IcFLockDr width='45' height='45' /> | **Puerta bloqueada**: La puerta ubicada en el piso está bloqueada. |
+| <IcFloorCam width='45' height='45' /> | **Cámara**: Haga clic en la cámara para reproducir el video de la instalación o piso correspondiente. |
+
+* Pase el cursor sobre una puerta o cámara para verificar su estado actual.
+
+  <Image src='/img/monitoring-map-floor-status-check.png' className='none' />
+
 * Al hacer clic en la puerta se mostrará un menú emergente que le permite controlar esa puerta. Para obtener más información sobre las funciones disponibles, consulte <DocLink docId='platform/biostar_x/control-door' />.
 
   <Image src='/img/monitoring-map-floor-control-door.png' />
@@ -139,9 +190,9 @@ O bien, haga doble clic en el piso en la barra lateral izquierda o haga clic con
 
 :::info
 
-* Para obtener más información sobre cómo configurar puertas y cámaras en un piso (Floor), consulte <DocLink docId='platform/biostar_x/settings-map-manage-floor' />.
+* Para navegar al mapa que muestra la instalación, haga clic en <IcBack/> en la parte superior izquierda.
 
-* Para navegar al mapa que muestra la instalación, haga clic en el botón <IcBack /> en la parte superior izquierda.
+* Para obtener más información sobre cómo configurar puertas y cámaras en un piso (Floor), consulte <DocLink docId='platform/biostar_x/settings-map-manage-floor' />.
 
 * Para obtener más información sobre los controles de vídeo y las herramientas que aparecen en él, consulte <DocLink docId='platform/biostar_x/monitoring-video#control-video' />.
 
@@ -157,7 +208,7 @@ Para moverse a otro piso, haga clic en la opción de selección en la esquina su
 
 :::info
 
-* Para navegar al mapa que muestra la instalación, haga clic en el botón <IcBack /> en la parte superior izquierda.
+* Para navegar al mapa que muestra la instalación, haga clic en <IcBack/> en la parte superior izquierda.
 
 * La opción de selección de piso en la parte superior izquierda del mapa muestra solo los pisos configurados para la instalación. Si el piso no está configurado en la instalación, no aparecerá en la lista. Para obtener más información sobre cómo configurar los pisos de una instalación, consulte <DocLink docId='platform/biostar_x/settings-map-manage-facility' />.
 
@@ -167,7 +218,7 @@ Para moverse a otro piso, haga clic en la opción de selección en la esquina su
 
 * Para controlar la cámara en el mapa o piso, haga clic en el ícono de la cámara. Seleccione la función deseada en el menú emergente.
 
-  <Image src='/img/biostarx-monitoring-map-camera-popup.png' />
+  <Image src='/img/biostarx-monitoring-map-camera-popup.png' className='none' />
 
   * <Cmd sid='map.menu.camera.playVideo' />: Puede ver el video de la cámara en tiempo real.
 

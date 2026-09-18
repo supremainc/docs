@@ -40,7 +40,7 @@ Guarda la información de usuarios seleccionada como un archivo CSV o carga arch
 
 :::info
 
-<Cmd sid='team.menu.export.exportReason' /> es opcional. Consulta los registros de <Cmd sid='team.menu.export.exportReason' /> en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+<Cmd sid='team.menu.export.exportReason' /> es opcional. Verifique los registros de motivos de exportación en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -60,7 +60,7 @@ Guarda la información de usuarios seleccionada como un archivo CSV o carga arch
 
    <Image src='/img/biostarx-user-import-02.png' width='50%' />
 
-6. Elige si mantener los datos de usuarios ya registrados con sus IDs en **BioStar X** o sobrescribirlos con la información del archivo CSV y haz clic en <Cmd sid='common.apply' />.
+6. Selecciona conservar datos de usuarios inscritos por ID en **BioStar X** o sobrescribirlos con el CSV y haz clic en <Cmd sid='common.apply' />.
 
    <Image src='/img/biostarx-user-import-03.png' />
 
@@ -83,6 +83,12 @@ Si ocurre un error al importar el archivo CSV, puedes volver a revisar y subir s
 * Los PIN de usuario se pueden inscribir mediante la importación de CSV. Para obtener más información, consulte <DocLink docId='platform/biostar_x/enroll-credential-pin' />.
 
 * Si añades columnas que no coinciden con el archivo CSV guardado, no podrás importar el archivo en **BioStar X**.
+
+* Si un nombre de usuario empieza con `&@~`, la importación de esa entrada del CSV falla.
+
+* Establece el período de validez (fecha y hora de vencimiento) hasta 2037-12-31 23:59:59. La importación falla para las entradas con valores posteriores a esta fecha.
+
+* Evita abrir el archivo CSV exportado directamente en programas de hojas de cálculo como Excel. Si un nombre de usuario empieza con el carácter `=`, el programa puede tratarlo como una fórmula y mostrar un valor diferente.
 
 :::
 
@@ -145,7 +151,7 @@ La información de usuarios se puede almacenar en un dispositivo de almacenamien
 
 * Seleccionar un dispositivo incorrecto para aplicar el archivo de datos puede hacer que el dispositivo no lo reconozca.
 
-* <Cmd sid='team.menu.export.exportReason' /> es opcional. Consulta los registros de <Cmd sid='team.menu.export.exportReason' /> en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+* <Cmd sid='team.menu.export.exportReason' /> es opcional. Verifique los registros de motivos de exportación en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
@@ -154,8 +160,6 @@ La información de usuarios se puede almacenar en un dispositivo de almacenamien
 Para importar en los dispositivos un archivo exportado desde **BioStar X**, cambia el nombre del archivo como se indica a continuación para que el dispositivo lo reconozca. El formato de nombre de archivo se ajustará para que sea reconocido automáticamente en futuras actualizaciones de firmware del dispositivo.
 
 *<b>BioStarX</b>_YYYYMMDD_HHMMSS.tgz* → *<b>BioStar2</b>_YYYYMMDD_HHMMSS.tgz*
-
-* <Cmd sid='team.menu.export.exportReason' /> es opcional. Consulta los registros de <Cmd sid='team.menu.export.exportReason' /> en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
 
 :::
 

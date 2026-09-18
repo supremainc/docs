@@ -7,6 +7,8 @@ keywords:
   - Autenticación
 ---
 
+import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-force.mdx';
+
 Se proporcionan instrucciones para varios ajustes relacionados con la autenticación de usuarios en el dispositivo. La sección <Cmd sid='device.info.authentication' product='2' /> ofrece información paso a paso sobre los métodos de autenticación y las principales opciones de autenticación compatibles con el dispositivo. Tenga en cuenta que los cambios en los ajustes se aplicarán al dispositivo real y configure la política de autenticación según su entorno, consultando las características y precauciones de cada opción.
 
 :::info
@@ -17,7 +19,7 @@ Se proporcionan instrucciones para varios ajustes relacionados con la autenticac
 
 :::
 
-## Configuración del método de autenticación
+## Ajustes del método de autenticación {/* #howToAuth */}
 
 Configure el modo de autenticación del dispositivo, los permisos, la autenticación en servidor y el tiempo de espera de autenticación.
 
@@ -31,11 +33,11 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 
 * <Cmd sid='device.info.usersHaveFullAccess' product='2' />: A los usuarios registrados en el dispositivo se les pueden otorgar todos los permisos de acceso sin definir ajustes de grupo de acceso.
 
-  :::info
+   :::info
 
-  Cuando esta opción está configurada en <Cmd sid='common.use' product='2' />, el dispositivo no se puede registrar en <Cmd sid='common.accessLevel' product='2' /> ni en <Cmd sid='ag.floorLevel.title' product='2' />.
+   Cuando esta opción está configurada en <Cmd sid='common.use' product='2' />, el dispositivo no se puede registrar en <Cmd sid='common.accessLevel' product='2' /> ni en <Cmd sid='ag.floorLevel.title' product='2' />.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.authTimeout' product='2' />: Es el tiempo de espera para autenticar la segunda credencial cuando se utilizan varias credenciales en la opción <Cmd sid='device.info.authenticationMode' product='2' />. Si la credencial no se autentica dentro del tiempo especificado, la autenticación fallará.
 
@@ -95,11 +97,11 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 
   * <Cmd sid='device.faceDetectionLevel.none' product='2' />: No utiliza la funcionalidad de reconocimiento facial.
 
-  :::info
+   :::info
 
-  Esta opción es compatible con BioStation A2.
+   Esta opción es compatible con BioStation A2.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.userIdDisplay' product='2' />: Controle si se muestra u oculta la ID de usuario en el dispositivo cuando la autenticación es exitosa.
 
@@ -108,6 +110,32 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 * <Cmd sid='device.info.userNameDisplay' product='2' />: Controle si se muestra u oculta el nombre de usuario en el dispositivo cuando la autenticación es exitosa.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
+
+* <Cmd sid='device.info.authFailLockout.label' product='2' />: Si la autenticación falla repetidamente en poco tiempo, el dispositivo se bloquea durante un período determinado. Esto bloquea ataques de fuerza bruta. Establezca esta opción en <Cmd sid='device.info.enable' product='2' /> para configurar los ajustes siguientes. El valor predeterminado es <Cmd sid='device.info.disable' product='2' />.
+
+  * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />: Establezca la cantidad de fallas de autenticación permitidas antes del bloqueo en 3\~15 intentos. El valor predeterminado es 5 intentos.
+
+  * <Cmd sid='device.info.authFailLockout.monitoringWindow' product='2' />: Establezca la ventana de tiempo para contar fallas de autenticación en 30\~300 segundos. El valor predeterminado es 60 segundos.
+
+  * <Cmd sid='device.info.authFailLockout.firstLockout' product='2' />: Establezca en 30\~900 segundos el tiempo de bloqueo que se aplica cuando las fallas llegan a <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />. El valor predeterminado es 60 segundos y el valor es obligatorio.
+
+  * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: Tiempo del 2.º bloqueo. El dispositivo lo aplica si las fallas de autenticación continúan incluso después de que se haya levantado el 1.º bloqueo. Establezca esta opción en <Cmd sid='common.use' product='2' /> para ingresar un valor entre 900\~3,600 segundos. El valor predeterminado es 900 segundos.
+
+     :::note
+
+     Establezca esta opción en <Cmd sid='device.info.disable' product='2' /> para aplicar repetidamente solo el 1.º bloqueo, sin un 2.º bloqueo.
+
+     :::
+
+  * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />: Si no ocurren fallas adicionales dentro de este tiempo después de la última falla, el dispositivo inicializa el conteo acumulado de fallas. Configúrelo en 600\~3,600 segundos. El valor predeterminado es 1,800 segundos.
+
+   :::info
+
+  * Si el dispositivo está bloqueado, cambie <Cmd sid='device.info.authFailLockout.label' product='2' /> a <Cmd sid='device.info.disable' product='2' /> y guarde. El dispositivo se desbloquea de inmediato. Sin embargo, cambiar <Cmd sid='device.info.authFailLockout.secondLockout' product='2' /> a <Cmd sid='device.info.disable' product='2' /> y guardar no desbloquea el dispositivo.
+
+  * Se incluye soporte para la opción <Cmd sid='device.info.authFailLockout.label' product='2' /> en el firmware de BioStation 3 1.5.0 o posterior.
+
+   :::
 
 ### Agregar modo de autenticación {/* #added-auth-mode */}
 
@@ -175,7 +203,7 @@ En el grupo <Cmd sid='device.info.fingerprint' product='2' />, configure los det
 
 :::
 
-## Ajustes de autenticación facial
+## Ajustes de autenticación facial {/* #faceDetectionSettings */}
 
 En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.credential.visualface' product='2' />, puedes configurar los ajustes de autenticación facial del dispositivo.
 
@@ -219,6 +247,30 @@ En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.cred
 
 * <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Almacena tanto la imagen facial real como una plantilla que contiene únicamente los datos de las características extraídas. Desactive esta opción si no desea almacenar la imagen real.
 
+* <Cmd sid='device.info.reauthPrevention' product='2' />: Configure la opción para evitar autenticaciones duplicadas cuando el dispositivo detecta de nuevo el rostro del mismo usuario pronto. Configure esta opción como <Cmd sid='device.info.enable' product='2' /> y configure <Cmd sid='device.info.reauthPreventionTime' product='2' /> en 3\~60 segundos.
+
+  <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
+
+   :::note
+
+   Este ajuste se aplica a <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' />, independientemente de la opción que habilite.
+
+   :::
+
+* <Cmd sid='device.info.antiTailgating.label' product='2' />: Si la cámara detecta 2 o más rostros al mismo tiempo dentro del rango de captura de la cámara del dispositivo, lo considera tailgating y detiene la autenticación.
+
+* <Cmd sid='device.info.multiFaceAuth.label' product='2' />: Autentica a varios usuarios en secuencia dentro de la vista de la cámara.
+
+   :::note
+
+  * Esta opción requiere una licencia de dispositivo independiente. Los dispositivos sin licencia no pueden habilitar esta opción. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-license-device-license' />.
+
+  * Configure esta opción en <Cmd sid='common.use' product='2' /> para usar solo autenticación facial, independientemente del ajuste <Cmd sid='device.info.authenticationMode' product='2' />.
+
+  * Los dispositivos que usan esta opción no pueden usar <Cmd sid='device.info.tna' product='2' /> ni <Cmd sid='device.info.serverPrivateMsg' product='2' />.
+
+   :::
+
 :::info
 
 * Las opciones disponibles para la configuración pueden variar según el tipo de dispositivo.
@@ -228,6 +280,14 @@ En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.cred
 * La opción <Cmd sid='device.authmode.settings.lightBrightness' product='2' /> es compatible con firmware FaceStation F2 versión 1.1.0 o superior.
 
 * Las opciones <Cmd sid='device.info.faceDetectSetting' product='2' /> y <Cmd sid='device.info.faceOperationMode' product='2' /> son compatibles con los modelos BioStation 3 Max, BioStation 3 y FaceStation F2.
+
+* No configure <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> en <Cmd sid='common.use' product='2' /> al mismo tiempo. Configure una opción en <Cmd sid='common.use' product='2' />; la otra cambia automáticamente a <Cmd sid='common.notUse' product='2' />.
+
+* Configure <Cmd sid='device.info.reauthPrevention' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> solo en el dispositivo maestro. Configure la opción <Cmd sid='device.info.antiTailgating.label' product='2' /> por separado en los dispositivos maestro y esclavo.
+
+* El soporte para <Cmd sid='device.info.reauthPrevention' product='2' />, <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> puede variar según el modelo del dispositivo y la versión de firmware.
+
+  * Versión de firmware 1.5.0 o posterior para BioStation 3
 
 :::
 
@@ -263,6 +323,8 @@ En el grupo <Cmd sid='user.credential.barcode' product='2' />, puedes configurar
 
   * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) versión de firmware 1.2.0 o superior
 
+  * X-Station 2 (XS2-QDPB, XS2-QAPB) versión de firmware 1.4.1 o superior
+
 * Los dispositivos que admiten las opciones <Cmd sid='device.info.useBarcodeScanner' product='2' /> y <Cmd sid='device.info.qrScanTimeout' product='2' /> son los siguientes.
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB)
@@ -283,7 +345,7 @@ Solo se mostrarán en el grupo <Cmd sid='setting.card.cardType' product='2' /> l
 
 :::
 
-### <Cmd sid='device.card.CSN' product='2' /> {/* #deviceCardcsn */}
+### <Cmd sid='device.card.CSN' product='2' className='normal' /> {/* #deviceCardcsn */}
 
 Puedes seleccionar los tipos y formatos de tarjetas CSN y definir el orden de bytes.
 
@@ -301,7 +363,7 @@ Puedes seleccionar los tipos y formatos de tarjetas CSN y definir el orden de by
 
   * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />: Transforma y muestra el número de serie (CSN) de la tarjeta según el formato Wiegand definido por el usuario. Consulte <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> para configurar un nuevo formato Wiegand.
 
-### <Cmd sid='device.card.Wiegand' product='2' /> {/* #deviceCardwiegand */}
+### <Cmd sid='device.card.Wiegand' product='2' className='normal' /> {/* #deviceCardwiegand */}
 
 Selecciona los tipos de tarjetas Wiegand y define los formatos Wiegand. Elija el formato Wiegand que se utilizará en la opción <Cmd sid='device.cardFormat.wiegand.format' product='2' />.
 
@@ -313,11 +375,13 @@ Consulte <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' 
 
 :::
 
-### <Cmd sid='device.card.supremaSmartCard' product='2' /> {/* #deviceCardsupremaSmartCard */}
+### <Cmd sid='device.card.supremaSmartCard' product='2' className='normal' /> {/* #deviceCardsupremaSmartCard */}
 
 Seleccione los tipos de tarjetas inteligentes Suprema y configure la estructura y el orden de bytes de la tarjeta.
 
 <Image src='/img/biostarx-setting-device-detail-card-smart.png' />
+
+<EV2EV3SecurityMessage type='suprema' />
 
 * <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Elija la estructura de tarjeta inteligente Suprema. Consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> para configurar un nuevo formato de tarjeta inteligente.
 
@@ -327,11 +391,13 @@ Seleccione los tipos de tarjetas inteligentes Suprema y configure la estructura 
 
   * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de bytes pequeñas a grandes.
 
-### <Cmd sid='device.card.customSmartCard' product='2' /> {/* #deviceCardcustomSmartCard */}
+### <Cmd sid='device.card.customSmartCard' product='2' className='normal' /> {/* #deviceCardcustomSmartCard */}
 
 Seleccione los tipos de tarjetas inteligentes personalizadas emitidas por terceros y configure la estructura y el orden de bytes de la tarjeta.
 
 <Image src='/img/biostarx-setting-device-detail-card-custom.png' />
+
+<EV2EV3SecurityMessage type='custom' />
 
 * <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Elija la estructura de tarjeta inteligente personalizada. Consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> para configurar un nuevo formato de tarjeta inteligente.
 
@@ -367,7 +433,7 @@ Seleccione los tipos de tarjetas inteligentes personalizadas emitidas por tercer
 
 </details>
 
-### <Cmd sid='device.info.csnMobile' product='2' /> {/* #deviceCsnMobile */}
+### <Cmd sid='device.info.csnMobile' product='2' className='normal' /> {/* #deviceCsnMobile */}
 
 Configure el método para reconocer tarjetas móviles.
 
@@ -377,7 +443,7 @@ Configure el método para reconocer tarjetas móviles.
 
 * <Cmd>BLE</Cmd>: Reconoce tarjetas móviles mediante comunicación Bluetooth Low Energy (BLE).
 
-### <Cmd sid='device.info.templateOnMobile' product='2' /> {/* #deviceInfotemplateOnMobile */}
+### <Cmd sid='device.info.templateOnMobile' product='2' className='normal' /> {/* #deviceInfotemplateOnMobile */}
 
 Especifique cómo funciona el reconocimiento en Template on Mobile y configure el orden de bytes para los biométricos enrolados directamente por el usuario en el dispositivo.
 

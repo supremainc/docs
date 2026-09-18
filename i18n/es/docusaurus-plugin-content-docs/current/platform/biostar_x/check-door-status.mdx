@@ -1,15 +1,12 @@
 ---
 id: check-door-status
-title: Verifica el Estado de la Puerta
-description: Supervisa el estado de la puerta de entrada en tiempo real para operar el sistema de seguridad de forma confiable. También verifica el estado anómalo del dispositivo asignado a la puerta de entrada.
-keywords:
-  - Monitorizar
-  - Puerta
+title: Verifica el estado
+description: Supervise el estado de puertas, elevadores y control de acceso avanzado en tiempo real. Revisa solo las entradas que requieren acción y responde de inmediato.
 ---
 
-Supervisa el estado de la puerta de entrada en tiempo real para operar el sistema de seguridad de forma confiable. Consulta de un vistazo el estado anómalo del dispositivo asignado a la puerta de entrada mediante el icono de estado proporcionado en <Cmd sid='shell.header.arena' /> y responde de inmediato cuando se produzca un problema.
+Supervise el estado de puertas, elevadores y control de acceso avanzado en tiempo real para operar el sistema de seguridad de forma confiable. Usa los íconos de estado en <Cmd sid='shell.header.arena' /> para revisar alarmas y estados anómalos de un vistazo. Revisa solo las entradas que requieren acción y responde de inmediato.
 
-Haga clic en <Cmd sid='shell.header.arena' /> en la página <Cmd sid='shell.header.launcher' /> o seleccione <Cmd sid='shell.header.arena' /> en la lista de accesos directos en la esquina superior izquierda de la pantalla. Verifica el estado de cada puerta de entrada en la pestaña <Cmd sid='arena.tree.door.title' /> ubicada en la barra lateral izquierda de la pantalla.
+Haga clic en <Cmd sid='shell.header.arena' /> en la página <Cmd sid='shell.header.launcher' /> o seleccione <Cmd sid='shell.header.arena' /> en la lista de accesos directos en la esquina superior izquierda de la pantalla. Revisa el estado de cada elemento en la pestaña <Cmd sid='arena.tree.door.title' /> en la barra lateral izquierda de la pantalla.
 
 ## Antes de comenzar
 
@@ -21,9 +18,9 @@ Asegúrate de que los dispositivos conectados a la puerta estén configurados co
 
 * Para más información sobre cómo agregar y configurar puertas, consulte <DocLink docId='platform/biostar_x/settings-manage-door' />.
 
-* La función <Cmd sid='setting.server.logUploadType' product='2' /> debe estar habilitada para supervisar o controlar el estado de la puerta de acceso. Activa esta función en la ruta de menú <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' />, en la sección <Cmd sid='common.general' product='2' />.
+* La función <Cmd sid='setting.server.logUploadType' product='2' /> debe estar habilitada para supervisar o controlar el estado de la puerta de acceso. Habilita esta función en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> en la sección <Cmd sid='common.general' product='2' />.
 
-* La función para conectar cámaras a la puerta mediante el servidor VMS está disponible como opción adicional con una licencia **Avanzado** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* La función para conectar cámaras a puertas mediante el servidor VMS está disponible como opción adicional con una licencia **Essential** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -59,8 +56,8 @@ Verifica el estado de la puerta o del ascensor para confirmar su correcto funcio
 
 | Ícono de estado | Descripción |
 | :-: | --- |
-| <IcErr width='35px' height='35px' /> | Muestra estados anómalos del dispositivo, como desconexión, errores del servidor de comunicación y errores de sincronización. |
-| <IcAlert width='40px' height='40px' /> | Muestra el estado cuando se producen alarmas de la puerta de entrada (apertura forzada, apertura prolongada, APB, alarmas de incendio, aperturas de emergencia) o alarmas de análisis de video con IA (detección de merodeo, detección de intrusión, etc.) se producen. |
+| <IcErr width='35px' height='35px' /> | Muestra estados anómalos del dispositivo, como desconexión, errores del servidor de comunicaciones múltiples y errores de sincronización. |
+| <IcAlert width='40px' height='40px' /> | Muestra el estado de puertas de entrada, elevadores, control de acceso avanzado y alarmas de análisis de video con IA. |
 
 </div>
 
@@ -68,7 +65,7 @@ Verifica el estado de la puerta o del ascensor para confirmar su correcto funcio
 
 Haz clic en un icono de estado para ver información detallada en una descripción emergente. Haz clic en el enlace del mensaje de error de la descripción emergente para ir a la lista de dispositivos conectados a la puerta o al ascensor.
 
-<Image src='/img/monitoring-door-status-tooltip.png' />
+<Image src='/img/monitoring-door-status-tooltip.png' className='none' />
 
 Haz clic derecho en el dispositivo y selecciona la opción <Cmd sid='arena.tree.contextMenu.reconnect' /> o <Cmd sid='arena.tree.contextMenu.reboot' />.
 
@@ -94,6 +91,166 @@ Haz clic derecho en el dispositivo y selecciona la opción <Cmd sid='arena.tree.
 
 :::
 
+### Revisa las alarmas en el panel de vista previa {/* #check-alarm-in-preview */}
+
+En la pestaña <Cmd sid='arena.eventTable.door' />, selecciona una puerta, un elevador o un área de control de acceso avanzado con el icono de alarma(<IcAlert width='20px' height='20px' />). Revisa los detalles de la alarma en la parte superior del panel de vista previa de la derecha. En puertas y elevadores, en la parte superior del panel también aparece el estado anómalo (<IcErr width='20px' height='20px' />).
+
+<Image src='/img/biostarx-monitoring-door-alarm-banner.png' />
+
+Un banner en la parte superior del panel muestra los detalles del estado actual, como el nombre y la hora de la alarma. También incluye botones para ejecutar la acción adecuada.
+
+:::info
+
+* Si ocurren varias alarmas al mismo tiempo, el banner muestra solo 1 alarma: la más reciente.
+
+* En puertas o elevadores, las alarmas que se activan cuando el dispositivo está desconectado muestran solo el tipo de alarma, sin marca de tiempo.
+
+* Los botones del banner varían según el tipo de alarma. Haz clic en un botón para ejecutar la acción de la alarma.
+
+* Los controles de puerta, como bloquear y desbloquear, siguen disponibles mientras aparece una alarma. Para obtener más información sobre el control de puertas, consulta <DocLink docId='platform/biostar_x/control-door' />.
+
+:::
+
+### Ver entradas que requieren atención {/* #checkAttentionFilter */}
+
+Los administradores pueden ver solo las puertas y los elevadores que requieren acción de un vistazo. En la barra lateral izquierda, haz clic en <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Revisa el estado de puertas y elevadores, y toma medidas de inmediato cuando ocurran problemas.
+
+<Image src='/img/biostarx-monitoring-door-attention-filter.png' />
+
+:::info
+
+Consulta <DocLink inner='#check-the-attention-criteria' /> para ver las condiciones que marcan puertas y elevadores como elementos que requieren atención.
+
+:::
+
+### Criterios de atención {/* #check-the-attention-criteria */}
+
+#### Puerta
+
+Una puerta requiere atención si se cumple alguna de las condiciones siguientes.
+
+##### Cambio de modo de la puerta
+
+Esto incluye puertas bloqueadas o desbloqueadas por un administrador, un horario o una emergencia.
+
+<div className='overflow-x'>
+
+| Motivo | Indicador de estado |
+| --- | --- |
+| Operación manual por un administrador | <Cmd sid='arena.preview.door.operatorLocked' /> / <Cmd sid='arena.preview.door.operatorUnlocked' /> |
+| Horario | <Cmd sid='arena.preview.door.scheduleLocked' /> / <Cmd sid='arena.preview.door.scheduleUnlocked' /> |
+| Emergencia | <Cmd sid='arena.preview.door.emergencyLocked' /> / <Cmd sid='arena.preview.door.emergencyUnlocked' /> |
+
+</div>
+
+##### Alarma
+
+Si una alarma permanece sin borrar, el sistema la marca como una alarma que requiere atención. Las alarmas de apertura forzada, puerta mantenida abierta, y anti-passback se clasifican como alarmas, no como estados anormales.
+
+<div className='overflow-x'>
+
+| Tipos de alarma | Descripción |
+| --- | --- |
+| Apertura de puerta forzada | Puerta abierta a la fuerza sin desbloquear |
+| Puerta mantenida abierta demasiado tiempo | La puerta permanece abierta más tiempo del establecido |
+| Alarma anti-passback (APB) | Regla anti-passback infringida |
+| Alarma anti-passback temporizada | Se infringió la regla de anti-passback basada en el tiempo |
+| Alarma de anulación del bloqueo | Desbloqueado mediante autenticación con tarjeta de anulación de bloqueo en estado bloqueado (bloqueado por un administrador o por horario) |
+| Alarma de analítica de video con IA | Alarmas basadas en analítica de video, como acceso por seguimiento, merodeo, intrusión, caídas, y objetos abandonados |
+
+</div>
+
+##### Estado anormal
+
+El sistema lo determina según el estado de conexión de los dispositivos conectados a la puerta.
+
+<div className='overflow-x'>
+
+| Tipo de estado anormal | Descripción |
+| --- | --- |
+| Desconectado | El dispositivo está desconectado de la red |
+| Error de sincronización | Conectado, pero los datos no están sincronizados |
+| Error de Multi Communications Server | El Multi Communications Server del dispositivo presenta un error |
+
+</div>
+
+:::info
+
+* El filtro <Cmd sid='arena.tree.door.entitiesNeedAttention' /> incluye el bloqueo del dispositivo y el bloqueo por fallas de autenticación consecutivas (Auth Fail Lockout), además de los estados anormales anteriores.
+
+* Si una alarma y un estado anormal ocurren juntos, ambos íconos aparecen en una fila sin superponerse. 
+
+* Los estados anormales de los dispositivos secundarios se consolidan en el nodo de puerta principal. Siga la jerarquía para encontrar el problema con el filtro activado.
+
+:::
+
+#### Elevador
+
+Evalúe los ascensores en las mismas condiciones que las puertas. Sin embargo, las condiciones de estado anormal y alarma difieren de la siguiente manera.
+
+* **Cambio de modo**: Igual que en las puertas. El sistema marca el ascensor como requiere atención si un administrador, un horario o una emergencia lo bloquea o desbloquea.
+
+* **Estado anormal**: Use los criterios de la puerta. Sin embargo, los ascensores no tienen estado de apertura forzada ni de apertura prolongada, así que exclúyalos de la evaluación.
+
+* **Alarma**: Los ascensores tienen alarmas dedicadas que difieren de las alarmas de puerta. Consulte lo siguiente.
+
+  <div className='overflow-x'>
+
+  | Tipos de alarma | Descripción |
+  | --- | --- |
+  | Alarma del ascensor disparada | Alarma del ascensor activada |
+  | Alarma de entrada del ascensor | Alarma activada por una señal de entrada externa |
+  | Alarma de desbloqueo de todos los pisos del ascensor | Apertura forzada de todos los pisos |
+
+  </div>
+
+:::info
+
+* Los pisos aparecen como nodos independientes debajo del nodo del ascensor, y cada piso solo tiene estado bloqueado (<IcElevClose />) o desbloqueado (<IcElevOpen />). 
+
+* Las alarmas y los estados anormales aparecen en el nodo del ascensor principal, no en los pisos. Al expandir el ascensor, solo aparecen los pisos que requieren acción, y el sistema oculta los pisos normales.
+
+:::
+
+#### Control de acceso avanzado
+
+El sistema también incluye entradas de control de acceso avanzado (anti-passback, incendio, intrusión, recuento, límite de ocupación e interbloqueo). Esto ayuda a decidir si se requiere acción. A diferencia de puertas o elevadores, los cambios de modo y los estados anormales no aplican. Si una alarma sigue sin restablecerse, aparece como que requiere acción.
+
+<div className='overflow-x'>
+
+| Tipos de alarma | Descripción |
+| --- | --- |
+| Alarma anti-passback (APB) | Regla anti-passback infringida |
+| Alarma de incendios | Alarma activada al detectar un incendio |
+| Alarma de cierre programado | Alarma activada cuando el cierre programado está activo |
+| Alarma de intrusión | Alarma activada al detectar una intrusión |
+| Alarma de esclusa | Incumplimiento de la regla de esclusa |
+| Alarma de reunión | Alarma activada durante un evento de reunión |
+
+</div>
+
+:::info
+
+* El estado de armado y las entradas deshabilitadas no aparecen como que requieren acción. Armado significa que la zona opera normalmente, y Deshabilitado significa que está desactivada intencionalmente.
+
+* Cada entrada aparece directamente bajo el grupo de control de acceso avanzado. El árbol no despliega puertas debajo del grupo. Solo las entradas que requieren acción permanecen en el árbol. Si ninguna entrada requiere acción, el sistema quita del árbol el grupo de control de acceso avanzado.
+
+:::
+
+### Verificar el estado de la puerta {/* #check-the-door-status */}
+
+Verifique si la puerta está cerrada, abierta o en estado anormal. Consulta lo siguiente para el estado de la puerta.
+
+<div className='col2--20-80 overflow-x'>
+
+| Ícono de estado | Descripción |
+| :-: | --- |
+| <IcDoorClose width='auto' height='35px' /> | La puerta está cerrada. |
+| <IcDoorOpen width='auto' height='35px' /> | La puerta está abierta. |
+| <IcDoorAlarm width='auto' height='35px' /> | El sensor de la puerta no está configurado. |
+
+</div>
+
 ### Verificar el estado del bloqueo de la puerta {/* #check-the-door-lock */}
 
 Verifica el estado de bloqueo de la puerta mediante el estado del relé de la puerta. Consulta lo siguiente para el estado del relé de la puerta.
@@ -103,9 +260,17 @@ Verifica el estado de bloqueo de la puerta mediante el estado del relé de la pu
 | Ícono de estado | Descripción |
 | :-: | --- |
 | <IcRelayLock width='auto' height='35px' /> | La puerta de entrada está bloqueada. |
-| <IcRelayUnlock width='auto' height='40px' /> | La puerta está abierta. |
+| <IcFixedLock width='auto' height='35px' /> | El sistema bloquea la puerta mediante la opción <Cmd sid='arena.tree.contextMenu.lockTimed' /> o <Cmd sid='arena.tree.contextMenu.lockPermanent' />. |
+| <IcRelayUnlock width='auto' height='40px' /> | La puerta de entrada está abierta. |
+| <IcFixedUnlock width='auto' height='40px' /> | El sistema desbloquea la puerta mediante la opción <Cmd sid='arena.tree.contextMenu.lockTimed' /> o <Cmd sid='arena.tree.contextMenu.lockPermanent' />. |
 
 </div>
+
+:::info
+
+Para obtener más información sobre las opciones de control de puertas, consulte <DocLink docId='platform/biostar_x/control-door#door-open' />.
+
+:::
 
 ### Verificar el estado de la cámara {/* #check-the-camera-status */}
 
@@ -136,7 +301,6 @@ Verifica el estado de seguridad de la puerta de entrada o de los ajustes avanzad
 
 | Ícono de estado | Descripción |
 | :-: | --- |
-| <IcDisable width='auto' height='30px' /> | Este es el icono para ajustes inactivos. Los ajustes inactivos no generan alarmas. |
 | <IcArm width='auto' height='35px'/> | La puerta está armada. |
 | <IcDisarm width='auto' height='35px'/> | La puerta está desarmada. |
 
@@ -156,8 +320,8 @@ Verifica el estado del control de acceso por piso a través del ascensor.
 
 | Ícono de estado | Descripción |
 | :-: | --- |
-| <StatusNormal width='auto' height='35px'/> | El piso correspondiente está bloqueado a través del ascensor. |
-| <StatusOK width='auto' height='35px'/> | El piso correspondiente está desbloqueado a través del ascensor. |
+| <IcElevClose width='auto' height='35px'/> | El piso correspondiente está bloqueado a través del ascensor. |
+| <IcElevOpen width='auto' height='35px'/> | El piso correspondiente está desbloqueado a través del ascensor. |
 
 </div>
 

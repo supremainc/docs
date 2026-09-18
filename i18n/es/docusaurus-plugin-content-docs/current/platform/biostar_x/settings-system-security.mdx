@@ -83,11 +83,17 @@ Puede configurarse hasta un máximo de 10 veces.
 
 :::
 
-## Configuraciones de seguridad avanzadas {/* #advanced-security-configuration */}
+## Ajustes de seguridad avanzados {/* #advanced-security-configuration */}
 
 En la sección <Cmd sid='setting.server.secure.comm.title' product='2' />, puede mejorar la seguridad de la información personal y la comunicación entre dispositivos.
 
 <Image src='/img/biostarx-settings-system-security-advanced.png' className='none' />
+
+:::info
+
+La sección <Cmd sid='setting.server.secure.comm.title' product='2' /> se activa solo cuando inicia sesión con la cuenta inicial de administrador.
+
+:::
 
 ### Mejorar la protección de datos personales
 
@@ -99,7 +105,7 @@ Para minimizar el riesgo de filtraciones de datos, configure las siguientes opci
 
   * <Cmd sid='common.notUse' product='2' />: Almacena la información personal del usuario sin cifrado. Los datos que ya están cifrados se almacenarán descifrados y los nuevos datos no se cifrarán.
 
-* <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' />: Se utiliza para cifrar o descifrar la información almacenada en la base de datos y proteger de forma segura la información personal del usuario. Haga clic en el botón <Cmd sid='setting.server.secure.comm.key_change' product='2' /> y establezca un nuevo valor de clave de cifrado. Cambiar la clave de cifrado vuelve a cifrar los datos que previamente estaban cifrados.
+* <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' />: Se utiliza para cifrar o descifrar la información almacenada en la base de datos y proteger de forma segura la información personal del usuario. Haga clic en <Cmd sid="setting.server.secure.comm.key_change" product='2' /> y establezca un nuevo valor de clave de cifrado. Cambiar la clave de cifrado vuelve a cifrar los datos que previamente estaban cifrados.
 
 :::info
 
@@ -140,24 +146,55 @@ Para minimizar el riesgo de filtraciones de datos, configure las siguientes opci
 
 * Puede introducir <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' /> utilizando caracteres alfanuméricos y símbolos, para un total de 32 caracteres.
 
+* Después de actualizar a la versión 1.0.3, el sistema cifra los nuevos registros de auditoría sin importar la opción <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' />.
+
 :::
 
-### Configurar la seguridad de comunicación entre dispositivos
+### Configurar la comunicación segura entre dispositivos {/* #communicationByDevice */}
 
-Configure la comunicación segura entre el servidor **BioStar X** y los dispositivos de control de acceso.
+Proteja la comunicación entre el servidor **BioStar X** y los dispositivos de control de acceso con certificados para mejorar la seguridad. Un sistema **BioStar X** recién instalado establece la opción <Cmd sid="setting.sever.secure.comm.menu" product='2' /> en <Cmd sid="common.use" product='2' /> de forma predeterminada. No requiere pasos adicionales de activación. Al actualizar un sistema existente, mantiene los ajustes anteriores, reutiliza el certificado de seguridad y vuelve a conectar los dispositivos inscritos.
 
-* <Cmd sid='setting.sever.secure.comm.menu' product='2' />: La comunicación entre el servidor **BioStar X** y los dispositivos de control de acceso puede protegerse con certificados. Si establece esta opción en <Cmd sid='common.use' product='2' />, el servidor genera automáticamente un certificado para enviarlo a los dispositivos y, a partir de entonces, toda la comunicación se cifrará. Los dispositivos pueden utilizar este certificado para establecer un canal seguro al intercambiar datos con el servidor **BioStar X**.
+* <Cmd sid="setting.sever.secure.comm.menu" product='2' />: Proteja la comunicación entre el servidor **BioStar X** y los dispositivos de control de acceso con certificados. Si establece esta opción en <Cmd sid="common.use" product='2' />, el servidor genera automáticamente un certificado, lo envía a los dispositivos y cifra toda la comunicación a partir de entonces. Los dispositivos usan este certificado para establecer un canal seguro al intercambiar datos con el servidor **BioStar X**.
 
-  Para usar certificados externos, habilite la opción <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> y cargue el certificado raíz, el certificado de clave pública y el archivo de clave privada.
+  Para usar un certificado externo, establezca la opción <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> en <Cmd sid="common.use" product='2' /> y registre lo siguiente.
+
+  * Cargue los archivos <Cmd sid="setting.sever.secure.comm.extcert.root.menu" product='2' />, <Cmd sid="setting.sever.secure.comm.extcert.public.menu" product='2' /> y <Cmd sid="setting.sever.secure.comm.extcert.private.menu" product='2' /> por separado.
+
+  * Si la clave privada tiene una frase de contraseña, escriba el mismo valor en <Cmd sid="setting.sever.secure.comm.extcert.passphrase.menu" product='2' /> y <Cmd sid="setting.sever.secure.comm.extcert.passphraseconfirm.menu" product='2' />. (Opcional)
+
+  :::note
+
+  Para restaurar el certificado de seguridad respaldado durante la eliminación del servidor, cópielo directamente en la ruta de instalación de **BioStar X**. Para obtener instrucciones para respaldar y restaurar certificados de seguridad, consulte <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />.
+
+  :::
 
   <Image src='/img/biostarx-settings-system-security-advanced-with-device.png' />
-* <Cmd sid='setting.server.secure.comm.data_encryption' product='2' />: Puede redefinir la clave de cifrado de datos y la contraseña de administrador.
+
+* <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />: Administre manualmente la clave hash aplicada a los dispositivos. Establezca esta opción en <Cmd sid="common.use" product='2' /> para verificar y cambiar el valor de <Cmd sid="setting.server.secure.comm.encryption_key_device" product='2' />. Haga clic en <Cmd sid="setting.server.secure.comm.key_change" product='2' /> y establezca un nuevo valor de clave hash.
+
+:::caution
+
+Antes de habilitar la opción <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />, verifique lo siguiente.
+
+* Al habilitarla, el dispositivo elimina datos de usuario, registros y claves de cifrado cuando ocurre un evento de manipulación (Tamper), para mejorar la seguridad; úsela con precaución.
+
+* Si un usuario distinto de la cuenta <Cmd sid='ROLE_CODE_ADMIN' product='2' className='normal' /> tiene una contraseña o un PIN, el sistema no puede aplicar la clave hash. Elimine la contraseña o el PIN de inicio de sesión y vuelva a intentarlo. El sistema cifra las contraseñas y los PIN de forma irreversible para cumplir los requisitos de seguridad.
+
+* Cambiar la clave hash del dispositivo elimina la información del PIN del administrador principal almacenada en el dispositivo. Tenga especial cuidado, porque eliminar credenciales puede impedir el acceso al menú Administrador de dispositivos.
+
+* Los ajustes <Cmd sid="setting.sever.secure.comm.encrypt.db" product='2' /> y <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> no se pueden habilitar al mismo tiempo. Deshabilite una de las dos opciones y luego establezca la otra.
+
+:::
 
 :::info
 
-* **BioStar X** genera o elimina certificados según el estado de configuración del dispositivo y los ajustes de comunicación segura, y no vuelve a crear el mismo certificado anterior. Por ejemplo, si el ajuste de Comunicación segura con el dispositivo se cambia en el orden de <Cmd sid='common.use' product='2' /> → <Cmd sid='common.notUse' product='2' />, el certificado creado se eliminará automáticamente. Cuando el ajuste se cambia en el orden de <Cmd sid='common.use' product='2' /> → <Cmd sid='common.notUse' product='2' /> → <Cmd sid='common.use' product='2' />, se ejecuta la operación **Crear certificado A** → **Eliminar certificado A** → **Crear certificado B**.
+* **BioStar X** conserva el certificado predeterminado generado por el servidor después de cambiar <Cmd sid="setting.sever.secure.comm.menu" product='2' /> a <Cmd sid="common.notUse" product='2' />. Al volver a cambiar la opción a <Cmd sid="common.use" product='2' />, el sistema reutiliza el certificado existente. Crea uno nuevo solo si no existe ninguno. Cambiar <Cmd sid="common.use" product='2' /> → <Cmd sid="common.notUse" product='2' /> → <Cmd sid="common.use" product='2' /> conserva el mismo certificado. Los dispositivos agregados previamente vuelven a conectarse sin pasos adicionales. Al cambiar a <Cmd sid="common.notUse" product='2' /> mientras se usa un certificado externo, el sistema elimina el certificado externo (certificado raíz, certificado de clave pública y clave privada) del servidor. También elimina la contraseña de la clave privada del servidor.
 
-* Si establece la opción <Cmd sid='setting.sever.secure.comm.menu' product='2' /> en <Cmd sid='common.notUse' product='2' /> mientras el dispositivo está físicamente desconectado de la red, se eliminará el certificado almacenado en el dispositivo. En este caso, el dispositivo no podrá reconectarse. Para volver a conectarlo, debe eliminarse el certificado guardado en el dispositivo o restablecer el dispositivo a los valores de fábrica. Para obtener más información, consulte el manual del dispositivo.
+* Cambie <Cmd sid="setting.sever.secure.comm.menu" product='2' /> y <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> solo cuando todos los dispositivos agregados y el servidor de multicomunicación estén conectados al servidor. Si un dispositivo se desconecta o el servidor de multicomunicación no está conectado, el sistema rechaza el cambio y muestra un mensaje de error. Vuelva a conectar el dispositivo o el servidor de multicomunicación, luego intente de nuevo. Si ya no usa el dispositivo, elimínelo de la lista de dispositivos y vuelva a intentarlo.
+
+* Si un dispositivo conectado anteriormente no se conecta por una discrepancia de certificado, **BioStar X** lo registra en el registro del sistema. Si el dispositivo deja de conectarse de repente, revise el registro del sistema. Luego, inicialice el dispositivo o vuelva a inscribir el conjunto de certificados exportado con <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' />. Si elimina y vuelve a instalar el servidor, consulte <DocLink docId='platform/biostar_x/remove-server#restoreCertificate' />.
+
+* Para ver instrucciones para respaldar los certificados al eliminar un servidor, consulte <DocLink docId='platform/biostar_x/remove-server' />.
 
 <details>
 <summary>Ver los dispositivos y versiones de firmware compatibles con la función <Cmd sid='setting.sever.secure.comm.menu' product='2' /></summary>
@@ -167,6 +204,8 @@ Configure la comunicación segura entre el servidor **BioStar X** y los disposit
 * Firmware de XPass Q2, versión 1.0.0 o posterior
 
 * BioStation 3 firmware 1.0.0 o superior
+
+* BioStation 2a firmware 1.0.0 o superior
 
 * X-Station 2 versión de firmware 1.0.0 o superior
 

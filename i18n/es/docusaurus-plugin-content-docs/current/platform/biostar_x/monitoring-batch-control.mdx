@@ -1,0 +1,186 @@
+---
+id: monitoring-batch-control
+title: Control Masivo
+description: Seleccione varias puertas, elevadores y ajustes avanzados de control de acceso para controlarlos a la vez.
+---
+
+Esta guía explica cómo seleccionar varias puertas, ascensores o ajustes avanzados de control de acceso y ejecutar Desbloquear, Bloquear o Borrar alarma a la vez.
+
+* Si selecciona dos o más entradas en el árbol de estado, el panel de control masivo aparece en el lado derecho de la pantalla. Ejecute comandos a la vez sin controlar cada entrada por separado.
+
+* Responda rápidamente durante emergencias o al controlar varias entradas al mismo tiempo.
+
+* Seleccione puertas, elevadores (pisos) o ajustes avanzados de control de acceso de forma masiva y contrólelos. El sistema no permite el control masivo para tipos mixtos.
+
+Haga clic en <Cmd sid='shell.header.arena' /> en la página <Cmd sid='shell.header.launcher' /> o seleccione <Cmd sid='shell.header.arena' /> en la lista de accesos directos en la esquina superior izquierda de la pantalla. Si selecciona dos o más entradas en el árbol de estado de la barra lateral izquierda, el panel de control masivo aparece en el lado derecho de la pantalla.
+
+<Image src='/img/biostarx-monitoring-batch-main.png' />
+
+:::info
+
+* El control masivo no incluye cámaras. Si selecciona cámaras junto con otras entradas, el sistema las quita de la lista de selección.
+
+* Este documento explica cómo controlar varias entradas a la vez. Para controlar una sola puerta, un elevador o un ajuste avanzado de control de acceso, consulte el siguiente documento.
+
+  * <DocLink docId='platform/biostar_x/control-door' />
+
+  * <DocLink docId='platform/biostar_x/control-elevator' />
+
+  * <DocLink docId='platform/biostar_x/control-zone' />
+
+:::
+
+## Seleccionar varias entradas {/* #select-multiple */}
+
+Para seleccionar puertas, elevadores, pisos o control de acceso avanzado en el árbol de estado de la barra lateral izquierda, siga estos pasos. Funciona igual que seleccionar varios archivos en el Explorador de archivos de Windows.
+
+* **Clic**: Seleccione una entrada. Esto borra la selección anterior.
+
+* **<Kbd>Ctrl</Kbd> + clic**: Agregue a la lista de selección la entrada en la que hizo clic o quítela. Esto mantiene el resto de la selección.
+
+* **<Kbd>Shift</Kbd> + clic**: Seleccione el rango visible desde la última entrada en la que hizo clic hasta la entrada actual. Reemplace la selección actual por este rango.
+
+* **<Kbd>Ctrl</Kbd> + <Kbd>Shift</Kbd> + clic**: Agregue un rango sin borrar la selección actual. Use esto para seleccionar varias entradas no adyacentes.
+
+* **Clic en un grupo**: Seleccione el nombre de un grupo (<IcGroup />) para seleccionar todas las puertas, elevadores, pisos y ajustes avanzados de control de acceso de ese grupo. Para expandir o contraer un grupo, haz clic en la flecha (<IcBw />) antes del nombre del grupo.
+
+:::info
+
+El panel de control masivo no se abre cuando no seleccionas ninguna entrada o solo una. Cuando solo queda una entrada seleccionada, aparece la vista detallada. Cuando borras todas las selecciones, el panel derecho desaparece.
+
+:::
+
+## Diseño del panel de control masivo {/* #panel-layout */}
+
+Selecciona varias entradas en el árbol de estado de la barra lateral izquierda. El panel de control masivo aparece a la derecha de la siguiente manera.
+
+* **Cantidad y tipos de selección**: Por ejemplo, si seleccionas 4 puertas, 2 elevadores y 4 pisos, aparece de la siguiente manera.
+
+  > <Cmd sid='monitoring.multiControl.selectedCount' replace='10' /> / <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.door' /> <Cmd>2</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.elevator' /> <Cmd>4</Cmd> <Cmd sid='monitoring.multiControl.typeLabel.floor' />
+
+  <Image src='/img/biostarx-monitoring-select-multi-items.png' />
+
+   :::note
+
+   Las características de control no están disponibles cuando seleccionas tipos diferentes juntos.
+
+   :::
+
+* **Control de puertas/elevadores**: Muestra las características de control disponibles para puertas y elevadores.
+
+  <Image src='/img/biostarx-monitoring-doors-batch-control.png' />
+
+  <Image src='/img/biostarx-monitoring-elevators-batch-control.png' />
+
+* **Control de acceso avanzado**: Muestra las características de control disponibles en el control de acceso avanzado.
+
+  <Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* **Tabla de resumen de entradas seleccionadas**: La parte inferior del panel derecho muestra el nombre y el estado de cada entrada seleccionada. Arrastra el divisor entre el área de control y la tabla de resumen hacia arriba o hacia abajo para ajustar sus alturas. Si seleccionas muchas entradas, arrastra el divisor para expandir el área de la tabla de resumen.
+
+  <Image src='/img/biostarx-monitoring-select-multi-summary.png' />
+
+## Control masivo de puertas {/* #bulk-door */}
+
+Cuando seleccionas al menos dos puertas, usa los mismos controles básicos y avanzados que en el control de una sola puerta.
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-monitoring-doors-control-list.png' />
+
+<Image src='/img/biostarx-monitoring-doors-control-intrusion.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+**Control básico**
+
+* <Cmd sid='monitoring.multiControl.once3sec' />: Aplica el estado de desbloqueo una vez.
+
+* <Cmd sid='monitoring.multiControl.timed' />: Mantiene el estado bloqueado o desbloqueado durante el tiempo especificado.
+
+* <Cmd sid='monitoring.multiControl.permanent' />: Establece el estado bloqueado o desbloqueado sin límite de tiempo.
+
+Selecciona un comando para aplicar y haz clic en <Cmd sid='common.apply' />.
+
+**Control avanzado**
+
+Usa los siguientes botones cuando al menos una entrada seleccionada cumple las condiciones que se indican a continuación.
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: Disponible cuando al menos una puerta seleccionada tiene una alarma activa.
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: Disponible cuando al menos una puerta seleccionada tiene el antirretorno habilitado. Para más información, consulte <DocLink docId='platform/biostar_x/control-door#apb-reset' />.
+
+* <Cmd sid='monitoring.multiControl.normalizeOverrides' />: Disponible cuando un administrador desbloquea o bloquea una puerta manualmente. Esto excluye estados cambiados por horarios o emergencias.
+
+* <Cmd sid='monitoring.multiControl.arm' /> / <Cmd sid='monitoring.multiControl.disarm' />: Aparece solo cuando la puerta se establece en alarma de intrusión, un ajuste avanzado de control de acceso.
+
+</Column>
+</Columns>
+
+:::info
+
+* Haga clic en <Cmd sid='monitoring.multiControl.clearAlarm' /> o <Cmd sid='monitoring.multiControl.normalizeOverrides' />. Aparece una ventana emergente. En la ventana emergente, haga clic en <Cmd sid='monitoring.multiControl.normalizeOverrides' /> o <Cmd sid='monitoring.multiControl.normalizeOverrides' /> para borrarlos. En cambio, <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' /> cambia el estado sin un cuadro de diálogo de confirmación.
+
+* Los ajustes avanzados de control de acceso están disponibles al comprar un complemento con una licencia **Essential**, o con una licencia **Enterprise** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
+
+:::
+
+## Control masivo de ascensores y pisos {/* #bulk-elevator */}
+
+Seleccione un ascensor para controlar todos los pisos configurados en conjunto. Para controlar solo ciertos pisos, seleccione los pisos directamente.
+
+Las diferencias con las puertas son las siguientes.
+
+| Característica de control | Puerta | Ascensor, piso |
+| --- | --- | --- |
+| <Cmd sid='monitoring.multiControl.unlock' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.once3sec' />, <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.lock' /> | <Cmd sid='monitoring.multiControl.timed' />, <Cmd sid='monitoring.multiControl.permanent' /> | <Cmd sid='monitoring.multiControl.permanent' /> |
+| <Cmd sid='monitoring.multiControl.normalizeOverrides' /> | Soportado | Soportado |
+| <Cmd sid='monitoring.multiControl.clearAlarm' /> | Soportado | Aparece cuando la selección incluye un ascensor; no aparece si solo se seleccionan pisos |
+| <Cmd sid='monitoring.multiControl.clearApb' /> | Soportado | No compatible |
+
+:::info
+
+Si selecciona un ascensor y sus pisos, el sistema envía un comando de desbloqueo/bloqueo por ascensor.
+
+:::
+
+## Control masivo del control de acceso avanzado {/* #bulk-acs */}
+
+Seleccione varios ajustes de control de acceso avanzado para controlarlos a la vez. Al seleccionar dos o más, el panel derecho cambia al panel de control masivo. Las acciones de selección, rango y filtro son iguales para puertas y elevadores.
+
+Los ajustes avanzados de control de acceso no incluyen relés de bloqueo ni bloqueo/desbloqueo del operador, por lo que las opciones difieren de puertas y elevadores. Los siguientes botones de control aparecen según el tipo de ajuste seleccionado.
+
+<Image src='/img/biostarx-monitoring-acs-batch-control.png' />
+
+* <Cmd sid='arena.tree.contextMenu.enable' />/<Cmd sid='arena.tree.contextMenu.disable' />: Aparece para todos los ajustes avanzados de control de acceso.
+
+* <Cmd sid='monitoring.multiControl.arm' />/<Cmd sid='monitoring.multiControl.disarm' />: Aparece solo cuando la selección se establece en alarma de intrusión.
+
+* <Cmd sid='monitoring.multiControl.clearAlarm' />: Aparece solo cuando la selección incluye ajustes que activan alarmas (anti-passback, alarma de incendio, bloqueo programado, alarma de intrusión, interbloqueo o muster). No aparece si selecciona solo ajustes sin alarma, como límite de ocupación o verificación de recuento.
+
+* <Cmd sid='monitoring.multiControl.clearApb' />: Aparece solo cuando la selección incluye el ajuste de anti-passback. Haz clic en este botón. En la ventana de selección de usuarios, selecciona un usuario que incumplió el ajuste de anti-passback y borra la alarma de APB. Para obtener más información, consulte <DocLink docId='platform/biostar_x/control-zone#apb-release' />.
+
+:::info
+
+* El control masivo no incluye <Cmd sid='monitoring.multiControl.lock' />, <Cmd sid='monitoring.multiControl.unlock' /> ni <Cmd sid='monitoring.multiControl.normalizeOverrides' />. El panel de control masivo también excluye funciones que abren otras pantallas, como el informe de muster y el monitoreo del límite de ocupación. Use estas funciones en la pantalla de detalles cuando seleccione un solo ajuste.
+
+* Para más información sobre el control de acceso avanzado, consulte <DocLink docId='platform/biostar_x/control-zone' />.
+
+:::
+
+## Verifique los resultados de ejecución {/* #result */}
+
+* Si todas las entradas seleccionadas se ejecutan correctamente, aparece un mensaje de éxito en la parte superior de la pantalla.
+
+  <Image src='/img/biostarx-monitoring-doors-control-success.png' caption />
+
+* Si alguna entrada falla, aparece un mensaje de fallo con el botón <Cmd sid='arena.batchResult.showDetails' />.
+
+  <Image src='/img/biostarx-monitoring-doors-control-fail.png' caption />
+
+  Haga clic en <Cmd sid='arena.batchResult.showDetails' /> para ver los resultados agrupados en <Cmd sid='arena.batchResult.successChip' />, <Cmd sid='arena.batchResult.failChip' /> y <Cmd sid='arena.batchResult.skippedChip' />. Haga clic en <Cmd sid='arena.batchResult.copyFailList' /> para copiar al portapapeles los nombres y los motivos de las entradas fallidas.
+
+  <Image src='/img/biostarx-monitoring-doors-control-fail-details.png' caption />
