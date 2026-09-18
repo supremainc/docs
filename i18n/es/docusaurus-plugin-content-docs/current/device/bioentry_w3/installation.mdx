@@ -19,15 +19,19 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
 ## Fijar el soporte y el producto
 
+### Soporte general
+
 1. Determine la ubicación para montar el producto.
 
    <Image src='/img/device/installation-recommended-bew3.svg' className='none' alone />
 
    <InstallationBracketNotes height={137} />
 
+   <PageBreak />
+
 2. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
 
-   <Image src='/img/device/installation-device1-bew3.svg' className='none' alone />
+   <Image src='/img/device/installation-device1-bew3.svg' className='none' width={240} alone />
 
    :::info
 
@@ -63,13 +67,17 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
    :::
 
+   <PageBreak />
+
 3. Monta el producto en el soporte fijado.
 
-   <Image src='/img/device/installation-device2-bew3.svg' className='none' alone />
+   <Image src='/img/device/installation-device2-bew3.svg' className='none' width={360} alone />
+
+   <PageBreak />
 
 4. Gira los tornillos de fijación para ensamblar el producto con el soporte.
 
-   <Image src='/img/device/installation-device3-bew3.svg' className='none' alone />
+   <Image src='/img/device/installation-device3-bew3.svg' className='none' width={150} alone />
 
    :::info
 
@@ -77,18 +85,114 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
    :::
 
-<Xclude lang='es'>
-
 <PageBreak />
 
-</Xclude>
+### Soporte inclinable
+
+Use el soporte inclinable dedicado para ajustar el ángulo de autenticación según el entorno de instalación. El soporte inclinable se vende por separado.
+
+1. Determine la posición correcta para instalar el soporte usando la plantilla de perforación proporcionada.
+
+   <Image src='/img/device/installation-recommended-bew3.svg' className='none' alone />
+
+   <InstallationBracketNotes height={137} />
+
+   <PageBreak />
+
+2. Use los tornillos de montaje del soporte inclinable para fijar firmemente la parte trasera del soporte inclinable en la ubicación de instalación (pared).
+
+   <Image src='/img/device/installation-device-tilt_bracket1-bs3.svg' className='none' width={300} alone />
+
+   :::note
+
+   Según la ubicación de instalación, instale el soporte inclinable con la orientación superior e inferior como se indica a continuación.
+
+   * Al instalarlo en el lado izquierdo de la entrada: instálelo de modo que la marca "R TOP" quede hacia arriba
+
+   * Al instalarlo en el lado derecho de la entrada: instálelo de modo que la marca "L TOP" quede hacia arriba
+
+   <Image src='/img/device/installation-device-tilt_bracket0-bew3.svg' className='none' width={700} alone />
+
+   :::
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/bew3-installation_distance1.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   | Espesor de pared | Distancia |
+   | :-: | :-: |
+   | 100 mm | 270 mm |
+   | 120 mm | 250 mm |
+   | 150 mm | 170 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/bew3-installation_distance.png' className='none' width='65%' />
+
+   </Column>
+   </Columns>
+
+   * Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE.
+
+   :::
+
+3. Una la parte frontal del soporte inclinable con la ranura de la parte trasera, ciérrelo y fíjelo con dos tornillos en los orificios superiores e inferiores.
+
+   <Image src='/img/device/installation-device-tilt_bracket2-bs3.svg' className='none' width={550} alone />
+
+   :::info
+
+   Si aprieta demasiado los tornillos, no se puede ajustar el ángulo. Apriete los tornillos al nivel adecuado.
+
+   :::
+
+4. Fije firmemente el soporte de montaje en pared encima del soporte inclinable.
+
+   <Image src='/img/device/installation-device-tilt_bracket3-bew3.svg' className='none' width={400} alone />
+
+   <PageBreak />
+
+5. Monte el producto en el soporte de montaje en pared fijado.
+
+   <Image src='/img/device/installation-device-tilt_bracket4-bew3.svg' className='none' width={400} alone />
+
+   <PageBreak />
+
+6. Apriete los tornillos de fijación del producto para ensamblarlo con el soporte de montaje en pared.
+
+   <Image src='/img/device/installation-device-tilt_bracket5-bew3.svg' className='none' width={210} alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+7. Ajuste el soporte inclinable al ángulo deseado.
+
+   <Image src='/img/device/installation-device-tilt_bracket6-bew3.svg' className='none' width={300} alone />
+
+<PageBreak />
 
 {/* ## 전원 연결 */}
 import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
 
-<div className='page-break' />
+<PageBreak />
 
 {/* ## 네트워크 연결 */}
 import NetworkConnection from "../../common/_device-network-connection.mdx";
@@ -107,7 +211,7 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 <RelayConnectioin />
 
-<div className='page-break' />
+<PageBreak />
 
 {/* ## 독립형 연결 */}
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
@@ -119,7 +223,7 @@ import CommonNotes from "../../common/_device-connection-standalone-secure-notes
 
 <CommonNotes />
 
-<div className='page-break' />
+<PageBreak />
 
 {/* ## Secure I/O 2 연결 */}
 import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";

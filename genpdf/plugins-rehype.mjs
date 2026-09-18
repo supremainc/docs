@@ -763,6 +763,7 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
       const productAttr = attributes.find(attr => attr.name === 'product')?.value;
       const classNameAttr = attributes.find(attr => attr.name === 'className')?.value || '';
       const tipAttr = attributes.find(attr => attr.name === 'tip')?.value;
+      const replaceAttr = attributes.find(attr => attr.name === 'replace')?.value;
 
       const classNames = classNameAttr ? ['cmd', classNameAttr] : ['cmd'];
       let textContent = '';
@@ -800,7 +801,12 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
           const locale = cmdXLocaleMap[language] || cmdXEn;
           localeText = locale[sidAttr];
           if (localeText) {
-            localeText = localeText.replace('{{value}}', 'N');
+            localeText = localeText
+              .replace('<br>', '')
+              .replace('{{value}}', 'N')
+              .replace(' ({{count}})', '')
+              .replace('({{count}})', '')
+              .replace('{{count}}', replaceAttr);
           }
         }
 
@@ -821,6 +827,8 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
             .replace(/&sol;/g, '/')
             .replace(/\\xB0\\x43/g, '℃')
             .replace(/\\xB0\\x46/g, '℉')
+            .replace(' <font size="1">※ｵﾝ時 ﾘﾚｰ非動作</font>', '')
+            .replace(/\\n/g, ' ')
             .trim();
         }
 
@@ -2738,7 +2746,7 @@ function buildTreeviewHtml(data) {
     
     // Add icon for level > 1 or specific types
     if (level > 1 || node.type === 'access-zone') {
-      if (node.type !== 'door-relay' && node.type !== 'door-arm' && node.type !== 'door-camera') {
+      if (node.type !== 'door-relay' && node.type !== 'door-arm') {
         const svgIcon = getSvgIcon(node.type);
         if (svgIcon) {
           nodeElements.push({
@@ -2761,7 +2769,7 @@ function buildTreeviewHtml(data) {
 
     // Add relay/arm/camera icons together for door nodes (matches Treeview/index.js)
     if (node.name === '출입문' || node.name === 'Door') {
-      ['door-relay', 'door-arm', 'door-camera'].forEach((iconType, idx) => {
+      ['door-relay', 'door-arm'].forEach((iconType, idx) => {
         const svgIcon = getSvgIcon(iconType);
         if (svgIcon) {
           if (svgIcon.properties) {
