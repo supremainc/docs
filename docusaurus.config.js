@@ -126,6 +126,7 @@ const config = {
             '_backup/**.{js,jsx,ts,tsx,md,mdx}',
             'cover/**.{js,jsx,ts,tsx,md,mdx}',
             'back/**.{js,jsx,ts,tsx,md,mdx}',
+            ...(!isDev && !isPreview ? ['cmds/**.{js,jsx,ts,tsx,md,mdx}'] : [])
           ]
         },
         blog: {
