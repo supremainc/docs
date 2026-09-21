@@ -229,7 +229,7 @@ const config = {
           siteDescription: "Check out all of Suprema's products and BioStar related information here.",
           enableLlmsFullTxt: true,
           includeBlog: false,
-          includePages: false,
+          includePages: true,
           includeDocs: true,
           includeVersionedDocs: false, // llms.txt에서는 기본값이 false
           excludeRoutes: [
