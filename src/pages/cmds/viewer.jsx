@@ -177,7 +177,7 @@ function CmdViewer() {
       <div className="cmdv-page">
         <header className="cmdv-header">
           <h1>Remark Cmd 키 뷰어</h1>
-          <p>카테고리별 remark-cmd JSON을 언어별로 불러와 키/번역을 검색하고, 클릭하여 클립보드에 복사할 수 있습니다. `${statusText}`</p>
+          <p>카테고리별 remark-cmd JSON을 언어별로 불러와 키/번역을 검색하고, 클릭하여 클립보드에 복사할 수 있습니다. {statusText}</p>
         </header>
 
         <div className="cmdv-toolbar">
