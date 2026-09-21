@@ -165,6 +165,17 @@ const config = {
     ]
   ],
   plugins: [
+    [ '@docusaurus/plugin-content-docs', {
+      id: 'developer',
+      path: 'developer',
+      routeBasePath: 'developer',
+      remarkPlugins: [
+        [remarkCmd, { locale: locale || 'ko' }],
+        [remarkImageSize, { locale: locale || 'ko' }],
+      ],
+      rehypePlugins: [ rehypeExtendedTable ],
+      sidebarPath: './sidebarsDeveloper.js',
+    }],
     [ '@docusaurus/plugin-client-redirects', {
       redirects: [
         {
