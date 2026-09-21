@@ -92,12 +92,12 @@ export default function ApiV2Page() {
         <title>CLUe API | Suprema Docs</title>
         <meta name="description" content="CLUe REST API documentation. Manage users, access control, doors, devices, and credentials with JSON-based endpoints." />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <link rel="canonical" href="https://docs.supremainc.com/api/clue" />
+        <link rel="canonical" href="https://docs.supremainc.com/developer/clue" />
 
         <meta property="og:title" content="CLUe API | Suprema Docs" />
         <meta property="og:description" content="Complete REST API documentation for CLUe access control system. Manage users, doors, devices, and credentials." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://docs.supremainc.com/api/clue" />
+        <meta property="og:url" content="https://docs.supremainc.com/developer/clue" />
         <meta property="og:site_name" content="Suprema Docs" />
 
         <meta name="keywords" content="CLUe API, Suprema API, access control API, REST API, user management API, door control API, device management API" />
@@ -125,7 +125,7 @@ export default function ApiV2Page() {
             "dateModified": new Date().toISOString().split('T')[0],
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://docs.supremainc.com/api/clue"
+              "@id": "https://docs.supremainc.com/developer/clue"
             }
           })}
         </script>
