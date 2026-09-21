@@ -187,10 +187,10 @@
         ],
         "version": "1.0.4",
         "manuals": {
-            "ko": "device/bioentry_w3/BioEntry W3_IG_1.03_KO_260616.pdf",
-            "en": "device/bioentry_w3/BioEntry W3_IG_1.03_EN_260616.pdf",
-            "es": "device/bioentry_w3/BioEntry W3_IG_1.03_ES_260616.pdf",
-            "ja": "device/bioentry_w3/BioEntry W3_IG_1.03_JA_260616.pdf"
+            "ko": "device/bioentry_w3/BioEntry W3_IG_1.04_KO_260918.pdf",
+            "en": "device/bioentry_w3/BioEntry W3_IG_1.04_EN_260918.pdf",
+            "es": "device/bioentry_w3/BioEntry W3_IG_1.04_ES_260918.pdf",
+            "ja": "device/bioentry_w3/BioEntry W3_IG_1.04_JA_260918.pdf"
         },
         "release_notes": {
             "ko": "device/bioentry_w3/BioEntry W3_RN_1.0.4_KO_260825.pdf",
@@ -201,7 +201,7 @@
             "ko": "device/bioentry_w3/BioEntry W3_DrillingTemplate_KO.pdf",
             "en": "device/bioentry_w3/BioEntry W3_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-06-29"
+        "release_date": "2026-08-31"
     },
     {
         "category": "biometric",
