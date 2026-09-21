@@ -1,0 +1,211 @@
+.cmdv-page {
+  --cmdv-border: var(--ifm-toc-border-color, #e2e5ea);
+  --cmdv-panel: var(--ifm-background-surface-color, #ffffff);
+  --cmdv-text-muted: var(--ifm-color-emphasis-600, #6b7280);
+  --cmdv-accent: var(--ifm-color-primary, #2563eb);
+  --cmdv-row-hover: var(--ifm-color-emphasis-100, #eff4ff);
+  --cmdv-key-bg: var(--ifm-color-emphasis-100, #f1f3f6);
+  padding: 3rem;
+}
+
+.cmdv-header {
+  padding: 20px 0 12px;
+}
+
+.cmdv-header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.cmdv-header p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--cmdv-text-muted);
+}
+
+.cmdv-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--cmdv-border);
+  position: sticky;
+  top: var(--ifm-navbar-height, 0px);
+  background: var(--ifm-background-color);
+  z-index: 10;
+}
+
+.cmdv-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cmdv-field label {
+  font-size: 12px;
+  color: var(--cmdv-text-muted);
+}
+
+.cmdv-toolbar select,
+.cmdv-toolbar input[type='search'] {
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid var(--cmdv-border);
+  border-radius: 8px;
+  background: var(--cmdv-panel);
+  color: var(--ifm-font-color-base);
+}
+
+.cmdv-toolbar select {
+  min-width: 200px;
+}
+
+.cmdv-search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cmdv-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--cmdv-text-muted);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.cmdv-checkbox input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.cmdv-toolbar input[type='search'] {
+  min-width: 280px;
+}
+
+.cmdv-toolbar select:focus,
+.cmdv-toolbar input[type='search']:focus {
+  outline: none;
+  border-color: var(--cmdv-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.cmdv-status {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--cmdv-text-muted);
+  white-space: nowrap;
+}
+
+.cmdv-main {
+  padding: 16px 0 60px;
+}
+
+.cmdv-table-wrap {
+  background: var(--cmdv-panel);
+  border: 1px solid var(--cmdv-border);
+  border-radius: 8px;
+  overflow: auto;
+  max-height: calc(100vh - 260px);
+}
+
+.cmdv-table-wrap table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  display: table;
+  table-layout: fixed;
+}
+
+.cmdv-table-wrap thead th {
+  position: sticky;
+  top: 0;
+  background: var(--ifm-color-emphasis-0, #fafbfc);
+  border-bottom: 1px solid var(--cmdv-border);
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 600;
+  color: var(--cmdv-text-muted);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.cmdv-table-wrap tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--cmdv-border);
+  vertical-align: top;
+}
+
+.cmdv-table-wrap tbody tr:hover {
+  background: var(--cmdv-row-hover);
+}
+
+.cmdv-key-cell {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+  color: var(--cmdv-accent);
+  background: var(--cmdv-key-bg);
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.cmdv-key-cell:hover {
+  filter: brightness(0.95);
+}
+
+.cmdv-value-cell {
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.cmdv-value-cell strong {
+  color: var(--cmdv-text-muted);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.cmdv-value-cell:hover {
+  text-decoration: underline dotted;
+}
+
+.cmdv-value-empty {
+  color: var(--ifm-color-emphasis-400, #c3c8d1);
+  font-style: italic;
+}
+
+.cmdv-empty-state,
+.cmdv-loading-state {
+  padding: 40px;
+  text-align: center;
+  color: var(--cmdv-text-muted);
+  font-size: 14px;
+}
+
+.cmdv-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #1f2328;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  max-width: 80vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.cmdv-toast--show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

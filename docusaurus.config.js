@@ -127,6 +127,7 @@ const config = {
             '_backup/**.{js,jsx,ts,tsx,md,mdx}',
             'cover/**.{js,jsx,ts,tsx,md,mdx}',
             'back/**.{js,jsx,ts,tsx,md,mdx}',
+            ...(!isDev && !isPreview ? ['cmds/**.{js,jsx,ts,tsx,md,mdx}'] : [])
           ]
         },
         blog: {
@@ -230,7 +231,7 @@ const config = {
           siteDescription: "Check out all of Suprema's products and BioStar related information here.",
           enableLlmsFullTxt: true,
           includeBlog: false,
-          includePages: false,
+          includePages: true,
           includeDocs: true,
           includeVersionedDocs: false, // llms.txt에서는 기본값이 false
           excludeRoutes: [

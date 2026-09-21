@@ -68,8 +68,6 @@
     "@types/fs-extra": "^11.0.4",
     "@types/md5": "^2.3.5",
     "@types/node": "^22.7.4",
-    "baseline-browser-mapping": "^2.10.0",
-    "caniuse-lite": "^1.0.30001776",
     "cheerio": "^1.0.0",
     "commander": "^14.0.2",
     "convert-json-to-dot": "^1.0.5",
