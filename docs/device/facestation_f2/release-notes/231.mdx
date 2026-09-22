@@ -3,7 +3,7 @@ id: 231
 title: 펌웨어 버전 2.3.1
 ---
 
-# 펌웨어 버전 2.3.1 (빌드 번호 2.3.1_260917)
+# 펌웨어 버전 2.3.1 (빌드 번호 2.3.1_260922)
 
 릴리즈<Separator/>2026-09-22
 
@@ -17,25 +17,26 @@ title: 펌웨어 버전 2.3.1
 
 :::
 
-## 신규 기능 및 개선
-
----
-
-(DFW-1390) [Lock override-User Status:Off] wiegand reader로 door 생성 후, wiegand 장치가 disable 상태일때, Lock override 카드 인증이 안되는 현상
-1. 
-
-(DFW-1388) timed apb 설정 후 toggle 진입 시 APB 상태 갱신이 안되는 현상
-(DFW-1384) wiegand reader로 door가 생성되어 있으면, Trigger&Action으로 하위 Wiegand Reader가 Disable Device 동작 안되는 문제
-(DFW-1382) [Lock override] wiegand reader로 door 생성 후, wiegand 장치가 disable 상태일때, Lock override 카드 인증이 안되는 현상
-(DFW-1381) trigger&Action 및 구역 알람 액션에 Relay 설정된 경우 릴레이 발생 횟수만큼 로그가 남는 문제
-
-
 ## 버그 수정
 
 ---
 
 <BugLists>
 
+    {/* (DFW-1390) [Lock override-User Status:Off] wiegand reader로 door 생성 후, wiegand 장치가 disable 상태일때, Lock override 카드 인증이 안되는 현상
+(DFW-1382) [Lock override] wiegand reader로 door 생성 후, wiegand 장치가 disable 상태일때, Lock override 카드 인증이 안되는 현상 */}
+1. Wiegand 리더가 비활성 상태일 때 해당 리더로 만든 출입문에서 **비상 개방 카드** 인증이 되지 않는 문제 <Badge>2.3.0</Badge>
 
+    {/* (DFW-1388) timed apb 설정 후 toggle 진입 시 APB 상태 갱신이 안되는 현상 */}
+1. **시간 제한 안티패스백** 환경에서 인증을 통한 출입문 제어 후 **안티패스백** 상태가 갱신되지 않는 문제 <Badge>2.3.0</Badge>
+
+    {/* (DFW-1384) wiegand reader로 door가 생성되어 있으면, Trigger&Action으로 하위 Wiegand Reader가 Disable Device 동작 안되는 문제 */}
+1. Wiegand 리더로 생성한 출입문이 있으면 **작업 조건 및 동작**으로 하위 Wiegand 리더가 장치 잠금되지 않는 문제 <Badge>2.3.0</Badge>
+
+    {/* (DFW-1381) trigger&Action 및 구역 알람 액션에 Relay 설정된 경우 릴레이 발생 횟수만큼 로그가 남는 문제 */}
+1. **작업 조건 및 동작** 또는 **구역** 알람에 릴레이가 설정된 경우 로그가 중복으로 기록되는 문제 <Badge>2.3.0</Badge>
+
+    {/* (DFW-1394) Toggle 진입 후 SLAVE 재부팅 시 SLAVE 장치에 자물쇠 사라지는 현상 */}
+1. 출입문을 수동 개방한 상태에서 슬레이브 장치를 재부팅하면 자물쇠 아이콘이 사라지는 문제 <Badge>2.3.0</Badge>
 
 </BugLists>
