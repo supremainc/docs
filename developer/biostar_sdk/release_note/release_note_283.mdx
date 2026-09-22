@@ -1,0 +1,111 @@
+# 2.8.3 버전 (V2.8.3.2)
+
+날짜 2022-10-05
+
+## 새로운 기능
+
+- BioStation 3 연결 지원 (제품명: BS3-DB, BS3-APWB)
+
+- 사용자 정보 부분 갱신 함수 추가
+
+- 사용자 통계 정보 취득 기능 추가
+
+- 파일 분할 저장이 가능한 디버깅용 파일로그 함수 추가
+
+1. BioStation 3 연결 지원 및 관련 확장형 Voip 설정, RTSP 설정 기능이 추가되었습니다.
+
+   - 구조체 [BS2VoipConfigExt](configuration_api#bs2voipconfigext) 추가
+
+   - 함수 [BS2_GetVoipConfigExt](bs2_getvoipconfigext) 추가
+
+   - 함수 [BS2_SetVoipConfigExt](bs2_setvoipconfigext) 추가
+
+   - 구조체 [BS2RtspConfig](configuration_api#bs2rtspconfig) 추가
+
+   - 함수 [BS2_GetRtspConfig](bs2_getrtspconfig) 추가
+
+   - 함수 [BS2_SetRtspConfig](bs2_setrtspconfig) 추가
+
+1. 사용자 정보를 부분적으로 갱신하는 함수가 추가되었습니다.
+
+   - 함수 [BS2_PartialUpdateUser](bs2_partialupdateuser) 추가
+
+   - 함수 [BS2_PartialUpdateUserEx](bs2_partialupdateuserex) 추가
+
+   - 함수 [BS2_PartialUpdateUserSmall](bs2_partialupdateusersmall) 추가
+
+   - 함수 [BS2_PartialUpdateUserSmallEx](bs2_partialupdateusersmallex) 추가
+
+   - 함수 [BS2_PartialUpdateUserFaceEx](bs2_partialupdateuserfaceex) 추가
+
+1. 장치가 보유한 사용자 통계정보를 가져올 수 있도록 기능이 추가되었습니다.
+
+   - 구조체 [BS2UserStatistic](user_management_api#bs2userstatistic) 추가
+
+   - 함수 [BS2_GetUserStatistic](bs2_getuserstatistic) 추가
+
+1. 디버깅용 파일로그 함수가 추가되었습니다. (파일분할 저장 지원)
+
+   - 함수 [BS2_SetDebugFileLogEx](bs2_setdebugfilelogex) 추가
+
+## 수정 기능
+
+1. 디버깅용 로그 파일 출력 시, 표시되는 시간 정보가 밀리 초까지 표시되도록 수정되었습니다.
+
+   - 함수 [BS2_SetDebugFileLog](bs2_setdebugfilelog) 참조
+
+1. 얼굴 설정 방법이 변경됩니다.
+
+   얼굴 검출 단계에서 얼굴 이미지 폭을 나타내는 faceWidth, 검색 범위를 나타내는 searchRange 등은 pixel 단위로 입력하며,
+
+   이는 사용자가 설정하기 다소 난해한 입력 단위였습니다.
+
+   이후 제공되는 detectDistance, wideSearch는 감지되는 얼굴까지의 거리를 cm로 입력하여, 보다 체감 가능한 설정 단위로 변경됩니다.
+
+   SDK V2.8.3이 배포되는 시점 기준으로 **BioStation 3**만 거리 기반의 설정이 가능하며, 이후 **FaceStation F2**로 확대 적용 계획에 있습니다.
+
+   - 구조체 [BS2FaceConfig](configuration_api#bs2faceconfig) 참조
+
+1. [BS2DeviceCapabilities](device_api#bs2devicecapabilities)에 다음의 지원 정보가 추가되었습니다. (사용자 업데이트 지원, Simulated unlock, RTSP, Visual QR 등)
+
+* 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+
+1. 사용자 구조체에, 해당 사용자가 어떤 credential 정보를 가지고 있는지 나타내는 infoMask가 추가되었습니다.
+
+   또한 infoMask의 mask 값을 수정 후 장치로 내려줌으로써, 해당 사용자가 가지고 있는 정보의 부분 변경/삭제가 가능하게 됩니다.
+
+   - 함수 [BS2User](user_management_api#bs2user) 참조
+
+1. USB의 로그 취득 시, 시작 index, 요청 수량 등의 조건이 적용되지 않는 문제가 수정되었습니다.
+
+   또한 취득된 로그 시간이 비정상적으로 큰 경우가 발생하는 문제를 수정하였습니다.
+
+   - 함수 [BS2_GetLogFromDir](bs2_getlogfromdir) 참조
+
+   - 함수 [BS2_GetLogBlobFromDir](bs2_getlogblobfromdir) 참조
+
+   - 함수 [BS2_GetLogSmallBlobFromDir](bs2_getlogsmallblobfromdir) 참조
+
+   - 함수 [BS2_GetLogSmallBlobExFromDir](bs2_getlogsmallblobexfromdir) 참조
+
+   - 함수 [BS2_GetLogFromDirWithKey](bs2_getlogfromdirwithkey) 참조
+
+   - 함수 [BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey) 참조
+
+   - 함수 [BS2_GetLogSmallBlobFromDirWithKey](bs2_getlogsmallblobfromdirwithkey) 참조
+
+   - 함수 [BS2_GetLogSmallBlobExFromDirWithKey](bs2_getlogsmallblobexfromdirwithkey) 참조
+
+1. USB의 filtered log 이용 시, 날짜 검색이 정상적으로 되지 않는 문제 수정되었습니다.
+
+   - 함수 [BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir) 참조
+
+   - 함수 [BS2_GetFilteredLogFromDirWithKey](bs2_getfilteredlogfromdirwithkey) 참조
+
+1. C# 예제 내의 간단한 버그 등이 수정되었습니다.
+
+1. 저속 네트워크 환경에서 SSL 사용에 대한 사용성이 개선되었습니다.
+
+1. USB import 시 사용자에 access group이 존재하면 crash 되는 문제가 수정되었습니다.
+
+1. SDK 내부적으로 코드 안정화를 위한 수정이 있었습니다.

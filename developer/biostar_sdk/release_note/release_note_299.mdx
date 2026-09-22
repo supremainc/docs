@@ -1,0 +1,43 @@
+# 2.9.9 버전 (v2.9.9.0)
+
+날짜 2025-06-13
+
+## 새로운 기능
+
+- Mifare Plus 카드 AES128/Crypto1 암호화 방식 선택 기능 지원
+
+- 신규 장치 CoreStation 20(CS-20, CS-20P), Door Interface(DI-24) 지원
+
+1. Mifare Plus 카드의 AES128/Crypto1 암호화 방식을 선택할 수 있도록 변경되었습니다.
+
+   - 현재 XPass 2 v1.4.3, XPass D2 v1.8.2만 지원합니다.
+
+   - 구조체 [BS2CardConfig](configuration_api#bs2cardconfig) 참조
+
+   - 구조체 [BS2CustomCardConfig](configuration_api#bs2customcardconfig) 참조
+
+   - 구조체 [BS2MifareCardConfigEx](configuration_api#bs2mifarecardconfigex) 참조
+
+1. 신규 장치의 연결을 지원합니다.
+
+   - CoreStation 20(CS-20, CS-20P)
+
+   - Door Interface(DI-24)
+
+   - 구조체 [BS2InputConfigEx](configuration_api#bs2inputconfigex) 참조
+
+   - 구조체 [BS2Rs485ConfigEXDynamic](configuration_api#bs2rs485configexdynamic) 참조
+
+   - 함수 [bs2_getrs485configexdynamic](bs2_getrs485configexdynamic), [BS2_SetRS485ConfigExDynamic](bs2_setrs485configexdynamic) 추가
+
+   - 구조체 [BS2FacilityCodeConfig](configuration_api#bs2facilitycodeconfig) 참조
+
+   - 함수 [BS2_GetFacilityCodeConfig](bs2_getfacilitycodeconfig), [BS2_SetFacilityCodeConfig](bs2_setfacilitycodeconfig) 추가
+
+   - 구조체 [BS2Rs485ConfigEXDynamic](configuration_api#bs2rs485configexdynamic) 참조
+
+## 수정 기능
+
+1. SDK 내부적으로 코드 안정화를 위한 수정이 있었습니다.
+
+1. 카드 샘플소스 중 SCC 스마트 카드의 Card ID 처리 방식이 개선되었습니다.

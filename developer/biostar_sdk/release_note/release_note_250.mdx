@@ -1,0 +1,107 @@
+# 2.5.0 버전
+
+날짜 2017-09-25
+
+:::caution
+
+BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SDK 버전을 업데이트하기 위해서는 SDK을 다시 빌드해야 합니다. 
+
+:::
+
+## 새로운 기능
+
+- SEOS 카드(Elite Key, RF 성능 개선 포함) 지원
+
+- CoreStation 지원, 장치 P2 지원
+
+- Intrusion Alarm Zone 지원
+
+- Ethernet Zone 지원
+
+- USB 로그 및 유저 Export 지원
+
+- 장치에서 로그 검색 기능 추가
+
+1. SEOS 카드(Elite Key, RF 성능 개선 포함) 지원은 스마트 카드 레이아웃을 통해 iClass SEOS 카드 설정 지원하는 기능입니다.
+
+   - 함수 [BS2_GetCardConfigEx](bs2_getcardconfigex) 추가
+
+   - 함수 [BS2_SetCardConfigEx](bs2_setcardconfigex) 추가
+
+   - 구조체 [BS2CardConfigEx](Configuration_API#bs2cardconfigex) 추가
+
+1. CoreStation 지원은 신규 장치인 CoreStation을 지원하는 기능이다. CoreStation은 Master의 Controller 역할을 하는 장치로서 하위 Slave 장치들과 연동하여 전반적인 기능을 수행합니다. 일반 장치와 다른 점은 Controller 역할만을 하기에 자체적으로 카드와 지문과 같은 크리덴셜의 입력을 받을 수 없습니다. 또한, 장치에서 별도의 UI를 제공하지 않기에 CoreStation에 대한 제어 및 설정은 BioStar 를 통해 지원합니다.
+
+   - 함수 [BS2_GetSlaveExDevice](bs2_getslaveexdevice) 추가
+
+   - 함수 [BS2_SetSlaveExDevice](bs2_setslaveexdevice) 추가
+
+   - 구조체 [BS2Rs485SlaveDeviceEX](Configuration_API#bs2rs485slavedeviceex) 추가
+
+1. Intrusion Alarm Zone 지원은 다음과 같습니다. 경비 시스템이란 경비 대상 시설물에 감지기를 설치하여 침입 혹은 이상 신호가 발생할 경우 신호를 수신하여 대처하는 시스템으로, 무인 경비와 로컬 경비로 나뉩니다. 무인 경비는 원격지의 관제 센터에서 출동 요원이 대처하지만, 로컬 경비는 자체 관제 센터에서 상주 경비원이 대처하는 시스템이라고 합니다. 바이오스타의 타겟은 무인 경비의 비용에 부담을 느끼거나 자체 경비 시스템을 갖추고 있는 고객의 로컬 경비를 대상으로 합니다. 현재는 일반적인 경비 구역 기능(biostar1.X)을 제공하며, 향후 3rd party alarm 시스템의 경비/해제 장치 통합, 장기적으로는 Video와 Visual map기능에서의 적용 등 전문 로컬 관제 시스템 구축을 목표로 합니다.
+
+   - 함수 [BS2_GetIntrusionAlarmZone](bs2_getintrusionalarmzone) 추가
+
+   - 함수 [BS2_GetIntrusionAlarmZoneStatus](bs2_getintrusionalarmzonestatus) 추가
+
+   - 함수 [BS2_SetIntrusionAlarmZone](bs2_setintrusionalarmzone) 추가
+
+   - 함수 [BS2_SetIntrusionAlarmZoneAlarm](bs2_setintrusionalarmzonealarm) 추가
+
+   - 함수 [BS2_RemoveIntrusionAlarmZone](bs2_removeintrusionalarmzone) 추가
+
+   - 함수 [BS2_SetIntrusionAlarmZoneArm](bs2_setintrusionalarmzonearm) 추가
+
+   - 구조체 [BS2IntrusionAlarmZoneBlob](Configuration_API#bs2intrusionalarmzoneblob) 추가
+
+1. Ethernet Zone 지원은 Zone Master 역할을 BioStar V2.x 서버가 아닌 특정 장치가 하며 장치 사이(Master ↔ Member)의 통신 방식으로 Ethernet TCP 통신 방식을 사용하는 Zone입니다.기존 1.x Entrance Limit, Fire Alarm Zone에 사응하는 기능만을 현재는 지원합니다.
+
+   - 함수 [BS2_GetDeviceZone](bs2_getdevicezone) 추가
+
+   - 함수 [BS2_SetDeviceZone](bs2_setdevicezone) 추가
+
+   - 함수 [BS2_RemoveDeviceZone](bs2_removedevicezone) 추가
+
+   - 함수 [BS2_SetDeviceZoneAlarm](bs2_setdevicezonealarm) 추가
+
+   - 구조체 [BS2DeviceZoneConfig](Configuration_API#bs2devicezoneconfig) 추가
+
+1. USB 로그 및 유저 Export 지원은 다음과 같습니다. 네트워크 연결이 어려운 현장에서 USB를 통해 유저와 로그를 Export / Import 하여 T&A 용도로 사용하고 있습니다. (대표적 사용 시나리오) BioStar 서버가 설치된 본사에서 유저를 등록하고 해당 유저를 USB에 담아 현장에 보내서 사용하고, 매월 초에 전월의 로그를 담아서 T&A 근태 결과를 반영하고 있습니다. 실제적으로는 USB에 옮겨담아 처리하거나, USB로 받은 데이터를 재 전달하여서도 처리할 수 있도록 하기 위해 파일 형태로 지원되어야 합니다.
+
+   - 함수 [BS2_GetUserListFromDir](bs2_getuserlistfromdir) 추가
+
+   - 함수 [BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir) 추가
+
+   - 함수 [BS2_GetLogFromDir](bs2_getlogfromdir) 추가
+
+1. 장치에서 로그 검색 기능 추가는 장치에서 SDK를 이용해서 로그를 검색하여 표시하거나 가져 갈 경우 장시간 응답 없는 상태 을 개선을 하였습니다.
+
+   - 함수 [BS2_GetFilteredLogSinceEventId](bs2_getfilteredlogsinceeventid) 추가
+
+## 수정 기능
+
+1. BS2_ScanFingerprint의 확장형으로 BS2_ScanFingerprintEx 추가가 되었습니다. 확장된 함수에는 outQuality 파라미터 추가가 되었습니다. 기존 함수를 유지하는 이유는 하위 호환성을 고려하기 위함입니다.
+
+   ```cpp
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprintEx(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outQuality, OnReadyToScan ptrReadyToScan);
+   ```
+
+1. SSL connect시 wait time시간을 주어서 시간 단축을 하였습니다.
+
+1. Payload size가 큰 경우 Internal Error 발생 오류 수정이 되었습니다.
+
+1. Packet Loss 및 Packet 처리 방법 개선으로 UDP 장치 검색시 일부 장치를 찾지 못한 이슈가 수정이 되었습니다.
+
+1. C# 예제에 관련된 사항으로 BS2Schedule 주석 처리를 하였습니다. C#언어적인 한계(Union 형식 미지원)로 문제점을 가지고 있기 때문입니다. BS2Schedule 대신 CSP_BS2Schedule를 사용하고, BS2Schedule을 사용해야 하는 함수 BS2_GetAllAccessSchedule, BS2_GetAccessSchedule, BS2_SetAccessSchedule는 WRAPPER함수인 CSP_BS2_GetAllAccessSchedule, CSP_BS2_GetAccessSchedule, CSP_BS2_SetAccessSchedule 사용하면 됩니다. CSP_BS2Schedule 에서 scheduleUnion.daily, scheduleUnion.weekly 값은 isDaily에 값에 의해 유효한 변수를 사용하면 됩니다.
+
+1. BS2_GetFilteredLogSinceEventId 로그 가져오기 성능 개선이 되었습니다. C# 예제에도 적용이 되었습니다.
+
+1. C# 예제에서 Util GetAll, Get Remove, Set의 Wrapper 함수 제작을 위한 Template 함수 추가가 되었습니다.
+
+1. Linux에서 CPU 사용률 100%되는 이슈를 수정하였습니다.
+
+1. C# 예제에서 BS2CardModelEnum\{ODPW, OAPW\} 추가가 되었습니다.
+
+1. C# 예제에서 Util 공용 UnixTimeStamp 관련 변환 함수 UTC내용 수정 되었습니다.

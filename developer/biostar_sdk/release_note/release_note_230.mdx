@@ -1,0 +1,98 @@
+# 2.3 버전
+
+날짜 2016-08-03
+
+## 새로운 기능
+
+- Multi Wiegand Format 지원
+
+- BioEntry W2 지원
+
+## 추가 및 변경된 기능
+
+1. 새로운 멀티 위겐드 기능이 추가되었습니다. 이제 한 장치로 여러 포맷을 사용할 수 있게 되었습니다. 만약 장치에서 여러 종류의 카드를 지원한다면, 여러 포맷을 다양한 카드 종류에 적용할 수 있습니다. 최대 15개의 포맷까지 설정할 수 있습니다.
+
+   - 함수 [BS2_GetWiegandMultiConfig](bs2_getwiegandmulticonfig) 추가
+
+   - 함수 [BS2_SetWiegandMultiConfig](bs2_setwiegandmulticonfig) 추가
+
+   - 구조체 [BS2WiegandMultiConfig](Configuration_API#bs2wiegandmulticonfig) 추가
+
+1. 필드 `wiegandMultiSupported`가 [BS2SimpleDeviceInfo](Device_API#bs2simpledeviceinfo)구조체에 추가되었습니다.
+
+   [BS2SimpleDeviceInfo](Device_API#bs2simpledeviceinfo) 구조체는 해당 장치에서 특정 기능의 지원 여부를 나타내기 위해 사용됩니다. 멀티 위겐드 기능이 추가됨으로써, 해당 기능의 지원 여부를 나타내기 위한 필드가 추가되었습니다.
+
+1. 마스크 `0x0D`(BioEntry W2) 값이 [BS2SimpleDeviceInfo](Device_API#bs2simpledeviceinfo) 구조체에 추가 되었습니다.
+
+   [BS2SimpleDeviceInfo](Device_API#bs2simpledeviceinfo) 구조체는 장치의 간략한 정보를 나타내기 위해 사용됩니다. 이번 SDK 버전에서부터 신규 출시된 BioEntry W2 가 지원되며, 이를 나타내기 위해 마스크값이 추가되었습니다.
+
+1. `IsAcceptableUserID` 파라미터가 [BS2_GetUserList](bs2_getuserlist) 함수에 추가되었습니다.
+
+   이 콜백함수는 BioStar 2 Device SDK를 이용하여 개발하는 개발자들에게는 아무런 관련이 없습니다. 이 필드는 BioStar v1.91 에서만 사용되며 BioStar v1.91 은 최신 장치들인 BioStation 2, BioStation A2, BioStation L2, BioEntry W2 를 지원할 수 있도록 BioStar 2 Device SDK 를 인테그레이션한 버전입니다. BioStar 1에서 사용자 ID의 최대값은 4294967295이지만 2세대 장치들은 최대 32 자리의 ID를 가질 수 있도록 설계되었습니다. 장치에서 BioStar 1 서버로 기존 BioStar 1의 최대 사용자 ID를 넘어가는 값을 전송하지 못하도록 막기 위해 해당 파라미터가 추가되었습니다.
+
+   ```cpp title='변경 전'
+   #include "BS_API.h"
+
+   int BS2_GetUserList(void* context, uint32_t deviceId, char** uidsObjs, uint32_t* numUid);
+   ```
+
+   ```cpp title='변경 후'
+   #include "BS_API.h"
+
+   int BS2_GetUserList(void* context, uint32_t deviceId, char** uidsObjs, uint32_t* numUid, IsAcceptableUserID ptrIsAcceptableUserID);
+   ```
+
+   ```cpp title='예제'
+
+   BS2_GetUserList(context, deviceId, uidsObjs, numUid, null);
+   ```
+
+1. 함수 [BS2_GetLastFingerprintImage](bs2_getlastfingerprintimage) 가 추가되었습니다.
+
+   지문의 실제 이미지를 취득할 수 있는 함수가 추가되었습니다. 해당 함수는 기존의 BioStar 2 에서 존재하는 기능을 제공하기 위해 추가되었습니다. 이 함수를 이용하여 지문 템플릿의 상태가 아닌 실제 지문의 상태를 확인할 수 있습니다. 그러나, 이 함수로 취득하는 이미지는 실제 매칭에 사용되지 않습니다.
+
+1. `templateFormat` 파라미터가 [BS2_ScanFingerprint](bs2_scanfingerprint) 함수에 추가되었습니다.
+
+   슈프리마의 지문 단말기들은 슈프리마 템플릿, ISO 19794-2, 그리고 ANSI 384 총 3종류의 템플릿을 지원합니다. 
+
+   | 값 | 설명 |
+   | --- | --- |
+   | 0 | Suprema Template |
+   | 1 | ISO19794-2 |
+   | 2 | ANSI-378 |
+
+   ```cpp title='변경 전'
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, OnReadyToScan ptrReadyToScan);
+   ```
+
+   ```cpp title='변경 후'
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, OnReadyToScan ptrReadyToScan);
+   ```
+
+1. `wiegandMultiConfig`필드가 [BS2Configs](Configuration_API#bs2configs) 구조체에 추가되었습니다.
+
+   설정과 관련된 모든 구조체들은 [BS2Configs](Configuration_API#bs2configs) 구조체로 관리할 수 있습니다. 멀티 위겐드를 위한 새로운 구조체가 추가되었기 때문에, [BS2Configs](Configuration_API#bs2configs) 구조체에 해당 구조체가 추가되었습니다.
+
+1. `wiegandInputMask`필드가 [BS2WiegandConfig](Configuration_API#bs2wiegandconfig) 구조체에 추가되었습니다.
+
+   멀티 위겐드 기능이 추가되면서, 어떠한 포맷이 사용될 것인지에 대해 나타낼 수 있는 마스크 값이 필요해졌습니다. 이 필드는 마스터 장치가 위겐드 카드 리더기나 RS-485를 통해 연결된 슬레이브 장치에서 보내지는 카드 데이터 중 처리를 해야 하는 포맷들을 나타냅니다. 이 필드는 장치가 위겐드 신호를 받아들이도록 설정되었을 때 사용 가능합니다. 예를 들어, 포맷 인덱스 0번, 2번, 6번을 사용하고 싶다면, 마스크 값을 0000000010001010로 설정하면 됩니다. 0번째 비트는 하위호환을 위해 따로 잡아둔 비트입니다.
+
+1. `wiegandCardMask` 필드가 [BS2WiegandConfig](Configuration_API#bs2wiegandconfig)구조체에 추가되었습니다.
+
+   멀티 위겐드 기능이 추가되면서, 어떠한 포맷이 사용될 것인지에 대해 나타낼 수 있는 마스크 값이 필요해졌습니다. 이 필드는 장치에 직접 카드를 읽혔을 때 장치가 처리를 해야 하는 포맷들을 나타냅니다. 이 필드는 장치가 위겐드 신호를 내보내도록 설정되었을 때 사용 가능합니다. 예를 들어, 포맷 인덱스 0번, 1번, 2번, 3번을 사용하고 싶다면, 마스크 값을 0000000000011110로 설정하면 됩니다. 0번째 비트는 하위호환을 위해 따로 잡아둔 비트입니다.
+
+1. `wiegandCSNIndex`필드가 [BS2WiegandConfig](Configuration_API#bs2wiegandconfig) 구조체에 추가되었습니다.
+
+   카드의 CSN 만 사용한다고 해도, 여전히 특정 포맷으로 위겐드 값을 내보낼 수 있습니다. 이 필드는 Mifare 나 EM 카드 같은 카드의 CSN을 사용하지만, 여전히 위겐드 신호를 내보내야하는 경우에 사용할 수 있습니다. 예를 들어, 인증했을 때 CSN 카드의 값을 포맷 인덱스 0번의 포맷으로 내보내고 싶을 경우, 값을 0으로 설정하면 됩니다. 해당 기능은 하나의 포맷만 설정할 수 있습니다.
+
+1. [BS2WiegandConfig](Configuration_API#bs2wiegandconfig) 구조체의 `reserved` 필드가 `uint8_t reserved\[27\]` 에서 `uint8_t reserved\[32\]` 으로 변경되었습니다.
+
+   [BS2WiegandConfig](Configuration_API#bs2wiegandconfig) 구조체에 위에서 언급된 필드 3개가 더 추가 되었습니다. 이로 인해 reserved 에서 5바이트를 사용하게 되었습니다.
+
+1. [BS2Door](Door_Control_API#bs2door) 구조체의 `alarmFlags`필드가 `uint8_t alarmFlags`에서 `uint8_t unconditionalLock`로 변경되었습니다.
+
+   `alarmFlags` 필드는 [BS2Door](Door_Control_API#bs2door) 구조체에서 사용되지 않습니다. 그 대신, `unconditionalLock` 필드가 새로운 기능을 지원하기 위해 추가되었으며, 기존 `alarmFlags`의 메모리를 그대로 사용합니다. `unconditionalLock` 자동문을 효율적으로 제어하기 위해 추가되었습니다. 일반적인 데드볼트형의 락을 사용할때는 설정해놓은 문열림 시간이 지나도 문이 닫히기 전에 락이 잠금이 되면 안 됩니다. 하지만 자동계폐식 문을 사용할때는, 문이 열려있다고 해도 설정해놓은 시간이 지나면 락이 잠겨야 합니다. 이 필드의 값을 변경하면 문열림 시간이 지나면 바로 문이 닫히게끔 설정할 수 있습니다.

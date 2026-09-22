@@ -1,0 +1,107 @@
+# 2.9.1 버전 (V2.9.1.0)
+
+날짜 2023-02-23
+
+## 새로운 기능
+
+- 장치에서 특정 기능 사용에 대한 라이선스 활성화 지원
+
+- 카메라를 이용한 QR 코드 인식 및 인증 지원
+
+- 소켓 읽기/쓰기 실패 시, 재시도 횟수 설정 기능 지원
+
+- 타사 OSDP 리더 연결 지원
+
+1. 장치 라이선스 활성화 기능이 추가되었습니다.
+
+   - 구조체 [BS2License](configuration_api#bs2license) 추가
+
+   - 구조체 [BS2LicenseConfig](configuration_api#bs2licenseconfig) 추가
+
+   - 구조체 [BS2LicenseBlob](sdk_api#bs2licenseblob) 추가
+
+   - 구조체 [BS2LicenseResult](sdk_api#bs2licenseresult) 추가
+
+   - 함수 [BS2_GetLicenseConfig](bs2_getlicenseconfig) 추가
+
+   - 함수 [BS2_EnableDeviceLicense](bs2_enabledevicelicense) 추가
+
+   - 함수 [BS2_DisableDeviceLicense](bs2_disabledevicelicense) 추가
+
+   - 함수 [BS2_QueryDeviceLicense](bs2_querydevicelicense) 추가
+
+1. 카메라를 통해 QR코드의 인식 및 인증을 지원하는 기능이 추가되었습니다.
+
+   - 구조체 [BS2BarcodeConfig](configuration_api#bs2barcodeconfig) 참조
+
+1. 통신 도중 소켓에서 패킷을 읽고 쓰는 중에 오류가 발생했을 때 사용되는 통신 재시도 횟수를 추가했습니다.
+
+   :::caution
+
+   재시도 횟수를 늘리는 것은 일시적인 오류를 해결할 수 있는 좋은 방법이지만, 네트워크 연결 끊김 등의 직접적인 원인이 발생하여 재연결이 필요할 때 무의미한 읽기/쓰기를 재시도하게 되면서 리소스 낭비가 발생할 수 있으므로 주의가 필요합니다.
+
+   :::
+
+   - 함수 [BS2_GetSocketRetryCount](bs2_getsocketretrycount) 추가
+
+   - 함수 [BS2_SetSocketRetryCount](bs2_setsocketretrycount) 추가
+
+   - 함수 [BS2_GetSocketSSLRetryCount](bs2_getsocketsslretrycount) 추가
+
+   - 함수 [BS2_SetSocketSSLRetryCount](bs2_setsocketsslretrycount) 추가
+
+1. OSDP 표준의 3rd party 장치들을 연결 및 관리를 할 수 있도록 기능이 추가되었습니다.
+
+   - 구조체 [BS2OsdpStandardDevice](slave_control_api#bs2osdpstandarddevice) 추가
+
+   - 구조체 [BS2OsdpStandardDeviceAvailable](slave_control_api#bs2osdpstandarddeviceavailable) 추가
+
+   - 구조체 [BS2OsdpStandardNotify](slave_control_api#bs2osdpstandardnotify) 추가
+
+   - 구조체 [BS2OsdpStandardConfig](configuration_api#bs2osdpstandardconfig) 추가
+
+   - 구조체 [BS2OsdpStandardActionConfig](configuration_api#bs2osdpstandardactionconfig) 추가
+
+   - 구조체 [BS2OsdpStandardDeviceAdd](slave_control_api#bs2osdpstandarddeviceadd) 추가
+
+   - 구조체 [BS2OsdpStandardDeviceUpdate](slave_control_api#bs2osdpstandarddeviceupdate) 추가
+
+   - 구조체 [BS2OsdpStandardDeviceCapability](slave_control_api#bs2osdpstandarddevicecapability) 추가
+
+   - 구조체 [BS2OsdpStandardDeviceResult](slave_control_api#bs2osdpstandarddeviceresult) 추가
+
+   - 구조체 [BS2OsdpStandardDeviceSecurityKey](slave_control_api#bs2osdpstandarddevicesecuritykey) 추가
+
+   - 함수 [BS2_GetOsdpStandardConfig](bs2_getosdpstandardconfig) 추가
+
+   - 함수 [BS2_GetOsdpStandardActionConfig](bs2_getosdpstandardactionconfig) 추가
+
+   - 함수 [BS2_SetOsdpStandardActionConfig](bs2_setosdpstandardactionconfig) 추가
+
+   - 함수 [BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice) 추가
+
+   - 함수 [BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice) 추가
+
+   - 함수 [BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice) 추가
+
+   - 함수 [BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice) 추가
+
+   - 함수 [BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice) 추가
+
+   - 함수 [BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability) 추가
+
+   - 함수 [BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey) 추가
+
+   - 함수 [BS2_SetOsdpStandardDeviceStatusListener](bs2_setosdpstandarddevicestatuslistener) 추가
+
+   - 콜백함수 [OnOsdpStandardDeviceStatusChanged](server_api#onosdpstandarddevicestatuschanged) 추가
+
+## 수정 기능
+
+1. 네트워크 switch에서 제공하는 keepalive check 기능처럼, 실제 장치 연결은 아니면서 연결 후 끊기가 반복되는 경우가 있습니다.
+
+   이 경우 SDK에서 실제 장치 연결로 오인하고 이것이 메모리 누수로 이어질 수 있는 문제가 수정되었습니다.
+
+1. **2.8.3.2 버전에서만** 발생하는 문제로, 사용자 등록 시 SDK 내부적으로 log dump를 수행하면서, 이 과정에서 비정상 종료로 이어질 수 있는 문제가 수정되었습니다.
+
+1. SDK 내부적으로 코드 안정화를 위한 수정이 있었습니다.

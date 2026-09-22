@@ -1,0 +1,47 @@
+# 2.6.3 버전 (V2.6.3.16)
+
+날짜 2019-11-04
+
+## 수정 기능
+
+1. 장치 연결 시, 다음의 장치들이 연결에 실패할 수 있는 문제 수정.
+
+   * BioEntry Plus 2.0
+
+   * BioEntry W 2.0
+
+   * BioLiteNet 2.0
+
+   * Xpass 2.0
+
+   * Xpass Slim 2.0
+
+1. 장치 검색을 하고 연결하는 형태가 아닌,
+
+   IP, port로 장치를 직접 연결한 후 BS2_GetDeviceInfo를 호출하면 반환값 dualIDSupported, useAlphanumericID의 값이 0이 되는 문제 수정.
+
+   * 함수 [BS2_SearchDevices](bs2_searchdevices) 참조
+
+   * 함수 [BS2_ConnectDevice](bs2_connectdevice) 참조
+
+   * 함수 [BS2_ConnectDeviceViaIP](bs2_connectdeviceviaip) 참조
+
+   * 함수 [BS2_GetDeviceInfo](bs2_getdeviceinfo) 참조
+
+   * 구조체 [BS2SimpleDeviceInfo](device_api#bs2simpledeviceinfo) 참조
+
+1. 다음의 장치들이 Factory reset을 시도하게되는 경우, timeout 오류(`BS_SDK_ERROR_TIMEOUT`)가 발생할 수 있는 문제 수정.
+
+   * BioEntry Plus 2.0
+
+   * BioEntry W 2.0
+
+   * BioLiteNet 2.0
+
+   * Xpass 2.0
+
+   * Xpass Slim 2.0
+
+   * 함수 [BS2_FactoryReset](bs2_factoryreset) 참조
+
+1. 장치와의 연결이 끊어지고 SDK 내에서는 아직 연결이 닫히지 않은 상태에서 패킷을 교환하게되는 경우 무한루프에 빠지게되는 문제를 정상적으로 연결이 종료되도록 수정.

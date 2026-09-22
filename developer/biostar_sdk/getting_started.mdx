@@ -4,16 +4,16 @@
 
 BioStar 2 Device SDK 패키지는 다음과 같은 폴더와 파일로 구성되어 있습니다.
 
-| SDL | Document | | | | |
+| SDL | Document[^1] | | | | |
 | --- | --- | ---| --- | --- | --- |
-| ^ | Include | | | | |
+| &nbsp; | Include[^2] | | | | |
 | ^ | Lib | Linux | lib | x86 | BS_SDK_V2.so |
 | ^ | ^ | ^ | ^ | x64 | BS_SDK_V2.so |
-| ^ | ^ | Windows | lib | x86 | BS_SDK_V2.lib |
+| ^ | ^ | Windows | lib | x86 | BS_SDK_V2.lib[^3] |
 | ^ | ^ | ^ | ^ | ^ | BS_SDK_V2.dll |
-| ^ | ^ | ^ | lib | x64 | BS_SDK_V2.lib |
+| ^ | ^ | ^ | lib | x64 | BS_SDK_V2.lib[^4] |
 | ^ | ^ | ^ | ^ | ^ | BS_SDK_V2.dll |
-| ^ | Example | C# | | | |
+| ^ | Example[^5] | C# | | | |
 | ^ | ^ | C++ | | | |
 
 ## 프레임워크
@@ -150,7 +150,7 @@ int result = BS2_GetDeviceInfo(context, deviceId, &deviceInfo);
 
 예를 들어, 얼굴 인증 정보를 지원하는 신규 장치가 출시되더라도 애플리케이션의 UI를 설계할 때 각 장치의 특성 정보에 따라 UI/로직이 동작하도록 설계했다면 신규 장치가 추가되어도 애플리케이션을 수정하는 번거로움을 덜 수 있습니다.
 
-## 개발 환경 구축하기
+## 개발 환경 구축하기 {/* #devEnvironment */}
 
 ### Visual Studio에서 새로운 프로젝트 만들기
 
@@ -168,7 +168,7 @@ Under construction
 
 2. 플랫폼 대상에 맞는 올바른 DLL를 사용하기 위해 프로젝트 속성을 수정해야 합니다.
 
-   프로젝트 속성 페이지를 열고 `빌드 전 이벤트` 명령줄에 다음과 같이 입력하십시오.
+   프로젝트 속성 페이지를 열고 **빌드 전 이벤트** 명령줄에 다음과 같이 입력하십시오.
 
    | SDK 버전 | 플랫폼 | 입력 정보 |
    | --- | --- | --- |
@@ -178,4 +178,14 @@ Under construction
 
 3. SDK 패키지의 예제 코드에서 **SFApi.cs**, **SFEnum.cs**, **SFStruct.cs**를 복사하십시오.
 
-   ![](pre-build_event_command_line.png)
+   ![](/img/common/pre-build_event_command_line.png)
+
+[^1]: SDK에서 제공하는 API의 사용법을 기술한 문서 파일이 존재합니다.
+
+[^2]: API 및 구조체를 정의한 헤더 파일들이 있으며, C/C++ 애플리케이션 개발 시 필요합니다.
+
+[^3]:  C/C++ 프로젝트에서 import할 정적 라이브러리입니다.
+
+[^4]:  C/C++ 프로젝트에서 import할 정적 라이브러리입니다.
+
+[^5]: 다양한 언어별로 SDK 샘플 코드가 존재합니다.

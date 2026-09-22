@@ -1,0 +1,283 @@
+# 2.6.0 버전
+
+## 2018-10-31
+
+:::info
+
+V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연계 반영되었으나, 매뉴얼 반영 시, 누락된 내용들을 추가 작성합니다.  
+
+:::
+
+### 새로운 기능
+
+- USB 읽기 기능(BioStation A2, FaceStation 2) 지원
+
+- Debugging API 지원
+
+- 서버 포트 변경 지원
+
+- Global APB zone 기능 지원
+
+- 장치 연결상태를 확인 기능 지원
+
+- 자동연결 여부를 확인하고, 변경 기능 지원
+
+1.USB 읽기 기능이 추가되었습니다.
+
+   - 함수 [BS2_AllocateUsbContext](bs2_allocateusbcontext) 추가
+
+   - 함수 [BS2_ReleaseUsbContext](bs2_releaseusbcontext) 추가
+
+   - 함수 [BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir) 추가
+
+   - 함수 [BS2_GetUserListFromDir](bs2_getuserlistfromdir) 추가
+
+   - 함수 [BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir) 추가
+
+   - 함수 [BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir) 추가
+
+   - 함수 [BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir) 추가
+
+   - 함수 [BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir) 추가
+
+   - 함수 [BS2_GetLogFromDir](bs2_getlogfromdir) 추가
+
+   - 함수 [BS2_GetLogBlobFromDir](bs2_getlogblobfromdir) 추가
+
+   - 함수 [BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir) 추가
+
+1.SDK 내에서 발생하는 디버그 정보를 참조할 수 있도록 추가되었습니다.
+
+   - 함수 [BS2_SetDebugExCallback](bs2_setdebugexcallback) 추가
+
+1.서버 포트를 지정할 수 있도록 추가하였습니다.
+
+   - 함수 [BS2_SetServerPort](bs2_setserverport) 추가
+
+   - 함수 [BS2_SetSSLServerPort](bs2_setsslserverport) 추가
+
+1.Global APB zone 기능이 추가되었습니다.
+
+   - 함수 [BS2_SetCheckGlobalAPBViolationHandler](bs2_setcheckglobalapbviolationhandler) 추가
+
+   - 함수 [BS2_CheckGlobalAPBViolation](bs2_checkglobalapbviolation) 추가
+
+1.장치 연결상태를 확인하는 기능이 추가되었습니다.
+
+   - 함수 [BS2_IsConnected](bs2_isconnected) 추가
+
+1.자동연결 여부를 확인하고, 변경할 수 있도록 추가하였습니다.
+
+   - 함수 [BS2_IsAutoConnection](bs2_isautoconnection) 추가
+
+   - 함수 [BS2_SetAutoConnection](bs2_setautoconnection) 추가
+
+### 수정 기능
+
+1. 일부 함수에서 log 취득 시, 설정된 event mask 판단 조건이 수정되었습니다.
+
+   (설정된 mask들 모두 만족하는 로그 =\> 하나라도 만족하는 로그)
+
+   - 함수 [BS2_GetLogBlob](bs2_getlogblob) 참조
+
+   - 함수 [BS2_GetLogBlobFromDir](bs2_getlogblobfromdir) 참조
+
+1. 일부 함수에서 사용자 정보 취득 시,
+
+   설정된 userMask가 0x3FF보다 크면 Invalid Parameter 오류가 발생하는 문제를 수정하였습니다.
+
+   - 함수 [BS2_GetUserDatas](bs2_getuserdatas) 참조
+
+   - 함수 [BS2_GetUserDatasEx](bs2_getuserdatasex) 참조
+
+   - 함수 [BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir) 참조
+
+   - 함수 [BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir) 참조
+
+1. Multi context를 사용 시, context release 단계에서 crash가 발생할 수 있는 문제를 수정하였습니다.
+
+   또한 간헐적으로 access violation이 발생될 수 있는 문제를 수정하였습니다.
+
+   - 함수 [BS2_AllocateContext](bs2_allocatecontext) 참조
+
+   - 함수 [BS2_ReleaseContext](bs2_releasecontext) 참조
+
+1. SDK 내부적으로 packet을 수신하는 중, buffer overflow로 crash가 될 수 있는 문제를 수정하였습니다.
+
+1. Entry 계열의 장치에서 전체 사용자 삭제 시, timeout이 발생하는 문제를 수정하였습니다.
+
+   * 함수 [BS2_RemoveAllUser](bs2_removealluser) 참조
+
+1. 사용자 정보 취득 시, userMask가 BS2_USER_MASK_ALL인 경우 Not Supported 오류가 발생하는 문제를 수정하였습니다.
+
+   - 함수 [BS2_GetSupportedConfigMask](bs2_getsupportedconfigmask) 참조
+
+   - 함수 [BS2_GetSupportedUserMask](bs2_getsupportedusermask) 참조
+
+   - 함수 [BS2_GetUserDatas](bs2_getuserdatas) 참조
+
+   - 함수 [BS2_GetUserDatasEx](bs2_getuserdatasex) 참조
+
+1. Log 취득 시 data가 없는 경우, crash가 발생될 수 있는 문제를 수정하였습니다.
+
+   - 함수 [BS2_GetLog](bs2_getlog) 참조
+
+   - 함수 [BS2_GetFilteredLog](bs2_getfilteredlog) 참조
+
+   - 함수 [BS2_GetLogFromDir](bs2_getlogfromdir) 참조
+
+1. RS485 통신 시 multi packet에 대한 packet이 버려질 수 있는 문제를 수정하였습니다.
+
+1. Linux SDK에서 timer가 동작하지 않을 수 있는 문제를 수정하였습니다. (signal 방식에서 thread 방식으로 변경)
+
+1. Linux SDK에서 signal handle 내의 memory 할당으로 dead-lock이 발생할 수 있는 문제를 수정하였습니다.
+
+1. Linux에서 socket 사용 시, socket close 옵션 SOCK_CLOEXEC를 추가하였습니다.
+
+1. Server matching 함수 사용시 내부적으로 잘못된 동기화 객체에 lock/unlock을 걸어주는 문제를 수정하였습니다.
+
+1. 장치의 연결상태 중, 끊김 상태 (disconnected status)를 감지하기 위해 keep alive code를 보완하였습니다.
+
+1. 침입탐지 구역 정보가 설정되지 않는 문제를 수정하였습니다.
+
+   또한, 유효성 검사 시 잘못된 오류 판단 조건을 수정하였습니다.
+
+   이전 : (0 \< door) AND (card data가 없는 경우), (0 \< card) AND (door ID가 없는 경우)
+
+   이후 : (0 \< door) AND (door ID가 없는 경우), (0 \< card) AND (card data가 없는 경우)
+
+   * 함수 [BS2_SetIntrusionAlarmZone](bs2_setintrusionalarmzone) 참조
+
+1. 실제 존재하지 않는 image log를 가져오는 경우 timeout이 발생될 때까지 block되는 문제를 수정하였습니다.
+
+   - 함수 [BS2_GetImageLog](bs2_getimagelog) 참조
+
+   - 함수 [BS2_GetLogBlobFromDir](bs2_getlogblobfromdir) 참조
+
+1. 침입탐지 구역에서 data가 없는 경우, allocation memory 오류가 발생하지 않도록 수정하였습니다.
+
+   또한 zoneBlob이 NULL인 경우 개수만 반환하도록 수정하였습니다.
+
+   * 함수 [BS2_GetIntrusionAlarmZone](bs2_getintrusionalarmzone) 참조
+
+1. Socket관련 내부 리소스가 소진되면 더 이상 TCP 연결이 되지 않던 문제가 수정되었습니다.
+
+1. Entry 계열의 경우 출입문 설정 시, door ID가 65535를 초과하면 Invalid Parameter로 반환되도록 수정되었습니다.
+
+   * 함수 [BS2_SetDoor](bs2_setdoor) 참조
+
+1. TCP 연결 시 handshake 단계에서 암호화 기능 활성화 코드가 추가되었습니다.
+
+1. FaceStation2에서 지문 정보가 저장이 되지 않는 문제를 수정하였습니다.
+
+1. 함수 [BS2_SearchDevicesCoreStation](bs2_searchdevicescorestation) 호출 시 crash 되는 문제 수정되었습니다.
+
+1. 함수 [BS2_EnrolUser](bs2_enroluser) 호출 시 face의 template, image 크기의 유효성을 검사하도록 수정하였습니다.
+
+1. 다음의 함수 호출 시 Not supported로 반환되는 문제를 수정하였습니다.
+
+* 함수 [BS2_GetCardConfigEx](bs2_getcardconfigex) 참조
+
+- 함수 [BS2_GetRs485ConfigEx](bs2_getrs485configex) 참조
+
+---
+
+## 2018-04-15
+
+:::caution
+
+2.5.0 버전까지는 Device SDK가 OpenSSL library를 정적으로 포함하고 있었으나, 2.6.0 버전부터는 공유 library 형태로 링크하도록 변경되었습니다.
+
+따라서 적절한 OpenSSL library를 설치 후 실행시켜주셔야 합니다. 2.6.0 라이브러리는 OpenSSL 1.0.2n library를 기반으로 테스트 되었습니다.
+
+예제파일에는 OpenSSL 1.0.2n Windows library 파일을 포함하고 있습니다. 
+
+:::
+
+### 새로운 기능
+
+- 새로운 장치 연결 (BioLite N2, Xpass D2) 지원
+
+- 일광절약 시간(DST) 지원
+
+- 인터락 구역 지원
+
+- 장치의 데이터 암호화키 설정 지원
+
+- 네트워크 설정을 제외한 장치 초기화 지원
+
+1. 새로운 장치 BioLite N2, Xpass D2에 대한 연결을 지원합니다. Xpass D2는 slave 전용 카드 모델입니다.
+
+1. 일광절약 시간 설정은 장치당 2개까지 가능합니다. 또한 일광절약 시간 적용 여부를 알수 있도록 로그에 관련 정보가 추가되었습니다.
+
+   - 함수 [BS2_GetDstConfig](bs2_getdstconfig) 추가
+
+   - 함수 [BS2_SetDstConfig](bs2_setdstconfig) 추가
+
+   - 구조체 [BS2DstConfig](configuration_api#bs2dstconfig) 추가
+
+   - 구조체 [BS2Event](Log_Management_API#bs2event) 수정
+
+1. 인터락 구역 설정을 지원합니다. 이중 문으로 구성되어 한 쪽 문과, 다른 한 쪽 문이 서로 배타적으로 잠겨있어야 하는 경우 사용됩니다. 현재 CoreStation만 사용가능합니다.
+
+   - 함수 [BS2_GetInterlockZone](bs2_getinterlockzone) 추가
+
+   - 함수 [BS2_GetInterlockZoneStatus](bs2_getinterlockzonestatus) 추가
+
+   - 함수 [BS2_GetAllInterlockZoneStatus](bs2_getallinterlockzonestatus) 추가
+
+   - 함수 [BS2_SetInterlockZone](bs2_setinterlockzone) 추가
+
+   - 함수 [BS2_SetInterlockZoneAlarm](bs2_setinterlockzonealarm) 추가
+
+   - 함수 [BS2_RemoveInterlockZone](bs2_removeinterlockzone) 추가
+
+   - 함수 [BS2_RemoveAllInterlockZone](bs2_removeallinterlockzone) 추가
+
+   - 구조체 [BS2InterlockZoneBlob](zone_control_api#bs2interlockzoneblob) 추가
+
+1. 장치의 데이터 암호화키의 변경 및 확인을 지원합니다.
+
+   - 함수 [BS2_GetDataEncryptKey](bs2_getdataencryptkey) 추가
+
+   - 함수 [BS2_SetDataEncryptKey](bs2_setdataencryptkey) 추가
+
+   - 함수 [BS2_RemoveDataEncryptKey](bs2_removedataencryptkey) 추가
+
+1. 신규 장치초기화 함수 BS2_ResetConfigExceptNetInfo를 지원합니다. 이 함수는 BS2_ResetConfig와 비교하여 네트워크 정보를 제외한 초기화가 가능합니다.
+
+   - 함수 [BS2_ResetConfigExceptNetInfo](bs2_resetconfigexceptnetinfo) 추가
+
+1. 장치의 기능 지원 유무에 관한 정보를 가져오는 함수 BS2_GetDeviceInfoEx를 지원합니다. 이 함수는 BS2_GetDeviceInfo 함수를 호출할 때 사용되는 BS2SimpleDeviceInfo 구조체에서 최근 추가된 항목들을 옮긴 구조체 BS2SimpleDeviceInfoEx를 사용합니다.
+
+- 함수 [BS2_GetDeviceInfoEx](bs2_getdeviceinfoex) 추가
+
+- 구조체 [BS2SimpleDeviceInfoEx](device_api#bs2simpledeviceinfoex) 추가
+
+### 수정 기능
+
+1. Wiegand In/Out 동시 사용 지원 기능이 추가되었습니다.
+
+   Wiegand 설정 시 mode 값으로 2를 설정하여 이 기능을 이용할 수 있습니다.
+
+   * 구조체 [BS2WiegandConfig](configuration_api#bs2wiegandconfig) 참조
+
+1. 장치 보안템퍼 설정을 지원합니다.
+
+   BS2SystemConfig의 secureTamper를 통해 현재 보안템퍼가 설정되어 있는지 확인 및 설정이 가능합니다.
+
+   이 구조체 정보는 반드시 BS2_GetSystemConfig를 통해 읽어낸 후, 필요한 정보만 수정하고 BS2_SetSystemConfig로 설정하여야 합니다.
+
+   * 구조체 [BS2SystemConfig](configuration_api#bs2systemconfig) 참조
+
+1. FaceStation2와 FaceLite의 지문 매칭 기능 지원
+
+   얼굴인증 장치 FS2 혹은 FL는 지문센서가 없으며, 따라서 지문인증을 지원하지 않습니다.
+
+   그러나 slave 장치로 지문장치가 연결이 되어질 수 있으므로 지문매칭을 지원합니다.
+
+   따라서 FS2와 FL의 BS2SimpleDeviceInfo.fingersupported 값이 0에서 1로 변경되었습니다.
+
+   현재 장치가 지문매칭을 지원하는지 여부는 BS2SimpleDeviceInfo의 fingerSupported를 통해 확인할 수 있습니다.
+
+   * 구조체 [BS2SimpleDeviceInfo](device_api#bs2simpledeviceinfo) 참조

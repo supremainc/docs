@@ -1,0 +1,81 @@
+# 2.6.4 버전 (V2.6.4.1)
+
+날짜 2020-02-25
+
+## 새로운 기능
+
+- EventMask에 맞게 로그를 취득하는 함수 추가.
+
+- DesFire 카드 고급 설정 지원.
+
+- 장치에서 지원하는 카드를 선택할 수 있는 기능 지원.
+
+- 중복 지문/얼굴 검사기능 지원
+
+1. 보다 효율적으로 메모리를 사용면서, EventMask에 맞는 로그를 취득하는 함수가 추가되었습니다.
+
+   - 구조체 [BS2EventSmallBlob](Log_Management_API#bs2eventsmallblob) 참조
+
+   - 함수 [BS2_GetLogSmallBlob](bs2_getlogsmallblob) 참조
+
+   - 함수 [BS2_GetLogSmallBlobFromDir](bs2_getlogsmallblobfromdir) 참조
+
+1. DesFire 카드 고급 설정을 지원합니다.
+
+   - 구조체 [BS2SimpleDeviceInfoEx](device_api#bs2simpledeviceinfoex) 참조
+
+   - 구조체 [BS2DesFireCardConfigEx](configuration_api#bs2desfirecardconfigex) 참조
+
+   - 함수 [BS2_GetDesFireCardConfigEx](bs2_getdesfirecardconfigex) 참조
+
+   - 함수 [BS2_SetDesFireCardConfigEx](bs2_setdesfirecardconfigex) 참조
+
+1. 장치에서 지원하는 카드를 선택적으로 읽을 수 있게, 켜고 끄는 옵션이 추가되었습니다.
+
+   - 구조체 [BS2SystemConfig](configuration_api#bs2systemconfig) 참조
+
+   - 함수 [BS2_SetSystemConfig](bs2_setsystemconfig) 참조
+
+1. 중복 얼굴(또는 지문) 여부 확인 모드가 추가되었습니다.
+
+   - 구조체 [BS2FaceConfig](Configuration_API#bs2faceconfig) 참조
+
+   - 함수 [BS2_GetFingerprintConfig](bs2_getfingerprintconfig) 참조
+
+   - 함수 [BS2_SetFingerprintConfig](bs2_setfingerprintconfig) 참조
+
+   - 구조체 [BS2FingerprintConfig](Configuration_API#bs2fingerprintconfig) 참조
+
+   - 함수 [BS2_GetFaceConfig](bs2_getfaceconfig) 참조
+
+   - 함수 [BS2_SetFaceConfig](bs2_setfaceconfig) 참조
+
+## 수정 기능
+
+1. BS2UserBlobEx의 멤버 BS2Job에서 numJobs가 array의 허용치인 16을 초과하여 설정하면 장치가 오동작되며 재부팅되는 문제가 수정되었습니다.
+
+   - 구조체 [BS2UserBlobEx](user_management_api#bs2userblobex) 참조
+
+   - 함수 [BS2_VerifyUserEx](bs2_verifyuserex) 참조
+
+   - 함수 [BS2_IdentifyUserEx](bs2_identifyuserex) 참조
+
+   - 함수 [BS2_EnrolUserEx](bs2_enroluserex) 참조
+
+   - 함수 [BS2_VerifyUserSmallEx](bs2_verifyusersmallex) 참조
+
+   - 함수 [BS2_IdentifyUserSmallEx](bs2_identifyusersmallex) 참조
+
+   - 함수 [BS2_EnrollUserSmallEx](bs2_enrollusersmallex) 참조
+
+1. BioStation 2에서 사용자 이미지를 사용할 수 없었던 문제가 수정되었습니다.
+
+1. SecureIO 2 펌웨어 업그레이드 시, `BS_SDK_INVALID_CODE_SIGN` 오류가 발생하는 문제가 수정되었습니다.
+
+1. BLN2-PAB 모델에 BS2_GetCardModel을 호출 시, `BS_SDK_ERROR_NOT_SUPPORTED` 오류가 발생하는 문제가 수정되었습니다.
+
+   - 함수 [BS2_GetCardModel](bs2_getcardmodel) 참조
+
+1. 장치가 간헐적으로 끊기는 상황이 반복되면, SDK에서 장치가 끊어지는 상황을 감지하지 못하는 문제가 수정되었습니다.
+
+1. Linux상에서 SDK가 crash 될 수 있는 문제가 수정되었습니다.

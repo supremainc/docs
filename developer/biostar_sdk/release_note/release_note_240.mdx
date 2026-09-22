@@ -1,0 +1,126 @@
+# 2.4.0 버전
+
+날짜 2017-3-24
+
+:::caution
+
+BioStar 2 Device SDK v2.4 에서 추가된 새로운 함수들은 2.4 펌웨어 그룹에서만 지원됩니다. 아래 목록에서 새로운 함수들을 사용할 수 있는 펌웨어 버전을 확인하십시오.
+
+**v2.4용 신규 함수**
+
+* [BS2_EnrolUserEx](bs2_enroluserex) 함수가 추가되었습니다.
+
+- [BS2_GetUserInfosEx](bs2_getuserinfosex) 함수가 추가되었습니다.
+
+- [BS2UserBlobEx](user_management_api#bs2userblobex) 구조체가 추가되었습니다.
+
+- [ssl api](ssl_api)가 추가되었습니다.
+
+**v2.4 펌웨어 그룹**
+
+| 장치명 | 펌웨어 버전 |
+| --- | --- |
+| BioStation 2 | 1.4.0 |
+| BioStation A2 | 1.3.0 |
+| BioStation L2 | 1.2.0 |
+| BioEntry W2 | 1.1.0 |
+
+:::
+
+## 신규 기능
+
+1. 신규 장치인 엘레베이터 컨트롤러 OM-120이 출시되었습니다. 해당 장치를 SDK 고객의 시스템에 통합할 수 있도록 신규 API 와 구조체가 추가되었습니다.
+
+   * [lift control api](lift_control_api)가 추가되었습니다.
+
+   OM-120은 Lift에 사용할 수있는 12 개의 Relay를 제어 할 수있는 새로운 장치입니다. 이제는 door와 똑같이 작동하는 새로운 개념의 floor가 있습니다. 사용자가 인증되면 OM-120의 릴레이에 연결된 층은 Access group의 floor level에 따라 활성화됩니다. floor level은 Access level과 동일한 개념이며 둘 다 액세스 그룹에 할당됩니다.
+
+1. 새로운 FaceStation 2는 2017 년 2 분기에 출시 될 예정입니다. v2.4는 FaceStation 2를 출시 이후 바로 사용될 수 있도록 모든 기능을 구현했습니7다.
+
+   * [face api](face_api) 가 추가되었습니다.
+
+   FaceStation 2는 1:N Matching에 최대 5,000 명의 사용자를 사용할 수 있는 그룹 매칭 기능을 지원합니다. 사용자는 자신이 속한 그룹을 선택한 뒤 얼굴 매칭할 수 있습니다.
+
+1. 특정 장치는 카드의 v1 Template과 호환됩니다. v1 및 v2 장치가 함께 사용되는 곳에서 호환되지 않는 단점이 있었지만, 이제 v1 장치에서 미리 발급 된 카드를 읽을 수 있습니다.
+
+   * 구조체 [BS1CardConfig](configuration_api#bs1cardconfig) 가 추가되었습니다. v1 장치에서 발행된 ToC(Template on Card)가 v2 장치에서 읽을 수 있도록 설정되었습니다. v2 장치는 시작 block index가 카드의 v1 장치의 CIS index block과 동일하게 설정되어야 합니다. v1 ToC와 v2 Access on Card/Secure Credential Card를 함께 사용하기 위해서는,동일한 시작 block index와 CIS index block를 사용해야 합니다.
+
+1. T&A SW와의 연동성을 위해 Job Code가 추가되었습니다. Job Code를 사용자에게 할당하고 로그에서 Job Code 정보를 얻을 수 있습니다. 이 기능은 v2.4 FW 그룹에만 포함됩니다.
+
+   * 구조체 [BS2UserBlobEx](user_management_api#bs2userblobex) 가 추가되었습니다. 기존 [BS2UserBlob](user_management_api#bs2userblob) 구조체 크기 제한으로 인해 새로운 기능 구현을 위한 새로운 구조체를 만들어야했습니다. 새로운 [BS2UserBlobEx](user_management_api#bs2userblobex) 구조체는 Job Code 필드를 포함하는 v2.4 FW 그룹에서만 동작합니다. 각 사용자는 각 Job Code에 대해 고유 코드 및 이름을 갖습니다.
+
+1. 로그를 검색하는 새로운 방법이 추가되었습니다.
+
+   - 함수 [BS2_GetLogBlob](bs2_getlogblob) 가 추가되었습니다.
+
+   - 구조체 [BS2EventBlob](log_management_api#bs2eventblob) 가 추가되었습니다.
+
+   기존 API [BS2_GetLog](bs2_getlog)는 Job Code를 포함한 로그를 가져올 수 없었습니다. 이제 이벤트 blob을 가져 오는 새로운 API가 있습니다. 이벤트 blob는 마스크 값을 사용하여 분류할 수 있으며 로그의 유형에 따라 로그를 가져올 수 있습니다.
+
+1. 개인 메시지는 특정 장치에 한해 다음 버전 FW에서 지원됩니다. 출시되면 사용할 수 있도록 구현되었습니다.
+
+   * 구조체 [BS2UserBlobEx](user_management_api#bs2userblobex) 가 추가되었습니다. 이 기능은 FaceStation 2부터 지원됩니다. 디스플레이 화면이 있는 나머지 장치는 향후 릴리스에서이 기능을 지원합니다.
+
+   기존 [BS2UserBlobEx](user_management_api#bs2userblobex) 구조체의 크기 제한으로 인해 새로운 기능을 구현하기 위한 새로운 구조체를 만들어야했습니다. 새로운 [BS2UserBlobEx](user_management_api#bs2userblobex) 구조체는 개인 메시지 필드를 포함하는 v2.4 FW 그룹에서만 작동합니다.
+
+1. SSL 통신은 서버와 장치간에 사용 가능합니다. SSL 통신 사용 시, 장치가 인증서가 유효한 서버에만 연결될 수 있습니다.
+
+   * [ssl api](ssl_api) 가 추가되었습니다.
+
+## 변경 사항
+
+1. 파라미터 `outQuality` 가 [BS2_ScanFingerprint](bs2_scanfingerprint) API 에 추가되었습니다.
+
+   [BS2_ScanFingerprint](bs2_scanfingerprint) API에 스캔된 지문의 품질 점수를 반환하는 새로운 매개 변수가 추가되었습니다. 이것은 지문 템플릿 관리를보다 효율적으로 수행 할 수 있도록 적절한 피드백을 제공하기 위해 추가되었습니다.
+
+   ```cpp title='변경 전'
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, OnReadyToScan ptrReadyToScan);
+   ```
+
+   ```cpp title='변경 후'
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outQuality, OnReadyToScan ptrReadyToScan);
+   ```
+
+1. 필드 `useJobCode`, `useAlphanumericID`, `cameraFrequency` 가 구조체 [BS2SystemConfig](Configuration_API#bs2systemconfig) 에 추가되었습니다.
+
+   `useJobCode` 필드는 Job Code 사용 Enable/Disable 설정을 위해 추가되었습니다.
+
+   영문 ID는 이미 BioStation 2, BioStation A2, BioStation L2 및 BioEntry W2와 같은 특정 장치에서 가능했었습니다. 그러나 디스플레이 화면이 있는 장치는 ID + Credential 인증을 위한 키패드가 지원되지 않았습니다. v2.4 FW 그룹부터 디스플레이 화면이 있는 장치는 `useAlphanumericID` 필드의 값을 변경하고 사용자가 인증을 위해 영문 ID를 입력 할 수있게합니다.
+
+   카메라 주파수는 `cameraFrequency` 필드를 사용하여 BioStation A2 장치에서 변경할 수 있습니다.
+
+1. 파라미터 `rs485mode, sslSupported, rootCertExist, dualIDSupported, useAlphanumericID, connectedIP, phraseCodeSupported, card1xSupported, systemExtSupported, voipSupported` 가 구조체 [BS2SimpleDeviceInfo](Device_API#bs2simpledeviceinfo) 에 추가되었습니다.
+
+   구조체 [BS2SimpleDeviceInfo](Device_API#bs2simpledeviceinfo) 에는 장치 지원여부 및 상황을 나타내는 추가적인 필드가 있습니다.
+
+   * `rs485mode`는 장치의 RS-485 모드를 결정하는 필드입니다.
+
+   * `sslSupported`는 장치가 SSL 연결을 지원하는지 여부를 나타내는 필드입니다.
+
+   * `rootCertExist`는 장치에 루트 인증서가 있는지 여부를 나타내는 필드입니다.
+
+   * `dualIDSupported`는 장치가 Dual ID를 지원하는지 여부를 나타내는 필드입니다.
+
+   * `useAlphanumericID`는 장치가 영문 ID를 지원하는지 여부를 나타내는 필드입니다.
+
+   * `connectedIP` 는 장치가 연결된 서버의 IP 주소를 결정하는 필드입니다.
+
+   * `phraseCodeSupported` 는 장치가 개인 메시지를 지원하는지 여부를 나타내는 필드입니다.
+
+   * `card1xSupported` 는 장치가 v1 ToC 카드를 지원하는지 여부를 나타내는 필드입니다.
+
+   * `systemExtSupported` 는 장치가 RS-485 마스터 키를 설정할 수 있는지 여부를 나타내는 필드입니다.
+
+   * `voipSupported` 장치가 VoIP를 지원하는지 여부를 나타내는 필드입니다.
+
+## 수정된 버그
+
+1. UDP 패킷 페이로드 크기가 v2.4 FW 부터 변경되었습니다. SDK는 이전 펌웨어와 새 펌웨어의 페이로드 크기를 모두 지원하도록 수정되었습니다.
+
+1. [BS2_GetConfig](bs2_getconfig)의 모든 마스크가 제대로 작동하지 않았습니다. 이것은 버퍼 크기가 추가된 구조체 [BS2MultiWiegandConfig](Configuration_API#bs2multiwiegandconfig) 보다 작게 설정 되었기 때문에 발생했습니다. 이제 버퍼 크기가 증가하여 모든 마스크가 제대로 작동합니다.
+
+1. BioEntry Plus와 BioEntry W는 다중 wiegand 기능을 사용할 수 있었지만 SDK에서는 제외되었습니다. 이제 이 장치들도 여러 wiegand 기능을 사용하여 작동 할 수 있습니다.

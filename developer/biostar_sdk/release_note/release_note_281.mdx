@@ -1,0 +1,45 @@
+# 2.8.1 버전 (V2.8.1.0)
+
+날짜 2021-08-05
+
+## 새로운 기능
+
+- X-Station 2 Finger 연결 지원 (제품명: XS2-OAPB, XS2-ODPB)
+
+- Input Module 연결 지원 (제품명: IM-120)
+
+- 장치에 특정동작을 요구하는 기능 추가
+
+1. X-Station 2 Finger 연결 지원 기능이 추가되었습니다.
+
+1. Input Module 연결 지원 기능이 추가되었습니다.
+
+   - 구조체 [BS2InputConfigEx](configuration_api#bs2inputconfigex) 참조
+
+   - 구조체 [BS2RelayActionConfig](configuration_api#bs2relayactionconfig) 참조
+
+   - 구조체 [BS2Event](log_management_api#bs2event)의 **relayAction** 참조
+
+   - 함수 [BS2_GetInputConfigEx](bs2_getinputconfigex) 참조
+
+   - 함수 [BS2_SetInputConfigEx](bs2_setinputconfigex) 참조
+
+   - 함수 [BS2_GetRelayActionConfig](bs2_getrelayactionconfig) 참조
+
+   - 함수 [BS2_SetRelayActionConfig](bs2_setrelayactionconfig) 참조
+
+1. 장치에 특정 동작을 직접 지시할 수 있습니다.
+
+   이제 아래의 명령을 통해 LED를 켜거나, buzzer를 울릴 수 있고, relay 동작 등을 원하는 시점에 직접 제어할 수 있습니다.
+
+   - 구조체 [BS2Action](configuration_api#bs2action) 참조
+
+   - 함수 [BS2_RunAction](bs2_runaction) 참조
+
+## 수정 기능
+
+1. Linux에서 BS_SDK_ERROR_TIMEOUT 오류를 반환하며, 장치 연결이 되지 않을 수 있는 문제가 수정되었습니다.
+
+1. 현재 서버매칭 기능 구현에 대한 도움을 제공하기 위하여 C# 예제가 제공되었으나, 이에대한 지원이 중단됩니다.
+
+   - 서버 API 문서 [server_api](server_api) 참조

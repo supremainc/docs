@@ -1,0 +1,36 @@
+# 2.9.4 버전 (V2.9.4.0)
+
+날짜 2023-08-08
+
+## 새로운 기능
+
+- BioStation 2a 연결 지원 (BS2A-ODPB, BS2A-OAPWB)
+
+- Custom smart card 읽기 지원
+
+1. 신규 장치 BioStation 2a의 연결을 지원합니다.
+
+1. Custom smart card 읽기를 지원합니다.
+
+   - 구조체 [BS2CustomMifareCard](configuration_api#bs2custommifarecard) 참조
+
+   - 구조체 [BS2CustomDesFireCard](configuration_api#bs2customdesfirecard) 추가
+
+   - 구조체 [BS2CustomCardConfig](configuration_api#bs2customcardconfig) 추가
+
+   - 함수 [BS2_GetCustomCardConfig](bs2_getcustomcardconfig) 추가
+
+   - 함수 [BS2_SetCustomCardConfig](bs2_setcustomcardconfig) 추가
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+
+## 수정 기능
+
+1. 지원 Linux 환경이 Ubuntu 22.04로 상향되었습니다.
+
+   | SDK 버전 | 지원 Linux 버전 |
+   | :--: | :--: |
+   | V2.9.4 이전 | Ubuntu 18.04 |
+   | V2.9.4 이후 | Ubuntu 22.04 |
+
+1. SDK 내부적으로 코드 안정화를 위한 수정이 있었습니다.

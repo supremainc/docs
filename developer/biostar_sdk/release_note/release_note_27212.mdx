@@ -1,0 +1,41 @@
+# 2.7.2 버전 (V2.7.2.12)
+
+날짜 2020-12-11
+
+## 새로운 기능
+
+- Screensaver 활성화 기능 추가 (FaceStation 2, FaceStation F2)
+
+- FaceStation F2의 서버 매칭 지원 (카드 만)
+
+1. Screensaver 활성화 기능이 추가되었습니다. FaceStation 2, FaceStation F2 장치만 적용됩니다.
+
+   - 구조체 [BS2DisplayConfig](configuration_api#bs2displayconfig) 참조
+
+   - 함수 [BS2_GetDisplayConfig](bs2_getdisplayconfig) 참조
+
+   - 함수 [BS2_SetDisplayConfig](bs2_setdisplayconfig) 참조
+
+1. FaceStation F2의 서버 매칭을 지원합니다. (카드 만)
+
+   - 함수 [BS2_SetServerMatchingHandler](bs2_setservermatchinghandler) 참조
+
+   - 함수 [BS2_VerifyUserFaceEx](bs2_verifyuserfaceex) 참조
+
+## 수정 기능
+
+1. Device to server 연결 모드일 때 장치가 정상적으로 연결되지 않을 수 있는 문제가 수정되었습니다.
+
+1. [BS2_ReleaseContext](bs2_releasecontext)를 통해 SDK가 unload 되는 과정에서, 특정 thread로 인해 정상적으로 unload 되지 않을 수 있는 문제가 수정되었습니다.
+
+1. 체온 측정 범위가 수정되었습니다. (30º \~ 45º =\> 1º \~ 45º)
+
+   - 구조체 [BS2FaceConfigExt](configuration_api#bs2faceconfigext) 참조 (thermalThresholdLow, thermalThresholdHigh)
+
+1. FaceStation F2에서 복수의 이미지를 가진 사용자를 등록시, `BS_SDK_ERROR_NOT_SUPPORTED` 또는 `BS_SDK_ERROR_TIMEOUT` 오류가 반환되는 문제가 수정되었습니다.
+
+   - 함수 [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) 참조
+
+1. BioStation 2를 제외한 일부 장치들에서 특정함수를 호출하면 정상 동작되나, 결과값으로 `BS_SDK_ERROR_TIMEOUT` 오류를 반환하는 문제가 수정되었습니다.
+
+   - 함수 [BS2_ResetConfigExceptNetInfo](bs2_resetconfigexceptnetinfo) 참조

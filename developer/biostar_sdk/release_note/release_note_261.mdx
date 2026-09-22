@@ -1,0 +1,27 @@
+# 2.6.1 버전
+
+날짜 2018-04-24
+
+:::caution
+
+2.5.0 버전까지는 Device SDK가 OpenSSL library를 정적으로 포함하고 있었으나, 2.6.0 버전부터는 공유 library 형태로 링크하도록 변경되었습니다.
+
+따라서 적절한 OpenSSL library를 설치 후 실행시켜주셔야 합니다. 2.6.0 라이브러리는 OpenSSL 1.0.2n library를 기반으로 테스트 되었습니다.
+
+예제파일에는 OpenSSL 1.0.2n Windows library 파일을 포함하고 있습니다. 
+
+:::
+
+## 수정 기능
+
+1. BS2SimpleDeviceInfo에서 BS2SimpleDeviceInfoEx로 옮겨진 필드들이 원복 되었습니다.
+
+   이로 인하여 v2.5.0의 코드에 대한 하위 호환성을 확보합니다.
+
+   - 구조체 [bs2simpledeviceinfo](device_api#bs2simpledeviceinfo) 참조
+
+   - 구조체 [bs2simpledeviceinfoex](device_api#bs2simpledeviceinfoex) 참조
+
+1. C# 예제에 사용되는 SSL 인증서가 업데이트 되었습니다.
+
+1. C# 예제에 포함되었던 오래된 FW 파일들을 삭제했습니다.

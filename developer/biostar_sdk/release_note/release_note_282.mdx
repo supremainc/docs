@@ -1,0 +1,40 @@
+# 2.8.2 버전 (V2.8.2.3)
+
+날짜 2021-11-29
+
+## 수정 기능
+
+1. 지원 Linux 환경이 Ubuntu 18.04로 상향되었습니다.
+
+   | SDK 버전 | 지원 Linux 버전 |
+   | :--: | :--: |
+   | V2.8.2 이전 | Ubuntu 16.04 |
+   | V2.8.2 이후 | Ubuntu 18.04 |
+
+1. OpenSSL이 기존 1.0.2n에서 1.1.1i를 지원하도록 수정되었습니다.
+
+   - 문서 [개발 환경 구축하기](../getting_started#devEnvironment) 참조
+
+1. IPv6 운용 장치에서 [BS2_GetFactoryConfig](bs2_getfactoryconfig) 호출 시, BS_SDK_ERROR_SOCKET_IS_NOT_CONNECTED 오류가 발생될 수 있는 문제가 수정되었습니다.
+
+1. FaceStation F2 장치로 Unwarped image 사용자를 대량으로 전송하면, BS_SDK_ERROR_TIMEOUT 오류가 발생될 수 있는 문제가 수정되었습니다.
+
+1. V2.7.2.20 이후 버전에서 [BS2_SetDebugExCallback](bs2_setdebugexcallback) 함수가 동작되지 않는 문제가 수정되었습니다.
+
+1. 지원 구성 정보 내역 중 FaceStation F2 장치와 관련하여 지원 항목으로 잘못 설정된 정보가 삭제되었습니다. (WLAN)
+
+   - 함수 [BS2_GetSupportedConfigMask](bs2_getsupportedconfigmask) 참조
+
+1. 지원 구성 정보 내역 중 XStation 2 장치와 관련하여 지원 항목으로 잘못 설정된 정보가 삭제되었습니다. (VoIP)
+
+   - 함수 [BS2_GetSupportedConfigMask](bs2_getsupportedconfigmask) 참조
+
+1. 지원 구성 정보 내역 중 BioEntry R2 장치와 관련하여 미지원 항목으로 잘못 설정된 정보가 추가되었습니다. (Wiegand)
+
+   - 함수 [BS2_GetSupportedConfigMask](bs2_getsupportedconfigmask) 참조
+
+1. C# 예제에서 [BS2DisplayConfig](configuration_api#bs2displayconfig)의 reserved2 array의 첨자가 잘못 표기되어 있는 문제가 수정되었습니다. (useScreenSaver의 영향으로 1 감소)
+
+   - 구조체 [BS2DisplayConfig](configuration_api#bs2displayconfig) 참조
+
+1. SDK 내부적으로 코드 안정화를 위한 수정이 있었습니다.

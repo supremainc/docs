@@ -1,0 +1,141 @@
+# 2.8.2 버전 (V2.8.2.9)
+
+날짜 2022-04-25
+
+## 새로운 기능
+
+- Ver.3를 지원하는 USB 파일 읽기 지원
+
+- Barcode bypass 기능 추가
+
+- Treat as CSN 기능 추가
+
+- Smart card byte order 기능 추가
+
+- 시스템 지원정보에 지원항목 추가
+
+1. Ver.3를 지원하는(GDPR supported) 장치에서, USB 파일 읽기를 위해 아래의 함수들이 추가되었습니다.
+
+   아래의 함수들은 과거에 [BS2_SetDataEncryptKey](bs2_setdataencryptkey) 함수를 호출하여 장치의 사용자 정보 암호화 키를 변경한 적이 있는 경우에 해당됩니다.
+
+   새로 추가된 key 파라메터는 과거에 설정한 키를 지정하면 됩니다.
+
+   - 함수 [BS2_GetUserDatabaseInfoFromDirWithKey](bs2_getuserdatabaseinfofromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserListFromDirWithKey](bs2_getuserlistfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserInfosFromDirWithKey](bs2_getuserinfosfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserInfosExFromDirWithKey](bs2_getuserinfosexfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserDatasExFromDirWithKey](bs2_getuserdatasexfromdirwithkey) 추가
+
+   - 함수 [BS2_GetLogFromDirWithKey](bs2_getlogfromdirwithkey) 추가
+
+   - 함수 [BS2_GetFilteredLogFromDirWithKey](bs2_getfilteredlogfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserSmallInfosFromDirWithKey](bs2_getusersmallinfosfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserSmallDatasFromDirWithKey](bs2_getusersmalldatasfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserSmallInfosExFromDirWithKey](bs2_getusersmallinfosexfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserSmallDatasExFromDirWithKey](bs2_getusersmalldatasexfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserInfosFaceExFromDirWithKey](bs2_getuserinfosfaceexfromdirwithkey) 추가
+
+   - 함수 [BS2_GetUserDatasFaceExFromDirWithKey](bs2_getuserdatasfaceexfromdirwithkey) 추가
+
+   - 함수 [BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey) 추가
+
+   - 함수 [BS2_GetLogSmallBlobFromDirWithKey](bs2_getlogsmallblobfromdirwithkey) 추가
+
+   - 함수 [BS2_GetLogSmallBlobExFromDirWithKey](bs2_getlogsmallblobexfromdirwithkey) 추가
+
+1. Barcode scan이 가능한 장치로부터 barcode를 구독할 수 있도록, barcode bypass 기능이 추가되었습니다.
+
+   - 구조체 [BS2BarcodeConfig](configuration_api#bs2barcodeconfig) 참조
+
+   - 함수 [BS2_SetBarcodeScanListener](bs2_setbarcodescanlistener) 추가
+
+   - 콜백함수 [OnBarcodeScanned](server_api#onbarcodescanned) 추가
+
+1. Barcode를 일반 CSN 카드와 동일하게 취급할 수 있는 기능(Treat as CSN)이 추가되었습니다.
+
+   - 구조체 [BS2BarcodeConfig](configuration_api#bs2barcodeconfig) 참조
+
+1. Smart card의 byte order를 지정할 수 있도록 수정되었습니다.
+
+   - 구조체 [BS2CardConfig](configuration_api#bs2cardconfig) 참조
+
+   - 함수 [BS2_GetCardConfig](bs2_getcardconfig) 참조
+
+   - 함수 [BS2_SetCardConfig](bs2_setcardconfig) 참조
+
+1. Smart card byte order, Treat as CSN 기능에 대한, 시스템 지원 정보가 업데이트 되었습니다.
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+
+   - 함수 [BS2_GetDeviceCapabilities](bs2_getdevicecapabilities) 참조
+
+## 수정 기능
+
+1. SDK에서 libxml2 library 종속성이 제거되었습니다.
+
+1. USB 파일 읽기 함수가 Ver.3(GDPR supported)를 지원하도록 내부적으로 수정되었습니다.
+
+   아래의 함수들은 과거에 [BS2_SetDataEncryptKey](bs2_setdataencryptkey) 함수를 호출하여 장치의 사용자 정보 암호화 키를 변경한 적이 없는 경우에 해당됩니다.
+
+   아래의 함수들은 암호화 정보를 기본키값으로 복호화하여 가져옵니다.
+
+   사용자는 이전과 동일하게 함수를 호출하면 됩니다.
+
+   - 함수 [BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir) 참조
+
+   - 함수 [BS2_GetUserListFromDir](bs2_getuserlistfromdir) 참조
+
+   - 함수 [BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir) 참조
+
+   - 함수 [BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir) 참조
+
+   - 함수 [BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir) 참조
+
+   - 함수 [BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir) 참조
+
+   - 함수 [BS2_GetLogFromDir](bs2_getlogfromdir) 참조
+
+   - 함수 [BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir) 참조
+
+   - 함수 [BS2_GetUserSmallInfosFromDir](bs2_getusersmallinfosfromdir) 참조
+
+   - 함수 [BS2_GetUserSmallDatasFromDir](bs2_getusersmalldatasfromdir) 참조
+
+   - 함수 [BS2_GetUserSmallInfosExFromDir](bs2_getusersmallinfosexfromdir) 참조
+
+   - 함수 [BS2_GetUserSmallDatasExFromDir](bs2_getusersmalldatasexfromdir) 참조
+
+   - 함수 [BS2_GetUserInfosFaceExFromDir](bs2_getuserinfosfaceexfromdir) 참조
+
+   - 함수 [BS2_GetUserDatasFaceExFromDir](bs2_getuserdatasfaceexfromdir) 참조
+
+   - 함수 [BS2_GetLogBlobFromDir](bs2_getlogblobfromdir) 참조
+
+   - 함수 [BS2_GetLogSmallBlobFromDir](bs2_getlogsmallblobfromdir) 참조
+
+   - 함수 [BS2_GetLogSmallBlobExFromDir](bs2_getlogsmallblobexfromdir) 참조
+
+1. USB를 연결하기 위한 아래의 두 API가 **지원 중단**되었습니다.
+
+   이후로 context는 [BS2_AllocateContext](bs2_allocatecontext)를 호출하여 생성된 객체를 전달하여 사용하면 됩니다.
+
+   - 함수 [BS2_AllocateUsbContext](bs2_allocateusbcontext) 지원중단
+
+   - 함수 [BS2_ReleaseUsbContext](bs2_releaseusbcontext) 지원중단
+
+   - 함수 [BS2_AllocateContext](bs2_allocatecontext) 참조
+
+   - 함수 [BS2_ReleaseContext](bs2_releasecontext) 참조
+
+1. SSL 연결 모드에서 단순 통신 오류 발생 시, 장치 연결이 끊기는 문제가 수정되었습니다.

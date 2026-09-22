@@ -1,0 +1,37 @@
+# 2.7.2 버전 (V2.7.2.4)
+
+날짜 2020-11-11
+
+## 새로운 기능
+
+- Wiegand 출력 시 사용자 ID 출력 지원.
+
+1. Wiegand 출력 시, Card ID 또는 사용자 ID를 선택적으로 출력할 수 있도록 추가되었습니다.
+
+   - 구조체 [BS2WiegandConfig](configuration_api#bs2wiegandconfig) 참조
+
+   - 함수 [BS2_GetWiegandConfig](bs2_getwiegandconfig) 참조
+
+   - 함수 [BS2_SetWiegandConfig](bs2_setwiegandconfig) 참조
+
+## 수정 기능
+
+1. SDK 내부적으로 파일로그 출력 구조가 수정되었습니다.
+
+   기존에는 이벤트 처리 쓰레드들이 각자 파일쓰기를 처리했으나, 파일처리 쓰레드를 별도로 두어 처리하도록 수정되었습니다.
+
+   이로인해 이벤트 처리속도가 향상되었습니다.
+
+   - 함수 [BS2_SetDebugFileLog](bs2_setdebugfilelog) 참조
+
+1. FaceStation F2에서 얼굴 복수 개 등록 시,
+
+   `BS_SDK_ERROR_NO_FACE_CREDENTIAL`(-759) 오류가 발생할 수 있는 문제가 수정되었습니다.
+
+   - 함수 [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) 참조
+
+1. 장치 연결이 끊길 경우, 간헐적으로 callback 동작하지 않을 수 있는 문제가 수정되었습니다.
+
+   - 함수 [BS2_SetDeviceEventListener](bs2_setdeviceeventlistener) 참조
+
+1. SDK 내부적으로 코드 안정화를 위한 수정이 있었습니다.

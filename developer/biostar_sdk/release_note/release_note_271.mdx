@@ -1,0 +1,125 @@
+# 2.7.1 버전 (V2.7.1.1)
+
+날짜 2020-09-15
+
+## 새로운 기능
+
+- 신규장치 FaceStation F2 지원 추가.
+
+- 열화상 감지 및 마스크 착용 여부를 검출 기능 지원
+
+- 사용자 정의 PIN 암호화 키 변경 기능 추가.
+
+1. 신규장치 FaceStation F2을 지원하며, 사용자 관련 함수 및 구조체가 추가되었습니다.
+
+   - 구조체 [BS2UserSettingEx](user_management_api#bs2usersettingex) 참조
+
+   - 구조체 [BS2TemplateEx](face_api#bs2templateex) 참조
+
+   - 구조체 [BS2FaceEx](face_api#bs2faceex) 참조
+
+   - 구조체 [BS2UserFaceExBlob](user_management_api#bs2userfaceexblob) 참조
+
+   - 함수 [BS2_ScanFaceEx](bs2_scanfaceex) 참조
+
+   - 함수 [BS2_ExtraceTemplateFaceEx](bs2_extracetemplatefaceex) 참조
+
+   - 함수 [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) 참조
+
+   - 함수 [BS2_GetUserInfosFaceEx](bs2_getuserinfosfaceex) 참조
+
+   - 함수 [BS2_GetUserDatasFaceEx](bs2_getuserdatasfaceex) 참조
+
+1. FaceStation F2의 인증모드가 대폭 추가되었으며, 아래의 함수를 통해 설정할 수 있습니다.
+
+   - 구조체 [BS2AuthConfigExt](configuration_api#bs2authconfigext) 참조
+
+   - 함수 [BS2_GetAuthConfigExt](bs2_getauthconfigext) 참조
+
+   - 함수 [BS2_SetAuthConfigExt](bs2_setauthconfigext) 참조
+
+1. FaceStation F2 장치에서 jpg image로 template을 추출할 수 있습니다. 이렇게 추출한 template은 AOC에 담을 수 있습니다.
+
+   - 구조체 [BS2SmartCardHeader](smartcard_api#bs2smartcardheader) 참조
+
+   - 함수 [BS2_ExtraceTemplateFaceEx](bs2_extracetemplatefaceex) 참조
+
+1. 얼굴의 열화상 감지와 마스크 착용 체크 정보 구조체 및 설정 함수가 추가되었습니다.
+
+   - 구조체 [BS2FaceConfigExt](configuration_api#bs2faceconfigext) 참조
+
+   - 함수 [BS2_GetFaceConfigExt](bs2_getfaceconfigext) 참조
+
+   - 함수 [BS2_SetFaceConfigExt](bs2_setfaceconfigext) 참조
+
+1. 열화상 카메라 정보 구조체 및 설정 함수가 추가되었습니다.
+
+   - 구조체 [BS2ThermalCameraConfig](configuration_api#bs2thermalcameraconfig) 참조
+
+   - 함수 [BS2_GetThermalCameraConfig](bs2_getthermalcameraconfig) 참조
+
+   - 함수 [BS2_SetThermalCameraConfig](bs2_setthermalcameraconfig) 참조
+
+1. 측정된 체온정보가 포함된 이벤트로그를 수신할 수 있는 함수가 추가되었습니다.
+
+   - 콜백함수 [OnLogReceivedEx](log_management_api#onlogreceivedex) 참조
+
+   - 구조체 [BS2EventSmallBlobEx](log_management_api#bs2eventsmallblobex) 참조
+
+   - 함수 [BS2_StartMonitoringLogEx](bs2_startmonitoringlogex) 참조
+
+   - 함수 [BS2_GetLogSmallBlobEx](bs2_getlogsmallblobex) 참조
+
+   - 함수 [BS2_GetLogSmallBlobExFromDir](bs2_getlogsmallblobexfromdir) 참조
+
+1. 사용자 정의 PIN 암호화 키를 변경하고, PIN을 추출할 수 있는 함수가 추가되었습니다.
+
+   - 함수 [BS2_SetDataEncryptKey](bs2_setdataencryptkey) 참조
+
+   - 함수 [BS2_MakePinCodeWithKey](bs2_makepincodewithkey) 참조
+
+## 수정 기능
+
+1. FaceStation F2 장치의 configuration 설정을 지원하기 위해 구조체가 수정되었습니다.
+
+   - 구조체 [BS2FaceConfig](configuration_api#bs2faceconfig) 참조
+
+1. Mask를 지정하여 사용자 정보를 취득하는 함수들의 mask 정보가 추가되었습니다. (각 함수의 userMask 파라메터 참조)
+
+   - 함수 [BS2_GetUserDatas](bs2_getuserdatas) 참조
+
+   - 함수 [BS2_GetUserDatasEx](bs2_getuserdatasex) 참조
+
+   - 함수 [BS2_GetSupportedUserMask](bs2_getsupportedusermask) 참조
+
+   - 함수 [BS2_GetUserSmallDatas](bs2_getusersmalldatas) 참조
+
+   - 함수 [BS2_GetUserSmallDatasEx](bs2_getusersmalldatasex) 참조
+
+   - 함수 [BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir) 참조
+
+   - 함수 [BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir) 참조
+
+   - 함수 [BS2_GetUserSmallDatasFromDir](bs2_getusersmalldatasfromdir) 참조
+
+   - 함수 [BS2_GetUserSmallDatasExFromDir](bs2_getusersmalldatasexfromdir) 참조
+
+   - 함수 [BS2_GetUserInfosFaceEx](bs2_getuserinfosfaceex) 참조
+
+   - 함수 [BS2_GetUserDatasFaceEx](bs2_getuserdatasfaceex) 참조
+
+1. 장치 지원정보에서 fingerSupported, faceSupported와 같은 정보들이,
+
+   내부적으로 지문인증(매칭), 얼굴인증(매칭)을 지원하는 의미로 사용되었었습니다.
+
+   따라서 FaceStation2가 fingerSupported true를 반환하고, CoreStation이 fingerSupported true를 반환하는 등, 혼란이 있었습니다.
+
+   V2.7.1에서는 fingerScanSupported, faceScanSupported와 같은 정보를 추가로 제공할 수 있도록 추가되었습니다.
+
+   이제부터 FaceStation2에서 fingerScanSupported는 false를 반환합니다.
+
+   - 함수 [BS2_GetDeviceInfoEx](bs2_getdeviceinfoex) 참조
+
+   - 구조체 [BS2SimpleDeviceInfoEx](device_api#bs2simpledeviceinfoex) 참조
+
+1. 보안상의 문제로 함수 BS2_GetDataEncryptKey의 지원이 중단되었습니다.

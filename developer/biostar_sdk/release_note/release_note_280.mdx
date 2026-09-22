@@ -1,0 +1,132 @@
+# 2.8.0 버전 (V2.8.0.6)
+
+날짜 2021-06-07
+
+## 새로운 기능
+
+- X-Station 2 연결 지원
+
+- Intelligent Slave 기능 지원
+
+- WARP 이미지 취득 기능 추가 (FaceStation F2)
+
+- 장치 지원 정보 취득 기능 추가
+
+- Mobile 카드 이벤트 추가
+
+- 특정 장치의 새로운 카드모델 지원 정보 추가
+
+1. X-Station 2 연결 지원 기능이 추가되었습니다.
+
+   - 구조체 [BS2BarcodeConfig](configuration_api#bs2barcodeconfig) 참조
+
+   - 함수 [BS2_GetBarcodeConfig](bs2_getbarcodeconfig) 참조
+
+   - 함수 [BS2_SetBarcodeConfig](bs2_setbarcodeconfig) 참조
+
+   - 함수 [BS2_WriteQRCode](bs2_writeqrcode) 참조
+
+1. Intelligent Slave 기능이 지원됩니다.
+
+   Intelligent Slave는 슈프리마 생체 인식 기기와 타사 컨트롤러가 연결된 환경에서 인증결과(카드 또는 사용자ID)를 ODSP로 전송하여줍니다.
+
+   [Intelligent Slave Support](https://support.supremainc.com/en/support/solutions/articles/24000066085--biostar-2-intelligent-slave-support)
+
+   - 구조체 [BS2Rs485Config](configuration_api#bs2rs485config) 참조
+
+   - 함수 [BS2_GetRs485Config](bs2_getrs485config) 참조
+
+   - 함수 [BS2_SetRs485Config](bs2_setrs485config) 참조
+
+1. WARP 되어지지 않은(가공되어지지 않은) 얼굴 이미지로, WARP 이미지를 취득하는 기능이 추가되었습니다.
+
+   - 함수 [BS2_GetNormalizedImageFaceEx](bs2_getnormalizedimagefaceex) 참조
+
+1. 장치 지원 정보를 취득하는 기능이 추가되었습니다.
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+
+   - 함수 [BS2_GetDeviceCapabilities](bs2_getdevicecapabilities) 참조
+
+1. Mobile 카드 이벤트가 추가되었습니다.
+
+   - 구조체 [BS2Event의 subCode](Log_Management_API#BS2Event) 참조
+
+1. [BS2_GetCardModel](bs2_getcardmodel) 함수가 다음의 새로운 모델들을 지원할 수 있도록 추가되었습니다.
+
+   - 함수 [BS2_GetCardModel](bs2_getcardmodel) 참조
+
+   - BEW2-ODPB
+
+   - BEW2-OAPB
+
+   - BEW2-OHPB
+
+## 수정 기능
+
+1. **Master: CoreStation 40**, **Slave: FaceStation 2 / FaceLite**에서 FaceStation 2, FaceLite에 대한 얼굴 template을 사용자에 할당하고, CoreStation 40에 등록 시 `BS_SDK_ERROR_TIMEOUT` 오류가 반환되는 문제가 수정되었습니다.
+
+   - 함수 [BS2_EnrolUser](bs2_enroluser) 참조
+
+   - 함수 [BS2_EnrollUser](bs2_enrolluser) 참조
+
+   - 함수 [BS2_EnrolUserEx](bs2_enroluserex) 참조
+
+   - 함수 [BS2_EnrollUserEx](bs2_enrolluserex) 참조
+
+   - 함수 [BS2_EnrollUserSmall](bs2_enrollusersmall) 참조
+
+   - 함수 [BS2_EnrollUserSmallEx](bs2_enrollusersmallex) 참조
+
+   - 함수 [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) 참조
+
+1. 많은 사용자(700명 이상)의 장치 전송 시, V2.7.2.x 이전 버전에 비해 상대적으로 느려졌던 문제가 수정되었습니다.
+
+   - 함수 [BS2_EnrolUser](bs2_enroluser) 참조
+
+   - 함수 [BS2_EnrollUser](bs2_enrolluser) 참조
+
+   - 함수 [BS2_EnrolUserEx](bs2_enroluserex) 참조
+
+   - 함수 [BS2_EnrollUserEx](bs2_enrolluserex) 참조
+
+   - 함수 [BS2_EnrollUserSmall](bs2_enrollusersmall) 참조
+
+   - 함수 [BS2_EnrollUserSmallEx](bs2_enrollusersmallex) 참조
+
+   - 함수 [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) 참조
+
+1. Event config를 지원하지 않는 장치 FaceLite에 config를 요청하게되는 경우, 반환 값이 `BS_SDK_SUCCESS`에서 `BS_SDK_ERROR_NOT_SUPPORTED`로 수정되었습니다.
+
+   - 함수 [BS2_GetEventConfig](bs2_geteventconfig) 참조
+
+1. SDK의 allocation과 release를 반복하면, 일정 횟수 초과 시 장치 연결이 불가능해지는 현상 수정되었습니다.
+
+   - 함수 [BS2_AllocateContext](bs2_allocatecontext) 참조
+
+   - 함수 [BS2_ReleaseContext](bs2_releasecontext) 참조
+
+1. [BS2_ReleaseContext](bs2_releasecontext) 호출 시, 간헐적으로 정상적인 리소스 반납이 이루어지지 않으며, 51212, 51213 포트를 점유하고 있는 문제가 수정되었습니다.
+
+1. 장치에대한 connect/cisconnect 호출을 반복하게 되면 event 처리과정에서 deadlock이 발생할 수 있는 문제가 수정되었습니다.
+
+1. [BS2_ReleaseContext](bs2_releasecontext) 호출 시, 간헐적으로 응용프로그램이 crash 될 수 있는 문제가 수정되었습니다.
+
+1. Display 설정 변경 시, timeout을 나타내는 필드들이 10의 배수로 할당되지 않으면, 장치가 reset될 수 있는 문제가 수정되었습니다.
+
+   - 구조체 [BS2DisplayConfig](configuration_api#bs2displayconfig) menuTimeout, msgTimeout, backlightTimeout 참조
+
+   - 함수 [BS2_SetDisplayConfig](bs2_setdisplayconfig) 참조
+
+1. 4 core 환경에서 [BS2_SearchDevices](bs2_searchdevices) 호출을 반복하면, CPU 점유율이 99%로 올라가는 문제가 수정되었습니다.
+
+1. FaceStation F2의 white LED 설정 옵션에 사용안함(Not used)이 추가되었습니다.
+
+1. **FaceStation F2 Only** [BS2FaceConfig](configuration_api#bs2faceconfig)의 lightCondition 멤버의 의미와 설정 값이 변경되었습니다.
+
+   | 지원 버전 | 의미 | 0 | 1 | 2 | 3 |
+   | --- | --- | --- | --- | --- | --- |
+   | 1.0.0 \~ 1.0.5 | Ambient Brightness | Indoor | Outdoor | Auto | \- |
+   | 1.1.0 이상 | Light Brightness | Normal | High | \- (**Deprecated**) | Not used |
+
+   - 구조체 [BS2FaceConfig](configuration_api#bs2faceconfig) lightCondition 참조

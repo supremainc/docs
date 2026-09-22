@@ -1,0 +1,71 @@
+# 2.9.8 버전 (v2.9.8.0)
+
+날짜 2024-09-30
+
+## 새로운 기능
+
+- 장치 인증 결과에 사용자 ID, 이름이 표시되는 방법을 선택할 수 있는 기능 지원
+
+- BioStation 3에서 IP 인터폰의 SIP 전송 방법을 선택할 수 있는 기능 지원
+
+- BioStation 3에서 IP 인터폰, RTSP 사용 시 영상 해상도를 선택할 수 있는 기능 지원
+
+- 마스크를 착용한 사용자는 인증을 거부하도록 설정할 수 있는 옵션 추가
+
+- X-Station 2에서 PIN을 입력할 때 숫자 키의 위치가 무작위로 변경되는 스크램블 키패드를 활성화하거나 비활성화할 수 있는 옵션 추가
+
+- 슬레이브 장치의 RS-485 전송 속도를 설정할 수 있는 기능 추가
+
+- CoreStation의 Aux Input 설정 기능 추가
+
+1. 장치의 화면에 표시되는 인증 결과 메시지에서 ID 또는 이름의 표시 방법을 변경할 수 있도록 설정이 추가되었습니다.
+
+   * 구조체 [BS2DisplayConfig](configuration_api#bs2displayconfig) - authMsgUserName, authMsgUserID 참조
+
+1. BioStation 3의 IP 인터폰에서 데이터 전송 방법을 UDP, TCP, TLS로 변경할 수 있도록 설정이 추가되었습니다.
+
+   - 구조체 [BS2VoipConfigExt](configuration_api#bs2voipconfigext) - transport 참조 (지원장치: BioStation 3)
+
+1. BioStation 3의 IP 인터폰과 RTSP 사용 시 송출되는 영상 해상도를 선택할 수 있도록 설정이 추가되었습니다.
+
+   - 구조체 [BS2VoipConfigExt](configuration_api#bs2voipconfigext) - resolution 참조 (지원장치: BioStation 3)
+
+   - 구조체 [BS2RtspConfig](configuration_api#bs2rtspconfig) - resolution 참조 (지원장치: BioStation 3, BioEntry W3)
+
+1. 얼굴 인증 시 마스크를 착용한 사용자는 인증을 거부하도록 설정할 수 있는 옵션이 추가되었습니다. 이 기능은 BioStation 3, FaceStation F2, BioEntry W3 등의 비주얼 페이스를 기반으로 하는 얼굴 인증 장치에만 해당됩니다.
+
+   - 구조체 [BS2FaceConfigExt](configuration_api#bs2faceconfigext) - maskCheckMode 참조
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) - authDenyMaskSupported 참조
+
+1. X-Station 2에서 PIN을 입력할 때 숫자 키의 위치가 무작위로 변경되는 스크램블 키패드를 설정할 수 있도록 추가되었습니다.
+
+   - 구조체 [BS2DisplayConfig](configuration_api#bs2displayconfig) - scrambleKeyboardMode 참조
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) - scrambleKeyboardModeSupported 참조
+
+1. 슬레이브 장치의 RS-485 전송 속도를 설정할 수 있는 기능이 추가되었습니다.
+
+   - 함수 [bs2_setslavebaudrate](bs2_setslavebaudrate) 추가
+
+1. CoreStation40의 Aux Input 설정 기능이 추가되었습니다.
+
+   - 구조체 [BS2InputConfig](configuration_api#bs2inputconfig) - aux 참조
+
+## 수정 기능
+
+1. C++(x64) 디버그 모드에서 `BS2_ReleaseContext()` 수행 시 발생하는 메모리 오류가 수정되었습니다.
+
+1. `BS2_SetAutoConnection`을 사용하여 재연결을 하는 경우, 실시간 로그를 받을 수 없는 문제가 수정되었습니다.
+
+1. so Linux Library 파일 헤더에 SONAME이 적용되었습니다.
+
+1. `BS2_RS485Config`, `BS2_RS485ConfigEx` 구조체의 사용되지 않는 mode의 값 중에서 'Not use'가 제거되었습니다.
+
+1. C# 샘플소스 개선
+
+   - ConfigControl 예제에서 `getDeviceCapabilities()` 수행 시 슬레이브 장치를 선택할 수 있도록 개선되었습니다.
+
+   - UserControl 예제에서 imagedata 메모리해제 누락이 개선되었습니다.
+
+   - SlaveControl 예제에서 wiegandDeviceID 변환 방법이 개선되었습니다.

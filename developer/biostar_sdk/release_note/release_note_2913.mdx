@@ -1,0 +1,67 @@
+# 2.9.13 버전 (v2.9.13.0)
+
+날짜 2026-08-30
+
+## 새로운 기능
+
+- XPass Q2 (XPQ2-DPB) 연결 지원
+
+- 장치 IP 주소를 이용한 유니캐스트(Unicast) 장치 검색 기능 추가
+
+- DesFire 카드를 EV2 Secure Messaging으로만 허용하는 설정 추가
+
+- 장치 지원 기능(Capability) 플래그 추가
+
+- 배포 패키지에 보안 증빙 자료 포함
+
+1. 신규 장치의 연결을 지원합니다.
+
+   * XPass Q2 (XPQ2-DPB)
+
+1. 장치 IP 주소를 이용한 유니캐스트 장치 검색 기능이 추가되었습니다.
+
+   브로드캐스트를 사용하지 않고 지정한 IPv4 주소로 직접 요청을 보내므로, 브로드캐스트가 차단된 구간이거나 장치가 다른 서브넷에 있어도 장치를 찾을 수 있습니다.
+
+   응답 시간 초과가 성공으로 보고되는 점에 유의하세요. 반환값이 아니라 [BS2_GetDevices](bs2_getdevices)가 반환하는 장치 수로 판단해야 합니다.
+
+   - 함수 [BS2_SearchDeviceByIP](bs2_searchdevicebyip) 추가
+
+1. DesFire 카드를 EV2 Secure Messaging으로만 허용하는 설정이 추가되었습니다.
+
+   이 설정을 사용하면 EV2 Secure Messaging을 사용할 수 없는 카드는 인증에 실패하며, 그 사유는 `BS2_SUB_EVENT_AUTH_FAIL_EV2SM_REQUIRED`로 보고됩니다.
+
+   지원 장치 및 펌웨어 버전 정보는 아래 링크된 함수 설명을 참조하세요.
+
+   - 구조체 [BS2CardConfig](configuration_api#bs2cardconfig) 참조
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+
+1. 장치 지원 기능(Capability) 플래그가 추가되었습니다.
+
+   플래그는 장치의 기능 지원 여부만 나타내며, SDK에서 해당 기능을 사용할 수 있다는 의미는 아닙니다.
+
+   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+
+   - `y2k38Supported`, `ev2smSupported`, `videoStandbySupported`
+
+   - `authFailLockoutSupported`, `doorUnlockLockImproveSupported`, `toggleDoorSupported`
+
+   - `antiTailgatingSupported`, `elevatorCabinAuthSupported`, `reAuthPreventionSupported`
+
+1. 배포 패키지에 보안 증빙 자료가 포함됩니다.
+
+   - SBOM (CycloneDX, Syft)
+
+   - 취약점 보고서 (Grype)
+
+   - `SHA256SUMS.txt`
+
+   - 보안 평가서
+
+## 수정 기능
+
+1. 장치 검색 함수 [BS2_SearchDevicesEx](bs2_searchdevicesex)가 `지원 중단`되었습니다.
+
+   대신 [BS2_SearchDevices](bs2_searchdevices)와 [BS2_SetEnableIPV4](bs2_setenableipv4) / [BS2_SetEnableIPV6](bs2_setenableipv6)를 함께 사용하세요.
+
+   [BS2_SearchDeviceByIP](bs2_searchdevicebyip)는 이 함수의 대체가 아닙니다. 이 함수의 인자는 호스트 주소나 브로드캐스트 주소가 아니라, 찾으려는 장치의 주소이기 때문입니다.

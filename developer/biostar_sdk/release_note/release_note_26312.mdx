@@ -1,0 +1,11 @@
+# 2.6.3 버전 (V2.6.3.12)
+
+날짜 2019-09-30
+
+## 수정 기능
+
+1. SDK를 통해 장치가 연결된 이후, 네트워크 통신이 끊어지고 `WSA_INVALID_HANDLE`이 발생되는 경우, 무한루프에 빠질 수 있는 문제수정.
+
+1. 통신 패킷 처리과정에서 출력되는 디버깅 로그가 너무 많아 질수 있는 문제 보완.
+
+   * 함수 [BS2_SetDebugExCallback](bs2_setdebugexcallback), [BS2_SetDebugFileLog](bs2_setdebugfilelog)에서 사용되는 level(`DEBUG_LOG_OPERATION_ALL` - 0xFF) 신규추가
