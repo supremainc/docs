@@ -1,0 +1,75 @@
+---
+id: 151
+title: Firmware Version 1.5.1
+---
+
+# Firmware Version 1.5.1 (Build No. 1.5.1_260918)
+
+Release<Separator/>2026-09-22
+
+:::caution
+
+- If you are using a device with firmware version v1.4.0, you must upgrade to v1.4.1 before use.<br/>As important security and stability improvements are included, using the latest version after the upgrade is mandatory.
+
+- After upgrading the firmware to v1.4.0, it is not able to downgrade to an earlier version of the firmware.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+    {/* <Jira num='BS3FW-2506' /> [LockOverride - User Status:Off] wiegand 리더로 도어 생성 후, wiegand 장치가 disabled 상태일 때 Lock override 카드 인증이 되지 않는 현상 - 발생버전 : V1.5.0
+<Jira num='BS3FW-2471' /> [Lock override] wiegand reader로 door 생성 후, wiegand 장치가 disable 상태일때, Lock override 카드 인증이 안되는 현상- 발생버전 : V1.5.0 */}
+1. **Lock Override** card authentication not working on a door created with a Wiegand reader when the reader is disabled. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2500' /> [Auth Fail Lockout] Auth Fail Lock 상태에서 Unlock 후 메뉴 진입 이후 메인화면에서 카드 입력 시 카드 인식음만 나고 더 이상 진행되지 않는 현상 - 발생버전 : V1.5.0 */}
+1. Card authentication not proceeding after unlocking **Auth Fail Lockout**, entering a menu, and returning to the main screen. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2498' /> [Auth Fail Lockout - JobCode 오동작] JobCode 진입 후 ID+PIN으로 인증 실패 시 표시되는 팝업이 관리자 메뉴 진입 실패 팝업으로 나타나지만, 실제 동작은 Access Auth Failure Lockout인 현상 - 발생버전 : V1.5.0 */}
+1. Mismatch between the displayed popup and the actual behavior when authentication fails after entering **Job Code**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2497' /> [Auth Fail Lockout 오동작] BS3FW-2496 상태에서 한 번의 인증 실패로 장치가 잠기지만, BioStar에는 잠김 알림이 올라오지 않고 정상으로 표시되는 현상 - 발생버전 : V1.5.0 */}
+1. Device lock status not displayed in BioStar X even when the device is locked by **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2496' /> [Auth Fail Lockout - Unlock 오동작] 동일 권한으로 Auth와 Menu를 동시에 잠근 상태에서 ID+PIN으로 Unlock하면 두 권한 모두 해제되는 현상 - 발생버전 :  V1.5.0 */}
+1. Unlocking **Auth Fail Lockout** with ID + PIN also releasing locks that were not intended to be released. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2495' /> [Auth Fail Lockout - Unlock 오동작] AuthFailLock 상태에서 Unlock을 시도하다 PIN 입력 실패 시 관리자 실패 횟수가 증가하는 현상 - 발생버전 :  V1.5.0 */}
+1. Administrator authentication failure count decreasing when PIN entry fails while unlocking **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2489' /> [Auth Fail Lockout - Slave 관련 오동작] AuthFailLock 상태인 Slave 장치를 삭제 후 재추가하면 AuthFailLock 설정이 기본으로 적용되어 PIN 한 번 실패만으로 즉시 Auth FailLock으로 잠기는 현상 - 발생 버전: V1.5.0 */}
+1. Slave device locking immediately on a single authentication failure after being deleted and re-added while in **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2485' /> [Auth Fail Lock Out - Door Control] Auth FailLock 동작 상태에서 Door Control에 대해서 Unlock, Lock 실행 시 Administrator authentication failed 이벤트가 발생하는 현상 - 발생버전 : V1.5.0 */}
+1. Administrator authentication failed event occurring when controlling a door while in **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2476' /> [Auth Fail Lockout-2차 잠금 Off] 2차 Admin AuthFailLockOut 잠금 상태에서  2차 잠금을 Off 시 1차 잠금으로 동작이 안되고, 2차 잠금 상태를 유지 하는 현상 - 발생버전 : V1.5.0 */}
+1. Second-stage lock remaining instead of switching to the first stage when **2nd Lockout Duration** is turned off during a second-stage **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2472' /> AuthFailLock 상태에서 Unlock 시 ID+PIN으로 인증 성공이 되면서 AuthFailLock이 해제되는 현상 - 발생버전 : V1.5.0 */}
+1. Authentication being processed as successful and releasing the lock when unlocking **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2470' /> 사용자에 Lock Override 카드가 설정되어 있으면 Trigger&Action으로 하위 Wiegand Reader가 Disable Device동작 안되는 문제 - 발생버전 : V1.4.0 */}
+1. Child Wiegand reader not being locked by **Trigger & Action** when a **Lock Override** card is assigned to a user. <Badge>1.4.0</Badge>
+
+    {/* <Jira num='BS3FW-2469' /> [FISF-2487] osdp_keyset로 들어온 키로 동작하지 않고, default key로 동작하는 문제 - 발생버전 : V1.5.0 */}
+1. Newly set key not applied and the default key being used in OSDP secure communication. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2467' /> [Auth Fail Lockout Release] 지원(M)-지원(S)일 때 Slave Auth FailLock Out 상태에서 Master 재부팅 후 1회만 Slave AuthFailLockOut 정상적으로 해제되고, 이후 발생하는 Auth FailLock에 대해서 오동작하는 현상 - 발생버전 : V1.5.0 */}
+1. Slave **Auth Fail Lockout** releasing correctly only once after a master reboot and malfunctioning thereafter. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2466' /> [Auth Fail Lockout-Slave오동작] Arm 인증 시도 시 PIN에 대해 실패 시에 Auth Fail Lockout으로 동작하지 않고 Access Denied로 동작 - 발생버전 : V1.5.0 */}
+1. PIN failure during Arm authentication resulting in access denial instead of being handled as **Auth Fail Lockout**. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2465' /> [Auth Fail Lockout] 지원(M)-지원(S)일 때 지원 Slave의 AuthFailLockout을 Card 인증으로 해제 할 수 없는 현상 - 발생버전 : V1.5.0 */}
+1. Slave **Auth Fail Lockout** not releasable through card authentication. <Badge>1.5.0</Badge>
+
+    {/* <Jira num='BS3FW-2461' /> [BSF-3178] BS2_UpdateResource 및 BS2_SetDisplayConfig 호출 후 로고 이미지가 즉시 반영되지 않는 현상 - 발생버전 : V1.0.0 */}
+1. Home screen logo image not reflected until reboot when changed via the SDK. <Badge>1.0.0</Badge>
+
+</BugLists>
