@@ -816,6 +816,22 @@ details.deviceInfo summary, details.faq summary {
   height: 300px !important;
 }
 
+.doc-content img[src*='component-cable-cover-fsf2'] {
+  height: 80px !important;
+}
+
+.doc-content img[src*='component-device-fsf2'] {
+  height: 180px !important;
+}
+
+.doc-content img[src*='component-wall-bracket-fsf2'] {
+  height: 170px !important;
+}
+
+.doc-content img[src*='component-drilling-template-fsf2'] {
+  height: 180px !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
