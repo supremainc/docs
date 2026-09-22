@@ -563,10 +563,10 @@
         ],
         "version": "2.3.0",
         "manuals": {
-            "ko": "device/facestation_f2/FaceStation F2_UG_1.13_KO_260624.pdf",
-            "en": "device/facestation_f2/FaceStation F2_UG_1.13_EN_260624.pdf",
-            "es": "device/facestation_f2/FaceStation F2_UG_1.13_ES_260624.pdf",
-            "ja": "device/facestation_f2/FaceStation F2_UG_1.13_JA_260624.pdf"
+            "ko": "device/facestation_f2/FaceStation F2_UG_1.14_KO_260922.pdf",
+            "en": "device/facestation_f2/FaceStation F2_UG_1.14_EN_260922.pdf",
+            "es": "device/facestation_f2/FaceStation F2_UG_1.14_ES_260922.pdf",
+            "ja": "device/facestation_f2/FaceStation F2_UG_1.14_JA_260922.pdf"
         },
         "release_notes": {
             "ko": "device/facestation_f2/FaceStation F2_ReleaseNotes_2.3.0_KO_260819.pdf",
@@ -577,7 +577,7 @@
             "ko": "device/facestation_f2/FaceStation F2_DrillingTemplate_KO.pdf",
             "en": "device/facestation_f2/FaceStation F2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-05-20"
+        "release_date": "2026-08-24"
     },
     {
         "category": "biometric",
