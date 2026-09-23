@@ -1067,7 +1067,7 @@
   "logs_filter_no_btn": "いいえ",
   "logs_filter_yes_btn": "はい",
   "export_event_log_btn": "イベントログのエクスポート",
-  "export_csv": "CSVをエクスポートしています。..",
+  "export_csv": "CSVをエクスポートしています...",
   "export_event_log_success": "イベントログのエクスポートに成功",
   "event_logs_export_no_records": "指定した二付のイベントログは0件です。",
   "event_logs_file_name": "イベントログ",
