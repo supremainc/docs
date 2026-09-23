@@ -656,6 +656,10 @@ details.deviceInfo summary, details.faq summary {
   width: 100%;
 }
 
+.doc-content img[src*='name-function-each-part-bs2a'] {
+  width: 80% !important;
+}
+
 .doc-content img[src*='component-connection-cables-vionyx'] {
   width: 150px !important;
 }
