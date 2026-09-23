@@ -65,23 +65,23 @@ IPアドレスの変更が完了したら、すべてのサービスを再起動
 
    ![BioStar X Service Manager Server Address](/img/common/biostarx-sm-change-ip-check.png)
 
-* デバイスが <Cmd sid='device.info.deviceToServerConnection' product='2' /> オプションで BioStar X に登録されている場合は、各デバイスで管理者がサーバーのIPアドレスを変更後のIPアドレスに手動で更新する必要があります.
+* デバイスが <Cmd sid='device.info.deviceToServerConnection' product='2' /> オプションで BioStar X に登録されている場合は、各デバイスで管理者がサーバーのIPアドレスを変更後のIPアドレスに手動で更新する必要があります。
 
 :::
 
 ### データベースサーバー設定の変更
 
-データベースを **BioStar X** と同じサーバーに設置して運用している場合は、すべてのサービスを停止してから **BioStar X** の *system.conf* ファイルを編集してください. 外部データベースサーバーを使用している場合は、この手順をスキップしてください.
+データベースを **BioStar X** と同じサーバーに設置して運用している場合は、すべてのサービスを停止してから **BioStar X** の *system.conf* ファイルを編集してください。 外部データベースサーバーを使用している場合は、この手順をスキップしてください。
 
 1. Windowsのサービス(service.msc)で**BioStar X**に関連するすべてのサービスを停止してください。
 
-2. *C:\\Program Files\\BioStar X Server* フォルダーに移動してください.
+2. *C:\\Program Files\\BioStar X Server* フォルダーに移動してください。
 
-3. *system.conf* ファイルをメモ帳などのテキストエディタで開いてください.
+3. *system.conf* ファイルをメモ帳などのテキストエディタで開いてください。
 
-4. `database` に関する項目の `server_ip` 値を変更後のIPアドレスに修正してください.
+4. `database` に関する項目の `server_ip` 値を変更後のIPアドレスに修正してください。
 
-5. *system.conf* ファイルを保存して閉じてください.
+5. *system.conf* ファイルを保存して閉じてください。
 
 6. Windowsのサービス(service.msc)で**BioStar X**に関連するすべてのサービスを再起動してください。
 

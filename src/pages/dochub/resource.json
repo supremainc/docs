@@ -327,10 +327,10 @@
         ],
         "version": "1.2.4",
         "manuals": {
-            "ko": "device/biostation_2a/BioStation 2a_UG_1.03_KO_260616.pdf",
-            "en": "device/biostation_2a/BioStation 2a_UG_1.03_EN_260616.pdf",
-            "es": "device/biostation_2a/BioStation 2a_UG_1.03_ES_260616.pdf",
-            "ja": "device/biostation_2a/BioStation 2a_UG_1.03_JA_260616.pdf"
+            "ko": "device/biostation_2a/BioStation 2a_UG_1.04_KO_260923.pdf",
+            "en": "device/biostation_2a/BioStation 2a_UG_1.04_EN_260923.pdf",
+            "es": "device/biostation_2a/BioStation 2a_UG_1.04_ES_260923.pdf",
+            "ja": "device/biostation_2a/BioStation 2a_UG_1.04_JA_260923.pdf"
         },
         "release_notes": {
             "ko": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.4_KO_260825.pdf",
@@ -341,7 +341,7 @@
             "ko": "device/biostation_2a/BioStation 2a_DrillingTemplate_KO.pdf",
             "en": "device/biostation_2a/BioStation 2a_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-04-17"
+        "release_date": "2026-08-26"
     },
     {
         "category": "biometric",
@@ -351,7 +351,7 @@
             "BS3-DB",
             "BS3-APWB"
         ],
-        "version": "1.5.0",
+        "version": "1.5.1",
         "manuals": {
             "ko": "device/biostation_3/BioStation 3_UG_1.12_KO_260904.pdf",
             "en": "device/biostation_3/BioStation 3_UG_1.12_EN_260904.pdf",
@@ -359,15 +359,15 @@
             "ja": "device/biostation_3/BioStation 3_UG_1.12_JA_260904.pdf"
         },
         "release_notes": {
-            "ko": "device/biostation_3/BioStation 3_ReleaseNotes_1.5.0_KO_260819.pdf",
-            "en": "device/biostation_3/BioStation 3_ReleaseNotes_1.5.0_EN_260819.pdf"
+            "ko": "device/biostation_3/BioStation 3_RN_1.5.1_KO_260922.pdf",
+            "en": "device/biostation_3/BioStation 3_RN_1.5.1_EN_260922.pdf"
         },
         "a_e": "device/biostation_3/SUPREMA_BioStation_3_AE-Specification_260907.docx",
         "dt": {
             "ko": "device/biostation_3/BioStation 3_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3/BioStation 3_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-04-10"
+        "release_date": "2026-09-22"
     },
     {
         "category": "biometric",

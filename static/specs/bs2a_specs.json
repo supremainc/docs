@@ -220,6 +220,50 @@
             "ja": "0 % ~ 90 %（結露なきこと）"
           }
         },
+        "dimensions": {
+          "label": "크기 (W x H x D)",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": {
+                "ko": "142 x 144 x 37.8 (상단) / 45 (하단) (mm)",
+                "en": "142 x 144 x 37.8 (Top) / 45 (Bottom) (mm)",
+                "es": "142 x 144 x 37.8 (Superior) / 45 (Inferior) (mm)",
+                "ja": "142 x 144 x 37.8 (上部) / 45 (下部) (mm)"
+              }
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": "132.1 x 137.9 (mm)"
+            }
+          }
+        },
+        "weight": {
+            "label": "무게",
+            "label_id": "specs.general.weight",
+            "type": "model",
+            "items": {
+               "model1": {
+                  "label": "장치",
+                  "label_id": "specs.general.weight.device",
+                  "value": "429 g"
+               },
+               "model2": {
+                  "label": "브래킷",
+                  "label_id": "specs.general.weight.bracket",
+                  "value": {
+                     "ko": "142 g (와셔 및 볼트 포함)",
+                     "en": "142 g (including washers and bolts)",
+                     "es": "142 g (incluye arandelas y tornillos)",
+                     "ja": "142 g (ワッシャーおよびボルトを含む)"
+                  }
+               }
+            }
+        },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
