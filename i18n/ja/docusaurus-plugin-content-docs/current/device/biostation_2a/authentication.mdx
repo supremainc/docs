@@ -13,7 +13,7 @@ keywords:
 
 ## 認証モード
 
-デバイスの認証モードを設定できます。 <Cmd sid='ui_312' product='dev' />、<Cmd sid='ui_040' product='dev' />、<Cmd sid='ui_322' product='dev' />、<Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして使用でき、各認証モードごとに使用するスケジュールを設定することもできます。
+デバイスの認証モードを設定できます。<Cmd sid='ui_312' product='dev' />、<Cmd sid='ui_040' product='dev' />、<Cmd sid='ui_322' product='dev' />、<Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして使用でき、各認証モードごとに使用するスケジュールを設定することもできます。
 
 ### 指紋認証モード
 
@@ -35,7 +35,7 @@ keywords:
 
 :::info
 
-* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
 
 * <Cmd sid='ui_203' product='dev' /> の設定については、<Linkto to='platform/biostar_x/settings-schedule'>BioStar X 管理者マニュアル</Linkto>をご参照ください。
 
@@ -67,7 +67,7 @@ keywords:
 
 :::info
 
-* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
 
 * <Cmd sid='ui_203' product='dev' /> の設定については、<Linkto to='platform/biostar_x/settings-schedule'>BioStar X 管理者マニュアル</Linkto>をご参照ください。
 
@@ -97,7 +97,7 @@ ID を使用する認証方法ごとにスケジュールを設定できます�
 
 :::info
 
-* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
 
 * <Cmd sid='ui_203' product='dev' /> の設定については、<Linkto to='platform/biostar_x/settings-schedule'>BioStar X 管理者マニュアル</Linkto>をご参照ください。
 
@@ -127,7 +127,7 @@ ID を使用する認証方法ごとにスケジュールを設定できます�
 
 ## サーバーマッチング
 
-サーバーマッチングを設定できます。 サーバーマッチングを使用すると、端末でユーザー認証を行わず、BioStar X でユーザー認証を行います。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
+サーバーマッチングを設定できます。サーバーマッチングを使用すると、端末でユーザー認証を行わず、BioStar X でユーザー認証を行います。サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
 
 1. <Image src='/img/common/ico-menu1.svg' ico alone /> を押してから、管理者権限の認証手段で認証してください。
 
@@ -161,28 +161,58 @@ ID を使用する認証方法ごとにスケジュールを設定できます�
 
    * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
 
-   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。 設定した時間内に認証を完了できないと、認証失敗となります。
+   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。設定した時間内に認証を完了できないと、認証失敗となります。
 
    * <Cmd sid='ui_254' product='dev' />：指紋をスキャンしたときに元画像を表示できます。
 
-   * <Cmd sid='ui_197' product='dev' />：指紋センサーの感度を設定できます。 より精密な指紋情報を取得するには、センサー感度を高く設定してください。
+   * <Cmd sid='ui_197' product='dev' />：指紋センサーの感度を設定できます。より精密な指紋情報を取得するには、センサー感度を高く設定してください。
 
-   * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。 偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
+   * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
 
    * <Cmd sid='ui_003' product='dev' />：指紋認証速度を設定できます。 <Cmd sid='ui_275' product='dev' /> を選択すると、端末に登録されている指紋テンプレートの総数に応じて認証パフォーマンスが設定されます。
 
    * <Cmd sid='ui_342' product='dev' />：指紋テンプレート形式を設定できます。 <Cmd sid='ui_057' product='dev' /> が既定で設定されており、テンプレート形式を変更すると以前に保存されたすべての指紋が使用できなくなるため、変更する際は注意してください。
 
-     :::info
+      :::info
 
-     ユーザー指紋情報をすべて削除してからテンプレート形式を変更します。 ユーザー指紋情報が登録されている場合は、テンプレート形式を変更できません。 
+      ユーザー指紋情報をすべて削除してからテンプレート形式を変更します。ユーザー指紋情報が登録されている場合は、テンプレート形式を変更できません。 
 
-     :::
+      :::
 
    * <Cmd sid='ui_198' product='dev' />：<Cmd sid='ui_277' product='dev' /> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <Cmd sid='ui_362' product='dev' /> に設定すると、指紋をスキャンしていないときでもセンサーが常にオンになります。
 
-   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。 有効にすると、指紋の品質が低い場合にユーザーに通知して、指紋を正しくスキャンするのを支援します。
+   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。有効にすると、指紋の品質が低い場合にユーザーに通知して、指紋を正しくスキャンするのを支援します。
 
    * <Cmd sid='ui_118' product='dev' />：指紋登録時に重複指紋かどうかを検査できます。
+
+4. 設定を保存するには **OK** を押してください。
+
+## 認証結果表示オプション
+
+認証結果表示オプションを設定できます。
+
+1. <Image src='/img/common/ico-menu1.svg' ico alone /> を押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_259' product='dev' /> を選択してから **OK** を押してください。
+
+   <Image src='/img/device/bs2a-auth-result-display-option.png' />
+
+3. 希望の項目を選択し、<IcFw />/<IcBw /> ボタンを押して設定を変更します。
+
+   * <Cmd sid='ui_169' product='dev' />：デバイスの認証結果画面でユーザー ID の表示方法を選択できます。
+
+      * <Cmd sid='ui_307' product='dev' />：ユーザー ID をすべて表示します。
+
+      * <Cmd sid='ui_316' product='dev' />：ユーザー ID の先頭文字のみ表示します。
+
+      * <Cmd sid='ui_357' product='dev' />：ユーザー ID を表示しません。
+
+   * <Cmd sid='ui_177' product='dev' />：デバイスの認証結果画面でユーザー名の表示方法を選択できます。
+
+      * <Cmd sid='ui_307' product='dev' />：ユーザー名をすべて表示します。
+
+      * <Cmd sid='ui_316' product='dev' />：ユーザー名の先頭文字のみ表示します。
+
+      * <Cmd sid='ui_357' product='dev' />：ユーザー名を表示しません。
 
 4. 設定を保存するには **OK** を押してください。
