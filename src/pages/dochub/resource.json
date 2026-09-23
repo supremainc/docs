@@ -328,10 +328,10 @@
         ],
         "version": "1.2.4",
         "manuals": {
-            "ko": "device/biostation_2a/BioStation 2a_UG_1.03_KO_260616.pdf",
-            "en": "device/biostation_2a/BioStation 2a_UG_1.03_EN_260616.pdf",
-            "es": "device/biostation_2a/BioStation 2a_UG_1.03_ES_260616.pdf",
-            "ja": "device/biostation_2a/BioStation 2a_UG_1.03_JA_260616.pdf"
+            "ko": "device/biostation_2a/BioStation 2a_UG_1.04_KO_260923.pdf",
+            "en": "device/biostation_2a/BioStation 2a_UG_1.04_EN_260923.pdf",
+            "es": "device/biostation_2a/BioStation 2a_UG_1.04_ES_260923.pdf",
+            "ja": "device/biostation_2a/BioStation 2a_UG_1.04_JA_260923.pdf"
         },
         "release_notes": {
             "ko": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.4_KO_260825.pdf",
@@ -342,7 +342,7 @@
             "ko": "device/biostation_2a/BioStation 2a_DrillingTemplate_KO.pdf",
             "en": "device/biostation_2a/BioStation 2a_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-04-17"
+        "release_date": "2026-08-26"
     },
     {
         "category": "biometric",
