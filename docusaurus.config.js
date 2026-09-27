@@ -237,6 +237,9 @@ const config = {
             '/common/**',
             '/_unused/**',
             '/products/**',
+            '/en/products/**',
+            '/es/products/**',
+            '/ja/products/**',
             '/bsx-license-calculator/**',
           ],
           autoSectionDepth: 2
