@@ -1,0 +1,214 @@
+---
+id: settings-system-audit-trail-ac
+title: Ver Registros de Auditoría de Control de Acceso
+description: Esta sección explica cómo revisar y filtrar todas las actividades de control de acceso, como crear, actualizar, eliminar y ver registros.
+---
+
+La característica <Cmd sid='setting.menu.auditTrail.acAuditLog' /> registra la actividad de control de acceso para usuarios, dispositivos y puertas: crear, actualizar, eliminar, ver, exportar, importar y operaciones. Cada registro muestra cuándo ocurrió, quién hizo el cambio, qué cambió y cómo, para respaldar auditorías y la resolución de problemas.
+
+* **Auditoría de seguridad**: Detectar intentos de acceso no autorizado o abuso de privilegios.
+
+* **Solución de problemas**: Supervisar cuándo ocurren errores del sistema y revisar cambios de ajustes.
+
+* **Cumplimiento**: Conservar registros de acceso, incluido el historial de acceso a datos personales, y crear informes de auditoría.
+
+## Consultar registros de auditoría de control de acceso
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' /> en la barra lateral izquierda.
+
+3. La lista de registros de auditoría aparece en la pantalla.
+
+<Image src='/img/biostarx-settings-system-audit-trail.png' />
+
+:::info
+
+* Para cambiar las políticas del registro de auditoría, como el período de retención, consulta <DocLink docId='platform/biostar_x/settings-system-audit-trail-settings' />.
+
+* Después de actualizar a la versión 1.0.3, el sistema cifra los nuevos registros de auditoría, independientemente de la opción <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' />.
+
+* Si el sistema no registra ciertos registros de auditoría después de la actualización de BioStar 2 a **BioStar X**, consulte <DocLink docId='platform/biostar_x/migration-x#checkCert' />.
+
+:::
+
+## Diseño de la tabla {/* #audit-trail-columns */}
+
+La tabla de la lista de registros de auditoría tiene 10 columnas y muestra los registros en orden descendente por <Cmd sid='audit.column.datetime' />.
+
+| Columna | Descripción |
+| --- | --- |
+| <Cmd sid='audit.column.datetime' /> | Fecha y hora en que ocurrió el evento. |
+| <Cmd sid='audit.column.user' /> | Usuario que realizó el evento. Aparece en el formato **id(nombre)**. |
+| <Cmd sid='audit.column.accountLevel' /> | El nivel de administrador del usuario que realizó el evento. |
+| <Cmd sid='audit.column.action' /> | El tipo de acción ejecutada. Se clasifica como <Cmd sid='action.create' />, <Cmd sid='action.update' />, <Cmd sid='action.delete' />, <Cmd sid='action.read' />, <Cmd sid='action.export' />, <Cmd sid='action.import' /> o <Cmd sid='action.operation' />. |
+| <Cmd sid='audit.column.category' /> | La categoría de dominio del objetivo del evento (por ejemplo, usuarios, dispositivos y puertas). |
+| <Cmd sid='audit.column.target' /> | Destino al que se aplica la acción. Aparece en el formato **type: id(name)**. |
+| <Cmd sid='audit.column.subAction' /> | Aparece solo cuando hay un nombre de acción detallado, como el método de inicio de sesión o el desarmado de alarma. |
+| <Cmd sid='audit.column.modifiedFields' /> | Nombre del campo que cambió o se consultó. |
+| <Cmd sid='audit.column.details' /> | Información detallada de cada acción. (p. ej., valores cambiados, motivos y criterios de búsqueda) |
+| <Cmd sid='audit.column.ip' /> | Dirección IP desde la cual el usuario accedió. El sistema muestra los registros emitidos automáticamente como **127.0.0.1**. |
+
+:::info
+
+* Si el valor de <Cmd sid='audit.column.target' /> o <Cmd sid='audit.column.modifiedFields' /> tiene 2 entradas o más, solo se muestra la primera y el resto se contrae en una insignia con el conteo restante a la derecha (p. ej., **+208**). Si el conteo restante es de 1,000 o más, la insignia muestra **+999**. Revise el conteo total exacto en el título de la ventana emergente de detalles. Haga clic en la insignia para abrir la ventana emergente de detalles de esa celda.
+
+  <Image src='/img/biostarx-settings-system-audit-trail-list-badge.png' />
+
+* Los valores largos de las celdas se truncan a una línea con puntos suspensivos. Pase el cursor sobre el valor para ver el texto completo en la información sobre herramientas. La información sobre herramientas trunca el texto excedente como `...`.
+
+  <Image src='/img/biostarx-settings-system-audit-trail-list-tooltip.png' />
+
+:::
+
+## Ver detalles
+
+Las columnas <Cmd sid='audit.column.target' />, <Cmd sid='audit.column.modifiedFields' /> y <Cmd sid='audit.column.details' /> aparecen subrayadas y permiten hacer clic cuando tienen valores. Haga clic en un valor de la columna para abrir la ventana emergente de detalles específica de la acción. Para cerrar la ventana emergente, haga clic en <Cmd sid='audit.filter.ok' /> o <IcClose title='Close' />.
+
+<Image src='/img/biostarx-settings-system-audit-trail-change-detail.png' />
+
+Escriba una palabra clave en el campo <Cmd sid='audit.detail.searchPlaceholder' /> en la parte superior de la ventana emergente para resaltar o filtrar las entradas coincidentes. Al buscar, la ventana emergente de destino actualiza los grupos y el recuento por grupo. El total del título no cambia.
+
+## Buscar registros con filtros
+
+Combine los filtros en la sección <Cmd sid='audit.filter.title' /> para acotar y encontrar los registros que necesita. Seleccione varios valores en un filtro para combinarlos con `OR`. Aplique varios filtros a la vez para combinarlos con `AND`.
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-filter.png' />
+
+| Filtrar | Cómo funciona |
+| --- | --- |
+| <Cmd sid='audit.filter.datetime' /> | Establezca las fechas y horas de inicio y fin. No se aplica un límite de duración al período de búsqueda. |
+| <Cmd sid='audit.filter.user' /> | Escriba un término de búsqueda y presione <Kbd>Enter</Kbd> para encontrar usuarios coincidentes. La lista está vacía cuando la abre por primera vez. |
+| <Cmd sid='audit.filter.accountLevel' /> | Escriba un término de búsqueda y presione <Kbd>Enter</Kbd> para encontrar niveles de administrador coincidentes. |
+| <Cmd sid='audit.filter.category' /> | Seleccione una o más categorías de la lista de casillas de verificación con búsqueda. |
+| <Cmd sid='audit.filter.target' /> | Escriba un término de búsqueda y presione <Kbd>Enter</Kbd> para encontrar objetivos coincidentes. |
+| <Cmd sid='audit.filter.action' /> | Seleccione una o más acciones de la lista de casillas de verificación. |
+| <Cmd sid='audit.filter.subAction' /> | Seleccione una acción detallada de la lista con búsqueda. |
+| <Cmd sid='audit.filter.ip' /> | Escriba un término de búsqueda y luego presione <Kbd>Enter</Kbd> para encontrar direcciones IP coincidentes. |
+
+* Si no aplica filtros, aparecen de forma predeterminada los registros de los últimos 30 días.
+
+* Seleccione un valor en cada ventana emergente de filtro y luego haga clic en <Cmd sid='audit.filter.addCondition' /> para aplicarlo a la búsqueda de inmediato. Haga clic en <Cmd sid='audit.filter.cancel' /> para cancelar la selección y cerrar la ventana emergente.
+
+  <Image src='/img/biostarx-settings-system-audit-trail-set-filter-popup.png' />
+
+* Los filtros aplicados aparecen como el primer filtro y la cantidad de filtros adicionales. Haga clic en <IcClose title='Disable' /> para desactivar solo ese filtro. Los filtros sin un valor seleccionado aparecen como <Cmd sid='audit.filter.none' />.
+
+  <Image src='/img/biostarx-settings-system-audit-trail-seted-filters.png' />
+
+:::info
+
+Escriba un término de búsqueda para ver resultados de los filtros <Cmd sid='audit.filter.user' />, <Cmd sid='audit.filter.accountLevel' />, <Cmd sid='audit.filter.target' /> y <Cmd sid='audit.filter.ip' />. La búsqueda admite coincidencias parciales; escriba parte de un nombre o ID. La búsqueda incluye destinos eliminados y los marca como <Cmd sid='audit.detail.target.deleted' />.
+
+:::
+
+### Configurar período de consulta
+
+Haga clic en <Cmd sid='audit.filter.datetime' /> para abrir la ventana <Cmd sid='audit.filter.dateRangeTitle' />.
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-period.png' />
+
+1. Configure la fecha y la hora de <Cmd sid='audit.filter.startDatetime' /> y <Cmd sid='audit.filter.endDatetime' />. Haga clic en <Cmd sid='audit.filter.today' /> para ir a hoy.
+
+2. Haga clic en <Cmd sid='audit.filter.ok' /> para aplicar el período de consulta.
+
+## Guardar filtro
+
+Guarde las condiciones de búsqueda de uso frecuente en <Cmd sid='audit.filter.savedFilters' /> y cárguelas cuando sea necesario.
+
+1. Configure los filtros para que coincidan con las condiciones requeridas.
+
+2. Haga clic en <Cmd sid='audit.filter.save' /> en la sección <Cmd sid='audit.filter.title' />.
+
+3. El sistema agrega <Cmd sid='audit.filter.newFilterName' /> a la lista de filtros de la izquierda.
+
+<Image src='/img/biostarx-settings-system-audit-trail-add-filter.png' />
+
+* Haga clic en <IcAuditEdit title='Edit' />, escriba un nombre nuevo y presione <Kbd>Enter</Kbd> para cambiar el nombre del filtro.
+
+* Haga clic en <IcAuditDelete title='Delete' /> para eliminar el filtro.
+
+:::info
+
+El sistema permite guardar hasta 20 filtros. El navegador almacena los filtros guardados, por lo que no aparecen en otras PC ni en otros navegadores.
+
+:::
+
+## Navegación de páginas
+
+Desplácese entre páginas o establezca la cantidad de elementos que aparecerán en cada página.
+
+* <IcFirst />: Ir a la primera página.
+
+* <IcFw />: Ir a la página anterior.
+
+* <IcBw />: Ir a la página siguiente.
+
+* <IcLast />: Ir a la última página.
+
+* <Image src='/img/ico-audit-trail-rows-page.png' ico />: Seleccione la cantidad de filas por página.
+
+## Configurar columnas
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/biostarx-settings-system-audit-trail-column-setting.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+Cambie la posición de las columnas u oculte columnas en la tabla del registro de auditoría. En el lado derecho de la sección <Cmd sid='audit.filter.title' />, haga clic en <IcMoreW /> → <Cmd sid='audit.filter.menuColumnSetting' />.
+
+* En <Cmd sid='audit.columnSettings.listHeading' />, desmarque la casilla de la columna para ocultarla.
+
+* Arrastre una columna para cambiar el orden de las columnas.
+
+* Haga clic en <Cmd sid='audit.columnSettings.defaultColumn' /> para inicializar la configuración de columnas.
+
+Haga clic en <Cmd sid='common.apply' /> para guardar la configuración.
+
+</Column>
+</Columns>
+
+## Exportar a CSV
+
+Exporte los registros de auditoría a un archivo CSV para utilizarlo con herramientas de análisis externas.
+
+1. En la sección <Cmd sid='audit.filter.title' />, configure filtros si es necesario.
+
+2. Haga clic en <IcMoreW /> → <Cmd sid='audit.filter.menuCsvExport' /> en el lado derecho de la sección.
+
+3. Cuando aparezca la ventana <Cmd sid='audit.csvExport.title' />, ingresa <Cmd sid='audit.csvExport.reasonLabel' /> (opcional) y haz clic en <Cmd sid='common.apply' />.
+
+   <Image src='/img/biostarx-settings-system-audit-trail-export-csv.png' />
+
+El CSV exportado incluye 10 columnas, una fila por registro, y pone entre comillas todos los valores. Los valores con varios destinos usan una barra vertical (`|`) (p. ej., **User: 7(Kim)|User: 8(Lee)**). El valor <Cmd sid='audit.column.details' /> incluye todos los destinos y campos sin truncar.
+
+:::caution
+
+El archivo CSV incluye los valores tal cual, incluidos los que una hoja de cálculo puede interpretar como fórmulas. No abra el archivo CSV descargado directamente en una hoja de cálculo. Si es necesario, ábralo con la característica de importación de texto.
+
+:::
+
+:::tip
+
+Si configura filtros, la exportación incluye solo los resultados filtrados en el archivo CSV.
+
+:::
+
+## Revisar registros de BioStar 2
+
+La misma tabla también muestra registros de versiones anteriores (BioStar 2). Los registros de BioStar 2 aparecen de la siguiente manera.
+
+* <Cmd sid='audit.column.user' /> y <Cmd sid='audit.column.target' /> mantienen el formato original **name(id)** (incluidas las variaciones de espacios).
+
+* <Cmd sid='audit.column.modifiedFields' /> siempre muestra un guion (`-`).
+
+* también puede buscar registros de BioStar 2 con los filtros proporcionados, y <Cmd sid='audit.filter.user' /> y <Cmd sid='audit.filter.target' /> coinciden con el nombre y el ID.
+
+:::info
+
+Los registros heredados pueden incluir criterios de búsqueda no compatibles. Cuando cargas un filtro guardado, aparece un aviso si se excluyen ciertos criterios.
+
+:::

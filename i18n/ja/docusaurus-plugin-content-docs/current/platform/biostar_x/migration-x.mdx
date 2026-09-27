@@ -6,7 +6,7 @@ keywords:
   - アップグレード
 ---
 
-本ドキュメントでは、BioStar 2 を **BioStar X** にアップグレードする手順を段階的に案内します。 アップグレードを開始する前に、システム要件と注意事項を確認してください。
+本ドキュメントでは、BioStar 2 を **BioStar X** にアップグレードする手順を段階的に案内します。アップグレードを開始する前に、システム要件と注意事項を確認してください。
 
 ## 開始前 {/* #start-before */}
 
@@ -46,6 +46,26 @@ BioStar 2 から **BioStar X** へアップグレードする前に、次の事�
 
 :::
 
+:::warning 
+
+### 証明書の確認 {/* #checkCert */}
+
+BioStar 2 から BioStar X にアップグレードすると、`nginx\conf` パスと `nginx\cert` パスにある `biostar_cert.crt` ファイルが異なる場合があります。この状態でアップグレードすると、次の問題が発生します。
+
+* 監査ログの一部が記録されません。
+
+* ユーザーグループの作成、Wiegand の追加、ツリーの更新に失敗します。
+
+BioStar X にアップグレードする前に証明書ファイルを一致させるには、次の手順に従ってください。
+
+1. BioStar 2 サービスを停止してください。
+
+2. `nginx\conf` パスの `biostar_cert.crt`、`biostar_cert.key` ファイルを `nginx\cert` パスに上書きしてください。
+
+3. BioStar 2 サービスを再起動してください。
+
+:::
+
 ## アップグレードインストール案内 {/* #upgrade-install */}
 
 1. [Suprema ダウンロードセンター](https://download.supremainc.com/) にアクセスしてログイン後、インストールパッケージ (*BioStar X Setup.X.Y.Z.BB.exe*) をダウンロードしてください。
@@ -56,7 +76,7 @@ BioStar 2 から **BioStar X** へアップグレードする前に、次の事�
 
    <Image src='/img/biostarx-install-select-language.png' />
 
-4. BioStar 2 から **BioStar X** に移行するというライセンスポリシーに同意してください。 チェックボックスをクリックし、<Cmd code='biostar2.install.next' className='bold'/> ボタンを選択してください。
+4. BioStar 2 から **BioStar X** に移行するというライセンスポリシーに同意してください。チェックボックスをクリックし、<Cmd code='biostar2.install.next' className='bold'/> ボタンを選択してください。
 
    <Image src='/img/biostarx-install-2-to-x-agree.png' />
 

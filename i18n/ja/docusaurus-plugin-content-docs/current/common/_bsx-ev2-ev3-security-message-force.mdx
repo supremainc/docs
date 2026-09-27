@@ -1,0 +1,29 @@
+* <Cmd sid='device.card.secureMessaging.enforce' product='2' />: このオプションを<Cmd sid='common.on' product='2' />に設定すると、認証はEV2セキュアメッセージングに対応するカード（DESFire EV2/EV3）に限られます。デバイスは、EV2セキュアメッセージングに対応しないDESFire EV1カードの認証を拒否します。
+
+  <Include type={props.type} ref='suprema'>
+
+  このオプションは、<Cmd sid='device.card.desfire_ev1' product='2' />を選択し、選択した<Cmd sid='device.card.supremaSmartCard' product='2' />の<Cmd sid='setting.cardFormat.encryptionType' product='2' />が<Cmd>AES</Cmd>の場合に有効になります。<Cmd sid='common.supremaSmartCard' product='2' />を使用しない場合、このオプションは<Cmd sid='common.off' product='2' />状態で表示されます。
+
+  <Image src='/img/biostarx-setting-device-detail-card-smart-security-force.png' className='none' />
+
+  </Include>
+
+  <Include type={props.type} ref='custom'>
+
+  このオプションは、<Cmd sid='device.card.desfire_ev1' product='2' />を選択し、選択した<Cmd sid='device.card.customSmartCard' product='2' />の<Cmd sid='setting.cardFormat.encryptionType' product='2' />が<Cmd>AES</Cmd>の場合に有効になります。<Cmd sid='common.customSmartCard' product='2' />を使用しない場合、このオプションは<Cmd sid='common.off' product='2' />状態で表示されます。
+
+  <Image src='/img/biostarx-setting-device-detail-card-custom-security-force.png' className='none' />
+
+  </Include>
+
+  :::note
+
+  * <Cmd sid='common.supremaSmartCard' product='2' />と<Cmd sid='common.customSmartCard' product='2' />は設定値を共有しています。どちらか一方でも使用中の場合、どちらかの値を変更すると確認メッセージが表示されます。メッセージウィンドウで <Cmd sid='button.ok' product='2' /> ボタンをクリックすると、二つのオプションが同時に変更されます。片方でスマートカードを使用していない場合、確認メッセージなしで値を変更できます。
+
+  * セキュアメッセージングは、DESFire EV2およびEV3カードでのみ使用できます。使用するには、DESFireを有効にし、カードレイアウトの暗号化の種類をAESに設定してください。
+
+  * デバイスがEV2セキュアメッセージング機能をサポートしない場合、<Cmd sid='device.card.secureMessaging.enforce' product='2' />オプションは表示されません。
+
+  * 複数のデバイスを選択し、<Cmd sid='device.batchEdit' product='2' />でこのオプションを設定することもできます。一括編集では、EV2セキュアメッセージングに対応しないデバイスを自動的に除外します。
+
+  :::

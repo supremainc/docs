@@ -1,0 +1,143 @@
+---
+id: remove-server
+title: Desinstalar El Servidor BioStar X Y Restaurar Certificados De Seguridad
+description: Esta guía explica cómo desinstalar el servidor BioStar X, respaldar los certificados de seguridad y restaurarlos después de reinstalarlo.
+---
+
+Esta sección explica cómo desinstalar el servidor **BioStar X** de una computadora. Si <Cmd sid='setting.sever.secure.comm.menu' product='2' /> no se usa, desinstale **BioStar X** sin respaldar ni restaurar certificados.
+
+Si <Cmd sid='setting.sever.secure.comm.menu' product='2' /> se usa, respalde el conjunto de certificados de seguridad del servidor (CA raíz/certificado del servidor/clave) antes de desinstalar **BioStar X**. Este respaldo es la única forma de volver a conectar los dispositivos existentes después de reinstalar el mismo servidor. Para reutilizar solo los certificados de comunicación segura y conservar la base de datos y los ajustes, consulte <DocLink inner='#restoreCertificate' />. Esto difiere de la [característica de restauración del sistema](settings-system-system-restore).
+
+## Desinstalar el servidor BioStar X {/* #uninstallServer */}
+
+:::caution
+
+Desinstalar **BioStar X** elimina todos los archivos de instalación, incluidos los certificados, y también puede eliminar contenido (información de usuarios). Para conservar la base de datos, los ajustes y las claves, respalde el sistema antes de desinstalarlo. Consulte <DocLink docId='platform/biostar_x/settings-system-system-backup' />.
+
+:::
+
+1. En Windows, vaya a **Configuración** → **Aplicaciones** → **Aplicaciones instaladas**.
+
+2. Busque **BioStar X** en la lista, haga clic en <IcMoreB title='More' /> y seleccione **Desinstalar**.
+
+   <Image src='/img/biostarx-uninstall-apps-list.png' />
+
+3. Si <Cmd sid='setting.sever.secure.comm.menu' product='2' /> se usa, aparece el cuadro de diálogo de respaldo de certificados. Haga clic en **Ubicación...** y defina la ruta de respaldo. Si esta opción no se usa, continúe con el paso 7 sin el procedimiento de respaldo de certificados.
+
+   <Image src='/img/biostarx-uninstall-cert-backup.png' />
+
+   :::caution
+
+   No use la ruta de instalación de **BioStar X** como ubicación de respaldo. Desinstalar **BioStar X** lo elimina junto con la carpeta de instalación de **BioStar X**. Seleccione una ruta distinta de la ruta de instalación de **BioStar X**.
+
+   :::
+
+4. Después de seleccionar una ruta, haga clic en **Respaldar y desinstalar** cuando se active.
+
+   <Image src='/img/biostarx-uninstall-cert-backup-path.png' />
+
+5. Si ya existe un archivo de respaldo de certificados en la ubicación seleccionada, un cuadro de diálogo pregunta si debe sobrescribirlo. Para sobrescribir el respaldo existente, haga clic en **Sí**. Para seleccionar otra ruta, haga clic en **No**.
+
+   <Image src='/img/biostarx-uninstall-cert-backup-overwrite.png' />
+
+6. Cuando finalice el respaldo de certificados, aparece un cuadro de diálogo informativo. Haga clic en **OK** para guardar los ajustes.
+
+   <Image src='/img/biostarx-uninstall-cert-backup-success.png' />
+
+7. Cuando se le solicite confirmar la desinstalación de **BioStar X** y todos los componentes relacionados, haga clic en **Sí**.
+
+   <Image src='/img/biostarx-uninstall-confirm.png' />
+
+8. Espere mientras se completa la desinstalación.
+
+   <Image src='/img/biostarx-uninstall-progress.png' />
+
+9. Aparece un cuadro de diálogo para confirmar si debe eliminar todo el contenido (información del usuario). Para eliminar todos los datos, incluida la información del usuario almacenada en la base de datos, haga clic en **Sí**. Para conservar los datos, haga clic en **No**.
+
+   <Image src='/img/biostarx-uninstall-delete-content.png' />
+
+   :::caution
+
+   Haga clic en **Sí** para eliminar todos los datos, incluida la información del usuario almacenada en la base de datos. No es posible recuperar los datos. Para conservar los datos, haga clic en **No**. Antes de quitar **BioStar X**, haga una copia de seguridad del sistema. Consulte <DocLink docId='platform/biostar_x/settings-system-system-backup' />.
+
+   :::
+
+10. Si **USB Device Agent** está instalado, aparece un cuadro de diálogo que pregunta si también debe quitarlo. Haga clic en **Sí**.
+
+    <Image src='/img/biostarx-uninstall-usb-agent-confirm.png' />
+
+    :::note
+
+    Según los componentes en uso, pueden aparecer cuadros de diálogo adicionales para desinstalar controladores relacionados. Siga las instrucciones en pantalla para completar la desinstalación.
+
+    :::
+
+11. Cuando finalice la eliminación de componentes, aparece un cuadro de diálogo. Haga clic en **OK** para guardar los ajustes.
+
+    <Image src='/img/biostarx-uninstall-usb-agent-success.png' />
+
+12. Después de que el sistema elimine **BioStar X**, aparece un cuadro de diálogo. Haga clic en **OK** para guardar los ajustes.
+
+    <Image src='/img/biostarx-uninstall-success.png' />
+
+## Restaurar certificados de seguridad respaldados {/* #restoreCertificate */}
+
+Después de reinstalar el servidor que usó la opción <Cmd sid='setting.sever.secure.comm.menu' product='2' />, restaure el certificado de comunicación segura. Esto permite reconectar los dispositivos existentes. La [herramienta de restauración del sistema](settings-system-system-restore) restaura todo el sistema, incluida la base de datos y los ajustes, a un estado anterior. Use este método para reutilizar solo el certificado de comunicación segura sin una restauración del sistema. Sin una herramienta dedicada, restaure los archivos de certificados respaldados directamente en la ruta de instalación.
+
+:::info
+
+En un entorno con un servidor principal y un Multi Communication Server, cada servidor usa su propio certificado de comunicación segura. Después de restaurar el certificado, instale y agregue el Multi Communication Server. El sistema copia su certificado automáticamente, por lo que no necesita una restauración aparte.
+
+:::
+
+1. Instale **BioStar X** de nuevo. Para obtener instrucciones de instalación, consulte <DocLink docId='platform/biostar_x/express-install' /> o <DocLink docId='platform/biostar_x/custom-install' />.
+
+2. Después de instalar **BioStar X**, haga clic en <Start/> → **BioStar X** → **BioStar X Service Manager** en Windows.
+
+3. Cuando aparezca la ventana **BioStar X Service Manager** en el navegador web, haga clic en el menú <Cmd>SERVICES</Cmd>.
+
+4. Para detener todos los servicios, haga clic en <Cmd>Detener todo</Cmd> en la esquina superior derecha de la pantalla.
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
+
+5. Copie todos los archivos de certificado respaldados (CA raíz, certificado del servidor y clave) en la carpeta *cert* en la ruta de instalación de **BioStar X**.
+
+   > Ejemplo: *C:\\Program Files\\BioStar X\\cert*
+
+   :::note
+
+   Los nombres de archivo coinciden con los certificados creados durante la nueva instalación. Cuando aparezca un aviso para sobrescribir archivos, haga clic en **Sí** para reemplazar los archivos existentes.
+
+   :::
+
+6. En <Cmd>SERVICIOS</Cmd>, haga clic en <Cmd>Iniciar todo</Cmd> para reiniciar todos los servicios.
+
+7. Si usa el Servidor de comunicaciones múltiples, instálelo en un entorno independiente. Para ver las instrucciones de instalación, consulte <DocLink docId='platform/biostar_x/install-communication-server' />.
+
+8. En **BioStar X Service Manager** del servidor principal, agregue el Servidor de comunicaciones múltiples. Para obtener instrucciones sobre cómo agregar el Servidor de comunicaciones múltiples, consulte <DocLink docId='platform/biostar_x/install-communication-server#check-after-install' />.
+
+Cuando agrega el Servidor de comunicaciones múltiples, el sistema copia los archivos del certificado de seguridad desde la carpeta *cert* del servidor principal. Los copia automáticamente en el Servidor de comunicaciones múltiples.
+
+:::caution
+
+Si agregó el Servidor de comunicaciones múltiples antes de restaurar el certificado (pasos 4\~6), ya tiene el certificado anterior. En ese caso, reemplace el certificado del Servidor de comunicaciones múltiples por separado. Siga el procedimiento a continuación.
+
+1. En el servidor donde está instalado el Servidor de comunicaciones múltiples, ejecute **BioStar X Service Manager** y detenga todos los servicios.
+
+2. Copie los archivos de certificado respaldados en la carpeta *cert* en la ruta de instalación del Servidor de comunicaciones múltiples.
+
+   > Ejemplo: *C:\\Program Files\\BioStar X Communications Server\\cert*
+
+3. En el servidor principal y en el Servidor de comunicaciones múltiples, reinicie todos los servicios en **BioStar X Service Manager**.
+
+:::
+
+:::info
+
+* Para obtener más información sobre el uso de **BioStar X Service Manager**, consulte <DocLink docId='platform/biostar_x/manage-server' />.
+
+* Para más información sobre la opción <Cmd sid='setting.sever.secure.comm.menu' product='2' />, consulta <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />.
+
+* Necesita una licencia del servidor de comunicaciones múltiples para instalarlo y conectarlo. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+
+:::

@@ -17,7 +17,7 @@ Esta sección ofrece orientación para configurar elementos en los ajustes de <C
 
 :::
 
-## Agregar Master Administrator {/* #master-administrator */}
+## Agregar administrador maestro <Badge only>productos CE</Badge> {/* #master-administrator */}
 
 La función <Cmd sid='device.masterAdmin.title' product='2' /> mejora los permisos de administrador global del dispositivo para aumentar la seguridad y evitar el acceso y los cambios de ajustes no autorizados. Un dispositivo nuevo debe registrar un Master Administrator mediante esta función, y solo el Master Administrator registrado puede acceder al menú de administrador y cambiar ajustes.
 
@@ -38,13 +38,19 @@ Las credenciales que se pueden enrolar como <Cmd sid='device.masterAdmin.title' 
 
 * Para eliminar la credencial enrolada, haga clic en el botón <IcTrash2 /> a la derecha de esa credencial.
 
+:::caution
+
+Esta característica está disponible solo en **productos CE** que admiten una interfaz de usuario LCD. Para obtener más información sobre los dispositivos compatibles y las versiones de firmware, consulte <DocLink docId='how-to/master-admin' />.
+
+:::
+
 :::note
 
 **Condiciones de enrolamiento**
 
 * Debe enrolar al menos dos tipos de credenciales.
 
-* Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
+* Estas mismas condiciones se aplican a todos los dispositivos con firmware actualizado que admiten administradores maestros.
 
 * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
 
@@ -56,15 +62,15 @@ Las credenciales que se pueden enrolar como <Cmd sid='device.masterAdmin.title' 
 
 * Los dispositivos existentes que han tenido su firmware actualizado no muestran el menú <Cmd sid='device.masterAdmin.title' product='2' /> en la configuración del dispositivo de BioStar X.
 
-* Los dispositivos existentes que se hayan actualizado no ofrecen los ajustes de <Cmd sid='device.masterAdmin.title' product='2' />; sin embargo, mejore los permisos de administrador global para aumentar la seguridad del dispositivo mediante la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />. Para obtener más información sobre cómo configurar <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />, consulte <DocLink inner='#two-step-authentication' />.
+* Ciertos dispositivos no incluyen el ajuste <Cmd sid='device.masterAdmin.title' product='2' /> (por ejemplo, dispositivos con firmware actualizado). Use la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> para mejorar los permisos de administrador. Según el dispositivo, la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> puede no aparecer.
 
-* Para obtener más información sobre los dispositivos y las versiones de firmware que admiten esta función, consulte <DocLink docId='how-to/master-admin' />.
+* El dispositivo almacena las credenciales del administrador maestro por separado y las gestiona independientemente de los PIN de usuario. Cambiar o eliminar un PIN de usuario no afecta las credenciales del administrador maestro.
 
 :::
 
 ## Configuración de autenticación en dos pasos {/* #two-step-authentication */}
 
-Los dispositivos existentes que se hayan actualizado no ofrecen los ajustes de <Cmd sid='device.masterAdmin.title' product='2' />; sin embargo, mejore los permisos de administrador global para aumentar la seguridad del dispositivo mediante la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />.
+Después de actualizar el firmware en un dispositivo global que no admite <Cmd sid='device.masterAdmin.title' product='2' />, habilite la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' />. Esto otorga permisos completos de administrador y mejora la seguridad.
 
 <Image src='/img/biostarx-setting-device-adv-two-step.png' />
 
@@ -72,9 +78,11 @@ Si configura la opción <Cmd sid='device.masterAdmin.twoStepAuth.title' product=
 
 :::info
 
-Si no hay dos tipos de credenciales enroladas para todos los administradores, la activación falla y se muestra un mensaje de error. Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
+* Si los administradores tienen menos de 2 tipos de credenciales enroladas, la activación falla y aparece un mensaje de error. Enrole 2 o más tipos de credenciales para todos los administradores e inténtelo nuevamente.
 
-<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+  <Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+* Según el dispositivo, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> puede no aparecer, pero el ajuste habilitado previamente permanece activo. BioStar X no permite desactivar este ajuste. Póngase en contacto con <Support />.
 
 :::
 
@@ -98,7 +106,7 @@ En el grupo <Cmd sid='device.info.administrator' product='2' />, gestione los ad
 
 <Image src='/img/biostarx-setting-device-edit-advanced-administrator.png' />
 
-Para agregar un administrador por nivel de permiso, haga clic en el botón <Cmd sid='button.plusAdd' product='2' />. Cuando aparezca la lista de usuarios, seleccione el usuario deseado. Busque al usuario deseado haciendo clic en el botón <IcSearch /> en la lista de usuarios.
+Para agregar un administrador por nivel de permiso, haga clic en el botón <Cmd sid='button.plusAdd' product='2' />. Cuando aparezca la lista de usuarios, seleccione el usuario deseado. Busque también al usuario deseado haciendo clic en el botón <IcSearch /> en la lista de usuarios.
 
 Consulte los permisos para cada nivel a continuación.
 
@@ -116,7 +124,7 @@ Consulte los permisos para cada nivel a continuación.
 
 * Se pueden agregar hasta 1,000 administradores. La cantidad de administradores que se pueden agregar puede variar según la versión del firmware del dispositivo.
 
-* Para buscar el usuario registrado, haga clic en el botón <IcSearch /> en <Cmd sid='device.info.admin.searchTitle' product='2' />.
+* Para buscar al usuario enrolado, haga clic en el botón <IcSearch /> en <Cmd sid='device.info.admin.searchTitle' product='2' />.
 
 * **Device Settings** permite cambiar ajustes de pantalla y sonido, red, RS-485, etc.
 
@@ -124,7 +132,29 @@ Consulte los permisos para cada nivel a continuación.
 
 * Los administradores establecidos para cada dispositivo no afectan los permisos de **BioStar X**.
 
+* Si un administrador enrolado en un dispositivo con administradores maestros (<Badge only>productos CE</Badge>) tiene un PIN de menos de 8 dígitos. Enrole el PIN de nuevo con al menos 8 dígitos. Para más información sobre cómo enrollar códigos PIN, consulte <DocLink docId='platform/biostar_x/enroll-credential-pin' />.
+
+* Primero, elimine al usuario de los roles de administrador en todos los dispositivos. Luego, cambie el PIN a 4 dígitos para el usuario con permisos de <Cmd sid='device.operatorLevel.configuration' product='2' />.
+
 :::
+
+:::caution
+
+Si el usuario que se asigna como administrador del dispositivo tiene menos de 2 tipos de credenciales enrolladas, aparece un mensaje de error. Enrole 2 o más tipos de credenciales para todos los administradores e inténtelo nuevamente.
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+### Gestionar el enrolamiento de administradores para usuarios eliminados
+
+Si la lista de administradores del dispositivo incluye un usuario eliminado de **BioStar X**, aparece una ventana emergente al guardar los ajustes. Haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+
+<Image src='/img/biostarx-settings-device-deleted-operator-check.png' />
+
+* <Cmd sid='button.yes' product='2' />: Elimine el usuario eliminado de la lista de administradores y guarde los ajustes.
+
+* <Cmd sid='button.no' product='2' />: Cancele el guardado.
 
 ## Gestión de asistencia {/* #attendance-management */}
 
@@ -146,11 +176,11 @@ El grupo <Cmd sid='device.info.tna' product='2' /> permite cambiar los nombres d
 
 * <Cmd sid='device.info.tnaRequired' product='2' />: Configura que se requiera al usuario registrar un evento de asistencia al autenticarse.
 
-  :::note
+   :::note
 
-  Esta opción puede usarse cuando la opción <Cmd sid='device.info.tnaMode' product='2' /> está configurada en <Cmd sid='device.tna.mode.byUser' product='2' />. 
+   Esta opción puede usarse cuando la opción <Cmd sid='device.info.tnaMode' product='2' /> está configurada en <Cmd sid='device.tna.mode.byUser' product='2' />. 
 
-  :::
+   :::
 
 * <Cmd sid='device.info.tnaEvent' product='2' />: Modifique los nombres de los eventos de asistencia o agregue horarios cuando la opción <Cmd sid='device.info.tnaMode' product='2' /> esté configurada en <Cmd sid='device.tna.mode.bySchedule' product='2' />.
 
@@ -167,6 +197,8 @@ El grupo <Cmd sid='device.info.tna' product='2' /> permite cambiar los nombres d
 * Los dispositivos sin pantalla LCD pueden establecer los modos de asistencia en <Cmd sid='device.tna.mode.fixed' product='2' /> y <Cmd sid='device.tna.mode.bySchedule' product='2' /> y pueden registrar eventos de asistencia fijos o eventos de asistencia que cambien según un horario preestablecido. Los dispositivos compatibles son XPass Q2, XPass 2, XPass D2, BioEntry P2 y BioEntry W2.
 
 * Para obtener más información sobre cómo configurar un nuevo horario, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
+
+* Establecer <Cmd sid='device.info.multiFaceAuth.label' product='2' /> en <Cmd sid='common.use' product='2' /> en el dispositivo desactiva la gestión de tiempo y asistencia. Para obtener más información sobre <Cmd sid='device.info.multiFaceAuth.label' product='2' />, consulta <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />.
 
 :::
 
@@ -218,7 +250,7 @@ La opción <Cmd sid='device.info.keypadBackLight' product='2' /> está disponibl
 
   * <Cmd sid='device.display.background.slideShow' product='2' />: Los usuarios pueden mostrar hasta 10 imágenes registradas como presentación de diapositivas en la pantalla de inicio. Haga clic en <Cmd sid='common.add' product='2' /> para registrar una imagen.
 
-  :::note
+   :::note
 
   * Haga clic en <Cmd sid='button.update' product='2' /> para reflejar los cambios en tiempo real en el dispositivo.
 
@@ -226,15 +258,15 @@ La opción <Cmd sid='device.info.keypadBackLight' product='2' /> está disponibl
 
   * Las opciones <Cmd sid='device.display.background.notice' product='2' /> y <Cmd sid='device.display.background.slideShow' product='2' /> son compatibles con el modelo BioStation 2.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.sound' product='2' />: Configure los efectos de sonido que se reproducirán al iniciar, al autenticar correctamente y al fallar la autenticación. Seleccione archivos *\*.wav* de hasta 500 Kb de tamaño. Haga clic en <Cmd sid='button.browse' product='2' />.
 
-  :::note
+   :::note
 
-  Haga clic en <Cmd sid='button.update' product='2' /> para reflejar los cambios en tiempo real en el dispositivo.
+   Haga clic en <Cmd sid='button.update' product='2' /> para reflejar los cambios en tiempo real en el dispositivo.
 
-  :::
+   :::
 
 </details>
 
@@ -258,13 +290,11 @@ La opción <Cmd sid='device.info.keypadBackLight' product='2' /> está disponibl
 
 * <Cmd sid='device.info.serverPrivateMsg' product='2' />: Defina si se utilizará un mensaje privado que se mostrará en pantalla cuando el usuario se autentique.
 
-* <Cmd sid='device.info.useScreenSaver' product='2' />: Reduce el consumo innecesario de energía al disminuir el brillo de la pantalla LCD cuando el dispositivo no está en uso. Si esta función no está habilitada, aunque la opción <Cmd sid='device.info.useScreenSaver' product='2' /> esté habilitada en el dispositivo, los mensajes de autenticación exitosa no se mostrarán.
+   :::note
 
-  :::note
+   Establecer <Cmd sid='device.info.multiFaceAuth.label' product='2' /> en <Cmd sid='common.use' product='2' /> en el dispositivo desactiva esta opción. Para obtener más información sobre <Cmd sid='device.info.multiFaceAuth.label' product='2' />, consulta <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />.
 
-  Esta opción es compatible con BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2 y FaceStation 2.
-
-  :::
+   :::
 
 * <Cmd sid='device.info.useVoice' product='2' />: Utilice la guía por voz en lugar de tonos de notificación.
 
@@ -276,7 +306,7 @@ La opción <Cmd sid='device.info.keypadBackLight' product='2' /> está disponibl
 
   * <Cmd sid='device.display.background.notice' product='2' />: Los administradores pueden mostrar sus entradas en la pantalla de inicio.
 
-  :::note
+   :::note
 
   * Haga clic en <Cmd sid='button.update' product='2' /> para reflejar los cambios en tiempo real en el dispositivo.
 
@@ -284,15 +314,29 @@ La opción <Cmd sid='device.info.keypadBackLight' product='2' /> está disponibl
 
   * Configurar la pantalla de inicio como <Cmd sid='device.display.background.logo' product='2' /> y <Cmd sid='device.display.background.slideShow' product='2' /> permite mostrar hasta 10 imágenes como presentación de diapositivas en la pantalla de inicio. Haga clic en <Cmd sid='common.add' product='2' /> para registrar una imagen.
 
-  :::
+   :::
 
 * <Cmd sid='device.info.sound' product='2' />: Configure los efectos de sonido que se reproducirán al iniciar, al autenticar correctamente y al fallar la autenticación. Seleccione archivos *\*.wav* de hasta 500 Kb de tamaño. Haga clic en <Cmd sid='button.browse' product='2' />.
 
-  :::note
+   :::note
 
-  Haga clic en <Cmd sid='button.update' product='2' /> para reflejar los cambios en tiempo real en el dispositivo.
+   Haga clic en <Cmd sid='button.update' product='2' /> para reflejar los cambios en tiempo real en el dispositivo.
 
-  :::
+   :::
+
+* <Cmd sid='device.info.defaultIdleScreen' product='2' />: Seleccione la pantalla en espera que aparece cuando el dispositivo no está en uso.
+
+  * <Cmd sid='device.idle.video.screenSaver' product='2' />: Muestra el protector de pantalla como pantalla en espera.
+
+  * <Cmd sid='device.info.homeScreen' product='2' />: Muestra la opción seleccionada en <Cmd sid='device.info.homeScreen' product='2' />.
+
+   :::note
+
+  * Esta opción es compatible con BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2 y FaceStation 2.
+
+  * Para obtener más información sobre la opción <Cmd sid='device.info.playVideo' product='2' />, consulte <DocLink inner='#playVideo' />.
+
+   :::
 
 </details>
 
@@ -304,11 +348,111 @@ La opción <Cmd sid='device.info.keypadBackLight' product='2' /> está disponibl
 
 </details>
 
+### Reproducir un video en la pantalla en espera {/* #playVideo */}
+
+:::note
+
+El firmware 1.1.0 o posterior de **BioStation 3 Max** admite el feature de reproducir videos en la pantalla en espera. Prepare el video antes de enviarlo al dispositivo.
+
+:::
+
+#### Agrega un video y transfiérelo al dispositivo
+
+Configura el dispositivo para reproducir contenido específico en la pantalla de inactividad.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+
+3. En la lista de dispositivos, haz clic en **BioStation 3 Max**.
+
+4. Ve a la sección <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.displaySound' product='2' />.
+
+5. Opción <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' />: configúrala como <Cmd sid='common.use' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-enable.png' />
+
+6. Haz clic en <Cmd sid='device.idle.video.add' product='2' />.
+
+7. Selecciona el video guardado localmente.
+
+8. Después de cargar el video, configura <Cmd sid='device.info.videoSchedule' product='2' /> y <Cmd sid='device.info.videoVolume' product='2' />.
+
+   <Image src='/img/biostarx-settings-device-playback-playVideo-upload.png' />
+
+9. Haz clic en <Cmd sid='device.idle.video.transfer' product='2' /> para transferir el video cargado al dispositivo.
+
+10. Aparece la ventana emergente de progreso de actualización. No cierres la página hasta que finalice la carga.
+
+    <Image src='/img/biostarx-settings-device-playback-playVideo-upload-progress.png' />
+
+11. Cuando aparezca el mensaje de carga completada, haz clic en <Cmd sid='button.ok' product='2' />.
+
+    <Image src='/img/biostarx-settings-device-playback-playVideo-upload-complete.png' />
+
+12. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar los cambios.
+
+:::info
+
+* Los videos se reproducen solo cuando <Cmd sid='device.info.playVideo' product='2' /> está configurado en <Cmd sid='common.use' product='2' />, registras al menos 1 video y configuras el horario en <Cmd sid='device.info.videoSchedule' product='2' />. En los horarios que no cumplen estas condiciones, aparece la pantalla seleccionada en <Cmd sid='device.info.defaultIdleScreen' product='2' />.
+
+* El tamaño máximo del archivo de video compatible es de 200 MB y el formato es MP4 (H.264). 
+
+* El nombre del archivo de video puede tener hasta 48 caracteres. El nombre del archivo no puede incluir caracteres como punto(`.`), apóstrofo(`'`) o acento grave(`` ` ``).
+
+* Agrega hasta 3 videos. Cuando agregas 3 videos, el botón <Cmd sid='device.idle.video.add' product='2' /> se desactiva.
+
+* Si el dispositivo se conecta como esclavo (mediante RS-485), no puedes agregar, eliminar ni transferir videos.
+
+  * Si el dispositivo maestro admite la reproducción de videos, la pantalla del esclavo muestra la lista del maestro en modo de solo lectura. La lista es de solo lectura. Agrega, elimina, transfiere y reordena videos solo en el dispositivo maestro.
+
+  * Si el dispositivo maestro no admite la reproducción de video, la pantalla esclava solo muestra <Cmd sid='device.info.defaultIdleScreen' product='2' />.
+
+:::
+
+:::tip
+
+Use <Cmd sid='button.batchEdit' product='2' /> para agregar y transferir videos a varios dispositivos a la vez. Para obtener más información sobre la característica <Cmd sid='button.batchEdit' product='2' />, consulte <DocLink docId='platform/biostar_x/settings-device-using-functions#batchEdit' />.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-batch-edit.png' />
+
+:::
+
+#### Cambiar el orden de reproducción de videos
+
+Arrastre el área a la derecha de una miniatura de video para cambiar el orden de reproducción. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-change-order.png' alone />
+
+#### Eliminar videos
+
+En <Cmd sid='device.idle.video.playback' product='2' /> → <Cmd sid='device.info.playVideo' product='2' />, haga clic en <IcClose /> del video que va a eliminar. Luego, haga clic en <Cmd sid='device.idle.video.transfer' product='2' />. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar los cambios.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-delete.png' />
+
+#### Falla de transferencia de video
+
+Si falla la transferencia del video al dispositivo, una ventana emergente muestra el nombre del video cuya transferencia falló.
+
+<Image src='/img/biostarx-settings-device-playback-playVideo-fail-transfer.png' />
+
+Los principales motivos de la falla de transferencia son los siguientes.
+
+* Cuando ocurre un error al procesar la respuesta del dispositivo
+
+* Cuando ocurre un error por motivos distintos a los anteriores
+
+:::tip
+
+Si la transferencia por lotes de video a varios dispositivos mediante la característica <Cmd sid='button.batchEdit' product='2' /> falla solo en ciertos dispositivos, haga clic en <Cmd sid='device.idle.video.download.partial.failed.copy' product='2' /> en la ventana emergente de resultados para copiar la lista de dispositivos con fallas y los motivos al portapapeles.
+
+:::
+
 ## Ajustes de condiciones y acciones de activación {/* #triggerAction */}
 
 En el grupo <Cmd sid='device.info.triggerNAction' product='2' />, defina las condiciones y acciones según situaciones específicas. Por ejemplo, configure todas las alarmas para que suenen cuando falle la autenticación o para que el dispositivo quede inutilizable si se pierde la conexión RS-485.
 
-Registre eventos seleccionándolos como condiciones o acciones, o configure condiciones y acciones según las preferencias del usuario. Haga clic en el grupo <Cmd sid='device.info.triggerNAction' product='2' /> y luego en <IcAdd /> <Cmd sid='common.add' product='2' /> ubicado a la derecha.
+Registre eventos seleccionándolos como condiciones o acciones, o configure condiciones y acciones según las preferencias del usuario. Haga clic en el grupo <Cmd sid='device.info.triggerNAction' product='2' /> y luego haga clic en <IcAdd /> <Cmd sid='common.add' product='2' /> a la derecha.
 
 <Image src='/img/biostarx-setting-device-edit-advanced-triggernaction.png' />
 
@@ -346,7 +490,7 @@ Puede seleccionar acciones predefinidas o agregar acciones personalizadas.
 
 :::
 
-## Configuración del registro de imágenes {/* #image-log-settings */}
+## Ajustes del registro de imágenes {/* #image-log-settings */}
 
 En el grupo <Cmd sid='common.imageLog' product='2' />, puede configurar los eventos y horarios del registro de imágenes utilizados por el dispositivo.
 
@@ -364,7 +508,7 @@ En el grupo <Cmd sid='common.imageLog' product='2' />, puede configurar los even
 
 :::
 
-## Configuración de Wiegand {/* #wiegang-settings */}
+## Ajustes de Wiegand {/* #wiegang-settings */}
 
 En el grupo <Cmd>Wiegand</Cmd>, puede configurar los detalles de entrada y salida relacionados con los dispositivos Wiegand.
 
@@ -392,13 +536,13 @@ Para obtener más información sobre la configuración del formato Wiegand, cons
 
 :::
 
-## Configuración de manipulación de seguridad {/* #tamper-settings */}
+## Ajustes de manipulación de seguridad {/* #tamper-settings */}
 
 Si ocurre un evento de manipulación en el dispositivo, puede configurarlo para eliminar toda la información de usuario, los registros y las claves de seguridad almacenadas en el dispositivo. Para activar la función <Cmd sid='device.info.tamperOn' product='2' />, establézcala en <Cmd sid='device.info.tamperOn.on' product='2' />.
 
 <Image src='/img/biostarx-setting-device-edit-advanced-tamper.png' />
 
-## Configuración de intercomunicador analógico {/* #analog-intercom-settings */}
+## Ajustes de intercomunicador analógico {/* #analog-intercom-settings */}
 
 Puede configurar si se utilizará un intercomunicador analógico. Para usar el intercomunicador conectado al dispositivo, haga clic en el grupo <Cmd sid='device.intercom.title' product='2' /> y seleccione <Cmd sid='common.use' product='2' />.
 
@@ -408,7 +552,7 @@ Esta función es compatible solo con el modelo BioStation 2.
 
 :::
 
-## Configuración de la cámara {/* #camera-settings */}
+## Ajustes de la cámara {/* #camera-settings */}
 
 Puede establecer la frecuencia de la cámara. Configurar incorrectamente la frecuencia en entornos con luces fluorescentes puede causar parpadeo en las imágenes. Establezca la frecuencia para el área local en el grupo <Cmd sid='device.info.camera' product='2' />.
 

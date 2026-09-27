@@ -39,7 +39,7 @@ cardPresso をインストールして Web 印刷サーバーを設定するに�
 
    <Image src='/img/common/cardpresso-new-card-template.png' alone caption />
 
-4. 作成したカードテンプレートを **BioStar X** をインストールしたサーバーの任意のパスに保存してください。 (例：*C:\template\example.card*)
+4. 作成したカードテンプレートを **BioStar X** をインストールしたサーバーの任意のパスに保存してください。(例：*C:\template\example.card*)
 
 5. cardPresso をインストールした PC のデスクトップで右クリックし、ポップアップメニューから **New ** → **Shortcut** をクリックしてください。 {/* New → Shortcut */}
 
@@ -73,7 +73,7 @@ cardPresso をインストールして Web 印刷サーバーを設定するに�
 
 10. 設定が完了したら **保存** をクリックします。
 
-11. 右下にある <Image src='/img/common/ico-card-printer-play.png' ico alone /> をクリックしてサービスを開始します。 正しく設定されると、アイコンが <Image src='/img/common/ico-card-printer-stop.png' ico alone /> に変わり、**listen OK** メッセージが表示されます。
+11. 右下にある <Image src='/img/common/ico-card-printer-play.png' ico alone /> をクリックしてサービスを開始します。正しく設定されると、アイコンが <Image src='/img/common/ico-card-printer-stop.png' ico alone /> に変わり、**listen OK** メッセージが表示されます。
 
     <Image src='/img/biostarx-settings-card-printer-installation3.png' />
 
@@ -89,15 +89,15 @@ cardPresso をインストールして Web 印刷サーバーを設定するに�
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左のサイドバーで <Cmd sid="common.cardPrinter" product='2' /> をクリックします。
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.credential.root' /> → <Cmd sid="setting.menu.cardPrinter.root" /> をクリックしてください。
 
 3. <Cmd sid="common.cardPrinter.cardpressoSetting" product='2' /> を <Cmd sid="common.use" product='2' /> に設定してから各項目を入力します。
 
    <Image src='/img/biostarx-settings-card-printer.png' className='none' />
 
-   * <Cmd sid="common.cardPrinter.id" product='2' />：cardPresso のログイン ID を入力します。 (デフォルト：ADMIN)
+   * <Cmd sid="common.cardPrinter.id" product='2' />：cardPresso のログイン ID を入力します。(デフォルト：ADMIN)
 
-   * <Cmd sid="common.cardPrinter.password" product='2' />：cardPresso のログインパスワードを入力します。 (デフォルト：admin)
+   * <Cmd sid="common.cardPrinter.password" product='2' />：cardPresso のログインパスワードを入力します。(デフォルト：admin)
 
    * <Cmd sid="common.cardPrinter.ipAddress" product='2' />：Web 印刷サーバーとして動作する PC の IP アドレスを入力します。
 
@@ -123,7 +123,7 @@ Administrator 情報を含むカードテンプレートをテスト印刷でき
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左のサイドバーで <Cmd sid="common.cardPrinter" product='2' /> をクリックします。
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.credential.root' /> → <Cmd sid="setting.menu.cardPrinter.root" /> をクリックしてください。
 
 3. 印刷するカードテンプレートを選択し、<Cmd sid="common.cardPrinter.testPrint" product='2' /> ボタンをクリックしてください。
 
@@ -161,9 +161,9 @@ Administrator 情報を含むカードテンプレートをテスト印刷でき
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> をクリックしてください。
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> をクリックしてください。
 
-3. <Cmd sid='setting.server.userDeviceManagement' product='2' /> セクションの <Cmd sid="setting.server.custom_field.title" product='2' /> 項目で <Cmd sid="button.plusAdd" product='2' /> ボタンをクリックし、<Cmd sid="setting.server.custom_field.configure.th.name" product='2' /> を入力して <Cmd sid="setting.server.custom_field.configure.th.type" product='2' /> を選択してください。 追加した <Cmd sid="setting.server.custom_field.title" product='2' /> の順序に従ってカードテンプレートの属性 **ID** が決定されます。
+3. <Cmd sid='setting.server.userDeviceManagement' product='2' /> セクションの <Cmd sid="setting.server.custom_field.title" product='2' /> 項目で <Cmd sid="button.plusAdd" product='2' /> ボタンをクリックし、<Cmd sid="setting.server.custom_field.configure.th.name" product='2' /> を入力して <Cmd sid="setting.server.custom_field.configure.th.type" product='2' /> を選択してください。追加した <Cmd sid="setting.server.custom_field.title" product='2' /> の順序に従ってカードテンプレートの属性 **ID** が決定されます。
 
    <Image src='/img/biostarx-settings-card-printer-custom-user.png' />
 
@@ -171,7 +171,7 @@ Administrator 情報を含むカードテンプレートをテスト印刷でき
 
 4. 設定が完了したら、画面最下部の <Cmd sid="button.apply" product='2' /> ボタンをクリックしてください。
 
-5. cardPresso で **ファイル** → **テンプレートを開く** をクリックしてカードテンプレートファイルを開いてください。 新しい属性を追加し、BioStar X の属性 ID の順序に合わせた **XML 項目 ID 名** として **ID** を入力してください。
+5. cardPresso で **ファイル** → **テンプレートを開く** をクリックしてカードテンプレートファイルを開いてください。新しい属性を追加し、BioStar X の属性 ID の順序に合わせた **XML 項目 ID 名** として **ID** を入力してください。
 
    <Image src='/img/biostarx-settings-card-printer-template.png' />
 
@@ -179,7 +179,7 @@ Administrator 情報を含むカードテンプレートをテスト印刷でき
 
 7. **BioStar X** に戻り、<Cmd sid='shell.header.user' /> ページでカードテンプレートを適用するユーザーを選択してください。
 
-8. 追加したカスタムユーザーフィールド項目を確認できます。 該当フォームに入力し、<Cmd sid="button.printCard" product='2' /> ボタンをクリックしてください。
+8. 追加したカスタムユーザーフィールド項目を確認できます。該当フォームに入力し、<Cmd sid="button.printCard" product='2' /> ボタンをクリックしてください。
 
    <Image src='/img/biostarx-settings-card-printer-custom-user1.png' />
 
@@ -195,7 +195,7 @@ Administrator 情報を含むカードテンプレートをテスト印刷でき
 
 ## カードテンプレート属性 ID {/* #card-template-attribute-ids */}
 
-**BioStar X** でサポートされる属性 ID は次のとおりです。 カードテンプレートを作成するときは、属性 ID を適切な **XML 項目 ID 名** として入力します。
+**BioStar X** でサポートされる属性 ID は次のとおりです。カードテンプレートを作成するときは、属性 ID を適切な **XML 項目 ID 名** として入力します。
 
 <div className='overflow-x cols3--20-40-40'>
 

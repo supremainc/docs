@@ -1,0 +1,41 @@
+## 出席確認の終了 {/* #endRollCall */}
+
+進行中の出席確認は **BioStar X** モバイルアプリとWebの両方で終了できます。
+
+### モバイルアプリで終了
+
+1. 出席確認を終了するには、出席確認リスト画面で <IcRCstop title='End' width={20} height={20} /> ボタンをタップするか、出席確認状況画面で <Cmd>END</Cmd> ボタンをタップします。
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end.png' className='none' width='600px' alone />
+
+2. 未確認のユーザーが残っている場合、システムが警告ポップアップを表示します。出席確認を終了するには、終了理由を入力し、<Cmd>Yes</Cmd> ボタンをタップします。
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end-unaccounted.png' width='272px' alone />
+
+### Webで終了
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />をクリックしてください。
+
+3. 一覧で <Cmd sid='zone.rollCall' product='2' /> をクリックします。
+
+4. 出席確認リストで、終了する出席確認のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-stop.png' />
+
+5. 画面右上の<Cmd sid='zone.pause.end' product='2' />ボタンをクリックしてください。
+
+6. 確認メッセージが表示されたら、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+未確認のユーザーがいない出席確認は、すぐに終了します。未確認のユーザーが残っている出席確認では、<Cmd sid='zone.rollCall.unaccountedUsers' product='2' /> リストと <Cmd sid='zone.rollCall.endReason' product='2' /> 入力欄があるダイアログが表示されます。出席確認を終了するには、理由を入力し、<Cmd sid='zone.rollCall.endButton' product='2' /> ボタンをクリックしてください。
+
+<Image src='/img/biostarx-settings-adv-ac-rollcall-stop-unaccounted-users.png' />
+
+:::info
+
+* <Cmd sid='zone.rollCall.endReason' product='2' />：最大 500 文字まで入力できます。
+
+* 複数の出席確認項目を同時に選択して終了する場合、いずれかに未確認のユーザーが残っていると終了できません。出席確認項目を個別に選択して終了してください。
+
+:::

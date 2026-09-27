@@ -1,10 +1,7 @@
 ---
 id: settings-advanced-ac-roll-call
-title: Llamada Roll
+title: Pase de lista
 description: Esta guía explica cómo configurar la lista de asistencia.
-keywords:
-  - Control de acceso avanzado
-  - Llamada Roll
 ---
 
 Roll Call genera rápidamente una lista de personal según los registros de entrada en un tiempo y lugar específicos. Cuando ocurre una emergencia, el sistema puede determinar si un usuario llegó al punto de lista de asistencia al autenticarse en el dispositivo de entrada o salida en una ubicación predefinida.
@@ -13,7 +10,7 @@ Puede utilizarse para la respuesta a emergencias, verificaciones de seguridad y 
 
 :::info
 
-Las configuraciones de lista de asistencia pueden utilizarse mediante opciones adicionales disponibles con una licencia **Avanzada** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+Los ajustes de Roll Call están disponibles mediante una opción adicional con una licencia **Essential** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -21,7 +18,7 @@ Las configuraciones de lista de asistencia pueden utilizarse mediante opciones a
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haz clic en <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haz clic en <Cmd sid='button.func.addZone' product='2' />.
 
@@ -41,7 +38,7 @@ Las configuraciones de lista de asistencia pueden utilizarse mediante opciones a
 
 :::
 
-## Guía de opciones de configuración {/* #setting */}
+## Guía de opciones de ajuste {/* #setting */}
 
 Los detalles de las configuraciones de lista de asistencia son los siguientes.
 
@@ -51,19 +48,35 @@ Los detalles de las configuraciones de lista de asistencia son los siguientes.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Puedes activar o desactivar temporalmente la configuración.
 
+* <Cmd sid='zone.rollCall.onSiteOnly' product='2' />: Establezca en <Cmd sid='common.use' product='2' />. Al iniciar la lista de asistencia, el sistema fija como objetivos a los **usuarios autenticados por última vez en un dispositivo de entrada en sitio**. El valor predeterminado es <Cmd sid='common.notUse' product='2' />. En este caso, todos los usuarios configurados (grupos de usuarios y usuarios individuales) pasan a ser objetivos de la lista de asistencia.
+
+   :::note
+
+   El sistema determina si cada usuario está en sitio según los registros de autenticación de dispositivos de entrada o salida en sitio de los últimos 7 días. Si la autenticación más reciente antes del inicio de la lista de asistencia ocurrió en un dispositivo de entrada en sitio, el sistema considera que el usuario está en sitio. Si ocurrió en un dispositivo de salida en sitio, el sistema considera que el usuario está fuera de sitio. El sistema considera que los usuarios sin registros de autenticación en los últimos 7 días están fuera de sitio y los excluye de la lista de usuarios objetivo.
+
+   La lista de usuarios objetivo se finaliza una sola vez cuando inicia la lista de asistencia, y no cambia si los usuarios entran o salen mientras la lista de asistencia está en curso.
+
+   :::
+
+  Las siguientes opciones están disponibles cuando <Cmd sid='zone.rollCall.onSiteOnly' product='2' /> está establecido en <Cmd sid='common.use' product='2' />.
+
+  * <Cmd sid='zone.rollCall.siteEntryDevices' product='2' />: Seleccione el dispositivo para la autenticación de entrada en sitio.
+
+  * <Cmd sid='zone.rollCall.siteExitDevices' product='2' />: Seleccione el dispositivo para la autenticación de salida en sitio.
+
 * <Cmd sid='zone.rollCall.manualStatusChange' product='2' />: Puedes configurarlo para cambiar el estado manualmente.
 
-* <Cmd sid='zone.entryDevices' product='2' />: Selecciona el dispositivo que se utilizará al entrar. Puedes elegir de la lista de dispositivos registrados.
+* <Cmd sid='zone.rollCall.entryDevices' product='2' />: Seleccione el dispositivo que se usará al entrar. Puedes elegir de la lista de dispositivos registrados.
 
-* <Cmd sid='zone.exitDevices' product='2' />: Selecciona el dispositivo que se utilizará al salir. Puedes elegir de la lista de dispositivos registrados.
+* <Cmd sid='zone.rollCall.exitDevices' product='2' />: Seleccione el dispositivo que se usará al salir. Puedes elegir de la lista de dispositivos registrados.
 
 * <Cmd sid='common.users' product='2' />: Puedes seleccionar grupos de usuarios o usuarios individuales que tengan permiso para entrar.
 
 :::info
 
-* No se puede establecer el mismo dispositivo tanto para <Cmd sid='zone.entryDevices' product='2' /> como para <Cmd sid='zone.exitDevices' product='2' /> al mismo tiempo.
+* No se puede establecer el mismo dispositivo tanto para <Cmd sid='zone.rollCall.entryDevices' product='2' /> como para <Cmd sid='zone.rollCall.exitDevices' product='2' /> al mismo tiempo.
 
-* Puedes seleccionar hasta 10 dispositivos para <Cmd sid='zone.entryDevices' product='2' /> y <Cmd sid='zone.exitDevices' product='2' />.
+* Seleccione hasta 10 dispositivos para <Cmd sid='zone.rollCall.entryDevices' product='2' /> y <Cmd sid='zone.rollCall.exitDevices' product='2' />.
 
 * Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
 
@@ -75,49 +88,91 @@ Los detalles de las configuraciones de lista de asistencia son los siguientes.
 
 :::
 
-## Activar/desactivar {/* #activateDeactivateOccupancyZone */}
+## Verifique el estado de la lista de asistencia {/* #rollCallZoneList */}
+
+La lista de asistencia muestra los detalles y el estado de cada ajuste de lista de asistencia.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcall-list.png' />
+
+* <Cmd sid='common.name' product='2' />: Muestra el nombre.
+
+* <Cmd sid='zone.rollCall.entryDevices' product='2' /> / <Cmd sid='zone.rollCall.exitDevices' product='2' />: Muestra los dispositivos seleccionados.
+
+* <Cmd sid='common.userGroup' product='2' /> / <Cmd sid='common.users' product='2' />: Muestra los usuarios objetivo seleccionados.
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Muestra el estado de activación.
+
+* <Cmd sid='zone.rollCall.onSiteOnly' product='2' />: Muestra si está habilitado.
+
+* <Cmd sid='zone.rollCall.siteEntryDevices' product='2' /> / <Cmd sid='zone.rollCall.siteExitDevices' product='2' />: Muestra los dispositivos de entrada o salida en sitio seleccionados.
+
+* <Cmd sid='common.status' product='2' />: Muestra el estado del pase de lista (<Cmd sid='zone.rollCall.notStart' product='2' />, <Cmd sid='zone.rollCall.inProgress' product='2' />, etc.).
+
+* <Cmd sid='common.description' product='2' />: Muestra la descripción.
+
+## Activar/desactivar {/* #activateDeactivateRollCall */}
 
 Puedes activar configuraciones de lista de asistencia deshabilitadas o desactivar configuraciones activadas.
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haz clic en <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haz clic en <Cmd sid='zone.rollCall' product='2' /> en la lista.
 
 4. Haz clic en la casilla de verificación del elemento que deseas activar o desactivar en la lista de configuraciones de lista de asistencia.
 
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-list-enable.png' />
+
 5. Haz clic en <Cmd sid='zone.pause.activate' product='2' /> o en <Cmd sid='zone.pause.deactivate' product='2' /> en la esquina superior derecha de la pantalla.
 
-## Eliminar {/* #deleteOccupancyZone */}
+:::info
+
+* Seleccione <Cmd sid='zone.pause.deactivate' product='2' />, y verá un mensaje de confirmación. Seleccione <Cmd sid='button.yes' product='2' /> o <Cmd sid='button.no' product='2' />.
+
+* No se puede desactivar un pase de lista en curso. Verifique y vuelva a intentarlo.
+
+:::
+
+## Eliminar {/* #deleteRollCall */}
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haz clic en <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haz clic en <Cmd sid='zone.rollCall' product='2' /> en la lista.
 
 4. Haz clic en la casilla de verificación del elemento que deseas eliminar de la lista de configuraciones de lista de asistencia.
 
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-list-delete.png' />
+
 5. Haz clic en <Cmd sid='button.deleteZone' product='2' /> en la esquina superior derecha de la pantalla.
 
 6. Cuando aparezca el mensaje de advertencia, haz clic en el botón <Cmd sid='button.continue' product='2' />.
 
+:::info
+
+No se puede eliminar un pase de lista en curso. Finalice el pase de lista y vuelva a intentar.
+
+:::
+
 import ExploreListPages from '../../common/_explore-list-pages.mdx';
+import RollCall from '../../common/_bsx-rollcall.mdx';
+import EndRollCall from '../../common/_bsx-end-rollcall.mdx';
 
 <ExploreListPages />
 
-import RollCall from '../../common/_bsx-rollcall.mdx';
-
 <RollCall />
+
+<EndRollCall />
 
 ## Ver informes de pase de lista {/* #viewRollCallReport */}
 
 Sigue estos pasos para consultar el informe de pase de lista.
 
-1. Haz clic en <Cmd sid='shell.header.launcher' /> en la página de <Cmd sid='shell.header.data' />.
+1. Haz clic en <Cmd sid='shell.header.data' /> en <Cmd sid='shell.header.launcher' />.
 
-2. En la barra lateral izquierda de la pantalla, haz clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' />.
+2. Haz clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' /> en la barra lateral izquierda.
 
 3. Cuando aparezca la ventana <Cmd sid='data.dialog.rollCall.selectRollCall' />, selecciona el elemento de pase de lista que deseas consultar en el informe y, luego, haz clic en el botón <Cmd sid='data.button.next' />.
 
@@ -136,3 +191,7 @@ Sigue estos pasos para consultar el informe de pase de lista.
 Generando el informe. El informe proporciona información de cada usuario, incluida la hora de entrada, la hora de salida, la última ubicación y las notas.
 
 <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated.png' caption />
+
+Revise <Cmd sid='data.header.rollCall.endReason' product='2' /> en los informes de pase de lista con usuarios sin confirmar.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated-uncounted-reason.png' caption />

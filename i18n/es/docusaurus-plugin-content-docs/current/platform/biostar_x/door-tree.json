@@ -1,25 +1,17 @@
 [
   {
-    "name": "All Door Groups",
+    "name": "Todos los grupos de puertas",
     "children": [
       {
-        "name": "Door Group A",
+        "name": "Grupo de puertas A",
         "type": "door-group",
         "children": [
           {
-            "name": "Door",
+            "name": "Puerta",
             "type": "door-device",
             "children": [
               {
-                "name": "Door relay",
-                "type": "door-relay"
-              },
-              {
-                "name": "Arming status",
-                "type": "door-arm"
-              },
-              {
-                "name": "Camera",
+                "name": "Cámara",
                 "type": "door-camera"
               }
             ]
@@ -29,23 +21,23 @@
     ]
   },
   {
-    "name": "All Elevator Groups",
-    "type": "elevator",
+    "name": "Todos los grupos de ascensores",
+    "type": "ascensor",
     "children": [
       {
-        "name": "Elevator Group B",
+        "name": "Grupo de ascensores B",
         "type": "elevator-group",
         "children": [
           {
-            "name": "Elevator 1",
+            "name": "Ascensor 1",
             "type": "elevator-device",
             "children": [
               {
-                "name": "Elevator 1 - 1st Floor",
+                "name": "Ascensor 1 - primer piso",
                 "type": "elevator-floor"
               },
               {
-                "name": "Elevator 1 - 2nd Floor",
+                "name": "Ascensor 1 - segundo piso",
                 "type": "elevator-floor"
               }
             ]
@@ -55,11 +47,11 @@
     ]
   },
   {
-    "name": "All Advanced ACs",
+    "name": "Todos los AC avanzados",
     "type": "access-control",
     "children": [
       {
-        "name": "Access Control Settings",
+        "name": "Configuración de Control de Acceso",
         "type": "access-zone"
       }
     ]

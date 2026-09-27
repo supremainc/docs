@@ -14,7 +14,7 @@ Esta guía describe cómo agregar el nivel de permiso deseado. Los permisos pers
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haz clic en <Cmd sid='setting.menu.account.root' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='setting.account.addCustomOperator' product='2' />.
 
@@ -60,25 +60,53 @@ Configure permisos detallados para los elementos. Seleccione grupos para otorgar
 
   * <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />
 
-* Los permisos para <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='setting.account.item.advAC' product='2' />, <Cmd sid='setting.account.item.map' product='2' />, <Cmd sid='setting.account.item.map' product='2' /> están disponibles con una licencia **avanzada** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
+* El permiso <Cmd sid='setting.account.item.map' product='2' /> está disponible con una licencia **Essential** o superior. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
 
-* El permiso <Cmd sid='common.permission.module.cameraGroup' product='2' /> puede habilitarse como una opción adicional con una licencia **avanzada** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* Los permisos <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='setting.account.item.advAC' product='2' />, <Cmd sid='common.permission.module.cameraGroup' product='2' /> están disponibles como una opción adicional con una licencia **Essential** o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
 ### <Cmd sid='settings.account.menu.setting' product='2' className='normal' /> {/* #menuSetting */}
 
-Configure permisos de **edición** y **visualización** para menús individuales. Se pueden configurar permisos diferentes para cada menú.
+Seleccione <Cmd sid='settings.account.menu.readOnly' product='2' /> o <Cmd sid='settings.account.menu.fullAccess' product='2' /> para cada menú. Asigne permisos diferentes a cada menú. Haga clic en la casilla <Cmd sid='settings.account.menu.permission' product='2' /> y luego seleccione <Cmd sid='settings.account.menu.readOnly' product='2' /> o <Cmd sid='settings.account.menu.fullAccess' product='2' />.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-menus.png' />
 
-* <Cmd sid='common.editRead' product='2' />: Concede permiso para añadir, editar o eliminar elementos en el menú.
+* <Cmd sid='settings.account.menu.readOnly' product='2' />: Concede permiso para entrar al menú y solo ver los ajustes.
 
-* <Cmd sid='common.read' product='2' />: Concede permiso para entrar en el menú y solo ver la configuración.
+* <Cmd sid='settings.account.menu.fullAccess' product='2' />: Concede permiso para añadir, editar o eliminar entradas en el menú.
 
 :::info
 
-Otorgar permisos de **edición** para cada menú activa el botón <Cmd sid='button.add' product='2' />. Sin embargo, para los menús <Cmd sid='shell.header.dashboard' /> y <Cmd sid='shell.header.setting' />, dado que no hay funciones adicionales, se mostrarán como <Cmd sid='setting.account.menu.canCreate.na' product='2' />. Para el menú <Cmd sid='common.permission.module.ac' product='2' />, <Cmd sid='settings.account.menu.detailSetting' product='2' /> debe tener <Cmd sid='common.permission.module.accessGroup' product='2' /> establecido en <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' /> y otorgar permisos de **edición** para que el botón <Cmd sid='button.add' product='2' /> se active.
+* En el menú <Cmd sid='shell.header.arena' />, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> permite agregar pestañas o controlar las entradas del árbol de estados.
+
+* En el menú <Cmd sid='shell.header.data' />, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> permite guardar informes, agregar programaciones automáticas de informes y acceder a los ajustes.
+
+* En el menú <Cmd sid='shell.header.dashboard' />, el permiso <Cmd sid='settings.account.menu.readOnly' product='2' className='bold' /> permite crear nuevos dashboards y widgets.
+
+* Los menús que no aparecen en <Cmd sid='settings.account.menu.item' product='2' /> son accesibles independientemente de los permisos.
+
+:::
+
+:::tip
+
+Haga clic en un permiso del menú principal para habilitar los permisos en todos los submenús.
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-example.png' />
+
+:::
+
+### Conector
+
+Después de agregar un plugin, configure los permisos del plugin. Los usuarios sin permisos del plugin no pueden acceder al plugin, y el plugin no aparece en la pantalla de inicio ni en el lanzador.
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-plugin.png' />
+
+:::info
+
+* Se requiere una licencia de conector para utilizar las funciones de conector. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+
+* Aplique <Cmd sid='settings.account.menu.readOnly' product='2' /> o <Cmd sid='settings.account.menu.fullAccess' product='2' /> solo al plugin <Cmd sid='common.permission.module.time_attendance' product='2' />.
 
 :::
 

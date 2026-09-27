@@ -7,43 +7,45 @@ keywords:
   - 高度なアクセス制御
 ---
 
-高度アクセス制御に設定されたドアまたはデバイスの操作方法を案内します。 提供される機能により、問題発生時に迅速に対応し、効率的に管理できます。
+高度アクセス制御に設定されたドアまたはデバイスの操作方法を案内します。提供される機能により、問題発生時に迅速に対応し、効率的に管理できます。
 
 1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.arena' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.arena' /> を選択してください。
 
 2. 画面左側のサイドバーで <Cmd sid='arena.tree.door.title' /> タブを開き、<Cmd sid='arena.tree.door.allZones' /> に移動します。 
 
-3. 設定された高度アクセス制御を選択し、右クリックします。 ポップアップメニューで必要な機能を選択できます。
+3. 設定された高度アクセス制御を選択し、右クリックします。ポップアップメニューで必要な機能を選択できます。
 
 <Image src='/img/biostarx-monitoring-door-zone-popup.png' />
 
 :::info
 
-高度アクセス制御の種類によって提供される機能が異なります。 高度アクセス制御の種類は次のとおりです。
+* 高度アクセス制御の種類によって提供される機能が異なります。高度アクセス制御の種類は次のとおりです。
 
-* **アンチパスバック**
+  * **アンチパスバック**
 
-* 火災警報
+  * 火災警報
 
-* スケジュールロック/開放
+  * スケジュールロック/開放
 
-* 警備
+  * 警備
 
-* インターロック
+  * インターロック
 
-* 点呼招集
+  * 点呼招集
 
-* 在室人数制限
+  * 在室人数制限
 
-* 出席確認（Roll Call）
+  * 出席確認（Roll Call）
 
-各高度アクセス制御機能の詳細については <DocLink docId='platform/biostar_x/settings-advanced-ac' /> を参照してください。
+* 各高度アクセス制御機能の詳細については <DocLink docId='platform/biostar_x/settings-advanced-ac' /> を参照してください。
+
+* 複数の高度なアクセス制御の設定をまとめて選択して制御するには、<DocLink docId='platform/biostar_x/monitoring-batch-control' />をご覧ください。
 
 :::
 
 ## APB 解除 {/* #apb-release */}
 
-**アンチパスバック**に設定されたドアまたはデバイスの APB アラームを解除できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.clearApb' /> をクリックしてください。 画面上部に完了メッセージが表示されます。
+**アンチパスバック**に設定されたドアまたはデバイスの APB アラームを解除できます。ポップアップメニューで <Cmd sid='arena.tree.contextMenu.clearApb' /> をクリックしてください。画面上部に完了メッセージが表示されます。
 
 :::info
 
@@ -57,7 +59,7 @@ keywords:
 
 ## アラーム解除 {/* #alarm */}
 
-ドアまたはデバイスで発生したアラームを解除できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックしてください。 画面上部に完了メッセージが表示されます。
+ドアまたはデバイスで発生したアラームを解除できます。ポップアップメニューで <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックしてください。画面上部に完了メッセージが表示されます。
 
 :::info
 
@@ -67,11 +69,13 @@ keywords:
 
 ## 有効化/無効化 {/* #zone-revitalizationdisabled */}
 
-高度アクセス制御機能を有効化するか、使用しない機能を無効化できます。 無効化された高度アクセス制御には <IcDisable width='20px' height='20px' /> アイコンが表示されます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.enable' /> または <Cmd sid='arena.tree.contextMenu.disable' /> をクリックします。
+高度アクセス制御機能を有効化するか、使用しない機能を無効化できます。無効化された高度アクセス制御は不透明表示に変わります。ポップアップメニューで <Cmd sid='arena.tree.contextMenu.enable' /> または <Cmd sid='arena.tree.contextMenu.disable' /> をクリックします。
+
+<Image src='/img/biostarx-monitoring-door-zone-disabled.png' />
 
 ## 警備/警備解除 {/* #security-zone-control */}
 
-ドアまたはデバイスの警備を設定または解除できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.arm' /> または <Cmd sid='arena.tree.contextMenu.disarm' /> をクリックします。
+ドアまたはデバイスの警備を設定または解除できます。ポップアップメニューで <Cmd sid='arena.tree.contextMenu.arm' /> または <Cmd sid='arena.tree.contextMenu.disarm' /> をクリックします。
 
 :::info
 
@@ -83,7 +87,7 @@ keywords:
 
 ## 点呼招集レポートの確認 {/* #confirmation-of-muster-reports */}
 
-点呼招集に関するレポートを確認するには <Cmd sid='arena.tree.contextMenu.musterReport' /> をクリックします。 新しいウィンドウが開くと、ユーザーリストと点呼招集機能に設定されたデバイスを通じて、ユーザーの入室・退室時刻や滞在時間超過の有無を確認できます。
+点呼招集に関するレポートを確認するには <Cmd sid='arena.tree.contextMenu.musterReport' /> をクリックします。新しいウィンドウが開くと、ユーザーリストと点呼招集機能に設定されたデバイスを通じて、ユーザーの入室・退室時刻や滞在時間超過の有無を確認できます。
 
 :::info
 
@@ -95,7 +99,7 @@ keywords:
 
 ## 在室人数制限のモニタリング {/* #monitoring-of-restrictions-on-the-number-of-people */}
 
-在室人数制限機能に設定されたデバイスの状態を確認できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> をクリックします。 新しいウィンドウが開いたら <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> メニューに移動します。 <Cmd sid='zone.occupancy.title' product='2' /> リストで状態を確認できます。
+在室人数制限機能に設定されたデバイスの状態を確認できます。ポップアップメニューで <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> をクリックします。新しいウィンドウが開いたら <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> メニューに移動します。 <Cmd sid='zone.occupancy.title' product='2' /> リストで状態を確認できます。
 
 :::info
 
@@ -107,7 +111,11 @@ keywords:
 
 ## 詳細情報確認 {/* #detail-view */}
 
-高度アクセス制御の詳細情報とイベント発生履歴を確認できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.viewDetail' /> をクリックしてください。 画面右側のパネルに詳細情報とイベント発生履歴が表示されます。
+高度アクセス制御の詳細情報とイベント発生履歴を確認できます。ポップアップメニューで <Cmd sid='arena.tree.contextMenu.viewDetail' /> をクリックしてください。画面右側のパネルに詳細情報とイベント発生履歴が表示されます。
+
+<Image src='/img/biostarx-monitoring-door-ac-details.png' />
+
+* **高度なアクセス制御の制御**: 選択した高度なアクセス制御に対応する制御機能を使用します。
 
 * **詳細情報**：高度アクセス制御機能の名前と状態、デバイス情報などを確認できます。
 

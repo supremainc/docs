@@ -9,11 +9,11 @@ keywords:
 
 **Acciones rápidas** es una función que automatiza procedimientos de control complejos durante emergencias. Ejecuta al instante las acciones de varios dispositivos predefinidos con un solo botón para responder con rapidez.
 
-Agregar un botón de Acción rápida en el menú <Cmd sid='common.customInterface' product='2' /> permite controlar varios puntos de acceso a la vez al hacer clic en el botón de Acción rápida en la pantalla principal de **BioStar X**.
+Agregue un botón de acción rápida en el menú <Cmd sid='setting.menu.customInterface.root' />. Haga clic en el botón en la pantalla principal de **BioStar X** para controlar varias puertas a la vez.
 
 :::info
 
-Para agregar el <Cmd sid="common.triggerAndAction" product='2' /> como acción rápida, consulte <DocLink docId='platform/biostar_x/settings-triger-and-action' />.
+Para agregar el <Cmd sid='setting.menu.customInterface.root' /> como acción rápida, consulte <DocLink docId='platform/biostar_x/settings-triger-and-action' />.
 
 :::
 
@@ -21,7 +21,7 @@ Para agregar el <Cmd sid="common.triggerAndAction" product='2' /> como acción r
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='common.customInterface' product='2' />.
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> en la barra lateral izquierda.
 
    <Image src='/img/biostarx-settings-custom-interface.png' />
 
@@ -37,11 +37,11 @@ Para agregar el <Cmd sid="common.triggerAndAction" product='2' /> como acción r
 
    * <Cmd sid='settings.customInterface.quickAction.confirmBeforeRun' product='2' />: Si habilita esta opción, aparecerá una ventana de confirmación cuando presione el botón <Cmd sid='common.quickAction' product='2' /> para preguntar si desea ejecutarlo.
 
-5. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar los ajustes.
+5. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración.
 
 6. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla. 
 
-Se creará el botón <Cmd sid='common.quickAction' product='2' /> agregado en el área del encabezado superior derecho de la pantalla de **BioStar X**. Haga clic en el botón <Cmd sid='common.quickAction' product='2' /> creado para verificar que funcione según lo configurado en <Cmd sid='common.triggerAndAction' product='2' />.
+Se creará el botón <Cmd sid='common.quickAction' product='2' /> agregado en el área del encabezado superior derecho de la pantalla de **BioStar X**. Haga clic en el botón <Cmd sid="common.quickAction" product='2' /> creado para verificar que funcione según lo configurado en <Cmd sid='setting.menu.customInterface.root' />.
 
 <Image src='/img/settings-custom-interface-main-quick-action.png' className='none' />
 
@@ -53,11 +53,11 @@ Se creará el botón <Cmd sid='common.quickAction' product='2' /> agregado en el
 
 :::
 
-## Editar los botones de Acción rápida
+## Editar botón de acción rápida
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='common.customInterface' product='2' />.
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> en la barra lateral izquierda.
 
 3. Haga clic en el botón <IcEditUL /> a la derecha del botón de Acción rápida que desea modificar.
 
@@ -67,13 +67,63 @@ Se creará el botón <Cmd sid='common.quickAction' product='2' /> agregado en el
 
 5. Para guardar las modificaciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla.
 
-## Eliminar el botón de Acción rápida
+## Cambiar el orden de las acciones rápidas
 
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='common.customInterface' product='2' />.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" />.
 
-3. Haga clic en el botón <IcTrash2 /> a la derecha del botón de Acción rápida que desea eliminar.
+3. En la lista de acciones rápidas, mantenga presionada la columna de más a la izquierda y arrástrela a la posición deseada.
+
+   <Image src='/img/settings-custom-interface-quick-action-change-order.png' />
+
+4. Haga clic en <Cmd sid="button.apply" product='2' /> en la esquina inferior derecha de la pantalla para guardar el nuevo orden.
+
+La lista de acciones rápidas en la esquina superior derecha de la pantalla muestra el orden actualizado.
+
+<Image src='/img/settings-custom-interface-quick-action-change-order-result.png' />
+
+## Fijar botones en el encabezado
+
+Coloque las acciones rápidas que requieren acceso rápido en el área del encabezado.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" />.
+
+3. Haga clic en <Cmd sid='settings.customInterface.quickAction.pinOnHeader' product='2' />(<IcPin />) para fijar la acción rápida en el área del encabezado.
+
+   <Image src='/img/settings-custom-interface-quick-action-pin-header.png' />
+
+   :::note
+
+   Arrastre la columna de más a la izquierda para cambiar el orden. Haga clic en <Cmd sid='settings.customInterface.quickAction.pinOnHeader' product='2' /> de nuevo para quitar la fijación.
+
+   :::
+
+4. Seleccione todas las acciones rápidas para fijarlas en el área del encabezado. Haga clic en <Cmd sid="button.apply" product='2' /> en la esquina inferior derecha.
+
+Las acciones rápidas fijadas aparecen a la izquierda del botón <Cmd sid='shell.header.action' /> en la esquina superior derecha de la pantalla.
+
+<Image src='/img/settings-custom-interface-quick-action-pin-header-result.png' />
+
+:::info
+
+* Fije hasta 4 acciones rápidas en el área del encabezado. Cuando ya hay 4 acciones rápidas fijadas, no es posible fijar más. Quite la fijación de otra entrada y vuelva a intentarlo.
+
+* Cuando la ventana del navegador se estrecha, desaparecen todos los botones individuales del encabezado. Busque las acciones rápidas fijadas con el icono de chincheta (<IcPin fill='#d8403a' />) en la lista desplegable del botón <Cmd sid='shell.header.action' />.
+
+* Si todas las acciones rápidas agregadas están fijadas en el área del encabezado, el botón <Cmd sid='shell.header.action' /> no aparece. Quite la fijación de ciertas entradas para que el botón vuelva a aparecer.
+
+:::
+
+## Eliminar el botón de acción rápida
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <IcTrash2 /> a la derecha del botón de acción rápida que desea eliminar.
 
    <Image src='/img/settings-custom-interface-quick-action-layout.png' />
 
@@ -81,4 +131,4 @@ Se creará el botón <Cmd sid='common.quickAction' product='2' /> agregado en el
 
    <Image src='/img/settings-custom-interface-confirm.png' className='none' />
 
-5. Para aplicar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla.
+5. Para aplicar los cambios, haga clic en <Cmd sid="button.apply" product='2' /> en la parte inferior derecha de la pantalla.

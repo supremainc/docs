@@ -1,7 +1,7 @@
 ---
 id: settings-videos-camera
 title: カメラを設定する
-description: VMS連携後にBioStar Xにカメラを追加し、グループ化して効率的に管理する方法を説明します。 リアルタイム監視と映像検索のためのカメラ設定方法を扱います。
+description: VMS連携後にBioStar Xにカメラを追加し、グループ化して効率的に管理する方法を説明します。リアルタイム監視と映像検索のためのカメラ設定方法を扱います。
 keywords:
   - カメラ
   - 設定
@@ -9,7 +9,7 @@ keywords:
   - グループ
 ---
 
-VMS連携を完了した後、BioStar Xで使用するカメラを選択して設定します。 適切なカメラ設定により、次のセキュリティ管理機能を利用できます。
+VMS連携を完了した後、BioStar Xで使用するカメラを選択して設定します。適切なカメラ設定により、次のセキュリティ管理機能を利用できます。
 
 * **選択的モニタリング**：VMSのすべてのカメラの中から必要なカメラだけを**BioStar X**に追加できます。
 
@@ -19,7 +19,7 @@ VMS連携を完了した後、BioStar Xで使用するカメラを選択して�
 
 * VMSサーバーとの連携方法については、<DocLink docId='platform/biostar_x/settings-video-integration' />をご参照ください。
 
-* カメラを追加したりグループを作成したりするには、カメラグループの権限が必要です。 カメラグループの権限設定の詳細については、<DocLink inner='#addCameraPermission' />をご参照ください。
+* カメラを追加したりグループを作成したりするには、カメラグループの権限が必要です。カメラグループの権限設定の詳細については、<DocLink inner='#addCameraPermission' />をご参照ください。
 
 :::
 
@@ -49,7 +49,7 @@ VMSと連携している場合、VMSサーバーに接続されたカメラを**
 
 ### カメラ情報の編集
 
-追加したカメラの情報を編集できます。 カメラ名、グループ、説明などを変更できます。
+追加したカメラの情報を編集できます。カメラ名、グループ、説明などを変更できます。
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
@@ -89,21 +89,21 @@ VMSと連携している場合、VMSサーバーに接続されたカメラを**
 
 :::info
 
-削除対象のカメラがいずれかのルールに含まれている場合、カメラを削除できません。 そのカメラをルールから削除してから再試行します。 ルールの作成および管理の詳細については、<DocLink docId='platform/biostar_x/settings-videos-rule' />をご参照ください。
+削除対象のカメラがいずれかのルールに含まれている場合、カメラを削除できません。そのカメラをルールから削除してから再試行します。ルールの作成および管理の詳細については、<DocLink docId='platform/biostar_x/settings-videos-rule' />をご参照ください。
 
 :::
 
 ## カメラグループの設定と管理
 
-複数のカメラをグループ化して、場所や用途に応じて体系的に管理できます。 カメラグループの作成と管理の手順は以下のとおりです。
+複数のカメラをグループ化して、場所や用途に応じて体系的に管理できます。カメラグループの作成と管理の手順は以下のとおりです。
 
 ### カメラグループの権限設定 {/* #addCameraPermission */}
 
-管理者がカメラを追加したりグループを作成したりするには、カメラグループの権限が必要です。 全体管理者、ユーザー管理者、監視管理者はすべてのカメラグループに対する権限を持っています。 個別の権限設定が必要な場合は、カスタム権限を追加して、カメラグループの権限を設定できます。
+管理者がカメラを追加したりグループを作成したりするには、カメラグループの権限が必要です。全体管理者、ユーザー管理者、監視管理者はすべてのカメラグループに対する権限を持っています。個別の権限設定が必要な場合は、カスタム権限を追加して、カメラグループの権限を設定できます。
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='setting.menu.account.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> をクリックします。
 
 3. <Cmd sid='setting.account.addCustomOperator' product='2' /> をクリックします。
 
@@ -111,7 +111,7 @@ VMSと連携している場合、VMSサーバーに接続されたカメラを**
 
 4. 新しく作成する権限の名前と説明を入力します。
 
-   <Image src='/img/biostarx-settings-video-camera-add-custom-permission.png' />
+   <Image src='/img/biostarx-settings-account-add-custom-permission-details.png' />
 
 5. <Cmd sid='settings.account.menu.detailSetting' product='2' /> の <Cmd sid='common.permission.module.cameraGroup' product='2' /> 項目で権限を割り当てるカメラグループを選択します。
 
@@ -119,7 +119,7 @@ VMSと連携している場合、VMSサーバーに接続されたカメラを**
 
    * すべてのカメラグループに対する権限を付与するには、<Cmd sid='setting.account.group.allCameraGroups' product='2' /> を選択します。
 
-   * 個別のカメラグループに対して権限を付与するには、カメラグループ一覧から目的のグループを選択します。 一つ以上のグループを選択できます。
+   * 個別のカメラグループに対して権限を付与するには、カメラグループ一覧から目的のグループを選択します。一つ以上のグループを選択できます。
 
 6. <Cmd sid='settings.account.addUser' product='2' /> で <Cmd sid='button.plusAdd' product='2' /> ボタンをクリックし、権限を付与するユーザーを選択します。
 
@@ -219,7 +219,7 @@ VMSと連携している場合、VMSサーバーに接続されたカメラを**
 
 :::info
 
-カメラグループにカメラが含まれている場合、グループを削除できません。 グループ内のカメラを別のグループへ移動するか、グループから削除してから再試行します。
+カメラグループにカメラが含まれている場合、グループを削除できません。グループ内のカメラを別のグループへ移動するか、グループから削除してから再試行します。
 
 :::
 
@@ -233,7 +233,7 @@ VMSと連携している場合、VMSサーバーに接続されたカメラを**
 
 3. <Cmd sid='video.header.all.camera' product='2' /> リストの右上で<IcMoreW /> → <Cmd sid='columnSetting.dialog.header' product='2' /> をクリックします。
 
-4. <Cmd sid='columnSetting.dialog.header' product='2' /> ウィンドウが表示されたら、表示する列のチェックボックスをクリックして追加または非表示設定ができます。 ドラッグ＆ドロップで列の順序を変更することもできます。
+4. <Cmd sid='columnSetting.dialog.header' product='2' /> ウィンドウが表示されたら、表示する列のチェックボックスをクリックして追加または非表示設定ができます。ドラッグ＆ドロップで列の順序を変更することもできます。
 
    <Image src='/img/biostarx-settings-video-column-layout.png' />
 

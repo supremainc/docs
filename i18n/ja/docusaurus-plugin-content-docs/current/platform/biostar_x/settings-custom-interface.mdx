@@ -7,21 +7,21 @@ keywords:
   - カスタムインターフェース
 ---
 
-**クイックアクション**は、緊急時に複雑な制御手順を自動化する機能です。 あらかじめ定義した複数のデバイスの動作を1つのボタンで即時に実行し、迅速に対応できます。
+**クイックアクション**は、緊急時に複雑な制御手順を自動化する機能です。あらかじめ定義した複数のデバイスの動作を1つのボタンで即時に実行し、迅速に対応できます。
 
-<Cmd sid="common.customInterface" product='2' /> メニューでクイックアクションボタンを追加すると、**BioStar X** のメイン画面からクイックアクションボタンをクリックして複数のドアを一括制御します。
+<Cmd sid='setting.menu.customInterface.root' /> メニューでクイックアクションボタンを追加すると、**BioStar X** のメイン画面からクイックアクションボタンをクリックして複数のドアを一括で制御できます。
 
 :::info
 
-クイックアクションとして使用する<Cmd sid="common.triggerAndAction" product='2' />を追加する方法については、<DocLink docId='platform/biostar_x/settings-triger-and-action' />をご参照ください。
+クイックアクションとして使用する<Cmd sid='setting.menu.customInterface.root' />を追加する方法については、<DocLink docId='platform/biostar_x/settings-triger-and-action' />をご参照ください。
 
 :::
 
-## クイックアクションボタンを追加する
+## クイックアクションボタンを追加
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid="common.customInterface" product='2' /> をクリックしてください。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> をクリックしてください。
 
    <Image src='/img/biostarx-settings-custom-interface.png' />
 
@@ -31,9 +31,9 @@ keywords:
 
    <Image src='/img/settings-custom-interface-add-quick-action.png' className='none' />
 
-   * <Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />：追加するクイックアクションを実行できる<Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />を選択します。 複数選択できます。
+   * <Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />：追加するクイックアクションを実行できる<Cmd sid="settings.customInterface.quickAction.operatorLevel" product='2' />を選択します。複数選択できます。
 
-   * <Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />：実行する<Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />を選択します。 複数選択できます。
+   * <Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />：実行する<Cmd sid="settings.customInterface.quickAction.triggerAction" product='2' />を選択します。複数選択できます。
 
    * <Cmd sid="settings.customInterface.quickAction.confirmBeforeRun" product='2' />：このオプションを有効にすると、<Cmd sid="common.quickAction" product='2' /> ボタンを押したときに実行の確認ポップアップが表示されます。
 
@@ -41,13 +41,13 @@ keywords:
 
 6. 画面右下の <Cmd sid="button.apply" product='2' /> ボタンをクリックします。 
 
-**BioStar X** 画面の右上ヘッダーエリアに、追加した<Cmd sid="common.quickAction" product='2' />ボタンが生成されます。 作成した<Cmd sid="common.quickAction" product='2' />ボタンをクリックして、<Cmd sid="common.triggerAndAction" product='2' />で設定したとおりに動作するか確認します。
+**BioStar X** 画面の右上ヘッダーエリアに、追加した<Cmd sid="common.quickAction" product='2' />ボタンが生成されます。作成した<Cmd sid="common.quickAction" product='2' />ボタンをクリックして、<Cmd sid='setting.menu.customInterface.root' />で設定したとおりに動作するか確認してください。
 
 <Image src='/img/settings-custom-interface-main-quick-action.png' className='none' />
 
 :::info
 
-* <Cmd sid="common.quickAction" product='2' /> ボタンは画面上部のヘッダーエリアに最大4個まで追加できます。 どのページでも使用できるよう固定されています。
+* <Cmd sid="common.quickAction" product='2' /> ボタンは画面上部のヘッダーエリアに最大4個まで追加できます。どのページでも使用できるよう固定されています。
 
 * ユーザーに設定された<Cmd sid="user.bioStarOperator" product='2' />によって、使用できる<Cmd sid="common.quickAction" product='2' />ボタンが異なる場合があります。
 
@@ -57,7 +57,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid="common.customInterface" product='2' /> をクリックしてください。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> をクリックしてください。
 
 3. 編集するクイックアクションボタンの右側にある<IcEditUL />ボタンをクリックします。
 
@@ -67,11 +67,61 @@ keywords:
 
 5. 変更を保存するには、画面右下の<Cmd sid="button.apply" product='2' />ボタンをクリックします。
 
+## クイックアクションの順序を変更
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> をクリックしてください。
+
+3. クイックアクション一覧で、順序を移動する項目の最も左の列をクリックしたまま、目的の位置にドラッグしてください。
+
+   <Image src='/img/settings-custom-interface-quick-action-change-order.png' />
+
+4. 変更した順序を保存するには、画面右下の <Cmd sid="button.apply" product='2' /> ボタンをクリックしてください。
+
+画面右上のクイックアクション一覧で、変更後の順序を確認できます。
+
+<Image src='/img/settings-custom-interface-quick-action-change-order-result.png' />
+
+## ヘッダー領域にボタンを固定
+
+すぐに実行する必要があるクイックアクション項目を、画面のヘッダー領域に配置できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> をクリックしてください。
+
+3. ヘッダー領域に配置するには、<Cmd sid='settings.customInterface.quickAction.pinOnHeader' product='2' />(<IcPin />)をクリックしてください。
+
+   <Image src='/img/settings-custom-interface-quick-action-pin-header.png' />
+
+   :::note
+
+   最も左の列をクリックしたまま目的の位置にドラッグして順序を変更するか、<Cmd sid='settings.customInterface.quickAction.pinOnHeader' product='2' />を解除してください。
+
+   :::
+
+4. ヘッダー領域に固定する項目をすべて選択したら、画面右下の <Cmd sid="button.apply" product='2' /> ボタンをクリックしてください。
+
+画面右上の <Cmd sid='shell.header.action' /> ボタンの左側で、固定されたクイックアクションを確認できます。
+
+<Image src='/img/settings-custom-interface-quick-action-pin-header-result.png' />
+
+:::info
+
+* 最大4個のクイックアクションをヘッダー領域に固定できます。すでに4個を固定している場合、クイックアクションを追加で固定できません。別の項目を解除してから、再度お試しください。
+
+* Webブラウザのウィンドウ幅が狭くなると、ヘッダーの個別ボタンはすべて非表示になります。固定したクイックアクション項目は、ピン(<IcPin fill='#d8403a' />)アイコンと一緒に<Cmd sid='shell.header.action' />ボタンのドロップダウン一覧で確認できます。
+
+* 登録済みのクイックアクションをすべてヘッダーに固定すると、<Cmd sid='shell.header.action' /> ボタンが表示されません。一部の項目を解除すると、ボタンが再び表示されます。
+
+:::
+
 ## クイックアクションボタンを削除する
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid="common.customInterface" product='2' /> をクリックしてください。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> をクリックしてください。
 
 3. 削除するクイックアクションボタンの右側にある<IcTrash2 />ボタンをクリックします。
 

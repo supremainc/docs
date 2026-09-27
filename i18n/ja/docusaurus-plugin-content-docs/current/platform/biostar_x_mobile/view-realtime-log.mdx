@@ -8,7 +8,7 @@ keywords:
   - イベント
 ---
 
-BioStar Xサーバーで発生するイベントをリアルタイムで確認してください。 アプリのホーム画面で <Cmd>REAL-TIME LOG</Cmd> をタップしてください。
+BioStar Xサーバーで発生するイベントをリアルタイムで確認してください。アプリのホーム画面で <Cmd>REAL-TIME LOG</Cmd> をタップしてください。
 
 <Image src='/img/mobile/bsx-mobile-app-realtime-log.png' width='500px' className='none' alone />
 
@@ -28,15 +28,15 @@ BioStar Xサーバーで発生するイベントをリアルタイムで確認�
 </Column>
 <Column className='padding--l40'>
 
-アプリのホーム画面で <Cmd>REAL-TIME LOG</Cmd> をタップしてください。 最初にリアルタイムログ(<Cmd>Real-time Log</Cmd>)画面を開くと、一覧は空です。
+アプリのホーム画面で <Cmd>REAL-TIME LOG</Cmd> をタップしてください。最初にリアルタイムログ(<Cmd>Real-time Log</Cmd>)画面を開くと、一覧は空です。
 
-* 新しいイベントが発生すると、自動的に一覧へリアルタイムで追加されます。 一覧の行数に制限はなく、新しいイベントは先頭に追加されます。
+* 新しいイベントが発生すると、自動的に一覧へリアルタイムで追加されます。一覧の行数に制限はなく、新しいイベントは先頭に追加されます。
 
-* リアルタイムイベントの受信を一時停止するには、画面右上の <IcAppPause title='Pause' width='20px' height='20px' /> をタップしてください。 一時停止中は新しいイベントが一覧に追加されませんが、バックグラウンドでキューに追加されます。 リアルタイムイベントの受信を再開するには、<IcAppPlay title='Play' width='20px' height='20px' /> をタップしてください。 キューに追加されたイベントは、新しいイベントより先に一覧へ追加されます。
+* リアルタイムイベントの受信を一時停止するには、画面右上の <IcAppPause title='Pause' width='20px' height='20px' /> をタップしてください。一時停止中は新しいイベントが一覧に追加されませんが、バックグラウンドでキューに追加されます。リアルタイムイベントの受信を再開するには、<IcAppPlay title='Play' width='20px' height='20px' /> をタップしてください。キューに追加されたイベントは、新しいイベントより先に一覧へ追加されます。
 
-* リアルタイムログ一覧を消去するには、画面右上の <IcAppClean title='Clean' width='20px' height='20px' /> をタップしてください。 ログ一覧が消去され、新しいイベントが発生した時点からリアルタイムで追加されます。
+* リアルタイムログ一覧を消去するには、画面右上の <IcAppClean title='Clean' width='20px' height='20px' /> をタップしてください。ログ一覧が消去され、新しいイベントが発生した時点からリアルタイムで追加されます。
 
-* リアルタイムログ一覧をフィルタリングして、特定のイベント、ユーザー、ドア、またはデバイスなど、関連するログだけを表示できます。 詳しくは <DocLink inner='#viewSpecificLog' /> をご参照ください。
+* リアルタイムログ一覧をフィルタリングして、特定のイベント、ユーザー、ドア、またはデバイスなど、関連するログだけを表示できます。詳しくは <DocLink inner='#viewSpecificLog' /> をご参照ください。
 
 :::info
 
@@ -51,7 +51,7 @@ BioStar Xサーバーで発生するイベントをリアルタイムで確認�
 </Column>
 </Columns>
 
-## 特定のログだけを表示 {/* #viewSpecificLog */}
+## 特定のログのみ表示 {/* #viewSpecificLog */}
 
 <Columns>
 <Column className='width--23'>
@@ -85,7 +85,7 @@ BioStar Xサーバーで発生するイベントをリアルタイムで確認�
 
 * フィルタ条件を初期化するには、画面右上の <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> をタップしてください。
 
-* エレベーター、高度な入退室制御は、**アドバンス**(Advanced)以上のライセンスを有効にすると使用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+* エレベーターと高度な入退室管理は、**エッセンシャル**（Essential）以上のライセンスを有効化した場合に使用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
 
 :::
 
@@ -104,19 +104,19 @@ BioStar Xサーバーで発生するイベントをリアルタイムで確認�
 
 ログ項目をタップして、そのログの詳細情報を確認してください。
 
-* <Cmd>Event Log</Cmd>: イベントの種類です。 どの種類のイベントが発生したかを表示します。
+* <Cmd>Event Log</Cmd>: イベントの種類です。どの種類のイベントが発生したかを表示します。
 
 * <Cmd>Datetime</Cmd>: イベントが発生した日付と時刻です。
 
 * <Cmd>Door</Cmd>: イベントが発生したドアです。
 
-* <Cmd>Device</Cmd>: イベントが発生したデバイスです。
+* <Cmd>Device ID</Cmd>/<Cmd>Device</Cmd>: イベントが発生したデバイス ID とデバイス名です。
 
-* <Cmd>User</Cmd>: イベントを発生させたユーザーです。 たとえば、入退室認証イベントの場合、入室を試みたユーザーが表示されます。
+* <Cmd>User</Cmd>: イベントを発生させたユーザーです。たとえば、入退室認証イベントの場合、入室を試みたユーザーが表示されます。
 
 詳細情報ポップアップ下部のボタンをタップして、次の操作を実行できます。
 
-* イベント情報をクリップボードにコピーするには、<Cmd>EVENT INFORMATION COPIED</Cmd> をタップしてください。
+* イベント情報をクリップボードにコピーするには、<Cmd>COPY LOG</Cmd>をタップしてください。
 
 * 詳細情報ポップアップを閉じるには、<Cmd>OK</Cmd> をタップしてください。
 

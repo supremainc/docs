@@ -1,0 +1,123 @@
+---
+id: add-user-by-scanning-passport
+title: 身分証明書のスキャンでユーザーを登録、編集する
+description: 身分証明書をスキャンしてユーザー情報を自動取得し、ユーザーを登録または編集する方法を説明します。
+---
+
+ユーザー情報を一つずつ入力する代わりに、身分証明書をスキャンして氏名や写真などの情報を自動取得し、ユーザーを登録したり既存ユーザー情報を編集したりできます。
+
+## 開始する前に
+
+* 身分証明書をスキャンするには、DESKO スキャナーをクライアント PC に接続する必要があります。
+
+* 身分証明書をスキャンしてユーザーを登録する前に、身分証明書から取得するデータを設定したか確認してください。身分証明書スキャンの設定に関する詳細は、<DocLink docId='platform/biostar_x/settings-account-scan-passport' />をご参照ください。
+
+:::info
+
+<Cmd sid='button.passportScan' product='2' /> は現在、パスポートのスキャンのみをサポートしています。
+
+:::
+
+## 身分証明書のスキャンでユーザーを登録する
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. <Cmd sid='shell.header.user' /> ページ右上の <Cmd sid='team.user.newUser' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-user-add-user-01.png' />
+
+3. <Cmd sid='user.addNewUser' product='2' />画面の右上にある<Cmd sid='button.passportScan' product='2' />ボタンをクリックします。
+
+   <Image src='/img/biostarx-user-add-by-scanning-passport-btn.png' />
+
+4. <Cmd sid='user.passportScan.dialog.title' product='2' /> ウィンドウが表示されたら、スキャナーに身分証明書を置きます。
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+5. 身分証明書のスキャン成功メッセージが表示されたら、身分証明書の写真を顔クレデンシャルとして登録するかどうかを選択します。
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::note
+
+   このメッセージは、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.passportScan' />で<Cmd sid='setting.passportScan.face' />オプションを<Cmd sid='setting.passportScan.faceAlwaysConfirm' />に設定すると表示されます。<Cmd sid='setting.passportScan.faceDoNotAsk' />オプションに設定すると、このメッセージは表示されず、すぐに顔クレデンシャルとして登録されます。
+
+   :::
+
+6. 身分証明書のスキャンで取得した情報を確認し、必要に応じて修正します。
+
+7. ユーザーを保存するには、画面右上の <Cmd sid='user.save' product='2' /> をクリックします。
+
+## 身分証明書のスキャンでユーザーを編集する
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザーリストで、身分証明書のスキャンで編集するユーザーをダブルクリックします。
+
+3. ユーザー情報修正画面の右上にある<Cmd sid='button.passportScan' product='2' />ボタンをクリックします。
+
+   <Image src='/img/biostarx-user-edit-by-scanning-passport-btn.png' />
+
+4. <Cmd sid='user.passportScan.dialog.title' product='2' /> ウィンドウが表示されたら、スキャナーに身分証明書を置きます。
+
+   <Image src='/img/biostarx-user-add-import-passport-data.png' />
+
+5. 身分証明書のスキャン成功メッセージが表示されたら、身分証明書の写真を顔クレデンシャルとして登録するかどうかを選択します。
+
+   <Image src='/img/biostarx-user-add-face-credential-confirm.png' />
+
+   :::note
+
+   このメッセージは、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.passportScan' />で<Cmd sid='setting.passportScan.face' />オプションを<Cmd sid='setting.passportScan.faceAlwaysConfirm' />に設定すると表示されます。<Cmd sid='setting.passportScan.faceDoNotAsk' />オプションに設定すると、このメッセージは表示されず、すぐに顔クレデンシャルとして登録されます。
+
+   :::
+
+6. 身分証明書のスキャンで取得した情報を確認し、必要に応じて修正します。
+
+7. スキャンした情報でユーザー情報を修正するには、画面右上の<Cmd sid='user.save' product='2' />ボタンをクリックしてください。
+
+:::info
+
+身分証明書のスキャンで編集するユーザーに顔クレデンシャルが2つ以上登録されている場合、最初に登録された顔クレデンシャルを上書きします。
+
+:::
+
+## エラーガイダンス
+
+身分証明書のスキャン中に問題が発生すると、画面にメッセージが表示され、原因と対処方法を案内します。以下を参照してエラーを解決してください。
+
+### スキャン失敗
+
+身分証明書をスキャナーに置き、自動認識する際に問題が発生すると、以下のいずれかのメッセージが表示されます。
+
+| 原因 | エラーメッセージ |
+| --- | --- |
+| 身分証明書のセキュリティ要素（UV 模様など）の検証に失敗 | <Cmd sid='user.passportScan.error.invalidPassport' product='2' /> |
+| 指定時間内に身分証明書を認識できない | <Cmd sid='user.passportScan.error.timeout' product='2' /> |
+| スキャン中に身分証明書が外れる、ページ認識に失敗するなど、その他のスキャンエラー | <Cmd sid='user.passportScan.error.cannotScan' product='2' /> |
+
+上記のメッセージが表示されたら、画面に表示された<Cmd sid='button.recognizePassport' product='2' />ボタンをクリックして再度スキャンしてください。身分証明書をスキャナーに正しく置いたか確認し、再試行してください。正常に認識されます。
+
+:::info
+
+<Cmd sid='button.recognizePassport' product='2' />ボタンをクリックすると、<Cmd sid='user.passportScan.scanning.title' product='2' />の案内から自動認識を再度開始します。
+
+:::
+
+### スキャナー接続エラー
+
+スキャナーの接続に問題がある場合、以下のメッセージが表示されます。このエラーには再試行ボタンがないため、案内に従って問題を解決し、<Cmd sid='button.passportScan' product='2' />ボタンを再度クリックして最初からスキャンしてください。
+
+| 状況 | エラーメッセージ | 解決方法 |
+| --- | --- | --- |
+| スキャナーがクライアントPCに接続されていない | <Cmd sid='user.passportScan.scannerNotFound.description' product='2' /> | 身分証明書スキャナーとクライアント PC の接続状態を確認してください。 |
+
+### USB Agent を確認する
+
+身分証明書スキャナーを使用するには、最新バージョンの USB Agent をインストールしておく必要があります。 USBエージェントがインストールされていないか、バージョンが古い場合、<Cmd sid='button.passportScan' product='2' /> ボタンをクリックすると、次のようなエラーウィンドウが表示されます。
+
+<Image src='/img/biostarx-user-scan-passport-error-usb-agent.png' />
+
+* <Cmd sid='button.cancel' product='2' />：エラーウィンドウを閉じ、スキャンしません。
+
+* <Cmd sid='button.goToUsbAgentSettings' product='2' />: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> 画面に移動します。移動した画面でUSB Agentを最新バージョンにアップグレードしてから、スキャンを再試行してください。

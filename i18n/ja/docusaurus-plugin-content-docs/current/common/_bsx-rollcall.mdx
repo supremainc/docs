@@ -1,4 +1,4 @@
-## 出席確認を開始する {/* #mobileAppRollCall */}
+## モバイルアプリで出席確認を使用する {/* #mobileAppRollCall */}
 
 出席確認機能は BioStar X モバイルアプリで利用できます。
 
@@ -16,7 +16,7 @@ BioStar X モバイルアプリは次のリンクからインストールでき�
 
 </Include>
 
-### モバイルアプリで出席確認を開始する {/* #useRollCallMobileApp */}
+### 出席確認を開始する {/* #useRollCallMobileApp */}
 
 モバイルアプリで出席確認機能を開始するには、次の手順に従います。
 
@@ -42,37 +42,31 @@ BioStar X モバイルアプリは次のリンクからインストールでき�
 
 <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png' width={595} alone className='none' />
 
-### 進行中の出席確認の管理
+### 進行中の出席確認を制御する {/* #controlInProgressRollCall */}
 
-* 入室済みのユーザーには <IcRCdone title='Done' width={20} height={20} /> アイコンが表示されます。 すべてのユーザーが入室すると、出席確認終了メッセージが表示されます。 出席確認を終了するには <Cmd>Yes</Cmd> をタップします。
+* 入室済みのユーザーには <IcRCdone title='Done' width={20} height={20} /> アイコンが表示されます。すべてのユーザーが入室すると、出席確認終了メッセージが表示されます。出席確認を終了するには <Cmd>Yes</Cmd> をタップします。
 
-* 管理者は手動でユーザーの入室または状態を変更できます。 ユーザーリストで状態を変更するユーザーの一番右にある丸いボタンを長押しします。
+* 管理者は手動でユーザーの入室または状態を変更できます。ユーザーリストで状態を変更するユーザーの一番右にある丸いボタンを長押しします。
 
-   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png' alone className='none' width={595} />
+  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png' alone className='none' width={595} />
 
-* 出席確認を初期化するには <Cmd>Reset</Cmd> をタップします。 これまでのすべての変更が削除され、出席確認を最初から再開できます。
+* 出席確認を初期化するには <Cmd>Reset</Cmd> をタップします。これまでのすべての変更が削除され、出席確認を最初から再開できます。
 
 * 別の管理者によって出席確認が終了すると、通知メッセージが表示されます。
 
-   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png' width={253} alone />
-
-* 進行中の出席確認を終了するには、出席確認リスト画面で <IcRCstop title='Stop' width={20} height={20} /> をタップするか、出席確認状況画面で <Cmd>END</Cmd> をタップします。
-
-* 進行中の出席確認は **BioStar X** でも終了できます。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='data.sidebar.events' /> → <Cmd sid='zone.rollCall' product='2' /> メニューに移動し、進行中の人員点検項目を選択した後、画面右上の <Cmd sid='zone.pause.end' product='2' /> ボタンをクリックします。
-
-   <Image src='/img/biostarx-settings-adv-ac-rollcoll-ended.png' />
+  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png' width={253} alone />
 
 <Include pages='settings-advanced-ac-roll-call'>
 
-* 出席確認を完了した後、<Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' /> で関連レポートを確認できます。 詳しくは<DocLink inner='#viewRollCallReport' />を参照してください。
+* 出席確認を完了した後、<Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' /> で関連レポートを確認できます。詳しくは<DocLink inner='#viewRollCallReport' />を参照してください。
 
 </Include>
 
 ### 出席確認中のユーザー情報確認
 
-モバイルアプリで、出席確認中に各ユーザーの情報を確認できます。 ユーザーに緊急連絡を取れる連絡先情報や、ユーザーの最終位置などの詳細を確認できます。
+モバイルアプリで、出席確認中に各ユーザーの情報を確認できます。ユーザーに緊急連絡を取れる連絡先情報や、ユーザーの最終位置などの詳細を確認できます。
 
-出席確認中に詳細を確認するユーザー項目を左にスワイプします。 その後、<IcRCinfo title='Information' width={20} height={20} /> をタップします。
+出席確認中に詳細を確認するユーザー項目を左にスワイプします。その後、<IcRCinfo title='Information' width={20} height={20} /> をタップします。
 
 <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png' className='none' width={595} alone />
 
@@ -80,7 +74,7 @@ BioStar X モバイルアプリは次のリンクからインストールでき�
 
 モバイルアプリで出席確認中に特定のユーザーが入室していない場合、そのユーザーにメモを残すことができます。
 
-出席確認中にメモを入力するユーザー項目を左へスワイプしてください。 その後、<IcRCmemo title='Memo' width={20} height={20} /> をタップします。 メモ入力画面で内容を入力してから <Cmd>Save</Cmd> をタップします。
+出席確認中にメモを入力するユーザー項目を左へスワイプしてください。その後、<IcRCmemo title='Memo' width={20} height={20} /> をタップします。メモ入力画面で内容を入力してから <Cmd>Save</Cmd> をタップします。
 
 <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png' className='none' width={595} alone />
 

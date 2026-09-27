@@ -1,13 +1,13 @@
 ---
 id: settings-advanced-ac-apb
 title: アンチパスバック
-description: アンチパスバック設定の方法を案内します。 アンチパスバックは、ドアまたはデバイスを基準に作成されたアンチパスバックよりも高度な機能を提供します。
+description: アンチパスバック設定の方法を案内します。アンチパスバックは、ドアまたはデバイスを基準に作成されたアンチパスバックよりも高度な機能を提供します。
 keywords:
   - 高度なアクセス制御
   - アンチパスバック
 ---
 
-アンチパスバックは、ドアまたはデバイスを基準に作成されたアンチパスバックよりも高度な機能を提供します。 アンチパスバックを設定することで、ユーザーが入室および退室する際に指定されたドアとデバイスを使用するよう強制できます。 これにより、不正な再入室を防止し、セキュリティを強化できます。
+アンチパスバックは、ドアまたはデバイスを基準に作成されたアンチパスバックよりも高度な機能を提供します。アンチパスバックを設定することで、ユーザーが入室および退室する際に指定されたドアとデバイスを使用するよう強制できます。これにより、不正な再入室を防止し、セキュリティを強化できます。
 
 :::info
 
@@ -19,7 +19,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />をクリックしてください。
 
 3. <Cmd sid='button.func.addZone' product='2' /> ボタンをクリックします。
 
@@ -29,11 +29,11 @@ keywords:
 
    <Image src='/img/biostarx-settings-adv-ac-add-apb.png' />
 
-6. <Cmd sid='common.setting' product='2' /> セクションでアンチパスバック機能の詳細項目を設定します。 詳細については<DocLink inner='#setting' />をご参照ください。
+6. <Cmd sid='common.setting' product='2' /> セクションでアンチパスバック機能の詳細項目を設定します。詳細については<DocLink inner='#setting' />をご参照ください。
 
 7. <Cmd sid='common.alarm' product='2' /> セクションでアンチパスバック違反が発生したときに実行する動作を設定します。
 
-8. <Cmd sid='zone.apb.bypass' product='2' /> セクションでアンチパスバックをバイパスして通過できるアクセスグループを選択します。 このグループに属するユーザーはアンチパスバックをバイパスできます。
+8. <Cmd sid='zone.apb.bypass' product='2' /> セクションでアンチパスバックをバイパスして通過できるアクセスグループを選択します。このグループに属するユーザーはアンチパスバックをバイパスできます。
 
 9. すべての設定が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
 
@@ -61,7 +61,7 @@ keywords:
 
   * <Cmd sid='door.apbType.soft' product='2' />：アンチパスバックイベントを生成し、入退室できます。
 
-* <Cmd sid='door.resetTime' product='2' />：アンチパスバック規則に違反したユーザーに再び入退室を許可するまでの待機時間を設定します。 アラーム発生後、設定した時間が経過すると該当ユーザーの入退室を自動で許可します。
+* <Cmd sid='door.resetTime' product='2' />：アンチパスバック規則に違反したユーザーに再び入退室を許可するまでの待機時間を設定します。アラーム発生後、設定した時間が経過すると該当ユーザーの入退室を自動で許可します。
 
   * **1** 分から **10080** 分（7日）の範囲で設定できます。
 
@@ -75,11 +75,11 @@ keywords:
 
   * <Cmd sid='zone.apbUseEachDoorSensorSetting' product='2' />：当該ドアで入退室ベースの APB を使用する場合、センサー使用オプションの設定に従ってアンチパスバック規則が適用されます。
 
-* <Cmd sid='zone.entryDevices' product='2' />：入室時に使用するデバイスを選択します。 登録済みデバイスの一覧から選択できます。
+* <Cmd sid='zone.entryDevices' product='2' />：入室時に使用するデバイスを選択します。登録済みデバイスの一覧から選択できます。
 
-* <Cmd sid='zone.exitDevices' product='2' />：退室時に使用するデバイスを選択します。 登録済みデバイスの一覧から選択できます。
+* <Cmd sid='zone.exitDevices' product='2' />：退室時に使用するデバイスを選択します。登録済みデバイスの一覧から選択できます。
 
-* <Cmd sid='zone.apbFailAction' product='2' />：**BioStar X** とアンチパスバックが設定されたデバイスとの通信が切断されたときのドア動作を設定します。 この機能は <Cmd sid='zone.globalZone' product='2' /> オプションを <Cmd sid='zone.globalZone.global' product='2' /> に設定した場合に使用できます。
+* <Cmd sid='zone.apbFailAction' product='2' />：**BioStar X** とアンチパスバックが設定されたデバイスとの通信が切断されたときのドア動作を設定します。この機能は <Cmd sid='zone.globalZone' product='2' /> オプションを <Cmd sid='zone.globalZone.global' product='2' /> に設定した場合に使用できます。
 
   * <Cmd sid='zone.apbFailAction.noAction' product='2' />：ユーザーが正常に認証されるとドアが開きます。
 

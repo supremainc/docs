@@ -1,33 +1,85 @@
-## Registrar en estado en línea {/* #registering-online */}
+## Registrar en línea {/* #registering-online */}
+
+:::info
+
+La clave de licencia acepta solo números y guiones (`-`). Ingrese hasta 16 dígitos en el formato `1111-1111-1111-1111`.
+
+:::
+
+### Registrar una sola licencia
 
 Ingrese su nombre y la clave de licencia recibida y, a continuación, haga clic en <Cmd sid='setting.server.license.button.activate' product='2' /> para activar la licencia de **BioStar X** mientras está en línea con una conexión a Internet.
 
 <Image src='/img/biostarx-tutorial-license-online.png' />
 
+### Registrar varias licencias
+
+Agregue hasta 30 licencias a la vez. Haga clic en el botón <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' />. Después de ingresar todas las licencias, haga clic en <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+<Image src='/img/biostarx-tutorial-license-online-added.png' />
+
+:::note
+
+* Cuando la cantidad de campos llegue a 30, el botón <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> se desactiva. No puede agregar más licencias.
+
+* Pegue varias claves de licencia en los campos a la vez. El sistema detecta solo las claves con el formato `1111-1111-1111-1111` y las divide en cada campo.
+
+* Si las claves pegadas superan 30, el sistema ingresa automáticamente solo las primeras 30. El sistema ignora las claves adicionales.
+
+:::
+
+### Progreso de activación
+
+Haga clic en <Cmd sid='setting.server.license.button.activate' product='2' /> para abrir la ventana emergente de progreso. No cierre la página ni la ventana emergente hasta que finalice la activación.
+
 ## Registrar sin conexión {/* #registering-offline */}
 
 Siga las instrucciones a continuación para activar la licencia de **BioStar X** en un entorno de red cerrado o en un estado sin conexión con acceso limitado a Internet.
 
-1. En la sección <Cmd sid='setting.xlicense.activation' product='2' />, haga clic en <Cmd sid='setting.xlicense.offlineActivation' product='2' />.
+1. Ingrese cualquier nombre del administrador de inscripción y la clave de licencia en la sección <Cmd sid='setting.xlicense.activation' product='2' />.
+
+   :::note
+
+   * La clave de licencia acepta solo números y guiones (`-`). Ingrese hasta 16 dígitos en el formato `1111-1111-1111-1111`.
+
+   * Guarde o anote el nombre de administrador y la clave de licencia.
+
+   * Si necesita varias licencias, haga clic en el botón <IcAdd /> <Cmd sid='setting.xlicense.addMoreLicense' product='2' /> para agregarlas.
+
+   :::
+
+2. Haga clic en <Cmd sid='setting.xlicense.offlineActivation' product='2' />.
 
    <Image src='/img/biostarx-tutorial-license-offline.png' />
 
-2. Cuando aparezca la ventana <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' />, haga clic en <Cmd sid='setting.xlicense.button.requestOfflineKey' product='2' />.
+3. Cuando aparezca la ventana <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' />, haga clic en <Cmd sid='setting.xlicense.offlineActivation.needFile' product='2' />.
 
    <Image src='/img/biostarx-tutorial-license-offline-popup.png' />
 
-3. Cuando aparezca el cuadro de diálogo, ingrese <Cmd sid='setting.xlicense.offlineActivation.requestBy' product='2' /> y <Cmd sid='setting.xlicense.offlineActivation.activationKey' product='2' />.
+   :::note
+
+   Si tiene un archivo de licencia emitido, haga clic en <Cmd sid='setting.xlicense.offlineActivation.haveFile' product='2' /> en esta pantalla y luego vaya al paso 9.
+
+   :::
+
+4. Cuando el sistema cree el archivo de solicitud de licencia (\*.req), descárguelo en el disco local.
+
+5. Envíe el archivo de solicitud descargado al revendedor y solicite un archivo de activación sin conexión (\*.lic).
+
+6. Tras recibir el archivo sin conexión, escriba el nombre de administrador y la clave del paso 1 en la sección <Cmd sid='setting.xlicense.activation' product='2' />.
+
+7. Haga clic en <Cmd sid='setting.xlicense.offlineActivation' product='2' />.
+
+8. Cuando aparezca la ventana <Cmd sid='setting.server.license.title.activateLicenseOffline' product='2' />, haga clic en <Cmd sid='setting.xlicense.offlineActivation.haveFile' product='2' />.
 
    <Image src='/img/biostarx-tutorial-license-offline-popup-filed.png' className='none' />
 
-4. Haga clic en el botón <Cmd sid='setting.server.license.button.download' product='2' /> para descargar el archivo de solicitud de licencia (*\*.req*).
+9. Cuando aparezca la ventana Abrir archivo, seleccione el archivo de activación sin conexión (\*.lic) o el comprimido (\*.zip) almacenado localmente.
 
-5. Envíelo al lugar de compra.
+   :::note
 
-Después de recibir el archivo de licencia (*\*.lic*) del lugar de compra, haga clic en el botón <Cmd sid='setting.xlicense.offlineActivationTitle' product='2' /> para cargar el archivo de licencia.
+   Si solicita varias licencias, recibirá un archivo comprimido.
 
-:::info
+   :::
 
-Si no tiene una clave de licencia, ingrese únicamente <Cmd sid='setting.xlicense.offlineActivation.requestBy' product='2' />.
-
-:::
+10. Aparece una ventana emergente con el estado del progreso. No cierre la página ni la ventana emergente hasta que finalice la activación.

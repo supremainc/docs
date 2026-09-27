@@ -15,7 +15,7 @@ keywords:
 
 <Image src='/img/biostarx-settings-server-not-secure.png' />
 
-これは、ブラウザーがサーバーの身元を確認できないために表示される警告です。 証明書をインストールすると、ブラウザーが **BioStar X** サーバーを信頼し、警告なしで安全な HTTPS 接続を利用できます。
+これは、ブラウザーがサーバーの身元を確認できないために表示される警告です。証明書をインストールすると、ブラウザーが **BioStar X** サーバーを信頼し、警告なしで安全な HTTPS 接続を利用できます。
 
 ## 証明書のインストール
 
@@ -37,19 +37,19 @@ keywords:
 
    :::note
 
-   **BioStar X** のデフォルトポート番号は 443 です。 ポート番号を変更した場合は **Port** に変更後のポート番号を入力します。
+   **BioStar X** のデフォルトポート番号は 443 です。ポート番号を変更した場合は **Port** に変更後のポート番号を入力します。
 
    :::
 
 6. セキュリティ警告メッセージを確認し、**はい** をクリックします。
 
-Web ブラウザーを再起動し、登録した IP アドレスを入力して **BioStar X** ページへ移動します。 アドレスバー左側のアイコンをクリックすると **この接続は安全です** のメッセージが表示されます。
+Web ブラウザーを再起動し、登録した IP アドレスを入力して **BioStar X** ページへ移動します。アドレスバー左側のアイコンをクリックすると **この接続は安全です** のメッセージが表示されます。
 
 <Image src='/img/biostarx-settings-server-secure.png' />
 
 :::info
 
-**Enroll Certificate** で入力する IP アドレスは **BioStar X** に設定されている IP アドレスと同一でなければなりません。 これは、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> のメニュー経路にある <Cmd sid='setting.server.biostarIPAdress' product='2' /> 項目で確認できます。
+**Enroll Certificate** で入力する IP アドレスは **BioStar X** に設定されている IP アドレスと同一でなければなりません。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> のメニューにある <Cmd sid='setting.server.biostarIPAdress' product='2' /> で確認できます。
 
 :::
 
@@ -57,7 +57,7 @@ Web ブラウザーを再起動し、登録した IP アドレスを入力して
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.https" /> をクリック。
 
 3. <Cmd sid="button.certDownload" product='2' /> をクリックします。
 
@@ -73,13 +73,13 @@ Web ブラウザーを再起動し、登録した IP アドレスを入力して
 
    :::note
 
-   **BioStar X** のデフォルトポート番号は 443 です。 ポート番号を変更した場合は **Port** に変更後のポート番号を入力します。
+   **BioStar X** のデフォルトポート番号は 443 です。ポート番号を変更した場合は **Port** に変更後のポート番号を入力します。
 
    :::
 
 7. セキュリティ警告メッセージを確認し、**はい** をクリックします。
 
-Web ブラウザーを再起動し、登録した IP アドレスを入力して **BioStar X** ページへ移動します。 アドレスバー左側のアイコンをクリックすると **この接続は安全です** のメッセージが表示されます。
+Web ブラウザーを再起動し、登録した IP アドレスを入力して **BioStar X** ページへ移動します。アドレスバー左側のアイコンをクリックすると **この接続は安全です** のメッセージが表示されます。
 
 <Image src='/img/biostarx-settings-server-secure.png' />
 
@@ -97,13 +97,13 @@ Web ブラウザーを再起動し、登録した IP アドレスを入力して
 
 * VMSサーバーに証明書をインストールする方法は、<DocLink docId='platform/biostar_x/settings-video-integration#install-vms-certification' />をご参照ください。
 
-* VMS サーバーと連携する機能は、追加オプションを別途購入することで利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+* VMS サーバーと連携する機能は、追加オプションを別途購入することで利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
 
 :::
 
-### クライアント PC で証明書をインストールする {/* #install-client-certification */}
+### クライアント PC に証明書をインストールする {/* #install-client-certification */}
 
-1. **BioStar X** をインストールしたクライアント PC のログイン画面、または <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> から HTTPS 証明書インストーラ (*cert-register.zip*) をダウンロードします。
+1. **BioStar X** をインストールしたクライアント PC のログイン画面、または <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.https" /> から HTTPS 証明書インストーラ (*cert-register.zip*) をダウンロードします。
 
 2. ダウンロードしたファイルを解凍し、*cert-register.exe* ファイルを実行します。 **Enroll Certificate** プログラムが起動します。
 

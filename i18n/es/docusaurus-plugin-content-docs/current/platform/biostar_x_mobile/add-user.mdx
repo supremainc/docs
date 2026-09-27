@@ -104,6 +104,10 @@ Para eliminar una imagen de perfil enrollada, toque <Cmd>Remove Picture</Cmd>.
 
 * <Cmd>Access Group</Cmd>: Seleccione el grupo de acceso del usuario.
 
+import UserNameIDrule from '@site/docs/common/_bsx-user-id-name-rule.mdx';
+
+<UserNameIDrule />
+
 :::info
 
 * Los valores disponibles del ID de usuario pueden variar según la opción <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid="setting.userDevice.useridType" product='2' /> del menú. Para más información, consulte <DocLink docId='platform/biostar_x/settings-server-server#userid-type' target='_blank' />.
@@ -129,7 +133,7 @@ Cuando registra a un usuario, también puede enrolar una credencial para que el 
 </Column>
 <Column className='padding--l40'>
 
-### Enrolar PIN {/* #enrollPin */}
+### Inscriba un PIN {/* #enrollPin */}
 
 Puede enrollar una credencial PIN para que el usuario acceda al ingresar un PIN en el dispositivo.
 
@@ -141,7 +145,7 @@ Puede enrollar una credencial PIN para que el usuario acceda al ingresar un PIN 
 
 :::info
 
-* El PIN debe tener al menos 8 caracteres y solo puede contener números.
+* El PIN debe tener una longitud de 4\~16 dígitos y contener solo números.
 
 * Inscriba como máximo una credencial de PIN por usuario.
 
@@ -158,7 +162,7 @@ Puede enrollar una credencial PIN para que el usuario acceda al ingresar un PIN 
 </Column>
 <Column className='padding--l40'>
 
-### Enrolar huella dactilar {/* #enrollFingerprint */}
+### Inscriba huellas dactilares {/* #enrollFingerprint */}
 
 Inscriba la huella digital del usuario como medio de autenticación para el control de acceso. Inscriba la información de la huella digital del usuario mediante un dispositivo que admita autenticación por huella digital.
 

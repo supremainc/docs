@@ -1,0 +1,41 @@
+## Finalizar lista de asistencia {/* #endRollCall */}
+
+Finaliza listas de asistencia en curso tanto en la aplicación móvil **BioStar X** como en la web.
+
+### Finalizar en la aplicación móvil
+
+1. Para finalizar una lista de asistencia, toca el botón <IcRCstop title='End' width={20} height={20} /> en la pantalla de lista o el botón <Cmd>END</Cmd> en la pantalla de estado.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end.png' className='none' width='600px' alone />
+
+2. Si quedan usuarios no contabilizados, aparece una ventana emergente de advertencia. Ingresa un motivo de finalización y toca <Cmd>Sí</Cmd>.
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-end-unaccounted.png' width='272px' alone />
+
+### Finalizar en la web
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid='zone.rollCall' product='2' /> en la lista.
+
+4. En la lista de listas de asistencia, marca la casilla de la lista que vas a finalizar.
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcall-stop.png' />
+
+5. Haz clic en <Cmd sid='zone.pause.end' product='2' /> en la esquina superior derecha de la pantalla.
+
+6. Cuando aparezca el mensaje de confirmación, haz clic en <Cmd sid='button.yes' product='2' />.
+
+Una lista de asistencia sin usuarios no contabilizados finaliza de inmediato. En una lista de asistencia con usuarios no contabilizados, aparece un cuadro de diálogo con la lista <Cmd sid='zone.rollCall.unaccountedUsers' product='2' /> y el campo <Cmd sid='zone.rollCall.endReason' product='2' />. Ingresa un motivo y haz clic en <Cmd sid='zone.rollCall.endButton' product='2' /> para finalizar la lista de asistencia.
+
+<Image src='/img/biostarx-settings-adv-ac-rollcall-stop-unaccounted-users.png' />
+
+:::info
+
+* <Cmd sid='zone.rollCall.endReason' product='2' />: Ingresa hasta 500 caracteres.
+
+* El sistema no puede finalizar varias listas de asistencia si alguna tiene usuarios no contabilizados. Finaliza las listas de asistencia una a la vez.
+
+:::

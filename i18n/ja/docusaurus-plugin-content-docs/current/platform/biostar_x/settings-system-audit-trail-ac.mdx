@@ -1,0 +1,214 @@
+---
+id: settings-system-audit-trail-ac
+title: 入退室管理の監査ログを確認する
+description: 入退室管理に関連する作成、修正、削除、照会など、すべてのアクティビティを監査ログで確認し、フィルタリングする方法を案内します。
+---
+
+<Cmd sid='setting.menu.auditTrail.acAuditLog' /> 機能は、ユーザー、デバイス、扉など入退室管理に関連する、作成、修正、削除、照会、エクスポート、インポート、運用のすべてのアクティビティを記録します。各記録は、いつ、誰が、何を、どのように変更したかを併せて示すため、セキュリティ監査やトラブルシューティングに活用できます。
+
+* **セキュリティ監査**：不正アクセスの試みや権限乱用を検出できます。
+
+* **トラブルシューティング**：システムエラーが発生した時点や設定変更履歴を追跡できます。
+
+* **コンプライアンス**：個人情報の照会履歴を含むアクセス記録を保管し、監査レポートを作成できます。
+
+## 入退室管理の監査ログを確認する
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />をクリックします。
+
+3. 監査ログの一覧が画面に表示されます。
+
+<Image src='/img/biostarx-settings-system-audit-trail.png' />
+
+:::info
+
+* 保管期間などの監査ログポリシーを変更するには、<DocLink docId='platform/biostar_x/settings-system-audit-trail-settings' />を参照してください。
+
+* バージョン1.0.3にアップグレードした後、新たに作成される監査ログは、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> メニューの <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> オプションに関係なく、暗号化して保存します。
+
+* BioStar 2 から **BioStar X** にアップグレードした後、監査ログの一部が記録されない場合は <DocLink docId='platform/biostar_x/migration-x#checkCert' /> を参照してください。
+
+:::
+
+## テーブル構成 {/* #audit-trail-columns */}
+
+監査ログ一覧テーブルは10列で構成され、現在の検索条件に該当する記録を <Cmd sid='audit.column.datetime' /> の新しい順に表示します。
+
+| 列 | 説明 |
+| --- | --- |
+| <Cmd sid='audit.column.datetime' /> | イベントが発生した日時です。 |
+| <Cmd sid='audit.column.user' /> | イベントを実行したユーザーです。 **id(名前)** 形式で表示されます。 |
+| <Cmd sid='audit.column.accountLevel' /> | イベントを実行したユーザーの管理者レベルです。 |
+| <Cmd sid='audit.column.action' /> | 実行された操作の種類です。<Cmd sid='action.create' />、<Cmd sid='action.update' />、<Cmd sid='action.delete' />、<Cmd sid='action.read' />、<Cmd sid='action.export' />、<Cmd sid='action.import' />、<Cmd sid='action.operation' /> のいずれかに分類されます。 |
+| <Cmd sid='audit.column.category' /> | イベント対象のドメイン分類です（例：ユーザー、デバイス、扉）。 |
+| <Cmd sid='audit.column.target' /> | 操作が適用された対象です。**タイプ: id(名前)** 形式で表示されます。 |
+| <Cmd sid='audit.column.subAction' /> | ログイン方式、アラーム解除のように、詳細な操作名がある場合のみ表示されます。 |
+| <Cmd sid='audit.column.modifiedFields' /> | 変更または照会されたフィールド名です。 |
+| <Cmd sid='audit.column.details' /> | 動作別の詳細情報です。（例：変更値、理由、照会条件など） |
+| <Cmd sid='audit.column.ip' /> | ユーザーが接続したIPアドレスです。システムが自動で発行した記録は**127.0.0.1**と表示されます。 |
+
+:::info
+
+* <Cmd sid='audit.column.target' />と<Cmd sid='audit.column.modifiedFields' />の値が2件以上の場合、最初の項目のみ表示し、残りは右側に残件数バッジ（例：**+208**）としてまとめて表示します。残件数が1,000件以上の場合は**+999**と表記し、正確な合計件数は詳細ポップアップのタイトルで確認できます。バッジをクリックすると、そのセルの詳細ポップアップが開きます。
+
+  <Image src='/img/biostarx-settings-system-audit-trail-list-badge.png' />
+
+* セルの値が長い場合は一行で省略して表示します。マウスを合わせると値全体をツールチップに表示し、ツールチップからはみ出す部分は`...`で省略して表示します。
+
+  <Image src='/img/biostarx-settings-system-audit-trail-list-tooltip.png' />
+
+:::
+
+## 詳細情報の確認
+
+値がある<Cmd sid='audit.column.target' />、<Cmd sid='audit.column.modifiedFields' />、<Cmd sid='audit.column.details' />列は下線が付き、クリックできます。該当列の値をクリックすると、動作に応じた詳細ポップアップが開きます。ポップアップを閉じるには<Cmd sid='audit.filter.ok' />ボタンまたは<IcClose title='Close' />ボタンをクリックしてください。
+
+<Image src='/img/biostarx-settings-system-audit-trail-change-detail.png' />
+
+ポップアップ上部の<Cmd sid='audit.detail.searchPlaceholder' />入力フィールドに検索語を入力すると、一致する項目だけを強調表示するかフィルタリングします。対象ポップアップでは、検索時にグループとグループ別件数も更新されますが、タイトルの全体件数は検索に関係なく変わりません。
+
+## フィルターで記録を絞り込む
+
+<Cmd sid='audit.filter.title' />セクションのフィルターを組み合わせ、目的の記録を絞り込んで探してください。同一フィルター内で複数の値を選択すると`OR`で、異なるフィルターを併用すると`AND`で結合されます。
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-filter.png' />
+
+| フィルター | 動作方式 |
+| --- | --- |
+| <Cmd sid='audit.filter.datetime' /> | 開始・終了の日時を指定します。照会期間に長さ制限はありません。 |
+| <Cmd sid='audit.filter.user' /> | 検索語を入力し、<Kbd>Enter</Kbd>キーを押して一致するユーザーを探してください。最初に開くと一覧は空です。 |
+| <Cmd sid='audit.filter.accountLevel' /> | 検索語を入力し、<Kbd>Enter</Kbd>キーを押して一致する管理者レベルを探してください。 |
+| <Cmd sid='audit.filter.category' /> | 検索可能なチェックボックス一覧から、分類を一つ以上選択してください。 |
+| <Cmd sid='audit.filter.target' /> | 検索語を入力し、<Kbd>Enter</Kbd>キーを押して一致する対象を探してください。 |
+| <Cmd sid='audit.filter.action' /> | チェックボックス一覧から動作を一つ以上選択してください。 |
+| <Cmd sid='audit.filter.subAction' /> | 検索可能なリストから詳細操作を選択してください。 |
+| <Cmd sid='audit.filter.ip' /> | 検索語を入力し、<Kbd>Enter</Kbd> キーを押して一致する IP を検索します。 |
+
+* 適用したフィルターがない場合、現在の日付から30日前までの記録を既定で表示します。
+
+* 各フィルターポップアップで値を選択し、<Cmd sid='audit.filter.addCondition' /> ボタンをクリックすると、検索にすぐ反映されます。 <Cmd sid='audit.filter.cancel' /> をクリックすると、選択を取り消してポップアップを閉じます。
+
+  <Image src='/img/biostarx-settings-system-audit-trail-set-filter-popup.png' />
+
+* 適用したフィルターは、先頭の条件と追加件数で要約して表示されます。 <IcClose title='Disable' /> ボタンをクリックすると、該当フィルターのみ解除されます。値を選択していないフィルターは <Cmd sid='audit.filter.none' /> と表示されます。
+
+  <Image src='/img/biostarx-settings-system-audit-trail-seted-filters.png' />
+
+:::info
+
+<Cmd sid='audit.filter.user' />、<Cmd sid='audit.filter.accountLevel' />、<Cmd sid='audit.filter.target' />、<Cmd sid='audit.filter.ip' /> フィルターは、検索語を入力すると結果が表示されます。部分一致に対応しているため、名前やIDの一部だけを入力しても検索できます。削除した対象も <Cmd sid='audit.detail.target.deleted' /> と表示して検索します。
+
+:::
+
+### 照会期間の指定
+
+<Cmd sid='audit.filter.datetime' /> をクリックすると、<Cmd sid='audit.filter.dateRangeTitle' /> ポップアップが開きます。
+
+<Image src='/img/biostarx-settings-system-audit-trail-set-period.png' />
+
+1. <Cmd sid='audit.filter.startDatetime' /> と <Cmd sid='audit.filter.endDatetime' /> の日時をそれぞれ指定します。 <Cmd sid='audit.filter.today' /> をクリックすると、今日の日付へ移動します。
+
+2. 照会期間を適用するには、<Cmd sid='audit.filter.ok' /> ボタンをクリックします。
+
+## フィルターの保存
+
+よく使う検索条件は <Cmd sid='audit.filter.savedFilters' /> に保存し、再度読み込めます。
+
+1. 希望する条件でフィルターを設定します。
+
+2. <Cmd sid='audit.filter.title' /> セクションの <Cmd sid='audit.filter.save' /> ボタンをクリックします。
+
+3. 画面左のフィルターリストに <Cmd sid='audit.filter.newFilterName' /> が追加されます。
+
+<Image src='/img/biostarx-settings-system-audit-trail-add-filter.png' />
+
+* フィルター名を変更するには <IcAuditEdit title='Edit' /> ボタンをクリックし、新しい名前を入力して <Kbd>Enter</Kbd> キーを押します。
+
+* フィルターを削除するには <IcAuditDelete title='Delete' /> ボタンをクリックします。
+
+:::info
+
+保存できるフィルターは最大20件です。保存したフィルターはブラウザーに保存されるため、別のPCやブラウザーでは表示されません。
+
+:::
+
+## ページナビゲーション​
+
+ページを移動したり、1ページに表示する一覧の件数を設定できます。
+
+* <IcFirst />：最初のページへ移動します。
+
+* <IcFw />：前のページへ移動します。
+
+* <IcBw />：次のページへ移動します。
+
+* <IcLast />：最後のページへ移動します。
+
+* <Image src='/img/ico-audit-trail-rows-page.png' ico />：一ページに表示するリスト数を選択します。
+
+## 列設定
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/biostarx-settings-system-audit-trail-column-setting.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+監査ログテーブルの列の位置を変更したり、非表示にしたりできます。 <Cmd sid='audit.filter.title' /> セクション右側の <IcMoreW /> → <Cmd sid='audit.filter.menuColumnSetting' /> をクリックしてください。
+
+* <Cmd sid='audit.columnSettings.listHeading' /> で非表示にする項目のチェックボックスの選択を解除してください。
+
+* 列の順序を変更するには、目的の項目をドラッグしてください。
+
+* 列設定を初期化するには、<Cmd sid='audit.columnSettings.defaultColumn' /> をクリックしてください。
+
+設定を保存するには、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+</Column>
+</Columns>
+
+## CSV へのエクスポート
+
+監査ログをCSVファイルにエクスポートし、外部分析ツールで活用してください。
+
+1. <Cmd sid='audit.filter.title' /> セクションで必要に応じてフィルターを設定してください。
+
+2. セクション右側の <IcMoreW /> → <Cmd sid='audit.filter.menuCsvExport' /> をクリックしてください。
+
+3. <Cmd sid='audit.csvExport.title' /> ウィンドウが表示されたら、<Cmd sid='audit.csvExport.reasonLabel' />(任意)を入力し、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-settings-system-audit-trail-export-csv.png' />
+
+エクスポートしたCSVファイルは、各レコードにつき一行で10列すべてを含み、すべての値は引用符で囲んで表記されます。対象が複数の値はバーティカルバー(`|`)で区切ります(例: **User: 7(Kim)|User: 8(Lee)**)。また、<Cmd sid='audit.column.details' /> の値は省略せず、すべての対象とすべてのフィールドを含みます。
+
+:::caution
+
+CSV ファイルは、スプレッドシートが数式として解釈できる値を元のまま含みます。ダウンロードした CSV ファイルをスプレッドシートで直ちに開かず、必要に応じてテキストのインポート機能で開いてください。
+
+:::
+
+:::tip
+
+フィルターを設定した場合、フィルタリングされた結果だけをCSVファイルにエクスポートします。
+
+:::
+
+## BioStar 2 の記録を確認
+
+以前のバージョン(BioStar 2)で残した記録も、同じテーブルでまとめて照会できます。 BioStar 2 の記録は次のように表示されます。
+
+* <Cmd sid='audit.column.user' /> と <Cmd sid='audit.column.target' /> は **名前(id)** 形式(空白の変形を含む)で、元の形のまま保持します。
+
+* <Cmd sid='audit.column.modifiedFields' /> は常にハイフン(`-`)で表示します。
+
+* 提供されるフィルターでBioStar 2 の記録も同様に検索できます。<Cmd sid='audit.filter.user' /> と <Cmd sid='audit.filter.target' /> は名前とIDの両方に一致します。
+
+:::info
+
+レガシー記録には、サポートしない検索条件が含まれる場合があります。保存したフィルターを読み込むときに一部の条件を除外すると、システムが案内メッセージを表示します。
+
+:::

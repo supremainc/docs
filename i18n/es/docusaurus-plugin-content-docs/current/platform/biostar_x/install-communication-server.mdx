@@ -7,7 +7,7 @@ keywords:
   - Instalación
 ---
 
-Este documento explica cómo instalar el **BioStar X** **Servidor de Comunicaciones Múltiples (Multi Communications)**. 
+Este documento explica cómo instalar el **BioStar X** **Servidor de Comunicaciones Múltiples**. 
 
 El servidor de comunicaciones múltiples gestiona la comunicación con dispositivos de control de acceso. Al instalarlo por separado del servidor principal, ayuda a gestionar muchos dispositivos de forma confiable. Un solo servidor de comunicaciones múltiples puede conectar hasta 1,000 dispositivos. Agregue varios servidores de comunicaciones múltiples según sea necesario.
 
@@ -17,7 +17,7 @@ Hasta 1,000 dispositivos pueden conectarse a través de Ethernet (TCP/IP).
 
 :::
 
-## Antes de empezar {/* #start-before */}
+## Antes de empezar {/* #start-before \*/}
 
 Antes de instalar el servidor de comunicaciones múltiples, verifique lo siguiente.
 
@@ -53,7 +53,7 @@ A continuación se muestra la información necesaria para instalar el servidor d
 
 :::info
 
-Para obtener más información sobre <Cmd>CONFIGURACIÓN DEL SERVICIO</Cmd>, consulte <DocLink docId='platform/biostar_x/service-settings' />.
+Para obtener más información sobre <Cmd>SERVICE SETTINGS</Cmd>, consulte <DocLink docId='platform/biostar_x/service-settings' />.
 
 :::
 
@@ -127,13 +127,13 @@ Después de instalar el servidor de comunicaciones múltiples, conéctelo al ser
 
 4. Haga clic en <Cmd>Add Communication Server</Cmd> en la esquina superior derecha de la pantalla.
 
-5. Cuando aparezca la ventana <Cmd>Agregar servidor de comunicación</Cmd>, marque la casilla que coincida con la dirección IP del servidor de comunicaciones múltiples instalado. En la columna <Cmd>Base de datos</Cmd>, seleccione la base de datos que se usará.
+5. Cuando aparezca la ventana <Cmd>Add Communication Server</Cmd>, marque la casilla que coincida con la dirección IP del servidor de comunicaciones múltiples instalado. En la columna <Cmd>Database</Cmd>, seleccione la base de datos que se usará.
 
    <Image src='/img/common/biostarx-sm-cluster-main-03.png' alone />
 
 6. Haga clic en el botón <Cmd>Add</Cmd>.
 
-En la lista del servidor de comunicaciones múltiples, compruebe que <Cmd>Estado del servidor</Cmd> muestre <Cmd>Conectado</Cmd>.
+En la lista del servidor de comunicaciones múltiples, compruebe que <Cmd>Server Status</Cmd> muestre <Cmd>Connected</Cmd>.
 
 <Image src='/img/common/biostarx-sm-cluster-main-04.png' alone />
 
@@ -141,7 +141,7 @@ En la lista del servidor de comunicaciones múltiples, compruebe que <Cmd>Estado
 
 * El menú <Cmd>COMMUNICATIONS</Cmd> puede usarse cuando la licencia de multi-servidor de comunicación está activada. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
-* Para eliminar el servidor de comunicaciones múltiples, marque la casilla del servidor en la lista y haga clic en <Cmd>Eliminar servidor de comunicación</Cmd> en la esquina superior derecha de la pantalla.
+* Para eliminar el servidor de comunicaciones múltiples, marque la casilla del servidor en la lista y haga clic en <Cmd>Delete Communication Server</Cmd> en la esquina superior derecha de la pantalla.
 
 * Al agregar un servidor de comunicaciones múltiples, agregue una base de datos secundaria para reducir la carga en el servidor principal. Para obtener más información sobre cómo agregar una base de datos secundaria, consulte <DocLink docId='platform/biostar_x/add-sub-db' />.
 

@@ -1,13 +1,13 @@
 ---
 id: settings-advanced-ac-occupancy
 title: 在室人数制限
-description: 在室人数制限設定の方法を案内します。 特定の場所の最大入室人数を制限し、在室状況をモニタリングします。
+description: 在室人数制限設定の方法を案内します。特定の場所の最大入室人数を制限し、在室状況をモニタリングします。
 keywords:
   - 高度なアクセス制御
   - 在室人数制限
 ---
 
-在室人数制限は、空間の安全性と効率性を確保するための重要な入退室制御機能です。 この機能により管理者は場所ごとに同時に入室できる最大人数をあらかじめ設定し、混雑を防ぎ、より体系的な空間管理を実現できます。
+在室人数制限は、空間の安全性と効率性を確保するための重要な入退室制御機能です。この機能により管理者は場所ごとに同時に入室できる最大人数をあらかじめ設定し、混雑を防ぎ、より体系的な空間管理を実現できます。
 
 在室人数制限設定の主な活用分野は次のとおりです。
 
@@ -39,7 +39,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />をクリックしてください。
 
 3. <Cmd sid='button.func.addZone' product='2' /> ボタンをクリックします。
 
@@ -49,9 +49,9 @@ keywords:
 
    <Image src='/img/biostarx-settings-adv-ac-add-occupancy.png' />
 
-6. <Cmd sid='common.configuration' product='2' /> セクションで在室人数制限設定の詳細項目を設定します。 詳細については<DocLink inner='#setting' />をご参照ください。
+6. <Cmd sid='common.configuration' product='2' /> セクションで在室人数制限設定の詳細項目を設定します。詳細については<DocLink inner='#setting' />をご参照ください。
 
-7. <Cmd sid='zone.occupancy.countByPass' product='2' /> セクションで、在室人数制限を常にバイパスできる入退室グループを選択できます。 詳細については<DocLink inner='#countByPass' />をご参照ください。
+7. <Cmd sid='zone.occupancy.countByPass' product='2' /> セクションで、在室人数制限を常にバイパスできる入退室グループを選択できます。詳細については<DocLink inner='#countByPass' />をご参照ください。
 
 8. すべての設定が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
 
@@ -65,21 +65,21 @@ keywords:
 
 在室人数制限設定の詳細項目は以下のとおりです。
 
-* <Cmd sid='zone.globalZone' product='2' />：適用範囲を確認できます。 在室人数制限設定は <Cmd sid='zone.globalZone.global' product='2' /> モードのみをサポートし、**BioStar X** に登録されているすべてのデバイスで設定できます。
+* <Cmd sid='zone.globalZone' product='2' />：適用範囲を確認できます。在室人数制限設定は <Cmd sid='zone.globalZone.global' product='2' /> モードのみをサポートし、**BioStar X** に登録されているすべてのデバイスで設定できます。
 
 * <Cmd sid='common.activate' product='2' />：設定を有効化または一時的に無効化できます。
 
-* <Cmd sid='zone.entryDevices' product='2' />：入室時に使用するデバイスを選択します。 登録済みデバイスの一覧から選択できます。
+* <Cmd sid='zone.entryDevices' product='2' />：入室時に使用するデバイスを選択します。登録済みデバイスの一覧から選択できます。
 
-* <Cmd sid='zone.exitDevices' product='2' />：退室時に使用するデバイスを選択します。 登録済みデバイスの一覧から選択できます。
+* <Cmd sid='zone.exitDevices' product='2' />：退室時に使用するデバイスを選択します。登録済みデバイスの一覧から選択できます。
 
-* <Cmd sid='zone.occupancy.limit' product='2' />：入室を制限する人数を入力します。 入室人数が設定した上限に達した場合、入室が制限されます。 0から10,000までの数値を入力でき、0に設定すると人数制限なしで入退室できます。
+* <Cmd sid='zone.occupancy.limit' product='2' />：入室を制限する人数を入力します。入室人数が設定した上限に達した場合、入室が制限されます。 0から10,000までの数値を入力でき、0に設定すると人数制限なしで入退室できます。
 
-* <Cmd sid='zone.occupancy.autoCountReset' product='2' />：保存された在室人数を自動で初期化する時間を設定します。 毎日設定した時間に在室人数および常時通過人数が初期化されます。
+* <Cmd sid='zone.occupancy.autoCountReset' product='2' />：保存された在室人数を自動で初期化する時間を設定します。毎日設定した時間に在室人数および常時通過人数が初期化されます。
 
-* <Cmd sid='zone.occupancy.list.almostFull' product='2' />：入室人数が設定上限に達する前に、あらかじめ管理者へアラームを送信するかイベントログに記録できます。 在室人数の事前警報を有効にすると、<Cmd sid='zone.occupancy.1stLevel' product='2' /> 入力フィールドが有効になります。 <Cmd sid='zone.occupancy.2stLevel' product='2' /> を設定するには、<IcAdd className='border radius' /> をクリックします。
+* <Cmd sid='zone.occupancy.list.almostFull' product='2' />：入室人数が設定上限に達する前に、あらかじめ管理者へアラームを送信するかイベントログに記録できます。在室人数の事前警報を有効にすると、<Cmd sid='zone.occupancy.1stLevel' product='2' /> 入力フィールドが有効になります。 <Cmd sid='zone.occupancy.2stLevel' product='2' /> を設定するには、<IcAdd className='border radius' /> をクリックします。
 
-* <Cmd sid='zone.occupancy.networkFailureAction' product='2' />：設定されたデバイスでネットワーク障害が発生した際の入退室許可可否を設定できます。 入退室許可に設定すると、デバイスがネットワーク切断された場合に入室制限が停止し、実際の入室人数が上限を超えてもユーザーは入室できます。
+* <Cmd sid='zone.occupancy.networkFailureAction' product='2' />：設定されたデバイスでネットワーク障害が発生した際の入退室許可可否を設定できます。入退室許可に設定すると、デバイスがネットワーク切断された場合に入室制限が停止し、実際の入室人数が上限を超えてもユーザーは入室できます。
 
 :::info
 
@@ -89,7 +89,7 @@ keywords:
 
 * <Cmd sid='door.dualAuthentication' product='2' />を出入口のドアで設定したデバイスは、<Cmd sid='zone.entryDevices' product='2' />または<Cmd sid='zone.exitDevices' product='2' />に設定できません。
 
-* <Cmd sid='zone.occupancy.autoCountReset' product='2' /> オプションの時間は、実際にその場所がある地域の標準タイムゾーンを考慮して設定してください。 例として、UTC+1:00 の地域にある **BioStar X** サーバーで在室人数の自動初期化時刻を 00:00 に設定すると、UTC+2:00 の地域にある **BioStar X** クライアントでは 01:00 に自動初期化されます。
+* <Cmd sid='zone.occupancy.autoCountReset' product='2' /> オプションの時間は、実際にその場所がある地域の標準タイムゾーンを考慮して設定してください。例として、UTC+1:00 の地域にある **BioStar X** サーバーで在室人数の自動初期化時刻を 00:00 に設定すると、UTC+2:00 の地域にある **BioStar X** クライアントでは 01:00 に自動初期化されます。
 
 * <Cmd sid='zone.occupancy.list.almostFull' product='2' /> は最大 2 件まで設定でき、制限値より小さい数字のみ入力できます。 <Cmd sid='zone.occupancy.1stLevel' product='2' /> と <Cmd sid='zone.occupancy.2stLevel' product='2' /> は同じ値に設定できません。
 
@@ -105,7 +105,7 @@ keywords:
 
 ## 常時通過人数の設定 {/* #countByPass */}
 
-在室人数制限を常に通過できる入退室グループを選択できます。 常時通過グループに属するユーザーは在室人数に関係なく入退室でき、在室人数としてカウントされません。 実際に在室している常時通過人数は、在室人数制限設定リストの常時通過人数列で確認できます。
+在室人数制限を常に通過できる入退室グループを選択できます。常時通過グループに属するユーザーは在室人数に関係なく入退室でき、在室人数としてカウントされません。実際に在室している常時通過人数は、在室人数制限設定リストの常時通過人数列で確認できます。
 
 :::info
 
@@ -115,21 +115,21 @@ keywords:
 
 :::
 
-## リスト状況の確認 {/* #occupancyZoneList */}
+## リストの状況確認 {/* #occupancyZoneList */}
 
-在室人数制限設定のリストを確認できます。 各設定の状態と在室人数を確認し、必要に応じて設定を変更できます。
+在室人数制限設定のリストを確認できます。各設定の状態と在室人数を確認し、必要に応じて設定を変更できます。
 
 * <Cmd sid='zone.occupancy.list.name' product='2' />：名前を確認できます。
 
 * <Cmd sid='zone.occupancy.list.status' product='2' />：状態を確認できます。
 
-  * <Cmd sid='zone.occupancy.list.normal' product='2' />：現在の在室人数が、<Cmd sid='common.limit' product='2' />、<Cmd sid='zone.occupancy.almostFull' product='2' />(<Cmd sid='zone.occupancy.1stLevel' product='2' />、<Cmd sid='zone.occupancy.2stLevel' product='2' />) で設定した人数より少ない状態です。 ユーザーは該当場所に入室できます。
+  * <Cmd sid='zone.occupancy.list.normal' product='2' />：現在の在室人数が、<Cmd sid='common.limit' product='2' />、<Cmd sid='zone.occupancy.almostFull' product='2' />(<Cmd sid='zone.occupancy.1stLevel' product='2' />、<Cmd sid='zone.occupancy.2stLevel' product='2' />) で設定した人数より少ない状態です。ユーザーは該当場所に入室できます。
 
   * <Cmd sid='zone.occupancy.almostFull' product='2' />：在室人数が <Cmd sid='zone.occupancy.1stLevel' product='2' /> または <Cmd sid='zone.occupancy.2stLevel' product='2' /> で設定した人数に到達した状態です。
 
-  * <Cmd sid='zone.occupancy.list.full' product='2' />：在室人数が制限で設定した人数に到達した状態です。 これ以上の入室は制限されます。
+  * <Cmd sid='zone.occupancy.list.full' product='2' />：在室人数が制限で設定した人数に到達した状態です。これ以上の入室は制限されます。
 
-* <Cmd sid='zone.occupancy.list.countLimit' product='2' />：定員に対する現在の入室人数を確認できます。 また、ネットワーク障害などの特殊な状況で在室人数と実際の人数が一致しない場合、管理者は <IcAdd className='border radius' /> または <IcMinus className='border radius' /> をクリックするか、在室人数をクリックして直接修正できます。
+* <Cmd sid='zone.occupancy.list.countLimit' product='2' />：定員に対する現在の入室人数を確認できます。また、ネットワーク障害などの特殊な状況で在室人数と実際の人数が一致しない場合、管理者は <IcAdd className='border radius' /> または <IcMinus className='border radius' /> をクリックするか、在室人数をクリックして直接修正できます。
 
 * <Cmd sid='zone.occupancy.countByPass' product='2' />：現在入室している常時通過人数に含まれるユーザー数を確認できます。
 
@@ -143,17 +143,17 @@ keywords:
 
 :::info
 
-<Cmd sid='zone.occupancy.limit' product='2' /> を設定した場合、在室人数は最大 50,000 まで入力できます。 <Cmd sid='zone.occupancy.limit' product='2' /> を設定しない場合、最大 999,999 まで入力できます。 最大入力値を超える数字は入力できず、実際の在室人数が最大入力値を超える場合、超過分はデータベースに保存されません。
+<Cmd sid='zone.occupancy.limit' product='2' /> を設定した場合、在室人数は最大 50,000 まで入力できます。 <Cmd sid='zone.occupancy.limit' product='2' /> を設定しない場合、最大 999,999 まで入力できます。最大入力値を超える数字は入力できず、実際の在室人数が最大入力値を超える場合、超過分はデータベースに保存されません。
 
 :::
 
 ## 在室人数を初期化する {/* #resetOccupancy */}
 
-在室人数および常時通過人数を初期化できます。 在室人数を初期化すると、ユーザーの入退室情報はすべて削除され、ネットワークの状態によって在室人数が不正確になる可能性があります。
+在室人数および常時通過人数を初期化できます。在室人数を初期化すると、ユーザーの入退室情報はすべて削除され、ネットワークの状態によって在室人数が不正確になる可能性があります。
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />をクリックしてください。
 
 3. リストで <Cmd sid='zone.occupancy.title' product='2' /> をクリックします。
 
@@ -165,11 +165,11 @@ keywords:
 
 ## 有効化/無効化 {/* #activateDeactivateOccupancyZone */}
 
-無効化された在室人数制限設定を有効化するか、有効化された設定を無効化できます。 設定を無効化すると、<Cmd sid='zone.occupancy.fullscreen.currentOccupancy' product='2' /> と <Cmd sid='zone.occupancy.list.countBypass' product='2' /> が初期化されます。
+無効化された在室人数制限設定を有効化するか、有効化された設定を無効化できます。設定を無効化すると、<Cmd sid='zone.occupancy.fullscreen.currentOccupancy' product='2' /> と <Cmd sid='zone.occupancy.list.countBypass' product='2' /> が初期化されます。
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />をクリックしてください。
 
 3. リストで <Cmd sid='zone.occupancy.title' product='2' /> をクリックします。
 
@@ -181,7 +181,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />をクリックしてください。
 
 3. リストで <Cmd sid='zone.occupancy.title' product='2' /> をクリックします。
 

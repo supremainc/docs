@@ -15,6 +15,8 @@ Supervise y controle en tiempo real los videos de cámaras vinculadas a puertas,
 
   <Image src='/img/biostarx-monitoring-video-tiles.png' width='70%' />
 
+* El área <Cmd sid='arena.title' /> permanece deshabilitada si el sistema no tiene cámaras registradas o no tiene componentes del mapa registrados (áreas, instalaciones o pisos).
+
 * Para obtener más información sobre la integración con el VMS y cómo agregar y administrar cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos' />.
 
 * Si se produce un error de carga al reproducir grabaciones desde el VMS, instale el certificado en el servidor VMS e instale el certificado del servidor VMS en la PC cliente. Para obtener más información, consulta lo siguiente.
@@ -25,7 +27,7 @@ Supervise y controle en tiempo real los videos de cámaras vinculadas a puertas,
 
 * Si las cámaras asociadas a esta área no son visibles, verifique los permisos del grupo de cámaras. Si el administrador de un permiso personalizado no ha configurado los permisos del grupo de cámaras, la cámara podría no ser visible. Para obtener más información sobre cómo configurar los permisos de los grupos de cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
 
-* El monitoreo de video está disponible con opciones adicionales para licencias **Avanzado** y superiores. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* El monitoreo de video está disponible como una opción adicional con la licencia **Essential** (Essential) o superior. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -72,6 +74,16 @@ De forma predeterminada, los videos colocados en el video tile se reproducen en 
 5. Este icono indica que el video actual se reproduce en tiempo real. Para volver al video en vivo mientras reproduce video anterior, haga clic en este icono.
 
 </Calloutlists>
+
+### Retención de la reproducción de video grabado y aviso de falla {/* #recording-playback-failure */}
+
+Salga de la pestaña <Cmd sid='arena.video.title' /> (por ejemplo, vaya a otra página, cambie a la pestaña <Cmd sid='arena.tree.map.title' /> o actualice). Cuando vuelva a la pestaña <Cmd sid='arena.video.title' />, mantiene el estado de reproducción del video grabado. Cada mosaico de video vuelve a cargar el video en el orden en que aparece.
+
+:::info
+
+La falla de reproducción puede aparecer en cada mosaico en momentos distintos porque los tiempos de respuesta varían. Sin embargo, los mosaicos que no se reproducen suelen aparecer al final del orden.
+
+:::
 
 ## Herramienta de control de puerta {/* #door-control-tool */}
 
@@ -127,7 +139,7 @@ Cuando se produce un evento específico en una puerta establecido por una regla,
 
 :::
 
-## Configurar diseño del video tile {/* #video-tile-layout-setting */}
+## Configurar diseño de mosaicos de video {/* #video-tile-layout-setting */}
 
 Cambie el tamaño o la posición del video colocado en el video tile según sea necesario. Ajuste el tamaño y la posición del video según su importancia para el monitoreo.
 

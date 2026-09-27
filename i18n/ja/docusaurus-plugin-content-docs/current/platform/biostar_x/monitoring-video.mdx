@@ -7,31 +7,33 @@ keywords:
   - ビデオ
 ---
 
-ビデオモニタリング機能を使用すると、ドア、エリア、デバイスに連携されたカメラ映像をリアルタイムで確認し、制御できます。 本書では、ビデオタイルを使用してカメラ映像を追加し、サイズ変更、位置変更、全画面表示などのさまざまな操作を行う方法を説明します。 さらに、アラーム状態の確認や解除といった管理機能によって、セキュリティ状況に迅速に対応できるよう支援します。
+ビデオモニタリング機能を使用すると、ドア、エリア、デバイスに連携されたカメラ映像をリアルタイムで確認し、制御できます。本書では、ビデオタイルを使用してカメラ映像を追加し、サイズ変更、位置変更、全画面表示などのさまざまな操作を行う方法を説明します。さらに、アラーム状態の確認や解除といった管理機能によって、セキュリティ状況に迅速に対応できるよう支援します。
 
 :::info
 
-* **ビデオタイル**は、画面中央に位置するカメラ映像表示エリアです。 複数のカメラ映像を同時に配置してモニタリングできるインターフェースコンポーネントです。 ユーザーはビデオタイルで映像のサイズを調整したり位置を変更し、必要に応じて映像を閉じたり全画面に切り替えたりできます。
+* **ビデオタイル**は、画面中央に位置するカメラ映像表示エリアです。複数のカメラ映像を同時に配置してモニタリングできるインターフェースコンポーネントです。ユーザーはビデオタイルで映像のサイズを調整したり位置を変更し、必要に応じて映像を閉じたり全画面に切り替えたりできます。
 
   <Image src='/img/biostarx-monitoring-video-tiles.png' width='70%' />
 
+* <Cmd sid='arena.title' /> エリアは、システムに登録されたデバイスカメラがない、またはマップ構成要素（エリア、施設、階）が登録されていない場合、有効になりません。
+
 * VMSと連携してカメラを追加・管理する方法については、<DocLink docId='platform/biostar_x/settings-videos' />を参照してください。
 
-* VMS の録画映像を再生するときにロードエラーが発生する場合は、VMS サーバーに証明書をインストールし、クライアント PC にも VMS サーバーの証明書をインストールする必要があります。 詳細については次のドキュメントを参照してください。
+* VMS の録画映像を再生するときにロードエラーが発生する場合は、VMS サーバーに証明書をインストールし、クライアント PC にも VMS サーバーの証明書をインストールする必要があります。詳細については次のドキュメントを参照してください。
 
   * [VMS サーバーでの証明書インストール](settings-video-integration#install-vms-certification)
 
   * [クライアント PC での VMS サーバー証明書のインストール](settings-video-integration#video-troubleshooting)
 
-* エリアと連動しているカメラが表示されない場合は、カメラグループの権限を確認してください。 カスタム権限を持つ管理者がカメラグループの権限を設定していないと、カメラが表示されないことがあります。 カメラグループの権限設定の詳細については <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />ご参照ください。
+* エリアと連動しているカメラが表示されない場合は、カメラグループの権限を確認してください。カスタム権限を持つ管理者がカメラグループの権限を設定していないと、カメラが表示されないことがあります。カメラグループの権限設定の詳細については <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />ご参照ください。
 
-* ビデオモニタリングは **アドバンス**(Advanced) 以上のライセンスで追加オプションとして利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+* ビデオモニタリングは **エッセンシャル**(Essential) 以上のライセンスで追加オプションとして利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
 :::
 
 ## 映像を再生する {/* #play-video */}
 
-ビデオタイルにカメラ映像を追加してモニタリングできます。 ビデオタイルは画面中央に配置され、複数のカメラ映像を同時にモニタリングできます。
+ビデオタイルにカメラ映像を追加してモニタリングできます。ビデオタイルは画面中央に配置され、複数のカメラ映像を同時にモニタリングできます。
 
 1. 画面左のサイドバーで <Cmd sid='arena.tree.door.title' /> または <Cmd sid='arena.tree.map.title' />、<Cmd sid='arena.tree.device.title' /> タブから映像を確認するカメラデバイスを選択します。
 
@@ -55,7 +57,7 @@ keywords:
 
 ## 映像を制御する {/* #control-video */}
 
-ビデオタイルに配置した映像はデフォルトでリアルタイム再生されます。 再生ツールを使って映像を停止したり、過去の録画映像を確認できます。
+ビデオタイルに配置した映像はデフォルトでリアルタイム再生されます。再生ツールを使って映像を停止したり、過去の録画映像を確認できます。
 
 <Image src='/img/monitoring-video-player.png' alone />
 
@@ -65,25 +67,35 @@ keywords:
 
 2. 映像を全画面(<Image src='/img/menus/ico-fullscreen.svg' ico alone />)で再生したり、ビデオタイルから除外(<Image src='/img/menus/ico-close.svg' ico alone />)したりできるボタンです。
 
-3. 映像の再生位置を調整できるスライダーです。 スライダーをドラッグして過去時点の映像を表示できます。
+3. 映像の再生位置を調整できるスライダーです。スライダーをドラッグして過去時点の映像を表示できます。
 
 4. <Image src='/img/menus/ico-play.svg' ico alone /> または <Image src='/img/menus/ico-pause.svg' ico alone /> をクリックして動画を再生または一時停止します。
 
-5. 現在の映像をリアルタイムで再生していることを示すアイコンです。 過去の映像を再生中にリアルタイム映像へ戻すには、このアイコンをクリックしてください。
+5. 現在の映像をリアルタイムで再生していることを示すアイコンです。過去の映像を再生中にリアルタイム映像へ戻すには、このアイコンをクリックしてください。
 
 </Calloutlists>
 
+### 録画映像の再生状態の維持と失敗通知 {/* #recording-playback-failure */}
+
+<Cmd sid='arena.video.title' /> タブから別の画面に移動した後（例：別のページに移動、<Cmd sid='arena.tree.map.title' /> タブに切り替え、更新）、再度 <Cmd sid='arena.video.title' /> タブに戻ると、以前再生していた録画映像の状態を維持します。このとき、各ビデオタイルは配置順に映像を再読み込みします。
+
+:::info
+
+映像ごとに応答速度が異なるため、再生失敗が表示されるタイミングはタイルごとに異なる場合があります。ただし、再生に失敗するタイルは、タイル順で後ろ側から現れる傾向があります。
+
+:::
+
 ## ドア制御ツール {/* #door-control-tool */}
 
-映像を追加した後、<Cmd sid='arena.map.doorControl' /> ツールを使用して追加操作を実行できます。 ビデオタイルでドアに連携されたカメラを選択すると、ドアを制御できる <Cmd sid='arena.map.doorControl' /> ツールが有効になります。 ドアの開放、ロック、解除、アラーム解除などの機能を利用できます。
+映像を追加した後、<Cmd sid='arena.map.doorControl' /> ツールを使用して追加操作を実行できます。ビデオタイルでドアに連携されたカメラを選択すると、ドアを制御できる <Cmd sid='arena.map.doorControl' /> ツールが有効になります。ドアの開放、ロック、解除、アラーム解除などの機能を利用できます。
 
 <Image src='/img/monitoring-door-control.png' alt='ドアを制御' />
 
 :::info
 
-* <Cmd sid='arena.map.doorControl' /> ツールは、右パネルに何も開かれていないときに使用できます。 右パネルに詳細情報が開いている場合は、閉じてから使用してください。
+* <Cmd sid='arena.map.doorControl' /> ツールは、右パネルに何も開かれていないときに使用できます。右パネルに詳細情報が開いている場合は、閉じてから使用してください。
 
-* この機能を使用するには、ドアにカメラが連携されている必要があります。 出入口とカメラの連携の詳細については、<DocLink docId='platform/biostar_x/settings-videos-rule' />を参照してください。
+* この機能を使用するには、ドアにカメラが連携されている必要があります。出入口とカメラの連携の詳細については、<DocLink docId='platform/biostar_x/settings-videos-rule' />を参照してください。
 
 * <Cmd sid='arena.map.doorControl' /> ツールで利用できる機能の詳細については、<DocLink docId='platform/biostar_x/control-door' />を参照してください。
 
@@ -91,11 +103,11 @@ keywords:
 
 ## 映像アラームを確認する {/* #check-the-video-alarm */}
 
-カメラと連携されたドアのいずれかがアラーム状態になると、映像にアラームアイコンが表示されます。 連携されたドアのアラームをすべて解除すると、アラームアイコンが消えます。
+カメラと連携されたドアのいずれかがアラーム状態になると、映像にアラームアイコンが表示されます。連携されたドアのアラームをすべて解除すると、アラームアイコンが消えます。
 
 <Image src='/img/monitoring-video-alarm.png' alt='アラーム' />
 
-ドアのアラームを解除するには、ドアリストで右クリックし、ポップアップメニューから <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックします。 または <Cmd sid='arena.map.doorControl' /> ツールで <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックします。
+ドアのアラームを解除するには、ドアリストで右クリックし、ポップアップメニューから <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックします。または <Cmd sid='arena.map.doorControl' /> ツールで <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックします。
 
 <Image src='/img/biostarx-monitoring-camera-clear-alarm.png' />
 
@@ -111,17 +123,17 @@ keywords:
 
 ## ビデオログを確認する {/* #check-video-log */}
 
-ルールで設定されたドアで特定のイベントが発生すると、<Cmd sid='arena.eventTable.title' /> セクションの該当イベント項目にビデオログ(<IcVidLog />)アイコンが表示されます。 ビデオログアイコンが表示されたイベント項目をクリックすると、画面右側に詳細情報が表示されます。 特定のイベントが発生した時刻の映像を確認できます。
+ルールで設定されたドアで特定のイベントが発生すると、<Cmd sid='arena.eventTable.title' /> セクションの該当イベント項目にビデオログ(<IcVidLog />)アイコンが表示されます。ビデオログアイコンが表示されたイベント項目をクリックすると、画面右側に詳細情報が表示されます。特定のイベントが発生した時刻の映像を確認できます。
 
 <Image src='/img/biostarx-monitoring-camera-event-video-log.png' />
 
 :::info
 
-* ビデオログアイコンは、ドアにカメラが連携されている場合に表示されます。 カメラと出入口の連携の詳細については、<DocLink docId='platform/biostar_x/settings-videos-rule' />を参照してください。
+* ビデオログアイコンは、ドアにカメラが連携されている場合に表示されます。カメラと出入口の連携の詳細については、<DocLink docId='platform/biostar_x/settings-videos-rule' />を参照してください。
 
-* イベント設定ルールに基づき、最初に接続されたカメラを優先して再生します。 映像をさらに大きな画面で再生するには、画面をダブルクリックします。
+* イベント設定ルールに基づき、最初に接続されたカメラを優先して再生します。映像をさらに大きな画面で再生するには、画面をダブルクリックします。
 
-* ドアには最大4台のカメラを接続でき、映像下部のカメラボタンをクリックして目的のカメラ映像を再生できます。 接続されているカメラが1台のみの場合、カメラボタンは表示されません。
+* ドアには最大4台のカメラを接続でき、映像下部のカメラボタンをクリックして目的のカメラ映像を再生できます。接続されているカメラが1台のみの場合、カメラボタンは表示されません。
 
 * 画面下部の <Cmd sid='arena.eventTable.event' /> セクションの詳細については、<DocLink docId='platform/biostar_x/monitoring-event' />を参照してください。
 
@@ -129,7 +141,7 @@ keywords:
 
 ## ビデオタイルのレイアウトを設定する {/* #video-tile-layout-setting */}
 
-ビデオタイルに配置した映像は、サイズを変更したり任意の位置に移動したりできます。 重要度に応じて映像のサイズを調整し、位置を変更してモニタリングします。
+ビデオタイルに配置した映像は、サイズを変更したり任意の位置に移動したりできます。重要度に応じて映像のサイズを調整し、位置を変更してモニタリングします。
 
 ### 映像サイズを変更する {/* #change-video-size */}
 
@@ -143,19 +155,19 @@ keywords:
 
    <Image src='/img/monitoring-video-adjust-size-02.png' alone />
 
-配置されたタイルのサイズに比例して映像のサイズを調整できます。 逆に映像のサイズを縮小することもできます。
+配置されたタイルのサイズに比例して映像のサイズを調整できます。逆に映像のサイズを縮小することもできます。
 
 <Image src='/img/monitoring-video-adjust-size-03.png' alone />
 
 ### 映像を拡大する {/* #video-size-enlargement */}
 
-映像をビデオタイルの全体サイズに拡大するには、映像をダブルクリックします。 映像がビデオタイルのサイズに拡大されます。
+映像をビデオタイルの全体サイズに拡大するには、映像をダブルクリックします。映像がビデオタイルのサイズに拡大されます。
 
 <Image src='/img/common/monitoring-video-extend.gif' alone />
 
 ### 映像の位置を変更する {/* #changing-the-video-location */}
 
-位置を変更する映像をクリックし、目的の位置へドラッグします。 選択した映像の位置を変更できます。
+位置を変更する映像をクリックし、目的の位置へドラッグします。選択した映像の位置を変更できます。
 
 <Image src='/img/monitoring-video-move-position.png' alone />
 
@@ -173,7 +185,7 @@ keywords:
 
 ビデオタイルに配置された映像を全画面で表示するには、映像右上の <IcFullscreen /> ボタンをクリックします。
 
-全画面表示を終了するには、画面右上の <IcRestorscreen/> ボタンをクリックしてください。 またはキーボードの <kbd>ESC</kbd> キーを押します。
+全画面表示を終了するには、画面右上の <IcRestorscreen/> ボタンをクリックしてください。またはキーボードの <kbd>ESC</kbd> キーを押します。
 
 </Column>
 </Columns>
@@ -195,6 +207,6 @@ keywords:
 
 ## すべての映像を閉じる {/* #close-all-video */}
 
-ビデオタイルに配置したすべての映像を閉じるには、画面右上の <IcMoreB/> ボタンをクリックします。 ポップアップメニューで <Cmd sid='arena.monitoring.contextMenu.closeAll' /> をクリックしてください。
+ビデオタイルに配置したすべての映像を閉じるには、画面右上の <IcMoreB/> ボタンをクリックします。ポップアップメニューで <Cmd sid='arena.monitoring.contextMenu.closeAll' /> をクリックしてください。
 
 <Image src='/img/biostarx-monitoring-video-close-all.png' />

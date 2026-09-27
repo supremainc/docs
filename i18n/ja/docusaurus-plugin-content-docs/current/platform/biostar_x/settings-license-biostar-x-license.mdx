@@ -1,14 +1,14 @@
 ---
 id: settings-license-biostar-x-license
 title: BioStar Xライセンス
-description: 購入したBioStar Xライセンスを有効化できます。
+description: 購入したBioStar Xライセンスを登録できます。
 keywords:
   - ライセンス
 ---
 
-購入したBioStar Xライセンスを有効化できます。
+購入した **BioStar X** ライセンスを登録できます。
 
-ユーザーのネットワーク環境によって、<Cmd sid='setting.menu.license.biostarXLicense' /> を有効化する方法が異なります。 案内に従ってネットワーク状態を確認し、ライセンスを有効化してください。
+ユーザーのネットワーク環境によって、<Cmd sid='setting.menu.license.biostarXLicense' /> を登録する方法が異なります。案内に従ってネットワーク状態を確認し、ライセンスを有効化してください。
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
@@ -26,8 +26,31 @@ import DocumentA from '../../common/_register-license-key.mdx'
 
 <DocumentA />
 
+## ライセンス有効化結果の確認 {/* #checkResult */}
+
+入力したライセンスキーの有効化結果に応じて、次の案内を表示します。
+
+* 入力したすべてのライセンスキーが有効な場合、成功メッセージを表示します。
+
+  <Image src='/img/biostarx-license-success.png' />
+
+* 一部のキーだけ有効化に成功した場合、またはすべてのキーが失敗した場合、キーごとの成功・失敗と失敗理由を確認できます。成功したキーの入力欄を初期化し、失敗したキーは再入力できるよう入力欄に残します。
+
+  <Columns>
+   <Column><Image src='/img/biostarx-license-fail.png' /></Column>
+   <Column><Image src='/img/biostarx-license-fail-alone.png' /></Column>
+   </Columns>
+
+* インターネットに接続できず、すべてのキーが失敗した場合、インターネット接続を確認してから再試行するよう案内し、<Cmd sid='setting.xlicense.offlineActivation' product='2' /> ボタンを表示します。閉域ネットワーク環境の場合、このボタンをクリックしてオフラインで登録してください。
+
+:::info
+
+失敗したキーをコピーするには、<Cmd sid='setting.xlicense.activation.copyFailedKeys' product='2' /> ボタンをクリックしてください。
+
+:::
+
 ## 有効化済みライセンスの確認
 
-<Cmd sid='setting.xlicense.myLicense' product='2' />では、有効化済みの **BioStar X** ライセンス情報を確認できます。
+登録した **BioStar X** ライセンス情報は、<Cmd sid='setting.xlicense.myLicense' product='2' />で確認できます。
 
 <Image src='/img/biostarx-settings-license-active-license.png' />

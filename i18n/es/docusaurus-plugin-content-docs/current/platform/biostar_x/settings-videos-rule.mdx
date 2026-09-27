@@ -18,7 +18,7 @@ Las reglas son ajustes para enviar eventos y marcadores al servidor VMS combinan
 
 :::info
 
-* La función de reglas de vídeo está disponible con una licencia **Avanzada** o superior a través de opciones adicionales. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* La característica de reglas de video está disponible con una licencia **Esencial** o superior mediante opciones adicionales. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 * Para vincular una puerta a una cámara, debes tener permiso del grupo al que pertenece la cámara. Para obtener más información sobre cómo configurar los permisos de los grupos de cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
 
@@ -59,6 +59,10 @@ En la sección <Cmd sid='video.rule.detail.information.title' product='2' />, in
   * <Cmd sid='video.addRule.label.disabled' product='2' />: Desactiva la función <Cmd sid='video.addRule.label.videoLog' product='2' className='normal' />.
 
 * <Cmd sid='video.addRule.label.videoLogLength' product='2' />: Define el rango de grabación alrededor de diez segundos antes y después del evento. Se puede configurar hasta un máximo de 60 segundos.
+
+Habilita la opción <Cmd sid='video.addRule.label.videoLog' product='2' />. El icono de registro de video (<IcVidLog />) aparece junto a los eventos en el panel de eventos de la pantalla de Supervisión. Al hacer clic en el elemento de evento con el icono de registro de video, se muestra información detallada en el lado derecho de la pantalla, lo que le permite ver el video del momento en que ocurrió el evento específico. Compruebe el video del momento en que ocurrió un evento específico.
+
+<Image src='/img/biostarx-monitoring-camera-event-video-log.png' />
 
 :::info
 
@@ -118,7 +122,7 @@ Consulta en la lista las cámaras enlazadas a la puerta.
 
 * Puede vincular cámaras a varias puertas sin restricciones y también puede reutilizar cámaras ya vinculadas a otras puertas.
 
-* Para eliminar la regla de enlace de puertas y cámaras, marca la casilla de los elementos que deseas eliminar en la lista y haz clic en <IcTrash2 /> <Cmd sid='button.delete' product='2' /> en la parte superior derecha.
+* Para eliminar la regla de enlace de puertas y cámaras, marca la casilla de las reglas que vas a eliminar. Luego, haz clic en <IcTrash2 /> <Cmd sid='button.delete' product='2' /> en la parte superior derecha.
 
 * Las cámaras enlazadas a las puertas pueden visualizarse como una subestructura de las puertas en la lista de puertas de la página <Cmd sid='shell.header.arena' />. Para obtener más información, consulta <DocLink docId='platform/biostar_x/check-door-status#door-tree-structure' />.
 
@@ -154,7 +158,7 @@ Para obtener más información sobre cada sección de la pantalla de edición de
 
 4. Haz clic en <IcTrash2 /> <Cmd sid='video.rule.delete' product='2' /> en la parte superior derecha de la pantalla.
 
-5. Revisa el mensaje y haz clic en el botón <Cmd sid='button.yes' product='2' />.
+5. Revisa el mensaje y haz clic en <Cmd sid='button.yes' product='2' />.
 
 ## Configuración de columnas
 
@@ -170,10 +174,10 @@ Agrega columnas, cambia su orden en la lista o configúralas como ocultas.
 
    <Image src='/img/biostarx-settings-video-column-layout.png' />
 
-5. Cuando hayas terminado de cambiar la configuración de columnas, haz clic en el botón <Cmd sid='button.ok' product='2' />.
+5. Cuando hayas terminado de cambiar la configuración de columnas, haz clic en <Cmd sid='button.ok' product='2' />.
 
 :::info
 
-Haz clic en el botón <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para inicializar la configuración de columnas.
+Haz clic en <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para inicializar la configuración de columnas.
 
 :::

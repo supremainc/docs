@@ -1,0 +1,159 @@
+---
+id: manage-devices
+title: Administrar Dispositivos
+description: Compruebe el estado del dispositivo en la lista de dispositivos y administre los dispositivos de forma remota.
+---
+
+En la lista de dispositivos, compruebe el estado de cada dispositivo y libere de forma remota los dispositivos bloqueados. Desde la pantalla de inicio de la app, toque <Cmd>DEVICE</Cmd>.
+
+<Image src='/img/mobile/bsx-mobile-app-device.png' width='500px' className='none' alone />
+
+:::info
+
+* La app móvil no permite agregar ni editar dispositivos.
+
+* También puedes acceder a ella desde el menú lateral. Toque <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Device</Cmd>.
+
+:::
+
+## Consultar información del dispositivo
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/mobile/bsx-mobile-app-device-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Cada dispositivo en la lista de dispositivos incluye la siguiente información.
+
+* Nombre del dispositivo
+
+* Nombre del grupo de dispositivos (muestra <Cmd>All Devices</Cmd> si no pertenece a un grupo)
+
+* Dirección IP del dispositivo
+
+</Column>
+</Columns>
+
+## Verificar estado del dispositivo
+
+Compruebe el estado del dispositivo mediante los iconos de estado en la lista de dispositivos.
+
+| Ícono de estado | Descripción |
+| :-: | --- |
+| <Image src='/img/mobile/bsx-mobile-app-device-ok.png' className='none' ico alone /> | El dispositivo está conectado correctamente. |
+| <Image src='/img/mobile/bsx-mobile-app-device-fail.png' className='none' ico alone /> | El dispositivo está apagado o desconectado. |
+
+:::info
+
+Deslice hacia abajo la lista de dispositivos para actualizar su estado.
+
+:::
+
+## Liberar bloqueo por fallo de autenticación
+
+Si fallos de autenticación consecutivos bloquean un dispositivo, use la app móvil para liberar el bloqueo.
+
+:::info
+
+Para obtener más información sobre el ajuste de bloqueo por fallo de autenticación en **BioStar X**, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
+
+:::
+
+### Liberar bloqueo de un dispositivo individual
+
+Libere los bloqueos por fallo de autenticación de los dispositivos en la lista de dispositivos.
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock.png' className='none' width='750px' alone />
+
+1. En la lista de dispositivos, busque los que tengan la etiqueta <Cmd>AUTH FAILURE LOCKOUT</Cmd>.
+
+2. Toque <Cmd>RELEASE AUTH FAILURE LOCKOUT</Cmd> para desbloquear.
+
+3. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+4. Cuando aparezca el mensaje de éxito de liberación del bloqueo, toque <Cmd>OK</Cmd>.
+
+### Liberar bloqueo para varios dispositivos
+
+Libere al mismo tiempo los bloqueos de varios dispositivos con la etiqueta <Cmd>AUTH FAILURE LOCKOUT</Cmd>.
+
+<Image src='/img/mobile/bsx-mobile-device-auth-fail-lock-multi-release.png' className='none' width='750px' alone />
+
+1. Toque <IcAppCheck title='Check box' /> en la esquina superior derecha de la lista de dispositivos.
+
+2. Seleccione al menos un dispositivo etiquetado como <Cmd>AUTH FAILURE LOCKOUT</Cmd>.
+
+3. Toca <Cmd>RELEASE</Cmd> en la esquina superior derecha.
+
+4. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+5. Cuando aparezca el mensaje de éxito de liberación del bloqueo, toque <Cmd>OK</Cmd>.
+
+## Búsqueda de dispositivos
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-search.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Busca por nombre del dispositivo, grupo o dirección IP.
+
+1. Toca <IcSearch title='Search' width='20px' height='20px' /> en la parte superior de la lista de dispositivos.
+
+2. Ingrese un término de búsqueda en el campo de búsqueda. Busca por nombre del dispositivo, nombre del grupo o dirección IP.
+
+3. Después de escribir el término de búsqueda, toca <IcSearch title='Search' width='20px' height='20px' />.
+
+Los dispositivos que coinciden con el término de búsqueda aparecen en los resultados.
+
+:::info
+
+* El historial de búsquedas recientes aparece debajo del campo de búsqueda. Toca una entrada reciente de búsqueda para buscar de nuevo con ese término.
+
+* Para cerrar el campo de búsqueda, toca <IcClose title='Close' width='20px' height='20px' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Filtrar la lista de dispositivos
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-device-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Filtra la lista de dispositivos por grupo de dispositivos.
+
+1. Toca <IcAppFilter title='Filter' width='20px' height='20px' /> en la parte superior de la lista de dispositivos.
+
+2. Toca <Cmd>All Devices</Cmd>.
+
+3. Selecciona el grupo deseado de la lista de grupos de dispositivos.
+
+   <Image src='/img/mobile/bsx-mobile-device-filter-device-group.png' width='252px' alone />
+
+4. Después de seleccionar un grupo de dispositivos, toca <Cmd>Yes</Cmd>.
+
+5. Toca <Cmd>Apply</Cmd> para filtrar la lista según los criterios seleccionados.
+
+La lista muestra los dispositivos del grupo de dispositivos seleccionado.
+
+:::info
+
+Para restablecer las condiciones del filtro, toca <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> en la esquina superior derecha de la pantalla.
+
+:::
+
+</Column>
+</Columns>

@@ -1,19 +1,19 @@
 ---
 id: settings-visitor
 title: 訪問者設定
-description: 訪問者を管理するために訪問先と訪問PCを構成でき、訪問者向けの入退館規約と案内文を設定できます。 さらに、カスタム訪問者フィールドを使用して訪問者に求める情報を直接追加することもできます。
+description: 訪問者を管理するために訪問先と訪問PCを構成でき、訪問者向けの入退館規約と案内文を設定できます。さらに、カスタム訪問者フィールドを使用して訪問者に求める情報を直接追加することもできます。
 keywords:
   - 訪問者管理
   - カスタムフィールド
 ---
 
-訪問者を管理するために訪問先と訪問PCを構成でき、訪問者向けの入退館規約と案内文を設定できます。 さらに、カスタム訪問者フィールドを使用して訪問者に求める情報を直接追加することもできます。
+訪問者を管理するために訪問先と訪問PCを構成でき、訪問者向けの入退館規約と案内文を設定できます。さらに、カスタム訪問者フィールドを使用して訪問者に求める情報を直接追加することもできます。
 
 :::info
 
-* <Cmd sid="common.visitor" product='2' /> 設定は、**アドバンス** (Advanced) ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+* <Cmd sid="setting.menu.visitor.visitor" /> 設定は、**エッセンシャル** (Essential) ライセンス以上で追加オプションとして利用できます。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
-* <Cmd sid="common.visitor" product='2' /> メニューを使用するには、<Cmd sid="setting.server.automaticUserSync" product='2' /> または <Cmd sid="setting.server.serverMatching.use" product='2' /> オプションを有効にする必要があります。 詳細については、<DocLink docId='platform/biostar_x/settings-server-server' />ご参照ください。
+* <Cmd sid="setting.menu.visitor.visitor" /> メニューを使用するには、<Cmd sid="setting.server.automaticUserSync" product='2' /> または <Cmd sid="setting.server.serverMatching.use" product='2' /> オプションを有効にする必要があります。詳細については、<DocLink docId='platform/biostar_x/settings-server-server' />ご参照ください。
 
 :::
 
@@ -21,7 +21,7 @@ keywords:
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
-2. 画面左のサイドバーで <Cmd sid="common.visitor" product='2' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='setting.menu.visitor.root' /> → <Cmd sid="setting.menu.visitor.visitor" />をクリックします。
 
 3. 次の案内に従って訪問者設定を構成してください。
 
@@ -30,7 +30,7 @@ keywords:
 
 ### 訪問先設定 {/* #settings-visitor-site */}
 
-各訪問先の訪問申請用または訪問者管理用PCで使用する入退館グループとカード使用の有無を設定できます。 カードを使用する場合は、カード種類とデータ形式も設定できます。
+各訪問先の訪問申請用または訪問者管理用PCで使用する入退館グループとカード使用の有無を設定できます。カードを使用する場合は、カード種類とデータ形式も設定できます。
 
 <Image src='/img/biostarx-settings-visitor-site-settings.png' className='none' />
 
@@ -46,13 +46,13 @@ keywords:
 
   :::info
 
-  訪問者用の入退室グループをあらかじめ設定しておくと、管理が容易になります。 出入グループの設定については、<DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />ご参照ください。
+  訪問者用の入退室グループをあらかじめ設定しておくと、管理が容易になります。出入グループの設定については、<DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />ご参照ください。
 
   :::
 
 * <Cmd sid="common.card" product='2' /> <Cmd sid="common.use" product='2' />：カードを使用するかどうかを選択できます。
 
-* <Cmd sid="user.cardType" product='2' />：訪問先で使用するカードの種類を選択できます。 カードの種類は、<Cmd sid="common.card" product='2' /> <Cmd sid="common.use" product='2' /> を設定した場合にのみ有効になります。
+* <Cmd sid="user.cardType" product='2' />：訪問先で使用するカードの種類を選択できます。カードの種類は、<Cmd sid="common.card" product='2' /> <Cmd sid="common.use" product='2' /> を設定した場合にのみ有効になります。
 
 * <Cmd sid="user.cardEnrol.cardFormat" product='2' />：カードデータを読み取る形式を設定できます。 <Cmd sid="user.cardEnrol.cardFormat" product='2' /> は、<Cmd sid="user.cardType" product='2' /> を <Cmd sid="user.cardEnrol.cardTypeWiegand" product='2' /> に設定した場合にのみ有効になります。
 
@@ -71,7 +71,7 @@ keywords:
 
 * <Cmd sid="common.fingerPrint" product='2' /> <Cmd sid="setting.server.enrollment_device.device_name" product='2' />：訪問者が指紋認証で入退館する場合、指紋を登録するデバイスを選択します。
 
-* <Cmd sid="common.card" product='2' /> <Cmd sid="setting.server.enrollment_device.device_name" product='2' />：訪問者がカード認証で入退館する場合、カードを発行するデバイスを選択します。 カードデバイス名は、カード使用を選択した訪問先を設定した場合にのみ有効になります。
+* <Cmd sid="common.card" product='2' /> <Cmd sid="setting.server.enrollment_device.device_name" product='2' />：訪問者がカード認証で入退館する場合、カードを発行するデバイスを選択します。カードデバイス名は、カード使用を選択した訪問先を設定した場合にのみ有効になります。
 
 * <Cmd sid="visitor.site" product='2' />：該当の訪問PCで訪問を管理する訪問先を選択します。
 
@@ -173,7 +173,7 @@ WebブラウザーでそのURLにアクセスすると、訪問申請ページ�
 
 * <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />：文字入力ボックス、数値入力ボックス、選択ボックスを選択できます。
 
-* <Cmd sid="setting.server.custom_field.configure.th.data" product='2' />：選択ボックスのリストに表示する選択肢を入力します。 各項目はセミコロン(;)で区切ります。 データは、<Cmd sid="setting.server.custom_field.configure.th.type" product='2' /> を <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> に設定した場合にのみ有効になります。
+* <Cmd sid="setting.server.custom_field.configure.th.data" product='2' />：選択ボックスのリストに表示する選択肢を入力します。各項目はセミコロン(;)で区切ります。データは、<Cmd sid="setting.server.custom_field.configure.th.type" product='2' /> を <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> に設定した場合にのみ有効になります。
 
 設定を保存するには、<Cmd sid="visitor.setting.button.apply" product='2' /> をクリックしてください。
 
@@ -183,6 +183,6 @@ WebブラウザーでそのURLにアクセスすると、訪問申請ページ�
 
 * <Cmd sid="setting.server.custom_field.type.numericbox" product='2' /> で追加したカスタム訪問者フィールドには数字のみ入力でき、文字は入力できません。
 
-* <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> で追加したカスタム訪問者フィールドでは、訪問者が項目を選択できます。 カスタム訪問者フィールドを設定するときは、データに **Option 1**; **Option 2**; **Option 3**; **Option 4** を入力してください。
+* <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> で追加したカスタム訪問者フィールドでは、訪問者が項目を選択できます。カスタム訪問者フィールドを設定するときは、データに **Option 1**; **Option 2**; **Option 3**; **Option 4** を入力してください。
 
 :::

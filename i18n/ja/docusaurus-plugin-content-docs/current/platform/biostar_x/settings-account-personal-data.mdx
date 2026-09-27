@@ -1,0 +1,150 @@
+---
+id: settings-account-personal-data
+title: 長期間未入退室ユーザーへの対処
+description: 一定期間入退室していないユーザーを自動で無効化し、無効化前に事前通知メールを受信するよう設定する方法を説明します。
+keywords:
+  - アカウント
+  - 個人情報
+  - 自動無効化
+  - 長期間未入退室
+---
+
+退職や休職などで長期間入退室しないユーザーのクレデンシャルを残すと、なりすましや不正入退室などのセキュリティ脅威につながる可能性があります。自動無効化機能を使用すると、最終入退室以降に一定期間が経過したユーザーを自動で無効化します。管理者は手動で毎回整理せずに、ユーザーアカウントを安全に管理できます。自動で無効化する前に、指定した受信者へ事前通知メールを送信します。事前に確認したり、例外処理したりする時間を確保できます。
+
+<Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。画面左のサイドバーで <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.privateData' /> をクリック。
+
+<Image src='/img/biostarx-settings-personal-data.png' />
+
+:::info
+
+<Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.privateData' /> メニューには、当該メニューの権限を持つ管理者のみアクセスできます。特定のメニュー権限を管理者に付与する方法は、<DocLink docId='platform/biostar_x/settings-manage-account#addUserPermission' /> を参照してください。
+
+:::
+
+## 自動無効化の設定 {/* #enable-auto-deactivation */}
+
+1. <Cmd sid='setting.personalData.autoDeactivation' /> オプションでトグルボタンをクリックして有効化してください。
+
+2. <Cmd sid='setting.personalData.applyTarget' /> セクションで、自動無効化の適用対象を設定してください。
+
+   <Image src='/img/biostarx-settings-personal-data-enable.png' />
+
+   * すべてのユーザーに同一基準を適用する場合は、<Cmd sid='setting.personalData.basicSettings' /> オプションでトグルボタンをクリックして有効化し、<Cmd sid='setting.personalData.inactivePeriod' /> を入力してください。設定範囲は 1 日から 365 日です。
+
+   * 特定のユーザーグループに異なる基準を適用する場合は、<Cmd sid='setting.personalData.exceptionGroup' /> を追加してください。追加方法は <DocLink inner='#exception-group' /> を参照してください。
+
+3. 設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックしてください。
+
+4. 確認画面が表示されたら、次回の自動処理予定日と無効化予定ユーザー数を確認し、<Cmd sid='setting.personalData.saveChanges' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-personal-data-change-confirm.png' caption />
+
+:::info
+
+* ユーザーが自動で無効化される前に、指定した受信者へメールで事前通知するには、<Cmd sid='setting.personalData.preNotificationEmail' /> で設定します。詳細については、<DocLink inner='#pre-notification-email' />をご参照ください。
+
+* <Cmd sid='setting.personalData.autoDeactivation' /> オプションを有効化しても、<Cmd sid='setting.personalData.basicSettings' /> オプションは自動で有効になりません。 <Cmd sid='setting.personalData.exceptionGroup' /> のみでポリシーを構成する場合は、<Cmd sid='setting.personalData.basicSettings' /> オプションを無効のままにしてください。
+
+* 自動無効化は、最後に入退室認証した時刻を基準に判定します。入退室履歴がないユーザー、またはユーザー登録前の入退室履歴のみがあるユーザーは、無効化の対象外です。
+
+* あるユーザーが <Cmd sid='setting.personalData.basicSettings' /> と <Cmd sid='setting.personalData.exceptionGroup' /> の両方に該当する場合、<Cmd sid='setting.personalData.exceptionGroup' /> の <Cmd sid='setting.personalData.inactivePeriod' /> が優先して適用されます。 2 つ以上の <Cmd sid='setting.personalData.exceptionGroup' /> に属する場合、そのうち最も短い <Cmd sid='setting.personalData.inactivePeriod' /> が適用されます。
+
+* 自動無効化は毎日1回（真夜中）実行されます。設定を変更してもすぐには反映されず、次回の処理時点から適用されます。すでに送信された事前通知のスケジュールには影響しません。
+
+* <Cmd sid='setting.personalData.autoDeactivation' /> オプションを無効にすると、確認メッセージを表示せずにすぐ保存されます。
+
+:::
+
+## グループ別に異なる基準を適用 {/* #exception-group */}
+
+特定のユーザーグループには、<Cmd sid='setting.personalData.basicSettings' /> と異なる <Cmd sid='setting.personalData.inactivePeriod' /> を適用できます。
+
+### グループ設定を追加
+
+1. <Cmd sid='setting.personalData.exceptionGroup' /> リストの右側にある <Cmd sid='button.plusAdd' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-settings-personal-data-add-btn.png' />
+
+2. <Cmd sid='setting.personalData.addGroup' /> ウィンドウが表示されたら、各項目を設定します。
+
+   <Image src='/img/biostarx-settings-personal-data-add-group-settings.png' />
+
+   * <Cmd sid='common.name' />: 他のグループ設定と重複しない名前を入力します。大文字と小文字、前後の空白は区別しません。
+
+   * <Cmd sid='setting.personalData.inactivePeriod' />: 最小 1 日から最大 365 日まで設定できます。
+
+   * <Cmd sid='setting.personalData.userGroup' />：適用するユーザーグループを選択します。グループを選択すると、下位のユーザーグループも一緒に選択されます。
+
+3. ユーザーグループの選択を終えたら、<Cmd sid='common.button.confirm' /> ボタンをクリックします。
+
+4. 変更を保存するには、画面の一番下にある <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+5. 確認画面が表示されたら、次回の自動処理予定日と無効化予定ユーザー数を確認し、<Cmd sid='setting.personalData.saveChanges' /> ボタンをクリックしてください。
+
+:::info
+
+* <Cmd sid='setting.personalData.userGroup' /> では、管理者の権限範囲外のユーザーグループは選択できないよう無効で表示されます。リストからは非表示になりません。このグループは展開でき、下位グループのうち権限範囲内のグループは選択できます。
+
+* 管理者権限が **すべてのユーザー** に設定された管理者、またはスーパー管理者は、ユーザーグループの選択に制限がありません。管理者権限の詳細については <DocLink docId='platform/biostar_x/settings-manage-account' /> をご覧ください。
+
+:::
+
+### グループ設定を編集または削除
+
+<Image src='/img/biostarx-settings-personal-data-group-edit.png' />
+
+* 編集するには、<Cmd sid='setting.personalData.exceptionGroup' /> リストで対象行の <IcRepoEdit title='Edit' /> ボタンをクリックし、値を変更してから <Cmd sid='common.button.confirm' /> ボタンをクリックします。
+
+* 削除するには、対象行の <IcTrash title='Delete' /> ボタンをクリックします。確認メッセージが表示されたら <Cmd sid='common.button.delete' /> ボタンをクリックします。
+
+修正または削除した内容を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックしてください。確認画面が表示されたら、次回の自動処理予定日と無効化予定ユーザー数を確認し、<Cmd sid='setting.personalData.saveChanges' /> ボタンをクリックしてください。
+
+:::info
+
+* <Cmd sid='setting.personalData.exceptionGroup' /> に管理者の権限範囲外のユーザーグループが含まれている場合、リストには表示され続けますが、編集と削除はできません。
+
+* <Cmd sid='setting.personalData.exceptionGroup' />は<Cmd sid='setting.personalData.basicSettings' />より優先します。
+
+* <Cmd sid='setting.personalData.exceptionGroup' /> を削除しても、すでに無効化されたユーザーは復元されません。削除後、該当ユーザーに適用可能な別の設定（<Cmd sid='setting.personalData.basicSettings' /> など）がある場合、その設定に切り替わります。
+
+:::
+
+## 事前通知メールの設定 {/* #pre-notification-email */}
+
+ユーザーが自動的に無効化される前に、指定した受信者へメールで事前通知できます。
+
+1. <Cmd sid='setting.personalData.preNotificationEmail' /> オプションでトグルボタンをクリックして有効にしてください。
+
+   <Image src='/img/biostarx-settings-personal-pre-noti-email-settings.png' />
+
+2. <Cmd sid='setting.personalData.preNotificationDeadline' /> を入力してください。入力した期間だけ、自動無効化の通知メールを送信します。最小 1 日から最大 30 日まで設定できます。
+
+3. <Cmd sid='setting.personalData.preNotificationRecipients' /> 入力フィールドで名前、ID、メールでユーザーを検索して選択するか、メールアドレスを直接入力して <Kbd>Enter</Kbd> キーを押してください。
+
+   <Image src='/img/biostarx-settings-personal-pre-noti-email-auto-complete.png' />
+
+4. 設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックしてください。
+
+5. 確認画面が表示されたら、次回の自動処理予定日と無効化予定ユーザー数を確認し、<Cmd sid='setting.personalData.saveChanges' /> ボタンをクリックしてください。
+
+:::info
+
+* 事前通知メールを使用するには、SMTP 設定を完了しておく必要があります。詳細については、<DocLink docId='platform/biostar_x/settings-email-setting' />ご参照ください。
+
+* <Cmd sid='setting.personalData.preNotificationDeadline' /> は、<Cmd sid='setting.personalData.basicSettings' /> とすべての <Cmd sid='setting.personalData.exceptionGroup' /> の未入退室期間より短く設定する必要があります。
+
+* **BioStar X** に登録されていないメールアドレスも受信者に追加できます。
+
+* 無効化予定のユーザーには、ユーザー別の個別メールではなく、毎日1回、統合メールとして送信されます。
+
+* <Cmd sid='setting.personalData.basicSettings' /> が無効で <Cmd sid='setting.personalData.exceptionGroup' /> もない状態で <Cmd sid='setting.personalData.preNotificationEmail' /> だけを有効にすると、適用対象がないためメールは送信されません。
+
+:::
+
+## 関連情報
+
+* 長期未入退室ユーザーは、ユーザーリストの <Cmd sid='team.user.table.lastAccessed' /> 列、または詳細検索で確認できます。詳しくは <DocLink docId='platform/biostar_x/view-users#advanced-search' /> をご参照ください。
+
+  <Image src='/img/biostarx-settings-personal-user-list-search.png' className='none' />
+
+* 自動および手動で無効化されたユーザーの履歴は、<Cmd sid='data.sidebar.inactiveUsers' /> レポートで確認できます。詳しくは <DocLink docId='platform/biostar_x/data-generate-reports#viewUserReport' /> をご参照ください。

@@ -1,0 +1,83 @@
+## Ajustes de la política de retención
+
+<Include type={props.type} ref='accesscontrol'>
+
+La sección <Cmd sid='audit.retention.sectionAccessControl' /> consta de los siguientes dos grupos.
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+La sección <Cmd sid='audit.retention.sectionTimeAttendance' /> consta de los siguientes dos grupos.
+
+</Include>
+
+* <Cmd sid='audit.retention.groupChanges' />: Registros de creación, actualización y eliminación. El sistema siempre los registra. No puede activar ni desactivar el registro.
+
+* <Cmd sid='audit.retention.groupAccess' />: Ver registros. Defina si el sistema crea registros.
+
+:::info
+
+* Ingrese <Cmd sid='audit.retention.retentionPeriod' /> como un número entero entre 1 y 2,147,483,647 días.
+
+<Include type={props.type} ref='accesscontrol'>
+
+* Seleccione <Cmd sid='setting.menu.auditTrail.acAuditLog' /> para ver los registros de auditoría de cambios de ajustes en la sección <Cmd sid='audit.retention.sectionAccessControl' />.
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+* Seleccione <Cmd sid='setting.menu.auditTrail.taAuditLog' /> para ver los registros de <Cmd sid='action.update' /> de cambios de ajustes en la sección <Cmd sid='audit.retention.sectionTimeAttendance' />.
+
+</Include>
+
+:::
+
+### Registros de cambios
+
+Como el sistema siempre registra el grupo <Cmd sid='audit.retention.groupChanges' />, seleccione el ajuste <Cmd sid='audit.retention.labelRetention' />.
+
+* <Cmd sid='audit.retention.optionEndless' />: Conserve los registros de forma permanente sin eliminación automática.
+
+* <Cmd sid='audit.retention.optionCustom' />: Seleccione esta opción para limitar el período de retención por cumplimiento o política interna. Cuando se active el campo <Cmd sid='audit.retention.retentionPeriod' />, ingrese el período de retención en días.
+
+### Ver registros
+
+En el grupo <Cmd sid='audit.retention.groupAccess' />, defina si el sistema conserva los registros de visualización.
+
+* <Cmd sid='audit.retention.labelLogging' />: Establezca esta opción en <Cmd sid='audit.retention.loggingOn' /> para conservar los registros de visualización. Si no se necesita, establézcalo en <Cmd sid='audit.retention.loggingOff' />.
+
+* <Cmd sid='audit.retention.labelRetention' />: Seleccione un método de retención.
+
+  * <Cmd sid='audit.retention.optionEndless' />: Conserve los registros de visualización de forma permanente sin eliminación automática.
+
+  * <Cmd sid='audit.retention.optionCustom' />: Activa el campo <Cmd sid='audit.retention.retentionPeriod' />. Ingrese el período de retención en días.
+
+:::info
+
+Cuando <Cmd sid='audit.retention.labelLogging' /> está en <Cmd sid='audit.retention.loggingOff' />, el sistema no registra eventos de visualización. Después de cambiarlo a <Cmd sid='audit.retention.loggingOn' />, el sistema no muestra los registros anteriores.
+
+:::
+
+### Guardar configuración
+
+<Include type={props.type} ref='accesscontrol'>
+
+Después de completar los ajustes de <Cmd sid='audit.retention.groupChanges' /> y <Cmd sid='audit.retention.groupAccess' />, haz clic en el botón <Cmd sid='common.apply' /> en la parte inferior de la sección <Cmd sid='audit.retention.sectionAccessControl' />. Guarda ambos ajustes de grupo juntos.
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+Después de completar los ajustes de <Cmd sid='audit.retention.groupChanges' /> y <Cmd sid='audit.retention.groupAccess' />, haz clic en el botón <Cmd sid='common.apply' /> en la parte inferior de la sección <Cmd sid='audit.retention.sectionTimeAttendance' />. Guarda ambos ajustes de grupo juntos.
+
+</Include>
+
+## Cómo funciona la eliminación automática
+
+El servidor ejecuta esta tarea todos los días a la 1 a. m. La tarea elimina los registros que superan el período de retención establecido en <Cmd sid='audit.retention.optionCustom' />, sin importar las acciones del usuario. La tarea evalúa y elimina los registros al mismo tiempo. La tarea se ejecuta solo una vez al día.
+
+> Por ejemplo, establece los registros de <Cmd sid='audit.retention.groupAccess' /> en 30 días en <Cmd sid='audit.retention.optionCustom' />. A la 1 a. m., la tarea elimina los registros con más de 30 días de antigüedad. Los registros que acaban de superar el período de retención permanecen hasta que se ejecute la siguiente tarea de la 1 a. m.
+
+Cuando <Cmd sid='audit.retention.labelRetention' /> se establece en <Cmd sid='audit.retention.optionEndless' />, la tarea de eliminación automática no se ejecuta y los registros se conservan permanentemente.

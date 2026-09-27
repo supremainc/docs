@@ -93,7 +93,9 @@ Los usuarios pueden filtrar la lista de eventos según los criterios deseados, l
 
    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
-   Para deseleccionar un elemento, haga clic en <span className='text-blue-500'><IcClose /></span>. Para borrar todos los elementos, haga clic en <Cmd sid='common.removeAll' />.
+   * Selecciona una opción principal para seleccionar todas las opciones secundarias.
+
+   * Haz clic en <IcClose title='Remove' /> para deseleccionar la opción seleccionada. Para borrar todos los elementos, haga clic en <Cmd sid='common.removeAll' />.
 
 3. Una vez que haya terminado la configuración, haga clic en <Cmd sid='common.apply' />.
 
@@ -107,7 +109,7 @@ Solo se mostrarán en la lista los eventos que cumplan las condiciones estableci
 
 * Los elementos que se pueden filtrar pueden variar según la columna de encabezado.
 
-* Cuando se aplican condiciones de filtrado, el color del ícono <span className='text-blue-500'><IcFilter /></span> en la columna de encabezado cambia a azul.
+* Cuando defines condiciones de filtrado, el ícono <IcFilter2 title='Filter' /> en la columna de encabezado cambia de color.
 
 :::
 
@@ -115,9 +117,9 @@ Solo se mostrarán en la lista los eventos que cumplan las condiciones estableci
 
 Puede borrar las condiciones de filtro aplicadas.
 
-1. Haga clic en <span className='text-blue-500'><IcFilter /></span> en la columna de encabezado donde se aplicaron filtros en la sección <Cmd sid='arena.eventTable.title' />.
+1. En la lista de la sección <Cmd sid='arena.eventTable.title' />, haz clic en el ícono <IcFilter2 title='Filter' /> de la columna de encabezado con filtros aplicados.
 
-2. Cuando aparezca la ventana de filtro, haga clic en <span className='text-blue-500'><IcClose /></span> junto al elemento que desea eliminar de la lista derecha. Para borrar todos los filtros, haga clic en <Cmd sid='common.removeAll' />.
+2. Cuando aparezca la ventana de filtro, haz clic en <IcClose title='Remove' /> a la derecha de la opción que vas a deseleccionar en la lista de la derecha. Para borrar todos los filtros, haga clic en <Cmd sid='common.removeAll' />.
 
    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
@@ -153,7 +155,9 @@ El botón <Cmd sid='common.ignoreAll' /> se muestra solo cuando ocurren dos o m�
 
 Ingresa las acciones relacionadas con el evento de alarma en el campo de entrada de mensaje. Ingresa hasta 500 caracteres. Ingresa las acciones y haz clic en <Cmd sid='common.acknowledge' />. Registra la confirmación y las acciones relacionadas con el evento de alarma. La ventana de mensaje de alarma se cerrará.
 
-### Aplazar confirmación del evento de alarma {/* #deferalarmeventacknowledgment */}
+<Image src='/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png' />
+
+### Aplazar la confirmación de un evento de alarma {/* #deferalarmeventacknowledgment */}
 
 Aplaza la confirmación del evento de alarma haciendo clic en <Cmd sid='common.ignore' />. Se pueden registrar las acciones realizadas. La ventana de mensaje de alarma se cerrará. Los eventos de alarma aplazados se muestran en la lista de eventos con el estado <Cmd sid='arena.preview.event.active' />, y se puede usar el botón <Cmd sid='common.acknowledge' />.
 

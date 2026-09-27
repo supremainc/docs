@@ -4,7 +4,7 @@ title: 参考
 description: BioStar X の展開とセキュリティ設定に関するポート、基本セキュリティ設定、およびコンプライアンス要件の参考資料です。
 ---
 
-この文書では、BioStar X システムの構築とセキュリティ強化に必要な技術参考情報を提供します。 ネットワークポートの設定、推奨セキュリティ設定、主要なコンプライアンス要件を一目で確認できます。\n追加のサポートが必要な場合は、外部参考資料を参照してください。
+この文書では、BioStar X システムの構築とセキュリティ強化に必要な技術参考情報を提供します。ネットワークポートの設定、推奨セキュリティ設定、主要なコンプライアンス要件を一目で確認できます。\n追加のサポートが必要な場合は、外部参考資料を参照してください。
 
 ## BioStar X の基本ネットワークポート
 
@@ -38,7 +38,7 @@ description: BioStar X の展開とセキュリティ設定に関するポート
 | デバイスハッシュキー管理 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.server.secure.comm.data_encryption' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 高セキュリティ環境の展開では、タンパー保護のために有効化してください。 |
 | システムバックアップ | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.systemBackup' /> | <Cmd sid='common.manual' product='2' /> | <Cmd sid='common.backup.autoBackup' product='2' /> 機能を有効化してください。 |
 | ディレクトリ連携 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> | 未構成 | 可能であれば Entra ID または Active Directory と連携してください。 |
-| ログ設定（保持とレベル） | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> | <Cmd sid='setting.server.logRetainDays' product='2' />: 60日<br /><Cmd sid='setting.server.logLevel' product='2' />: <Cmd sid='setting.server.logLevel.info' product='2' /> | コンプライアンス要件に応じて調整してください。 ログは SIEM に送信してください。 |
+| ログ設定（保持とレベル） | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> | <Cmd sid='setting.server.logRetainDays' product='2' />: 60日<br /><Cmd sid='setting.server.logLevel' product='2' />: <Cmd sid='setting.server.logLevel.info' product='2' /> | コンプライアンス要件に応じて調整してください。ログは SIEM に送信してください。 |
 | 個人情報データベース暗号化 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 本番環境で有効化してください。 |
 | 顔画像の保存 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid='settings.expertSettings.enableButton' product='2' /> → <Cmd sid='settings.expertSettings.detail.storeVisualFaceImageOptionLabel' product='2' /> | <Cmd sid='common.use' product='2' /> | 正当な理由がない限り無効化してください。 |
 

@@ -16,7 +16,7 @@ keywords:
 
 :::info
 
-* **BioStar X** に追加していないカスタムユーザーフィールドがある場合、CSVファイルを正しくインポートできません。 カスタムユーザーフィールドの追加方法については、<DocLink docId='platform/biostar_x/settings-server-server#custom-field' />を参照してください。
+* **BioStar X** に追加していないカスタムユーザーフィールドがある場合、CSVファイルを正しくインポートできません。カスタムユーザーフィールドの追加方法については、<DocLink docId='platform/biostar_x/settings-server-server#custom-field' />を参照してください。
 
 * 英語と韓国語以外の言語でユーザー情報を入力した場合は、CSVファイルをUTF-8で保存します。
 
@@ -40,7 +40,7 @@ keywords:
 
 :::info
 
-<Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。 <Cmd sid='team.menu.export.exportReason' />の記録は<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />で確認できます。
+<Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。エクスポート理由は <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' /> で確認できます。
 
 :::
 
@@ -68,7 +68,7 @@ CSVファイルの情報をインポート中にエラーが発生した場合�
 
 :::info
 
-* CSVインポートでモバイルアクセスカードを発行します。 レギュラーサイトを使用する場合、インポート完了後にAirfob Portalでモバイルアクセスカード1枚につき1クレジットが差し引かれます。 モバイルアクセスカードを発行しない場合は、マッピングを解除します。
+* CSVインポートでモバイルアクセスカードを発行します。レギュラーサイトを使用する場合、インポート完了後にAirfob Portalでモバイルアクセスカード1枚につき1クレジットが差し引かれます。モバイルアクセスカードを発行しない場合は、マッピングを解除します。
 
 * CSVファイルに **BioStar X** に登録済みのユーザーに発行したモバイルアクセスカードと同一のデータが存在する場合は、データを保持するか上書きし、既存のモバイルアクセスカードを維持します。
 
@@ -78,27 +78,33 @@ CSVファイルの情報をインポート中にエラーが発生した場合�
 
 * **BioStar X** QR はCSVインポートでは発行できません。
 
-* CSVインポートでユーザーの顔を登録します。 詳細については、<DocLink docId='platform/biostar_x/batch-import-face#import-csv' />を参照してください。
+* CSVインポートでユーザーの顔を登録します。詳細については、<DocLink docId='platform/biostar_x/batch-import-face#import-csv' />を参照してください。
 
-* CSVインポートでユーザーのPINを登録します。 詳細については、<DocLink docId='platform/biostar_x/enroll-credential-pin' />を参照してください。
+* CSVインポートでユーザーのPINを登録します。詳細については、<DocLink docId='platform/biostar_x/enroll-credential-pin' />を参照してください。
 
 * 保存済みのCSVファイルに一致しない列を追加すると、**BioStar X** でファイルをインポートできません。
+
+* ユーザー名の先頭が `&@~` で連続して始まる場合、該当ユーザーを CSV からインポートできません。
+
+* 有効期限（失効日時）は 2037-12-31 23:59:59 まで設定できます。この日付を超える値を含む行はインポートに失敗します。
+
+* エクスポートした CSV ファイルは、Excel などの表計算ソフトで直接開かないことを推奨します。ユーザー名が `=` 文字で始まる場合、プログラムが数式として認識し、実際の値と異なる表示になることがあります。
 
 :::
 
 ## データファイル エクスポート／インポート {/* #exportimportdatafile */}
 
-外部ストレージ(USB)にユーザー情報を保存し、**BioStar X** またはデバイスでインポートします。 最大500,000人のユーザー情報をサーバーからデバイスへ、またはデバイス間で移行します。
+外部ストレージ(USB)にユーザー情報を保存し、**BioStar X** またはデバイスでインポートします。最大500,000人のユーザー情報をサーバーからデバイスへ、またはデバイス間で移行します。
 
 :::info
 
-* 古いファームウェアバージョンを使用するデバイスからエクスポートしたデータは **BioStar X** にインポートできません。 常に最新バージョンのファームウェアを使用してください。
+* 古いファームウェアバージョンを使用するデバイスからエクスポートしたデータは **BioStar X** にインポートできません。常に最新バージョンのファームウェアを使用してください。
 
-* 異なる指紋テンプレート形式を使用する場合、データをインポートできません。 例えば、Suprema指紋テンプレート形式を使用するデバイスからエクスポートしたデータは、ISO指紋テンプレート形式を使用するデバイスではインポートできません。
+* 異なる指紋テンプレート形式を使用する場合、データをインポートできません。例えば、Suprema指紋テンプレート形式を使用するデバイスからエクスポートしたデータは、ISO指紋テンプレート形式を使用するデバイスではインポートできません。
 
 * ユーザーデータを取り込む際、**BioStar X** サーバーに登録されている指紋および顔クレデンシャルがすでに存在する場合、既存のデータは上書きされます。
 
-* 古いファームウェアバージョンを使用するデバイスのデータはインポートできません。 デバイスのファームウェアを互換バージョンにアップグレードします。 
+* 古いファームウェアバージョンを使用するデバイスのデータはインポートできません。デバイスのファームウェアを互換バージョンにアップグレードします。 
 
   <details>
   <summary>対応デバイスとファームウェアバージョンを表示</summary>
@@ -145,17 +151,15 @@ CSVファイルの情報をインポート中にエラーが発生した場合�
 
 * データファイルを適用するデバイスを正しく選択しないと、そのデバイスではデータファイルを認識できません。
 
-* <Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。 <Cmd sid='team.menu.export.exportReason' />の記録は<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />で確認できます。
+* <Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。エクスポート理由は <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' /> で確認できます。
 
 :::
 
 :::caution
 
-**BioStar X** からエクスポートしたファイルをデバイスにインポートするには、現在のデバイスが認識できるようにファイル名を以下のとおり変更する必要があります。 ファイル名の形式は、今後のデバイスファームウェアのアップデートにより自動認識されるよう調整される予定です。
+**BioStar X** からエクスポートしたファイルをデバイスにインポートするには、現在のデバイスが認識できるようにファイル名を以下のとおり変更する必要があります。ファイル名の形式は、今後のデバイスファームウェアのアップデートにより自動認識されるよう調整される予定です。
 
 *<b>BioStarX</b>_YYYYMMDD_HHMMSS.tgz* → *<b>BioStar2</b>_YYYYMMDD_HHMMSS.tgz*
-
-* <Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。 <Cmd sid='team.menu.export.exportReason' />の記録は<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />で確認できます。
 
 :::
 

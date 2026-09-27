@@ -8,7 +8,7 @@ keywords:
 
 Este documento ofrece una guía paso a paso sobre cómo actualizar BioStar 2 a **BioStar X**. Verifique los requisitos del sistema y las precauciones antes de iniciar la actualización.
 
-## Antes de comenzar {/* #start-before */}
+## Antes de empezar {/* #start-before */}
 
 Verifique lo siguiente antes de actualizar de **BioStar 2** a **BioStar X**.
 
@@ -43,6 +43,26 @@ Verifique lo siguiente antes de actualizar de **BioStar 2** a **BioStar X**.
   * Nube
 
 * Para utilizar el servicio T&A de BioStar 2 en **BioStar X**, debe adquirir por separado la licencia **BioStar X T&A**.
+
+:::
+
+:::warning 
+
+### Verifica el certificado {/* #checkCert */}
+
+Cuando actualizas de BioStar 2 a BioStar X, el archivo `biostar_cert.crt` en `nginx\conf` y el de `nginx\cert` pueden diferir. Actualizar en este estado causa los siguientes problemas.
+
+* Ciertos registros de auditoría no se registran.
+
+* Falla la creación de grupos de usuarios, la adición de Wiegand y la actualización del árbol.
+
+Sigue estos pasos para hacer que los archivos de certificado coincidan antes de actualizar a BioStar X.
+
+1. Detén el servicio de BioStar 2.
+
+2. Sobrescribe los archivos `biostar_cert.crt` y `biostar_cert.key` en `nginx\cert` con los archivos de `nginx\conf`.
+
+3. Reinicia el servicio de BioStar 2.
 
 :::
 

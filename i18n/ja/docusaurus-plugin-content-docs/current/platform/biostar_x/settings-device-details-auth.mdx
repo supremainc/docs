@@ -7,23 +7,25 @@ keywords:
   - 認証
 ---
 
-デバイスのユーザー認証に関するさまざまな設定方法を案内します。 <Cmd sid='device.info.authentication' product='2' /> セクションでは、認証方式とデバイスがサポートする主要な認証オプションを段階的に確認します。 設定を変更すると実際のデバイスに反映される点に留意し、各オプションの機能と注意事項を参照して環境に適した認証ポリシーを構成してください。
+import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-force.mdx';
+
+デバイスのユーザー認証に関するさまざまな設定方法を案内します。 <Cmd sid='device.info.authentication' product='2' /> セクションでは、認証方式とデバイスがサポートする主要な認証オプションを段階的に確認します。設定を変更すると実際のデバイスに反映される点に留意し、各オプションの機能と注意事項を参照して環境に適した認証ポリシーを構成してください。
 
 :::info
 
 * デバイスの種類によって設定できるネットワークオプションが異なる場合があります。
 
-* ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。 変更内容を保存しないとデバイスに反映されません。
+* ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。変更内容を保存しないとデバイスに反映されません。
 
 :::
 
-## 認証方法を設定する
+## 認証方法の設定 {/* #howToAuth */}
 
 デバイスの認証モードと権限、サーバーマッチング、認証待機時間を設定できます。
 
 <Image src='/img/biostarx-setting-device-edit-auth-mode.png' />
 
-* <Cmd sid='device.info.authenticationMode' product='2' />：1 つ以上のクレデンシャルを組み合わせてデバイスの認証モードを設定します。 詳しくは<DocLink inner='#added-auth-mode' />をご覧ください。
+* <Cmd sid='device.info.authenticationMode' product='2' />：1 つ以上のクレデンシャルを組み合わせてデバイスの認証モードを設定します。詳しくは<DocLink inner='#added-auth-mode' />をご覧ください。
 
   * 追加した認証モードを編集するには <IcEdit /> をクリックします。
 
@@ -31,19 +33,19 @@ keywords:
 
 * <Cmd sid='device.info.usersHaveFullAccess' product='2' />：デバイスに登録されたユーザーに出入グループ設定なしですべての出入権限を付与できます。
 
-  :::info
+   :::info
 
-  このオプションを <Cmd sid='common.use' product='2' /> に設定すると、<Cmd sid='common.accessLevel' product='2' /> および <Cmd sid='ag.floorLevel.title' product='2' /> にデバイスを登録できません。
+   このオプションを <Cmd sid='common.use' product='2' /> に設定すると、<Cmd sid='common.accessLevel' product='2' /> および <Cmd sid='ag.floorLevel.title' product='2' /> にデバイスを登録できません。
 
-  :::
+   :::
 
-* <Cmd sid='device.info.authTimeout' product='2' />：<Cmd sid='device.info.authenticationMode' product='2' /> オプションで複数のクレデンシャルを組み合わせて使用する場合、2 番目のクレデンシャルを認証するまでの待機時間です。 指定した時間内にクレデンシャルを認証しない場合、認証に失敗します。
+* <Cmd sid='device.info.authTimeout' product='2' />：<Cmd sid='device.info.authenticationMode' product='2' /> オプションで複数のクレデンシャルを組み合わせて使用する場合、2 番目のクレデンシャルを認証するまでの待機時間です。指定した時間内にクレデンシャルを認証しない場合、認証に失敗します。
 
 * <Cmd sid='common.serverMatching' product='2' />
 
   * <Cmd sid='common.active' product='2' />：サーバーマッチング機能を有効にします。 **BioStar X**をインストールしたサーバーに保存されているユーザー情報を使用して認証を行うサーバーマッチング機能を設定してください。
 
-  * <Cmd sid='common.inactive' product='2' />：サーバーマッチング機能を無効にします。 この場合、デバイスに登録されているユーザー情報で認証を行います。
+  * <Cmd sid='common.inactive' product='2' />：サーバーマッチング機能を無効にします。この場合、デバイスに登録されているユーザー情報で認証を行います。
 
   <details>
 
@@ -95,11 +97,11 @@ keywords:
 
   * <Cmd sid='device.faceDetectionLevel.none' product='2' />：顔検出機能を使用しません。
 
-  :::info
+   :::info
 
-  このオプションは BioStation A2 モデルでサポートされています。
+   このオプションは BioStation A2 モデルでサポートされています。
 
-  :::
+   :::
 
 * <Cmd sid='device.info.userIdDisplay' product='2' />：認証成功時にデバイスに表示されるユーザーIDを表示または非表示にできます。
 
@@ -109,9 +111,35 @@ keywords:
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
+* <Cmd sid='device.info.authFailLockout.label' product='2' />：短時間に認証に繰り返し失敗すると、一定時間デバイスをロックして総当たり攻撃を遮断します。このオプションを <Cmd sid='device.info.enable' product='2' /> に設定すると、以下の項目を設定できます。デフォルトは <Cmd sid='device.info.disable' product='2' /> です。
+
+  * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />：デバイスをロックするまでに許容する認証失敗回数を 3\~15回の範囲で設定してください。デフォルトは5回です。
+
+  * <Cmd sid='device.info.authFailLockout.monitoringWindow' product='2' />：認証失敗回数を累積して計算する時間を 30\~300秒の範囲で設定してください。デフォルトは60秒です。
+
+  * <Cmd sid='device.info.authFailLockout.firstLockout' product='2' />：認証失敗回数が <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' /> に達したときにデバイスをロックする時間を 30\~900秒の範囲で設定してください。デフォルトは60秒です。値の入力が必須です。
+
+  * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: 1次ロックが解除された後も認証失敗が繰り返される場合に適用する2次ロック時間です。このオプションを <Cmd sid='common.use' product='2' /> に設定すると、900\~3,600秒の値を入力できます。デフォルトは900秒です。
+
+     :::note
+
+     このオプションを <Cmd sid='device.info.disable' product='2' /> に設定すると、2次ロックなしで1次ロックのみを繰り返し適用します。
+
+     :::
+
+  * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />：最後の認証失敗後、この時間内に追加の失敗がなければ、累積失敗回数を初期化します。 600\~3,600秒の範囲で設定してください。デフォルトは1,800秒です。
+
+   :::info
+
+  * デバイスが現在ロック状態の場合、<Cmd sid='device.info.authFailLockout.label' product='2' />を<Cmd sid='device.info.disable' product='2' />に変更して保存すると、デバイスは直ちにロックを解除します。ただし、<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />を<Cmd sid='device.info.disable' product='2' />に変更して保存しても、デバイスはロックを解除しません。
+
+  * <Cmd sid='device.info.authFailLockout.label' product='2' /> オプションは BioStation 3 のファームウェア 1.5.0 以降でサポートされています。
+
+   :::
+
 ### 認証モードを追加する {/* #added-auth-mode */}
 
-<Cmd sid='device.info.authenticationMode' product='2' /> オプションでデバイスの認証モードを設定してください。 指紋、ID、カード、PIN、顔などのクレデンシャルを組み合わせて認証モードを設定できます。
+<Cmd sid='device.info.authenticationMode' product='2' /> オプションでデバイスの認証モードを設定してください。指紋、ID、カード、PIN、顔などのクレデンシャルを組み合わせて認証モードを設定できます。
 
 1. <Cmd sid='device.info.authenticationMode' product='2' /> オプションで <IcAdd/> <Cmd sid='button.add' product='2' /> ボタンをクリックしてください。
 
@@ -127,7 +155,7 @@ keywords:
 
 :::info
 
-<Cmd sid='schedule.schedule' product='2' /> オプションに希望のスケジュールがない場合は、<IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> をクリックしてください。 新しいスケジュールを追加できます。 スケジュール設定の詳細については、<DocLink docId='platform/biostar_x/settings-schedule' />をご参照ください。
+<Cmd sid='schedule.schedule' product='2' /> オプションに希望のスケジュールがない場合は、<IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> をクリックしてください。新しいスケジュールを追加できます。スケジュール設定の詳細については、<DocLink docId='platform/biostar_x/settings-schedule' />をご参照ください。
 
 :::
 
@@ -137,17 +165,17 @@ keywords:
 
 <Image src='/img/biostarx-setting-device-detail-fingerprint.png' />
 
-* <Cmd sid='device.info.securityLevel' product='2' />：指紋認証時に使用するセキュリティレベルを設定してください。 セキュリティレベルを上げるほど、[本人拒否率 (FRR)](../../reference/glossary#frr) は高くなりますが、[他人受入率 (FAR)](../../reference/glossary#far) は低くなります。
+* <Cmd sid='device.info.securityLevel' product='2' />：指紋認証時に使用するセキュリティレベルを設定してください。セキュリティレベルを上げるほど、[本人拒否率 (FRR)](../../reference/glossary#frr) は高くなりますが、[他人受入率 (FAR)](../../reference/glossary#far) は低くなります。
 
-* <Cmd sid='device.info.scanTimeout' product='2' />：指紋スキャンの待機時間を設定してください。 設定した時間内に指紋をスキャンできない場合、認証は失敗します。
+* <Cmd sid='device.info.scanTimeout' product='2' />：指紋スキャンの待機時間を設定してください。設定した時間内に指紋をスキャンできない場合、認証は失敗します。
 
-* <Cmd sid='device.info.sensorSensitivity' product='2' />：指紋センサーの感度を設定してください。 より精密な指紋情報を取得するには、センサー感度を高く設定してください。
+* <Cmd sid='device.info.sensorSensitivity' product='2' />：指紋センサーの感度を設定してください。より精密な指紋情報を取得するには、センサー感度を高く設定してください。
 
 * <Cmd sid='device.info.1NFastMode' product='2' />：指紋認証の速度を設定してください。 <Cmd sid='common.auto' product='2' /> を選択すると、デバイスに登録されている指紋テンプレートの総数に応じて認証速度が設定されます。
 
 * <Cmd sid='device.info.templateFormat' product='2' />：設定されている指紋テンプレート形式を確認できます。
 
-* <Cmd sid='device.info.matchingTimeout' product='2' />：指紋マッチングの待機時間を設定してください。 設定した時間内に認証が完了しない場合、認証は失敗します。
+* <Cmd sid='device.info.matchingTimeout' product='2' />：指紋マッチングの待機時間を設定してください。設定した時間内に認証が完了しない場合、認証は失敗します。
 
 * <Cmd sid='device.info.viewImage' product='2' />：指紋認証時に画面に指紋画像を表示できます。
 
@@ -157,9 +185,9 @@ keywords:
 
   * <Cmd sid='device.sensorMode.alwaysOn' product='2' />：指紋センサーが常にオンになっています。
 
-* <Cmd sid='device.info.advancedEnrollment' product='2' />：高品質の指紋情報を保存するために、スキャンした指紋の品質を検査できます。 <Cmd sid='common.use' product='2' />に設定すると、指紋品質が低い場合にユーザーへ通知し、正しくスキャンできるよう支援します。
+* <Cmd sid='device.info.advancedEnrollment' product='2' />：高品質の指紋情報を保存するために、スキャンした指紋の品質を検査できます。<Cmd sid='common.use' product='2' />に設定すると、指紋品質が低い場合にユーザーへ通知し、正しくスキャンできるよう支援します。
 
-* <Cmd sid='device.info.fingerprintLFD' product='2' />：[偽造指紋](../../reference/glossary#fake_fp)検出レベルを設定できます。 偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
+* <Cmd sid='device.info.fingerprintLFD' product='2' />：[偽造指紋](../../reference/glossary#fake_fp)検出レベルを設定できます。偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
 
 * <Cmd sid='device.info.duplicateCheck' product='2' />：指紋を登録する際に重複登録をチェックできます。
 
@@ -167,7 +195,7 @@ keywords:
 
 * デバイスの種類によって設定できるオプションが異なる場合があります。
 
-* 指紋認証設定で <Cmd sid='device.info.templateFormat' product='2' /> オプションを変更すると、以前に保存されたすべての指紋は使用できなくなります。 ユーザーの指紋を登録する前に、必ず <Cmd sid='device.info.templateFormat' product='2' /> オプションでテンプレートを選択してください。
+* 指紋認証設定で <Cmd sid='device.info.templateFormat' product='2' /> オプションを変更すると、以前に保存されたすべての指紋は使用できなくなります。ユーザーの指紋を登録する前に、必ず <Cmd sid='device.info.templateFormat' product='2' /> オプションでテンプレートを選択してください。
 
 * <Cmd sid='device.info.viewImage' product='2' /> オプションは BioStation 3 Max (BS3M-ODB, BS3M-OAPB)、X-Station 2 (XS2-ODPB, XS2-OAPB)、FaceStation F2 (FSF2-ODB)、BioLite N2、BioStation L2、BioStation A2、BioStation 2 のモデルでサポートされています。
 
@@ -175,13 +203,13 @@ keywords:
 
 :::
 
-## 顔認証設定
+## 顔認証の設定 {/* #faceDetectionSettings */}
 
 <Cmd sid='user.credential.face' product='2' /> または <Cmd sid='user.credential.visualface' product='2' /> グループでは、デバイスの顔認証に関する詳細設定を行えます。
 
 <Image src='/img/biostarx-setting-device-detail-face.png' />
 
-* <Cmd sid='device.info.securityLevel' product='2' />：顔を認証する際に使用するセキュリティレベルを設定します。 セキュリティレベルを上げるほど、[本人拒否率 (FRR)](../../reference/glossary#frr) は高くなりますが、[他人受入率 (FAR)](../../reference/glossary#far) は低くなります。
+* <Cmd sid='device.info.securityLevel' product='2' />：顔を認証する際に使用するセキュリティレベルを設定します。セキュリティレベルを上げるほど、[本人拒否率 (FRR)](../../reference/glossary#frr) は高くなりますが、[他人受入率 (FAR)](../../reference/glossary#far) は低くなります。
 
 * <Cmd sid='face.operationMode.enrollTime' product='2' />：ユーザーの顔を登録する際、設定した時間内に登録できないと顔登録がキャンセルされます。
 
@@ -189,7 +217,7 @@ keywords:
 
 * <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />：デバイス周囲の明るさを検知して IR LED の強度を調整できます。
 
-* <Cmd sid='device.info.faceLFD' product='2' />：偽造顔検出レベルを設定します。 偽造顔検出レベルを高く設定すると、実際の顔に対する拒否率も高くなる場合があります。
+* <Cmd sid='device.info.faceLFD' product='2' />：偽造顔検出レベルを設定します。偽造顔検出レベルを高く設定すると、実際の顔に対する拒否率も高くなる場合があります。
 
 * <Cmd sid='device.authmode.settings.lightBrightness' product='2' />：デバイス照明の明るさを手動で調整できます。 <Cmd sid='device.authmode.settings.ambientBrightness.normal' product='2' /> または <Cmd sid='device.authmode.settings.ambientBrightness.high' product='2' /> で明るさを設定するか、 <Cmd sid='device.authmode.settings.lightBrightness.notUse' product='2' /> を選択して照明をオフにできます。
 
@@ -197,7 +225,7 @@ keywords:
 
   * <Cmd sid='device.info.enable' product='2' />：顔登録手順をワンステップに設定します。
 
-  * <Cmd sid='device.info.disabled' product='2' />：顔登録手順を3段階に設定します。 高品質の顔テンプレートを登録する場合は、<Cmd sid='device.info.disabled' product='2' /> に設定します。
+  * <Cmd sid='device.info.disabled' product='2' />：顔登録手順を3段階に設定します。高品質の顔テンプレートを登録する場合は、<Cmd sid='device.info.disabled' product='2' /> に設定します。
 
 * <Cmd sid='device.info.duplicateCheck' product='2' />：顔を登録する際に重複登録をチェックできます。
 
@@ -217,7 +245,31 @@ keywords:
 
 * <Cmd sid='device.info.faceFakeDetection' product='2' />：写真などによる偽造顔を利用したユーザー認証を防止できます。 <Cmd sid='device.info.faceOperationMode' product='2' /> オプションを <Cmd sid='device.info.face.operation_mode.enable' product='2' /> に設定すると有効になります。
 
-* <Cmd sid='device.info.storeVisualFaceImage' product='2' />：顔の実際の画像と特徴情報のみを抽出したテンプレートを保存します。 実際の画像を保存しない場合は、この設定を無効にしてください。
+* <Cmd sid='device.info.storeVisualFaceImage' product='2' />：顔の実際の画像と特徴情報のみを抽出したテンプレートを保存します。実際の画像を保存しない場合は、この設定を無効にしてください。
+
+* <Cmd sid='device.info.reauthPrevention' product='2' />：同じユーザーの顔が短時間に再度検知された場合、重複して認証しないように設定してください。 <Cmd sid='device.info.enable' product='2' /> に設定すると、<Cmd sid='device.info.reauthPreventionTime' product='2' /> を 3\~60秒の範囲で設定できます。
+
+  <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
+
+   :::note
+
+   この設定は、<Cmd sid='device.info.antiTailgating.label' product='2' /> と <Cmd sid='device.info.multiFaceAuth.label' product='2' /> のどちらを使用しても共通で適用されます。
+
+   :::
+
+* <Cmd sid='device.info.antiTailgating.label' product='2' />：デバイスカメラの撮影範囲内で2人以上の顔を同時に検知すると、共連れと判断して認証を中断します。
+
+* <Cmd sid='device.info.multiFaceAuth.label' product='2' />：デバイスカメラの撮影範囲内にいる複数のユーザーの顔を順番に認証します。
+
+   :::note
+
+  * このオプションを使用するには、別途デバイスライセンスが必要です。ライセンスがないデバイスでは、このオプションを使用に設定できません。詳しくは<DocLink docId='platform/biostar_x/settings-license-device-license' />をご覧ください。
+
+  * このオプションを <Cmd sid='common.use' product='2' /> に設定すると、デバイスに設定された <Cmd sid='device.info.authenticationMode' product='2' /> に関係なく、顔認証専用で動作します。
+
+  * このオプションを使用するデバイスでは、<Cmd sid='device.info.tna' product='2' />および<Cmd sid='device.info.serverPrivateMsg' product='2' />機能は使用できません。
+
+   :::
 
 :::info
 
@@ -229,6 +281,14 @@ keywords:
 
 * <Cmd sid='device.info.faceDetectSetting' product='2' />, <Cmd sid='device.info.faceOperationMode' product='2' /> オプションは BioStation 3 Max、BioStation 3、FaceStation F2 のモデルでサポートされています。
 
+* <Cmd sid='device.info.antiTailgating.label' product='2' /> と <Cmd sid='device.info.multiFaceAuth.label' product='2' /> は同時に <Cmd sid='common.use' product='2' /> に設定できません。一方のオプションを <Cmd sid='common.use' product='2' /> に設定すると、もう一方のオプションは自動的に <Cmd sid='common.notUse' product='2' /> に切り替わります。
+
+* <Cmd sid='device.info.reauthPrevention' product='2' /> と <Cmd sid='device.info.multiFaceAuth.label' product='2' /> オプションを設定できるのはマスターデバイスのみです。 <Cmd sid='device.info.antiTailgating.label' product='2' /> オプションは、マスターデバイスとスレーブデバイスでそれぞれ設定できます。
+
+* <Cmd sid='device.info.reauthPrevention' product='2' />、<Cmd sid='device.info.antiTailgating.label' product='2' />、<Cmd sid='device.info.multiFaceAuth.label' product='2' /> オプションは、デバイスの種類およびファームウェアのバージョンによってサポート状況が異なる場合があります。
+
+  * BioStation 3 ファームウェア バージョン 1.5.0以降
+
 :::
 
 ## QR/バーコード設定
@@ -239,7 +299,7 @@ keywords:
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' /> / <Cmd sid='device.info.useBarcode' product='2' />：デバイスのカメラでのQR/バーコード認証を使用するかどうかを設定します。
 
-* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />：カメラのスキャン待機時間を設定します。 設定した時間内に QR/バーコードをスキャンしないと、認証に失敗します。
+* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />：カメラのスキャン待機時間を設定します。設定した時間内に QR/バーコードをスキャンしないと、認証に失敗します。
 
 * <Cmd sid='device.info.normalize' product='2' />：ユーザーに発行した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。
 
@@ -247,21 +307,23 @@ keywords:
 
 * <Cmd sid='device.info.useBarcodeScanner' product='2' />：デバイスのスキャナーによるQR/バーコード認証の使用可否を設定します。
 
-* <Cmd sid='device.info.qrScanTimeout' product='2' />：スキャン待機時間を設定します。 設定した時間内に QR/バーコードをスキャンしないと、認証に失敗します。
+* <Cmd sid='device.info.qrScanTimeout' product='2' />：スキャン待機時間を設定します。設定した時間内に QR/バーコードをスキャンしないと、認証に失敗します。
 
 * <Cmd sid='device.info.useQrLed' product='2' />：QRコード認証時にデバイスのLED照明を使用するかどうかを設定します。
 
 :::info
 
-* <Cmd sid='device.info.useVisualBarcode' product='2' /> オプションを使用するには、別途デバイスライセンスが必要です。 詳しくは<DocLink docId='platform/biostar_x/settings-license-device-license' />をご覧ください。
+* <Cmd sid='device.info.useVisualBarcode' product='2' /> オプションを使用するには、別途デバイスライセンスが必要です。詳しくは<DocLink docId='platform/biostar_x/settings-license-device-license' />をご覧ください。
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' />、<Cmd sid='device.info.qrCameraTimeout' product='2' />、<Cmd sid='device.info.normalize' product='2' />、<Cmd sid='device.authmode.settings.motionSensor' product='2' /> オプションに対応しているデバイスは以下のとおりです。
 
-  * BioStation 3 Max ファームウェア 1.0.0 以上
+  * BioStation 3 Maxのファームウェアバージョン1.0.0以降
 
   * BioStation 3 ファームウェア バージョン 1.1.0以降
 
   * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) ファームウェア 1.2.0 以上
+
+  * X-Station 2 (XS2-QDPB, XS2-QAPB) ファームウェア 1.4.1 以上
 
 * 以下のデバイスが <Cmd sid='device.info.useBarcodeScanner' product='2' /> および <Cmd sid='device.info.qrScanTimeout' product='2' /> オプションに対応しています。
 
@@ -283,7 +345,7 @@ keywords:
 
 :::
 
-### <Cmd sid='device.card.CSN' product='2' /> {/* #deviceCardcsn */}
+### <Cmd sid='device.card.CSN' product='2' className='normal' /> {/* #deviceCardcsn */}
 
 CSNカードとフォーマットの種類を選択し、バイト順序を設定します。
 
@@ -299,9 +361,9 @@ CSNカードとフォーマットの種類を選択し、バイト順序を設�
 
   * <Cmd sid='device.info.cardIdFormat.normal' product='2' />：カードのシリアル番号 (CSN) を変換せずにそのまま読み取って表示します。
 
-  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />：ユーザーが定義した Wiegand 形式に従ってカードシリアル番号 (CSN) を変換して表示します。 新しい Wiegand 形式を設定するには、<DocLink docId='platform/biostar_x/settings-credential-wiegand-format' />を参照してください。
+  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />：ユーザーが定義した Wiegand 形式に従ってカードシリアル番号 (CSN) を変換して表示します。新しい Wiegand 形式を設定するには、<DocLink docId='platform/biostar_x/settings-credential-wiegand-format' />を参照してください。
 
-### <Cmd sid='device.card.Wiegand' product='2' /> {/* #deviceCardwiegand */}
+### <Cmd sid='device.card.Wiegand' product='2' className='normal' /> {/* #deviceCardwiegand */}
 
 Wiegand カードの種類を選択し、Wiegand 形式を設定します。 <Cmd sid='device.cardFormat.wiegand.format' product='2' /> オプションで使用する Wiegand 形式を選択します。
 
@@ -313,13 +375,15 @@ Wiegand カードの種類を選択し、Wiegand 形式を設定します。 <Cm
 
 :::
 
-### <Cmd sid='device.card.supremaSmartCard' product='2' /> {/* #deviceCardsupremaSmartCard */}
+### <Cmd sid='device.card.supremaSmartCard' product='2' className='normal' /> {/* #deviceCardsupremaSmartCard */}
 
 Suprema スマートカードの種類を選択し、カードレイアウトとバイト順序を設定します。
 
 <Image src='/img/biostarx-setting-device-detail-card-smart.png' />
 
-* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />：Suprema スマートカードレイアウトを選択します。 詳しくは<DocLink docId='platform/biostar_x/settings-credential-smart-format' />をご覧ください。
+<EV2EV3SecurityMessage type='suprema' />
+
+* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />：Suprema スマートカードレイアウトを選択します。詳しくは<DocLink docId='platform/biostar_x/settings-credential-smart-format' />をご覧ください。
 
 * <Cmd sid='device.info.supremaSmartCardByteOrder' product='2' />
 
@@ -327,13 +391,15 @@ Suprema スマートカードの種類を選択し、カードレイアウトと
 
   * <Cmd>LSB</Cmd>：カードデータを小さいバイト単位から大きいバイト単位の順に処理します。
 
-### <Cmd sid='device.card.customSmartCard' product='2' /> {/* #deviceCardcustomSmartCard */}
+### <Cmd sid='device.card.customSmartCard' product='2' className='normal' /> {/* #deviceCardcustomSmartCard */}
 
 他社が発行したカスタムスマートカードの種類を選択し、カードレイアウトとバイト順序を設定します。
 
 <Image src='/img/biostarx-setting-device-detail-card-custom.png' />
 
-* <Cmd sid='device.batch.customSmartCardLayout' product='2' />：カスタムスマートカードレイアウトを選択します。 詳しくは<DocLink docId='platform/biostar_x/settings-credential-smart-format' />をご覧ください。
+<EV2EV3SecurityMessage type='custom' />
+
+* <Cmd sid='device.batch.customSmartCardLayout' product='2' />：カスタムスマートカードレイアウトを選択します。詳しくは<DocLink docId='platform/biostar_x/settings-credential-smart-format' />をご覧ください。
 
 * <Cmd sid='device.info.customSmartCardByteOrder' product='2' />
 
@@ -367,7 +433,7 @@ Suprema スマートカードの種類を選択し、カードレイアウトと
 
 </details>
 
-### <Cmd sid='device.info.csnMobile' product='2' /> {/* #deviceCsnMobile */}
+### <Cmd sid='device.info.csnMobile' product='2' className='normal' /> {/* #deviceCsnMobile */}
 
 モバイルカードの認識方法を設定します。
 
@@ -377,7 +443,7 @@ Suprema スマートカードの種類を選択し、カードレイアウトと
 
 * <Cmd>BLE</Cmd>：低電力 Bluetooth (Bluetooth Low Energy、BLE) 通信を使用してモバイルカードを認識します。
 
-### <Cmd sid='device.info.templateOnMobile' product='2' /> {/* #deviceInfotemplateOnMobile */}
+### <Cmd sid='device.info.templateOnMobile' product='2' className='normal' /> {/* #deviceInfotemplateOnMobile */}
 
 テンプレートオンモバイルの認識方法と、ユーザーがデバイスで直接登録するバイオメトリクスを指定し、バイト順序を設定します。
 

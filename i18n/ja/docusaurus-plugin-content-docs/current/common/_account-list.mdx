@@ -1,25 +1,29 @@
 * <Cmd sid='setting.account.administrator' product='2' />：すべてのメニューを使用できる管理者権限レベルです。
 
-* <Cmd sid='setting.account.userOperator' product='2' />：<Cmd sid='shell.header.user' /> メニューで **読み取り**、**書き込み** 権限を持ちます。
+* <Cmd sid='setting.account.userOperator' product='2' />：<Cmd sid='shell.header.user' /> メニューに対する **読み取り**、**編集** 権限を持ちます。 <Cmd sid='shell.header.user' /> メニュー以外の設定グループに対する権限はありません。
 
-* <Cmd sid='setting.account.monitoringOperator' product='2' />：<Cmd sid='shell.header.arena' />、<Cmd sid='shell.header.data' />、<Cmd sid='shell.header.dashboard' /> メニューで **読み取り**、**書き込み** 権限を持ちます。
+* <Cmd sid='setting.account.monitoringOperator' product='2' />：<Cmd sid='shell.header.arena' /> と <Cmd sid='shell.header.data' /> メニューに対する **読み取り**、**編集** 権限を持ち、<Cmd sid='shell.header.dashboard' /> メニューに対する **読み取り** 権限を持ちます。
 
-* <Cmd sid='setting.account.taOperator' product='2' />：<Cmd sid='common.gnb.time_attendance' product='2' /> メニューで **読み取り**、**書き込み** 権限を持ちます。
+* <Cmd sid='setting.account.taOperator' product='2' />: <Cmd sid='common.gnb.time_attendance' product='2' /> メニューの**閲覧**、**編集**権限を持ち、<Cmd sid='shell.header.user' /> メニューの**閲覧**権限を持ちます。
 
-* <Cmd sid='setting.account.visitorOperator' product='2' />：<Cmd sid='common.gnb.visitor' product='2' /> メニューで **読み取り**、**書き込み** 権限を持ちます。
+* <Cmd sid='setting.account.visitorOperator' product='2' />：<Cmd sid='common.gnb.visitor' product='2' /> メニューで **読み取り**、**編集** 権限を持ちます。
 
 :::info
 
 <Include pages='set-permission'>
 
-* 管理者権限レベルを設定しない場合は、<Cmd sid='common.selectNone' /> を選択してください。 この場合、該当ユーザーは **BioStar X** にログインできません。
+* 管理者権限レベルを設定しない場合は、<Cmd sid='common.selectNone' /> を選択してください。この場合、該当ユーザーは **BioStar X** にログインできません。
 
 </Include>
+
+* <Cmd sid='shell.header.arena' /> メニューの **編集** 権限では、タブを追加したり、状態ツリー項目を制御したりできます。
+
+* <Cmd sid='shell.header.data' /> メニューの **編集** 権限では、レポートの保存、レポートの自動スケジュール追加、設定へのアクセスができます。
 
 * 既定のユーザー権限以外の新しいユーザー権限を追加するには、<DocLink docId='platform/biostar_x/settings-adding-custom-account' />を参照してください。
 
 * 既定のアカウントの権限は変更または削除できません。
 
-* <Cmd sid='setting.account.taOperator' product='2' /> および <Cmd sid='setting.account.visitorOperator' product='2' /> 権限レベルには別途ライセンスが必要です。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
+* <Cmd sid='setting.account.taOperator' product='2' /> および <Cmd sid='setting.account.visitorOperator' product='2' /> 権限レベルには別途ライセンスが必要です。ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing#features-add-ons' />を参照してください。
 
 :::
