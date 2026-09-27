@@ -38,6 +38,16 @@
 
 * <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Set the encryption type to <Cmd>DES/3DES</Cmd> or <Cmd>AES</Cmd>.
 
+:::info
+
+When changing a card layout saved with <Cmd>AES</Cmd> encryption to <Cmd>DES/3DES</Cmd>, the following warning pop-up appears.
+
+> <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
+
+Click the <Cmd sid='button.ok' product='2' /> button to save the changes. The <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option turns off automatically for devices using this card layout. For more information about the <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option, see <DocLink docId='platform/biostar_x/settings-device-details-auth' />.
+
+:::
+
 </Include>
 
 <Include type={props.type} ref='custom-mifare,custom-iclass,custom-desfire'>

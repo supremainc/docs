@@ -1,0 +1,83 @@
+## Retention policy settings
+
+<Include type={props.type} ref='accesscontrol'>
+
+The <Cmd sid='audit.retention.sectionAccessControl' /> section consists of the following two groups.
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+The <Cmd sid='audit.retention.sectionTimeAttendance' /> section consists of the following two groups.
+
+</Include>
+
+* <Cmd sid='audit.retention.groupChanges' />: Creation, update, and deletion logs. Always recorded. Cannot turn logging on or off.
+
+* <Cmd sid='audit.retention.groupAccess' />: View logs. Set whether to record logs.
+
+:::info
+
+* Enter <Cmd sid='audit.retention.retentionPeriod' /> as an integer between 1 and 2,147,483,647 days.
+
+<Include type={props.type} ref='accesscontrol'>
+
+* Check <Cmd sid='setting.menu.auditTrail.acAuditLog' /> for audit logs of setting changes in the <Cmd sid='audit.retention.sectionAccessControl' /> section.
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+* Check <Cmd sid='setting.menu.auditTrail.taAuditLog' /> for <Cmd sid='action.update' /> logs of setting changes in the <Cmd sid='audit.retention.sectionTimeAttendance' /> section.
+
+</Include>
+
+:::
+
+### Change logs
+
+Because the <Cmd sid='audit.retention.groupChanges' /> group is always recorded, select the <Cmd sid='audit.retention.labelRetention' /> setting.
+
+* <Cmd sid='audit.retention.optionEndless' />: Keep logs permanently without automatic deletion.
+
+* <Cmd sid='audit.retention.optionCustom' />: Select this option to limit the retention period for compliance or internal policy. When the <Cmd sid='audit.retention.retentionPeriod' /> field becomes active, enter the retention period in days.
+
+### View logs
+
+In the <Cmd sid='audit.retention.groupAccess' /> group, set whether to keep view logs.
+
+* <Cmd sid='audit.retention.labelLogging' />: Set to <Cmd sid='audit.retention.loggingOn' /> to keep view logs. If not needed, set it to <Cmd sid='audit.retention.loggingOff' />.
+
+* <Cmd sid='audit.retention.labelRetention' />: Select a retention method.
+
+  * <Cmd sid='audit.retention.optionEndless' />: Keep view logs permanently without automatic deletion.
+
+  * <Cmd sid='audit.retention.optionCustom' />: Activates the <Cmd sid='audit.retention.retentionPeriod' /> field. Enter the retention period in days.
+
+:::info
+
+When <Cmd sid='audit.retention.labelLogging' /> is set to <Cmd sid='audit.retention.loggingOff' />, the system does not record view events. After setting it to <Cmd sid='audit.retention.loggingOn' />, the system cannot view earlier records.
+
+:::
+
+### Save Settings
+
+<Include type={props.type} ref='accesscontrol'>
+
+After completing the <Cmd sid='audit.retention.groupChanges' /> and <Cmd sid='audit.retention.groupAccess' /> settings, click the <Cmd sid='common.apply' /> button at the bottom of the <Cmd sid='audit.retention.sectionAccessControl' /> section. Save both group settings together.
+
+</Include>
+
+<Include type={props.type} ref='timeattendance'>
+
+After completing the <Cmd sid='audit.retention.groupChanges' /> and <Cmd sid='audit.retention.groupAccess' /> settings, click the <Cmd sid='common.apply' /> button at the bottom of the <Cmd sid='audit.retention.sectionTimeAttendance' /> section. Save both group settings together.
+
+</Include>
+
+## How automatic deletion works
+
+The server runs this job daily at 1 a.m. It deletes records past the retention period set in <Cmd sid='audit.retention.optionCustom' />, regardless of user actions. The job evaluates and deletes records at the same time. It runs only once a day.
+
+> For example, set <Cmd sid='audit.retention.groupAccess' /> records to 30 days in <Cmd sid='audit.retention.optionCustom' />. At 1 a.m., the job deletes records older than 30 days. Records just past the retention period remain until the next 1 AM job runs.
+
+When <Cmd sid='audit.retention.labelRetention' /> is set to <Cmd sid='audit.retention.optionEndless' />, the automatic deletion job does not run, and records are retained permanently.

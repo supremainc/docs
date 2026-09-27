@@ -9,11 +9,11 @@ keywords:
 
 **Quick Action** is a feature that automates complex control procedures during emergencies. Execute the actions of multiple predefined devices instantly with a single button to respond quickly.
 
-Adding a quick action button in the <Cmd sid="common.customInterface" product='2' /> menu allows you to easily control multiple access points at once by clicking the quick action button on the **BioStar X** main screen.
+Add a quick action button in the <Cmd sid='setting.menu.customInterface.root' /> menu. Click it on the **BioStar X** main screen to control multiple doors at once.
 
 :::info
 
-To add the <Cmd sid="common.triggerAndAction" product='2' /> as a Quick Action, see <DocLink docId='platform/biostar_x/settings-triger-and-action' />.
+To add the <Cmd sid='setting.menu.customInterface.root' /> as a Quick Action, see <DocLink docId='platform/biostar_x/settings-triger-and-action' />.
 
 :::
 
@@ -21,7 +21,7 @@ To add the <Cmd sid="common.triggerAndAction" product='2' /> as a Quick Action, 
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. In the left sidebar, click the <Cmd sid="common.customInterface" product='2' />.
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> on the left sidebar.
 
    <Image src='/img/biostarx-settings-custom-interface.png' />
 
@@ -37,11 +37,11 @@ To add the <Cmd sid="common.triggerAndAction" product='2' /> as a Quick Action, 
 
    * <Cmd sid="settings.customInterface.quickAction.confirmBeforeRun" product='2' />: Enabling this option will prompt a confirmation popup when you press the <Cmd sid="common.quickAction" product='2' /> button to ask if you want to execute it.
 
-5. Click <Cmd sid="button.apply" product='2' /> button to save the settings.
+5. Click <Cmd sid="button.apply" product='2' /> to save the settings.
 
 6. Click <Cmd sid="button.apply" product='2' /> at the bottom right of the screen. 
 
-The <Cmd sid="common.quickAction" product='2' /> button added in the upper right header area of the **BioStar X** screen will be created. Click the created <Cmd sid="common.quickAction" product='2' /> button to verify it works as configured in <Cmd sid="common.triggerAndAction" product='2' />.
+The <Cmd sid="common.quickAction" product='2' /> button added in the upper right header area of the **BioStar X** screen will be created. Click the created <Cmd sid="common.quickAction" product='2' /> button to verify it works as configured in <Cmd sid='setting.menu.customInterface.root' />.
 
 <Image src='/img/settings-custom-interface-main-quick-action.png' className='none' />
 
@@ -53,11 +53,11 @@ The <Cmd sid="common.quickAction" product='2' /> button added in the upper right
 
 :::
 
-## Editing the Quick Action buttons
+## Edit Quick Action button
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. In the left sidebar, click the <Cmd sid="common.customInterface" product='2' />.
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> on the left sidebar.
 
 3. Click the <IcEditUL /> button on the right side of the quick action button you want to modify.
 
@@ -67,13 +67,63 @@ The <Cmd sid="common.quickAction" product='2' /> button added in the upper right
 
 5. To save the modifications, click the <Cmd sid="button.apply" product='2' /> button at the bottom right of the screen.
 
-## Deleting the Quick Action button
+## Change Quick Action order
 
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
-2. In the left sidebar, click the <Cmd sid="common.customInterface" product='2' />.
+2. On the left sidebar, click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" />.
 
-3. Click the <IcTrash2 /> button to the right of the quick action button you want to delete.
+3. In the quick action list, click and hold the leftmost column, then drag it to the desired position.
+
+   <Image src='/img/settings-custom-interface-quick-action-change-order.png' />
+
+4. Click <Cmd sid="button.apply" product='2' /> in the bottom right corner of the screen to save the new order.
+
+The quick action list at the top right of the screen shows the updated order.
+
+<Image src='/img/settings-custom-interface-quick-action-change-order-result.png' />
+
+## Pin buttons to the header
+
+Place quick actions that require quick access in the header area.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. On the left sidebar, click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" />.
+
+3. Click <Cmd sid='settings.customInterface.quickAction.pinOnHeader' product='2' />(<IcPin />) to pin the quick action to the header area.
+
+   <Image src='/img/settings-custom-interface-quick-action-pin-header.png' />
+
+   :::note
+
+   Drag the leftmost column to reorder. Click <Cmd sid='settings.customInterface.quickAction.pinOnHeader' product='2' /> again to unpin.
+
+   :::
+
+4. Select all quick actions to pin to the header area. Click <Cmd sid="button.apply" product='2' /> in the bottom right corner.
+
+Pinned quick actions appear to the left of the <Cmd sid='shell.header.action' /> button at the top right of the screen.
+
+<Image src='/img/settings-custom-interface-quick-action-pin-header-result.png' />
+
+:::info
+
+* Pin up to 4 quick actions to the header area. When 4 quick actions are already pinned, you cannot pin more. Unpin another entry, then try again.
+
+* When the browser window narrows, all individual buttons in the header disappear, and you can find the pinned quick actions with the pin (<IcPin fill='#d8403a' />) icon in the dropdown list of the <Cmd sid='shell.header.action' /> button.
+
+* If all added quick actions are pinned to the header area, the <Cmd sid='shell.header.action' /> button does not appear. Unpin certain entries to show the button again.
+
+:::
+
+## Delete Quick Action button
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid="setting.menu.customInterface.root" /> on the left sidebar.
+
+3. Click <IcTrash2 /> to the right of the quick action button you want to delete.
 
    <Image src='/img/settings-custom-interface-quick-action-layout.png' />
 
@@ -81,4 +131,4 @@ The <Cmd sid="common.quickAction" product='2' /> button added in the upper right
 
    <Image src='/img/settings-custom-interface-confirm.png' className='none' />
 
-5. To reflect the deleted items, click the <Cmd sid="button.apply" product='2' /> button at the bottom right of the screen.
+5. To reflect the deleted items, click <Cmd sid="button.apply" product='2' /> at the bottom right of the screen.

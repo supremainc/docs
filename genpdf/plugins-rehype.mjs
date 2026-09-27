@@ -19,13 +19,9 @@ const __dirname = dirname(__filename);
 // Cmd component locale imports
 const cmdKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/ko.json`, 'utf-8'));
 const cmdEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/en.json`, 'utf-8'));
-const cmdEs = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/es.json`, 'utf-8'));
-const cmdJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/ja.json`, 'utf-8'));
 
 const cmdXKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/ko.json`, 'utf-8'));
 const cmdXEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/en.json`, 'utf-8'));
-const cmdXEs = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/es.json`, 'utf-8'));
-const cmdXJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/x/ja.json`, 'utf-8'));
 
 const cmdDevKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/device/ko.json`, 'utf-8'));
 const cmdDevEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/device/en.json`, 'utf-8'));
@@ -66,7 +62,8 @@ const treeviewSvgIcons = {
   'access-zone': readFileSync(`${__dirname}/../static/img/menus/ico-zone.svg`, 'utf-8'),
   'elevator': readFileSync(`${__dirname}/../static/img/menus/ico-flelev.svg`, 'utf-8'),
   'elevator-device': readFileSync(`${__dirname}/../static/img/menus/ico-elevator.svg`, 'utf-8'),
-  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8')
+  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8'),
+  'elevator-floor': readFileSync(`${__dirname}/../static/img/menus/ico-elevator-floor.svg`, 'utf-8')
 };
 
 /**
@@ -694,16 +691,12 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
 
   const cmdLocaleMap = {
     ko: cmdKo,
-    en: cmdEn,
-    es: cmdEs,
-    ja: cmdJa,
+    en: cmdEn
   };
 
   const cmdXLocaleMap = {
     ko: cmdXKo,
-    en: cmdXEn,
-    es: cmdXEs,
-    ja: cmdXJa,
+    en: cmdXEn
   };
 
   const deviceLocaleMap = {
@@ -770,6 +763,7 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
       const productAttr = attributes.find(attr => attr.name === 'product')?.value;
       const classNameAttr = attributes.find(attr => attr.name === 'className')?.value || '';
       const tipAttr = attributes.find(attr => attr.name === 'tip')?.value;
+      const replaceAttr = attributes.find(attr => attr.name === 'replace')?.value;
 
       const classNames = classNameAttr ? ['cmd', classNameAttr] : ['cmd'];
       let textContent = '';
@@ -807,7 +801,12 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
           const locale = cmdXLocaleMap[language] || cmdXEn;
           localeText = locale[sidAttr];
           if (localeText) {
-            localeText = localeText.replace('{{value}}', 'N');
+            localeText = localeText
+              .replace('<br>', '')
+              .replace('{{value}}', 'N')
+              .replace(' ({{count}})', '')
+              .replace('({{count}})', '')
+              .replace('{{count}}', replaceAttr);
           }
         }
 
@@ -828,6 +827,8 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
             .replace(/&sol;/g, '/')
             .replace(/\\xB0\\x43/g, '℃')
             .replace(/\\xB0\\x46/g, '℉')
+            .replace(' <font size="1">※ｵﾝ時 ﾘﾚｰ非動作</font>', '')
+            .replace(/\\n/g, ' ')
             .trim();
         }
 
@@ -2745,18 +2746,7 @@ function buildTreeviewHtml(data) {
     
     // Add icon for level > 1 or specific types
     if (level > 1 || node.type === 'access-zone') {
-      // Special handling for elevator-floor (rendered as a circle dot)
-      if (node.type === 'elevator-floor') {
-        nodeElements.push({
-          type: 'element',
-          tagName: 'span',
-          properties: { 
-            className: ['tree-icon'],
-            style: 'display: inline-block; width: 10px; height: 10px; background-color: #aaa; border-radius: 50%; position: relative; top: 2px;'
-          },
-          children: []
-        });
-      } else {
+      if (node.type !== 'door-relay' && node.type !== 'door-arm') {
         const svgIcon = getSvgIcon(node.type);
         if (svgIcon) {
           nodeElements.push({
@@ -2768,7 +2758,7 @@ function buildTreeviewHtml(data) {
         }
       }
     }
-    
+
     // Add label
     nodeElements.push({
       type: 'element',
@@ -2776,7 +2766,29 @@ function buildTreeviewHtml(data) {
       properties: { className: ['tree-label'] },
       children: [{ type: 'text', value: node.name || 'Unnamed' }]
     });
-    
+
+    // Add relay/arm/camera icons together for door nodes (matches Treeview/index.js)
+    if (node.name === '출입문' || node.name === 'Door') {
+      ['door-relay', 'door-arm'].forEach((iconType, idx) => {
+        const svgIcon = getSvgIcon(iconType);
+        if (svgIcon) {
+          if (svgIcon.properties) {
+            svgIcon.properties.height = 'auto';
+            svgIcon.properties.width = '25';
+          }
+          if (idx > 0) {
+            nodeElements.push({ type: 'text', value: ' ' });
+          }
+          nodeElements.push({
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['tree-icon', 'tree-svg-icon'] },
+            children: [svgIcon]
+          });
+        }
+      });
+    }
+
     // Build tree item
     const treeItem = {
       type: 'element',

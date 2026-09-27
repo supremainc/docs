@@ -13,6 +13,8 @@ import IcArm from '@site/static/img/menus/ico-arms.svg';
 import IcElev from '@site/static/img/menus/ico-elevator.svg';
 import IcZone from '@site/static/img/menus/ico-zone.svg';
 import IcCamOk from '@site/static/img/menus/ico-camera-ok.svg';
+import IcGroup from '@site/static/img/menus/ico-monitor-group.svg';
+import IcElevFl from '@site/static/img/menus/ico-elevator-floor.svg';
 
 const dataKo = [
     {
@@ -118,32 +120,34 @@ function TreeNode({ node, level = 0 }) {
         <div className={styles.treeNode}>
             <div 
                 className={`${styles.treeItem} ${styles[`level${level}`]}`}
-                style={{ paddingLeft: `${level > 1 ? (level - 1) * 30 : 0}px` }}
+                style={{ paddingLeft: `${level > 0 ? level * 30 : 0}px` }}
             >
-                {level == 1 && hasChildren && (
+                {hasChildren && (
                     <span className={styles.treeToggle}>
-                        <IcDown />
+                        <IcDown height='20' width='auto' />
+                        {node.type === 'door-group' || node.type === 'elevator-group' ? <IcGroup className={styles.group} height='25' width='auto' /> : null}
                     </span>
                 )}
                 {(level > 1 || node.type === 'access-zone') && (
                     <span className={styles.treeIcon}>
                         {node.type === 'access-level' && <IcAcLevel height='25' width='auto' /> }
                         {node.type === 'door' && <IcAcDoor height='25' width='auto' /> }
-                        {node.type === 'door-device' && <IcDoorClose height='21' width='auto' /> }
-                        {node.type === 'door-sensor' && <IcDoorSensor height='25' width='auto' /> }
-                        {node.type === 'door-relay' && <IcRelayLock height='25' width='auto' /> }
-                        {node.type === 'door-arm' && <IcArm height='25' width='auto' /> }
+                        {node.type === 'door-device' && <><IcDoorClose height='21' width='auto' /></> }
                         {node.type === 'door-camera' && <IcCamOk height='25' width='auto' /> }
+                        {node.type === 'door-sensor' && <IcDoorSensor height='25' width='auto' /> }
                         {node.type === 'floor-level' && <IcFloorLevel height='25' width='auto' /> }
                         {node.type === 'access-zone' && <IcZone height='25' width='auto' /> }
                         {node.type === 'elevator' && <IcFloorElev height='25' width='auto' /> }
                         {node.type === 'elevator-device' && <IcElev height='25' width='auto' /> }
                         {node.type === 'elevator-schedule' && <IcFlElevFl height='25' width='auto' /> }
-                        {node.type === 'elevator-floor' && <div style={{ backgroundColor: '#aaa', width: '10px', height: '10px', borderRadius: '50%', top: '8px', position: 'relative' }} /> }
+                        {node.type === 'elevator-floor' && <IcElevFl height='25' width='auto' /> }
                     </span>
                 )}
                 
-                <span className={styles.treeLabel}>{node.name}</span>
+                <span className={styles.treeLabel}>
+                    {node.name}
+                </span>
+                {(node.name === '출입문' || node.name === 'Door') && <><IcRelayLock height='auto' width='25' /> <IcArm height='auto' width='25' /></>}
             </div>
             
             {hasChildren && (

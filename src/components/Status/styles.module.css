@@ -20,3 +20,24 @@
   height: .75rem;
   display: inline-block;
 }
+
+.mark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 9px;
+  padding: 4px 0 0;
+  margin-top: 0;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.master {
+  background: #594b4f;
+}
+
+.slave {
+  background: #a49c9e;
+}

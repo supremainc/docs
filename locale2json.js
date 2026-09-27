@@ -18,7 +18,7 @@ if (!process.argv[2] || !process.argv[3]) {
   const propertiesFile = process.argv[2];
   const exportFile = process.argv[3];
   const filePath = path.join(__dirname, propertiesFile);
-  const exportFilePath = path.join(__dirname, '/src/components/Cmd/', exportFile);
+  const exportFilePath = path.join(__dirname, '/static/data/remark-cmd/', exportFile);
 
   fs.readFile(filePath, { encoding: 'utf-8' }, (err, data) => {
     if (!err) {

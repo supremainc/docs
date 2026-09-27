@@ -84,13 +84,15 @@ keywords: [ 모니터링, 이벤트 모니터링, 실시간 이벤트, 알람 �
 
 1. <Cmd sid='arena.eventTable.title' /> 섹션 목록의 각 헤더 컬럼에 <IcFilter /> 아이콘을 클릭하세요.
 
-    <Image src='/img/biostarx-monitoring-event-list-filter-01.png' />
+   <Image src='/img/biostarx-monitoring-event-list-filter-01.png' />
 
 1. 필터 창이 나타나면 왼쪽 목록에서 원하는 항목을 클릭하세요.
 
-    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
+   <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
-    선택한 항목을 해제하려면 <span className='text-blue-500'><IcClose /></span> 버튼을 클릭하세요. 모든 항목을 해제하려면 <Cmd sid='common.removeAll' /> 버튼을 클릭하세요.
+   * 상위 항목을 선택하면 하위 항목 모두를 선택할 수 있습니다.
+
+   * 선택한 항목을 해제하려면 <IcClose title='Remove' /> 버튼을 클릭하세요. 모든 항목을 해제하려면 <Cmd sid='common.removeAll' /> 버튼을 클릭하세요.
 
 1. 모든 설정을 완료했다면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
 
@@ -104,7 +106,7 @@ keywords: [ 모니터링, 이벤트 모니터링, 실시간 이벤트, 알람 �
 
 * 각 헤더 컬럼별로 필터링할 수 있는 항목은 다를 수 있습니다.
 
-* 필터링 조건을 설정하면 헤더 컬럼의 <span className='text-blue-500'><IcFilter /></span> 아이콘 색상이 파란색으로 변경됩니다.
+* 필터링 조건을 설정하면 헤더 컬럼의 <IcFilter2 title='Filter' /> 아이콘 색상이 변경됩니다.
 
 :::
 
@@ -113,11 +115,11 @@ keywords: [ 모니터링, 이벤트 모니터링, 실시간 이벤트, 알람 �
 
 적용한 필터 조건을 해제할 수 있습니다.
 
-1. <Cmd sid='arena.eventTable.title' /> 섹션 목록의 필터를 적용한 헤더 컬럼에 <span className='text-blue-500'><IcFilter /></span> 아이콘을 클릭하세요. 
+1. <Cmd sid='arena.eventTable.title' /> 섹션 목록의 필터를 적용한 헤더 컬럼에 <IcFilter2 title='Filter' /> 아이콘을 클릭하세요. 
 
-1. 필터 창이 나타나면 오른쪽 목록에서 해제할 항목의 오른쪽에 <span className='text-blue-500'><IcClose /></span> 버튼을 클릭하세요. 모든 필터를 해제하려면 <Cmd sid='common.removeAll' /> 버튼을 클릭하세요.
+1. 필터 창이 나타나면 오른쪽 목록에서 해제할 항목의 오른쪽에 <IcClose title='Remove' /> 버튼을 클릭하세요. 모든 필터를 해제하려면 <Cmd sid='common.removeAll' /> 버튼을 클릭하세요.
 
-    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
+   <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
 1. 해제할 조건을 모두 설정했다면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
 
@@ -153,6 +155,8 @@ keywords: [ 모니터링, 이벤트 모니터링, 실시간 이벤트, 알람 �
 
 메시지 입력 필드에 알람 이벤트에 대한 조치 사항을 입력하세요. 최대 500자까지 입력할 수 있습니다. 조치 사항을 입력하고 <Cmd sid='common.acknowledge' /> 버튼을 클릭하세요. 알람 이벤트에 대한 인지 여부와 조치 사항이 기록됩니다. 알람 메시지 창은 닫힙니다.
 
+<Image src='/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png' />
+
 ### 알람 이벤트 인지 여부 보류 {/* #deferalarmeventacknowledgment */}
 
 <Cmd sid='common.ignore' /> 버튼을 클릭해 알람 이벤트에 대한 인지 여부를 보류할 수도 있습니다. 조치 사항은 기록할 수 있습니다. 알람 메시지 창은 닫힙니다. 보류한 알람 이벤트는 이벤트 목록에서 <Cmd sid='arena.preview.event.active' /> 상태로 표시되고, <Cmd sid='common.acknowledge' /> 버튼을 사용할 수 있습니다.
@@ -172,11 +176,11 @@ keywords: [ 모니터링, 이벤트 모니터링, 실시간 이벤트, 알람 �
 
 1. <Cmd sid='arena.eventTable.title' /> 섹션 오른쪽 상단의 <IcViewAlert /> 버튼을 클릭하세요. 
 
-    <Image src='/img/biostarx-monitoring-event-list-view-alerts-01.png' />
+   <Image src='/img/biostarx-monitoring-event-list-view-alerts-01.png' />
 
 1. <Cmd sid='arena.activeAlarm.activeAlarmEvents' /> 창이 나타나면 왼쪽 목록에서 조치 사항을 기록할 알람 이벤트를 선택하세요. 모든 이벤트를 선택하려면 헤더 컬럼 가장 왼쪽의 체크박스를 클릭하세요.
 
-    <Image src='/img/biostarx-monitoring-event-list-view-alerts-02.png' />
+   <Image src='/img/biostarx-monitoring-event-list-view-alerts-02.png' />
 
 1. <Cmd sid='arena.activeAlarm.memo' /> 입력 필드에 알람 이벤트에 대한 조치 사항을 입력하세요.
 
@@ -197,11 +201,11 @@ keywords: [ 모니터링, 이벤트 모니터링, 실시간 이벤트, 알람 �
 
 1. <Cmd sid='arena.eventTable.title' /> 섹션의 오른쪽 상단에서 <IcMoreB /> → <Cmd sid='arena.eventTable.columnLayout' />을 클릭하세요.
 
-    <Image src='/img/biostarx-monitoring-event-list-column-layout.png' />
+   <Image src='/img/biostarx-monitoring-event-list-column-layout.png' />
 
 1. <Cmd sid='arena.eventTable.columnLayout' /> 창이 나타나면 표시할 열의 체크박스를 클릭해 추가하거나 숨김 설정을 할 수 있습니다. 드래그 앤 드롭으로 열의 순서를 변경할 수도 있습니다.
 
-    <Image src='/img/biostarx-monitoring-event-list-column-layout-popup.png' />
+   <Image src='/img/biostarx-monitoring-event-list-column-layout-popup.png' />
 
 1. 열 설정을 모두 변경했으면 <Cmd sid='common.apply' /> 버튼을 클릭하세요.
 

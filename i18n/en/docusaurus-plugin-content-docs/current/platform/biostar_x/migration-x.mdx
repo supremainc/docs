@@ -46,6 +46,26 @@ Check the following before upgrading from **BioStar 2** to **BioStar X**.
 
 :::
 
+:::warning 
+
+### Verify certificate {/* #checkCert */}
+
+When you upgrade from BioStar 2 to BioStar X, the `biostar_cert.crt` file in `nginx\conf` and the one in `nginx\cert` may differ. Upgrading in this state causes the following problems.
+
+* Certain audit logs are not recorded.
+
+* Creating user groups, adding Wiegand, and refreshing the tree fail.
+
+Follow these steps to match the certificate files before upgrading to BioStar X.
+
+1. Stop the BioStar 2 service.
+
+2. Overwrite the `biostar_cert.crt` and `biostar_cert.key` files in `nginx\cert` with the files from `nginx\conf`.
+
+3. Restart the BioStar 2 service.
+
+:::
+
 ## Upgrade installation guide {/* #upgrade-install */}
 
 1. Go to the [Suprema Download Center](https://download.supremainc.com/), log in, and download the installation package (*BioStar X Setup.X.Y.Z.BB.exe*).
