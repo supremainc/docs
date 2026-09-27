@@ -45,9 +45,15 @@ export function getPartNumber(type: string, quantity?: number): string {
     'BioStar X Plugin': 'BIOSTARX-ADD-PLG',
   };
 
-  // Package
+  // Advnaced AC Package
   const packageMap: Record<string, string> = {
-    'Advanced AC': 'BIOSTARX-PKG-AAC',
+    'Fire Alarm': 'BIOSTARX-ADD-FAL',
+    'Global Anti-Passback': 'BIOSTARX-ADD-APB',
+    'Intrusion Alarm': 'BIOSTARX-ADD-IAL',
+    'Interlock': 'BIOSTARX-ADD-ILK',
+    'Occupancy Limit': 'BIOSTARX-ADD-OCC',
+    'Mustering': 'BIOSTARX-ADD-MST',
+    'Elevator Control': 'BIOSTARX-ADD-ELV',
   };
 
   // Check maps in order, but handle empty strings explicitly

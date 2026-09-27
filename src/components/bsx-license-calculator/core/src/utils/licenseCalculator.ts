@@ -3,14 +3,15 @@ import {
   LicenseResult,
   BaseLicenseType,
   FeatureAddonType,
+  PackageType,
 } from '../types/license';
-import { licenseConfigs, getTAType, capacityUpgradePrices, packagePrices, featureAddonPrices } from '../data/licenseData';
+import { licenseConfigs, getTAType, capacityUpgradePrices, packagePrices, featureAddonPrices, advancedACPackages } from '../data/licenseData';
 
 export function recommendLicense(input: LicenseInput): LicenseResult {
-  // Advanced AC 또는 "Advanced tier 전용" add-on이 있으면 Essential 이상 필요
+  // Advanced AC Package 기능 또는 "Advanced tier 전용" add-on이 있으면 Essential 이상 필요
   // "Base license 무관" add-on(Mobile App, Event Log API, Remote Access, Plugin, T&A)만 있으면 용량으로 Base 결정
   const hasAddonsRequiringEssentialOrHigher = hasAddonsRequiringEssentialOrHigherTier(input);
-  const hasAdvancedAC = input.packages['Advanced AC'];
+  const hasAdvancedAC = getSelectedAdvancedACPackages(input).length > 0;
 
   // Device Manager 체크 (Door 0인 경우)
   if (input.door === 0) {
@@ -98,25 +99,14 @@ function recommendDeviceManager(input: LicenseInput): LicenseResult {
 function recommendEssentialOrHigher(
   input: LicenseInput
 ): LicenseResult {
-  const needsAdvancedAC = input.packages['Advanced AC'];
+  const selectedAdvancedAC = getSelectedAdvancedACPackages(input);
+  const needsAdvancedAC = selectedAdvancedAC.length > 0;
   const config = licenseConfigs;
   
   // 필요한 용량에 따라 적절한 라이센스 선택
   let baseLicense: BaseLicenseType = 'Essential';
   
-  // GIS Map, Video, Server Matching, Visitor, Directory Integration, Roll Call 은 Advanced 이상만 가능
-  const needsAdvancedTierAddon =
-    input.featureAddons['Video Monitoring'] ||
-    input.featureAddons['Map Monitoring'] ||
-    input.featureAddons['GIS Map Monitoring'] ||
-    input.featureAddons['Server Matching'] ||
-    input.featureAddons['Visitor'] ||
-    input.featureAddons['Directory Integration'] ||
-    input.featureAddons['Roll Call'];
-  if (needsAdvancedTierAddon && baseLicense === 'Essential') {
-    baseLicense = 'Advanced';
-  }
-  
+
   // Essential의 max 용량 확인
   if (
     (config.Essential.capacityLimits.door?.max !== undefined && input.door > config.Essential.capacityLimits.door.max) ||
@@ -178,29 +168,15 @@ function recommendEssentialOrHigher(
       }
   }
   
-  // 문서: "Advanced AC can be purchased as add-ons from the Advanced license tier"
-  // → Essential에서는 Advanced AC 구매 불가, 최소 Advanced 필요
-  if (needsAdvancedAC && baseLicense === 'Essential') {
-    baseLicense = 'Advanced';
-  }
+  if (needsAdvancedAC && (baseLicense === 'Essential' || baseLicense === 'Advanced')) {
+    const currentUpgrades = calculateCapacityUpgrades(input, baseLicense);
+    const currentWithACPrice =
+      calculateLicensePrice(baseLicense, currentUpgrades) + getAdvancedACPrice(selectedAdvancedAC);
+    const enterprisePrice = config.Enterprise.msrp;
 
-  // Advanced AC가 필요하고 현재 라이센스가 Advanced면 Enterprise와 가격 비교
-  if (needsAdvancedAC) {
-    if (baseLicense === 'Advanced') {
-      // Advanced + Advanced AC vs Enterprise 가격 비교
-      const advancedUpgrades = calculateCapacityUpgrades(input, 'Advanced');
-      const advancedPrice = calculateLicensePrice('Advanced', advancedUpgrades);
-      const advancedWithACPrice = advancedPrice + (packagePrices['Advanced AC'] || 0);
-      const enterprisePrice = config.Enterprise.msrp;
-      
-      // Advanced + Advanced AC와 Enterprise 가격 비교
-      if (advancedWithACPrice < enterprisePrice) {
-        baseLicense = 'Advanced';
-      } else {
-        baseLicense = 'Enterprise';
-      }
+    if (currentWithACPrice >= enterprisePrice) {
+      baseLicense = 'Enterprise';
     }
-    // Enterprise와 Elite는 이미 Advanced AC 포함
   }
 
   const capacityUpgrades = calculateCapacityUpgrades(input, baseLicense);
@@ -330,9 +306,9 @@ function calculateFeatureAddons(
   return addons;
 }
 
-// "Advanced, Enterprise, Elite에만 적용 가능"한 add-on 또는 Advanced AC 선택 시 true
+// "Advanced, Enterprise, Elite에만 적용 가능"한 add-on 또는 Advanced AC Package 기능 선택 시 true
 function hasAddonsRequiringEssentialOrHigherTier(input: LicenseInput): boolean {
-  if (input.packages['Advanced AC']) return true;
+  if (getSelectedAdvancedACPackages(input).length > 0) return true;
   const advancedTierOnlyAddons: Array<keyof typeof input.featureAddons> = [
     'Map Monitoring',
     'Video Monitoring',
@@ -373,22 +349,27 @@ function calculateLicensePrice(
   return basePrice + upgradePrice;
 }
 
+// 선택된 Advanced AC Package 기능 (화면 표기 순서 유지)
+function getSelectedAdvancedACPackages(input: LicenseInput): PackageType[] {
+  return advancedACPackages.filter((pkg) => input.packages[pkg]);
+}
+
+function getAdvancedACPrice(packages: PackageType[]): number {
+  return packages.reduce((sum, pkg) => sum + (packagePrices[pkg] || 0), 0);
+}
+
 function getSelectedPackages(
   input: LicenseInput,
   baseLicense?: BaseLicenseType
 ): LicenseResult['packages'] {
-  const packages: LicenseResult['packages'] = [];
-  
-  // Advanced AC는 Essential/Advanced에서만 추가 구매로 표시
-  // Enterprise/Elite는 기본 포함이므로 packages에 포함하지 않음
-  if (input.packages['Advanced AC']) {
-    const license = baseLicense || 'Essential';
-    if (license === 'Essential' || license === 'Advanced') {
-      packages.push('Advanced AC');
-    }
+  // Advanced AC Package 기능은 Essential/Advanced에서만 추가 구매로 표시
+  // Enterprise/Elite는 7개 모두 기본 포함이므로 packages에 포함하지 않음
+  const license = baseLicense || 'Essential';
+  if (license !== 'Essential' && license !== 'Advanced') {
+    return [];
   }
 
-  return packages;
+  return getSelectedAdvancedACPackages(input);
 }
 
 function calculateTotalPrice(
@@ -427,3 +408,4 @@ function calculateTotalPrice(
   
   return total;
 }
+

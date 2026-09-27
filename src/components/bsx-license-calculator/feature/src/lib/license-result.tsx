@@ -3,7 +3,7 @@ import {
   LicenseResult as LicenseResultType,
   getTAType,
   getPartNumber,
-  generatePartNumberList
+  generatePartNumberList,
 } from '@site/src/components/bsx-license-calculator/core';
 
 interface LicenseResultProps {
@@ -96,7 +96,7 @@ export function LicenseResult({ licenseResult, onReset }: LicenseResultProps) {
           </div>
         )}
 
-        {/* Feature Add-ons (includes packages e.g. Advanced AC) */}
+        {/* Feature Add-ons (includes packages e.g. Advanced Access Control features) */}
         {(licenseResult.featureAddons.length > 0 || licenseResult.packages.length > 0) && (
           <div>
             <h3 className="font-semibold mb-2">Feature Add-ons</h3>

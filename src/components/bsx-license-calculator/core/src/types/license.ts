@@ -25,9 +25,15 @@ export type FeatureAddonType =
   | 'Remote Access'
   | 'BioStar X Plugin';
 
-// Package Types
+// Advanced AC Package Types
 export type PackageType =
-  | 'Advanced AC';
+  | 'Fire Alarm'
+  | 'Global Anti-Passback'
+  | 'Intrusion Alarm'
+  | 'Interlock'
+  | 'Occupancy Limit'
+  | 'Mustering'
+  | 'Elevator Control';
 
 // License Configuration
 export interface LicenseConfig {
@@ -67,7 +73,13 @@ export interface LicenseInput {
     'BioStar X Plugin': boolean;
   };
   packages: {
-    'Advanced AC': boolean;
+    'Fire Alarm': boolean;
+    'Global Anti-Passback': boolean;
+    'Intrusion Alarm': boolean;
+    'Interlock': boolean;
+    'Occupancy Limit': boolean;
+    'Mustering': boolean;
+    'Elevator Control': boolean;
   };
 }
 

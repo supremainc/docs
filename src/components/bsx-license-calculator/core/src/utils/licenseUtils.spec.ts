@@ -151,16 +151,38 @@ describe('generatePartNumberList', () => {
   });
 
   describe('Packages', () => {
-    it('includes Advanced AC package', () => {
+    it('includes advanced access control packages', () => {
       const result: LicenseResult = {
         baseLicense: 'Essential',
         capacityUpgrades: {},
         featureAddons: [],
-        packages: ['Advanced AC'],
+        packages: ['Fire Alarm', 'Elevator Control'],
       };
 
       const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-PKG-AAC');
+      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-ADD-FAL, BIOSTARX-ADD-ELV');
+    });
+
+    it('maps every advanced access control package to its part number', () => {
+      const result: LicenseResult = {
+        baseLicense: 'Essential',
+        capacityUpgrades: {},
+        featureAddons: [],
+        packages: [
+          'Fire Alarm',
+          'Global Anti-Passback',
+          'Intrusion Alarm',
+          'Interlock',
+          'Occupancy Limit',
+          'Mustering',
+          'Elevator Control',
+        ],
+      };
+
+      const partNumberList = generatePartNumberList(result);
+      expect(partNumberList).toBe(
+        'BIOSTARX-ESS, BIOSTARX-ADD-FAL, BIOSTARX-ADD-APB, BIOSTARX-ADD-IAL, BIOSTARX-ADD-ILK, BIOSTARX-ADD-OCC, BIOSTARX-ADD-MST, BIOSTARX-ADD-ELV'
+      );
     });
   });
 
@@ -177,11 +199,11 @@ describe('generatePartNumberList', () => {
           { type: 'BioStar X Plugin' },
           { type: 'T&A', quantity: 200 },
         ],
-        packages: ['Advanced AC'],
+        packages: ['Fire Alarm'],
       };
 
       const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-UP-DOR (2), BIOSTARX-UP-USR, BIOSTARX-ADD-MOB, BIOSTARX-ADD-PLG, BIOSTARX-ADD-TNA-STD, BIOSTARX-PKG-AAC');
+      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-UP-DOR (2), BIOSTARX-UP-USR, BIOSTARX-ADD-MOB, BIOSTARX-ADD-PLG, BIOSTARX-ADD-TNA-STD, BIOSTARX-ADD-FAL');
     });
 
     it('generates part number list matching example format', () => {
