@@ -7499,6 +7499,10 @@
     "width": 320,
     "height": 240
   },
+  "/img/device/bs2a-auth-result-display-option.png": {
+    "width": 320,
+    "height": 240
+  },
   "/img/device/bs2a-auth.png": {
     "width": 320,
     "height": 240
@@ -8040,8 +8044,8 @@
     "height": 166
   },
   "/img/device/component-cable-cover-fsf2.svg": {
-    "width": 112,
-    "height": 140
+    "width": 60,
+    "height": 75
   },
   "/img/device/component-cable-cover-xs2.svg": {
     "width": 130,
@@ -8128,12 +8132,12 @@
     "height": 261
   },
   "/img/device/component-device-fsf2-dbab.svg": {
-    "width": 342,
-    "height": 663
+    "width": 200,
+    "height": 388
   },
   "/img/device/component-device-fsf2-odb.svg": {
-    "width": 342,
-    "height": 763
+    "width": 200,
+    "height": 446
   },
   "/img/device/component-device-im120.svg": {
     "width": 339,
@@ -8220,12 +8224,12 @@
     "height": 261
   },
   "/img/device/component-drilling-template-fsf2-dbab.svg": {
-    "width": 341,
-    "height": 670
+    "width": 200,
+    "height": 393
   },
   "/img/device/component-drilling-template-fsf2-odb.svg": {
-    "width": 341,
-    "height": 762
+    "width": 200,
+    "height": 447
   },
   "/img/device/component-drilling-template-im120.svg": {
     "width": 330,
@@ -8384,12 +8388,12 @@
     "height": 177
   },
   "/img/device/component-wall-bracket-fsf2-dbab.svg": {
-    "width": 281,
-    "height": 635
+    "width": 160,
+    "height": 362
   },
   "/img/device/component-wall-bracket-fsf2-odb.svg": {
-    "width": 281,
-    "height": 715
+    "width": 160,
+    "height": 407
   },
   "/img/device/component-wall-bracket-odb-oapb-bs3m.svg": {
     "width": 141,
@@ -8524,7 +8528,7 @@
     "height": 1964
   },
   "/img/device/device-manager-system-diagram1.svg": {
-    "width": 378,
+    "width": 437,
     "height": 134
   },
   "/img/device/device-manager-system-diagram2.svg": {
@@ -8735,6 +8739,14 @@
     "width": 590,
     "height": 948
   },
+  "/img/device/fsf2-door-control1.png": {
+    "width": 590,
+    "height": 942
+  },
+  "/img/device/fsf2-door-control2.png": {
+    "width": 590,
+    "height": 942
+  },
   "/img/device/fsf2-dst.png": {
     "width": 590,
     "height": 943
@@ -8753,11 +8765,11 @@
   },
   "/img/device/fsf2-memory.png": {
     "width": 590,
-    "height": 943
+    "height": 942
   },
   "/img/device/fsf2-menu.png": {
     "width": 590,
-    "height": 943
+    "height": 942
   },
   "/img/device/fsf2-network-ethernet.png": {
     "width": 590,
@@ -8783,8 +8795,12 @@
     "width": 590,
     "height": 943
   },
-  "/img/device/fsf2-user-add.png": {
-    "width": 1250,
+  "/img/device/fsf2-user-add1.png": {
+    "width": 590,
+    "height": 943
+  },
+  "/img/device/fsf2-user-add2.png": {
+    "width": 590,
     "height": 943
   },
   "/img/device/fsf2-user-usage.png": {
@@ -16503,6 +16519,10 @@
     "width": 320,
     "height": 240
   },
+  "/img/en/device/bs2a-auth-result-display-option.png": {
+    "width": 320,
+    "height": 240
+  },
   "/img/en/device/bs2a-auth.png": {
     "width": 320,
     "height": 240
@@ -17107,6 +17127,14 @@
     "width": 590,
     "height": 943
   },
+  "/img/en/device/fsf2-door-control1.png": {
+    "width": 590,
+    "height": 942
+  },
+  "/img/en/device/fsf2-door-control2.png": {
+    "width": 590,
+    "height": 942
+  },
   "/img/en/device/fsf2-dst.png": {
     "width": 590,
     "height": 943
@@ -17125,11 +17153,11 @@
   },
   "/img/en/device/fsf2-memory.png": {
     "width": 590,
-    "height": 943
+    "height": 942
   },
   "/img/en/device/fsf2-menu.png": {
     "width": 590,
-    "height": 943
+    "height": 942
   },
   "/img/en/device/fsf2-network-ethernet.png": {
     "width": 590,
@@ -17155,8 +17183,12 @@
     "width": 590,
     "height": 943
   },
-  "/img/en/device/fsf2-user-add.png": {
-    "width": 1250,
+  "/img/en/device/fsf2-user-add1.png": {
+    "width": 590,
+    "height": 943
+  },
+  "/img/en/device/fsf2-user-add2.png": {
+    "width": 590,
     "height": 943
   },
   "/img/en/device/fsf2-user-usage.png": {
