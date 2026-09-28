@@ -401,6 +401,7 @@ function createSidebars(preview) {
                   items: [
                     'platform/biostar_air/manage-presence',
                     'platform/biostar_air/managing-roll-call-fire-muster',
+                    'platform/biostar_air/multi-building-presence-muster'
                   ]
                 },
               ]

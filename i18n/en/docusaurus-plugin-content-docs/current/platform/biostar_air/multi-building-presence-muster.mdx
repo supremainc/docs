@@ -1,0 +1,73 @@
+---
+id: multi-building-presence-muster
+title: Configuring Presence and Muster Points for Multi-Building Sites
+description: Learn how to configure a perimeter zone and per-building muster points on a multi-building BioStar Air site, and how to choose the roll call scope for each emergency.
+---
+
+BioStar Air uses the **Presence Engine** to determine which users are currently on site. **Roll Call** then uses this presence information together with configured muster points to determine who should be included in an evacuation and where they should report.
+
+For multi-building sites, it is important to configure the **perimeter zone** and muster points correctly because they serve different purposes.
+
+## 1. Configure the perimeter zone
+
+The perimeter zone defines which users are considered On Site. Users who enter through a configured perimeter door are considered On Site until they exit through a perimeter door.
+
+During a Roll Call, only users currently considered On Site are included by default. These users can also receive a notification through the Suprema Pass app asking them to report to their assigned muster point.
+
+For a site containing multiple buildings, the perimeter zone should normally include the entry and exit doors that represent transitions between off site and on site across all buildings included in the site.
+
+The perimeter zone answers the question: **Who is currently on site?**
+
+## 2. Configure muster points
+
+Muster points determine how On Site users are organized during an evacuation. 
+
+Each muster point can include:
+
+* Devices
+
+* User groups
+
+* Administrators
+
+For a multi-building site, create a separate muster point for each building or evacuation group. 
+
+For example:
+
+* Building A → Building A Muster Point
+
+* Building B → Building B Muster Point
+
+* Building C → Building C Muster Point
+
+Assign the appropriate user groups, administrators, and muster devices to each muster point.
+
+The muster point answers the question: **Who should report where during this Roll Call?**
+
+## 3. Select the Roll Call scope
+
+When starting a Roll Call, an administrator can select either the entire site or specific muster points.
+
+* If the entire site is selected, the Roll Call covers all users currently considered On Site.
+
+* If only specific muster points are selected, the Roll Call is limited to the On Site users assigned to the user groups for those muster points, together with the assigned administrators.
+
+For example, if an emergency affects only Building B, the administrator can start a Roll Call for the Building B Muster Point rather than initiating a site-wide Roll Call.
+
+## Recommended configuration for multi-building sites
+
+For a typical multi-building campus:
+
+* Configure one perimeter zone covering the site's external entry and exit points.
+
+* Create a separate muster point for each building or evacuation group.
+
+* Assign the appropriate user groups, administrators, and muster devices to each muster point.
+
+* Start either a site-wide Roll Call or a Roll Call for selected muster points depending on the scope of the emergency.
+
+In summary:
+
+* **Perimeter Zone** = **Who is currently on site?**
+
+* **Muster Point** = **Who should report where during the Roll Call?**
