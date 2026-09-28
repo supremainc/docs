@@ -314,7 +314,7 @@
   "ip_address": "IPアドレス",
   "subnet_mask": "サブネットマスク",
   "gateway": "ゲートウェイ",
-  "dns_server": "DNSサーバー",
+  "dns_server": "DNS サーバー",
   "rs485": "RS-485通信",
   "slave": "スレーブ",
   "zone_list": "ゾーンリスト",
