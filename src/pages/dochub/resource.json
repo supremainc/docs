@@ -1116,10 +1116,10 @@
         ],
         "version": "1.2.4",
         "manuals": {
-            "ko": "device/device_manager/Suprema Device Manager_UG_1.08_KO_260515.pdf",
-            "en": "device/device_manager/Suprema Device Manager_UG_1.08_EN_260515.pdf",
-            "es": "device/device_manager/Suprema Device Manager_UG_1.08_ES_260515.pdf",
-            "ja": "device/device_manager/Suprema Device Manager_UG_1.08_JA_260515.pdf"
+            "ko": "device/device_manager/Suprema Device Manager_UG_1.09_KO_260928.pdf",
+            "en": "device/device_manager/Suprema Device Manager_UG_1.09_EN_260928.pdf",
+            "es": "device/device_manager/Suprema Device Manager_UG_1.09_ES_260928.pdf",
+            "ja": "device/device_manager/Suprema Device Manager_UG_1.09_JA_260928.pdf"
         },
         "release_notes": {
             "ko": "device/device_manager/Suprema Device Manager_RN_1.2.4_KO_260901.pdf",
@@ -1130,7 +1130,7 @@
             "ko": "",
             "en": ""
         },
-        "release_date": "2026-05-15"
+        "release_date": "2026-09-10"
     },
     {
         "category": "integration",
