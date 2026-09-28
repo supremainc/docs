@@ -2,6 +2,7 @@
     {
         "category": "platform",
         "product": "BioStar X",
+        "sidebar": "biostarx",
         "version": "1.0.3",
         "manuals": {
             "ko": "platform/bsx/BioStar X_Administrator_Guide_1.0.3_KO_260918.pdf",
@@ -1069,6 +1070,7 @@
     {
         "category": "apps",
         "product": "BioStar X Mobile",
+        "sidebar": "biostarx_mobile",
         "version": "1.0.5",
         "manuals": {
             "ko": "platform/bsx-mobile/BioStar X Mobile_Administrator_Guide_1.0.5_KO_260918.pdf",
