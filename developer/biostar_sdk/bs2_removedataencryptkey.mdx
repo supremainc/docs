@@ -1,0 +1,29 @@
+# BS2_RemoveDataEncryptKey
+
+<Badge only>+ v2.6.0</Badge> 장치의 데이터 암호화키를 제거합니다.
+
+이 함수의 호출이 성공하면 장치는 기본키값으로 되돌아 가게되고, 장치의 데이터는 모두 지워집니다.
+
+### 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveDataEncryptKey(void* context, uint32_t deviceId);
+```
+
+### 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+### 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+### 함께 보기
+
+[BS2_GetDataEncryptKey](bs2_getdataencryptkey)
+
+[BS2_SetDataEncryptKey](bs2_setdataencryptkey)

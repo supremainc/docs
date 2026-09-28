@@ -1,0 +1,29 @@
+# BS2_SetDstConfig
+
+<Badge only>+ v2.6.0</Badge> 장치의 DST 설정 정보를 저장합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDstConfig(void* context, uint32_t deviceId, BS2DstConfig* config);
+```
+
+:::info
+
+[BS2DstConfig 구조체 보기](configuration_api#bs2dstconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `config` : DST 설정 정보 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생힐 경우 상응하는 에러 코드를 반환합니다.

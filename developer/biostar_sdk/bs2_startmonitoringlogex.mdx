@@ -1,0 +1,58 @@
+# BS2_StartMonitoringLogEx
+
+<Badge only>+ v2.7.1</Badge> 측정 체온이 포함된, 실시간 로그 스트리밍을 시작합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_StartMonitoringLogEx(void* context, uint32_t deviceId, OnLogReceivedEx ptrLogReceivedEx);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `ptrLogReceivedEx` : 새로운 로그를 받았을 때 호출할 콜백함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+static DeviceInfo deviceInfo = { 0, 0, 0, 51211, 0 };
+static void* sdkContext = NULL;
+sdkContext = BS2Context::getInstance()->getContext();
+
+void onLogReceivedEx(BS2_DEVICE_ID id, const BS2Event* event, BS2_TEMPERATURE temperature)
+{
+    if (deviceInfo.id_ == id)
+    {
+        int32_t timezone = deviceInfo.timezone_;
+        cout << Utility::getEventStringWithThermal(id, *event, timezone, temperature) << endl;
+    }
+}
+
+sdkResult = BS2_StartMonitoringLogEx(sdkContext, deviceInfo.id_, onLogReceivedEx);
+if (BS_SDK_SUCCESS != sdkResult)
+    TRACE("BS2_StartMonitoringLog call failed: %d", sdkResult);
+```
+
+```csharp title='C#'
+private API.OnLogReceived cbOnLogReceived = null; //To prevent garbage collection
+
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_StartMonitoringLogEx(sdkContext, deviceID, cbOnLogReceivedEx);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+```
+
+## 함께 보기
+
+[BS2_StopMonitoringLog](bs2_stopmonitoringlog)

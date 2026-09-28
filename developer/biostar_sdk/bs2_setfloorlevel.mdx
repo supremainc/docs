@@ -1,0 +1,41 @@
+# BS2_SetFloorLevel
+
+Floor 레벨을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetFloorLevel(void* context, uint32_t deviceId, BS2FloorLevel* floorLevels, uint32_t floorLevelCount);
+```
+
+:::info
+
+[BS2FloorLevel구조체 보기](lift_control_api#bs2floorlevel) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `floorLevels` : 저장하고자 하는 floor level 리스트
+
+- [In] `floorLevelCount` : floor level 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetFloorLevel](bs2_getfloorlevel)
+
+[BS2_GetAllFloorLevel](bs2_getallfloorlevel)
+
+[BS2_RemoveFloorLevel](bs2_removefloorlevel)
+
+[BS2_RemoveAllFloorLevel](bs2_removeallfloorlevel)

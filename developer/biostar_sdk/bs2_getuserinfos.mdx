@@ -1,0 +1,51 @@
+# BS2_GetUserInfos
+
+사용자 식별자에 해당하는 사용자 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserInfos(void* context, uint32_t deviceId, char* uids, uint32_t uidCount, BS2UserBlob* userBlob);
+```
+
+:::info
+
+[BS2UserBlob 구조체 보기](user_management_api#bs2userblob) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `uids` : 가져오고자 하는 사용자 식별자 리스트
+
+- [In] `uidCount` : 사용자 식별자 개수
+
+- [Out] `userBlob` : 사용자 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetUserList](bs2_getuserlist)
+
+[BS2_RemoveUser](bs2_removeuser)
+
+[BS2_RemoveAllUser](bs2_removealluser)
+
+[BS2_GetUserInfosEx](bs2_getuserinfosex)
+
+[BS2_EnrolUser](bs2_enroluser)
+
+[BS2_EnrolUserEx](bs2_enroluserex)
+
+[BS2_GetUserDatas](bs2_getuserdatas)
+
+[BS2_GetUserDatasEx](bs2_getuserdatasex)

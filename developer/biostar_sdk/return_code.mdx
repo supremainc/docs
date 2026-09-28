@@ -1,0 +1,254 @@
+# 응답 코드
+
+API에서 반환되는 응답 코드입니다.
+
+응답 코드의 의미는 아래와 같습니다. 응답 코드를 검색하려면 <Kbd>Ctrl+F</Kbd>를 누르십시오.
+
+| 코드 | 설명 |
+| --- | --- |
+| `BS_SDK_SUCCESS` | 성공 |
+| `BS_SDK_DURESS_SUCCESS` | 협박 지문으로 인증되었습니다. |
+| `BS_SDK_FIRST_AUTH_SUCCESS` | 첫 번째 사용자가 인증되었습니다. |
+| `BS_SDK_SECOND_AUTH_SUCCESS` | 두 번째 사용자가 인증되었습니다. |
+| `BS_SDK_DUAL_AUTH_SUCCESS` | 이중 인증(2인 인증)에 성공하였습니다. |
+| `BS_SDK_WIEGAND_BYPASS_SUCCESS` | 위겐드 바이패스에 성공하였습니다. (FaceStation2만 해당) |
+| `BS_SDK_ERROR_FROM_DEVICE_DRIVER` | 장치 드라이버에 오류가 발생하였습니다. |
+| `BS_SDK_ERROR_CANNOT_OPEN_SOCKET` | 소켓을 생성할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_CONNECT_SOCKET` | 소켓 접속이 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_LISTEN_SOCKET` | 소켓을 연결 대기 상태로 설정할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_ACCEPT_SOCKET` | 소켓 연결에 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_READ_SOCKET` | 소켓에서 데이터를 읽을 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_WRITE_SOCKET` | 소켓에 데이터를 쓸 수 없습니다. |
+| `BS_SDK_ERROR_SOCKET_IS_NOT_CONNECTED` | 소켓에 연결되지 않았습니다. |
+| `BS_SDK_ERROR_SOCKET_IS_NOT_OPEN` | 소켓을 사용할 수 없습니다. |
+| `BS_SDK_ERROR_SOCKET_IS_NOT_LISTENED` | 소켓이 연결 대기 상태가 아닙니다. |
+| `BS_SDK_ERROR_SOCKET_IN_PROGRESS` | 이미 처리 중입니다. |
+| `BS_SDK_ERROR_INVALID_PARAM` | 유효하지 않은 파라미터입니다. |
+| `BS_SDK_ERROR_INVALID_PACKET` | 유효하지 않은 패킷입니다. |
+| `BS_SDK_ERROR_INVALID_DEVICE_ID` | 유효하지 않은 장치 식별자입니다. |
+| `BS_SDK_ERROR_INVALID_DEVICE_TYPE` | 유효하지 않은 장치 유형입니다. |
+| `BS_SDK_ERROR_PACKET_CHECKSUM` | 패킷 데이터의 체크섬이 맞지 않습니다. |
+| `BS_SDK_ERROR_PACKET_INDEX` | 패킷 데이터의 일부가 유실되었습니다. |
+| `BS_SDK_ERROR_PACKET_COMMAND` | 유효하지 않은 요청입니다. |
+| `BS_SDK_ERROR_PACKET_SEQUENCE` | 네트워크 상태가 좋지 않아 수신 패킷의 순서가 맞지 않습니다. |
+| `BS_SDK_ERROR_NO_PACKET` | 유효하지 않은 패킷입니다. |
+| `BS_SDK_ERROR_EXTRACTION_FAIL` | 템플릿 데이터를 추출할 수 없습니다. |
+| `BS_SDK_ERROR_VERIFY_FAIL` | 1:1 인증에 실패하였습니다. |
+| `BS_SDK_ERROR_IDENTIFY_FAIL` | 1:N 인증에 실패하였습니다. |
+| `BS_SDK_ERROR_IDENTIFY_TIMEOUT` | 인증 대기 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_FINGERPRINT_CAPTURE_FAIL` | 지문 이미지를 획득할 수 없습니다. |
+| `BS_SDK_ERROR_FINGERPRINT_SCAN_TIMEOUT` | 지문 스캔 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_FINGERPRINT_SCAN_CANCELLED` | 지문 스캔이 취소되었습니다. |
+| `BS_SDK_ERROR_NOT_SAME_FINGERPRINT` | 동일 지문이 아닙니다. |
+| `BS_SDK_ERROR_EXTRACTION_LOW_QUALITY` | 지문 특징점 정보가 부족합니다. |
+| `BS_SDK_ERROR_CAPTURE_LOW_QUALITY` | 획득한 지문 이미지의 품질이 좋지 않습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_FINGERPRINT` | 지문이 등록되지 않았습니다. |
+| `BS_SDK_ERROR_FAKE_FINGER_DETECTED` | 위조 지문입니다. |
+| `BS_SDK_ERROR_FAKE_FINGER_TRY_AGAIN` | 위조 지문 재시도 오류입니다. |
+| `BS_SDK_ERROR_FAKE_FINGER_SENSOR_ERROR` | 위조 지문 센서 오류입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_FACE` | 얼굴 위치를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_FACE_CAPTURE_FAIL` | 얼굴 검출에 실패했습니다. |
+| `BS_SDK_ERROR_FACE_SCAN_TIMEOUT` | 얼굴 검출 대기 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_FACE_SCAN_CANCELLED` | 얼굴 검출이 취소되었습니다. |
+| `BS_SDK_ERROR_FACE_SCAN_FAILED` | 얼굴 검출에 실패했습니다. (FaceStation2, FaceLite만 해당) |
+| `BS_SDK_ERROR_CANNOT_OPEN_DIR` | 폴더를 열 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_OPEN_FILE` | 파일을 열 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_WRITE_FILE` | 파일을 쓸 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_SEEK_FILE` | 파일 탐색을 할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_READ_FILE` | 파일을 읽을 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_GET_STAT` | 파일 정보를 가져올 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_GET_SYSINFO` | 시스템 정보를 가져올 수 없습니다. |
+| `BS_SDK_ERROR_DATA_MISMATCH` | 데이터 무결성 체크에 실패하였습니다. |
+| `BS_SDK_ERROR_INVALID_RELAY` | 유효하지 않는 릴레이 장치입니다. |
+| `BS_SDK_ERROR_CANNOT_WRITE_IO_PACKET` | I/O 장치의 데이터 출력에 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_READ_IO_PACKET` | I/O 장치의 데이터 입력에 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_READ_INPUT` | 입력 장치를 읽을 수 없습니다. |
+| `BS_SDK_ERROR_READ_INPUT_TIMEOUT` | 입력 장치를 읽는중에 타임아웃이 발생되었습니다. |
+| `BS_SDK_ERROR_CANNOT_ENABLE_INPUT` | 입력 장치를 활성화할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_SET_INPUT_DURATION` | 입력 장치의 지속 시간을 설정할 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_PORT` | 유효하지 않는 포트입니다. |
+| `BS_SDK_ERROR_INVALID_INTERPHONE_TYPE` | 유효하지 않는 인터폰 유형입니다. |
+| `BS_SDK_ERROR_INVALID_LCD_PARAM` | 유효하지 LCD 파라미터입니다. |
+| `BS_SDK_ERROR_CANNOT_WRITE_LCD_PACKET` | LCD 장치의 데이터 출력에 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_READ_LCD_PACKET` | LCD 장치의 데이터 입력에 실패하였습니다. |
+| `BS_SDK_ERROR_INVALID_LCD_PACKET` | 유효하지 않는 LCD 패킷입니다. |
+| `BS_SDK_ERROR_INPUT_QUEUE_FULL` | 입력 장치의 버퍼 공간이 부족합니다. |
+| `BS_SDK_ERROR_WIEGAND_QUEUE_FULL` | Wiegand 장치의 입력 버퍼 공간이 부족합니다. |
+| `BS_SDK_ERROR_MISC_INPUT_QUEUE_FULL` | Miscellaneous 장치의 입력 버퍼 공간이 부족합니다. |
+| `BS_SDK_ERROR_WIEGAND_DATA_QUEUE_FULL` | Wiegand 장치의 출력 버퍼 공간이 부족합니다. |
+| `BS_SDK_ERROR_WIEGAND_DATA_QUEUE_EMPTY` | Wiegand 장치의 출력 데이터가 없습니다. |
+| `BS_SDK_ERROR_NOT_SUPPORTED` | 지원하지 않는 기능입니다. |
+| `BS_SDK_ERROR_TIMEOUT` | 대기 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_INVALID_DATA_FILE` | 파일 데이터가 유효하지 않습니다. |
+| `BS_SDK_ERROR_TOO_LARGE_DATA_FOR_SLOT` | Slot 공간보다 더 큰 데이터 크기입니다. |
+| `BS_SDK_ERROR_INVALID_SLOT_NO` | 유효하지 않는 slot 번호입니다. |
+| `BS_SDK_ERROR_INVALID_SLOT_DATA` | slot 데이터가 유효하지 않습니다. |
+| `BS_SDK_ERROR_CANNOT_INIT_DB` | 데이터베이스를 초기화할 수 없습니다. |
+| `BS_SDK_ERROR_DUPLICATE_ID` | 중복된 식별자입니다. |
+| `BS_SDK_ERROR_USER_FULL` | 사용자를 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_DUPLICATE_TEMPLATE` | 이미 등록된 지문입니다. |
+| `BS_SDK_ERROR_FINGERPRINT_FULL` | 더 이상 지문을 추가할 수 없습니다. |
+| `BS_SDK_ERROR_DUPLICATE_CARD` | 이미 등록된 카드입니다. |
+| `BS_SDK_ERROR_CARD_FULL` | 카드를 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_NO_VALID_HDR_FILE` | 파일 헤더 정보가 유효하지 않습니다. |
+| `BS_SDK_ERROR_INVALID_LOG_FILE` | 로그 파일이 유효하지 않습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_USER` | 요청한 사용자를 찾을 수가 없습니다. |
+| `BS_SDK_ERROR_ACCESS_LEVEL_FULL` | 출입 통제 레벨을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_USER_ID` | 사용자 식별자가 유효하지 않습니다. |
+| `BS_SDK_ERROR_BLACKLIST_FULL` | 카드를 더 이상 블랙리스트에 추가할 수 없습니다. |
+| `BS_SDK_ERROR_USER_NAME_FULL` | 사용자 이름을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_USER_IMAGE_FULL` | 사용자 프로필 사진을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_USER_IMAGE_SIZE_TOO_BIG` | 사용자 프로필 사진이 너무 큽니다. |
+| `BS_SDK_ERROR_SLOT_DATA_CHECKSUM` | 섹터 데이터가 유효하지 않습니다. |
+| `BS_SDK_ERROR_CANNOT_UPDATE_FINGERPRINT` | 지문 템플릿을 갱신할 수 없습니다. |
+| `BS_SDK_ERROR_TEMPLATE_FORMAT_MISMATCH` | 시스템 지문 템플릿 포맷과 상이합니다. |
+| `BS_SDK_ERROR_NO_ADMIN_USER` | 관리자로 등록된 유저가 없습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_LOG` | 요청한 로그를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_DOOR_SCHEDULE_FULL` | 출입문에 해당하는 일정을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_DB_SLOT_FULL` | 데이터베이스의 저장 공간이 부족합니다. |
+| `BS_SDK_ERROR_ACCESS_GROUP_FULL` | 출입 통제 그룹을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_ACCESS_SCHEDULE_FULL` | 출입 통제 일정을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_HOLIDAY_GROUP_FULL` | 휴일 그룹을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_HOLIDAY_FULL` | 휴일 일정을 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_TIME_PERIOD_FULL` | 하루에 추가할 수 있는 일정을 초과하였습니다. |
+| `BS_SDK_ERROR_NO_CREDENTIAL` | 등록된 인증 수단이 없습니다. |
+| `BS_SDK_ERROR_NO_BIOMETRIC_CREDENTIAL` | 등록된 지문 인증 정보가 없습니다. |
+| `BS_SDK_ERROR_NO_CARD_CREDENTIAL` | 등록된 카드가 없습니다. |
+| `BS_SDK_ERROR_NO_PIN_CREDENTIAL` | 등록된 PIN이 없습니다. |
+| `BS_SDK_ERROR_NO_BIOMETRIC_PIN_CREDENTIAL` | PIN이나 지문 인증 정보가 등록되지 않았습니다. |
+| `BS_SDK_ERROR_NO_USER_NAME` | 사용자 이름이 등록되지 않았습니다. |
+| `BS_SDK_ERROR_NO_USER_IMAGE` | 사용자 프로필 사진이 등록되지 않았습니다. |
+| `BS_SDK_ERROR_READER_FULL` | 리더 장치를 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_CACHE_MISSED` | 캐쉬 데이터를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_OPERATOR_FULL` | 관리자를 더 이상 추가할 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_LINK_ID` | 유효하지 링크 식별자입니다. |
+| `BS_SDK_ERROR_TIMER_CANCELED` | 타이머가 취소되었습니다. |
+| `BS_SDK_ERROR_USER_JOB_FULL` | 더 이상 Job code를 추가할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_UPDATE_FACE` | 얼굴 업데이트에 실패하였습니다. |
+| `BS_SDK_ERROR_FACE_FULL` | 얼굴 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_FLOOR_SCHEDULE_FULL` | 층에대한 스케쥴 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_AUTH_GROUP` | 인증 그룹을 찾을 수 없습니다. |
+| `BS_SDK_ERROR_AUTH_GROUP_FULL` | 인증 그룹 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_USER_PHRASE_FULL` | 사용자 구문 오류입니다. |
+| `BS_SDK_ERROR_DST_SCHEDULE_FULL` | 일광절약시간 설정 초과 오류입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_DST_SCHEDULE` | 일광절약시간 정보를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_SCHEDULE` | 유효하지 않은 일정입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_OPERATOR` | Operator를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_DUPLICATE_FINGERPRINT` | 중복된 지문입니다. |
+| `BS_SDK_ERROR_DUPLICATE_FACE` | 중복된 얼굴입니다. |
+| `BS_SDK_ERROR_INVALID_CONFIG` | 유효하지 않은 시스템 구성입니다. |
+| `BS_SDK_ERROR_CANNOT_OPEN_CONFIG_FILE` | 시스템 구성 파일을 열 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_READ_CONFIG_FILE` | 시스템 구성 파일을 읽을 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_CONFIG_FILE` | 시스템 구성 파일의 헤더 정보가 유효하지 않습니다. |
+| `BS_SDK_ERROR_INVALID_CONFIG_DATA` | 시스템 구성 정보가 유효하지 않습니다. |
+| `BS_SDK_ERROR_CANNOT_WRITE_CONFIG_FILE` | 시스템 구성 파일을 갱신할 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_CONFIG_INDEX` | 시스템 구성 정보의 섹터 번호가 유효하지 않습니다. |
+| `BS_SDK_ERROR_CANNOT_SCAN_FINGER` | 지문을 스캔할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_SCAN_CARD` | 카드를 스캔할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_OPEN_RTC` | RTC 장치가 없습니다. |
+| `BS_SDK_ERROR_CANNOT_SET_RTC` | RTC 장치에 시간을 설정할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_GET_RTC` | RTC 장치로부터 시간 정보를 가져올 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_SET_LED` | LED 패턴을 설정할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_OPEN_DEVICE_DRIVER` | 장치 드라이버가 없습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_DEVICE` | 장치를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_SCAN_FACE` | 얼굴을 검출할 수 없습니다. |
+| `BS_SDK_ERROR_SLAVE_FULL` | 슬레이브 장치의 연결 개수가 초과되었습니다. |
+| `BS_SDK_ERROR_CANNOT_ADD_DEVICE` | 장치를 추가할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_DOOR` | 출입문을 찾을 수 없습니다. |
+| `BS_SDK_ERROR_DOOR_FULL` | 더 이상 출입문 정보를 추가할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_LOCK_DOOR` | 출입문을 잠글 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_UNLOCK_DOOR` | 출입문을 열 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_RELEASE_DOOR` | 출입문 상태를 설정할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_LIFT` | Lift 장치를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_LIFT_FULL` | Lift 장치의 연결 개수가 초과되었습니다. |
+| `BS_SDK_ERROR_ACCESS_RULE_VIOLATION` | 출입 통제 규칙을 위반하였습니다. |
+| `BS_SDK_ERROR_DISABLED` | 유효하지 않은 사용자입니다. |
+| `BS_SDK_ERROR_NOT_YET_VALID` | 아직은 유효하지 않습니다. |
+| `BS_SDK_ERROR_EXPIRED` | 유효 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_BLACKLIST` | 블랙리스트에 등재된 카드입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_ACCESS_GROUP` | 존재하지 않는 출입 통제 그룹입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_ACCESS_LEVEL` | 존재하지 않는 출입 통제 레벨입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_ACCESS_SCHEDULE` | 존재하지 않는 출입 통제 일정입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_HOLIDAY_GROUP` | 존재하지 않는 휴일 그룹입니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_BLACKLIST` | 존재하지 않는 블랙리스트입니다. |
+| `BS_SDK_ERROR_AUTH_TIMEOUT` | 인증 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_DUAL_AUTH_TIMEOUT` | 이중 인증(2인 인증) 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_INVALID_AUTH_MODE` | 유효하지 않은 인증 모드입니다. |
+| `BS_SDK_ERROR_AUTH_UNEXPECTED_USER` | 2개 이상의 인증 매체에서 식별한 사용자가 서로 다릅니다. |
+| `BS_SDK_ERROR_AUTH_UNEXPECTED_CREDENTIAL` | 현재 사용되고 있는 스케줄에 사용할 수 없는 인증 매체를 사용하였습니다. |
+| `BS_SDK_ERROR_DUAL_AUTH_FAIL` | 이중 인증(2인 인증)에 실패하였습니다. |
+| `BS_SDK_ERROR_BIOMETRIC_AUTH_REQUIRED` | 지문을 입력하세요. |
+| `BS_SDK_ERROR_PIN_AUTH_REQUIRED` | PIN을 입력하세요. |
+| `BS_SDK_ERROR_BIOMETRIC_OR_PIN_AUTH_REQUIRED` | 지문이나 PIN을 입력하세요. |
+| `BS_SDK_ERROR_TNA_CODE_REQUIRED` | 근태 코드값이 필요합니다. |
+| `BS_SDK_ERROR_AUTH_SERVER_MATCH_REFUSAL` | 서버 매치가 거부되었습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_FLOOR_LEVEL` | Floor 레벨을 찾을 수 없습니다. |
+| `BS_SDK_ERROR_AUTH_FAIL` | 인증 실패하였습니다. |
+| `BS_SDK_ERROR_AUTH_GROUP_REQUIRED` | 인증 그룹이 필요합니다. |
+| `BS_SDK_ERROR_IDENTIFICATION_REQUIRED` | 인증이 필요합니다. |
+| `BS_SDK_ERROR_ANTI_TAILGATE_VIOLATION` | 따라 들어가기(Anti tailgating) 차단 규칙을 위반하였습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_ZONE` | 등록되지 않은 출입 통제 구역입니다. |
+| `BS_SDK_ERROR_SET_ZONE` | 더 이상 출입 통제 구역을 추가할 수 없습니다. |
+| `BS_SDK_ERROR_HARD_APB_VIOLATION` | Hard APB 규칙을 위반하였습니다. |
+| `BS_SDK_ERROR_SOFT_APB_VIOLATION` | Soft APB 규칙을 위반하였습니다. |
+| `BS_SDK_ERROR_HARD_TIMED_APB_VIOLATION` | Timed Hard APB 규칙을 위반했습니다. |
+| `BS_SDK_ERROR_SOFT_TIMED_APB_VIOLATION` | Timed Soft APB 규칙을 위반했습니다. |
+| `BS_SDK_ERROR_SCHEDULED_LOCK_VIOLATION` | 스케줄 잠금 구역에 사용자가 출입을 시도하였습니다. |
+| `BS_SDK_ERROR_SCHEDULED_UNLOCK_VIOLATION` | 스케줄 개방 구역에 사용자가 출입을 시도하였습니다. |
+| `BS_SDK_ERROR_SET_FIRE_ALARM` | 화재경보를 설정할 수 없습니다. |
+| `BS_SDK_ERROR_TIMED_APB_ZONE_FULL` | 더 이상 Timed APB Zone을 추가할 수 없습니다. |
+| `BS_SDK_ERROR_FIRE_ALARM_ZONE_FULL` | 더 이상 Fire Alarm Zone을 추가할 수 없습니다. |
+| `BS_SDK_ERROR_SCHEDULED_LOCK_UNLOCK_ZONE_FULL` | 더 이상 스케줄 잠금/개방 구역을 추가할 수 없습니다. |
+| `BS_SDK_ERROR_INACTIVE_ZONE` | 활성화되지 않은 Zone입니다. |
+| `BS_SDK_ERROR_INTRUSION_ALARM_ZONE_FULL` | 침입탐지 경보 구역 허용 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_CANNOT_ARM` | 경비모드로 전환할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_DISARM` | 경비해제 모드로 전환할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_ARM_CARD` | 경비모드 전환 카드가 없습니다. |
+| `BS_SDK_ERROR_HARD_ENTRANCE_LIMIT_COUNT_VIOLATION` | 인증횟수 제한 구역(Hard) 허용 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_SOFT_ENTRANCE_LIMIT_COUNT_VIOLATION` | 인증횟수 제한 구역(Soft) 허용 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_HARD_ENTRANCE_LIMIT_TIME_VIOLATION` | 인증횟수 제한 구역(Hard) 시간 오류입니다. |
+| `BS_SDK_ERROR_SOFT_ENTRANCE_LIMIT_TIME_VIOLATION` | 인증횟수 제한 구역(Hard) 시간 오류입니다. |
+| `BS_SDK_ERROR_INTERLOCK_ZONE_DOOR_VIOLATION` | 인터락 zone 출입문 규칙을 위반했습니다. |
+| `BS_SDK_ERROR_INTERLOCK_ZONE_INPUT_VIOLATION` | 인터락 zone의 입력 포트 규칙을 위반했습니다. |
+| `BS_SDK_ERROR_INTERLOCK_ZONE_FULL` | 인터락 zone 허용 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_AUTH_LIMIT_SCHEDULE_VIOLATION` | 인증제한 구역 규칙(스케줄)을 위반했습니다. |
+| `BS_SDK_ERROR_AUTH_LIMIT_COUNT_VIOLATION` | 인증제한 구역 규칙(횟수)을 위반했습니다. |
+| `BS_SDK_ERROR_AUTH_LIMIT_USER_VIOLATION` | 인증제한 구역 규칙(사용자)을 위반했습니다. |
+| `BS_SDK_ERROR_SOFT_AUTH_LIMIT_VIOLATION` | 인증제한 구역 규칙(네트워크 단절 및 soft인증제한)을 위반했습니다. |
+| `BS_SDK_ERROR_HARD_AUTH_LIMIT_VIOLATION` | 인증제한 구역 규칙(네트워크 단절 및 hard인증제한)을 위반했습니다. |
+| `BS_SDK_ERROR_CARD_IO` | 지원하지 않는 카드 I/O입니다. |
+| `BS_SDK_ERROR_CARD_INIT_FAIL` | 카드 I/O를 초기화할 수 없습니다. |
+| `BS_SDK_ERROR_CARD_NOT_ACTIVATED` | 카드가 아직 활성화되지 않았습니다. |
+| `BS_SDK_ERROR_CARD_CANNOT_READ_DATA` | 카드에서 데이터를 읽을 수 없습니다. |
+| `BS_SDK_ERROR_CARD_CIS_CRC` | CIS 체크섬 오류입니다. |
+| `BS_SDK_ERROR_CARD_CANNOT_WRITE_DATA` | 카드에 데이터를 쓸 수 없습니다. |
+| `BS_SDK_ERROR_CARD_READ_TIMEOUT` | 카드 읽기 대기 시간이 만료되었습니다. |
+| `BS_SDK_ERROR_CARD_READ_CANCELLED` | 카드 읽기가 취소되었습니다. |
+| `BS_SDK_ERROR_CARD_CANNOT_SEND_DATA` | 카드 데이터 전송에 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_FIND_CARD` | 요청한 카드를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_INVALID_PASSWORD` | 패스워드가 맞지 않습니다. |
+| `BS_SDK_ERROR_CAMERA_INIT_FAIL` | 카메라 장치를 초기화할 수 없습니다. |
+| `BS_SDK_ERROR_JPEG_ENCODER_INIT_FAIL` | Jpeg encoder를 초기화할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_ENCODE_JPEG` | Jpeg으로 변환할 수 없습니다. |
+| `BS_SDK_ERROR_JPEG_ENCODER_NOT_INITIALIZED` | Jpeg encoder가 초기화되지 않았습니다. |
+| `BS_SDK_ERROR_JPEG_ENCODER_DEINIT_FAIL` | Jpeg encoder를 제거할 수 없습니다. |
+| `BS_SDK_ERROR_CAMERA_CAPTURE_FAIL` | 사진을 찍을 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_DETECT_FACE` | 얼굴 검출에 실패하였습니다. |
+| `BS_SDK_ERROR_FILE_IO` | 파일 I/O 동작에 실패하였습니다. |
+| `BS_SDK_ERROR_ALLOC_MEM` | 메모리 할당에 실패하였습니다. |
+| `BS_SDK_ERROR_CANNOT_UPGRADE` | 업그레이드에 실패하였습니다. |
+| `BS_SDK_ERROR_DEVICE_LOCKED` | 장치가 잠겨져 있습니다. |
+| `BS_SDK_ERROR_CANNOT_SEND_TO_SERVER` | 서버로 데이터를 전송할 수 없습니다. |
+| `BS_SDK_ERROR_CANNOT_UPGRADE_MEMOEY` | 메모리 업그레이드할 수 없습니다. |
+| `BS_SDK_ERROR_NULL_POINTER` | 잘못된 주소입니다. |
+| `BS_SDK_ERROR_UNINITIALIZED` | SDK가 초기화되지 않았습니다. |
+| `BS_SDK_ERROR_CANNOT_RUN_SERVICE` | SDK 서비스 실행에 실패하였습니다. |
+| `BS_SDK_ERROR_CANCELED` | 취소되었습니다. |
+| `BS_SDK_ERROR_EXIST` | 이미 존재합니다. |
+| `BS_SDK_ERROR_ENCRYPT` | 암호화에 실패하였습니다. |
+| `BS_SDK_ERROR_DECRYPT` | 복호화에 실패하였습니다. |
+| `BS_SDK_ERROR_DEVICE_BUSY` | 장치가 응답할 수 없습니다. |
+| `BS_SDK_ERROR_INTERNAL` | SDK 내부 오류입니다. |
+| `BS_SDK_ERROR_INVALID_FILE_FORMAT` | 지원하지 않는 파일 형식입니다. |
+| `BS_SDK_ERROR_INVALID_SCHEDULE_ID` | 유효하지 않은 스케쥴 식별자입니다. |
+| `BS_SDK_ERROR_UNKNOWN_FINGER_TEMPLATE` | 지원하지 않는 지문 타입입니다. (Suprema 또는 ANSI, ISO 타입이 아님) |

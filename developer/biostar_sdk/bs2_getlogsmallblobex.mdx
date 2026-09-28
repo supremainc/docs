@@ -1,0 +1,82 @@
+# BS2_GetLogSmallBlobEx
+
+<Badge only>+ v2.7.1</Badge> EventMask를 사용해서 체온 정보를 포함한 로그를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogSmallBlobEx(void* context, uint32_t deviceId, uint16_t eventMask, uint32_t eventId, uint32_t amount, BS2EventSmallBlobEx** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[BS2EventSmallBlobEx 구조체 보기](log_management_api#bs2eventsmallblobex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `eventMask` : event mask
+
+- [In] `eventId` : 로그 레코드 ID이며, 0일 경우 처음부터 가져옵니다.
+
+- [In] `amount` : 최대 로그 레코드 개수이며, 0일 경우 eventId 이후 모든 레코드를 가져옵니다.
+
+- [Out] `logsObj` : 로그 레코드의 주소를 저장할 포인터
+
+- [Out] `numLog` : 로그 레코드의 개수
+
+:::info
+
+`logsObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+int LogControl::getLogSmallBlobEx(BS2_DEVICE_ID id)
+{
+    uint16_t mask = BS2_EVENT_MASK_USER_ID | BS2_EVENT_MASK_TEMPERATURE;
+    const uint32_t FROM_FIRST = 0;
+    BS2_EVENT_ID eID = FROM_FIRST;
+    uint32_t amount(0), numLog(0);
+    BS2EventSmallBlobEx* blobObj = NULL;
+
+    int sdkResult = BS2_GetLogSmallBlobEx(context_, id, mask, eID, amount, &blobObj, &numLog);
+    if (BS_SDK_SUCCESS != sdkResult)
+        TRACE("BS2_GetLogSmallBlobEx call failed: %d", sdkResult);
+
+    print(blobObj, numLog);
+
+    if (blobObj)
+    {
+        if (blobObj->imageObj)
+            BS2_ReleaseObject(blobObj->imageObj);
+
+        BS2_ReleaseObject(blobObj);
+    }
+    return sdkResult;
+}
+```
+
+```csharp title='C#'
+outEventLogObjs = IntPtr.Zero;
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetLogSmallBlobEx(sdkContext, deviceID, (ushort)BS2EventMaskEnum.ALL, lastEventId, amount, out outEventLogObjs, out outNumEventLogs);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+    break;
+}
+```
+

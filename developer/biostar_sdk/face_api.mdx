@@ -1,0 +1,230 @@
+# Face API
+
+사용자의 얼굴을 인식하여 템플릿 데이터를 추출하고 매치하는 함수를 제공하는 API입니다.
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2Face
+
+```cpp
+typedef struct {
+   uint8_t faceIndex;
+   uint8_t numOfTemplate;
+   uint8_t flag;
+   uint8_t reserved;
+
+   uint16_t imageLen;
+   uint8_t reserved2[2];
+
+   uint8_t imageData[BS2_FACE_IMAGE_SIZE];
+   uint8_t templateData[BS2_TEMPLATE_PER_FACE][BS2_FACE_TEMPLATE_LENGTH];
+} BS2Face;
+```
+
+1. `faceIndex`
+
+   얼굴 인덱스입니다.
+
+1. `numOfTemplate`
+
+   얼굴 템플릿 개수입니다.
+
+1. `flag`
+
+   FaceStation2 V1.4.0, FaceLite V1.2.0 기준으로 장치내부에서 사용되는 값입니다.
+
+   장치에서 수신한 flag 값을 사용하면 되지만, 알 수 없다면 0으로 지정하면 됩니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `imageLen`
+
+   얼굴 이미지 데이터 크기입니다.
+
+1. `reserved2`
+
+   예약된 공간입니다.
+
+1. `imageData`
+
+   얼굴 이미지 데이터입니다.
+
+1. `data`
+
+   얼굴 템플릿 데이터입니다.
+
+### BS2AuthGroup
+
+```cpp
+typedef struct {
+   BS2_AUTH_GROUP_ID id;
+   char name[BS2_MAX_AUTH_GROUP_NAME_LEN];
+   uint8_t reserved[32];
+} BS2AuthGroup;
+
+```
+
+1. `id`
+
+   인증 그룹 식별자입니다.
+
+1. `name`
+
+   BioStar 애플리케이션에서 보여줄 인증 그룹 이름입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2TemplateEx
+
+```cpp
+typedef struct {
+   uint8_t      data[552];
+   uint8_t      isIR;
+   uint8_t      reserved[3];
+} BS2TemplateEx;
+```
+
+#### Visual Face 기반
+
+1. `data`
+
+   IR 또는 visual 이미지 탬플릿 데이터 입니다.
+
+1. `isIR`
+
+   IR 이미지라면 true, visual 이미지라면 false입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2FaceEx
+
+```cpp
+typedef struct {
+   uint8_t      faceIndex;
+   uint8_t      numOfTemplate;
+   uint8_t      flag;
+   uint8_t      reserved;
+   
+   uint32_t     imageLen;
+   union {
+      struct {
+         uint16_t irImageLen;
+         uint8_t  unused[6];       ///< 6 bytes (packing)
+         uint8_t  imageData[BS2_MAX_WARPED_IMAGE_LENGTH];         ///< 40 * 1024 bytes
+         uint8_t  irImageData[BS2_MAX_WARPED_IR_IMAGE_LENGTH];      ///< 30 * 1024 bytes
+         BS2TemplateEx templateEx[BS2_MAX_TEMPLATES_PER_FACE_EX];   ///< 20 * 556 bytes
+      };
+
+      uint8_t   *rawImageData;
+
+      BS2TemplateEx *onlyTemplateEx;
+   };
+} BS2FaceEx;
+```
+
+#### Visual Face 기반
+
+1. `faceIndex`
+
+   얼굴 인덱스입니다.
+
+1. `numOfTemplate`
+
+   Visual, IR을 포함한 얼굴 템플릿 개수입니다.
+
+1. `flag`
+
+   * 이미지가 WARP된 이미지인지 여부를 나타냅니다.
+
+   * 여기서 WARP란, 이미지에는 다양한 신체 부분이 담겨 있을 수 있는데, 이 중 얼굴 부분을 뽑아내는, 일종의 일반화라고 보시면 됩니다.
+
+   * flag가 1로 설정되면, 장치는 union 내의 struct로 정의되어 있는 5개의 정보를 참조합니다.
+
+   * flag가 0으로 설정되면, 장치는 union 내의 rawImageData를 참조합니다.
+
+   * 만약에 사용자가 WARP되지 않은 임의의 이미지를 가지고 얼굴을 등록하고자 하는 경우, flag는 `BS2_FACE_EX_FLAG_NONE(0)`으로, rawImageData의 주소공간에 이미지 데이터로 설정하고, 이미지 데이터의 크기를 imageLen으로 지정해 주시면 됩니다.
+
+   * 이렇게 되면 장치는 rawImageData를 가지고 자동으로 WARP 과정을 거쳐서 struct 내의 정보들을 채워주게 될 것입니다.
+
+   * rawImageData와 struct가 union으로 묶여있음을 주목해 주세요.
+
+   * <Badge only>+ v2.9.6</Badge> 얼굴정보 전송 시 얼굴 이미지를 제외한 템플릿만 전송할 수 있도록 `BS2_FACE_EX_FLAG_TEMPLATE_ONLY(0x20)` 옵션이 추가되었습니다.
+
+   * 개인정보 보호가 좀 더 중요시되는 현장에서 유용합니다.
+
+   * 이 옵션을 사용할 때는 numOfTemplate의 개수만큼 onlyTemplateEx에 템플릿 데이터가 할당되어있어야 합니다.
+
+   * 또한, [BS2FaceConfig](configuration_api#bs2faceconfig)의 `unableToSaveImageOfVisualFace`에 `1`(true)이 설정되어야 합니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | BS2_FACE_EX_FLAG_NONE | 0x00 |
+   | BS2_FACE_EX_FLAG_WARPED | 0x01 |
+   | BS2_FACE_EX_FLAG_TEMPLATE_ONLY | 0x20 |
+   | BS2_FACE_EX_FLAG_ALL | 0xFF |
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `imageLen`
+
+   얼굴 이미지 데이터 크기입니다.
+
+1. `irImageLen`
+
+   IR 이미지 데이터 크기입니다.
+
+1. `unused`
+
+   사용하지 않는 공간입니다. (packing용)
+
+1. `imageData`
+
+   WARP 되어진 얼굴 이미지 데이터입니다. rawImageData로부터 자동으로 만들어집니다.
+
+   | 장치타입 | 장치버전 | FW버전 | 이미지크기 | 이미지타입 | `rawImageData` |
+   | --- | --- | --- | --- | --- | --- |
+   | FaceStation F2 | V1 | 2.0.0 미만 | 250 × 250 | JPG | JPG |
+   | FaceStation F2 | V2 | 2.0.0 이상 | 112 × 112 | PNG | JPG, PNG |
+   | BioStation 3 | V1 | 모든 버전 | 112 × 112 | PNG | JPG, PNG |
+
+1. `irImageData`
+
+   IR 이미지 데이터입니다. WARP 단계에서는 IR 이미지는 존재하지 않을 수 있습니다.
+
+   인증을 시도하게되면 자동으로 생성됩니다.
+
+1. `templateEx`
+
+   Visual 또는 IR 이미지에 대한 탬플릿 데이터입니다.
+
+1. `rawImageData`
+
+   * WARP되지 않은 이미지 정보입니다. `imageData` 참조
+
+   * WARP되지 않은 이미지의 최대 해상도는 가로와 세로 모두 4000 픽셀 이며 1920 픽셀 이하를 권장하며, 파일 크기는 1OMB 이하여야 합니다.
+
+   * 가급적 선명하고 얼굴이 정면으로 노출된 사진을 권장합니다.원본 이미지가 흐리거나 왜곡된 경우, Warped Image 생성에 실패할 수 있습니다.
+
+   * Warped Image 생성 성공 여부는 원본 이미지 내 얼굴 영역의 해상도와 크기에 따라 결정됩니다. 원본 이미지에서 얼굴 영역은 최소 224 × 224픽셀 이상이어야 하며, 전체 사진의 가로 길이가 얼굴 가로길이 보다 190% 이상 큰 이미지 사용을 권장합니다.
+
+   * 원본 이미지에서 얼굴이 너무 작거나 너무 크게 포함된 경우 Warped Image 생성에 실패할 수 있습니다.
+
+   * 해상도와 파일 크기 조건을 모두 충족했는데도 실패가 발생한다면, 원본 이미지 내 얼굴 영역이 적절한 크기로 포함되도록 이미지 해상도 또는 얼굴 비율을 조정한 뒤 다시 시도해 주시기 바랍니다.
+
+1. `onlyTemplateEx`
+
+   <Badge only>+ v2.9.6</Badge> 템플릿 정보인 BS2TemplateEx 데이터의 연속된 메모리 정보이며, numOfTemplate의 개수만큼 할당되어있어야 합니다.
+
+   flag가 `BS2_FACE_EX_FLAG_TEMPLATE_ONLY`인 경우에만 사용됩니다.

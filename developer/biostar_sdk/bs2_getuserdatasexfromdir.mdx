@@ -1,0 +1,75 @@
+# BS2_GetUserDatasExFromDir
+
+<Badge only>+ v2.5.0</Badge> USB로 추출한 Data에서 사용자 식별자에 해당하는 사용자 정보를 가져옵니다. (Job, phrase 포함)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserDatasExFromDir(void* context, const char* szDir, char* uids, uint32_t uidCount, BS2UserBlobEx* userBlob, BS2_USER_MASK userMask);
+```
+
+:::info
+
+[BS2UserBlobEx 구조체 보기](user_management_api#bs2userblobex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `szDir` : Data 저장 경로
+
+- [In] `uids` : 가져오고자 하는 사용자 식별자 리스트
+
+- [In] `uidCount` : 사용자 식별자 개수
+
+- [Out] `userBlob` : 사용자 정보를 저장할 포인터
+
+- [In] `userMask` : 사용자 Mask
+
+| 값 | 설명 |
+| :--: | --- |
+| 0x0000 | 사용자 식별자 |
+| 0x0001 | 사용자 data |
+| 0x0002 | 사용자 설정 |
+| 0x0004 | 사용자명 |
+| 0x0008 | 이미지 |
+| 0x0010 | PIN |
+| 0x0020 | 카드 |
+| 0x0040 | 지문 |
+| 0x0080 | 얼굴 |
+| 0x0100 | 출입그룹 |
+| 0x0200 | 작업코드 |
+| 0x0400 | 개인메시지 |
+| 0x0800 | 얼굴 (**FaceStation F2**) |
+| 0x1000 | 사용자설정 (**FaceStation F2**) |
+| 0xFFFF | 사용자 정보 전체 |
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_AllocateUsbContext](bs2_allocateusbcontext)
+
+[BS2_ReleaseUsbContext](bs2_releaseusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

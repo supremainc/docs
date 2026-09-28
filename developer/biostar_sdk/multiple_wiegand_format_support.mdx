@@ -1,0 +1,183 @@
+# Multiple Wiegand format support
+
+## 1. 다중 Wiegand 형식 지원이 필요한 이유
+
+장치에 Wiegand 형식이 하나만 저장되어 있으면, 다른 Wiegand 형식의 카드를 읽으려 할 때마다 장치의 Wiegand 설정을 변경해야 합니다. 장치에 여러 개의 Wiegand 형식을 저장해 두면, 서로 다른 Wiegand 형식의 카드를 읽기 위해 장치의 Wiegand 설정을 변경할 필요가 없습니다. 다중 Wiegand 형식 지원은 보안 강화를 위해 출입 카드의 Wiegand 형식을 변경하기로 결정한 경우에 특히 중요합니다(예: 26-bit Prox 에서 35-bit Corporate 1000 으로 변경). 모든 직원의 카드를 동시에 교체하는 것은 사실상 불가능하므로 전환 기간이 반드시 발생합니다. 이 기간 동안 카드 리더는 서로 다른 Wiegand 형식의 카드를 읽을 수 있어야 합니다. 다중 Wiegand 형식을 지원하지 않는 리더는 이 상황에 대응할 수 없습니다.
+
+## 2. 다중 Wiegand 형식 지원의 동작 방식
+
+BioStar 를 출입통제 관리 시스템으로 사용하는 경우, BioStar 서버의 Wiegand 형식 설정이 장치로 자동 전달됩니다. 이후 장치 상세 페이지에서 어떤 Wiegand 형식을 사용할지 지정하면 됩니다. BioStar Device SDK 로 직접 애플리케이션을 개발하는 경우에는 Wiegand 형식 설정을 직접 생성하여 전달해야 합니다. 또한 어떤 Wiegand 형식을 사용할지 지정하기 위해 Wiegand 형식의 인덱스를 담은 설정도 함께 전달해야 합니다. BS2WiegandMultiConfig 자료구조의 formats 필드에는 최대 15 개의 서로 다른 Wiegand 형식을 저장할 수 있습니다.
+
+```cpp
+public struct BS2WiegandMultiConfig
+{
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)]
+    public BS2WiegandInConfig[] formats;
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+    public byte[] reserved;
+}
+```
+
+BS2WiegandConfig 자료구조에는 사용할 Wiegand 형식의 인덱스를 지정할 수 있는 세 개의 mask 필드가 있습니다.
+
+```cpp
+public struct BS2WiegandConfig
+{
+    public byte mode;
+    public byte useWiegandBypass;
+    public byte useFailCode;
+    public byte failCode;
+    public UInt16 outPulseWidth; //(20 ~ 100 us)
+    public UInt16 outPulseInterval; //(200 ~ 20000 us)
+    public UInt32 formatID;
+    public BS2WiegandFormat format;
+    public UInt16 wiegandInputMask;
+    public UInt16 wiegandCardMask;
+    public byte wiegandCSNIndex;
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 27)]
+    public byte[] reserved;
+}
+```
+
+- wiegandInputMask: slave 장치와 Wiegand 장치에 사용할 Wiegand 형식의 인덱스를 나타내는 bitmask 입니다. slave 장치는 dummy 장치로 동작하며 Wiegand 설정을 자체적으로 저장하지 않습니다(slave 장치란 RS485 를 통해 다른 Suprema 장치에 dummy reader 로 연결된 Suprema 장치를 말합니다). BS2WiegandMultiConfig 자료구조의 formats 배열 필드에서 첫 번째와 세 번째 요소(배열 인덱스: 0 과 2)를 지정하려면 bitmask 를 0000000000001010 으로 설정해야 합니다. 0 번째 bit 는 하위 호환성을 위해 예약되어 있기 때문입니다. 이 wiegandInputMask 필드는 slave 장치(또는 Wiegand 장치)에서 Wiegand 카드(iClass 또는 Prox)를 읽을 때 적용됩니다.
+
+- wiegandCardMask: master 장치에 사용할 Wiegand 형식의 인덱스를 나타내는 bitmask 입니다. 장치가 master 장치로 동작할 때, 이 필드에 지정된 Wiegand 형식과 일치하는 Wiegand 카드를 읽습니다. BS2WiegandMultiConfig 자료구조의 formats 배열 필드에서 첫 번째와 세 번째 요소(배열 인덱스: 0 과 2)를 지정하려면 bitmask 를 0000000000001010 으로 설정해야 합니다. 0 번째 bit 는 하위 호환성을 위해 예약되어 있기 때문입니다. 이 wiegandCardMask 필드는 master 장치에서 Wiegand 카드(iClass 또는 Prox)를 읽을 때 적용됩니다.
+
+- wiegandCSNIndex: master 장치와 slave 장치 모두에서 카드 일련번호(card serial number)를 변환하는 데 사용할 Wiegand 형식의 인덱스입니다. Wiegand 가 아닌 카드(Mifare 또는 EM)를 장치에 인식시키면, 장치는 카드에서 일련번호를 읽어 이 필드에 지정된 Wiegand 형식으로 변환합니다. 이 필드에는 인덱스를 하나만 설정할 수 있습니다. BS2WiegandMultiConfig 자료구조의 formats 배열 필드의 세 번째 요소(배열 인덱스: 2)에 저장된 Wiegand 형식으로 카드 일련번호를 변환하려면 wiegandCSNIndex 를 3 으로 설정해야 합니다. 이 wiegandCSNIndex 필드는 master 및 slave 장치 모두에서 Wiegand 가 아닌 카드(Mifare 또는 EM)를 읽을 때 적용됩니다.
+
+위 세 개의 mask 필드가 모두 0 으로 설정되면, 장치는 BS2WiegandConfig 자료구조의 BS2WiegandFormat 필드에 저장된 Wiegand 형식과 일치하는 Wiegand 카드를 읽으려고 시도합니다.
+
+```cpp
+public struct BS2WiegandConfig
+{
+    public byte mode;
+    public byte useWiegandBypass;
+    public byte useFailCode;
+    public byte failCode;
+    public UInt16 outPulseWidth;    //(20 ~ 100 us)
+    public UInt16 outPulseInterval; //(200 ~ 20000 us)
+    public UInt32 formatID;
+    public BS2WiegandFormat format;
+    public UInt16 wiegandInputMask;
+    public UInt16 wiegandCardMask;
+    public byte wiegandCSNIndex;
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 27)]
+    public byte[] reserved;
+}
+```
+
+## 3. 예제 
+
+```csharp title='C#'
+// 26 bit H10301
+IntPtr the26bitformatPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(BS2WiegandFormat)));
+BS2WiegandFormat the26bitFormat = new BS2WiegandFormat();
+the26bitFormat.idFields = new byte[128];
+the26bitFormat.parityFields = new byte[128];
+the26bitFormat.parityType = new byte[4];
+the26bitFormat.parityPos = new byte[4];
+                                
+the26bitFormat.length = 26;
+
+the26bitFormat.parityPos[0] = 0;
+the26bitFormat.parityPos[1] = 25;
+
+the26bitFormat.parityType[0] = 2;
+the26bitFormat.parityType[1] = 1;
+the26bitFormat.parityType[2] = 0;
+the26bitFormat.parityType[3] = 0;
+
+the26bitFormat.parityFields[28] = 1;
+the26bitFormat.parityFields[29] = 255;
+the26bitFormat.parityFields[30] = 224;
+the26bitFormat.parityFields[62] = 31;
+the26bitFormat.parityFields[63] = 254;
+
+the26bitFormat.idFields[28] = 1;
+the26bitFormat.idFields[29] = 254;
+the26bitFormat.idFields[61] = 1;
+the26bitFormat.idFields[62] = 255;
+the26bitFormat.idFields[63] = 254;
+
+Marshal.StructureToPtr(the26bitFormat, the26bitformatPtr, false);
+
+// Corporate 1000
+IntPtr theCorp1000FormatPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(BS2WiegandFormat)));
+BS2WiegandFormat theCorp1000Format = new BS2WiegandFormat();
+theCorp1000Format.idFields = new byte[128];
+theCorp1000Format.parityFields = new byte[128];
+theCorp1000Format.parityType = new byte[4];
+theCorp1000Format.parityPos = new byte[4];
+
+theCorp1000Format.length = 35;
+
+theCorp1000Format.parityPos[0] = 1;
+theCorp1000Format.parityPos[0] = 1;
+theCorp1000Format.parityPos[1] = 34;
+
+theCorp1000Format.parityType[0] = 2;
+theCorp1000Format.parityType[1] = 1;
+theCorp1000Format.parityType[2] = 1;
+
+theCorp1000Format.parityFields[27] = 1;
+theCorp1000Format.parityFields[28] = 182;
+theCorp1000Format.parityFields[29] = 219;
+theCorp1000Format.parityFields[30] = 109;
+theCorp1000Format.parityFields[31] = 182;
+theCorp1000Format.parityFields[59] = 3;
+theCorp1000Format.parityFields[60] = 109;
+theCorp1000Format.parityFields[61] = 182;
+theCorp1000Format.parityFields[62] = 219;
+theCorp1000Format.parityFields[63] = 108;
+theCorp1000Format.parityFields[91] = 3;
+theCorp1000Format.parityFields[92] = 255;
+theCorp1000Format.parityFields[93] = 255;
+theCorp1000Format.parityFields[94] = 255;
+theCorp1000Format.parityFields[95] = 255;
+
+theCorp1000Format.idFields[27] = 1;
+theCorp1000Format.idFields[28] = 255;
+theCorp1000Format.idFields[29] = 224;
+theCorp1000Format.idFields[61] = 31;
+theCorp1000Format.idFields[62] = 255;
+theCorp1000Format.idFields[63] = 254;
+
+Marshal.StructureToPtr(theCorp1000Format, theCorp1000FormatPtr, false);
+Marshal.Copy(the26bitformatPtr, wiegandMultiConfig.formats[0].format, 0,
+             Marshal.SizeOf(typeof(BS2WiegandFormat)));
+Marshal.Copy(theCorp1000FormatPtr, wiegandMultiConfig.formats[3].format, 0, 
+             Marshal.SizeOf(typeof(BS2WiegandFormat)));
+Marshal.FreeHGlobal(the26bitformatPtr);
+Marshal.FreeHGlobal(theCorp1000FormatPtr);
+
+result = API.BS2_SetWiegandMultiConfig(sdkContext, deviceId, ref wiegandMultiConfig);
+if (result != (int)BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("BS2_SetWiegandMultiConfig failed: " + result);
+    API.BS2_DisconnectDevice(sdkContext, deviceId);
+    API.BS2_ReleaseContext(sdkContext);
+    return;
+}
+
+BS2WiegandConfig wiegandConfig;
+result = API.BS2_GetWiegandConfig(sdkContext, deviceId, out wiegandConfig);
+if (result != (int)BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("BS2_GetWiegandConfig failed: " + result);
+    API.BS2_DisconnectDevice(sdkContext, deviceId);
+    API.BS2_ReleaseContext(sdkContext);
+    return;
+}
+wiegandConfig.wiegandCardMask = 18; // Use the first and fourth Wiegand formats only 
+                                    // (0x0000000000010010)
+
+result = API.BS2_SetWiegandConfig(sdkContext, deviceId, ref wiegandConfig);
+if (result != (int)BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("BS2_SetWiegandConfig failed: " + result);
+    API.BS2_DisconnectDevice(sdkContext, deviceId);
+    API.BS2_ReleaseContext(sdkContext);
+    return;
+}
+```
+

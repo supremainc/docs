@@ -1,0 +1,49 @@
+# BS2_UnlockDoor
+
+출입문이 열릴 때의 우선 순위를 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_UnlockDoor(void* context, uint32_t deviceId, uint8_t flag, uint32_t* doorIds, uint32_t doorIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `flag` : 추가하고자 하는 출입문 열림 상태
+
+- [In] `doorIds` : door id 리스트
+
+- [In] `doorIdCount` : door id 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDoor](bs2_getdoor)
+
+[BS2_GetAllDoor](bs2_getalldoor)
+
+[BS2_GetDoorStatus](bs2_getdoorstatus)
+
+[BS2_GetAllDoorStatus](bs2_getalldoorstatus)
+
+[BS2_SetDoor](bs2_setdoor)
+
+[BS2_SetDoorAlarm](bs2_setdooralarm)
+
+[BS2_RemoveDoor](bs2_removedoor)
+
+[BS2_RemoveAllDoor](bs2_removealldoor)
+
+[BS2_ReleaseDoor](bs2_releasedoor)
+
+[BS2_LockDoor](bs2_lockdoor)

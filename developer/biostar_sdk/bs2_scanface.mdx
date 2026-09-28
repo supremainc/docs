@@ -1,0 +1,105 @@
+# BS2_ScanFace
+
+**IR Face 기반** 장치에서 얼굴을 스캔하고 템플릿 데이터와 이미지 데이터를 추출합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ScanFace(void* context, uint32_t deviceId, BS2Face* face, uint8_t erollmentThreshold, OnReadyToScan ptrReadyToScan);
+```
+
+:::info
+
+[BS2Face구조체 보기](face_api#bs2face) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `face` : 얼굴 데이터를 저장할 포인터
+
+- [In] `erollmentThreshold` : 요구되는 얼굴 erollmentThreshold - 상세한 것은 [BS2FaceConfig.enrollThreshold](configuration_api#bs2faceconfig) 참조
+
+- [Out] `ptrReadyToScan` : 얼굴 스캔 준비가 완료되었을 때 호출되는 콜백 함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+if (faceScanSupported)
+{
+    if (Utility::isYes("Do you want to scan face?"))
+    {
+        uint32_t numFace = Utility::getInput<uint32_t>("How many face would you like to register?");
+        BS2Face* ptrFace = new BS2Face[numFace];
+        if (ptrFace)
+        {
+            userBlob.faceObjs = ptrFace;
+            for (uint32_t index = 0; index < numFace;)
+            {
+                sdkResult = BS2_ScanFace(context_, id, &ptrFace[index], BS2_FACE_ENROLL_THRESHOLD_DEFAULT, 
+                                onReadyToScanFace);
+                if (BS_SDK_SUCCESS != sdkResult)
+                    TRACE("BS2_ScanFace call failed: %d", sdkResult);
+                else
+                {
+                    user.numFaces++;
+                    index++;
+                }
+            }
+        }
+    }
+}
+BS2_ReleaseObject(uidObj);
+```
+
+```csharp title='C#'
+if (faceScanSupported)
+{
+    Console.WriteLine("Do you want to scan face? [y/n]");
+    Console.Write(">> ");
+    if (Util.IsYes())
+    {
+        Console.WriteLine("How many face would you like to register?");
+        Console.Write(">> ");
+        int numOfFace = Util.GetInput(1);
+        if (0 < numOfFace)
+        {
+            int structSize = Marshal.SizeOf(typeof(BS2Face));
+            BS2Face[] face = Util.AllocateStructureArray<BS2Face>(1);
+            userBlob[0].faceObjs = Marshal.AllocHGlobal(structSize * numOfFace);
+            IntPtr curFaceObjs = userBlob[0].faceObjs;
+            cbFaceOnReadyToScan = new API.OnReadyToScan(ReadyToScanForFace);
+
+            for (int index = 0; index < numOfFace;)
+            {
+                sdkResult = (BS2ErrorCode)API.BS2_ScanFace(sdkContext, deviceID, face, (byte)BS2FaceEnrollThreshold.THRESHOLD_DEFAULT, cbFaceOnReadyToScan);
+                if (BS2ErrorCode.BS_SDK_SUCCESS != sdkResult)
+                    Console.WriteLine("BS2_ScanFace call failed: %d", sdkResult);
+                else
+                {
+                    userBlob[0].user.numFaces++;
+                    index++;
+                    face[0].faceIndex = (byte)index;
+                    Marshal.StructureToPtr(face[0], curFaceObjs, false);
+                    curFaceObjs += structSize;
+
+                    Thread.Sleep(100);
+                }
+            }
+
+            cbFaceOnReadyToScan = null;
+        }
+    }
+}
+```
+

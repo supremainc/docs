@@ -1,0 +1,326 @@
+# Smartcard API
+
+스마트 카드 데이터를 읽고 쓰는 함수를 제공하는 API입니다.
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2CSNCard
+
+```cpp
+typedef struct {
+   uint8_t type;
+   uint8_t size;
+   uint8_t data[BS2_CARD_DATA_SIZE];
+} BS2CSNCard;
+```
+
+1. `type`
+
+   카드 유형의 코드 값입니다. 카드 유형은 카드 목적을 나타냅니다. 장치에서 서버로 사용자를 전송할 때, Access 카드는 카드에 기록된 정보만으로 동작이 가능하기 때문에 이슈 기록을 유지하는 데에만 사용됩니다.
+
+   | 값 | 설명 | 사용된 형식 |
+   | :--: | --- | --- |
+   | 0x00 | 알려지지 않은 카드 |  |
+   | 0x01 | CSN 카드 |  |
+   | 0x02 | Secure 카드 |  |
+   | 0x03 | Access 카드 |  |
+   | 0x06 | QR 코드 |  |
+   | 0x0A | Wiegand 카드 | `BS2WiegandConfig.format` 이 형식은 `BS2WiegandConfig.CSNIndex` 혹은 `BS2WiegandConfig.CardMask`가 0으로 설정될 때 사용됩니다. |
+   | 0x0B | Config 카드 |  |
+   | 0x1A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[0\] |
+   | 0x2A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[1\] |
+   | 0x3A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[2\] |
+   | 0x4A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[3\] |
+   | 0x5A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[4\] |
+   | 0x6A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[5\] |
+   | 0x7A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[6\] |
+   | 0x8A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[7\] |
+   | 0x9A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[8\] |
+   | 0xAA | Wiegand 카드 | BS2WiegandMultiConfig.formats\[9\] |
+   | 0xBA | Wiegand 카드 | BS2WiegandMultiConfig.formats\[10\] |
+   | 0xCA | Wiegand 카드 | BS2WiegandMultiConfig.formats\[11\] |
+   | 0xDA | Wiegand 카드 | BS2WiegandMultiConfig.formats\[12\] |
+   | 0xEA | Wiegand 카드 | BS2WiegandMultiConfig.formats\[13\] |
+   | 0xFA | Wiegand 카드 | BS2WiegandMultiConfig.formats\[14\] |
+
+1. `size`
+
+   데이터 버퍼 사이즈 크기입니다.
+
+1. `data`
+
+   카드 템플릿 데이터입니다.
+
+### BS2SmartCardHeader
+
+```cpp
+typedef struct {
+   uint16_t hdrCRC;
+   uint16_t cardCRC;
+   BS2_CARD_TYPE cardType;
+   uint8_t numOfTemplate;
+   uint16_t templateSize;
+   uint16_t issueCount;
+   uint8_t duressMask;
+   uint8_t cardAuthMode;
+   uint8_t useAlphanumericID;
+   uint8_t cardAuthModeEx;
+   uint8_t numOfFaceTemplate;
+   uint8_t reserved[1];
+} BS2SmartCardHeader;
+```
+
+1. `hdrCRC`
+
+   card header 체크섬 값입니다. (cardCRC - reserved)
+
+1. `cardCRC`
+
+   card data 체크섬 값입니다. (BS2SmartCardHeader.cardType - BS2SmartCardData.accessOnData)
+
+1. `cardType`
+
+   카드 유형의 코드 값입니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0x00 | 알려지지 않은 카드 |
+   | 0x01 | CSN 카드 |
+   | 0x02 | Secure 카드 |
+   | 0x03 | Access 카드 |
+   | 0x0A | Wiegand 카드 |
+   | 0x0B | Config 카드 |
+
+1. `numOfTemplate`
+
+   지문 템플릿의 개수입니다.
+
+   :::caution
+
+   * AOC 카드 구조상 template은 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)에 저장됩니다.
+
+   * 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장되어집니다. 지문과 얼굴이 함께 저장되어지지 않습니다.
+
+   * 따라서 AOC 카드에 지문 template을 담고자 한다면, `numOfFacetemplate`은 반드시 0으로 설정 되어야 합니다. 
+
+   :::
+
+1. `templateSize`
+
+   * 지문 템플릿의 크기입니다. 일반적인 지문 템플릿의 크기는 384 바이트로 고정되어 있습니다.
+
+   * BioStar 2에서 스마트 카드를 사용하는 경우 기본값은 300 바이트이며 필요에 따라 변경할 수 있지만 템플릿의 크기가 너무 작게 설정되면 지문 매칭에 문제가 발생할 수 있으므로 300 바이트 이상으로 설정하는 것을 권장합니다.
+
+1. `issueCount`
+
+   스마트 카드 발급 회차입니다.
+
+1. `duressMask`
+
+   협박 지문 유무 마스크 값입니다.
+
+1. `cardAuthMode`
+
+   * **IR Face 기반** 카드 인증 모드 설정값입니다.
+
+   * **Visual Face 기반** `cardAuthModeEx`를 사용합니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 2 | 카드 인증만 사용 |
+   | 3 | 카드와 지문 인증 사용 |
+   | 4 | 카드와 PIN 인증 사용 |
+   | 5 | 카드 인증 후 지문이나 PIN 인증 사용 |
+   | 6 | 카드, 지문, PIN 인증 사용 |
+   | 254 | 사용할 수 없음 |
+   | 255 | 정의되지 않음(시스템에 정의된 모드로 동작) |
+
+1. `useAlphanumericID`
+
+   Alphanumeric ID를 사용할지 결정하는 flag입니다.
+
+1. `cardAuthModeEx`
+
+   **IR Face 기반** `cardAuthMode`를 사용합니다.
+
+   <Badge only>+ v2.7.1</Badge> **Visual Face 기반** 카드 인증 모드 설정값입니다.
+
+   | 값 | 1단계 인증 | 2단계 인증 | 3단계 인증 |
+   | :--: | --- | --- | --- |
+   | 21 | 카드 |  |  |
+   | 22 | 카드 | 얼굴 |  |
+   | 23 | 카드 | 지문 |  |
+   | 24 | 카드 | PIN |  |
+   | 25 | 카드 | 얼굴 또는 지문 |  |
+   | 26 | 카드 | 얼굴 또는 PIN |  |
+   | 27 | 카드 | 지문 또는 PIN |  |
+   | 28 | 카드 | 얼굴 또는 지문 또는 PIN |  |
+   | 29 | 카드 | 얼굴 | 지문 |
+   | 30 | 카드 | 얼굴 | PIN |
+   | 31 | 카드 | 지문 | 얼굴 |
+   | 32 | 카드 | 지문 | PIN |
+   | 33 | 카드 | 얼굴 또는 지문 | PIN |
+   | 34 | 카드 | 얼굴 | 지문 또는 PIN |
+   | 35 | 카드 | 지문 | 얼굴 또는 PIN |
+   | 254 | 사용할 수 없음 |  |  |
+   | 255 | 정의되지 않음(시스템 정의 모드) |  |  |
+
+1. `numOfFaceTemplate`
+
+   얼굴 템플릿 수를 나타냅니다.
+
+   :::caution
+
+   * 지문과 얼굴이 갖는 기본적인 template의 크기가 다르지만 (지문:384, 얼굴:552), 이 경우에도 변함없이 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)의 templateData의 전체크기를 고려하여 저장하시면 됩니다.
+
+   * AOC 카드 구조상 template은 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)에 저장됩니다.
+
+   * 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장되어집니다. 지문과 얼굴이 함께 저장되어지지 않습니다.
+
+   * 따라서 AOC 카드에 얼굴 template을 담고자 한다면, numOfTemplate은 반드시 0으로 설정 되어야 합니다.
+
+   :::
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2SmartCardCredentials
+
+```cpp
+typedef struct {
+   uint8_t pin[BS2_PIN_HASH_SIZE];
+   uint8_t templateData[BS2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE];
+} BS2SmartCardCredentials;
+```
+
+1. `pin`
+
+   pin code 값입니다.
+
+1. `templateData`
+
+   지문 템플릿 데이터 영역으로 최대 4개의 지문 템플릿을 저장할 수 있습니다.
+
+### BS2AccessOnCardData
+
+```cpp
+typedef struct {
+   uint16_t accessGroupID[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT];
+   BS2_DATETIME startTime;
+   BS2_DATETIME endTime;
+} BS2AccessOnCardData;
+```
+
+1. `accessGroupID`
+
+   출입 그룹 아이디 리스트입니다.
+
+1. `startTime`
+
+   사용자 인증이 가능한 시작 시간이며, 0일 경우 제한이 없습니다.
+
+1. `endTime`
+
+   사용자 인증이 가능한 마지막 시간이며, 0일 경우 제한이 없습니다.
+
+### BS2SmartCardData
+
+```cpp
+typedef struct {
+   BS2SmartCardHeader header;
+   uint8_t cardID[BS2_CARD_DATA_SIZE];
+   BS2SmartCardCredentials credentials;
+   BS2AccessOnCardData accessOnData;
+} BS2SmartCardData;    
+```
+
+1. `header`
+
+   SmartCard 헤더입니다.
+
+1. `cardID`
+
+   * 단말기에서 사용할 카드 식별자입니다.
+
+   * Access on Card의 경우 배열의 32 byte를 Card ID로 사용하고, Secure Credential card는 배열의 24 byte를 Card ID로 사용하게 됩니다.
+
+   * Secure Credential Card(SCC)의 경우, 32 byte는 Card ID(24 bytes), issueCount(4 byte) 그리고 Time Stamp(4 byte)로 채워져야 합니다.
+
+   * 또한, `BS2UserBlob` 구조체의 cardObjs array가 SC Card로 채워야 하며, SC Card 발급 시마다 cardObjs 업데이트 되어야 합니다.
+
+1. `credentials`
+
+   pin code나 지문 템플릿이 저장되어 있는 인증 데이터 영역입니다.
+
+1. `accessOnData`
+
+   AOC 카드에서 사용하는 영역으로 출입 그룹 정보를 가지고 있습니다.
+
+### BS2Card
+
+```cpp
+typedef struct {
+   uint8_t isSmartCard;
+   union {
+      BS2CSNCard card;
+      BS2SmartCardData smartCard;
+   };
+}BS2Card;   
+```
+
+1. `isSmartCard`
+
+   SmartCard 여부를 나타내는 flag입니다.
+
+1. `card`
+
+   일반 카드 데이터
+
+1. `smartCard`
+
+   SmartCard 데이터
+
+### BS2LockOverride
+
+```cpp
+typedef struct {
+    uint8_t cardID[BS2_CARD_DATA_SIZE];     ///< 32 bytes
+    uint16_t issueCount;            ///< 2 bytes    
+
+    BS2_CARD_TYPE type;             ///< 1 byte
+    uint8_t size;               ///< 1 byte
+
+    BS2_USER_ID userID;             ///< 32 bytes
+    uint8_t reserved[4];            ///< 4 bytes
+} BS2LockOverride;
+```
+
+1. `cardID`
+
+   32byte의 카드ID 입니다.
+
+1. `issueCount`
+
+   스마트 카드의 발급 회차입니다.
+
+1. `type`
+
+   카드 유형을 나타내는 코드 값입니다. 현재 Lock Override 기능을 지원하는 카드 유형은 다음과 같습니다.
+
+   | 값 | 설명 | 사용된 형식 |
+   | :--: | --- | --- |
+   | 0x01 | CSN 카드 |  |
+   | 0x02 | Secure 카드 |  |
+
+1. `size`
+
+   카드 ID의 크기를 나타내며, 32의 값을 갖습니다.
+
+1. `userID`
+
+   할당하고자 하는 카드가 이미 특정 사용자에게 할당된 상태라면, 해당 사용자의 ID를 설정할 수 있습니다.

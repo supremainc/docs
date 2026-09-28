@@ -1,0 +1,53 @@
+# BS2_GetFingerTemplateQuality
+
+<Badge only>+ v2.6.4</Badge> Suprema 및 ANSI, ISO 타입 등의 지문 템플릿의 유효성을 검사하고, 품질 점수를 측정하여 반환합니다.
+
+지원하지 않는 포맷 또는 알수 없는 포맷의 템플릿의 경우 오류를 반환합니다.
+
+:::info
+
+384 Byte 내의 지문 템플릿을 지정해야 하며, out parameter인 score는 다음의 의미를 갖습니다.
+
+| score | 품질 |
+| --- | --- |
+| 81 - 100 | Best |
+| 61 - 80 | Good |
+| 41 - 60 | Normal |
+| 21 - 40 | Bad |
+| 0 - 20 | Worst |
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFingerTemplateQuality(const uint8_t* templateBuffer, const int32_t templateSize, int32_t* score);
+```
+
+## 파라미터
+
+- [In] `templateBuffer` : 384 Byte 내의 템플릿 데이터의 주소
+
+- [In] `templateSize` : 실제 템플릿의 크기
+
+- [Out] `score` : 템플릿 품질 점수가 반환되어질 메모리의 주소
+
+## 반환값
+
+* 성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 지원하지 않거나 비정상적인 템플릿이 전달되어진 경우 `BS_SDK_ERROR_UNKNOWN_FINGER_TEMPLATE`를 반환합니다.
+
+* templateBuffer 또는 score에 NULL이 전달되어질 경우 `BS_SDK_ERROR_NULL_POINTER`가 반환됩니다.
+
+* templateSize가 0보다 작거나, 384를 초과하는 경우 `BS_SDK_ERROR_INVALID_PARAM`가 반환됩니다.
+
+## 함께 보기
+
+[BS2_ScanFingerprint](bs2_scanfingerprint)
+
+[BS2_ScanFingerprintEx](bs2_scanfingerprintex)
+
+[BS2_VerifyFingerprint](bs2_verifyfingerprint)
+
+[BS2_GetLastFingerprintImage](bs2_getlastfingerprintimage)

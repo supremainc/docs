@@ -28,7 +28,9 @@
   --ifm-paragraph-margin-bottom: .7rem;
   --ifm-admonition-font-size: 1rem;
   --ifm-color-cmd: #A32343;
+  --ifm-warning-color: red;
   --ifm-color-cmd-lightest: #e78fa5;
+  --ifm-color-deprecated-lightest: #fcecf0;
   --docsearch-searchbox-background: none !important;
   --ifm-color-nextstep-background: #f5f5f5;
   --ifm-color-markdown-link: var(--ifm-color-primary);
@@ -345,6 +347,9 @@ div[class*='docItemCol'] {
   }
 }
 .theme-doc-sidebar-menu {
+  a.menu__link {
+    line-height: 1.35;
+  }
   li.p-title {
     &> .menu__list-item-collapsible {
       a.menu__link--active {
@@ -354,6 +359,15 @@ div[class*='docItemCol'] {
     }
     &> ul.menu__list {
       padding-left: 0;
+    }
+  }
+  li.apis {
+    ul.menu__list li span {
+      font-size: 10pt;
+      font-family: "Noto Sans Coptic";
+    }
+    .menu__list-item:not(:first-child) {
+      margin-top: 0;
     }
   }
   li.cam--basiclive > a {
@@ -702,7 +716,7 @@ footer {
   }
 
   .theme-code-block {
-    margin: .5rem 0;
+    margin: .5rem 0 1.5rem 0;
   }
 
   .tabs-container {

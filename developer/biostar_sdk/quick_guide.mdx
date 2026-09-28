@@ -328,8 +328,6 @@ if (deviceInfo.faceSupported)
     byte enrollThreshold;
     int result = BS_SDK_SUCCESS;
     
-    
-    
     for(; idx < BS2_MAX_NUM_OF_FACE_PER_USER; idx++)
     {
         result = BS2_ScanFace(context, deviceId, Face, enrollThreshold, NULL);

@@ -1,0 +1,53 @@
+# BS2_SetDoor
+
+출입문을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDoor(void* context, uint32_t deviceId, BS2Door* doors, uint32_t doorCount);
+```
+
+:::info
+
+[BS2Door 구조체 보기](door_control_api#bs2door) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `doors` : 저장하고자 하는 door 리스트
+
+- [In] `doorCount` : door 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDoor](bs2_getdoor)
+
+[BS2_GetAllDoor](bs2_getalldoor)
+
+[BS2_GetDoorStatus](bs2_getdoorstatus)
+
+[BS2_GetAllDoorStatus](bs2_getalldoorstatus)
+
+[BS2_SetDoorAlarm](bs2_setdooralarm)
+
+[BS2_RemoveDoor](bs2_removedoor)
+
+[BS2_RemoveAllDoor](bs2_removealldoor)
+
+[BS2_ReleaseDoor](bs2_releasedoor)
+
+[BS2_LockDoor](bs2_lockdoor)
+
+[BS2_UnlockDoor](bs2_unlockdoor)

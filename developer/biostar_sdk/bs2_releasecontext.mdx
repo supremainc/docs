@@ -1,0 +1,29 @@
+# BS2_ReleaseContext
+
+`BS2_AllocateContext()` 함수로부터 할당된 Context를 파괴합니다. 포인터 값이 `NULL`이면 아무런 동작을 하지 않습니다.
+
+:::info
+
+더 이상 Context를 사용하지 않을 때 사용하십시오. 이 함수는 어플리케이션이 종료되기 전 마지막에 단 한 번 사용하시기 바랍니다. 
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+void BS2_ReleaseContext(void* context);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+## 반환값
+
+Void
+
+## 함께 보기
+
+[BS2_AllocateContext](bs2_allocatecontext)

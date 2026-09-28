@@ -1,0 +1,41 @@
+# BS2_RemoveLiftLockUnlockZone
+
+<Badge only>+ v2.7.0</Badge> 주어진 Lift 스케줄 잠금/개방 구역을 제거합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveLiftLockUnlockZone(void* context, uint32_t deviceId, uint32_t* zoneIds, uint32_t zoneIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zoneIds` : 제거하고자 하는 Lift lock/unlock zone id 리스트
+
+- [In] `zoneIdCount` : Lift lock/unlock zone id 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetLiftLockUnlockZone](bs2_getliftlockunlockzone)
+
+[BS2_GetAllLiftLockUnlockZone](bs2_getallliftlockunlockzone)
+
+[BS2_GetLiftLockUnlockZoneStatus](bs2_getliftlockunlockzonestatus)
+
+[BS2_GetAllLiftLockUnlockZoneStatus](bs2_getallliftlockunlockzonestatus)
+
+[BS2_SetLiftLockUnlockZone](bs2_setliftlockunlockzone)
+
+[BS2_SetLiftLockUnlockZoneAlarm](bs2_setliftlockunlockzonealarm)
+
+[BS2_RemoveAllLiftLockUnlockZone](bs2_removeallliftlockunlockzone)

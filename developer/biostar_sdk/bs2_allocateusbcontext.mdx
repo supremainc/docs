@@ -1,0 +1,49 @@
+# BS2_AllocateUsbContext
+
+<Dep>[지원 중단]</Dep>
+
+<Badge only>+ v2.5.0</Badge> 함수는 USB장치를 관리하고 제어하는 Context를 생성합니다. USB Context를 통해 USB장치로부터 로그 및 사용자 정보를 취득할 수 있습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+void* BS2_AllocateUsbContext(const char* szDir);
+```
+
+## 파라미터
+
+- [In] `szDir` : USB 장치의 경로
+
+:::info
+
+성공적으로 반환된 USB Context는 사용 후 [BS2_ReleaseUsbContext](bs2_releaseusbcontext) 함수를 통해 시스템에 메모리를 반환해야 합니다.
+
+:::
+
+## 반환값
+
+시스템 메모리가 부족할 경우에 NULL를 반환하고, 부족하지 않다면 할당된 USB Context를 반환합니다.
+
+## 함께 보기
+
+[BS2_ReleaseUsbContext](bs2_releaseusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

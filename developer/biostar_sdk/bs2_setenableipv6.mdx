@@ -1,0 +1,25 @@
+# BS2_SetEnableIPV6
+
+<Badge only>+ v2.6.3</Badge> IP V6 연결모드로 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetEnableIPV6(void* context, int enable);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `enable` : IP V6 연결모드
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetEnableIPV6](bs2_getenableipv6)

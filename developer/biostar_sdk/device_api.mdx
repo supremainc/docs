@@ -1,0 +1,1023 @@
+# Device API
+
+장치 정보를 제어하거나 펌웨어를 업그레이드할 수 있습니다.
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2SimpleDeviceInfo
+
+```cpp
+typedef struct
+{
+   uint32_t id;
+   uint16_t type;
+   uint8_t connectionMode;
+   uint32_t ipv4Address;
+   uint16_t port;
+   uint32_t maxNumOfUser;
+   uint8_t userNameSupported;
+   uint8_t userPhotoSupported;
+   uint8_t pinSupported;
+   uint8_t cardSupported;
+   uint8_t fingerSupported;
+   uint8_t faceSupported;
+   uint8_t wlanSupported;
+   uint8_t tnaSupported;
+   uint8_t triggerActionSupported;
+   uint8_t wiegandSupported;
+   uint8_t imageLogSupported;
+   uint8_t dnsSupported;
+   uint8_t jobCodeSupported;    
+   uint8_t wiegandMultiSupported;
+   uint8_t rs485Mode;
+   uint8_t sslSupported;
+   uint8_t rootCertExist;
+   uint8_t dualIDSupported;
+   uint8_t useAlphanumericID;
+   uint32_t connectedIP;
+   uint8_t phraseCodeSupported;
+   uint8_t card1xSupported;
+   uint8_t systemExtSupported;
+   uint8_t voipSupported;
+}BS2SimpleDeviceInfo;
+```
+
+1. `id`
+
+   장치 식별자이며 항상 1 이상입니다.
+
+1. `type`
+
+   장치 유형의 코드 값입니다. 
+
+   | 값 | 설명 |
+   | --- | --- |
+   | 0x00 | Unknown Type |
+   | 0x01 | BioEntry Plus |
+   | 0x02 | BioEntry W |
+   | 0x03 | BioLite Net |
+   | 0x04 | Xpass |
+   | 0x05 | Xpass S2 |
+   | 0x06 | Secure IO 2 |
+   | 0x07 | DM-20 |
+   | 0x08 | BioStation 2 |
+   | 0x09 | BioStation A2 |
+   | 0x0A | FaceStation 2 |
+   | 0x0B | IO Device |
+   | 0x0C | BioStation L2 |
+   | 0x0D | BioEntry W2 |
+   | 0x0E | CoreStation 40 |
+   | 0x0F | Output Module |
+   | 0x10 | Input Module |
+   | 0x11 | BioEntry P2 |
+   | 0x12 | BioLite N2 |
+   | 0x13 | XPass2 |
+   | 0x14 | XPass S3 |
+   | 0x15 | BioEntry R2 |
+   | 0x16 | XPass D2 |
+   | 0x17 | Door Module 21 |
+   | 0x18 | XPass D2 Keypad |
+   | 0x19 | FACELITE |
+   | 0x1A | XPass2 Keypad |
+   | 0x1B | XPass D2 Revision |
+   | 0x1C | XPass D2 Keypad Revision |
+   | 0x1D | FaceStation F2 Finger |
+   | 0x1E | FaceStation F2 |
+   | 0x1F | XStation 2 QR |
+   | 0x20 | XStation 2 |
+   | 0x21 | Input Module 120 |
+   | 0x22 | XStation 2 Finger |
+   | 0x23 | BioStation 3 |
+   | 0x24 | 3rd party OSDP device |
+   | 0x25 | 3rd party OSDP IO device |
+   | 0x26 | BioStation 2a |
+   | 0x27 | UZ OSDP Module |
+   | 0x28 | UZ OSDP Door handle |
+   | 0x29 | UZ OSDP Door knob |
+   | 0x2A | BioEntry W3 |
+   | 0x2B | CoreStation 20 |
+   | 0x2C | Door Interface 24 |
+   | 0x2D | BioStation 3 MAX |
+   | 0x2E | BioStation 3 MAX FP |
+   | 0x2F | XPass Q2 |
+
+1. `connectionMode`
+
+   BioStar 애플리케이션과 장치간의 접속 모드를 뜻하며, 접속 주체에 따라 direct mode(0x0)와 server mode(0x1)로 구분됩니다. direct mode는 BioStar 애플리케이션이 장치로 접속하며 server mode는 장치가 BioStar 애플리케이션으로 접속합니다. 장치에 설정된 기본 접속 모드는 direct mode이며 접속 모드를 수정하려면 [IP Config](configuration_api#bs2ipconfig)를 참고하십시오.
+
+1. `ipv4Address`
+
+   현재 설정된 장치의 IP 주소입니다.
+
+1. `port`
+
+   현재 설정된 장치의 TCP 포트 번호입니다.
+
+1. `maxNumOfUser`
+
+   장치에서 저장할 수 있는 최대 사용자 개수입니다.
+
+1. `userNameSupported`
+
+   장치에서 사용자 이름 사용을 지원하는지 알 수 있는 flag입니다.
+
+1. `userPhotoSupported`
+
+   장치에서 사용자 프로필 사진 사용을 지원하는지 알 수 있는 flag입니다.
+
+1. `pinSupported`
+
+   장치에서 PIN 사용을 지원하는지 알 수 있는 flag입니다.
+
+1. `cardSupported`
+
+   장치에서 스마트 카드 인증을 지원하는지 알 수 있는 flag입니다.
+
+1. `fingerSupported`
+
+   장치에서 지문 인증을 지원하는지 알 수 있는 flag입니다.
+
+1. `faceSupported`
+
+   장치에서 얼굴 인식을 지원하는지 알 수 있는 flag입니다.
+
+1. `wlanSupported`
+
+   장치에서 무선랜을 지원하는지 알 수 있는 flag입니다.
+
+1. `tnaSupported`
+
+   장치에서 근태관리를 지원하는지 알 수 있는 flag입니다.
+
+1. `triggerActionSupported`
+
+   장치에서 trigger action을 지원하는지 알 수 있는 flag입니다.
+
+1. `wiegandSupported`
+
+   장치에서 Wiegand를 지원하는지 알 수 있는 flag입니다.
+
+1. `imageLogSupported`
+
+   장치에서 이미지 로그를 지원하는지 알 수 있는 flag입니다.
+
+1. `dnsSupported`
+
+   장치에서 DNS를 지원하는지 알 수 있는 flag입니다.
+
+1. `jobCodeSupported`
+
+   장치에서 Job Code를 지원하는지 알 수 있는 flag입니다.
+
+1. `wiegandMultiSupported`
+
+   장치에서 wiegandMulti를 지원하는지 알 수 있는 flag입니다.
+
+1. `rs485Mode`
+
+   장치에서 RS485 모드입니다.
+
+1. `sslSupported`
+
+   장치에서 ssl를 지원하는지 알 수 있는 flag입니다.
+
+1. `rootCertExist`
+
+   장치에서 root인증서가 존재하는지를 알 수 있는 flag입니다.
+
+1. `dualIDSupported`
+
+   장치에서 dualID(숫자,문자)를 지원하는지 알 수 있는 flag입니다.
+
+1. `useAlphanumericID`
+
+   장치에서 AlphanumericID를 사용중인지 여부를 말하는 flag입니다.
+
+1. `connectedIP`
+
+   장치가 접속하고 있는 ip주소입니다. (0xFFFFFFFF if disconnected)
+
+1. `phraseCodeSupported`
+
+   장치에서 사용자별 개인 메세지를 지원하는지 알 수 있는 flag입니다.
+
+1. `card1xSupported`
+
+   장치에서 1.x ToC 카드 읽기를 지원하는지 알 수 있는 flag입니다.
+
+1. `systemExtSupported`
+
+   장치에서 RS-485 키 설정을 지원하는지 알 수 있는 flag입니다.
+
+1. `voipSupported`
+
+   장치에서 VoIP를 지원하는지 알 수 있는 flag입니다.
+
+### BS2SimpleDeviceInfoEx
+
+BS2SimpleDeviceInfo 외 지원정보를 가져옵니다.
+
+```cpp
+typedef struct
+{
+   enum
+   {
+      BS2_SUPPORT_RS485EX     = 0x00000001,
+      BS2_SUPPORT_CARDEX      = 0x00000002,
+      BS2_SUPPORT_DST         = 0x00000004,
+      BS2_SUPPORT_DESFIREEX   = 0x00000008,
+      BS2_SUPPORT_FACE_EX = 0x00000010,
+      BS2_SUPPORT_QR      = 0x00000020,
+
+      BS2_SUPPORT_FINGER_SCAN = 0x00010000,
+      BS2_SUPPORT_FACE_SCAN   = 0x00020000,
+      BS2_SUPPORT_FACE_EX_SCAN = 0x00040000,
+      BS2_SUPPORT_QR_SCAN     = 0x00080000,
+
+      BS2_SUPPORT_ALL         = BS2_SUPPORT_RS485EX |
+                                                   BS2_SUPPORT_CARDEX |
+                                                   BS2_SUPPORT_DST |
+                                                   BS2_SUPPORT_DESFIREEX |
+                                                   BS2_SUPPORT_FACE_EX |
+                                                   BS2_SUPPORT_QR |
+                                                   BS2_SUPPORT_FINGER_SCAN |
+                                                   BS2_SUPPORT_FACE_SCAN |
+                                                   BS2_SUPPORT_FACE_EX_SCAN |
+                                                   BS2_SUPPORT_QR_SCAN,
+   };
+
+   uint32_t supported;
+   uint8_t  reserved[4];
+}BS2SimpleDeviceInfoEx;
+```
+
+1. `supported`
+
+   현재 장치가 `BS2SimpleDeviceInfo`에서 제공하는 기능 외의 정보를 추가적으로 가져옵니다.
+
+   아래 정의된 값으로 bit masking을 하여 지원 여부를 확인할 수 있습니다. 
+
+   | 정의 | 값 | 설명 |
+   | --- | --- | --- |
+   | BS2_SUPPORT_RS485EX | 0x00000001 | RS485 확장 지원 여부 (CoreStation 40에 해당) |
+   | BS2_SUPPORT_CARDEX | 0x00000002 | iClass SEOS 카드 사용 여부 |
+   | BS2_SUPPORT_DST | 0x00000004 | 일광절약 시간 사용 여부 |
+   | BS2_SUPPORT_DESFIREEX | 0x00000008 | DesFire 카드 고급설정 지원 여부 <Badge only>+ v2.6.4</Badge> |
+   | BS2_SUPPORT_FACE_EX | 0x00000010 | 얼굴인증 지원 여부 **FaceStation F2** <Badge only>+ v2.7.1</Badge> |
+   | BS2_SUPPORT_QR | 0x00000020 | QR인증 지원 여부 **XStation 2 QR** <Badge only>+ v2.8.0</Badge> |
+   | BS2_SUPPORT_FINGER_SCAN | 0x00010000 | 지문 검출이 가능한 장치 인지 여부 <Badge only>+ v2.7.1</Badge> |
+   | BS2_SUPPORT_FACE_SCAN | 0x00020000 | 얼굴 검출이 가능한 장치 인지 여부 **FaceStation2**, **FaceLite** <Badge only>+ v2.7.1</Badge> |
+   | BS2_SUPPORT_FACE_EX_SCAN | 0x00040000 | 얼굴 검출이 가능한 장치 인지 여부 **FaceStation F2** <Badge only>+ v2.7.1</Badge> |
+   | BS2_SUPPORT_QR_SCAN | 0x00080000 | QR 검출이 가능한 장치 인지 여부 **XStation 2** <Badge only>+ v2.8.0</Badge> |
+   | BS2_SUPPORT_ALL | 0x000FFFFF | 추가 정보 전체 제공 여부 |
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2ResourceElement
+
+```cpp
+typedef struct
+{
+   uint8_t type;
+   uint32_t numResData;
+   struct {
+      uint8_t index;
+      uint32_t dataLen;
+      uint8_t* data;
+   }resData[128];
+}BS2ResourceElement;
+```
+
+1. `type`
+
+   리소스 데이터 타입입니다.
+
+   | 값 | 설명 | 지원하는 데이터 형식 |
+   | --- | --- | --- |
+   | 0 | UI(Language pack) | 슈프리마 언어팩 |
+   | 1 | Notice message | UTF-8 문자열 |
+   | 2 | Image(Background) | PNG |
+   | 3 | Slide image | PNG |
+   | 4 | Sound | WAVE |
+
+1. `numResData`
+
+   리소스 데이터 개수입니다.
+
+1. `index`
+
+   리소스 인덱스 번호입니다.
+
+1. `dataLen`
+
+   리소스 데이터 크기입니다.
+
+1. `data`
+
+   바이너리 리소스 데이터입니다.
+
+### BS2IPv6DeviceInfo
+
+```cpp
+enum {
+    BS2_MAX_IPV6_ALLOCATED_ADDR = 8,
+};
+
+typedef struct
+{
+    BS2_DEVICE_ID id;
+    uint8_t reserved[1];
+    uint8_t bIPv6Mode;
+    char ipv6Address[BS2_IPV6_ADDR_SIZE];
+    uint16_t portV6;
+    char connectedIPV6[BS2_IPV6_ADDR_SIZE];
+    uint8_t numOfAllocatedAddressV6;
+    char allocatedIpAddressV6[BS2_IPV6_ADDR_SIZE][BS2_MAX_IPV6_ALLOCATED_ADDR];
+}BS2IPv6DeviceInfo;
+```
+
+1. `id`
+
+   장치 식별자입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `bIPv6Mode`
+
+   현 장치가 IP V6로 동작하는지 여부를 나타내는 flag입니다.
+
+1. `ipv6Address`
+
+   현재 장치의 IP V6 주소입니다.
+
+1. `portV6`
+
+   현재 장치의 IP V6 포트 번호입니다.
+
+1. `connectedIPV6`
+
+   장치가 연결된 서버의 IP V6 주소입니다.
+
+1. `numOfAllocatedAddressV6`
+
+   현재 장치에 할당되어진 IP V6 주소의 개수를 나타냅니다.
+
+1. `allocatedIpAddressV6`
+
+   현재 장치에 할당되어진 IP V6 주소입니다. `numOfAllocatedAddressV6`는 할당되어진 주소의 개수를 나타냅니다.
+
+### BS2AuthOperatorLevel
+
+:::caution
+
+운영자 기능을 제대로 사용하려면 **장치에 최소 한 명의 관리자**(`BS2_OPERATOR_LEVEL_ADMIN`)가 구성되어 있어야 합니다.
+
+관리자가 지정되지 않은 경우 모든 사용자가 제한 없이 장치 메뉴에 접근할 수 있습니다.
+
+:::
+
+```cpp
+typedef struct {
+    char userID[BS2_USER_ID_SIZE];
+    uint8_t level;
+    uint8_t reserved[3];
+} BS2Operator;
+
+typedef BS2Operator BS2AuthOperatorLevel;
+```
+
+1. `userID`
+
+   사용자 식별자입니다.
+
+1. `level`
+
+   사용자가 인증되었을 때 식별자에 해당하는 권한을 지정합니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0 | 권한 없음 |
+   | 1 | 관리자 권한 |
+   | 2 | 시스템 구성을 변경할 수 있는 권한 |
+   | 3 | 사용자 정보를 변경할 수 있는 권한 |
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2DeviceCapabilities
+
+<Badge only>+ v2.8</Badge>
+
+```cpp
+typedef struct {
+   uint32_t maxUsers;                ///< 4 bytes
+   uint32_t maxEventLogs;            ///< 4 bytes
+   uint32_t maxImageLogs;            ///< 4 bytes
+   uint32_t maxBlacklists;           ///< 4 bytes
+   uint32_t maxOperators;            ///< 4 bytes
+   uint32_t maxCards;                ///< 4 bytes
+   uint32_t maxFaces;                ///< 4 bytes
+   uint32_t maxFingerprints;         ///< 4 bytes
+   uint32_t maxUserNames;            ///< 4 bytes
+   uint32_t maxUserImages;           ///< 4 bytes
+   uint32_t maxUserJobs;             ///< 4 bytes
+   uint32_t maxUserPhrases;          ///< 4 bytes
+   uint8_t maxOutputPorts;           ///< 1 byte
+   uint8_t maxRelays;                ///< 1 byte
+   uint8_t maxRS485Channels;         ///< 1 byte
+
+   uint8_t cameraSupported: 1;
+   uint8_t tamperSupported: 1;
+   uint8_t wlanSupported: 1;
+   uint8_t displaySupported: 1;
+   uint8_t thermalSupported: 1;
+   uint8_t maskSupported: 1;
+   uint8_t faceExSupported: 1;
+   uint8_t unused: 1;
+
+   union {
+      uint32_t mask;                ///< 4 bytes
+      struct {
+         uint32_t EM: 1;
+         uint32_t HIDProx: 1;
+         uint32_t MifareFelica: 1;
+         uint32_t iClass: 1;
+         uint32_t ClassicPlus: 1;
+         uint32_t DesFireEV1: 1;
+         uint32_t SRSE: 1;
+         uint32_t SEOS: 1;
+         uint32_t NFC: 1;
+         uint32_t BLE: 1;
+         uint32_t CustomClassicPlus: 1;
+         uint32_t CustomDesFireEV1: 1;
+         uint32_t TOM_NFC: 1;
+         uint32_t TOM_BLE: 1;
+         uint32_t CustomFelica: 1;
+         uint32_t reserved: 16;
+         uint32_t useCardOperation: 1;
+      };
+   } cardSupported;
+
+   struct {
+      BS2_BOOL extendedMode;        ///< 1 byte
+      union {
+         uint8_t mask;             ///< 1 byte
+         struct {
+               uint8_t card: 1;
+               uint8_t fingerprint: 1;
+               uint8_t face: 1;
+               uint8_t id: 1;
+               uint8_t pin: 1;
+               uint8_t reserved: 3;
+         };
+      } credentials;
+      uint8_t reserved[2];          ///< 2 bytes
+      union {
+         struct {
+               union {
+                  uint8_t mask;     ///< 1 byte
+                  struct {
+                     uint8_t biometricOnly: 1;
+                     uint8_t biometricPIN: 1;
+                     uint8_t unused: 6;
+                  };
+               } biometricAuth;
+
+               union {
+                  uint8_t mask;     ///< 1 byte
+                  struct {
+                     uint8_t cardOnly: 1;
+                     uint8_t cardBiometric: 1;
+                     uint8_t cardPIN: 1;
+                     uint8_t cardBiometricOrPIN: 1;
+                     uint8_t cardBiometricPIN: 1;
+                     uint8_t unused: 3;
+                  };
+               } cardAuth;
+
+               union {
+                  uint8_t mask;     ///< 1 byte
+                  struct {
+                     uint8_t idBiometric: 1;
+                     uint8_t idPIN: 1;
+                     uint8_t idBiometricOrPIN: 1;
+                     uint8_t idBiometricPIN: 1;
+                     uint8_t unused: 4;
+                  };
+               } idAuth;
+         } legacy;
+
+         struct {
+               union {
+                  uint32_t mask;    ///< 4 bytes
+                  struct {
+                     uint32_t faceOnly: 1;
+                     uint32_t faceFingerprint: 1;
+                     uint32_t facePIN: 1;
+                     uint32_t faceFingerprintOrPIN: 1;
+                     uint32_t faceFingerprintPIN: 1;
+                     uint32_t unused: 27;
+                  };
+               } faceAuth;
+
+               union {
+                  uint32_t mask;    ///< 4 bytes
+                  struct {
+                     uint32_t fingerprintOnly: 1;
+                     uint32_t fingerprintFace: 1;
+                     uint32_t fingerprintPIN: 1;
+                     uint32_t fingerprintFaceOrPIN: 1;
+                     uint32_t fingerprintFacePIN: 1;
+                     uint32_t unused: 27;
+                  };
+               } fingerprintAuth;
+
+               union {
+                  uint32_t mask;    ///< 4 bytes
+                  struct {
+                     uint32_t cardOnly: 1;
+                     uint32_t cardFace: 1;
+                     uint32_t cardFingerprint: 1;
+                     uint32_t cardPIN: 1;
+                     uint32_t cardFaceOrFingerprint: 1;
+                     uint32_t cardFaceOrPIN: 1;
+                     uint32_t cardFingerprintOrPIN: 1;
+                     uint32_t cardFaceOrFingerprintOrPIN: 1;
+                     uint32_t cardFaceFingerprint: 1;
+                     uint32_t cardFacePIN: 1;
+                     uint32_t cardFingerprintFace: 1;
+                     uint32_t cardFingerprintPIN: 1;
+                     uint32_t cardFaceOrFingerprintPIN: 1;
+                     uint32_t cardFaceFingerprintOrPIN: 1;
+                     uint32_t cardFingerprintFaceOrPIN: 1;
+                     uint32_t unused: 17;
+                  };
+               } cardAuth;
+
+               union {
+                  uint32_t mask;    ///< 4 bytes
+                  struct {
+                     uint32_t idFace: 1;
+                     uint32_t idFingerprint: 1;
+                     uint32_t idPIN: 1;
+                     uint32_t idFaceOrFingerprint: 1;
+                     uint32_t idFaceOrPIN: 1;
+                     uint32_t idFingerprintOrPIN: 1;
+                     uint32_t idFaceOrFingerprintOrPIN: 1;
+                     uint32_t idFaceFingerprint: 1;
+                     uint32_t idFacePIN: 1;
+                     uint32_t idFingerprintFace: 1;
+                     uint32_t idFingerprintPIN: 1;
+                     uint32_t idFaceOrFingerprintPIN: 1;
+                     uint32_t idFaceFingerprintOrPIN: 1;
+                     uint32_t idFingerprintFaceOrPIN: 1;
+                     uint32_t unused: 18;
+                  };
+               } idAuth;
+         } extended;
+      };
+   } authSupported;
+
+   uint8_t intelligentPDSupported: 1;
+   uint8_t updateUserSupported: 1;
+   uint8_t simulatedUnlockSupported: 1;
+   uint8_t smartCardByteOrderSupported: 1;
+   uint8_t treatAsCSNSupported: 1;
+   uint8_t rtspSupported: 1;
+   uint8_t lfdSupported: 1;
+   uint8_t visualQRSupported: 1;
+
+   uint8_t maxVoipExtensionNumbers;        ///< 1 byte
+
+   uint8_t osdpStandardCentralSupported : 1;       ///< 1 byte
+   uint8_t enableLicenseFuncSupported : 1;   ///< 1 byte
+   uint8_t keypadBacklightSupported: 1;
+   uint8_t uzWirelessLockDoorSupported: 1;
+   uint8_t customSmartCardSupported: 1; 
+   uint8_t tomSupported: 1;
+   uint8_t tomEnrollSupported: 1;
+   uint8_t showOsdpResultbyLED: 1;
+
+   uint8_t customSmartCardFelicaSupported: 1;
+   uint8_t ignoreInputAfterWiegandOut: 1;
+   uint8_t setSlaveBaudrateSupported: 1;
+   uint8_t rtspResolutionChangeSupported: 1;
+   uint8_t voipResolutionChangeSupported: 1;
+   uint8_t voipTransportChangeSupported: 1;
+   uint8_t authMsgUserInfoSupported: 1;
+   uint8_t scrambleKeyboardModeSupported: 1;
+   
+   
+   uint16_t visualFaceTemplateVersion;
+
+   //-------------------------------------------------------------------------------- 2 byte
+
+   uint8_t authDenyMaskSupported: 1;
+   uint8_t mifareExSupported: 1;
+   uint8_t lockOverrideSupported: 1;
+   uint8_t doorModeOverrideSupported: 1;
+   uint8_t alternateAccessTimerSupported: 1;
+   uint8_t realtimeIOStatusReportSupported:1;
+   uint8_t dynamicSlaveDeviceNumSupported: 1;  
+   uint8_t secureTamperSupported: 1;
+
+   //-------------------------------------------------------------------------------- 1 byte
+   uint8_t customSmartcardSlaveSupported: 1;
+   uint8_t serverPrivateMsgSupported: 1;
+   uint8_t facilityCodeSupported: 1;
+   uint8_t masterAdminSupported: 1;
+   uint8_t adminTwoStepAuthSupported: 1;
+   uint8_t qrDetectGuideLedSupported: 1;   
+   uint8_t y2k38Supported: 1;
+   uint8_t ev2smSupported: 1;
+
+   //-------------------------------------------------------------------------------- 1 byte
+   uint8_t videoStandbySupported: 1;
+   uint8_t authFailLockoutSupported: 1;
+   uint8_t doorUnlockLockImproveSupported: 1;
+   uint8_t toggleDoorSupported: 1;
+   uint8_t antiTailgatingSupported: 1;
+   uint8_t elevatorCabinAuthSupported: 1;
+   uint8_t reAuthPreventionSupported: 1;
+   uint8_t unused: 1;
+
+   uint8_t reserved[423];      ///< 423 bytes
+
+} BS2DeviceCapabilities;
+```
+
+1. `maxUsers`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자)
+
+1. `maxEventLogs`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (이벤트로그)
+
+1. `maxImageLogs`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (이미지로그)
+
+1. `maxBlacklists`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (블랙리스트)
+
+1. `maxOperators`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (관리자)
+
+1. `maxCards`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (카드)
+
+1. `maxFaces`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (얼굴)
+
+1. `maxFingerprints`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (지문)
+
+1. `maxUserNames`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자 명)
+
+1. `maxUserImages`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자 이미지)
+
+1. `maxUserJobs`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (Job code)
+
+1. `maxUserPhrases`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자 구문)
+
+1. `maxCardsPerUser`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자별 카드)
+
+1. `maxFacesPerUser`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자별 얼굴)
+
+1. `maxFingerprintsPerUser`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (사용자별 지문)
+
+1. `maxInputPorts`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (장치의 입력포트)
+
+1. `maxOutputPorts`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (장치의 출력포트)
+
+1. `maxRelays`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (장치의 릴레이)
+
+1. `maxRS485Channels`
+
+   장치에 저장 가능한 정보의 최대 개수를 나타냅니다. (RS485 채널)
+
+1. `시스템 지원 정보`
+
+   장치가 지원 가능한 시스템 정보를 bit 단위로 아래와 같이 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | cameraSupported | 카메라 지원 여부. |
+   | 1 | 1 | tamperSupported | 탬퍼 지원 여부. |
+   | 2 | 1 | wlanSupported | 무선랜 지원 여부. |
+   | 3 | 1 | displaySupported | 화면의 지원 여부. |
+   | 4 | 1 | thermalSupported | 열화상 카메라 지원 여부. |
+   | 5 | 1 | maskSupported | 마스크 검출 지원 여부. |
+   | 6 | 1 | faceExSupported | Visual camera 인증 지원 여부. |
+   | 7 | 1 | unused | 미할당 필드 |
+
+1. `cardSupported`
+
+   카드관련 지원 정보를 나타냅니다. mask값으로 전체를 또는 bit 단위로 각각의 지원항목에 접근할 수 있습니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | EM | EM 카드 |
+   | 1 | 1 | HIDProx | HID Proximity 카드 |
+   | 2 | 1 | MifareFelica | MIFARE / FeliCa |
+   | 3 | 1 | iClass | iClass 카드 |
+   | 4 | 1 | ClassicPlus | Classic plus 카드 |
+   | 5 | 1 | DesFireEV1 | DESFire EV1 |
+   | 6 | 1 | SRSE | iClass SR, iClass SE |
+   | 7 | 1 | SEOS | iClass SEOS |
+   | 8 | 1 | NFC | NFC 카드 |
+   | 9 | 1 | BLE | BLE |
+   | 10 | 1 | ClassicPlus(Custom card) | ClassicPlus(커스텀카드) |
+   | 11 | 1 | DesFireEV1(Custom card) | DesFireEV1(커스텀카드) |
+   | 12 | 1 | TOM NFC | TOM NFC |
+   | 13 | 1 | TOM BLE | TOM BLE |
+   | 14 | 1 | FeliCa(Custom card) | FeliCa (커스텀카드) |
+   | 15 | 16 | reserved | 미할당 필드|
+   | 31 | 1 | useCardOperation | 카드 사용 여부 |
+
+1. `authSupported`
+
+   인증관련 지원 정보를 나타냅니다.
+
+1. `extendedMode`
+
+   true인 경우, 확장인증모드를 지원하며, authSupported.extended를 참조합니다.
+
+   false인 경우 비확장인증 모드를 지원하며, authSupported.lagacy를 참조합니다.
+
+1. `credentials`
+
+   지원되는 인증 수단을 나타냅니다. mask값으로 전체를 또는 bit 단위로 각각의 지원항목에 접근할 수 있습니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | card | 카드 |
+   | 1 | 1 | fingerprint | 지문 |
+   | 2 | 1 | face | 얼굴 |
+   | 3 | 1 | id | ID |
+   | 4 | 1 | pin | PIN |
+   | 5 | 3 | reserved | 미할당 필드 |
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `legacy`
+
+   비확장 인증모드 지원 시, 참조되는 정보입니다.
+
+1. `biometricAuth`
+
+   (비확장 인증모드)Biometric 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | biometricOnly | Biometric only |
+   | 1 | 1 | biometricPIN | Biometric + PIN |
+   | 2 | 6 | unused | 미할당 필드 |
+
+1. `cardAuth`
+
+   (비확장 인증모드)Card 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | cardOnly | Card only |
+   | 1 | 1 | cardBiometric | Card + Biometric |
+   | 2 | 1 | cardPIN | Card + PIN |
+   | 3 | 1 | cardBiometricOrPIN | Card + Biometric/PIN |
+   | 4 | 1 | cardBiometricPIN | Card + Biometric + PIN |
+   | 5 | 3 | unused | 미할당 필드 |
+
+1. `idAuth`
+
+   (비확장 인증모드)ID 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | idBiometric | ID + Biometric |
+   | 1 | 1 | idPIN | ID + PIN |
+   | 2 | 1 | idBiometricOrPIN | ID + Biometric/PIN |
+   | 3 | 1 | idBiometricPIN | ID + Biometric + PIN |
+   | 4 | 4 | unused | 미할당 필드 |
+
+1. `extended`
+
+   확장 인증모드 지원 시, 참조되는 정보입니다.
+
+1. `faceAuth`
+
+   (확장 인증모드)얼굴 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | faceOnly | Face only |
+   | 1 | 1 | faceFingerprint | Face + Fingerprint |
+   | 2 | 1 | facePIN | Face + PIN |
+   | 3 | 1 | faceFingerprintOrPIN | Face + Fingerprint/PIN |
+   | 4 | 1 | faceFingerprintPIN | Face + Fingerprint + PIN |
+   | 5 | 27 | unused | 미할당 필드 |
+
+1. `fingerprintAuth`
+
+   (확장 인증모드)지문 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | fingerprintOnly | Fingerprint only |
+   | 1 | 1 | fingerprintFace | Fingerprint + Face |
+   | 2 | 1 | fingerprintPIN | Fingerprint + PIN |
+   | 3 | 1 | fingerprintFaceOrPIN | Fingerprint + Face/PIN |
+   | 4 | 1 | fingerprintFacePIN | Fingerprint + Face + PIN |
+   | 5 | 27 | unused | 미할당 필드 |
+
+1. `cardAuth`
+
+   (확장 인증모드)카드 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 0 | 1 | cardOnly | Card only |
+   | 1 | 1 | cardFace | Card + Face |
+   | 2 | 1 | cardFingerprint | Card + Fingerprint |
+   | 3 | 1 | cardPIN | Card + PIN |
+   | 4 | 1 | cardFaceOrFingerprint | Card + Face/Fingerprint |
+   | 5 | 1 | cardFaceOrPIN | Card + Face/PIN |
+   | 6 | 1 | cardFingerprintOrPIN | Card + Fingerprint/PIN |
+   | 7 | 1 | cardFaceOrFingerprintOrPIN | Card + Face/Fingerprint/PIN |
+   | 8 | 1 | cardFaceFingerprint | Card + Face + Fingerprint |
+   | 9 | 1 | cardFacePIN | Card + Face + PIN |
+   | 10 | 1 | cardFingerprintFace | Card + Fingerprint + Face |
+   | 11 | 1 | cardFingerprintPIN | Card + Fingerprint + PIN |
+   | 12 | 1 | cardFaceOrFingerprintPIN | Card + Face/Fingerprint + PIN |
+   | 13 | 1 | cardFaceFingerprintOrPIN | Card + Face + Fingerprint/PIN |
+   | 14 | 1 | cardFingerprintFaceOrPIN | Card + Fingerprint + Face/PIN |
+   | 15 | 17 | unused | 미할당 필드 |
+
+1. `idAuth`
+
+   (확장 인증모드)ID 인증 조합을 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | \- | 전체 | mask | 전체정보 |
+   | 1 | 1 | idFace | ID + Face |
+   | 2 | 1 | idFingerprint | ID + Fingerprint |
+   | 3 | 1 | idPIN | ID + PIN |
+   | 4 | 1 | idFaceOrFingerprint | ID + Face/Fingerprint |
+   | 5 | 1 | idFaceOrPIN | ID + Face/PIN |
+   | 6 | 1 | idFingerprintOrPIN | ID + Fingerprint/PIN |
+   | 7 | 1 | idFaceOrFingerprintOrPIN | ID + Face/Fingerprint/PIN |
+   | 8 | 1 | idFaceFingerprint | ID + Face + Fingerprint |
+   | 9 | 1 | idFacePIN | ID + Face + PIN |
+   | 10 | 1 | idFingerprintFace | ID + Fingerprint + Face |
+   | 11 | 1 | idFingerprintPIN | ID + Fingerprint + PIN |
+   | 12 | 1 | idFaceOrFingerprintPIN | ID + Face/Fingerprint + PIN |
+   | 13 | 1 | idFaceFingerprintOrPIN | ID + Face + Fingerprint/PIN |
+   | 14 | 1 | idFingerprintFaceOrPIN | ID + Fingerprint + Face/PIN |
+   | 15 | 18 | unused | 미할당 필드 |
+
+1. `시스템 지원 정보`
+
+   장치가 지원 가능한 시스템 정보를 bit 단위로 아래와 같이 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | intelligentPDSupported | Intelligent PD 지원 여부. ([BS2Rs485Config 참조](configuration_api#bs2rs485config)) |
+   | 1 | 1 | updateUserSupported | 사용자 정보 부분 update 지원 여부. |
+   | 2 | 1 | simulatedUnlockSupported | Simulated 버튼 열림 지원 여부. |
+   | 3 | 1 | smartCardByteOrderSupported | smartCardByteOrder 지원 여부. ([BS2CardConfig 참조](configuration_api#bs2cardconfig)) |
+   | 4 | 1 | treatAsCSNSupported | treatAsCSN 지원 여부. ([BS2BarcodeConfig 참조](configuration_api#bs2barcodeconfig)) |
+   | 5 | 1 | rtspSupported | RTSP 지원 여부. ([BS2RtspConfig 참조](configuration_api#bs2rtspconfig)) |
+   | 6 | 1 | lfdSupported | LFD 지원 여부. |
+   | 7 | 1 | visualQRSupported | Visual QR 지원 여부. |
+
+1. `maxVoipExtensionNumbers`
+
+   확장형 VoIP의 설정 정보 중에서 내선 전화번호부에 등록된 전화번호 개수입니다.
+
+1. `시스템 지원 정보 2`
+
+   장치에서 지원하는 시스템 정보를 다음과 같이 bit 단위로 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | osdpStandardCentralSupported | OSDP Standard 지원 여부. ([BS2OsdpStandardConfig 참조](configuration_api#bs2osdpstandardconfig)) |
+   | 1 | 1 | enableLicenseFuncSupported | Device license 지원 여부. ([BS2LicenseConfig 참조](configuration_api#bs2licenseconfig)) |
+   | 2 | 1 | keypadBacklightSupported | Keypad backlight 지원 여부. |
+   | 3 | 1 | uzWirelessLockDoorSupported | U&Z wireless lock 지원 여부. |
+   | 4 | 1 | customSmartCardSupported | Custom card 지원 여부. ([BS2CustomCardConfig 참조](configuration_api#bs2customcardconfig)) |
+   | 5 | 1 | tomSupported | ToM 지원 여부. |
+   | 6 | 1 | tomEnrollSupported | ToM 등록 지원 여부. |
+   | 7 | 1 | showOsdpResultbyLED | OSDP standard 장치가 인증결과 표시 기능을 지원하는지에 대한 여부. ([BS2DisplayConfig 참조](configuration_api#bs2displayconfig)) |
+
+1. `시스템 지원 정보 3`
+
+   장치에서 지원하는 시스템 정보를 다음과 같이 bit 단위로 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | customSmartCardFelicaSupported | FeliCa custom smart card 지원 여부. |
+   | 1 | 1 | ignoreInputAfterWiegandOut | Wiegand 출력 후, 결과가 반복적으로 재유입되는 상황을 걸러내는 기능이 포함되었는지 여부. |
+   | 2 | 1 | setSlaveBaudrateSupported | RS485 slave 장치의 baudrate 설정 지원 여부. |
+   | 3 | 1 | rtspResolutionChangeSupported | <Badge only>+ v2.9.8</Badge> RTSP 비디오 해상도 변경 지원 여부. |
+   | 4 | 1 | voipResolutionChangeSupported | <Badge only>+ v2.9.8</Badge> 인터폰 비디오 해상도 변경 지원 여부. |
+   | 5 | 1 | voipTransportChangeSupported | <Badge only>+ v2.9.8</Badge> 인터폰 데이터 전송방식 변경 지원 여부. |
+   | 6 | 1 | authMsgUserInfoSupported | <Badge only>+ v2.9.8</Badge> 인증화면 사용자정보 표시방법 변경 지원 여부. |
+   | 7 | 1 | scrambleKeyboardModeSupported | <Badge only>+ v2.9.8</Badge> 스크램블 키패드 사용 변경 지원 여부 . |
+
+1. `visualFaceTemplateVersion`
+
+   <Badge only>+ v2.9.8</Badge> Visual face 장치의 경우 장치가 지원하는 템플릿 버전 정보를 나타냅니다.
+
+1. `시스템 지원 정보 4`
+
+   <Badge only>+ v2.9.12</Badge> 장치에서 지원하는 시스템 정보를 다음과 같이 bit 단위로 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | authDenyMaskSupported | 얼굴 인증에서 마스크 착용 금지 설정 지원 여부 |
+   | 1 | 1 | mifareExSupported | Mifare CardEx 지원 여부 |
+   | 2 | 1 | lockOverrideSupported | Lock override 지원 여부 |
+   | 3 | 1 | doorModeOverrideSupported | Door mode override 지원 여부 |
+   | 4 | 1 | alternateAccessTimerSupported | User override 지원 여부 |
+   | 5 | 1 | realtimeIOStatusReportSupported | 실시간 device I/O port 상태 정보 제공 여부 |
+   | 6 | 1 | dynamicSlaveDeviceNumSupported | Slave 장치 동적 연결 지원(최대 128대) 여부 |
+   | 7 | 1 | secureTamperSupported | Secure tamper 지원 여부 |
+
+1. `시스템 지원 정보 5`
+
+   <Badge only>+ v2.9.12</Badge> 장치에서 지원하는 시스템 정보를 다음과 같이 bit 단위로 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | customSmartcardSlaveSupported | Custom smart card slave 지원 여부 |
+   | 1 | 1 | serverPrivateMsgSupported | Server private message 지원 여부 |
+   | 2 | 1 | facilityCodeSupported | Facility code 지원 여부 |
+   | 3 | 1 | masterAdminSupported | Master admin 기능 지원 여부 |
+   | 4 | 1 | adminTwoStepAuthSupported | Master admin에대한 2단계 인증을 지원하는지 여부 |
+   | 5 | 1 | qrDetectGuideLedSupported | QR 감지 LED를 표시할 수 있는지 여부(XPQ2) |
+   | 6 | 1 | y2k38Supported | 2038년 이후 timestamp 처리 지원 여부 |
+   | 7 | 1 | ev2smSupported | DESFire EV2 Secure Messaging 지원 여부 |
+
+1. `시스템 지원 정보 6`
+
+   <Badge only>+ v2.9.13</Badge> 장치에서 지원하는 시스템 정보를 다음과 같이 bit 단위로 나타냅니다.
+
+   | 비트위치 | 비트 수 | 멤버명 | 설명 |
+   | :--: | :--: | --- | --- |
+   | 0 | 1 | videoStandbySupported | Video standby 화면 모드 지원 여부 |
+   | 1 | 1 | authFailLockoutSupported | 인증 반복 실패 시 lockout 지원 여부 |
+   | 2 | 1 | doorUnlockLockImproveSupported | 개선된 출입문 잠금/개방 동작 지원 여부 |
+   | 3 | 1 | toggleDoorSupported | 단일 인증으로 출입문 toggle 지원 여부 |
+   | 4 | 1 | antiTailgatingSupported | Anti-tailgating(ATG) 지원 여부 |
+   | 5 | 1 | elevatorCabinAuthSupported | Elevator cabin authentication(ECA) 지원 여부 |
+   | 6 | 1 | reAuthPreventionSupported | 재인증 방지 지원 여부 |
+   | 7 | 1 | unused | 미사용 |
+
+1. `reserved`
+
+   예약된 공간입니다.

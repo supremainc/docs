@@ -1,0 +1,49 @@
+# BS2_SetLiftAlarm
+
+Lift의 경보 상태를 갱신합니다
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetLiftAlarm(void* context, uint32_t deviceId, BS2_LIFT_ALARM_FLAG flag, BS2_LIFT_ID* liftIds, uint32_t liftIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `flag` : lift 경보 flag
+
+- [In] `liftIds` : lift id 리스트
+
+- [In] `liftIdCount` : lift id 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetLift](bs2_getlift)
+
+[BS2_GetAllLift](bs2_getalllift)
+
+[BS2_GetLiftStatus](bs2_getliftstatus)
+
+[BS2_GetAllLiftStatus](bs2_getallliftstatus)
+
+[BS2_SetLift](bs2_setlift)
+
+[BS2_RemoveLift](bs2_removelift)
+
+[BS2_RemoveAllLift](bs2_removealllift)
+
+[BS2_ReleaseFloor](bs2_releasefloor)
+
+[BS2_ActivateFloor](bs2_activatefloor)
+
+[BS2_DeActivateFloor](bs2_deactivatefloor)

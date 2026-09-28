@@ -1,0 +1,77 @@
+# BS2_RemoveAuthGroup
+
+주어진 인증 그룹을 제거합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveAuthGroup(void* context, uint32_t deviceId, uint32_t* authGroupIds, uint32_t authGroupIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `authGroupIds` : 제거할 auth group id 리스트
+
+- [In] `authGroupIdCount` : auth group id 리스트의 크기
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+Console.WriteLine("Enter the ID of the auth group which you want to remove: [ID_1,ID_2 ...]");
+Console.Write(">>>> ");
+char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+string[] authGroupIDs = Console.ReadLine().Split(delimiterChars);
+List<UInt32> authGroupIDList = new List<UInt32>();
+
+foreach (string authGroupID in authGroupIDs)
+{
+    if (authGroupID.Length > 0)
+    {
+        UInt32 item;
+        if (UInt32.TryParse(authGroupID, out item))
+        {
+            authGroupIDList.Add(item);
+        }
+    }
+}
+
+if (authGroupIDList.Count > 0)
+{
+    IntPtr authGroupIDObj = Marshal.AllocHGlobal(4 * authGroupIDList.Count);
+    IntPtr curAuthGroupIDObj = authGroupIDObj;
+    foreach (UInt32 item in authGroupIDList)
+    {
+        Marshal.WriteInt32(curAuthGroupIDObj, (Int32)item);
+        curAuthGroupIDObj = (IntPtr)((long)curAuthGroupIDObj + 4);
+    }
+
+    Console.WriteLine("Trying to remove auth gruops from device.");
+    result = (BS2ErrorCode)API.BS2_RemoveAuthGroup(sdkContext, deviceID, authGroupIDObj, (UInt32)authGroupIDList.Count);
+
+    Marshal.FreeHGlobal(authGroupIDObj);
+}
+else
+{
+    Console.WriteLine("Invalid parameter");
+}
+```
+
+## 함께 보기
+
+[BS2_GetAuthGroup](bs2_getauthgroup)
+
+[BS2_GetAllAuthGroup](bs2_getallauthgroup)
+
+[BS2_SetAuthGroup](bs2_setauthgroup)
+
+[BS2_RemoveAllAuthGroup](bs2_removeallauthgroup)

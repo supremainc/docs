@@ -1,0 +1,60 @@
+# BS2_GetSupportedConfigMask
+
+<Badge only>+ v2.5.0</Badge> 주어진 장치에서 지원하는 구성 설정 정보를 가져옵니다.
+
+이 정보는 장치의 종류별로 다를 수 있습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSupportedConfigMask(void* context, uint32_t deviceId, BS2_CONFIG_MASK* configMask);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `configMask` : 장치의 구성 설정 정보
+
+| 값 | 설명 |
+| :--: | --- |
+| 0x0000 | None |
+| 0x0001 | Factory configuration |
+| 0x0002 | System configuration |
+| 0x0004 | TCP/IP configuration |
+| 0x0008 | RS485 configuration |
+| 0x0010 | Wireless LAN configuration |
+| 0x0020 | Authentication configuration |
+| 0x0040 | Card configuration |
+| 0x0080 | Fingerprint configuration |
+| 0x0100 | Face configuration |
+| 0x0200 | Trigger Action configuration |
+| 0x0400 | Display configuration |
+| 0x0800 | Sound configuration |
+| 0x1000 | Status Signal(LED, Buzzer) configuration |
+| 0x2000 | Wiegand configuration |
+| 0x4000 | USB configuration |
+| 0x10000 | Videophone configuration |
+| 0x20000 | Interphone configuration |
+| 0x40000 | Voice over IP configuration |
+| 0x80000 | Input(Supervised input) configuration |
+| 0x100000 | Wiegand IO Device configuration |
+| 0x200000 | Time and Attendance configuration |
+| 0x400000 | DNS and Server url configuration |
+| 0x800000 | Event configuration |
+| 0x1000000 | 1x Card configuration |
+| 0x2000000 | Multi-Wiegand configuration |
+| 0x4000000 | Extended System configuration |
+| 0x10000000 | RS485 Extended configuration |
+| 0x20000000 | Extended Card configuration |
+| 0x40000000 | Daylight Saving configuration |
+| 0x80000000 | Extended DesFire Card configuration <Badge only>+ v2.6.4</Badge> |
+| 0xFFFFFFFF | All configuration |
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

@@ -1,0 +1,41 @@
+# BS2_SetAccessGroup
+
+출입 그룹을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAccessGroup(void* context, uint32_t deviceId, BS2AccessGroup* accessGroups, uint32_t accessGroupCount);
+```
+
+:::info
+
+[BS2AccessGroup 구조체 보기](access_control_api#bs2accessgroup) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `accessGroups` : 저장하고자 하는 access group 리스트
+
+- [In] `accessGroupCount` : access group 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAccessGroup](bs2_getaccessgroup)
+
+[BS2_GetAllAccessGroup](bs2_getallaccessgroup)
+
+[BS2_RemoveAccessGroup](bs2_removeaccessgroup)
+
+[BS2_RemoveAllAccessGroup](bs2_removeallaccessgroup)

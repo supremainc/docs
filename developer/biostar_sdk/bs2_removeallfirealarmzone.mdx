@@ -1,0 +1,37 @@
+# BS2_RemoveAllFireAlarmZone
+
+모든 화재 경보 구역을 제거합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveAllFireAlarmZone(void* context, uint32_t deviceId);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetFireAlarmZone](bs2_getfirealarmzone)
+
+[BS2_GetAllFireAlarmZone](bs2_getallfirealarmzone)
+
+[BS2_GetFireAlarmZoneStatus](bs2_getfirealarmzonestatus)
+
+[BS2_GetAllFireAlarmZoneStatus](bs2_getallfirealarmzonestatus)
+
+[BS2_SetFireAlarmZone](bs2_setfirealarmzone)
+
+[BS2_SetFireAlarmZoneAlarm](bs2_setfirealarmzonealarm)
+
+[BS2_RemoveFireAlarmZone](bs2_removefirealarmzone)

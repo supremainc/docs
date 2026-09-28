@@ -1,0 +1,61 @@
+# BS2_GetDeviceZone
+
+주어진 Ethernet 구역을 가져옵니다.
+
+## 지원 장치
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceZone(void* context, BS2_DEVICE_ID deviceId, const BS2_DEVICE_ZONE_TABLE_ID* Ids, uint32_t IdCount, BS2DeviceZone** deviceZoneObj, uint32_t* numDeviceZone);
+```
+
+:::info
+
+[BS2DeviceZone구조체 보기](zone_control_api#bs2devicezone) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `Ids` : 가져오고자 하는 device zone id 리스트
+
+- [In] `IdCount` : device zone id 리스트의 크기
+
+- [Out] `deviceZoneObj` : device zone 리스트를 저장할 포인터
+
+- [Out] `numDeviceZone` : device zone 리스트의 개수
+
+:::info
+
+`zoneObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAllDeviceZone](bs2_getalldevicezone)
+
+[BS2_SetDeviceZone](bs2_setdevicezone)
+
+[BS2_RemoveDeviceZone](bs2_removedevicezone)
+
+[BS2_RemoveAllDeviceZone](bs2_removealldevicezone)
+
+[BS2_SetDeviceZoneAlarm](bs2_setdevicezonealarm)

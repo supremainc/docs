@@ -1,0 +1,93 @@
+# BS2_EnrollUserEx
+
+<Badge only>+ v2.6.3</Badge> 새로운 사용자를 등록합니다.
+
+영국식 표현인 [BS2_EnrolUserEx](bs2_enroluserex)와 기능은 동일합니다.
+
+:::info
+
+**FaceStation F2**로 사용자 전송을 위해서는 [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex)를 사용해 주십시오.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_EnrollUserEx(void* context, uint32_t deviceId, BS2UserBlobEx* userBlob, uint32_t userCount, uint8_t overwrite);
+```
+
+:::info
+
+[BS2UserBlobEx 구조체 보기](user_management_api#bs2userblobex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `userBlob` : 등록하고자 하는 사용자 정보
+
+- [In] `userCount` : 사용자 개수
+
+- [In] `overwrite` : 중복된 사용자 덮어쓰기 여부
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+if (selection < userList.Count)
+{
+    BS2User user = userList[selection];
+    BS2UserBlobEx[] userBlob = Util.AllocateStructureArray<BS2UserBlobEx>(1);
+    if (dbHandler.GetUserBlobEx(ref deviceInfo, ref user, ref userBlob[0]))
+    {
+        Console.WriteLine("Trying to enroll user.");
+        BS2ErrorCode result = (BS2ErrorCode)API.BS2_EnrollUserEx(sdkContext, deviceID, userBlob, 1, 1);
+        if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+        {
+            Console.WriteLine("Got error({0}).", result);
+        }
+
+        if (userBlob[0].cardObjs != IntPtr.Zero)
+        {
+            Marshal.FreeHGlobal(userBlob[0].cardObjs);
+        }
+
+        if (userBlob[0].fingerObjs != IntPtr.Zero)
+        {
+            Marshal.FreeHGlobal(userBlob[0].fingerObjs);
+        }
+
+        if (userBlob[0].faceObjs != IntPtr.Zero)
+        {
+            Marshal.FreeHGlobal(userBlob[0].faceObjs);
+        }
+    }
+}
+```
+
+## 함께 보기
+
+[BS2_GetUserList](bs2_getuserlist)
+
+[BS2_RemoveUser](bs2_removeuser)
+
+[BS2_RemoveAllUser](bs2_removealluser)
+
+[BS2_GetUserInfos](bs2_getuserinfos)
+
+[BS2_GetUserInfosEx](bs2_getuserinfosex)
+
+[BS2_EnrollUser](bs2_enrolluser)
+
+[BS2_GetUserDatas](bs2_getuserdatas)
+
+[BS2_GetUserDatasEx](bs2_getuserdatasex)

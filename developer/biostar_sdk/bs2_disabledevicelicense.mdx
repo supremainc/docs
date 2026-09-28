@@ -1,0 +1,168 @@
+# BS2_DisableDeviceLicense
+
+<Badge only>+ v2.9.1</Badge> 마스터 장치 및 그와 연결된 슬레이브 장치들을 일괄 지정하여, 장치 내 라이선스를 비활성화시킵니다.
+
+비활성화에 대한 장치별 결과는 outResultObj 및 outNumOfResult를 통해 반환됩니다.
+
+이 기능은 장치가 라이선스 활성화 기능을 지원해야 하며, 현재 기능을 지원하는 장치 정보는 아래와 같습니다.
+
+| 지원장치 | 펌웨어 |
+| --- | --- |
+| XS2-Finger | V1.2.0 |
+| XS2-Card | V1.2.0 |
+| BS3 | V1.1.0 |
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_DisableDeviceLicense(void* context, uint32_t deviceId, const BS2LicenseBlob* licenseBlob, BS2LicenseResult** outResultObj, uint32_t* outNumOfResult);
+```
+
+:::info
+
+[BS2LicenseBlob 구조체 보기](sdk_api#bs2licenseblob)
+
+[BS2LicenseResult 구조체 보기](sdk_api#bs2licenseresult) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `licenseBlob` : 장치 라이선스 정보 구조체 포인터
+
+- [Out] `outResultObj` : 장치 라이선스 비활성화 결과를 돌려받을 구조체의 포인터
+
+- [Out] `outNumOfResult` : 장치 라이선스 비활성화 결과 구조체의 개수
+
+:::info
+
+`outResultObj` 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+int deleteDeviceLicense(void* context, BS2_DEVICE_ID id)
+{
+    DeviceControl dc(context);
+    BS2LicenseBlob licenseBlob = { 0, };
+    vector<BS2_DEVICE_ID> deviceIDs;
+    vector<BS2LicenseResult> licenseResult;
+    int sdkResult = BS_SDK_SUCCESS;
+
+    licenseBlob.licenseType = (BS2_LICENSE_TYPE)Utility::getInput<uint32_t>("Enter the license type. (0: None, 1: Visual QR)");
+    licenseBlob.numOfDevices = (uint16_t)Utility::getInput<uint32_t>("How many devices do you want to register?");
+    if (0 < licenseBlob.numOfDevices)
+    {
+        // Device ID
+        for (uint16_t idx = 0; idx < licenseBlob.numOfDevices; idx++)
+        {
+            BS2_DEVICE_ID deviceID = (BS2_DEVICE_ID)Utility::getInput<uint32_t>("Enter a device ID:");
+            deviceIDs.push_back(deviceID);
+        }
+
+        licenseBlob.deviceIDObjs = deviceIDs.data();
+
+        sdkResult = dc.disableDeviceLicense(id, &licenseBlob, licenseResult);
+        if (BS_SDK_SUCCESS == sdkResult)
+            DeviceControl::print(licenseResult);
+    }
+
+    return sdkResult;
+}
+
+int DeviceControl::disableDeviceLicense(BS2_DEVICE_ID id, const BS2LicenseBlob* licenseBlob, vector<BS2LicenseResult>& licenseResult)
+{
+    BS2LicenseResult* result = NULL;
+    uint32_t numOfResult = 0;
+    int sdkResult = BS2_DisableDeviceLicense(context_, id, licenseBlob, &result, &numOfResult);
+    if (BS_SDK_SUCCESS != sdkResult)
+    {
+        TRACE("BS2_DisableDeviceLicense call failed: %d", sdkResult);
+        return sdkResult;
+    }
+
+    licenseResult.clear();
+    for (uint32_t idx = 0; idx < numOfResult; idx++)
+    {
+        licenseResult.push_back(result[idx]);
+    }
+
+    return sdkResult;
+}
+```
+
+```csharp title='C#'
+BS2LicenseBlob licenseBlob = Util.AllocateStructure<BS2LicenseBlob>();
+
+Console.WriteLine("Try removing the license");
+
+Console.WriteLine("Enter the license type. (0: None, 1: Visual QR)");
+Console.Write(">>>> ");
+licenseBlob.licenseType = Util.GetInput((UInt16)BS2LicenseType.VISUAL_QR_MASK);
+
+Console.WriteLine("How many devices do you want to remove?");
+Console.Write(">>>> ");
+licenseBlob.numOfDevices = Util.GetInput((UInt16)1);
+
+if (0 < licenseBlob.numOfDevices)
+{
+    // Device ID
+    List<UInt32> listID = new List<UInt32>();
+    UInt32 tempID = 0;
+    for (UInt16 idx = 0; idx < licenseBlob.numOfDevices; idx++)
+    {
+        Console.WriteLine("  Slave device ID #{0}", idx);
+        Console.Write("  >> ");
+        tempID = (UInt32)Util.GetInput();
+        listID.Add(tempID);
+    }
+
+    byte[] byteListID = listID.SelectMany(BitConverter.GetBytes).ToArray();
+    int byteCount = Marshal.SizeOf(typeof(UInt32)) * licenseBlob.numOfDevices;
+
+    licenseBlob.deviceIDObjs = Marshal.AllocHGlobal(byteCount);
+    Marshal.Copy(byteListID, 0, licenseBlob.deviceIDObjs, byteCount);
+
+    // License data
+    licenseBlob.licenseLen = 0;
+    licenseBlob.licenseObj = IntPtr.Zero;
+
+    IntPtr resultObj = IntPtr.Zero;
+    UInt32 numOfResult = 0;
+
+    BS2ErrorCode result = (BS2ErrorCode)API.BS2_DisableDeviceLicense(sdkContext, deviceID, ref licenseBlob, out resultObj, out numOfResult);
+
+    if (BS2ErrorCode.BS_SDK_SUCCESS != result)
+    {
+        Console.WriteLine("Got error({0}).", result);
+    }
+    else
+    {
+        IntPtr curResult = resultObj;
+        int resultSize = Marshal.SizeOf(typeof(BS2LicenseResult));
+        for (UInt32 idx = 0; idx < numOfResult; idx++)
+        {
+            BS2LicenseResult item = (BS2LicenseResult)Marshal.PtrToStructure(curResult, typeof(BS2LicenseResult));
+            print(item, idx);
+            curResult += resultSize;
+        }
+
+        API.BS2_ReleaseObject(resultObj);
+    }
+} // if (0 < licenseBlob.numOfDevices)
+
+Marshal.FreeHGlobal(licenseBlob.deviceIDObjs);
+```
+

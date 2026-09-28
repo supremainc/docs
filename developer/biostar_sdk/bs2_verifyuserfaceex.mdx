@@ -1,0 +1,43 @@
+# BS2_VerifyUserFaceEx
+
+<Badge only>+ v2.7.2</Badge> 카드나 User ID의 인증 결과와 맵핑된 유저 정보를 단말기로 전송합니다.
+
+이 함수는 FaceStation F2 장치 지원을 포함합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_VerifyUserFaceEx(void* context, uint32_t deviceId, uint16_t seq, int handleResult, BS2UserFaceExBlob* userBlob);
+```
+
+:::info
+
+[BS2UserFaceExBlob 구조체 보기](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치식별자
+
+- [In] `seq` : 패킷 일련번호
+
+- [In] `handleResult` : 매칭 결과 값(`BS_SDK_SUCCESS` or `BS_SDK_ERROR_XXX`)
+
+- [In] `userBlob` : 매칭된 유저 정보
+
+:::info
+
+패킷 일련번호는 반드시 `OnVerifyUser`에서 전달받은 값과 동일해야 합니다.
+
+`handleResult`가 `BS_SDK_SUCCESS`이면, `userBlob`이 `null`이 아니어야 합니다.
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

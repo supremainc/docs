@@ -1,0 +1,37 @@
+# BS2_TimedUnlockDoor
+
+<Badge only>+ v2.9.12</Badge> 지정된 시간 동안 출입문을 개방하며, 시간이 경과(Timeout)하면 출입문은 다시 이전 상태(Normalize)로 복구됩니다.
+
+이 기능은 관리자가 출입문 상태 복원을 누락하는 것을 방지하는 데 유용합니다.
+
+시간은 1초부터 86,400초(24시간)까지 초 단위로 설정할 수 있으며, 시간 설정 외 기능은 [BS2_UnlockDoor](bs2_unlockdoor)와 동일합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_TimedUnlockDoor(void* context, BS2_DEVICE_ID deviceId, BS2_DOOR_FLAG flag, BS2_DOOR_ID* doorIds, uint32_t doorIdCount, uint32_t timeout);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `flag` : 추가하고자 하는 출입문 열림 상태
+
+- [In] `doorIds` : door id 리스트
+
+- [In] `doorIdCount` : door id 리스트의 개수
+
+- [In] `timeout` : 개방 시간 (초)
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_TimedLockDoor](bs2_timedlockdoor)

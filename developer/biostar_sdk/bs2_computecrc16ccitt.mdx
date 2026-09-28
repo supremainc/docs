@@ -1,0 +1,23 @@
+# BS2_ComputeCRC16CCITT
+
+CRC-16 CCITT 체크섬을 계산합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ComputeCRC16CCITT(uint8_t* data, uint32_t dataLen, uint16_t* crc);
+```
+
+## 파라미터
+
+- [In] `data` : 평문 데이터
+
+- [In] `dataLen` : 평문 데이터의 길이
+
+- [Out] `crc` : CRC-16 CCITT 체크섬을 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

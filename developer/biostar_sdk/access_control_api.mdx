@@ -1,0 +1,299 @@
+# Access Control API
+
+출입 통제를 관리하기 위한 API로 개인별, 그룹별, 타임스케줄 관리를 통해 출입시간 제한 및 관리할 수 있습니다.
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2AccessGroup
+
+```cpp
+typedef struct {
+   uint32_t id;
+   char name[BS2_MAX_ACCESS_GROUP_NAME_LEN];
+   uint8_t numAccessLevels;
+   uint8_t reserved[3];
+   uint32_t accessLevels[BS2_MAX_ACCESS_LEVEL_PER_ACCESS_GROUP];
+} BS2AccessGroup;
+```
+
+1. `id`
+
+   출입 그룹 식별자입니다.
+
+1. `name`
+
+   BioStar 애플리케이션에서 보여줄 출입 그룹 이름입니다.
+
+1. `numAccessLevels`
+
+   출입 그룹에 속한 출입 레벨의 개수입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `accessLevels`
+
+   출입 그룹에 속한 출입 레벨 리스트입니다.
+
+### BS2DoorSchedule
+
+```cpp
+typedef struct {
+   uint32_t doorID;
+   uint32_t scheduleID;
+} BS2DoorSchedule ;
+```
+
+1. `doorID`
+
+   출입문 식별자입니다.
+
+1. `scheduleID`
+
+   타임 스케줄 식별자입니다.
+
+### BS2AccessLevel
+
+```cpp
+typedef struct {
+   uint32_t id;
+   char name[BS2_MAX_ACCESS_GROUP_NAME_LEN];
+   uint8_t numDoorSchedules;
+   uint8_t reserved[3];
+   BS2DoorSchedule doorSchedules[BS2_MAX_ACCESS_LEVEL_PER_ACCESS_GROUP];
+} BS2AccessLevel;
+```
+
+1. `id`
+
+   출입 레벨 식별자입니다.
+
+1. `name`
+
+   BioStar 애플리케이션에서 보여줄 출입 레벨 이름입니다.
+
+1. `numDoorSchedules`
+
+   출입 레벨에 속한 출입문 타임 스케줄 개수입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `doorSchedules`
+
+   출입 레벨에 속한 출입문 타임 스케줄 리스트입니다.
+
+### BS2TimePeriod
+
+```cpp
+typedef struct {
+   int16_t startTime;
+   int16_t endTime;
+} BS2TimePeriod;
+```
+
+1. `startTime`
+
+   시분할 스케줄의 시작할 시간이며, 분 단위의 값을 가집니다.
+
+1. `endTime`
+
+   시분할 스케줄의 끝나는 시간이며, 분 단위의 값을 가집니다.
+
+### BS2DaySchedule
+
+```cpp
+typedef struct {
+   uint8_t numPeriods;
+   uint8_t reserved[3];
+   BS2TimePeriod periods[BS2_MAX_TIME_PERIODS_PER_DAY];
+} BS2DaySchedule;
+```
+
+1. `numPeriods`
+
+   시분할 스케줄의 개수입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `periods`
+
+   시분할 스케줄 리스트로 최대 5개까지 지정할 수 있습니다.
+
+### BS2WeeklySchedule
+
+```cpp
+typedef struct {
+   BS2DaySchedule schedule[BS2_NUM_WEEKDAYS];
+} BS2WeeklySchedule;
+```
+
+1. `schedule`
+
+   주간 스케줄로 총 7일의 일간 스케줄을 가집니다.
+
+### BS2DailySchedule
+
+```cpp
+typedef struct {
+   uint32_t startDate;
+   uint8_t numDays;
+   uint8_t reserved[3];
+   BS2DaySchedule schedule[BS2_MAX_DAYS_PER_DAILY_SCHEDULE];    
+} BS2DailySchedule;
+```
+
+1. `startDate`
+
+   스케줄이 시작할 시간입니다.
+
+1. `numDays`
+
+   총 일간 스케줄의 개수입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `schedule`
+
+   startDate부터 시작되는 일간 스케줄 리스트입니다.
+
+### BS2HolidaySchedule
+
+```cpp
+typedef struct {
+   uint32_t id;
+   BS2DaySchedule schedule;
+} BS2HolidaySchedule;
+```
+
+1. `startDate`
+
+   휴일 그룹 스케줄 식별자입니다.
+
+1. `schedule`
+
+   휴일 일간 스케줄입니다.
+
+### BS2Schedule
+
+```cpp
+typedef struct
+{
+   uint32_t id;
+   char name[BS2_MAX_SCHEDULE_NAME_LEN];
+   uint8_t isDaily;
+   uint8_t numHolidaySchedules;
+   uint8_t reserved[2];
+   union
+   {
+      BS2WeeklySchedule weekly;
+      BS2DailySchedule daily;
+   }schedule;
+   BS2HolidaySchedule holidaySchedules[BS2_MAX_HOLIDAY_GROUPS_PER_SCHEDULE];
+}BS2Schedule;
+```
+
+1. `id`
+
+   타임 스케줄 식별자입니다.
+
+   :::caution
+
+   스케줄 식별자 중 0과 1은 사전 정의된 값으로, 0은 시간할당 안함, 1은 항시의 의미를 가지는 식별자이며, 사용자가 임의로 변경할 수 없습니다.
+
+   :::
+
+1. `name`
+
+   BioStar 애플리케이션에 보여줄 타임 스케줄 이름입니다.
+
+1. `isDaily`
+
+   일간 스케줄인지 주간 스케줄인지 구분하는 flag입니다.
+
+1. `numHolidaySchedules`
+
+   휴일 스케줄 개수입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `weekly`
+
+   주간 스케줄로 isDaily가 0의 값을 가질 때 의미가 있습니다.
+
+1. `daily`
+
+   일간 스케줄로 isDaily가 0이 아닌 값을 가질 때 의미가 있습니다.
+
+1. `holidaySchedules`
+
+   휴일 스케줄 리스트입니다.
+
+### BS2Holiday
+
+```cpp
+typedef struct {
+   uint32_t date;
+   uint8_t recurrence;
+} BS2Holiday;
+```
+
+1. `date`
+
+   휴일 날짜입니다.
+
+1. `recurrence`
+
+   주기적으로 반복되는 값입니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0 | 반복 없음 |
+   | 1 | 매년 반복 |
+   | 2 | 매월 반복 |
+   | 3 | 매주 반복 |
+
+### BS2HolidayGroup
+
+```cpp
+typedef struct
+{
+   uint32_t id;
+   char name[BS2_MAX_SCHEDULE_NAME_LEN];
+   uint8_t numHolidays;
+   uint8_t reserved[3];
+   BS2Holiday holidays[BS2_MAX_HOLIDAYS_PER_GROUP];
+}BS2HolidayGroup;
+```
+
+1. `id`
+
+   휴일 그룹 식별자입니다.
+
+1. `name`
+
+   BioStar 애플리케이션에 보여줄 휴일 그룹 이름입니다.
+
+1. `numHolidays`
+
+   휴일 개수입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `holidays`
+
+   휴일 리스트입니다.

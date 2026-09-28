@@ -1,0 +1,43 @@
+# BS2_GetLogSmallBlobExFromDir
+
+<Badge only>+ v2.7.1</Badge> USB로 추출한 Data에서 EventMask를 사용하여 체온 정보를 포함한 로그를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogSmallBlobExFromDir(void* context, const char* szDir, uint16_t eventMask, BS2_EVENT_ID eventId, uint32_t amount, BS2EventSmallBlobEx** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[BS2EventSmallBlobEx 구조체 보기](log_management_api#bs2eventsmallblobex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `szDir` : Data 저장 경로
+
+- [In] `eventMask` : event mask
+
+- [In] `eventId` : 로그 레코드 ID이며, 0일 경우 처음부터 가져옵니다.
+
+- [In] `amount` : 최대 로그 레코드 개수이며, 0일 경우 eventId 이후 모든 레코드를 가져옵니다.
+
+- [Out] `logsObj` : 로그 레코드의 주소를 저장할 포인터
+
+- [Out] `numLog` : 로그 레코드의 개수
+
+:::info
+
+`logsObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

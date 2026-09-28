@@ -1,0 +1,33 @@
+# BS2_SetFacilityCodeConfig
+
+<Badge only>+ v2.9.9</Badge> Door Interface(DI-24)와 마스터 장치의 OSDP 연결이 끊어진 경우 인증코드로 사용되는 BS2FacilityCode를 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetFacilityCodeConfig(void* context, BS2_DEVICE_ID deviceId, BS2FacilityCodeConfig* config);
+```
+
+:::info
+
+[BS2FacilityCodeConfig 구조체 보기](configuration_api#bs2facilitycodeconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `config` : 인증정보를 저장할 포인터 BS2FacilityCodeConfig
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetFacilityCodeConfig](bs2_getfacilitycodeconfig)

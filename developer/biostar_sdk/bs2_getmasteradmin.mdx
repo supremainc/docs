@@ -1,0 +1,112 @@
+# BS2_GetMasterAdmin
+
+<Badge only>+ v2.9.12</Badge> CE RED(유럽 무선 장비 지침) 마스터 관리자(Master Admin) 기능을 지원하는 장치로부터 마스터 관리자 정보를 가져옵니다.
+
+:::caution
+
+Suprema 기기는 CE RED(유럽 무선 장비 지침)를 준수하며, 마스터 관리자(Master Admin) 기능을 지원합니다.
+
+관리자 설정 없이 기기를 사용할 경우, 누구나 관리자 메뉴에 접근하여 설정을 변경할 수 있는 보안 취약점이 발생할 수 있습니다.
+
+마스터 관리자 기능은 전체 관리자 등록을 의무화하여 이러한 위험을 사전에 차단합니다.
+
+해당 기능을 지원하는 기기는 반드시 마스터 관리자 등록을 완료해야 하며, 설정이 완료되지 않은 상태에서는 기기 사용이 제한됩니다.
+
+이는 기존의 운영자[BS2AuthOperatorLevel 구조체 보기](device_api#bs2authoperatorlevel)와는 차이가 있으므로 주의하시기 바랍니다.
+
+마스터 관리자 등록이 정상적으로 완료된 후 기기의 모든 기능을 사용할 수 있습니다.
+
+아래는 마스터 관리자 기능을 지원하는 기기 및 버전 정보입니다.
+
+| 장치 종류 | 지원 버전 |
+| --- | --- |
+| BS3 | V1.4.0 이후 |
+| XS2 | V1.4.0 이후 |
+| BS2a | V1.2.0 이후 |
+| BEW3 | 지원 예정 |
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetMasterAdmin(void* context, BS2_DEVICE_ID deviceId, BS2UserFaceExBlob* masterAdmin);
+```
+
+:::info
+
+[BS2UserFaceExBlob 구조체 보기](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `masterAdmin` : 마스터 관리자(Master Admin)를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+
+BS2UserFaceExBlob masterAdmin;
+memset(&masterAdmin, 0x0, sizeof(masterAdmin));
+int sdkResult = BS2_GetMasterAdmin(context_, id, &masterAdmin);
+if (BS_SDK_SUCCESS != sdkResult)
+{
+    TRACE("BS2_GetMasterAdmin call failed: %d", sdkResult);
+    return sdkResult;
+}
+
+print(masterAdmin);
+
+if (masterAdmin.cardObjs && 0 < masterAdmin.user.numCards)
+    BS2_ReleaseObject(masterAdmin.cardObjs);
+
+if (masterAdmin.fingerObjs && 0 < masterAdmin.user.numFingers)
+    BS2_ReleaseObject(masterAdmin.fingerObjs);
+
+if (0 < masterAdmin.user.numFaces)
+{
+    if (masterAdmin.faceObjs)
+        BS2_ReleaseObject(masterAdmin.faceObjs);
+    else if (masterAdmin.faceExObjs)
+        BS2_ReleaseObject(masterAdmin.faceExObjs);
+}
+
+```
+
+```csharp title='C#'
+BS2UserFaceExBlob userBlob;
+Console.WriteLine("Trying to get master admin");
+BS2ErrorCode sdkResult = (BS2ErrorCode)API.BS2_GetMasterAdmin(sdkContext, deviceID, out userBlob);
+if (sdkResult != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0})." , sdkResult);
+    return;
+}
+
+print(userBlob);
+
+if (userBlob.cardObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.cardObjs);
+if (userBlob.fingerObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.fingerObjs);
+if (userBlob.faceObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.faceObjs);
+if (userBlob.faceExObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.faceExObjs);
+
+```
+
+## 함께 보기
+
+[BS2_SetMasterAdmin](bs2_setmasteradmin)

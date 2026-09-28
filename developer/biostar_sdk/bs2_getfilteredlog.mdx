@@ -1,0 +1,102 @@
+# BS2_GetFilteredLog
+
+<Dep>[지원 중단]</Dep> 주어진 조건을 만족하는 모든 로그 레코드를 가져옵니다. 
+
+:::caution
+
+장치 로그 필터링 함수 [BS2_GetFilteredLog](bs2_getfilteredlog)는 서버가 정해준 조건을 기준으로 장치의 로그가 조건에 부합하는지 검토합니다.
+
+이는 장치가 로그 필터링을 하는데 많은 시간이 소요될 수 있음을 의미하며, 장치가 가지고 있는 로그가 늘어날수록 시간이 더 많이 소요됨을 의미합니다.
+
+또한, 로그는 장치에 영구적으로 보관되지 않습니다.
+
+장치가 보유할 수 있는 최대 로그 수를 초과할 경우, 장치는 가장 오래된 로그부터 덮어쓰게 되므로 일정 기간이 지난 로그는 자동으로 삭제될 수 있습니다.
+
+장치의 모든 로그는 서버에 보관하고 관리하는 것을 권장합니다.
+
+장치로부터 로그를 일괄 수신하는 [BS2_GetLog](bs2_getlog) 함수와 이후로 발생하는 로그만 실시간으로 수신할 수 있는 [BS2_StartMonitoringLog](bs2_startmonitoringlog) 함수를 적절히 조합하여 장치의 모든 로그를 서버가 적당한 DBMS에 보관하고, DBMS로부터 로그를 필터링하는 것을 권장합니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFilteredLog(void* context, uint32_t deviceId, char* uid, uint16_t eventCode, uint32_t start, uint32_t end, uint8_t tnakey, BS2Event** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[BS2Event 구조체 보기](log_management_api#bs2event) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `uid` : 사용자 식별자이며 NULL일 경우 모든 사용자를 의미합니다.
+
+- [In] `eventCode` : 로그 이벤트 코드이며 0일 경우 모든 이벤트를 의미합니다.
+
+- [In] `start` : 조건 검색의 시작 시간이며 0일 경우 제한이 없음을 의미합니다.
+
+- [In] `end` : 조건 검색의 마지막 시간이며 0일 경우 제한이 없음을 의미합니다.
+
+- [In] `tnakey` : TNA key이며 0일 경우 모든 TNA key를 의미합니다.
+
+- [Out] `logsObj` : 로그 레코드의 주소를 저장할 포인터
+
+- [Out] `numLog` : 로그 레코드의 개수
+
+:::info
+
+`logsObj` 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+Type structureType = typeof(BS2Event);
+int structSize = Marshal.SizeOf(structureType);
+IntPtr uid = IntPtr.Zero;
+UInt16 eventCode = 0;
+UInt32 start = 0;
+UInt32 end = 0;
+byte tnaKey = 0;
+IntPtr outEventLogObjs = IntPtr.Zero;
+UInt32 outNumEventLogs = 0;
+
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetFilteredLog(sdkContext, deviceID, uid, eventCode, start, end, tnaKey, out outEventLogObjs, out outNumEventLogs);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+else if (outNumEventLogs > 0)
+{
+    IntPtr curEventLogObjs = outEventLogObjs;
+    for (int idx = 0; idx < outNumEventLogs; idx++)
+    {
+        BS2Event eventLog = (BS2Event)Marshal.PtrToStructure(curEventLogObjs, structureType);
+        Console.WriteLine(Util.GetLogMsg(eventLog));
+        curEventLogObjs = (IntPtr)((long)curEventLogObjs + structSize);
+    }
+
+    API.BS2_ReleaseObject(outEventLogObjs);
+}
+
+```
+
+## 함께 보기
+
+[BS2_GetLog](bs2_getlog)
+
+[BS2_ClearLog](bs2_clearlog)

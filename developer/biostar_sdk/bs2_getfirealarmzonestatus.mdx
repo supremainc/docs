@@ -1,0 +1,57 @@
+# BS2_GetFireAlarmZoneStatus
+
+주어진 화재 경보 구역의 상태 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFireAlarmZoneStatus(void* context, uint32_t deviceId, uint32_t* zoneIds, uint32_t zoneIdCount, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[BS2ZoneStatus 구조체 보기](zone_control_api#bs2zonestatus) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zoneIds` : 가져오고자 하는 fire alarm zone id 리스트
+
+- [In] `zoneIdCount` : fire alarm zone id 리스트의 크기
+
+- [Out] `zoneStatusObj` : zone status 리스트를 저장할 포인터
+
+- [Out] `numZoneStatus` : zone status 리스트의 개수
+
+:::info
+
+`zoneStatusObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetFireAlarmZone](bs2_getfirealarmzone)
+
+[BS2_GetAllFireAlarmZone](bs2_getallfirealarmzone)
+
+[BS2_GetAllFireAlarmZoneStatus](bs2_getallfirealarmzonestatus)
+
+[BS2_SetFireAlarmZone](bs2_setfirealarmzone)
+
+[BS2_SetFireAlarmZoneAlarm](bs2_setfirealarmzonealarm)
+
+[BS2_RemoveFireAlarmZone](bs2_removefirealarmzone)
+
+[BS2_RemoveAllFireAlarmZone](bs2_removeallfirealarmzone)

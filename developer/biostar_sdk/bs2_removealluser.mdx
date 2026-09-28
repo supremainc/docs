@@ -1,0 +1,56 @@
+# BS2_RemoveAllUser
+
+모든 사용자를 삭제합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveAllUser(void* context, uint32_t deviceId);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+int removeAllUser(BS2_DEVICE_ID id)
+{
+    int sdkResult = BS2_RemoveAllUser(context_, id);
+    if (BS_SDK_SUCCESS != sdkResult)
+        TRACE("BS2_RemoveAllUser call failed: %d", sdkResult);
+
+    return sdkResult;
+}
+```
+
+```csharp title='C#'
+ BS2ErrorCode result = (BS2ErrorCode)API.BS2_RemoveAllUser(sdkContext, deviceID);
+```
+
+## 함께 보기
+
+[BS2_GetUserList](bs2_getuserlist)
+
+[BS2_RemoveUser](bs2_removeuser)
+
+[BS2_GetUserInfos](bs2_getuserinfos)
+
+[BS2_GetUserInfosEx](bs2_getuserinfosex)
+
+[BS2_EnrolUser](bs2_enroluser)
+
+[BS2_EnrolUserEx](bs2_enroluserex)
+
+[BS2_GetUserDatas](bs2_getuserdatas)
+
+[BS2_GetUserDatasEx](bs2_getuserdatasex)

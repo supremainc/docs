@@ -1,0 +1,21 @@
+# BS2_UnlockDevice
+
+장치 잠금을 해제하여 사용자 인증을 허용합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_UnlockDevice(void* context, uint32_t deviceId);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

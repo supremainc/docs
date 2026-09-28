@@ -1,0 +1,49 @@
+# BS2_SetGlobalAPBViolationByDoorOpenHandler
+
+<Badge only>+ v2.7.0</Badge> 안티패스백 경보가 발생했을 때 글로벌 판정을 위해 호출되는 콜백 함수를 등록합니다.
+
+일반적으로 Global APB 함수인 [BS2_SetCheckGlobalAPBViolationHandler](bs2_setcheckglobalapbviolationhandler)가 인증만으로 출입가능 여부를 판단했다면, Global APB By Door Open은 사용자 인증과 출입문 센서를 기반의 실제 출입여부, 2단계로 구성됩니다.
+
+* 1차로 사용자가 인증을 시도하면, 인증 확인을 위해 [OnCheckGlobalAPBViolationByDoorOpen](zone_control_api#oncheckglobalapbviolationbydooropen)의 호출이 이루어지며,
+
+* 2차로 출입문 센서를 통해 사용자의 실제 출입이 이루어졌는지 추가로 판단하여 [OnUpdateGlobalAPBViolationByDoorOpen](zone_control_api#onupdateglobalapbviolationbydooropen)의 호출이 이루어집니다.
+
+* 사용자의 최종상태는 [OnUpdateGlobalAPBViolationByDoorOpen](zone_control_api#onupdateglobalapbviolationbydooropen)를 통해 update하면 됩니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetGlobalAPBViolationByDoorOpenHandler(void* context, OnCheckGlobalAPBViolationByDoorOpen ptrCheck, OnUpdateGlobalAPBViolationByDoorOpen ptrUpdate);
+```
+
+:::info
+
+[OnCheckGlobalAPBViolationByDoorOpen 콜백함수 보기](zone_control_api#oncheckglobalapbviolationbydooropen)
+
+[OnUpdateGlobalAPBViolationByDoorOpen 콜백함수 보기](zone_control_api#onupdateglobalapbviolationbydooropen) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `ptrCheck` : 안티패스백 경보가 발생했을 때 글로벌 판정을 위해 호출되는 콜백 함수
+
+- [In] `ptrUpdate` : 인증된 사용자의 최종 상태를 갱신하기 위해 호출되는 콜백 함수
+
+:::info
+
+출입문 센서 기반의 글로벌 안티패스백 서비스를 이용하기 위해서는 [BS2AuthConfig](configuration_api#bs2authconfig)의 `useGlobalAPB`가 `true`로, [BS2DoorSensor](door_control_api#bs2doorsensor)의 `apbUseDoorSensor`가 `true`로 설정되어야 합니다.
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_CheckGlobalAPBViolationByDoorOpen](bs2_checkglobalapbviolationbydooropen)

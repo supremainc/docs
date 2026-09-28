@@ -24,3 +24,9 @@ export function StatusUpdating() {
         <div className={clsx(styles.status, styles.updating)}></div>
     )
 }
+
+export function Dep({children}) {
+    return (
+        <span className={styles.deprecate}>{children}</span>
+    )
+}

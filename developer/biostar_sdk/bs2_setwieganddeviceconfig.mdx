@@ -1,0 +1,29 @@
+# BS2_SetWiegandDeviceConfig
+
+Wiegand 신호 설정 정보를 저장합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetWiegandDeviceConfig(void* context, uint32_t deviceId, BS2WiegandDeviceConfig* config);
+```
+
+:::info
+
+[BS2WiegandDeviceConfig 구조체 보기](configuration_api#bs2wieganddeviceconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `config` : Wiegand 신호 설정 정보 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

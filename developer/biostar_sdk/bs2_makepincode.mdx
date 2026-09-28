@@ -1,0 +1,29 @@
+# BS2_MakePinCode
+
+일반 문자를 PIN으로 암호화합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_MakePinCode(void* context, char* plaintext, unsigned char* ciphertext);
+```
+
+## 파라미터
+
+- [In] `context` : 장치 관리 Context
+
+- [In] `plaintext` : 암호화할 평문 문자열
+
+- [Out] `ciphertext` : 암호화된 데이터를 저장할 버퍼
+
+:::info
+
+ciphertext 버퍼 크기는 `BS2_PIN_HASH_SIZE`입니다.
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

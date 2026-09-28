@@ -6187,6 +6187,10 @@
     "width": 1200,
     "height": 495
   },
+  "/img/common/biostar_2_sdk_framework_1.png": {
+    "width": 600,
+    "height": 388
+  },
   "/img/common/bsair-cloud-architecture.webp": {
     "width": 1439,
     "height": 710
@@ -6527,9 +6531,17 @@
     "width": 800,
     "height": 455
   },
+  "/img/common/pre-build_event_command_line.png": {
+    "width": 1000,
+    "height": 595
+  },
   "/img/common/qr.svg": {
     "width": 29,
     "height": 29
+  },
+  "/img/common/sdk_hero.png": {
+    "width": 945,
+    "height": 471
   },
   "/img/common/setting-system-restore-complete.png": {
     "width": 635,
@@ -6554,6 +6566,10 @@
   "/img/common/smartcardapi-structure.png": {
     "width": 2072,
     "height": 1192
+  },
+  "/img/common/workflow.png": {
+    "width": 650,
+    "height": 540
   },
   "/img/cover/bioentryp2.png": {
     "width": 370,
@@ -8411,6 +8427,10 @@
     "width": 496,
     "height": 598
   },
+  "/img/device/installation-device-tilt_bracket0-bew3.svg": {
+    "width": 825,
+    "height": 380
+  },
   "/img/device/installation-device-tilt_bracket0-bs3.svg": {
     "width": 825,
     "height": 380
@@ -8431,6 +8451,10 @@
     "width": 483,
     "height": 348
   },
+  "/img/device/installation-device-tilt_bracket3-bew3.svg": {
+    "width": 487,
+    "height": 545
+  },
   "/img/device/installation-device-tilt_bracket3-bs3.svg": {
     "width": 466,
     "height": 524
@@ -8438,6 +8462,10 @@
   "/img/device/installation-device-tilt_bracket3-fs2.svg": {
     "width": 483,
     "height": 406
+  },
+  "/img/device/installation-device-tilt_bracket4-bew3.svg": {
+    "width": 501,
+    "height": 576
   },
   "/img/device/installation-device-tilt_bracket4-bs3.svg": {
     "width": 509,
@@ -8447,9 +8475,17 @@
     "width": 421,
     "height": 476
   },
+  "/img/device/installation-device-tilt_bracket5-bew3.svg": {
+    "width": 254,
+    "height": 616
+  },
   "/img/device/installation-device-tilt_bracket5-bs3.svg": {
     "width": 233,
     "height": 611
+  },
+  "/img/device/installation-device-tilt_bracket6-bew3.svg": {
+    "width": 473,
+    "height": 411
   },
   "/img/device/installation-device-tilt_bracket6-bs3.svg": {
     "width": 473,
@@ -8464,8 +8500,8 @@
     "height": 331
   },
   "/img/device/installation-device1-bew3.svg": {
-    "width": 209,
-    "height": 396
+    "width": 276,
+    "height": 496
   },
   "/img/device/installation-device1-bln2.svg": {
     "width": 200,
@@ -8516,8 +8552,8 @@
     "height": 362
   },
   "/img/device/installation-device2-bew3.svg": {
-    "width": 405,
-    "height": 400
+    "width": 448,
+    "height": 568
   },
   "/img/device/installation-device2-bln2.svg": {
     "width": 200,
@@ -8564,8 +8600,8 @@
     "height": 215
   },
   "/img/device/installation-device3-bew3.svg": {
-    "width": 219,
-    "height": 151
+    "width": 185,
+    "height": 618
   },
   "/img/device/installation-device3-bln2.svg": {
     "width": 150,
@@ -15222,6 +15258,10 @@
   "/img/en/clue/test-period-set-device-list.png": {
     "width": 1706,
     "height": 405
+  },
+  "/img/en/common/sdk_hero.png": {
+    "width": 945,
+    "height": 471
   },
   "/img/en/device/auth-dynamic-roi.png": {
     "width": 800,

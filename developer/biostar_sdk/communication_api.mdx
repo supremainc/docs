@@ -1,0 +1,47 @@
+# Communication API
+
+장치 통신을 제어하는 API로써 통신 인터페이스는 LAN, USB, RS485 등이 있습니다. 실시간으로 장치의 연결유무와 탐색 결과를 받으려면 [BS2_SetDeviceEventListener](bs2_setdeviceeventlistener) 함수를 통해 콜백 함수를 등록하십시오.
+
+---
+
+<DocCardList />
+
+## 콜백 함수
+
+```cpp
+typedef void (*OnDeviceFound)(uint32_t deviceId);
+typedef void (*OnDeviceAccepted)(BS2_DEVICE_ID deviceId);
+typedef void (*OnDeviceConnected)(uint32_t deviceId);
+typedef void (*OnDeviceDisconnected)(uint32_t deviceId);
+typedef void (*OnAlarmFired)(BS2_DEVICE_ID deviceId, const BS2Event* event);
+typedef void (*OnInputDetected)(BS2_DEVICE_ID deviceId, const BS2Event* event);
+typedef void (*OnConfigChanged)(BS2_DEVICE_ID deviceId, uint32_t configMask);
+```
+
+1. `OnDeviceFound`
+
+   Subnet에서 새로운 BioStar 장치를 찾았을 때 호출되는 콜백 함수입니다.
+
+1. `OnDeviceAccepted`
+
+   BioStar 장치가 BioStar 애플리케이션으로 연결을 요청할 때 호출되는 콜백 함수입니다.
+
+1. `OnDeviceConnected`
+
+   장치와 BioStar 애플리케이션이 연결되었을 때 호출되는 콜백 함수입니다.
+
+1. `OnDeviceDisconnected`
+
+   장치와 BioStar 애플리케이션의 연결이 끊어졌을 때 호출되는 콜백 함수입니다.
+
+1. `OnAlarmFired`
+
+   Zone에 설정한 알람이 발생되면 호출되는 콜백 함수입니다.
+
+1. `OnInputDetected`
+
+   입력 신호가 발생되면 호출되는 콜백 함수입니다.
+
+1. `OnConfigChanged`
+
+   단말기를 조작하여 Configuration이 변경될 때 호출되는 콜백 함수입니다.

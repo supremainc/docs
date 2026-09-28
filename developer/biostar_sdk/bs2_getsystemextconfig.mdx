@@ -1,0 +1,35 @@
+# BS2_GetSystemExtConfig
+
+Master와 Slave 장치간의 암호 설정 정보를 가져옵니다
+
+:::info
+
+보안강화를 위해 키 값은 취득할 수 없습니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSystemExtConfig(void* context, uint32_t deviceId, BS2SystemConfigExt* config);
+```
+
+:::info
+
+[BS2SystemConfigExt구조체 보기](configuration_api#bs2systemconfigext) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `config` : Master와 Slave 장치간의 암호 설정을 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

@@ -1,0 +1,55 @@
+# BS2_ScanFingerprintEx
+
+<Badge only>+ v2.5.0</Badge> 장치에서 지문을 스캔하고, 템플릿데이터와 스캔된 지문이미지의 점수를 취득합니다.
+
+:::info
+
+일반적으로 좋은 지문이미지에서 좋은 지문품질을 얻을 수 있으므로 이미지 점수를 그대로 사용해도 무방합니다만, 이와 별개로 지문 템플릿의 품질을 얻고자 한다면 <Badge only>v2.6.4</Badge>에서 추가된 [BS2_GetFingerTemplateQuality](bs2_getfingertemplatequality)를 참고하십시오. 
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ScanFingerprintEx(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outquality, OnReadyToScan ptrReadyToScan);
+```
+
+:::info
+
+[BS2Fingerprint 구조체 보기](fingerprint_api#bs2fingerprint) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `finger` : 템플릿 데이터를 저장할 포인터
+
+- [In] `templateIndex` : 템플릿 데이터 인덱스
+
+- [In] `quality` : 요구되는 지문 이미지 품질
+
+- [In] `templateFormat` : 지문 템플릿 저장 형식
+
+- [Out] `outquality` : 추출된 지문 이미지 품질점수
+
+- [Out] `ptrReadyToScan` : 지문 스캔 준비가 완료되었을 때 호출되는 콜백 함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_ScanFingerprint](bs2_scanfingerprint)
+
+[BS2_VerifyFingerprint](bs2_verifyfingerprint)
+
+[BS2_GetLastFingerprintImage](bs2_getlastfingerprintimage)
+
+[BS2_GetFingerTemplateQuality](bs2_getfingertemplatequality)

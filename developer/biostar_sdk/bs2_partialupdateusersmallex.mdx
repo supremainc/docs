@@ -1,0 +1,70 @@
+# BS2_PartialUpdateUserSmallEx
+
+<Badge only>+ v2.8.3</Badge> 이미 등록된 사용자의 부분 정보를 갱신합니다. 갱신하고자 하는 사용자는 이미 등록된 존재하는 사용자이어야 합니다.
+
+갱신하고자 하는 부분 정보는 mask를 이용해 선택적으로 지정할 수 있습니다.
+
+부분 정보를 삭제하고자 하는 경우, [BS2User](user_management_api#bs2user)의 infoMask와 조합하여 삭제할 수 있습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_PartialUpdateUserSmallEx(void* context, uint32_t deviceId, BS2_USER_MASK mask, BS2UserSmallBlobEx* userBlob, uint32_t userCount);
+```
+
+:::info
+
+[BS2UserSmallBlobEx 구조체 보기](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `mask` : 갱신하고자 하는 사용자 부분에 대한 mask
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0x0002 | 사용자설정(개인인증모드,유효기간) |
+   | 0x0004 | 사용자명 |
+   | 0x0008 | 이미지 |
+   | 0x0010 | PIN |
+   | 0x0020 | 카드 |
+   | 0x0040 | 지문 |
+   | 0x0080 | 얼굴 |
+   | 0x0100 | 출입그룹 |
+   | 0x0200 | 작업코드 |
+   | 0x0400 | 개인메시지 |
+   | 0x0800 | 얼굴 (**Visual Face 지원**) |
+   | 0x1000 | 사용자설정 (**Visual Face 지원**) |
+
+- [In] `userBlob` : 갱신하고자 하는 사용자 부분 정보
+
+- [In] `userCount` : 사용자 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, `BS2_EVENT_USER_UPDATE_PARTIAL_SUCCESS` 이벤트가 발생됩니다.
+
+실패했을 경우 상응하는 에러 코드를 반환하고, 장치 발생 오류라면 `BS2_EVENT_USER_UPDATE_PARTIAL_FAIL` 이벤트가 발생됩니다.
+
+## 함께 보기
+
+[BS2_PartialUpdateUser](bs2_partialupdateuser)
+
+[BS2_PartialUpdateUserEx](bs2_partialupdateuserex)
+
+[BS2_PartialUpdateUserSmall](bs2_partialupdateusersmall)
+
+[BS2_PartialUpdateUserSmallEx](bs2_partialupdateusersmallex)
+
+[BS2_PartialUpdateUserFaceEx](bs2_partialupdateuserfaceex)
+
+## 샘플 코드
+
+[BS2_PartialUpdateUserFaceEx](bs2_partialupdateuserfaceex)의 샘플 코드 참조

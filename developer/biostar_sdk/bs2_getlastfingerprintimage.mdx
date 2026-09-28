@@ -1,0 +1,37 @@
+# BS2_GetLastFingerprintImage
+
+장치에서 지문을 스캔하고 이미지를 추출합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLastFingerprintImage(void* context, uint32_t deviceId, uint8_t** imageObj, uint32_t* imageWidth, uint32_t* imageHeight);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `imageObj` : 스캔 이미지 데이터를 저장할 포인터
+
+- [In] `imageWidth` : 이미지 width
+
+- [In] `imageHeight` : 이미지 Height
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_ScanFingerprint](bs2_scanfingerprint)
+
+[BS2_ScanFingerprintEx](bs2_scanfingerprintex)
+
+[BS2_VerifyFingerprint](bs2_verifyfingerprint)
+
+[BS2_GetFingerTemplateQuality](bs2_getfingertemplatequality)

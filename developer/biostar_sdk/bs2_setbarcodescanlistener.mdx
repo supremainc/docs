@@ -1,0 +1,21 @@
+# BS2_SetBarcodeScanListener
+
+<Badge only>+ v2.8.2</Badge> Barcode 입력을 감지하는 listener 함수를 등록합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetBarcodeScanListener(void* context, OnBarcodeScanned ptrBarcodeScanned);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `ptrBarcodeScanned` : 장치에 barcode가 scan 되어졌을 때, 해당 barcode를 수신 받기위한 콜백 함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

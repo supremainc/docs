@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   useDocById,
+  useDocsVersion,
   findFirstSidebarItemLink,
 } from '@docusaurus/plugin-content-docs/client';
 import {
@@ -26,16 +27,24 @@ function getIconTitleProps(item) {
 function CardCategory({item}) {
   const href = findFirstSidebarItemLink(item);
   const categoryItemsPlural = useDocCardDescriptionCategoryItemsPlural();
+  const version = useDocsVersion();
+  const docId = href ? href.replace('/developer/', '') : undefined;
+  // useDocById는 id에 해당하는 문서가 없으면 예외를 던지므로,
+  // href에서 추정한 docId(자동 생성 카테고리 인덱스 등 실제 문서가 아닐 수 있음)는
+  // version.docs에서 안전하게 조회한다.
+  const groupDoc = docId ? version.docs[docId] : undefined;
+
   // Unexpected: categories that don't have a link have been filtered upfront
   if (!href) {
     return null;
   }
+
   return (
     <Layout
       item={item}
       className={item.className}
       href={href}
-      description={item.description ?? categoryItemsPlural(item.items.length)}
+      description={groupDoc?.description ?? item.description ?? categoryItemsPlural(item.items.length)}
       {...getIconTitleProps(item)}
     />
   );

@@ -1,0 +1,27 @@
+# BS2_SetAutoConnection
+
+자동연결 여부를 설정합니다.
+
+자동연결이 설정되어 있으면, 장치로부터 소켓 연결이 수락되어진 이후 [BS2_SetDeviceEventListener](bs2_setdeviceeventlistener)에서 지정한 connected 콜백 함수를 자동으로 호출해줍니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAutoConnection(void* context, int enable);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `enable` : 자동연결 설정 여부
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_IsAutoConnection](bs2_isautoconnection)

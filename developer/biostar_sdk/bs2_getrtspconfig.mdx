@@ -1,0 +1,29 @@
+# BS2_GetRtspConfig
+
+<Badge only>+ v2.8.3</Badge> RTSP 설정을 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetRtspConfig(void* context, uint32_t deviceId, BS2RtspConfig* config);
+```
+
+:::info
+
+[BS2RtspConfig 구조체 보기](configuration_api#bs2rtspconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `config` : RTSP 설정 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

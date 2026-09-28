@@ -1,0 +1,72 @@
+# BS2_InitializeEx
+
+Context를 초기화 하고 두 번째 인자로 지정한 IP 주소로 소켓을 초기화합니다.
+
+:::info
+
+장치 제어 API를 호출하기전에 반드시 먼저 호출되어야 합니다. 
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_InitializeEx(void* context, const char* hostIPAddr);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `hostIPAddr` : host IP Address
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++' title='bs2_initializeex'
+void initializeSDK()
+{
+   void* context_ = BS2_AllocateContext();
+
+   string hostAddr = Utility::getInput<string>("Please enter the host network address.");
+   sdkResult = BS2_InitializeEx(context_, hostAddr.c_str());
+   if (BS_SDK_SUCCESS != sdkResult)
+   {
+      TRACE("BS2_InitializeEx call failed: %d", sdkResult);
+      BS2_ReleaseContext(context_);
+      context_ = NULL;
+   }
+}
+```
+
+## 샘플 코드
+
+```csharp title='C#'
+public void initializeSDK()
+{
+   sdkContext = API.BS2_AllocateContext();
+   if (sdkContext == IntPtr.Zero)
+   {
+      Console.WriteLine("Can't allocate sdk context.");
+      return;
+   }
+
+   string deviceIpAddress = Console.ReadLine();
+   IntPtr ptrIPAddr = Marshal.StringToHGlobalAnsi(deviceIpAddress);
+
+   BS2ErrorCode result = (BS2ErrorCode)API.BS2_InitializeEx(sdkContext, ptrIPAddr);
+   if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+   {
+      Console.WriteLine("SDK initialization failed with : {0}, {1}", result, deviceIpAddress);
+      API.BS2_ReleaseContext(sdkContext);
+      sdkContext = IntPtr.Zero;
+      return;
+   }
+}
+```
+

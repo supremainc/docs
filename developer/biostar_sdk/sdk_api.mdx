@@ -1,0 +1,93 @@
+# SDK API
+
+장치를 관리하는 정보를 초기화 하고, 동적 메모리 제어와 PIN 생성을 위해 사용되는 API입니다.
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2EncryptKey
+
+```cpp
+enum
+{
+    BS2_ENC_KEY_SIZE = 32,
+};
+
+typedef struct
+{
+    uint8_t key[BS2_ENC_KEY_SIZE];
+    uint8_t reserved[32];
+} BS2EncryptKey;
+```
+
+1. `key`
+
+   장치에서 사용되는 키 값입니다.
+
+1. `reserved`
+
+   예약된 영역입니다.
+
+### BS2LicenseBlob
+
+```cpp
+typedef struct {
+    BS2_LICENSE_TYPE    licenseType;
+    uint16_t            numOfDevices;
+    BS2_DEVICE_ID*      deviceIDObjs;
+    uint32_t            licenseLen;
+    uint8_t*            licenseObj;
+} BS2LicenseBlob;
+```
+
+1. `licenseType`
+
+   라이선스의 종류를 나타냅니다.
+
+   | 값 | 설명 |
+   | --- | --- |
+   | 0x0000 | None |
+   | 0x0001 | Visual QR |
+
+1. `numOfDevices`
+
+   라이선스 활성화 장치의 개수입니다.
+
+1. `deviceIDObjs`
+
+   라이선스 정보가 내려질 slave 장치들입니다.
+
+1. `licenseLen`
+
+   라이선스 활성화 파일의 크기입니다.
+
+1. `licenseObj`
+
+   라이선스 활성화 데이터 블록입니다.
+
+### BS2LicenseResult
+
+```cpp
+typedef struct {
+    BS2_DEVICE_ID       deviceID;
+    BS2_LICENSE_STATUS  status;
+} BS2LicenseResult;
+```
+
+1. `deviceID`
+
+   장치 식별자입니다.
+
+1. `status`
+
+   라이선스 상태 정보입니다.
+
+   | 값 | 설명 |
+   | --- | --- |
+   | 0 | Not supported (지원 안함) |
+   | 1 | Disable (꺼짐) |
+   | 2 | Enable (켜짐) |
+   | 3 | Expired (만료됨) |

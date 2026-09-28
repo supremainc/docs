@@ -1,0 +1,73 @@
+# BS2_GetNormalizedImageFaceEx
+
+<Badge only>+ v2.8</Badge> **Visual Face 기반** WARP 되지 않은(가공되지 않은) 얼굴 이미지로, WARP 이미지를 만듭니다.
+
+서버는 WARP 이미지를 사용자 별로 보관하다가, 서버매칭 요청 시 해당 사용자의 WARP 이미지를 장치에 내려주는 형태로 서버 매칭의 구현이 가능합니다.
+
+WARP에 대한 설명은 [BS2FaceEx](face_api#bs2faceex)의 `flag` 필드를 참고 바랍니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetNormalizedImageFaceEx(void* context, uint32_t deviceId, const uint8_t* unwarpedImage, uint32_t unwarpedImageLen, uint8_t* warpedImage, uint32_t* warpedImageLen);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `unwarpedImage` : WARP 되어지지 않은 일반 얼굴 이미지 정보를 가리키는 포인터. ([BS2FaceEx](face_api#bs2faceex)의 `rawImageData` 참조)
+
+- [In] `unwarpedImageLen` : unwarpedImage 데이터의 크기
+
+- [Out] `warpedImage` : WARP된 이미지 정보를 취득할 버퍼의 포인터
+
+- [Out] `warpedImageLen` : 취득된 warpedImage 데이터의 크기
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+sdkResult = BS2_GetNormalizedImageFaceEx(context_, id, unwarpedBuffer.get(), unwarpedSize, warpedBuffer.get(), &warpedSize);
+if (BS_SDK_SUCCESS != sdkResult)
+{
+    TRACE("BS2_GetNormalizedImageFaceEx call failed: %d", sdkResult);
+    return sdkResult;
+}
+```
+
+```csharp title='C#'
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetNormalizedImageFaceEx(sdkContext, deviceID, unwarpedImagePtr, unwarpedImageLen, warpedImagePtr, out warpedImageLen);
+if (BS2ErrorCode.BS_SDK_SUCCESS == result)
+{
+    byte[] warpedBuffer = new byte[warpedImageLen];
+    Array.Clear(warpedBuffer, 0, (int)warpedImageLen);
+    Marshal.Copy(warpedImagePtr, warpedBuffer, 0, (int)warpedImageLen);
+            
+    Console.WriteLine("Enter the path and name of warped image file");
+    Console.Write(">> ");
+    string warpedPath = Console.ReadLine();
+    if (warpedPath.Length == 0)
+    {
+        Console.WriteLine("The path and name can not be empty.");
+        return;
+    }
+
+    File.WriteAllBytes(warpedPath, warpedBuffer);
+}
+else
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+
+Marshal.FreeHGlobal(unwarpedImagePtr);
+Marshal.FreeHGlobal(warpedImagePtr);
+```
+

@@ -1,0 +1,36 @@
+# BS2_ResetConfigExceptNetInfo
+
+<Badge only>+ v2.6.0</Badge> 장치의 설정 정보를 초기화합니다. (네트워크 설정 제외)
+
+다음 장치 버전 또는 그 이후의 버전에서 지원되며 표시되지 않은 다른 장치의 경우 모두 지원합니다 
+
+| 모델 | 버전 |
+| :--: | :--: |
+| BS2 | V1.6.0 |
+| BSA2 | V1.5.0 |
+| CS-40 | V1.1.0 |
+| BEP2 | V1.1.0 |
+| BSL2 | V1.3.0 |
+| BEW2 | V1.2.0 |
+| BLN2 | V1.0.0 |
+| FS2 | V1.1.0 |
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ResetConfigExceptNetInfo(void* context, uint32_t deviceId, uint8_t includingDB);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `includingDB` : access group, level, schedule, holiday group, door, zone 설정 정보도 삭제할지 여부입니다.
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

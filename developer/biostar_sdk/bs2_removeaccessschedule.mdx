@@ -1,0 +1,35 @@
+# BS2_RemoveAccessSchedule
+
+주어진 타임 스케줄을 제거합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveAccessSchedule(void* context, BS2_DEVICE_ID deviceId, uint32_t* accessSheduleIds, uint32_t accessScheduleIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `accessSheduleIds` : 제거할 access schedule id 리스트
+
+- [In] `accessScheduleIdCount` : access schedule id 리스트의 크기
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAccessSchedule](bs2_getaccessschedule)
+
+[BS2_GetAllAccessSchedule](bs2_getallaccessschedule)
+
+[BS2_SetAccessSchedule](bs2_setaccessschedule)
+
+[BS2_RemoveAllAccessSchedule](bs2_removeallaccessschedule)

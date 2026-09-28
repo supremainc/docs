@@ -1,0 +1,47 @@
+# BS2_SetScheduledLockUnlockZone
+
+스케줄 잠금/개방 구역을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetScheduledLockUnlockZone(void* context, uint32_t deviceId, BS2ScheduledLockUnlockZone* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[BS2ScheduledLockUnlockZone 구조체 보기](zone_control_api#bs2scheduledlockunlockzone) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zones` : scheduled lock/unlock zone 리스트
+
+- [In] `zoneCount` : scheduled lock/unlock zone 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetScheduledLockUnlockZone](bs2_getscheduledlockunlockzone)
+
+[BS2_GetAllScheduledLockUnlockZone](bs2_getallscheduledlockunlockzone)
+
+[BS2_GetScheduledLockUnlockZoneStatus](bs2_getscheduledlockunlockzonestatus)
+
+[BS2_GetAllScheduledLockUnlockZoneStatus](bs2_getallscheduledlockunlockzonestatus)
+
+[BS2_SetScheduledLockUnlockZoneAlarm](bs2_setscheduledlockunlockzonealarm)
+
+[BS2_RemoveScheduledLockUnlockZone](bs2_removescheduledlockunlockzone)
+
+[BS2_RemoveAllScheduledLockUnlockZone](bs2_removeallscheduledlockunlockzone)

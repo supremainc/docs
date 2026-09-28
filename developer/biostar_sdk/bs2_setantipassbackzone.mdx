@@ -1,0 +1,57 @@
+# BS2_SetAntiPassbackZone
+
+안티패스백 구역을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAntiPassbackZone(void* context, uint32_t deviceId, BS2AntiPassbackZone* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[BS2AntiPassbackZone 구조체 보기](zone_control_api#bs2antipassbackzone) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zones` : anti-passback zone 리스트
+
+- [In] `zoneCount` : anti-passback zone 리스트의 개수
+
+:::caution
+
+안티패스백 구역의 식별자와 출입문 식별자가 같을 경우, 출입문 기반 안티패스백 구역으로 간주하기 때문에 해당 출입문이 제거될 때 구역 정보도 같이 제거될 수 있습니다.
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAntiPassbackZone](bs2_getantipassbackzone)
+
+[BS2_GetAllAntiPassbackZone](bs2_getallantipassbackzone)
+
+[BS2_GetAntiPassbackZoneStatus](bs2_getantipassbackzonestatus)
+
+[BS2_GetAllAntiPassbackZoneStatus](bs2_getallantipassbackzonestatus)
+
+[BS2_SetAntiPassbackZoneAlarm](bs2_setantipassbackzonealarm)
+
+[BS2_RemoveAntiPassbackZone](bs2_removeantipassbackzone)
+
+[BS2_RemoveAllAntiPassbackZone](bs2_removeallantipassbackzone)
+
+[BS2_ClearAntiPassbackZoneStatus](bs2_clearantipassbackzonestatus)
+
+[BS2_ClearAllAntiPassbackZoneStatus](bs2_clearallantipassbackzonestatus)

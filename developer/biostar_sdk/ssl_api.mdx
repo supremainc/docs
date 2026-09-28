@@ -1,0 +1,37 @@
+# SSL API
+
+장치 통신에서 SSL통신 제어하는 API입니다.
+
+---
+
+<DocCardList />
+
+## 콜백 함수
+
+```cpp
+typedef const char* (*GetRootCaFilePath)(uint32_t deviceId);
+typedef const char* (*GetServerCaFilePath)(BS2_DEVICE_ID deviceId);
+typedef const char* (*GetServerPrivateKeyFilePath)(uint32_t deviceId);
+typedef const char* (*GetPassword)(uint32_t deviceId);
+typedef void (*OnErrorOccured)(BS2_DEVICE_ID deviceId, int errCode);
+```
+
+1. `GetRootCaFilePath`
+
+   Root CA 파일 경로를 얻고자 할 때 호출되는 콜백 함수입니다.
+
+1. `GetServerCaFilePath`
+
+   서버 CA 파일 경로를 얻고자 할 때 호출되는 콜백 함수입니다.
+
+1. `GetServerPrivateKeyFilePath`
+
+   서버 PrivateKey 파일 경로을 얻고자 할 때 호출되는 콜백 함수입니다.
+
+1. `GetPassword`
+
+   Password을 얻고자 할 때 호출되는 콜백 함수입니다.
+
+1. `OnErrorOccured`
+
+   에러가 발생했을 때 호출되는 콜백 함수입니다.

@@ -1,0 +1,34 @@
+# BS2_ScanCard
+
+장치에서 카드를 스캔하고 카드 데이터를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+C++
+int BS2_ScanCard(void* context, BS2_DEVICE_ID deviceId, BS2Card* card, OnReadyToScan ptrReadyToScan);
+
+C#
+extern public static int BS2_ScanCard(IntPtr context, UInt32 deviceId, out BS2Card card, OnReadyToScan cbReadyToScan);
+```
+
+:::info
+
+[BS2Card 구조체 보기](smartcard_api#bs2card) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 ID
+
+- [Out] `card` : 카드 데이터를 저장할 포인터
+
+- [Out] `ptrReadyToScan` : 카드 스캔 준비가 완료되었을 때 호출되는 콜백 함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

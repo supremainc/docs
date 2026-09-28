@@ -1,0 +1,53 @@
+# BS2_VerifyUserSmallEx
+
+<Badge only>+ v2.6.3</Badge> 카드나 User ID의 인증 결과와 맵핑된 유저 정보를 단말기로 전송합니다.
+
+[BS2UserBlobEx](user_management_api#bs2userblobex)을 이용하는 [BS2_VerifyUserEx](bs2_verifyuserex)와의 차이는 메모리 효율을 위해 5번째 인자 `BS2UserSmallBlobEx` 멤버 `BS2UserPhoto`가 포인터 처리된 것을 제외하고 모두 동일합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_VerifyUserSmallEx(void* context, uint32_t deviceId, uint16_t seq, int handleResult, BS2UserSmallBlobEx* userBlob);
+```
+
+:::info
+
+[BS2UserSmallBlobEx 구조체 보기](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치식별자
+
+- [In] `seq` : 패킷 일련번호
+
+- [In] `handleResult` : 매칭 결과 값(`BS_SDK_SUCCESS` or `BS_SDK_ERROR_XXX`)
+
+- [In] `userBlob` : 매칭된 유저 정보
+
+:::info
+
+패킷 일련번호는 반드시 `OnVerifyUser`에서 전달받은 값과 동일해야 합니다.
+
+`handleResult`가 `BS_SDK_SUCCESS`이면, `userBlob`이 `null`이 아니어야 합니다.
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_VerifyUserSmall](bs2_verifyusersmall)
+
+[BS2_IdentifyUserSmall](bs2_identifyusersmall)
+
+[BS2_VerifyUserSmallEx](bs2_verifyusersmallex)
+
+[BS2_IdentifyUserSmallEx](bs2_identifyusersmallex)

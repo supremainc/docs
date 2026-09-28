@@ -1,0 +1,47 @@
+# BS2_SetAntiPassbackZoneAlarm
+
+안티패스백 구역의 경보 상태를 갱신합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAntiPassbackZoneAlarm(void* context, uint32_t deviceId, uint8_t alarmed, BS2_ZONE_ID* zoneIds, uint32_t zoneIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `alarmed` : 경보 발생 유무
+
+- [In] `zoneIds` : anti-passback zone id 리스트
+
+- [In] `zoneIdCount` : anti-passback zone id 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAntiPassbackZone](bs2_getantipassbackzone)
+
+[BS2_GetAllAntiPassbackZone](bs2_getallantipassbackzone)
+
+[BS2_GetAntiPassbackZoneStatus](bs2_getantipassbackzonestatus)
+
+[BS2_GetAllAntiPassbackZoneStatus](bs2_getallantipassbackzonestatus)
+
+[BS2_SetAntiPassbackZone](bs2_setantipassbackzone)
+
+[BS2_RemoveAntiPassbackZone](bs2_removeantipassbackzone)
+
+[BS2_RemoveAllAntiPassbackZone](bs2_removeallantipassbackzone)
+
+[BS2_ClearAntiPassbackZoneStatus](bs2_clearantipassbackzonestatus)
+
+[BS2_ClearAllAntiPassbackZoneStatus](bs2_clearallantipassbackzonestatus)

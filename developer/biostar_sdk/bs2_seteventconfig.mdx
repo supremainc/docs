@@ -1,0 +1,33 @@
+# BS2_SetEventConfig
+
+Image log filter 설정 정보를 저장합니다.  **Info**
+
+이미지 로그가 지원되는 장치에서만 설정 가능합니다.
+
+**FaceStation F2, FaceStation 2, BioStation A2, X-Station 2, BioStation 3** 
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetEventConfig(void* context, uint32_t deviceId, BS2EventConfig* config);
+```
+
+:::info
+
+[BS2EventConfig 구조체 보기](configuration_api#bs2eventconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `config` : Image log filter 설정 정보 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

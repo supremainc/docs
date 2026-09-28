@@ -1,0 +1,25 @@
+# BS2_SetNotificationListener
+
+Notification listener를 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetNotificationListener(void* context, OnAlarmFired ptrAlarmFired, OnInputDetected ptrInputDetected, OnConfigChanged ptrConfigChanged);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `ptrAlarmFired` : Zone에 설정한 알람이 발생될 때 호출되는 콜백 함수
+
+- [In] `ptrInputDetected` : 입력 신호가 발생되면 호출되는 콜백 함수
+
+- [In] `ptrConfigChanged` : 장치의 configuration이 변경될 때 호출되는 콜백 함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

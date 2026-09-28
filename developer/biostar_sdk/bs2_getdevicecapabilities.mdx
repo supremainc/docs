@@ -1,0 +1,31 @@
+# BS2_GetDeviceCapabilities
+
+<Badge only>+ v2.8</Badge> 장치가 지원하는 정보를 일괄 취득합니다.
+
+(SIO2와 DM-20은 이 API를 지원하지 않습니다.)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceCapabilities(void* context, uint32_t deviceId, BS2DeviceCapabilities* capabilities);
+```
+
+:::info
+
+[BS2DeviceCapabilities 구조체 보기](device_api#bs2devicecapabilities) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `capabilities` : 장치 지원 정보를 저장할 주소
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

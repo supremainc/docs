@@ -1,0 +1,563 @@
+# Slave Control API
+
+RS485 네트워크를 이용하여 마스터 장치와 슬레이브 장치를 연결하는 기능을 제공합니다.
+
+:::caution
+
+SDK가 초기화된 상태에서는 슬레이브 장치의 구성을 알 수가 없기 때문에 슬레이브 장치를 제어하기 전에 반드시 슬레이브 장치를 검색하거나 추가해야 합니다. 
+
+:::
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2Rs485SlaveDevice
+
+```cpp
+typedef struct {
+   uint32_t deviceID;
+   uint16_t deviceType;
+   uint8_t enableOSDP;
+   uint8_t connected;
+} BS2Rs485SlaveDevice;
+```
+
+1. `deviceID`
+
+   장치 식별자입니다.
+
+1. `deviceType`
+
+   장치 유형입니다.
+
+1. `enableOSDP`
+
+   슬레이브 장치를 사용하는지를 결정하는 flag 값입니다.
+
+1. `connected`
+
+   슬레이브 장치가 마스터 장치에 연결되었는지를 나타내는 flag 값입니다.
+
+### BS2Rs485SlaveDeviceEX
+
+```cpp
+typedef struct {
+   uint32_t deviceID;
+   uint16_t deviceType;
+   uint8_t enableOSDP;
+   uint8_t connected;
+   uint8_t channelInfo;
+   uint8_t reserved[3];
+} BS2Rs485SlaveDeviceEX;
+```
+
+1. `deviceID`
+
+   장치 식별자입니다.
+
+1. `deviceType`
+
+   장치 유형입니다.
+
+1. `enableOSDP`
+
+   슬레이브 장치를 사용하는지를 결정하는 flag 값입니다.
+
+1. `connected`
+
+   슬레이브 장치가 마스터 장치에 연결되었는지를 나타내는 flag 값입니다.
+
+1. `channelInfo`
+
+   슬레이브 장치의 Channel 값입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2OsdpStandardDevice
+
+```cpp
+typedef struct {
+   BS2_DEVICE_ID   deviceID;      ///< 4 bytes
+   BS2_DEVICE_TYPE deviceType;    ///< 2 bytes
+   BS2_BOOL      enableOSDP;    ///< 1 byte
+   BS2_BOOL      connected;     ///< 1 byte
+
+   uint8_t       channelInfo;   ///< 1 byte
+   uint8_t       osdpID;       ///< 1 byte
+   BS2_BOOL      supremaSearch;  ///< 1 byte
+   BS2_BOOL      activate;      ///< 1 byte
+   
+   BS2_BOOL      useSecure;     ///< 1 byte
+   uint8_t       vendorCode[3];  ///< 3 bytes
+
+   BS2_VERSION    fwVersion;     ///< 4 bytes
+
+   uint8_t       modelNumber;   ///< 1 byte
+   uint8_t       modelVersion;   ///< 1 byte
+   BS2_BOOL      readInfo;      ///< 1 byte
+   uint8_t       reserved[25];   ///< 25 byte (packing)
+} BS2OsdpStandardDevice;         ///< 48 bytes
+```
+
+1. `deviceID`
+
+   OSDP 장치 식별자입니다.
+
+1. `deviceType`
+
+   장치 유형입니다. 일반적으로 `BS2_DEVICE_TYPE_3RD_OSDP_DEVICE`를 갖습니다.
+
+1. `enableOSDP`
+
+   항상 true로 설정되어집니다.
+
+1. `connected`
+
+   true이면 OSDP 장치가 현재 연결되어 있음을 나타냅니다.
+
+1. `channelInfo`
+
+   연결된 채널정보입니다. **CoreStation40**이 0\~4 까지 5개의 채널을 가지므로, 이 범위의 채널 값을 갖습니다.
+
+1. `osdpID`
+
+   OSDP 식별자입니다.
+
+1. `supremaSearch`
+
+   OSDP를 지원하지 않는 기존 RS485와 구별되는 정보로, 항상 false를 갖습니다.
+
+1. `activate`
+
+   장치의 연결 상태와 무관하게, 연결되어있는 장치의 동작여부를 결정할 수 있는데, 동작의 활성화 상태를 나타냅니다.
+
+1. `useSecure`
+
+   암호화 통신을 사용하는지 여부를 나타냅니다.
+
+   별도의 키를 설정하지 않았다면 기본키로 암호화 통신을 수행하며, [BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)로 변경할 수 있습니다.
+
+1. `vendorCode`
+
+   Vendor의 고유 값입니다.
+
+1. `fwVersion`
+
+   OSDP 장치의 FW 버전 정보입니다.
+
+1. `modelNumber`
+
+   OSDP 장치의 모델 번호입니다.
+
+1. `modelVersion`
+
+   OSDP 장치의 모델 버전입니다.
+
+1. `readInfo`
+
+   `vendorCode` 또는 `fwVersion`, `model` 등, OSDP 장치 정보를 갖고 있는지 나타냅니다. 장치 정보를 갖고 있다는 것은 해당 장치가 master에 연결된 적이 있음을 의미합니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2OsdpStandardDeviceAvailable
+
+```cpp
+typedef struct {
+   uint8_t             channelIndex;            ///< 1 byte
+   BS2_OSDP_CHANNEL_TYPE   channelType;            ///< 1 byte
+   uint8_t             maxOsdpDevice;           ///< 1 byte
+   uint8_t             numOsdpAvailableDevice;    ///< 1 byte
+   BS2_DEVICE_ID         deviceIDs[8];            ///< 4 x 8 = 32 bytes
+} BS2OsdpStandardChannelInfo;                     ///< 36 bytes
+
+typedef struct {
+   uint8_t             numOfChannel;            ///< 1 byte
+   uint8_t             reserved[3];            ///< 3 bytes
+   BS2OsdpStandardChannelInfo channels[BS2_RS485_MAX_CHANNELS_EX]; ///< 36 x 8 = 288 bytes
+   uint8_t             reserved1[32];           ///< 32 bytes
+} BS2OsdpStandardDeviceAvailable;                  ///< 288 bytes + 36
+```
+
+1. `channelIndex`
+
+   OSDP 장치가 연결되어 있는 통신 채널 번호입니다.
+
+1. `channelType`
+
+   * RS485 통신을 하는 장치가 어떠한 방식으로 연결되어 있는지를 나타냅니다.
+
+   * CoreStation40 기준으로, 할당 가능한 채널은 0\~4까지 5개인데, 각 채널내에서는 슈프리마 장치와 OSDP 장치가 혼용되어 운용될어질 수 없습니다.
+
+   * 특정 채널에 연결된 장치가 없는 경우, Suprema 장치든, OSDP 장치이든 연결될 수 있음을 나타내는 0을 갖습니다.
+
+   * 만일 특정 채널로 Suprema 장치가 연결되면, 이후 해당 채널은 Suprema 장치들의 연결만 허용되며, channelType은 1을 갖습니다. OSDP 장치가 연결되어 있더라도 무시되어집니다.
+
+   * 만일 특정 채널로 OSDP 장치가 연결되면, 이후 해당 채널은 OSDP 장치 연결만 허용되며, channelType은 2를 갖습니다. Suprema 장치가 연결되어 있더라도 무시되어집니다.
+
+   * CoreStation40 각각의 채널들은 Suprema 장치 채널, OSDP 장치 채널들로 혼용되어 운용될 수 있습니다.
+
+   * 채널에 OSDP로 장치가 연결이되면 허용이 가능한 최대 장치수는 2대로 제한되며, 이미 해당 채널이 최대치에 도달했으면 channelType은 3을 갖으며 더이상 연결이 불가함을 나타냅니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0 | Normal |
+   | 1 | Suprema 장치 |
+   | 2 | OSDP 장치 |
+   | 3 | OSDP 장치 FULL |
+
+1. `maxOsdpDevice`
+
+   해당 채널에서 연결 가능한 장치의 최대치를 나타냅니다.
+
+   channelType이 1이면 32를, 2나 3이면 2를 갖습니다.
+
+1. `numOsdpAvailibleDevice`
+
+   해당 채널에서 현재 연결 가능한 장치수를 나타냅니다.
+
+1. `deviceIDs`
+
+   해당 채널에 연결된(또는 연결될 수 있는) 장치 식별자 리스트입니다.
+
+1. `numOfChannel`
+
+   채널 수 입니다. CoreStation40 기준 5를 갖습니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `channels`
+
+   채널별 OSDP 장치정보입니다.
+
+   최대 8개까지 채널정보를 가질 수 있으나, CoreStation40이 5개의 채널을 가지므로 0\~4번까지만 유의미합니다.
+
+1. `reserved1`
+
+   예약된 공간입니다.
+
+### BS2OsdpStandardDeviceNotify
+
+```cpp
+typedef struct {
+   BS2_DEVICE_ID   deviceID;      ///< 4 bytes
+   BS2_DEVICE_TYPE deviceType;    ///< 2 bytes
+   BS2_BOOL      enableOSDP;    ///< 1 byte
+   BS2_BOOL      connected;     ///< 1 byte
+
+   uint8_t       channelInfo;   ///< 1 byte
+   uint8_t       osdpID;       ///< 1 byte
+   BS2_BOOL      supremaSearch;  ///< 1 byte
+   BS2_BOOL      activate;      ///< 1 byte
+   
+   BS2_BOOL      useSecure;     ///< 1 byte
+   uint8_t       vendorCode[3];  ///< 3 bytes
+
+   BS2_VERSION    fwVersion;     ///< 4 bytes
+
+   uint8_t       modelNumber;   ///< 1 byte
+   uint8_t       modelVersion;   ///< 1 byte
+   BS2_BOOL      readInfo;      ///< 1 byte
+   uint8_t       reserved[5];   ///< 5 bytes (packing)
+} BS2OsdpStandardDeviceNotify;        ///< 48 bytes
+```
+
+1. `deviceID`
+
+   OSDP 장치 식별자입니다.
+
+1. `deviceType`
+
+   장치 유형입니다. 일반적으로 `BS2_DEVICE_TYPE_3RD_OSDP_DEVICE`를 갖습니다.
+
+1. `enableOSDP`
+
+   항상 true로 설정되어집니다.
+
+1. `connected`
+
+   true이면 OSDP 장치가 현재 연결되어 있음을 나타냅니다.
+
+1. `channelInfo`
+
+   연결된 채널정보입니다. **CoreStation40**이 0\~4 까지 5개의 채널을 가지므로, 이 범위의 채널 값을 갖습니다.
+
+1. `osdpID`
+
+   OSDP 식별자입니다.
+
+1. `supremaSearch`
+
+   OSDP를 지원하지 않는 기존 RS485와 구별되는 정보로, 항상 false를 갖습니다.
+
+1. `activate`
+
+   장치의 연결 상태와 무관하게, 연결되어있는 장치의 동작여부를 결정할 수 있는데, 동작의 활성화 상태를 나타냅니다.
+
+1. `useSecure`
+
+   암호화 통신을 사용하는지 여부를 나타냅니다.
+
+   별도의 키를 설정하지 않았다면 기본키로 암호화 통신을 수행하며, [BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)로 변경할 수 있습니다.
+
+1. `vendorCode`
+
+   Vendor의 고유 값입니다.
+
+1. `fwVersion`
+
+   OSDP 장치의 FW 버전 정보입니다.
+
+1. `modelNumber`
+
+   OSDP 장치의 모델 번호입니다.
+
+1. `modelVersion`
+
+   OSDP 장치의 모델 버전입니다.
+
+1. `readInfo`
+
+   vendorCode나 fwVersion, model 등, OSDP 장치 정보를 갖고 있는지 나타냅니다. 장치 정보를 갖고 있다는 것은 해당 장치가 master에 연결된 적이 있음을 의미합니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2OsdpStandardDeviceAdd
+
+```cpp
+typedef struct {
+   uint8_t       osdpID;                   ///< 1 byte
+   uint8_t       activate;                  ///< 1 byte
+   uint8_t       useSecureSession;            ///< 1 byte
+   uint8_t       deviceType;                ///< 1 byte
+   BS2_DEVICE_ID   deviceID;                  ///< 4 bytes
+} BS2OsdpStandardDeviceAdd;                   ///< 8 bytes
+```
+
+1. `osdpID`
+
+   OSDP 식별자입니다. 식별자는 사용자가 직접 0\~126 사이의 임의의 값을 지정하여야 합니다.
+
+   이 값은 동일 채널 내에서는 중복을 허용하지 않으며, 중복되거나 범위 밖의 값이 지정된 경우 오류를 발생시킬 수 있습니다.
+
+   마스터 장치 내에서 채널이 다르다면 동일한 식별자를 부여하여 장치를 추가 할 수 있습니다.
+
+1. `activate`
+
+   장치 활성화 상태를 지정합니다.
+
+   장치의 연결 상태와는 무관하며, false로 설정되면 성공적으로 연결이 되어있더라도 해당 장치의 동작은 무시됩니다.
+
+1. `useSecureSession`
+
+   암호화 통신 여부를 지정합니다.
+
+   별도의 키를 설정하지 않았다면 기본키로 암호화 통신을 수행하며, [BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)로 변경할 수 있습니다.
+
+1. `deviceType`
+
+   장치 유형입니다. `BS2_DEVICE_TYPE_3RD_OSDP_DEVICE`로 설정되어져야 합니다.
+
+1. `deviceID`
+
+   장치 식별자입니다. 0으로 설정 시 master 장치가 알아서 할당하여 줍니다.
+
+### BS2OsdpStandardDeviceUpdate
+
+```cpp
+typedef struct {
+   uint8_t       osdpID;                   ///< 1 byte
+   uint8_t       activate;                  ///< 1 byte
+   uint8_t       useSecureSession;            ///< 1 byte
+   uint8_t       deviceType;                ///< 1 byte
+   BS2_DEVICE_ID   deviceID;                  ///< 4 bytes
+} BS2OsdpStandardDeviceUpdate;                 ///< 8 bytes
+```
+
+1. `osdpID`
+
+   OSDP 식별자입니다. 식별자는 사용자가 직접 0\~126 사이의 임의의 값을 지정하여야 합니다.
+
+   이 값은 동일 채널 내에서는 중복을 허용하지 않으며, 중복되거나 범위 밖의 값이 지정된 경우 오류를 발생시킬 수 있습니다.
+
+   마스터 장치 내에서 채널이 다르다면 동일한 식별자를 부여하여 장치를 추가 할 수 있습니다.
+
+1. `activate`
+
+   장치 활성화 상태를 지정합니다.
+
+   장치의 연결 상태와는 무관하며, false로 설정되면 성공적으로 연결이 되어있더라도 해당 장치의 동작은 무시됩니다.
+
+1. `useSecureSession`
+
+   암호화 통신 여부를 지정합니다.
+
+   별도의 키를 설정하지 않았다면 기본키로 암호화 통신을 수행하며, [BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)로 변경할 수 있습니다.
+
+1. `deviceType`
+
+   장치 유형입니다. `BS2_DEVICE_TYPE_3RD_OSDP_DEVICE`로 설정되어져야 합니다.
+
+1. `deviceID`
+
+   장치 식별자입니다.
+
+### BS2OsdpStandardDeviceCapability
+
+```cpp
+typedef struct {
+   uint8_t             compliance;
+   uint8_t             count;
+} BS2OsdpStandardDeviceCapabilityItem;
+
+typedef struct {
+   BS2OsdpStandardDeviceCapabilityItem input;        ///< 2 bytes
+   BS2OsdpStandardDeviceCapabilityItem output;       ///< 2 bytes
+   BS2OsdpStandardDeviceCapabilityItem led;         ///< 2 bytes
+   BS2OsdpStandardDeviceCapabilityItem audio;        ///< 2 bytes
+   BS2OsdpStandardDeviceCapabilityItem textOutput;    ///< 2 bytes
+   BS2OsdpStandardDeviceCapabilityItem reader;       ///< 2 bytes
+
+   uint16_t            recvBufferSize;          ///< 2 bytes
+   uint16_t            largeMsgSize;            ///< 2 bytes
+
+   uint8_t             osdpVersion;            ///< 1 byte
+   uint8_t             cardFormat;             ///< 1 byte
+   uint8_t             timeKeeping;            ///< 1 byte
+   uint8_t             canCommSecure;           ///< 1 byte
+
+   BS2_BOOL            crcSupport;             ///< 1 byte
+   BS2_BOOL            smartCardSupport;         ///< 1 byte
+   BS2_BOOL            biometricSupport;         ///< 1 byte
+   BS2_BOOL            securePinEntrySupport;     ///< 1 byte
+
+   uint8_t             reserved[4];            ///< 4 bytes
+} BS2OsdpStandardDeviceCapability;                 ///< 28 bytes
+```
+
+1. `compliance`
+
+   PD의 기능(function)에 따른 준수수준(compliance level)을 나타냅니다.
+
+   기능은 input, output, led, audio, textOutput 등이 있으며, 기능 별로 준수수준이 상이하므로 관련 OSDP 문서를 참고바랍니다.
+
+1. `count`
+
+   PD의 기능(function)에 따른 개수(number of objects)를 의미하는데, 기능 별로 개수에 부여되는 의미가 다르므로 관련 OSDP 문서를 참고바랍니다.
+
+1. `input`
+
+   입력(모니터링) 기능을 정의합니다.
+
+1. `output`
+
+   출력 기능을 정의합니다.
+
+1. `led`
+
+   LED 기능을 정의합니다.
+
+1. `audio`
+
+   Buzzer 기능을 정의합니다.
+
+1. `textOutput`
+
+   문자 출력 기능을 정의합니다.
+
+1. `reader`
+
+   지원되는 장치 수를 나타내며, count 정보만 의미를 갖습니다.
+
+1. `recvBufferSize`
+
+   PD가 수신할 수 있는 단문 메시지 크기를 나타냅니다.
+
+1. `largeMsgSize`
+
+   PD가 처리할 수 있는 장문 메시지의 최대 크기입니다.
+
+1. `osdpVersion`
+
+   OSDP 버전입니다.
+
+1. `cardFormat`
+
+   카드 데이터 포맷 기능을 정의하며, 01, 02, 03 중 하나의 값을 갖습니다. OSDP 문서의 카드 데이터 포맷관련 compliance level을 참고바랍니다.
+
+1. `timeKeeping`
+
+   PD의 날짜 및 시간 정보 유형과 이를 유지하는 것에 대해 나타냅니다. OSDP 2.2에서 이 기능은 사용되지 않습니다.
+
+1. `canCommSecure`
+
+   보안통신 지원 여부를 나타냅니다.
+
+1. `crcSupport`
+
+   체크섬 지원 여부를 나타냅니다.
+
+1. `smartCardSupport`
+
+   스마트 카드 지원 여부를 나타냅니다.
+
+1. `biometricSupport`
+
+   생체정보 처리가 가능한지를 나타냅니다.
+
+1. `securePinEntrySupport`
+
+   SPE(Secure PIN Entry) 지원 여부를 나타냅니다.
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+### BS2OsdpStandardDeviceResult
+
+```cpp
+typedef struct {
+   BS2_DEVICE_ID   deviceID;
+   BS2_OSDP_RESULT  result;
+} BS2OsdpStandardDeviceResult;
+```
+
+1. `deviceID`
+
+   장치 식별자입니다.
+
+1. `result`
+
+   OSDP 장치 명령 결과 값을 가집니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0 | Fail |
+   | 1 | Success |
+
+### BS2OsdpStandardDeviceSecurityKey
+
+```cpp
+typedef struct {
+   uint8_t   key[BS2_OSDP_STANDARD_KEY_SIZE];
+   uint8_t   reserved[32];
+} BS2OsdpStandardDeviceSecurityKey;
+```
+
+1. `key`
+
+   OSDP 장치에서 사용할 16byte 크기의 보안키 입니다.
+
+1. `reserved`
+
+   예약된 공간입니다.

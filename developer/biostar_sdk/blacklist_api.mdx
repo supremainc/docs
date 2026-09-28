@@ -1,0 +1,26 @@
+# Blacklist API
+
+BioStar 시스템에서는 분실된 카드나, 접근을 제한하고자 할 때 출입 인증 장치에 블랙리스트 카드를 추가할 수 있습니다.
+
+---
+
+<DocCardList />
+
+## 구조체
+
+### BS2BlackList
+
+```cpp
+typedef struct {
+   uint8_t cardID[BS2_CARD_DATA_SIZE];
+   uint16_t issueCount;
+} BS2BlackList;
+```
+
+1. `cardID`
+
+   카드 식별자입니다.
+
+1. `issueCount`
+
+   카드 발급 회차로 CSN card는 항상 0이고, 스마트 카드는 카드에 쓴 발급 회차입니다.

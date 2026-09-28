@@ -1,0 +1,126 @@
+# BS2_AddOsdpStandardDevice
+
+<Badge only>+ v2.9.1</Badge> **CoreStation40** 마스터 장치의 주어진 채널에 지정 정보로 OSDP 장치를 추가합니다.
+
+추가 가능한 장치는 [BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice) 또는 [BS2_GetOsdpStandardConfig](bs2_getosdpstandardconfig)로 확인할 수 있습니다.
+
+만일 마스터 장치에 슈프리마 장치 및 OSDP 표준 연결 장치가 혼용되어 연결되어 있는 상황이라면, [BS2_GetRS485ConfigEx](bs2_getrs485configex)로 슬레이브 장치들을 일괄 취득할 수 있습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_AddOsdpStandardDevice(void* context, uint32_t deviceId, uint32_t channelIndex, const BS2OsdpStandardDeviceAdd* osdpDevice, uint32_t* outChannelIndex);
+```
+
+:::info
+
+[BS2OsdpStandardDeviceAdd 구조체 보기](slave_control_api#bs2osdpstandarddeviceadd) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `channelIndex` : 장치의 채널 식별자
+
+- [In] `osdpDevice` : 추가할 OSDP 장치 정보
+
+- [Out] `outChannelIndex` : 추가된 OSDP 장치의 채널 식별자를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+BS2OsdpStandardDeviceAvailable availDevice = { 0, };
+BS2OsdpStandardDeviceAdd addDevice = { 0, };
+
+BS2_DEVICE_ID masterID = Utility::selectDeviceID(deviceList, false, false);
+
+cout << "Now add a OSDP device." << endl;
+addDevice.deviceID = Utility::selectSlaveID();
+
+uint32_t channelIndex = 0;
+for (int idx = 0; idx < availDevice.numOfChannel; idx++)
+{
+    for (int didx = 0; didx < availDevice.channels[idx].numOsdpAvailableDevice; didx++)
+    {
+        if (availDevice.channels[idx].deviceIDs[didx] == addDevice.deviceID)
+            channelIndex = availDevice.channels[idx].channelIndex;
+    }
+}
+
+addDevice.osdpID = (uint8_t)Utility::getInput<uint32_t>("Please enter the OSDP ID. [0 ~ 126]");
+addDevice.useSecureSession = Utility::isYes("Does the OSDP device use secure communication?");
+addDevice.deviceType = BS2_DEVICE_TYPE_3RD_OSDP_DEVICE;
+addDevice.activate = 1;
+
+uint32_t outChannelIndex(0);
+int sdkResult = BS2_AddOsdpStandardDevice(context_, masterID, channelIndex, &addDevice, &outChannelIndex);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_AddOsdpStandardDevice call failed: %d", sdkResult);
+
+return sdkResult;
+```
+
+## 샘플 코드()
+
+```csharp title='C#'
+BS2OsdpStandardDeviceAdd addDevice = Util.AllocateStructure<BS2OsdpStandardDeviceAdd>();
+
+Util.HighlightLine(">>>> Now add a OSDP device.", "add");
+addDevice.deviceID = Util.GetInputSlaveID();
+
+UInt32 channelIndex = 0;
+for (int idx = 0; idx < allDevice.numOfChannel; idx++)
+{
+    for (int didx = 0; didx < allDevice.channels[idx].numOsdpAvailableDevice; didx++)
+    {
+        if (allDevice.channels[idx].deviceIDs[didx] == addDevice.deviceID)
+            channelIndex = allDevice.channels[idx].channelIndex;
+    }
+}
+
+Util.HighlightLine(">>>> Please enter the OSDP ID. [0 ~ 126]", "OSDP ID");
+Console.Write(">>>> ");
+addDevice.osdpID = Util.GetInput((byte)0);
+
+Util.HighlightLine(">>>> Does the OSDP device use secure communication? [Y/n]", "use secure communication");
+Console.Write(">>>> ");
+addDevice.useSecureSession = Convert.ToByte(Util.IsYes());
+
+addDevice.deviceType = Convert.ToByte(BS2DeviceTypeEnum.THIRD_OSDP_DEVICE);
+addDevice.activate = Convert.ToByte(true);
+
+UInt32 outChannelIndex = 0;
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_AddOsdpStandardDevice(sdkContext, deviceID, channelIndex, ref addDevice, out outChannelIndex);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+
+return result;
+```
+
+## 함께 보기
+
+[BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice)
+
+[BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice)
+
+[BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice)
+
+[BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice)
+
+[BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice)
+
+[BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability)
+
+[BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)

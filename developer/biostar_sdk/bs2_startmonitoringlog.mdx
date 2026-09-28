@@ -1,0 +1,40 @@
+# BS2_StartMonitoringLog
+
+실시간 로그 스트리밍을 시작합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_StartMonitoringLog(void* context, uint32_t deviceId, OnLogReceived ptrLogReceived);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `ptrLogReceived` : 새로운 로그를 받았을 때 호출할 콜백함수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+private API.OnLogReceived cbOnLogReceived = null; //To prevent garbage collection
+
+Console.WriteLine("Trying to activate log monitoring.");
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_StartMonitoringLog(sdkContext, deviceID, cbOnLogReceived);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+```
+
+## 함께 보기
+
+[BS2_StopMonitoringLog](bs2_stopmonitoringlog)

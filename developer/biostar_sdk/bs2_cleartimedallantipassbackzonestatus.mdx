@@ -1,0 +1,43 @@
+# BS2_ClearAllTimedAntiPassbackZoneStatus
+
+모든 사용자를 인증 제한 구역의 규칙을 위반하지 않은 상태로 갱신합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ClearAllTimedAntiPassbackZoneStatus(void* context, BS2_DEVICE_ID deviceId, BS2_ZONE_ID zoneID);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zoneID` : 구역 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetTimedAntiPassbackZone](bs2_gettimedantipassbackzone)
+
+[BS2_GetAllTimedAntiPassbackZone](bs2_getalltimedantipassbackzone)
+
+[BS2_GetTimedAntiPassbackZoneStatus](bs2_gettimedantipassbackzonestatus)
+
+[BS2_GetAllTimedAntiPassbackZoneStatus](bs2_getalltimedantipassbackzonestatus)
+
+[BS2_SetTimedAntiPassbackZone](bs2_settimedantipassbackzone)
+
+[BS2_SetTimedAntiPassbackZoneAlarm](bs2_settimedantipassbackzonealarm)
+
+[BS2_RemoveTimedAntiPassbackZone](bs2_removetimedantipassbackzone)
+
+[BS2_RemoveAllTimedAntiPassbackZone](bs2_removealltimedantipassbackzone)
+
+[BS2_ClearTimedAntiPassbackZoneStatus](bs2_cleartimedantipassbackzonestatus)
