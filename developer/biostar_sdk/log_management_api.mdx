@@ -6,6 +6,8 @@
 
 <DocCardList />
 
+---
+
 ## 콜백 함수
 
 ### OnLogReceived
@@ -206,7 +208,7 @@ typedef struct {
    로그 유형의 하위 코드 값입니다. 추가 정보가 필요할 경우 사용하십시오.
 
    | 범주 | 이벤트 코드 | 값 | 설명 |
-   | --- | --- | --- | --- |
+   | --- | --- | :--: | --- |
    | Verify | BS2_SUB_EVENT_VERIFY_ID_PIN | 0x01 | 주어진 사용자 식별자로 PIN 인증 성공 |
    | ^ | BS2_SUB_EVENT_VERIFY_ID_FINGER | 0x02 | 주어진 사용자 식별자로 지문 인증 성공 |
    | ^ | BS2_SUB_EVENT_VERIFY_ID_FINGER_PIN | 0x03 | 주어진 사용자 식별자로 지문과 PIN 인증 성공 |
@@ -322,7 +324,7 @@ typedef struct {
    로그 유형의 주코드 값입니다.
 
    | 범주 | 이벤트 코드 | 값 | 설명 |
-   | --- | --- | --- | --- |
+   | --- | --- | :--: | --- |
    | Auth | BS2_EVENT_VERIFY_SUCCESS | 0x1000 | 1:1 인증 성공 |
    | ^ | BS2_EVENT_VERIFY_FAIL | 0x1100 | 1:1 인증 실패 |
    | ^ | BS2_EVENT_VERIFY_DURESS | 0x1200 | 협박 지문으로 1:1 인증 성공에 성공 |
@@ -438,7 +440,7 @@ typedef struct {
    이벤트 발생 장치의 추가 정보가 필요할 경우에만 사용되고, 주로 근태 코드나 출입문이나 입력 장치의 포트 번호가 저장됩니다. 근태 코드가 저장될 때는 아래의 코드표를 참고하십시오. 
 
    | 장치 종류 | 근태 코드 | 키 | 값 |
-   | --- | --- | --- | --- |
+   | --- | --- | :--: | :--: |
    | BioStation 2 | BS2_TNA_UNSPECIFIED | (N/A) | 0 |
    | ^ | BS2_TNA_KEY_1 | F1 | 1 |
    | ^ | BS2_TNA_KEY_2 | F2 | 2 |
@@ -468,7 +470,7 @@ typedef struct {
    이 기능은 아래의 펌웨어 버전 이후부터 지원합니다. 
 
    | 장치 종류 | 지원 버전 |
-   | --- | --- |
+   | :--: | :--: |
    | BioStation 2 | V1.7.0 |
    | BioStation A2 | V1.6.0 |
    | CoreStation 40 | V1.2.0 |
@@ -491,7 +493,7 @@ typedef struct {
    - DST 적용 여부
 
    | 범주 | 비트 수 | 변수 | 설명 |
-   | --- | --- | --- | --- |
+   | --- | :--: | --- | --- |
    | SDK 2.6.0 이전 | 8 | image | 이벤트 발생되었을 때 이미지 정보가 포함될 경우에 사용됩니다. |
    | SDK 2.6.0 부터 | 1 | image | 이벤트 발생되었을 때 이미지 정보가 포함될 경우에 사용됩니다. |
    | ^ | 1 | isDST | 현재 로그가 DST의 적용을 받았는지 여부를 표시 |
@@ -527,14 +529,14 @@ typedef struct {
    Event mask값입니다. mask값에 따라서 해당 ID(User, card, door, zone)값을 인식할 수 있습니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | 0x0000 | 없음 |
-   | 0x0001 | BS2EventExtInfo 구조체 |
+   | 0x0001 | [BS2EventExtInfo](#bs2eventextinfo) 구조체 |
    | 0x0002 | User ID |
    | 0x0004 | Card ID |
    | 0x0008 | Door ID |
    | 0x0010 | Zone ID |
-   | 0x0020 | BS2EventExtIoDevice 구조체 |
+   | 0x0020 | [BS2EventExtIoDevice](#bs2eventextiodevice) 구조체 |
    | 0x0040 | TNA Key |
    | 0x0080 | Job Code |
    | 0x0100 | Image |
@@ -548,7 +550,7 @@ typedef struct {
 
 1. `info`
 
-   BS2EventExtInfo 구조체 정보입니다.
+   [BS2EventExtInfo](#bs2eventextinfo) 구조체 정보입니다.
 
 1. `userID`
 
@@ -570,7 +572,7 @@ typedef struct {
 
 1. `ioDevice`
 
-   Door나 Input 장치의 식별자로 Door나 Input 장치와 관련 없는 로그일 경우 0으로 설정됩니다. (BS2EventExtIoDevice 구조체 참고)
+   Door나 Input 장치의 식별자로 Door나 Input 장치와 관련 없는 로그일 경우 0으로 설정됩니다. ([BS2EventExtIoDevice](#bs2eventextiodevice) 구조체 참고)
 
 1. `tnaKey`
 
@@ -653,7 +655,7 @@ typedef struct {
    입력 port 상태를 말합니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | -1 | UNKNOWN |
    | 0 | Open |
    | 1 | Closed |
@@ -673,11 +675,11 @@ typedef struct {
    BS2EventExtInfo info; 
    union
    {
-   BS2_USER_ID userID;                       // valid if eventMask has BS2_EVENT_MASK_USER_ID
-   uint8_t cardID[BS2_CARD_DATA_SIZE];       // valid if eventMask has BS2_EVENT_MASK_CARD_ID
-   BS2_DOOR_ID doorID;                       // valid if eventMask has BS2_EVENT_MASK_DOOR_ID
-   BS2_ZONE_ID zoneID;                       // valid if eventMask has BS2_EVENT_MASK_ZONE_ID
-   BS2EventExtIoDevice ioDevice;             // valid if eventMask has BS2_EVENT_MASK_IODEVICE
+      BS2_USER_ID userID;                       // valid if eventMask has BS2_EVENT_MASK_USER_ID
+      uint8_t cardID[BS2_CARD_DATA_SIZE];       // valid if eventMask has BS2_EVENT_MASK_CARD_ID
+      BS2_DOOR_ID doorID;                       // valid if eventMask has BS2_EVENT_MASK_DOOR_ID
+      BS2_ZONE_ID zoneID;                       // valid if eventMask has BS2_EVENT_MASK_ZONE_ID
+      BS2EventExtIoDevice ioDevice;             // valid if eventMask has BS2_EVENT_MASK_IODEVICE
    };
    uint8_t tnaKey;
    uint32_t jobCode;    
@@ -692,14 +694,14 @@ typedef struct {
    Event mask값입니다. mask값에 따라서 해당 ID(User, card, door, zone)값을 인식할 수 있습니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | 0x0000 | 없음 |
-   | 0x0001 | BS2EventExtInfo 구조체 |
+   | 0x0001 | [BS2EventExtInfo](#bs2eventextinfo) 구조체 |
    | 0x0002 | User ID |
    | 0x0004 | Card ID |
    | 0x0008 | Door ID |
    | 0x0010 | Zone ID |
-   | 0x0020 | BS2EventExtIoDevice 구조체 |
+   | 0x0020 | [BS2EventExtIoDevice](#bs2eventextiodevice) 구조체 |
    | 0x0040 | TNA Key |
    | 0x0080 | Job Code |
    | 0x0100 | Image |
@@ -713,7 +715,7 @@ typedef struct {
 
 1. `info`
 
-   BS2EventExtInfo 구조체 정보입니다.
+   [BS2EventExtInfo](#bs2eventextinfo) 구조체 정보입니다.
 
 1. `userID`
 
@@ -735,7 +737,7 @@ typedef struct {
 
 1. `ioDevice`
 
-   Door나 Input 장치의 식별자로 Door나 Input 장치와 관련 없는 로그일 경우 0으로 설정됩니다. (BS2EventExtIoDevice 구조체 참고)
+   Door나 Input 장치의 식별자로 Door나 Input 장치와 관련 없는 로그일 경우 0으로 설정됩니다. ([BS2EventExtIoDevice](#bs2eventextiodevice) 구조체 참고)
 
 1. `tnaKey`
 
@@ -786,14 +788,14 @@ typedef struct {
    Event mask값입니다. mask값에 따라서 해당 ID(User, card, door, zone)값을 인식할 수 있습니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | 0x0000 | 없음 |
-   | 0x0001 | BS2EventExtInfo 구조체 |
+   | 0x0001 | [BS2EventExtInfo](#bs2eventextinfo) 구조체 |
    | 0x0002 | User ID |
    | 0x0004 | Card ID |
    | 0x0008 | Door ID |
    | 0x0010 | Zone ID |
-   | 0x0020 | BS2EventExtIoDevice 구조체 |
+   | 0x0020 | [BS2EventExtIoDevice](#bs2eventextiodevice) 구조체 |
    | 0x0040 | TNA Key |
    | 0x0080 | Job Code |
    | 0x0100 | Image |
@@ -807,7 +809,7 @@ typedef struct {
 
 1. `info`
 
-   BS2EventExtInfo 구조체 정보입니다.
+   [BS2EventExtInfo](#bs2eventextinfo) 구조체 정보입니다.
 
 1. `userID`
 
@@ -829,7 +831,7 @@ typedef struct {
 
 1. `ioDevice`
 
-   Door나 Input 장치의 식별자로 Door나 Input 장치와 관련 없는 로그일 경우 0으로 설정됩니다. (BS2EventExtIoDevice 구조체 참고)
+   Door나 Input 장치의 식별자로 Door나 Input 장치와 관련 없는 로그일 경우 0으로 설정됩니다. ([BS2EventExtIoDevice](#bs2eventextiodevice) 구조체 참고)
 
 1. `tnaKey`
 
@@ -890,7 +892,7 @@ typedef struct{
    포트의 상태를 나타냅니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | -1 | UNKNOWN |
    | 0 | Open |
    | 1 | Closed |

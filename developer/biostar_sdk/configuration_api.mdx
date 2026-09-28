@@ -6,6 +6,8 @@
 
 <DocCardList />
 
+---
+
 ## 구조체
 
 ### BS2FactoryConfig
@@ -257,7 +259,7 @@ typedef struct {
    아래 설명 중 생체정보는 장치에 따라 지문 또는 얼굴을 의미합니다.
 
    | 순서 | 의미 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | -- | :--: |
    | 0 | BS2_AUTH_MODE_BIOMETRIC_ONLY | 생체정보 |
    | 1 | BS2_AUTH_MODE_BIOMETRIC_PIN | 생체정보 + PIN번호 |
    | 2 | BS2_AUTH_MODE_CARD_ONLY | 카드번호 |
@@ -2026,7 +2028,7 @@ typedef struct {
    - relay.relayIndex : 4 \~ 9 (OUTPUT 0 \~ 5)
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | None |
    | 1 | Lock device |
    | 2 | Unlock device |
@@ -2057,7 +2059,7 @@ typedef struct {
    stopFlag를 2로 설정하여 action정보를 내려주게되면 해당 장치의 경보만 선별적으로 제어할 수 있습니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 중지 안함 |
    | 1 | 출입문 닫힘 시 중지 |
    | 2 | 명령을 통해 중지 (V2.6.0 추가) |
@@ -2400,7 +2402,7 @@ typedef struct {
    시스템 전반적으로 사용할 얼굴 인증 보안 레벨입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 기본 |
    | 1 | 보안 레벨 높음 |
    | 2 | 보안 레벨 매우 높음 |
@@ -2410,7 +2412,7 @@ typedef struct {
    빛 조건입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 옥내 |
    | 1 | 옥외 |
    | 2 | 자동 |
@@ -2421,7 +2423,7 @@ typedef struct {
    얼굴 등록의 임계값입니다. 등록시 어느 정도 포즈 움직임을 허용하는지에 대한 값입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | THRESHOLD_0 (엄격) |
    | 1 | THRESHOLD_1 |
    | 2 | THRESHOLD_2 |
@@ -2438,7 +2440,7 @@ typedef struct {
    얼굴 센서의 민감도 설정입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 꺼짐 |
    | 1 | 낮음 |
    | 2 | 기본 |
@@ -2471,7 +2473,7 @@ typedef struct {
    **Visual Face 기반**: <Badge only>+ v2.7.1</Badge> 기본값이 1입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 사용안함 |
    | 1 | 민감도 낮음 |
    | 2 | 민감도 보통 |
@@ -2506,7 +2508,7 @@ typedef struct {
    <Badge only>+ v2.7.1</Badge> **FaceStation F2 V1.0.1** 미만은 아래의 동작 모드로 설정가능하며, 기본값은 Fusion 모드입니다.
 
    | 값 | 모드 | 설명 | 기본값 |
-   | :--: | :--: | :--: | :--: |
+   | :--: | -- | -- | :--: |
    | 0 | Fusion 모드 | Visual matching + IR matching | 기본 |
    | 1 | Visual 모드 | Visual matching |  |
    | 2 | Visual + IR검출 | Visual matching, IR은 얼굴 검출만 |  |
@@ -2514,7 +2516,7 @@ typedef struct {
    **FaceStation F2 V1.0.1** 이상, **Visual Face 기반**은 아래와 같은 의미로 사용됩니다.
 
    | 값 | 모드 | 설명 | 기본값 |
-   | :--: | :--: | :--: | :--: |
+   | :--: | -- | -- | :--: |
    | 0 | Fusion 모드 | Visual matching + IR matching | 기본 |
    | 1 | Fast 모드 | Visual matching |  |
 
@@ -2872,7 +2874,7 @@ typedef struct {
    configuration을 가져오거나 설정할 mask값입니다.
 
    | 값 | 설명 | 
-   | :--: | :--: |
+   | :--: | -- |
    | 0x0000 | None |
    | 0x0001 | Factory configuration |
    | 0x0002 | System configuration |
@@ -3092,7 +3094,7 @@ typedef struct {
    아래 설명 중 생체정보는 장치에 따라 지문 또는 얼굴을 의미합니다.
 
    | 순서 | 의미 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | -- | -- |
    | 11 | BS2_EXT_AUTH_MODE_FACE_ONLY | 얼굴 |
    | 12 | BS2_EXT_AUTH_MODE_FACE_FINGERPRINT | 얼굴 + 지문 |
    | 13 | BS2_EXT_AUTH_MODE_FACE_PIN | 얼굴 + PIN |
@@ -3142,7 +3144,7 @@ typedef struct {
    광역 이중 인증 위반인지 BioStar 애플리케이션에 질의를 할 수 없거나 응답이 없을때 기본적으로 수행해야 할 동작입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | APB 검사 안함 |
    | 1 | Soft APB로 동작 |
    | 2 | Hard APB로 동작 |
@@ -3170,7 +3172,7 @@ typedef struct {
    설정하면 Normal/Strict에 따른 카메라 뷰가 표시되며, 인증 성공 시의 이미지 로그가 얼굴로 인식되지 않으면 접근이 거부됩니다. 기본값은 0입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 얼굴 검출을 하지 않음 |
    | 1 | Normal mode |
    | 2 | Strict mode |
@@ -3214,7 +3216,7 @@ typedef struct {
    사용자가 인증되었을 때 식별자에 해당하는 권한을 지정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 권한 없음 |
    | 1 | 관리자 권한 |
    | 2 | 시스템 구성을 변경할 수 있는 권한 |
@@ -3272,10 +3274,10 @@ typedef struct {
    그리고 useRejectSound의 열화상 감지로 인한 sound발생이, faceCheckOrder의 발열 측정이 무시됩니다.
 
    | 값 | 설명 | 기본값 |
-   | :--: | :--: | :--: |
+   | :--: | -- | :--: |
    | 0 | 열화상 감지 사용 안함 | 기본값 |
-   | 1 | 열화상 감지 사용 (HARD) |  |
-   | 2 | 열화상 감지 사용 (SOFT) |  |
+   | 1 | 열화상 감지 사용 (HARD) | \- |
+   | 2 | 열화상 감지 사용 (SOFT) | \- |
 
 1. `maskCheckMode`
 
@@ -3292,11 +3294,11 @@ typedef struct {
    <Badge only>+ v2.9.8</Badge> 마스크 착용 금지(3)는 Mask Check Mode가 Check Before Authentication 인 경우만 설정 가능하며, maskDetectionLevel에 따라 마스크를 착용한 사용자는 인증이 실패됩니다. 이 옵션은 [BS2DeviceCapabilities - authDenyMaskSupported](device_api#bs2devicecapabilities)를 지원하는 장치만 사용할 수 있습니다.
 
    | 값 | 설명 | 기본값 |
-   | :--: | :--: | :--: |
+   | :--: | -- | :--: |
    | 0 | 마스크 착용 감지 사용 안함 | 기본값 |
-   | 1 | 마스크 착용 감지 사용 (HARD) |  |
-   | 2 | 마스크 착용 감지 사용 (SOFT) |  |
-   | 3 | 마스크 착용 금지 |  |
+   | 1 | 마스크 착용 감지 사용 (HARD) | \- |
+   | 2 | 마스크 착용 감지 사용 (SOFT) | \- |
+   | 3 | 마스크 착용 금지 | \- |
 
 1. `reserved`
 
@@ -3307,8 +3309,8 @@ typedef struct {
    온도 단위를 나타내며, 화면상의 온도 표시를 화씨 또는 섭씨로 나타내도록 선택할 수 있습니다.
 
    | 값 | 설명 | 기본값 |
-   | :--: | :--: | :--: |
-   | 0 | 화씨 |  |
+   | :--: | -- | :--: |
+   | 0 | 화씨 | \- |
    | 1 | 섭씨 | 기본값 |
 
 1. `reserved2`
@@ -3344,11 +3346,11 @@ typedef struct {
    **Visual Face 기반** 마스크 착용 감지 수준을 입력합니다. 여기서 감지 수준은 내부적으로 설정된 값에 근거합니다.
 
    | 값 | 설명 | 기본값 |
-   | :--: | :--: | :--: |
+   | :--: | -- | :--: |
    | 0 | 착용 감지 안함 | 기본값 |
-   | 1 | 감지수준 보통 |  |
-   | 2 | 감지수준 높음 |  |
-   | 3 | 감지수준 매우높음 |  |
+   | 1 | 감지수준 보통 | \- |
+   | 2 | 감지수준 높음 | \- |
+   | 3 | 감지수준 매우높음 | \- |
 
 1. `auditTemperature`
 
@@ -3375,10 +3377,10 @@ typedef struct {
    고위험군을 고려하는 환경이라면, 발열 측정 후 인증을 선택할지, 그 전에 인증을 수행할지에 대한 선택은 매우 중요한 요소입니다.
 
    | 값 | 설명 | 기본값 |
-   | :--: | :--: | :--: |
+   | :--: | -- | :--: |
    | 0 | 인증 후 발열 측정 및 마스크 착용 감지 | 기본값 |
-   | 1 | 발열 측정 및 마스크 착용 감지 후 인증 |  |
-   | 2 | 인증 절차 생략. 발열 검사 및 마스크 착용 감지만 수행 |  |
+   | 1 | 발열 측정 및 마스크 착용 감지 후 인증 | \- |
+   | 2 | 인증 절차 생략. 발열 검사 및 마스크 착용 감지만 수행 | \- |
 
 ### BS2ThermalCameraConfig
 
@@ -3453,7 +3455,7 @@ typedef struct {
    기본값은 4초이며, 4\~10초 범위 내로 입력 가능합니다.
 
    | 값 | 매크로 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | -- | -- |
    | 4 | BS2_BARCODE_TIMEOUT_DEFAULT | 기본값 |
    | 4 | BS2_BARCODE_TIMEOUT_MIN | 최소값 |
    | 10 | BS2_BARCODE_TIMEOUT_MAX | 최대값 |
@@ -3503,7 +3505,7 @@ typedef struct {
    <Badge only>+ v2.9.1</Badge> Visual barcode에 대한, 모션 센서의 감도를 설정합니다.
 
    | 값 | 매크로 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | -- | -- |
    | 0 | BS2_MOTION_SENSITIVITY_LOW | 낮음 |
    | 1 | BS2_MOTION_SENSITIVITY_NORMAL | 중간 |
    | 2 | BS2_MOTION_SENSITIVITY_HIGH | 높음 |
@@ -3515,7 +3517,7 @@ typedef struct {
    기본값은 10초이며, 3\~20초 범위 내로 입력 가능합니다.
 
    | 값 | 매크로 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | -- | -- |
    | 10 | BS2_VISUAL_BARCODE_TIMEOUT_DEFAULT | 기본값 |
    | 3 | BS2_VISUAL_BARCODE_TIMEOUT_MIN | 최소값 |
    | 20 | BS2_VISUAL_BARCODE_TIMEOUT_MAX | 최대값 |
@@ -3587,7 +3589,7 @@ typedef struct {
    <Badge only>+ v2.9.9</Badge> Aux 입력 신호 유형을 설정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | Normally Open |
    | 1 | Normally Closed |
 
@@ -3604,7 +3606,7 @@ typedef struct {
    Input 신호 유형입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | Normally Open |
    | 1 | Normally Closed |
 
@@ -3621,7 +3623,7 @@ typedef struct {
    Supervised input 저항 값의 유형을 설정하거나, 해제할 수(unsupervised) 있습니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 1K 저항 |
    | 1 | 2.2K 저항 |
    | 2 | 4.7K 저항 |
@@ -3704,7 +3706,7 @@ typedef struct {
    Linkage로 설정 시 mask로 alarm이 설정되어야 신호가 전달됩니다.
 
    | type | 값 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | :--: | -- |
    | NONE | 0 | 사용안함 |
    | LINKAGE | 1 | 해당 input에 대한 relay로의 연결 |
    | LATCHING | 2 | 미지원 |
@@ -3715,7 +3717,7 @@ typedef struct {
    Input 신호정보들에 대해 mask를 설정합니다.
 
    | type | 값 | 설명 |
-   | :--: | :--: | :--: |
+   | :--: | :--: | -- |
    | NONE | 0 | 사용안함 |
    | ALARM | 1 | 신호 발생 |
    | FAULT | 2 | 단선/단락의 경우 신호 발생 |
@@ -3849,7 +3851,7 @@ typedef struct {
    퇴실버튼으로 사용할 버튼 기호입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | \* | `*` ASCII code 42 |
    | \# | `#` ASCII code 35 |
    | 0\~9 | '0'\~'9' ASCII code (48\~57) |
@@ -3875,7 +3877,7 @@ typedef struct {
    <Badge only>+ v2.9.8</Badge> 송신 비디오 해상도를 설정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 360 x 640 |
    | 1 | 720 x 480 |
 
@@ -3884,7 +3886,7 @@ typedef struct {
    <Badge only>+ v2.9.8</Badge> 데이터 전송 방식을 설정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | UDP |
    | 1 | TCP |
    | 2 | SSL |
@@ -3940,7 +3942,7 @@ typedef struct {
    <Badge only>+ v2.9.8</Badge> 송신 비디오 해상도를 설정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 180 x 320 |
    | 1 | 720 x 480 |
 
@@ -3988,7 +3990,7 @@ typedef struct {
    라이선스의 종류를 나타냅니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0x0000 | None |
    | 0x0001 | Visual QR |
 
@@ -3997,7 +3999,7 @@ typedef struct {
    licenseType의 세부 형태를 나타냅니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | None |
    | 1 | Visual QR (CodeCorp) |
 
@@ -4112,7 +4114,7 @@ typedef struct {
    채널에 OSDP로 장치가 연결이되면 허용이 가능한 최대 장치수는 2대로 제한되며, 이미 해당 채널이 최대치에 도달했으면 channelType은 3을 갖으며 더이상 연결이 불가함을 나타냅니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | Normal |
    | 1 | Suprema 장치 |
    | 2 | OSDP 장치 |
@@ -4131,7 +4133,7 @@ typedef struct {
    RS485 네트워크에서 어떤 모드로 동작할지 결정하는 flag인데, 문서 작성일 2023/1/12일 기준으로 Osdp standard config를 지원하는 장치는 CoreStation40 뿐이므로 항상 master 값을 갖습니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 사용안함 |
    | 1 | Master |
    | 2 | Slave |
@@ -4221,7 +4223,7 @@ typedef struct
    Temporary command 입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | No Operation |
    | 1 | Cancel |
    | 2 | Set |
@@ -4243,7 +4245,7 @@ typedef struct
    Temporary command에 대해서 On 상태의 LED 색상을 지정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | BLACK |
    | 1 | RED |
    | 2 | GREEN |
@@ -4258,7 +4260,7 @@ typedef struct
    Temporary command에 대해서 Off 상태의 LED 색상을 지정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | BLACK |
    | 1 | RED |
    | 2 | GREEN |
@@ -4311,7 +4313,7 @@ typedef struct
    Buzzer를 설정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | None |
    | 1 | Off |
    | 2 | On |
@@ -4337,7 +4339,7 @@ typedef struct
    action을 지정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | None |
    | 1 | Success |
    | 2 | Fail |
@@ -4454,7 +4456,7 @@ typedef struct {
    데이터 암호화 방식을 나타냅니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | DES/3DES |
    | 1 | AES |
 
@@ -4463,7 +4465,7 @@ typedef struct {
    운영 방식을 지정합니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 일반설정 사용 (PICC master key를 사용) |
    | 1 | 고급설정 사용 (App master key를 사용) |
 
@@ -4546,7 +4548,7 @@ typedef struct {
    Card의 데이터 유형입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | 바이너리 |
    | 1 | 아스키 |
    | 2 | UTF16 |
@@ -4579,7 +4581,7 @@ typedef struct {
    CRYPTO1으로 설정하면 BS2CustomMifareCard의 Mifare 설정이 적용되고, AES128로 설정하면 BS2CustomMifareConfigEx의 mifareEx 설정이 적용됩니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | CRYPTO1 |
    | 1 | AES128 |
 
@@ -4592,7 +4594,7 @@ typedef struct {
    MSB 또는 LSB로 출력을 지정할 수 있습니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 0 | MSB |
    | 1 | LSB |
 
@@ -4741,8 +4743,8 @@ baudRate을 제외한 모든 값은 읽기 전용으로 변경이 불가능합�
    해당 포트에 연결된 슬레이브 장치타입을 나타냅니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
-   | 0 | 연결이 없음 |
+   | :--: | -- |
+   | 0 | 연결 없음 |
    | 1 | 슈프리마 장치 |
    | 2 | OSDP 표준 장치 |
    | 3 | 더 이상 연결할 수 없음 |
@@ -4765,7 +4767,7 @@ baudRate을 제외한 모든 값은 읽기 전용으로 변경이 불가능합�
    RS485 네트워크에서 어떤 모드로 동작할지 결정하는 flag입니다.
 
    | 값 | 설명 |
-   | :--: | :--: |
+   | :--: | -- |
    | 1 | Master |
    | 2 | Slave |
    | 3 | Standalone |

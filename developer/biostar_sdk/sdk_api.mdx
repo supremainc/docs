@@ -6,6 +6,8 @@
 
 <DocCardList />
 
+---
+
 ## 구조체
 
 ### BS2EncryptKey
@@ -13,13 +15,13 @@
 ```cpp
 enum
 {
-    BS2_ENC_KEY_SIZE = 32,
+   BS2_ENC_KEY_SIZE = 32,
 };
 
 typedef struct
 {
-    uint8_t key[BS2_ENC_KEY_SIZE];
-    uint8_t reserved[32];
+   uint8_t key[BS2_ENC_KEY_SIZE];
+   uint8_t reserved[32];
 } BS2EncryptKey;
 ```
 
@@ -35,11 +37,11 @@ typedef struct
 
 ```cpp
 typedef struct {
-    BS2_LICENSE_TYPE    licenseType;
-    uint16_t            numOfDevices;
-    BS2_DEVICE_ID*      deviceIDObjs;
-    uint32_t            licenseLen;
-    uint8_t*            licenseObj;
+   BS2_LICENSE_TYPE    licenseType;
+   uint16_t            numOfDevices;
+   BS2_DEVICE_ID*      deviceIDObjs;
+   uint32_t            licenseLen;
+   uint8_t*            licenseObj;
 } BS2LicenseBlob;
 ```
 
@@ -48,7 +50,7 @@ typedef struct {
    라이선스의 종류를 나타냅니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | 0x0000 | None |
    | 0x0001 | Visual QR |
 
@@ -72,8 +74,8 @@ typedef struct {
 
 ```cpp
 typedef struct {
-    BS2_DEVICE_ID       deviceID;
-    BS2_LICENSE_STATUS  status;
+   BS2_DEVICE_ID       deviceID;
+   BS2_LICENSE_STATUS  status;
 } BS2LicenseResult;
 ```
 
@@ -86,7 +88,7 @@ typedef struct {
    라이선스 상태 정보입니다.
 
    | 값 | 설명 |
-   | --- | --- |
+   | :--: | --- |
    | 0 | Not supported (지원 안함) |
    | 1 | Disable (꺼짐) |
    | 2 | Enable (켜짐) |

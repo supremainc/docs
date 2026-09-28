@@ -363,9 +363,9 @@ div[class*='docItemCol'] {
   }
   li.apis {
     ul.menu__list li span {
-      font-size: 10pt;
+      font-size: 11pt;
       font-family: "Noto Sans Coptic";
-      font-weight: 400;
+      font-weight: 200;
     }
     .menu__list-item:not(:first-child) {
       margin-top: 0;
@@ -629,7 +629,30 @@ footer {
     margin-top: 0;
     padding-top: 0;
   }
-
+  .sdk--download {
+    background: var(--ifm-color-nextstep-background);
+    width: 70%;
+    padding: 1rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    h2 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+    p {
+      a {
+        width: 100%;
+        display: block;
+        font-weight: 600;
+        color: #fff;
+        background: var(--ifm-color-cmd);
+        text-align: center;
+        padding: .5rem;
+        border-radius: 5px;
+        margin-top: .75rem;
+      }
+    }
+  }
   dl {
     dt {
       font-weight: 600;

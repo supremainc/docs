@@ -6,6 +6,8 @@
 
 <DocCardList />
 
+---
+
 ## 구조체
 
 ### BS2Face
@@ -167,7 +169,7 @@ typedef struct {
    * 또한, [BS2FaceConfig](configuration_api#bs2faceconfig)의 `unableToSaveImageOfVisualFace`에 `1`(true)이 설정되어야 합니다.
 
    | 값 | 설명 |
-   | :--: | --- |
+   | :--: | :--: |
    | BS2_FACE_EX_FLAG_NONE | 0x00 |
    | BS2_FACE_EX_FLAG_WARPED | 0x01 |
    | BS2_FACE_EX_FLAG_TEMPLATE_ONLY | 0x20 |
@@ -193,8 +195,8 @@ typedef struct {
 
    WARP 되어진 얼굴 이미지 데이터입니다. rawImageData로부터 자동으로 만들어집니다.
 
-   | 장치타입 | 장치버전 | FW버전 | 이미지크기 | 이미지타입 | `rawImageData` |
-   | --- | --- | --- | --- | --- | --- |
+   | 장치 타입 | 장치 버전 | FW 버전 | 이미지 크기 | 이미지 타입 | `rawImageData` |
+   | :--: | :--: | :--: | :--: | :--: | :--: |
    | FaceStation F2 | V1 | 2.0.0 미만 | 250 × 250 | JPG | JPG |
    | FaceStation F2 | V2 | 2.0.0 이상 | 112 × 112 | PNG | JPG, PNG |
    | BioStation 3 | V1 | 모든 버전 | 112 × 112 | PNG | JPG, PNG |

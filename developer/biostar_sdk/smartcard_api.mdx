@@ -6,6 +6,8 @@
 
 <DocCardList />
 
+---
+
 ## 구조체
 
 ### BS2CSNCard
@@ -24,13 +26,13 @@ typedef struct {
 
    | 값 | 설명 | 사용된 형식 |
    | :--: | --- | --- |
-   | 0x00 | 알려지지 않은 카드 |  |
-   | 0x01 | CSN 카드 |  |
-   | 0x02 | Secure 카드 |  |
-   | 0x03 | Access 카드 |  |
-   | 0x06 | QR 코드 |  |
-   | 0x0A | Wiegand 카드 | `BS2WiegandConfig.format` 이 형식은 `BS2WiegandConfig.CSNIndex` 혹은 `BS2WiegandConfig.CardMask`가 0으로 설정될 때 사용됩니다. |
-   | 0x0B | Config 카드 |  |
+   | 0x00 | 알려지지 않은 카드 | \- |
+   | 0x01 | CSN 카드 | \- |
+   | 0x02 | Secure 카드 | \- |
+   | 0x03 | Access 카드 | \- |
+   | 0x06 | QR 코드 | \- |
+   | 0x0A | Wiegand 카드 | `BS2WiegandConfig.format` 이 형식은 `BS2WiegandConfig.CSNIndex` 혹은<br /> `BS2WiegandConfig.CardMask`가 0으로 설정될 때 사용됩니다. |
+   | 0x0B | Config 카드 | \- |
    | 0x1A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[0\] |
    | 0x2A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[1\] |
    | 0x3A | Wiegand 카드 | BS2WiegandMultiConfig.formats\[2\] |
@@ -151,14 +153,14 @@ typedef struct {
 
    | 값 | 1단계 인증 | 2단계 인증 | 3단계 인증 |
    | :--: | --- | --- | --- |
-   | 21 | 카드 |  |  |
-   | 22 | 카드 | 얼굴 |  |
-   | 23 | 카드 | 지문 |  |
-   | 24 | 카드 | PIN |  |
-   | 25 | 카드 | 얼굴 또는 지문 |  |
-   | 26 | 카드 | 얼굴 또는 PIN |  |
-   | 27 | 카드 | 지문 또는 PIN |  |
-   | 28 | 카드 | 얼굴 또는 지문 또는 PIN |  |
+   | 21 | 카드 | \- | \- |
+   | 22 | 카드 | 얼굴 | \- |
+   | 23 | 카드 | 지문 | \- |
+   | 24 | 카드 | PIN | \- |
+   | 25 | 카드 | 얼굴 또는 지문 | \- |
+   | 26 | 카드 | 얼굴 또는 PIN | \- |
+   | 27 | 카드 | 지문 또는 PIN | \- |
+   | 28 | 카드 | 얼굴 또는 지문 또는 PIN | \- |
    | 29 | 카드 | 얼굴 | 지문 |
    | 30 | 카드 | 얼굴 | PIN |
    | 31 | 카드 | 지문 | 얼굴 |
@@ -166,8 +168,8 @@ typedef struct {
    | 33 | 카드 | 얼굴 또는 지문 | PIN |
    | 34 | 카드 | 얼굴 | 지문 또는 PIN |
    | 35 | 카드 | 지문 | 얼굴 또는 PIN |
-   | 254 | 사용할 수 없음 |  |  |
-   | 255 | 정의되지 않음(시스템 정의 모드) |  |  |
+   | 254 | 사용할 수 없음 | \- | \- |
+   | 255 | 정의되지 않음(시스템 정의 모드) | \- | \- |
 
 1. `numOfFaceTemplate`
 
@@ -314,8 +316,8 @@ typedef struct {
 
    | 값 | 설명 | 사용된 형식 |
    | :--: | --- | --- |
-   | 0x01 | CSN 카드 |  |
-   | 0x02 | Secure 카드 |  |
+   | 0x01 | CSN 카드 | \- |
+   | 0x02 | Secure 카드 | \- |
 
 1. `size`
 
