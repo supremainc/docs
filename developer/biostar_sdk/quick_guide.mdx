@@ -2,9 +2,9 @@
 
 이 페이지는 BioStar SDK를 이용하여 애플리케이션을 개발하는 방법을 설명합니다.
 
-아래 내용은 BioStar 애플리케이션에서 자주 사용하는 인터페이스의 사용법을 기술하고 있으며, 예제 코드는 C++ 기반으로 작성되었습니다. 다른 언어의 예제는 SDK 패키지의 Example 폴더를 참고하십시오.
+아래 내용은 BioStar 애플리케이션에서 자주 사용하는 인터페이스의 사용법을 기술하고 있으며, 예제 코드는 C++ 기반으로 작성되었습니다. 다른 언어의 예제는 SDK 패키지의 Example 폴더를 참고하세요.
 
-변수명이 Obj로 끝나는 파라미터는 동적으로 메모리가 할당되므로 더 이상 사용하지 않을 경우에는 `BS2_ReleaseObject` 함수를 사용하여 메모리를 해제하십시오.
+변수명이 Obj로 끝나는 파라미터는 동적으로 메모리가 할당되므로 더 이상 사용하지 않을 경우에는 `BS2_ReleaseObject` 함수를 사용하여 메모리를 해제하세요.
 
 아래는 메모리 해제가 필요한 함수 목록입니다.
 
@@ -106,7 +106,7 @@ if(result == BS_SDK_SUCCESS)
 
 ## 4 단계. 장치 설정 정보 가져오기
 
-장치의 설정 정보는 BS2_GetXXXConfig[^2] 함수를 통해 가져올 수 있습니다. 장치 설정에 대한 자세한 정보는 [Configuration API](configuration_api)를 참고하십시오.
+장치의 설정 정보는 BS2_GetXXXConfig[^2] 함수를 통해 가져올 수 있습니다. 장치 설정에 대한 자세한 정보는 [Configuration API](configuration_api)를 참고하세요.
 
 ```cpp
 uint32_t deviceId = 1;
@@ -132,9 +132,9 @@ if(deviceInfo.tnaSupported)
 
 ## 5 단계. 사용자 등록
 
-장치에 사용자를 등록하려면 헤더 정보를 올바르게 설정해야 합니다. 사용자가 사용할 수 있는 크리덴셜 종류는 PIN, 스마트 카드, 지문 인식, 얼굴 인식이 있으며, 장치에서 지원하는 크리덴셜 종류는 [4 단계. 장치 설정 정보 가져오기](quick_guide#4 단계. 장치 설정 정보 가져오기)에서 `BS2SimpleDeviceInfo`로 얻은 정보를 사용하십시오.
+장치에 사용자를 등록하려면 헤더 정보를 올바르게 설정해야 합니다. 사용자가 사용할 수 있는 크리덴셜 종류는 PIN, 스마트 카드, 지문 인식, 얼굴 인식이 있으며, 장치에서 지원하는 크리덴셜 종류는 [4 단계. 장치 설정 정보 가져오기](quick_guide#4 단계. 장치 설정 정보 가져오기)에서 `BS2SimpleDeviceInfo`로 얻은 정보를 사용하세요.
 
-사용자 정보와 크리덴셜 정보는 `BS2_EnrolUser` 함수로 등록할 수 있습니다. 자세한 내용은 [User Management API](user_management_api)를 참고하십시오.
+사용자 정보와 크리덴셜 정보는 `BS2_EnrolUser` 함수로 등록할 수 있습니다. 자세한 내용은 [User Management API](user_management_api)를 참고하세요.
 
 ```cpp
 uint32_t deviceId = 1;
@@ -212,7 +212,7 @@ if(deviceInfo.pinSupported)
 
 ### 카드 추가
 
-BioStar 시스템에서는 MIFARE, IClass 등과 같은 다양한 스마트 카드를 지원하며, 한 사람당 최대 8개의 카드를 할당할 수 있습니다. 사용자에게 스마트 카드를 할당하려면 `BS2_ScanCard` 함수를 이용하여 카드 정보를 읽은 뒤 카드 정보를 User header 구조체에 맵핑하십시오.
+BioStar 시스템에서는 MIFARE, IClass 등과 같은 다양한 스마트 카드를 지원하며, 한 사람당 최대 8개의 카드를 할당할 수 있습니다. 사용자에게 스마트 카드를 할당하려면 `BS2_ScanCard` 함수를 이용하여 카드 정보를 읽은 뒤 카드 정보를 User header 구조체에 맵핑하세요.
 
 ```cpp
 uint32_t deviceId = 1;
@@ -242,7 +242,7 @@ if(deviceInfo.cardSupported)
 
 ### 지문 템플릿 추가
 
-지문 템플릿 추출은 지문 이미지를 스캔하고 템플릿 데이터를 추출하는 과정과 등록된 지문 템플릿이 서로 매치되는지 확인하는 과정으로 이루어져 있습니다. 지문 템플릿 추출이 완료되면 지문 템플릿 정보를 User header 구조체에 맵핑하십시오.
+지문 템플릿 추출은 지문 이미지를 스캔하고 템플릿 데이터를 추출하는 과정과 등록된 지문 템플릿이 서로 매치되는지 확인하는 과정으로 이루어져 있습니다. 지문 템플릿 추출이 완료되면 지문 템플릿 정보를 User header 구조체에 맵핑하세요.
 
 ```cpp
 uint32_t deviceId = 1;
@@ -313,7 +313,7 @@ if(deviceInfo.fingerSupported)
 
 ### 얼굴 템플릿 추가
 
-얼굴 템플릿 추출은 얼굴을 스캔하고 템플릿 데이터를 추출하는 과정과 등록된 얼굴 템플릿이 서로 매치되는지 확인하는 과정으로 이루어져 있습니다. 얼굴 템플릿 추출이 완료되면 얼굴 템플릿 정보를 User header 구조체에 맵핑하십시오.
+얼굴 템플릿 추출은 얼굴을 스캔하고 템플릿 데이터를 추출하는 과정과 등록된 얼굴 템플릿이 서로 매치되는지 확인하는 과정으로 이루어져 있습니다. 얼굴 템플릿 추출이 완료되면 얼굴 템플릿 정보를 User header 구조체에 맵핑하세요.
 
 ```cpp
 uint32_t deviceId = 1;
@@ -347,13 +347,13 @@ if (deviceInfo.faceSupported)
 
 ## 6 단계. 로그 제어
 
-BioEntry Plus, BioEntry W, BioLite Net, Xpass, Xpass S2는 최대 50,000개의 로그를 저장할 수 있으며, BioStation 2는 최대 3,000,000개의 로그를 저장할 수 있습니다. 로그 정보는 순환 큐로 관리하므로 저장할 공간이 부족하면 자동으로 오래된 로그부터 삭제하여 저장 공간을 확보합니다. 로그 유형에 대한 자세한 정보는 [Log Management API](log_management_api)를 참고하십시오.
+BioEntry Plus, BioEntry W, BioLite Net, Xpass, Xpass S2는 최대 50,000개의 로그를 저장할 수 있으며, BioStation 2는 최대 3,000,000개의 로그를 저장할 수 있습니다. 로그 정보는 순환 큐로 관리하므로 저장할 공간이 부족하면 자동으로 오래된 로그부터 삭제하여 저장 공간을 확보합니다. 로그 유형에 대한 자세한 정보는 [Log Management API](log_management_api)를 참고하세요.
 
 ---
 
 ### 로그 가져오기
 
-로그를 가져오는 함수는 `BS2_GetLog`와 `BS2_GetFilteredLog`를 사용합니다. 대부분의 경우 `BS2_GetLog` 함수로 사용하지만 조건 검색이 필요하다면 `BS2_GetFilteredLog` 함수를 이용하십시오.
+로그를 가져오는 함수는 `BS2_GetLog`와 `BS2_GetFilteredLog`를 사용합니다. 대부분의 경우 `BS2_GetLog` 함수로 사용하지만 조건 검색이 필요하다면 `BS2_GetFilteredLog` 함수를 이용하세요.
 
 ```cpp
 uint32_t deviceId = 1;

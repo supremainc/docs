@@ -164,11 +164,11 @@ Under construction
 
 ***C#***
 
-1. SDK 패키지에서 라이브러리 디렉토리를 선택하고 프로젝트 디렉토리로 복사하십시오.
+1. SDK 패키지에서 라이브러리 디렉토리를 선택하고 프로젝트 디렉토리로 복사하세요.
 
 2. 플랫폼 대상에 맞는 올바른 DLL를 사용하기 위해 프로젝트 속성을 수정해야 합니다.
 
-   프로젝트 속성 페이지를 열고 **빌드 전 이벤트** 명령줄에 다음과 같이 입력하십시오.
+   프로젝트 속성 페이지를 열고 **빌드 전 이벤트** 명령줄에 다음과 같이 입력하세요.
 
    | SDK 버전 | 플랫폼 | 입력 정보 |
    | --- | --- | --- |
@@ -176,7 +176,7 @@ Under construction
    | V2.8.2 이후 | x86 | `copy "$(ProjectDir)lib\$(PlatformTarget)\BS_SDK_V2.dll" "$(TargetDir)"`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libssl-1_1.dll" "$(TargetDir)"        // OpenSSL 1.1.1i`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libcrypto-1_1.dll" "$(TargetDir)"     // OpenSSL 1.1.1i` |
    | V2.8.2 이후 | x64 | `copy "$(ProjectDir)lib\$(PlatformTarget)\BS_SDK_V2.dll" "$(TargetDir)"`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libssl-1_1-x64.dll" "$(TargetDir)"     // OpenSSL 1.1.1i`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libcrypto-1_1-x64.dll" "$(TargetDir)"  // OpenSSL 1.1.1i` |
 
-3. SDK 패키지의 예제 코드에서 **SFApi.cs**, **SFEnum.cs**, **SFStruct.cs**를 복사하십시오.
+3. SDK 패키지의 예제 코드에서 **SFApi.cs**, **SFEnum.cs**, **SFStruct.cs**를 복사하세요.
 
    ![](/img/common/pre-build_event_command_line.png)
 
