@@ -22,9 +22,9 @@
 
    브로드캐스트를 사용하지 않고 지정한 IPv4 주소로 직접 요청을 보내므로, 브로드캐스트가 차단된 구간이거나 장치가 다른 서브넷에 있어도 장치를 찾을 수 있습니다.
 
-   응답 시간 초과가 성공으로 보고되는 점에 유의하세요. 반환값이 아니라 [BS2_GetDevices](bs2_getdevices)가 반환하는 장치 수로 판단해야 합니다.
+   응답 시간 초과가 성공으로 보고되는 점에 유의하세요. 반환값이 아니라 [BS2_GetDevices](../bs2_getdevices)가 반환하는 장치 수로 판단해야 합니다.
 
-   - 함수 [BS2_SearchDeviceByIP](bs2_searchdevicebyip) 추가
+   - 함수 [BS2_SearchDeviceByIP](../bs2_searchdevicebyip) 추가
 
 1. DesFire 카드를 EV2 Secure Messaging으로만 허용하는 설정이 추가되었습니다.
 
@@ -32,15 +32,15 @@
 
    지원 장치 및 펌웨어 버전 정보는 아래 링크된 함수 설명을 참조하세요.
 
-   - 구조체 [BS2CardConfig](configuration_api#bs2cardconfig) 참조
+   - 구조체 [BS2CardConfig](../configuration_api#bs2cardconfig) 참조
 
-   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+   - 구조체 [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) 참조
 
 1. 장치 지원 기능(Capability) 플래그가 추가되었습니다.
 
    플래그는 장치의 기능 지원 여부만 나타내며, SDK에서 해당 기능을 사용할 수 있다는 의미는 아닙니다.
 
-   - 구조체 [BS2DeviceCapabilities](device_api#bs2devicecapabilities) 참조
+   - 구조체 [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) 참조
 
    - `y2k38Supported`, `ev2smSupported`, `videoStandbySupported`
 
@@ -60,8 +60,8 @@
 
 ## 수정 기능
 
-1. 장치 검색 함수 [BS2_SearchDevicesEx](bs2_searchdevicesex)가 `지원 중단`되었습니다.
+1. 장치 검색 함수 [BS2_SearchDevicesEx](../bs2_searchdevicesex)가 `지원 중단`되었습니다.
 
-   대신 [BS2_SearchDevices](bs2_searchdevices)와 [BS2_SetEnableIPV4](bs2_setenableipv4) / [BS2_SetEnableIPV6](bs2_setenableipv6)를 함께 사용하세요.
+   대신 [BS2_SearchDevices](../bs2_searchdevices)와 [BS2_SetEnableIPV4](../bs2_setenableipv4) / [BS2_SetEnableIPV6](../bs2_setenableipv6)를 함께 사용하세요.
 
-   [BS2_SearchDeviceByIP](bs2_searchdevicebyip)는 이 함수의 대체가 아닙니다. 이 함수의 인자는 호스트 주소나 브로드캐스트 주소가 아니라, 찾으려는 장치의 주소이기 때문입니다.
+   [BS2_SearchDeviceByIP](../bs2_searchdevicebyip)는 이 함수의 대체가 아닙니다. 이 함수의 인자는 호스트 주소나 브로드캐스트 주소가 아니라, 찾으려는 장치의 주소이기 때문입니다.
