@@ -238,10 +238,7 @@
   "ui_198": "Sensor Mode",
   "ui_199": "By User",
   "ui_200": "Number",
-  "ui_201": {
-    "common": "Suprema Smart Card",
-    "device_manager": "Suprema Smart Card Layout"
-  },
+  "ui_201": "Suprema Smart Card",
   "ui_202": "Output Byte Order",
   "ui_203": "Schedule",
   "ui_204": "Scramble Keypad",
@@ -335,10 +332,7 @@
   "ui_273": "Normal User",
   "ui_274": "Switch",
   "ui_275": "Auto",
-  "ui_276": {
-    "common": "Auto Connection",
-    "device_manager": "Auto Connect"
-  },
+  "ui_276": "Auto Connection",
   "ui_277": "Auto On",
   "ui_278": "Operation Mode",
   "ui_279": "Job Code",
@@ -406,10 +400,7 @@
   },
   "ui_331": "Camera Configuration",
   "ui_332": "Kernel",
-  "ui_333": {
-    "common": "Custom Smart Card",
-    "device_manager": "Custom Smart Card Layout"
-  },
+  "ui_333": "Custom Smart Card",
   "ui_334": "Key Menu",
   "ui_335": "Keypad",
   "ui_336": "Keypad Setting",
