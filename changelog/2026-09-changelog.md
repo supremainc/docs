@@ -11,6 +11,12 @@ date: 2026-10-01T09:00
 
 {/*truncate*/}
 
+## Docs
+
+개별 문서 페이지에서 해당 제품의 매뉴얼 PDF를 바로 다운로드할 수 있도록 개선되었습니다.
+
+![Download PDF](/img/changelogs/changelog-2609-download-pdf.png)
+
 ## 플랫폼
 
 ### BioStar X
@@ -146,9 +152,3 @@ date: 2026-10-01T09:00
 * [X-Station 2](/device/xstation_2/release-notes/142): 1.4.2 버전 릴리스 노트 추가
 
 * [Device Manager](/device/device_manager/release-notes/124): 1.2.4 버전 릴리스 노트 추가
-
-## Docs
-
-개별 문서 페이지에서 제품 기준으로 문서를 PDF로 다운로드할 수 있도록 개선
-
-![Download PDF](/img/changelogs/changelog-2609-download-pdf.png)
