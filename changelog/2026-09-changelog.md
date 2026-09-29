@@ -99,17 +99,13 @@ date: 2026-10-01T09:00
 
 ### 장치 업데이트
 
-* [XPass Q2](../device/xpass_q2): XPQ2-DPB 모델 추가
-
-  * [설치하기](../device/xpass_q2/installation): PoE 전원 사용 시 리더 출력 전력 사양과 케이블 규격별 최대 연장 길이 추가
-
-  * [안전을 위한 주의 사항](../device/xpass_q2/safety-instructions): PoE 전원 사용 시 권장 작동 온도 범위 추가
+* [XPass Q2](../device/xpass_q2): XPQ2-DPB 신규 모델 추가
 
 * [BioEntry W3](../device/bioentry_w3/installation): 틸팅 브래킷을 사용한 설치 방법 추가
 
 * [BioStation 3](../device/biostation_3)
 
-  * [인증](../device/biostation_3/authentication): 중복 인증 방지 시간 설정 추가
+  * [인증](../device/biostation_3/authentication): 얼굴 중복 인증 방지 시간 설정 추가
 
   * [사용자](../device/biostation_3/user): 사용자 ID와 이름에 입력할 수 있는 특수 문자 안내 업데이트
 
@@ -117,11 +113,15 @@ date: 2026-10-01T09:00
 
 * [FaceStation F2](../device/facestation_f2)
 
-  * [시작하기](../device/facestation_f2/getting-started): 장치에서 출입문을 제어하는 방법 추가
+  * [시작하기](../device/facestation_f2/admin-menu): 장치에서 출입문을 제어하는 방법 추가
 
   * [사용자](../device/facestation_f2/user): 사용자 ID와 이름에 입력할 수 있는 특수 문자 안내 업데이트
 
-* [BioStation 2a](../device/biostation_2a/): [인증 결과 표시 옵션](../device/biostation_2a/authentication) 및 [인증 결과](../device/biostation_2a/settings#rs-485) 설정 추가
+* [BioStation 2a](../device/biostation_2a)
+  
+  * [인증](../device/biostation_2a/authentication): 인증 결과 표시 옵션 설정 추가
+
+  * [설정](../device/biostation_2a/settings#rs-485): 인증 결과 설정 추가
 
 * [Device Manager](../device/device_manager/getting-started): 신규 장치 지원 및 iOS 지원 버전 업데이트
 
