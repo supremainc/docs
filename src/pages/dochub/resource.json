@@ -413,7 +413,7 @@
             "BS3M-DB",
             "BS3M-APB"
         ],
-        "version": "1.0.1",
+        "version": "1.1.0",
         "manuals": {
             "ko": "device/biostation_3_max/BioStation 3 Max_UG_1.01_KO_260625.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_UG_1.01_EN_260625.pdf",
@@ -421,15 +421,15 @@
             "ja": "device/biostation_3_max/BioStation 3 Max_UG_1.01_JA_260625.pdf"
         },
         "release_notes": {
-            "ko": "device/biostation_3_max/BioStation 3 Max_ReleaseNotes_1.0.1_KO_260624.pdf",
-            "en": "device/biostation_3_max/BioStation 3 Max_ReleaseNotes_1.0.1_EN_260624.pdf"
+            "ko": "device/biostation_3_max/BioStation 3 Max_RN_1.1.0_KO_260923.pdf",
+            "en": "device/biostation_3_max/BioStation 3 Max_RN_1.1.0_EN_260923.pdf"
         },
         "a_e": "device/biostation_3_max/SUPREMA_BioStation_3_Max_AE-Specification_260625.docx",
         "dt": {
             "ko": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-07-01"
+        "release_date": "2026-09-29"
     },
     {
         "category": "biometric",
