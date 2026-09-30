@@ -13,9 +13,13 @@ date: 2026-10-01T09:00
 
 ## Docs
 
-개별 문서 페이지에서 해당 제품의 매뉴얼 PDF를 바로 다운로드할 수 있도록 개선되었습니다.
+* 개별 문서 페이지에서 해당 제품의 매뉴얼 **PDF를 바로 다운로드**할 수 있도록 개선되었습니다.
 
-![Download PDF](/img/changelogs/changelog-2609-download-pdf.png)
+  ![Download PDF](/img/changelogs/changelog-2609-download-pdf.png)
+
+* 개별 문서 페이지에서 해당 문서의 **최종 업데이트 날짜**를 확인할 수 있도록 개선되었습니다.
+
+  ![Last Updated](/img/changelogs/changelog-2609-last-updated.png)
 
 ## 플랫폼
 
@@ -43,7 +47,7 @@ date: 2026-10-01T09:00
 
 #### 문서 업데이트
 
-* [사용자 기본 정보 입력하기](platform/biostar_x/add-user-basic-info): 사용자 ID 및 이름 입력 시 특수 문자를 허용하는 규칙 업데이트
+* [사용자 기본 정보 입력하기](/platform/biostar_x/add-user-basic-info): 사용자 ID 및 이름 입력 시 특수 문자를 허용하는 규칙 업데이트
 
 * 모니터링
 
@@ -63,7 +67,7 @@ date: 2026-10-01T09:00
 
   * [대기 화면에 동영상 재생](/platform/biostar_x/settings-device-details-advanced#playVideo): 대기 화면 동영상 재생 기능 안내 추가
 
-* [운영 권한 관리하기](platform/biostar_x/settings-manage-account): 운영 권한의 메뉴별 권한을 세분화하여 설정할 수 있는 안내 업데이트
+* [운영 권한 관리하기](/platform/biostar_x/settings-manage-account): 운영 권한의 메뉴별 권한을 세분화하여 설정할 수 있는 안내 업데이트
 
 * [인원 점검(Roll Call)](/platform/biostar_x/settings-advanced-ac-roll-call): 인원 점검 수행 시 현장에 없는 사람은 제외하는 기능 추가
 
@@ -73,7 +77,7 @@ date: 2026-10-01T09:00
 
 * [리포트 생성하기](/platform/biostar_x/data-generate-reports): 모든 이벤트 및 경보 이력 조회에서 리포트 저장 기능 안내 추가
 
-* [시스템 보안 강화하기](platform/biostar_x/settings-system-security#communicationByDevice): 장치와 보안 통신 기능 관련 업데이트
+* [시스템 보안 강화하기](/platform/biostar_x/settings-system-security#communicationByDevice): 장치와 보안 통신 기능 관련 업데이트
 
 * [BioStar X 라이선스](/platform/biostar_x/settings-license-biostar-x-license): 여러 라이선스 키를 한 번에 활성화하는 안내 업데이트
 
@@ -85,7 +89,7 @@ date: 2026-10-01T09:00
 
 * [장치 관리하기](/platform/biostar_x_mobile/manage-devices): 모바일 앱에서 장치 상태를 확인하고 인증 실패 잠금을 해제하는 안내 문서 추가
 
-* [인원 점검 시작하기](platform/biostar_x_mobile/start-rollcall) 인원 점검 수행 시 현장에 없는 사람은 제외하는 기능 안내 추가
+* [인원 점검 시작하기](/platform/biostar_x_mobile/start-rollcall) 인원 점검 수행 시 현장에 없는 사람은 제외하는 기능 안내 추가
 
 ### BioStar Air
 
@@ -133,7 +137,7 @@ date: 2026-10-01T09:00
 
 * [FaceStation F2](/device/facestation_f2)
 
-  * [시작하기](/device/facestation_f2/admin-menu): 장치에서 출입문을 제어하는 방법 추가
+  * [관리자 메뉴](/device/facestation_f2/admin-menu): 장치에서 출입문을 제어하는 방법 추가
 
   * [사용자](/device/facestation_f2/user): 사용자 ID와 이름에 입력할 수 있는 특수 문자 안내 업데이트
 
@@ -147,8 +151,16 @@ date: 2026-10-01T09:00
 
 ### 릴리스 노트
 
+* [BioStation 3 Max](/device/biostation_3_max/release-notes/110): 1.1.0 버전 릴리스 노트 추가
+
 * [BioStation 3](/device/biostation_3/release-notes/151): 1.5.1 버전 릴리스 노트 추가
 
 * [X-Station 2](/device/xstation_2/release-notes/142): 1.4.2 버전 릴리스 노트 추가
 
 * [Device Manager](/device/device_manager/release-notes/124): 1.2.4 버전 릴리스 노트 추가
+
+## 개발자 센터
+
+* [BioStar Device SDK](https://kb.supremainc.com/bs2sdk/doku.php?id=ko:release_note_2913): 2.9.13 버전 릴리스
+
+* [Suprema G-SDK](https://supremainc.github.io/g-sdk/release/release-1.9.2/): 1.9.2 버전 릴리스
