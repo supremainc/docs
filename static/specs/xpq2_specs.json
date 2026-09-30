@@ -8,10 +8,10 @@
           "label": "RF 카드",
           "label_id": "specs.credentials.rfcard",
           "value": {
-           "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-           "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-           "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-           "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
+           "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+           "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+           "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+           "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3、FeliCa"
           }
         },
         "rf_distance": {
@@ -23,7 +23,7 @@
             "es": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
             "ja": "EM/MIFARE/DESFire：50 mm、FeliCa：30 mm"
           },
-          "annotation_label": "anno2"
+          "annotation_label": "anno1"
         },
         "mobile": {
           "label": "모바일",
@@ -39,19 +39,19 @@
           "label": "QR/바코드",
           "label_id": "specs.credentials.qr_barcode",
           "value": true,
-          "annotation_label": "anno3",
-          "annotation_value": "anno4"
+          "annotation_label": "anno2",
+          "annotation_value": "anno3"
         },
         "qr_barcode_read_range": {
         "label": "QR/바코드 인식 권장 거리",
         "label_id": "specs.credentials.qr_barcode_read_range",
         "value": {
-            "ko": "5 ~ 15 cm",
-            "en": "5 ~ 15 cm",
-            "es": "De 5 a 15 cm",
-            "ja": "5 ~ 15 cm"
+            "ko": ["QR 코드: 5 ~ 15 cm", "바코드: 5 ~ 9 cm"],
+            "en": ["QR code: 5 ~ 15 cm", "Barcode: 5 ~ 9 cm"],
+            "es": ["Código QR: 5 ~ 15 cm", "Código de barras: 5 ~ 9 cm"],
+            "ja": ["QR コード：5 ~ 15 cm", "バーコード：5 ~ 9 cm"]
          },
-         "annotation_label": "anno5"
+         "annotation_label": "anno4"
         }
       }
     },
@@ -234,7 +234,7 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "200,000",
-          "annotation_value": "anno6"
+          "annotation_value": "anno5"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
