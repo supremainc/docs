@@ -36,6 +36,13 @@ async function git(args, cwd) {
 // 파일 절대 경로 → 병합(반영) 시각(ms) 맵
 async function loadMergeDates(siteDir) {
   const repoRoot = (await git(['rev-parse', '--show-toplevel'], siteDir)).trim();
+  const isShallow = (await git(['rev-parse', '--is-shallow-repository'], repoRoot)).trim() === 'true';
+  if (isShallow) {
+    console.warn(
+      '[mergeDateVcs] 얕은 클론(shallow clone)에서 빌드 중입니다. 문서 최종 수정일이 최신 커밋 날짜로 표시됩니다. ' +
+        'CI에서는 actions/checkout에 fetch-depth: 0을 설정하세요.',
+    );
+  }
   const stdout = await git(
     [
       '--no-pager',
