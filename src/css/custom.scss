@@ -48,6 +48,7 @@
   --ifm-shortcut-banner-background: #ebedf0;
   --ifm-bsair-description-color: #5f5e5e;
   --ifm-footer-background-color: #d5d5d5;
+  --ifm-last-updated-color: #767676;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -81,6 +82,7 @@
   --ifm-shortcut-banner-background: #3a3a3a;
   --ifm-bsair-description-color: #fff;
   --ifm-footer-background-color: #000000;
+  --ifm-last-updated-color: #a5a5a5;
   .navbar__title {
     color: #fff !important;
   }
@@ -566,6 +568,24 @@ footer {
       padding: 0.2rem 0.7rem;
       border-radius: 20px;
       margin-left: 1rem;
+    }
+  }
+  .lastUpdate {
+    padding: 0;
+    text-align: right;
+    margin-bottom: 1rem;
+    position: relative;
+    svg {
+      top: 2px;
+      position: relative;
+      margin-right: 5px;
+    }
+    .theme-last-updated {
+      color: var(--ifm-last-updated-color);
+      font-size: 15px;
+      b {
+        font-weight: 500;
+      }
     }
   }
   h1, h2, h3, h4, h5, h6 {
@@ -1981,7 +2001,7 @@ footer {
       margin-top: 0
     }
 
-    div[class*='fdstep'] .print--invisible {
+    .print--invisible, div[class*='fdstep'] .print--invisible {
       display: none;
     }
     ul + hr, section + hr {

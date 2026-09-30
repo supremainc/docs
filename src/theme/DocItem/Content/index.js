@@ -6,7 +6,8 @@ import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import Admonition from '@theme/Admonition';
 import { useLocation } from '@docusaurus/router';
-
+import LastUpdated from '@theme/LastUpdated';
+import RecentIcon from './recent.svg';
 /**
  Title can be declared inside md content or declared through
  front matter and added manually. To make both cases consistent,
@@ -27,7 +28,8 @@ function useSyntheticTitle() {
   return metadata.title;
 }
 export default function DocItemContent({children}) {
-  const { frontMatter } = useDoc();
+  const { metadata, frontMatter } = useDoc();
+  const { lastUpdatedAt, lastUpdatedBy } = metadata;
   const syntheticTitle = useSyntheticTitle();
   const headingClassName = frontMatter.heading_className || null;
   const location = useLocation();
@@ -49,9 +51,18 @@ export default function DocItemContent({children}) {
       }
     }
   }, [location.hash]);
-  
+  const isReleaseNote = location.pathname.includes('/release-note');
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
+      {(!isReleaseNote && lastUpdatedAt || lastUpdatedBy) && (
+        <div className="col lastUpdate print--invisible">
+          <RecentIcon />
+          <LastUpdated
+            lastUpdatedAt={lastUpdatedAt}
+            lastUpdatedBy={lastUpdatedBy}
+          />
+        </div>
+      )}
       {syntheticTitle && (
         <header>
           <Heading as="h1" className={headingClassName}>{syntheticTitle}</Heading>
