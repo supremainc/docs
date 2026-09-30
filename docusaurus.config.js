@@ -291,7 +291,7 @@ const config = {
       }} : {
         announcementBar: {
           id: 'annoucementbar',
-          content: getLocalizedConfigValue('noticeAir'),
+          content: `${getLocalizedConfigValue('noticeChanglog')} / ${getLocalizedConfigValue('noticeX')}`,
           backgroundColor: '#091E42',
           textColor: '#fff',
           isCloseable: false,
