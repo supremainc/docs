@@ -16,6 +16,9 @@ jobs:
         with:
           submodules: true
           lfs: false
+          # 문서 최종 수정일(병합 날짜)을 Git 히스토리에서 읽으므로 전체 히스토리가 필요하다.
+          # 기본값(1)이면 모든 문서가 최신 커밋 날짜로 표시된다. (utils/mergeDateVcs.js)
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
