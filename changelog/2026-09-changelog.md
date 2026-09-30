@@ -83,7 +83,7 @@ date: 2026-10-01T09:00
 
 * [라이선스 정책](/platform/biostar_x/licensing): 변경된 라이선스 정책 업데이트
 
-* [라이선스 계산기](/bsx-license-calculator): 라이선스 정채 업데이트에 따른 개선
+* [라이선스 계산기](/bsx-license-calculator): 라이선스 정책 업데이트에 따른 개선
 
 ### BioStar X Mobile
 
