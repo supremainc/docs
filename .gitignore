@@ -36,3 +36,4 @@ nul
 generatepdf.bat
 uploadtr.bat
 genpdf/svg-components-map.mjs
+/docs/device/vionyx_webserver/reference/
