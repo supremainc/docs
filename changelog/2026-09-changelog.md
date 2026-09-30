@@ -161,6 +161,8 @@ date: 2026-10-01T09:00
 
 ## 개발자 센터
 
+* [BioStar X API](/developer/bsxapi?api=revision-notes): 1.0.3 버전 릴리스
+
 * [BioStar Device SDK](https://kb.supremainc.com/bs2sdk/doku.php?id=ko:release_note_2913): 2.9.13 버전 릴리스
 
 * [Suprema G-SDK](https://supremainc.github.io/g-sdk/release/release-1.9.2/): 1.9.2 버전 릴리스

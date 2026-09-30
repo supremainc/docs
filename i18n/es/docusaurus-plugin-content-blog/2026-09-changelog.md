@@ -161,6 +161,8 @@ September brings plenty of news to **Suprema Docs**. In line with **BioStar X** 
 
 ## Developer
 
+* [BioStar X API](/developer/bsxapi?api=revision-notes): Released version 1.0.3
+
 * [BioStar Device SDK](https://kb.supremainc.com/bs2sdk/doku.php?id=en:release_note_2913): Released version 2.9.13
 
 * [Suprema G-SDK](https://supremainc.github.io/g-sdk/release/release-1.9.2/): Released version 1.9.2
