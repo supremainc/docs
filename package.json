@@ -41,6 +41,7 @@
     "@docusaurus/preset-classic": "3.10.2",
     "@docusaurus/theme-classic": "3.10.2",
     "@docusaurus/theme-mermaid": "3.10.2",
+    "@docusaurus/utils": "3.10.2",
     "@saucelabs/theme-github-codeblock": "^0.3.0",
     "@signalwire/docusaurus-plugin-llms-txt": "^2.0.0-alpha.7",
     "algoliasearch": "^5.50.0",
