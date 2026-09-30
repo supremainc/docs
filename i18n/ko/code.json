@@ -206,7 +206,7 @@
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " {date}에",
+    "message": " {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
@@ -214,10 +214,9 @@
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "최종 수정: {atDate}{byUser}",
+    "message": "최종 업데이트 | {atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
-  },
-  "theme.navbar.mobileVersionsDropdown.label": {
+  },  "theme.navbar.mobileVersionsDropdown.label": {
     "message": "버전",
     "description": "The label for the navbar versions dropdown on mobile view"
   },

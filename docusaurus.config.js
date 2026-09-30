@@ -10,6 +10,7 @@ const {rehypeExtendedTable} = require("rehype-extended-table");
 const remarkCmd = require('./src/plugins/remark-cmd/remark-cmd');
 const remarkImageSize = require('./src/plugins/remark-image-size/remark-image-size');
 const svgrCmdTemplate = require('./src/plugins/remark-cmd/svgrCmdTemplate');
+const mergeDateVcs = require('./utils/mergeDateVcs');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isPreview = process.env.CONTEXT === 'preview';
@@ -33,7 +34,8 @@ const config = {
       useCssCascadeLayers: false,
     },
     faster: true,
-    experimental_vcs: 'default-v2'
+    // 최종 수정일을 빌드 브랜치에 병합된 날짜로 표시 (utils/mergeDateVcs.js)
+    experimental_vcs: mergeDateVcs
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
