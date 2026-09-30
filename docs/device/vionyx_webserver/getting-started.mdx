@@ -5,6 +5,8 @@ description: ViOnyx Web Server를 처음 접속하여 인증서 설치, 비밀�
 keywords: [ViOnyx, Web Server, 시작하기]
 ---
 
+import PWRule from './_password-rule.mdx';
+
 ViOnyx 카메라를 처음 설치한 후 웹 브라우저를 통해 초기 설정을 완료해야 합니다. 이 문서는 인증서 설치, 관리자 비밀번호 설정, 로그인까지 필요한 모든 단계를 안내합니다.
 
 :::info
@@ -127,21 +129,7 @@ ViOnyx Web Server는 안전한 HTTPS 연결을 사용합니다. 처음 접속 �
 
 * <Cmd sid='password' product='cam' /> 필드와 <Cmd sid='confirm_password' product='cam' /> 필드의 값이 정확히 일치해야 합니다.
 
-* 비밀번호는 최소 12자 이상이어야 합니다. 최대 64자 이하로 제한합니다.
-
-* 최소 1개의 영어 소문자(`a-z`)와 대문자(`A-Z`)를 포함해야 합니다.
-
-* 최소 1개의 숫자(`0-9`)와 특수문자를 포함해야 합니다.
-
-  > 특수문자 예시: `"` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`
-
-* `1234`, `abcd` 같이 연속 문자 4개 이상, 동일 문자 4개 이상을 포함할 수 없습니다.
-
-* 대소문자와 무관하게 아이디는 비밀번호에 포함할 수 없습니다.
-
-  > admin, Admin, ADMIN, Admin123! 등
-
-* `password`, `qwerty`, `123456` 등 흔히 사용되는 비밀번호 패턴은 사용할 수 없습니다.
+<PWRule />
 
 :::
 
@@ -176,7 +164,7 @@ ViOnyx Web Server는 안전한 HTTPS 연결을 사용합니다. 처음 접속 �
 <NextStep>
 <NextItem to='live-basic'>
 
-<Cmd sid='live' product='cam' className='normal' /> 메뉴의 주요 기능과 사용 방법을 안내합니다.
+<Cmd sid='live' product='cam' /> 메뉴의 주요 기능과 사용 방법을 안내합니다.
 
 </NextItem>
 <NextItem to='configure-ai-events-and-rules'>
