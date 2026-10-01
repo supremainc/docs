@@ -155,6 +155,8 @@ date: 2026-10-01T09:00
 
 * [BioStation 3](/device/biostation_3/release-notes/151): 1.5.1 버전 릴리스 노트 추가
 
+* [FaceStation F2](/device/facestation_f2/release-notes/231): 2.3.1 버전 릴리스 노트 추가
+
 * [X-Station 2](/device/xstation_2/release-notes/142): 1.4.2 버전 릴리스 노트 추가
 
 * [Device Manager](/device/device_manager/release-notes/124): 1.2.4 버전 릴리스 노트 추가
