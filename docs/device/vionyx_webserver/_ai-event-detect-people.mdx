@@ -1,0 +1,27 @@
+### 사람 검출 설정(선택 사항)
+
+<Cmd sid='detection' product='cam' /> 섹션에서 카메라가 사람을 검출할 범위를 선택할 수 있습니다. 검출 범위를 필요한 곳으로 좁히면 관심 없는 구역(통로 끝, 창문, 반사면 등)에서 사람을 잘못 검출하는 일을 줄일 수 있습니다. 
+
+* <Cmd sid='all_area' product='cam' />: 기본값으로, 화면 전체에서 사람을 검출합니다. 얼굴 영역 설정 여부와 관계없이 사용할 수 있습니다.
+
+* <Cmd sid='designated_area' product='cam' />: 직접 지정한 영역 안에서만 사람을 검출합니다. 얼굴 영역을 설정하지 않았을 때만 선택할 수 있습니다. 최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다. 라이브 뷰에 보라색 상자가 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
+
+   <Include pages='configure-people-tracking'><ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png' /></Include>
+
+   <Include pages='configure-intrusion'><ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png' /></Include>
+
+   * <Cmd sid='name' product='cam' />: 사람 검출 영역의 이름을 수정할 수 있습니다.
+
+* <Cmd sid='face_area_only' product='cam' />: 얼굴 영역 안에서만 사람을 검출합니다. 얼굴 영역을 설정했을 때만 선택할 수 있습니다.
+
+:::info
+
+* <Cmd sid='designated_area' product='cam' />을 선택한 상태에서 얼굴 영역을 추가하면 <Cmd sid='notice' product='cam' /> 팝업이 나타납니다. <Cmd sid='ok' product='cam' /> 버튼을 클릭하면 지정한 검출 영역이 해제되고 <Cmd sid='face_area_only' product='cam' />으로 변경됩니다.
+
+* <Cmd sid='face_area_only' product='cam' />을 선택한 상태에서 얼굴 영역을 모두 삭제하면 <Cmd sid='all_area' product='cam' />으로 자동 변경됩니다.
+
+* 설정한 사람 검출 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 추가한 사람 검출 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::
