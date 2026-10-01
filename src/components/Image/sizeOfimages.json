@@ -5227,6 +5227,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/cam-server/ai-analysis-events-add-people-tracking-settings-entry-area.png": {
     "width": 1920,
     "height": 1080
@@ -5234,6 +5238,10 @@
   "/img/cam-server/ai-analysis-events-add-people-tracking-settings-face-area.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-add-people-tracking-settings-option.png": {
+    "width": 436,
+    "height": 233
   },
   "/img/cam-server/ai-analysis-events-add-people-tracking-settings.png": {
     "width": 1920,
@@ -5262,6 +5270,10 @@
   "/img/cam-server/ai-analysis-events-line-crosing-result.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-live-reset-counts.png": {
+    "width": 333,
+    "height": 100
   },
   "/img/cam-server/ai-analysis-events.png": {
     "width": 1920,
@@ -5601,7 +5613,7 @@
   },
   "/img/cam-server/password-setting1-vionyx.png": {
     "width": 1652,
-    "height": 1005
+    "height": 927
   },
   "/img/cam-server/password-setting2-vionyx.png": {
     "width": 1920,
@@ -8520,7 +8532,7 @@
     "height": 1964
   },
   "/img/device/device-manager-system-diagram1.svg": {
-    "width": 378,
+    "width": 437,
     "height": 134
   },
   "/img/device/device-manager-system-diagram2.svg": {
@@ -15523,6 +15535,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/en/cam-server/ai-analysis-events-add-people-tracking-settings-entry-area.png": {
     "width": 1920,
     "height": 1080
@@ -15530,6 +15546,10 @@
   "/img/en/cam-server/ai-analysis-events-add-people-tracking-settings-face-area.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-add-people-tracking-settings-option.png": {
+    "width": 436,
+    "height": 233
   },
   "/img/en/cam-server/ai-analysis-events-add-people-tracking-settings.png": {
     "width": 1920,
@@ -15558,6 +15578,10 @@
   "/img/en/cam-server/ai-analysis-events-line-crosing-result.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-live-reset-counts.png": {
+    "width": 333,
+    "height": 100
   },
   "/img/en/cam-server/ai-analysis-events.png": {
     "width": 1920,
@@ -15852,8 +15876,8 @@
     "height": 1080
   },
   "/img/en/cam-server/password-setting1-vionyx.png": {
-    "width": 1669,
-    "height": 1005
+    "width": 1652,
+    "height": 927
   },
   "/img/en/cam-server/password-setting2-vionyx.png": {
     "width": 1920,
@@ -15864,8 +15888,8 @@
     "height": 1080
   },
   "/img/en/cam-server/vionyx-install-root-ca.png": {
-    "width": 988,
-    "height": 707
+    "width": 989,
+    "height": 705
   },
   "/img/en/cam-server/vionyx-live-basic-ai-face-shot.png": {
     "width": 1920,
@@ -21555,6 +21579,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/ja/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/ja/cam-server/ai-analysis-events-add-people-tracking-settings-entry-area.png": {
     "width": 1920,
     "height": 1080
@@ -21562,6 +21590,10 @@
   "/img/ja/cam-server/ai-analysis-events-add-people-tracking-settings-face-area.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-add-people-tracking-settings-option.png": {
+    "width": 436,
+    "height": 233
   },
   "/img/ja/cam-server/ai-analysis-events-add-people-tracking-settings.png": {
     "width": 1920,
@@ -21590,6 +21622,10 @@
   "/img/ja/cam-server/ai-analysis-events-line-crosing-result.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-live-reset-counts.png": {
+    "width": 333,
+    "height": 100
   },
   "/img/ja/cam-server/ai-analysis-events.png": {
     "width": 1920,
@@ -21876,8 +21912,8 @@
     "height": 1080
   },
   "/img/ja/cam-server/password-setting1-vionyx.png": {
-    "width": 1669,
-    "height": 1005
+    "width": 1652,
+    "height": 927
   },
   "/img/ja/cam-server/password-setting2-vionyx.png": {
     "width": 1920,
@@ -22830,6 +22866,14 @@
   "/img/menus/ico-fullscreen.svg": {
     "width": 16,
     "height": 16
+  },
+  "/img/menus/ico-header-access.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-header-ai.svg": {
+    "width": 20,
+    "height": 20
   },
   "/img/menus/ico-help.svg": {
     "width": 16,

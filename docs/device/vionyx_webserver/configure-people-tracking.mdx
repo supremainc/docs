@@ -5,7 +5,7 @@ description: 관리자가 정의한 진입 구역에서 사람의 움직임을 �
 keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 ---
 
-사용자 추적 이벤트를 생성하여 진입 구역의 출입을 감지합니다. 선택적으로 얼굴 영역을 추가하면 특정 영역에서 얼굴을 우선적으로 추적할 수 있으며,  등록된 사용자는 신원을 자동 인식합니다.
+사용자 추적 이벤트를 생성하여 진입 구역의 출입을 감지합니다. 선택적으로 얼굴 영역을 추가하면 특정 영역에서 얼굴을 우선적으로 추적할 수 있으며, 등록된 사용자는 신원을 자동 인식합니다.
 
 
 ## 언제 사용하나요?
@@ -19,14 +19,14 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 ## 사용자 추적 이벤트 생성
 
-사용자 추적 이벤트를 생성하면 라이브 페이지에서 실시간으로 사람의 이동을 추적할 수 있습니다. 또한 얼굴 영역을 설정하면 등록된 사용자를 인식하여 누가 이동했는지 확인할 수 있습니다.
+사용자 추적 이벤트를 생성하면 라이브 뷰에서 실시간으로 사람의 이동을 추적할 수 있습니다. 또한 얼굴 영역을 설정하면 등록된 사용자를 인식하여 누가 이동했는지 확인할 수 있습니다.
 
 <Steps>
 <Step>
 
 ### 이벤트 생성 시작
 
-1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+1. 화면 왼쪽 상단의 <Cmd sid='ai_and_rule_short' product='cam' /> 메뉴를 클릭하세요.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
 
@@ -44,7 +44,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
    :::note
 
-   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
+   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
 
    * <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업은 최초 한 번만 표시됩니다. 이후 AI 이벤트 생성 시에는 동의한 것으로 간주합니다.
 
@@ -93,7 +93,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 :::info
 
-* 등록된 사용자는 <Cmd sid='live' product='cam' /> 메뉴에서 신원을 자동 인식해 이름이 표시됩니다. 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />으로 표시됩니다.
+* 등록된 사용자는 <Cmd sid='live' product='cam' /> 메뉴에서 신원을 자동 인식해 이름이 표시됩니다. 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다.
 
 * 설정한 얼굴 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
 
@@ -104,13 +104,68 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 </Step>
 <Step>
 
-### 이벤트 발생 조건 설정
+### 사람 검출 설정(선택 사항)
 
-이벤트 발생 조건을 설정하세요. 진입 또는 퇴장 감지 여부, 이벤트 발생 지연 시간을 설정할 수 있습니다.
+<Cmd sid='detection' product='cam' /> 섹션에서 카메라가 사람을 검출할 범위를 선택할 수 있습니다. 검출 범위를 필요한 곳으로 좁히면 관심 없는 구역(통로 끝, 창문, 반사면 등)에서 사람을 잘못 검출하는 일을 줄일 수 있습니다.
 
-* <Cmd sid='event_condition' product='cam' />: 진입(Entry) 또는 퇴장(Exit) 감지 여부를 선택하세요. 둘 다 선택할 수도 있습니다.
+* <Cmd sid='all_area' product='cam' />: 기본값으로, 화면 전체에서 사람을 검출합니다. 얼굴 영역 설정 여부와 관계없이 사용할 수 있습니다.
 
-* <Cmd sid='every_delay' product='cam' />: 이벤트 발생 지연 시간을 설정하세요. 설정한 시간을 초과했을 때만 이벤트가 발생하며, 최대 60초까지 설정할 수 있습니다.
+* <Cmd sid='designated_area' product='cam' />: 직접 지정한 영역 안에서만 사람을 검출합니다. 얼굴 영역을 설정하지 않았을 때만 선택할 수 있습니다. 최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png' />
+
+   * <Cmd sid='name' product='cam' />: 사람 검출 영역의 이름을 수정할 수 있습니다.
+
+* <Cmd sid='face_area_only' product='cam' />: 얼굴 영역 안에서만 사람을 검출합니다. 얼굴 영역을 설정했을 때만 선택할 수 있습니다.
+
+:::info
+
+* <Cmd sid='designated_area' product='cam' />을 선택한 상태에서 얼굴 영역을 추가하면 <Cmd sid='notice' product='cam' /> 팝업이 나타납니다. <Cmd sid='ok' product='cam' /> 버튼을 클릭하면 지정한 검출 영역이 해제되고 <Cmd sid='face_area_only' product='cam' />으로 변경됩니다.
+
+* <Cmd sid='face_area_only' product='cam' />을 선택한 상태에서 얼굴 영역을 모두 삭제하면 <Cmd sid='all_area' product='cam' />으로 자동 변경됩니다.
+
+* 설정한 사람 검출 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 추가한 사람 검출 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 이벤트 발생 조건 및 카운트 설정
+
+<Cmd sid='option' product='cam' /> 섹션에서 이벤트 발생 조건과 이벤트 카운트를 설정하세요.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-option.png' />
+
+* <Cmd sid='event_condition' product='cam' />: 이벤트를 발생시킬 동작을 선택하세요. <Cmd sid='entry' product='cam' />과 <Cmd sid='exit' product='cam' />을 모두 선택할 수도 있습니다.
+
+* <Cmd sid='every_delay' product='cam' />: 이벤트로 인식할 최소 시간을 설정하세요. 감지 상태가 설정한 시간보다 오래 이어져야 이벤트가 발생합니다. 최대 60초까지 설정할 수 있습니다.
+
+   :::note
+
+   너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 값을 늘리세요. 설정한 시간보다 짧게 감지된 움직임은 이벤트로 인식하지 않으므로 불필요한 이벤트가 줄어듭니다.
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />: 진입 영역에 들어오거나 나간 횟수를 계산하려면 <Cmd sid='on' product='cam' />으로 설정하세요. 진입 횟수와 퇴장 횟수를 따로 계산하며, 진입 영역이 여러 개일 때는 영역마다 각각 계산합니다.
+
+   :::note
+
+   <Cmd sid='event_condition' product='cam' />에서 선택한 항목만 계산합니다. 예를 들어 <Cmd sid='entry' product='cam' />만 선택하면 진입 횟수만 이벤트로 표시하고 로그에 기록합니다.
+
+   :::
+
+* <Cmd sid='all_event_count_reset' product='cam' />: 모든 진입 영역의 이벤트 카운트를 매일 지정한 시각에 초기화하려면 <Cmd sid='on' product='cam' />으로 설정하세요. <Cmd sid='reset_time' product='cam' />에서 설정한 시각에 모든 진입 영역의 이벤트 카운트를 초기화합니다.
+
+:::info
+
+<Cmd sid='event_count' product='cam' />를 <Cmd sid='on' product='cam' />으로 설정했다면 라이브 뷰 영상 위의 진입 영역마다 <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> 형식으로 표시됩니다. 이벤트 카운트를 수동으로 초기화하려면 <IcMoreB title='More' /> 버튼을 클릭한 후 <Cmd sid='count_reset' product='cam' />를 선택하세요.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+:::
 
 </Step>
 <Step>
@@ -127,22 +182,20 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 ## 라이브에서 확인
 
-화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 진입 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 사람이 진입 영역에 들어오거나 나갈 때마다 이벤트가 발생합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름을 표시합니다.
+화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 진입 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 사람이 진입 영역에 들어오거나 나갈 때마다 이벤트가 발생합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름이 표시됩니다.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-result.png' />
 
 :::info
 
-* 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다. 등록된 사용자는 이름과 함께 표시합니다.
+* 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다. 등록된 사용자는 이름과 함께 표시됩니다.
 
 * 카메라가 얼굴을 인식하지 못한다면 <Cmd sid='min_face_size_visualize' product='cam' /> 옵션을 활성화하세요. 또는 얼굴 영역을 더 크게 설정하거나 카메라 위치를 조정하세요.
 
 * 조명이 부족하거나 역광이 있으면 카메라가 얼굴을 인식하지 못할 수 있습니다. 촬영 공간의 조명을 개선하거나 카메라의 위치와 각도를 조정하여 얼굴이 잘 보이도록 하세요.
 
-* 얼굴이 카메라로 향해야 인식됩니다. 옆모습 또는 뒷모습은 인식이 어려울 수 있습니다.
+* 얼굴이 카메라를 향해야 인식됩니다. 옆모습 또는 뒷모습은 인식이 어려울 수 있습니다.
 
 * 진입 영역에서 이벤트가 발생하지 않는다면 얼굴 영역이 진입 영역을 포함하는지 확인하세요.
-
-* 너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 옵션값을 조정하세요. 이벤트 발생 지연 시간을 늘리면 이벤트 빈도를 줄일 수 있습니다.
 
 :::
