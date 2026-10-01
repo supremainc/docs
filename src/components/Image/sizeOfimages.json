@@ -5171,6 +5171,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png": {
     "width": 1920,
     "height": 1080
@@ -5182,6 +5186,10 @@
   "/img/cam-server/ai-analysis-events-add-intrusion-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png": {
     "width": 1920,
@@ -5199,9 +5207,21 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/cam-server/ai-analysis-events-add-line-crossing-help.png": {
+    "width": 474,
+    "height": 555
+  },
+  "/img/cam-server/ai-analysis-events-add-line-crossing-options.png": {
+    "width": 458,
+    "height": 217
+  },
   "/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png": {
     "width": 1920,
@@ -15479,6 +15499,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/en/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png": {
     "width": 1920,
     "height": 1080
@@ -15490,6 +15514,10 @@
   "/img/en/cam-server/ai-analysis-events-add-intrusion-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/en/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png": {
     "width": 1920,
@@ -15507,9 +15535,21 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/cam-server/ai-analysis-events-add-line-crossing-help.png": {
+    "width": 474,
+    "height": 555
+  },
+  "/img/en/cam-server/ai-analysis-events-add-line-crossing-options.png": {
+    "width": 458,
+    "height": 217
+  },
   "/img/en/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/en/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png": {
     "width": 1920,
@@ -21523,6 +21563,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/ja/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/ja/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png": {
     "width": 1920,
     "height": 1080
@@ -21534,6 +21578,10 @@
   "/img/ja/cam-server/ai-analysis-events-add-intrusion-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/ja/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png": {
     "width": 1920,
@@ -21551,9 +21599,21 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/ja/cam-server/ai-analysis-events-add-line-crossing-help.png": {
+    "width": 474,
+    "height": 555
+  },
+  "/img/ja/cam-server/ai-analysis-events-add-line-crossing-options.png": {
+    "width": 458,
+    "height": 217
+  },
   "/img/ja/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/ja/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png": {
     "width": 1920,
@@ -22636,6 +22696,10 @@
     "height": 20
   },
   "/img/menus/ico-cam-facesearch.svg": {
+    "width": 20,
+    "height": 20
+  },
+  "/img/menus/ico-cam-help.svg": {
     "width": 20,
     "height": 20
   },
