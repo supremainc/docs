@@ -561,7 +561,7 @@
             "FSF2-AB",
             "FSF2-ODB"
         ],
-        "version": "2.3.0",
+        "version": "2.3.1",
         "manuals": {
             "ko": "device/facestation_f2/FaceStation F2_UG_1.14_KO_260922.pdf",
             "en": "device/facestation_f2/FaceStation F2_UG_1.14_EN_260922.pdf",
@@ -569,15 +569,15 @@
             "ja": "device/facestation_f2/FaceStation F2_UG_1.14_JA_260922.pdf"
         },
         "release_notes": {
-            "ko": "device/facestation_f2/FaceStation F2_ReleaseNotes_2.3.0_KO_260819.pdf",
-            "en": "device/facestation_f2/FaceStation F2_ReleaseNotes_2.3.0_EN_260819.pdf"
+            "ko": "device/facestation_f2/FaceStation F2_RN_2.3.1_KO_260922.pdf",
+            "en": "device/facestation_f2/FaceStation F2_RN_2.3.1_EN_260922.pdf"
         },
         "a_e": "device/facestation_f2/SUPREMA_FaceStation_F2_AE-Specification_250722.docx",
         "dt": {
             "ko": "device/facestation_f2/FaceStation F2_DrillingTemplate_KO.pdf",
             "en": "device/facestation_f2/FaceStation F2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-08-24"
+        "release_date": "2026-09-30"
     },
     {
         "category": "biometric",
