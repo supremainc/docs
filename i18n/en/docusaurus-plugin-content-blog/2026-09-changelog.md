@@ -155,6 +155,8 @@ September brings plenty of news to **Suprema Docs**. In line with **BioStar X** 
 
 * [BioStation 3](/device/biostation_3/release-notes/151): Added release notes for version 1.5.1
 
+* [FaceStation F2](/device/facestation_f2/release-notes/231): Added release notes for version 2.3.1
+
 * [X-Station 2](/device/xstation_2/release-notes/142): Added release notes for version 1.4.2
 
 * [Device Manager](/device/device_manager/release-notes/124): Added release notes for version 1.2.4
