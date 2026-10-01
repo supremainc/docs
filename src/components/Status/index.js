@@ -36,3 +36,15 @@ export function Slavemark() {
         <span className={clsx(styles.slave, styles.mark)}>S</span>
     )
 }
+
+export function Centerpoint() {
+    return (
+        <span className={clsx(styles.status, styles.center)}></span>
+    )
+}
+
+export function Bottompoint() {
+    return (
+        <span className={clsx(styles.status, styles.bottom)}></span>
+    )
+}
