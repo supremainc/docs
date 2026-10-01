@@ -81,7 +81,23 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
    * <Cmd>A \<-> B</Cmd>: 양방향으로 통과 시 이벤트 발생
 
+* <Cmd sid='reference_point' product='cam' />: 사람이 가상 라인을 통과했는지 판정할 때 사람 감지 박스의 어느 지점을 기준으로 할지 선택하세요. 라인마다 다르게 설정할 수 있으며, 기본값은 <Cmd sid='reference_point_center' product='cam' />입니다.
+
+   * <Cmd sid='reference_point_center' product='cam' />: 박스의 한가운데를 기준으로 판정합니다. 몸 중앙이 라인에 닿으면 통과한 것으로 판정합니다.
+
+   * <Cmd sid='reference_point_lower' product='cam' />: 박스의 긴 축을 따라 위에서 80% 지점을 기준으로 판정합니다. 몸 아래쪽이 라인에 닿으면 통과한 것으로 판정합니다. 바닥에 라인을 그렸을 때처럼 발이 라인을 넘는 시점에 이벤트를 발생시키려면 이 옵션을 선택하세요.
+
+   <Cmd sid='reference_point' product='cam' /> 오른쪽의 <IcCamHelp title='Help' /> 아이콘을 클릭하면 각 기준점의 위치와 판정 방식을 그림으로 확인할 수 있습니다.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-help.png' />
+
 :::info
+
+* <Cmd sid='reference_point' product='cam' /> 옵션은 펌웨어 버전 1.1.0 이상에서 지원합니다. 기준점 선택을 지원하지 않는 장치에서는 모든 라인 통과를 <Cmd sid='reference_point_center' product='cam' />으로 판정합니다.
+
+* <Cmd sid='reference_point_lower' product='cam' />은 사람 감지 박스를 기준으로 계산한 위치이며, 실제 발 위치를 검출하는 것은 아닙니다.
+
+* <Cmd sid='live' product='cam' /> 메뉴에서 판정 기준점을 확인하려면 [AI 표시 옵션](live-basic#displayBox)에서 <Cmd sid='reference_point' product='cam' /> 옵션을 켜세요.
 
 * 설정한 가상 라인의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
 
@@ -113,9 +129,18 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 </Step>
 <Step>
 
-### 이벤트 발생 조건 설정
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-이벤트 발생 조건을 설정하세요.
+<DetectPeople />
+
+</Step>
+<Step>
+
+### 이벤트 발생 조건 및 카운트 설정
+
+<Cmd sid='option' product='cam' /> 섹션에서 이벤트 발생 조건과 이벤트 카운트를 설정하세요.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-options.png' />
 
 * <Cmd sid='every_delay' product='cam' />: 이벤트로 인식할 최소 시간을 설정하세요. 감지 상태가 설정한 시간보다 오래 이어져야 이벤트가 발생합니다. 최대 60초까지 설정할 수 있습니다.
 
@@ -124,6 +149,20 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
    너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 값을 늘리세요. 설정한 시간보다 짧게 감지된 움직임은 이벤트로 인식하지 않으므로 불필요한 이벤트가 줄어듭니다.
 
    :::
+
+* <Cmd sid='event_count' product='cam' />: 라인을 통과할 때마다 횟수를 계산하려면 <Cmd sid='on' product='cam' />으로 설정하세요. 라인이 여러 개일 때는 라인마다 각각 계산합니다.
+
+* <Cmd sid='all_event_count_reset' product='cam' />: 모든 라인의 이벤트 카운트를 매일 지정한 시각에 초기화하려면 <Cmd sid='on' product='cam' />으로 설정하세요. <Cmd sid='reset_time' product='cam' />에서 설정한 시각에 모든 라인의 이벤트 카운트를 초기화합니다.
+
+:::info
+
+* <Cmd sid='event_count' product='cam' />를 <Cmd sid='on' product='cam' />으로 설정했다면 <Cmd sid='live' product='cam' /> 메뉴 영상 위의 라인마다 <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> 형식으로 표시됩니다. 이벤트 카운트를 수동으로 초기화하려면 <IcMoreB title='More' /> 버튼을 클릭한 후 <Cmd sid='count_reset' product='cam' />를 선택하세요.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* 이벤트 카운트 관련 옵션은 펌웨어 버전 1.1.0 이상에서 지원합니다.
+
+:::
 
 </Step>
 <Step>
