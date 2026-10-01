@@ -83,7 +83,7 @@ date: 2026-10-01T09:00
 
 * [라이선스 정책](/platform/biostar_x/licensing): 변경된 라이선스 정책 업데이트
 
-* [라이선스 계산기](/bsx-license-calculator): 라이선스 정채 업데이트에 따른 개선
+* [라이선스 계산기](/bsx-license-calculator): 라이선스 정책 업데이트에 따른 개선
 
 ### BioStar X Mobile
 
@@ -162,6 +162,8 @@ date: 2026-10-01T09:00
 * [Device Manager](/device/device_manager/release-notes/124): 1.2.4 버전 릴리스 노트 추가
 
 ## 개발자 센터
+
+* [BioStar X API](/developer/bsxapi?api=revision-notes): 1.0.3 버전 릴리스
 
 * [BioStar Device SDK](https://kb.supremainc.com/bs2sdk/doku.php?id=ko:release_note_2913): 2.9.13 버전 릴리스
 
