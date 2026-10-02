@@ -101,7 +101,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: 'AI 이벤트 및 규칙 설정하기',
+          label: 'AI 이벤트 관리하기',
           className: 'ai--event',
           link: {
             type: 'doc',

@@ -5163,6 +5163,34 @@
     "width": 1133,
     "height": 583
   },
+  "/img/cam-server/ai-analysis-events-access-control-result.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-access-control-settings-ac-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-access-control-settings-complete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-access-control-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
+  "/img/cam-server/ai-analysis-events-access-control-settings-face-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-access-control-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/ai-analysis-events-access-control.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png": {
     "width": 1920,
     "height": 1080
@@ -5305,15 +5333,23 @@
   },
   "/img/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
-    "height": 208
+    "height": 334
+  },
+  "/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png": {
+    "width": 620,
+    "height": 121
+  },
+  "/img/cam-server/ai-rule-settings-add-rule-action-relay.png": {
+    "width": 620,
+    "height": 406
   },
   "/img/cam-server/ai-rule-settings-add-rule-action-webhook.png": {
     "width": 620,
-    "height": 672
+    "height": 598
   },
   "/img/cam-server/ai-rule-settings-add-rule.png": {
     "width": 1920,
-    "height": 720
+    "height": 840
   },
   "/img/cam-server/ai-rule-settings-added-list-delete.png": {
     "width": 1667,
@@ -5329,7 +5365,7 @@
   },
   "/img/cam-server/ai-rule-settings-edit.png": {
     "width": 1920,
-    "height": 1080
+    "height": 807
   },
   "/img/cam-server/ai-rule-settings-list.png": {
     "width": 1920,
@@ -15491,6 +15527,34 @@
     "width": 1133,
     "height": 583
   },
+  "/img/en/cam-server/ai-analysis-events-access-control-result.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-access-control-settings-ac-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-access-control-settings-complete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-access-control-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
+  "/img/en/cam-server/ai-analysis-events-access-control-settings-face-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-access-control-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/ai-analysis-events-access-control.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/cam-server/ai-analysis-events-add-counting-people-settings-complete.png": {
     "width": 1920,
     "height": 1080
@@ -15633,15 +15697,23 @@
   },
   "/img/en/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
-    "height": 210
+    "height": 334
+  },
+  "/img/en/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png": {
+    "width": 620,
+    "height": 121
+  },
+  "/img/en/cam-server/ai-rule-settings-add-rule-action-relay.png": {
+    "width": 620,
+    "height": 406
   },
   "/img/en/cam-server/ai-rule-settings-add-rule-action-webhook.png": {
     "width": 620,
-    "height": 681
+    "height": 598
   },
   "/img/en/cam-server/ai-rule-settings-add-rule.png": {
     "width": 1920,
-    "height": 720
+    "height": 840
   },
   "/img/en/cam-server/ai-rule-settings-added-list-delete.png": {
     "width": 1667,
@@ -15657,7 +15729,7 @@
   },
   "/img/en/cam-server/ai-rule-settings-edit.png": {
     "width": 1920,
-    "height": 1080
+    "height": 807
   },
   "/img/en/cam-server/ai-rule-settings-list.png": {
     "width": 1920,
@@ -21555,6 +21627,34 @@
     "width": 1133,
     "height": 583
   },
+  "/img/ja/cam-server/ai-analysis-events-access-control-result.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-access-control-settings-ac-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-access-control-settings-complete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-access-control-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
+  "/img/ja/cam-server/ai-analysis-events-access-control-settings-face-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-access-control-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/ai-analysis-events-access-control.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/ja/cam-server/ai-analysis-events-add-counting-people-settings-complete.png": {
     "width": 1920,
     "height": 1080
@@ -21697,15 +21797,23 @@
   },
   "/img/ja/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
-    "height": 192
+    "height": 334
+  },
+  "/img/ja/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png": {
+    "width": 620,
+    "height": 121
+  },
+  "/img/ja/cam-server/ai-rule-settings-add-rule-action-relay.png": {
+    "width": 620,
+    "height": 406
   },
   "/img/ja/cam-server/ai-rule-settings-add-rule-action-webhook.png": {
     "width": 620,
-    "height": 681
+    "height": 598
   },
   "/img/ja/cam-server/ai-rule-settings-add-rule.png": {
     "width": 1920,
-    "height": 720
+    "height": 840
   },
   "/img/ja/cam-server/ai-rule-settings-added-list-delete.png": {
     "width": 1667,
@@ -21721,7 +21829,7 @@
   },
   "/img/ja/cam-server/ai-rule-settings-edit.png": {
     "width": 1920,
-    "height": 1080
+    "height": 807
   },
   "/img/ja/cam-server/ai-rule-settings-list.png": {
     "width": 1920,
