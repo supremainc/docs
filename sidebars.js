@@ -115,6 +115,7 @@ function createSidebars(preview) {
             'device/vionyx_webserver/configure-access-control',
             'device/vionyx_webserver/edit-delete-ai-event',
             'device/vionyx_webserver/set-ai-rule',
+            'device/vionyx_webserver/manage-schedule',
             'device/vionyx_webserver/set-ai-advanced'
           ]
         },
