@@ -573,11 +573,11 @@ const config = {
                 to: 'https://supremainc.github.io/g-sdk',
                 target: '_blank',
               },
-              {
-                label: 'SVP Android SDK',
-                to: 'https://kb.supremainc.com/svpsdk/doku.php',
-                target: '_blank',
-              },
+              // {
+              //   label: 'SVP Android SDK',
+              //   to: 'https://kb.supremainc.com/svpsdk/doku.php',
+              //   target: '_blank',
+              // },
             ]
           },
           {

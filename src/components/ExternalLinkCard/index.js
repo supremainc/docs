@@ -104,14 +104,14 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       desc: `${translate({ id: "externalLinks.dev.gsdk.desc" })}`,
       linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
-    {
-      title: 'SVP Android SDK',
-      url: `https://kb.supremainc.com/svpsdk/doku.php?id=${cLocale}:start`,
-      Svg: require('@site/static/img/cover-svp-sdk.svg').default,
-      height: '60px',
-      desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`,
-      linkText: `${translate({ id: "index.shortcut.linkText" })}`
-    }
+    // {
+    //   title: 'SVP Android SDK',
+    //   url: `https://kb.supremainc.com/svpsdk/doku.php?id=${cLocale}:start`,
+    //   Svg: require('@site/static/img/cover-svp-sdk.svg').default,
+    //   height: '60px',
+    //   desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`,
+    //   linkText: `${translate({ id: "index.shortcut.linkText" })}`
+    // }
   ].filter(Boolean), [isPreview, currentLocale]);
   const externalLinks = externalLinksProp || defaultExternalLinks;
 
