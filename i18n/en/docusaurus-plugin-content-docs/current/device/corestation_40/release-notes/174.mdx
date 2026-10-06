@@ -1,0 +1,26 @@
+---
+id: 174
+title: Firmware Version 1.7.4
+---
+
+# Firmware Version 1.7.4 (Build No. 1.7.4_260929)
+
+Release<Separator/>2026-10-06
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+    {/* (CSTFW-1038) [BSF-3102] 복원 장치에 물리적으로 연결되지 않는 Slave가 BioStar에서 연결된 것으로 표시돠고, 장치 정보가 Unknown(버전 정보 0.0.0) 으로 표시되는 현상 */}
+1. Disconnected slave devices shown as online after restoring CoreStation settings. <Badge>1.7.3</Badge>
+
+    {/* (CSTFW-1044) 사용자에 Lock Override카드가 설정되어 있으면 Trigger Action으로 하위 Wiegand Readcer가 Disable Device로 동작 안되는 문제 */}
+1. Child Wiegand reader not being locked by **Trigger & Action** when a **Lock Override** card is assigned to a user. <Badge>1.7.2</Badge>
+
+    {/* (CSTFW-1043) [Lock Overrride] Wiegand reader로 door를 생성 후, Wiegand 장치가 disable일 때, Lock Override 카드 인증이 안되는 현상
+    (CSTFW-1045) Wiegand Reader로 door 생성 후, Wiegand 장치가 disable일 때 Lock Override 카드 인증이 안되는 현상 */}
+1. **Lock Override** card authentication not working on a door created with a Wiegand reader when the reader is disabled. <Badge>1.7.2</Badge>
+
+</BugLists>
