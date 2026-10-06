@@ -60,7 +60,7 @@ RS-485 포트에 연결된 슬레이브 장치를 검색하여 카메라에 등�
 
 1. <Cmd sid='slave_device' product='cam' /> 항목의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
 
-1. <Cmd sid='add_slave_devices' product='cam' /> 팝업창이 나타나고, 장치 검색을 자동으로 시작합니다. 검색이 끝날 때까지 기다리세요.
+1. <Cmd sid='add_slave_devices' product='cam' /> 팝업창이 나타나고, 장치 검색이 자동 시작됩니다. 검색이 끝날 때까지 기다리세요.
 
    <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-scanning.png' />
 
@@ -128,7 +128,13 @@ RS-485 포트에 연결된 슬레이브 장치를 검색하여 카메라에 등�
 
 1. 변경 사항을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
 
-변경 사항이 정상 저장되면 화면 오른쪽 상단의 성공 메시지가 나타납니다.
+변경 사항이 정상 저장되면 화면 오른쪽 상단에 성공 메시지가 나타납니다.
+
+:::info
+
+<Cmd sid='slave_settings' product='cam' /> 팝업창에서는 OSDP ID를 확인만 할 수 있으며, 변경할 수 없습니다.
+
+:::
 
 ## 슬레이브 장치 펌웨어 업데이트
 
@@ -213,11 +219,11 @@ AI 규칙에서 사용 중인 장치는 제거할 수 없습니다. 제거를 �
 | <Cmd sid='rs485_err_add_failed' product='cam' /> | 장치와 통신하지 못했습니다. RS-485 배선을 확인한 후 다시 시도하세요. |
 | <Cmd sid='rs485_err_slave_limit' product='cam' /> | 이미 8대가 등록되어 있습니다. 사용하지 않는 장치를 제거한 후 다시 추가하세요. |
 | <Cmd sid='rs485_err_duplicate_serial' product='cam' /> | 같은 시리얼 번호의 장치가 이미 목록에 있습니다. 목록을 확인하세요. |
-| <Cmd sid='rs485_err_osdp_duplicate' product='cam' /> | 다른 장치가 같은 OSDP ID를 사용하고 있습니다. 장치의 OSDP ID를 변경한 후 다시 검색하세요. |
-| <Cmd sid='rs485_err_address_collision' product='cam' /> | RS-485 버스의 다른 장치와 OSDP ID가 겹칩니다. 장치의 OSDP ID를 변경한 후 다시 검색하세요. |
+| <Cmd sid='rs485_err_osdp_duplicate' product='cam' /> | 다른 장치가 같은 OSDP ID를 사용하고 있습니다. 슬레이브 장치에서 OSDP ID를 변경한 후 다시 검색하세요. |
+| <Cmd sid='rs485_err_address_collision' product='cam' /> | RS-485 버스의 다른 장치와 OSDP ID가 겹칩니다. 슬레이브 장치에서 OSDP ID를 변경한 후 다시 검색하세요. |
 | <Cmd sid='rs485_osdp_park_hint' product='cam' /> | OSDP ID가 0(미배정)인 장치입니다. 장치에서 OSDP ID를 배정한 후 다시 검색하세요. |
 | <Cmd sid='rs485_scan_timeout' product='cam' /> | 검색 시간 안에 장치가 응답하지 않았습니다. 배선을 확인한 후 다시 검색하세요. |
-| <Cmd sid='rs485_err_slave_in_use' product='cam' /> | 장치가 AI 규칙에서 사용 중입니다. 해당 룰에서 장치의 릴레이 설정을 제거한 후 다시 시도하세요. |
+| <Cmd sid='rs485_err_slave_in_use' product='cam' /> | 장치가 AI 규칙에서 사용 중입니다. 해당 규칙에서 장치의 릴레이 설정을 제거한 후 다시 시도하세요. |
 | <Cmd sid='rs485_initializing' product='cam' /> | 카메라가 RS-485 포트를 준비하고 있습니다. 잠시 후 다시 시도하세요. |
 
 </div>

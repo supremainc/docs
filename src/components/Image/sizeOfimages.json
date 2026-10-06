@@ -5331,6 +5331,34 @@
     "width": 600,
     "height": 660
   },
+  "/img/cam-server/ai-rule-schedule-add-time-table-delete.png": {
+    "width": 282,
+    "height": 46
+  },
+  "/img/cam-server/ai-rule-schedule-add-time-table.png": {
+    "width": 984,
+    "height": 328
+  },
+  "/img/cam-server/ai-rule-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/ai-rule-schedule-edit-time-table-popup.png": {
+    "width": 1028,
+    "height": 646
+  },
+  "/img/cam-server/ai-rule-schedule-edit-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
+  "/img/cam-server/ai-rule-schedule-list.png": {
+    "width": 1920,
+    "height": 380
+  },
+  "/img/cam-server/ai-rule-schedule-remove-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
   "/img/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
     "height": 334
@@ -5479,7 +5507,23 @@
     "width": 1088,
     "height": 1032
   },
+  "/img/cam-server/cam-webserver-settings-network-clue.png": {
+    "width": 835,
+    "height": 203
+  },
   "/img/cam-server/cam-webserver-settings-network-dhcp.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-webserver-settings-network-onvif-add-operator.png": {
+    "width": 642,
+    "height": 614
+  },
+  "/img/cam-server/cam-webserver-settings-network-onvif-warning.png": {
+    "width": 462,
+    "height": 344
+  },
+  "/img/cam-server/cam-webserver-settings-network-onvif.png": {
     "width": 1920,
     "height": 1080
   },
@@ -5495,6 +5539,18 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/cam-server/cam-webserver-settings-network-tunnel-named-token.png": {
+    "width": 835,
+    "height": 390
+  },
+  "/img/cam-server/cam-webserver-settings-network-tunnel-named.png": {
+    "width": 835,
+    "height": 409
+  },
+  "/img/cam-server/cam-webserver-settings-network-tunnel-quick.png": {
+    "width": 835,
+    "height": 186
+  },
   "/img/cam-server/cam-webserver-settings-privacy-overlay-add-area.png": {
     "width": 1920,
     "height": 1080
@@ -5508,6 +5564,42 @@
     "height": 207
   },
   "/img/cam-server/cam-webserver-settings-privacy-overlay.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-connection-status.png": {
+    "width": 265,
+    "height": 329
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-edit.png": {
+    "width": 622,
+    "height": 350
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-fw-update.png": {
+    "width": 622,
+    "height": 548
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-multi-delete.png": {
+    "width": 830,
+    "height": 468
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-no-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-registered.png": {
+    "width": 1920,
+    "height": 623
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-scanning.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-webserver-settings-rs485-select.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-webserver-settings-rs485.png": {
     "width": 1920,
     "height": 1080
   },
@@ -15695,6 +15787,30 @@
     "width": 600,
     "height": 1120
   },
+  "/img/en/cam-server/ai-rule-schedule-add-time-table.png": {
+    "width": 984,
+    "height": 328
+  },
+  "/img/en/cam-server/ai-rule-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/ai-rule-schedule-edit-time-table-popup.png": {
+    "width": 1028,
+    "height": 646
+  },
+  "/img/en/cam-server/ai-rule-schedule-edit-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
+  "/img/en/cam-server/ai-rule-schedule-list.png": {
+    "width": 1920,
+    "height": 380
+  },
+  "/img/en/cam-server/ai-rule-schedule-remove-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
   "/img/en/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
     "height": 334
@@ -15847,7 +15963,23 @@
     "width": 1920,
     "height": 651
   },
+  "/img/en/cam-server/cam-webserver-settings-network-clue.png": {
+    "width": 835,
+    "height": 203
+  },
   "/img/en/cam-server/cam-webserver-settings-network-dhcp.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-webserver-settings-network-onvif-add-operator.png": {
+    "width": 642,
+    "height": 614
+  },
+  "/img/en/cam-server/cam-webserver-settings-network-onvif-warning.png": {
+    "width": 462,
+    "height": 344
+  },
+  "/img/en/cam-server/cam-webserver-settings-network-onvif.png": {
     "width": 1920,
     "height": 1080
   },
@@ -15863,6 +15995,18 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/cam-server/cam-webserver-settings-network-tunnel-named-token.png": {
+    "width": 835,
+    "height": 390
+  },
+  "/img/en/cam-server/cam-webserver-settings-network-tunnel-named.png": {
+    "width": 835,
+    "height": 409
+  },
+  "/img/en/cam-server/cam-webserver-settings-network-tunnel-quick.png": {
+    "width": 835,
+    "height": 186
+  },
   "/img/en/cam-server/cam-webserver-settings-privacy-overlay-add-area.png": {
     "width": 1920,
     "height": 1080
@@ -15876,6 +16020,42 @@
     "height": 206
   },
   "/img/en/cam-server/cam-webserver-settings-privacy-overlay.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-connection-status.png": {
+    "width": 265,
+    "height": 329
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-edit.png": {
+    "width": 622,
+    "height": 350
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-fw-update.png": {
+    "width": 622,
+    "height": 564
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-multi-delete.png": {
+    "width": 830,
+    "height": 468
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-no-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-registered.png": {
+    "width": 1920,
+    "height": 623
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-scanning.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485-select.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-webserver-settings-rs485.png": {
     "width": 1920,
     "height": 1080
   },
@@ -21795,6 +21975,30 @@
     "width": 600,
     "height": 945
   },
+  "/img/ja/cam-server/ai-rule-schedule-add-time-table.png": {
+    "width": 984,
+    "height": 328
+  },
+  "/img/ja/cam-server/ai-rule-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/ai-rule-schedule-edit-time-table-popup.png": {
+    "width": 1028,
+    "height": 646
+  },
+  "/img/ja/cam-server/ai-rule-schedule-edit-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
+  "/img/ja/cam-server/ai-rule-schedule-list.png": {
+    "width": 1920,
+    "height": 380
+  },
+  "/img/ja/cam-server/ai-rule-schedule-remove-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
   "/img/ja/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
     "height": 334
@@ -21939,7 +22143,23 @@
     "width": 1920,
     "height": 651
   },
+  "/img/ja/cam-server/cam-webserver-settings-network-clue.png": {
+    "width": 835,
+    "height": 203
+  },
   "/img/ja/cam-server/cam-webserver-settings-network-dhcp.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-webserver-settings-network-onvif-add-operator.png": {
+    "width": 642,
+    "height": 614
+  },
+  "/img/ja/cam-server/cam-webserver-settings-network-onvif-warning.png": {
+    "width": 462,
+    "height": 362
+  },
+  "/img/ja/cam-server/cam-webserver-settings-network-onvif.png": {
     "width": 1920,
     "height": 1080
   },
@@ -21955,6 +22175,18 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/ja/cam-server/cam-webserver-settings-network-tunnel-named-token.png": {
+    "width": 835,
+    "height": 390
+  },
+  "/img/ja/cam-server/cam-webserver-settings-network-tunnel-named.png": {
+    "width": 835,
+    "height": 409
+  },
+  "/img/ja/cam-server/cam-webserver-settings-network-tunnel-quick.png": {
+    "width": 835,
+    "height": 186
+  },
   "/img/ja/cam-server/cam-webserver-settings-privacy-overlay-add-area.png": {
     "width": 1920,
     "height": 1080
@@ -21968,6 +22200,42 @@
     "height": 206
   },
   "/img/ja/cam-server/cam-webserver-settings-privacy-overlay.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-connection-status.png": {
+    "width": 265,
+    "height": 329
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-edit.png": {
+    "width": 622,
+    "height": 350
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-fw-update.png": {
+    "width": 622,
+    "height": 567
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-multi-delete.png": {
+    "width": 830,
+    "height": 468
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-no-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-registered.png": {
+    "width": 1920,
+    "height": 623
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-scanning.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485-select.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-webserver-settings-rs485.png": {
     "width": 1920,
     "height": 1080
   },
