@@ -133,6 +133,7 @@ function createSidebars(preview) {
             'device/vionyx_webserver/configure-privacy-overlay',
             'device/vionyx_webserver/configure-date-time',
             'device/vionyx_webserver/configure-network',
+            'device/vionyx_webserver/configure-rs485',
             'device/vionyx_webserver/configure-rtsp-onvif'
           ]
         },
