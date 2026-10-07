@@ -16055,6 +16055,10 @@
     "width": 1920,
     "height": 439
   },
+  "/img/en/cam-server/cam-acs-level.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/cam-server/cam-webserver-people-ai-matching.png": {
     "width": 1920,
     "height": 1080
@@ -22342,6 +22346,10 @@
   "/img/ja/cam-server/cam-acs-level-select-delete.png": {
     "width": 1920,
     "height": 439
+  },
+  "/img/ja/cam-server/cam-acs-level.png": {
+    "width": 1920,
+    "height": 1080
   },
   "/img/ja/cam-server/cam-webserver-people-ai-matching.png": {
     "width": 1920,
