@@ -2,7 +2,6 @@
 id: configure-counting-people
 title: 인원 카운팅 이벤트 설정하기
 description: 지정된 구역에 머무르는 사람의 수를 감지할 수 있습니다.
-keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 ---
 
 인원 카운팅 이벤트를 설정하면 지정된 구역에 머무르는 사람의 수를 감지할 수 있습니다. 선택적으로 얼굴 영역을 추가하면 등록된 사용자를 자동으로 신원을 인식합니다.
@@ -27,9 +26,9 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 ### 이벤트 생성 시작
 
-1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+1. 화면 왼쪽 상단의 <Cmd sid='ai_and_rule_short' product='cam' /> 메뉴를 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -45,7 +44,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
    :::note
 
-   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
+   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
 
    * <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업은 최초 한 번만 표시됩니다. 이후 AI 이벤트 생성 시에는 동의한 것으로 간주합니다.
 
@@ -65,7 +64,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 </Step>
 <Step>
 
-### 카운팅 영역 설정
+### 카운팅 영역 설정 {/* #countingArea */}
 
 라이브 뷰에서 카운팅 영역을 설정하세요. 카메라에서 설정한 카운팅 영역에 머무르는 사람을 실시간으로 카운팅하고 이벤트를 발생시킵니다. 최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다. 라이브 뷰에 표시되는 카운팅 영역 상자의 모서리 또는 점을 마우스로 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
 
@@ -115,6 +114,13 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 </Step>
 <Step>
 
+import DetectPeople from './_ai-event-detect-people.mdx';
+
+<DetectPeople />
+
+</Step>
+<Step>
+
 ### 카운팅 초기화 설정
 
 카운팅 영역에 머무르는 사람 수를 초기화하는 조건을 설정하세요.
@@ -151,7 +157,5 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 * 조명이 부족하거나 역광이 있으면 카메라가 얼굴을 인식하지 못할 수 있습니다. 촬영 공간의 조명을 개선하거나 카메라의 위치와 각도를 조정하여 얼굴이 잘 보이도록 하세요.
 
 * 얼굴이 카메라로 향해야 인식됩니다. 옆모습 또는 뒷모습은 인식이 어려울 수 있습니다.
-
-* 너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 옵션값을 조정하세요. 이벤트 발생 지연 시간을 늘리면 이벤트 빈도를 줄일 수 있습니다.
 
 :::

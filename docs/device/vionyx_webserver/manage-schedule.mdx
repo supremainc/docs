@@ -1,0 +1,154 @@
+---
+id: manage-schedule
+title: 일정 관리하기
+description: AI 규칙의 동작이 실행될 요일과 시간대를 일정으로 만들고, 일정을 수정하거나 삭제하는 방법을 안내합니다.
+---
+
+일정은 요일과 시간대를 조합해 만든 주간 시간표입니다. 일정을 만들어 AI 규칙의 동작에 지정하면, 해당 동작은 일정에 포함된 시간대에만 실행됩니다. 한 번 만든 일정은 여러 AI 규칙에서 함께 사용할 수 있습니다.
+
+아래와 같은 상황에서 일정을 만드세요.
+
+* 평일 업무 시간에만 웹훅을 전송하고 싶을 때
+
+* 야간에만 침입 감지 경고 오디오를 재생하고 싶을 때
+
+* 주말에는 릴레이가 동작하지 않도록 제한하고 싶을 때
+
+:::info
+
+장치에는 **Always** 일정을 기본 제공합니다. Always 일정은 매일 24시간 동작하며, 수정하거나 삭제할 수 없습니다.
+
+:::
+
+
+## 일정 목록 확인
+
+1. 화면 왼쪽 상단의 <Cmd sid='ai_and_rule_short' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='schedule' product='cam' />을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-list.png' />
+
+일정 목록에서 등록된 일정과 각 일정을 사용하는 AI 규칙을 확인할 수 있습니다. 
+
+* 화면 상단의 <Cmd sid='schedule' product='cam' />(<Num num='1' />) 옆에는 등록된 일정의 개수가 표시됩니다.
+
+* 특정 일정을 찾으려면 검색 필드(<Num num='2' />)에 일정 이름 또는 ID를 입력하세요.
+
+* 한 페이지에 표시할 일정 개수를 변경하려면 화면 오른쪽 상단의 행 수 목록(<Num num='3' />)에서 원하는 값을 선택하세요.
+
+* 정렬 기준을 변경하려면 <Cmd sid='sort_by_name' product='cam' />(<Num num='4' />) 목록에서 원하는 기준을 선택하세요.
+
+일정 목록에 표시되는 항목은 다음과 같습니다.
+
+| 항목 | 설명 |
+| --- | --- |
+| <Cmd sid='column_id' product='cam' /> | 일정의 고유 번호입니다. Always 일정은 `0`입니다. |
+| <Cmd sid='name' product='cam' /> | 일정 이름입니다. |
+| <Cmd sid='description' product='cam' /> | 일정을 추가하거나 수정할 때 입력한 설명입니다. |
+| <Cmd sid='used_by' product='cam' /> | 일정을 사용하는 AI 규칙입니다. 사용하는 AI 규칙이 없으면 <Cmd sid='not_used' product='cam' />으로 표시됩니다. AI 규칙이 여러 개일 때는 <Cmd sid='used_by_more' product='cam' replace='N' /> 형식으로 표시됩니다. |
+| <Cmd sid='actions' product='cam' /> | 일정을 수정(<IcCamEdit />)하거나 삭제(<IcCamTrash />)할 수 있는 기능을 제공합니다. |
+
+
+## 일정 추가
+
+<Steps>
+<Step>
+
+### 일정 추가 시작
+
+1. 일정 목록 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='add_schedule' product='cam' /> 팝업이 나타나면 일정 정보를 입력하세요.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-add.png' />
+
+</Step>
+<Step>
+
+### 이름과 설명 입력
+
+* <Cmd sid='name' product='cam' />: 일정 이름을 입력하세요. 필수 항목이며, 다른 일정과 같은 이름을 사용할 수 없습니다. 최대 48자까지 입력할 수 있습니다.
+
+* <Cmd sid='description' product='cam' />: 일정에 대한 설명을 입력하세요. 예를 들어 **월-금 09:00-18:00**처럼 적용 시간대를 적어 두면 규칙에서 일정을 선택할 때 쉽게 구분할 수 있습니다.
+
+</Step>
+<Step>
+
+### 타임테이블에서 시간대 지정
+
+<Cmd sid='timetable' product='cam' />에서 일정이 동작할 요일과 시간대를 선택하세요. 세로축은 요일(일요일\~토요일), 가로축은 시간(0시\~24시)입니다. 선택한 시간대는 블록으로 표시됩니다.
+
+<ProdImg src='/img/cam-server/ai-rule-schedule-add-time-table.png' />
+
+* **시간대 선택**: 원하는 요일 행에서 시작 시간부터 종료 시간까지 마우스로 드래그하세요. 최소 10분 단위로 선택할 수 있습니다.
+
+* **시간대 이동**: 지정한 블록을 왼쪽 또는 오른쪽으로 드래그하면 다른 시간대로 이동할 수 있습니다.
+
+* **24시간 선택 또는 해제**: 요일 이름 옆의 <Cmd sid='timetable_24h' product='cam' /> 버튼을 클릭하세요. 해당 요일의 24시간 전체가 선택되며, 다시 클릭하면 전체 해제됩니다.
+
+* **블록 삭제**: 삭제하려는 블록을 선택하면 <IcClose title='Remove block' /> 버튼이 나타납니다. 이 버튼을 클릭하세요. {/* TODO: 블록 삭제 UI 동작 확인 */}
+
+   <Image src='/img/cam-server/ai-rule-schedule-add-time-table-delete.png' alone />
+
+* **전체 초기화**: 지정한 시간대를 모두 지우고 다시 설정하려면 <Cmd sid='reset_timetable' product='cam' /> 버튼을 클릭하세요.
+
+</Step>
+<Step>
+
+### 일정 저장
+
+모든 설정을 완료한 후 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 저장한 일정은 일정 목록에 추가되며, AI 규칙의 동작 설정에서 선택할 수 있습니다.
+
+:::info
+
+* <Cmd sid='used_by' product='cam' /> 항목은 일정을 사용하는 AI 규칙을 보여 주는 읽기 전용 항목입니다. 새로 만든 일정은 아직 사용하는 AI 규칙이 없으므로 <Cmd sid='not_used' product='cam' />으로 표시됩니다.
+
+* 저장한 일정을 AI 규칙에 적용하는 방법은 <DocLink docId='device/vionyx_webserver/set-ai-rule' />를 참고하세요.
+
+:::
+
+</Step>
+</Steps>
+
+
+## 일정 수정
+
+1. 일정 목록에서 수정하려는 일정의 오른쪽에 있는 <IcCamEdit title='Edit' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table.png' />
+
+1. <Cmd sid='edit_schedule' product='cam' /> 팝업이 나타나면 이름, 설명, 타임테이블을 수정하세요.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table-popup.png' width='600px' />
+
+1. 수정한 내용을 저장하려면 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+수정한 일정은 저장하는 즉시 해당 일정을 사용하는 모든 AI 규칙에 적용됩니다.
+
+:::info
+
+* 일정을 여러 AI 규칙에서 함께 사용할 때는 수정하기 전에 <Cmd sid='used_by' product='cam' /> 열에서 영향을 받는 AI 규칙을 먼저 확인하세요.
+
+* Always 일정은 기본 일정으로 수정할 수 없습니다.
+
+:::
+
+
+## 일정 삭제
+
+1. 일정 목록에서 삭제하려는 일정의 오른쪽에 있는 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-remove-time-table.png' />
+
+1. 확인 메시지가 나타나면 내용을 확인하고 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+삭제한 일정은 복구할 수 없습니다.
+
+:::info
+
+* AI 규칙에서 사용 중인 일정은 삭제할 수 없습니다. <Cmd sid='used_by' product='cam' /> 열에 표시된 AI 규칙에서 다른 일정을 선택한 후 다시 삭제하세요.
+
+* Always 일정은 기본 일정으로 삭제할 수 없습니다.
+
+:::

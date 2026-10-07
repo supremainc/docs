@@ -69,7 +69,8 @@ function resolveText(data, sid, product, deviceName, replace) {
       if (sid === 'ntp_address_n' || sid === 'dns_n') {
         text = raw.replace('{n}', replace || '1');
       } else {
-        text = raw.replace('<br/>', '');
+        text = raw.replace('<br/>', '')
+                  .replace('{count}', replace || '1');
       }
     }
   } else if (product === 'clue') {

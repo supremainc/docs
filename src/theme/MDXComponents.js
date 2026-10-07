@@ -19,7 +19,7 @@ import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
-import { StatusOK, StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark } from '@site/src/components/Status';
+import { StatusOK, StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark, Centerpoint, Bottompoint } from '@site/src/components/Status';
 import Overview from '@site/src/components/Overview';
 import Separator from '@site/src/components/Separator';
 import Badge from '@site/src/components/Badge';
@@ -224,6 +224,9 @@ import IcAirResume from '@site/static/img/menus/ico-air-apb-resume.svg';
 import IcAirClear from '@site/static/img/menus/ico-air-clear-apb.svg';
 import IcAirOff from '@site/static/img/menus/ico-air-off-site.svg';
 import IcAirOn from '@site/static/img/menus/ico-air-on-site.svg';
+import IcCamheadAi from '@site/static/img/menus/ico-header-ai.svg';
+import IcCamAcs from '@site/static/img/menus/ico-header-access.svg';
+import IcCamHelp from '@site/static/img/menus/ico-cam-help.svg';
 export default {
     ...MDXComponents,
     Include,
@@ -255,7 +258,7 @@ export default {
     GlossaryAll,
     Num,
     StatusOK,
-    StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark,
+    StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark, Centerpoint, Bottompoint,
     Overview,
     Separator,
     Badge,
@@ -295,5 +298,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend, IcAirRef, IcAirFw, IcAirCloud, IcAirByte, IcAirDset, IcAirUpd, IcAirColumn, IcAirSchedule, IcAirLogfilter, IcAirMask, IcAirReportApp, IcHamberg, IcFunc, IcSpqr, IcAirWarn, IcCamTrash, IcCamReset, IcCamLive, IcCamSet, IcCamPeople, IcCamSys, IcQuestion, IcAirRevoke, IcAirResend, IcAirPlock, IcAirPunlock, IcPanelFace, IcKnob, IcCapture, IcFull, IcMin, IcCamAi, IcCamEdit, IcCamFace, IcCamFaceSearch, IcSave, IcAppDelete, IcAppEdit, IcAppLog, IcAppFilter, IcAppLogFiltered, IcAppReset, IcAppDoorLog, IcAppPause, IcAppPlay, IcAppClean, IcCheck, IcCLCheck, IcCLEdit, IcCLMove, IcCLEditR, IcCLDel, IcCLDetail, IcCLCal, IcAirOver, IcAirPause, IcAirResume, IcAirClear, IcAirOff, IcAirOn, IcPin, IcFixedLock, IcFixedUnlock, IcDoorAlarm, IcElevClose, IcElevOpen, IcArea, IcFacility, IcFloor, IcFloorCam, IcDeviceOn, IcDeviceOff, IcAuditEdit, IcAuditDelete, IcGroup, IcAppCheck
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend, IcAirRef, IcAirFw, IcAirCloud, IcAirByte, IcAirDset, IcAirUpd, IcAirColumn, IcAirSchedule, IcAirLogfilter, IcAirMask, IcAirReportApp, IcHamberg, IcFunc, IcSpqr, IcAirWarn, IcCamTrash, IcCamReset, IcCamLive, IcCamSet, IcCamPeople, IcCamSys, IcQuestion, IcAirRevoke, IcAirResend, IcAirPlock, IcAirPunlock, IcPanelFace, IcKnob, IcCapture, IcFull, IcMin, IcCamAi, IcCamEdit, IcCamFace, IcCamFaceSearch, IcSave, IcAppDelete, IcAppEdit, IcAppLog, IcAppFilter, IcAppLogFiltered, IcAppReset, IcAppDoorLog, IcAppPause, IcAppPlay, IcAppClean, IcCheck, IcCLCheck, IcCLEdit, IcCLMove, IcCLEditR, IcCLDel, IcCLDetail, IcCLCal, IcAirOver, IcAirPause, IcAirResume, IcAirClear, IcAirOff, IcAirOn, IcPin, IcFixedLock, IcFixedUnlock, IcDoorAlarm, IcElevClose, IcElevOpen, IcArea, IcFacility, IcFloor, IcFloorCam, IcDeviceOn, IcDeviceOff, IcAuditEdit, IcAuditDelete, IcGroup, IcAppCheck, IcCamheadAi, IcCamAcs, IcCamHelp
 }

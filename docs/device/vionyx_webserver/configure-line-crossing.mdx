@@ -2,7 +2,6 @@
 id: configure-line-crossing
 title: 라인 통과 감지 이벤트 설정하기
 description: 설정한 가상 라인을 통과하는 사람을 감지하여 실시간으로 이벤트를 발생합니다. 통과 방향을 지정하여 특정 방향의 출입만 감시할 수 있습니다.
-keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 ---
 
 라인 통과 감지 이벤트를 설정하면 설정한 가상 라인을 통과하는 사람을 감지하여 실시간으로 이벤트를 발생합니다. 통과 방향(A→B, B→A, 양방향)을 지정하여 특정 방향의 출입만 모니터링할 수 있으며, 선택적으로 얼굴 영역을 추가하면 등록된 사용자를 자동으로 신원을 인식합니다.
@@ -27,9 +26,9 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 ### 이벤트 생성 시작
 
-1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+1. 화면 왼쪽 상단의 <Cmd sid='ai_and_rule_short' product='cam' /> 메뉴를 클릭하세요.
 
-1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -45,7 +44,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
    :::note
 
-   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
+   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
 
    * <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업은 최초 한 번만 표시됩니다. 이후 AI 이벤트 생성 시에는 동의한 것으로 간주합니다.
 
@@ -81,7 +80,23 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
    * <Cmd>A \<-> B</Cmd>: 양방향으로 통과 시 이벤트 발생
 
+* <Cmd sid='reference_point' product='cam' />: 사람이 가상 라인을 통과했는지 판정할 때 사람 감지 박스의 어느 지점을 기준으로 할지 선택하세요. 라인마다 다르게 설정할 수 있으며, 기본값은 <Cmd sid='reference_point_center' product='cam' />입니다.
+
+   * <Cmd sid='reference_point_center' product='cam' />: 박스의 한가운데를 기준으로 판정합니다. 몸 중앙이 라인에 닿으면 통과한 것으로 판정합니다.
+
+   * <Cmd sid='reference_point_lower' product='cam' />: 박스의 긴 축을 따라 위에서 80% 지점을 기준으로 판정합니다. 몸 아래쪽이 라인에 닿으면 통과한 것으로 판정합니다. 바닥에 라인을 그렸을 때처럼 발이 라인을 넘는 시점에 이벤트를 발생시키려면 이 옵션을 선택하세요.
+
+   <Cmd sid='reference_point' product='cam' /> 오른쪽의 <IcCamHelp title='Help' /> 아이콘을 클릭하면 각 기준점의 위치와 판정 방식을 그림으로 확인할 수 있습니다.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-help.png' />
+
 :::info
+
+* <Cmd sid='reference_point' product='cam' /> 옵션은 펌웨어 버전 1.1.0 이상에서 지원합니다. 기준점 선택을 지원하지 않는 장치에서는 모든 라인 통과를 <Cmd sid='reference_point_center' product='cam' />으로 판정합니다.
+
+* <Cmd sid='reference_point_lower' product='cam' />은 사람 감지 박스를 기준으로 계산한 위치이며, 실제 발 위치를 검출하는 것은 아닙니다.
+
+* <Cmd sid='live' product='cam' /> 메뉴에서 판정 기준점을 확인하려면 [AI 표시 옵션](live-basic#displayBox)에서 <Cmd sid='reference_point' product='cam' /> 옵션을 켜세요.
 
 * 설정한 가상 라인의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
 
@@ -113,11 +128,40 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 </Step>
 <Step>
 
-### 이벤트 발생 조건 설정
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-이벤트 발생 조건을 설정하세요.
+<DetectPeople />
 
-* <Cmd sid='every_delay' product='cam' />: 이벤트 발생 지연 시간을 설정하세요. 설정한 시간을 초과했을 때만 이벤트가 발생하며, 최대 60초까지 설정할 수 있습니다.
+</Step>
+<Step>
+
+### 이벤트 발생 조건 및 카운트 설정
+
+<Cmd sid='option' product='cam' /> 섹션에서 이벤트 발생 조건과 이벤트 카운트를 설정하세요.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-options.png' />
+
+* <Cmd sid='every_delay' product='cam' />: 이벤트로 인식할 최소 시간을 설정하세요. 감지 상태가 설정한 시간보다 오래 이어져야 이벤트가 발생합니다. 최대 60초까지 설정할 수 있습니다.
+
+   :::note
+
+   너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 값을 늘리세요. 설정한 시간보다 짧게 감지된 움직임은 이벤트로 인식하지 않으므로 불필요한 이벤트가 줄어듭니다.
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />: 라인을 통과할 때마다 횟수를 계산하려면 <Cmd sid='on' product='cam' />으로 설정하세요. 라인이 여러 개일 때는 라인마다 각각 계산합니다.
+
+* <Cmd sid='all_event_count_reset' product='cam' />: 모든 라인의 이벤트 카운트를 매일 지정한 시각에 초기화하려면 <Cmd sid='on' product='cam' />으로 설정하세요. <Cmd sid='reset_time' product='cam' />에서 설정한 시각에 모든 라인의 이벤트 카운트를 초기화합니다.
+
+:::info
+
+* <Cmd sid='event_count' product='cam' />를 <Cmd sid='on' product='cam' />으로 설정했다면 <Cmd sid='live' product='cam' /> 메뉴 영상 위의 라인마다 <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> 형식으로 표시됩니다. 이벤트 카운트를 수동으로 초기화하려면 <IcMoreB title='More' /> 버튼을 클릭한 후 <Cmd sid='count_reset' product='cam' />를 선택하세요.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* 이벤트 카운트 관련 옵션은 펌웨어 버전 1.1.0 이상에서 지원합니다.
+
+:::
 
 </Step>
 <Step>
@@ -145,7 +189,5 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 * 조명이 부족하거나 역광이 있으면 카메라가 얼굴을 인식하지 못할 수 있습니다. 촬영 공간의 조명을 개선하거나 카메라의 위치와 각도를 조정하여 얼굴이 잘 보이도록 하세요.
 
 * 얼굴이 카메라로 향해야 인식됩니다. 옆모습 또는 뒷모습은 인식이 어려울 수 있습니다.
-
-* 너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 옵션값을 조정하세요. 이벤트 발생 지연 시간을 늘리면 이벤트 빈도를 줄일 수 있습니다.
 
 :::

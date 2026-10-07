@@ -2,7 +2,6 @@
 id: live-basic
 title: 라이브 영상 보기
 description: ViOnyx Web Server의 Live 메뉴에서 실시간으로 카메라 영상을 확인하고, 채널과 뷰 모드를 선택하고, 화면을 확대/축소하는 방법을 안내합니다.
-keywords: [실시간, 영상, Live, 모니터링, 뷰 모드]
 ---
 
 ViOnyx Web Server의 <Cmd sid='live' product='cam' /> 메뉴에서는 카메라가 촬영 중인 영상을 실시간으로 확인할 수 있습니다. 원하는 채널과 뷰 모드를 선택하고, 화면을 확대하거나 전체 화면으로 볼 수 있습니다.
@@ -17,11 +16,11 @@ ViOnyx Web Server의 <Cmd sid='live' product='cam' /> 메뉴에서는 카메라�
 
 | 항목 | 구성 요소 | 설명 |
 | :-: | :-: | --- |
-| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - AI 기능이 비활성화된 상태입니다. 아이콘을 클릭해 AI 기능을 활성화할 수 있습니다.<br />- AI 이벤트와 사용자 박스를 표시하거나 숨길려면 <IcMoreB title='More' /> 버튼을 클릭해 설정을 조정하세요. |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - AI 기능이 비활성화된 상태입니다. 아이콘을 클릭해 AI 기능을 활성화할 수 있습니다.<br />- AI 이벤트와 사용자 박스를 표시하거나 숨기려면 <IcMoreB title='More' /> 버튼을 클릭해 설정을 조정하세요. |
 | <Num num='2' /> | <IcPanelFace width='26px' height='26px' title='Face Shot' /> | <Cmd sid='face_shot' product='cam' />(Face Shot) 패널을 열 수 있습니다. |
 | <Num num='3' /> | CH | 채널에 따라 제공하는 뷰 모드를 선택할 수 있습니다. |
 | <Num num='4' /> | <IcKnob width='28px' height='28px' title='Rotate' /> | 라이브로 보고 있는 영상을 회전할 수 있습니다. |
-| ^ | <IcCapture width='26px' height='26px' title='Capture' /> | 라이브 영상을 캡쳐할 수 있습니다. |
+| ^ | <IcCapture width='26px' height='26px' title='Capture' /> | 라이브 영상을 캡처할 수 있습니다. |
 | ^ | <IcFull width='26px' height='26px' title='Full Screen' /> | 라이브 영상을 전체 화면으로 볼 수 있습니다. |
 
 </div>
@@ -39,7 +38,7 @@ ViOnyx Web Server는 여러 채널과 다양한 뷰 모드를 제공합니다. �
 
 | 채널 | 뷰 모드 | 설명 | 예시 |
 | :--: | -- | -- | :--: |
-| **1ch** | Fisheye View (Main/Sub) | 기본 채널의 원본 피시아이 렌즈 영상 | <Image src='/img/cam-server/vionyx-live-basic-fisheye-view-mode.png' width='50%' alone /> |
+| **1ch** | Fisheye View (Main/Sub) | 기본 채널의 원본 피쉬아이 렌즈 영상 | <Image src='/img/cam-server/vionyx-live-basic-fisheye-view-mode.png' width='50%' alone /> |
 | **2ch** | Quad View (Main) | 파노라마 뷰 채널의 4분할 뷰 | <Image src='/img/cam-server/vionyx-live-basic-quad-view-mode.png' width='50%' alone /> |
 
 </div>
@@ -61,11 +60,11 @@ ViOnyx Web Server는 여러 채널과 다양한 뷰 모드를 제공합니다. �
 
 * 스크롤 다운(아래로): 화면 축소(줌 아웃)
 
-* 더블클릭: 원래 크기로 복귀(1배)
+* 더블 클릭: 원래 크기로 복귀(1배)
 
 :::info
 
-* 1배 ~ 8배까지 화면을 확대할 수 있습니다.
+* 1배 \~ 8배까지 화면을 확대할 수 있습니다.
 
 * 화면 확대는 디지털 줌이므로, 높은 배율로 확대하면 영상이 흐릿해질 수 있습니다.
 
@@ -74,14 +73,14 @@ ViOnyx Web Server는 여러 채널과 다양한 뷰 모드를 제공합니다. �
 
 ## 화면 회전하기
 
-라이브 영상을 회전하려면 <IcKnob /> 버튼을 클릭한 상태에서 드래그하세요. 또는 <IcKnob /> 버튼 오른쪽에 입력 필드에 회전 각도를 직접 입력할 수도 있습니다.
+라이브 영상을 회전하려면 <IcKnob title='Rotate View' /> 버튼을 클릭한 상태에서 드래그하세요. 또는 <IcKnob title='Rotate View' /> 버튼 오른쪽에 입력 필드에 회전 각도를 직접 입력할 수도 있습니다.
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-rotate-screen.png' />
 
 
-## 화면 캡쳐
+## 화면 캡처
 
-라이브 영상을 캡쳐하려면 <IcCapture title='Capture' /> 버튼을 클릭하세요. 캡쳐 이미지는 `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg` 형식으로 저장됩니다.
+라이브 영상을 캡처하려면 <IcCapture title='Capture' /> 버튼을 클릭하세요. 캡처 이미지는 `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg` 형식으로 저장됩니다.
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-capture-screen.png' />
 
@@ -96,9 +95,9 @@ ViOnyx Web Server는 여러 채널과 다양한 뷰 모드를 제공합니다. �
 * 전체 화면 모드를 종료하려면 <Kbd>ESC</Kbd> 키를 누르거나 <IcMin /> 버튼을 다시 클릭하세요.
 
 
-## 이벤트 및 사용자 박스 표시 {/* #displayBox */}
+## AI 표시 옵션 {/* #displayBox */}
 
-라이브 영상에서 AI 이벤트와 사용자 박스를 표시하거나 숨길려면 화면 오른쪽 상단의 <IcMoreB /> 버튼을 클릭하세요. 표시할 요소를 선택할 수 있습니다.
+라이브 영상의 AI 표시 옵션을 설정하려면 화면 오른쪽 상단의 <IcMoreB /> 버튼을 클릭하세요.
 
 <ProdImg src='/img/cam-server/live-view-event-user-box.png' width='60%' />
 
@@ -106,12 +105,23 @@ ViOnyx Web Server는 여러 채널과 다양한 뷰 모드를 제공합니다. �
 
 * <Cmd sid='user_box_popup' product='cam' />: AI 이벤트를 통해 얼굴이 감지되면 라이브 영상 오른쪽 하단에 사용자 박스가 팝업으로 표시됩니다.
 
+* <Cmd sid='base_opacity' product='cam' />: 이벤트 팝업, 사용자 팝업의 투명도를 조절할 수 있습니다.
+
+* <Cmd sid='reference_point' product='cam' />: 라이브 영상의 사람 감지 박스 위에 기준점을 표시합니다. 이 옵션을 켜면 영상 오른쪽 상단에 범례가 함께 표시됩니다.
+
+   * 하늘색 점(<Centerpoint />): 박스의 한가운데입니다.
+
+   * 빨간색 점(<Bottompoint />): 박스의 긴 축을 따라 위에서 80% 지점입니다. 카메라를 천장에 아래 방향으로 설치하면 사람의 발 근처에 표시됩니다.
+
 :::info
 
-<Cmd sid='display_time' product='cam' /> 옵션에서 설정한 시간(단위: 초) 동안 팝업이 유지됩니다.
+* <Cmd sid='display_time' product='cam' /> 옵션에서 설정한 시간(단위: 초) 동안 팝업이 유지됩니다.
+
+* <Cmd sid='reference_point' product='cam' /> 옵션은 AI 기능(<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />)을 켜야 사용할 수 있습니다.
+
+* <Cmd sid='base_opacity' product='cam' />, <Cmd sid='reference_point' product='cam' /> 옵션은 펌웨어 버전 1.1.0 이상에서 지원합니다.
 
 :::
-
 
 ## 얼굴 촬영 패널 열기
 
@@ -121,7 +131,7 @@ AI 이벤트 기능을 활성화했다면 카메라를 통해서 감지된 얼�
 
 <Cmd sid='face_shot' product='cam' /> 패널 상단에서 제공하는 도구 아이콘을 클릭해 다음과 같은 기능을 사용할 수 있습니다.
 
-* <Image src='/img/menus/ico-faceshot-pause.svg' ico alone className='none' /> / <Image src='/img/menus/ico-faceshot-play.svg' ico alone className='none' />: 얼굴 촬영을 일시 정지하거나 재게할 수 있습니다.
+* <Image src='/img/menus/ico-faceshot-pause.svg' ico alone className='none' /> / <Image src='/img/menus/ico-faceshot-play.svg' ico alone className='none' />: 얼굴 촬영을 일시 정지하거나 재개할 수 있습니다.
 
 * <Image src='/img/menus/ico-faceshot-filter.svg' ico alone className='none' />: 얼굴 촬영 결과를 필터링할 수 있습니다.
 

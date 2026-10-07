@@ -1,0 +1,229 @@
+---
+id: configure-rs485
+title: RS-485 설정하기
+description: 카메라를 RS-485 마스터로 동작시켜 슈프리마 I/O 장치를 슬레이브로 검색 및 추가하고, 슬레이브 장치의 이름, 펌웨어를 관리하거나 제거하는 방법을 안내합니다.
+---
+
+RS-485 설정에서는 카메라의 RS-485 포트에 연결된 슈프리마 I/O 장치를 슬레이브 장치로 등록하고 관리할 수 있습니다. 카메라는 RS-485 포트의 마스터로 동작하며, 등록한 슬레이브 장치의 릴레이를 AI 규칙과 연동하여 출입문 개방, 비상등 작동 등 외부 장치를 제어할 수 있습니다.
+
+아래와 같은 상황에서 <Cmd sid='rs485' product='cam' /> 설정을 확인하세요.
+
+* 카메라에 I/O 장치를 연결하여 릴레이 출력이나 입력 포트를 늘리고 싶을 때
+
+* AI 이벤트가 발생하면 슬레이브 장치의 릴레이로 외부 장치를 제어하고 싶을 때
+
+* 슬레이브 장치의 연결 상태를 확인하거나 펌웨어를 업데이트해야 할 때
+
+* 더 이상 사용하지 않는 슬레이브 장치를 제거해야 할 때
+
+:::info
+
+* 펌웨어 버전 1.1.0에서는 마스터 모드만 지원합니다. 카메라를 다른 장치의 슬레이브로 연결하는 슬레이브 모드는 지원하지 않습니다.
+
+* 슬레이브 장치는 최대 8대까지 등록할 수 있습니다.
+
+* 지원하는 슬레이브 장치는 슈프리마 I/O 장치입니다. 지문 인식 장치와 얼굴 인식 장치는 슬레이브 장치로 연결할 수 없습니다.
+
+   * [Secure I/O 2](/device/securemodule) (SIO2)
+
+   * [Door Module](/device/doormodule) (DM-20)
+
+   * [Door Interface](/device/doorinterface) (DI-24)
+
+   * [Output Module](/device/outputmodule) (OM-120)
+
+   * [Input Module](/device/inputmodule) (IM-120)
+
+:::
+
+## 시작하기 전에
+
+슬레이브 장치를 추가하기 전에 다음 사항을 확인하세요.
+
+* 슬레이브 장치가 카메라의 RS-485 포트에 올바르게 배선되어 있는지 확인하세요.
+
+* 슬레이브 장치에 OSDP ID가 할당되어 있는지 확인하세요. OSDP ID가 0(미배정)인 장치는 등록할 수 없습니다.
+
+* 같은 RS-485 버스에 연결된 장치끼리 OSDP ID가 중복되지 않는지 확인하세요.
+
+* 슬레이브 장치가 다른 마스터 장치에 등록되어 있었다면 장치를 초기화하세요.
+
+## 슬레이브 장치 추가
+
+RS-485 포트에 연결된 슬레이브 장치를 검색하여 카메라에 등록하세요.
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' />를 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485.png' />
+
+1. <Cmd sid='slave_device' product='cam' /> 항목의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='add_slave_devices' product='cam' /> 팝업창이 나타나고, 장치 검색이 자동 시작됩니다. 검색이 끝날 때까지 기다리세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-scanning.png' />
+
+1. 검색 결과에서 추가할 장치의 체크박스를 선택하세요. 여러 장치를 함께 선택할 수 있습니다.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-select.png' />
+
+   검색된 장치에는 다음 정보가 포함되어 있습니다.
+
+   * <Cmd sid='serial_number_short' product='cam' />: 장치의 시리얼 번호
+
+   * <Cmd sid='device' product='cam' />: 장치 모델명
+
+   * <Cmd sid='input' product='cam' />: 입력 단자 수
+
+   * <Cmd sid='relay' product='cam' />: 릴레이 단자 수
+
+   * <Cmd sid='osdp_id' product='cam' />: 장치에 배정된 OSDP ID
+
+1. 선택한 장치를 등록하려면 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 장치를 하나 이상 선택해야 버튼이 활성화됩니다.
+
+장치가 정상 등록되면 화면 오른쪽 상단에 성공 메시지가 나타납니다. <Cmd sid='slave_device' product='cam' /> 목록에 장치가 OSDP ID 순으로 표시됩니다. 장치 이름은 시리얼 번호로 자동 지정되며, [슬레이브 장치 수정](#edit-slave-device)에서 변경할 수 있습니다.
+
+### 장치를 찾을 수 없을 때
+
+검색 결과에 <Cmd sid='rs485_scan_no_device' product='cam' /> 메시지가 나타나면 다음 사항을 확인한 후 <Cmd sid='search_again' product='cam' /> 버튼을 클릭하세요.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-no-device.png' />
+
+* 슬레이브 장치의 RS-485 배선이 올바르게 연결되어 있는지 확인하세요.
+
+* 슬레이브 장치가 다른 마스터 장치에 등록되어 있다면 장치를 초기화하세요.
+
+* 슬레이브 장치에 OSDP ID가 할당되어 있는지 확인하세요.
+
+## 슬레이브 장치 상태 확인
+
+<Cmd sid='slave_device' product='cam' /> 목록에서 등록한 장치의 정보와 연결 상태를 확인할 수 있습니다.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-registered.png' />
+
+장치와 카메라의 통신이 끊어지면 장치 카드에 <Cmd sid='disconnected' product='cam' /> 표시와 함께 연결이 끊어진 일시가 나타납니다. 장치의 전원과 RS-485 배선을 확인하세요. 장치가 다시 연결되면 표시가 사라집니다.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-connection-status.png' />
+
+:::info
+
+슬레이브 장치의 연결 및 연결 끊김 기록은 시스템 로그에서 확인할 수 있습니다. 자세한 내용은 [시스템 로그 확인하기](view-system-logs)를 참고하세요.
+
+:::
+
+## 슬레이브 장치 수정 {#edit-slave-device}
+
+등록한 슬레이브 장치의 이름을 변경할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' />를 클릭하세요.
+
+1. 수정할 장치 카드에 마우스 포인터를 올린 후, 오른쪽 상단의 <IcCamEdit title='Edit' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='slave_settings' product='cam' /> 팝업창에서 <Cmd sid='name' product='cam' /> 입력 필드에 새 이름을 입력하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-edit.png' />
+
+1. 변경 사항을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+변경 사항이 정상 저장되면 화면 오른쪽 상단에 성공 메시지가 나타납니다.
+
+:::info
+
+<Cmd sid='slave_settings' product='cam' /> 팝업창에서는 OSDP ID를 확인만 할 수 있으며, 변경할 수 없습니다.
+
+:::
+
+## 슬레이브 장치 펌웨어 업데이트
+
+<Cmd sid='slave_settings' product='cam' /> 팝업창에서 슬레이브 장치의 현재 펌웨어 버전을 확인하고 업데이트할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' />를 클릭하세요.
+
+1. 업데이트할 장치 카드에 마우스 포인터를 올린 후, 오른쪽 상단의 <IcCamEdit title='Edit' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='slave_settings' product='cam' /> 팝업창의 <Cmd sid='fw_version' product='cam' />에서 현재 버전을 확인하고, <Cmd sid='update' product='cam' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-edit.png' />
+
+1. 드래그 앤 드롭 또는 <Cmd sid='choose_file' product='cam' /> 버튼을 클릭해 펌웨어 파일을 선택하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-fw-update.png' />
+
+1. 업데이트 중 서비스 중단 안내를 확인한 후, <Cmd sid='rs485_fw_consent' product='cam' /> 체크박스를 선택하세요.
+
+1. 업데이트를 시작하려면 <Cmd sid='firmware_upload' product='cam' /> 버튼을 클릭하세요.
+
+업데이트가 진행되는 동안 진행 상태와 진행률이 표시됩니다. 슬레이브 장치의 펌웨어 업데이트 성공 및 실패 기록은 시스템 로그에서 확인할 수 있습니다.
+
+:::caution
+
+* 업데이트하는 동안 대상 장치의 릴레이와 입력, 그리고 모든 슬레이브 장치의 입력이 중단되며, 보안 채널이 일시적으로 해제됩니다. 장치를 사용하지 않는 시간에 업데이트하세요.
+
+* 업데이트 중에는 장치의 전원을 끄거나 RS-485 배선을 분리하지 마세요.
+
+* 다른 펌웨어 업데이트가 진행 중이면 업데이트를 시작할 수 없습니다. 진행 중인 업데이트가 끝난 후 다시 시도하세요.
+
+:::
+
+## 슬레이브 장치 제거
+
+더 이상 사용하지 않는 슬레이브 장치를 제거할 수 있습니다. 장치를 하나씩 제거하거나, 여러 장치를 선택하여 한 번에 제거할 수 있습니다.
+
+:::caution
+
+AI 규칙에서 사용 중인 장치는 제거할 수 없습니다. 제거를 시도하면 해당 장치를 사용하는 규칙 이름이 표시됩니다. 먼저 해당 규칙에서 장치의 릴레이 설정을 제거한 후 다시 시도하세요. 규칙 수정 방법은 <DocLink docId='device/vionyx_webserver/set-ai-rule#setRelayAction' />를 참고하세요.
+
+:::
+
+### 장치 하나씩 제거
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' />를 클릭하세요.
+
+1. 제거할 장치 카드에 마우스 포인터를 올린 후, 오른쪽 상단의 <IcCamTrash title='Delete' /> 버튼을 클릭하세요.
+
+   * 또는 <IcCamEdit title='Edit' /> 버튼을 클릭한 후, <Cmd sid='slave_settings' product='cam' /> 팝업창에서 <Cmd sid='remove' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='remove_device' product='cam' /> 팝업창이 나타나면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+### 여러 장치 한 번에 제거
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' />를 클릭하세요.
+
+1. 제거할 장치 카드의 체크박스를 각각 선택하세요. <Cmd sid='select_device' product='cam' /> 옆에 선택한 장치 수가 표시됩니다.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-multi-delete.png' />
+
+1. <Cmd sid='delete' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='remove_device' product='cam' /> 팝업창이 나타나면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+장치가 정상 제거되면 화면 오른쪽 상단에 삭제 성공 메시지가 나타납니다.
+
+## 문제 해결
+
+슬레이브 장치를 추가하거나 수정, 제거할 때 다음 오류 메시지가 나타날 수 있습니다.
+
+<div className='table-fixed'>
+
+| 메시지 | 원인 및 조치 |
+| --- | --- |
+| <Cmd sid='rs485_err_add_failed' product='cam' /> | 장치와 통신하지 못했습니다. RS-485 배선을 확인한 후 다시 시도하세요. |
+| <Cmd sid='rs485_err_slave_limit' product='cam' /> | 이미 8대가 등록되어 있습니다. 사용하지 않는 장치를 제거한 후 다시 추가하세요. |
+| <Cmd sid='rs485_err_duplicate_serial' product='cam' /> | 같은 시리얼 번호의 장치가 이미 목록에 있습니다. 목록을 확인하세요. |
+| <Cmd sid='rs485_err_osdp_duplicate' product='cam' /> | 다른 장치가 같은 OSDP ID를 사용하고 있습니다. 슬레이브 장치에서 OSDP ID를 변경한 후 다시 검색하세요. |
+| <Cmd sid='rs485_err_address_collision' product='cam' /> | RS-485 버스의 다른 장치와 OSDP ID가 겹칩니다. 슬레이브 장치에서 OSDP ID를 변경한 후 다시 검색하세요. |
+| <Cmd sid='rs485_osdp_park_hint' product='cam' /> | OSDP ID가 0(미배정)인 장치입니다. 장치에서 OSDP ID를 배정한 후 다시 검색하세요. |
+| <Cmd sid='rs485_scan_timeout' product='cam' /> | 검색 시간 안에 장치가 응답하지 않았습니다. 배선을 확인한 후 다시 검색하세요. |
+| <Cmd sid='rs485_err_slave_in_use' product='cam' /> | 장치가 AI 규칙에서 사용 중입니다. 해당 규칙에서 장치의 릴레이 설정을 제거한 후 다시 시도하세요. |
+| <Cmd sid='rs485_initializing' product='cam' /> | 카메라가 RS-485 포트를 준비하고 있습니다. 잠시 후 다시 시도하세요. |
+
+</div>

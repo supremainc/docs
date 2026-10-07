@@ -383,6 +383,13 @@ div[class*='docItemCol'] {
       background: url('./img/ico-header-people.svg') no-repeat 10px 7px !important;
     }
   }
+  li.cam--access .menu__list-item-collapsible > a, li.cam--access .menu__list-item-collapsible > a.menu__link--active {
+    background: url('./img/ico-header-access.svg') no-repeat 10px 7px !important;
+    padding-left: 37px;
+    &:hover {
+      background: url('./img/ico-header-access.svg') no-repeat 10px 7px !important;
+    }
+  }
   li.cam--system .menu__list-item-collapsible > a, li.cam--system .menu__list-item-collapsible > a.menu__link--active {
     background: url('./img/ico-header-system.svg') no-repeat 10px 7px !important;
     padding-left: 37px;
@@ -1842,6 +1849,12 @@ footer {
     background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px !important;
     &:hover {
       background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--access .menu__list-item-collapsible > a {
+    background: url('./img/ico-header-access-dark.svg') no-repeat 10px 7px !important;
+    &:hover {
+      background: url('./img/ico-header-access-dark.svg') no-repeat 10px 7px !important;
     }
   }
   li.cam--system .menu__list-item-collapsible > a {

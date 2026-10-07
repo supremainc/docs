@@ -101,7 +101,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: 'AI 이벤트 및 규칙 설정하기',
+          label: 'AI 이벤트 관리하기',
           className: 'ai--event',
           link: {
             type: 'doc',
@@ -112,8 +112,10 @@ function createSidebars(preview) {
             'device/vionyx_webserver/configure-intrusion',
             'device/vionyx_webserver/configure-line-crossing',
             'device/vionyx_webserver/configure-counting-people',
+            'device/vionyx_webserver/configure-access-control',
             'device/vionyx_webserver/edit-delete-ai-event',
             'device/vionyx_webserver/set-ai-rule',
+            'device/vionyx_webserver/manage-schedule',
             'device/vionyx_webserver/set-ai-advanced'
           ]
         },
@@ -131,6 +133,7 @@ function createSidebars(preview) {
             'device/vionyx_webserver/configure-privacy-overlay',
             'device/vionyx_webserver/configure-date-time',
             'device/vionyx_webserver/configure-network',
+            'device/vionyx_webserver/configure-rs485',
             'device/vionyx_webserver/configure-rtsp-onvif'
           ]
         },
@@ -147,6 +150,21 @@ function createSidebars(preview) {
             'device/vionyx_webserver/add-users',
             'device/vionyx_webserver/modify-delete-users',
             'device/vionyx_webserver/search-view-users'
+          ]
+        },
+        {
+          type: 'category',
+          label: '출입 통제 관리하기',
+          className: 'cam--access',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/manage-access-control',
+          },
+          items: [
+            'device/vionyx_webserver/manage-doors',
+            'device/vionyx_webserver/manage-access-levels',
+            'device/vionyx_webserver/control-doors',
+            'device/vionyx_webserver/configure-door-rules'
           ]
         },
         {

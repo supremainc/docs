@@ -515,9 +515,9 @@
     "message": "ViOnyx Web Server",
     "description": "The label for category 'ViOnyx Web Server' in sidebar 'aicamwebserver'"
   },
-  "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
-    "message": "Set Up AI Events and Rules",
-    "description": "The label for category 'AI 이벤트 및 규칙 설정하기' in sidebar 'aicamwebserver'"
+  "sidebar.aicamwebserver.category.AI 이벤트 관리하기": {
+    "message": "Manage AI Events",
+    "description": "The label for category 'AI 이벤트 관리하기' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.카메라 설정하기": {
     "message": "Configure the Camera",
