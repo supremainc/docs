@@ -6263,6 +6263,14 @@
     "width": 1355,
     "height": 867
   },
+  "/img/changelogs/changelog-2609-download-pdf.png": {
+    "width": 673,
+    "height": 236
+  },
+  "/img/changelogs/changelog-2609-last-updated.png": {
+    "width": 1167,
+    "height": 485
+  },
   "/img/changelogs/changelogs-202605.png": {
     "width": 800,
     "height": 394
@@ -6276,6 +6284,10 @@
     "height": 394
   },
   "/img/changelogs/changelogs-202608.png": {
+    "width": 800,
+    "height": 394
+  },
+  "/img/changelogs/changelogs-202609.png": {
     "width": 800,
     "height": 394
   },
@@ -19175,6 +19187,34 @@
     "width": 1133,
     "height": 583
   },
+  "/img/es/cam-server/ai-analysis-events-access-control-result.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-access-control-settings-ac-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-access-control-settings-complete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-access-control-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
+  "/img/es/cam-server/ai-analysis-events-access-control-settings-face-area.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-access-control-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-access-control.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/es/cam-server/ai-analysis-events-add-counting-people-settings-complete.png": {
     "width": 1920,
     "height": 1080
@@ -19182,6 +19222,10 @@
   "/img/es/cam-server/ai-analysis-events-add-counting-people-settings-counting-area.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/es/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png": {
     "width": 1920,
@@ -19194,6 +19238,10 @@
   "/img/es/cam-server/ai-analysis-events-add-intrusion-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/es/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png": {
     "width": 1920,
@@ -19211,9 +19259,21 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/es/cam-server/ai-analysis-events-add-line-crossing-help.png": {
+    "width": 474,
+    "height": 555
+  },
+  "/img/es/cam-server/ai-analysis-events-add-line-crossing-options.png": {
+    "width": 458,
+    "height": 217
+  },
   "/img/es/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png": {
+    "width": 1920,
+    "height": 1083
   },
   "/img/es/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png": {
     "width": 1920,
@@ -19239,6 +19299,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/es/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png": {
+    "width": 1920,
+    "height": 1083
+  },
   "/img/es/cam-server/ai-analysis-events-add-people-tracking-settings-entry-area.png": {
     "width": 1920,
     "height": 1080
@@ -19246,6 +19310,10 @@
   "/img/es/cam-server/ai-analysis-events-add-people-tracking-settings-face-area.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/img/es/cam-server/ai-analysis-events-add-people-tracking-settings-option.png": {
+    "width": 436,
+    "height": 233
   },
   "/img/es/cam-server/ai-analysis-events-add-people-tracking-settings.png": {
     "width": 1920,
@@ -19275,6 +19343,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/es/cam-server/ai-analysis-events-live-reset-counts.png": {
+    "width": 333,
+    "height": 100
+  },
   "/img/es/cam-server/ai-analysis-events.png": {
     "width": 1920,
     "height": 1080
@@ -19283,17 +19355,49 @@
     "width": 600,
     "height": 1120
   },
+  "/img/es/cam-server/ai-rule-schedule-add-time-table.png": {
+    "width": 984,
+    "height": 328
+  },
+  "/img/es/cam-server/ai-rule-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/ai-rule-schedule-edit-time-table-popup.png": {
+    "width": 1028,
+    "height": 646
+  },
+  "/img/es/cam-server/ai-rule-schedule-edit-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
+  "/img/es/cam-server/ai-rule-schedule-list.png": {
+    "width": 1920,
+    "height": 380
+  },
+  "/img/es/cam-server/ai-rule-schedule-remove-time-table.png": {
+    "width": 1666,
+    "height": 335
+  },
   "/img/es/cam-server/ai-rule-settings-add-rule-action-audio.png": {
     "width": 620,
-    "height": 210
+    "height": 334
+  },
+  "/img/es/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png": {
+    "width": 620,
+    "height": 121
+  },
+  "/img/es/cam-server/ai-rule-settings-add-rule-action-relay.png": {
+    "width": 620,
+    "height": 406
   },
   "/img/es/cam-server/ai-rule-settings-add-rule-action-webhook.png": {
     "width": 620,
-    "height": 681
+    "height": 598
   },
   "/img/es/cam-server/ai-rule-settings-add-rule.png": {
     "width": 1920,
-    "height": 720
+    "height": 840
   },
   "/img/es/cam-server/ai-rule-settings-added-list-delete.png": {
     "width": 1667,
@@ -19309,9 +19413,113 @@
   },
   "/img/es/cam-server/ai-rule-settings-edit.png": {
     "width": 1920,
-    "height": 1080
+    "height": 807
   },
   "/img/es/cam-server/ai-rule-settings-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door-add-rule-audio.png": {
+    "width": 622,
+    "height": 290
+  },
+  "/img/es/cam-server/cam-acs-door-add-rule-relay.png": {
+    "width": 622,
+    "height": 378
+  },
+  "/img/es/cam-server/cam-acs-door-add-rule-webhook.png": {
+    "width": 762,
+    "height": 712
+  },
+  "/img/es/cam-server/cam-acs-door-add-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door-added-list.png": {
+    "width": 1920,
+    "height": 395
+  },
+  "/img/es/cam-server/cam-acs-door-control-disable-button.png": {
+    "width": 1670,
+    "height": 207
+  },
+  "/img/es/cam-server/cam-acs-door-control.png": {
+    "width": 1920,
+    "height": 410
+  },
+  "/img/es/cam-server/cam-acs-door-edit-switch-type.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door-lists.png": {
+    "width": 1669,
+    "height": 347
+  },
+  "/img/es/cam-server/cam-acs-door-rule-added-list.png": {
+    "width": 1920,
+    "height": 372
+  },
+  "/img/es/cam-server/cam-acs-door-rule-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door-rule-list-check.png": {
+    "width": 1669,
+    "height": 324
+  },
+  "/img/es/cam-server/cam-acs-door-rule-list-enable-disable.png": {
+    "width": 1669,
+    "height": 157
+  },
+  "/img/es/cam-server/cam-acs-door-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-door.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-level-add-assigned-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-level-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-level-added-list.png": {
+    "width": 1920,
+    "height": 368
+  },
+  "/img/es/cam-server/cam-acs-level-assign-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-level-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-acs-level-list-users-popup.png": {
+    "width": 1920,
+    "height": 617
+  },
+  "/img/es/cam-server/cam-acs-level-list.png": {
+    "width": 1669,
+    "height": 320
+  },
+  "/img/es/cam-server/cam-acs-level-select-delete.png": {
+    "width": 1920,
+    "height": 439
+  },
+  "/img/es/cam-server/cam-acs-level.png": {
     "width": 1920,
     "height": 1080
   },
@@ -19353,7 +19561,7 @@
   },
   "/img/es/cam-server/cam-webserver-people-list-batch-delete.png": {
     "width": 1920,
-    "height": 483
+    "height": 544
   },
   "/img/es/cam-server/cam-webserver-people-list-delete-1.png": {
     "width": 1920,
@@ -19393,7 +19601,7 @@
   },
   "/img/es/cam-server/cam-webserver-people-list-mode.png": {
     "width": 1920,
-    "height": 494
+    "height": 480
   },
   "/img/es/cam-server/cam-webserver-people-list-search-select.png": {
     "width": 400,
@@ -19427,7 +19635,23 @@
     "width": 1920,
     "height": 651
   },
+  "/img/es/cam-server/cam-webserver-settings-network-clue.png": {
+    "width": 835,
+    "height": 203
+  },
   "/img/es/cam-server/cam-webserver-settings-network-dhcp.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-webserver-settings-network-onvif-add-operator.png": {
+    "width": 642,
+    "height": 614
+  },
+  "/img/es/cam-server/cam-webserver-settings-network-onvif-warning.png": {
+    "width": 462,
+    "height": 344
+  },
+  "/img/es/cam-server/cam-webserver-settings-network-onvif.png": {
     "width": 1920,
     "height": 1080
   },
@@ -19443,6 +19667,18 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/es/cam-server/cam-webserver-settings-network-tunnel-named-token.png": {
+    "width": 835,
+    "height": 390
+  },
+  "/img/es/cam-server/cam-webserver-settings-network-tunnel-named.png": {
+    "width": 835,
+    "height": 409
+  },
+  "/img/es/cam-server/cam-webserver-settings-network-tunnel-quick.png": {
+    "width": 835,
+    "height": 186
+  },
   "/img/es/cam-server/cam-webserver-settings-privacy-overlay-add-area.png": {
     "width": 1920,
     "height": 1080
@@ -19456,6 +19692,42 @@
     "height": 206
   },
   "/img/es/cam-server/cam-webserver-settings-privacy-overlay.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-connection-status.png": {
+    "width": 265,
+    "height": 329
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-edit.png": {
+    "width": 622,
+    "height": 350
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-fw-update.png": {
+    "width": 622,
+    "height": 564
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-multi-delete.png": {
+    "width": 830,
+    "height": 468
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-no-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-registered.png": {
+    "width": 1920,
+    "height": 623
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-scanning.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485-select.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/es/cam-server/cam-webserver-settings-rs485.png": {
     "width": 1920,
     "height": 1080
   },
@@ -19517,7 +19789,7 @@
   },
   "/img/es/cam-server/cam-webserver-system-log-date.png": {
     "width": 710,
-    "height": 357
+    "height": 441
   },
   "/img/es/cam-server/cam-webserver-system-log-download-device-log.png": {
     "width": 1920,
@@ -19529,7 +19801,7 @@
   },
   "/img/es/cam-server/cam-webserver-system-log-filter.png": {
     "width": 1922,
-    "height": 1226
+    "height": 1607
   },
   "/img/es/cam-server/cam-webserver-system-log.png": {
     "width": 1920,
@@ -19568,8 +19840,8 @@
     "height": 1080
   },
   "/img/es/cam-server/password-setting1-vionyx.png": {
-    "width": 1669,
-    "height": 1005
+    "width": 1652,
+    "height": 927
   },
   "/img/es/cam-server/password-setting2-vionyx.png": {
     "width": 1920,
@@ -19580,8 +19852,8 @@
     "height": 1080
   },
   "/img/es/cam-server/vionyx-install-root-ca.png": {
-    "width": 988,
-    "height": 707
+    "width": 989,
+    "height": 705
   },
   "/img/es/cam-server/vionyx-live-basic-ai-face-shot.png": {
     "width": 1920,
