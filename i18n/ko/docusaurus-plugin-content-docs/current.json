@@ -694,5 +694,9 @@
   "sidebar.biostarx.category.감사 추적 관리하기": {
     "message": "감사 추적 관리하기",
     "description": "The label for category '감사 추적 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.aicamwebserver.category.출입 통제 관리하기": {
+    "message": "출입 통제 관리하기",
+    "description": "The label for category '출입 통제 관리하기' in sidebar 'aicamwebserver'"
   }
 }
