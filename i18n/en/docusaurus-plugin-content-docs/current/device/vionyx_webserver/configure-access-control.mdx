@@ -1,0 +1,263 @@
+---
+id: configure-access-control
+title: Set Up Access Control Events
+description: Use Facial Authentication to identify people approaching the door, verify people following them, and detect tailgating.
+---
+
+Access control events identify entrants with Facial Authentication, verify nearby people, and determine whether to allow access. Detect tailgating, where an unauthorized person follows an authenticated user, and exclude people exiting through the door from the assessment.
+
+:::info
+
+Firmware version 1.1.0 or later supports access control events.
+
+:::
+
+## When to use this?
+
+* When facial authentication verifies whether the person approaching the door is registered
+
+* When you need to prevent tailgating, where an unauthorized person follows an authenticated user inside
+
+* When evaluating only entrants and excluding people exiting from inside the door
+
+* When linking follow-up actions, such as opening the door or outputting a warning prompt, based on the decision
+
+:::info
+
+Access control events only **determine** whether to allow access and do not directly control the door relay. To open the door based on results, create an event, add the door, and link the event. For additional actions, such as voice prompts or webhook notifications, set up door rules. 
+
+* For more information on door registration and management, refer to <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+* For more information on door rules, refer to <DocLink docId='device/vionyx_webserver/configure-door-rules' />.
+
+:::
+
+## How access control events work
+
+Access control events decide whether to allow access by combining the following three elements. Before starting setup, review the role of each element.
+
+| Component | roles | Required |
+| --- | --- | --- |
+| <Cmd sid='validation_area' product='cam' /> | This is a wider area surrounding the access control zone. Check the number of people and identification status in this area to detect tailgating. | Yes |
+| <Cmd sid='door_access_area' product='cam' /> | This is the area directly in front of the door. When a person enters this area, the system treats it as an access attempt and starts evaluation. | Yes |
+| <Cmd sid='event_entry_line' product='cam' /> | This is a line that distinguishes movement direction. People exiting from inside the door are not treated as access attempts. | Option |
+| <Cmd sid='face_area' product='cam' /> | This is the area that tracks faces first to identify users. | Option |
+
+The camera classifies people in the zone into one of the following states.
+
+* **Identified**: Facial Authentication succeeded, and the person matches a registered user.
+
+* **Unidentified**: Facial Authentication failed, or the person does not match a registered user. The Live menu shows unregistered people, people with covered faces, or people not facing the camera as <Cmd sid='unknown_face' product='cam' />.
+
+:::caution
+
+For security, the system does not treat an unrecognized person as an authenticated user. If a person is unidentified in the access control area, the system denies access.
+
+:::
+
+## Create access control event
+
+An access control event identifies users approaching the door in the <Cmd sid='live' product='cam' /> menu and verifies tailgaters.
+
+<Steps>
+<Step>
+
+### Start event creation
+
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='ai_analysis' product='cam' /> on the left sidebar.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. In the <Cmd sid='select_ai_analysis_type' product='cam' /> window, click <Cmd sid='ai_analysis_door_access' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-access-control.png' />
+
+5. When the <Cmd sid='face_analytics_consent_title' product='cam' /> pop-up appears, review the details, select the consent checkbox, and click <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * The access control event uses Facial Authentication to identify users, so agree to use it before creating it.
+
+   * To use the Facial Authentication feature, comply with local regulations.
+
+   * The <Cmd sid='face_analytics_consent_title' product='cam' /> popup appears only once. Subsequent AI event creation assumes consent.
+
+   :::
+
+6. Complete the required settings in the <Cmd sid='ai_analysis_door_access' product='cam' /> panel on the right.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings.png' />
+
+</Step>
+<Step>
+
+### Set event name
+
+Enter the AI event name in the <Cmd sid='name' product='cam' /> input field. The name can be up to 64 characters long.
+
+</Step>
+<Step>
+
+### Access control area settings
+
+In the <Cmd sid='area' product='cam' /> section, set the validation area, access control area, and event entry line for the door location. Set at least one virtual line. Click <Cmd sid='add_button' product='cam' /> to add up to 10. Each addition shows the three elements as a set in Live view. Drag corners or points to adjust the shape, and drag the center area to move it.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-ac-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the name of the access control area. Use a clear name, such as the door location.
+
+* <Cmd sid='validation_area' product='cam' />(Yellow): Validation area surrounding the access control area. Set it wider than the access control area to detect fast approaches and tailgaters.
+
+* <Cmd sid='door_access_area' product='cam' />(Orange): Set it directly in front of the door, where the person must pass to enter. When a person enters this area, the system determines access.
+
+* <Cmd sid='event_entry_line' product='cam' />: A line that distinguishes the direction of movement for access. Drag the points at both ends to place the line across the access control area. A person exiting inside to outside does not count as an access attempt when passing through the access control area.
+
+{/* TODO (pending developer confirmation): Confirm whether access decisions exclude movement direction A → B or B → A, then add placement guidance / Screenshot shows the entry line goes outside the verification area → confirm whether this is a drag limit, a save error, or based on the person detection area, then revise the info text */}
+
+:::info
+
+* The verification area must fully include the access control area. Saving fails if the access control area extends outside the verification area.
+
+* Extend the event entry line beyond the access control area, but keep it within the verification area.
+
+* You cannot change the event entry line direction (<Cmd>A ↔ B</Cmd>).
+
+* To initialize the shape and size of the configured area, click <IcCamReset title='reset' />.
+
+* To delete the added access control area, click <IcCamTrash title='delete' />.
+
+:::
+
+</Step>
+<Step>
+
+### Face area settings (optional)
+
+Define the area for face detection. When set, the system prioritizes face tracking in that area to identify users. Set the face area where a person approaching the door is clearly visible from the front. Face areas and access control areas can overlap. Click <Cmd sid='add_button' product='cam' /> to add up to 10 face areas. A blue box appears in Live View; drag corners or points to adjust the shape. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the face area's name. Assign a clear, descriptive name. The face area name appears on hover in Live View.
+
+:::info
+
+* Enrolled users are automatically identified in the <Cmd sid='live' product='cam' /> menu and shown by name. Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />.
+
+* Click <IcCamReset title='reset' /> to reset the configured face area's shape and size.
+
+* Click <IcCamTrash title='delete' /> to delete an added face area.
+
+:::
+
+</Step>
+<Step>
+
+import DetectPeople from './_ai-event-detect-people.mdx';
+
+<DetectPeople />
+
+</Step>
+<Step>
+
+### Tailgating option settings
+
+In the <Cmd sid='tailgating_option' product='cam' /> section, select how the system determines access when 2 or more people are in the verification area. Options are listed from highest security to lowest.
+
+* <Cmd sid='door_access_tailgating_no_success_on_multiple' product='cam' />: If 2 or more people are in the verification area, the system denies access regardless of the identification results. This option fits areas where only one person must pass at a time.
+
+* <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' />: The system allows access only when it identifies everyone in the verification area as a registered user. The system denies access if anyone remains unidentified.
+
+* <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' />: The system allows access if at least one registered user is in the verification area. This option allows access with unidentified people, so it fits areas with frequent escorted visitors.
+
+* <Cmd sid='door_access_tailgating_no_effect' product='cam' />: The system ignores headcount in the verification area. It bases access only on the entrant’s identification result.
+
+The following shows the decision for each option when a registered user enters with others in the verification area.
+
+| Option | When only registered users are in the verification area | When unidentified people are also in the verification area |
+| --- | :-: | :-: |
+| <Cmd sid='door_access_tailgating_no_success_on_multiple' product='cam' /> | Access denied | Access denied |
+| <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' /> | Access granted | Access denied |
+| <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' /> | Access granted | Access granted |
+| <Cmd sid='door_access_tailgating_no_effect' product='cam' /> | Access granted | Access granted |
+
+:::tip
+
+For security-critical doors, use <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' /> or higher.
+
+:::
+
+</Step>
+<Step>
+
+### Set event trigger conditions {/* #eventTrigger */}
+
+In the <Cmd sid='option' product='cam' /> section, set the event trigger conditions.
+
+* <Cmd sid='event_delay' product='cam' />: Set the minimum duration to treat as an event. An event occurs only when the detection state lasts longer than the set time. It can be set up to a maximum of 60 seconds.
+
+   :::note
+
+   If events occur too often because people briefly pass in front of the door, increase the <Cmd sid='event_delay' product='cam' /> value. Motion detected for less than the set time is not treated as an event, reducing unnecessary events.
+
+   :::
+
+* <Cmd sid='condition' product='cam' />: Select how long to keep the event after access is granted. While the event remains active, linked actions (for example, door opening) also remain active.
+
+  * <Cmd sid='door_access_hold_keep_until_area_clear' product='cam' />: Keep the event until no one remains in the access-controlled area. The door remains open while the authenticated user stays in front of it, without re-authenticating.
+
+  * <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' />: Clear the event when the area is empty. Clear it immediately when an unauthorized person enters the verification area and violates the tailgating setting. This prevents unauthorized people from following someone in while the door is open.
+
+  * <Cmd sid='door_access_hold_one_shot' product='cam' />: Do not keep the event. Trigger it once each time someone enters the access-controlled area.
+
+:::info
+
+If a registered user hesitates in front of the door and cannot enter, the door opens only after leaving and re-entering the access-controlled area. To reduce this inconvenience while maintaining security, select <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' />.
+
+:::
+
+</Step>
+<Step>
+
+### Save Settings
+
+After completing all settings, click <Cmd sid='save' product='cam' /> in the upper-right. The interface returns to the previous screen, and the new AI event is added to the list.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Check in Live
+
+Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. Confirm the <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> icon at the top right of the camera feed is on. The configured verification area, access-controlled area, event entry line, and face area appear as overlays on the video. When someone enters the access-controlled area, the system triggers Access granted or Access denied based on identification and tailgating options.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-result.png' />
+
+:::info
+
+* Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />. Enrolled users appear with their name.
+
+* Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
+
+* Faces must face the camera to be detected. Profile or rear views may not be detected. If the system cannot identify a face, it treats the person as unidentified and denies access.
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+The access control event determines only whether to grant access. Set door rules to execute additional actions such as voice prompts, webhook notifications, or warning lights.
+
+</NextItem>
+<NextItem to='manage-doors' >
+
+After creating an access control event, add the door and link the event. When access is granted, the relay connected to the door activates and opens the door.
+
+</NextItem>
+</NextStep>

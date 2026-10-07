@@ -2,13 +2,6 @@
 id: add-users
 title: Add Users
 description: Guide to enrolling users for Facial Authentication and enrolling face images.
-keywords:
-  - User
-  - Enrollment
-  - Face
-  - Face User
-  - Add
-  - Photo
 ---
 
 Enroll users for AI Facial Authentication. When adding a user, enter basic information and enroll a face using one of three methods.
@@ -157,13 +150,15 @@ To capture again, click the face photo and capture it again.
 
 ### Enroll AI-recommended face
 
-Select and enroll a face that matches the user from the list of unrecognized faces detected through AI analysis.
+Select and enroll a face that matches the user from the list of unenrolled faces detected through AI analysis.
 
 1. Click <IcCamAi title='AI Recommend' />.
 
-2. The <Cmd sid='ai_shot' product='cam' /> popup shows the list of recently authenticated unrecognized faces.
+2. The <Cmd sid='ai_shot' product='cam' /> popup shows the list of recently authenticated unenrolled faces.
 
    <ProdImg src='/img/cam-server/cam-webserver-people-ai-matching.png' />
+
+   If the <Cmd sid='ai_shot_view_enrollable' product='cam' /> list does not appear, click <Cmd sid='ai_shot_view_all' product='cam' />. View all unenrolled faces.
 
 3. Select the face that matches the user. Only one face can be selected at a time.
 

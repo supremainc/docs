@@ -1,17 +1,10 @@
 ---
 id: view-system-logs
-title: View system logs
-description: This guide explains how to view and export the camera's access, event, and system logs.
-keywords:
-  - Log
-  - System log
-  - Event Logs
-  - Access logs
-  - CSV
-  - Export
+title: View System Logs
+description: View camera logs by category, level, and actor, export them to CSV, or download device logs.
 ---
 
-You can view and manage logs for camera user access, event occurrences, and system operations. Filter logs by the desired criteria in the web interface, export them in CSV format, or download encrypted device logs when more detailed analysis is needed.
+View and manage logs for camera user access, event occurrences, AI analysis, and system operations. In the web interface, filter logs by category, level, and actor. Export logs as CSV or download encrypted device logs for detailed analysis.
 
 Check logs in the following situations.
 
@@ -25,15 +18,17 @@ Check logs in the following situations.
 
 * To collect system logs for troubleshooting
 
+* When you need to distinguish actions executed by an administrator or operator from actions executed automatically by the camera
+
 :::info
 
 * Logs are retained automatically according to the device's memory size.
 
-* Each log type is retained for approximately one month.
+* Each log type is retained for approximately 1 month.
 
 * When memory is full, the oldest logs are deleted automatically.
 
-* Only administrators and operators with read/write permission can view system logs.
+* Only administrators and operators with read/write permission can use the <Cmd sid='system_logs' product='cam' /> menu. However, only administrators can view <Cmd sid='system' product='cam' /> logs.
 
 :::
 
@@ -41,11 +36,11 @@ Check logs in the following situations.
 
 1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='system_logs' product='cam' /> in the left sidebar. View all logs.
+2. Click <Cmd sid='system_logs' product='cam' /> on the left sidebar. View all logs.
 
    <ProdImg src='/img/cam-server/cam-webserver-system-log.png' />
 
-3. To filter logs by log category, level, and type, select the desired criteria in <Cmd sid='all_logs' product='cam' />, <Cmd sid='all_levels' product='cam' />, and <Cmd sid='all_types' product='cam' /> at the upper left of the log list.
+3. Select criteria in <Cmd sid='all_logs' product='cam' />, <Cmd sid='all_levels' product='cam' />, <Cmd sid='all_types' product='cam' />, and <Cmd sid='all_actors' product='cam' /> at the upper left of the log list. Use them to filter logs by category, level, type, and actor.
 
    <ProdImg src='/img/cam-server/cam-webserver-system-log-filter.png' className='none' />
 
@@ -69,7 +64,7 @@ Logs are categorized as follows.
 
 * <Cmd sid='ai_analysis' product='cam' />: View event records related to AI analysis.
 
-* <Cmd sid='access' product='cam' />: Records of users accessing the camera web interface.
+* <Cmd sid='access' product='cam' />: View records related to user access and accounts, such as login, logout, and account creation.
 
 * <Cmd sid='event' product='cam' />: Records of event occurrences, Webhook sends, and rule executions.
 
@@ -91,15 +86,23 @@ Logs are categorized by the following levels.
 
 * <Cmd sid='log_level_error' product='cam' />: View error message logs.
 
+### Actors {/* #logActors */}
+
+The entity that generates a log is called an actor. Actors are categorized as follows.
+
+* <Cmd sid='actor_type_user' product='cam' />: An administrator or operator who executes tasks directly in the web interface.
+
+* <Cmd sid='actor_system' product='cam' />: A camera that executes tasks automatically based on AI rules and schedules.
+
 ## Export logs
 
 Download logs in CSV format for external analysis or archiving.
 
 1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='system_logs' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='system_logs' product='cam' /> on the left sidebar.
 
-3. Select the log type to export in <Cmd sid='all_logs' product='cam' /> at the upper left of the log list. Set a search period to export logs for a specific time range.
+3. Select criteria for the logs to export in <Cmd sid='all_logs' product='cam' />, <Cmd sid='all_levels' product='cam' />, <Cmd sid='all_types' product='cam' />, and <Cmd sid='all_actors' product='cam' /> at the upper left of the log list. Set a search period to export logs for a specific time range. The CSV file reflects the selected criteria and period.
 
 4. Click <Cmd sid='csv_export' product='cam' /> at the top right of the screen.
 
@@ -129,11 +132,12 @@ When the camera's memory is full, the oldest logs are deleted automatically.
 
 <div className='table-fixed'>
 
-| **Log type** | **Retention period** |
+| **Log category** | **Retention period** |
 | --- | --- |
-| **System Logs** | Approximately one month |
-| **Access Logs** | Approximately one month |
-| **Event Logs** | Approximately one month |
+| <Cmd sid='ai_analysis' product='cam' /> | Approximately one month |
+| <Cmd sid='access' product='cam' /> | Approximately one month |
+| <Cmd sid='event' product='cam' /> | Approximately one month |
+| <Cmd sid='system' product='cam' /> | Approximately one month |
 
 </div>
 
@@ -149,17 +153,19 @@ To retain important logs long-term, follow these steps:
 
 ## Device log download {/* #downloadDeviceLogs */}
 
-Download log files stored on the device in encrypted form. Device logs are detailed log files that include all events and operational records generated by the camera system for troubleshooting. The file is encrypted to keep it secure, and provide it to <Support /> when needed for troubleshooting.
+Download log files stored on the device in encrypted form. Device logs are detailed log files that include all events and operational records generated by the camera system. The file is encrypted to keep it secure, and provide it to <Support /> when needed for troubleshooting.
 
 1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='system_logs' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='system_logs' product='cam' /> on the left sidebar.
 
 3. Select <Cmd sid='log_category_download' product='cam' /> in <Cmd sid='all_logs' product='cam' /> at the upper left of the log list.
 
    <ProdImg src='/img/cam-server/cam-webserver-system-log-download-device-log.png' />
 
-4. Click <Cmd sid='log_category_download' product='cam' /> at the upper right of the log list.
+4. To download logs for a specific actor, select an actor in <Cmd sid='all_actors' product='cam' />. If no actor is selected, the system downloads logs for all actors. For more information on actors, see <DocLink inner='#logActors' />.
+
+5. Click <Cmd sid='log_category_download' product='cam' /> at the upper right of the log list.
 
 Download the device log file locally. The file name uses the format `device_logs_{device-serial-number}_YYYYMMDDTHHMMSS.zip.enc`.
 

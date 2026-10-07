@@ -2,10 +2,6 @@
 id: configure-line-crossing
 title: Set Up Line-Crossing Detection Event
 description: Detects people crossing configured virtual lines and triggers real-time events. Specify the crossing direction to monitor only a specific direction of movement.
-keywords:
-  - AI analysis
-  - Pedestrian flow
-  - Facial recognition
 ---
 
 Setting up a line-crossing detection event detects people who cross configured virtual lines and triggers real-time events. Specify the crossing direction (A→B, B→A, or both) to monitor a specific direction only. Optionally add a face area to prioritize face tracking; enrolled users are automatically identified.
@@ -29,9 +25,9 @@ Use the <Cmd sid='live' product='cam' /> menu to detect people crossing a config
 
 ### Start event creation
 
-1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='ai_analysis' product='cam' /> on the left sidebar.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -83,7 +79,23 @@ Place the virtual line at the appropriate location in Live View. The camera dete
 
   * <Cmd>A \<-> B</Cmd>: Trigger an event when crossing in both directions.
 
+* <Cmd sid='reference_point' product='cam' />: Select the reference point in the person detection box to determine whether a person crosses a virtual line. Set this per line. The default is <Cmd sid='reference_point_center' product='cam' />.
+
+  * <Cmd sid='reference_point_center' product='cam' />: Use the center of the box as the reference point. The system counts a crossing when the body center touches the line.
+
+  * <Cmd sid='reference_point_lower' product='cam' />: Use the point 80% down from the top along the box’s long axis. The system counts a crossing when the lower body touches the line. Select this option to trigger an event when feet cross the line, as if it were on the floor.
+
+  Click the <IcCamHelp title='Help' /> icon to the right of <Cmd sid='reference_point' product='cam' /> to view the location and detection criteria for each reference point in a diagram.
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-help.png' />
+
 :::info
+
+* Support for the <Cmd sid='reference_point' product='cam' /> option is included in firmware version 1.1.0 or later. On devices that do not support reference point selection, all line crossings use <Cmd sid='reference_point_center' product='cam' />.
+
+* <Cmd sid='reference_point_lower' product='cam' /> is a position calculated from the person detection box, not the actual foot position.
+
+* Enable <Cmd sid='reference_point' product='cam' /> in [AI display options](live-basic#displayBox) to check the reference point in the <Cmd sid='live' product='cam' /> menu.
 
 * Click <IcCamReset title='reset' /> to reset the configured virtual line's shape and size.
 
@@ -115,11 +127,40 @@ Define the area for face detection. When set, the system prioritizes face tracki
 </Step>
 <Step>
 
-### Set event trigger conditions
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-Set the event trigger conditions.
+<DetectPeople />
 
-* <Cmd sid='every_delay' product='cam' />: Set the event trigger delay. Events trigger only after the configured time elapses; set up to 60 seconds.
+</Step>
+<Step>
+
+### Set event trigger conditions and event count settings
+
+In the <Cmd sid='option' product='cam' /> section, set the event trigger conditions and event count.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-options.png' />
+
+* <Cmd sid='every_delay' product='cam' />: Set the minimum duration to treat as an event. An event occurs only when the detection state lasts longer than the set time. It can be set up to a maximum of 60 seconds.
+
+   :::note
+
+   If too many events occur, increase the <Cmd sid='every_delay' product='cam' /> value. Motion detected for less than the set time is not treated as an event, reducing unnecessary events.
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />: Set to <Cmd sid='on' product='cam' /> to count each line crossing. If multiple lines exist, count each line separately.
+
+* <Cmd sid='all_event_count_reset' product='cam' />: Set to <Cmd sid='on' product='cam' /> to initialize event counts for all lines daily at the specified time. Initialize event counts for all lines at the time set in <Cmd sid='reset_time' product='cam' />.
+
+:::info
+
+* If you set <Cmd sid='event_count' product='cam' /> to <Cmd sid='on' product='cam' />, it is displayed in the <Cmd sid='live' product='cam' /> menu above the video for each line in the <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> format. Click the <IcMoreB title='More' /> button and select <Cmd sid='count_reset' product='cam' /> to initialize the event count manually.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* Support for event count options is included in firmware version 1.1.0 or later.
+
+:::
 
 </Step>
 <Step>
@@ -146,7 +187,5 @@ Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. C
 * Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
 
 * Faces must face the camera to be detected. Profile or rear views may not be detected.
-
-* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
 
 :::

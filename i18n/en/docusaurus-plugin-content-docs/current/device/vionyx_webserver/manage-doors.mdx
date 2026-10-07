@@ -1,0 +1,274 @@
+---
+id: manage-doors
+title: Manage Doors
+description: This guide explains how to add a door the camera controls. It also explains how to link access control events, relays, exit buttons, door status sensors, and unlock/lock schedules.
+---
+
+Add doors that the camera unlocks and locks. When adding a door, set the access control event, relay output, and door open time. Add a door before selecting it in access levels and door rules.
+
+Register the door in the following cases.
+
+* Automatically open the door for users authenticated with facial authentication
+
+* Enable users to open the door from inside by pressing the exit button
+
+* Check whether the door is open or closed using a sensor
+
+* Operate the door by time period, such as unlocked during business hours and locked at night
+
+## Before you start
+
+Check the following before adding a door.
+
+* Create the access control event for access decisions first. For more information, see <DocLink docId='device/vionyx_webserver/configure-access-control' />.
+
+* Make sure the door lock connects to a relay port on the camera or sub I/O device. To use a sub I/O device, first add it via RS-485. For more information, see <DocLink docId='device/vionyx_webserver/configure-rs485' />.
+
+* To use an exit button or door status sensor, make sure the device connects to an input port.
+
+* Create schedules in advance to use unlock and lock schedules. For more information, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+## Add doors
+
+<Steps>
+<Step>
+
+### Start adding doors
+
+1. Click the <Cmd sid='access' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='door' product='cam' /> on the left sidebar.
+
+   <ProdImg src='/img/cam-server/cam-acs-door.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. When the <Cmd sid='add_door' product='cam' /> popup appears, enter the door information. Enter all required fields to enable the <Cmd sid='save' product='cam' /> button.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add.png' />
+
+</Step>
+<Step>
+
+### Enter basic information
+
+In the <Cmd sid='info' product='cam' /> section, enter information to identify the door.
+
+* <Cmd sid='id' product='cam' />: The unique ID of the door. The system enters it automatically. Change it if needed. Do not use an ID already assigned to another door. Enter up to 64 characters. Use letters, numbers, hyphens(`-`), and underscores(`_`).
+
+* <Cmd sid='name' product='cam' />: Enter the door name. Required. Do not use the same name as another door. Assign a location-based name, such as **Main Entrance** or **2nd Floor Office**, to distinguish doors in access levels and rules.
+
+* <Cmd sid='description' product='cam' />: Enter a description for the door.
+
+:::info
+
+* The door ID and name must be unique in the system. Do not use values already in use.
+
+* Once saved, the door ID stays fixed.
+
+:::
+
+</Step>
+<Step>
+
+### Link access control events
+
+In the <Cmd sid='ai_door_event' product='cam' /> section, select an access control area from the <Cmd sid='door_access_area' product='cam' /> list to use for this door’s access decision. The list shows access control areas set when creating access control events.
+
+:::info
+
+* Link each access control area to one door only. Do not select an area already linked to another door.
+
+* The AI Events page blocks deleting or changing the access control area linked to a door. To change the area, unlink it from the door first.
+
+* See <DocLink docId='device/vionyx_webserver/configure-access-control' /> for more information on creating access control events.
+
+:::
+
+</Step>
+<Step>
+
+### Set relays
+
+In the <Cmd sid='select_relay' product='cam' /> section, set the relay that controls the door lock.
+
+* <Cmd sid='port' product='cam' />: Select the relay port connected to the door lock. Required. Select a relay port on the camera or on a downstream I/O device. Do not select ports used by another door or AI rule.
+
+* <Cmd sid='switch_type' product='cam' />: Select the lock contact type. If <Cmd sid='select_none' product='cam' /> remains selected, saving changes it to <Cmd sid='normal_open' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
+
+  * <Cmd sid='normal_close' product='cam' />: Normally closed, and opens when the relay activates.
+
+:::caution
+
+* <Cmd sid='switch_type' product='cam' /> applies to the relay port, not the door. Saving a door applies the setting to all doors and rules that use the port.
+
+* Check the lock specifications, and select the correct <Cmd sid='switch_type' product='cam' />. An incorrect selection may keep the door unlocked during normal operation.
+
+:::
+
+</Step>
+<Step>
+
+### Unlock time setting
+
+In the <Cmd sid='unlock_time' product='cam' /> section, set how long to keep the door unlocked after access is granted.
+
+* <Cmd sid='unlock_time' product='cam' />: Move the slider or enter a value in the input field. Set from 1 to 120 seconds. Default: 3 seconds.
+
+* <Cmd sid='keep_unlock_until_event_off' product='cam' />: Select this option to keep the door unlocked until the access control event ends, regardless of unlock time. This option is available only when an access control area is selected.
+
+:::info
+
+The access control event <Cmd sid='condition' product='cam' /> setting determines when the event ends. For example, to lock the door immediately when someone tailgates, select <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' /> in the access control event. For details, see <DocLink docId='device/vionyx_webserver/configure-access-control#eventTrigger' />.
+
+:::
+
+</Step>
+<Step>
+
+### Exit button settings (optional)
+
+If an exit button is installed inside the door, set the input port connected to the button in the <Cmd sid='exit_button' product='cam' /> section. The exit button opens the door without Facial Authentication.
+
+* <Cmd sid='port' product='cam' />: Select the input port where the exit button is connected.
+
+* <Cmd sid='switch_type' product='cam' />: Select the contact type for the exit button. The default is <Cmd sid='normal_open' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
+
+  * <Cmd sid='normal_close' product='cam' />: Normally closed, and opens when the relay activates.
+
+</Step>
+<Step>
+
+### Door status settings (optional)
+
+If a door position sensor is installed, set the input port connected to the sensor in the <Cmd sid='door_status' product='cam' /> section. After setup, the <Cmd sid='door_control' product='cam' /> screen shows whether the door is open or closed.
+
+* <Cmd sid='port' product='cam' />: Select the input port where the door position sensor is connected.
+
+* <Cmd sid='switch_type' product='cam' />: Select the sensor contact type. The default is <Cmd sid='normal_close' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
+
+  * <Cmd sid='normal_close' product='cam' />: Normally closed, and opens when the relay activates.
+
+:::info
+
+* Connect the exit button and door status sensor to different input ports.
+
+* Do not select an input port used by another door.
+
+:::
+
+</Step>
+<Step>
+
+### Schedule settings (optional)
+
+In the <Cmd sid='schedule' product='cam' /> section, set the door to stay unlocked or locked by time period.
+
+* <Cmd sid='unlock_schedule' product='cam' />: Keep the door unlocked during the selected schedule. Use this to keep the lobby door unlocked during busy business hours.
+
+* <Cmd sid='lock_schedule' product='cam' />: Keep the door locked during the selected schedule. In this time zone, registered users cannot access.
+
+:::info
+
+Use different schedules for the open and lock schedules. The system cannot save them if the time zones overlap.
+
+:::
+
+</Step>
+<Step>
+
+### Save door
+
+After completing all settings, click <Cmd sid='save' product='cam' />. Saved doors are added to the door list and are available in access levels and door rules.
+
+<ProdImg src='/img/cam-server/cam-acs-door-added-list.png' />
+
+</Step>
+</Steps>
+
+## Check door list
+
+In the door list, check saved doors and the events and ports linked to each door.
+
+<ProdImg src='/img/cam-server/cam-acs-door-lists.png' />
+
+* To find a specific door, enter the door name in the search field (<Num num='1' />).
+
+* Select a value in the Rows per page list (<Num num='2' />) in the upper-right corner. This changes the number of doors per page.
+
+* To change the sort criterion, select one in <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+The following items are shown in the door list.
+
+| Item | Description |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | The door’s unique ID. |
+| <Cmd sid='name' product='cam' /> | The name of the door. |
+| <Cmd sid='description' product='cam' /> | The description entered when adding or editing the door. |
+| <Cmd sid='ai_event' product='cam' /> | The access control area linked to the door. |
+| <Cmd sid='relay' product='cam' /> | Relay port that controls the door lock. |
+| <Cmd sid='exit_button' product='cam' /> | Input port connected to the exit button. |
+| <Cmd sid='door_status' product='cam' /> | Input port connected to the door open/close sensor. |
+| <Cmd sid='actions' product='cam' /> | Edit (<IcCamEdit />) or delete (<IcCamTrash />) the door. |
+
+## Edit doors
+
+1. In the door list, click the <IcCamEdit title='Edit' /> button at the far right of the door to edit.
+
+2. When the <Cmd sid='edit_door' product='cam' /> pop-up appears, edit the fields.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-edit.png' />
+
+3. Click <Cmd sid='save' product='cam' /> to save the changes.
+
+Saving changes applies them immediately to access levels and door rules that use the door.
+
+:::caution
+
+If the door is manually locked or unlocked, changing the relay <Cmd sid='switch_type' product='cam' /> may invert the output and open a locked door. Manually control it in the <Cmd sid='door_control' product='cam' /> menu before changing it.
+
+:::
+
+:::info
+
+Change the relay <Cmd sid='switch_type' product='cam' /> and click the <Cmd sid='save' product='cam' /> button. A confirmation message appears.
+
+<ProdImg src='/img/cam-server/cam-acs-door-edit-switch-type.png' />
+
+* Click <Cmd sid='ok' product='cam' /> to close the confirmation message and apply the new contact type to the relay port immediately. It also applies to all doors and rules that use the port.
+
+* Click <Cmd sid='cancel' product='cam' /> to keep the contact type and save only the other changes.
+
+* Changing it while the door is held open applies after the open time ends.
+
+:::
+
+## Delete door
+
+1. In the door list, click <IcCamTrash title='delete' /> at the far right of the door to delete.
+
+2. If a confirmation message appears, review it and click <Cmd sid='ok' product='cam' />.
+
+Deleting the door unlinks it from connected access control events and access levels. The deleted door also disappears from the <Cmd sid='door_control' product='cam' /> list and cannot be restored.
+
+:::info
+
+* Deleting a door used in an access level or door rule also deletes the related access level and door rule.
+
+* To add, edit, or delete doors, you need <Cmd sid='read_write' product='cam' /> permission. If you do not have permission, contact your administrator. For more information on operator roles, see <DocLink docId='device/vionyx_webserver/manage-operators' />.
+
+:::
+
+<NextStep>
+<NextItem to='manage-access-levels' >
+
+After adding doors, create an access level to set when certain users can enter.
+
+</NextItem>
+</NextStep>

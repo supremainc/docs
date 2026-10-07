@@ -2,14 +2,6 @@
 id: configure-video-profile
 title: Configure Video Profile
 description: Describes how to manage, from an operational perspective, per-channel view modes and stream encoding settings, and mirror and reset policies.
-keywords:
-  - Video profile
-  - Stream
-  - Codec
-  - Resolution
-  - Frame rate
-  - Bitrate
-  - Mirror
 ---
 
 Live-view image quality and recorded video quality depend on the video profile settings. In video profile settings, adjust per-channel view modes and stream encoding values. Also provide Mirror (left-right flip) and channel reset features depending on the installation environment.
@@ -32,7 +24,7 @@ If AI events are active, changing the mirror setting or performing a reset may d
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. On the left sidebar, click <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' />.
+2. Click <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' /> on the left sidebar.
 
 <ProdImg src='/img/cam-server/cam-webserver-settings-video-profile.png' />
 
@@ -66,7 +58,7 @@ Channel view type policies are as follows.
 
   * <Cmd sid='view_type_double' product='cam' />: This mode corrects distortion in video captured from a 360° area so you can view a panorama split into upper and lower screens.
 
-  * <Cmd sid='view_type_quad' product='cam' />: This mode corrects distortion so you can view four specific screens that fit human vision at the same time.
+  * <Cmd sid='view_type_quad' product='cam' />: This mode corrects distortion to suit human vision and lets you view 4 specific screens simultaneously.
 
 ## Stream type selection
 
@@ -128,7 +120,7 @@ Adjust codec, resolution, frame rate, and other detailed settings according to t
 
 * **Constant Bitrate** (CBR): This method transmits video by fixing the data size of each frame. Provides stable streaming in environments with consistent network bandwidth, but quality may degrade depending on scene complexity.
 
-* **GOV** (Group of Video): In H.264/H.265 compression, this refers to the group of frames from an I-frame to the frame immediately before the next I-frame. A GOV contains I-frames (key frames) that hold full image data and P-frames that contain only changes from the previous frame. Longer GOV reduces the number of I-frames and thus reduces video data; shorter GOV increases the number of I-frames and increases video data.
+* **GOV** (Group of Video): In H.264/H.265 compression, this refers to the group of frames from an I-frame to the frame immediately before the next I-frame. A GOV contains I-frames (key frames) that hold full image data and P-frames that contain only changes from the previous frame. A longer GOV reduces the number of I-frames, reducing video data. A shorter GOV increases the number of I-frames, increasing video data.
 
 :::
 
@@ -148,7 +140,7 @@ Changing Mirror may be restricted when AI events are configured. Follow the popu
 
 ## Channel settings initialization
 
-To restore the selected channel's view mode and stream settings to factory defaults, click <Cmd sid='restore_to_default' product='cam' /> in <Cmd sid='reset' product='cam' />.
+Click <Cmd sid='restore_to_default' product='cam' /> in <Cmd sid='reset' product='cam' /> to restore the selected channel's view mode and stream settings to factory defaults.
 
 :::info
 

@@ -1,18 +1,12 @@
 ---
 id: configure-network
 title: Configure Network Settings
-description: This page explains how to set the IPv4 address automatically or manually, configure web UI and video streaming ports, and connect to the CLUe cloud service.
-keywords:
-  - Network
-  - IPv4
-  - DHCP
-  - Static
-  - port
-  - CLUe
-  - Cloud
+description: This section explains how to set the IPv4 address and port. Configure an ONVIF profile for NVR/VMS connections. Connect to the CLUe cloud service for user synchronization. Set external access with Cloudflare Tunnel.
 ---
 
-Network settings configure the device's IPv4 address, subnet, gateway, and DNS servers, set ports used by the web UI and live video streaming, and manage the Suprema CLUe cloud connection. Select either automatic assignment (DHCP) or manual (Static) according to your network environment.
+Network settings set the device IPv4 address, subnet, gateway, and DNS servers. They set ports for the web UI and live video streaming. Select either automatic assignment (DHCP) or manual (Static) according to your network environment.
+
+Configure the profile that NVR/VMS uses to connect via ONVIF. Connect to the external Suprema CLUe cloud service to synchronize user information. Cloudflare Tunnel enables access to the web UI from outside the network.
 
 Check network settings in the following situations.
 
@@ -22,7 +16,11 @@ Check network settings in the following situations.
 
 * When the default ports conflict with other devices or you need to change ports for security.
 
-* When you need remote management by enrolling the device in Suprema CLUe.
+* When connecting via ONVIF to a legacy NVR/VMS that does not support Profile T
+
+* When synchronizing user information with the Suprema CLUe cloud service
+
+* When accessing the device web UI from outside the network without port forwarding or a public IP address
 
 :::info
 
@@ -36,7 +34,7 @@ DHCP automatically assigns IP addresses on the network. In most typical network 
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. In the left sidebar, click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
 
 3. Select <Cmd sid='dhcp' product='cam' /> in <Cmd sid='ip_type' product='cam' />.
 
@@ -66,7 +64,7 @@ Set the IP address manually when the network requires a fixed IP for stable acce
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. In the left sidebar, click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
 
 3. Select <Cmd sid='static' product='cam' /> in <Cmd sid='ip_type' product='cam' />.
 
@@ -98,17 +96,19 @@ If you do not enter a valid address in each input field, a red border appears ar
 
 :::
 
-## Port settings {/* #port-settings */}
+## Setting the port {#port-settings}
 
 In the <Cmd sid='port' product='cam' /> section, set port numbers used to access the web UI (HTTP, HTTPS) and for video streaming (RTSP).
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. In the left sidebar, click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
 
 3. Set the required ports in the <Cmd sid='port' product='cam' /> section.
 
    <ProdImg src='/img/cam-server/cam-webserver-settings-network-port.png' />
+
+   * <Cmd sid='http' product='cam' />: Port for unencrypted access to the web UI (default: 8000)
 
    * <Cmd sid='https' product='cam' />: Port for encrypted access to the web UI (default: 443)
 
@@ -128,13 +128,13 @@ In the <Cmd sid='port' product='cam' /> section, set port numbers used to access
 
 :::
 
-## Video transmission and encryption settings {/* #rtsp-settings */}
+## Video transmission and encryption settings {#rtsp-settings}
 
 In the <Cmd sid='rtsp' product='cam' /> section, configure video transmission and encryption settings.
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. In the left sidebar, click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
 
 3. Set the following options in the <Cmd sid='rtsp' product='cam' /> section.
 
@@ -166,26 +166,238 @@ After changing the <Cmd sid='secure_rtp' product='cam' /> option, you may need t
 
 :::
 
-## CLUe cloud connection
+## ONVIF settings {/* #onvifSettings */}
 
-Suprema CLUe is a cloud-based remote management service. Connect to CLUe to manage the device remotely over the Internet.
+In the <Cmd sid='onvif' product='cam' /> section, set the profile that NVR/VMS uses to connect via ONVIF. By default, the device uses only Profile T. Enable Profile S fallback when connecting to legacy NVR/VMS that does not support Profile T.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-network-onvif.png' />
+
+You can select one of the following two modes.
+
+* <Cmd sid='onvif_mode_t_only' product='cam' />: Connect using only Profile T (Media2). This mode supports H.264/H.265 codecs, HTTPS, metadata, and events, and it is the recommended default for modern NVR/VMS environments.
+
+* <Cmd sid='onvif_mode_fallback' product='cam' />: NVR/VMS first tries to connect using Profile T, then connects using Profile S (Media1) if Profile T is not supported. NVR/VMS that supports Profile T connects using Profile T in this mode.
+
+<div className='table-fixed'>
+
+| Item | Profile T (Media2) | Profile S (Media1) |
+| --- | --- | --- |
+| Codec | H.264, H.265 | H.264, MJPEG |
+| Encrypted communication | HTTPS support | Not supported (plaintext communication) |
+| Advanced Features | Metadata, events | Basic video streaming |
+| Recommended environment | Latest NVR/VMS | Older NVR/VMS that does not support Profile T |
+
+</div>
+
+### Create an ONVIF-only account {/* #onvifOnlyAccount */}
+
+Create an ONVIF-only account for ONVIF and RTSP authentication before enabling Profile S fallback. If you save settings without an account, the <Cmd sid='onvif_err_account_required' product='cam' /> message appears, and the system does not save the settings.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='account_management' product='cam' /> on the left sidebar.
+
+3. In the <Cmd sid='operator' product='cam' /> section, click <Cmd sid='add_button' product='cam' />.
+
+4. In the <Cmd sid='add_operator' product='cam' /> pop-up window, enter the username and password, then select <Cmd sid='onvif_only_account' product='cam' /> in <Cmd sid='permission' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-onvif-add-operator.png' />
+
+5. Click the <Cmd sid='ok' product='cam' /> button to create an ONVIF-only account.
+
+### Enable Profile S fallback
+
+Enable Profile S fallback.
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. In the left sidebar, click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />.
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
+
+3. In the <Cmd sid='onvif' product='cam' /> section, select <Cmd sid='onvif_mode_fallback' product='cam' /> in <Cmd sid='mode' product='cam' />.
+
+4. When the <Cmd sid='onvif_dialog_title' product='cam' /> pop-up window appears, review the precautions for Profile S, then click the <Cmd sid='confirm' product='cam' /> button.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-onvif-warning.png' />
+
+5. Click <Cmd sid='save' product='cam' /> to save the settings.
+
+When settings save successfully, a success message appears in the upper right corner of the screen. When adding the device to the NVR/VMS, enter the ID and password for the ONVIF-only account.
+
+To disable Profile S fallback, select <Cmd sid='onvif_mode_t_only' product='cam' />, then click the <Cmd sid='save' product='cam' /> button.
+
+:::caution
+
+Profile S sends unencrypted plain-text traffic, which exposes it to network attacks. Profile S also does not support the H.265 codec or HTTPS/TLS. Use it only when connecting to older NVR/VMS that does not support Profile T.
+
+:::
+
+:::info
+
+* Only administrators can change ONVIF settings.
+
+* Each device allows only one ONVIF-only account. The account cannot log in to the web UI. The system does not allow ID or password changes after creation.
+
+* Only these actions are available for the ONVIF-only account: enable, disable, or delete. If the account is disabled, the system cannot enable Profile S fallback.
+
+* To delete the ONVIF-only account, first change to <Cmd sid='onvif_mode_t_only' product='cam' />.
+
+* The updated ONVIF settings apply to new connections. Connected streams keep the current connection method until they reconnect.
+
+:::
+
+## CLUe cloud connection
+
+Suprema CLUe is a cloud-based access control service. Connect to CLUe to sync user information with the CLUe cloud service.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
 
 3. Click the <Cmd sid='clue' product='cam' /> toggle in the <Cmd sid='cloud' product='cam' /> section to enable it.
 
-4. The system checks the Internet connection and the CLUe server connection.
+4. The system checks the Internet connection and the CLUe server connection. The connection status appears to the right of the <Cmd sid='clue' product='cam' /> toggle.
 
-   * Connection successful: <Cmd sid='clue_enabled' product='cam' /> message appears.
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-clue.png' />
 
-   * Internet connection failed: <Cmd sid='clue_disabled' product='cam' /> message appears. Check the Internet connection and try again.
+   * <Cmd sid='clue_status_connecting' product='cam' />: Connecting to the CLUe server.
 
-:::note
+   * <Cmd sid='clue_status_connected' product='cam' />: Connected to the CLUe server.
 
-* If you disable the <Cmd sid='clue' product='cam' /> option, the connection to the CLUe server is disconnected, and remote management through the cloud is unavailable. However, the device's enrollment on the CLUe server remains.
+   * <Cmd sid='clue_status_connection_failed' product='cam' />: Failed to connect to the CLUe server. Check the Internet connection and try again.
+
+   * <Cmd sid='clue_no_certification_status' product='cam' />: The device is not CLUe-certified.
+
+5. Enable the required options. Enable the <Cmd sid='clue' product='cam' /> toggle to use the following options.
+
+   * <Cmd sid='clue_user_sync' product='cam' />: Syncs user information with the CLUe cloud service.
+
+   * <Cmd sid='clue_tunnel_use' product='cam' />: Uses a tunnel for external access to the device through CLUe. When the tunnel connects, the URL appears in the <Cmd sid='external_url' product='cam' /> field. Click the <Cmd sid='copy' product='cam' /> button to copy the URL.
+
+:::info
+
+* If the connection succeeds, the <Cmd sid='clue_enabled' product='cam' /> message appears.
+
+* If the connection fails, the <Cmd sid='clue_disabled' product='cam' /> message appears. Check the Internet connection and try again.
+
+* Disable the <Cmd sid='clue' product='cam' /> toggle to disconnect from the CLUe server. <Cmd sid='clue_user_sync' product='cam' /> and <Cmd sid='clue_tunnel_use' product='cam' /> become unavailable. However, the registration information on the CLUe server is retained.
 
 * CLUe connection successes and failures are recorded in the system log.
+
+:::
+
+## Tunnel settings {/* #tunnelSettings */}
+
+In the <Cmd sid='tunnel' product='cam' /> section, use Cloudflare Tunnel to create an external URL to access the device web UI from the internet. Use this when remote access is required without router port forwarding or a public IP address.
+
+In <Cmd sid='tunnel' product='cam' /> > <Cmd sid='tunnel_type' product='cam' />, select one of the following.
+
+| Type | Description | Required information |
+| --- | --- | --- |
+| <Cmd sid='tunnel_mode_off' product='cam' /> | Do not use Tunnel. This is the default setting. | None |
+| <Cmd sid='tunnel_mode_cf_quick' product='cam' /> | Get a temporary external URL without a Cloudflare account. The URL changes when the device restarts. | None |
+| <Cmd sid='tunnel_mode_cf_named' product='cam' /> | Create a Tunnel with a Cloudflare API token, and use a fixed external URL with your domain. | Cloudflare account, domain |
+| <Cmd sid='tunnel_mode_cf_named_token' product='cam' /> | Connect to a Tunnel created in the Cloudflare dashboard using a Connector token. | Cloudflare account, domain, Connector token |
+
+:::tip
+
+Use <Cmd sid='tunnel_mode_cf_quick' product='cam' /> for testing or temporary remote access. Use <Cmd sid='tunnel_mode_cf_named' product='cam' /> or <Cmd sid='tunnel_mode_cf_named_token' product='cam' /> for continued access with a fixed address.
+
+:::
+
+:::info
+
+* To disable Tunnel, select <Cmd sid='tunnel_mode_off' product='cam' /> in <Cmd sid='tunnel_type' product='cam' />.
+
+* To use Tunnel, the device must be connected to the internet.
+
+* Anyone who knows the external URL can access the device login page. Use strong passwords for administrator and operator accounts, and share the external URL only with authorized users.
+
+* The system log records tunnel mode changes.
+
+:::
+
+### Use a temporary external URL
+
+Access the device using a temporary external URL without a Cloudflare account.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
+
+3. In the <Cmd sid='tunnel' product='cam' /> section, select <Cmd sid='tunnel_mode_cf_quick' product='cam' /> in <Cmd sid='tunnel_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-tunnel-quick.png' />
+
+4. When a temporary external URL is issued, it appears in the <Cmd sid='external_url' product='cam' /> field. Click the <Cmd sid='copy' product='cam' /> button to copy the URL, then open it in a web browser.
+
+:::caution
+
+The external URL issued with <Cmd sid='tunnel_mode_cf_quick' product='cam' /> changes when the device restarts. After restarting, check the new URL in the <Cmd sid='external_url' product='cam' /> field.
+
+:::
+
+### Use a fixed external URL (API token)
+
+Enter a Cloudflare API token. The device creates a Tunnel in Cloudflare and links the external URL to the hostname. Before starting, prepare a Cloudflare account and a domain registered in Cloudflare.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
+
+3. In the <Cmd sid='tunnel' product='cam' /> section, select <Cmd sid='tunnel_mode_cf_named' product='cam' /> in <Cmd sid='tunnel_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-tunnel-named.png' />
+
+4. Enter the following information.
+
+   * <Cmd sid='tunnel_api_token' product='cam' />: Enter the API token issued in the Cloudflare dashboard.
+
+   * <Cmd sid='tunnel_account_id' product='cam' />: Enter the Cloudflare account ID.
+
+   * <Cmd sid='tunnel_hostname' product='cam' />: Enter the host name to use for external access.
+
+     > Example: cam.example.com
+
+   * <Cmd sid='tunnel_name_option' product='cam' />: Enter a name to identify the tunnel in Cloudflare. Optional.
+
+5. Click <Cmd sid='tunnel_verify' product='cam' /> to verify the entered information.
+
+6. Click <Cmd sid='tunnel_apply' product='cam' /> to apply the settings.
+
+When the tunnel connects, the external URL appears in the <Cmd sid='external_url' product='cam' /> field. Click <Cmd sid='copy' product='cam' /> to copy the URL.
+
+### Use a fixed external URL (Connector Token)
+
+This option connects the device to a tunnel created in the Cloudflare dashboard. Before starting, complete the following tasks in the Cloudflare dashboard.
+
+* Create a tunnel, and copy the Connector Token.
+
+* Add the tunnel's Public Hostname and set the Service URL to `http://127.0.0.1:81` or `http://localhost:81`.
+
+After finishing the settings, follow these steps on the device.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> on the left sidebar.
+
+3. In the <Cmd sid='tunnel' product='cam' /> section, select <Cmd sid='tunnel_mode_cf_named_token' product='cam' /> under <Cmd sid='tunnel_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-tunnel-named-token.png' />
+
+4. Enter the following information.
+
+   * <Cmd sid='tunnel_connector_token' product='cam' />: Enter the Connector Token copied from the Cloudflare dashboard.
+
+   * <Cmd sid='tunnel_name_option' product='cam' />: Enter a name to identify the tunnel. Optional.
+
+5. Click <Cmd sid='tunnel_verify' product='cam' /> to verify the entered information.
+
+6. Click <Cmd sid='tunnel_apply' product='cam' /> to apply the settings.
+
+When cloudflared connects, the external URL automatically appears in the <Cmd sid='external_url' product='cam' /> field.
+
+:::caution
+
+Security policies prevent the tunnel from opening if the Public Hostname Service URL is not `http://127.0.0.1:81` or `http://localhost:81`.
 
 :::

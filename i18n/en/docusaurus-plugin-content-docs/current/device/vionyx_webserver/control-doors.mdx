@@ -1,0 +1,94 @@
+---
+id: control-doors
+title: Door Control
+description: This guide explains how to check a door’s lock and open/close status in real time. It also explains how to open the door remotely or manually lock or unlock it.
+---
+
+In the <Cmd sid='door_control' product='cam' /> menu, check the lock status of registered doors in real time and open or lock doors remotely.
+
+Directly control the door in the following situations.
+
+* Open the door once for visitors or delivery drivers without enrolled facial credentials
+
+* Keep the door open for events or moving day
+
+* Lock the door immediately in an emergency, regardless of the schedule
+
+:::info
+
+* An operator account is required to control doors. Without operator permission, the system disables door status checks and door control. For more information on operator roles, see <DocLink docId='device/vionyx_webserver/manage-operators' />.
+
+* For more information on adding and managing doors, see <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+:::
+
+## Check door status
+
+1. Click the <Cmd sid='access' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='door_control' product='cam' /> on the left sidebar.
+
+<ProdImg src='/img/cam-server/cam-acs-door-control.png' />
+
+The list shows the doors registered in the <Cmd sid='door' product='cam' /> menu. When a door is added or deleted, the list updates immediately.
+
+* To find a specific door, enter the door name in the search field (<Num num='1' />).
+
+* Select a value in the Rows per page list (<Num num='2' />) in the upper-right corner. This changes the number of doors per page.
+
+* To change the sort criterion, select one in <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+The following items are shown in the door list.
+
+| Item | Description |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | The door’s unique ID. |
+| <Cmd sid='name' product='cam' /> | The name of the door. |
+| <Cmd sid='description' product='cam' /> | The description entered when adding or editing the door. |
+| <Cmd sid='relay_status' product='cam' /> | The current status of the door lock. |
+| <Cmd sid='door_sensor' product='cam' /> | The current status of the door sensor. This column appears only when you set the <Cmd sid='door_status' product='cam' /> input port for the door. |
+| <Cmd sid='control' product='cam' /> | This feature opens the door and manually locks or unlocks it. |
+
+{/* TODO(Developer check): Confirm whether the door sensor ON/OFF means open/closed, and the value shown when the status input port is not set ('-' etc). Confirm the status refresh interval and how status appears when communication fails */}
+
+### Relay status
+
+The <Cmd sid='relay_status' product='cam' /> column shows whether the entrance door is locked and what determines that status.
+
+| Status | Description |
+| --- | --- |
+| <Cmd sid='relay_status_locked' product='cam' /> | The entrance door remains locked by default. |
+| <Cmd sid='relay_status_unlocked' product='cam' /> | The entrance door remains unlocked by default. |
+| <Cmd sid='relay_status_schedule_lock' product='cam' /> | The entrance door locks according to the lock schedule. |
+| <Cmd sid='relay_status_schedule_unlock' product='cam' /> | The entrance door unlocks according to the unlock schedule. |
+| <Cmd sid='relay_status_fixed_lock' product='cam' /> | Locked using <Cmd sid='manual_lock' product='cam' />. |
+| <Cmd sid='relay_status_fixed_unlock' product='cam' /> | Unlocked using <Cmd sid='manual_unlock' product='cam' />. |
+
+## Door Control
+
+Click the button in the <Cmd sid='control' product='cam' /> column to control the entrance door.
+
+| Button | Trigger and Action |
+| --- | --- |
+| <Cmd sid='door_open' product='cam' /> | Open the entrance door once. The entrance door locks again after the configured open time elapses. |
+| <Cmd sid='manual_unlock' product='cam' /> | Unlock the entrance door and keep it open until you execute the <Cmd sid='release' product='cam' /> feature. |
+| <Cmd sid='manual_lock' product='cam' /> | Lock the entrance door and keep it locked until you execute the <Cmd sid='release' product='cam' /> feature. During this time, registered users cannot access the entrance door. |
+| <Cmd sid='release' product='cam' /> | End <Cmd sid='manual_lock' product='cam' /> or <Cmd sid='manual_unlock' product='cam' /> and return the entrance door to its previous state. |
+
+:::caution
+
+In the <Cmd sid='manual_unlock' product='cam' /> state, anyone can access regardless of facial authentication. After completing required tasks, click the <Cmd sid='release' product='cam' /> button.
+
+:::
+
+:::info
+
+* Manual Lock or Manual Unlock disables the <Cmd sid='door_open' product='cam' /> button and shows only the <Cmd sid='release' product='cam' /> button.
+
+  <ProdImg src='/img/cam-server/cam-acs-door-control-disable-button.png' />
+
+* Manual control takes precedence over the unlock schedule and lock schedule. For example, executing <Cmd sid='manual_lock' product='cam' /> during an unlock schedule keeps the entrance door locked.
+
+* Click <Cmd sid='release' product='cam' /> to return to the schedule for the current time or the default state.
+
+:::

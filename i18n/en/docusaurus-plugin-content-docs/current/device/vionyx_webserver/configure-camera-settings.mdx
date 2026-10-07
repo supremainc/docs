@@ -1,32 +1,32 @@
 ---
 id: configure-camera-settings
 title: Configure Camera Settings
-description: This guide explains how to adjust image quality, white balance, sensitivity (Time Filter), backlight compensation (WDR), anti-flicker, and mounting type to suit the installation environment.
-keywords:
-  - Camera settings
-  - Image quality
-  - White balance
-  - Sensitivity
-  - Mounting type
+description: This guide explains how to set image quality, white balance, sensitivity, backlight compensation WDR, anti-flicker, IR auto switch, and the heater to suit the installation environment, and how to specify the installation type.
 ---
 
-Adjust camera settings to capture optimal footage for the installation environment. Check changes in real time on Live View and adjust image quality, white balance, and sensitivity filters. AI feature availability is also automatically limited depending on ceiling or wall mounting.
+Adjust camera settings to capture optimal footage in the installation environment. Changes appear in Live View immediately, so check results while adjusting image quality, white balance, sensitivity, and backlight compensation. Available AI features vary by mounting type (ceiling or wall).
 
 Adjust camera settings in the following situations.
 
 * To improve image quality to match scene brightness and color.
 
-* To reduce flicker from fluorescent or LED lighting.
-
 * To minimize noise in low-light environments while maintaining motion detection.
 
+* When strong backlight from a window or doorway makes the subject look dark
+
+* To reduce flicker from fluorescent or LED lighting.
+
+* When supplemental lighting is available or color video is required, and IR switching at night must stay off
+
 * To optimize the camera and AI features for the installation location.
+
+* When condensation or frost forms on the lens due to cold or humidity, and the image looks blurry
 
 ## Camera settings
 
 1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
 
-2. Click <Cmd sid='basic' product='cam' /> → <Cmd sid='camera' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='basic' product='cam' /> → <Cmd sid='camera' product='cam' /> on the left sidebar.
 
 <ProdImg src='/img/cam-server/cam-webserver-settings-camera.png' />
 
@@ -104,6 +104,20 @@ Select the option that matches the lighting frequency in the scene. Incorrect se
 
 :::
 
+## IR auto switch setting
+
+Set whether the camera automatically switches to IR (night) mode when ambient light dims. Disable auto switching in areas with supplemental lighting or where color video is required. In the <Cmd sid='video' product='cam' /> section, enable or disable the <Cmd sid='ir_auto_switch' product='cam' /> option.
+
+* <Cmd sid='on' product='cam' />(Default): Automatically switches to IR mode when ambient light dims, based on the illuminance sensor and image brightness.
+
+* <Cmd sid='off' product='cam' />: Does not switch to IR mode in low-light environments.
+
+:::info
+
+Firmware version 1.1.0 or later supports the <Cmd sid='ir_auto_switch' product='cam' /> option.
+
+:::
+
 ## Mounting type settings
 
 Set <Cmd sid='mounting_type' product='cam' /> according to the camera's installation location. Supported AI features depend on the mounting type.
@@ -117,6 +131,22 @@ Set <Cmd sid='mounting_type' product='cam' /> according to the camera's installa
 * **When changing from ceiling to wall**, a confirmation popup appears stating that only Facial Authentication is available and object-tracking AI is unavailable. Review the message before proceeding.
 
 * **When changing from wall to ceiling**, the change applies immediately and all AI features activate automatically.
+
+:::
+
+## Camera heater setting
+
+Low temperatures or high humidity can fog or frost the lens, blur the image, and reduce AI recognition accuracy. Enable the camera heater to keep the lens clear. In the <Cmd sid='heater' product='cam' /> section, enable or disable the <Cmd sid='heater' product='cam' /> option. (Default: <Cmd sid='off' product='cam' />)
+
+* <Cmd sid='on' product='cam' />: The heater operates. The heater turns off automatically after 30 minutes.
+
+* <Cmd sid='off' product='cam' />: Stops the heater.
+
+:::info
+
+* To prevent overheating and unnecessary power consumption, the heater runs for 30 minutes and then turns off automatically, and the option changes to <Cmd sid='off' product='cam' />. If the lens still has fog or frost after the heater turns off, enable the option again.
+
+* Support for the <Cmd sid='heater' product='cam' /> option is included in firmware 1.1.0 or later.
 
 :::
 
