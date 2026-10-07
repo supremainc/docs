@@ -2,10 +2,6 @@
 id: configure-counting-people
 title: Set Up People Counting Event
 description: Detects the number of people staying in designated areas.
-keywords:
-  - AI analysis
-  - Pedestrian flow
-  - Facial recognition
 ---
 
 Configure a people counting event to detect the number of people staying in designated areas. Add an optional face area to automatically authenticate enrolled users.
@@ -29,9 +25,9 @@ After creating a people counting event, the <Cmd sid='live' product='cam' /> men
 
 ### Start event creation
 
-1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='ai_analysis' product='cam' /> on the left sidebar.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -67,7 +63,7 @@ Enter the AI event name in the <Cmd sid='name' product='cam' /> input field. The
 </Step>
 <Step>
 
-### Counting area setup
+### Set the counting area {/* #countingArea */}
 
 Set counting areas in Live View. The camera counts people within configured counting areas in real time and triggers events. Set at least one virtual line. Click <Cmd sid='add_button' product='cam' /> to add up to 10. Drag the corners or points of the counting area box in Live View to reshape it. Drag the center to move the line.
 
@@ -117,6 +113,13 @@ Define the area for face detection. When set, the system prioritizes face tracki
 </Step>
 <Step>
 
+import DetectPeople from './_ai-event-detect-people.mdx';
+
+<DetectPeople />
+
+</Step>
+<Step>
+
 ### Counting reset settings
 
 Set the condition to reset the people count in counting areas.
@@ -128,7 +131,7 @@ Set the condition to reset the people count in counting areas.
 
 ### Save settings
 
-After completing all settings, click <Cmd sid='save' product='cam' /> in the upper-right. The interface returns to the previous screen, and the new AI event is added to the list.
+After completing all settings, click <Cmd sid='create' product='cam' /> in the top right. The interface returns to the previous screen, and the new AI event is added to the list.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
 
@@ -152,7 +155,5 @@ Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. C
 * Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
 
 * Faces must face the camera to be detected. Profile or rear views may not be detected.
-
-* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
 
 :::

@@ -2,15 +2,9 @@
 id: live-basic
 title: ライブ映像を見る
 description: ViOnyx Web ServerのLiveメニューでカメラ映像をリアルタイムで確認し、チャンネルとビュー モードを選択して画面を拡大・縮小する方法を案内します。
-keywords:
-  - リアルタイム
-  - 映像
-  - ライブ
-  - モニタリング
-  - ビュー モード
 ---
 
-ViOnyx Web Serverの<Cmd sid='live' product='cam' />メニューでは、カメラが撮影している映像をリアルタイムで確認できます。 希望するチャンネルとビュー モードを選択し、画面を拡大したり全画面で表示できます。
+ViOnyx Web Serverの<Cmd sid='live' product='cam' />メニューでは、カメラが撮影している映像をリアルタイムで確認できます。希望するチャンネルとビュー モードを選択し、画面を拡大したり全画面で表示できます。
 
 ## ライブビューの基本構成
 
@@ -22,7 +16,7 @@ ViOnyx Web Serverの<Cmd sid='live' product='cam' />メニューでは、カメ�
 
 | 項目 | 構成要素 | 説明 |
 | :-: | :-: | --- |
-| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - AI機能は無効です。 アイコンをクリックしてAI機能を有効にできます。<br />- AIイベントとユーザーボックスを表示または非表示にするには、<IcMoreB title='More' /> ボタンをクリックして設定を調整します。 |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - AI機能は無効です。アイコンをクリックしてAI機能を有効にできます。<br />- AIイベントとユーザーボックスを表示または非表示にするには、<IcMoreB title='More' /> ボタンをクリックして設定を調整してください。 |
 | <Num num='2' /> | <IcPanelFace width='26px' height='26px' title='Face Shot' /> | <Cmd sid='face_shot' product='cam' />(Face Shot) パネルを開けます。 |
 | <Num num='3' /> | CH | チャンネルごとに利用可能なビュー モードを選択できます。 |
 | <Num num='4' /> | <IcKnob width='28px' height='28px' title='Rotate' /> | ライブ映像を回転できます。 |
@@ -33,7 +27,7 @@ ViOnyx Web Serverの<Cmd sid='live' product='cam' />メニューでは、カメ�
 
 ## チャンネルとビュー モードを選択する
 
-ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モードを提供します。 画面下の<Cmd>CH</Cmd>ドロップダウンメニューから目的のチャンネルとビュー モードを選択します。
+ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モードを提供します。画面下の<Cmd>CH</Cmd>ドロップダウンメニューから目的のチャンネルとビュー モードを選択します。
 
 <Image src='/img/cam-server/vionyx-live-basic-select-ch.png' alone />
 
@@ -52,7 +46,7 @@ ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モー�
 
 * 各チャンネルのMainとSubは異なる解像度のストリームを提供します。 Mainは高画質、Subは低画質のストリームです。
 
-* 上の画像は例示用の画面です。 実際の画面とは異なる場合があります。
+* 上の画像は例示用の画面です。実際の画面とは異なる場合があります。
 
 :::
 
@@ -68,7 +62,7 @@ ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モー�
 
 :::info
 
-* 1倍〜8倍まで画面を拡大できます。
+* 1倍 \~ 8倍まで画面を拡大できます。
 
 * 画面の拡大はデジタルズームのため、高倍率にすると映像がぼやける場合があります。
 
@@ -76,19 +70,19 @@ ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モー�
 
 ## 画面回転
 
-ライブ映像を回転するには、<IcKnob /> ボタンをクリックしたままドラッグします。 または、<IcKnob /> ボタンの右側の入力フィールドに回転角度を直接入力することもできます。
+ライブ映像を回転するには、<IcKnob title='Rotate View' /> ボタンをクリックしたままドラッグしてください。または、<IcKnob title='Rotate View' /> ボタンの右側の入力フィールドに回転角度を直接入力することもできます。
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-rotate-screen.png' />
 
 ## 画面キャプチャ
 
-ライブ映像をキャプチャするには、<IcCapture title='Capture' /> ボタンをクリックします。 キャプチャ画像は `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg` 形式で保存されます。
+ライブ映像をキャプチャするには、<IcCapture title='Capture' /> ボタンをクリックしてください。キャプチャ画像は `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg` 形式で保存されます。
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-capture-screen.png' />
 
 ## 全画面モード
 
-大きな映像を確認するには、全画面モードを使用してください。 画面右下の <IcFull /> ボタンをクリックします。
+大きな映像を確認するには、全画面モードを使用してください。画面右下の <IcFull /> ボタンをクリックします。
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-full-screen.png' />
 
@@ -96,9 +90,9 @@ ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モー�
 
 * 全画面モードを終了するには、<Kbd>ESC</Kbd> キーを押すか、<IcMin /> ボタンをもう一度クリックします。
 
-## イベントとユーザーボックスの表示 {/* #displayBox */}
+## AI表示オプション {/* #displayBox */}
 
-ライブ映像でAIイベントとユーザーボックスを表示または非表示にするには、画面右上の <IcMoreB /> ボタンをクリックします。 表示する要素を選択できます。
+ライブ映像のAI表示オプションを設定するには、画面右上の <IcMoreB /> ボタンをクリックしてください。
 
 <ProdImg src='/img/cam-server/live-view-event-user-box.png' width='60%' />
 
@@ -106,9 +100,21 @@ ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モー�
 
 * <Cmd sid='user_box_popup' product='cam' />: AIイベントで顔が検出されると、ライブ映像の右下にユーザーボックスがポップアップ表示されます。
 
+* <Cmd sid='base_opacity' product='cam' />：イベントポップアップとユーザーポップアップの透明度を調整できます。
+
+* <Cmd sid='reference_point' product='cam' />：ライブ映像の人物検知ボックスの上に基準点を表示します。このオプションをオンにすると、映像右上に凡例も表示されます。
+
+  * 水色の点(<Centerpoint />)：ボックスの中央です。
+
+  * 赤色の点(<Bottompoint />)：ボックスの長軸に沿って上から80%の位置です。カメラを天井に下向きで設置すると、人の足元付近に表示されます。
+
 :::info
 
-<Cmd sid='display_time' product='cam' /> オプションで設定した時間（単位: 秒）の間、ポップアップが表示されます。
+* <Cmd sid='display_time' product='cam' /> オプションで設定した時間（単位: 秒）の間、ポップアップが表示されます。
+
+* <Cmd sid='reference_point' product='cam' /> オプションを使用するには、AI機能(<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />)をオンにしてください。
+
+* <Cmd sid='base_opacity' product='cam' />、<Cmd sid='reference_point' product='cam' /> オプションはファームウェアバージョン1.1.0以降で利用できます。
 
 :::
 

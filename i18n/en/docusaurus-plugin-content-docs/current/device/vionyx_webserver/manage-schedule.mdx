@@ -1,0 +1,150 @@
+---
+id: manage-schedule
+title: Manage Schedules
+description: Learn how to create schedules for the days and times when AI rule actions execute, and how to edit or delete schedules.
+---
+
+A schedule is a weekly timetable created by combining days of the week and time slots. When an AI rule action uses a schedule, the action executes only during the time slots in the schedule. A single schedule can be used across multiple AI rules.
+
+Create schedules in the following situations.
+
+* Send webhooks only during weekday business hours
+
+* Play intrusion detection alert audio only at night
+
+* Prevent relays from operating on weekends
+
+:::info
+
+The device provides the **Always** schedule by default. The Always schedule runs 24 hours a day and cannot be edited or deleted.
+
+:::
+
+## Check the schedule list
+
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='schedule' product='cam' /> on the left sidebar.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-list.png' />
+
+The schedule list shows registered schedules and the AI rules that use each schedule. 
+
+* Next to <Cmd sid='schedule' product='cam' />(<Num num='1' />) at the top of the screen, the system shows the number of schedules.
+
+* Enter the schedule name or ID in the search field (<Num num='2' />) to find a specific schedule.
+
+* Select a value from the Rows per page list (<Num num='3' />) to set schedules per page.
+
+* To change the sort order, select a criterion from the <Cmd sid='sort_by_name' product='cam' />(<Num num='4' />) list.
+
+The following items are displayed in the schedule list.
+
+| Item | Description |
+| --- | --- |
+| <Cmd sid='column_id' product='cam' /> | The unique ID of the schedule. Always schedule is `0`. |
+| <Cmd sid='name' product='cam' /> | The name of the schedule. |
+| <Cmd sid='description' product='cam' /> | The description entered when adding or editing the schedule. |
+| <Cmd sid='used_by' product='cam' /> | AI rules that use the schedule. When no AI rules use the schedule, <Cmd sid='none' product='cam' /> appears. When multiple AI rules apply, they appear in the <Cmd sid='used_by_more' product='cam' replace='N' /> format. |
+| <Cmd sid='actions' product='cam' /> | This feature enables editing (<IcCamEdit />) or deleting (<IcCamTrash />) schedules. |
+
+## Add schedule
+
+<Steps>
+<Step>
+
+### Start adding a schedule
+
+1. Click <Cmd sid='add_button' product='cam' /> in the upper right of the schedule list screen.
+
+2. Enter the schedule information when the <Cmd sid='add_schedule' product='cam' /> pop-up appears.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-add.png' />
+
+</Step>
+<Step>
+
+### Enter a name and description
+
+* <Cmd sid='name' product='cam' />: Enter the schedule name. This field is required. Use a unique name for each schedule. You can enter up to 48 characters.
+
+* <Cmd sid='description' product='cam' />: Enter a description for the schedule. For example, add an applied time range like **Mon-Fri 09:00-18:00** to distinguish schedules when selecting them in rules.
+
+</Step>
+<Step>
+
+### Set time slots in the timetable
+
+Select the days and time slots when the schedule runs in <Cmd sid='timetable' product='cam' />. The vertical axis shows the day of the week (Sunday\~Saturday), and the horizontal axis shows time (0\~24). The selected time slots appear as blocks.
+
+<ProdImg src='/img/cam-server/ai-rule-schedule-add-time-table.png' />
+
+* **Select time slots**: Drag from the start time to the end time in the desired day row. Select in 10-minute increments.
+
+* **Move a time slot**: Drag the block left or right to move it to a different time.
+
+* **Select or clear 24 hours**: Click <Cmd sid='timetable_24h' product='cam' /> next to the day name. The timetable selects all 24 hours for that day. Click again to clear all.
+
+* **Delete a block**: Select the block to delete. The <IcClose title='Remove block' /> icon appears. Click the Remove block button. {/* TODO: 블록 삭제 UI 동작 확인 */}
+
+  <Image src='/img/cam-server/ai-rule-schedule-add-time-table-delete.png' alone />
+
+* **Initialize all**: To clear all time slots and set them again, click <Cmd sid='reset_timetable' product='cam' />.
+
+</Step>
+<Step>
+
+### Save schedule
+
+After completing all settings, click <Cmd sid='save' product='cam' />. The system adds the saved schedule to the schedule list. Select it in the AI rule operation settings.
+
+:::info
+
+* The <Cmd sid='used_by' product='cam' /> field is read-only and shows the AI rules that use the schedule. A newly created schedule has no AI rules using it yet, so it appears as <Cmd sid='not_used' product='cam' />.
+
+* To apply a saved schedule to an AI rule, see <DocLink docId='device/vionyx_webserver/set-ai-rule' />.
+
+:::
+
+</Step>
+</Steps>
+
+## Modify schedule
+
+1. In the schedule list, click the <IcCamEdit title='Edit' /> button to the right of the schedule.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table.png' />
+
+2. When the <Cmd sid='edit_schedule' product='cam' /> pop-up appears, edit the name, description, and timetable.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table-popup.png' width='600px' />
+
+3. Click <Cmd sid='save' product='cam' /> to save the changes.
+
+Saving the modified schedule applies it to all AI rules that use it.
+
+:::info
+
+* If multiple AI rules share a schedule, check the affected AI rules in the <Cmd sid='used_by' product='cam' /> column before editing.
+
+* The Always schedule, the default schedule, cannot be modified.
+
+:::
+
+## Delete schedule
+
+1. In the schedule list, click the <IcCamTrash title='delete' /> button to the right of the schedule.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-remove-time-table.png' />
+
+2. If a confirmation message appears, review it and click <Cmd sid='ok' product='cam' />.
+
+Deleted schedules cannot be recovered.
+
+:::info
+
+* Do not delete schedules that AI rules use. In the AI rules listed in the <Cmd sid='used_by' product='cam' /> column, select another schedule, then try deleting it again.
+
+* The Always schedule, the default schedule, cannot be deleted.
+
+:::

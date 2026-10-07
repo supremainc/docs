@@ -1,13 +1,10 @@
 ---
 id: set-ai-rule
 title: AIルールの設定
-description: AIイベント発生時に実行する動作をルールとして設定します。 ルールの作成、条件の選択、オーディオと webhook 動作の設定、保存および運用方法を案内します。
-keywords:
-  - AI
-  - ルール
+description: AIイベント発生時に実行する動作をルールとして設定します。ルールの作成、条件の選択、オーディオ、webhook、リレー動作の設定、保存および運用方法を案内します。
 ---
 
-AIルールを使用すると、イベント種類と条件に応じてオーディオ再生または webhook 送信を自動で実行できます。 このドキュメントではルールの作成と運用の全手順を案内します。
+AIルールを使用すると、イベント種類と条件に応じてオーディオ再生、webhook 送信、リレー動作を自動で実行できます。このドキュメントではルールの作成と運用の全手順を案内します。
 
 次のような場合にAIルールを設定してください。
 
@@ -15,13 +12,15 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
 * 特定のAIイベント発生時にデバイスでオーディオを再生する場合
 
+* 特定のAIイベント発生時に入退室ドアなどに接続されたリレーを動作させる場合
+
 * イベント種類ごとに異なる後続動作を自動化する場合
 
 ## 開始する前に
 
 ルール設定を開始する前に、以下を確認してください。
 
-* AIイベントが事前に作成されている必要があります。 次のドキュメントを参照してAIイベントを作成してください。
+* AIイベントが事前に作成されている必要があります。次のドキュメントを参照してAIイベントを作成してください。
 
   * <DocLink docId='device/vionyx_webserver/configure-people-tracking' />
 
@@ -31,11 +30,15 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
   * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
+  * <DocLink docId='device/vionyx_webserver/configure-access-control' />
+
 * オーディオを使用する場合は、再生するオーディオクリップを事前に用意してください。
 
 * Webhook を使用する場合は、受信URLを事前に用意してください。
 
-* オーディオまたはWebhookのいずれか1つ以上のアクションを設定する必要があります。
+* リレーを使用する場合、デバイスまたはサブデバイスのリレーポートが接続されているか確認してください。
+
+* オーディオ、Webhook、リレーのうち、少なくとも一つの動作を設定する必要があります。
 
 ## AIルールの作成
 
@@ -44,15 +47,15 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
 ### ルール作成の開始
 
-1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='rule_settings' product='cam' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='rule_settings' product='cam' /> をクリックします。
 
    <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
 
 3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
 
-4. <Cmd sid='add_rule_page_title' product='cam' /> 画面が表示されたら、ルール名を入力し、条件と動作を設定します。
+4. <Cmd sid='new_rule' product='cam' /> 画面が表示されたら、ルール名を入力し、条件と動作を設定します。
 
    <ProdImg src='/img/cam-server/ai-rule-settings-add-rule.png' />
 
@@ -61,18 +64,18 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
 ### ルール名の入力
 
-<Cmd sid='name' product='cam' /> 入力フィールドにルール名を入力します。 ルール名は必須項目です。 最大64文字まで入力できます。
+<Cmd sid='name' product='cam' /> 入力フィールドにルール名を入力します。ルール名は必須項目です。最大64文字まで入力できます。
 
 </Step>
 <Step>
 
 ### 条件の設定
 
-条件はAIイベント発生時にルールが実行されるかを決定する要素です。 案内に従って条件を設定してください。 <Cmd sid='type' product='cam' /> と <Cmd sid='event' product='cam' /> オプションは、AIイベント作成時に設定した内容に応じて表示されます。
+条件はAIイベント発生時にルールが実行されるかを決定する要素です。 <Cmd sid='condition' product='cam' /> セクションで案内に従って条件を設定してください。 <Cmd sid='type' product='cam' /> と <Cmd sid='event' product='cam' /> オプションは、AIイベント作成時に設定した内容に応じて表示されます。
 
 * <Cmd sid='channel' product='cam' />：チャンネルはCH 1に固定されています。 Fisheyeビューのみサポートします。
 
-* <Cmd sid='type' product='cam' />：AIイベントタイプを選択します。 次のいずれかを選択できます。
+* <Cmd sid='type' product='cam' />：AIイベントタイプを選択します。次のいずれかを選択できます。
 
   * <Cmd sid='ai_analysis_people_tracking' product='cam' />
 
@@ -82,36 +85,53 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
 
-* <Cmd sid='event' product='cam' />：ルールを実行するAIイベントを選択します。 イベント一覧には選択したタイプに該当するAIイベントが表示されます。 イベントは `(ID:N) event_name` 形式で表示されます。
+  * <Cmd sid='ai_analysis_door_access' product='cam' />
+
+* <Cmd sid='event' product='cam' />：ルールを実行するAIイベントを選択します。イベント一覧には選択したタイプに該当するAIイベントが表示されます。イベントは `(ID:N) event_name` 形式で表示されます。
 
 * <Cmd sid='entry_area' product='cam' /> / <Cmd sid='intrusion_area' product='cam' /> / <Cmd sid='line' product='cam' /> / <Cmd sid='counting_area' product='cam' />：選択したイベントタイプに応じて、エリアの条件を追加できます。
 
-* <Cmd sid='event_type' product='cam' />：ルール実行の判定に使うイベントタイプを選択します。 選択したイベントタイプに応じてルールが実行されます。
+* <Cmd sid='event_type' product='cam' />：ルール実行の判定に使うイベントタイプを選択します。選択したイベントタイプに応じてルールが実行されます。
 
-  :::note
+   :::note
 
-  少なくとも1つのイベントタイプを選択する必要があります。
+   少なくとも1つのイベントタイプを選択する必要があります。
 
-  :::
+   :::
+
+</Step>
+<Step>
+
+### ユーザー選択
+
+登録済みユーザーから、ルールの実行を判断するユーザーを <Cmd sid='actor_type_user' product='cam' /> セクションで選択してください。選択したユーザーをAIイベントが検知すると、ルールが実行されます。
+
+* 特定のユーザーを選択するには、<Cmd sid='select_users_to_trigger_actions' product='cam' /> をクリックしてください。ユーザー一覧が表示されたら、ユーザーを選択し、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+* 登録済みの全ユーザーを選択するには、<Cmd sid='select_all' product='cam' /> をクリックしてください。
 
 </Step>
 <Step>
 
 ### オーディオ動作の設定
 
-オーディオ動作は、AIイベント発生時にカメラでオーディオを再生する機能です。 トグルボタンをクリックしてオーディオ動作を有効にします。
+オーディオ動作は、AIイベント発生時にカメラでオーディオを再生する機能です。 <Cmd sid='action' product='cam' /> セクションで <Cmd sid='audio' product='cam' /> トグルボタンをクリックして動作を有効にした後、<IcCamEdit title='Edit' /> ボタンをクリックしてください。オーディオ設定ポップアップが表示されます。
 
 <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-audio.png' />
 
-* <Cmd sid='audio_clip' product='cam' />：再生するオーディオクリップを選択します。 オーディオクリップはシステムにアップロードされた一覧から選択できます。
+* <Cmd sid='audio_clip' product='cam' />：再生するオーディオクリップを選択します。オーディオクリップはシステムにアップロードされた一覧から選択できます。
 
-* <Cmd sid='repeat' product='cam' />：オーディオの再生回数を設定します。 設定した回数だけオーディオクリップを繰り返し再生します。 最大 10 回まで設定できます。
+* <Cmd sid='repeat' product='cam' />：オーディオの再生回数を設定します。設定した回数だけオーディオクリップを繰り返し再生します。最大 10 回まで設定できます。
 
-* <Cmd sid='schedule' product='cam' />：ルールが実行され、オーディオを再生するスケジュールです。 このオプションは変更できません。
+* <Cmd sid='schedule' product='cam' />：ルールが実行され、オーディオを再生するスケジュールを選択してください。
+
+オーディオ動作の設定を保存するには、<Cmd sid='apply' product='cam' /> ボタンをクリックします。
 
 :::info
 
-オーディオ動作を設定する前に、オーディオクリップを事前に用意してください。 オーディオクリップは <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' /> メニューでアップロードできます。 詳細は <DocLink docId='device/vionyx_webserver/upload-audio-clips' /> を参照してください。
+* オーディオ動作を設定する前に、オーディオクリップを事前に用意してください。オーディオクリップは <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' /> メニューでアップロードできます。詳細は <DocLink docId='device/vionyx_webserver/upload-audio-clips' /> を参照してください。
+
+* スケジュールは <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' /> で作成、修正、削除できます。スケジュール管理の詳細は、<DocLink docId='device/vionyx_webserver/manage-schedule' />をご参照ください。
 
 :::
 
@@ -120,29 +140,70 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
 ### Webhook 動作の設定
 
-Webhook 動作は、AIイベント発生時に外部サーバーへ webhook を送信する機能です。 トグルボタンをクリックして webhook 動作を有効にします。
+Webhook 動作は、AIイベント発生時に外部サーバーへ webhook を送信する機能です。  <Cmd sid='action' product='cam' /> セクションで <Cmd sid='webhook' product='cam' /> トグルボタンをクリックして動作を有効にした後、<IcCamEdit title='Edit' /> ボタンをクリックしてください。 webhook 設定ポップアップが表示されます。
 
 <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-webhook.png' />
 
 * <Cmd sid='method' product='cam' />：Webhook の送信方式です。 `POST`方式のみサポートします。
 
-* <Cmd>URL</Cmd>：Webhook を受信するURLを入力します。 `http://`または`https://`で始まる有効なアドレスである必要があります。
+* <Cmd sid='url' product='cam' />：Webhookを受信するURLを入力します。 `http://`または`https://`で始まる有効なアドレスである必要があります。
 
-* <Cmd sid='header' product='cam' />：Webhook に含めるHTTPヘッダーを設定します。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてヘッダーを追加できます。 各ヘッダーはキーと値のペアで入力します。
+* <Cmd sid='header' product='cam' />：Webhook に含めるHTTPヘッダーを設定します。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてヘッダーを追加できます。各ヘッダーはキーと値のペアで入力します。
 
-* <Cmd sid='body' product='cam' />：Webhook に含めるHTTPボディを設定します。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてボディ項目を追加できます。 各ボディ項目はキーと値のペアで入力します。
+* <Cmd sid='body' product='cam' />：Webhook に含めるHTTPボディを設定します。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてボディ項目を追加できます。各ボディ項目はキーと値のペアで入力します。
 
-  :::note
+* <Cmd sid='schedule' product='cam' />：ルールが実行され、webhook を送信するスケジュールを選択してください。
 
-  カスタム項目は空にできず、最大10件まで追加できます。
-
-  :::
-
-* <Cmd sid='schedule' product='cam' />：ルールが実行され、Webhookを送信するスケジュールです。 このオプションは変更できません。
+webhook 動作の設定を保存するには、<Cmd sid='apply' product='cam' /> ボタンをクリックします。
 
 :::info
 
-Webhook 送信履歴と応答コードは、障害解析のためシステムログで確認できます。
+* Webhook 送信履歴と応答コードは、障害解析のためシステムログで確認できます。
+
+* スケジュールは <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' /> で作成、修正、削除できます。スケジュール管理の詳細は、<DocLink docId='device/vionyx_webserver/manage-schedule' />をご参照ください。
+
+:::
+
+</Step>
+<Step>
+
+### リレー動作の設定 {/* #setRelayAction */}
+
+リレー動作は、AIイベント発生時に該当デバイスまたはサブデバイスのリレーを動作させる機能です。例えば、ブラックリストユーザーのイベント発生時にドアのリレーを動作させ、入退室を制限できます。
+
+<Cmd sid='action' product='cam' /> セクションで <Cmd sid='relay' product='cam' /> トグルボタンをクリックして動作を有効にし、<IcCamEdit title='Edit' /> ボタンをクリックします。リレー設定ポップアップが表示されます。
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay.png' />
+
+* <Cmd sid='port' product='cam' />: 動作させるリレーポートを選択してください。デバイス本体のリレーポートと、デバイスに接続された下位デバイスのリレーポートを選択できます。他のルールやドアですでに使用中のポートは、一覧に使用中と表示され、選択できません。
+
+* <Cmd sid='open_time' product='cam' />: リレーを開放状態に保つ時間を設定します。スライダーを動かすか、入力フィールドに値を直接入力できます。 1 秒から 120 秒まで設定できます。
+
+  * <Cmd sid='keep_until_event_off' product='cam' />: 条件の <Cmd sid='type' product='cam' />で <Cmd sid='ai_analysis_people_counting' product='cam' />を選択し、<Cmd sid='count_limit' product='cam' />で設定したエリアを条件として指定すると、<Cmd sid='keep_until_event_off' product='cam' /> オプションを使用できます。このオプションを選択すると、開放時間に関係なく、カウント制限イベントが解除されるまでリレーが開放状態を維持します。
+
+    <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
+
+* <Cmd sid='contact_type' product='cam' />: リレーの接点タイプを選択してください。ポートを選択して設定します。デフォルトは <Cmd sid='normal_close' product='cam' /> です。
+
+  * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
+
+  * <Cmd sid='normal_close' product='cam' />: 通常は閉じており、リレーが動作すると開く接点です。
+
+* <Cmd sid='schedule' product='cam' />: ルールが実行され、リレーを動作させるスケジュールを選択します。
+
+リレー動作の設定を保存するには、<Cmd sid='apply' product='cam' /> ボタンをクリックします。
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' />はルールではなく、リレーポートに適用する設定です。 <Cmd sid='contact_type' product='cam' /> を変更すると、そのポートを使用するすべてのルールとドアに直ちに適用されます。ポートが固定施錠または固定解錠の状態で <Cmd sid='contact_type' product='cam' /> を変更すると、出力が反転し、施錠中のドアが開く場合があります。注意してください。
+
+:::
+
+:::info
+
+* この機能のサポートは、ファームウェアバージョン1.1.0以降に含まれます。
+
+* スケジュールは <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' /> で作成、修正、削除できます。スケジュール管理の詳細は、<DocLink docId='device/vionyx_webserver/manage-schedule' />をご参照ください。
 
 :::
 
@@ -151,7 +212,7 @@ Webhook 送信履歴と応答コードは、障害解析のためシステムロ
 
 ### ルールを保存
 
-ルール設定をすべて完了してルールを保存するには、画面右上の <Cmd sid='apply' product='cam' /> ボタンをクリックします。 保存したルールはルール一覧で確認できます。 ルール一覧では、ルール名、タイプ、イベント、スケジュールを確認できます。 
+ルール設定をすべて完了してルールを保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。保存したルールはルール一覧で確認できます。ルール一覧では、ルール名、タイプ、イベント、スケジュールを確認できます。 
 
 <ProdImg src='/img/cam-server/ai-rule-settings-added-list.png' />
 
@@ -160,24 +221,24 @@ Webhook 送信履歴と応答コードは、障害解析のためシステムロ
 
 ## AIルールの有効化/無効化
 
-ルール一覧で各ルール項目の最左のトグルボタンをクリックすると、そのルールを有効または無効にできます。 有効なルールはAIイベント発生時に設定された動作を実行します。 無効なルールはAIイベント発生時でも動作が実行されません。
+ルール一覧で各ルール項目の最左のトグルボタンをクリックすると、そのルールを有効または無効にできます。有効なルールはAIイベント発生時に設定された動作を実行します。無効なルールはAIイベント発生時でも動作が実行されません。
 
 <ProdImg src='/img/cam-server/ai-rule-settings-added-list-enable-disable.png' />
 
 :::info
 
-ルール一覧で有効/無効の状態をひと目で区別できます。 青色のトグルで表示されるルールは有効、灰色のトグルで表示されるルールは無効です。
+ルール一覧で有効/無効の状態をひと目で区別できます。青色のトグルで表示されるルールは有効、灰色のトグルで表示されるルールは無効です。
 
 :::
 
 ## AIルールの編集
 
-ルール一覧で各ルール項目をクリックすると、ルールの詳細を確認または編集できます。 ルール詳細画面で条件と動作を編集した後、変更を保存するには <Cmd sid='update' product='cam' /> ボタンをクリックします。
+ルール一覧で各ルール項目をクリックすると、ルールの詳細を確認または編集できます。ルール詳細画面で条件と動作を編集した後、変更を保存するには <Cmd sid='update' product='cam' /> ボタンをクリックします。
 
 <ProdImg src='/img/cam-server/ai-rule-settings-edit.png' />
 
 ## AIルールの削除
 
-ルール一覧で各ルール項目の最右の <IcCamTrash title='delete' /> ボタンをクリックすると、該当ルールを削除できます。 削除したルールは復元できません。
+ルール一覧で各ルール項目の最右の <IcCamTrash title='delete' /> ボタンをクリックすると、該当ルールを削除できます。削除したルールは復元できません。
 
 <ProdImg src='/img/cam-server/ai-rule-settings-added-list-delete.png' />

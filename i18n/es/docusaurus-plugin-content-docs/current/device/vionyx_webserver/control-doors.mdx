@@ -1,0 +1,94 @@
+---
+id: control-doors
+title: Control de Puerta
+description: Esta guía explica cómo verificar en tiempo real el estado de la cerradura y de apertura/cierre de una puerta. También explica cómo abrir la puerta de forma remota o bloquearla y desbloquearla manualmente.
+---
+
+En el menú <Cmd sid='door_control' product='cam' />, verifica en tiempo real el estado de bloqueo de las puertas registradas y abre o bloquea puertas de forma remota.
+
+Controla la puerta directamente en las siguientes situaciones.
+
+* Abre la puerta una vez para visitantes o repartidores sin credenciales faciales inscritas
+
+* Mantén la puerta abierta para eventos o mudanzas
+
+* Bloquea la puerta de inmediato en una emergencia, sin importar el horario
+
+:::info
+
+* Se requiere una cuenta de operador para controlar las puertas. Sin permiso de operador, el sistema deshabilita la comprobación de estado y el control de puertas. Para obtener más información sobre los roles de operador, consulta <DocLink docId='device/vionyx_webserver/manage-operators' />.
+
+* Para más información sobre cómo agregar y administrar puertas, consulta <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+:::
+
+## Verifica el estado de la puerta
+
+1. Haz clic en el menú <Cmd sid='access' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='door_control' product='cam' /> en la barra lateral izquierda.
+
+<ProdImg src='/img/cam-server/cam-acs-door-control.png' />
+
+La lista muestra las puertas registradas en el menú <Cmd sid='door' product='cam' />. La lista se actualiza de inmediato cuando agregas o eliminas una puerta.
+
+* Para encontrar una puerta específica, ingresa el nombre de la puerta en el campo de búsqueda (<Num num='1' />).
+
+* Selecciona un valor en la lista Filas por página (<Num num='2' />) en la esquina superior derecha. Esto cambia el número de puertas por página.
+
+* Para cambiar el criterio de ordenamiento, selecciona uno en <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+Los siguientes campos aparecen en la lista de puertas.
+
+| Ítem | Descripción |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | El identificador único de la puerta. |
+| <Cmd sid='name' product='cam' /> | El nombre de la puerta. |
+| <Cmd sid='description' product='cam' /> | La descripción ingresada al agregar o editar la puerta. |
+| <Cmd sid='relay_status' product='cam' /> | El estado actual de la cerradura de la puerta. |
+| <Cmd sid='door_sensor' product='cam' /> | El estado actual del sensor de la puerta. Esta columna aparece solo cuando estableces el puerto de entrada <Cmd sid='door_status' product='cam' /> de la puerta. |
+| <Cmd sid='control' product='cam' /> | Esta característica abre la puerta y la bloquea o desbloquea manualmente. |
+
+{/* TODO(Developer check): Confirm whether the door sensor ON/OFF means open/closed, and the value shown when the status input port is not set ('-' etc). Confirma el intervalo de actualización del estado y cómo aparece el estado cuando falla la comunicación */}
+
+### Estado del relé
+
+La columna <Cmd sid='relay_status' product='cam' /> muestra si la puerta de entrada está bloqueada y qué determina ese estado.
+
+| Estado | Descripción |
+| --- | --- |
+| <Cmd sid='relay_status_locked' product='cam' /> | La puerta de entrada permanece bloqueada de forma predeterminada. |
+| <Cmd sid='relay_status_unlocked' product='cam' /> | La puerta de entrada permanece desbloqueada de forma predeterminada. |
+| <Cmd sid='relay_status_schedule_lock' product='cam' /> | La puerta de entrada se bloquea según el horario de bloqueo. |
+| <Cmd sid='relay_status_schedule_unlock' product='cam' /> | La puerta de entrada se desbloquea según el horario de desbloqueo. |
+| <Cmd sid='relay_status_fixed_lock' product='cam' /> | Bloqueada con <Cmd sid='manual_lock' product='cam' />. |
+| <Cmd sid='relay_status_fixed_unlock' product='cam' /> | Desbloqueada con <Cmd sid='manual_unlock' product='cam' />. |
+
+## Control de Puerta
+
+Haz clic en el botón en la columna <Cmd sid='control' product='cam' /> para controlar la puerta de entrada.
+
+| Botón | Activador y acción |
+| --- | --- |
+| <Cmd sid='door_open' product='cam' /> | Abre la puerta de entrada una vez. La puerta de entrada vuelve a bloquearse cuando se agota el tiempo de apertura establecido. |
+| <Cmd sid='manual_unlock' product='cam' /> | Desbloquea la puerta de entrada y mantenla abierta hasta que ejecutes la característica <Cmd sid='release' product='cam' />. |
+| <Cmd sid='manual_lock' product='cam' /> | Bloquea la puerta de entrada y mantenla bloqueada hasta que ejecutes la característica <Cmd sid='release' product='cam' />. Durante este tiempo, los usuarios inscritos no pueden acceder a la puerta de entrada. |
+| <Cmd sid='release' product='cam' /> | Finaliza <Cmd sid='manual_lock' product='cam' /> o <Cmd sid='manual_unlock' product='cam' /> y devuelve la puerta de entrada a su estado anterior. |
+
+:::caution
+
+En el estado <Cmd sid='manual_unlock' product='cam' />, cualquier persona puede acceder sin importar la autenticación facial. Después de completar las tareas requeridas, haz clic en el botón <Cmd sid='release' product='cam' />.
+
+:::
+
+:::info
+
+* El bloqueo manual o el desbloqueo manual deshabilitan el botón <Cmd sid='door_open' product='cam' /> y muestran solo el botón <Cmd sid='release' product='cam' />.
+
+  <ProdImg src='/img/cam-server/cam-acs-door-control-disable-button.png' />
+
+* El control manual tiene prioridad sobre el horario de desbloqueo y el horario de bloqueo. Por ejemplo, al ejecutar <Cmd sid='manual_lock' product='cam' /> durante un horario de desbloqueo, la puerta de entrada permanece bloqueada.
+
+* Haz clic en <Cmd sid='release' product='cam' /> para volver al horario vigente o al estado predeterminado.
+
+:::

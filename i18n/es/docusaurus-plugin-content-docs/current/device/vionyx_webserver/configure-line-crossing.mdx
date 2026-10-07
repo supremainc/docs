@@ -2,10 +2,6 @@
 id: configure-line-crossing
 title: Configurar Evento de Detección de Cruce de Línea
 description: Detecta a las personas que cruzan líneas virtuales configuradas y activa eventos en tiempo real. Especifique la dirección de cruce para supervisar solo una dirección de movimiento.
-keywords:
-  - Análisis con IA
-  - Flujo peatonal
-  - Autenticación facial
 ---
 
 Configurar un evento de detección de cruce de línea detecta a las personas que cruzan líneas virtuales configuradas y activa eventos en tiempo real. Especifique la dirección de cruce (A→B, B→A o ambas) para supervisar solo una dirección. Agregue opcionalmente un área facial para priorizar el seguimiento de rostros; los usuarios inscritos se identifican automáticamente.
@@ -29,9 +25,9 @@ Use el menú <Cmd sid='live' product='cam' /> para detectar a las personas que c
 
 ### Iniciar creación del evento
 
-1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -83,7 +79,23 @@ Coloque la línea virtual en la ubicación adecuada en Live View. La cámara det
 
   * <Cmd>A \<-> B</Cmd>: Active un evento cuando se cruce en ambas direcciones.
 
+* <Cmd sid='reference_point' product='cam' />: Seleccione el punto de referencia en el recuadro de detección de personas para determinar si una persona cruza una línea virtual. Establezca esto para cada línea. El valor predeterminado es <Cmd sid='reference_point_center' product='cam' />.
+
+  * <Cmd sid='reference_point_center' product='cam' />: Use el centro del recuadro como punto de referencia. El sistema cuenta un cruce cuando el centro del cuerpo toca la línea.
+
+  * <Cmd sid='reference_point_lower' product='cam' />: Use el punto ubicado al 80 % desde la parte superior a lo largo del eje largo del recuadro. El sistema cuenta un cruce cuando la parte inferior del cuerpo toca la línea. Seleccione esta opción para activar un evento cuando los pies crucen la línea, como si estuviera en el piso.
+
+  Haga clic en el icono <IcCamHelp title='Help' /> a la derecha de <Cmd sid='reference_point' product='cam' /> para ver la ubicación y los criterios de detección de cada punto de referencia en un diagrama.
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-help.png' />
+
 :::info
+
+* Se incluye soporte para la opción <Cmd sid='reference_point' product='cam' /> en el firmware 1.1.0 o posterior. En dispositivos que no admiten la selección del punto de referencia, todos los cruces de línea usan <Cmd sid='reference_point_center' product='cam' />.
+
+* <Cmd sid='reference_point_lower' product='cam' /> es una posición calculada a partir del recuadro de detección de personas, no la posición real del pie.
+
+* Active <Cmd sid='reference_point' product='cam' /> en [Opciones de visualización de IA](live-basic#displayBox) para ver el punto de referencia en el menú <Cmd sid='live' product='cam' />.
 
 * Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño de la línea virtual configurada.
 
@@ -115,27 +127,56 @@ Defina el área para la detección facial. Cuando se configura, el sistema prior
 </Step>
 <Step>
 
-### Establecer condiciones de activación de eventos
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-Establezca las condiciones de activación de eventos.
+<DetectPeople />
 
-* <Cmd sid='every_delay' product='cam' />: Establezca el retraso de activación del evento. Los eventos se activan solo después de que transcurre el tiempo configurado; establezca hasta 60 segundos.
+</Step>
+<Step>
+
+### Configurar condiciones de activación de eventos y ajustes de conteo de eventos
+
+En la sección <Cmd sid='option' product='cam' />, configure las condiciones de activación de eventos y el conteo de eventos.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-options.png' />
+
+* <Cmd sid='every_delay' product='cam' />: Establezca la duración mínima para tratarla como un evento. Un evento ocurre solo cuando el estado de detección dura más que el tiempo establecido. Se puede configurar hasta un máximo de 60 segundos.
+
+   :::note
+
+   Si ocurren demasiados eventos, aumente el valor de <Cmd sid='every_delay' product='cam' />. El movimiento detectado por menos del tiempo establecido no se considera un evento, lo que reduce eventos innecesarios.
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />: Establezca esta opción en <Cmd sid='on' product='cam' /> para contar cada cruce de línea. Si existen varias líneas, cuente cada línea por separado.
+
+* <Cmd sid='all_event_count_reset' product='cam' />: Establezca esta opción en <Cmd sid='on' product='cam' /> para inicializar diariamente los conteos de eventos de todas las líneas a la hora especificada. Inicialice los conteos de eventos de todas las líneas a la hora definida en <Cmd sid='reset_time' product='cam' />.
+
+:::info
+
+* Si establece <Cmd sid='event_count' product='cam' /> en <Cmd sid='on' product='cam' />, aparece en el menú <Cmd sid='live' product='cam' /> sobre el video de cada línea, en el formato <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd>. Haga clic en el botón <IcMoreB title='More' /> y seleccione <Cmd sid='count_reset' product='cam' /> para inicializar manualmente el conteo de eventos.
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* El firmware versión 1.1.0 o posterior incluye soporte para las opciones de conteo de eventos.
+
+:::
 
 </Step>
 <Step>
 
 ### Guardar ajustes
 
-Después de completar todas las configuraciones, haga clic en <Cmd sid='create' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y el nuevo evento de IA se agrega a la lista.
+Después de completar todas las configuraciones, haga clic en <Cmd sid='create' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y agrega el nuevo evento de IA a la lista.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png' />
 
 </Step>
 </Steps>
 
-## Verificación en Live
+## Verificar en Live
 
-Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las líneas virtuales y las áreas faciales configuradas se superponen en el video. Se produce un evento cada vez que una persona cruza una línea virtual. Si se configuran áreas faciales, la cámara detecta rostros allí; los usuarios enrolados se identifican automáticamente y sus nombres se muestran.
+Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las líneas virtuales y las áreas faciales configuradas se superponen en el video. Se produce un evento cada vez que una persona cruza una línea virtual. Si configura áreas faciales, la cámara detecta rostros allí; identifica automáticamente a los usuarios enrolados y muestra sus nombres.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-line-crosing-result.png' />
 
@@ -145,8 +186,6 @@ Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior iz
 
 * La mala iluminación o la luz de fondo pueden impedir que la cámara detecte rostros. Mejore la iluminación del área o ajuste la posición y el ángulo de la cámara para que los rostros se vean con claridad.
 
-* Los rostros deben mirar hacia la cámara para detectarse. Las vistas de perfil o de espaldas pueden no detectarse.
-
-* Si ocurren demasiados eventos, ajuste la opción <Cmd sid='every_delay' product='cam' />. Aumentar el retraso del evento reduce la frecuencia de los eventos.
+* Los rostros deben mirar a la cámara para que la cámara los detecte. Es posible que la cámara no detecte las vistas de perfil o de espaldas.
 
 :::

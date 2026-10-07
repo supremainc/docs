@@ -1,0 +1,274 @@
+---
+id: manage-doors
+title: ドア管理
+description: カメラが制御するドアを登録し、アクセス制御イベント、リレー、退室ボタン、ドア状態センサー、開放および施錠スケジュールを連動させる方法を案内します。
+---
+
+カメラで実際に解錠・施錠するドアを登録できます。ドアを登録するときは、どのアクセス制御イベントで入退室を判定するか、どのリレーで錠前を制御するか、ドアをどれくらい開放するかも指定します。ドアを登録すると、アクセスレベルとドアルールでそのドアを選択できます。
+
+次のような場合は、ドアを登録してください。
+
+* 顔認証で入室が許可されたユーザーに対して、ドアを自動で開ける場合
+
+* 退室ボタンを押して内側からドアを開けられるようにする場合
+
+* センサーでドアの開閉状態を確認する場合
+
+* 営業時間はドアを開放し、夜間は施錠するなど、時間帯ごとにドアを運用する場合
+
+## 開始する前に
+
+ドアを登録する前に、次の事項を確認してください。
+
+* 入退室判定に使用するアクセス制御イベントを先に作成してください。詳しくは、<DocLink docId='device/vionyx_webserver/configure-access-control' />を参照してください。
+
+* ドアの錠前が、カメラまたは下位I/Oデバイスのリレーポートに接続されていることを確認してください。下位I/Oデバイスを使用するには、先にRS-485経由でデバイスを登録してください。詳しくは、<DocLink docId='device/vionyx_webserver/configure-rs485' />を参照してください。
+
+* 退室ボタンまたはドア状態センサーを使用するには、該当デバイスが入力ポートに接続されていることを確認してください。
+
+* 開放スケジュールまたは施錠スケジュールを使用するには、事前にスケジュールを作成してください。詳しくは、<DocLink docId='device/vionyx_webserver/manage-schedule' />を参照してください。
+
+## ドアの追加
+
+<Steps>
+<Step>
+
+### ドアの追加を開始
+
+1. 画面左上の <Cmd sid='access' product='cam' /> メニューをクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='door' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/cam-acs-door.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='add_door' product='cam' /> ポップアップが表示されたら、ドア情報を入力します。必須項目をすべて入力すると、<Cmd sid='save' product='cam' /> ボタンが有効になります。
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add.png' />
+
+</Step>
+<Step>
+
+### 基本情報入力
+
+<Cmd sid='info' product='cam' /> セクションでドアを識別する情報を入力します。
+
+* <Cmd sid='id' product='cam' />：ドアの固有IDです。自動で入力されます。必要に応じて変更できます。ほかのドアと同じIDは使用できません。最大64文字まで入力できます。英数字、ハイフン（`-`）、アンダースコア（`_`）を使用できます。
+
+* <Cmd sid='name' product='cam' />：ドア名を入力します。管理を容易にするために識別しやすい名前を入力してください。必須項目です。他のドアと同じ名前は使用できません。**正面玄関**、**2階オフィス**のように場所が分かる名前を付けると、入退室レベルとルールでドアを簡単に区別できます。
+
+* <Cmd sid='description' product='cam' />：ドアの説明を入力します。
+
+:::info
+
+* ドアのIDと名前はシステム内で一意である必要があり、既に使用中の値は使用できません。
+
+* ドアのIDは一度保存すると変更できません。
+
+:::
+
+</Step>
+<Step>
+
+### 入退室制御イベントの連携
+
+<Cmd sid='ai_door_event' product='cam' /> セクションの <Cmd sid='door_access_area' product='cam' /> リストで、このドアの入退室判定に使用する入退室制御エリアを選択します。システムは、入退室制御イベントの作成時に設定した入退室制御エリアをリストに表示します。
+
+:::info
+
+* 一つの入退室制御エリアは一つのドアにのみ接続できます。他のドアに既に連携されているエリアは選択できません。
+
+* ドアに連携した入退室制御エリアは、AIイベント画面で削除または変更できません。エリアを変更する前に、まずドアとの連携を解除してください。
+
+* 入退室制御イベントの作成の詳細は <DocLink docId='device/vionyx_webserver/configure-access-control' />を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### リレー設定
+
+<Cmd sid='select_relay' product='cam' />セクションで、ドアのロック装置を制御するリレーを設定します。
+
+* <Cmd sid='port' product='cam' />：ドアのロック装置が接続されているリレーポートを選択します。必須項目です。カメラのリレーポートと下位I/Oデバイスのリレーポートを選択できます。他のドアまたはAIルールで使用中のポートは選択できません。
+
+* <Cmd sid='switch_type' product='cam' />：ロック装置の接点タイプを選択します。<Cmd sid='select_none' product='cam' />のまま保存すると、<Cmd sid='normal_open' product='cam' />として保存されます。
+
+  * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
+
+  * <Cmd sid='normal_close' product='cam' />: 通常は閉じており、リレーが動作すると開く接点です。
+
+:::caution
+
+* <Cmd sid='switch_type' product='cam' />はドアではなく、リレーポートに適用する設定です。ドアを保存すると、そのポートを使用するすべてのドアとルールに適用されます。
+
+* 使用中のロック装置の仕様を確認し、正しい<Cmd sid='switch_type' product='cam' />を選択します。誤って選択すると、通常時にドアが開いたままになる場合があります。
+
+:::
+
+</Step>
+<Step>
+
+### 開放時間の設定
+
+<Cmd sid='unlock_time' product='cam' />セクションで、入退室が許可されたときにドアを開けておく時間を設定します。
+
+* <Cmd sid='unlock_time' product='cam' />：スライダーを動かすか、入力フィールドに値を直接入力してください。 1 秒から 120 秒まで設定でき、デフォルトは 3 秒です。
+
+* <Cmd sid='keep_unlock_until_event_off' product='cam' />：このオプションを選択すると、解錠時間に関係なく、アクセス制御イベントが終了するまでドアを解錠したままにします。このオプションを使用するには、アクセス制御エリアを選択する必要があります。
+
+:::info
+
+イベントの終了時点は、アクセス制御イベントの <Cmd sid='condition' product='cam' /> 設定によって異なります。例えば、未承認者が後に続いて入室したときにすぐドアを施錠するには、アクセス制御イベントで <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' /> を選択してください。詳しくは、<DocLink docId='device/vionyx_webserver/configure-access-control#eventTrigger' />を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### 退室ボタンの設定（任意）
+
+ドアの内側に退室ボタンを設置した場合は、<Cmd sid='exit_button' product='cam' /> セクションでボタンが接続された入力ポートを設定してください。退室ボタンを押すと、顔認証を行わずにドアが開きます。
+
+* <Cmd sid='port' product='cam' />：退室ボタンが接続されている入力ポートを選択してください。
+
+* <Cmd sid='switch_type' product='cam' />：退室ボタンの接点タイプを選択してください。デフォルトは <Cmd sid='normal_open' product='cam' /> です。
+
+  * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
+
+  * <Cmd sid='normal_close' product='cam' />: 通常は閉じており、リレーが動作すると開く接点です。
+
+</Step>
+<Step>
+
+### ドア状態の設定（任意）
+
+ドアに開閉センサーを設置した場合は、<Cmd sid='door_status' product='cam' /> セクションでセンサーが接続された入力ポートを設定してください。設定すると、<Cmd sid='door_control' product='cam' /> 画面でドアが開いているか閉じているかを確認できます。
+
+* <Cmd sid='port' product='cam' />：ドアの開閉センサーが接続された入力ポートを選択してください。
+
+* <Cmd sid='switch_type' product='cam' />：センサーの接点タイプを選択してください。デフォルトは <Cmd sid='normal_close' product='cam' /> です。
+
+  * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
+
+  * <Cmd sid='normal_close' product='cam' />: 通常は閉じており、リレーが動作すると開く接点です。
+
+:::info
+
+* 退室ボタンとドア状態センサーは、別々の入力ポートに接続する必要があります。
+
+* 別のドアで使用中の入力ポートは選択できません。
+
+:::
+
+</Step>
+<Step>
+
+### スケジュールの設定（任意）
+
+<Cmd sid='schedule' product='cam' /> セクションで、時間帯に応じてドアを解錠したままにするか、施錠したままにするかを設定できます。
+
+* <Cmd sid='unlock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを解錠したままにします。来訪者が多い業務時間にロビーのドアを解錠しておく場合に使用してください。
+
+* <Cmd sid='lock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを施錠したままにします。この時間帯は、登録済みのユーザーも入退室できません。
+
+:::info
+
+開放スケジュールと施錠スケジュールには同じスケジュールを選択できず、両スケジュールの時間帯が重なる場合は保存できません。
+
+:::
+
+</Step>
+<Step>
+
+### ドアの保存
+
+すべての設定が完了したら、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。保存したドアはドア一覧に追加され、アクセスレベルとドアルールで選択できます。
+
+<ProdImg src='/img/cam-server/cam-acs-door-added-list.png' />
+
+</Step>
+</Steps>
+
+## ドア一覧の確認
+
+ドア一覧で、登録済みのドアと各ドアに接続されたイベントとポートを確認できます。
+
+<ProdImg src='/img/cam-server/cam-acs-door-lists.png' />
+
+* 特定のドアを探すには、検索フィールド(<Num num='1' />)にドア名を入力します。
+
+* 一ページあたりに表示するドアの数を変更するには、画面右上の行数リスト(<Num num='2' />)から希望の値を選択してください。
+
+* 並べ替え基準を変更するには、<Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)で基準を選択します。
+
+ドア一覧に表示される情報は次のとおりです。
+
+| 項目 | 説明 |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | ドアの固有IDです。 |
+| <Cmd sid='name' product='cam' /> | ドア名です。 |
+| <Cmd sid='description' product='cam' /> | ドアを追加または編集するときに入力した説明です。 |
+| <Cmd sid='ai_event' product='cam' /> | ドアに接続されたアクセス制御エリアです。 |
+| <Cmd sid='relay' product='cam' /> | ドアの施錠装置を制御するリレーポートです。 |
+| <Cmd sid='exit_button' product='cam' /> | 退室ボタンが接続された入力ポートです。 |
+| <Cmd sid='door_status' product='cam' /> | ドア開閉センサーが接続された入力ポートです。 |
+| <Cmd sid='actions' product='cam' /> | ドアを編集(<IcCamEdit />)または削除(<IcCamTrash />)する機能を提供します。 |
+
+## ドアの編集
+
+1. ドア一覧で編集するドアの右側にある<IcCamEdit title='Edit' />ボタンをクリックしてください。
+
+2. <Cmd sid='edit_door' product='cam' /> ポップアップが表示されたら、必要な項目を編集します。
+
+   <ProdImg src='/img/cam-server/cam-acs-door-edit.png' />
+
+3. 編集内容を保存するには、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+編集内容を保存すると、該当ドアを使用するアクセスレベルとドアルールに直ちに適用されます。
+
+:::caution
+
+ドアが手動施錠または手動解錠の状態でリレーの <Cmd sid='switch_type' product='cam' />を変更すると、リレー出力が反転して施錠中のドアが開く場合があります。変更する前に <Cmd sid='door_control' product='cam' /> メニューで手動制御してください。
+
+:::
+
+:::info
+
+リレーの <Cmd sid='switch_type' product='cam' />を変更し、<Cmd sid='save' product='cam' /> ボタンをクリックすると確認メッセージが表示されます。
+
+<ProdImg src='/img/cam-server/cam-acs-door-edit-switch-type.png' />
+
+* <Cmd sid='ok' product='cam' /> ボタンをクリックすると確認メッセージが閉じ、変更した接点タイプがリレーポートに直ちに適用されます。該当ポートを使用するすべてのドアとルールにも適用されます。
+
+* <Cmd sid='cancel' product='cam' /> ボタンをクリックすると接点タイプは変更されず、一緒に編集した他の項目のみ保存されます。
+
+* ドアが一時的に開いている間に変更すると、開放時間の終了後に適用されます。
+
+:::
+
+## ドアの削除
+
+1. ドア一覧で削除するドアの一番右にある<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+2. 確認メッセージが表示されたら内容を確認し、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+ドアを削除すると、接続されたアクセス制御イベントとアクセスレベルのリンクが解除されます。削除したドアは <Cmd sid='door_control' product='cam' /> 一覧からも消え、復元できません。
+
+:::info
+
+* アクセスレベルやドアルールで使用中のドアを削除すると、アクセスレベルとドアルールも削除されます。
+
+* ドアを追加、修正、削除するには <Cmd sid='read_write' product='cam' /> 権限が必要です。権限がない場合は管理者にお問い合わせください。オペレーター権限の詳細については <DocLink docId='device/vionyx_webserver/manage-operators' /> をご覧ください。
+
+:::
+
+<NextStep>
+<NextItem to='manage-access-levels' >
+
+ドアを登録したら、アクセスレベルを作成し、どのユーザーがいつ入退室できるかを指定してください。
+
+</NextItem>
+</NextStep>

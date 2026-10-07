@@ -1,0 +1,263 @@
+---
+id: configure-access-control
+title: Configurar Eventos De Control De Acceso
+description: Use la autenticación facial para identificar a quienes se acercan a la puerta, verificar acompañantes y detectar tailgating.
+---
+
+Los eventos de control de acceso identifican con autenticación facial, verifican personas cercanas y deciden el acceso. Detecte el tailgating, cuando una persona no autorizada sigue a un usuario autenticado, y excluya a las personas que salen por la puerta de la evaluación.
+
+:::info
+
+La versión de firmware 1.1.0 o posterior incluye soporte para eventos de control de acceso.
+
+:::
+
+## ¿Cuándo usarlo?
+
+* Cuando la autenticación facial verifica si la persona que se acerca a la puerta está inscrita
+
+* Cuando deba evitar tailgating: una persona no autorizada sigue a un usuario autenticado al entrar
+
+* Cuando evalúe solo las entradas y excluya a quienes salen desde el interior
+
+* Al vincular acciones posteriores, como abrir la puerta o mostrar un aviso de advertencia, según la decisión
+
+:::info
+
+Los eventos de control de acceso solo **determinan** si permiten el acceso y no controlan directamente el relé de la puerta. Para abrir la puerta según los resultados, cree un evento, agregue la puerta y vincule el evento. Para acciones adicionales, como indicaciones de voz o notificaciones por webhook, configure reglas de puertas. 
+
+* Para obtener más información sobre el registro y la gestión de puertas, consulte <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+* Para obtener más información sobre las reglas de puertas, consulte <DocLink docId='device/vionyx_webserver/configure-door-rules' />.
+
+:::
+
+## Cómo funcionan los eventos de control de acceso
+
+Los eventos de control de acceso deciden si permiten el acceso al combinar los tres elementos siguientes. Antes de iniciar la configuración, revise el rol de cada elemento.
+
+| Componente | roles | Obligatorio |
+| --- | --- | --- |
+| <Cmd sid='validation_area' product='cam' /> | Es un área más amplia que rodea la zona de control de acceso. Verifique la cantidad de personas y el estado de identificación en esta área para detectar tailgating. | Si |
+| <Cmd sid='door_access_area' product='cam' /> | Es el área justo frente a la puerta. Cuando una persona entra en esta área, el sistema lo considera un intento de acceso e inicia la evaluación. | Si |
+| <Cmd sid='event_entry_line' product='cam' /> | Es una línea que distingue la dirección del movimiento. Las personas que salen desde el interior no se consideran intentos de acceso. | Opción |
+| <Cmd sid='face_area' product='cam' /> | Es el área donde el sistema rastrea primero los rostros para identificar usuarios. | Opción |
+
+La cámara clasifica a las personas en la zona en uno de los siguientes estados.
+
+* **Identificado**: La autenticación facial se completó correctamente y la persona coincide con un usuario enrolado.
+
+* **No identificado**: La autenticación facial falló o la persona no coincide con un usuario enrolado. El menú En vivo muestra a personas no enroladas, con el rostro cubierto o que no miran a la cámara como <Cmd sid='unknown_face' product='cam' />.
+
+:::caution
+
+Por seguridad, el sistema no trata a una persona no reconocida como usuario autenticado. Si una persona no se identifica en el área de control de acceso, el sistema deniega el acceso.
+
+:::
+
+## Crear evento de control de acceso
+
+Un evento de control de acceso identifica a los usuarios en el menú <Cmd sid='live' product='cam' />. También verifica a quienes ingresan detrás.
+
+<Steps>
+<Step>
+
+### Iniciar creación del evento
+
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. En la ventana <Cmd sid='select_ai_analysis_type' product='cam' />, haga clic en <Cmd sid='ai_analysis_door_access' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-access-control.png' />
+
+5. Cuando aparece la ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' />, revise los detalles, seleccione la casilla de consentimiento y haga clic en <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * El evento de control de acceso usa autenticación facial para identificar usuarios. Acepte usarla antes de crearlo.
+
+   * Para usar la función de Facial Authentication, cumpla con las normas locales.
+
+   * La ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' /> aparece solo una vez. La creación posterior de eventos de IA asume el consentimiento.
+
+   :::
+
+6. Complete los ajustes requeridos en el panel <Cmd sid='ai_analysis_door_access' product='cam' /> de la derecha.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings.png' />
+
+</Step>
+<Step>
+
+### Configurar nombre del evento
+
+Ingrese el nombre del evento de IA en el campo <Cmd sid='name' product='cam' />. El nombre puede tener hasta 64 caracteres.
+
+</Step>
+<Step>
+
+### Ajustes del área de control de acceso
+
+En la sección <Cmd sid='area' product='cam' />, defina el área de validación, el área de control de acceso y la línea de entrada del evento para la ubicación de la puerta. Configure al menos una línea virtual. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10. Cada vez que lo agregue, la vista en vivo muestra los tres elementos como un conjunto. Arrastre las esquinas o los puntos para ajustar la forma, y arrastre el área central para moverla.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-ac-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edite el nombre del área de control de acceso. Use un nombre claro, como la ubicación de la puerta.
+
+* <Cmd sid='validation_area' product='cam' />(Amarillo): Área de validación que rodea el área de control de acceso. Defínala más amplia que el área de control de acceso para detectar aproximaciones rápidas y personas que se cuelan.
+
+* <Cmd sid='door_access_area' product='cam' />(Naranja): Defínala justo frente a la puerta, por donde la persona debe pasar para ingresar. Cuando una persona ingresa en esta área, el sistema determina el acceso.
+
+* <Cmd sid='event_entry_line' product='cam' />: Línea que indica la dirección del movimiento para el acceso. Arrastre los puntos de ambos extremos para colocar la línea a través del área de control de acceso. Una persona que sale de adentro hacia afuera no cuenta como intento de acceso al pasar por el área de control de acceso.
+
+{/* TODO (pending developer confirmation): Confirm whether access decisions exclude movement direction A → B or B → A, then add placement guidance / Screenshot shows the entry line goes outside the verification area → confirm whether this is a drag limit, a save error, or based on the person detection area, then revise the info text */}
+
+:::info
+
+* El área de validación debe incluir por completo el área de control de acceso. El sistema no guarda si el área de control de acceso se extiende fuera del área de validación.
+
+* Extienda la línea de entrada del evento más allá del área de control de acceso, pero manténgala dentro del área de verificación.
+
+* No es posible cambiar la dirección de la línea de entrada del evento (<Cmd>A ↔ B</Cmd>).
+
+* Para inicializar la forma y el tamaño del área configurada, haga clic en <IcCamReset title='reset' />.
+
+* Para eliminar el área de control de acceso agregada, haga clic en <IcCamTrash title='delete' />.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes del área facial (opcional)
+
+Defina el área para la detección facial. Al activarla, el sistema prioriza el seguimiento facial en esa área para identificar a los usuarios. Establezca el área facial donde una persona que se acerca a la puerta se vea claramente de frente. Las áreas faciales y las áreas de control de acceso pueden superponerse. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10 áreas faciales. Aparece un cuadro azul en Live View; arrastre las esquinas o los puntos para ajustar la forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: edite el nombre del área facial. Asigne un nombre claro y descriptivo. El nombre del área facial aparece al pasar el cursor en Live View.
+
+:::info
+
+* Los usuarios enrolados se identifican automáticamente en el menú <Cmd sid='live' product='cam' /> y se muestran por nombre. Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />.
+
+* Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área facial configurada.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar un área facial agregada.
+
+:::
+
+</Step>
+<Step>
+
+import DetectPeople from './_ai-event-detect-people.mdx';
+
+<DetectPeople />
+
+</Step>
+<Step>
+
+### Ajustes de la opción de tailgating
+
+En la sección <Cmd sid='tailgating_option' product='cam' />, seleccione cómo determina el sistema el acceso cuando hay 2 o más personas en el área de verificación. Las opciones se enumeran de mayor a menor seguridad.
+
+* <Cmd sid='door_access_tailgating_no_success_on_multiple' product='cam' />: Si hay 2 o más personas en el área de verificación, el sistema deniega el acceso, independientemente de los resultados de identificación. Esta opción es adecuada para áreas donde solo debe pasar una persona a la vez.
+
+* <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' />: El sistema autoriza el acceso solo cuando identifica a todos en el área de verificación como usuarios inscritos. El sistema deniega el acceso si alguien permanece sin identificar.
+
+* <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' />: El sistema autoriza el acceso si al menos un usuario inscrito está en el área de verificación. Esta opción autoriza el acceso con personas sin identificar. Es adecuada para áreas con visitantes escoltados frecuentes.
+
+* <Cmd sid='door_access_tailgating_no_effect' product='cam' />: El sistema ignora el conteo de personas en el área de verificación. Basa el acceso solo en el resultado de identificación de la persona que ingresa.
+
+Lo siguiente muestra la decisión de cada opción cuando un usuario inscrito ingresa con otras personas en el área de verificación.
+
+| Opción | Cuando solo hay usuarios inscritos en el área de verificación | Cuando también hay personas sin identificar en el área de verificación |
+| --- | :-: | :-: |
+| <Cmd sid='door_access_tailgating_no_success_on_multiple' product='cam' /> | Acceso denegado | Acceso denegado |
+| <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' /> | Acceso autorizado | Acceso denegado |
+| <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' /> | Acceso autorizado | Acceso autorizado |
+| <Cmd sid='door_access_tailgating_no_effect' product='cam' /> | Acceso autorizado | Acceso autorizado |
+
+:::tip
+
+Para puertas críticas para la seguridad, use <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' /> o superior.
+
+:::
+
+</Step>
+<Step>
+
+### Establecer condiciones de activación de eventos {/* #eventTrigger */}
+
+En la sección <Cmd sid='option' product='cam' />, establezca las condiciones de activación del evento.
+
+* <Cmd sid='event_delay' product='cam' />: Establezca la duración mínima para tratarlo como un evento. Un evento ocurre solo cuando el estado de detección dura más que el tiempo establecido. Se puede configurar hasta un máximo de 60 segundos.
+
+   :::note
+
+   Si los eventos ocurren con demasiada frecuencia porque las personas pasan brevemente frente a la puerta, aumente el valor de <Cmd sid='event_delay' product='cam' />. El movimiento detectado por menos del tiempo establecido no se considera un evento, lo que reduce eventos innecesarios.
+
+   :::
+
+* <Cmd sid='condition' product='cam' />: Seleccione cuánto tiempo mantener el evento después de conceder el acceso. Mientras el evento permanezca activo, las acciones vinculadas (por ejemplo, abrir la puerta) también permanecen activas.
+
+  * <Cmd sid='door_access_hold_keep_until_area_clear' product='cam' />: Mantenga el evento hasta que no quede nadie en el área con control de acceso. La puerta permanece abierta mientras el usuario autenticado esté frente a ella, sin volver a autenticarse.
+
+  * <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' />: Finalice el evento cuando el área quede vacía. Finalícelo de inmediato cuando una persona no autorizada ingrese al área de verificación y viole el ajuste de tailgating. Esto evita que personas no autorizadas sigan a alguien mientras la puerta está abierta.
+
+  * <Cmd sid='door_access_hold_one_shot' product='cam' />: No mantenga el evento. Actívelo una vez cada vez que alguien ingrese al área con control de acceso.
+
+:::info
+
+Si un usuario inscrito duda frente a la puerta y no puede entrar, la puerta se abre solo después de salir y volver a ingresar al área con control de acceso. Para reducir esta molestia y mantener la seguridad, seleccione <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' />.
+
+:::
+
+</Step>
+<Step>
+
+### Guardar configuración
+
+Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y agrega el nuevo evento de IA a la lista.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Verificar en Live
+
+Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. El área de verificación definida, el área con control de acceso, la línea de entrada del evento y el área facial aparecen como superposiciones en el video. Cuando alguien ingresa al área con control de acceso, el sistema activa Acceso concedido o Acceso denegado según la identificación y las opciones de tailgating.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-result.png' />
+
+:::info
+
+* Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />. Los usuarios enrolados aparecen con su nombre.
+
+* La mala iluminación o la luz de fondo pueden impedir que la cámara detecte rostros. Mejore la iluminación del área o ajuste la posición y el ángulo de la cámara para que los rostros se vean con claridad.
+
+* Los rostros deben mirar a la cámara para que la cámara los detecte. Es posible que la cámara no detecte las vistas de perfil o de espaldas. Si el sistema no puede identificar un rostro, trata a la persona como no identificada y deniega el acceso.
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+El evento de control de acceso solo determina si se permite el acceso. Defina reglas de la puerta para ejecutar acciones adicionales, como mensajes de voz, notificaciones webhook o luces de advertencia.
+
+</NextItem>
+<NextItem to='manage-doors' >
+
+Después de crear un evento de control de acceso, agregue la puerta y vincule el evento. Cuando el sistema concede el acceso, el relé conectado a la puerta se activa y la abre.
+
+</NextItem>
+</NextStep>

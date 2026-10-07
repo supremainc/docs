@@ -690,5 +690,9 @@
   "sidebar.biostar_air.category.SSO & SCIM 설정하기": {
     "message": "Configurar SSO Y SCIM",
     "description": "The label for category 'SSO & SCIM 설정하기' in sidebar 'biostar_air'"
+  },
+  "sidebar.aicamwebserver.category.출입 통제 관리하기": {
+    "message": "Administrar Control De Acceso",
+    "description": "The label for category '출입 통제 관리하기' in sidebar 'aicamwebserver'"
   }
 }

@@ -1,26 +1,26 @@
 ---
 id: configure-camera-settings
 title: Configurar Ajustes de la Cámara
-description: Esta guía explica cómo ajustar la calidad de imagen, el balance de blancos, la sensibilidad (Time Filter), la compensación de contraluz (WDR), el anti-parpadeo y el tipo de montaje para adaptarlos al entorno de instalación.
-keywords:
-  - Ajustes de la cámara
-  - Calidad de imagen
-  - Balance de blancos
-  - Sensibilidad
-  - Tipo de montaje
+description: Esta guía explica cómo ajustar la calidad de imagen, el balance de blancos, la sensibilidad, la compensación de contraluz WDR, el anti-parpadeo, el cambio automático a IR y el calefactor para adaptarlos al entorno de instalación, y cómo especificar el tipo de instalación.
 ---
 
-Ajuste los parámetros de la cámara para capturar video óptimo para el entorno de instalación. Revise los cambios en tiempo real en Live View y ajuste la calidad de imagen, el balance de blancos y los filtros de sensibilidad. La disponibilidad de la función de IA también se limita automáticamente según el montaje en techo o pared.
+Ajuste los parámetros de la cámara para capturar video óptimo para el entorno de instalación. Los cambios aparecen de inmediato en Vista en vivo. Verifique los resultados mientras ajusta la calidad de imagen, el balance de blancos, la sensibilidad y la compensación de contraluz. Las características de IA disponibles varían según el tipo de montaje (techo o pared).
 
 Ajuste los parámetros de la cámara en las siguientes situaciones.
 
 * Para mejorar la calidad de imagen y adaptarla al brillo y color de la escena.
 
-* Para reducir el parpadeo de la iluminación fluorescente o LED.
-
 * Para minimizar el ruido en entornos con poca luz mientras mantiene la detección de movimiento.
 
+* Cuando un contraluz intenso desde una ventana o puerta hace que el sujeto se vea oscuro
+
+* Para reducir el parpadeo de la iluminación fluorescente o LED.
+
+* Cuando hay iluminación complementaria o se requiere video a color, y el cambio a IR por la noche debe permanecer desactivado
+
 * Para optimizar la cámara y las funciones de IA para la ubicación de instalación.
+
+* Cuando se forme condensación o escarcha en el lente por el frío o la humedad y la imagen se vea borrosa
 
 ## Ajustes de la cámara
 
@@ -104,6 +104,20 @@ Seleccione la opción que coincida con la frecuencia de iluminación de la escen
 
 :::
 
+## Ajuste del cambio automático a IR
+
+Defina si la cámara cambia automáticamente al modo IR (noche) cuando baja la luz ambiental. Desactive el cambio automático en áreas con iluminación complementaria o donde se requiera video a color. En la sección <Cmd sid='video' product='cam' />, active o desactive la opción <Cmd sid='ir_auto_switch' product='cam' />.
+
+* <Cmd sid='on' product='cam' />(Predeterminado): Cambia automáticamente al modo IR cuando baja la luz ambiental, según el sensor de iluminancia y el brillo de la imagen.
+
+* <Cmd sid='off' product='cam' />: No cambia al modo IR en entornos con poca luz.
+
+:::info
+
+La versión de firmware 1.1.0 o posterior admite la opción <Cmd sid='ir_auto_switch' product='cam' />.
+
+:::
+
 ## Ajustes de tipo de montaje
 
 Configure <Cmd sid='mounting_type' product='cam' /> según la ubicación de instalación de la cámara. Las funciones de IA compatibles dependen del tipo de montaje.
@@ -117,6 +131,22 @@ Configure <Cmd sid='mounting_type' product='cam' /> según la ubicación de inst
 * **Al cambiar de techo a pared**, aparece una ventana de confirmación que indica que solo está disponible Facial Authentication y que la IA de seguimiento de objetos no está disponible. Revise el mensaje antes de continuar.
 
 * **Al cambiar de pared a techo**, el cambio se aplica de inmediato y todas las funciones de IA se activan automáticamente.
+
+:::
+
+## Ajuste del calefactor de la cámara
+
+Las bajas temperaturas o la alta humedad pueden empañar o escarchar el lente, desenfocar la imagen y reducir la precisión del reconocimiento de IA. Active el calefactor de la cámara para mantener el lente despejado. En la sección <Cmd sid='heater' product='cam' />, active o desactive la opción <Cmd sid='heater' product='cam' />. (Predeterminado: <Cmd sid='off' product='cam' />)
+
+* <Cmd sid='on' product='cam' />: El calefactor funciona. El calefactor se apaga automáticamente después de 30 minutos.
+
+* <Cmd sid='off' product='cam' />: Detiene el calefactor.
+
+:::info
+
+* Para evitar sobrecalentamiento y consumo innecesario, el calefactor funciona durante 30 minutos, se apaga automáticamente y la opción cambia a <Cmd sid='off' product='cam' />. Si el lente sigue empañado o con escarcha después de que el calefactor se apague, active la opción de nuevo.
+
+* Se incluye soporte para la opción <Cmd sid='heater' product='cam' /> en el firmware 1.1.0 o posterior.
 
 :::
 

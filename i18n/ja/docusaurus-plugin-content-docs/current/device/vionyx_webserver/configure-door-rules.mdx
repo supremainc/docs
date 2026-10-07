@@ -1,0 +1,231 @@
+---
+id: configure-door-rules
+title: 出入口ルールの設定
+description: 入退室許可、入退室拒否、通過などの入退室判定結果に応じて、オーディオ再生、Webhook送信、リレー動作を自動で実行するように出入口ルールを設定する方法を説明します。
+---
+
+出入口ルールを使用すると、出入口で発生した入退室判定結果に応じて、オーディオ再生、Webhook送信、リレー動作を自動で実行できます。入退室が許可されると、出入口は出入口設定に従って自動で開くため、出入口ルールでは開扉以外の追加動作を設定します。
+
+次のような場合に出入口ルールを設定してください。
+
+* 入退室が許可されたら歓迎音声を、拒否されたら案内音声を再生する場合
+
+* 未認可の人が後から入室したら、非常灯や警告音を作動させる場合
+
+* 入退室記録を外部の入退室制御システムまたは管制サーバーに送信する場合
+
+## 開始する前に
+
+出入口ルールを設定する前に、以下を確認してください。
+
+* ルールを適用する出入口を先に登録してください。詳しくは、<DocLink docId='device/vionyx_webserver/manage-doors' />を参照してください。
+
+* オーディオを使用するには、再生するオーディオクリップを事前にアップロードしてください。詳細は <DocLink docId='device/vionyx_webserver/upload-audio-clips' /> を参照してください。
+
+* Webhookを使用するには、受信するサーバーのURLを事前に用意してください。
+
+* リレーを使用するには、非常灯、警告音など、動作させる装置がリレーポートに接続されていることを確認してください。外部装置の接続に関する詳細は、<Linkto to='device/vionyx/installation'>ViOnyx インストールガイド</Linkto>を参照してください。
+
+## 入退室判定結果
+
+出入口ルールでは、次の入退室判定結果ごとに実行する動作を個別に設定できます。
+
+| 入退室判定結果 | 発生条件 |
+| --- | --- |
+| <Cmd sid='door_rule_outcome_granted' product='cam' /> | 入退室レベルがあるユーザーを入退室時間内に識別し、入退室を許可しました。 |
+| <Cmd sid='door_rule_outcome_denied_unidentified' product='cam' /> | 入退室制御エリアに入った人を顔認証で識別できなかった、または未登録の人です。 |
+| <Cmd sid='door_rule_outcome_denied_access_level' product='cam' /> | 登録済みユーザーとして識別しましたが、当該出入口の入退室レベルがない、または入退室時間外です。 |
+| <Cmd sid='door_rule_outcome_denied_door_mode' product='cam' /> | 出入口が手動ロック状態、またはロックスケジュール時間帯のため、入退室を拒否しました。 |
+| <Cmd sid='door_rule_outcome_denied_anti_tailgating' product='cam' /> | 検証エリアの人数が入退室制御イベントのテイルゲーティングオプション条件を満たさず、入退室を拒否しました。 |
+| <Cmd sid='door_rule_outcome_passed' product='cam' /> | 入退室が許可されたユーザーがイベント進入ラインを通過し、実際に入退室しました。 |
+| <Cmd sid='door_rule_outcome_passed_after_denied' product='cam' /> | 入退室が拒否された人がイベント進入ラインを通過し、入退室しました。強制入退室が疑われるセキュリティイベントです。 |
+
+## ドアルールの追加
+
+<Steps>
+<Step>
+
+### ルール追加を開始
+
+1. 画面左上の <Cmd sid='access' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='door_rule_settings' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='add_door_rule' product='cam' /> 画面が表示されたら、ルール名を入力し、条件と動作を設定します。
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add-rule.png' />
+
+</Step>
+<Step>
+
+### ルール名の入力
+
+<Cmd sid='name' product='cam' /> 入力フィールドにルール名を入力します。必須項目です。
+
+</Step>
+<Step>
+
+### 条件の設定
+
+<Cmd sid='condition' product='cam' />セクションで、ルールを適用するドアを選択します。
+
+* <Cmd sid='channel' product='cam' />：チャンネルはCH 1に固定されています。フィッシュアイビューのみサポートします。
+
+* <Cmd sid='door' product='cam' />：ルールを適用するドアを選択します。必須項目です。
+
+</Step>
+<Step>
+
+### 動作設定
+
+<Cmd sid='action' product='cam' />セクションでは、入退室判定結果ごとに <Cmd sid='audio' product='cam' />、<Cmd sid='webhook' product='cam' />、<Cmd sid='relay' product='cam' /> の動作を表示します。動作を実行する入退室判定結果で、目的の動作のトグルをクリックして有効にし、<IcCamEdit title='Edit' /> ボタンをクリックします。動作別の設定ポップアップが開きます。
+
+少なくとも1つの動作を有効にしないと、ルールを保存できません。動作別の設定方法は、以下を参照してください。
+
+:::info
+
+動作別スケジュールの時間帯でない場合、入退室判定結果が発生してもその動作は実行されません。スケジュールは <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' /> で管理できます。詳しくは、<DocLink docId='device/vionyx_webserver/manage-schedule' />を参照してください。
+
+:::
+
+#### オーディオ動作の設定
+
+入退室判定結果が発生すると、カメラでオーディオクリップを再生します。
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />：再生するオーディオクリップを選択します。必須項目です。
+
+* <Cmd sid='repeat' product='cam' />：オーディオクリップを繰り返し再生する回数を選択します。
+
+* <Cmd sid='schedule' product='cam' />：オーディオを再生するスケジュールを選択します。必須項目で、デフォルト値は <Cmd sid='always' product='cam' /> です。
+
+オーディオ動作の設定を保存するには、<Cmd sid='apply' product='cam' /> ボタンをクリックします。
+
+:::info
+
+オーディオ動作を設定する前に、オーディオクリップを事前に用意してください。オーディオクリップは <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' /> メニューでアップロードできます。詳細は <DocLink docId='device/vionyx_webserver/upload-audio-clips' /> を参照してください。
+
+:::
+
+#### Webhook 動作の設定
+
+入退室判定結果が発生すると、外部サーバーにWebhookを送信します。
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-webhook.png' />
+
+* <Cmd sid='method' product='cam' />：Webhook の送信方式です。 `POST`方式のみサポートします。
+
+* <Cmd sid='url' product='cam' />：Webhookを受信するURLを入力します。必須項目です。
+
+* <Cmd sid='header' product='cam' />：Webhook に含めるHTTPヘッダーを設定します。デフォルトで `Content-Type: application/json` ヘッダーが追加されています。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてヘッダーを追加できます。同じヘッダー名は重複して使用できません。システムで予約されたヘッダー名も使用できません。
+
+* <Cmd sid='body' product='cam' />: Webhook 本文に含める項目を設定してください。必須項目です。各行の左側のリストで送信する情報を選択し、中央のフィールドに JSON キー名を入力してください。右側のフィールドには、イベント発生時に実際の値に置き換わる変数が表示されます。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてユーザー定義項目を追加します。削除するには、<IcCamTrash title='delete' /> ボタンをクリックします。本文のサイズは最大64キロバイトです。
+
+* <Cmd sid='schedule' product='cam' />: Webhook を送信するスケジュールを選択してください。必須項目で、デフォルト値は <Cmd sid='always' product='cam' /> です。
+
+設定を保存するには、<Cmd sid='apply' product='cam' /> をクリックします。
+
+:::info
+
+* セキュリティのため、システムは保存後にヘッダーと本文の入力値を画面に再表示しません。ルールを編集しても保存済みの値は保持されます。新しく入力すると既存の値を置き換えます。
+
+* システムログで Webhook の送信結果を確認できます。詳しくは、<DocLink docId='device/vionyx_webserver/view-system-logs' />を参照してください。
+
+:::
+
+#### リレー動作の設定
+
+入退室判定結果が発生すると、選択したリレーを動作させます。非常灯、警報音、補助ロック装置などを連動させるときに使用してください。
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-relay.png' />
+
+* <Cmd sid='port' product='cam' />: 動作させるリレーポートを選択してください。必須項目です。ドアロック装置として使用中のリレーポートは選択できません。
+
+* <Cmd sid='open_time' product='cam' />: リレーを動作状態に保持する時間を設定してください。スライダーを動かすか、入力フィールドに値を直接入力できます。 1 秒から 120 秒まで設定でき、デフォルトは 3 秒です。
+
+  * <Cmd sid='keep_until_event_off' product='cam' />: このオプションを選択すると、開放時間に関係なく入退室管理イベントが終了するまでリレーを動作状態に保持します。
+
+* <Cmd sid='contact_type' product='cam' />: リレーの接点タイプを選択してください。必須項目で、ポートを選択すると設定できます。
+
+  * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
+
+  * <Cmd sid='normal_close' product='cam' />: 通常は閉じており、リレーが動作すると開く接点です。
+
+* <Cmd sid='schedule' product='cam' />：リレーを動作させるスケジュールを選択します。必須項目で、デフォルト値は <Cmd sid='always' product='cam' /> です。
+
+設定を保存するには、<Cmd sid='apply' product='cam' /> をクリックします。
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' />はルールではなく、リレーポートに適用する設定です。<Cmd sid='contact_type' product='cam' />を変更すると、システムが確認メッセージを表示します。<Cmd sid='ok' product='cam' /> ボタンをクリックすると、該当ポートを使用するすべてのルールとドアに即時適用します。ポートが手動施錠または手動解錠の状態で変更すると、出力が反転し、施錠中のドアが開くことがあります。注意してください。
+
+:::
+
+</Step>
+<Step>
+
+### ルールを保存
+
+すべての設定が完了したら、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。保存したルールをドアルール一覧に追加し、すぐに適用します。
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-added-list.png' />
+
+:::info
+
+ドアルールは最大 20 件まで作成できます。
+
+:::
+
+</Step>
+</Steps>
+
+## ドアルール一覧の確認
+
+ドアルール一覧で、登録済みルールと各ルールの適用先を確認できます。
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-check.png' />
+
+* 特定のドアルールを探すには、検索フィールド(<Num num='1' />)にドアルール名を入力します。
+
+* ページあたりに表示するドアルール数を変更するには、画面右上の行数リスト(<Num num='2' />)で希望の値を選択してください。
+
+* 並べ替え基準を変更するには、<Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)で基準を選択します。
+
+ドアルール一覧に表示される項目は次のとおりです。
+
+| 項目 | 説明 |
+| --- | --- |
+| <Cmd sid='column_no' product='cam' /> | ルール番号です。 |
+| <Cmd sid='name' product='cam' /> | ルール名です。 |
+| <Cmd sid='door' product='cam' /> | ルールを適用するドアです。 |
+| <Cmd sid='event' product='cam' /> | 有効な動作が一つ以上ある入退室判定結果です。結果が複数ある場合は、一部のみ表示されます。 |
+| <Cmd sid='schedule' product='cam' /> | ルールに適用したスケジュールです。 |
+| <Cmd sid='on_off' product='cam' /> | ルールをオンまたはオフに切り替えます。 |
+| <Cmd sid='actions' product='cam' /> | ルールを編集(<IcCamEdit />)または削除(<IcCamTrash />)する機能です。 |
+
+{/* TODO(개발자 확인): 목록의 '일정' 열이 동작별 일정 중 무엇을 표시하는지 확인 */}
+
+## ドアルールの有効化/無効化
+
+ドアルール一覧で <Cmd sid='on_off' product='cam' /> 列のトグルボタンをクリックして、該当ルールを有効または無効に切り替えます。無効にしたルールは、入退室判定結果が発生しても動作を実行しません。ルールを削除せずに一時停止するときに使用します。
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-enable-disable.png' />
+
+## ドアルールの編集
+
+1. 出入口ドアルール一覧で編集するルールの右側にある<IcCamEdit title='Edit' />ボタンをクリックしてください。
+
+2. <Cmd sid='edit_door_rule' product='cam' /> 画面が表示されたら、条件と動作を編集してください。
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule-edit.png' />
+
+3. 編集した内容を保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。
+
+## 出入口ドアルールの削除
+
+出入口ドアルール一覧で削除するルールの右側にある<IcCamTrash title='delete' />ボタンをクリックしてください。確認メッセージが表示されたら <Cmd sid='ok' product='cam' /> ボタンをクリックします。削除したルールは復元できません。

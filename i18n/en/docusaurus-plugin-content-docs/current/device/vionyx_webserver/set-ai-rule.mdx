@@ -1,19 +1,18 @@
 ---
 id: set-ai-rule
 title: AI Rule Settings
-description: Define rules that execute actions when AI events occur. This guide explains how to create rules, select conditions, configure audio and webhook actions, and save and operate rules.
-keywords:
-  - AI
-  - Rules
+description: Define rules that execute actions when AI events occur. This guide explains how to create rules, select conditions, set audio, webhook, and relay actions, and save and run rules.
 ---
 
-Use AI rules to automatically execute audio playback or send webhooks based on event type and conditions. This document guides the complete procedure for creating and operating rules.
+Use AI rules to automatically play audio, send webhooks, or trigger relay actions based on event type and conditions. This document guides the complete procedure for creating and operating rules.
 
 Set AI rules in the following situations.
 
 * Send a webhook to an external server when a specific AI event occurs.
 
 * Play audio on the device when a specific AI event occurs.
+
+* Trigger a relay connected to an access door when a specific AI event occurs
 
 * Automate different follow-up actions by event type.
 
@@ -31,11 +30,15 @@ Before starting rule setup, check the following.
 
   * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
+  * <DocLink docId='device/vionyx_webserver/configure-access-control' />
+
 * Prepare the audio clips to play before using audio.
 
 * Prepare the webhook receiver URL beforehand.
 
-* You must configure at least one audio or webhook action.
+* When using relays, verify that the relay port on the device or subdevice is connected.
+
+* Set at least one action: audio, webhook, or relay.
 
 ## Create AI rule
 
@@ -44,15 +47,15 @@ Before starting rule setup, check the following.
 
 ### Start creating a rule
 
-1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
 
-2. In the left sidebar, click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='rule_settings' product='cam' />.
+2. Click <Cmd sid='rule_settings' product='cam' /> on the left sidebar.
 
    <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
 
 3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
 
-4. When the <Cmd sid='add_rule_page_title' product='cam' /> screen appears, enter the rule name and set conditions and actions.
+4. When the <Cmd sid='new_rule' product='cam' /> screen appears, enter the rule name and set conditions and actions.
 
    <ProdImg src='/img/cam-server/ai-rule-settings-add-rule.png' />
 
@@ -68,7 +71,7 @@ Enter the rule name in the <Cmd sid='name' product='cam' /> input field. Rule na
 
 ### Set conditions
 
-Conditions determine whether a rule executes when an AI event occurs. Set conditions as instructed below. The <Cmd sid='type' product='cam' /> and <Cmd sid='event' product='cam' /> options appear based on the settings specified when creating the AI event.
+Conditions determine whether a rule executes when an AI event occurs. In the <Cmd sid='condition' product='cam' /> section, set conditions as instructed below. The <Cmd sid='type' product='cam' /> and <Cmd sid='event' product='cam' /> options appear based on the settings specified when creating the AI event.
 
 * <Cmd sid='channel' product='cam' />: The channel is fixed to CH 1. Only Fisheye view is supported.
 
@@ -82,24 +85,37 @@ Conditions determine whether a rule executes when an AI event occurs. Set condit
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
 
+  * <Cmd sid='ai_analysis_door_access' product='cam' />
+
 * <Cmd sid='event' product='cam' />: Select the AI event that will trigger the rule. The event list shows AI events that match the selected type. Events appear in the format `(ID:N) event_name`.
 
 * <Cmd sid='entry_area' product='cam' /> / <Cmd sid='intrusion_area' product='cam' /> / <Cmd sid='line' product='cam' /> / <Cmd sid='counting_area' product='cam' />: Add conditions for an area based on the selected event type.
 
 * <Cmd sid='event_type' product='cam' />: Select the event type that determines whether the rule executes. The rule executes based on the selected event type.
 
-  :::note
+   :::note
 
-  You must select at least one event type.
+   You must select at least one event type.
 
-  :::
+   :::
+
+</Step>
+<Step>
+
+### User selection
+
+In the <Cmd sid='actor_type_user' product='cam' /> section, select the user who determines whether the rule runs. The system runs the rule when it detects the selected user in an AI event.
+
+* Click <Cmd sid='select_users_to_trigger_actions' product='cam' /> to select specific users. When the user list appears, select the desired users and click the <Cmd sid='save' product='cam' /> button.
+
+* Click <Cmd sid='select_all' product='cam' /> to select all registered users.
 
 </Step>
 <Step>
 
 ### Audio action settings
 
-Audio action plays audio from the camera when an AI event occurs. Click the toggle button to enable the audio action.
+Audio action plays audio from the camera when an AI event occurs. In the <Cmd sid='action' product='cam' /> section, click the <Cmd sid='audio' product='cam' /> toggle to enable the action, and then click <IcCamEdit title='Edit' />. The audio settings pop-up appears.
 
 <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-audio.png' />
 
@@ -107,11 +123,15 @@ Audio action plays audio from the camera when an AI event occurs. Click the togg
 
 * <Cmd sid='repeat' product='cam' />: Set the number of times to repeat audio playback. Plays the audio clip repeatedly the number of times you set. It can be set to a maximum of 10 times.
 
-* <Cmd sid='schedule' product='cam' />: The schedule when the rule runs and plays audio. You cannot change this option.
+* <Cmd sid='schedule' product='cam' />: Select the schedule when the rule runs and plays audio.
+
+Click <Cmd sid='apply' product='cam' /> to save the audio action settings.
 
 :::info
 
-Prepare audio clips before configuring audio actions. Upload audio clips in <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. For more information, refer to <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+* Prepare audio clips before configuring audio actions. Upload audio clips in <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. For more information, refer to <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+* Create, edit, or delete schedules in <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. For more information on schedule management, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
 
 :::
 
@@ -120,29 +140,70 @@ Prepare audio clips before configuring audio actions. Upload audio clips in <Cmd
 
 ### Webhook action settings
 
-Webhook action sends a webhook to an external server when an AI event occurs. Click the toggle button to enable the webhook action.
+Webhook action sends a webhook to an external server when an AI event occurs.  In the <Cmd sid='action' product='cam' /> section, click the <Cmd sid='webhook' product='cam' /> toggle to enable the action, and then click <IcCamEdit title='Edit' />. The webhook settings pop-up appears.
 
 <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-webhook.png' />
 
 * <Cmd sid='method' product='cam' />: The webhook transmission method. Only the `POST` method is supported.
 
-* <Cmd>URL</Cmd>: Enter the URL to receive the webhook. The address must be valid and start with `http://` or `https://`.
+* <Cmd sid='url' product='cam' />: Enter the URL to receive the webhook. The address must be valid and start with `http://` or `https://`.
 
 * <Cmd sid='header' product='cam' />: Set the HTTP headers to include in the webhook. Click <Cmd sid='add_button' product='cam' /> to add headers. Enter each header as a key-value pair.
 
 * <Cmd sid='body' product='cam' />: Set the HTTP body to include in the webhook. Click <Cmd sid='add_button' product='cam' /> to add body items. Enter each body item as a key-value pair.
 
-  :::note
+* <Cmd sid='schedule' product='cam' />: Select the schedule when the rule runs and sends webhooks.
 
-  Custom items cannot be empty; up to 10 items can be added.
-
-  :::
-
-* <Cmd sid='schedule' product='cam' />: The schedule when the rule runs and sends the webhook. You cannot change this option.
+Click the <Cmd sid='apply' product='cam' /> button to save the webhook action setting.
 
 :::info
 
-Webhook send logs and response codes can be checked in the system logs for troubleshooting.
+* Webhook send logs and response codes can be checked in the system logs for troubleshooting.
+
+* Create, edit, or delete schedules in <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. For more information on schedule management, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+:::
+
+</Step>
+<Step>
+
+### Relay action settings {/* #setRelayAction */}
+
+The relay action feature triggers the relay on the device or subdevice when an AI event occurs. For example, trigger the door relay to restrict access when an event involves a blacklisted user.
+
+In the <Cmd sid='action' product='cam' /> section, click the <Cmd sid='relay' product='cam' /> toggle to enable the action. Then click the <IcCamEdit title='Edit' /> button. The relay settings pop-up appears.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay.png' />
+
+* <Cmd sid='port' product='cam' />: Select the relay port to activate. Select the relay port on the device or on a subdevice connected to the device. Ports already used by other rules or doors show "In use" in the list, and the system prevents selection.
+
+* <Cmd sid='open_time' product='cam' />: Set how long the relay remains open. Move the slider or enter a value in the input field. Set it to 1–120 seconds.
+
+  * <Cmd sid='keep_until_event_off' product='cam' />: Set <Cmd sid='type' product='cam' /> to <Cmd sid='ai_analysis_people_counting' product='cam' />, and specify the area set in <Cmd sid='count_limit' product='cam' /> as the condition to use the <Cmd sid='keep_until_event_off' product='cam' /> option. Selecting this option keeps the relay open until the count limit event clears, regardless of open time.
+
+    <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
+
+* <Cmd sid='contact_type' product='cam' />: Select the relay contact type. Select a port to set options. The default is <Cmd sid='normal_close' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
+
+  * <Cmd sid='normal_close' product='cam' />: Normally closed, and opens when the relay activates.
+
+* <Cmd sid='schedule' product='cam' />: Select the schedule when the rule runs and triggers the relay.
+
+Click <Cmd sid='apply' product='cam' /> to save the relay operation settings.
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' /> is a setting applied to the relay port, not a rule. Changing <Cmd sid='contact_type' product='cam' /> applies immediately to all rules and doors that use the port. When the port is fixed to Lock or Unlock, changing <Cmd sid='contact_type' product='cam' /> inverts the output and may open a locked door.
+
+:::
+
+:::info
+
+* Firmware version 1.1.0 or later supports this feature.
+
+* Create, edit, or delete schedules in <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. For more information on schedule management, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
 
 :::
 
@@ -151,7 +212,7 @@ Webhook send logs and response codes can be checked in the system logs for troub
 
 ### Save rule
 
-After completing rule setup, click <Cmd sid='apply' product='cam' /> at the top right to save the rule. Saved rules appear in the rule list. The rule list shows the rule name, type, event, and schedule. 
+After completing rule setup, click <Cmd sid='save' product='cam' /> at the top right to save the rule. Saved rules appear in the rule list. The rule list shows the rule name, type, event, and schedule. 
 
 <ProdImg src='/img/cam-server/ai-rule-settings-added-list.png' />
 

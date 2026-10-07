@@ -1,0 +1,35 @@
+### Person detection settings (optional)
+
+In the <Cmd sid='detection' product='cam' /> section, select the area where the camera detects people. Narrow the detection area as needed to reduce false detections in irrelevant areas (hallway ends, windows, reflective surfaces, etc.).
+
+* <Cmd sid='all_area' product='cam' />: Default. Detects people across the entire screen. Available regardless of whether face areas are set.
+
+* <Cmd sid='designated_area' product='cam' />: Detects people only within the area you specify. Available only when no face area is set. Set at least one virtual line. Click <Cmd sid='add_button' product='cam' /> to add up to 10. A purple box appears in the live view; drag its corners or points with the mouse to adjust it to the desired shape. Drag the center to move the line.
+
+  <Include pages='configure-people-tracking'><ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png' /></Include>
+
+  <Include pages='configure-intrusion'><ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-line-crossing'><ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-counting-people'><ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-access-control'><ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-detect-area.png' /></Include>
+
+  * <Cmd sid='name' product='cam' />: Edit the name of the person detection area.
+
+* <Cmd sid='face_area_only' product='cam' />: Detects people only within the face area. Available only when a face area is set.
+
+:::info
+
+* Adding a face area while <Cmd sid='designated_area' product='cam' /> is selected opens the <Cmd sid='notice' product='cam' /> pop-up. Click <Cmd sid='ok' product='cam' /> to clear the designated detection area and switch to <Cmd sid='face_area_only' product='cam' />.
+
+* Deleting all face areas while <Cmd sid='face_area_only' product='cam' /> is selected automatically switches to <Cmd sid='all_area' product='cam' />.
+
+* Click <IcCamReset title='reset' /> to initialize the shape and size of the person detection area.
+
+* Click <IcCamTrash title='delete' /> to delete the added person detection area.
+
+* Firmware version 1.1.0 or later supports this feature.
+
+:::

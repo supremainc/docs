@@ -2,10 +2,6 @@
 id: configure-people-tracking
 title: Set Up User Tracking Events
 description: Detects and tracks people moving in administrator-defined entry areas. Setting face areas prioritizes face tracking in those zones and automatically identifies registered users.
-keywords:
-  - AI analysis
-  - Pedestrian flow
-  - Facial recognition
 ---
 
 Create user tracking events to detect entry into restricted areas. Optionally add face areas to prioritize face tracking in specific zones; registered users are automatically identified.
@@ -20,16 +16,16 @@ Create user tracking events to detect entry into restricted areas. Optionally ad
 
 ## Create people tracking events
 
-When you create user tracking events, you can track people's movement in real time on the live page. Additionally, setting face areas recognizes registered users and identifies who moved.
+Create user tracking events to track people's movement in real time in Live View. Additionally, setting face areas recognizes registered users and identifies who moved.
 
 <Steps>
 <Step>
 
 ### Start event creation
 
-1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='ai_analysis' product='cam' /> on the left sidebar.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -105,13 +101,48 @@ Define the area for face detection. When set, the system prioritizes face tracki
 </Step>
 <Step>
 
-### Set event trigger conditions
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-Set the event trigger conditions. Select Entry or Exit detection and set the event delay time.
+<DetectPeople />
 
-* <Cmd sid='event_condition' product='cam' />: Select Entry or Exit detection. You can select both.
+</Step>
+<Step>
 
-* <Cmd sid='every_delay' product='cam' />: Set the event trigger delay. Events trigger only after the configured time elapses; set up to 60 seconds.
+### Set event trigger conditions and event count settings
+
+In the <Cmd sid='option' product='cam' /> section, set the event trigger conditions and event count.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-option.png' />
+
+* <Cmd sid='event_condition' product='cam' />: Select the action that triggers an event. Optionally, select both <Cmd sid='entry' product='cam' /> and <Cmd sid='exit' product='cam' />.
+
+* <Cmd sid='every_delay' product='cam' />: Set the minimum duration to treat as an event. An event occurs only when the detection state lasts longer than the set time. It can be set up to a maximum of 60 seconds.
+
+   :::note
+
+   If too many events occur, increase the <Cmd sid='every_delay' product='cam' /> value. Motion detected for less than the set time is not treated as an event, reducing unnecessary events.
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />: Set to <Cmd sid='on' product='cam' /> to count the number of times people enter or exit the entry area. The system counts entries and exits separately. If multiple entry areas exist, it counts each area separately.
+
+   :::note
+
+   The system counts only the options selected under <Cmd sid='event_condition' product='cam' />. For example, if only <Cmd sid='entry' product='cam' /> is selected, only entries appear as events, and the system records them in logs.
+
+   :::
+
+* <Cmd sid='all_event_count_reset' product='cam' />: Set to <Cmd sid='on' product='cam' /> to initialize event counts for all entry areas daily at the specified time. The system initializes event counts for all entry areas at the time set in <Cmd sid='reset_time' product='cam' />.
+
+:::info
+
+* If you set <Cmd sid='event_count' product='cam' /> to <Cmd sid='on' product='cam' />, <Cmd sid='live' product='cam' /> menu will display <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> for each entry area on the video. Click the <IcMoreB title='More' /> button and select <Cmd sid='count_reset' product='cam' /> to initialize the event count manually.
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* Support for event count options is included in firmware version 1.1.0 or later.
+
+:::
 
 </Step>
 <Step>
@@ -127,13 +158,13 @@ After completing all settings, click <Cmd sid='create' product='cam' /> in the t
 
 ## Check in Live
 
-Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. Confirm the <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> icon at the top right of the camera feed is on. The configured entry and face areas appear as overlays on the video. An event triggers whenever a person enters or exits an entry area. If face areas are set, the camera detects faces there; enrolled users are automatically identified and their names are displayed.
+Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. Confirm the <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> icon at the top right of the camera feed is on. The configured entry and face areas appear as overlays on the video. An event triggers whenever a person enters or exits an entry area. If face areas are set, the camera detects faces there; registered users are automatically identified, and their names appear.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-result.png' />
 
 :::info
 
-* Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />. Enrolled users appear with their name.
+* Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />. Registered users appear with their names.
 
 * If the camera fails to recognize faces, enable the <Cmd sid='min_face_size_visualize' product='cam' /> option. Alternatively, enlarge the face area or adjust the camera position.
 
@@ -142,7 +173,5 @@ Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. C
 * Faces must face the camera to be detected. Profile or rear views may not be detected.
 
 * If no events occur in the entry area, verify that the face area includes it.
-
-* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
 
 :::

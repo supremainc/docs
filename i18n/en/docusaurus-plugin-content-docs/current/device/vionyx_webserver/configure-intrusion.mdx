@@ -2,10 +2,6 @@
 id: configure-intrusion
 title: Set Up Intrusion Detection Events
 description: Detects entry and exit events in configured areas in real time and uses facial authentication to automatically distinguish enrolled staff from unauthorized persons.
-keywords:
-  - AI analysis
-  - Pedestrian flow
-  - Facial recognition
 ---
 
 An intrusion detection event generates a real-time event whenever a person enters or exits an administrator-defined area. Optionally add face areas to prioritize face tracking within those zones; enrolled users are automatically authenticated. Get real-time alerts when unauthorized people enter areas that require monitoring.
@@ -35,9 +31,9 @@ Creating an intrusion detection event lets the <Cmd sid='live' product='cam' /> 
 
 ### Start event creation
 
-1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+1. Click the <Cmd sid='ai_and_rule_short' product='cam' /> menu in the upper-left corner of the screen.
 
-2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+2. Click <Cmd sid='ai_analysis' product='cam' /> on the left sidebar.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -113,20 +109,55 @@ Define the area for face detection. When set, the system prioritizes face tracki
 </Step>
 <Step>
 
-### Set event trigger conditions
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-Set the event trigger conditions. Select Entry or Exit detection and set the event delay time.
+<DetectPeople />
 
-* <Cmd sid='event_condition' product='cam' />: Select Entry or Exit detection. You can select both.
+</Step>
+<Step>
 
-* <Cmd sid='every_delay' product='cam' />: Set the event trigger delay. Events trigger only after the configured time elapses; set up to 60 seconds.
+### Set event trigger conditions and event count settings
+
+In the <Cmd sid='option' product='cam' /> section, set the event trigger conditions and event count.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-option.png' />
+
+* <Cmd sid='event_condition' product='cam' />: Select the action that triggers an event. Optionally, select both <Cmd sid='entry' product='cam' /> and <Cmd sid='exit' product='cam' />.
+
+* <Cmd sid='every_delay' product='cam' />: Set the minimum duration to treat as an event. An event occurs only when the detection state lasts longer than the set time. It can be set up to a maximum of 60 seconds.
+
+   :::note
+
+   If too many events occur, increase the <Cmd sid='every_delay' product='cam' /> value. Motion detected for less than the set time is not treated as an event, reducing unnecessary events.
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />: Set to <Cmd sid='on' product='cam' /> to count entries and exits for an intrusion area. The system counts entries and exits separately for each intrusion area.
+
+   :::note
+
+   The system counts only the options selected under <Cmd sid='event_condition' product='cam' />. For example, if only <Cmd sid='entry' product='cam' /> is selected, only entries appear as events, and the system records them in logs.
+
+   :::
+
+* <Cmd sid='all_event_count_reset' product='cam' />: Set to <Cmd sid='on' product='cam' /> to initialize event counts for all intrusion areas daily at the specified time. The system initializes event counts for all intrusion areas at the time set in <Cmd sid='reset_time' product='cam' />.
+
+:::info
+
+* If <Cmd sid='event_count' product='cam' /> is set to <Cmd sid='on' product='cam' />, in the <Cmd sid='live' product='cam' /> menu, <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> is displayed for each intrusion area above the video. Click the <IcMoreB title='More' /> button and select <Cmd sid='count_reset' product='cam' /> to initialize the event count manually.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* Support for event count options is included in firmware version 1.1.0 or later.
+
+:::
 
 </Step>
 <Step>
 
 ### Save settings
 
-After completing all settings, click <Cmd sid='save' product='cam' /> in the upper-right. The interface returns to the previous screen, and the new AI event is added to the list.
+After completing all settings, click <Cmd sid='create' product='cam' /> in the top right. The interface returns to the previous screen, and the new AI event is added to the list.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-complete.png' />
 
@@ -146,7 +177,5 @@ Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. C
 * Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
 
 * Faces must face the camera to be detected. Profile or rear views may not be detected.
-
-* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
 
 :::

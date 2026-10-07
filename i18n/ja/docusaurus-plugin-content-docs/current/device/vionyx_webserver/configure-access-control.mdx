@@ -1,0 +1,263 @@
+---
+id: configure-access-control
+title: 入退室制御イベントを設定する
+description: ドアに近づく人を顔認証で識別し、後に続く人も検証してテールゲーティングを判断します。
+---
+
+入退室制御イベントを設定すると、ドアに近づく人を顔認証で識別し、ドア周辺の同行者も検証して入室を許可するか判断できます。認証済みユーザーに続いて未承認者が入室するテールゲーティング（Tailgating）を検知できます。また、ドア内側から出る人を判断対象から除外できます。
+
+:::info
+
+入退室制御イベントは、ファームウェア バージョン1.1.0以降で利用できます。
+
+:::
+
+## いつ使用しますか？
+
+* ドアに近づく人が登録済みユーザーかどうかを顔認証で確認するとき
+
+* 認証済みユーザーに続いて未承認者が入室するテールゲーティングを防止するとき
+
+* ドア内側から出る人を除外し、入ってくる人だけを入退室判断の対象にするとき
+
+* 入退室判断の結果に応じてドアを解錠したり、警告音声を出力したりする後続動作と連動するとき
+
+:::info
+
+入退室制御イベントは、入室を許可するかを**判断**するだけで、ドアのリレーを直接制御しません。判断結果に基づいてドアを解錠するには、イベントを作成した後にドアを登録し、イベントに関連付けてください。音声案内やWebhook通知などの追加動作が必要な場合は、ドアルールを設定してください。 
+
+* 出入口の登録と管理の詳細については、<DocLink docId='device/vionyx_webserver/manage-doors' /> を参照してください。
+
+* ドアルールの詳細については、<DocLink docId='device/vionyx_webserver/configure-door-rules' />を参照してください。
+
+:::
+
+## 入退室制御イベントの動作の仕組み
+
+入退室制御イベントは、次の三つの要素を組み合わせて入退室を許可するかどうかを判断します。設定を開始する前に、各要素の役割を確認してください。
+
+| 構成要素 | 役割 | 必須かどうか |
+| --- | --- | --- |
+| <Cmd sid='validation_area' product='cam' /> | 入退室制御エリアを囲む、より広いエリアです。このエリア内の人数と識別状態を確認し、テールゲーティングの有無を判断します。 | 必須 |
+| <Cmd sid='door_access_area' product='cam' /> | ドアのすぐ前のエリアです。人がこのエリアに入ると入退室を試みたとみなし、判断を開始します。 | 必須 |
+| <Cmd sid='event_entry_line' product='cam' /> | 移動方向を区別する線です。ドア内側から出る人は入退室の試行とみなしません。 | 任意 |
+| <Cmd sid='face_area' product='cam' /> | 顔を優先して追跡し、ユーザーを識別するエリアです。 | 任意 |
+
+カメラは、エリア内の人を次のいずれかの状態に分類します。
+
+* **識別済み**：顔認証に成功し、登録済みユーザーとして確認された状態です。
+
+* **未識別**：顔認証に失敗した、または登録済みユーザーと一致しない状態です。未登録の人、顔が隠れている人、またはカメラを向いていない人は、ライブメニューで <Cmd sid='unknown_face' product='cam' /> と表示されます。
+
+:::caution
+
+セキュリティのため、顔を認証できない人を認証済みユーザーとして扱いません。アクセス制御エリアに入った人が未識別状態の場合、入室を許可しません。
+
+:::
+
+## アクセス制御イベントの作成
+
+アクセス制御イベントを作成すると、<Cmd sid='live' product='cam' /> メニューでドアに近づくユーザーを識別し、後から入る人を検証できます。
+
+<Steps>
+<Step>
+
+### イベント作成の開始
+
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='ai_analysis' product='cam' /> をクリックしてください。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='select_ai_analysis_type' product='cam' />ウィンドウで<Cmd sid='ai_analysis_door_access' product='cam' />をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-access-control.png' />
+
+5. <Cmd sid='face_analytics_consent_title' product='cam' /> ポップアップが表示されたら、内容を確認し、同意チェックボックスをクリックしてから <Cmd sid='face_analytics_consent_agree' product='cam' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * アクセス制御イベントは顔認証でユーザーを識別するため、顔認証の使用に同意しないと作成できません。
+
+   * 顔認証機能を使用するには、該当地域の関連法規を遵守する必要があります。
+
+   * 「<Cmd sid='face_analytics_consent_title' product='cam' />」ポップアップは初回のみ表示されます。以降、AIイベント作成時は同意済みとみなします。
+
+   :::
+
+6. 右側の <Cmd sid='ai_analysis_door_access' product='cam' /> パネルで必要な設定を完了してください。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings.png' />
+
+</Step>
+<Step>
+
+### イベント名の設定
+
+<Cmd sid='name' product='cam' /> 入力フィールドに AI イベント名を入力します。名前は最大64文字まで入力できます。
+
+</Step>
+<Step>
+
+### アクセス制御エリアの設定
+
+<Cmd sid='area' product='cam' /> セクションで、ドアの位置に合わせて検証エリア、アクセス制御エリア、イベント進入ラインを設定してください。最低1本を設定する必要があり、<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10本まで追加できます。追加するたびに、三つの要素が一つのまとまりとしてライブビューに表示されます。マウスで角または点をドラッグして形状を調整し、中央のエリアをドラッグして位置を移動してください。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-ac-area.png' />
+
+* <Cmd sid='name' product='cam' />：アクセス制御エリアの名前を編集できます。ドアの位置など、わかりやすい名前を付けてください。
+
+* <Cmd sid='validation_area' product='cam' />(黄色)：アクセス制御エリアを囲む検証エリアです。急接近する人や追尾する人も確認できるように、アクセス制御エリアより広く設定してください。
+
+* <Cmd sid='door_access_area' product='cam' />(オレンジ色)：ドアのすぐ前で、入退室しようとする人が必ず通る位置に設定してください。人がこのエリアに入ると、入退室の判定を開始します。
+
+* <Cmd sid='event_entry_line' product='cam' />：入退室する人の移動方向を区別する線です。線の両端の点をドラッグし、入退室する人が必ず通るようにアクセス制御エリアを横切って配置してください。ドアの内側から外側へ出る人は、アクセス制御エリアを通過しても入退室の試行と判断しません。
+
+{/* TODO(開発者確認待ち): A → B、B → A のどちらの方向移動を入退室判定から除外するか確認後、配置ガイドを補足 / 進入ラインが検証領域の外に出たスクリーンショットを確認 → ドラッグ制限か、保存時のエラーか、基準が人物検出領域かを確認後、info文言を修正 */}
+
+:::info
+
+* 検証領域はアクセス制御領域を完全に含む必要があります。アクセス制御領域が検証領域から少しでもはみ出すと、保存できません。
+
+* イベント進入ラインはアクセス制御領域の外側まで延ばせますが、検証領域の外側には設定できません。
+
+* イベント進入ラインの方向（<Cmd>A ↔ B</Cmd>）は変更できません。
+
+* 設定した領域の形状とサイズを初期化するには、<IcCamReset title='reset' /> ボタンをクリックしてください。
+
+* 追加したアクセス制御領域を削除するには、<IcCamTrash title='delete' /> ボタンをクリックしてください。
+
+:::
+
+</Step>
+<Step>
+
+### 顔領域の設定（任意）
+
+顔を検知する領域を設定してください。設定すると、当該領域で顔を優先的に追跡し、ユーザーを識別します。出入口に近づく人の顔が正面からよく見える位置に設定してください。顔領域とアクセス制御領域は重ねて設定できます。<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10個まで設定できます。ライブビューに青い枠が表示され、マウスで角や点をドラッグして形状を調整できます。中央の領域をドラッグして位置を移動できます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />：顔領域の名前を編集できます。わかりやすい名前を付けてください。顔領域の名前はライブビューでマウスオーバーすると表示されます。
+
+:::info
+
+* 登録済みユーザーは<Cmd sid='live' product='cam' />メニューで自動的に識別され、名前が表示されます。登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。
+
+* 設定した顔領域の形状とサイズを初期化するには、<IcCamReset title='reset' />ボタンをクリックしてください。
+
+* 追加した顔領域を削除するには、<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+:::
+
+</Step>
+<Step>
+
+import DetectPeople from './_ai-event-detect-people.mdx';
+
+<DetectPeople />
+
+</Step>
+<Step>
+
+### テールゲーティングオプションの設定
+
+<Cmd sid='tailgating_option' product='cam' /> セクションで、検証領域に2人以上いる場合に入退室をどのように判断するか選択してください。セキュリティレベルが高いオプションから順に並べました。
+
+* <Cmd sid='door_access_tailgating_no_success_on_multiple' product='cam' />: 検証領域に2人以上いる場合、識別結果に関係なく入退室を許可しません。一度に一人ずつだけ入退室する必要がある場所に適しています。
+
+* <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' />: 検証領域にいる全員が登録済みユーザーとして識別された場合にのみ入退室を許可します。一人でも未識別の状態であれば、入退室を許可しません。
+
+* <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' />: 検証領域に登録されたユーザーが一人以上いる場合、入退室を許可します。未識別者が一緒でも入退室を許可するため、来訪者の同伴が多い場所に適しています。
+
+* <Cmd sid='door_access_tailgating_no_effect' product='cam' />: 検証領域の人数を考慮せず、アクセス制御領域に入った人の識別結果だけで入退室の可否を判断します。
+
+以下は、アクセス制御領域に登録済みユーザーがいて、検証領域に別の人が一緒にいる場合のオプション別の判断結果です。
+
+| オプション | 検証領域に登録済みユーザーのみがいる場合 | 検証領域に未識別者が混在する場合 |
+| --- | :-: | :-: |
+| <Cmd sid='door_access_tailgating_no_success_on_multiple' product='cam' /> | 入退室拒否 | 入退室拒否 |
+| <Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' /> | アクセス許可 | 入退室拒否 |
+| <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' /> | アクセス許可 | アクセス許可 |
+| <Cmd sid='door_access_tailgating_no_effect' product='cam' /> | アクセス許可 | アクセス許可 |
+
+:::tip
+
+セキュリティが重要なドアでは、<Cmd sid='door_access_tailgating_all_must_be_valid' product='cam' /> 以上のオプションを使用してください。
+
+:::
+
+</Step>
+<Step>
+
+### イベント発生条件の設定 {/* #eventTrigger */}
+
+<Cmd sid='option' product='cam' /> セクションでイベント発生条件を設定します。
+
+* <Cmd sid='event_delay' product='cam' />：イベントとして認識する最小時間を設定してください。検知状態が設定した時間より長く続く場合にイベントが発生します。最大で60秒まで設定できます。
+
+   :::note
+
+   ドア前を短時間通過する人が原因でイベントが頻繁に発生する場合は、<Cmd sid='event_delay' product='cam' /> の値を増やしてください。設定した時間より短く検知した動きはイベントとして認識しないため、不要なイベントが減ります。
+
+   :::
+
+* <Cmd sid='condition' product='cam' />：アクセスが許可された後、イベントをいつまで維持するか選択してください。イベントを維持している間、連動動作（例：ドア解錠）も継続します。
+
+  * <Cmd sid='door_access_hold_keep_until_area_clear' product='cam' />：アクセス制御エリアに誰もいなくなるまでイベントを維持します。認証済みユーザーがドアの前にいる間、再認証しなくてもドアの解錠状態を維持します。
+
+  * <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' />：アクセス制御エリアに誰もいない場合、または未許可者が検証エリアに入りテイルゲイティングオプション条件に違反すると、直ちにイベントを解除します。ドアが開いている間に未許可者が後に続いて入るのを防げます。
+
+  * <Cmd sid='door_access_hold_one_shot' product='cam' />：イベントを維持せず、アクセス制御エリアに入るたびに一度だけイベントを発生させます。
+
+:::info
+
+登録済みユーザーがドアの前でためらって入れない場合、アクセス制御エリアから出て、再度入るとドアが開きます。この不便を減らしつつセキュリティも維持するには、<Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' /> を選択してください。
+
+:::
+
+</Step>
+<Step>
+
+### 設定を保存
+
+すべての設定を完了したら、右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。前の画面に戻り、新しく作成したAIイベントが一覧に追加されます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## ライブで確認
+
+画面左上の<Cmd sid='live' product='cam' />メニューをクリックしてください。カメラ映像の右上にある<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />アイコンがオンになっているか確認してください。映像に、設定した検証エリア、アクセス制御エリア、イベント進入ライン、顔領域をオーバーレイ表示します。人がアクセス制御エリアに入ると、識別結果とテイルゲイティングオプションに基づき、アクセス許可またはアクセス拒否イベントが発生します。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-access-control-result.png' />
+
+:::info
+
+* 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。登録済みユーザーは名前とともに表示されます。
+
+* 照明が不足しているか逆光の場合、カメラが顔を認識できないことがあります。撮影エリアの照明を改善するか、カメラの位置と角度を調整して顔が見えやすくしてください。
+
+* 顔がカメラに向いている必要があります。横顔や後ろ姿は認識が難しい場合があります。顔を認識できない人は未識別状態として処理し、アクセスを拒否します。
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+アクセス制御イベントはアクセスの許可/拒否だけを判定します。判定結果に応じて音声案内、Webhook通知、警告灯などの追加動作を実行するには、ドアルールを設定してください。
+
+</NextItem>
+<NextItem to='manage-doors' >
+
+アクセス制御イベントを作成したら、ドアを登録し、イベントを関連付けてください。アクセスが許可されると、ドアに接続されたリレーが動作し、ドアが開きます。
+
+</NextItem>
+</NextStep>

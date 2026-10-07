@@ -2,9 +2,6 @@
 id: set-ai-advanced
 title: Configuración Avanzada
 description: Puedes configurar opciones adicionales en la configuración avanzada.
-keywords:
-  - IA
-  - Configuración Avanzada
 ---
 
 <Include lang='ja'>
@@ -21,7 +18,13 @@ En la configuración avanzada, elige si deseas capturar solo la parte superior d
 
 ## Configuración del tipo de captura de rostro
 
-Establece el tipo de captura de rostro para capturar solo la parte superior del cuerpo o el cuerpo completo. Selecciona el tipo de captura deseado en la opción <Cmd sid='shoot_type' product='cam' />, luego haz clic en <Cmd sid='save' product='cam' />.
+Establece el tipo de captura de rostro para capturar solo la parte superior del cuerpo o el cuerpo completo. 
+
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='advanced' product='cam' /> en la barra lateral izquierda.
+
+3. Selecciona el tipo de captura deseado en la opción <Cmd sid='shoot_type' product='cam' />, luego haz clic en <Cmd sid='save' product='cam' />.
 
 <ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
 
@@ -29,7 +32,7 @@ Establece el tipo de captura de rostro para capturar solo la parte superior del 
 
 ## Configuración de enrolamiento automático de usuarios
 
-Los rostros detectados mediante eventos de IA pueden enrolarse automáticamente como usuarios. De forma predeterminada, esta feature está configurada en el modo Enrolamiento manual, y puedes cambiar al modo Enrolamiento automático según sea necesario.
+Los rostros detectados mediante eventos de IA se pueden enrolar automáticamente como usuarios. De forma predeterminada, esta función está en el modo Enrolamiento manual. Cambia al modo Enrolamiento automático según sea necesario.
 
 :::info
 
@@ -39,11 +42,11 @@ Para los usuarios enrolados automáticamente, edita manualmente información com
 
 ### Habilitar el modo de enrolamiento automático
 
-1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haz clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='advanced' product='cam' />.
+2. Haz clic en <Cmd sid='advanced' product='cam' /> en la barra lateral izquierda.
 
-3. En la sección <Cmd sid='auto_user_enroll' product='cam' />, habilita la opción <Cmd sid='by_face_recognition' product='cam' />.
+3. En la sección <Cmd sid='auto_user_enroll' product='cam' />, haz clic en el interruptor para habilitar el modo de enrolamiento automático.
 
 <ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
 
@@ -59,15 +62,15 @@ Cuando se usa el modo <Cmd sid='auto_user_enroll' product='cam' />, los usuarios
 
 En la opción <Cmd sid='num_of_auto_enroll_user' product='cam' />, establece el número de usuarios que se pueden enrolar automáticamente. Arrastra el control deslizante o ingresa un número directamente en el campo de entrada.
 
-* El valor predeterminado es 50,000 usuarios, y puedes establecer hasta 100,000 usuarios.
+* El valor predeterminado es 50,000 usuarios y admite hasta 100,000 usuarios.
 
-* Cuando estableces el número de usuarios para enrolamiento automático, los usuarios enrolados manualmente solo se pueden enrolar dentro del número configurado. Por ejemplo, si el número de usuarios configurado es 50,000, el total de enrolamientos automáticos y manuales solo puede llegar a 50,000 usuarios.
+* Al establecer el número de usuarios para enrolamiento automático, el total de enrolamientos automáticos y manuales no puede superar el límite configurado. Por ejemplo, si el número de usuarios configurado es 50,000, el total de enrolamientos automáticos y manuales solo puede llegar a 50,000 usuarios.
 
 :::info
 
-* Si ya existen usuarios enrolados manualmente, no puedes aumentar el número de usuarios para enrolamiento automático.
+* Si ya existen usuarios enrolados manualmente, no es posible aumentar el número de usuarios para enrolamiento automático.
 
-* Cuando disminuyes el número de usuarios para enrolamiento automático, los usuarios excedentes se eliminan automáticamente empezando por los más antiguos.
+* Cuando disminuyes el número de usuarios para enrolamiento automático, el sistema elimina automáticamente a los usuarios excedentes, empezando por los más antiguos.
 
 :::
 
@@ -91,7 +94,7 @@ En la opción <Cmd sid='retention_period_days' product='cam' />, establece en d�
 
 :::info
 
-Cuando estableces un período de retención, una vez que se alcanza el límite de usuarios, los usuarios más antiguos se eliminan de inmediato en lugar de esperar a que termine el período.
+Al establecer un período de retención, cuando se alcanza el límite de usuarios, el sistema elimina usuarios antiguos de inmediato; no espera a que termine.
 
 :::
 
@@ -101,9 +104,9 @@ Cuando estableces un período de retención, una vez que se alcanza el límite d
 
 Los usuarios enrolados automáticamente aparecen en la lista de usuarios del menú <Cmd sid='people' product='cam' />.
 
-* Los IDs de usuario se asignan automáticamente en secuencia según el orden de reconocimiento facial.
+* Los IDs de usuario se asignan automáticamente en secuencia según el orden de autenticación facial.
 
-* La columna <Cmd sid='description' product='cam' /> muestra <Cmd sid='auto_enroll' product='cam' />, por lo que puedes distinguir a estos usuarios de los usuarios enrolados manualmente.
+* La columna <Cmd sid='description' product='cam' /> muestra <Cmd sid='auto_enroll' product='cam' />, lo que permite distinguir a estos usuarios de los usuarios enrolados manualmente.
 
 * La columna <Cmd sid='last_updated' product='cam' /> muestra la fecha y hora en que se enroló al usuario.
 

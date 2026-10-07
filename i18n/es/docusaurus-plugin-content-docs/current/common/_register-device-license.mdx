@@ -1,0 +1,109 @@
+## Licencia de dispositivo
+
+### Registro
+
+Para activar una licencia de dispositivo emitida por Suprema, la función asociada queda disponible. Las licencias de dispositivo se pueden activar en un dispositivo usando BioStar X y una memoria USB. Para emitir una licencia de dispositivo, póngase en contacto con su distribuidor.
+
+1. Vaya al menú <Cmd>Settings</Cmd> → <IcLicense/> <Cmd>License</Cmd> → <Cmd>Device</Cmd>.
+
+<span class='cmd'>Settings</span>
+
+1. En la sección <Cmd sid='setting.server.license.device' />, haga clic en el botón <Cmd sid='user.list.csvImport.browse' />.
+
+2. Seleccione el archivo de licencia de dispositivo (*\*.lic*) desde la ruta donde está almacenado.
+
+3. Después de cargar el archivo de licencia, aparecen <Cmd sid='setting.server.license.name' />, <Cmd sid='setting.server.license.device.count' /> y <Cmd sid='setting.server.license.device.list' />. Para más detalles, consulte [lo siguiente](#check-device-license).
+
+4. Después de verificar <Cmd sid='setting.server.license.device.list' />, haga clic en el botón <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+Si la activación de la licencia falla, aparece un mensaje. En ese caso, puede intentar activar la licencia nuevamente.
+
+:::info
+
+* Una licencia de dispositivo habilita una función.
+
+* Un único archivo de licencia de dispositivo puede incluir varias licencias de dispositivo. Se admiten hasta 100.
+
+* Los archivos de licencia de dispositivo están cifrados y no pueden modificarse de forma arbitraria.
+
+* Las licencias de dispositivo se emiten según el ID del dispositivo. Si el ID del dispositivo cambia de forma anómala, no se proporcionará servicio de garantía para la licencia.
+
+:::
+
+### Información de la licencia de dispositivo {#check-device-license}
+
+Después de cargar el archivo de licencia (*\*.lic*), consulte los siguientes elementos y active la licencia de dispositivo.
+
+#### <Cmd sid='setting.server.license.name' />
+
+Puede verificar el tipo de licencia incluido en el archivo de licencia de dispositivo.
+
+* Para los dispositivos que pueden usar **Camera QR**, consulte la lista a continuación.
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB): versión de firmware 1.2.0 o superior
+
+  * BioStation 3 (BS3-DB, BS3-APWB): versión de firmware 1.1.0 o superior
+
+* Para las antenas OSDP y las cerraduras inalámbricas compatibles, consulte la lista a continuación.
+
+  * Antena OSDP U&Z: CX8936
+
+  * Cerradura inalámbrica U&Z: CX217x (Manija), CX212x (Perilla)
+
+  :::info
+
+  * Puede emitir hasta 12 licencias de dispositivo, según el número de cerraduras inalámbricas que desee conectar.
+
+  * El número máximo de cerraduras inalámbricas que se pueden conectar con licencias de dispositivo es 12. Incluso si se activan varias licencias de dispositivo, no puede superar las 12.
+
+  :::
+
+#### <Cmd sid='setting.server.license.device.count' />
+
+Puede verificar la cantidad de dispositivos incluidos en el archivo de licencia de dispositivo.
+
+#### <Cmd sid='setting.server.license.device.licenseCount' />
+
+Puede verificar la cantidad de cerraduras inalámbricas que se pueden activar con una licencia de dispositivo.
+
+:::info
+
+Este elemento aparece cuando se selecciona un archivo de licencia de cerradura inalámbrica.
+
+:::
+
+#### <Cmd sid='setting.server.license.device.list' />
+
+Consulte cada elemento que aparece en la lista de dispositivos.
+
+* <Cmd sid='setting.server.license.device.id' />: Identificador único del dispositivo.
+
+* <Cmd sid='setting.server.license.device.name' />: Nombre del dispositivo.
+
+* <Cmd sid='setting.server.license.device.product' />: Nombre del modelo del dispositivo.
+
+* <Cmd sid='setting.server.license.device.status' />: Puede consultar el estado del dispositivo. Solo los dispositivos con el estado <Cmd sid='setting.server.license.device.list.normal' /> pueden activar la licencia.
+
+  Los dispositivos con los siguientes estados no pueden activar la licencia:
+
+  * <Cmd sid='setting.server.license.device.list.disconnected' />
+
+  * <Cmd sid='setting.server.license.device.list.notSupported' />
+
+  * <Cmd sid='setting.server.license.device.list.unregistered' />
+
+* <Cmd sid='setting.server.license.status' />: Indica si la licencia está activada. Solo los dispositivos con estado <Cmd sid='setting.server.license.device.list.notActivated' /> pueden activar la licencia.
+
+  Los siguientes estados no pueden activar la licencia:
+
+  * <Cmd sid='setting.server.license.device.list.notActivated' />
+
+  * <Cmd sid='setting.server.license.device.list.na' />
+
+* <Cmd sid='setting.server.license.device.activatedCount' />: Estado de conexión de las cerraduras inalámbricas.
+
+  :::info
+
+  Este elemento aparece cuando se selecciona un archivo de licencia de cerradura inalámbrica.
+
+  :::

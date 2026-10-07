@@ -2,10 +2,6 @@
 id: configure-counting-people
 title: Configurar Evento de Conteo de Personas
 description: Detecta la cantidad de personas que permanecen en áreas designadas.
-keywords:
-  - Análisis con IA
-  - Flujo peatonal
-  - Autenticación facial
 ---
 
 Configure un evento de conteo de personas para detectar la cantidad de personas que permanecen en áreas designadas. Agregue un área facial opcional para autenticar automáticamente a los usuarios enrolados.
@@ -29,9 +25,9 @@ Después de crear un evento de conteo de personas, el menú <Cmd sid='live' prod
 
 ### Iniciar creación del evento
 
-1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -67,7 +63,7 @@ Ingrese el nombre del evento de IA en el campo <Cmd sid='name' product='cam' />.
 </Step>
 <Step>
 
-### Configuración del área de conteo
+### Configure el área de conteo {/* #countingArea */}
 
 Configure las áreas de conteo en Live View. La cámara cuenta personas dentro de las áreas de conteo configuradas en tiempo real y activa eventos. Configure al menos una línea virtual. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10. Arrastre las esquinas o los puntos del cuadro del área de conteo en Live View para cambiar su forma. Arrastre el centro para mover la línea.
 
@@ -117,27 +113,34 @@ Defina el área para la detección facial. Cuando se configura, el sistema prior
 </Step>
 <Step>
 
+import DetectPeople from './_ai-event-detect-people.mdx';
+
+<DetectPeople />
+
+</Step>
+<Step>
+
 ### Ajustes de restablecimiento del conteo
 
 Configure la condición para restablecer el conteo de personas en las áreas de conteo.
 
-* <Cmd sid='all_areas_count_reset' product='cam' />: configúrelo en <Cmd sid='on' product='cam' /> para restablecer los conteos de todas las áreas de conteo en la hora programada. Los conteos de todas las áreas de conteo se restablecen a la hora configurada en <Cmd sid='reset_time' product='cam' />.
+* <Cmd sid='all_areas_count_reset' product='cam' />: configúrelo en <Cmd sid='on' product='cam' /> para restablecer los conteos de todas las áreas de conteo en la hora programada. El sistema restablece los conteos de todas las áreas de conteo a la hora configurada en <Cmd sid='reset_time' product='cam' />.
 
 </Step>
 <Step>
 
 ### Guardar ajustes
 
-Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y el nuevo evento de IA se agrega a la lista.
+Después de completar todas las configuraciones, haga clic en <Cmd sid='create' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y agrega el nuevo evento de IA a la lista.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
 
 </Step>
 </Steps>
 
-## Verificación en Live
+## Verificar en Live
 
-Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las áreas de conteo y faciales configuradas aparecen como superposiciones en el video. Muestra la cantidad de personas en el área de conteo con el formato <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd>. Si se configuran áreas faciales, la cámara detecta rostros allí; los usuarios enrolados se identifican automáticamente y sus nombres se muestran.
+Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las áreas de conteo y faciales configuradas aparecen como superposiciones en el video. Muestra la cantidad de personas en el área de conteo con el formato <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd>. Si configura áreas faciales, la cámara detecta rostros allí; identifica automáticamente a los usuarios enrolados y muestra sus nombres.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
 
@@ -151,8 +154,6 @@ Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior iz
 
 * La mala iluminación o la luz de fondo pueden impedir que la cámara detecte rostros. Mejore la iluminación del área o ajuste la posición y el ángulo de la cámara para que los rostros se vean con claridad.
 
-* Los rostros deben mirar hacia la cámara para detectarse. Las vistas de perfil o de espaldas pueden no detectarse.
-
-* Si ocurren demasiados eventos, ajuste la opción <Cmd sid='every_delay' product='cam' />. Aumentar el retraso del evento reduce la frecuencia de los eventos.
+* Los rostros deben mirar a la cámara para que la cámara los detecte. Es posible que la cámara no detecte las vistas de perfil o de espaldas.
 
 :::

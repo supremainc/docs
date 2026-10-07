@@ -1,14 +1,10 @@
 ---
 id: configure-line-crossing
 title: ライン通過検知イベントの設定
-description: 設定した仮想ラインを通過する人を検知し、リアルタイムでイベントを発生させます。 通過方向を指定して、特定の方向の出入りのみを監視できます。
-keywords:
-  - AI分析
-  - 出入者の動線
-  - 顔認証
+description: 設定した仮想ラインを通過する人を検知し、リアルタイムでイベントを発生させます。通過方向を指定して、特定の方向の出入りのみを監視できます。
 ---
 
-ライン通過検知イベントを設定すると、設定した仮想ラインを通過する人を検知し、リアルタイムでイベントを発生させます。 通過方向（A→B、B→A、双方向）を指定して特定の方向の出入りのみを監視できます。任意で顔領域を追加すると、登録済みユーザーを自動で識別します。
+ライン通過検知イベントを設定すると、設定した仮想ラインを通過する人を検知し、リアルタイムでイベントを発生させます。通過方向（A→B、B→A、双方向）を指定して特定の方向の出入りのみを監視できます。任意で顔領域を追加すると、登録済みユーザーを自動で識別します。
 
 ## いつ使用しますか？
 
@@ -22,16 +18,16 @@ keywords:
 
 ## ライン通過検知イベントの作成
 
-ライン通過検知イベントを作成すると、<Cmd sid='live' product='cam' /> メニューで特定エリアを人がラインを通過するのを検知してイベントを発生させます。 また、顔領域を設定すると当該領域で顔を優先的に追跡でき、登録済みユーザーは自動で識別されます。
+ライン通過検知イベントを作成すると、<Cmd sid='live' product='cam' /> メニューで特定エリアを人がラインを通過するのを検知してイベントを発生させます。また、顔領域を設定すると当該領域で顔を優先的に追跡でき、登録済みユーザーは自動で識別されます。
 
 <Steps>
 <Step>
 
 ### イベント作成の開始
 
-1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='ai_analysis' product='cam' /> をクリックしてください。
 
    <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
@@ -47,9 +43,9 @@ keywords:
 
    :::note
 
-   * 顔認識機能を使用するには、該当地域の関連法規を遵守する必要があります。 同意しない場合は先に進めません。
+   * 顔認証機能を使用するには、該当地域の関連法規を遵守する必要があります。同意しない場合は先に進めません。
 
-   * 「<Cmd sid='face_analytics_consent_title' product='cam' />」ポップアップは初回のみ表示されます。 以降、AIイベント作成時は同意済みとみなします。
+   * 「<Cmd sid='face_analytics_consent_title' product='cam' />」ポップアップは初回のみ表示されます。以降、AIイベント作成時は同意済みとみなします。
 
    :::
 
@@ -62,20 +58,20 @@ keywords:
 
 ### イベント名の設定
 
-<Cmd sid='name' product='cam' /> 入力フィールドに AI イベント名を入力します。 名前は最大64文字まで入力できます。
+<Cmd sid='name' product='cam' /> 入力フィールドに AI イベント名を入力します。名前は最大64文字まで入力できます。
 
 </Step>
 <Step>
 
 ### 仮想ラインの設定
 
-ライブビューで仮想ラインを適切な位置に設定してください。 カメラに設定した仮想ラインを通過する人を検知してイベントを発生させます。 最低1本を設定する必要があり、<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10本まで追加できます。 ライブビューにオレンジ色のラインが表示され、マウスで角や点をドラッグして形状を調整できます。 中央の領域をドラッグして位置を移動できます。
+ライブビューで仮想ラインを適切な位置に設定してください。カメラに設定した仮想ラインを通過する人を検知してイベントを発生させます。最低1本を設定する必要があり、<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10本まで追加できます。ライブビューにオレンジ色のラインが表示され、マウスで角や点をドラッグして形状を調整できます。中央の領域をドラッグして位置を移動できます。
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-position.png' />
 
-* <Cmd sid='name' product='cam' />：仮想ラインの名前を編集できます。 わかりやすい名前を付けてください。 仮想ラインの名前はライブビューでマウスオーバーすると表示されます。
+* <Cmd sid='name' product='cam' />：仮想ラインの名前を編集できます。わかりやすい名前を付けてください。仮想ラインの名前はライブビューでマウスオーバーすると表示されます。
 
-* <Cmd sid='condition' product='cam' />：仮想ラインを通過する条件を設定してください。 以下の3つの通過方向オプションからいずれかを選択できます。
+* <Cmd sid='condition' product='cam' />：仮想ラインを通過する条件を設定してください。以下の3つの通過方向オプションからいずれかを選択できます。
 
   * <Cmd>A -> B</Cmd>：AからB方向への通過でイベントが発生します。
 
@@ -83,7 +79,23 @@ keywords:
 
   * <Cmd>A \<-> B</Cmd>：双方向の通過でイベントが発生します。
 
+* <Cmd sid='reference_point' product='cam' />：人が仮想ラインを通過したかを判定する際に、人検知ボックスのどの位置を基準にするか選択してください。ラインごとに設定でき、デフォルトは <Cmd sid='reference_point_center' product='cam' /> です。
+
+  * <Cmd sid='reference_point_center' product='cam' />：ボックスの中心を基準に判定します。体の中心がラインに触れると、通過したと判定します。
+
+  * <Cmd sid='reference_point_lower' product='cam' />：ボックスの長軸に沿って上端から 80% の位置を基準に判定します。体の下側がラインに触れると、通過したと判定します。床にラインを描く場合のように、足がラインを越えた時点でイベントを発生させるには、このオプションを選択してください。
+
+  <Cmd sid='reference_point' product='cam' /> 右側の <IcCamHelp title='Help' /> アイコンをクリックして、各基準点の位置と判定方法を図で確認してください。
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-help.png' />
+
 :::info
+
+* <Cmd sid='reference_point' product='cam' /> オプションはファームウェア バージョン 1.1.0 以降でサポートします。基準点の選択をサポートしないデバイスでは、すべてのライン通過を <Cmd sid='reference_point_center' product='cam' /> として判定します。
+
+* <Cmd sid='reference_point_lower' product='cam' /> は人検知ボックスを基準に計算した位置であり、実際の足位置を検出するものではありません。
+
+* <Cmd sid='live' product='cam' /> メニューで判定基準点を確認するには、[AI 表示オプション](live-basic#displayBox)で <Cmd sid='reference_point' product='cam' /> オプションをオンにしてください。
 
 * 設定した仮想ラインの形状とサイズを初期化するには、<IcCamReset title='reset' />ボタンをクリックしてください。
 
@@ -96,15 +108,15 @@ keywords:
 
 ### 顔領域の設定（任意）
 
-顔を検知する領域を設定してください。 設定すると、当該領域で顔を優先的に追跡します。 顔領域と仮想ラインは重ねて設定できます。 <Cmd sid='add_button' product='cam' />ボタンをクリックして最大10個まで設定できます。 ライブビューに青い枠が表示され、マウスで角や点をドラッグして形状を調整できます。 中央の領域をドラッグして位置を移動できます。
+顔を検知する領域を設定してください。設定すると、当該領域で顔を優先的に追跡します。顔領域と仮想ラインは重ねて設定できます。<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10個まで設定できます。ライブビューに青い枠が表示され、マウスで角や点をドラッグして形状を調整できます。中央の領域をドラッグして位置を移動できます。
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png' />
 
-* <Cmd sid='name' product='cam' />：顔領域の名前を編集できます。 わかりやすい名前を付けてください。 顔領域の名前はライブビューでマウスオーバーすると表示されます。
+* <Cmd sid='name' product='cam' />：顔領域の名前を編集できます。わかりやすい名前を付けてください。顔領域の名前はライブビューでマウスオーバーすると表示されます。
 
 :::info
 
-* 登録済みユーザーは<Cmd sid='live' product='cam' />メニューで自動的に識別され、名前が表示されます。 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。
+* 登録済みユーザーは<Cmd sid='live' product='cam' />メニューで自動的に識別され、名前が表示されます。登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。
 
 * 設定した顔領域の形状とサイズを初期化するには、<IcCamReset title='reset' />ボタンをクリックしてください。
 
@@ -115,18 +127,47 @@ keywords:
 </Step>
 <Step>
 
-### イベント発生条件の設定
+import DetectPeople from './_ai-event-detect-people.mdx';
 
-イベント発生条件を設定してください。
+<DetectPeople />
 
-* <Cmd sid='every_delay' product='cam' />：イベント発生の遅延時間を設定してください。 設定した時間を超えた場合にのみイベントが発生し、最大60秒まで設定できます。
+</Step>
+<Step>
+
+### イベント発生条件とカウントの設定
+
+<Cmd sid='option' product='cam' /> セクションでイベント発生条件とイベントカウントを設定してください。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-options.png' />
+
+* <Cmd sid='every_delay' product='cam' />：イベントとして認識する最小時間を設定してください。検知状態が設定した時間より長く続く場合にイベントが発生します。最大で60秒まで設定できます。
+
+   :::note
+
+   イベントが多発する場合は、<Cmd sid='every_delay' product='cam' />の値を増やしてください。設定した時間より短く検知した動きはイベントとして認識しないため、不要なイベントが減ります。
+
+   :::
+
+* <Cmd sid='event_count' product='cam' />：ラインを通過するたびに回数をカウントするには、<Cmd sid='on' product='cam' />に設定してください。ラインが複数ある場合、ラインごとにカウントします。
+
+* <Cmd sid='all_event_count_reset' product='cam' />：すべてのラインのイベントカウントを毎日指定した時刻に初期化するには、<Cmd sid='on' product='cam' />に設定してください。<Cmd sid='reset_time' product='cam' />で設定した時刻に、すべてのラインのイベントカウントを初期化します。
+
+:::info
+
+* <Cmd sid='event_count' product='cam' />を<Cmd sid='on' product='cam' />に設定すると、<Cmd sid='live' product='cam' /> メニューの映像上で、各ラインの上に <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> の形式で表示します。イベントカウントを手動で初期化するには、<IcMoreB title='More' />ボタンをクリックし、<Cmd sid='count_reset' product='cam' />を選択してください。
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-live-reset-counts.png' />
+
+* ファームウェアバージョン1.1.0以降は、イベントカウント関連オプションをサポートします。
+
+:::
 
 </Step>
 <Step>
 
 ### 設定を保存
 
-すべての設定を完了したら、右上の<Cmd sid='create' product='cam' />ボタンをクリックしてください。 前の画面に戻り、新しく作成したAIイベントが一覧に追加されます。
+すべての設定を完了したら、右上の<Cmd sid='create' product='cam' />ボタンをクリックしてください。前の画面に戻り、新しく作成したAIイベントが一覧に追加されます。
 
 <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png' />
 
@@ -135,18 +176,16 @@ keywords:
 
 ## ライブで確認
 
-画面左上の<Cmd sid='live' product='cam' />メニューをクリックしてください。 カメラ映像の右上にある<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />アイコンがオンになっているか確認してください。 設定した仮想ラインと顔領域が映像にオーバーレイ表示されます。 人が仮想ラインを通過するたびにイベントが発生します。 顔領域を設定している場合、カメラは当該領域で顔を検知し、登録済みユーザーは自動的に識別され名前が表示されます。
+画面左上の<Cmd sid='live' product='cam' />メニューをクリックしてください。カメラ映像の右上にある<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />アイコンがオンになっているか確認してください。設定した仮想ラインと顔領域が映像にオーバーレイ表示されます。人が仮想ラインを通過するたびにイベントが発生します。顔領域を設定している場合、カメラは当該領域で顔を検知し、登録済みユーザーは自動的に識別され名前が表示されます。
 
 <ProdImg src='/img/cam-server/ai-analysis-events-line-crosing-result.png' />
 
 :::info
 
-* 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。 登録済みユーザーは名前とともに表示されます。
+* 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。登録済みユーザーは名前とともに表示されます。
 
-* 照明が不足しているか逆光の場合、カメラが顔を認識できないことがあります。 撮影エリアの照明を改善するか、カメラの位置と角度を調整して顔が見えやすくしてください。
+* 照明が不足しているか逆光の場合、カメラが顔を認識できないことがあります。撮影エリアの照明を改善するか、カメラの位置と角度を調整して顔が見えやすくしてください。
 
-* 顔がカメラに向いている必要があります。 横顔や後ろ姿は認識が難しい場合があります。
-
-* イベントが多発する場合は、<Cmd sid='every_delay' product='cam' />の値を調整してください。 イベント発生の遅延時間を長くするとイベント頻度を減らせます。
+* 顔がカメラに向いている必要があります。横顔や後ろ姿は認識が難しい場合があります。
 
 :::

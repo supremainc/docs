@@ -1,19 +1,18 @@
 ---
 id: set-ai-rule
 title: Ajustes de Reglas de IA
-description: Defina reglas que ejecuten acciones cuando ocurran eventos de IA. Esta guía explica cómo crear reglas, seleccionar condiciones, configurar acciones de audio y webhook, y guardar y operar reglas.
-keywords:
-  - IA
-  - Reglas
+description: Defina reglas que ejecuten acciones cuando ocurran eventos de IA. Esta guía explica cómo crear reglas, seleccionar condiciones, configurar acciones de audio, webhook y relé, y guardar y ejecutar reglas.
 ---
 
-Use reglas de IA para ejecutar automáticamente la reproducción de audio o enviar webhooks según el tipo de evento y las condiciones. Este documento guía el procedimiento completo para crear y operar reglas.
+Use reglas de IA para reproducir audio automáticamente, enviar webhooks o activar acciones de relé según el tipo de evento y las condiciones. Este documento guía el procedimiento completo para crear y operar reglas.
 
 Configure reglas de IA en las siguientes situaciones.
 
 * Envíe un webhook a un servidor externo cuando ocurra un evento específico de IA.
 
 * Reproduzca audio en el dispositivo cuando ocurra un evento específico de IA.
+
+* Active un relé conectado a una puerta de acceso cuando ocurra un evento de IA específico
 
 * Automatice diferentes acciones de seguimiento según el tipo de evento.
 
@@ -31,11 +30,15 @@ Antes de empezar la configuración de reglas, revise lo siguiente.
 
   * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
+  * <DocLink docId='device/vionyx_webserver/configure-access-control' />
+
 * Prepare los clips de audio que se reproducirán antes de usar audio.
 
 * Prepare con antelación la URL del receptor del webhook.
 
-* Debe configurar al menos una acción de audio o webhook.
+* Al usar relés, verifique que el puerto de relé del dispositivo o subdispositivo esté conectado.
+
+* Configure al menos una acción: audio, webhook o relé.
 
 ## Crear regla de IA
 
@@ -44,15 +47,15 @@ Antes de empezar la configuración de reglas, revise lo siguiente.
 
 ### Iniciar la creación de una regla
 
-1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='rule_settings' product='cam' />.
+2. Haga clic en <Cmd sid='rule_settings' product='cam' /> en la barra lateral izquierda.
 
    <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
 
 3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
 
-4. Cuando aparezca la pantalla <Cmd sid='add_rule_page_title' product='cam' />, ingrese el nombre de la regla y configure las condiciones y acciones.
+4. Cuando aparezca la pantalla <Cmd sid='new_rule' product='cam' />, ingrese el nombre de la regla y configure las condiciones y acciones.
 
    <ProdImg src='/img/cam-server/ai-rule-settings-add-rule.png' />
 
@@ -68,7 +71,7 @@ Ingrese el nombre de la regla en el campo de entrada <Cmd sid='name' product='ca
 
 ### Configurar condiciones
 
-Las condiciones determinan si una regla se ejecuta cuando ocurre un evento de IA. Configure las condiciones como se indica a continuación. Las opciones <Cmd sid='type' product='cam' /> y <Cmd sid='event' product='cam' /> aparecen según la configuración especificada al crear el evento de IA.
+Las condiciones determinan si una regla se ejecuta cuando ocurre un evento de IA. En la sección <Cmd sid='condition' product='cam' />, configure las condiciones según se indica a continuación. Las opciones <Cmd sid='type' product='cam' /> y <Cmd sid='event' product='cam' /> aparecen según la configuración especificada al crear el evento de IA.
 
 * <Cmd sid='channel' product='cam' />: El canal está fijo en CH 1. Solo se admite la vista Fisheye.
 
@@ -82,24 +85,37 @@ Las condiciones determinan si una regla se ejecuta cuando ocurre un evento de IA
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
 
+  * <Cmd sid='ai_analysis_door_access' product='cam' />
+
 * <Cmd sid='event' product='cam' />: Seleccione el evento de IA que activará la regla. La lista de eventos muestra los eventos de IA que coinciden con el tipo seleccionado. Los eventos aparecen en el formato `(ID:N) event_name`.
 
 * <Cmd sid='entry_area' product='cam' /> / <Cmd sid='intrusion_area' product='cam' /> / <Cmd sid='line' product='cam' /> / <Cmd sid='counting_area' product='cam' />: Agregue condiciones para un área según el tipo de evento seleccionado.
 
 * <Cmd sid='event_type' product='cam' />: Seleccione el tipo de evento que determina si la regla se ejecuta. La regla se ejecuta según el tipo de evento seleccionado.
 
-  :::note
+   :::note
 
-  Debe seleccionar al menos un tipo de evento.
+   Debe seleccionar al menos un tipo de evento.
 
-  :::
+   :::
+
+</Step>
+<Step>
+
+### Selección de usuario
+
+En la sección <Cmd sid='actor_type_user' product='cam' />, seleccione el usuario que determina si la regla se ejecuta. El sistema ejecuta la regla cuando detecta al usuario seleccionado en un evento de IA.
+
+* Haga clic en <Cmd sid='select_users_to_trigger_actions' product='cam' /> para seleccionar usuarios específicos. Cuando aparezca la lista de usuarios, seleccione los usuarios deseados y haga clic en el botón <Cmd sid='save' product='cam' />.
+
+* Haga clic en <Cmd sid='select_all' product='cam' /> para seleccionar a todos los usuarios registrados.
 
 </Step>
 <Step>
 
 ### Ajustes de acción de audio
 
-La acción de audio reproduce audio de la cámara cuando ocurre un evento de IA. Haga clic en el botón de alternancia para habilitar la acción de audio.
+La acción de audio reproduce audio de la cámara cuando ocurre un evento de IA. En la sección <Cmd sid='action' product='cam' />, haga clic en el interruptor <Cmd sid='audio' product='cam' /> para activar la acción y, luego, haga clic en <IcCamEdit title='Edit' />. Aparece la ventana emergente de ajustes de audio.
 
 <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-audio.png' />
 
@@ -107,11 +123,15 @@ La acción de audio reproduce audio de la cámara cuando ocurre un evento de IA.
 
 * <Cmd sid='repeat' product='cam' />: Configure la cantidad de veces que se repetirá la reproducción de audio. Reproduce el clip de audio repetidamente la cantidad de veces que configure. Puede configurarse hasta un máximo de 10 veces.
 
-* <Cmd sid='schedule' product='cam' />: El horario en que la regla se ejecuta y reproduce audio. No puede cambiar esta opción.
+* <Cmd sid='schedule' product='cam' />: Seleccione el horario en que la regla se ejecuta y reproduce audio.
+
+Haga clic en <Cmd sid='apply' product='cam' /> para guardar los ajustes de la acción de audio.
 
 :::info
 
-Prepare los clips de audio antes de configurar acciones de audio. Cargue clips de audio en <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+* Prepare los clips de audio antes de configurar acciones de audio. Cargue clips de audio en <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+* Cree, edite o elimine horarios en <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. Para más información sobre la gestión de horarios, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
 
 :::
 
@@ -120,29 +140,70 @@ Prepare los clips de audio antes de configurar acciones de audio. Cargue clips d
 
 ### Ajustes de acción de webhook
 
-La acción de webhook envía un webhook a un servidor externo cuando ocurre un evento de IA. Haga clic en el botón de alternancia para habilitar la acción de webhook.
+La acción de webhook envía un webhook a un servidor externo cuando ocurre un evento de IA.  En la sección <Cmd sid='action' product='cam' />, haga clic en el interruptor <Cmd sid='webhook' product='cam' /> para activar la acción y, luego, haga clic en <IcCamEdit title='Edit' />. Aparece la ventana emergente de ajustes de webhook.
 
 <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-webhook.png' />
 
 * <Cmd sid='method' product='cam' />: El método de transmisión del webhook. Solo se admite el método `POST`.
 
-* <Cmd>URL</Cmd>: Ingrese la URL para recibir el webhook. La dirección debe ser válida y comenzar con `http://` o `https://`.
+* <Cmd sid='url' product='cam' />: Ingrese la URL para recibir el webhook. La dirección debe ser válida y comenzar con `http://` o `https://`.
 
 * <Cmd sid='header' product='cam' />: Configure los encabezados HTTP que se incluirán en el webhook. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar encabezados. Ingrese cada encabezado como un par clave-valor.
 
 * <Cmd sid='body' product='cam' />: Configure el cuerpo HTTP que se incluirá en el webhook. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar elementos del cuerpo. Ingrese cada elemento del cuerpo como un par clave-valor.
 
-  :::note
+* <Cmd sid='schedule' product='cam' />: Seleccione el horario en que la regla se ejecuta y envía webhooks.
 
-  Los elementos personalizados no pueden estar vacíos; se pueden agregar hasta 10.
-
-  :::
-
-* <Cmd sid='schedule' product='cam' />: El horario en que la regla se ejecuta y envía el webhook. No puede cambiar esta opción.
+Haga clic en el botón <Cmd sid='apply' product='cam' /> para guardar los ajustes de la acción de webhook.
 
 :::info
 
-Los registros de envío del webhook y los códigos de respuesta se pueden revisar en los registros del sistema para solucionar problemas.
+* Los registros de envío del webhook y los códigos de respuesta se pueden revisar en los registros del sistema para solucionar problemas.
+
+* Cree, edite o elimine horarios en <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. Para más información sobre la gestión de horarios, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes de la acción de relé {/* #setRelayAction */}
+
+La característica de acción de relé activa el relé en el dispositivo o subdispositivo cuando ocurre un evento de IA. Por ejemplo, active el relé de la puerta para restringir el acceso cuando un evento involucre a un usuario en lista negra.
+
+En la sección <Cmd sid='action' product='cam' />, haga clic en el interruptor <Cmd sid='relay' product='cam' /> para habilitar la acción. Luego haga clic en el botón <IcCamEdit title='Edit' />. Aparece la ventana emergente de ajustes del relé.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay.png' />
+
+* <Cmd sid='port' product='cam' />: Seleccione el puerto del relé para activar. Seleccione el puerto del relé en el dispositivo o en un subdispositivo conectado al dispositivo. Los puertos usados por otras reglas o puertas muestran "En uso" y el sistema impide seleccionarlos.
+
+* <Cmd sid='open_time' product='cam' />: Defina cuánto tiempo el relé permanece abierto. Mueva el control deslizante o ingrese un valor en el campo de entrada. Configúrelo en 1–120 segundos.
+
+  * <Cmd sid='keep_until_event_off' product='cam' />: Configure <Cmd sid='type' product='cam' /> como <Cmd sid='ai_analysis_people_counting' product='cam' /> y especifique el área definida en <Cmd sid='count_limit' product='cam' /> como condición para usar <Cmd sid='keep_until_event_off' product='cam' />. Esta opción mantiene el relé abierto hasta que finaliza el evento de límite de conteo, sin importar el tiempo.
+
+    <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
+
+* <Cmd sid='contact_type' product='cam' />: Seleccione el tipo de contacto del relé. Seleccione un puerto para establecer las opciones. El valor predeterminado es <Cmd sid='normal_close' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
+
+  * <Cmd sid='normal_close' product='cam' />: Normalmente cerrado y se abre cuando se activa el relé.
+
+* <Cmd sid='schedule' product='cam' />: Seleccione el horario en que la regla se ejecuta y activa el relé.
+
+Haga clic en <Cmd sid='apply' product='cam' /> para guardar los ajustes de operación del relé.
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' /> es un ajuste aplicado al puerto del relé, no una regla. El sistema aplica de inmediato el cambio de <Cmd sid='contact_type' product='cam' /> a todas las reglas y puertas que usan el puerto. Cuando el puerto está fijo en Bloquear o Desbloquear, cambiar <Cmd sid='contact_type' product='cam' /> invierte la salida y puede abrir una puerta bloqueada.
+
+:::
+
+:::info
+
+* La versión de firmware 1.1.0 o posterior incluye soporte para esta característica.
+
+* Cree, edite o elimine horarios en <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. Para más información sobre la gestión de horarios, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
 
 :::
 
@@ -151,7 +212,7 @@ Los registros de envío del webhook y los códigos de respuesta se pueden revisa
 
 ### Guardar regla
 
-Después de completar la configuración de la regla, haga clic en <Cmd sid='apply' product='cam' /> en la parte superior derecha para guardar la regla. Las reglas guardadas aparecen en la lista de reglas. La lista de reglas muestra el nombre de la regla, el tipo, el evento y el horario. 
+Después de completar la configuración de la regla, haga clic en <Cmd sid='save' product='cam' /> en la parte superior derecha para guardar la regla. Las reglas guardadas aparecen en la lista de reglas. La lista de reglas muestra el nombre de la regla, el tipo, el evento y el horario. 
 
 <ProdImg src='/img/cam-server/ai-rule-settings-added-list.png' />
 
