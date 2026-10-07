@@ -2,14 +2,6 @@
 id: configure-video-profile
 title: Configurar Perfil de Video
 description: Describe cómo administrar, desde una perspectiva operativa, los modos de vista por canal, los ajustes de codificación de transmisión y las políticas de espejo y restablecimiento.
-keywords:
-  - Perfil de video
-  - Transmisión
-  - Códec
-  - Resolución
-  - Velocidad de fotogramas
-  - Tasa de bits
-  - Espejo
 ---
 
 La calidad de la imagen de vista en vivo y la calidad del video grabado dependen de los ajustes del perfil de video. En los ajustes del perfil de video, ajuste los modos de vista por canal y los valores de codificación de transmisión. También ofrece las funciones de Espejo (inversión izquierda-derecha) y restablecimiento de canal según el entorno de instalación.
@@ -32,7 +24,7 @@ Si los eventos de IA están activos, cambiar el ajuste de espejo o realizar un r
 
 1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. En la barra lateral izquierda, haga clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' />.
+2. Haz clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' /> en la barra lateral izquierda.
 
 <ProdImg src='/img/cam-server/cam-webserver-settings-video-profile.png' />
 
@@ -66,7 +58,7 @@ Las políticas del tipo de vista por canal son las siguientes.
 
   * <Cmd sid='view_type_double' product='cam' />: Este modo corrige la distorsión en el video capturado de un área de 360° para que pueda ver una vista panorámica dividida en pantalla superior e inferior.
 
-  * <Cmd sid='view_type_quad' product='cam' />: Este modo corrige la distorsión para que pueda ver al mismo tiempo cuatro pantallas específicas que se ajustan a la visión humana.
+  * <Cmd sid='view_type_quad' product='cam' />: Este modo corrige la distorsión según la visión humana y permite ver 4 pantallas específicas a la vez.
 
 ## Selección del tipo de transmisión
 
@@ -128,7 +120,7 @@ Ajuste el códec, la resolución, la velocidad de fotogramas y otros ajustes det
 
 * **Tasa de bits constante** (CBR): Este método transmite video fijando el tamaño de datos de cada fotograma. Ofrece una transmisión estable en entornos con ancho de banda de red constante, pero la calidad puede degradarse según la complejidad de la escena.
 
-* **GOV** (Group of Video): En la compresión H.264/H.265, esto se refiere al grupo de fotogramas desde un I-frame hasta el fotograma inmediatamente anterior al siguiente I-frame. Un GOV contiene I-frames (fotogramas clave) que conservan todos los datos de la imagen y P-frames que solo contienen los cambios respecto al fotograma anterior. Un GOV más largo reduce la cantidad de I-frames y, por tanto, reduce los datos de video; uno más corto aumenta la cantidad de I-frames y aumenta los datos de video.
+* **GOV** (Group of Video): En la compresión H.264/H.265, esto se refiere al grupo de fotogramas desde un I-frame hasta el fotograma inmediatamente anterior al siguiente I-frame. Un GOV contiene I-frames (fotogramas clave) que conservan todos los datos de la imagen y P-frames que solo contienen los cambios respecto al fotograma anterior. Un GOV más largo reduce los fotogramas I y los datos de video. Un GOV más corto aumenta los fotogramas I y los datos de video.
 
 :::
 
@@ -148,7 +140,7 @@ Cambiar el espejo puede estar restringido cuando se configuran eventos de IA. Si
 
 ## Inicialización de ajustes del canal
 
-Para restaurar el modo de vista y los ajustes de transmisión del canal seleccionado a los valores predeterminados de fábrica, haga clic en <Cmd sid='restore_to_default' product='cam' /> en <Cmd sid='reset' product='cam' />.
+Haz clic en <Cmd sid='restore_to_default' product='cam' /> en <Cmd sid='reset' product='cam' /> para restaurar el modo de vista y los ajustes de transmisión del canal seleccionado a los valores predeterminados de fábrica.
 
 :::info
 

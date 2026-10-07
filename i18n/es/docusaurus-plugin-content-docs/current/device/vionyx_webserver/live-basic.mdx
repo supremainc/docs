@@ -2,12 +2,6 @@
 id: live-basic
 title: Ver en Vivo
 description: Use el menú En vivo en ViOnyx Web Server para ver el video en vivo de la cámara, seleccionar canales y modos de visualización, y acercar o entrar en pantalla completa.
-keywords:
-  - Tiempo real
-  - Video
-  - En vivo
-  - Monitorizar
-  - Modo de visualización
 ---
 
 Use el menú <Cmd sid='live' product='cam' /> de ViOnyx Web Server para ver el video en vivo de la cámara. Seleccione el canal y el modo de visualización deseados, luego acerque o vea en pantalla completa.
@@ -22,7 +16,7 @@ Al entrar por primera vez al menú <Cmd sid='live' product='cam' />, el video ap
 
 | Ítem | Componente | Descripción |
 | :-: | :-: | --- |
-| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - Las funciones de IA están deshabilitadas. Haga clic en el icono para habilitar las funciones de IA.<br />- Para mostrar u ocultar los eventos de IA y los cuadros de usuario, haga clic en <IcMoreB title='More' /> y ajuste el setting. |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - Las funciones de IA están deshabilitadas. Haga clic en el icono para habilitar las funciones de IA.<br />- Haga clic en <IcMoreB title='More' /> y ajuste la configuración para mostrar u ocultar eventos de IA y cuadros de usuario. |
 | <Num num='2' /> | <IcPanelFace width='26px' height='26px' title='Face Shot' /> | Abra el panel <Cmd sid='face_shot' product='cam' />(Face Shot). |
 | <Num num='3' /> | CH | Seleccione el modo de visualización disponible para cada canal. |
 | <Num num='4' /> | <IcKnob width='28px' height='28px' title='Rotate' /> | Gire el video en vivo. |
@@ -68,7 +62,7 @@ Use el mouse para acercar y alejar.
 
 :::info
 
-* Rango de acercamiento: de 1x a 8x
+* Rango de zoom: 1x \~ 8x.
 
 * El acercamiento usa ampliación digital, por lo que la imagen puede verse borrosa con niveles altos de acercamiento.
 
@@ -76,13 +70,13 @@ Use el mouse para acercar y alejar.
 
 ## Rotar la pantalla
 
-Para rotar el video en vivo, haga clic y arrastre <IcKnob />. O ingrese directamente el ángulo de rotación en el campo de entrada a la derecha del botón <IcKnob />.
+Haga clic y arrastre <IcKnob title='Rotate View' /> para rotar el video en vivo. O ingrese directamente el ángulo de rotación en el campo de entrada a la derecha del botón <IcKnob title='Rotate View' />.
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-rotate-screen.png' />
 
-## Capturar pantalla
+## Captura de pantalla
 
-Para capturar el video en vivo, haga clic en <IcCapture title='Capture' />. La imagen capturada se guarda en el formato `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg`.
+Haga clic en <IcCapture title='Capture' /> para capturar una imagen del video en vivo. La imagen capturada se guarda en el formato `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg`.
 
 <ProdImg src='/img/cam-server/vionyx-live-basic-capture-screen.png' />
 
@@ -96,9 +90,9 @@ Use el modo de pantalla completa para ver el video en un tamaño mayor. Haga cli
 
 * Para salir del modo de pantalla completa, presione la tecla <Kbd>ESC</Kbd> o haga clic de nuevo en <IcMin />.
 
-## Mostrar cuadros de eventos y de usuario {/* #displayBox */}
+## Opciones de visualización de IA {/* #displayBox */}
 
-Para mostrar u ocultar los eventos de IA y los cuadros de usuario en el video en vivo, haga clic en <IcMoreB /> en la esquina superior derecha de la pantalla. Seleccione los elementos que se mostrarán.
+Haga clic en <IcMoreB /> en la esquina superior derecha de la pantalla para establecer las opciones de visualización de IA del video en vivo.
 
 <ProdImg src='/img/cam-server/live-view-event-user-box.png' width='60%' />
 
@@ -106,9 +100,21 @@ Para mostrar u ocultar los eventos de IA y los cuadros de usuario en el video en
 
 * <Cmd sid='user_box_popup' product='cam' />: Cuando una cara se detecta mediante un evento de IA, el cuadro de usuario aparece como una ventana emergente en la esquina inferior derecha del video en vivo.
 
+* <Cmd sid='base_opacity' product='cam' />: Ajuste la opacidad de las ventanas emergentes de eventos y de usuarios.
+
+* <Cmd sid='reference_point' product='cam' />: Muestre un punto de referencia sobre el cuadro de detección de personas en el video en vivo. Habilite esta opción para mostrar una leyenda en la esquina superior derecha del video.
+
+  * Punto azul claro (<Centerpoint />): Centro del cuadro.
+
+  * Punto rojo (<Bottompoint />): 80% desde la parte superior a lo largo del eje longitudinal del cuadro. Si instala la cámara en el techo apuntando hacia abajo, el punto aparece cerca de los pies de la persona.
+
 :::info
 
-La ventana emergente permanece visible durante el tiempo configurado en la opción <Cmd sid='display_time' product='cam' /> (en segundos).
+* La ventana emergente permanece visible durante el tiempo configurado en la opción <Cmd sid='display_time' product='cam' /> (en segundos).
+
+* Use la opción <Cmd sid='reference_point' product='cam' /> solo cuando la característica de IA (<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />) esté habilitada.
+
+* La versión de firmware 1.1.0 o posterior incluye soporte para las opciones <Cmd sid='base_opacity' product='cam' /> y <Cmd sid='reference_point' product='cam' />.
 
 :::
 

@@ -1,0 +1,150 @@
+---
+id: manage-schedule
+title: Administrar horarios
+description: Aprende a crear horarios para los días y las horas en que se ejecutan las acciones de reglas de IA, y a editarlos o eliminarlos.
+---
+
+Un horario es un calendario semanal que combina días de la semana y franjas horarias. Cuando una acción de regla de IA usa un horario, la acción se ejecuta solo durante las franjas horarias del horario. Un solo horario se puede usar en varias reglas de IA.
+
+Crea horarios en las siguientes situaciones.
+
+* Enviar webhooks solo durante el horario laboral de lunes a viernes
+
+* Reproducir el audio de alerta de detección de intrusión solo por la noche
+
+* Evitar que los relés operen los fines de semana
+
+:::info
+
+El dispositivo ofrece el horario **Always** de forma predeterminada. El horario Always se ejecuta las 24 horas del día y no se puede editar ni eliminar.
+
+:::
+
+## Revisa la lista de horarios
+
+1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='schedule' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-list.png' />
+
+La lista de horarios muestra los horarios registrados y las reglas de IA que usan cada horario. 
+
+* Junto a <Cmd sid='schedule' product='cam' />(<Num num='1' />) en la parte superior de la pantalla, el sistema muestra la cantidad de horarios.
+
+* Ingresa el nombre o el ID del horario en el campo de búsqueda (<Num num='2' />) para encontrar un horario específico.
+
+* Selecciona un valor de la lista Filas por página (<Num num='3' />) para definir los horarios por página.
+
+* Para cambiar el orden de clasificación, selecciona un criterio de la lista <Cmd sid='sort_by_name' product='cam' />(<Num num='4' />).
+
+La lista de horarios muestra lo siguiente.
+
+| Ítem | Descripción |
+| --- | --- |
+| <Cmd sid='column_id' product='cam' /> | Identificador único del horario. El horario Always es `0`. |
+| <Cmd sid='name' product='cam' /> | Nombre del horario. |
+| <Cmd sid='description' product='cam' /> | Descripción que se ingresa al agregar o editar el horario. |
+| <Cmd sid='used_by' product='cam' /> | Reglas de IA que usan el horario. Si ninguna regla de IA usa el horario, aparece <Cmd sid='none' product='cam' />. Si varias reglas de IA usan el horario, aparecen con el formato <Cmd sid='used_by_more' product='cam' replace='N' />. |
+| <Cmd sid='actions' product='cam' /> | Esta característica permite editar (<IcCamEdit />) o eliminar (<IcCamTrash />) horarios. |
+
+## Agregar horario
+
+<Steps>
+<Step>
+
+### Comienza a agregar un horario
+
+1. Haz clic en <Cmd sid='add_button' product='cam' /> en la parte superior derecha de la pantalla de lista de horarios.
+
+2. Ingrese la información del horario cuando aparezca la ventana emergente <Cmd sid='add_schedule' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-add.png' />
+
+</Step>
+<Step>
+
+### Ingrese un nombre y una descripción
+
+* <Cmd sid='name' product='cam' />: Introduzca el nombre del horario. Este campo es obligatorio. Use un nombre único para cada horario. Ingresa hasta 48 caracteres.
+
+* <Cmd sid='description' product='cam' />: Ingrese una descripción para el horario. Por ejemplo, agregue un rango de tiempo aplicado como **Lun-Vie 09:00-18:00** para distinguir horarios al seleccionarlos en reglas.
+
+</Step>
+<Step>
+
+### Defina franjas horarias en la tabla horaria
+
+Seleccione los días y las franjas horarias en las que se aplica el horario en <Cmd sid='timetable' product='cam' />. El eje vertical muestra el día de la semana (domingo\~sábado) y el eje horizontal muestra la hora (0\~24). Las franjas horarias seleccionadas aparecen como bloques.
+
+<ProdImg src='/img/cam-server/ai-rule-schedule-add-time-table.png' />
+
+* **Seleccionar franjas horarias**: Arrastre desde la hora de inicio hasta la hora de fin en la fila del día deseado. Seleccione en incrementos de 10 minutos.
+
+* **Mover una franja horaria**: Arrastre el bloque a la izquierda o a la derecha para moverlo a otra hora.
+
+* **Seleccionar o borrar 24 horas**: Haz clic en <Cmd sid='timetable_24h' product='cam' /> junto al nombre del día. La tabla horaria selecciona las 24 horas de ese día. Haz clic de nuevo para borrar todo.
+
+* **Eliminar un bloque**: Seleccione el bloque para eliminarlo. Aparece el icono <IcClose title='Remove block' />. Haz clic en el botón Eliminar bloque. {/* TODO: 블록 삭제 UI 동작 확인 */}
+
+  <Image src='/img/cam-server/ai-rule-schedule-add-time-table-delete.png' alone />
+
+* **Inicializar todo**: Para borrar todas las franjas horarias y definirlas de nuevo, haz clic en <Cmd sid='reset_timetable' product='cam' />.
+
+</Step>
+<Step>
+
+### Guardar horario
+
+Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' />. El sistema agrega el horario guardado a la lista de horarios. Selecciónelo en los ajustes de operación de reglas de IA.
+
+:::info
+
+* El campo <Cmd sid='used_by' product='cam' /> es de solo lectura y muestra las reglas de IA que usan el horario. Un horario recién creado aún no tiene reglas de IA que lo usen, por lo que aparece como <Cmd sid='not_used' product='cam' />.
+
+* Para aplicar un horario guardado a una regla de IA, consulte <DocLink docId='device/vionyx_webserver/set-ai-rule' />.
+
+:::
+
+</Step>
+</Steps>
+
+## Modificar horario
+
+1. En la lista de horarios, haga clic en el botón <IcCamEdit title='Edit' /> a la derecha del horario.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table.png' />
+
+2. Cuando aparezca la ventana emergente <Cmd sid='edit_schedule' product='cam' />, edite el nombre, la descripción y la tabla horaria.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table-popup.png' width='600px' />
+
+3. Haga clic en <Cmd sid='save' product='cam' /> para guardar los cambios.
+
+Al guardar el horario modificado, el sistema lo aplica a todas las reglas de IA que lo usan.
+
+:::info
+
+* Si varias reglas de IA comparten un horario, revise las reglas afectadas en la columna <Cmd sid='used_by' product='cam' /> antes de editar.
+
+* El horario Always, el horario predeterminado, no se puede modificar.
+
+:::
+
+## Eliminar horario
+
+1. En la lista de horarios, haga clic en el botón <IcCamTrash title='delete' /> a la derecha del horario.
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-remove-time-table.png' />
+
+2. Si aparece un mensaje de confirmación, revíselo y haga clic en <Cmd sid='ok' product='cam' />.
+
+Los horarios eliminados no se pueden recuperar.
+
+:::info
+
+* No elimine horarios que usan las reglas de IA. En las reglas de IA de la columna <Cmd sid='used_by' product='cam' />, seleccione otro horario y luego intente eliminarlo de nuevo.
+
+* El horario Always, el horario predeterminado, no se puede eliminar.
+
+:::

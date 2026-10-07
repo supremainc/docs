@@ -1,0 +1,274 @@
+---
+id: manage-doors
+title: Administrar Puertas
+description: Esta guía explica cómo agregar una puerta que la cámara controla. También explica cómo vincular eventos de control de acceso, relés, botones de salida, sensores de estado de la puerta y horarios de desbloqueo y bloqueo.
+---
+
+Agregue puertas que la cámara desbloquea y bloquea. Al agregar una puerta, configure el evento de control de acceso, la salida del relé y el tiempo de apertura de la puerta. Agregue una puerta antes de seleccionarla en niveles de acceso y reglas de puertas.
+
+Agregue la puerta en los siguientes casos.
+
+* Abrir automáticamente la puerta para usuarios autenticados con autenticación facial
+
+* Permitir que los usuarios abran la puerta desde el interior al presionar el botón de salida
+
+* Verificar si la puerta está abierta o cerrada mediante un sensor
+
+* Controlar la puerta por período, por ejemplo, desbloqueada durante el horario laboral y bloqueada por la noche
+
+## Antes de comenzar
+
+Revise lo siguiente antes de agregar una puerta.
+
+* Cree primero el evento de control de acceso para decidir el acceso. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/configure-access-control' />.
+
+* Asegúrese de que la cerradura de la puerta se conecte a un puerto de relé en la cámara o en el dispositivo de E/S secundario. Para usar un dispositivo de E/S secundario, agréguelo primero vía RS-485. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/configure-rs485' />.
+
+* Para usar un botón de salida o un sensor de estado de la puerta, asegúrese de que el dispositivo se conecte a un puerto de entrada.
+
+* Cree horarios con anticipación para usar horarios de desbloqueo y bloqueo. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+## Agregar puertas
+
+<Steps>
+<Step>
+
+### Comience a agregar puertas
+
+1. Haz clic en el menú <Cmd sid='access' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='door' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/cam-acs-door.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. Cuando aparezca la ventana emergente <Cmd sid='add_door' product='cam' />, ingrese la información de la puerta. Complete todos los campos obligatorios para habilitar el botón <Cmd sid='save' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add.png' />
+
+</Step>
+<Step>
+
+### Ingrese información básica
+
+En la sección <Cmd sid='info' product='cam' />, ingrese información para identificar la puerta.
+
+* <Cmd sid='id' product='cam' />: Identificador único de la puerta. El sistema lo ingresa automáticamente. Cámbialo si es necesario. No use un ID que ya esté asignado a otra puerta. Ingresa hasta 64 caracteres. Usa letras, números, guiones (`-`) y guiones bajos (`_`).
+
+* <Cmd sid='name' product='cam' />: Ingrese el nombre de la puerta. Obligatorio. No use el mismo nombre que otra puerta. Asigne un nombre según la ubicación, como **Entrada principal** o **Oficina del 2º piso**, para distinguir las puertas en niveles de acceso y reglas.
+
+* <Cmd sid='description' product='cam' />: Ingrese una descripción para la puerta.
+
+:::info
+
+* El ID y el nombre de la puerta deben ser únicos en el sistema. No use valores ya en uso.
+
+* Después de guardar, el ID de la puerta queda fijo.
+
+:::
+
+</Step>
+<Step>
+
+### Vincular eventos de control de acceso
+
+En la sección <Cmd sid='ai_door_event' product='cam' />, seleccione un área de control de acceso en la lista <Cmd sid='door_access_area' product='cam' /> para usarla en la decisión de acceso de esta puerta. La lista muestra las áreas de control de acceso definidas al crear eventos de control de acceso.
+
+:::info
+
+* Vincule cada área de control de acceso solo a una puerta. No seleccione un área ya vinculada a otra puerta.
+
+* La página Eventos de IA impide eliminar o cambiar el área de control de acceso vinculada a una puerta. Para cambiar el área, desvincúlela de la puerta primero.
+
+* Consulte <DocLink docId='device/vionyx_webserver/configure-access-control' /> para obtener más información sobre la creación de eventos de control de acceso.
+
+:::
+
+</Step>
+<Step>
+
+### Configurar relés
+
+En la sección <Cmd sid='select_relay' product='cam' />, seleccione el relé que controla la cerradura de la puerta.
+
+* <Cmd sid='port' product='cam' />: Seleccione el puerto del relé conectado a la cerradura de la puerta. Obligatorio. Seleccione un puerto de relé en la cámara o en un dispositivo de E/S aguas abajo. No seleccione puertos usados por otra puerta o regla de IA.
+
+* <Cmd sid='switch_type' product='cam' />: Seleccione el tipo de contacto de la cerradura. Si <Cmd sid='select_none' product='cam' /> permanece seleccionado, al guardar el sistema lo cambia a <Cmd sid='normal_open' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
+
+  * <Cmd sid='normal_close' product='cam' />: Normalmente cerrado y se abre cuando se activa el relé.
+
+:::caution
+
+* <Cmd sid='switch_type' product='cam' /> se aplica al puerto del relé, no a la puerta. Al guardar una puerta, el sistema aplica el ajuste a todas las puertas y reglas que usan el puerto.
+
+* Verifique las especificaciones de la cerradura y seleccione el <Cmd sid='switch_type' product='cam' /> correcto. Una selección incorrecta puede mantener la puerta desbloqueada durante el funcionamiento normal.
+
+:::
+
+</Step>
+<Step>
+
+### Ajuste del tiempo de desbloqueo
+
+En la sección <Cmd sid='unlock_time' product='cam' />, defina cuánto tiempo mantener la puerta desbloqueada después de conceder el acceso.
+
+* <Cmd sid='unlock_time' product='cam' />: Arrastre el control deslizante o ingrese un valor en el campo de entrada. Establezca de 1 a 120 segundos. Predeterminado: 3 segundos.
+
+* <Cmd sid='keep_unlock_until_event_off' product='cam' />: Seleccione esta opción para mantener la puerta desbloqueada hasta que finalice el evento de control de acceso, sin importar el tiempo de desbloqueo. Esta opción está disponible solo cuando selecciona un área de control de acceso.
+
+:::info
+
+El ajuste <Cmd sid='condition' product='cam' /> del evento de control de acceso determina cuándo finaliza el evento. Por ejemplo, para bloquear la puerta de inmediato cuando alguien entra detrás de otra persona sin autorización, seleccione <Cmd sid='door_access_hold_keep_until_clear_or_violation' product='cam' /> en el evento de control de acceso. Para obtener detalles, consulte <DocLink docId='device/vionyx_webserver/configure-access-control#eventTrigger' />.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes del botón de salida (opcional)
+
+Si el botón de salida está instalado en el interior de la puerta, defina el puerto de entrada conectado al botón en la sección <Cmd sid='exit_button' product='cam' />. El botón de salida abre la puerta sin autenticación facial.
+
+* <Cmd sid='port' product='cam' />: Seleccione el puerto de entrada al que está conectado el botón de salida.
+
+* <Cmd sid='switch_type' product='cam' />: Seleccione el tipo de contacto del botón de salida. El valor predeterminado es <Cmd sid='normal_open' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
+
+  * <Cmd sid='normal_close' product='cam' />: Normalmente cerrado y se abre cuando se activa el relé.
+
+</Step>
+<Step>
+
+### Ajustes del estado de la puerta (opcional)
+
+Si el sensor de posición de la puerta está instalado, defina el puerto de entrada conectado al sensor en la sección <Cmd sid='door_status' product='cam' />. Después de la configuración, la pantalla <Cmd sid='door_control' product='cam' /> muestra si la puerta está abierta o cerrada.
+
+* <Cmd sid='port' product='cam' />: Seleccione el puerto de entrada al que está conectado el sensor de posición de la puerta.
+
+* <Cmd sid='switch_type' product='cam' />: Seleccione el tipo de contacto del sensor. El valor predeterminado es <Cmd sid='normal_close' product='cam' />.
+
+  * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
+
+  * <Cmd sid='normal_close' product='cam' />: Normalmente cerrado y se abre cuando se activa el relé.
+
+:::info
+
+* Conecte el botón de salida y el sensor de estado de la puerta a puertos de entrada diferentes.
+
+* No seleccione un puerto de entrada que utilice otra puerta.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes de horario (opcional)
+
+En la sección <Cmd sid='schedule' product='cam' />, configure la puerta para que quede desbloqueada o bloqueada por período de tiempo.
+
+* <Cmd sid='unlock_schedule' product='cam' />: Mantenga la puerta desbloqueada durante el horario seleccionado. Úselo para mantener la puerta del vestíbulo desbloqueada durante las horas de mayor actividad.
+
+* <Cmd sid='lock_schedule' product='cam' />: Mantenga la puerta bloqueada durante el horario seleccionado. En esta zona horaria, los usuarios inscritos no pueden acceder.
+
+:::info
+
+Use horarios distintos para abrir y bloquear. El sistema no puede guardarlos si las zonas horarias se superponen.
+
+:::
+
+</Step>
+<Step>
+
+### Guardar puerta
+
+Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' />. El sistema agrega las puertas guardadas a la lista y las habilita en niveles de acceso y reglas de puertas.
+
+<ProdImg src='/img/cam-server/cam-acs-door-added-list.png' />
+
+</Step>
+</Steps>
+
+## Revisar lista de puertas
+
+En la lista de puertas, revise las puertas guardadas y los eventos y puertos vinculados a cada puerta.
+
+<ProdImg src='/img/cam-server/cam-acs-door-lists.png' />
+
+* Para encontrar una puerta específica, ingresa el nombre de la puerta en el campo de búsqueda (<Num num='1' />).
+
+* Selecciona un valor en la lista Filas por página (<Num num='2' />) en la esquina superior derecha. Esto cambia el número de puertas por página.
+
+* Para cambiar el criterio de ordenamiento, selecciona uno en <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+Los siguientes campos aparecen en la lista de puertas.
+
+| Ítem | Descripción |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | El identificador único de la puerta. |
+| <Cmd sid='name' product='cam' /> | El nombre de la puerta. |
+| <Cmd sid='description' product='cam' /> | La descripción ingresada al agregar o editar la puerta. |
+| <Cmd sid='ai_event' product='cam' /> | El área de control de acceso vinculada a la puerta. |
+| <Cmd sid='relay' product='cam' /> | Puerto de relé que controla la cerradura de la puerta. |
+| <Cmd sid='exit_button' product='cam' /> | Puerto de entrada conectado al botón de salida. |
+| <Cmd sid='door_status' product='cam' /> | Puerto de entrada conectado al sensor de apertura/cierre de la puerta. |
+| <Cmd sid='actions' product='cam' /> | Edite (<IcCamEdit />) o elimine (<IcCamTrash />) la puerta. |
+
+## Editar puertas
+
+1. En la lista de puertas, haga clic en el botón <IcCamEdit title='Edit' /> en el extremo derecho de la puerta para editarla.
+
+2. Cuando aparezca la ventana emergente <Cmd sid='edit_door' product='cam' />, edite los campos.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-edit.png' />
+
+3. Haga clic en <Cmd sid='save' product='cam' /> para guardar los cambios.
+
+El sistema aplica los cambios de inmediato a los niveles de acceso y las reglas de puerta que usan la puerta.
+
+:::caution
+
+Si la puerta se bloquea o desbloquea manualmente, cambiar el <Cmd sid='switch_type' product='cam' /> del relé podría invertir la salida y abrir una puerta bloqueada. Contrólela manualmente en el menú <Cmd sid='door_control' product='cam' /> antes de cambiar el tipo de contacto.
+
+:::
+
+:::info
+
+Cambie el <Cmd sid='switch_type' product='cam' /> del relé y haga clic en el botón <Cmd sid='save' product='cam' />. Aparece un mensaje de confirmación.
+
+<ProdImg src='/img/cam-server/cam-acs-door-edit-switch-type.png' />
+
+* Haga clic en <Cmd sid='ok' product='cam' /> para cerrar el mensaje de confirmación y aplicar el nuevo tipo de contacto al puerto de relé de inmediato. También se aplica a todas las puertas y reglas que usan el puerto.
+
+* Haz clic en <Cmd sid='cancel' product='cam' /> para mantener el tipo de contacto y guardar solo los demás cambios.
+
+* Si lo cambias mientras la puerta se mantiene abierta, se aplica cuando termina el tiempo de apertura.
+
+:::
+
+## Borrar puerta
+
+1. En la lista de puertas, haz clic en <IcCamTrash title='delete' /> al extremo derecho de la puerta para eliminarla.
+
+2. Si aparece un mensaje de confirmación, revíselo y haga clic en <Cmd sid='ok' product='cam' />.
+
+Al borrar la puerta, el sistema la desvincula de los eventos de control de acceso conectados y de los niveles de acceso. La puerta borrada también desaparece de la lista <Cmd sid='door_control' product='cam' /> y no se puede restaurar.
+
+:::info
+
+* Al borrar una puerta que se usa en un nivel de acceso o una regla de puerta, el sistema también borra el nivel de acceso y la regla de puerta relacionados.
+
+* Para agregar, editar o borrar puertas, necesitas el permiso <Cmd sid='read_write' product='cam' />. Si no tienes permiso, contacta a tu administrador. Para obtener más información sobre los roles de operador, consulta <DocLink docId='device/vionyx_webserver/manage-operators' />.
+
+:::
+
+<NextStep>
+<NextItem to='manage-access-levels' >
+
+Después de agregar puertas, crea un nivel de acceso para definir cuándo ciertos usuarios pueden entrar.
+
+</NextItem>
+</NextStep>

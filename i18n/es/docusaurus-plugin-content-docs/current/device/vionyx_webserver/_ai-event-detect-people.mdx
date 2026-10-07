@@ -1,0 +1,35 @@
+### Ajustes de detección de personas (opcional)
+
+En la sección <Cmd sid='detection' product='cam' />, seleccione el área donde la cámara detecta personas. Reduzca el área de detección según sea necesario para reducir detecciones falsas en áreas irrelevantes (finales de pasillos, ventanas, superficies reflectantes, etc.).
+
+* <Cmd sid='all_area' product='cam' />: Predeterminado. Detecta personas en toda la pantalla. Disponible independientemente de si se establecen áreas faciales.
+
+* <Cmd sid='designated_area' product='cam' />: Detecta personas solo dentro del área que especifique. Disponible solo cuando no se establece un área facial. Configure al menos una línea virtual. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10. Aparece un cuadro morado en la vista en vivo; arrastre sus esquinas o puntos con el mouse para ajustarlo a la forma deseada. Arrastre el centro para mover la línea.
+
+  <Include pages='configure-people-tracking'><ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png' /></Include>
+
+  <Include pages='configure-intrusion'><ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-line-crossing'><ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-counting-people'><ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-access-control'><ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-detect-area.png' /></Include>
+
+  * <Cmd sid='name' product='cam' />: Edite el nombre del área de detección de personas.
+
+* <Cmd sid='face_area_only' product='cam' />: Detecta personas solo dentro del área facial. Disponible solo cuando se establece un área facial.
+
+:::info
+
+* Al agregar un área facial con <Cmd sid='designated_area' product='cam' /> seleccionado, el sistema abre la ventana emergente <Cmd sid='notice' product='cam' />. Haga clic en <Cmd sid='ok' product='cam' /> para borrar el área de detección designada y cambiar a <Cmd sid='face_area_only' product='cam' />.
+
+* Al eliminar todas las áreas faciales con <Cmd sid='face_area_only' product='cam' /> seleccionado, el sistema cambia automáticamente a <Cmd sid='all_area' product='cam' />.
+
+* Haga clic en <IcCamReset title='reset' /> para inicializar la forma y el tamaño del área de detección de personas.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar el área de detección de personas agregada.
+
+* La versión de firmware 1.1.0 o posterior incluye soporte para esta característica.
+
+:::

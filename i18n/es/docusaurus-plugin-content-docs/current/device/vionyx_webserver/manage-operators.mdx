@@ -2,13 +2,13 @@
 id: manage-operators
 title: Administrar Operadores
 description: Esta guía explica cómo administrar cuentas adicionales de administrador (operador) para la operación de cámaras.
-keywords:
-  - Operador
 ---
+
+import PWRule from './_password-rule.mdx';
 
 Además de los administradores, agregue, edite o elimine cuentas de operador con permisos limitados. Los operadores pueden administrar ciertas funciones de la cámara en nombre de los administradores.
 
-Se requiere una cuenta de operador para usar la feature ONVIF. Al conectarse a la cámara desde un cliente ONVIF o VMS, use una cuenta de operador registrada.
+Además, agregue una cuenta solo para ONVIF que el NVR/VMS usa para la autenticación de ONVIF y RTSP. Una cuenta solo para ONVIF es obligatoria para habilitar la conmutación por error del Perfil S de ONVIF.
 
 Agregue operadores en las siguientes situaciones.
 
@@ -34,17 +34,37 @@ Agregue operadores en las siguientes situaciones.
 
 ## Tipos de permisos de operador
 
-Seleccione uno de los dos permisos siguientes al agregar un operador.
+Seleccione uno de los siguientes 3 permisos al agregar un operador.
 
 * <Cmd sid='read_only' product='cam' className='bold' />: Ve todas las configuraciones y registros de la cámara; no puede cambiar la configuración.
 
-* <Cmd sid='read_write' product='cam' className='bold' />: Accede a todos los menús excepto el menú de Administrador; puede cambiar la configuración de la cámara. Los operadores pueden cambiar su propia contraseña, pero no la de otros operadores ni la de los administradores.
+* <Cmd sid='read_write' product='cam' className='bold' />: Acceda a todos los menús excepto el menú Administrador y cambie los ajustes de la cámara. Los operadores pueden cambiar su propia contraseña, pero no la de otros operadores ni la de los administradores.
+
+* <Cmd sid='onvif_only_account' product='cam' className='bold' />: Una cuenta exclusiva del dispositivo que el NVR/VMS usa para la autenticación de ONVIF y RTSP. No es posible iniciar sesión en la interfaz web. Obligatoria al habilitar la conmutación por error del Perfil S de ONVIF. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/configure-network#onvifSettings' />.
+
+### Limitaciones de las cuentas solo para ONVIF {/* #onvif-only-account */}
+
+Las cuentas solo para ONVIF tienen las siguientes limitaciones, a diferencia de las cuentas de operador estándar.
+
+* Cree solo una por dispositivo.
+
+* Después de crear la cuenta, el sistema bloquea los cambios de ID, contraseña y permisos. Solo habilite, deshabilite o elimine la cuenta.
+
+* Deshabilitar la cuenta impide la conmutación por error del Perfil S.
+
+* Cuando la conmutación por error del Perfil S está habilitada, el sistema bloquea la eliminación de la cuenta. Primero, cambie el modo ONVIF a <Cmd sid='onvif_mode_t_only' product='cam' />.
+
+:::caution
+
+Las cuentas solo para ONVIF no permiten cambiar el ID ni la contraseña después de crearlas. Decida con anticipación qué ingresar en el NVR/VMS y almacene la información de la cuenta de forma segura. Para cambiar la contraseña, elimine la cuenta y créela de nuevo.
+
+:::
 
 ## Agregar operador
 
 1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
 
    <ProdImg src='/img/cam-server/cam-webserver-system-account-manage.png' />
 
@@ -68,7 +88,7 @@ Seleccione uno de los dos permisos siguientes al agregar un operador.
 
    * <Cmd sid='confirm_password' product='cam' />: Vuelva a ingresar la contraseña.
 
-   * <Cmd sid='permission' product='cam' />: Seleccione el permiso del operador.
+   * <Cmd sid='permission' product='cam' />: Seleccione el permiso del operador. Seleccione <Cmd sid='onvif_only_account' product='cam' /> para crear una cuenta solo para ONVIF.
 
    * <Cmd sid='enabled' product='cam' />: Active o desactive la cuenta del operador.
 
@@ -90,7 +110,7 @@ Cambie los permisos de un operador.
 
 1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
 
 3. En la sección <Cmd sid='operator' product='cam' />, haga clic en el campo <Cmd sid='permission' product='cam' /> del operador cuyos permisos desea cambiar.
 
@@ -108,13 +128,19 @@ Haga clic en <IcCamEdit title='Edit' /> para abrir la ventana <Cmd sid='edit_ope
 
 :::
 
+:::info
+
+Las cuentas solo para ONVIF no permiten cambios de permisos. Si requiere otro permiso, agregue una nueva cuenta de operador.
+
+:::
+
 ## Deshabilitar operador
 
 Desactive temporalmente la cuenta de un operador. Bloquea el acceso sin eliminar la cuenta.
 
 1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
 
 3. En la sección <Cmd sid='operator' product='cam' />, haga clic en el interruptor del campo <Cmd sid='enabled' product='cam' /> del operador que desea desactivar.
 
@@ -148,7 +174,7 @@ Puede eliminar permanentemente las cuentas de operador. Las cuentas eliminadas n
 
 1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
 
 3. En la sección <Cmd sid='operator' product='cam' />, haga clic en <IcCamTrash title='Delete' /> del operador que desea eliminar.
 
@@ -157,3 +183,9 @@ Puede eliminar permanentemente las cuentas de operador. Las cuentas eliminadas n
 4. Cuando aparezca el mensaje de advertencia, haga clic en <Cmd sid='ok' product='cam' />.
 
 Cuando la eliminación se completa correctamente, aparece un mensaje de éxito en la esquina superior derecha de la pantalla. La cuenta de operador se quita de la lista.
+
+:::info
+
+Si <Cmd sid='onvif_mode_fallback' product='cam' /> está habilitado, el sistema bloquea la eliminación de la cuenta solo para ONVIF. Vaya a <Cmd sid='settings' product='cam' /> → <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />, cambie el modo ONVIF a <Cmd sid='onvif_mode_t_only' product='cam' /> y vuelva a intentarlo. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/configure-network#onvifSettings' />.
+
+:::

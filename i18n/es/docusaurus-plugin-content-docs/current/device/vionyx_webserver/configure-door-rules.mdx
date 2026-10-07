@@ -1,0 +1,231 @@
+---
+id: configure-door-rules
+title: Configurar Reglas de Puerta
+description: Configure reglas de puerta para automatizar la reproducción de audio, la entrega de webhooks y las acciones de relé. Active acciones cuando el sistema otorgue o deniegue el acceso, o permita el paso directo.
+---
+
+Las reglas de puerta reproducen audio, envían webhooks o ejecutan acciones de relé según la decisión de acceso en la puerta. Cuando el sistema otorga acceso, la puerta se abre según los ajustes de la puerta. Defina acciones adicionales en reglas de puerta.
+
+Configure reglas de puerta en las siguientes situaciones.
+
+* Cuando suena un mensaje de bienvenida al otorgar acceso y un mensaje de instrucción al denegar acceso
+
+* Cuando una persona no autorizada sigue a otra y debe activarse una luz de baliza o una alarma
+
+* Cuando los registros de acceso deben enviarse a un sistema externo de control de acceso o a un servidor de monitoreo
+
+## Antes de comenzar
+
+Antes de configurar reglas de puerta, revise lo siguiente.
+
+* Agregue puertas antes de aplicar reglas. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+* Cargue clips de audio antes de usar la reproducción de audio. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+* Prepare la URL del receptor del webhook antes de usar webhooks.
+
+* Conecte luces de baliza y alarmas al puerto de relé para usar relés. Para obtener más información sobre cómo conectar dispositivos externos, consulte la <Linkto to='device/vionyx/installation'>Guía de instalación de ViOnyx</Linkto>.
+
+## Resultados de decisiones de acceso
+
+En las reglas de puerta, defina las acciones que el sistema ejecuta para cada resultado de decisión de acceso.
+
+| Resultados de decisiones de acceso | Condición de activación |
+| --- | --- |
+| <Cmd sid='door_rule_outcome_granted' product='cam' /> | El sistema identificó a un usuario con nivel de acceso durante el horario de acceso y otorgó acceso. |
+| <Cmd sid='door_rule_outcome_denied_unidentified' product='cam' /> | La autenticación facial no autenticó a la persona, o la persona no está inscrita. |
+| <Cmd sid='door_rule_outcome_denied_access_level' product='cam' /> | El sistema identificó a un usuario inscrito, pero el usuario no tiene el nivel de acceso de la puerta o está fuera del horario de acceso. |
+| <Cmd sid='door_rule_outcome_denied_door_mode' product='cam' /> | El sistema denegó el acceso porque la puerta está bloqueada manualmente o por horario. |
+| <Cmd sid='door_rule_outcome_denied_anti_tailgating' product='cam' /> | El sistema denegó el acceso porque la zona de verificación no cumplió la condición de tailgating o seguimiento. |
+| <Cmd sid='door_rule_outcome_passed' product='cam' /> | Un usuario al que se le otorgó acceso cruzó la línea de entrada del evento y entró. |
+| <Cmd sid='door_rule_outcome_passed_after_denied' product='cam' /> | Una persona con acceso denegado cruzó la línea de entrada del evento y entró. Este evento de seguridad indica un presunto ingreso forzado. |
+
+## Añadir una regla de puerta
+
+<Steps>
+<Step>
+
+### Iniciar la creación de una regla
+
+1. Haz clic en el menú <Cmd sid='access' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='door_rule_settings' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. Cuando aparezca la pantalla <Cmd sid='add_door_rule' product='cam' />, ingrese el nombre de la regla y configure las condiciones y acciones.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add-rule.png' />
+
+</Step>
+<Step>
+
+### Ingresar nombre de la regla
+
+Ingrese el nombre de la regla en el campo de entrada <Cmd sid='name' product='cam' />. Obligatorio.
+
+</Step>
+<Step>
+
+### Configurar condiciones
+
+En la sección <Cmd sid='condition' product='cam' />, seleccione las puertas a las que se aplicará la regla.
+
+* <Cmd sid='channel' product='cam' />: El canal está fijo en CH 1. Soporte solo para la vista ojo de pez.
+
+* <Cmd sid='door' product='cam' />: Seleccione la puerta a la que se aplicará la regla. Obligatorio.
+
+</Step>
+<Step>
+
+### Configurar acciones
+
+La sección <Cmd sid='action' product='cam' /> muestra las acciones <Cmd sid='audio' product='cam' />, <Cmd sid='webhook' product='cam' /> y <Cmd sid='relay' product='cam' /> para cada resultado de decisión de acceso. Para el resultado de decisión de acceso que activa la acción, active el interruptor de la acción y haga clic en <IcCamEdit title='Edit' />. Aparece la ventana emergente de ajustes de acción.
+
+Active al menos 1 acción para guardar la regla. Consulte a continuación los ajustes específicos de cada acción.
+
+:::info
+
+Fuera del horario de la acción, la acción no se ejecuta cuando ocurre un resultado de decisión de acceso. Administre los horarios en <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+:::
+
+#### Ajustes de acción de audio
+
+Cuando ocurre un resultado de decisión de acceso, la cámara reproduce un clip de audio.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />: Seleccione el clip de audio que se reproducirá. Obligatorio.
+
+* <Cmd sid='repeat' product='cam' />: Seleccione la cantidad de veces que se repetirá la reproducción de audio.
+
+* <Cmd sid='schedule' product='cam' />: Seleccione el horario para la reproducción de audio. Obligatorio. El valor predeterminado es <Cmd sid='always' product='cam' />.
+
+Haga clic en <Cmd sid='apply' product='cam' /> para guardar los ajustes de la acción de audio.
+
+:::info
+
+Prepare los clips de audio antes de configurar acciones de audio. Cargue clips de audio en <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+:::
+
+#### Ajustes de acción de webhook
+
+Cuando ocurre un resultado de decisión de acceso, el sistema envía un webhook a un servidor externo.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-webhook.png' />
+
+* <Cmd sid='method' product='cam' />: El método de transmisión del webhook. Solo se admite el método `POST`.
+
+* <Cmd sid='url' product='cam' />: Ingrese la URL para recibir el webhook. Obligatorio.
+
+* <Cmd sid='header' product='cam' />: Configure los encabezados HTTP que se incluirán en el webhook. El sistema agrega el encabezado `Content-Type: application/json` de forma predeterminada. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar encabezados. No use nombres de encabezados duplicados. No use nombres de encabezados reservados por el sistema.
+
+* <Cmd sid='body' product='cam' />: Seleccione los campos que se incluirán en el cuerpo del webhook. Obligatorio. En cada fila, seleccione a la izquierda los datos para enviar e ingrese la clave JSON en el campo central. El campo derecho muestra variables que cambian a valores reales cuando ocurre un evento. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar un campo personalizado o haga clic en <IcCamTrash title='delete' /> para eliminarlo. El tamaño máximo del cuerpo es 64KB.
+
+* <Cmd sid='schedule' product='cam' />: Seleccione un horario para enviar webhooks. Obligatorio. El valor predeterminado es <Cmd sid='always' product='cam' />.
+
+Para guardar la configuración, haga clic en <Cmd sid='apply' product='cam' />.
+
+:::info
+
+* Por seguridad, los valores ingresados en el encabezado y el cuerpo no vuelven a aparecer después de guardar. Al editar una regla, los valores guardados se mantienen. Las nuevas entradas reemplazan los valores existentes.
+
+* Revise los resultados de entrega del webhook en el registro del sistema. Para obtener detalles, consulte <DocLink docId='device/vionyx_webserver/view-system-logs' />.
+
+:::
+
+#### Ajustes de acción del relé
+
+Cuando ocurre una decisión de acceso, el sistema activa el relé seleccionado. Use esta opción para integrar una baliza, una sirena o una cerradura auxiliar.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-relay.png' />
+
+* <Cmd sid='port' product='cam' />: Seleccione el puerto del relé para activar. Obligatorio. No se pueden seleccionar los puertos de relé usados para cerraduras de puertas.
+
+* <Cmd sid='open_time' product='cam' />: Configure cuánto tiempo mantener activo el relé. Mueva el control deslizante o ingrese un valor en el campo de entrada. Establezca de 1 a 120 segundos. Predeterminado: 3 segundos.
+
+  * <Cmd sid='keep_until_event_off' product='cam' />: Seleccione esta opción para mantener activo el relé hasta que termine el evento de control de acceso, sin importar el tiempo de apertura.
+
+* <Cmd sid='contact_type' product='cam' />: Seleccione el tipo de contacto del relé. Obligatorio. Establezca esta opción después de seleccionar un puerto.
+
+  * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
+
+  * <Cmd sid='normal_close' product='cam' />: Normalmente cerrado y se abre cuando se activa el relé.
+
+* <Cmd sid='schedule' product='cam' />: Seleccione un horario para activar el relé. Obligatorio. El valor predeterminado es <Cmd sid='always' product='cam' />.
+
+Para guardar la configuración, haga clic en <Cmd sid='apply' product='cam' />.
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' /> es un ajuste aplicado al puerto del relé, no una regla. Al cambiar <Cmd sid='contact_type' product='cam' />, aparece un mensaje de confirmación. Haga clic en <Cmd sid='ok' product='cam' /> para aplicarlo de inmediato a todas las reglas y puertas que usan el puerto. Cambiar esto mientras el puerto está bloqueado o desbloqueado manualmente invierte la salida. Una puerta bloqueada puede abrirse.
+
+:::
+
+</Step>
+<Step>
+
+### Guardar regla
+
+Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha. El sistema agrega las reglas guardadas a la lista de reglas de puerta y las aplica de inmediato.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-added-list.png' />
+
+:::info
+
+Cree hasta 20 reglas de puerta.
+
+:::
+
+</Step>
+</Steps>
+
+## Ver la lista de reglas de puerta
+
+La lista de reglas de puerta muestra las reglas guardadas y el destino de cada regla.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-check.png' />
+
+* Ingrese el nombre de la regla de puerta en el campo de búsqueda (<Num num='1' />) para encontrar una regla específica.
+
+* Seleccione un valor en Filas (<Num num='2' />) para cambiar el número de reglas por página.
+
+* Para cambiar el criterio de ordenamiento, selecciona uno en <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+En la lista de reglas de puerta aparecen los siguientes campos.
+
+| Ítem | Descripción |
+| --- | --- |
+| <Cmd sid='column_no' product='cam' /> | El número de la regla. |
+| <Cmd sid='name' product='cam' /> | El nombre de la regla. |
+| <Cmd sid='door' product='cam' /> | La puerta a la que se aplica la regla. |
+| <Cmd sid='event' product='cam' /> | El resultado de la decisión de acceso con una o más acciones habilitadas. Si existen varios resultados, la lista muestra solo parte de ellos. |
+| <Cmd sid='schedule' product='cam' /> | El horario aplicado a la regla. |
+| <Cmd sid='on_off' product='cam' /> | Activa o desactiva la regla. |
+| <Cmd sid='actions' product='cam' /> | Proporciona controles para editar (<IcCamEdit />) o eliminar (<IcCamTrash />) la regla. |
+
+{/* TODO(개발자 확인): 목록의 '일정' 열이 동작별 일정 중 무엇을 표시하는지 확인 */}
+
+## Habilitar/deshabilitar reglas de puerta
+
+En la lista de reglas de puerta, haga clic en el interruptor de la columna <Cmd sid='on_off' product='cam' /> para habilitar o deshabilitar la regla. Las reglas deshabilitadas no ejecutan acciones cuando ocurre un resultado de decisión de acceso. Use esto para pausar una regla sin eliminarla.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-enable-disable.png' />
+
+## Editar regla de puerta
+
+1. En la lista de reglas de puerta, haga clic en el botón <IcCamEdit title='Edit' /> al extremo derecho de la regla para editarla.
+
+2. Cuando aparezca la pantalla <Cmd sid='edit_door_rule' product='cam' />, edite las condiciones y las acciones.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule-edit.png' />
+
+3. Para guardar los cambios, haz clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla.
+
+## Eliminar regla de puerta
+
+En la lista de reglas de puerta, haga clic en el botón <IcCamTrash title='delete' /> al extremo derecho de la regla para eliminarla. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='ok' product='cam' />. Las reglas eliminadas no se pueden recuperar.
