@@ -2,13 +2,13 @@
 id: manage-operators
 title: オペレーターの管理
 description: カメラ運用のための追加管理者（オペレーター）アカウントを管理する方法を案内します。
-keywords:
-  - オペレーター
 ---
 
-管理者以外に、制限された権限を持つオペレーター（Operator）アカウントを追加、編集、削除できます。 オペレーターは管理者に代わってカメラの一部機能を管理できます。
+import PWRule from './_password-rule.mdx';
 
-ONVIF機能を使用するには、オペレーターアカウントが必要です。 ONVIFクライアントまたはVMSからカメラに接続する場合は、登録済みのオペレーターアカウントを使用してください。
+管理者以外に、制限された権限を持つオペレーター（Operator）アカウントを追加、編集、削除できます。オペレーターは管理者に代わってカメラの一部機能を管理できます。
+
+また、NVR/VMSがONVIFおよびRTSP認証に使用するONVIF専用アカウントを追加できます。 ONVIF Profile S フォールバックを有効化するには、ONVIF専用アカウントが必要です。
 
 次のような場合にオペレーターを追加してください。
 
@@ -24,9 +24,9 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
 * 最大10名までオペレーターを追加できます。
 
-* オペレーターは他のオペレーターを追加できません。 オペレーターを追加できるのは管理者のみです。
+* オペレーターは他のオペレーターを追加できません。オペレーターを追加できるのは管理者のみです。
 
-* オペレーターのパスワードは管理者のパスワードと同じルールに従います。 詳しくは <DocLink docId='device/vionyx_webserver/update-admin-password' /> をご参照ください。
+* オペレーターのパスワードは管理者のパスワードと同じルールに従います。詳しくは <DocLink docId='device/vionyx_webserver/update-admin-password' /> をご参照ください。
 
 * 各オペレーターは自分のアカウント情報のみ変更できます。
 
@@ -34,11 +34,31 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
 ## オペレーター権限の種類
 
-オペレーターを追加する際に、次の2つの権限のいずれかを選択します。
+オペレーターを追加する際に、次の3つの権限のいずれかを選択します。
 
 * <Cmd sid='read_only' product='cam' className='bold' />：すべてのカメラ設定とログを参照できますが、設定は変更できません。
 
-* <Cmd sid='read_write' product='cam' className='bold' />：管理者メニューを除くすべてのメニューにアクセスでき、カメラ設定を変更できます。 自分のパスワードは変更できますが、他のオペレーターや管理者アカウントのパスワードは変更できません。
+* <Cmd sid='read_write' product='cam' className='bold' />：管理者メニューを除くすべてのメニューにアクセスでき、カメラ設定を変更できます。自分のパスワードは変更できますが、他のオペレーターや管理者アカウントのパスワードは変更できません。
+
+* <Cmd sid='onvif_only_account' product='cam' className='bold' />：NVR/VMSがONVIFおよびRTSP認証に使用するデバイス専用アカウントです。 Web UIにはログインできません。 ONVIF Profile S フォールバックを有効化する際に必要です。詳しくは、<DocLink docId='device/vionyx_webserver/configure-network#onvifSettings' />を参照してください。
+
+### ONVIF専用アカウントの制限事項 {/* #onvif-only-account */}
+
+ONVIF専用アカウントには、通常のオペレーターアカウントと異なり、次の制限があります。
+
+* デバイスごとに一つだけ作成できます。
+
+* アカウント作成後は、ID、パスワード、権限を変更できません。有効化、無効化、削除のみ行えます。
+
+* アカウントを無効化すると、Profile S フォールバックを有効化できません。
+
+* Profile S フォールバックが有効な場合、アカウントを削除できません。先にONVIFモードを<Cmd sid='onvif_mode_t_only' product='cam' />に変更してください。
+
+:::caution
+
+ONVIF専用アカウントは、作成後にIDとパスワードを変更できません。接続するNVR/VMSに入力する情報を事前に決め、アカウント情報を安全に保管してください。パスワードを変更するには、アカウントを削除してから作り直してください。
+
+:::
 
 ## オペレーターを追加
 
@@ -64,11 +84,11 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
      * 他のオペレーターと重複できません。
 
-   * <Cmd sid='password' product='cam' />：オペレーターのパスワードを入力します。 管理者のパスワードと同じルールに従います。 詳しくは <DocLink docId='device/vionyx_webserver/update-admin-password' /> をご参照ください。
+   * <Cmd sid='password' product='cam' />：オペレーターのパスワードを入力します。管理者のパスワードと同じルールに従います。詳しくは <DocLink docId='device/vionyx_webserver/update-admin-password' /> をご参照ください。
 
    * <Cmd sid='confirm_password' product='cam' />：パスワードを再入力します。
 
-   * <Cmd sid='permission' product='cam' />：オペレーターの権限を選択します。
+   * <Cmd sid='permission' product='cam' />：オペレーターの権限を選択します。 ONVIF専用アカウントを作成するには、<Cmd sid='onvif_only_account' product='cam' />を選択してください。
 
    * <Cmd sid='enabled' product='cam' />：オペレーターのアカウントを有効または無効にできます。
 
@@ -108,9 +128,15 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
 :::
 
+:::info
+
+ONVIF専用アカウントは権限を変更できません。別の権限が必要な場合は、新しいオペレーターアカウントを追加してください。
+
+:::
+
 ## オペレーターの無効化
 
-オペレーターのアカウントを一時的に無効化できます。 アカウントを削除せず、アクセスのみをブロックします。
+オペレーターのアカウントを一時的に無効化できます。アカウントを削除せず、アクセスのみをブロックします。
 
 1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
 
@@ -120,11 +146,11 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
    <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-active.png' />
 
-無効化に成功すると、画面右上に成功メッセージが表示されます。 オペレーターのアカウントが無効化されると、これ以上ログインできなくなります。
+無効化に成功すると、画面右上に成功メッセージが表示されます。オペレーターのアカウントが無効化されると、これ以上ログインできなくなります。
 
 :::tip
 
-<IcCamEdit title='Edit' /> ボタンをクリックすると、<Cmd sid='edit_operator' product='cam' /> ウィンドウが表示されます。 <Cmd sid='enabled' product='cam' /> 項目でトグルボタンをクリックして、アカウントを無効化してください。 変更を保存するには、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+<IcCamEdit title='Edit' /> ボタンをクリックすると、<Cmd sid='edit_operator' product='cam' /> ウィンドウが表示されます。 <Cmd sid='enabled' product='cam' /> 項目でトグルボタンをクリックして、アカウントを無効化してください。変更を保存するには、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
 
 <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
 
@@ -144,7 +170,7 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
 ## オペレーターの削除
 
-オペレーターアカウントを完全に削除できます。 削除したアカウントは復元できません。
+オペレーターアカウントを完全に削除できます。削除したアカウントは復元できません。
 
 1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
 
@@ -156,4 +182,10 @@ ONVIF機能を使用するには、オペレーターアカウントが必要で
 
 4. 警告メッセージが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
 
-削除に成功すると、画面右上に成功メッセージが表示されます。 オペレーターアカウントが一覧から完全に削除されます。
+削除に成功すると、画面右上に成功メッセージが表示されます。オペレーターアカウントが一覧から完全に削除されます。
+
+:::info
+
+<Cmd sid='onvif_mode_fallback' product='cam' /> オプションが有効になっている場合、ONVIF専用アカウントを削除できません。 <Cmd sid='settings' product='cam' /> → <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' />でONVIFモードを<Cmd sid='onvif_mode_t_only' product='cam' />に変更してから、もう一度試してください。詳しくは、<DocLink docId='device/vionyx_webserver/configure-network#onvifSettings' />を参照してください。
+
+:::

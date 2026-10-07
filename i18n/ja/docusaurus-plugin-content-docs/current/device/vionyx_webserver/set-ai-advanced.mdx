@@ -2,9 +2,6 @@
 id: set-ai-advanced
 title: 高度設定
 description: 高度な設定で追加オプションを構成できます。
-keywords:
-  - AI
-  - 高度な設定
 ---
 
 <Include lang='ja'>
@@ -21,7 +18,13 @@ keywords:
 
 ## 顔の撮影タイプ設定
 
-顔の撮影タイプを上半身のみ撮影するか、全身まで撮影するか設定できます。 <Cmd sid='shoot_type' product='cam' />オプションで希望の撮影タイプを選択し、<Cmd sid='save' product='cam' />ボタンをクリックしてください。
+顔の撮影タイプを上半身のみ撮影するか、全身まで撮影するか設定できます。 
+
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='advanced' product='cam' /> をクリックします。
+
+3. <Cmd sid='shoot_type' product='cam' />オプションで希望の撮影タイプを選択し、<Cmd sid='save' product='cam' />ボタンをクリックしてください。
 
 <ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
 
@@ -29,21 +32,21 @@ keywords:
 
 ## 自動登録ユーザ設定
 
-AIイベントで検知した顔をユーザーとして自動登録できます。 既定では手動登録モードに設定されており、必要に応じて自動登録モードに切り替えられます。
+AIイベントで検知した顔をユーザーとして自動登録できます。既定では手動登録モードに設定されており、必要に応じて自動登録モードに切り替えられます。
 
 :::info
 
-自動登録したユーザーも、ユーザー名や説明などの情報を手動で編集できます。 ユーザー情報の編集の詳細については <DocLink docId='device/vionyx_webserver/modify-delete-users' /> をご覧ください。
+自動登録したユーザーも、ユーザー名や説明などの情報を手動で編集できます。ユーザー情報の編集の詳細については <DocLink docId='device/vionyx_webserver/modify-delete-users' /> をご覧ください。
 
 :::
 
 ### 自動登録モードを有効にする
 
-1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
 
-2. 画面左側のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='advanced' product='cam' /> をクリックしてください。
+2. 画面左側のサイドバーで <Cmd sid='advanced' product='cam' /> をクリックします。
 
-3. <Cmd sid='auto_user_enroll' product='cam' />セクションで <Cmd sid='by_face_recognition' product='cam' /> オプションを有効にしてください。
+3. <Cmd sid='auto_user_enroll' product='cam' /> セクションでトグルボタンをクリックして自動登録モードを有効にしてください。
 
 <ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
 
@@ -57,11 +60,11 @@ AIイベントで検知した顔をユーザーとして自動登録できます
 
 ### 自動登録ユーザー数設定
 
-<Cmd sid='num_of_auto_enroll_user' product='cam' />オプションで、自動登録できるユーザー数を設定できます。 スライダーをドラッグするか、入力欄に数値を直接入力してください。
+<Cmd sid='num_of_auto_enroll_user' product='cam' />オプションで、自動登録できるユーザー数を設定できます。スライダーをドラッグするか、入力欄に数値を直接入力してください。
 
 * 既定値は50,000人で、最大100,000人まで設定できます。
 
-* 自動登録ユーザー数を設定すると、手動登録ユーザーも設定した人数内でのみ登録できます。 たとえば、設定ユーザー数が50,000人の場合、自動登録ユーザー数と手動登録ユーザー数を合計して最大50,000人まで登録できます。
+* 自動登録ユーザー数を設定すると、手動登録ユーザーも設定した人数内でのみ登録できます。たとえば、設定ユーザー数が50,000人の場合、自動登録ユーザー数と手動登録ユーザー数を合計して最大50,000人まで登録できます。
 
 :::info
 
@@ -73,7 +76,7 @@ AIイベントで検知した顔をユーザーとして自動登録できます
 
 ### 保存処理方法設定
 
-<Cmd sid='retention_period' product='cam' />オプションでは、自動登録されたユーザーの保存処理方法を設定できます。 ユーザー数の上限に達したときの、自動登録ユーザーの削除方法を選択してください。
+<Cmd sid='retention_period' product='cam' />オプションでは、自動登録されたユーザーの保存処理方法を設定できます。ユーザー数の上限に達したときの、自動登録ユーザーの削除方法を選択してください。
 
 * <Cmd sid='delete_oldest_when_full' product='cam' />: 割り当てられたユーザー数を超えると、最も古く登録されたユーザーから自動削除します。
 
@@ -83,7 +86,7 @@ AIイベントで検知した顔をユーザーとして自動登録できます
 
 ### 保存期間設定
 
-<Cmd sid='retention_period_days' product='cam' />オプションでは、自動登録されたユーザーの保存期間を日単位で設定できます。 保存期間が終了すると、最も古く登録されたユーザーから自動削除されます。
+<Cmd sid='retention_period_days' product='cam' />オプションでは、自動登録されたユーザーの保存期間を日単位で設定できます。保存期間が終了すると、最も古く登録されたユーザーから自動削除されます。
 
 * <Cmd sid='disabled' product='cam' />（既定値）: 割り当てられたユーザー数を超えると、最も古く登録されたユーザーから自動削除します。
 

@@ -2,13 +2,6 @@
 id: configure-rtsp-onvif
 title: RTSPおよびONVIF連携
 description: RTSPストリーミング接続先URLの規則とONVIFプロトコルを使って、他社NVR/VMSと連携する方法を案内します。
-keywords:
-  - RTSP
-  - ONVIF
-  - NVR
-  - VMS
-  - ストリーミング
-  - 連携
 ---
 
 カメラは、他社NVR(Network Video Recorder)およびVMS(Video Management Software)との標準連携のために、RTSP(Real-Time Streaming Protocol)ストリーミングとONVIF(Open Network Video Interface Forum)プロトコルをサポートします。
@@ -25,7 +18,7 @@ keywords:
 
 ### ポートおよび転送方式
 
-RTSPポートと転送方式は<Cmd sid='network' product='cam' />設定で変更できます。 ポート設定、映像転送、および暗号化設定の詳細は、次の文書を参照してください。
+RTSPポートと転送方式は<Cmd sid='network' product='cam' />設定で変更できます。ポート設定、映像転送、および暗号化設定の詳細は、次の文書を参照してください。
 
 * [ポート設定](configure-network#port-settings)
 
@@ -51,7 +44,7 @@ RTSPポートをデフォルト値(554)から変更した場合は、下の**Con
 
 * `{IP_address}`: カメラのIPアドレスを入力します。
 
-* `{port}`: RTSPポート番号を入力します。 デフォルト値は554です。
+* `{port}`: RTSPポート番号を入力します。デフォルト値は554です。
 
 ## ONVIF連携
 
@@ -61,7 +54,7 @@ RTSPポートをデフォルト値(554)から変更した場合は、下の**Con
 
 ### ONVIF専用アカウントの準備
 
-セキュリティ標準仕様により、デフォルトの管理者(admin)アカウントではONVIF接続をサポートしません。 ONVIFで連携する前に、ONVIF専用のオペレーターアカウントを追加し、そのアカウント情報でNVR/VMSに接続してください。 オペレーターアカウントの追加方法は<DocLink docId='device/vionyx_webserver/manage-operators' />を参照してください。
+セキュリティ標準仕様により、デフォルトの管理者(admin)アカウントではONVIF接続をサポートしません。 ONVIFで連携する前に、ONVIF専用のオペレーターアカウントを追加し、そのアカウント情報でNVR/VMSに接続してください。 ONVIF専用オペレーターアカウントの追加方法は<DocLink docId='device/vionyx_webserver/configure-network#onvifOnlyAccount' />を参照してください。
 
 ### 連携時の注意事項
 
@@ -71,7 +64,7 @@ RTSPポートをデフォルト値(554)から変更した場合は、下の**Con
 
 * **VMS自動最適化機能の無効化**
 
-   一部のVMSは、接続時にカメラ設定を自動変更する機能(Video Optimization、Auto Configurationなど)を提供します。 この機能がオンだと連携エラーが発生する場合があるため、VMS側でカメラ設定の自動修正/最適化オプションを無効にしてください。
+   一部のVMSは、接続時にカメラ設定を自動変更する機能(Video Optimization、Auto Configurationなど)を提供します。この機能がオンだと連携エラーが発生する場合があるため、VMS側でカメラ設定の自動修正/最適化オプションを無効にしてください。
 
 :::caution
 

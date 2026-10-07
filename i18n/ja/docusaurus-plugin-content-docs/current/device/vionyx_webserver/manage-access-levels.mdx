@@ -1,0 +1,197 @@
+---
+id: manage-access-levels
+title: 出入レベルの管理性行する
+description: ドア、アクセス時間、ユーザーを一つのアクセスレベルとしてまとめてユーザー別のアクセス権限を付与し、アクセスレベルを編集または削除する方法を説明します。
+---
+
+アクセスレベルは、**どのユーザー**が**どのドア**に**いつ**入退室できるかをまとめたアクセス権限です。アクセス制御イベントで顔認証により識別されたユーザーでも、そのドアのアクセスレベルに割り当てられていない、またはアクセス時間外の場合、入退室できません。
+
+次のような場合にアクセスレベルを作成してください。
+
+* 特定の部署やチームメンバーだけがドアに入退室できるようにする場合
+
+* 平日の業務時間のみ許可するなど、ユーザーグループごとに入退室時間を変える場合
+
+* 夜間勤務者など、特定の時間帯のみ入退室するユーザーに別の権限を付与する場合
+
+## 開始する前に
+
+アクセスレベルを作成する前に、次を確認してください。
+
+* アクセスレベルに指定するドアを先に登録してください。詳しくは、<DocLink docId='device/vionyx_webserver/manage-doors' />を参照してください。
+
+* アクセスレベルに割り当てるユーザーを顔ユーザーとして登録してください。詳しくは、<DocLink docId='device/vionyx_webserver/add-users' />を参照してください。
+
+* 入退室時間を制限する場合は、スケジュールを事前に作成してください。スケジュールを作成しない場合は、既定のAlwaysスケジュールを使用できます。詳しくは、<DocLink docId='device/vionyx_webserver/manage-schedule' />を参照してください。
+
+## アクセスレベルの追加
+
+<Steps>
+<Step>
+
+### アクセスレベルの追加を開始
+
+1. 画面左上の <Cmd sid='access' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='access_level' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/cam-acs-level.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='add_access_level' product='cam' /> ポップアップが表示されたら、アクセスレベル情報を入力し、ユーザーを割り当ててください。
+
+   <ProdImg src='/img/cam-server/cam-acs-level-add.png' />
+
+</Step>
+<Step>
+
+### 基本情報入力
+
+<Cmd sid='info' product='cam' /> セクションで、アクセスレベルを識別する情報を入力してください。
+
+* <Cmd sid='id' product='cam' />：アクセスレベルの固有IDです。自動で入力されます。必要に応じて変更できます。他のアクセスレベルと同じIDは使用できません。最大64文字まで入力できます。英数字、ハイフン（`-`）、アンダースコア（`_`）を使用できます。
+
+* <Cmd sid='name' product='cam' />：アクセスレベル名を入力します。必須です。他のアクセスレベルと同じ名前は使用できません。**開発チーム 常時入退室**、**夜間勤務者**のように、対象と時間が分かる名前にしてください。
+
+* <Cmd sid='description' product='cam' />：アクセスレベルの説明を入力します。
+
+</Step>
+<Step>
+
+### 出入口の選択
+
+<Cmd sid='select_doors' product='cam' /> セクションの <Cmd sid='door' product='cam' /> 一覧で、入退室を許可する出入口を選択します。必須項目です。 1つ以上のドアを選択できます。
+
+:::info
+
+登録済みの出入口がない場合、一覧で出入口を選択できません。 <Cmd sid='access' product='cam' /> → <Cmd sid='door' product='cam' /> で、出入口を先に登録してください。出入口の登録の詳細については、<DocLink docId='device/vionyx_webserver/manage-doors' />を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### アクセス時間の選択
+
+<Cmd sid='select_access_time' product='cam' /> セクションの <Cmd sid='schedule' product='cam' /> 一覧で、入退室を許可するスケジュールを選択します。必須項目で、既定値は **Always** です。選択したスケジュールの時間帯のみ入退室を許可します。その他の時間帯は、登録済みユーザーでも入退室を拒否します。
+
+:::info
+
+スケジュール管理の詳細は、<DocLink docId='device/vionyx_webserver/manage-schedule' />をご参照ください。
+
+:::
+
+</Step>
+<Step>
+
+### ユーザーの割り当て
+
+<Cmd sid='assign_user' product='cam' /> セクションで、アクセスレベルを適用するユーザーを追加してください。
+
+1. <Cmd sid='assign_user' product='cam' /> セクション右上の <Cmd sid='add_button' product='cam' /> ボタンをクリックします。
+
+2. <Cmd sid='select_user' product='cam' /> ポップアップが表示されたら、割り当てるユーザーのチェックボックスをクリックします。
+
+   <ProdImg src='/img/cam-server/cam-acs-level-assign-users.png' />
+
+   * 一覧のすべてのユーザーを選択するには、一覧ヘッダーのチェックボックス(<Num num='1' />)を選択します。
+
+   * 特定のユーザーを検索するには、検索フィールド(<Num num='2' />)にユーザー名を入力します。
+
+   * 並べ替え基準を変更するには、並べ替えリスト(<Num num='3' />)で目的の基準を選択します。
+
+3. <Cmd sid='save' product='cam' /> ボタンをクリックしてください。選択したユーザーが <Cmd sid='assign_user' product='cam' /> 一覧に追加されます。
+
+   <Image src='/img/cam-server/cam-acs-level-add-assigned-users.png' />
+
+割り当てたユーザーをアクセスレベルから除外するには、<Cmd sid='assign_user' product='cam' /> 一覧で該当ユーザーの <IcCamTrash title='delete' /> ボタンをクリックします。
+
+:::info
+
+* <Cmd sid='select_user' product='cam' /> 一覧には、顔ユーザーとして登録されたユーザーのみが表示されます。
+
+* 一人のユーザーは複数のアクセスレベルに割り当てできます。ユーザーごとに割り当てできるアクセスレベル数には制限があります。
+
+:::
+
+</Step>
+<Step>
+
+### アクセスレベルの保存
+
+すべての設定が完了したら、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。保存したアクセスレベルはアクセスレベル一覧に追加され、割り当てたユーザーにすぐ適用されます。
+
+<ProdImg src='/img/cam-server/cam-acs-level-added-list.png' />
+
+</Step>
+</Steps>
+
+## アクセスレベル一覧の確認
+
+アクセスレベル一覧で、登録済みのアクセスレベル、各アクセスレベルのアクセス時間、割り当てられたユーザーを確認できます。
+
+<ProdImg src='/img/cam-server/cam-acs-level-list.png' />
+
+* 特定のアクセスレベルを探すには、検索フィールド(<Num num='1' />)にアクセスレベル名を入力してください。
+
+* 一ページに表示するアクセスレベル数を変更するには、画面右上の行数リスト(<Num num='2' />)で希望の値を選択してください。
+
+* 並べ替え基準を変更するには、<Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)で基準を選択します。
+
+アクセスレベル一覧に表示される項目は次のとおりです。
+
+| 項目 | 説明 |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | アクセスレベルの固有IDです。 |
+| <Cmd sid='name' product='cam' /> | アクセスレベル名です。 |
+| <Cmd sid='description' product='cam' /> | アクセスレベルを追加または編集するときに入力した説明です。 |
+| <Cmd sid='schedule' product='cam' /> | アクセスを許可するスケジュールです。 |
+| <Cmd sid='users' product='cam' /> | アクセスレベルに割り当てたユーザー数です。 |
+| <Cmd sid='actions' product='cam' /> | アクセスレベルを編集(<IcCamEdit />)または削除(<IcCamTrash />)できます。 |
+
+:::info
+
+<Cmd sid='users' product='cam' />項目の数字をクリックすると、割り当てられたユーザー一覧を確認できます。
+
+<ProdImg src='/img/cam-server/cam-acs-level-list-users-popup.png' />
+
+:::
+
+## アクセスレベルの編集
+
+1. アクセスレベル一覧で、編集するアクセスレベルの右側にある<IcCamEdit title='Edit' />ボタンをクリックしてください。
+
+2. <Cmd sid='edit_access_level' product='cam' /> ポップアップが表示されたら、ドア、アクセス時間、割り当てられたユーザーなどを編集してください。
+
+   <ProdImg src='/img/cam-server/cam-acs-level-edit.png' />
+
+3. 編集内容を保存するには、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+編集内容は保存するとすぐに、割り当てたすべてのユーザーに適用します。
+
+## アクセスレベルの削除
+
+アクセスレベルは一件ずつ削除するか、複数を選択して一度に削除できます。
+
+* **一件ずつ削除**: アクセスレベル一覧で、削除したいアクセスレベルの右側にある <IcCamTrash title='delete' /> ボタンをクリックしてください。
+
+* **複数削除**: アクセスレベル一覧で、削除するアクセスレベルのチェックボックスを選択し、画面右上の <Cmd sid='delete' product='cam' /> ボタンをクリックしてください。
+
+  <ProdImg src='/img/cam-server/cam-acs-level-select-delete.png' />
+
+確認メッセージが表示されたら内容を確認し、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。アクセスレベルを削除すると、割り当てたすべてのユーザーから該当のアクセスレベルを解除します。ドアとユーザーは削除しません。削除したアクセスレベルは復元できません。
+
+:::caution
+
+アクセスレベルを削除すると、そのアクセスレベルでのみ出入していたユーザーは、以後ドアを出入できません。削除する前に割り当てられているユーザーを確認してください。
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+アクセス判定結果に応じて、音声案内、Webhook通知、非常灯などの追加動作を実行するには、ドアのルールを設定してください。
+
+</NextItem>
+</NextStep>

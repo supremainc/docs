@@ -1,18 +1,12 @@
 ---
 id: configure-network
 title: ネットワークを設定
-description: "IPv4アドレスを自動または手動で設定し、Web UIと映像ストリーミングのポートを構成し、CLUeクラウドサービスに接続する方法を案内します。 "
-keywords:
-  - ネットワーク
-  - IPv4
-  - DHCP
-  - Static
-  - ポート
-  - CLUe
-  - クラウド
+description: IPv4アドレスとポートを設定し、NVR/VMS接続用のONVIFプロファイルを構成し、ユーザー同期のためにCLUeクラウドサービスに接続し、Cloudflare Tunnelで外部アクセス環境を設定する方法を案内します。
 ---
 
-ネットワーク設定では、デバイスのIPv4アドレス、サブネット、ゲートウェイ、DNS サーバーを構成し、Web UIおよびライブ映像ストリーミングで使用するポートを設定し、Suprema CLUeクラウドサービスへの接続を管理します。 ネットワーク環境に応じて、自動割り当て（DHCP）または手動設定（Static）のいずれかを選択して構成できます。
+ネットワーク設定では、デバイスのIPv4アドレス、サブネット、ゲートウェイ、DNSサーバーを構成し、Web UIとライブ映像ストリーミングで使用するポートを設定します。ネットワーク環境に応じて、自動割り当て（DHCP）または手動設定（Static）のいずれかを選択して構成できます。
+
+また、NVR/VMSがONVIFでデバイスに接続する際に使用するプロファイルを設定し、ユーザー情報を同期するために外部のSuprema CLUeクラウドサービスへ接続できます。 Cloudflare Tunnelを使用すると、外部からデバイスのWeb UIにアクセスできます。
 
 以下の状況ではネットワーク設定を確認してください。
 
@@ -22,17 +16,21 @@ keywords:
 
 * デフォルトのポートが他の機器と競合するか、セキュリティ上の理由でポートを変更する場合
 
-* Suprema CLUeクラウドにデバイスを登録してリモート管理が必要な場合
+* Profile Tに対応しない旧型のNVR/VMSとONVIFで接続する必要がある場合
+
+* Suprema CLUeクラウドサービスとユーザー情報を同期する必要がある場合
+
+* ポートフォワーディングやグローバルIPアドレスなしで、外部からデバイスのWeb UIにアクセスする必要がある場合
 
 :::info
 
-ネットワーク設定の変更、特にIPアドレスの変更により既存の接続が切断されることがあります。 変更後のIPアドレスで再接続してください。
+ネットワーク設定の変更、特にIPアドレスの変更により既存の接続が切断されることがあります。変更後のIPアドレスで再接続してください。
 
 :::
 
 ## IPアドレス自動設定
 
-DHCPはネットワーク上でIPアドレスを自動割り当てする方式です。 ほとんどの一般的なネットワーク環境では、設定なしで自動的に構成されます。
+DHCPはネットワーク上でIPアドレスを自動割り当てする方式です。ほとんどの一般的なネットワーク環境では、設定なしで自動的に構成されます。
 
 1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
 
@@ -94,7 +92,7 @@ DHCPモードがデフォルトに設定されており、ほとんどの標準�
 
 :::note
 
-各入力フィールドに正しい形式のアドレスを入力しないと、入力フィールドの周囲に赤い枠が表示され、<Cmd sid='save' product='cam' />ボタンが無効になります。 すべての入力フィールドを正しく入力してから、もう一度お試しください。
+各入力フィールドに正しい形式のアドレスを入力しないと、入力フィールドの周囲に赤い枠が表示され、<Cmd sid='save' product='cam' />ボタンが無効になります。すべての入力フィールドを正しく入力してから、もう一度お試しください。
 
 :::
 
@@ -110,6 +108,8 @@ DHCPモードがデフォルトに設定されており、ほとんどの標準�
 
    <ProdImg src='/img/cam-server/cam-webserver-settings-network-port.png' />
 
+   * <Cmd sid='http' product='cam' />: Web UIに暗号化せずに接続するポート（既定値: 8000）
+
    * <Cmd sid='https' product='cam' />: Web UIに暗号化して接続するポート（既定値: 443）
 
    * <Cmd sid='rtsp' product='cam' />: RTSPプロトコルで映像をストリーミングするポート（既定値: 554）
@@ -120,11 +120,11 @@ DHCPモードがデフォルトに設定されており、ほとんどの標準�
 
 * 各ポート入力フィールドに 1\~65535 の範囲の番号を入力できます。
 
-* 同じポート番号を複数設定することはできません。 各ポートは固有の番号でなければなりません。
+* 同じポート番号を複数設定することはできません。各ポートは固有の番号でなければなりません。
 
 * ポート設定がデフォルトと異なる場合は、Web UIの接続アドレスにポート番号を明記する必要があります。
 
-   > 例: HTTPSポートが4000の場合: `https://{ip_address}:4000`
+  > 例: HTTPSポートが4000の場合: `https://{ip_address}:4000`
 
 :::
 
@@ -142,13 +142,13 @@ DHCPモードがデフォルトに設定されており、ほとんどの標準�
 
    * <Cmd sid='transport' product='cam' />: 映像ストリーミングに使用する転送プロトコルを選択します。
 
-      * <Cmd>UDP</Cmd>: 高速転送が可能ですが、ネットワーク状態によっては映像の途切れやフレーム損失が発生することがあります。
+     * <Cmd>UDP</Cmd>: 高速転送が可能ですが、ネットワーク状態によっては映像の途切れやフレーム損失が発生することがあります。
 
-      * <Cmd>TCP</Cmd>: 安定した転送が可能ですが、ネットワーク状態によっては<Cmd>UDP</Cmd>より遅延が発生することがあります。
+     * <Cmd>TCP</Cmd>: 安定した転送が可能ですが、ネットワーク状態によっては<Cmd>UDP</Cmd>より遅延が発生することがあります。
 
-      * <Cmd>DUAL</Cmd>: ネットワーク状態に応じてUDPとTCPを自動的に選択してストリーミングします。 通常の環境で推奨される既定値です。
+     * <Cmd>DUAL</Cmd>: ネットワーク状態に応じてUDPとTCPを自動的に選択してストリーミングします。通常の環境で推奨される既定値です。
 
-      * <Cmd>TLS</Cmd>: RTSPストリームをTLS暗号化で送信します。 セキュリティを強化しますが、CPU負荷が増加する場合があります。 接続先のNVR/VMSがTLSをサポートしているか確認してください。
+     * <Cmd>TLS</Cmd>: RTSPストリームをTLS暗号化で送信します。セキュリティを強化しますが、CPU負荷が増加する場合があります。接続先のNVR/VMSがTLSをサポートしているか確認してください。
 
    * <Cmd sid='secure_rtp' product='cam' />: RTSPストリーム暗号化オプションを有効にします。
 
@@ -166,9 +166,88 @@ DHCPモードがデフォルトに設定されており、ほとんどの標準�
 
 :::
 
+## ONVIFの設定 {/* #onvifSettings */}
+
+<Cmd sid='onvif' product='cam' />セクションでは、NVR/VMSがONVIFでデバイスに接続する際に使用するプロファイルを設定します。既定ではProfile Tのみを使用します。Profile Tに対応しない旧型のNVR/VMSと接続する場合は、Profile Sのフォールバックを追加で有効にします。
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-network-onvif.png' />
+
+次の2つのモードのいずれかを選択します。
+
+* <Cmd sid='onvif_mode_t_only' product='cam' />: Profile T（Media2）のみで接続します。 H.264/H.265コーデック、HTTPS、メタデータ、イベントに対応し、最新のNVR/VMS環境で推奨される既定値です。
+
+* <Cmd sid='onvif_mode_fallback' product='cam' />: NVR/VMSはまずProfile Tでの接続を試行し、Profile Tに対応しない場合はProfile S（Media1）で接続します。 Profile Tに対応するNVR/VMSは、このモードでもProfile Tで接続します。
+
+<div className='table-fixed'>
+
+| 項目 | Profile T (Media2) | Profile S (Media1) |
+| --- | --- | --- |
+| コーデック | H.264, H.265 | H.264, MJPEG |
+| 暗号化通信 | HTTPS対応 | 非対応（平文通信） |
+| 高度な機能 | メタデータ、イベント | 基本映像ストリーミング |
+| 推奨環境 | 最新のNVR/VMS | Profile Tをサポートしない旧型NVR/VMS |
+
+</div>
+
+### ONVIF専用アカウントの作成 {/* #onvifOnlyAccount */}
+
+Profile Sフォールバックを有効にする前に、NVR/VMSがONVIFおよびRTSP認証に使用するONVIF専用アカウントが必要です。アカウントなしで設定を保存すると、<Cmd sid='onvif_err_account_required' product='cam' /> メッセージが表示され、設定は保存されません。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='account_management' product='cam' /> をクリックします。
+
+3. <Cmd sid='operator' product='cam' /> セクションで <Cmd sid='add_button' product='cam' /> ボタンをクリックします。
+
+4. <Cmd sid='add_operator' product='cam' /> ポップアップウィンドウでIDとパスワードを入力し、<Cmd sid='permission' product='cam' /> で <Cmd sid='onvif_only_account' product='cam' /> を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-onvif-add-operator.png' />
+
+5. ONVIF専用アカウントを作成するには、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+### Profile Sフォールバックの有効化
+
+Profile Sフォールバックを有効にしてください。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='onvif' product='cam' /> セクションの <Cmd sid='mode' product='cam' /> で <Cmd sid='onvif_mode_fallback' product='cam' /> を選択してください。
+
+4. <Cmd sid='onvif_dialog_title' product='cam' /> ポップアップウィンドウが表示されたら、Profile S使用時の注意事項を確認し、<Cmd sid='confirm' product='cam' /> ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-onvif-warning.png' />
+
+5. 設定を保存するには、<Cmd sid='save' product='cam' />ボタンをクリックします。
+
+設定を正常に保存すると、画面右上に成功メッセージが表示されます。 NVR/VMSにデバイスを登録するときは、ONVIF専用アカウントのIDとパスワードを入力してください。
+
+Profile Sフォールバックを無効にするには、<Cmd sid='onvif_mode_t_only' product='cam' /> を選択し、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+:::caution
+
+Profile Sは暗号化なしで平文通信するため、ネットワーク攻撃にさらされる可能性があります。また、H.265コーデックとHTTPS/TLSを使用できません。 Profile Tをサポートしない旧型NVR/VMSと接続するときだけ使用してください。
+
+:::
+
+:::info
+
+* ONVIF設定は管理者のみ変更できます。
+
+* ONVIF専用アカウントはデバイスごとに一つだけ作成できます。 Web UIにログインできません。アカウントを作成すると、IDとパスワードを変更できません。
+
+* ONVIF専用アカウントは、有効化、無効化、削除のみ行えます。アカウントが無効の場合、Profile Sフォールバックを有効にできません。
+
+* ONVIF専用アカウントを削除するには、まず <Cmd sid='onvif_mode_t_only' product='cam' /> に変更してください。
+
+* 変更したONVIF設定は、新しい接続から適用されます。既存の接続済みストリームは、再接続するまで現在の接続方式を維持します。
+
+:::
+
 ## CLUeクラウド接続
 
-Suprema CLUeはクラウドベースのリモート管理サービスです。 CLUeに接続すると、インターネット経由でリモートからデバイスを管理できます。
+Suprema CLUeはクラウドベースの入退室管理サービスです。 CLUeに接続すると、CLUeクラウドサービスとユーザー情報を同期できます。
 
 1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
 
@@ -176,16 +255,149 @@ Suprema CLUeはクラウドベースのリモート管理サービスです。 C
 
 3. <Cmd sid='cloud' product='cam' />セクションの<Cmd sid='clue' product='cam' />トグルをクリックして有効にします。
 
-4. システムがインターネット接続とCLUeサーバーへの接続を確認します。
+4. システムがインターネット接続とCLUeサーバーへの接続を確認します。 <Cmd sid='clue' product='cam' /> トグルの右側に接続状態が表示されます。
 
-   * 接続成功: <Cmd sid='clue_enabled' product='cam' />メッセージが表示されます。
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-clue.png' />
 
-   * インターネット接続失敗: <Cmd sid='clue_disabled' product='cam' />メッセージが表示されます。 インターネット接続を確認してから再試行してください。
+   * <Cmd sid='clue_status_connecting' product='cam' />: CLUeサーバーに接続しています。
 
-:::note
+   * <Cmd sid='clue_status_connected' product='cam' />: CLUeサーバーに接続済みです。
 
-* <Cmd sid='clue' product='cam' />オプションを無効にすると、CLUeサーバーとの接続が切断され、クラウド経由のリモート管理はできません。 ただし、CLUeサーバー側の登録情報は保持されます。
+   * <Cmd sid='clue_status_connection_failed' product='cam' />: CLUeサーバーに接続できませんでした。インターネット接続を確認してから再試行してください。
+
+   * <Cmd sid='clue_no_certification_status' product='cam' />: デバイスはCLUe認証を受けていません。
+
+5. 必要なオプションを有効にしてください。次のオプションを使用するには、<Cmd sid='clue' product='cam' /> トグルを有効にしてください。
+
+   * <Cmd sid='clue_user_sync' product='cam' />: CLUeクラウドサービスとユーザー情報を同期します。
+
+   * <Cmd sid='clue_tunnel_use' product='cam' />: CLUeを介して外部からデバイスにアクセスできるトンネルを使用します。トンネルが接続されると、<Cmd sid='external_url' product='cam' /> フィールドにURLが表示されます。 <Cmd sid='copy' product='cam' /> ボタンをクリックしてURLをコピーしてください。
+
+:::info
+
+* 接続に成功すると、<Cmd sid='clue_enabled' product='cam' /> メッセージが表示されます。
+
+* 接続に失敗すると、<Cmd sid='clue_disabled' product='cam' /> メッセージが表示されます。インターネット接続を確認してから再試行してください。
+
+* <Cmd sid='clue' product='cam' /> トグルを無効にするとCLUeサーバーとの接続が切断され、<Cmd sid='clue_user_sync' product='cam' />と<Cmd sid='clue_tunnel_use' product='cam' />オプションを使用できません。ただし、CLUeサーバー側の登録情報は保持されます。
 
 * CLUeの接続成功および失敗はシステムログに記録されます。
+
+:::
+
+## トンネルの設定 {/* #tunnelSettings */}
+
+<Cmd sid='tunnel' product='cam' /> セクションでは、Cloudflare Tunnelを使用して外部インターネットからデバイスのWeb UIにアクセスできる外部URLを作成できます。ルーターのポートフォワーディングやグローバルIPアドレスなしでリモートからデバイスにアクセスする場合に使用してください。
+
+<Cmd sid='tunnel' product='cam' /> セクションの <Cmd sid='tunnel_type' product='cam' /> で、次のいずれかを選択できます。
+
+| タイプ | 説明 | 必要な情報 |
+| --- | --- | --- |
+| <Cmd sid='tunnel_mode_off' product='cam' /> | トンネルを使用しません。既定値です。 | なし |
+| <Cmd sid='tunnel_mode_cf_quick' product='cam' /> | Cloudflare アカウントなしで一時的な外部URLを発行します。デバイスを再起動するとURLが変わります。 | なし |
+| <Cmd sid='tunnel_mode_cf_named' product='cam' /> | Cloudflare API TokenでTunnelを作成し、ユーザーのドメインに固定した外部URLを使用します。 | Cloudflare アカウント、ドメイン |
+| <Cmd sid='tunnel_mode_cf_named_token' product='cam' /> | Cloudflare ダッシュボードで事前に作成したTunnelにConnector Tokenで接続します。 | Cloudflare アカウント、ドメイン、Connector Token |
+
+:::tip
+
+テストや一時的なリモートアクセスには<Cmd sid='tunnel_mode_cf_quick' product='cam' />を使用してください。固定アドレスで継続してアクセスする場合は<Cmd sid='tunnel_mode_cf_named' product='cam' />または<Cmd sid='tunnel_mode_cf_named_token' product='cam' />を使用してください。
+
+:::
+
+:::info
+
+* Tunnelを使用しない場合は<Cmd sid='tunnel_type' product='cam' />で<Cmd sid='tunnel_mode_off' product='cam' />を選択してください。
+
+* Tunnelを使用するには、デバイスがインターネットに接続されている必要があります。
+
+* 外部URLを知っている人は誰でも、デバイスのログイン画面にアクセスできます。管理者アカウントとオペレーターアカウントに強力なパスワードを設定し、外部URLは必要な人にのみ共有してください。
+
+* Tunnelモードの変更はシステムログに記録されます。
+
+:::
+
+### 一時的な外部URLの使用
+
+Cloudflare アカウントなしで一時的な外部URLでデバイスにアクセスできます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='tunnel' product='cam' />セクションの<Cmd sid='tunnel_type' product='cam' />で<Cmd sid='tunnel_mode_cf_quick' product='cam' />を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-tunnel-quick.png' />
+
+4. 一時的な外部URLを発行すると、<Cmd sid='external_url' product='cam' />フィールドに表示します。<Cmd sid='copy' product='cam' />ボタンをクリックしてURLをコピーし、Webブラウザーでアクセスしてください。
+
+:::caution
+
+<Cmd sid='tunnel_mode_cf_quick' product='cam' />で発行した外部URLは、デバイスを再起動すると変わります。再起動後は<Cmd sid='external_url' product='cam' />フィールドで新しいURLを確認してください。
+
+:::
+
+### 固定外部URLの使用（API Token）
+
+Cloudflare API Tokenを入力すると、デバイスがCloudflareにTunnelを作成し、指定したホスト名に外部URLを紐付けます。開始する前に、Cloudflare アカウントとCloudflareに登録したドメインを用意してください。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='tunnel' product='cam' />セクションの<Cmd sid='tunnel_type' product='cam' />で<Cmd sid='tunnel_mode_cf_named' product='cam' />を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-tunnel-named.png' />
+
+4. 次の情報を入力してください。
+
+   * <Cmd sid='tunnel_api_token' product='cam' />: Cloudflare ダッシュボードで発行したAPI Tokenを入力してください。
+
+   * <Cmd sid='tunnel_account_id' product='cam' />：Cloudflare アカウント ID を入力してください。
+
+   * <Cmd sid='tunnel_hostname' product='cam' />：外部からアクセスするときに使用するホスト名を入力してください。
+
+     > 例：cam.example.com
+
+   * <Cmd sid='tunnel_name_option' product='cam' />：Cloudflare で Tunnel を区別する名前を入力してください。任意です。
+
+5. 入力した情報が正しいことを確認するには、<Cmd sid='tunnel_verify' product='cam' /> ボタンをクリックしてください。
+
+6. 設定を適用するには、<Cmd sid='tunnel_apply' product='cam' /> をクリックしてください。
+
+Tunnel が接続されると、<Cmd sid='external_url' product='cam' /> フィールドに外部 URL が表示されます。 <Cmd sid='copy' product='cam' /> ボタンをクリックすると URL をコピーできます。
+
+### 固定外部 URL の使用（Connector Token）
+
+Cloudflare ダッシュボードで作成した Tunnel にデバイスを接続できます。開始する前に、Cloudflare ダッシュボードで次の作業を完了してください。
+
+* Tunnel を作成し、Connector Token をコピーしてください。
+
+* Tunnel の Public Hostname を追加し、Service URL を `http://127.0.0.1:81` または `http://localhost:81` に設定してください。
+
+設定が完了したら、デバイスで次の手順を実行してください。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='tunnel' product='cam' /> セクションの <Cmd sid='tunnel_type' product='cam' /> で <Cmd sid='tunnel_mode_cf_named_token' product='cam' /> を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-tunnel-named-token.png' />
+
+4. 次の情報を入力してください。
+
+   * <Cmd sid='tunnel_connector_token' product='cam' />：Cloudflare ダッシュボードからコピーした Connector Token を入力してください。
+
+   * <Cmd sid='tunnel_name_option' product='cam' />：Tunnel を区別する名前を入力してください。任意です。
+
+5. 入力した情報が正しいことを確認するには、<Cmd sid='tunnel_verify' product='cam' /> ボタンをクリックしてください。
+
+6. 設定を適用するには、<Cmd sid='tunnel_apply' product='cam' /> をクリックしてください。
+
+Cloudflared が接続されると、<Cmd sid='external_url' product='cam' /> フィールドに外部 URL が自動的に表示されます。
+
+:::caution
+
+Public Hostname の Service URL を `http://127.0.0.1:81` または `http://localhost:81` 以外の値に設定すると、セキュリティポリシーにより Tunnel が開きません。
 
 :::

@@ -1,0 +1,35 @@
+### 人検出の設定（任意）
+
+<Cmd sid='detection' product='cam' /> セクションで、カメラが人を検出する範囲を選択します。検出範囲を必要な場所に絞ると、関心のないエリア（通路の端、窓、反射面など）での誤検出を減らせます。
+
+* <Cmd sid='all_area' product='cam' />：デフォルト値です。画面全体で人を検出します。顔領域の設定に関係なく使用できます。
+
+* <Cmd sid='designated_area' product='cam' />：指定した領域内でのみ人を検出します。顔領域を設定していない場合のみ選択できます。最低1本を設定する必要があり、<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10本まで追加できます。ライブビューに紫色の枠が表示されます。マウスで角または点をドラッグして希望の形に調整できます。中央の領域をドラッグして位置を移動できます。
+
+  <Include pages='configure-people-tracking'><ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-detection-area.png' /></Include>
+
+  <Include pages='configure-intrusion'><ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-line-crossing'><ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-counting-people'><ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-detect-area.png' /></Include>
+
+  <Include pages='configure-access-control'><ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-detect-area.png' /></Include>
+
+  * <Cmd sid='name' product='cam' />：人検出領域の名前を編集できます。
+
+* <Cmd sid='face_area_only' product='cam' />：顔領域内でのみ人を検出します。顔領域を設定した場合のみ選択できます。
+
+:::info
+
+* <Cmd sid='designated_area' product='cam' />を選択した状態で顔領域を追加すると、<Cmd sid='notice' product='cam' /> ポップアップが表示されます。 <Cmd sid='ok' product='cam' /> ボタンをクリックすると、指定した検出領域が解除され、<Cmd sid='face_area_only' product='cam' />に変更されます。
+
+* <Cmd sid='face_area_only' product='cam' />を選択した状態で顔領域をすべて削除すると、<Cmd sid='all_area' product='cam' />に自動で変更されます。
+
+* 設定した人検出領域の形状とサイズを初期化するには、<IcCamReset title='reset' /> ボタンをクリックしてください。
+
+* 追加した人検出領域を削除するには、<IcCamTrash title='delete' /> ボタンをクリックしてください。
+
+* この機能のサポートは、ファームウェアバージョン1.1.0以降に含まれます。
+
+:::

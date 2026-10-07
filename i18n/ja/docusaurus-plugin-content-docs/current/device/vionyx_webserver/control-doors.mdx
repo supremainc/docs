@@ -1,0 +1,94 @@
+---
+id: control-doors
+title: 出入ドアを制御する
+description: ドアの施錠状態と開閉状態をリアルタイムで確認し、遠隔でドアを開けたり、手動で施錠・解錠したりする方法を案内します。
+---
+
+<Cmd sid='door_control' product='cam' /> メニューでは、登録されたドアの施錠状態をリアルタイムで確認し、遠隔でドアを開けたり施錠したりできます。
+
+次のような状況では、ドアを直接制御してください。
+
+* 顔が登録されていない来訪者や配送員のために、ドアを一度だけ開けるとき
+
+* イベントや引っ越しなどで、ドアを開けたままにするとき
+
+* 緊急時に、スケジュールに関係なくドアを直ちに施錠する必要があるとき
+
+:::info
+
+* ドアを制御するにはオペレーター権限が必要です。権限がない場合、ドアの状態確認と制御機能を使用できません。オペレーター権限の詳細については <DocLink docId='device/vionyx_webserver/manage-operators' /> をご覧ください。
+
+* ドアの追加および管理の詳細については <DocLink docId='device/vionyx_webserver/manage-doors' /> をご覧ください。
+
+:::
+
+## ドア状態の確認
+
+1. 画面左上の <Cmd sid='access' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='door_control' product='cam' /> をクリックします。
+
+<ProdImg src='/img/cam-server/cam-acs-door-control.png' />
+
+<Cmd sid='door' product='cam' /> メニューに登録したドアを一覧に表示します。ドアを追加または削除すると、一覧にもすぐ反映します。
+
+* 特定のドアを探すには、検索フィールド(<Num num='1' />)にドア名を入力します。
+
+* 一ページあたりに表示するドアの数を変更するには、画面右上の行数リスト(<Num num='2' />)から希望の値を選択してください。
+
+* 並べ替え基準を変更するには、<Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)で基準を選択します。
+
+ドア一覧に表示される情報は次のとおりです。
+
+| 項目 | 説明 |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | ドアの固有IDです。 |
+| <Cmd sid='name' product='cam' /> | ドア名です。 |
+| <Cmd sid='description' product='cam' /> | ドアを追加または編集するときに入力した説明です。 |
+| <Cmd sid='relay_status' product='cam' /> | ドアのロック装置の現在の状態です。 |
+| <Cmd sid='door_sensor' product='cam' /> | ドアセンサーの現在の状態です。ドアに <Cmd sid='door_status' product='cam' /> 入力ポートを設定した場合のみ表示します。 |
+| <Cmd sid='control' product='cam' /> | ドアを開けたり、手動で施錠または解錠したりする機能を提供します。 |
+
+{/* TODO(開発者確認): ドアセンサー ON/OFF がそれぞれ開/閉のどちらか、状態入力ポート未設定時の表示値（「-」など）を確認 / 状態更新周期と通信失敗時の表示方式を確認 */}
+
+### リレー状態
+
+<Cmd sid='relay_status' product='cam' /> 列は、ドアが施錠されているかに加え、その状態を決定した要因を表示します。
+
+| 状態 | 説明 |
+| --- | --- |
+| <Cmd sid='relay_status_locked' product='cam' /> | 通常は施錠状態です。 |
+| <Cmd sid='relay_status_unlocked' product='cam' /> | 通常は解錠状態です。 |
+| <Cmd sid='relay_status_schedule_lock' product='cam' /> | ドアは施錠スケジュールに従って施錠した状態です。 |
+| <Cmd sid='relay_status_schedule_unlock' product='cam' /> | ドアは開放スケジュールに従って解錠した状態です。 |
+| <Cmd sid='relay_status_fixed_lock' product='cam' /> | <Cmd sid='manual_lock' product='cam' />で施錠した状態です。 |
+| <Cmd sid='relay_status_fixed_unlock' product='cam' /> | <Cmd sid='manual_unlock' product='cam' />で解錠した状態です。 |
+
+## 出入口ドア制御
+
+<Cmd sid='control' product='cam' /> 列のボタンをクリックして、ドアを制御してください。
+
+| ボタン | 動作 |
+| --- | --- |
+| <Cmd sid='door_open' product='cam' /> | ドアを一度開けます。ドアに設定した開放時間が経過すると、ドアは自動的に施錠します。 |
+| <Cmd sid='manual_unlock' product='cam' /> | ドアを解錠し、<Cmd sid='release' product='cam' /> 機能を実行するまで開放したままにします。 |
+| <Cmd sid='manual_lock' product='cam' /> | ドアを施錠し、<Cmd sid='release' product='cam' /> 機能を実行するまで施錠したままにします。この間、登録済みユーザーも入退室できません。 |
+| <Cmd sid='release' product='cam' /> | <Cmd sid='manual_lock' product='cam' /> または <Cmd sid='manual_unlock' product='cam' />を終了し、ドアを手動制御前の状態に戻します。 |
+
+:::caution
+
+<Cmd sid='manual_unlock' product='cam' /> 状態では、顔認証に関係なく誰でも入退室できます。必要な作業が終わったら、必ず <Cmd sid='release' product='cam' /> ボタンをクリックしてください。
+
+:::
+
+:::info
+
+* ドアが手動施錠または手動解錠状態の場合、<Cmd sid='door_open' product='cam' /> ボタンを無効にし、<Cmd sid='release' product='cam' /> ボタンのみを表示します。
+
+  <ProdImg src='/img/cam-server/cam-acs-door-control-disable-button.png' />
+
+* 手動制御は、ドアの開放スケジュールと施錠スケジュールより優先します。例えば、開放スケジュールの時間帯に <Cmd sid='manual_lock' product='cam' />を実行すると、ドアは施錠状態を維持します。
+
+* <Cmd sid='release' product='cam' /> ボタンをクリックすると、現在時刻に合ったスケジュール状態、または通常状態に戻ります。
+
+:::
