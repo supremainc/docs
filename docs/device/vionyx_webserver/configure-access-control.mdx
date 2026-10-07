@@ -24,7 +24,11 @@ description: 출입문에 접근하는 사람을 얼굴 인식으로 식별하�
 
 :::info
 
-출입 통제 이벤트는 출입 허용 여부를 **판단**하는 역할만 하며, 출입문의 릴레이를 직접 제어하지 않습니다. 판단 결과에 따라 문을 열거나 알림을 보내려면 이벤트를 생성한 후 출입문 규칙을 별도로 설정하세요.
+출입 통제 이벤트는 출입 허용 여부를 **판단**하는 역할만 하며, 출입문의 릴레이를 직접 제어하지 않습니다. 판단 결과에 따라 출입문을 열려면 이벤트를 생성한 후 출입문을 등록하고 이벤트를 연결하세요. 음성 안내나 웹훅 알림 같은 추가 동작이 필요하면 출입문 규칙을 설정하세요. 
+
+* 출입문 등록 및 관리에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-doors' />를 참고하세요.
+
+* 출입문 규칙에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/configure-door-rules' />를 참고하세요.
 
 :::
 
@@ -191,7 +195,7 @@ import DetectPeople from './_ai-event-detect-people.mdx';
 </Step>
 <Step>
 
-### 이벤트 발생 조건 설정
+### 이벤트 발생 조건 설정 {/* #eventTrigger */}
 
 <Cmd sid='option' product='cam' /> 섹션에서 이벤트 발생 조건을 설정하세요.
 
@@ -249,7 +253,12 @@ import DetectPeople from './_ai-event-detect-people.mdx';
 <NextStep>
 <NextItem to='configure-door-rules' >
 
-출입 통제 이벤트는 출입 허용 여부만 판단합니다. 판단 결과에 따라 출입문을 열거나 음성 안내, 웹훅 알림을 실행하려면 출입문 규칙을 설정하세요.
+출입 통제 이벤트는 출입 허용 여부만 판단합니다. 판단 결과에 따라 음성 안내, 웹훅 알림, 비상등 같은 추가 동작을 실행하려면 출입문 규칙을 설정하세요.
+
+</NextItem>
+<NextItem to='manage-doors' >
+
+출입 통제 이벤트를 생성했다면 출입문을 등록하고 이벤트를 연결하세요. 출입이 허용되면 출입문에 연결된 릴레이가 동작하여 출입문이 열립니다.
 
 </NextItem>
 </NextStep>

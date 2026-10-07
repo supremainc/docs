@@ -1,0 +1,237 @@
+---
+id: configure-door-rules
+title: 출입문 규칙 설정하기
+description: 출입 허용, 출입 거부, 통과 등 출입 판단 결과에 따라 오디오 재생, 웹훅 전송, 릴레이 동작을 자동으로 실행하도록 출입문 규칙을 설정하는 방법을 안내합니다.
+---
+
+출입문 규칙을 사용하면 출입문에서 발생한 출입 판단 결과에 따라 오디오 재생, 웹훅 전송, 릴레이 동작을 자동 실행할 수 있습니다. 출입이 허용되면 출입문은 출입문 설정에 따라 자동으로 열리므로, 출입문 규칙에서는 문을 여는 것 외에 필요한 추가 동작을 설정합니다.
+
+아래와 같은 상황에서 출입문 규칙을 설정하세요.
+
+* 출입이 허용되면 환영 음성을, 거부되면 안내 음성을 재생하고 싶을 때
+
+* 미인가자가 뒤따라 들어오면 비상등이나 경고음을 동작시키고 싶을 때
+
+* 출입 기록을 외부 출입 통제 시스템이나 관제 서버로 전송하고 싶을 때
+
+## 시작하기 전에
+
+출입문 규칙을 설정하기 전에 아래 사항을 확인하세요.
+
+* 규칙을 적용할 출입문을 먼저 등록하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-doors' />를 참고하세요.
+
+* 오디오를 사용하려면 재생할 오디오 클립을 미리 업로드하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/upload-audio-clips' />를 참고하세요.
+
+* 웹훅을 사용하려면 수신할 서버의 URL을 미리 준비하세요.
+
+* 릴레이를 사용하려면 비상등, 경고음 등 동작시킬 장치가 릴레이 포트에 연결되어 있는지 확인하세요. 외부 장치 연결에 대한 자세한 내용은 <Linkto to='device/vionyx/installation'>ViOnyx 설치 가이드</Linkto>를 참고하세요.
+
+
+## 출입 판단 결과
+
+출입문 규칙에서는 다음 출입 판단 결과마다 실행할 동작을 각각 설정할 수 있습니다.
+
+| 출입 판단 결과 | 발생 조건 |
+| --- | --- |
+| <Cmd sid='door_rule_outcome_granted' product='cam' /> | 출입 레벨이 있는 사용자가 출입 시간 안에 식별되어 출입이 허용되었습니다. |
+| <Cmd sid='door_rule_outcome_denied_unidentified' product='cam' /> | 출입 통제 영역에 들어온 사람의 얼굴을 인식하지 못했거나, 등록되지 않은 사람입니다. |
+| <Cmd sid='door_rule_outcome_denied_access_level' product='cam' /> | 등록된 사용자로 식별되었지만, 해당 출입문의 출입 레벨이 없거나 출입 시간이 아닙니다. |
+| <Cmd sid='door_rule_outcome_denied_door_mode' product='cam' /> | 출입문이 수동 잠금 상태이거나 잠금 일정 시간대여서 출입이 거부되었습니다. |
+| <Cmd sid='door_rule_outcome_denied_anti_tailgating' product='cam' /> | 검증 영역의 인원이 출입 통제 이벤트의 테일게이팅 옵션 조건을 충족하지 않아 출입이 거부되었습니다. |
+| <Cmd sid='door_rule_outcome_passed' product='cam' /> | 출입이 허용된 사용자가 이벤트 진입 라인을 지나 실제로 출입했습니다. |
+| <Cmd sid='door_rule_outcome_passed_after_denied' product='cam' /> | 출입이 거부된 사람이 이벤트 진입 라인을 지나 출입했습니다. 강제 출입이 의심되는 보안 이벤트입니다. |
+
+
+## 출입문 규칙 추가
+
+<Steps>
+<Step>
+
+### 규칙 추가 시작
+
+1. 화면 왼쪽 상단의 <Cmd sid='access' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='door_rule_settings' product='cam' />을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='add_door_rule' product='cam' /> 화면이 나타나면 규칙 이름을 입력하고, 조건과 동작을 설정하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add-rule.png' />
+
+</Step>
+<Step>
+
+### 규칙 이름 입력
+
+<Cmd sid='name' product='cam' /> 입력 필드에 규칙 이름을 입력하세요. 필수 항목입니다.
+
+</Step>
+<Step>
+
+### 조건 설정
+
+<Cmd sid='condition' product='cam' /> 섹션에서 규칙을 적용할 출입문을 선택하세요.
+
+* <Cmd sid='channel' product='cam' />: 채널은 CH 1로 고정되어 있습니다. 피쉬아이 뷰만 지원합니다.
+
+* <Cmd sid='door' product='cam' />: 규칙을 적용할 출입문을 선택하세요. 필수 항목입니다.
+
+</Step>
+<Step>
+
+### 동작 설정
+
+<Cmd sid='action' product='cam' /> 섹션에는 출입 판단 결과별로 <Cmd sid='audio' product='cam' />, <Cmd sid='webhook' product='cam' />, <Cmd sid='relay' product='cam' /> 동작이 표시됩니다. 동작을 실행할 출입 판단 결과에서 원하는 동작의 토글 버튼을 클릭해 활성화한 후 <IcCamEdit title='Edit' /> 버튼을 클릭하세요. 동작별 설정 팝업이 나타납니다.
+
+최소 1개의 동작을 활성화해야 규칙을 저장할 수 있습니다. 동작별 설정 방법은 아래를 참고하세요.
+
+:::info
+
+동작별 일정의 시간대가 아니면 출입 판단 결과가 발생해도 해당 동작은 실행되지 않습니다. 일정은 <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />에서 관리할 수 있습니다. 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-schedule' />를 참고하세요.
+
+:::
+
+#### 오디오 동작 설정
+
+출입 판단 결과가 발생하면 카메라에서 오디오 클립을 재생합니다.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />: 재생할 오디오 클립을 선택하세요. 필수 항목입니다.
+
+* <Cmd sid='repeat' product='cam' />: 오디오 클립을 반복 재생할 횟수를 선택하세요.
+
+* <Cmd sid='schedule' product='cam' />: 오디오를 재생할 일정을 선택하세요. 필수 항목이며, 기본값은 <Cmd sid='always' product='cam' />입니다.
+
+오디오 동작 설정을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+:::info
+
+오디오 동작을 설정하기 전에 오디오 클립을 미리 준비해야 합니다. 오디오 클립은 <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' /> 메뉴에서 업로드할 수 있습니다. 자세한 내용은 <DocLink docId='device/vionyx_webserver/upload-audio-clips' />를 참고하세요.
+
+:::
+
+#### 웹훅 동작 설정
+
+출입 판단 결과가 발생하면 외부 서버로 웹훅을 전송합니다.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-webhook.png' />
+
+* <Cmd sid='method' product='cam' />: 웹훅 전송 방식입니다. `POST` 방식만 지원합니다.
+
+* <Cmd sid='url' product='cam' />: 웹훅을 수신할 URL을 입력하세요. 필수 항목입니다.
+
+* <Cmd sid='header' product='cam' />: 웹훅에 포함할 HTTP 헤더를 설정하세요. 기본으로 `Content-Type: application/json` 헤더가 추가되어 있습니다. <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 헤더를 추가할 수 있습니다. 같은 헤더 이름은 중복해서 사용할 수 없으며, 시스템에서 예약한 헤더 이름은 사용할 수 없습니다.
+
+* <Cmd sid='body' product='cam' />: 웹훅 본문에 포함할 항목을 설정하세요. 필수 항목입니다. 각 줄의 왼쪽 목록에서 전송할 정보를 선택하고, 가운데 필드에 JSON 키 이름을 입력하세요. 오른쪽 필드에는 이벤트가 발생할 때 실제 값으로 바뀌는 변수가 표시됩니다. <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 사용자 정의 항목을 추가하거나 <IcCamTrash title='delete' /> 버튼을 클릭해 삭제할 수 있습니다. 본문 크기는 최대 64KB입니다.
+
+* <Cmd sid='schedule' product='cam' />: 웹훅을 전송할 일정을 선택하세요. 필수 항목이며, 기본값은 <Cmd sid='always' product='cam' />입니다.
+
+설정을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+:::info
+
+* 헤더와 본문에 입력한 값은 보안을 위해 저장 후 화면에 다시 표시되지 않습니다. 규칙을 수정할 때 저장된 값은 그대로 유지되며, 새로 입력하면 기존 값을 대체합니다.
+
+* 웹훅 전송 결과는 시스템 로그에서 확인할 수 있습니다. 자세한 내용은 <DocLink docId='device/vionyx_webserver/view-system-logs' />를 참고하세요.
+
+:::
+
+#### 릴레이 동작 설정
+
+출입 판단 결과가 발생하면 선택한 릴레이를 동작시킵니다. 비상등, 경고음, 보조 잠금 장치 등을 연동할 때 사용하세요.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-relay.png' />
+
+* <Cmd sid='port' product='cam' />: 동작시킬 릴레이 포트를 선택하세요. 필수 항목입니다. 출입문 잠금 장치로 사용 중인 릴레이 포트는 선택할 수 없습니다.
+
+* <Cmd sid='open_time' product='cam' />: 릴레이를 동작 상태로 유지할 시간을 설정하세요. 슬라이더를 움직이거나 입력 필드에 값을 직접 입력할 수 있습니다. 1초부터 120초까지 설정할 수 있으며, 기본값은 3초입니다.
+
+   * <Cmd sid='keep_until_event_off' product='cam' />: 이 옵션을 선택하면 개방 시간과 관계없이 출입 통제 이벤트가 종료될 때까지 릴레이를 동작 상태로 유지합니다.
+
+* <Cmd sid='contact_type' product='cam' />: 릴레이의 접점 타입을 선택하세요. 필수 항목이며, 포트를 선택하면 설정할 수 있습니다.
+
+   * <Cmd sid='normal_open' product='cam' />: 평상시 열려 있다가 릴레이가 동작하면 닫히는 접점입니다.
+
+   * <Cmd sid='normal_close' product='cam' />: 평상시 닫혀 있다가 릴레이가 동작하면 열리는 접점입니다.
+
+* <Cmd sid='schedule' product='cam' />: 릴레이를 동작시킬 일정을 선택하세요. 필수 항목이며, 기본값은 <Cmd sid='always' product='cam' />입니다.
+
+설정을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' />은 규칙이 아니라 릴레이 포트에 적용되는 설정입니다. <Cmd sid='contact_type' product='cam' />을 변경하면 확인 메시지가 나타나며, <Cmd sid='ok' product='cam' /> 버튼을 클릭하면 해당 포트를 사용하는 모든 규칙과 출입문에 즉시 적용됩니다. 포트가 수동 잠금 또는 수동 잠금 해제 상태일 때 변경하면 출력이 반전되어 잠긴 문이 열릴 수 있으니 주의하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 규칙 저장
+
+모든 설정을 완료한 후 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 저장한 규칙은 출입문 규칙 목록에 추가되고 바로 적용됩니다.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-added-list.png' />
+
+:::info
+
+출입문 규칙은 최대 20개까지 만들 수 있습니다.
+
+:::
+
+</Step>
+</Steps>
+
+
+## 출입문 규칙 목록 확인
+
+출입문 규칙 목록에서 등록된 규칙과 각 규칙의 적용 대상을 확인할 수 있습니다.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-check.png' />
+
+* 특정 출입문 규칙을 찾으려면 검색 필드(<Num num='1' />)에 출입문 규칙 이름을 입력하세요.
+
+* 한 페이지에 표시할 출입문 규칙 개수를 변경하려면 화면 오른쪽 상단의 행 수 목록(<Num num='2' />)에서 원하는 값을 선택하세요.
+
+* 정렬 기준을 변경하려면 <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)에서 원하는 기준을 선택하세요.
+
+출입문 규칙 목록에 표시되는 항목은 다음과 같습니다.
+
+| 항목 | 설명 |
+| --- | --- |
+| <Cmd sid='column_no' product='cam' /> | 규칙 번호입니다. |
+| <Cmd sid='name' product='cam' /> | 규칙 이름입니다. |
+| <Cmd sid='door' product='cam' /> | 규칙을 적용하는 출입문입니다. |
+| <Cmd sid='event' product='cam' /> | 활성화된 동작이 하나 이상 있는 출입 판단 결과입니다. 결과가 여러 개이면 일부만 표시됩니다. |
+| <Cmd sid='schedule' product='cam' /> | 규칙에 적용된 일정입니다. |
+| <Cmd sid='on_off' product='cam' /> | 규칙을 켜거나 끌 수 있습니다. |
+| <Cmd sid='actions' product='cam' /> | 규칙을 수정(<IcCamEdit />)하거나 삭제(<IcCamTrash />)할 수 있는 기능을 제공합니다. |
+
+{/* TODO(개발자 확인): 목록의 '일정' 열이 동작별 일정 중 무엇을 표시하는지 확인 */}
+
+
+## 출입문 규칙 활성화/비활성화
+
+출입문 규칙 목록에서 <Cmd sid='on_off' product='cam' /> 열의 토글 버튼을 클릭하면 해당 규칙을 활성화하거나 비활성화할 수 있습니다. 비활성화한 규칙은 출입 판단 결과가 발생해도 동작을 실행하지 않습니다. 규칙을 삭제하지 않고 잠시 중단할 때 사용하세요.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-enable-disable.png' />
+
+
+## 출입문 규칙 수정
+
+1. 출입문 규칙 목록에서 수정하려는 규칙의 오른쪽에 있는 <IcCamEdit title='Edit' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='edit_door_rule' product='cam' /> 화면이 나타나면 조건과 동작을 수정하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule-edit.png' />
+
+1. 수정한 내용을 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+
+## 출입문 규칙 삭제
+
+출입문 규칙 목록에서 삭제하려는 규칙의 오른쪽에 있는 <IcCamTrash title='delete' /> 버튼을 클릭하세요. 확인 메시지가 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요. 삭제한 규칙은 복구할 수 없습니다.

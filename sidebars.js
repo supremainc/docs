@@ -154,6 +154,21 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
+          label: '출입 통제 관리하기',
+          className: 'cam--access',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/manage-access-control',
+          },
+          items: [
+            'device/vionyx_webserver/manage-doors',
+            'device/vionyx_webserver/manage-access-levels',
+            'device/vionyx_webserver/control-doors',
+            'device/vionyx_webserver/configure-door-rules'
+          ]
+        },
+        {
+          type: 'category',
           label: '시스템 구성하기',
           className: 'cam--system',
           link: {

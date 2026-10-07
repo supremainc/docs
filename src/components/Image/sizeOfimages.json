@@ -5399,6 +5399,110 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/cam-server/cam-acs-door-add-rule-audio.png": {
+    "width": 622,
+    "height": 290
+  },
+  "/img/cam-server/cam-acs-door-add-rule-relay.png": {
+    "width": 622,
+    "height": 378
+  },
+  "/img/cam-server/cam-acs-door-add-rule-webhook.png": {
+    "width": 762,
+    "height": 712
+  },
+  "/img/cam-server/cam-acs-door-add-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-door-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-door-added-list.png": {
+    "width": 1920,
+    "height": 395
+  },
+  "/img/cam-server/cam-acs-door-control-disable-button.png": {
+    "width": 1670,
+    "height": 207
+  },
+  "/img/cam-server/cam-acs-door-control.png": {
+    "width": 1920,
+    "height": 410
+  },
+  "/img/cam-server/cam-acs-door-edit-switch-type.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-door-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-door-lists.png": {
+    "width": 1669,
+    "height": 347
+  },
+  "/img/cam-server/cam-acs-door-rule-added-list.png": {
+    "width": 1920,
+    "height": 372
+  },
+  "/img/cam-server/cam-acs-door-rule-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-door-rule-list-check.png": {
+    "width": 1669,
+    "height": 324
+  },
+  "/img/cam-server/cam-acs-door-rule-list-enable-disable.png": {
+    "width": 1669,
+    "height": 157
+  },
+  "/img/cam-server/cam-acs-door-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-door.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-level-add-assigned-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-level-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-level-added-list.png": {
+    "width": 1920,
+    "height": 368
+  },
+  "/img/cam-server/cam-acs-level-assign-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-level-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/cam-server/cam-acs-level-list-users-popup.png": {
+    "width": 1920,
+    "height": 617
+  },
+  "/img/cam-server/cam-acs-level-list.png": {
+    "width": 1669,
+    "height": 320
+  },
+  "/img/cam-server/cam-acs-level-select-delete.png": {
+    "width": 1920,
+    "height": 439
+  },
+  "/img/cam-server/cam-acs-level.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/cam-server/cam-webserver-people-ai-matching.png": {
     "width": 1920,
     "height": 1080
@@ -5433,7 +5537,7 @@
   },
   "/img/cam-server/cam-webserver-people-list-batch-delete.png": {
     "width": 1920,
-    "height": 483
+    "height": 544
   },
   "/img/cam-server/cam-webserver-people-list-delete.png": {
     "width": 1920,
@@ -5661,7 +5765,7 @@
   },
   "/img/cam-server/cam-webserver-system-log-date.png": {
     "width": 710,
-    "height": 357
+    "height": 441
   },
   "/img/cam-server/cam-webserver-system-log-download-device-log.png": {
     "width": 1920,
@@ -5673,7 +5777,7 @@
   },
   "/img/cam-server/cam-webserver-system-log-filter.png": {
     "width": 1922,
-    "height": 1226
+    "height": 1607
   },
   "/img/cam-server/cam-webserver-system-log.png": {
     "width": 1920,
@@ -5689,7 +5793,7 @@
   },
   "/img/cam-server/cam-webserver-system-manage-operator-edit.png": {
     "width": 641,
-    "height": 448
+    "height": 450
   },
   "/img/cam-server/cam-webserver-system-manage-operator.png": {
     "width": 1920,
@@ -15851,6 +15955,106 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/cam-server/cam-acs-door-add-rule-audio.png": {
+    "width": 622,
+    "height": 290
+  },
+  "/img/en/cam-server/cam-acs-door-add-rule-relay.png": {
+    "width": 622,
+    "height": 378
+  },
+  "/img/en/cam-server/cam-acs-door-add-rule-webhook.png": {
+    "width": 762,
+    "height": 712
+  },
+  "/img/en/cam-server/cam-acs-door-add-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-door-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-door-added-list.png": {
+    "width": 1920,
+    "height": 395
+  },
+  "/img/en/cam-server/cam-acs-door-control-disable-button.png": {
+    "width": 1670,
+    "height": 207
+  },
+  "/img/en/cam-server/cam-acs-door-control.png": {
+    "width": 1920,
+    "height": 410
+  },
+  "/img/en/cam-server/cam-acs-door-edit-switch-type.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-door-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-door-lists.png": {
+    "width": 1669,
+    "height": 347
+  },
+  "/img/en/cam-server/cam-acs-door-rule-added-list.png": {
+    "width": 1920,
+    "height": 372
+  },
+  "/img/en/cam-server/cam-acs-door-rule-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-door-rule-list-check.png": {
+    "width": 1669,
+    "height": 324
+  },
+  "/img/en/cam-server/cam-acs-door-rule-list-enable-disable.png": {
+    "width": 1669,
+    "height": 157
+  },
+  "/img/en/cam-server/cam-acs-door-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-door.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-level-add-assigned-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-level-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-level-added-list.png": {
+    "width": 1920,
+    "height": 368
+  },
+  "/img/en/cam-server/cam-acs-level-assign-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-level-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/cam-server/cam-acs-level-list-users-popup.png": {
+    "width": 1920,
+    "height": 617
+  },
+  "/img/en/cam-server/cam-acs-level-list.png": {
+    "width": 1669,
+    "height": 320
+  },
+  "/img/en/cam-server/cam-acs-level-select-delete.png": {
+    "width": 1920,
+    "height": 439
+  },
   "/img/en/cam-server/cam-webserver-people-ai-matching.png": {
     "width": 1920,
     "height": 1080
@@ -15889,7 +16093,7 @@
   },
   "/img/en/cam-server/cam-webserver-people-list-batch-delete.png": {
     "width": 1920,
-    "height": 483
+    "height": 544
   },
   "/img/en/cam-server/cam-webserver-people-list-delete-1.png": {
     "width": 1920,
@@ -15929,7 +16133,7 @@
   },
   "/img/en/cam-server/cam-webserver-people-list-mode.png": {
     "width": 1920,
-    "height": 494
+    "height": 480
   },
   "/img/en/cam-server/cam-webserver-people-list-search-select.png": {
     "width": 400,
@@ -16117,7 +16321,7 @@
   },
   "/img/en/cam-server/cam-webserver-system-log-date.png": {
     "width": 710,
-    "height": 357
+    "height": 441
   },
   "/img/en/cam-server/cam-webserver-system-log-download-device-log.png": {
     "width": 1920,
@@ -16129,7 +16333,7 @@
   },
   "/img/en/cam-server/cam-webserver-system-log-filter.png": {
     "width": 1922,
-    "height": 1226
+    "height": 1607
   },
   "/img/en/cam-server/cam-webserver-system-log.png": {
     "width": 1920,
@@ -22039,6 +22243,106 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/ja/cam-server/cam-acs-door-add-rule-audio.png": {
+    "width": 622,
+    "height": 290
+  },
+  "/img/ja/cam-server/cam-acs-door-add-rule-relay.png": {
+    "width": 622,
+    "height": 378
+  },
+  "/img/ja/cam-server/cam-acs-door-add-rule-webhook.png": {
+    "width": 762,
+    "height": 712
+  },
+  "/img/ja/cam-server/cam-acs-door-add-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-door-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-door-added-list.png": {
+    "width": 1920,
+    "height": 395
+  },
+  "/img/ja/cam-server/cam-acs-door-control-disable-button.png": {
+    "width": 1670,
+    "height": 207
+  },
+  "/img/ja/cam-server/cam-acs-door-control.png": {
+    "width": 1920,
+    "height": 410
+  },
+  "/img/ja/cam-server/cam-acs-door-edit-switch-type.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-door-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-door-lists.png": {
+    "width": 1669,
+    "height": 347
+  },
+  "/img/ja/cam-server/cam-acs-door-rule-added-list.png": {
+    "width": 1920,
+    "height": 372
+  },
+  "/img/ja/cam-server/cam-acs-door-rule-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-door-rule-list-check.png": {
+    "width": 1669,
+    "height": 324
+  },
+  "/img/ja/cam-server/cam-acs-door-rule-list-enable-disable.png": {
+    "width": 1669,
+    "height": 157
+  },
+  "/img/ja/cam-server/cam-acs-door-rule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-door.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-level-add-assigned-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-level-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-level-added-list.png": {
+    "width": 1920,
+    "height": 368
+  },
+  "/img/ja/cam-server/cam-acs-level-assign-users.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-level-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/ja/cam-server/cam-acs-level-list-users-popup.png": {
+    "width": 1920,
+    "height": 617
+  },
+  "/img/ja/cam-server/cam-acs-level-list.png": {
+    "width": 1669,
+    "height": 320
+  },
+  "/img/ja/cam-server/cam-acs-level-select-delete.png": {
+    "width": 1920,
+    "height": 439
+  },
   "/img/ja/cam-server/cam-webserver-people-ai-matching.png": {
     "width": 1920,
     "height": 1080
@@ -22073,7 +22377,7 @@
   },
   "/img/ja/cam-server/cam-webserver-people-list-batch-delete.png": {
     "width": 1920,
-    "height": 483
+    "height": 544
   },
   "/img/ja/cam-server/cam-webserver-people-list-delete.png": {
     "width": 1920,
@@ -22109,7 +22413,7 @@
   },
   "/img/ja/cam-server/cam-webserver-people-list-mode.png": {
     "width": 1920,
-    "height": 494
+    "height": 480
   },
   "/img/ja/cam-server/cam-webserver-people-list-search-select.png": {
     "width": 434,
@@ -22297,7 +22601,7 @@
   },
   "/img/ja/cam-server/cam-webserver-system-log-date.png": {
     "width": 710,
-    "height": 357
+    "height": 441
   },
   "/img/ja/cam-server/cam-webserver-system-log-download-device-log.png": {
     "width": 1920,
@@ -22309,7 +22613,7 @@
   },
   "/img/ja/cam-server/cam-webserver-system-log-filter.png": {
     "width": 1922,
-    "height": 1226
+    "height": 1607
   },
   "/img/ja/cam-server/cam-webserver-system-log.png": {
     "width": 1920,

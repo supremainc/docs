@@ -1,0 +1,95 @@
+---
+id: control-doors
+title: 출입문 제어하기
+description: 출입문의 잠금 상태와 개폐 상태를 실시간으로 확인하고, 원격으로 출입문을 열거나 수동으로 잠금·잠금 해제하는 방법을 안내합니다.
+---
+
+<Cmd sid='door_control' product='cam' /> 메뉴에서는 등록된 출입문의 잠금 상태를 실시간으로 확인하고, 원격으로 출입문을 열거나 잠글 수 있습니다.
+
+아래와 같은 상황에서 출입문을 직접 제어하세요.
+
+* 얼굴이 등록되지 않은 방문객이나 택배 기사를 위해 출입문을 한 번 열어 줄 때
+
+* 행사나 이사와 같은 상황에서 출입문을 계속 열어 둘 때
+
+* 비상 상황에서 일정과 관계없이 출입문을 즉시 잠가야 할 때
+
+:::info
+
+* 출입문을 제어하려면 운영자 권한이 필요합니다. 권한이 없으면 출입문 상태 확인과 제어 기능을 사용할 수 없습니다. 운영자 권한에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-operators' />를 참고하세요.
+
+* 출입문 추가 및 관리에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-doors' />를 참고하세요.
+
+:::
+
+
+## 출입문 상태 확인
+
+1. 화면 왼쪽 상단의 <Cmd sid='access' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='door_control' product='cam' />을 클릭하세요.
+
+<ProdImg src='/img/cam-server/cam-acs-door-control.png' />
+
+<Cmd sid='door' product='cam' /> 메뉴에 등록된 출입문이 목록에 표시됩니다. 출입문을 추가하거나 삭제하면 목록에도 바로 반영됩니다.
+
+* 특정 출입문을 찾으려면 검색 필드(<Num num='1' />)에 출입문 이름을 입력하세요.
+
+* 한 페이지에 표시할 출입문 개수를 변경하려면 화면 오른쪽 상단의 행 수 목록(<Num num='2' />)에서 원하는 값을 선택하세요.
+
+* 정렬 기준을 변경하려면 <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)에서 원하는 기준을 선택하세요.
+
+출입문 목록에 표시되는 항목은 다음과 같습니다.
+
+| 항목 | 설명 |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | 출입문의 고유 ID입니다. |
+| <Cmd sid='name' product='cam' /> | 출입문 이름입니다. |
+| <Cmd sid='description' product='cam' /> | 출입문을 추가하거나 수정할 때 입력한 설명입니다. |
+| <Cmd sid='relay_status' product='cam' /> | 출입문 잠금 장치의 현재 상태입니다. |
+| <Cmd sid='door_sensor' product='cam' /> | 출입문 센서의 현재 상태입니다. 출입문에 <Cmd sid='door_status' product='cam' /> 입력 포트를 설정한 경우에만 표시됩니다. |
+| <Cmd sid='control' product='cam' /> | 출입문을 열거나 수동 잠금 또는 수동 잠금 해제할 수 있는 기능을 제공합니다. |
+
+{/* TODO(개발자 확인): 출입문 센서 ON/OFF가 각각 열림/닫힘 중 무엇인지, 상태 입력 포트 미설정 시 표시값('-' 등) 확인 / 상태 갱신 주기와 통신 실패 시 표시 방식 확인 */}
+
+### 릴레이 상태
+
+<Cmd sid='relay_status' product='cam' /> 열에는 출입문이 잠겨 있는지와 함께 그 상태가 무엇에 의해 결정되었는지 표시됩니다.
+
+| 상태 | 설명 |
+| --- | --- |
+| <Cmd sid='relay_status_locked' product='cam' /> | 평상시 잠긴 상태입니다. |
+| <Cmd sid='relay_status_unlocked' product='cam' /> | 평상시 잠금 해제된 상태입니다. |
+| <Cmd sid='relay_status_schedule_lock' product='cam' /> | 출입문의 잠금 일정에 따라 잠긴 상태입니다. |
+| <Cmd sid='relay_status_schedule_unlock' product='cam' /> | 출입문의 개방 일정에 따라 잠금 해제된 상태입니다. |
+| <Cmd sid='relay_status_fixed_lock' product='cam' /> | <Cmd sid='manual_lock' product='cam' />으로 잠근 상태입니다. |
+| <Cmd sid='relay_status_fixed_unlock' product='cam' /> | <Cmd sid='manual_unlock' product='cam' />로 잠금 해제한 상태입니다. |
+
+## 출입문 제어
+
+<Cmd sid='control' product='cam' /> 열의 버튼을 클릭하여 출입문을 제어하세요.
+
+| 버튼 | 동작 |
+| --- | --- |
+| <Cmd sid='door_open' product='cam' /> | 출입문을 한 번 엽니다. 출입문에 설정한 개방 시간이 지나면 다시 잠깁니다. |
+| <Cmd sid='manual_unlock' product='cam' /> | 출입문을 잠금 해제하고, <Cmd sid='release' product='cam' /> 기능을 실행할 때까지 계속 열어 둡니다. |
+| <Cmd sid='manual_lock' product='cam' /> | 출입문을 잠그고, <Cmd sid='release' product='cam' /> 기능을 실행할 때까지 계속 잠가 둡니다. 이 동안에는 등록된 사용자도 출입할 수 없습니다. |
+| <Cmd sid='release' product='cam' /> | <Cmd sid='manual_lock' product='cam' /> 또는 <Cmd sid='manual_unlock' product='cam' />를 끝내고, 출입문을 수동 제어 이전 상태로 되돌립니다. |
+
+:::caution
+
+<Cmd sid='manual_unlock' product='cam' /> 상태에서는 얼굴 인식과 관계없이 누구나 출입할 수 있습니다. 필요한 작업을 마치면 반드시 <Cmd sid='release' product='cam' /> 버튼을 클릭하세요.
+
+:::
+
+:::info
+
+* 출입문이 수동 잠금 또는 수동 잠금 해제 상태일 때는 <Cmd sid='door_open' product='cam' /> 버튼이 비활성화되고 <Cmd sid='release' product='cam' /> 버튼만 표시됩니다.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-control-disable-button.png' />
+
+* 수동 제어는 출입문의 개방 일정과 잠금 일정보다 우선 적용됩니다. 예를 들어, 개방 일정 시간대에 <Cmd sid='manual_lock' product='cam' />을 실행하면 출입문은 잠긴 상태로 유지됩니다.
+
+* <Cmd sid='release' product='cam' /> 버튼을 클릭하면 현재 시간에 맞는 일정 상태 또는 평상시 상태로 돌아갑니다.
+
+:::
