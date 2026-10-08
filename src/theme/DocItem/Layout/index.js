@@ -56,8 +56,7 @@ export default function DocItemLayout({children}) {
       {/* {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>} */}
       <div className="col col--3">
         {/* {docTOC.desktop} */}
-        <CopyPageButton 
-          generateMarkdownRoutes 
+        <CopyPageButton  
           enabledActions={[ 'copy', 'chatgpt', 'claude', 'gemini', 'perplexity' ]} 
           customStyles={{
             'button': {
