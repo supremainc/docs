@@ -2,6 +2,7 @@ import React from 'react';
 import {
   useDocById,
   useDocsVersion,
+  useDocsData,
   findFirstSidebarItemLink,
 } from '@docusaurus/plugin-content-docs/client';
 import {
@@ -28,7 +29,14 @@ function CardCategory({item}) {
   const href = findFirstSidebarItemLink(item);
   const categoryItemsPlural = useDocCardDescriptionCategoryItemsPlural();
   const version = useDocsVersion();
-  const docId = href ? href.replace('/developer/', '') : undefined;
+  // 전역 데이터의 doc.path는 baseUrl·locale이 포함된 실제 경로(예: /en/developer/...)이므로
+  // href와 정확히 일치하는 문서를 찾아 docId를 얻는다. 문자열 치환은 locale 접두사를 깨뜨린다.
+  const globalVersion = useDocsData(version.pluginId).versions.find(
+    (v) => v.name === version.version,
+  );
+  const docId = href
+    ? globalVersion?.docs.find((doc) => doc.path === href)?.id
+    : undefined;
   // useDocById는 id에 해당하는 문서가 없으면 예외를 던지므로,
   // href에서 추정한 docId(자동 생성 카테고리 인덱스 등 실제 문서가 아닐 수 있음)는
   // version.docs에서 안전하게 조회한다.
