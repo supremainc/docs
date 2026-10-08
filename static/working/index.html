@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>근무시간 시뮬레이터</title>
+<title>근무시간 플래너</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -306,6 +306,13 @@
   .badge.clamp{background:var(--amber-soft);color:var(--amber);}
   .cell .vsel{font-size:11px;padding:3px 5px;border-radius:6px;}
   .cell .stay-note{font-size:10.5px;color:var(--faint);font-family:var(--mono);word-break:keep-all;margin-bottom:4px;}
+  .exbrk-btn{
+    display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;padding:0;
+    margin-left:2px;vertical-align:middle;border:1px solid currentColor;border-radius:50%;
+    background:transparent;color:inherit;font-size:10px;line-height:1;cursor:pointer;font-family:var(--sans);
+  }
+  .exbrk-btn:hover{color:var(--accent-ink);border-color:var(--accent);background:var(--accent-soft);}
+  .exbrk-tag{color:var(--amber);font-weight:600;}
 
   /* ── 규칙 설명 ── */
   details.rules{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;}
@@ -389,8 +396,8 @@
 <div class="wrap">
 
   <header class="top">
-    <div class="kicker">Working Hours</div>
-    <h1>근무시간 시뮬레이터</h1>
+    <div class="kicker">Worktime Planner</div>
+    <h1>근무시간 플래너</h1>
     <p>출근·퇴근 시간을 입력하면 휴게시간 규칙에 따라 실 근무시간이 자동으로 계산됩니다.</p>
   </header>
 
@@ -611,7 +618,7 @@
   </main>
   </div>
 
-  <div class="footnote">V3.1 | Technical Writing</div>
+  <div class="footnote">V3.2 | Technical Writing</div>
 </div>
 
 <!-- 월별 기준근로시간 모달 -->
@@ -706,7 +713,8 @@ function vacUsesRange(key){
 const REC_START = 450;   // 07:30
 const REC_END   = 1410;  // 23:30
 
-function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
+function computeDay(inMin, outMin, vacKey, vinMin, voutMin, extraBreak){
+  extraBreak = extraBreak || 0;   // 자진 추가 휴게시간(분)
   const vh = vacHours(vacKey);
   // 연차는 출근/퇴근(근무시간)과 연계되지 않고 8시간으로만 인정
   if(normalizeVac(vacKey) === 'annual'){ inMin = null; outMin = null; }
@@ -730,7 +738,8 @@ function computeDay(inMin, outMin, vacKey, vinMin, voutMin){
       }
       officePhysical = stay - overlap;
       officeWork = calcWork(officePhysical);
-      brk = officePhysical - officeWork;
+      if(extraBreak > 0) officeWork = Math.max(0, officeWork - extraBreak);   // 자진 휴게만큼 실근무 차감
+      brk = officePhysical - officeWork;                                       // 휴게시간 = 공식 휴게 + 자진 휴게
     }
   }
   const vacRangeLen = (vinMin !== null && voutMin !== null && voutMin > vinMin) ? (voutMin - vinMin) : null;
@@ -1311,7 +1320,7 @@ function monthTotals(){
     const vac  = isRest ? '' : d.vac;                   // 휴일엔 휴가 없음
     const vin  = isRest ? '' : d.vin;
     const vout = isRest ? '' : d.vout;
-    const r = computeDay(toMin(d.in), toMinOut(d.out), vac, toMin(vin), toMin(vout));
+    const r = computeDay(toMin(d.in), toMinOut(d.out), vac, toMin(vin), toMin(vout), d.exbrk || 0);
     if(isRest) holiday += Math.min(r.total, 480);       // 휴일근무는 1일 최대 8시간 인정
     else       regular += r.total;                      // 평일 실근무 (기준 대상)
     night += r.night;                                   // 야간근로 (휴일 포함 전체)
@@ -1468,6 +1477,18 @@ function buildCalendar(){
     const getVac  = ()=> vacEl  ? vacEl.value  : '';
     const getVin  = ()=> vinEl  ? vinEl.value  : '';
     const getVout = ()=> voutEl ? voutEl.value : '';
+    let exbrk = (monthData[dateKey] && monthData[dateKey].exbrk) || 0;   // 자진 추가 휴게(분)
+    function onExtraBreak(e){
+      if(e) e.stopPropagation();
+      const input = window.prompt(
+        '자진 추가 휴게시간을 분 단위로 입력하세요.\n(4시간당 30분 휴게 외에 개인적으로 더 쉰 시간 — 그만큼 실근무에서 차감됩니다. 0 입력 시 해제)',
+        exbrk ? String(exbrk) : ''
+      );
+      if(input === null) return;
+      const digits = String(input).replace(/[^0-9]/g,'');
+      exbrk = digits === '' ? 0 : Math.max(0, parseInt(digits, 10) || 0);
+      onChange();
+    }
 
     // 배지 + 결과 영역
     const badges = document.createElement('div');
@@ -1480,7 +1501,7 @@ function buildCalendar(){
       const im = toMin(inEl.value), om = toMinOut(outEl.value);
       const vac = getVac();
       const vin = toMin(getVin()), vout = toMin(getVout());
-      const r = computeDay(im, om, vac, vin, vout);
+      const r = computeDay(im, om, vac, vin, vout, exbrk);
       badges.innerHTML = '';
       // 공휴일 배지 (항상 표시)
       if(hol){
@@ -1511,7 +1532,9 @@ function buildCalendar(){
       let html = '';
       if(r.officeValid){
         html += `<div class="stay-note">체류 ${fmtDur(r.officePhysical)}</div>`;
-        html += `<div class="stay-note">휴게시간 ${fmtBreak(r.brk)}</div>`;
+        html += `<div class="stay-note">휴게시간 ${fmtBreak(r.brk)}` +
+                `${exbrk > 0 ? ` <span class="exbrk-tag">자진 +${fmtBreak(exbrk)}</span>` : ''}` +
+                ` <button type="button" class="exbrk-btn" title="자진 휴게시간 추가">+</button></div>`;
       }
       if(r.vh > 0){
         html += `<div class="stay-note">휴가 ${fmtDur(r.vh)}</div>`;
@@ -1523,6 +1546,8 @@ function buildCalendar(){
       html += `<span class="rlab">실근무</span>${fmtDur(recWork)}`;
       result.className='result';
       result.innerHTML = html;
+      const exBtn = result.querySelector('.exbrk-btn');
+      if(exBtn) exBtn.addEventListener('click', onExtraBreak);
 
       // 휴일근무 8시간 초과분 미인정 표시
       if(holidayCapped){
@@ -1551,8 +1576,10 @@ function buildCalendar(){
     function onChange(){
       const im = inEl.value, om = outEl.value;
       const vac = getVac(), vin = getVin(), vout = getVout();
-      if(im || om || vac || vin || vout){
-        monthData[dateKey] = {in:im, out:om, vac:vac, vin:vin, vout:vout};
+      if(im || om || vac || vin || vout || exbrk){
+        const entry = {in:im, out:om, vac:vac, vin:vin, vout:vout};
+        if(exbrk > 0) entry.exbrk = exbrk;
+        monthData[dateKey] = entry;
       } else { delete monthData[dateKey]; }
       saveMonth(curYear, curMonth, monthData);
       refreshCell();
