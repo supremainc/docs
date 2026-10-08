@@ -13,6 +13,7 @@ import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import ContentVisibility from '@theme/ContentVisibility';
 import styles from './styles.module.css';
 import GenerateToc from '@site/src/components/GenerateToc';
+import CopyPageButton from "docusaurus-plugin-copy-page-button/react";
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -55,6 +56,18 @@ export default function DocItemLayout({children}) {
       {/* {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>} */}
       <div className="col col--3">
         {/* {docTOC.desktop} */}
+        <CopyPageButton 
+          generateMarkdownRoutes 
+          enabledActions={[ 'copy', 'chatgpt', 'claude', 'gemini', 'perplexity' ]} 
+          customStyles={{
+            'button': {
+              'style': {
+                'position': 'sticky',
+                'top': 'calc(var(--ifm-navbar-height) + 1rem)'
+              }
+            }
+          }}
+        />
         {!docTOC.hidden ? <GenerateToc device="desktop" /> : null}
       </div>
     </div>
