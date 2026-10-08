@@ -1,0 +1,47 @@
+# BS2_VerifyUser
+
+Transfers user information mapped to the card or user ID authentication results to the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_VerifyUser(void* context, uint32_t deviceId, uint16_t seq, int handleResult, BS2UserBlob* userBlob);
+```
+
+:::info
+
+[See BS2UserBlob Structure](user_management_api#bs2userblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `seq` : Packet sequence number
+
+- \[In\] `handleResult` : Value of matching result(`BS_SDK_SUCCESS` or `BS_SDK_ERROR_XXX`)
+
+- \[In\] `userBlob` : Matched user information
+
+:::info
+
+Packet sequence number must be equivalent to the value sent from the `OnVerifyUser`.
+
+If the `handleResult` is `BS_SDK_SUCCESS`, the `userBlob` should not be null.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_SetServerMatchingHandler](bs2_setservermatchinghandler)

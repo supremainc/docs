@@ -1,0 +1,57 @@
+# BS2_GetAllInterlockZoneStatus
+
+<Badge only>+ v2.6.0</Badge> Gets all Interlock zone's status information.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllInterlockZoneStatus(void* context, uint32_t deviceId, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[See BS2ZoneStatus Structure](zone_control_api#bs2zonestatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zoneIds` : Interlock zone ID list trying to get
+
+- \[In\] `zoneIdCount` : Size of Interlozk zone ID list
+
+- \[Out\] `zoneStatusObj` : Pointer to store the zone status list
+
+- \[Out\] `numZoneStatus` : Number of zone status list
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetInterlockZone](bs2_getinterlockzone)
+
+[BS2_GetInterlockZoneStatus](bs2_getinterlockzonestatus)
+
+[BS2_SetInterlockZone](bs2_setinterlockzone)
+
+[BS2_SetInterlockZoneAlarm](bs2_setinterlockzonealarm)
+
+[BS2_RemoveInterlockZone](bs2_removeinterlockzone)
+
+[BS2_RemoveAllInterlockZone](bs2_removeallinterlockzone)

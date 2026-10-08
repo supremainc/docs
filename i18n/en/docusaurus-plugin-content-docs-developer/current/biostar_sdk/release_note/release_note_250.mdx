@@ -1,0 +1,107 @@
+# Version 2.5.0
+
+Date: 2017-09-25
+
+:::caution
+
+You need to re-build SDK to SDK version upgrade as BioStar 2 Device SDK structure has been changed.
+
+:::
+
+## New Features
+
+- Supports SEOS Card(Including Elite Key, RF performance improvement)
+
+- Supports CoreStation
+
+- Supports Intrusion Alarm Zone
+
+- Supports Ethernet Zone
+
+- Supports USB log and user export
+
+- Filtering log from device feature
+
+1. SEOS Card(Including Elite Key, RF performance improvement) feature supports iClass SEOS card configuration via Smart card layout.
+
+   - Add API [BS2_GetCardConfigEx](../bs2_getcardconfigex)
+
+   - Add API [BS2_SetCardConfigEx](../bs2_setcardconfigex)
+
+   - Add structure [BS2CardConfigEx](../configuration_api#bs2cardconfigex)
+
+1. CoreStation feature supports CoreStation which is the new Suprema device. CoreStation, which works as a controller of the master, performs overall functions along with Slave devices. The difference from other devices is CoreStation can't get credential input such as card or fingerprint since it works only as a controller. Also, CoreStation configuration and control setting is supported via BioStar because it doesn't have a separate UI.
+
+   - Add API [BS2_GetSlaveExDevice](../bs2_getslaveexdevice)
+
+   - Add API [BS2_SetSlaveExDevice](../bs2_setslaveexdevice)
+
+   - Add structure [BS2Rs485SlaveDeviceEX](../configuration_api#bs2rs485slavedeviceex)
+
+1. Intrusion Alarm Zone supports following features. Normally Intrusion detection system sends signals when the installed sensor on the security facility detected intrusion or abnormal signals and it has two different ways - unmanned and local. In the Unmanned Intrusion detection system, security guards from the control center which is the remote location perform tasks when the an abnormal situation. On the other hand, in the Local Intrusion detection system, resident security guards from its own control center perform the overall task. BioStar targets users who feel pressured by the cost of an Unmanned intrusion system or whose local security guards based on their own Intrusion detection system. Currently, a normal Intrusion Alarm Zone(biostar1.X) is provided, and 3rd party alarm system intrusion detection On/Off device integration will be provided in the near future. In the long term, a professional local control system that can be applied to Video and Visual map features is a goal.
+
+   - Add API [BS2_GetIntrusionAlarmZone](../bs2_getintrusionalarmzone)
+
+   - Add API [BS2_GetIntrusionAlarmZoneStatus](../bs2_getintrusionalarmzonestatus)
+
+   - Add API [BS2_SetIntrusionAlarmZone](../bs2_setintrusionalarmzone)
+
+   - Add API [BS2_SetIntrusionAlarmZoneAlarm](../bs2_setintrusionalarmzonealarm)
+
+   - Add API [BS2_RemoveIntrusionAlarmZone](../bs2_removeintrusionalarmzone)
+
+   - Add API [BS2_SetIntrusionAlarmZoneArm](../bs2_setintrusionalarmzonearm)
+
+   - Add structure [BS2IntrusionAlarmZoneBlob](../configuration_api#bs2intrusionalarmzoneblob)
+
+1. Ethernet Zone is the feature that a specific device(Not BioStar V2.x) performs as Zone Master using Ethernet TCP communication method between devices(Master \<-\> Member). Currently, it supports corresponding features to the existing 1.x Entrance Limit, Fire Alarm Zone.
+
+   - Add API [BS2_GetDeviceZone](../bs2_getdevicezone)
+
+   - Add API [BS2_SetDeviceZone](../bs2_setdevicezone)
+
+   - Add API [BS2_RemoveDeviceZone](../bs2_removedevicezone)
+
+   - Add API [BS2_SetDeviceZoneAlarm](../bs2_setdevicezonealarm)
+
+   - Add structure [BS2DeviceZoneConfig](../configuration_api#bs2devicezoneconfig)
+
+1. USB log and User export support following features. It is used as T&A using Export/Import user & log data via USB at site where network connection is unavailable. (Usage Scenario) Users are registered at the head office where BioStar server is installed and USB memory which includes registered users is sent to the site, and T&A result is generated with log of the previous month at the beginning of every month. Practically it should be supported as a file type so that it can be handled via USB copy even when this USB data is re-forwarded.
+
+   - Add API [BS2_GetUserListFromDir](../bs2_getuserlistfromdir)
+
+   - Add API [BS2_GetUserInfosFromDir](../bs2_getuserinfosfromdir)
+
+   - Add API [BS2_GetLogFromDir](../bs2_getlogfromdir)
+
+1. Filtering log from device feature is improve the status of no response from the system when the log is filtered and showed from the device via SDK or when the device gets log.
+
+   - Add API [BS2_GetFilteredLogSinceEventId](../bs2_getfilteredlogsinceeventid)
+
+## Modified features
+
+1. `BS2_ScanFingerprint` in SDK v2.4.1 is changed to `BS2_ScanFingerprintEx` in SDK v2.5.0 to distinguish function with existing `BS2_ScanFingerprint` before outQuality parameter has been added. We haven't deleted the existing `BS2_ScanFingerprint` function for backward compatibility.
+
+   ```cpp
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprintEx(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outQuality, OnReadyToScan ptrReadyToScan);
+   ```
+
+1. Time reduction as giving wait time when SSL connect.
+
+1. 'Internal Error' has been resolved when Payload size is huge.
+
+1. The issue that some devices couldn't be found using UDP search has been resolved with the improvement of Packet Loss and Packet handling.
+
+1. Comment out `BS2Schedule` for C# example since C# has a language limitation which Union is not supported. Using `CSP_BS2Schedule` instead of `BS2Schedule`, and for functions have to use `BS2Schedule` such as `BS2_GetAllAccessSchedule`, `BS2_GetAccessSchedule` and `BS2_SetAccessSchedule` can use WRAPPER function `CSP_BS2_GetAllAccessSchedule`, `CSP_BS2_GetAccessSchedule` and `CSP_BS2_SetAccessSchedule`. In `CSP_BS2Schedule`, for `scheduleUnion.daily`, `scheduleUnion.weekly` value can use valid parameter with `isDaily`.
+
+1. Getting log of `BS2_GetFilteredLogSinceEventId` has been improved and it is applied to C# example too.
+
+1. Template function for creating Wrapper function in Util GetAll, Get Remove, Set has been added in C# example.
+
+1. CPU usage 100% in Linux has been resolved.
+
+1. `BS2CardModelEnum{ODPW, OAPW}` has been added in C# example.
+
+1. Transformation function UTC contents in regards to Util common UnixTimeStamp has been modified in C# example.

@@ -20,29 +20,29 @@
 
 1. 장치의 화면에 표시되는 인증 결과 메시지에서 ID 또는 이름의 표시 방법을 변경할 수 있도록 설정이 추가되었습니다.
 
-   * 구조체 [BS2DisplayConfig](../configuration_api#bs2displayconfig) - authMsgUserName, authMsgUserID 참조
+   * 구조체 [BS2DisplayConfig](../configuration_api#bs2displayconfig) - `authMsgUserName`, `authMsgUserID` 참조
 
 1. BioStation 3의 IP 인터폰에서 데이터 전송 방법을 UDP, TCP, TLS로 변경할 수 있도록 설정이 추가되었습니다.
 
-   - 구조체 [BS2VoipConfigExt](../configuration_api#bs2voipconfigext) - transport 참조 (지원장치: BioStation 3)
+   - 구조체 [BS2VoipConfigExt](../configuration_api#bs2voipconfigext) - `transport` 참조 (지원장치: BioStation 3)
 
 1. BioStation 3의 IP 인터폰과 RTSP 사용 시 송출되는 영상 해상도를 선택할 수 있도록 설정이 추가되었습니다.
 
-   - 구조체 [BS2VoipConfigExt](../configuration_api#bs2voipconfigext) - resolution 참조 (지원장치: BioStation 3)
+   - 구조체 [BS2VoipConfigExt](../configuration_api#bs2voipconfigext) - `resolution` 참조 (지원장치: BioStation 3)
 
-   - 구조체 [BS2RtspConfig](../configuration_api#bs2rtspconfig) - resolution 참조 (지원장치: BioStation 3, BioEntry W3)
+   - 구조체 [BS2RtspConfig](../configuration_api#bs2rtspconfig) - `resolution` 참조 (지원장치: BioStation 3, BioEntry W3)
 
 1. 얼굴 인증 시 마스크를 착용한 사용자는 인증을 거부하도록 설정할 수 있는 옵션이 추가되었습니다. 이 기능은 BioStation 3, FaceStation F2, BioEntry W3 등의 비주얼 페이스를 기반으로 하는 얼굴 인증 장치에만 해당됩니다.
 
-   - 구조체 [BS2FaceConfigExt](../configuration_api#bs2faceconfigext) - maskCheckMode 참조
+   - 구조체 [BS2FaceConfigExt](../configuration_api#bs2faceconfigext) - `maskCheckMode` 참조
 
-   - 구조체 [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) - authDenyMaskSupported 참조
+   - 구조체 [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) - `authDenyMaskSupported` 참조
 
 1. X-Station 2에서 PIN을 입력할 때 숫자 키의 위치가 무작위로 변경되는 스크램블 키패드를 설정할 수 있도록 추가되었습니다.
 
-   - 구조체 [BS2DisplayConfig](../configuration_api#bs2displayconfig) - scrambleKeyboardMode 참조
+   - 구조체 [BS2DisplayConfig](../configuration_api#bs2displayconfig) - `scrambleKeyboardMode` 참조
 
-   - 구조체 [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) - scrambleKeyboardModeSupported 참조
+   - 구조체 [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) - `scrambleKeyboardModeSupported` 참조
 
 1. 슬레이브 장치의 RS-485 전송 속도를 설정할 수 있는 기능이 추가되었습니다.
 
@@ -64,8 +64,8 @@
 
 1. C# 샘플소스 개선
 
-   - ConfigControl 예제에서 `getDeviceCapabilities()` 수행 시 슬레이브 장치를 선택할 수 있도록 개선되었습니다.
+   - `ConfigControl` 예제에서 `getDeviceCapabilities()` 수행 시 슬레이브 장치를 선택할 수 있도록 개선되었습니다.
 
-   - UserControl 예제에서 imagedata 메모리해제 누락이 개선되었습니다.
+   - `UserControl` 예제에서 imagedata 메모리해제 누락이 개선되었습니다.
 
-   - SlaveControl 예제에서 wiegandDeviceID 변환 방법이 개선되었습니다.
+   - `SlaveControl` 예제에서 `wiegandDeviceID` 변환 방법이 개선되었습니다.

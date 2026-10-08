@@ -1,0 +1,45 @@
+# BS2_GetSlaveExDevice
+
+In case of CoreStation, searches a slave device from the RS-485 network.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSlaveExDevice(void* context, uint32_t deviceId, uint32_t channelPort, BS2Rs485SlaveDeviceEX** slaveDevices, uint32_t* outchannelPort, uint32_t* slaveDeviceCount);
+```
+
+:::info
+
+[See BS2Rs485SlaveExDeviceEX Structure](slave_control_api#bs2rs485slavedeviceex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `channelPort` : Channel port
+
+- \[Out\] `slaveDevices` : Slave device list pointer
+
+- \[Out\] `outchannelPort` : Channel port of slave device
+
+- \[Out\] `slaveDeviceCount` : Number of slave devices
+
+:::info
+
+The `slaveDeviceObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_SetSlaveExDevice](bs2_setslaveexdevice)

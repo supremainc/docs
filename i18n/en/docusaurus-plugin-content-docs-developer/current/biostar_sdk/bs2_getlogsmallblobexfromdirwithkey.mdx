@@ -1,0 +1,45 @@
+# BS2_GetLogSmallBlobExFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> Import a certain amount of logs from the USB extracted data to match the Event Mask.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogSmallBlobExFromDirWithKey(void* context, const char* szDir, uint16_t eventMask, BS2_EVENT_ID eventId, uint32_t amount, BS2EventSmallBlobEx** logsObj, uint32_t* numLog, const BS2EncryptKey* key);
+```
+
+:::info
+
+[View the structure of the BS2EventSmallBlobEx](Log_Management_API#bs2eventsmallblobex) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Data storage path
+
+- \[In\] `eventMask` : event mask
+
+- \[In\] `eventId` : Log record ID, if zero, gets it from scratch.
+
+- \[In\] `amount` : Maximum number of log records, if zero, gets all records since eventId.
+
+- \[Out\] `logsObj` : Pointer to store user information
+
+- \[Out\] `numLog` : Number of log records
+
+- \[In\] `key` : Encryption key and the key value specified by [BS2_SetDataEncryptKey](bs2_setdataencryptkey)
+
+:::info
+
+The `logsObj` variable must be used and then returned to the system using the [BS2_ReleaseObject](bs2_releaseobject) function.
+
+:::
+
+## Return value
+
+Returns `BS_SDK_SUCCESS` if performed successfully, or a corresponding error code if an error occurs.

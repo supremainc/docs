@@ -1,0 +1,47 @@
+# BS2_SetInterlockZone
+
+<Badge only>+ v2.6.0</Badge> Sets Interlock Zones.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetInterlockZone(void* context, uint32_t deviceId, BS2InterlockZoneBlob* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[See BS2InterlockZoneBlob Structure](zone_control_api#bs2interlockzoneblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zones` : Zone list trying to set
+
+- \[In\] `zoneCount` : Number of zone list trying to set
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetInterlockZone](bs2_getinterlockzone)
+
+[BS2_GetInterlockZoneStatus](bs2_getinterlockzonestatus)
+
+[BS2_GetAllInterlockZoneStatus](bs2_getallinterlockzonestatus)
+
+[BS2_SetInterlockZoneAlarm](bs2_setinterlockzonealarm)
+
+[BS2_RemoveInterlockZone](bs2_removeinterlockzone)
+
+[BS2_RemoveAllInterlockZone](bs2_removeallinterlockzone)

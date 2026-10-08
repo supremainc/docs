@@ -1,0 +1,40 @@
+# Version 2.8.2 (V2.8.2.3)
+
+Date: 2021-11-29
+
+## Modified Features
+
+1. Supported Linux environments have been upgraded to Ubuntu 18.04.
+
+   | SDK Version | Supported Linux Version |
+   | --- | --- |
+   | Before V2.8.2 | Ubuntu 16.04 |
+   | Later V2.8.2 | Ubuntu 18.04 |
+
+1. OpenSSL has been modified to support 1.1.1i from the existing 1.0.2n.
+
+   - Refer to [Building a Development Environment](../getting_started#building_a_development_environment)
+
+1. Fixed an issue where a `BS_SDK_ERROR_SOCKET_IS_NOT_CONNECTED` error occurred when calling [BS2_GetFactoryConfig](../bs2_getfactoryconfig) on an IPv6 operating device.
+
+1. Fixed an issue that could cause a `BS_SDK_ERROR_TIMEOUT` error when enrolling many image-based users on FaceStation F2 devices.
+
+1. Fixed the problem that [BS2_SetDebugExCallback](../bs2_setdebugexcallback) does not work after V2.7.2.20.
+
+1. Removed incorrect support configuration for FaceStation F2. (WLAN)
+
+   - Refer to API [BS2_GetSupportedConfigMask](../bs2_getsupportedconfigmask)
+
+1. Removed incorrect support configuration for XStation 2. (VoIP)
+
+   - Refer to API [BS2_GetSupportedConfigMask](../bs2_getsupportedconfigmask)
+
+1. Added incorrect support configuration for BioEntry R2 devices. (Wiegand)
+
+   - Refer to API [BS2_GetSupportedConfigMask](../bs2_getsupportedconfigmask)
+
+1. Fix reserved2 resizing error due to adding useScreenSaver in C# example.
+
+   - Refer to structure [BS2DisplayConfig](../configuration_api#bs2displayconfig)
+
+1. There were fixes for stabilizing the code inside the SDK.

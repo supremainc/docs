@@ -1,0 +1,132 @@
+# Version 2.4.0
+
+Date: 2017-3-24
+
+:::caution
+
+New APIs have been added that will work only with the v2.4 FW group. Please check the FW that will be compatible with the new APIs.
+
+**New API for v2.4**
+
+- Add API [BS2_EnrolUserEx](../bs2_enroluserex)
+
+- Add API [BS2_GetUserInfosEx](../bs2_getuserinfosex)
+
+- Add structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
+
+- Add [ssl api](../ssl_api)
+
+**v2.4 Firmware Group**
+
+| Device | FW version |
+| --- | --- |
+| BioStation 2 | 1.4.0 or higher |
+| BioStation A2 | 1.3.0 or higher |
+| BioStation L2 | 1.2.0 or higher |
+| BioEntry W2 | 1.1.0 or higher |
+
+:::
+
+## New Features
+
+1. A brand new lift controller OM-120 has been released. New APIs and structures were added to allow SDK users to integrate this device and features to their own system.
+
+   * Add [lift control api](../lift_control_api)
+
+   The OM-120 is a new device having capability of controlling 12 relays which can be used for lifts. There is now a new concept as floors, which will work exactly like the doors. Once a user authenticates, the floors connected to the relays of the OM-120 will be activated depending on the floor level the access group has. The floor level is the same concept of the access level and they both will be allocated to an access group.
+
+1. The new FaceStation 2 will be released in the 2nd quarter of 2017. The v2.4 has implemented all features so the FaceStation 2 can be used right away with its release.
+
+   * Add [face api](../face_api) 
+
+   The FaceStation 2 will be supporting a feature called group matching, which is a feature where you can have maximum 5000 users to be used for 1:N matching. The user can select the group that they belong to, and continue with the face matching.
+
+1. Certain devices will be compatible with the v1 Template on Cards. It was a downside of the v2 devices since there can be sites having v1 and v2 devices mixed. Now, it is possible to read the pre-issued cards from the v1 devices.
+
+   * Add structure [BS1CardConfig](../configuration_api#bs1cardconfig) 
+
+   The v2 devices can now be set to read Template on Cards issued from a v1 device. The v2 device will need the starting block index to be the same as the CIS index block of the v1 Template on Card. To use both v1 Template on Card, v2 Access on Card/Secure Credential Card together, they will need to share the same starting block index and CIS index block.
+
+1. Job code has been added to support flexibility on integrations with a T&A software. It is possible to allocate job codes to users and get the job code information from the logs. This feature is included only with the v2.4 FW group.
+
+   * Add structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
+
+   Due to the limitation on size of the existing [BS2UserBlob](../user_management_api#bs2userblob) structure, there were needs to create a new structure to implement a new feature. The new [BS2UserBlobEx](../user_management_api#bs2userblobex) structure will work only with the v2.4 FW group which includes a field for the job code. Each user will have their own code and name for each job code.
+
+1. A new method to retrieve logs has been added.
+
+   - Add API [BS2_GetLogBlob](../bs2_getlogblob)
+
+   - Add structure [BS2EventBlob](../log_management_api#bs2eventblob)
+
+   The existing API [BS2_GetLog](../bs2_getlog) was not capable to get logs including the job code. Now there is a new API where it gets the event blob. The event blob can be categorized using a mask value, which leads to be possible to get logs based on the type of the log.
+
+1. Personal messages will be supported from the next version of the firmware for certain devices. This was implemented to be ready to use once the releases are made.
+
+   * Add structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
+
+   This feature will be supported starting from the FaceStation 2. The rest of the devices with a display screen will support this feature in the future release.
+
+   Due to the limitation on size of the existing [BS2UserBlob](../user_management_api#bs2userblob) structure, there were needs to create a new structure to implement a new feature. The new [BS2UserBlobEx](../user_management_api#bs2userblobex) structure will work only with the v2.4 FW group which includes a field for personal messages.
+
+1. SSL Communication will be available between the server and devices. This will allow the devices to be only connected to a server where the certificate is valid.
+
+   * Add [ssl api](../ssl_api)
+
+## Changed Objects
+
+1. Parameter `outQuality` has been added to the [BS2_ScanFingerprint](../bs2_scanfingerprint) API
+
+   The [BS2_ScanFingerprint](../bs2_scanfingerprint) API now has a new parameter which returns the quality score of the scanned fingerprint. This was added to give a proper feedback to make fingerprint template management more efficient.
+
+   ```cpp title='BEFORE'
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, OnReadyToScan ptrReadyToScan);
+   ```
+
+   ```cpp title='AFTER'
+   #include "BS_API.h"
+
+   int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outQuality, OnReadyToScan ptrReadyToScan);
+   ```
+
+1. Field `useJobCode`, `useAlphanumericID`, `cameraFrequency` has been added to the [BS2SystemConfig](../configuration_api#bs2systemconfig) structure
+
+   The `useJobCode` field was added to allow enable/disable the usage of job codes.
+
+   The alphanumeric ID was already allowed in the certain devices such as, BioStation 2, BioStation A2, BioStation L2, and BioEntry W2. However, the devices with display screens did not support keypads that allowed ID + credential authentications. Starting from the v2.4 FW group, the devices with a display screen can change the value of the `useAlphanumericID` field and allow users to input an alphanumeric ID for authentication.
+
+   The camera frequency can be changed for the BioStation A2 device using the `cameraFrequency` field.
+
+1. Parameter `rs485mode`, `sslSupported`, `rootCertExist`, `dualIDSupported`, `useAlphanumericID`, `connectedIP`, `phraseCodeSupported`, `card1xSupported`, `systemExtSupported`, `voipSupported` has been added to the [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo) Structure.
+
+   The [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo) Structure has additional fields that will indicate the capability and status of the device.
+
+   * `rs485mode` is a field where it determines the RS-485 mode of the device
+
+   * `sslSupported` is a field that indicates whether the device supports SSL connection
+
+   * `rootCertExist` is a field that indicates whether the device has the root certificate
+
+   * `dualIDSupported` is a field that indicates whether the device supports alphanumeric ID
+
+   * `useAlphanumericID` is a field where it determines the device is set to use alphanumeric ID
+
+   * `connectedIP` is a field where it determines the IP address of the server that the device is connected to
+
+   * `phraseCodeSupported` is a field that indicates whether the device supports personal messages
+
+   * `card1xSupported` is a field that indicates whether the device supports v1 ToC cards
+
+   * `systemExtSupported` is a field that indicates whether the device can set the RS-485 master key
+
+   * `voipSupported` is a field that indicates whether the device supports VoIP
+
+## Bug Fixes
+
+1. The UDP packet payload size has been changed starting from the v2.4 FW group. The SDK was modified to support both payload sizes for the old and new firmware.
+
+1. The ALL mask of [BS2_GetConfig](../bs2_getconfig) was not working properly. This was caused because the buffer size was set smaller than the added structure [BS2MultiWiegandConfig](../configuration_api#bs2multiwiegandconfig). Now the buffer size has been increased so the ALL mask will work properly.
+
+1. The BioEntry Plus and BioEntry W did had the capability of using the multiple wiegand feature, but was ruled out in the SDK. Now these devices can operate using the multiple wiegand feature.

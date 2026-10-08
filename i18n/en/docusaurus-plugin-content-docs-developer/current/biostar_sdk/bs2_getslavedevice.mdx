@@ -1,0 +1,43 @@
+# BS2_GetSlaveDevice
+
+Searches a slave device from the RS-485 network.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSlaveDevice(void* context, uint32_t deviceId, BS2Rs485SlaveDevice** slaveDeviceObj, uint32_t* slaveDeviceCount);
+```
+
+:::info
+
+[See BS2Rs485SlaveDevice Structure](slave_control_api#bs2rs485slavedevice) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `slaveDeviceObj` : Slave device list pointer
+
+- \[Out\] `slaveDeviceCount` : Number of slave devices
+
+:::info
+
+The `slaveDeviceObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_SetSlaveDevice](bs2_setslavedevice)

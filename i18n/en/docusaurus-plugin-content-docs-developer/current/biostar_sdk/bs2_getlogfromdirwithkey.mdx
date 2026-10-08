@@ -1,0 +1,61 @@
+# BS2_GetLogFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> Gets the log after a given log record ID from the data extracted by USB by a maximum of amount.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogFromDirWithKey(void* context, const char* szDir, BS2_EVENT_ID eventId, uint32_t amount, BS2Event** logsObj, uint32_t* numLog, const BS2EncryptKey* key);
+```
+
+:::info
+
+[View the structure of BS2Event](Log_Management_API#bs2event) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Data storage path
+
+- \[In\] `eventId` : Log record ID, if 0 then import from scratch.
+
+- \[In\] `amount` : Maximum number of log records, if zero, gets all records since eventId.
+
+- \[Out\] `logsObj` : Pointer to store the address of the log record
+
+- \[Out\] `numLog` : Number of log records
+
+- \[In\] `key` : Encryption key and the key value specified by [BS2_SetDataEncryptKey](bs2_setdataencryptkey)
+
+:::info
+
+The `logsObj` variable must be used and then returned to the system using the [BS2_ReleaseObject](bs2_releaseobject) function.
+
+:::
+
+## Return value
+
+Returns `BS_SDK_SUCCESS` if performed successfully, or a corresponding error code if an error occurs.
+
+## See Also
+
+[BS2_GetUserDatabaseInfoFromDirWithKey](bs2_getuserdatabaseinfofromdirwithkey)
+
+[BS2_GetUserListFromDirWithKey](bs2_getuserlistfromdirwithkey)
+
+[BS2_GetUserInfosFromDirWithKey](bs2_getuserinfosfromdirwithkey)
+
+[BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey)
+
+[BS2_GetUserInfosExFromDirWithKey](bs2_getuserinfosexfromdirwithkey)
+
+[BS2_GetUserDatasExFromDirWithKey](bs2_getuserdatasexfromdirwithkey)
+
+[BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey)
+
+[BS2_GetFilteredLogFromDirWithKey](bs2_getfilteredlogfromdirwithkey)

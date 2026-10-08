@@ -1,0 +1,29 @@
+# BS2_ReleaseContext
+
+Releases the context allocated from the `BS2_AllocateContext()` function. If the pointer value is `NULL`, it doesn't do any action.
+
+:::info
+
+Use this if the context is not used anymore. We strongly recommend you to call this API only once when the application ends.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+void BS2_ReleaseContext(void* context);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+## Return Value
+
+Void
+
+## See Also
+
+[BS2_AllocateContext](bs2_allocatecontext)

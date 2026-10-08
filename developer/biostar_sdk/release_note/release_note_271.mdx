@@ -108,11 +108,9 @@
 
    - 함수 [BS2_GetUserDatasFaceEx](../bs2_getuserdatasfaceex) 참조
 
-1. 장치 지원정보에서 fingerSupported, faceSupported와 같은 정보들이,
+1. 장치 지원정보에서 fingerSupported, faceSupported와 같은 정보들이, 내부적으로 지문인증(매칭), 얼굴인증(매칭)을 지원하는 의미로 사용되었었습니다.
 
-   내부적으로 지문인증(매칭), 얼굴인증(매칭)을 지원하는 의미로 사용되었었습니다.
-
-   따라서 FaceStation2가 fingerSupported true를 반환하고, CoreStation이 fingerSupported true를 반환하는 등, 혼란이 있었습니다.
+   따라서 FaceStation2가 `fingerSupported = true`를 반환하고, CoreStation이 `fingerSupported = true`를 반환하는 등, 혼란이 있었습니다.
 
    V2.7.1에서는 fingerScanSupported, faceScanSupported와 같은 정보를 추가로 제공할 수 있도록 추가되었습니다.
 
@@ -122,4 +120,4 @@
 
    - 구조체 [BS2SimpleDeviceInfoEx](../device_api#bs2simpledeviceinfoex) 참조
 
-1. 보안상의 문제로 함수 BS2_GetDataEncryptKey의 지원이 중단되었습니다.
+1. 보안상의 문제로 함수 `BS2_GetDataEncryptKey`의 지원이 중단되었습니다.

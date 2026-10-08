@@ -1,0 +1,37 @@
+# BS2_SetServerMatchingHandler
+
+Registers callback functions that can distinguish whether the card, fingerprint, user ID corresponds.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetServerMatchingHandler(void* context, OnVerifyUser ptrVerifyUser, OnIdentifyUser ptrIdentifyUser);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `ptrVerifyUser` : Callback function that is called when the user information mapped to the card or user ID is required from the device
+
+- \[In\] `ptrIdentifyUser` : Callback function that is called when the user information mapped to the fingerprint is required from the device
+
+:::info
+
+To use the server matching service, the [BS2AuthConfig](configuration_api#bs2authconfig)'s `useServerMatching` should be set as true.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS`' will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_VerifyUser](bs2_verifyuser)
+
+[BS2_IdentifyUser](bs2_identifyuser)

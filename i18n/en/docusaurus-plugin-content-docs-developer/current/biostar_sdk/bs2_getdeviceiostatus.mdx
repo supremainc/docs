@@ -1,0 +1,45 @@
+# BS2_GetDeviceIOStatus
+
+<Badge only>+ v2.9.12</Badge> Gets the current I/O port status of the device. When slave devices are connected, the status can be retrieved collectively by specifying target devices.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceIOStatus(void* context, BS2_DEVICE_ID deviceId, const BS2_DEVICE_ID* slaveIDs, uint32_t numOfSlave, BS2IOStatus** statusObj, uint32_t* numOfStatus);
+```
+
+:::info
+
+[View BS2IOStatus structure](Log_Management_API#bs2iostatus) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `slaveIDs` : Device IDs to query (IDs of master and slave devices)
+
+- \[In\] `numOfSlave` : Number of device IDs specified as query targets
+
+- \[Out\] `statusObj` : Structure pointer to store IO status information acquired from the device.
+
+- \[Out\] `numOfStatus` : Number of IO status information acquired from the device
+
+:::info
+
+The `statusObj` variable must return memory to the system through the [BS2_ReleaseObject](bs2_releaseobject) function after use.
+
+:::
+
+## Return Value
+
+Returns `BS_SDK_SUCCESS` when performed successfully, and returns the corresponding error code when an error occurs.
+
+## See Also
+
+[BS2_GetAllDeviceIOStatus](bs2_getalldeviceiostatus)

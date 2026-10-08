@@ -1,0 +1,67 @@
+# BS2_GetUserSmallDatasFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> Gets the log after a given log record ID from the data extracted by USB by a maximum amount.
+
+[BS2UserBlob](user_management_api#bs2userblob) The difference from [BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey) is that For memory efficiency, all are the same except that the fifth factor `BS2UserSmallBlob` member `BS2UserPhoto` is pointer-processed.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserSmallDatasFromDirWithKey(void* context, const char* szDir, char* uids, uint32_t uidCount, BS2UserSmallBlob* userBlob, BS2_USER_MASK userMask, const BS2EncryptKey* key);
+```
+
+:::info
+
+[View the structure of the BS2UserSmallBlob](user_management_api#bs2usersmallblob) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Data storage path
+
+- \[In\] `uids` : List of user identifiers to be imported
+
+- \[In\] `uidCount` : Number of user identifiers
+
+- \[Out\] `userBlob` : Pointer to store user information
+
+- \[In\] `userMask` : User's Mask
+
+- \[In\] `key` : Encryption key and the key value specified by [BS2_SetDataEncryptKey](bs2_setdataencryptkey)
+
+| Value | Description |
+| :--: | --- |
+| 0x0000 | User identifier |
+| 0x0001 | User data |
+| 0x0002 | User settings |
+| 0x0004 | User name |
+| 0x0008 | Image |
+| 0x0010 | PIN |
+| 0x0020 | Card |
+| 0x0040 | Fingerprint |
+| 0x0080 | Face |
+| 0x0100 | Access group |
+| 0x0200 | Work code |
+| 0x0400 | Private Message |
+| 0x0800 | Face (**FaceStation F2**) |
+| 0x1000 | User settings (**FaceStation F2**) |
+| 0xFFFF | User information full |
+
+## Return value
+
+Returns `BS_SDK_SUCCESS` if performed successfully, or a corresponding error code if an error occurs.
+
+## See Also
+
+[BS2_GetUserSmallInfosFromDirWithKey](bs2_getusersmallinfosfromdirwithkey)
+
+[BS2_GetUserSmallDatasFromDirWithKey](bs2_getusersmalldatasfromdirwithkey)
+
+[BS2_GetUserSmallInfosExFromDirWithKey](bs2_getusersmallinfosexfromdirwithkey)
+
+[BS2_GetUserSmallDatasExFromDirWithKey](bs2_getusersmalldatasexfromdirwithkey)

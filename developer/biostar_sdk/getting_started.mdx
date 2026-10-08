@@ -36,71 +36,71 @@ BioStar 2와 연동되는 모든 장치를 사용할 수 있습니다.
 
 ```cpp
 if( m_DeviceType == BS_DEVICE_BIOENTRY_PLUS || 
-    m_DeviceType == BS_DEVICE_BIOENTRY_W    || 
-    m_DeviceType == BS_DEVICE_BIOLITE       ||
-    m_DeviceType == BS_DEVICE_XPASS         || 
-    m_DeviceType == BS_DEVICE_XPASS_SLIM    || 
-    m_DeviceType == BS_DEVICE_XPASS_SLIM2)
+   m_DeviceType == BS_DEVICE_BIOENTRY_W    || 
+   m_DeviceType == BS_DEVICE_BIOLITE       ||
+   m_DeviceType == BS_DEVICE_XPASS         || 
+   m_DeviceType == BS_DEVICE_XPASS_SLIM    || 
+   m_DeviceType == BS_DEVICE_XPASS_SLIM2)
 
 {
-    BEUserHdr userHdr;
-    // Retrieve a user from the device
-    BS_RET_CODE result = BS_GetUserBEPlus( m_Handle, m_UserID, &userHdr, m_TemplateData );  
-    ...
-    
-    // Transfer the user to the device
-    result = BS_EnrollUserBEPlus( m_Handle, &userHdr, m_TemplateData );
-    ...
+   BEUserHdr userHdr;
+   // Retrieve a user from the device
+   BS_RET_CODE result = BS_GetUserBEPlus( m_Handle, m_UserID, &userHdr, m_TemplateData );  
+   ...
+   
+   // Transfer the user to the device
+   result = BS_EnrollUserBEPlus( m_Handle, &userHdr, m_TemplateData );
+   ...
 }
 else if( m_DeviceType == BS_DEVICE_BIOSTATION )
 {
-    BSUserHdrEx userHdr;
-    
-    BS_RET_CODE result = BS_GetUserEx( m_Handle, m_UserID, &userHdr, m_TemplateData );
-    ...
-        
-    result = BS_EnrollUserEx( m_Handle, &userHdr, m_TemplateData );
-    ...
+   BSUserHdrEx userHdr;
+   
+   BS_RET_CODE result = BS_GetUserEx( m_Handle, m_UserID, &userHdr, m_TemplateData );
+   ...
+   
+   result = BS_EnrollUserEx( m_Handle, &userHdr, m_TemplateData );
+   ...
 }
 else if( m_DeviceType == BS_DEVICE_DSTATION )
 {
-    DSUserHdr userHdr;
-    ...
-    
-    BS_RET_CODE result = BS_GetUserDStation( m_Handle, m_UserID, &userHdr, m_TemplateData, m_FaceTemplate_DST );
-    ...
-    
-    result = BS_EnrollUserDStation( m_Handle, &userHdr, m_TemplateData, m_FaceTemplate_DST );   
+   DSUserHdr userHdr;
+   ...
+   
+   BS_RET_CODE result = BS_GetUserDStation( m_Handle, m_UserID, &userHdr, m_TemplateData, m_FaceTemplate_DST );
+   ...
+   
+   result = BS_EnrollUserDStation( m_Handle, &userHdr, m_TemplateData, m_FaceTemplate_DST );   
 }
 else if( m_DeviceType == BS_DEVICE_XSTATION )
 {
-    XSUserHdr userHdr;
-    ...
+   XSUserHdr userHdr;
+   ...
 
-    BS_RET_CODE result = BS_GetUserXStation( m_Handle, m_UserID, &userHdr);
-    ...
-    
-    result = BS_EnrollUserXStation( m_Handle, &userHdr );   
+   BS_RET_CODE result = BS_GetUserXStation( m_Handle, m_UserID, &userHdr);
+   ...
+   
+   result = BS_EnrollUserXStation( m_Handle, &userHdr );   
 }
 else if( m_DeviceType == BS_DEVICE_BIOSTATION2 )
 {
-    BS2UserHdr userHdr;
-    ...
-    
-    BS_RET_CODE result = BS_GetUserBioStation2( m_Handle, m_UserID, &userHdr, m_TemplateData );
-    ...
-    
-    result = BS_EnrollUserBioStation2( m_Handle, &userHdr, m_TemplateData );    
+   BS2UserHdr userHdr;
+   ...
+   
+   BS_RET_CODE result = BS_GetUserBioStation2( m_Handle, m_UserID, &userHdr, m_TemplateData );
+   ...
+   
+   result = BS_EnrollUserBioStation2( m_Handle, &userHdr, m_TemplateData );    
 }
 else if( m_DeviceType == BS_DEVICE_FSTATION )
 {
-    FSUserHdr userHdr;
-    ...
-    
-    BS_RET_CODE result = BS_GetUserFStation( m_Handle, m_UserID, &userHdr, faceTemplate );
-    ...
-    
-    result = BS_EnrollUserFStation( m_Handle, &userHdr, m_FaceTemplate_FST );   
+   FSUserHdr userHdr;
+   ...
+   
+   BS_RET_CODE result = BS_GetUserFStation( m_Handle, m_UserID, &userHdr, faceTemplate );
+   ...
+   
+   result = BS_EnrollUserFStation( m_Handle, &userHdr, m_FaceTemplate_FST );   
 }
 ```
 
@@ -172,7 +172,7 @@ Under construction
 
    | SDK 버전 | 플랫폼 | 입력 정보 |
    | --- | --- | --- |
-   | V2.8.2 이전 | - | `copy "copy "$(ProjectDir)lib\$(PlatformTarget)\BS_SDK_V2.dll" "$(TargetDir)"`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libeay32.dll" "$(TargetDir)"        // OpenSSL 1.0.2n`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libssl32.dll" "$(TargetDir)"        // OpenSSL 1.0.2n`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\ssleay32.dll" "$(TargetDir)"        // OpenSSL 1.0.2n` |
+| V2.8.2 이전 | - | `copy "copy "$(ProjectDir)lib\$(PlatformTarget)\BS_SDK_V2.dll" "$(TargetDir)"`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libeay32.dll" "$(TargetDir)"        // OpenSSL 1.0.2n`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libssl32.dll" "$(TargetDir)"        // OpenSSL 1.0.2n`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\ssleay32.dll" "$(TargetDir)"        // OpenSSL 1.0.2n` |
    | V2.8.2 이후 | x86 | `copy "$(ProjectDir)lib\$(PlatformTarget)\BS_SDK_V2.dll" "$(TargetDir)"`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libssl-1_1.dll" "$(TargetDir)"        // OpenSSL 1.1.1i`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libcrypto-1_1.dll" "$(TargetDir)"     // OpenSSL 1.1.1i` |
    | V2.8.2 이후 | x64 | `copy "$(ProjectDir)lib\$(PlatformTarget)\BS_SDK_V2.dll" "$(TargetDir)"`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libssl-1_1-x64.dll" "$(TargetDir)"     // OpenSSL 1.1.1i`<br/>`copy "$(ProjectDir)lib\$(PlatformTarget)\libcrypto-1_1-x64.dll" "$(TargetDir)"  // OpenSSL 1.1.1i` |
 

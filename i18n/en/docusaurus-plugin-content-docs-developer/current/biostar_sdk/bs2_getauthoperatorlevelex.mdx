@@ -1,0 +1,67 @@
+# BS2_GetAuthOperatorLevelEx
+
+<Badge only>+ v2.6.3</Badge> Gets specified device operator. (Support operator up to 1000)
+
+When using [BS2_SetAuthConfig](bs2_setauthconfig), [BS2_GetAuthConfig](bs2_getauthconfig), there is a limitation that you can set operators up to 10.
+
+The new API below accommodates setting operators up to 1,000.
+
+:::caution
+
+The exsiting [BS2AuthConfig](configuration_api#bs2authconfig) and operators are valid until you call the new API. However, if at any one time you call the newly added API below, the existing [BS2AuthConfig](configuration_api#bs2authconfig)setting will be ignored so you need to use only the new API and structure.
+
+If you want to use the new API with the new structure, please move the operator list managed by existing BS2AuthConfig securely to the new structure [BS2AuthOperatorLevel](device_api#bs2authoperatorlevel) where can manage 1000 operators.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAuthOperatorLevelEx(void* context, BS2_DEVICE_ID deviceId, BS2_USER_ID* userIDs, uint32_t userIDCount, BS2AuthOperatorLevel** operatorlevelObj, uint32_t* numOperatorlevel);
+```
+
+:::info
+
+[See BS2AuthOperatorLevel Structure](device_api#bs2authoperatorlevel) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `userIDs` : User ID list trying to get
+
+- \[In\] `userIDCount` : Number of user ID
+
+- \[Out\] `operatorlevelObj` : Pointer to store the operators from device
+
+- \[Out\] `numOperatorlevel` : Number of operators from device
+
+:::info
+
+The `operatorlevelObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAuthOperatorLevelEx](bs2_getauthoperatorlevelex)
+
+[BS2_GetAllAuthOperatorLevelEx](bs2_getallauthoperatorlevelex)
+
+[BS2_SetAuthOperatorLevelEx](bs2_setauthoperatorlevelex)
+
+[BS2_RemoveAuthOperatorLevelEx](bs2_removeauthoperatorlevelex)
+
+[BS2_RemoveAllAuthOperatorLevelEx](bs2_removeallauthoperatorlevelex)

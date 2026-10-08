@@ -1,0 +1,1071 @@
+# Zone Control API
+
+API that configures the zone, which can control the entry device and door's operations. This feature will allow to divide one managing area into several zones for access control
+
+---
+
+<DocCardList />
+
+---
+
+## Callback Function
+
+### OnCheckGlobalAPBViolation
+
+Callback function for global determination when an APB violation alarm occurs.
+
+```cpp
+typedef void (*OnCheckGlobalAPBViolation)(uint32_t deviceId, uint16_t seq, const char* userID_1, const char* userID_2, bool isDualAuth);
+```
+
+1. `deviceId`
+
+   Device ID
+
+1. `seq`
+
+   Packet sequence number
+
+1. `userID_1`
+
+   User ID 1
+
+1. `userID_2`
+
+   User ID 2
+
+1. `isDualAuth`
+
+   Indicates whether to Dual authentication.
+
+### OnCheckGlobalAPBViolationByDoorOpen
+
+1st Callback function for requesting global determination based on authentication information when an APB violation by door alarm occurs.
+
+```cpp
+typedef void (*OnCheckGlobalAPBViolationByDoorOpen)(uint32_t deviceId, uint16_t seq, const char* userID_1, const char* userID_2, bool isDualAuth);
+```
+
+1. `deviceId`
+
+   Device ID
+
+1. `seq`
+
+   Packet sequence number
+
+1. `userID_1`
+
+   User ID 1
+
+1. `userID_2`
+
+   User ID 2
+
+1. `isDualAuth`
+
+   Indicates whether to Dual authentication.
+
+### OnUpdateGlobalAPBViolationByDoorOpen
+
+2nd Callback function for requesting the update of the final user access status when an APB violation by door alarm occurs.
+
+```cpp
+typedef void (*OnUpdateGlobalAPBViolationByDoorOpen)(uint32_t deviceId, uint16_t seq, const char* userID_1, const char* userID_2, bool isDualAuth);
+```
+
+1. `deviceId`
+
+   Device ID
+
+1. `seq`
+
+   Packet sequence number
+
+1. `userID_1`
+
+   User ID 1
+
+1. `userID_2`
+
+   User ID 2
+
+1. `isDualAuth`
+
+   Indicates whether to Dual authentication.
+
+---
+
+## Structure
+
+### BS2ZoneStatus
+
+```cpp
+typedef struct {
+   uint32_t id;
+   uint8_t status;
+   uint8_t disabled;
+   uint8_t reserved[6];
+} BS2ZoneStatus;
+```
+
+1. `id`
+
+   Zone ID.
+
+1. `status`
+
+   The value of the zone's status, which can be combined with several statuses.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Normal, Disarm |
+   | 1 | Alarm triggered |
+   | 2 | Scheduled locked, Lift locked |
+   | 4 | Scheduled unlocked, Lift unlocked |
+   | 8 | Arm |
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `reserved`
+
+   Reserved space.
+
+### BS2ApbMember
+
+```cpp
+typedef struct {
+   uint32_t deviceID;
+   uint8_t type;
+   uint8_t reserved[3];
+} BS2ApbMember;
+```
+
+1. `deviceID`
+
+   Device ID.
+
+1. `type`
+
+   Type of APB device.
+
+   | Value | Description |
+   | :--: | --- |
+   | -1 | Undefined |
+   | 0 | Entry device |
+   | 1 | Exit device |
+
+1. `reserved`
+
+   Reserved space.
+
+### BS2TimedApbMember
+
+```cpp
+typedef struct {
+   uint32_t deviceID;
+   uint8_t reserved[4];
+} BS2TimedApbMember;
+```
+
+1. `deviceID`
+
+   Device ID.
+
+1. `reserved`
+
+   Reserved space.
+
+### BS2FireSensor
+
+```cpp
+typedef struct {
+   uint32_t deviceID;
+   uint8_t port;
+   uint8_t switchType;
+   uint8_t duration;
+} BS2FireSensor ;
+```
+
+1. `deviceID`
+
+   Device ID.
+
+1. `port`
+
+   Device's input port.
+
+1. `switchType`
+
+   Type of the switch.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Normally open |
+   | 1 | Normally closed |
+
+1. `duration`
+
+   The duration time of the signal that will be determined as a fire alarm status. The unit of time is milliseconds.
+
+### BS2AntiPassbackZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint8_t type;
+   uint8_t numReaders;
+   uint8_t numBypassGroups;
+   uint8_t disabled;
+   uint8_t alarmed;
+   uint8_t reserved[3];
+   uint32_t resetDuration;
+   BS2Action alarm[BS2_MAX_APB_ALARM_ACTION];
+   BS2ApbMember readers[BS2_MAX_READERS_PER_APB_ZONE];
+   uint8_t reserved2[512];
+   uint32_t bypassGroupIDs[BS2_MAX_BYPASS_GROUPS_PER_APB_ZONE];
+} BS2AntiPassbackZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0.
+
+   :::caution
+
+   When the Anti Passback zone ID and door ID is equivalent, this is considered as a Anti Passback zone based on the door. Therefore, when the door gets removed, the zone information could get removed also.
+
+   :::
+
+1. *name*
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `type`
+
+   Type of Anti Passback zone.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Hard APB(When violated, entrance not allowed and violation log will be recorded) |
+   | 1 | Soft APB(When violated, entrance is allowed but violation log will be recorded) |
+
+1. `numReaders`
+
+   Number of APB devices.
+
+1. `numBypassGroups`
+
+   Number of bypass access group IDs that will not be affected by the APB rule.
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `alarmed`
+
+   Zone's alarm status.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `resetDuration`
+
+   It means the time until the APB violation status is initialized(released), unit is second. At this time, the initialization time is calculated based on the time when the last authentication succeeded. If this value is set to 0, it means not to initialize but can be initialized with `BS2_ClearAntiPassbackZoneStatus`.
+
+1. `alarm`
+
+   An alarm that will be triggered when a user violates the user APB rule, which can be configured up to 5 alarms.
+
+1. `readers`
+
+   List of devices belonging to the Anti Passback zone, which can be configured up to 64 devices.
+
+1. `reserved2`
+
+   Reserved space.
+
+1. `bypassGroupIDs`
+
+   The ID of the bypass access group that will not be affected by the APB rule, which can be configured up to 16 access groups.
+
+### BS2TimedAntiPassbackZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint8_t type;
+   uint8_t numReaders;
+   uint8_t numBypassGroups;
+   uint8_t disabled;
+   uint8_t alarmed;
+   uint8_t reserved[3];
+   uint32_t resetDuration;
+   BS2Action alarm[BS2_MAX_TIMED_APB_ALARM_ACTION];
+   BS2TimedApbMember readers[BS2_MAX_READERS_PER_TIMED_APB_ZONE];
+   uint8_t reserved2[320];
+   uint32_t bypassGroupIDs[BS2_MAX_BYPASS_GROUPS_PER_TIMED_APB_ZONE];
+} BS2TimedAntiPassbackZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0.
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `type`
+
+   Type of Anti Passback zone.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Hard APB(When violated, entrance not allowed and violation log will be recorded) |
+   | 1 | Soft APB(When violated, entrance is allowed but violation log will be recorded) |
+
+1. `numReaders`
+
+   Number of timed Anti Passback devices.
+
+1. `numBypassGroups`
+
+   Number of bypass access group IDs that will not be affected by the timed APB rule.
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `alarmed`
+
+   Zone's alarm status.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `resetDuration`
+
+   The time interval for initializing the users status when a user violates the APB rule. When the value is set to 0, this means that it will not initialize the status, and will be initialized only through the BioStar application.
+
+1. `alarm`
+
+   An alarm that will be triggered when a user violates the user APB rule, which can be configured up to 5 alarms.
+
+1. `readers`
+
+   List of devices belonging to the timed Anti Passback zone, which can be configured up to 64 devices.
+
+1. `reserved2`
+
+   Reserved space.
+
+1. `bypassGroupIDs`
+
+   The ID of the bypass access group that will not be affected by the timed APB rule, which can be configured up to 16 access groups.
+
+### BS2FireAlarmZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint8_t numSensors;
+   uint8_t numDoors;
+   uint8_t disabled;
+   uint8_t alarmed;
+   uint8_t reserved[8];
+   BS2FireSensor sensor[BS2_MAX_FIRE_SENSORS_PER_FIRE_ALARM_ZONE];
+   BS2Action alarm[BS2_MAX_FIRE_ALARM_ACTION];
+   uint8_t reserved2[32];
+   uint32_t doorIDs[BS2_MAX_DOORS_PER_FIRE_ALARM_ZONE];
+} BS2FireAlarmZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0.
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `numSensors`
+
+   Number of fire alarm sensors.
+
+1. `numDoors`
+
+   Number of doors belonging to the Fire Alarm zone.
+
+1. `alarmed`
+
+   Zone's alarm status.
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `sensor`
+
+   List of fire sensors belonging to the Fire Alarm zone, which can be configured up to 8 sensors.
+
+1. `alarm`
+
+   An alarm that will be triggered when detecting a fire, which can be configured up to 5 alarms.
+
+1. `reserved2`
+
+   Reserved space.
+
+1. `doorIDs`
+
+   List of doors to be unlocked when detecting a fire, which can be configured up to 32 doors.
+
+### BS2ScheduledLockUnlockZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint32_t lockScheduleID;
+   uint32_t unlockScheduleID;    
+   uint8_t numDoors;
+   uint8_t numBypassGroups;
+   uint8_t numUnlockGroups;
+   uint8_t bidirectionalLock;
+   uint8_t disabled;
+   uint8_t alarmed;
+   uint8_t reserved[6];
+   BS2Action alarm[BS2_MAX_SCHEDULED_LOCK_UNLOCK_ALARM_ACTION];
+   uint8_t reserved2[32];
+   uint32_t doorIDs[BS2_MAX_DOORS_IN_SCHEDULED_LOCK_UNLOCK_ZONE];
+   uint32_t bypassGroupIDs[BS2_MAX_BYPASS_GROUPS_IN_SCHEDULED_LOCK_UNLOCK_ZONE];
+   uint32_t unlockGroupIDs[BS2_MAX_UNLOCK_GROUPS_IN_SCHEDULED_LOCK_UNLOCK_ZONE];
+} BS2ScheduledLockUnlockZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0.
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `lockScheduleID`
+
+   Schedule ID of the doors belonging to a zone, which needs to operate as scheduled lock.
+
+1. `unlockScheduleID`
+
+   Schedule ID of the doors belonging to a zone, which needs to operate as scheduled unlock.
+
+1. `numDoors`
+
+   Number of doors belonging to the zone.
+
+1. `numBypassGroups`
+
+   Number of bypass access groups that will be allowed to enter while scheduled lock status.
+
+1. `numUnlockGroups`
+
+   Number of access groups that will be able to open all doors even during the scheduled lock schedule.
+
+1. `bidirectionalLock`
+
+   Decides whether to lock both entrance and exit of a door while under the scheduled lock status.
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `alarmed`
+
+   Zone's alarm status.
+
+1. `reserved`
+
+   Reserved.
+
+1. `alarm`
+
+   An alarm that will be triggered when a user violates zone rule, which can be configured up to 5 alarms.
+
+1. `reserved2`
+
+   Reserved space.
+
+1. `doorIDs`
+
+   List of door IDs belonging to the zone, which can be configured up to 32 doors.
+
+1. `bypassGroupIDs`
+
+   The ID of the bypass access group that will be able to enter under the scheduled lock status, which can be configured up to 16 access groups.
+
+1. `unlockGroupIDs`
+
+   The ID of the access group that will be able to start the scheduled unlock, which can be configured up to 16 access groups.
+
+### BS2IntrusionAlarmZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint8_t armDelay;
+   uint8_t alarmDelay;
+   uint8_t disabled;
+   uint8_t reserved[1];
+   uint8_t numReaders;
+   uint8_t numInputs;
+   uint8_t numOutputs;
+   uint8_t numCards;
+   uint8_t numDoors;
+   uint8_t numGroups;    
+   uint8_t reserved2[10];    
+} BS2IntrusionAlarmZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0.
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `armDelay`
+
+   Intrusion alarm operation delay time.
+
+1. `alarmDelay`
+
+   Release intrusion alarm operation delay time.
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `reserved\[1\]`
+
+   Reserved space.
+
+1. `numReaders`
+
+   Number of devices belonging to Intrusion alarm zone.
+
+1. `numInputs`
+
+   Number of intrusion detecting sensor inputs belonging to Intrusion alarm zone.
+
+1. `numOutputs`
+
+   Number of outputs belonging to intrusion alarm zone.
+
+1. `numCards`
+
+   Number of cards belonging to intrusion alarm zone.
+
+1. `numDoors`
+
+   Number of doors belonging to intrusion alarm zone.
+
+1. `numGroups`
+
+   Number of access groups belonging to intrusion alarm zone.
+
+1. `reserved`
+
+   Reserved space.
+
+### BS2IntrusionAlarmZoneBlob
+
+```cpp
+typedef struct {
+   BS2IntrusionAlarmZone IntrusionAlarmZone;    
+   BS2AlarmZoneMember* memberObjs;
+   BS2AlarmZoneInput* inputObjs;
+   BS2AlarmZoneOutput* outputObjs;   
+   BS2CSNCard* cardObjs;   
+   BS2_DOOR_ID* doorIDs;
+   BS2_ACCESS_GROUP_ID* groupIDs;     
+} BS2IntrusionAlarmZoneBlob;
+```
+
+1. `IntrusionAlarmZone`
+
+   Structure that defines the basic Intrusion alarm zone information.
+
+1. `memberObjs`
+
+   Device member list which belongs to Intrusion alarm zone. It needs to exist as much as `IntrusionAlarmZone.numReaders`.
+
+1. `inputObjs`
+
+   Input list which belongs to Intrusion alarm zone. It needs to exist as much as `IntrusionAlarmZone.numInputs`.
+
+1. `outputObjs`
+
+   Output list which belongs to Intrusion alarm zone. It needs to exist as much as `IntrusionAlarmZone.numOutputs`.
+
+1. `cardObjs`
+
+   Card list which belongs to Intrusion alarm zone. It needs to exist as much as `IntrusionAlarmZone.numCards`. Refer to [Smartcard API](smartcard_api) for data format.
+
+1. `doorIDs`
+
+   Door list which belongs to Intrusion alarm zone. It needs to exist as much as `IntrusionAlarmZone.numDoors`.
+
+1. `groupIDs`
+
+   Access group list which belongs to Intrusion alarm zone. It needs to exist as much as `IntrusionAlarmZone.numGroups`.
+
+### BS2InterlockZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint8_t disabled;
+   uint8_t numInputs;
+   uint8_t numOutputs;
+   uint8_t numDoors;
+   uint8_t reserved[8];    
+} BS2InterlockZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 1.
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application..
+
+1. `disabled`
+
+   Decides whether the zone is disabled.
+
+1. `numInputs`
+
+   Number of intrusion detecting sensor inputs belonging to Interlock alarm zone.
+
+1. `numOutputs`
+
+   Number of outputs belonging to Interlock alarm zone.
+
+1. `numDoors`
+
+   Number of doors belonging to Interlock alarm zone.
+
+1. `reserved`
+
+   Reserved space.
+
+### BS2InterlockZoneBlob
+
+```cpp
+typedef struct {
+   BS2InterlockZone InterlockZone;
+   BS2InterlockZoneInput* inputObjs;
+   BS2InterlockZoneOutput* outputObjs;
+   BS2_DOOR_ID* doorIDs;
+} BS2InterlockZoneBlob;
+```
+
+1. `InterlockZone`
+
+   Structure that defines the basic Interlock alarm zone information.
+
+1. `inputObjs`
+
+   Input list which belongs to Interlock alarm zone. It needs to exist as much as `InterlockAlarmZone.numInputs`.
+
+1. `outputObjs`
+
+   Output list which belongs to Interlock alarm zone. It needs to exist as much as `InterlockAlarmZone.numOutputs`.
+
+1. `doorIDs`
+
+   Door list which belongs to Interlock alarm zone. It needs to exist as much as `InterlockAlarmZone.numDoors`.
+
+### BS2DeviceZoneEntranceLimitMaster
+
+```cpp
+typedef struct {
+   char name[BS2_MAX_ZONE_NAME_LEN];   
+   uint8_t type;
+   uint8_t reserved1[3];
+   uint32_t entryLimitInterval_s;
+   uint8_t numEntranceLimit;
+   uint8_t numReaders;
+   uint8_t numAlarm;
+   uint8_t numBypassGroups;
+   uint8_t maxEntry[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE];
+   uint32_t periodStart_s[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE];
+   uint32_t periodEnd_s[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE]; 
+   BS2DeviceZoneEntranceLimitMemberInfo readers[BS2_MAX_READERS_PER_DEVICE_ZONE_ENTRANCE_LIMIT];
+   BS2Action alarm[BS2_MAX_DEVICE_ZONE_ENTRANCE_LIMIT_ALARM_ACTION];
+   BS2_ACCESS_GROUP_ID bypassGroupIDs[BS2_MAX_BYPASS_GROUPS_PER_DEVICE_ZONE_ENTRANCE_LIMIT];
+   uint8_t reserved3[8 * 4];    
+} BS2DeviceZoneEntranceLimitMaster;
+```
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `type`
+
+   Type of Entrance limit zone.
+
+   | Value | Description |
+   | :--: | --- |
+   | 1 | Soft EntranceLimit(When violated, entrance not allowed and violation log will be recorded) |
+   | 2 | Hard EntranceLimit(When violated, entrance is allowed but violation log will be recorded) |
+
+1. `reserved1\[3\]`
+
+   Reserved space.
+
+1. `entryLimitInterval_s`
+
+   Interval between identified entry.
+
+1. `numEntranceLimit`
+
+   Number of Entrance limit.
+
+1. `numReaders`
+
+   Number of readers in Entrance limit zone.
+
+1. `numAlarm`
+
+   Number of Entrance limit zone alarm.
+
+1. `numBypassGroups`
+
+   Number of bypass access group IDs that will not be affected by Entrance limit rules.
+
+1. `maxEntry`
+
+   Number of maximum entry.
+
+1. `periodStart_s`
+
+   Start time that a user can enter. (Unit : Second)
+
+1. `periodEnd_s`
+
+   End time that a user can enter. (Unit : Second)
+
+1. `readers`
+
+   List of devices belonging to Entrance limit zone, which can be configured up to 64 devices.
+
+1. `alarm`
+
+   An alarm that will be triggered when a user violates the user Entrance limit rule, which can be configured up to 5 alarms.
+
+1. `bypassGroupIDs`
+
+   The ID of the bypass access group that will not be affected by Entrance limit rule, which can be configured up to 16 access groups.
+
+1. `reserved3`
+
+   Reserved space.
+
+### BS2DeviceZoneEntranceLimitMember
+
+```cpp
+typedef struct {
+   uint16_t masterPort;
+   BS2_DEVICE_ZONE_ENTRANCE_LIMIT_DISCONNECTED_ACTION_TYPE actionInDisconnect;    
+   uint8_t reserved1[1];    
+   BS2_IPV4_ADDR masterIP;
+} BS2DeviceZoneEntranceLimitMember;
+```
+
+1. `masterPort`
+
+   master device port.
+
+1. `actionInDisconnect`
+
+   Action when disconnected.
+
+   | Value | Description |
+   | :--: | --- |
+   | 1 | Soft EntranceLimit Disconnected action(When violated, entrance not allowed and violation log will be recorded) |
+   | 2 | Hard EntranceLimit Disconnected action(When violated, entrance is allowed but violation log will be recorded) |
+
+1. `reserved1\[3\]`
+
+   Reserved space.
+
+1. `masterIP`
+
+   master device IP.
+
+### BS2DeviceZoneFireAlarmMaster
+
+```cpp
+typedef struct {
+   char name[BS2_MAX_ZONE_NAME_LEN];
+   uint8_t numReaders; 
+   uint8_t numAlarm;   
+   uint8_t reserved1[2];    
+   BS2DeviceZoneFireAlarmMemberInfo readers[BS2_MAX_READERS_PER_DEVICE_ZONE_FIRE_ALARM];
+   BS2Action alarm[BS2_MAX_DEVICE_ZONE_FIRE_ALARM_ALARM_ACTION];
+   uint8_t reserved2[8 * 40];
+} BS2DeviceZoneFireAlarmMaster;
+```
+
+1. `name`
+
+   Name of the zone that will be displayed on the BioStar application.
+
+1. `numReaders`
+
+   Number of devices belonging to the Fire alarm zone.
+
+1. `reserved1`
+
+   Reserved space.
+
+1. `readers`
+
+   Devices belonging to the Fire alarm zone.
+
+1. `alarm`
+
+   An alarm that will be triggered when detecting a fire, which can be configured up to 5 alarms.
+
+1. `reserved2`
+
+   Reserved space.
+
+### BS2DeviceZoneFireAlarmMember
+
+```cpp
+typedef struct {
+   BS2_PORT masterPort;    
+   uint8_t reserved1[2]; 
+   BS2_IPV4_ADDR masterIP;    
+   uint8_t numSensors;
+   uint8_t numDoors; 
+   uint8_t reserved2[2];      
+   BS2DeviceZoneFireSensor sensor[BS2_MAX_FIRE_SENSORS_PER_DEVICE_ZONE_FIRE_ALARM_MEMBER];
+   union {
+      BS2_DOOR_ID doorIDs[BS2_MAX_DOORS_PER_DEVICE_ZONE_FIRE_ALARM_MEMBER];                               
+      BS2_LIFT_ID liftIDs[BS2_MAX_DOORS_PER_DEVICE_ZONE_FIRE_ALARM_MEMBER];                               
+   };
+} BS2DeviceZoneFireAlarmMember;
+```
+
+1. `masterPort`
+
+   master device port.
+
+1. `reserved1`
+
+   Reserved space.
+
+1. `masterIP`
+
+   master device IP.
+
+1. `numSensors`
+
+   Number of fire alarm sensors.
+
+1. `numDoors`
+
+   Number of doors belonging to the Fire Alarm zone.
+
+1. `reserved2`
+
+   Reserved space.
+
+1. `sensor`
+
+   List of fire sensors belonging to the Fire Alarm zone, which can be configured up to 8 sensors.
+
+1. `doorIDs`
+
+   List of doors to be unlocked when detecting a fire, which can be configured up to 8 doors.
+
+1. `liftIDs`
+
+   List of lifts to be unlocked when detecting a fire, which can be configured up to 8 doors.
+
+### BS2DeviceZoneFireAlarmMemberInfo
+
+```cpp
+typedef struct {
+   uint32_t readerID;                 
+} BS2DeviceZoneFireAlarmMemberInfo;
+```
+
+1. `readerID`
+
+   Devices belonging to the Fire alarm zone.
+
+### BS2DeviceZoneFireSensor
+
+```cpp
+typedef struct {
+   uint32_t deviceID;
+   uint8_t port;
+   uint8_t switchType;
+   uint16_t duration;                 
+} BS2DeviceZoneFireSensor;
+```
+
+1. `deviceID`
+
+   Device ID.
+
+1. `port`
+
+   Device's input port.
+
+1. `switchType`
+
+   Type of the switch.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Normally open |
+   | 1 | Normally closed |
+
+1. `duration`
+
+   The duration time of the signal that will be determined as a fire alarm status. The unit of time is milliseconds.
+
+### BS2DeviceZone
+
+```cpp
+typedef struct {
+   uint32_t zoneID;    
+   uint8_t zoneType;
+   uint8_t nodeType;
+   uint8_t enable;
+   uint8_t reserved[1];
+   union {
+       BS2DeviceZoneEntranceLimitMaster entranceLimitMaster;   
+       BS2DeviceZoneEntranceLimitMember entranceLimitMember;   
+       BS2DeviceZoneFireAlarmMaster fireAlarmMaster;       
+       BS2DeviceZoneFireAlarmMember fireAlarmMember;       
+   };
+} BS2DeviceZone;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0.
+
+1. `zoneType`
+
+   Intrusion on delay time.
+
+1. `nodeType`
+
+   Intrusion off delay time.
+
+1. `enable`
+
+   Decides whether the zone is abled.
+
+1. `reserved\[1\]`
+
+   Reserved space.
+
+### BS2DeviceZoneAGEntranceLimit
+
+```cpp
+typedef struct {
+   uint32_t zoneID;    
+   uint16_t numAGEntranceLimit;
+   uint16_t reserved1;
+   uint32_t periodStart_s[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE];
+   uint32_t periodEnd_s[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE];
+   uint16_t numEntry[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE]; 
+   uint16_t maxEntry[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE][BS2_MAX_ACCESS_GROUP_ENTRANCE_LIMIT_PER_ENTRACE_LIMIT];
+   uint32_t accessGroupID[BS2_MAX_ENTRANCE_LIMIT_PER_ZONE][BS2_MAX_ACCESS_GROUP_ENTRANCE_LIMIT_PER_ENTRACE_LIMIT];    
+} BS2DeviceZoneAGEntranceLimit;
+```
+
+1. `zoneID`
+
+   Zone ID which needs to have a value higher than 0
+
+1. `numAGEntranceLimit`
+
+   Number of Access group entrance limit.
+
+1. `reserved1`
+
+   Reserved space.
+
+1. `periodStart_s`
+
+   Start time that a user can enter.
+
+1. `periodEnd_s`
+
+   End time that a user can enter.
+
+1. `numEntry`
+
+   Number of entries.
+
+1. `maxEntry`
+
+   Max number of selected entries.
+
+1. `accessGroupID`
+
+   Access group ID list which can be configured up to 16.
+
+### BS2DeviceZoneMasterConfig
+
+```cpp
+typedef struct 
+{
+   bool enable;
+   uint8_t reserved1[1];
+   uint16_t listenPort;
+   uint8_t reserved[4];
+} BS2DeviceZoneMasterConfig;
+```
+
+1. `enable`
+
+   Decides whether the zone master is abled.
+
+1. `reserved1`
+
+   Reserved space.
+
+1. `listenPort`
+
+   TCP/IP port information to be connected from slave devices.
+
+1. `reserved`
+
+   Reserved space.

@@ -1,0 +1,73 @@
+# BS2_GetLogSmallBlobFromDir
+
+<Badge only>+ v2.6.4</Badge> Gets certain amount of logs based on the event mask from USB exported data in an efficient way.
+
+The difference from [BS2_GetLogBlobFromDir](bs2_getlogblobfromdir) which is using [BS2EventBlob](Log_Management_API#bs2eventblob) is that the parameter `imageObj` in BS2EventSmallBlob is changed to pointer for memory efficiency.
+
+Except this, everything is the same.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogSmallBlobFromDir(void* context, const char* szDir, uint16_t eventMask, BS2_EVENT_ID eventId, uint32_t amount, BS2EventSmallBlob** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[See BS2EventSmallBlob Structure](Log_Management_API#bs2eventsmallblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Data storage path
+
+- \[In\] `eventMask` : event mask
+
+- \[In\] `eventId` : Log record ID, retireves from the first record if it is 0
+
+- \[In\] `amount` : Maximum log amount, retrieves all after eventID if it is 0
+
+- \[Out\] `logsObj` : Pointer of storing the log record address
+
+- \[Out\] `numLog` : The number of log records
+
+:::info
+
+The `logsObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_AllocateUsbContext](bs2_allocateusbcontext)
+
+[BS2_ReleaseUsbContext](bs2_releaseusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)

@@ -1,0 +1,35 @@
+# BS2_SetRS485ConfigExDynamic
+
+<Badge only>+ v2.9.9</Badge> Saves the RS485 network setting information for CoreStation.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetRS485ConfigExDynamic(void* context, uint32_t deviceId, BS2Rs485ConfigEXDynamic* config);
+```
+
+**Supported Devices**: CoreStation 20(CS-20, CS-20P), Door Interface(DI-24)
+
+:::info
+
+[See BS2Rs485ConfigEXDynamic Structure](configuration_api#bs2rs485configexdynamic) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[Out\] `config` : Pointer to store RS485 network setting information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetRS485ConfigExDynamic](bs2_getrs485configexdynamic)

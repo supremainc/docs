@@ -1,0 +1,45 @@
+# Version 2.8.1 (V2.8.1.0)
+
+Date: 2021-08-05
+
+## New Features
+
+- Supports X-Station 2 Finger (Product Name: XS2-OAPB, XS2-ODPB)
+
+- Supports Input Module Feature (Product Name: IM-120)
+
+- Supports the function of commanding certain actions to devices
+
+1. X-Station 2 Finger Configurations are available to use.
+
+1. Input Module(Product Name: IM-120) Configurations are available to use.
+
+   - Refer to structure [BS2InputConfigEx](../configuration_api#bs2inputconfigex)
+
+   - Refer to structure [BS2RelayActionConfig](../configuration_api#bs2relayactionconfig)
+
+   - Refer to structure [BS2Event](../log_management_api#bs2event) **relayAction**
+
+   - Refer to API [BS2_GetInputConfigEx](../bs2_getinputconfigex)
+
+   - Refer to API [BS2_SetInputConfigEx](../bs2_setinputconfigex)
+
+   - Refer to API [BS2_GetRelayActionConfig](../bs2_getrelayactionconfig)
+
+   - Refer to API [BS2_SetRelayActionConfig](../bs2_setrelayactionconfig)
+
+1. You can now command certain actions to devices.
+
+   You can now turn on LED, alarm a buzzer, or control relay and perform more actions at the desired time with the COMMANDS below.
+
+   - Refer to structure [BS2Action](../configuration_api#bs2action)
+
+   - Refer to API [BS2_RunAction](../bs2_runaction)
+
+## Modified Features
+
+1. Fixed the error in which Linux returns `BS_SDK_ERROR_TIMEOUT` and is not able to have device connections.
+
+1. C# examples provided to guide through server-matching function implementation will not be supported anymore.
+
+   - Refer to the Server API Document [server_api](../server_api)

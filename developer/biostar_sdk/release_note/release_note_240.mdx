@@ -8,7 +8,7 @@ BioStar 2 Device SDK v2.4 에서 추가된 새로운 함수들은 2.4 펌웨어 
 
 **v2.4용 신규 함수**
 
-* [BS2_EnrolUserEx](../bs2_enroluserex) 함수가 추가되었습니다.
+- [BS2_EnrolUserEx](../bs2_enroluserex) 함수가 추가되었습니다.
 
 - [BS2_GetUserInfosEx](../bs2_getuserinfosex) 함수가 추가되었습니다.
 
@@ -85,7 +85,7 @@ BioStar 2 Device SDK v2.4 에서 추가된 새로운 함수들은 2.4 펌웨어 
    int BS2_ScanFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outQuality, OnReadyToScan ptrReadyToScan);
    ```
 
-1. 필드 `useJobCode`, `useAlphanumericID`, `cameraFrequency` 가 구조체 [BS2SystemConfig](../Configuration_API#bs2systemconfig) 에 추가되었습니다.
+1. 필드 `useJobCode`, `useAlphanumericID`, `cameraFrequency` 가 구조체 [BS2SystemConfig](../configuration_api#bs2systemconfig) 에 추가되었습니다.
 
    `useJobCode` 필드는 Job Code 사용 Enable/Disable 설정을 위해 추가되었습니다.
 
@@ -93,9 +93,9 @@ BioStar 2 Device SDK v2.4 에서 추가된 새로운 함수들은 2.4 펌웨어 
 
    카메라 주파수는 `cameraFrequency` 필드를 사용하여 BioStation A2 장치에서 변경할 수 있습니다.
 
-1. 파라미터 `rs485mode, sslSupported, rootCertExist, dualIDSupported, useAlphanumericID, connectedIP, phraseCodeSupported, card1xSupported, systemExtSupported, voipSupported` 가 구조체 [BS2SimpleDeviceInfo](../Device_API#bs2simpledeviceinfo) 에 추가되었습니다.
+1. 파라미터 `rs485mode`, `sslSupported`, `rootCertExist`, `dualIDSupported`, `useAlphanumericID`, `connectedIP`, `phraseCodeSupported`, `card1xSupported`, `systemExtSupported`, `voipSupported` 가 구조체 [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo) 에 추가되었습니다.
 
-   구조체 [BS2SimpleDeviceInfo](../Device_API#bs2simpledeviceinfo) 에는 장치 지원여부 및 상황을 나타내는 추가적인 필드가 있습니다.
+   구조체 [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo) 에는 장치 지원여부 및 상황을 나타내는 추가적인 필드가 있습니다.
 
    * `rs485mode`는 장치의 RS-485 모드를 결정하는 필드입니다.
 
@@ -121,6 +121,6 @@ BioStar 2 Device SDK v2.4 에서 추가된 새로운 함수들은 2.4 펌웨어 
 
 1. UDP 패킷 페이로드 크기가 v2.4 FW 부터 변경되었습니다. SDK는 이전 펌웨어와 새 펌웨어의 페이로드 크기를 모두 지원하도록 수정되었습니다.
 
-1. [BS2_GetConfig](../bs2_getconfig)의 모든 마스크가 제대로 작동하지 않았습니다. 이것은 버퍼 크기가 추가된 구조체 [BS2MultiWiegandConfig](../Configuration_API#bs2multiwiegandconfig) 보다 작게 설정 되었기 때문에 발생했습니다. 이제 버퍼 크기가 증가하여 모든 마스크가 제대로 작동합니다.
+1. [BS2_GetConfig](../bs2_getconfig)의 모든 마스크가 제대로 작동하지 않았습니다. 이것은 버퍼 크기가 추가된 구조체 [BS2MultiWiegandConfig](../configuration_api#bs2multiwiegandconfig) 보다 작게 설정 되었기 때문에 발생했습니다. 이제 버퍼 크기가 증가하여 모든 마스크가 제대로 작동합니다.
 
 1. BioEntry Plus와 BioEntry W는 다중 wiegand 기능을 사용할 수 있었지만 SDK에서는 제외되었습니다. 이제 이 장치들도 여러 wiegand 기능을 사용하여 작동 할 수 있습니다.

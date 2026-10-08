@@ -1,0 +1,37 @@
+# BS2_ScanFaceEx
+
+<Badge only>+ v2.7.1</Badge> **Visual Face based** Scans the face from a device and extracts template and image data.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ScanFaceEx(void* context, uint32_t deviceId, BS2FaceEx* faceEx, uint8_t enrollmentThreshold, OnReadyToScan ptrReadyToScan);
+```
+
+:::info
+
+[See BS2FaceEx Structure](face_api#bs2faceex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `faceEx` : Face data settings pointer
+
+- \[In\] `enrollmentThreshold` : Threshold required for face enrollment
+
+   [Refer to BS2FaceConfig::enrollThreshold](configuration_api#bs2faceconfig)
+
+- \[Out\] `ptrReadyToScan` : Callback function called when face scanning is ready
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

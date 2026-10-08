@@ -1,0 +1,105 @@
+# Version 2.9.1 (V2.9.1.0)
+
+Date: 2023-02-23
+
+## New Features
+
+- Supports activating licenses for use of specific features on devices.
+
+- QR code recognition and authentication support using the camera.
+
+- Support setting the number of retries in case of socket read/write failure.
+
+- Supports 3rd party OSDP reader connection.
+
+1. Added device license activation feature.
+
+   - Add structure [BS2License](../configuration_api#bs2license)
+
+   - Add structure [BS2LicenseConfig](../configuration_api#bs2licenseconfig)
+
+   - Add structure [BS2LicenseBlob](../sdk_api#bs2licenseblob)
+
+   - Add structure [BS2LicenseResult](../sdk_api#bs2licenseresult)
+
+   - Add API [BS2_GetLicenseConfig](../bs2_getlicenseconfig)
+
+   - Add API [BS2_EnableDeviceLicense](../bs2_enabledevicelicense)
+
+   - Add API [BS2_DisableDeviceLicense](../bs2_disabledevicelicense)
+
+   - Add API [BS2_QueryDeviceLicense](../bs2_querydevicelicense)
+
+1. Added features for QR code authentication by using the camera.
+
+   - Refer to structure [BS2BarcodeConfig](../configuration_api#bs2barcodeconfig)
+
+1. Added retry count for communication used when an error occurs while reading or writing packets from the socket during communication.
+
+   :::caution
+
+   Increasing the number of retries is a way to resolve temporary errors, but care must be taken as direct causes such as network disconnection occurs, can lead to wasted resources by meaningless read/write retries when reconnection is required.
+
+   :::
+
+   - Add API [BS2_GetSocketRetryCount](../bs2_getsocketretrycount)
+
+   - Add API [BS2_SetSocketRetryCount](../bs2_setsocketretrycount)
+
+   - Add API [BS2_GetSocketSSLRetryCount](../bs2_getsocketsslretrycount)
+
+   - Add API [BS2_SetSocketSSLRetryCount](../bs2_setsocketsslretrycount)
+
+1. Added feature to connect and manage 3rd party OSDP.
+
+   - Add structure [BS2OsdpStandardDevice](../slave_control_api#bs2osdpstandarddevice)
+
+   - Add structure [BS2OsdpStandardDeviceAvailable](../slave_control_api#bs2osdpstandarddeviceavailable)
+
+   - Add structure [BS2OsdpStandardNotify](../slave_control_api#bs2osdpstandardnotify)
+
+   - Add structure [BS2OsdpStandardConfig](../configuration_api#bs2osdpstandardconfig)
+
+   - Add structure [BS2OsdpStandardActionConfig](../configuration_api#bs2osdpstandardactionconfig)
+
+   - Add structure [BS2OsdpStandardDeviceAdd](../slave_control_api#bs2osdpstandarddeviceadd)
+
+   - Add structure [BS2OsdpStandardDeviceUpdate](../slave_control_api#bs2osdpstandarddeviceupdate)
+
+   - Add structure [BS2OsdpStandardDeviceCapability](../slave_control_api#bs2osdpstandarddevicecapability)
+
+   - Add structure [BS2OsdpStandardDeviceResult](../slave_control_api#bs2osdpstandarddeviceresult)
+
+   - Add structure [BS2OsdpStandardDeviceSecurityKey](../slave_control_api#bs2osdpstandarddevicesecuritykey)
+
+   - Add API [BS2_GetOsdpStandardConfig](../bs2_getosdpstandardconfig)
+
+   - Add API [BS2_GetOsdpStandardActionConfig](../bs2_getosdpstandardactionconfig)
+
+   - Add API [BS2_SetOsdpStandardActionConfig](../bs2_setosdpstandardactionconfig)
+
+   - Add API [BS2_AddOsdpStandardDevice](../bs2_addosdpstandarddevice)
+
+   - Add API [BS2_GetOsdpStandardDevice](../bs2_getosdpstandarddevice)
+
+   - Add API [BS2_GetAvailableOsdpStandardDevice](../bs2_getavailableosdpstandarddevice)
+
+   - Add API [BS2_UpdateOsdpStandardDevice](../bs2_updateosdpstandarddevice)
+
+   - Add API [BS2_RemoveOsdpStandardDevice](../bs2_removeosdpstandarddevice)
+
+   - Add API [BS2_GetOsdpStandardDeviceCapability](../bs2_getosdpstandarddevicecapability)
+
+   - Add API [BS2_SetOsdpStandardDeviceSecurityKey](../bs2_setosdpstandarddevicesecuritykey)
+
+   - Add API [BS2_SetOsdpStandardDeviceStatusListener](../bs2_setosdpstandarddevicestatuslistener)
+
+   - Add callback function [OnOsdpStandardDeviceStatusChanged](../server_api#onosdpstandarddevicestatuschanged)
+
+## Modified Features
+
+1. Fixed memory leak caused by network switches keepalive check being misunderstood by the SDK.
+
+1. This is a problem that occurs `only in version 2.8.3.2`, and a problem that can lead to abnormal termination during user registration while taking a log dump inside the SDK has been fixed.
+
+1. Fixes were made to stabilize the code internally in the SDK.

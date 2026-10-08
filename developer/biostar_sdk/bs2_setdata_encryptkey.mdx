@@ -4,15 +4,17 @@
 
 또한 장치의 PIN 암호화 키가 설정하려는 키와 다르면 해당 키로 설정되고 장치의 모든 사용자 정보가 삭제됩니다.
 
-**주의**
+:::caution
 
-PIN 암호화 키를 변경하면 변경한 사용자 정의 키를 사용하기 위해 장치의 모든 사용자가 삭제됩니다.
+* PIN 암호화 키를 변경하면 변경한 사용자 정의 키를 사용하기 위해 장치의 모든 사용자가 삭제됩니다.
 
-[BS2_EnrolUser](bs2_enroluser)와 같은 함수를 통해 사용자를 장치에 다시 추가해야 합니다.
+* [BS2_EnrolUser](bs2_enroluser)와 같은 함수를 통해 사용자를 장치에 다시 추가해야 합니다.
 
-[BS2_MakePinCode](bs2_makepincode) 함수는 기본 키 값으로 사용자 PIN 코드를 암호화합니다.
+* [BS2_MakePinCode](bs2_makepincode) 함수는 기본 키 값으로 사용자 PIN 코드를 암호화합니다.
 
-PIN 암호화 키를 사용자 정의 값으로 변경했다면 [BS2_MakePinCodeWithKey](bs2_makepincodewithkey)를 호출하여 사용자에게 다시 할당해야 합니다. 
+* PIN 암호화 키를 사용자 정의 값으로 변경했다면 [BS2_MakePinCodeWithKey](bs2_makepincodewithkey)를 호출하여 사용자에게 다시 할당해야 합니다.
+
+:::
 
 ### 함수
 

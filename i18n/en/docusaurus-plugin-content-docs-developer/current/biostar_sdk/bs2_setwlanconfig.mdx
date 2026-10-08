@@ -1,0 +1,31 @@
+# BS2_SetWlanConfig
+
+Stores wireless LAN settings on the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetWlanConfig(void* context, uint32_t deviceId, BS2WlanConfig* config);
+```
+
+:::info
+
+[See BS2WlanConfig Structure](configuration_api#bs2wlanconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : Wireless LAN configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,49 @@
+# BS2_GetLog
+
+Gets the maximum amount of logs starting from the given log record ID.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLog(void* context, uint32_t deviceId, uint32_t eventId, uint32_t amount, BS2Event** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[See BS2Event Structure](Log_Management_API#bs2event) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `eventId` : Log record ID. When the value is 0, gets the logs from the beginning.
+
+- \[In\] `amount` : Maximum number of logs. When the value is 0, gets the logs starting from the event ID.
+
+- \[Out\] `logsObj` : Pointer to store the log record's address.
+
+- \[Out\] `numLog` : Number of log record.
+
+:::info
+
+The `logsObj` variable needs to return the memory to the system by the `BS2_ReleaseObject` function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetFilteredLog](bs2_getfilteredlog)
+
+[BS2_ClearLog](bs2_clearlog)

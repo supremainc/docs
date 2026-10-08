@@ -1,0 +1,55 @@
+# BS2_VerifyUserSmallEx
+
+<Badge only>+ v2.6.3</Badge> Transfers user information mapped to the card or user ID authentication results to the device.
+
+The only difference between [BS2_VerifyUserEx](bs2_verifyuserex) which is using structure [BS2UserBlobEx](user_management_api#bs2userblobex) is that the 5th parameter `BS2UserPhoto` of `BS2UserSmallBlob` is using pointer for efficient memory use.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_VerifyUserSmallEx(void* context, uint32_t deviceId, uint16_t seq, int handleResult, BS2UserSmallBlobEx* userBlob);
+```
+
+:::info
+
+[See BS2UserSmallBlobEx Structure](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `seq` : Packet sequence number
+
+- \[In\] `handleResult` : Value of matching result(`BS_SDK_SUCCESS` or `BS_SDK_ERROR_XXX`)
+
+- \[In\] `userBlob` : Matched user information
+
+:::info
+
+Packet sequence number must be equivalent to the value sent from the `OnVerifyUser`.
+
+If the `handleResult` is `BS_SDK_SUCCESS`, the `userBlob` should not be null.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_VerifyUserSmall](bs2_verifyusersmall)
+
+[BS2_IdentifyUserSmall](bs2_identifyusersmall)
+
+[BS2_VerifyUserSmallEx](bs2_verifyusersmallex)
+
+[BS2_IdentifyUserSmallEx](bs2_identifyusersmallex)

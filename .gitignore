@@ -36,3 +36,4 @@ nul
 generatepdf.bat
 uploadtr.bat
 genpdf/svg-components-map.mjs
+bun.lock

@@ -1,0 +1,105 @@
+# Version 2.9.12 (v2.9.12.0)
+
+Date: 2026-01-30
+
+## New Features
+
+- Supported XPass Q2 (XPQ2-DB, XPQ2-APB)
+
+- Supported BioStation 3 Max (BS3M-DB, BS3M-APB, BS3M-ODB, BS3M-OAPB)
+
+- Added Master Admin configuration feature
+
+- Added Lock Override feature
+
+- Added Door Mode Override feature
+
+- Added User Override feature
+
+- Added configuration for response timeout of long-processing functions
+
+1. Supports new devices.
+
+   - XPass Q2 (XPQ2-DB, XPQ2-APB)
+
+   - BioStation 3 Max (BS3M-DB, BS3M-APB, BS3M-ODB, BS3M-OAPB)
+
+1. Added a feature to configure the Master Admin on the device.
+
+   Please refer to the linked API descriptions below for supported devices and firmware versions.
+
+   - Add API [BS2_GetMasterAdmin](../bs2_getmasteradmin)
+
+   - Add API [BS2_SetMasterAdmin](../bs2_setmasteradmin)
+
+   - Refer to structure [BS2SystemConfig](../configuration_api#bs2systemconfig)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Added Lock Override feature for emergency door opening.
+
+   Cards enrolled via Lock Override can bypass the door lock status and open the door.
+
+   - Add API [BS2_GetLockOverride](../bs2_getlockoverride)
+
+   - Add API [BS2_GetAllLockOverride](../bs2_getalllockoverride)
+
+   - Add API [BS2_SetLockOverride](../bs2_setlockoverride)
+
+   - Add API [BS2_RemoveLockOverride](../bs2_removelockoverride)
+
+   - Add API [BS2_RemoveAllLockOverride](../bs2_removealllockoverride)
+
+   - Add structure [BS2LockOverride](../smartcard_api#bs2lockoverride)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Added Timed Door Lock/Unlock (Door Mode Override) feature.
+
+   - Add API [BS2_TimedLockDoor](../bs2_timedlockdoor)
+
+   - Add API [BS2_TimedUnlockDoor](../bs2_timedunlockdoor)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Added Extended Door Open Time (User Override) feature.
+
+   - Add API [BS2_GetUserOverride](../bs2_getuseroverride)
+
+   - Add API [BS2_GetAllUserOverride](../bs2_getalluseroverride)
+
+   - Add API [BS2_SetUserOverride](../bs2_setuseroverride)
+
+   - Add API [BS2_RemoveUserOverride](../bs2_removeuseroverride)
+
+   - Add API [BS2_RemoveAllUserOverride](../bs2_removealluseroverride)
+
+   - Refer to structure [BS2Door](../door_control_api#bs2door)
+
+   - Add structure [BS2UserOverride](../user_management_api#bs2useroverride)
+
+1. Added a feature to retrieve the current I/O port status of the device.
+
+   - Add API [BS2_GetDeviceIOStatus](../bs2_getdeviceiostatus)
+
+   - Add API [BS2_GetAllDeviceIOStatus](../bs2_getalldeviceiostatus)
+
+   - Add structure [BS2IOStatus](../log_management_api#bs2iostatus)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Allows manual configuration of the response timeout for some APIs that require a long processing time.
+
+   - Add API [BS2_SetDefaultLongResponseTimeout](../bs2_setdefaultlongresponsetimeout)
+
+   - Add API [BS2_GetDefaultLongResponseTimeout](../bs2_getdefaultlongresponsetimeout)
+
+## Modified Features
+
+1. Restricted controlling slave devices using the [BS2_RunAction](../bs2_runaction) API.
+
+   However, it works normally for slave panels such as DI-24.
+
+1. Fixed an issue where a crash could occur in the SDK internal timer manager module (Specific to v2.9.6.1).
+
+1. Improved internal logic for SDK code stability.

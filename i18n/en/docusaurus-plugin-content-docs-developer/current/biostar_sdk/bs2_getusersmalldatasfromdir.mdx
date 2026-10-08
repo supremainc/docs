@@ -1,0 +1,65 @@
+# BS2_GetUserSmallDatasFromDir
+
+<Badge only>+ v2.6.3</Badge> Gets the user information of the given user ID & usermask from USB exported data.
+
+The only difference between [BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir) which is using structure [BS2UserBlob](user_management_api#bs2userblob) is that the 5th parameter `BS2UserPhoto` of `BS2UserSmallBlob` is using pointer for efficient memory use.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserSmallDatasFromDir(void* context, const char* szDir, char* uids, uint32_t uidCount, BS2UserSmallBlob* userBlob, BS2_USER_MASK userMask);
+```
+
+:::info
+
+[See BS2UserSmallBlob Structure](user_management_api#bs2usersmallblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Storage path in device
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+- \[In\] `userMask` : User Mask
+
+| Value | Description |
+| :--: | --- |
+| 0x0000 | User ID |
+| 0x0001 | User data |
+| 0x0002 | User setting |
+| 0x0004 | User name |
+| 0x0008 | Image |
+| 0x0010 | PIN |
+| 0x0020 | Card |
+| 0x0040 | Fingerprint |
+| 0x0080 | Face |
+| 0x0100 | Access group |
+| 0x0200 ​ | Job code​ |
+| 0x0400 ​ | User phrase(personal message) ​ |
+| 0x0800 ​ | Face (**FaceStation F2**) ​ |
+| 0x1000 ​ | User setting(**FaceStation F2**) ​ |
+| 0xFFFF | All information |
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+## See Also
+
+[BS2_GetUserSmallInfosFromDir](bs2_getusersmallinfosfromdir)
+
+[BS2_GetUserSmallDatasFromDir](bs2_getusersmalldatasfromdir)
+
+[BS2_GetUserSmallInfosExFromDir](bs2_getusersmallinfosexfromdir)
+
+[BS2_GetUserSmallDatasExFromDir](bs2_getusersmalldatasexfromdir)

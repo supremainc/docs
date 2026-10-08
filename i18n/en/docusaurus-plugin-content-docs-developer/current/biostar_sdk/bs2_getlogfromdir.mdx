@@ -1,0 +1,65 @@
+# BS2_GetLogFromDir
+
+Gets the maximum amount of logs starting from the given log record ID from storage path in device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogFromDir(void* context, const char* szDir, BS2_EVENT_ID eventId, uint32_t amount, BS2Event** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[See BS2Event Structure](Log_Management_API#bs2event) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Storage path in device
+
+- \[In\] `eventId` : Log record ID. When the value is 0, gets the logs from the beginning.
+
+- \[In\] `amount` : Maximum number of logs. When the value is 0, gets the logs starting from the event ID.
+
+- \[Out\] `logsObj` : Pointer to store the log record's address.
+
+- \[Out\] `numLog` : Number of log record.
+
+:::info
+
+The `logsObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_AllocateUsbContext](bs2_allocateusbcontext)
+
+[BS2_ReleaseUsbContext](bs2_releaseusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

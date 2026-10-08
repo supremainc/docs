@@ -19,8 +19,19 @@ export default {
         id: 'biostar_sdk/start'
       },
       items: [
-        'biostar_sdk/quick_guide',
         'biostar_sdk/getting_started',
+        'biostar_sdk/quick_guide',
+        {
+          type: 'category',
+          label: '활용 가이드',
+          link: {
+            type: 'doc',
+            id: 'biostar_sdk/useful_articles'
+          },
+          items: [
+            'biostar_sdk/multiple_wiegand_format_support'
+          ]
+        },
         {
           type: 'category',
           label: 'API & References',
@@ -123,7 +134,7 @@ export default {
                 'biostar_sdk/bs2_rebootdevice',
                 'biostar_sdk/bs2_lockdevice',
                 'biostar_sdk/bs2_unlockdevice',
-                'biostar_sdk/bs2_setkeepalivetimeout',
+                'biostar_sdk/bs2_setkeepalivetimeout-device',
                 'biostar_sdk/bs2_upgradefirmware',
                 'biostar_sdk/bs2_updateresource',
                 'biostar_sdk/bs2_getspecifieddeviceinfo',

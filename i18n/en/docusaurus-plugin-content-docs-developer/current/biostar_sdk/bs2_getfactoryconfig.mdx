@@ -1,0 +1,31 @@
+# BS2_GetFactoryConfig
+
+Retrieves software version and hardware settings from the device
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFactoryConfig(void* context, uint32_t deviceId, BS2FactoryConfig* config);
+```
+
+:::info
+
+[See BS2FactoryConfig Structure](configuration_api#bs2factoryconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Device configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

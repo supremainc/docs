@@ -1,0 +1,23 @@
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetKeepAliveTimeout(void* context, long ms);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `ms` : Keep-alive timeout (ms)
+
+:::info
+
+Tiemout 기본 값은 30,000(30초)
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

@@ -1,0 +1,37 @@
+# BS2_SetAuthConfigExt
+
+<Badge only>+ v2.7.1</Badge> **Visual Face-based devices** Stores authentication settings on the device.
+
+:::info
+
+If **not Visual Face based devices**, please use [BS2_SetAuthConfig](bs2_setauthconfig).
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAuthConfigExt(void* context, uint32_t deviceId, const BS2AuthConfigExt* config);
+```
+
+:::info
+
+[See BS2AuthConfigExt Structure](configuration_api#bs2authconfigext) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : Authentication configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

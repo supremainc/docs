@@ -1,0 +1,169 @@
+# BS2_RemoveOsdpStandardDevice
+
+<Badge only>+ v2.9.1</Badge> **CoreStation40** Remove the OSDP device in batches by specifying the OSDP device identifier and number.
+
+Device-specific remove results are returned via outResultObj and outNumOfResult.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveOsdpStandardDevice(void* context, uint32_t deviceId, const uint32_t* osdpDeviceIds, uint32_t numOfDevice, BS2OsdpStandardDeviceResult** outResultObj, uint32_t* outNumOfResult)
+```
+
+:::info
+
+[See BS2OsdpStandardDeviceResult Structure](slave_control_api#bs2osdpstandarddeviceresult) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Master device identifier
+
+- \[In\] `osdpDeviceIds` : OSDP Device Identifier array pointer to remove
+
+- \[In\] `numOfDevice` : Number of devices in osdpDevices
+
+- \[Out\] `outResultObj` : Structure array pointer to receive results
+
+- \[Out\] `outNumOfResult` : Number of result structures
+
+:::info
+
+The `outResultObj` parameter must be used and then returned memory to the system via the [BS2_ReleaseObject](bs2_releaseobject) function.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+BS2OsdpStandardConfig config = { 0, };
+vector<BS2_DEVICE_ID> removeData;
+
+BS2_DEVICE_ID id = Utility::selectDeviceID(deviceList, false, false);
+int sdkResult = cc.getOsdpStandardConfig(id, config);
+if (BS_SDK_SUCCESS != sdkResult)
+    return sdkResult;
+
+uint32_t numOfActivated = cc.printOSDPDeviceID(config);
+uint32_t numOfDevice = Utility::getInput<uint32_t>("How many devices do you want to remove? (0~%u)", numOfActivated);
+if (0 < numOfDevice)
+{
+    for (uint32_t idx = 0; idx < numOfDevice; idx++)
+    {
+        BS2_DEVICE_ID slaveID = (BS2_DEVICE_ID)Utility::getInput<uint32_t>("[%u] Please enter the slave ID to be removed.", idx + 1);
+        removeData.push_back(slaveID);
+    }
+
+    vector<BS2OsdpStandardDeviceResult> listResult;
+    BS2OsdpStandardDeviceResult* outResultObj = NULL;
+    uint32_t outNumOfResult(0);
+    int sdkResult = BS2_RemoveOsdpStandardDevice(context_, id, const_cast<BS2_DEVICE_ID*>(removeData.data()), removeData.size(), &outResultObj, &outNumOfResult);
+    if (BS_SDK_SUCCESS != sdkResult)
+    {
+        printf("BS2_RemoveOsdpStandardDevice call failed: %d", sdkResult);
+    }
+
+    if (outResultObj)
+    {
+        listResult.clear();
+        for (uint32_t idx = 0; idx < outNumOfResult; idx++)
+        {
+            listResult.push_back(outResultObj[idx]);
+        }
+
+        BS2_ReleaseObject(outResultObj);
+    }
+}
+
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2OsdpStandardConfig config;
+if (!CommonControl.getOsdpStandardConfig(sdkContext, deviceID, out config))
+    return;
+
+UInt32 numOfActivated = 0;
+printOSDPDeviceID(ref config, ref numOfActivated);
+
+string tempStr = String.Format("How many devices do you want to remove? (0~{0})", numOfActivated);
+Util.HighlightLineMulti(tempStr, "How many", "remove");
+Console.Write(">>>> ");
+int numOfDevice = Util.GetInput(1);
+if (0 < numOfDevice)
+{
+    List<UInt32> removeIDs = new List<UInt32>();
+    for (int idx = 0; idx < numOfDevice; idx++)
+    {
+        tempStr = String.Format(">>>> [{0}] Please enter the slave ID to be removed.", idx + 1);
+        Util.HighlightLine(tempStr, "device ID to be removed");
+        Console.Write(">>>> ");
+        removeIDs.Add(Util.GetInput((UInt32)0));
+    }
+
+    List<BS2OsdpStandardDeviceResult> listResult = new List<BS2OsdpStandardDeviceResult>();
+    int structSize = Marshal.SizeOf(typeof(UInt32));
+    IntPtr ptrArray = Marshal.AllocHGlobal(structSize * removeIDs.Length);
+    long ptrCurrent = ptrArray.ToInt64();
+    BS2ErrorCode result = BS2ErrorCode.BS_SDK_SUCCESS;
+    try
+    {
+        int[] tempIDs = Array.ConvertAll(removeIDs, Convert.ToInt32);
+        Marshal.Copy(tempIDs, 0, ptrArray, tempIDs.Length);
+
+        IntPtr outResultObj = IntPtr.Zero;
+        UInt32 numOfResult = 0;
+        result = (BS2ErrorCode)API.BS2_RemoveOsdpStandardDevice(sdkContext, deviceID, ptrArray, (UInt32)tempIDs.Length, out outResultObj, out numOfResult);
+        if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+        {
+            Console.WriteLine("Got error({0}).", result);
+        }
+        else
+        {
+            IntPtr curResult = outResultObj;
+            int resultSize = Marshal.SizeOf(typeof(BS2OsdpStandardDeviceResult));
+            for (UInt32 resultIdx = 0; resultIdx < numOfResult; resultIdx++)
+            {
+                BS2OsdpStandardDeviceResult item = (BS2OsdpStandardDeviceResult)Marshal.PtrToStructure(curResult, typeof(BS2OsdpStandardDeviceResult));
+                //print(ref item, resultIdx);
+                listResult.Add(item);
+                curResult += resultSize;
+            }
+
+            API.BS2_ReleaseObject(outResultObj);
+            Console.WriteLine("Call success.");
+        }
+    }
+    finally
+    {
+        Marshal.FreeHGlobal(ptrArray);
+    }
+}
+
+return result;
+```
+
+## See Also
+
+[BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice)
+
+[BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice)
+
+[BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice)
+
+[BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice)
+
+[BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice)
+
+[BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability)
+
+[BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)

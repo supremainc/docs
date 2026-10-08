@@ -1,0 +1,39 @@
+# BS2_SetCheckGlobalAPBViolationHandler
+
+<Badge only>+ v2.5.0</Badge> Registers callback function for global determination when an APB violation alarm occurs.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetCheckGlobalAPBViolationHandler(void* context, OnCheckGlobalAPBViolation ptrCheckGlobalAPBViolation);
+```
+
+:::info
+
+[See OnCheckGlobalAPBViolation callback function](zone_control_api#OnCheckGlobalAPBViolation) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `ptrCheckGlobalAPBViolation` : Callback function called for global determination when Anti Passback alarm occurs
+
+:::info
+
+To use Global Anti Passback service, [BS2AuthConfig](configuration_api#bs2authconfig) `useGloableAPB` should be set to True.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_CheckGlobalAPBViolation](bs2_checkglobalapbviolation)

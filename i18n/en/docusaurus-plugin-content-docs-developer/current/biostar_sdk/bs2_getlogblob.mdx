@@ -1,0 +1,53 @@
+# BS2_GetLogBlob
+
+Gets certain amount of logs based on the event mask. This API can be used to retrieve logs when job codes are used. Also can be used to get all types of logs with one API.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogBlob(void* context, uint32_t deviceId, uint16_t eventMask, uint32_t eventId, uint32_t amount, BS2EventBlob** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[See BS2EventBlob structure](Log_Management_API#bs2eventblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `eventMask` : Event mask
+
+- \[In\] `eventId` : Log record ID. When the value is 0, gets the logs from the beginning.
+
+- \[In\] `amount` : Maximum number of logs. When the value is 0, gets the logs starting from the event ID.
+
+- \[Out\] `logsObj` : Pointer to store the log record's address.
+
+- \[Out\] `numLog` : Number of log records.
+
+:::info
+
+The `logsObj` variable needs to return the memory to the system by the `BS2_ReleaseObject` function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetLog](bs2_getlog)
+
+[BS2_GetFilteredLog](bs2_getfilteredlog)
+
+[BS2_ClearLog](bs2_clearlog)

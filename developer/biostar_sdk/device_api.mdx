@@ -228,28 +228,28 @@ typedef struct
 {
    enum
    {
-     BS2_SUPPORT_RS485EX     = 0x00000001,
-     BS2_SUPPORT_CARDEX      = 0x00000002,
-     BS2_SUPPORT_DST         = 0x00000004,
-     BS2_SUPPORT_DESFIREEX   = 0x00000008,
-     BS2_SUPPORT_FACE_EX = 0x00000010,
-     BS2_SUPPORT_QR      = 0x00000020,
+   BS2_SUPPORT_RS485EX     = 0x00000001,
+   BS2_SUPPORT_CARDEX      = 0x00000002,
+   BS2_SUPPORT_DST         = 0x00000004,
+   BS2_SUPPORT_DESFIREEX   = 0x00000008,
+   BS2_SUPPORT_FACE_EX = 0x00000010,
+   BS2_SUPPORT_QR      = 0x00000020,
 
-     BS2_SUPPORT_FINGER_SCAN = 0x00010000,
-     BS2_SUPPORT_FACE_SCAN   = 0x00020000,
-     BS2_SUPPORT_FACE_EX_SCAN = 0x00040000,
-     BS2_SUPPORT_QR_SCAN     = 0x00080000,
+   BS2_SUPPORT_FINGER_SCAN = 0x00010000,
+   BS2_SUPPORT_FACE_SCAN   = 0x00020000,
+   BS2_SUPPORT_FACE_EX_SCAN = 0x00040000,
+   BS2_SUPPORT_QR_SCAN     = 0x00080000,
 
-     BS2_SUPPORT_ALL         = BS2_SUPPORT_RS485EX |
-                                                  BS2_SUPPORT_CARDEX |
-                                                  BS2_SUPPORT_DST |
-                                                  BS2_SUPPORT_DESFIREEX |
-                                                  BS2_SUPPORT_FACE_EX |
-                                                  BS2_SUPPORT_QR |
-                                                  BS2_SUPPORT_FINGER_SCAN |
-                                                  BS2_SUPPORT_FACE_SCAN |
-                                                  BS2_SUPPORT_FACE_EX_SCAN |
-                                                  BS2_SUPPORT_QR_SCAN,
+   BS2_SUPPORT_ALL         = BS2_SUPPORT_RS485EX |
+                                                BS2_SUPPORT_CARDEX |
+                                                BS2_SUPPORT_DST |
+                                                BS2_SUPPORT_DESFIREEX |
+                                                BS2_SUPPORT_FACE_EX |
+                                                BS2_SUPPORT_QR |
+                                                BS2_SUPPORT_FINGER_SCAN |
+                                                BS2_SUPPORT_FACE_SCAN |
+                                                BS2_SUPPORT_FACE_EX_SCAN |
+                                                BS2_SUPPORT_QR_SCAN,
    };
 
    uint32_t supported;
@@ -388,7 +388,7 @@ typedef struct
 
 ```cpp
 typedef struct {
-   char userID[BS2_USER_ID_SIZE];
+char userID[BS2_USER_ID_SIZE];
    uint8_t level;
    uint8_t reserved[3];
 } BS2Operator;

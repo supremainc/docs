@@ -104,21 +104,21 @@ typedef struct {
 
    ##### Credential(카드/지문/얼굴) 정보의 변경
 
-   `BS2User`의 numCards, numFingers, numFaces가 0인지, 그리고 fingerObjs, cardObjs, faceObjs, faceExObjs에 credential 정보가 할당되어 있는지 여부를 우선 검토하고, 부가적으로 infoMask를 검토합니다.
+   `BS2User`의 `numCards`, `numFingers`, `numFaces`가 0인지, 그리고 `fingerObjs`, `cardObjs`, `faceObjs`, `faceExObjs`에 credential 정보가 할당되어 있는지 여부를 우선 검토하고, 부가적으로 `infoMask`를 검토합니다.
 
-   카드/지문/얼굴 정보를 0보다 큰 값으로 지정하고, infoMask에 mask를 설정하면 장치의 credential 정보를 변경 할 수 있습니다.
+   카드/지문/얼굴 정보를 0보다 큰 값으로 지정하고, `infoMask`에 mask를 설정하면 장치의 credential 정보를 변경 할 수 있습니다.
 
-   예를들어, 장치에 대상이 되는 사용자의 지문이 2개가 있는 상태에서, infoMask에 `BS2_USER_INFO_MASK_FINGER`를 masking하고, numFingers = 1, fingerObjs에 지문을 할당하여 내려준다면, 장치는 새로 내려준 1개 지문 만을 갖습니다.
+   예를들어, 장치에 대상이 되는 사용자의 지문이 2개가 있는 상태에서, `infoMask`에 `BS2_USER_INFO_MASK_FINGER`를 masking하고, `numFingers = 1`, `fingerObjs`에 지문을 할당하여 내려준다면, 장치는 새로 내려준 1개 지문 만을 갖습니다.
 
    만일 지문의 추가가 목적이라면, 기존 2개의 지문에 새롭게 더해질 지문 1개가 더해진, 총 3개의 지문이 내려져야만 합니다.
 
    ##### Credential(카드/지문/얼굴) 정보의 유지
 
-   카드/지문/얼굴 각각의 credential 정보를 0으로 하고, infoMask를 masking 하면, 장치는 기존에 가지고 있는 credential 정보들을 유지합니다.
+   카드/지문/얼굴 각각의 credential 정보를 0으로 하고, `infoMask`를 masking 하면, 장치는 기존에 가지고 있는 credential 정보들을 유지합니다.
 
    ##### Credential(카드/지문/얼굴) 정보의 삭제
 
-   카드/지문/얼굴 각각의 credential 정보를 0으로 하고, infoMask를 unmasking 하면, 장치는 각각 credential에 해당되는 정보를 삭제합니다.
+   카드/지문/얼굴 각각의 credential 정보를 0으로 하고, `infoMask`를 unmasking 하면, 장치는 각각 credential에 해당되는 정보를 삭제합니다.
 
 1. `authGroupID`
 

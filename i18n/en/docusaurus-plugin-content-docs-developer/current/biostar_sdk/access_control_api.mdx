@@ -1,0 +1,305 @@
+# Access Control API
+
+API for access control, which can manage access authority by individual, group, time schedules.
+
+---
+
+<DocCardList />
+
+---
+
+## Structure
+
+### BS2AccessGroup
+
+```cpp
+typedef struct {
+   uint32_t id;
+   char name[BS2_MAX_ACCESS_GROUP_NAME_LEN];
+   uint8_t numAccessLevels;
+   uint8_t reserved[3];
+   uint32_t accessLevels[BS2_MAX_ACCESS_LEVEL_PER_ACCESS_GROUP];
+} BS2AccessGroup;
+```
+
+1. `id`
+
+   Access group ID.
+
+1. `name`
+
+   Name of the access group that will be displayed on the BioStar application.
+
+1. `numAccessLevels`
+
+   Number of access levels that belongs to an access group.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `accessLevels`
+
+   List of access levels that belongs to an access group.
+
+### BS2DoorSchedule
+
+```cpp
+typedef struct {
+   uint32_t doorID;
+   uint32_t scheduleID;
+} BS2DoorSchedule ;
+```
+
+1. `doorID`
+
+   Door ID.
+
+1. `scheduleID`
+
+   Schedule ID.
+
+### BS2AccessLevel
+
+```cpp
+typedef struct {
+   uint32_t id;
+   char name[BS2_MAX_ACCESS_GROUP_NAME_LEN];
+   uint8_t numDoorSchedules;
+   uint8_t reserved[3];
+   BS2DoorSchedule doorSchedules[BS2_MAX_ACCESS_LEVEL_PER_ACCESS_GROUP];
+} BS2AccessLevel;
+```
+
+1. `id`
+
+   Access level ID. The ID should be a number less than 32768(0x7FFF).
+
+   This is due to a limitation where this ID needs to be shared with floor levels for lift control.
+
+1. `name`
+
+   Name of the access level that will be displayed on the BioStar application.
+
+1. `numDoorSchedules`
+
+   Number of schedules allocated to a door that belongs to an access level.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `doorSchedules`
+
+   List of schedules allocated to a door that belongs to an access level.
+
+### BS2TimePeriod
+
+```cpp
+typedef struct {
+   int16_t startTime;
+   int16_t endTime;
+} BS2TimePeriod;
+```
+
+1. `startTime`
+
+   Starting time of the time period. The unit of the value is minutes.
+
+1. `endTime`
+
+   Ending time of the time period. The unit of the value is minutes.
+
+### BS2DaySchedule
+
+```cpp
+typedef struct {
+   uint8_t numPeriods;
+   uint8_t reserved[3];
+   BS2TimePeriod periods[BS2_MAX_TIME_PERIODS_PER_DAY];
+} BS2DaySchedule;
+```
+
+1. `numPeriods`
+
+   Number of time periods.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `periods`
+
+   List of time periods, which can be configured up to 5 time periods.
+
+### BS2WeeklySchedule
+
+```cpp
+typedef struct {
+   BS2DaySchedule schedule[BS2_NUM_WEEKDAYS];
+} BS2WeeklySchedule;    
+```
+
+1. `schedule`
+
+   Weekly schedule that has total 7 daily schedules.
+
+### BS2DailySchedule
+
+```cpp
+typedef struct {
+   uint32_t startDate;
+   uint8_t numDays;    
+   uint8_t reserved[3];    
+   BS2DaySchedule schedule[BS2_MAX_DAYS_PER_DAILY_SCHEDULE];    
+} BS2DailySchedule;    
+```
+
+1. `startDate`
+
+   Starting date of the schedule.
+
+1. `numDays`
+
+   Number of the daily schedule.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `schedule`
+
+   List of daily schedules starting from the startDate.
+
+### BS2HolidaySchedule
+
+```cpp
+typedef struct {
+   uint32_t id;
+   BS2DaySchedule schedule;
+} BS2HolidaySchedule;    
+```
+
+1. `startDate`
+
+   Holiday schedule ID.
+
+1. `schedule`
+
+   Holiday daily schedule.
+
+### BS2Schedule
+
+```cpp
+typedef struct
+{
+   uint32_t id;
+   char name[BS2_MAX_SCHEDULE_NAME_LEN];
+   uint8_t isDaily;
+   uint8_t numHolidaySchedules;
+   uint8_t reserved[2];
+   union
+   {
+      BS2WeeklySchedule weekly;
+      BS2DailySchedule daily;
+   }schedule;
+   BS2HolidaySchedule holidaySchedules[BS2_MAX_HOLIDAY_GROUPS_PER_SCHEDULE];
+}BS2Schedule;   
+```
+
+1. `id`
+
+   Schedule ID.
+
+   :::caution
+
+   You should avoid using 0 and 1 as the schedule ID.
+
+   Schedule ID 0 is recognized as 'Not used' and Schedule ID 1 is recognized as 'Always' for every device.
+
+   :::
+
+1. `name`
+
+   Name of the schedule that will be displayed on the BioStar application.
+
+1. `isDaily`
+
+   Decides whether it's a daily schedule or a weekly schedule.
+
+1. `numHolidaySchedules`
+
+   Number of holiday schedules.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `weekly`
+
+   Weekly schedule. This will be valid only when isDaily is set to 0.
+
+1. `daily`
+
+   Daily schedule. This will be valid when isDaily has a value rather than 0.
+
+1. `holidaySchedules`
+
+   List of holiday schedules.
+
+### BS2Holiday
+
+```cpp
+typedef struct {
+   uint32_t date;
+   uint8_t recurrence;
+} BS2Holiday;
+```
+
+1. `date`
+
+   Date of the holiday.
+
+1. `recurrence`
+
+   The value of repetition.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Does not repeat |
+   | 1 | Repeat yearly |
+   | 2 | Repeat monthly |
+   | 3 | Repeat weekly |
+
+### BS2HolidayGroup
+
+```cpp
+typedef struct
+{
+   uint32_t id;
+   char name[BS2_MAX_SCHEDULE_NAME_LEN];
+   uint8_t numHolidays;
+   uint8_t reserved[3];
+   BS2Holiday holidays[BS2_MAX_HOLIDAYS_PER_GROUP];
+}BS2HolidayGroup;   
+```
+
+1. `id`
+
+   Holiday group ID.
+
+1. `name`
+
+   Name of the holiday group that will be displayed on the BioStar application.
+
+1. `numHolidays`
+
+   Number of holidays.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `holidays`
+
+   List of holidays.

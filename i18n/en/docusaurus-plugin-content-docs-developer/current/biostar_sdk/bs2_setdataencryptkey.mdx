@@ -1,0 +1,53 @@
+# BS2_SetDataEncryptKey
+
+<Badge only>+ v2.7.1</Badge> Changes the user defined PIN encryption key.
+
+If the PIN encryption key on the device is the same as you are trying to change, this configuration will be ignored.
+
+If the PIN encryption key on the device is different from what you are trying to change, the PIN will be configured and it deletes all user information on the device.
+
+:::caution
+
+* If you change PIN encryption key, then it deletes all user information on the device so that it sets the changed user-defined encryption key.
+
+* You must transfer all user information using API such as [BS2_EnrolUser](bs2_enroluser).
+
+* The API [BS2_MakePinCode](bs2_makepincode) encrypts user PIN with a default key.
+
+* If you've ever changed to user-defined PIN encryption key, then PIN needs to be assigned to users again using [BS2_MakePinCodeWithKey](bs2_makepincodewithkey).
+
+:::
+
+### Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDataEncryptKey(void* context, uint32_t deviceId, const BS2EncryptKey* keyInfo);
+```
+
+:::info
+
+[See BS2EncryptKey Structure](sdk_api#bs2encryptkey) 
+
+:::
+
+### Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `keyInfo` : The address of the key information structure to set.
+
+### Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+### See Also
+
+[BS2_MakePinCodeWithKey](bs2_makepincodewithkey)
+
+[BS2_RemoveDataEncryptKey](bs2_removedataencryptkey)

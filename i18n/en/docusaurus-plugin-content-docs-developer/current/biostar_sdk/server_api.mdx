@@ -1,0 +1,88 @@
+# Server API
+
+API that can enable server matching or controls the device from the BioStar application.
+
+:::caution
+
+Due to the issues with the management of UFMatcher.dll which was provided by a separate independent Corporation,​ Runnable examples will not be available anymore.
+
+Please reference the prior examples at the code level only. ​
+
+Other technical supports including fingerprint libraries for server matching can be provided by Xperix.
+
+Xperix : [https://www.xperix.com/](https://www.xperix.com/)
+
+:::
+
+---
+
+<DocCardList />
+
+---
+
+## Callback Function
+
+```cpp
+typedef void (*OnVerifyUser)(uint32_t deviceId, uint16_t seq, uint8_t isCard, uint8_t cardType, const uint8_t* data, uint32_t dataLen);
+typedef void (*OnIdentifyUser)(uint32_t deviceId, uint16_t seq, uint8_t format, const uint8_t* templateData, uint32_t templateSize);
+```
+
+1. `OnVerifyUser`
+
+   Callback function that is called when the BioStar application needs to distinguish whether the card or user ID matches.
+
+1. `OnIdentifyUser`
+
+   Callback function that is called when the BioStar application needs to distinguish whether the fingerprint matches.
+
+### OnUserPhrase
+
+Callback function asking for user phrase to the server.
+
+```cpp
+typedef void (*OnUserPhrase)(uint32_t deviceId, uint16_t seq, const char* userID);
+```
+
+1. `deviceId`
+
+   Device ID
+
+1. `seq`
+
+   Packet sequence
+
+1. `userID`
+
+   User ID
+
+### OnBarcodeScanned
+
+Callback function called when barcode is scanned on the device.
+
+```cpp
+typedef void (*OnBarcodeScanned)(uint32_t deviceId, const char* barcode);
+```
+
+1. `deviceId`
+
+   Device ID that sent the scanned barcode.
+
+1. `barcode`
+
+   Barcode string read from device.
+
+### OnOsdpStandardDeviceStatusChanged
+
+This is a callback function that is called when the state of the OSDP device changes.
+
+```cpp
+typedef void (*OnOsdpStandardDeviceStatusChanged)(uint32_t deviceId, const BS2OsdpStandardDeviceNotify* notifyData);
+```
+
+1. `deviceId`
+
+   OSDP device identifier.
+
+1. `notifyData`
+
+   OSDP device information.

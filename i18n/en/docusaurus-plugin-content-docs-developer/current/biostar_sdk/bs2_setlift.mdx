@@ -1,0 +1,55 @@
+# BS2_SetLift
+
+Configures a lift.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetLift(void* context, uint32_t deviceId, BS2Lift* lifts, uint32_t liftCount);
+```
+
+:::info
+
+[See BS2Lift Structure](lift control api#bs2lift) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `lifts` : List of lifts to be stored
+
+- \[In\] `liftCount` : Number of lifts
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetLift](bs2_getlift)
+
+[BS2_GetAllLift](bs2_getalllift)
+
+[BS2_GetLiftStatus](bs2_getliftstatus)
+
+[BS2_GetAllLiftStatus](bs2_getallliftstatus)
+
+[BS2_SetLiftAlarm](bs2_setliftalarm)
+
+[BS2_RemoveLift](bs2_removelift)
+
+[BS2_RemoveAllLift](bs2_removealllift)
+
+[BS2_ReleaseFloor](bs2_releasefloor)
+
+[BS2_ActivateFloor](bs2_activatefloor)
+
+[BS2_DeActivateFloor](bs2_deactivatefloor)

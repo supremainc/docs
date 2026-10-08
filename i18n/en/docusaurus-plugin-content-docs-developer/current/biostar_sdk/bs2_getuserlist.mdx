@@ -1,0 +1,45 @@
+# BS2_GetUserList
+
+Gets enrolled user ID as array. The size of the user ID is [BS2_USER_ID_SIZE](user_management_api#User).
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserList(void* context, uint32_t deviceId, char** uidsObjs, uint32_t* numUid, IsAcceptableUserID ptrIsAcceptableUserID);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `uidsObjs` : Pointer to store the user ID list's address
+
+- \[Out\] `numUid` : Number of users
+
+- \[In\] `ptrIsAcceptableUserID` : TBD
+
+:::info
+
+The `uidsObjs` variable needs to return the memory to the system by the `BS2_ReleaseObject` function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetUserInfos](bs2_getuserinfos)
+
+[BS2_EnrolUser](bs2_enroluser)
+
+[BS2_RemoveUser](bs2_removeuser)
+
+[BS2_RemoveAllUser](bs2_removealluser)

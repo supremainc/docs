@@ -1,0 +1,37 @@
+# BS2_UpgradeFirmware
+
+Upgrades the firmware.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_UpgradeFirmware(void* context, uint32_t deviceId, uint8_t* firmwareData, uint32_t firmwareDataLen, uint8_t keepVerifyingSlaveDevice, OnProgressChanged ptrProgressChanged);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `firmwareData` : Firmware data
+
+- \[In\] `firmwareDataLen` : Size of the firmware data
+
+- \[In\] `keepVerifyingSlaveDevice` : Flag that decides whether to enable the authentication on the slave device when upgrading the resource
+
+- \[In\] `ptrProgressChanged` : progress change listener
+
+:::info
+
+keepVerifyingSlaveDevice parameter needs to be checked whether it is supported from the firmware.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

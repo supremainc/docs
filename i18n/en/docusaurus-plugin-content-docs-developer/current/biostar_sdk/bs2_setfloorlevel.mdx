@@ -1,0 +1,43 @@
+# BS2_SetFloorLevel
+
+Configures a floor level.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetFloorLevel(void* context, uint32_t deviceId, BS2FloorLevel* floorLevels, uint32_t floorLevelCount);
+```
+
+:::info
+
+[See BS2FloorLevel Structure](lift control api#bs2floorlevel) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `floorLevels` : List of floor levels to be stored
+
+- \[In\] `floorLevelCount` : Number of floor levels
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetFloorLevel](bs2_getfloorlevel)
+
+[BS2_GetAllFloorLevel](bs2_getallfloorlevel)
+
+[BS2_RemoveFloorLevel](bs2_removefloorlevel)
+
+[BS2_RemoveAllFloorLevel](bs2_removeallfloorlevel)

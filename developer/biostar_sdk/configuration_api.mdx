@@ -1034,15 +1034,9 @@ typedef struct {
 
 1. `mifareEncType`
 
-   <Badge only>+ v2.9.9</Badge> Mifare Card의 암호화 방식을 지정합니다. Mifare Classic 카드는 CRYPTO1만 지원하며,
+   <Badge only>+ v2.9.9</Badge> Mifare Card의 암호화 방식을 지정합니다. Mifare Classic 카드는 CRYPTO1만 지원하며, Mifare Plus 카드는 CRYPTO1과 AES128 모두 지원합니다.
 
-   Mifare Plus 카드는 CRYPTO1과 AES128 모두 지원합니다.
-
-   CRYPTO1으로 설정하면 BS2MifareCard의 Mifare 설정이 적용되고, AES128로 설정하면
-
-   BS2_SetMifareCardConfigEx 및 BS2_GetMifareCardConfigEx를 통해 설정할 수 있는
-
-   BS2MifareCardConfigEx 설정이 적용됩니다.
+   CRYPTO1으로 설정하면 `BS2MifareCard`의 Mifare 설정이 적용되고, AES128로 설정하면 `BS2_SetMifareCardConfigEx` 및 `BS2_GetMifareCardConfigEx를` 통해 설정할 수 있는 `BS2MifareCardConfigEx` 설정이 적용됩니다.
 
    | 값 | 설명 |
    | :--: | :--: |
@@ -1192,6 +1186,14 @@ typedef struct {
 1. `supportConfig`
 
    <Badge only>+ v2.8</Badge> 이 값이 0으로 전달되면 장치는 아래의 Intelligent PD(Peripheral Device) 관련 설정들을 모두 무시하게 됩니다.
+
+   * `useExceptionCode`
+
+   * `exceptionCode`
+
+   * `outputFormat`
+
+   * `
 
 1. `useExceptionCode`
 
@@ -3574,7 +3576,7 @@ typedef struct {
 
    supervised input 포트의 개수입니다.
 
-1. `tamperAuxIndex, acFailAuxIndex, fireAuxIndex`
+1. `tamperAuxIndex`, `acFailAuxIndex`, `fireAuxIndex`
 
    <Badge only>+ v2.9.9</Badge> Aux 입력을 설정합니다. 4bit 크기이며 CS20, DI24는 고정되어 있고 변경할 수 없습니다.
 
@@ -3584,7 +3586,7 @@ typedef struct {
    | TAMPER | 1 |
    | FIRE | 2 |
 
-1. `aux0Type, aux1Type, aux2Type`
+1. `aux0Type`, `aux1Type`, `aux2Type`
 
    <Badge only>+ v2.9.9</Badge> Aux 입력 신호 유형을 설정합니다.
 

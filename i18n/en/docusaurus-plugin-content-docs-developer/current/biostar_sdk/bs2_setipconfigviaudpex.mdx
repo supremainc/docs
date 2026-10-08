@@ -1,0 +1,33 @@
+# BS2_SetIPConfigViaUDPEx
+
+<Badge only>+ v2.6.3</Badge> Stores IP configuration through UDP broadcast with host IP.
+
+It is useful on systems with multiple Ethernet cards installed.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetIPConfigViaUDPEx(void* context, uint32_t deviceId, const BS2IpConfig* config, const char* hostipAddr);
+```
+
+:::info
+
+[See BS2IpConfig Structure](configuration_api#bs2ipconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : IP configuration pointer
+
+- \[In\] `hostipAddr` : Host IP address
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.

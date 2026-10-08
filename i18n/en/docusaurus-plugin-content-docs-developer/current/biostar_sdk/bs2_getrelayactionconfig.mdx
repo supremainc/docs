@@ -1,0 +1,29 @@
+# BS2_GetRelayActionConfig
+
+<Badge only>+ v2.8.1</Badge> **IM-120** Retrieves Configuration related to the RelayAction.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetRelayActionConfig(void* context, uint32_t deviceId, BS2RelayActionConfig* config);
+```
+
+:::info
+
+[BS2RelayActionConfig Structure](configuration_api#bs2relayactionconfig) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[Out\] `config` : Pointer where Input Expandable Setting Information will be saved
+
+## Return Values
+
+Return `BS_SDK_SUCCESS` when successful, and return an appropriate error code when an error occurs.

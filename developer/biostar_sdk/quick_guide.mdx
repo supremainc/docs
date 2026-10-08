@@ -104,7 +104,7 @@ if(result == BS_SDK_SUCCESS)
 }
 ```
 
-## 4 단계. 장치 설정 정보 가져오기
+## 4 단계. 장치 설정 정보 가져오기 {/* #step-4-getting-the-device-configuration */}
 
 장치의 설정 정보는 BS2_GetXXXConfig[^2] 함수를 통해 가져올 수 있습니다. 장치 설정에 대한 자세한 정보는 [Configuration API](configuration_api)를 참고하세요.
 
@@ -132,7 +132,7 @@ if(deviceInfo.tnaSupported)
 
 ## 5 단계. 사용자 등록
 
-장치에 사용자를 등록하려면 헤더 정보를 올바르게 설정해야 합니다. 사용자가 사용할 수 있는 크리덴셜 종류는 PIN, 스마트 카드, 지문 인식, 얼굴 인식이 있으며, 장치에서 지원하는 크리덴셜 종류는 [4 단계. 장치 설정 정보 가져오기](quick_guide#4 단계. 장치 설정 정보 가져오기)에서 `BS2SimpleDeviceInfo`로 얻은 정보를 사용하세요.
+장치에 사용자를 등록하려면 헤더 정보를 올바르게 설정해야 합니다. 사용자가 사용할 수 있는 크리덴셜 종류는 PIN, 스마트 카드, 지문 인식, 얼굴 인식이 있으며, 장치에서 지원하는 크리덴셜 종류는 [4 단계. 장치 설정 정보 가져오기](#step-4-getting-the-device-configuration)에서 `BS2SimpleDeviceInfo`로 얻은 정보를 사용하세요.
 
 사용자 정보와 크리덴셜 정보는 `BS2_EnrolUser` 함수로 등록할 수 있습니다. 자세한 내용은 [User Management API](user_management_api)를 참고하세요.
 
@@ -154,7 +154,7 @@ if(result != BS_SDK_SUCCESS)
 
 사용자 헤더 정보는 장치 종류에 따라 필드가 다릅니다. 예를 들어, BioStation 2는 사용자 식별자, 사용자 이름 그리고 PIN을 사용할 수 있지만 BioEntry Plus는 오직 사용자 식별자 필드만 사용할 수 있습니다. 장치에서 사용하지 않는 나머지 필드 값은 무시되므로 BioStar 애플리케이션 개발자는 반드시 장치가 지원하는 기능을 기반으로 UI를 생성해야 사용자의 혼란과 불편을 막을 수 있습니다.
 
-:::tip
+:::info
 
 사용자 식별자는 반드시 숫자로만 구성되어야 하며, 유효범위는 1 \~ 4294967295까지입니다. 
 

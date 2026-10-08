@@ -1,0 +1,37 @@
+# BS2_SetSlaveDevice
+
+Add/Modify/Delete a slave device from the master device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSlaveDevice(void* context, uint32_t deviceId, BS2Rs485SlaveDevice* slaveDevices, uint32_t slaveDeviceCount);
+```
+
+:::info
+
+[See BS2Rs485SlaveDevice Structure](slave_control_api#bs2rs485slavedevice) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `slaveDevices` : List of slave devices
+
+- \[In\] `slaveDeviceCount` : Number of slave devices
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetSlaveDevice](bs2_getslavedevice)

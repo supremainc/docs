@@ -22,7 +22,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 - 자동연결 여부를 확인하고, 변경 기능 지원
 
-1.USB 읽기 기능이 추가되었습니다.
+1. USB 읽기 기능이 추가되었습니다.
 
    - 함수 [BS2_AllocateUsbContext](../bs2_allocateusbcontext) 추가
 
@@ -46,27 +46,27 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
    - 함수 [BS2_GetFilteredLogFromDir](../bs2_getfilteredlogfromdir) 추가
 
-1.SDK 내에서 발생하는 디버그 정보를 참조할 수 있도록 추가되었습니다.
+1. SDK 내에서 발생하는 디버그 정보를 참조할 수 있도록 추가되었습니다.
 
    - 함수 [BS2_SetDebugExCallback](../bs2_setdebugexcallback) 추가
 
-1.서버 포트를 지정할 수 있도록 추가하였습니다.
+1. 서버 포트를 지정할 수 있도록 추가하였습니다.
 
    - 함수 [BS2_SetServerPort](../bs2_setserverport) 추가
 
    - 함수 [BS2_SetSSLServerPort](../bs2_setsslserverport) 추가
 
-1.Global APB zone 기능이 추가되었습니다.
+1. Global APB zone 기능이 추가되었습니다.
 
    - 함수 [BS2_SetCheckGlobalAPBViolationHandler](../bs2_setcheckglobalapbviolationhandler) 추가
 
    - 함수 [BS2_CheckGlobalAPBViolation](../bs2_checkglobalapbviolation) 추가
 
-1.장치 연결상태를 확인하는 기능이 추가되었습니다.
+1. 장치 연결상태를 확인하는 기능이 추가되었습니다.
 
    - 함수 [BS2_IsConnected](../bs2_isconnected) 추가
 
-1.자동연결 여부를 확인하고, 변경할 수 있도록 추가하였습니다.
+1. 자동연결 여부를 확인하고, 변경할 수 있도록 추가하였습니다.
 
    - 함수 [BS2_IsAutoConnection](../bs2_isautoconnection) 추가
 
@@ -108,7 +108,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
    * 함수 [BS2_RemoveAllUser](../bs2_removealluser) 참조
 
-1. 사용자 정보 취득 시, userMask가 BS2_USER_MASK_ALL인 경우 Not Supported 오류가 발생하는 문제를 수정하였습니다.
+1. 사용자 정보 취득 시, userMask가 `BS2_USER_MASK_ALL`인 경우 Not Supported 오류가 발생하는 문제를 수정하였습니다.
 
    - 함수 [BS2_GetSupportedConfigMask](../bs2_getsupportedconfigmask) 참조
 
@@ -132,7 +132,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 1. Linux SDK에서 signal handle 내의 memory 할당으로 dead-lock이 발생할 수 있는 문제를 수정하였습니다.
 
-1. Linux에서 socket 사용 시, socket close 옵션 SOCK_CLOEXEC를 추가하였습니다.
+1. Linux에서 socket 사용 시, socket close 옵션 `SOCK_CLOEXEC`를 추가하였습니다.
 
 1. Server matching 함수 사용시 내부적으로 잘못된 동기화 객체에 lock/unlock을 걸어주는 문제를 수정하였습니다.
 
@@ -176,9 +176,9 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 1. 다음의 함수 호출 시 Not supported로 반환되는 문제를 수정하였습니다.
 
-* 함수 [BS2_GetCardConfigEx](../bs2_getcardconfigex) 참조
+   * 함수 [BS2_GetCardConfigEx](../bs2_getcardconfigex) 참조
 
-- 함수 [BS2_GetRs485ConfigEx](../bs2_getrs485configex) 참조
+   - 함수 [BS2_GetRs485ConfigEx](../bs2_getrs485configex) 참조
 
 ---
 
@@ -186,11 +186,11 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 :::caution
 
-2.5.0 버전까지는 Device SDK가 OpenSSL library를 정적으로 포함하고 있었으나, 2.6.0 버전부터는 공유 library 형태로 링크하도록 변경되었습니다.
+* 2.5.0 버전까지는 Device SDK가 OpenSSL library를 정적으로 포함하고 있었으나, 2.6.0 버전부터는 공유 library 형태로 링크하도록 변경되었습니다.
 
-따라서 적절한 OpenSSL library를 설치 후 실행시켜주셔야 합니다. 2.6.0 라이브러리는 OpenSSL 1.0.2n library를 기반으로 테스트 되었습니다.
+* 따라서 적절한 OpenSSL library를 설치 후 실행시켜주셔야 합니다. 2.6.0 라이브러리는 OpenSSL 1.0.2n library를 기반으로 테스트 되었습니다.
 
-예제파일에는 OpenSSL 1.0.2n Windows library 파일을 포함하고 있습니다. 
+* 예제파일에는 OpenSSL 1.0.2n Windows library 파일을 포함하고 있습니다. 
 
 :::
 
@@ -244,11 +244,11 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
    - 함수 [BS2_RemoveDataEncryptKey](../bs2_removedataencryptkey) 추가
 
-1. 신규 장치초기화 함수 BS2_ResetConfigExceptNetInfo를 지원합니다. 이 함수는 BS2_ResetConfig와 비교하여 네트워크 정보를 제외한 초기화가 가능합니다.
+1. 신규 장치초기화 함수 `BS2_ResetConfigExceptNetInfo`를 지원합니다. 이 함수는 `BS2_ResetConfig`와 비교하여 네트워크 정보를 제외한 초기화가 가능합니다.
 
    - 함수 [BS2_ResetConfigExceptNetInfo](../bs2_resetconfigexceptnetinfo) 추가
 
-1. 장치의 기능 지원 유무에 관한 정보를 가져오는 함수 BS2_GetDeviceInfoEx를 지원합니다. 이 함수는 BS2_GetDeviceInfo 함수를 호출할 때 사용되는 BS2SimpleDeviceInfo 구조체에서 최근 추가된 항목들을 옮긴 구조체 BS2SimpleDeviceInfoEx를 사용합니다.
+1. 장치의 기능 지원 유무에 관한 정보를 가져오는 함수 `BS2_GetDeviceInfoEx`를 지원합니다. 이 함수는 `BS2_GetDeviceInfo` 함수를 호출할 때 사용되는 `BS2SimpleDeviceInfo` 구조체에서 최근 추가된 항목들을 옮긴 구조체 `BS2SimpleDeviceInfoEx`를 사용합니다.
 
 - 함수 [BS2_GetDeviceInfoEx](../bs2_getdeviceinfoex) 추가
 
@@ -264,9 +264,9 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 1. 장치 보안템퍼 설정을 지원합니다.
 
-   BS2SystemConfig의 secureTamper를 통해 현재 보안템퍼가 설정되어 있는지 확인 및 설정이 가능합니다.
+   `BS2SystemConfig`의 `secureTamper`를 통해 현재 보안템퍼가 설정되어 있는지 확인 및 설정이 가능합니다.
 
-   이 구조체 정보는 반드시 BS2_GetSystemConfig를 통해 읽어낸 후, 필요한 정보만 수정하고 BS2_SetSystemConfig로 설정하여야 합니다.
+   이 구조체 정보는 반드시 `BS2_GetSystemConfig`를 통해 읽어낸 후, 필요한 정보만 수정하고 `BS2_SetSystemConfig`로 설정하여야 합니다.
 
    * 구조체 [BS2SystemConfig](../configuration_api#bs2systemconfig) 참조
 
@@ -276,8 +276,8 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
    그러나 slave 장치로 지문장치가 연결이 되어질 수 있으므로 지문매칭을 지원합니다.
 
-   따라서 FS2와 FL의 BS2SimpleDeviceInfo.fingersupported 값이 0에서 1로 변경되었습니다.
+   따라서 FS2와 FL의 `BS2SimpleDeviceInfo.fingersupported` 값이 0에서 1로 변경되었습니다.
 
-   현재 장치가 지문매칭을 지원하는지 여부는 BS2SimpleDeviceInfo의 fingerSupported를 통해 확인할 수 있습니다.
+   현재 장치가 지문매칭을 지원하는지 여부는 `BS2SimpleDeviceInfo`의 `fingerSupported`를 통해 확인할 수 있습니다.
 
    * 구조체 [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo) 참조

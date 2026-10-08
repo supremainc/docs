@@ -1,0 +1,31 @@
+# BS2_SetTNAConfig
+
+Stores time and attendance settings on the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetTNAConfig(void* context, uint32_t deviceId, BS2TNAConfig* config);
+```
+
+:::info
+
+[See BS2TNAConfig Structure](configuration_api#bs2tnaconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : T&A configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

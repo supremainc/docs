@@ -1,0 +1,45 @@
+# BS2_GetLogSmallBlobEx
+
+<Badge only>+ v2.7.1</Badge> Gets certain amount of logs based on the event mask in an efficient way, including the temperature information.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLogSmallBlobEx(void* context, uint32_t deviceId, uint16_t eventMask, uint32_t eventId, uint32_t amount, BS2EventSmallBlobEx** logsObj, uint32_t* numLog);
+```
+
+:::info
+
+[See BS2EventSmallBlobEx Structure](Log_Management_API#bs2eventsmallblobex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `eventMask` : event mask
+
+- \[In\] `eventId` : Log record ID, retireves from the first record if it is 0
+
+- \[In\] `amount` : Log amount, retrieves all after eventID if it is 0
+
+- \[Out\] `logsObj` : Pointer of storing the log record address
+
+- \[Out\] `numLog` : The number of log records
+
+:::info
+
+The `logsObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,61 @@
+# BS2_GetDeviceZoneAGEntranceLimit
+
+Retrieves selected Ethernet Access Group Entrance limit.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceZoneAGEntranceLimit(void* context, BS2_DEVICE_ID deviceId, const BS2_ZONE_ID* Ids, uint32_t IdCount, BS2DeviceZoneAGEntranceLimit** deviceZoneAGEntranceLimitObj, uint32_t* numDeviceZoneAGEntranceLimit);
+```
+
+:::info
+
+[See BS2DeviceZoneAGEntranceLimit Structure](zone_control_api#bs2devicezoneagentrancelimit) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `Ids` : List of device zone entrance limit IDs to retrieve
+
+- \[In\] `IdCount` : Size of Device zone entrance limit IDs list
+
+- \[Out\] `deviceZoneAGEntranceLimitObj` : Device zone Access Group entrance limit pointer
+
+- \[Out\] `numDeviceZoneAGEntranceLimit` : Number of device zone Access Group entrance limit list 
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAllDeviceZoneAGEntranceLimit](bs2_getalldevicezoneagentrancelimit)
+
+[BS2_SetDeviceZoneAGEntranceLimit](bs2_setdevicezoneagentrancelimit)
+
+[BS2_RemoveDeviceZoneAGEntranceLimit](bs2_removedevicezoneagentrancelimit)
+
+[BS2_RemoveAllDeviceZoneAGEntranceLimit](bs2_removealldevicezoneagentrancelimit)

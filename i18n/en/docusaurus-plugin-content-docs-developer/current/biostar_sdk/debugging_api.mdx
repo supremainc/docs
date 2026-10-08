@@ -1,0 +1,21 @@
+# Debugging API
+
+When developing an application, you can check debugging message that occurs within the SDK.
+
+Register the callback function through [BS2_SetDebugExCallback](bs2_setdebugexcallback) to check debugging message in real time.
+
+---
+
+<DocCardList />
+
+---
+
+## Callback Function
+
+```cpp
+typedef void (*CBDebugExPrint)(uint32_t level, uint32_t module, const char* msg);
+```
+
+1. `CBDebugExPrint`
+
+   Callback function that is called for debugging message.

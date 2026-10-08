@@ -1,0 +1,67 @@
+# BS2_GetFilteredLogFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> Gets the log after a given log record ID from the data extracted by USB by a maximum of amount.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFilteredLogFromDirWithKey(void* context, const char* szDir, char* uid, BS2_EVENT_CODE eventCode, BS2_TIMESTAMP start, BS2_TIMESTAMP end, uint8_t tnakey, BS2Event** logsObj, uint32_t* numLog, const BS2EncryptKey* key);
+```
+
+:::info
+
+[View the structure of the BS2Event](Log_Management_API#bs2event) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Data storage path
+
+- \[In\] `uid` : User identifier, if NULL, means all users.
+
+- \[In\] `eventCode` : Log event code, 0 means all events.
+
+- \[In\] `start` : The start time of the condition search, 0 means there is no limit.
+
+- \[In\] `end` : The last time of the condition search and 0 means there is no limit.
+
+- \[In\] `tnakey` : TNA key, 0 means all TNA keys.
+
+- \[Out\] `logsObj` : Pointer to store the address of the log record
+
+- \[Out\] `numLog` : Number of log records
+
+- \[In\] `key` : Encryption key and the key value specified by [BS2_SetDataEncryptKey](bs2_setdataencryptkey)
+
+:::info
+
+The `logsObj` variable must return memory to the system after use via the [BS2_ReleaseObject](bs2_releaseobject) function.
+
+:::
+
+## Return value
+
+Returns `BS_SDK_SUCCESS` if performed successfully, or a corresponding error code if an error occurs.
+
+## See Also
+
+[BS2_GetUserDatabaseInfoFromDirWithKey](bs2_getuserdatabaseinfofromdirwithkey)
+
+[BS2_GetUserListFromDirWithKey](bs2_getuserlistfromdirwithkey)
+
+[BS2_GetUserInfosFromDirWithKey](bs2_getuserinfosfromdirwithkey)
+
+[BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey)
+
+[BS2_GetUserInfosExFromDirWithKey](bs2_getuserinfosexfromdirwithkey)
+
+[BS2_GetUserDatasExFromDirWithKey](bs2_getuserdatasexfromdirwithkey)
+
+[BS2_GetLogFromDirWithKey](bs2_getlogfromdirwithkey)
+
+[BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey)

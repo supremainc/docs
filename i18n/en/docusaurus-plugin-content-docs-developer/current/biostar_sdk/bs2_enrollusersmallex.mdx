@@ -1,0 +1,57 @@
+# BS2_EnrollUserSmallEx
+
+<Badge only>+ v2.6.3</Badge> Enrolls new user with efficient use of memory.
+
+The only difference between [BS2_EnrollUserEx](bs2_enrolluserex) which is using structure [BS2UserBlobEx](user_management_api#bs2userblobex) is that the 3rd parameter `BS2UserPhoto` of `BS2UserSmallBlob`Ex is using pointer for efficient memory use.
+
+:::info
+
+Please use [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) for user enrollment to **FaceStation F2**.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_EnrollUserSmallEx(void* context, uint32_t deviceId, BS2UserSmallBlobEx* userBlob, uint32_t userCount, uint8_t overwrite);
+```
+
+:::info
+
+[See BS2UserSmallBlobEx Structure](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `userBlob` : User information trying to enroll
+
+- \[In\] `userCount` : Number of users
+
+- \[In\] `overwrite` : Whether to overwrite duplicated user
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_EnrollUserSmall](bs2_enrollusersmall)
+
+[BS2_EnrollUserSmallEx](bs2_enrollusersmallex)
+
+[BS2_GetUserSmallInfos](bs2_getusersmallinfos)
+
+[BS2_GetUserSmallInfosEx](bs2_getusersmallinfosex)
+
+[BS2_GetUserSmallDatas](bs2_getusersmalldatas)
+
+[BS2_GetUserSmallDatasEx](bs2_getusersmalldatasex)

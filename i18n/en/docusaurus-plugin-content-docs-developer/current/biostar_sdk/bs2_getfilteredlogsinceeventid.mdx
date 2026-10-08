@@ -1,0 +1,82 @@
+# BS2_GetFilteredLogSinceEventId
+
+<Dep>[Deprecated]</Dep> Gets all the log records that matches the given condition.
+
+:::caution
+
+* The device log filtering API [BS2_GetFilteredLogSinceEventId](bs2_getfilteredlogsinceeventid) reviews the device's logs against the conditions set by the server.
+
+* This means that the device may invest considerable time in log filtering, and as the number of logs on the device increases, more time will be required.
+
+* Also, logs are not permanently stored on the device.
+
+* If the maximum number of logs that the device can hold is exceeded, the device will overwrite the oldest logs, and logs older than a certain period of time may be automatically deleted.
+
+* It is recommended that all logs from the device be stored and managed on a server.
+
+* Combining the [BS2_GetLog](bs2_getlog) API for bulk receiving of logs from the device and the [BS2_StartMonitoringLog](bs2_startmonitoringlog) API for receiving logs in real-time after that, it is recommended to store all logs from the device in a suitable DBMS by the server, and then filter logs from the DBMS.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFilteredLogSinceEventId(void* context, BS2_DEVICE_ID deviceId, char* uid, BS2_EVENT_CODE eventCode,
+                        BS2_TIMESTAMP start,
+                        BS2_TIMESTAMP end,
+                        uint8_t tnakey,
+                        BS2_EVENT_ID lastEventId,
+                        uint32_t amount,                        
+                        BS2Event** logsObj,
+                        uint32_t* numLog);
+```
+
+:::info
+
+[See BS2Event Structure](Log_Management_API#bs2event) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `uid` : User ID. When the value is NULL, it means all users.
+
+- \[In\] `eventCode` : Log event code. When the value is 0, it means all events.
+
+- \[In\] `start` : Filtered search start time. When the value is 0, it means there are no limitations.
+
+- \[In\] `end` : Filtered search end time. When the value is 0, it means there are no limitations.
+
+- \[In\] `tnakey` : TNA key. When the value is 0, it means all TNA keys.
+
+- \[In\] `lastEventId` : Choose a specific log ID and it searches from the chosen log ID
+
+- \[In\] `amount` : Amount of log.
+
+- \[Out\] `logsObj` : Pointer to store the log record's address.
+
+- \[Out\] `numLog` : Number of log record.
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetLog](bs2_getlog)
+
+[BS2_ClearLog](bs2_clearlog)

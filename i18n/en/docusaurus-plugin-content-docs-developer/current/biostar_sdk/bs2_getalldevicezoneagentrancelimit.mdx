@@ -1,0 +1,57 @@
+# BS2_GetAllDeviceZoneAGEntranceLimit
+
+Retrieves all Ethernet Access Group Entrance limit.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllDeviceZoneAGEntranceLimit(vvoid* context, BS2_DEVICE_ID deviceId, BS2DeviceZoneAGEntranceLimit** deviceZoneAGEntranceLimitObj, uint32_t* numDeviceZoneAGEntranceLimit);
+```
+
+:::info
+
+[See BS2DeviceZoneAGEntranceLimit Structure](zone_control_api#bs2devicezoneagentrancelimit) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `deviceZoneAGEntranceLimitObj` : Device zone Access Group entrance limit pointer
+
+- \[Out\] `numDeviceZoneAGEntranceLimit` : Number of device zone Access Group entrance
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDeviceZoneAGEntranceLimit](bs2_getdevicezoneagentrancelimit)
+
+[BS2_SetDeviceZoneAGEntranceLimit](bs2_setdevicezoneagentrancelimit)
+
+[BS2_RemoveDeviceZoneAGEntranceLimit](bs2_removedevicezoneagentrancelimit)
+
+[BS2_RemoveAllDeviceZoneAGEntranceLimit](bs2_removealldevicezoneagentrancelimit)

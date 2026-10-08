@@ -1,0 +1,55 @@
+# BS2_SetGlobalAPBViolationByDoorOpenHandler
+
+<Badge only>+ v2.7.0</Badge> Registers callback function for global determination when an APB violation alarm occurs.
+
+* Generally, Global APB API [BS2_SetCheckGlobalAPBViolationHandler](bs2_setcheckglobalapbviolationhandler) determines access with the user authentication only.
+
+* On the other hand, Global APB By Door Open has two steps; i) User authentication ii) Actual access based on the door sensor.
+
+* First, [OnCheckGlobalAPBViolationByDoorOpen](zone_control_api#oncheckglobalapbviolationbydooropen) is called after a user authentication.
+
+* Second, [OnUpdateGlobalAPBViolationByDoorOpen](zone_control_api#onupdateglobalapbviolationbydooropen) is called after checking the door sensor to figure out if the user actually accessed the door.
+
+* The final status is updated through [OnUpdateGlobalAPBViolationByDoorOpen](zone_control_api#onupdateglobalapbviolationbydooropen)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetGlobalAPBViolationByDoorOpenHandler(void* context, OnCheckGlobalAPBViolationByDoorOpen ptrCheck, OnUpdateGlobalAPBViolationByDoorOpen ptrUpdate);
+```
+
+:::info
+
+[See OnCheckGlobalAPBViolationByDoorOpen Callback Function](zone_control_api#OnCheckGlobalAPBViolationByDoorOpen)
+
+[See OnUpdateGlobalAPBViolationByDoorOpen Callback Function](zone_control_api#OnUpdateGlobalAPBViolationByDoorOpen) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `ptrCheck` : Callback function called for global determination when Anti Passback alarm occurs
+
+- \[In\] `ptrUpdate` : Callback function called for updating status of the authenticated user.
+
+:::info
+
+To use Global Anti Passback service, set [BS2AuthConfig](configuration_api#bs2authconfig) `useGlobalAPB = true`,
+
+and [BS2DoorSensor](door_control_api#bs2doorsensor) `apbUseDoorSensor = true`.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_CheckGlobalAPBViolationByDoorOpen](bs2_checkglobalapbviolationbydooropen)

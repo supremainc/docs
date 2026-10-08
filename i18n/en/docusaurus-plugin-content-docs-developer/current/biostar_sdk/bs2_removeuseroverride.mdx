@@ -1,0 +1,58 @@
+# BS2_RemoveUserOverride
+
+<Badge only>+ v2.9.12</Badge> Removes users using extended door open time by specifying user IDs.
+
+
+:::info
+
+This feature allows doors to remain open longer than the standard open time for users who need more time for access, such as people with disabilities or delivery personnel.
+
+Set the extended open time for the door through extendedAutoLockTimeout in [BS2Door](door_control_api#bs2door), and specify users to whom the extended open time will apply through [BS2UserOverride](user_management_api#bs2useroverride).
+
+When using extended open time, the following rules apply:
+
+- When users with and without extended open time authenticate consecutively, the open time is applied based on the last authenticated user.
+
+- When using two-step authentication, if at least one authenticated user is subject to extended open time, the door opens with the extended open time.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveUserOverride(void* context, BS2_DEVICE_ID deviceId, const char* userIDs, uint32_t numOfUsers);
+```
+
+:::info
+
+[View BS2UserOverride structure](user_management_api#bs2useroverride) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `userIDs` : Specifies user IDs to remove
+
+- \[In\] `numOfUsers` : Number of user IDs to remove
+
+
+
+## Return Value
+
+Returns `BS_SDK_SUCCESS` when performed successfully, and returns the corresponding error code when failed.
+
+## See Also
+
+[BS2_GetUserOverride](bs2_getuseroverride)
+
+[BS2_GetAllUserOverride](bs2_getalluseroverride)
+
+[BS2_SetUserOverride](bs2_setuseroverride)
+
+[BS2_RemoveAllUserOverride](bs2_removealluseroverride)
