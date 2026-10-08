@@ -15,6 +15,12 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 
 **BioStar X**를 설치하기 전에 다음 사항을 확인하고 설치를 진행하세요.
 
+:::note
+
+BioStar X 프로그램은 공급자가 직접 설치합니다.
+
+:::
+
 * **BioStar X**는 64bit 운영체제에서만 설치할 수 있습니다.
 
 * MS SQL 2012 Express를 사용한다면 [서비스 팩 3](https://www.microsoft.com/download/details.aspx?id=49996)를 설치하세요.
@@ -26,9 +32,6 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 * 이전 버전의 **BioStar X**에서 데이터베이스를 백업할 때 모든 서비스를 사용 중지한 후 진행하세요. 또한, AC 데이터베이스와 TA 데이터베이스를 함께 백업하고, 복원하지 않으면 TA 데이터베이스를 사용할 수 없습니다.
 
 * **BioStar X** 데이터베이스를 백업하려면 *\Program Files\BioStar X\util* 폴더의 *enckey* 파일과 *\Program Files\BioStar X* 폴더의 *system.conf*, *setting.conf* 파일도 반드시 함께 백업하세요. 그렇지 않으면, 데이터베이스를 사용할 수 없게 됩니다.
-
-* **BioStar X**가 사용하는 포트의 기본값은 [다음 문서](service-settings)를 참고하세요. 다른 프로그램에서 동일한 포트를 점유한다면, **BioStar X**가 정상 구동되지 않을 수 있습니다.
-
 
 ## 데이터베이스 확인 {#checkdb}
 
@@ -222,16 +225,6 @@ keywords: [ 설치 안내, MariaDB, SQL Server, 데이터베이스 ]
 <NextItem to='system-requirements'>
 
 **BioStar X**를 설치하기 위한 시스템의 최소 사양을 알아보세요.
-
-</NextItem>
-<NextItem to='express-install'>
-
-처음 설치하는 사용자를 위한 간편 설치 방법을 안내합니다.
-
-</NextItem>
-<NextItem to='custom-install'>
-
-사용자가 이미 설치한 데이터베이스와 연동하기 위한 사용자 정의 설치 방식을 안내합니다.
 
 </NextItem>
 </NextStep>

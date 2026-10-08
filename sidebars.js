@@ -325,29 +325,9 @@ const sidebars = {
             id: 'platform/biostar_x/getting-started',
           },
           items: [
-            'platform/biostar_x/check-ethernet',
-            'platform/biostar_x/express-install',
-            'platform/biostar_x/custom-install',
-            'platform/biostar_x/migration-x',
-            'platform/biostar_x/install-communication-server',
             'platform/biostar_x/login',
             'platform/biostar_x/register-license-key',
             'platform/biostar_x/initial-setup-guide',
-          ]
-        },
-        {
-          type: 'category',
-          label: '서버 관리',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/server-management',
-          },
-          items: [
-            'platform/biostar_x/manage-server',
-            'platform/biostar_x/service-settings',
-            'platform/biostar_x/change-port',
-            'platform/biostar_x/change-db',
-            'platform/biostar_x/add-sub-db'
           ]
         },
         'platform/biostar_x/ui-launcher',
@@ -650,7 +630,6 @@ const sidebars = {
                 'platform/biostar_x/settings-advanced-ac-interlock',
                 'platform/biostar_x/settings-advanced-ac-muster',
                 'platform/biostar_x/settings-advanced-ac-occupancy',
-                'platform/biostar_x/settings-advanced-ac-roll-call',
               ]
             },
             {
@@ -745,7 +724,6 @@ const sidebars = {
             'platform/biostar_x/ui-settings'
           ]
         },
-        'platform/biostar_x/licensing',
         'platform/biostar_x/appendices',
       ],
     },
