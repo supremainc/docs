@@ -20,6 +20,8 @@ Register the door in the following cases.
 
 Check the following before adding a door.
 
+* Each camera lets you register up to 10 doors. Check the number of doors the camera will control before setup.
+
 * Create the access control event for access decisions first. For more information, see <DocLink docId='device/vionyx_webserver/configure-access-control' />.
 
 * Make sure the door lock connects to a relay port on the camera or sub I/O device. To use a sub I/O device, first add it via RS-485. For more information, see <DocLink docId='device/vionyx_webserver/configure-rs485' />.
@@ -172,7 +174,13 @@ In the <Cmd sid='schedule' product='cam' /> section, set the door to stay unlock
 
 * <Cmd sid='unlock_schedule' product='cam' />: Keep the door unlocked during the selected schedule. Use this to keep the lobby door unlocked during busy business hours.
 
-* <Cmd sid='lock_schedule' product='cam' />: Keep the door locked during the selected schedule. In this time zone, registered users cannot access.
+* <Cmd sid='lock_schedule' product='cam' />: Keep the door locked during the selected schedule. In this time zone, registered users cannot access, and the Exit button does not work.
+
+:::caution
+
+During the time period set in <Cmd sid='lock_schedule' product='cam' /> prevents people inside from exiting using the exit button. Do not set <Cmd sid='lock_schedule' product='cam' /> for time period when people may remain inside. To open a door, execute <Cmd sid='manual_unlock' product='cam' /> from <Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' />. For more information, see <DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />.
+
+:::
 
 :::info
 
