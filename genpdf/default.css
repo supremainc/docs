@@ -1098,6 +1098,10 @@ html[lang='en'] .doc-content .container table {
   color: #000;
 }
 
+.doc-content p .cmd.upper {
+  text-transform: uppercase;
+}
+
 .doc-content .tabItem > b:first-of-type {
   font-weight: 600;
   font-size: 10.5pt;
