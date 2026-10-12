@@ -222,7 +222,7 @@ ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'bios
 
   :::info
 
-  FederatedX 특성 상 `Table_type`이 'BASE TABLE'으로 설정하는 것을 권장합니다. `VIEW type`도 가능하지만 권장하지는 않습니다.
+  FederatedX 특성상 `Table_type`이 'BASE TABLE'으로 설정하는 것을 권장합니다. `VIEW type`도 가능하지만 권장하지는 않습니다.
 
   :::
 
@@ -293,7 +293,7 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 
 #### 보조 데이터베이스 권한 부여
 
-1. sysadmin 권한을 가진 계정으로 보조 데이터베이스에 테이블 및 사용자에 대한 User Mapping 연결이 필요합니다. 이 때 `db_owner` 역할 추가가 필요합니다.
+1. sysadmin 권한을 가진 계정으로 보조 데이터베이스에 테이블 및 사용자에 대한 User Mapping 연결이 필요합니다. 이때 `db_owner` 역할 추가가 필요합니다.
 
     <Image src='/img/common/biostarx-subdb-user-mapping.png' alone />
 
