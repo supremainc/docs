@@ -1,6 +1,6 @@
 <Include type={props.type} ref='mifare,custom-mifare'>
 
-* <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Configure el tipo de cifrado en <Cmd>SL1</Cmd> o <Cmd>SL3</Cmd>.
+* <Cmd sid='setting.cardFormat.securityLevel' product='2' />: Configure el nivel de seguridad en <Cmd>SL1</Cmd> o <Cmd>SL3</Cmd>.
 
 </Include>
 
@@ -32,21 +32,21 @@
 
 <Include type={props.type} ref='desfire,custom-desfire'>
 
-* <Cmd sid='setting.cardFormat.idField' product='2' />: Configure para leer un área específica de la tarjeta. Funciona como un directorio que contiene <Cmd sid='setting.cardFormat.fileId' product='2' />.
+* <Cmd sid='setting.cardFormat.appId' product='2' />: Configure para leer un área específica de la tarjeta. Funciona como un directorio que contiene <Cmd sid='setting.cardFormat.fileId' product='2' />.
 
 * <Cmd sid='setting.cardFormat.fileId' product='2' />: Configure el ID de archivo.
 
 * <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Configure el tipo de cifrado en <Cmd>DES/3DES</Cmd> o <Cmd>AES</Cmd>.
 
-:::info
+  :::info
 
-Al cambiar un diseño de tarjeta guardado con cifrado <Cmd>AES</Cmd> a <Cmd>DES/3DES</Cmd>, aparece esta advertencia.
+  Al cambiar un diseño de tarjeta guardado con cifrado <Cmd>AES</Cmd> a <Cmd>DES/3DES</Cmd>, aparece esta advertencia.
 
-> <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
+  > <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
 
-Haz clic en el botón <Cmd sid='button.ok' product='2' /> para guardar los cambios. El sistema desactiva automáticamente la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' /> en los dispositivos que usan este diseño de tarjeta. Para más información sobre la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' />, consulta <DocLink docId='platform/biostar_x/settings-device-details-auth' />.
+  Haz clic en el botón <Cmd sid='button.ok' product='2' /> para guardar los cambios. El sistema desactiva automáticamente la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' /> en los dispositivos que usan este diseño de tarjeta. Para más información sobre la opción <Cmd sid='device.card.secureMessaging.enforce' product='2' />, consulta <DocLink docId='platform/biostar_x/settings-device-details-auth' />.
 
-:::
+  :::
 
 </Include>
 

@@ -761,6 +761,8 @@
   "arena.message.elevatorAlarmClearFailed": "엘리베이터 알람 해제 실패",
   "arena.message.fetchDoorStatusFailed": "출입문 상태 조회 실패",
   "arena.message.zoneControlFail.partialDeviceDisconnected": "일부 장치가 연결되지 않아 요청이 일부 장치에만 전달되었습니다.",
+  "arena.message.zoneEnableFailedWithName": "{{Name}} 활성화에 실패했습니다.",
+  "arena.message.zoneDisableFailedWithName": "{{Name}} 비활성화에 실패했습니다.",
   "arena.dialog.target": "사용자",
   "arena.dialog.clearAPB": "APB 해제",
   "arena.activeAlarm.activeAlarmEvents": "미확인 알람 이벤트",

@@ -759,6 +759,8 @@
   "arena.message.elevatorAlarmClearFailed": "Failed to clear elevator alarm.",
   "arena.message.fetchDoorStatusFailed": "Failed to fetch door status.",
   "arena.message.zoneControlFail.partialDeviceDisconnected": "The request reached only some devices. Some devices are not connected.",
+  "arena.message.zoneEnableFailedWithName": "Failed to enable {{Name}}.",
+  "arena.message.zoneDisableFailedWithName": "Failed to disable {{Name}}.",
   "arena.dialog.target": "User",
   "arena.dialog.clearAPB": "Clear APB",
   "arena.activeAlarm.activeAlarmEvents": "Active Alarm Events",
