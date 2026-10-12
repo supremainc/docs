@@ -5336,7 +5336,7 @@
   "ta.tempschedule.error.msg": "Apply failed user(s) is found due to another existing temporary schedule period overlap. <br> Click the below download button to check the user(s).",
   "ta.timeCard.modifyPunch.deviceName": "장치 이름",
   "ta.timeCard.modifyPunch.manualInput": "수동 입력",
-  "taAPI.tempLeave.failError.msg": "동일 근무 스케줄에 속하지 않는 사용자 들은 적용되지 않습니다.",
+  "taAPI.tempLeave.failError.msg": "동일 근무 스케줄에 속하지 않는 사용자들은 적용되지 않습니다.",
   "tab.payCode": "시간 규칙",
   "tab.report": "보고서",
   "tab.rule": "규칙",

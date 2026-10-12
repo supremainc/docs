@@ -3773,7 +3773,7 @@
   },
   "/img/biostarx-settings-credentail-custom-smart-format-type.png": {
     "width": 1000,
-    "height": 453
+    "height": 483
   },
   "/img/biostarx-settings-credentail-mobile-access-connection.png": {
     "width": 1200,
@@ -3801,23 +3801,23 @@
   },
   "/img/biostarx-settings-credentail-smart-format-add.png": {
     "width": 1200,
-    "height": 746
+    "height": 818
   },
   "/img/biostarx-settings-credentail-smart-format-info.png": {
     "width": 1200,
-    "height": 537
+    "height": 618
   },
   "/img/biostarx-settings-credentail-smart-format-type.png": {
     "width": 1000,
-    "height": 572
+    "height": 598
   },
   "/img/biostarx-settings-credential-cart-secondary-key.png": {
     "width": 600,
-    "height": 232
+    "height": 240
   },
   "/img/biostarx-settings-credential-custom-card-desfire.png": {
     "width": 800,
-    "height": 288
+    "height": 310
   },
   "/img/biostarx-settings-credential-custom-card-felica.png": {
     "width": 800,
@@ -3825,7 +3825,7 @@
   },
   "/img/biostarx-settings-credential-custom-card-mifare.png": {
     "width": 800,
-    "height": 262
+    "height": 276
   },
   "/img/biostarx-settings-credential-irface-group-match.png": {
     "width": 1200,
@@ -3833,7 +3833,7 @@
   },
   "/img/biostarx-settings-credential-smart-card-desfire.png": {
     "width": 800,
-    "height": 303
+    "height": 319
   },
   "/img/biostarx-settings-credential-smart-card-iclass.png": {
     "width": 800,
@@ -3845,7 +3845,7 @@
   },
   "/img/biostarx-settings-credential-smart-card-mifare.png": {
     "width": 800,
-    "height": 244
+    "height": 294
   },
   "/img/biostarx-settings-credential-wiegand-format.png": {
     "width": 1200,
@@ -14465,11 +14465,11 @@
   },
   "/img/en/biostarx-settings-credentail-smart-format-add.png": {
     "width": 1198,
-    "height": 751
+    "height": 839
   },
   "/img/en/biostarx-settings-credentail-smart-format-info.png": {
     "width": 1202,
-    "height": 557
+    "height": 642
   },
   "/img/en/biostarx-settings-credentail-smart-format-type.png": {
     "width": 1000,

@@ -1,6 +1,6 @@
 <Include type={props.type} ref='mifare,custom-mifare'>
 
-* <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Set encryption type to <Cmd>SL1</Cmd> or <Cmd>SL3</Cmd>.
+* <Cmd sid='setting.cardFormat.securityLevel' product='2' />: Set the security level to <Cmd>SL1</Cmd> or <Cmd>SL3</Cmd>.
 
 </Include>
 
@@ -32,21 +32,21 @@
 
 <Include type={props.type} ref='desfire,custom-desfire'>
 
-* <Cmd sid='setting.cardFormat.idField' product='2' />: Configure to read a specific area on the card. Acts as a directory containing <Cmd sid='setting.cardFormat.fileId' product='2' />.
+* <Cmd sid='setting.cardFormat.appId' product='2' />: Configure to read a specific area on the card. Acts as a directory containing <Cmd sid='setting.cardFormat.fileId' product='2' />.
 
 * <Cmd sid='setting.cardFormat.fileId' product='2' />: Set the file ID.
 
 * <Cmd sid='setting.cardFormat.encryptionType' product='2' />: Set the encryption type to <Cmd>DES/3DES</Cmd> or <Cmd>AES</Cmd>.
 
-:::info
+  :::info
 
-When changing a card layout saved with <Cmd>AES</Cmd> encryption to <Cmd>DES/3DES</Cmd>, the following warning pop-up appears.
+  When changing a card layout saved with <Cmd>AES</Cmd> encryption to <Cmd>DES/3DES</Cmd>, the following warning pop-up appears.
 
-> <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
+  > <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
 
-Click the <Cmd sid='button.ok' product='2' /> button to save the changes. The <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option turns off automatically for devices using this card layout. For more information about the <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option, see <DocLink docId='platform/biostar_x/settings-device-details-auth' />.
+  Click the <Cmd sid='button.ok' product='2' /> button to save the changes. The <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option turns off automatically for devices using this card layout. For more information about the <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option, see <DocLink docId='platform/biostar_x/settings-device-details-auth' />.
 
-:::
+  :::
 
 </Include>
 

@@ -1,6 +1,6 @@
 <Include type={props.type} ref='mifare,custom-mifare'>
 
-* <Cmd sid='setting.cardFormat.encryptionType' product='2' />：暗号化タイプを<Cmd>SL1</Cmd> または <Cmd>SL3</Cmd> に設定します。
+* <Cmd sid='setting.cardFormat.securityLevel' product='2' />：セキュリティレベルを <Cmd>SL1</Cmd> または <Cmd>SL3</Cmd> に設定できます。
 
 </Include>
 
@@ -38,15 +38,15 @@
 
 * <Cmd sid='setting.cardFormat.encryptionType' product='2' />：暗号化タイプを<Cmd>DES/3DES</Cmd> または <Cmd>AES</Cmd> に設定します。
 
-:::info
+  :::info
 
-暗号化タイプが<Cmd>AES</Cmd>で保存されているカードレイアウトを<Cmd>DES/3DES</Cmd>に変更すると、次の警告ポップアップが表示されます。
+  暗号化タイプが<Cmd>AES</Cmd>で保存されているカードレイアウトを<Cmd>DES/3DES</Cmd>に変更すると、次の警告ポップアップが表示されます。
 
-> <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
+  > <Cmd sid='setting.cardFormat.secureMessaging.disableWarn' product='2' />
 
-<Cmd sid='button.ok' product='2' />ボタンをクリックすると、変更内容を保存し、このカードレイアウトを使用するデバイスの<Cmd sid='device.card.secureMessaging.enforce' product='2' />オプションを自動的にオフにします。 <Cmd sid='device.card.secureMessaging.enforce' product='2' /> オプションの詳細については、<DocLink docId='platform/biostar_x/settings-device-details-auth' />をご参照ください。
+  <Cmd sid='button.ok' product='2' />ボタンをクリックすると、変更内容を保存し、このカードレイアウトを使用するデバイスの<Cmd sid='device.card.secureMessaging.enforce' product='2' />オプションを自動的にオフにします。 <Cmd sid='device.card.secureMessaging.enforce' product='2' /> オプションの詳細については、<DocLink docId='platform/biostar_x/settings-device-details-auth' />をご参照ください。
 
-:::
+  :::
 
 </Include>
 
