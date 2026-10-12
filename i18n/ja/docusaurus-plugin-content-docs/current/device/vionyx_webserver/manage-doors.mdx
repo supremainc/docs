@@ -20,6 +20,8 @@ description: カメラが制御するドアを登録し、アクセス制御イ�
 
 ドアを登録する前に、次の事項を確認してください。
 
+* カメラごとにドアを最大10個まで登録できます。カメラが制御するドア数を事前に確認してください。
+
 * 入退室判定に使用するアクセス制御イベントを先に作成してください。詳しくは、<DocLink docId='device/vionyx_webserver/configure-access-control' />を参照してください。
 
 * ドアの錠前が、カメラまたは下位I/Oデバイスのリレーポートに接続されていることを確認してください。下位I/Oデバイスを使用するには、先にRS-485経由でデバイスを登録してください。詳しくは、<DocLink docId='device/vionyx_webserver/configure-rs485' />を参照してください。
@@ -172,7 +174,13 @@ description: カメラが制御するドアを登録し、アクセス制御イ�
 
 * <Cmd sid='unlock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを解錠したままにします。来訪者が多い業務時間にロビーのドアを解錠しておく場合に使用してください。
 
-* <Cmd sid='lock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを施錠したままにします。この時間帯は、登録済みのユーザーも入退室できません。
+* <Cmd sid='lock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを施錠したままにします。この時間帯は、登録済みのユーザーも入退室できず、退室ボタンも動作しません。
+
+:::caution
+
+<Cmd sid='lock_schedule' product='cam' />で設定した時間帯は、室内にいる人が退室ボタンで退出できません。室内に人が残る可能性がある時間帯には、<Cmd sid='lock_schedule' product='cam' />を指定しないでください。ドアを開ける必要がある場合は、<Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' />メニューで<Cmd sid='manual_unlock' product='cam' />を実行してください。詳しくは、<DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />を参照してください。
+
+:::
 
 :::info
 
