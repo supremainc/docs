@@ -20,6 +20,8 @@ Agregue la puerta en los siguientes casos.
 
 Revise lo siguiente antes de agregar una puerta.
 
+* Cada cámara permite registrar hasta 10 puertas. Verifique cuántas puertas controlará la cámara antes de la configuración.
+
 * Cree primero el evento de control de acceso para decidir el acceso. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/configure-access-control' />.
 
 * Asegúrese de que la cerradura de la puerta se conecte a un puerto de relé en la cámara o en el dispositivo de E/S secundario. Para usar un dispositivo de E/S secundario, agréguelo primero vía RS-485. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/configure-rs485' />.
@@ -172,7 +174,13 @@ En la sección <Cmd sid='schedule' product='cam' />, configure la puerta para qu
 
 * <Cmd sid='unlock_schedule' product='cam' />: Mantenga la puerta desbloqueada durante el horario seleccionado. Úselo para mantener la puerta del vestíbulo desbloqueada durante las horas de mayor actividad.
 
-* <Cmd sid='lock_schedule' product='cam' />: Mantenga la puerta bloqueada durante el horario seleccionado. En esta zona horaria, los usuarios inscritos no pueden acceder.
+* <Cmd sid='lock_schedule' product='cam' />: Mantenga la puerta bloqueada durante el horario seleccionado. En esta franja horaria, los usuarios inscritos no pueden acceder, y el botón Salir no funciona.
+
+:::caution
+
+Durante el período establecido en <Cmd sid='lock_schedule' product='cam' />, las personas dentro no pueden salir con el botón Salir. No establezca <Cmd sid='lock_schedule' product='cam' /> para un período en el que las personas puedan permanecer dentro. Para abrir una puerta, ejecute <Cmd sid='manual_unlock' product='cam' /> desde <Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' />. Para más información, consulte <DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />.
+
+:::
 
 :::info
 
