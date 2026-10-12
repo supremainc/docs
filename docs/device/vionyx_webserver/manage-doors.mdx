@@ -20,6 +20,8 @@ description: 카메라가 제어할 출입문을 등록하고, 출입 통제 이
 
 출입문을 등록하기 전에 아래 사항을 확인하세요.
 
+* 카메라당 출입문을 최대 10개까지 등록할 수 있습니다. 카메라가 제어할 출입문 수를 미리 확인하세요.
+
 * 출입 판단에 사용할 출입 통제 이벤트를 먼저 생성하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/configure-access-control' />를 참고하세요.
 
 * 출입문 잠금 장치가 카메라 또는 하위 I/O 장치의 릴레이 포트에 연결되어 있는지 확인하세요. 하위 I/O 장치를 사용하려면 먼저 RS-485로 장치를 등록해야 합니다. 자세한 내용은 <DocLink docId='device/vionyx_webserver/configure-rs485' />를 참고하세요.
@@ -173,7 +175,13 @@ description: 카메라가 제어할 출입문을 등록하고, 출입 통제 이
 
 * <Cmd sid='unlock_schedule' product='cam' />: 선택한 일정의 시간대에는 출입문을 계속 열어 둡니다. 방문객이 많은 업무 시간에 로비 출입문을 열어 둘 때 사용하세요.
 
-* <Cmd sid='lock_schedule' product='cam' />: 선택한 일정의 시간대에는 출입문을 계속 잠가 둡니다. 이 시간대에는 등록된 사용자도 출입할 수 없습니다.
+* <Cmd sid='lock_schedule' product='cam' />: 선택한 일정의 시간대에는 출입문을 계속 잠가 둡니다. 이 시간대에는 등록된 사용자도 출입할 수 없으며, 퇴실 버튼도 동작하지 않습니다.
+
+:::caution
+
+<Cmd sid='lock_schedule' product='cam' />로 설정한 시간대에는 실내에 있는 사람이 퇴실 버튼으로 나갈 수 없습니다. 실내에 사람이 남아 있을 수 있는 시간대에는 <Cmd sid='lock_schedule' product='cam' />을 지정하지 마세요. 출입문을 열어야 할 때는 <Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' /> 메뉴에서 <Cmd sid='manual_unlock' product='cam' />를 실행하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />를 참고하세요.
+
+:::
 
 :::info
 
