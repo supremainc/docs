@@ -14,7 +14,7 @@ import { useIsMobile } from './hooks';
 import { toDisplayUrl, prettyJson } from './utils';
 import { METHOD_COLORS, SECTION_LABEL } from './constants';
 
-export default function RequestDetail({ item, onSelect, auth, serverUrl }) {
+export default function RequestDetail({ item, hrefOf, auth, serverUrl }) {
   // hooks는 조건문 이전에 항상 호출
   const isMobile = useIsMobile();
 
@@ -43,11 +43,11 @@ export default function RequestDetail({ item, onSelect, auth, serverUrl }) {
                         textTransform: 'uppercase', letterSpacing: '0.06em',
                         borderBottom: '1px solid var(--ifm-color-emphasis-200)',
                       }}>{child.name}</div>
-                      {child.item.map(req => <EndpointRow key={req.name} req={req} onSelect={onSelect} />)}
+                      {child.item.map(req => <EndpointRow key={req.name} req={req} hrefOf={hrefOf} />)}
                     </div>
                   );
                 }
-                return <EndpointRow key={child.name} req={child} onSelect={onSelect} />;
+                return <EndpointRow key={child.name} req={child} hrefOf={hrefOf} />;
               })}
             </div>
           </div>

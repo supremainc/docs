@@ -1,17 +1,18 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import MethodBadge from './MethodBadge';
 import DeprecatedBadge from './DeprecatedBadge';
 
-export default function EndpointRow({ req, onSelect }) {
+export default function EndpointRow({ req, hrefOf }) {
   const method = req.request?.method;
   const desc = req.request?.description;
   const shortDesc = typeof desc === 'string' ? desc.split('\n')[0].replace(/\*\*/g, '').trim().replace('#### ', '') : '';
   return (
-    <button onClick={() => onSelect(req)} style={{
+    <Link to={hrefOf(req)} style={{
       display: 'flex', alignItems: 'flex-start', gap: 12, width: '100%',
       padding: '12px 16px', background: 'none', border: 'none',
       borderBottom: '1px solid var(--ifm-color-emphasis-200)',
-      cursor: 'pointer', textAlign: 'left',
+      cursor: 'pointer', textAlign: 'left', textDecoration: 'none',
       opacity: req.deprecated ? 0.6 : 1,
     }}>
       <span style={{ flexShrink: 0, marginTop: 2, width: 50 }}><MethodBadge method={method} compact /></span>
@@ -31,6 +32,6 @@ export default function EndpointRow({ req, onSelect }) {
           </span>
         )}
       </span>
-    </button>
+    </Link>
   );
 }

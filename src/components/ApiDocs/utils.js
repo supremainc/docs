@@ -23,25 +23,17 @@ export function prettyJson(raw) {
   catch { return raw.replace(/\r\n/g, '\n'); }
 }
 
-export function toSlug(name) {
-  return (name || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-');
-}
-
 export function findParentKeys(selected, folders) {
   if (!selected) return null;
   for (const folder of folders || []) {
-    if (selected._folder?.name === folder.name) return { folder: folder.name };
+    if (selected._folder === folder) return { folder: folder.name };
     for (const child of folder.item || []) {
       if (child.item?.length > 0) {
-        if (selected._folder?.name === child.name) return { folder: folder.name, sub: `${folder.name}::${child.name}` };
+        if (selected._folder === child) return { folder: folder.name, sub: `${folder.name}::${child.name}` };
         for (const req of child.item) {
-          if (req.name === selected.name) return { folder: folder.name, sub: `${folder.name}::${child.name}` };
+          if (req === selected) return { folder: folder.name, sub: `${folder.name}::${child.name}` };
         }
-      } else if (child.name === selected.name) {
+      } else if (child === selected) {
         return { folder: folder.name };
       }
     }

@@ -115,6 +115,9 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
+            ...(!isPreview ? [
+            'device/xpass_2_v2/**.{md,mdx}',
+            ] : []),
           ],
           remarkPlugins: [
             [remarkCmd, { locale: locale || 'ko' }],
@@ -178,6 +181,8 @@ const config = {
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
     ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
+    // API 레퍼런스(/developer/{api})와 엔드포인트별 정적 페이지 생성
+    './src/plugins/api-docs-routes',
     [ 'docusaurus-plugin-image-zoom', {}],
     // 쿠키 동의 배너: GA4(gtag)에 대한 동의를 받기 위한 용도이므로 gtag와 동일하게 프로덕션에서만 활성화.
     // Google Analytics(gtag) 플러그인보다 반드시 먼저 로드되어야 함

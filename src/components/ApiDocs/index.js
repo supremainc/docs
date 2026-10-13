@@ -13,4 +13,5 @@ export { default as RequestDetail } from './RequestDetail';
 export { default as WelcomeScreen } from './WelcomeScreen';
 export * from './constants';
 export * from './utils';
+export * from './slug';
 export { useIsMobile } from './hooks';
