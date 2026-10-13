@@ -816,6 +816,10 @@ details.deviceInfo summary, details.faq summary {
   height: 300px !important;
 }
 
+.doc-content img[src*='cables-layout-xp2v2'] {
+  width: 600px !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
