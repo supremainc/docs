@@ -3058,10 +3058,11 @@ function createSidebars(preview) {
   ]
 };
 
-  // Preview가 아니면 조건부 사이드바 제거 (빌드 최적화)
-  // if (!preview) {
-  //   delete sidebars.clueportal;
-  // }
+//   Preview가 아니면 조건부 사이드바 제거 (빌드 최적화)
+  if (!preview) {
+    delete sidebars.xpass2_v2;
+  }
+  
   return sidebars;
 }
 
