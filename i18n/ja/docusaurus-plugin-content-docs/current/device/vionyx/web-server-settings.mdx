@@ -16,83 +16,79 @@ ViOnyx Web Server に初めて接続してパスワードを設定し、ログ�
 
 * カメラと同じネットワークに接続されたコンピューターで操作してください。
 
-* 工場出荷状態に初期化した後に IP アドレスが割り当てられない場合は、デフォルト IP アドレス（`https://192.168.1.100`）に変更されます。こちらのアドレスを使用して接続してください。
+* 工場出荷状態に初期化した後、IP アドレスを割り当てられない場合、基本 IP アドレス（`https://192.168.1.100`）に切り替わります。Web ブラウザーでそのアドレスにアクセスしてください。
 
 :::
 
 1. [Suprema 営業所](https://www.supremainc.com/jp/support/main.asp)にインストールパッケージ (*VionyxTool.zip*) を依頼してください。
 
-2. インストールファイルの圧縮を解凍した後、*vionyx_tool.exe* を実行してください。
+2. インストールファイルの圧縮を解凍した後、*ViOnyxTool_X.X.X.exe* を実行してください。
 
-   <Image src="/img/camera/web-server-settings1.png" width='80%' alone />
+   <ProdImg src="/img/camera/web-server-settings1.png" width={800} />
 
-3. **Search for Cameras** をクリックしてください。
+3. **カメラを検索**をクリックしてください。
 
-4. 検出されたカメラ一覧から接続するカメラのシリアル番号（**DEVICE ID**）を探し、IPアドレス（**IP ADDRESS**）を確認してください。
+4. 検出されたカメラ一覧から接続するカメラのシリアル番号（**DEVICE ID**）を探し、IP アドレス（**IP ADDRESS**）を確認してください。
 
-   <Image src="/img/camera/web-server-settings2.png" width='80%' alone />
+   <ProdImg src="/img/camera/web-server-settings2.png" width={800} />
 
-5. Web ブラウザを起動します。
-
-6. アドレスバーに`https://`を含むカメラのIPアドレス（**IP ADDRESS**）を入力して、**Enter**キーを押してください。
+5. Web ブラウザーで、カメラに割り当てた IP アドレス（`https://{IP ADDRESS}`）にアクセスしてください。
 
    > 例: `https://192.168.1.100/`
 
-7. ViOnyx Web Server の画面が表示されます。
+6. ViOnyx Web Server の画面が表示されます。
 
 ## パスワードの設定
 
 初回接続時にパスワードを設定してください。
 
-1. [カメラの Web サーバーに接続する](#access-web-server)を参照して、Web ブラウザで ViOnyx Web Server の `https://IPアドレス`にアクセスしてください。
+1. [カメラの Web サーバーに接続する](#access-web-server)を参照して、Web ブラウザーで、カメラに割り当てた IP アドレス（`https://{IP ADDRESS}`）にアクセスしてください。
 
    > 例: `https://192.168.1.100/`
 
-   <ProdImg src="/img/camera/password-setting1-vionyx.png" />
+   <ProdImg src="/img/camera/password-setting1-vionyx.png" width={572} />
 
-2. <Cmd sid='password' product='cam' /> 入力欄にパスワードを入力してください。
-
-3. <Cmd sid='confirm_password' product='cam' /> 入力欄に同じパスワードをもう一度入力してください。
-
-4. 入力したパスワードが以下の要件をすべて満たしていることを確認してください。
+2. 以下のパスワード要件を確認してから、<Cmd sid='password' product='cam' /> 入力欄にパスワードを入力してください。
 
    :::note
 
    **パスワード要件**
 
-   * **パスワード確認**: <Cmd sid='password' product='cam' /> と <Cmd sid='confirm_password' product='cam' /> 入力欄の値が正確に一致している必要があります。
-
-   * **長さ**: 12文字以上64文字以下で入力してください。
+   * **長さ**: 12 文字以上 64 文字以下で入力してください。
 
    * **文字の組み合わせ**: 英大文字(A-Z)、英小文字(a-z)、数字(0-9)、記号(`"` `!` `@` `#` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`)をそれぞれ1文字以上含める必要があります。
 
-     * 空白、ハングル文字、その他のUnicode文字は使用できません。
+      * 空白、ハングル文字、その他のUnicode文字は使用できません。
 
    * **セキュリティ規則**: セキュリティ上の脆弱性を防ぐため、次のパターンは使用できません。
 
-     * 4文字以上の連続した文字または数字（例：abcd、1234、4321）
+      * 4 文字以上の連続した文字または数字（例：abcd、1234、4321）
 
-     * 同じ文字や数字が4回以上連続している（例：aaaa、1111）
+      * 同じ文字や数字が 4 回以上連続している（例：aaaa、1111）
 
-     * ユーザーIDを含む（大文字と小文字は区別されません）
+      * ユーザー ID を含む（大文字と小文字は区別されません）
 
-     * 推測されやすい一般的な単語やパターン（例：password、qwerty）
+      * 推測されやすい一般的な単語やパターン（例：password、qwerty）
+
+   * **パスワード確認**: <Cmd sid='password' product='cam' /> と <Cmd sid='confirm_password' product='cam' /> 入力欄の値が正確に一致している必要があります。
 
    :::
 
-5. すべての条件が満たされると、<Cmd sid='submit' product='cam' /> ボタンが有効になります。 ボタンをクリックしてパスワードの設定を完了してください。
+3. <Cmd sid='confirm_password' product='cam' /> 入力欄に同じパスワードをもう一度入力してください。
+
+4. すべてのパスワード要件が満たされると、<Cmd sid='submit' product='cam' /> ボタンが有効になります。ボタンをクリックしてパスワードの設定を完了してください。
 
 :::caution
 
-パスワードを紛失しないようご注意ください。 パスワードを紛失した場合は、カメラを初期化する必要があります。
+パスワードを紛失しないようご注意ください。パスワードを紛失した場合は、カメラを初期化する必要があります。
 
 :::
 
 ## ログインする
 
-パスワードの設定が完了すると、ログインページへ自動的に移動します。 管理者IDと設定したパスワードを入力して、ViOnyx Web Server に接続してください。
+パスワードの設定が完了すると、ログインページへ自動的に移動します。管理者 ID と設定したパスワードを入力して、ViOnyx Web Server に接続してください。
 
-<ProdImg src="/img/camera/password-setting2-vionyx.png" />
+<ProdImg src="/img/camera/password-setting2-vionyx.png" width={572} />
 
 1. <Cmd sid='id' product='cam' /> 入力欄に **admin** を入力してください。
 
@@ -100,6 +96,6 @@ ViOnyx Web Server に初めて接続してパスワードを設定し、ログ�
 
 2. <Cmd sid='password' product='cam' /> 入力欄に設定したパスワードを入力してください。
 
-3. <Cmd sid='sign_in' product='cam' /> ボタンをクリックしてください。 ログインに成功すると、ViOnyx Web Server のカメラのライブビューア画面が表示されます。
+3. <Cmd sid='sign_in' product='cam' /> ボタンをクリックしてください。ログインに成功すると、ViOnyx Web Server のカメラのライブビューア画面が表示されます。
 
 4. [ViOnyx Web Server](../vionyx_webserver) を参照してカメラを設定してください。
