@@ -107,7 +107,7 @@ To ensure proper operation of the Plugin, please enable RIO protocol for Synergi
 
    :::note
    
-   When the RIO protocol is enabled, the **RIO** tab becomes available on the **Hardware** page under **Config Tool** → **Access Control** → **Cloud Link**. 
+   When the RIO protocol is enabled, the **RIO** tab becomes available on the **Hardware** page under **Config Tool** → **Access control** → **Cloud Link**. 
 
    <Image src='/img/integration/genetec/rio-protocol-hardware.png' width={800} alone />
 
@@ -117,7 +117,7 @@ To ensure proper operation of the Plugin, please enable RIO protocol for Synergi
 
 If you'd like to **extract face templates from cardholder profile images** in GSC, please adjust picture size to ensure picture quality.
 
-* Path: **Config Tool** → **Access Control** → **General settings**
+* Path: **Config Tool** → **Access control** → **General settings**
 
    <Image src='/img/integration/genetec/profile-image-quality-setting.png' width={600} alone />
 
@@ -609,7 +609,7 @@ You can set the detailed settings of SIP Intercom.
 
 ## Assign Device to Cloud Link
 
-1. In the **Config Tool**, click the **Access Control** under **Tasks**.
+1. In the **Config Tool**, click the **Access control** under **Tasks**.
 
    <Image src='/img/integration/genetec/config-tool-tasks-access-control.png' width={800} alone />
 
@@ -639,15 +639,220 @@ You can set the detailed settings of SIP Intercom.
 
    <Image src='/img/integration/genetec/card-format-setting2.png' width={800} alone />
 
-   * Byte Order: Supports MSB or LSB
+   * **Byte Order**: Supports **MSB** or **LSB**.
 
-   * CSN Card_Format type: After enabling the **CSN Card_Format type** and selecting a Wiegand format, the **Plugin converts the card data received from the device into the selected Wiegand format and delivers it to the Cloud Link**.
+   * CSN Card\_**Format type**: After enabling the CSN Card\_**Format type** and selecting a Wiegand format, the **Plugin converts the card data received from the device into the selected Wiegand format and delivers it to the Cloud Link**.
 
    * Wiegand Card Setting: Devices can read wiegand cards based on the **selected Wiegand Card Format**.
 
    * Custom Credential: When using a Custom Credential Format, compatibility with Suprema devices must be verified in advance.
 
 1. Click **Save button** to set selected card type and format into all devices.
+
+### Wiegand Card Setting
+
+Add a Wiegand card format for Suprema devices.
+
+1. Go to **Config Tool** → **Tasks** → **Suprema Plugin Configurations** → Wiegand Format tab.
+
+   <Image src='/img/integration/genetec/card-format-setting.png' width={800} alone />
+
+2. Click **+ Add** button.
+
+   <Image src='/img/integration/genetec/card-format-setting-wiegand.png' alone />
+
+   * **Information**: Enter **Name**, **Description**, and **Total Bits**. To use a facility code, check **Facility Code Field** and set its **Start Bit** and **End Bit**.
+
+   * **ID Field**: Set the **Start Bit** and **End Bit** of the ID. Click **+ Add** to add more ID fields.
+
+   * **Parity Bits**: Click **+ Add** and set **Position**, **Type** (**Odd** / **Even**), **Start Bit**, and **End Bit**.
+
+   * **Genetec Mapping**: Enter the **Genetec Card Format Name**, then click **+ Add** to add each field (e.g., FC, CN, IL) and set its **Start Bit**, **Length**, **Reverse**, and **Output Order**.
+
+3. Click **Apply**.
+
+:::info
+
+* **Genetec Card Format Name** must be exactly the same as the name of the custom card format configured in **Config Tool** → **Access control** → **General settings**.
+
+* Set each **Genetec Mapping** field (**Start Bit**, **Length**, **Reverse**, **Output Order**) the same as the corresponding field of that custom card format. The field names (FC, CN, IL, etc.) do not need to match.
+
+* **Total Bits** must be entered before adding **Parity Bits**.
+
+* Up to 15 Wiegand formats can be used. Predefined formats cannot be modified or deleted.
+
+:::
+
+### Suprema Smart Card Setting
+
+Set the layout of Suprema smart cards (**MIFARE**, **iCLASS**, **DESFire**, **iCLASS Seos**).
+
+1. Go to **Config Tool** → **Tasks** → **Suprema Plugin Configurations** → Smart Card tab.
+
+   <Image src='/img/integration/genetec/card-format-setting.png' width={800} alone />
+
+2. Click **+ Add** button.
+
+3. When the **Add New Smart Card** window appears, set **Smart Card Type** to **Suprema Smart Card**.
+
+   <Image src='/img/integration/genetec/card-format-setting-smart.png' alone />
+
+3. Enter **Name**. To use a secondary site key, set **Secondary Key** to **Active**.
+
+4. Select the card tab and configure the options.
+
+   <details>
+   <summary>MIFARE</summary>
+
+   {/* * **Encryption Type** : Set the encryption type to **SL1** or **SL3**. */}
+   
+   * **Primary Key**: The key that encrypts communication between the smart card and the card reader.
+
+   * **Secondary Key**: Used for authentication when the card's primary site key does not match.
+
+   * **Start Block Index**: The starting block where user information and templates are saved.
+
+   </details>
+
+   <details>
+   <summary>iCLASS</summary>
+
+   * **Primary Key**: The key that encrypts communication between the smart card and the card reader.
+
+   * **Secondary Key**: Used for authentication when the card's primary site key does not match.
+
+   * **Start Block Index**: The starting block where user information and templates are saved.
+
+   </details>
+
+   <details>
+   <summary>DESFire</summary>
+
+   * **DESFire Advanced**: You can use DESFire cards issued by third parties. Only DESFire can be configured.
+
+   * **Primary Key**: The key that encrypts communication between the smart card and the card reader.
+
+   * **Secondary Key**: Used for authentication when the card's primary site key does not match.
+
+   * **App ID**: Configure to read a specific area on the card. Acts as a directory containing **File ID**.
+
+   * **File ID**: Set the file ID.
+
+   * **Encryption Type**: Set the encryption type to **DES/3DES** or **AES**.
+
+   </details>
+
+   <details>
+   <summary>iClass Seos</summary>
+
+   * **Primary Key**: The key that encrypts communication between the smart card and the card reader.
+
+   * **Secondary Key**: Used for authentication when the card's primary site key does not match.
+
+   * **ADF Address Value**: The ADF address where digital credentials are stored.
+
+   </details>
+
+5. In the **Layout**, set the number and size of fingerprint and face templates that can be written to an Access On Card.
+
+   * **Template Count**: Set the number of fingerprint templates to include in the layout.
+
+   * **Template Size**: Set the number of bytes used by each fingerprint template.
+
+   * **Use Face Template**: Choose whether to use the face template.
+
+   * **Face Template Size**: Set the number of bytes used by the face template.
+
+5. Click **Apply**.
+
+:::info
+
+* Key values must be 2–96 characters and converted to HEX before applying. Enter the key in the input field on the right, click **Convert to HEX**, and use the **Converting Result** as the key.
+
+* **Use Face Template** is available on BioStation 3 Max, BioEntry W3, BioStation 3, and FaceStation F2.
+
+* To use **DESFire Advanced**, please accurately enter the information for **App Master Key**, **App Master Key Index**, **File Read Access Key**, **File Read Access Key Index**, **File Write Access Key**, **File Write Access Key Index**, **App ID**, **File ID**, **Encryption Type**.
+
+:::
+
+### Custom Smart Card Setting
+
+Set the layout of smart cards issued by third parties. Custom smart cards support **MIFARE**, **DESFire**, and **FeliCa**.
+
+1. Go to **Config Tool** → **Tasks** → **Suprema Plugin Configurations** → Smart Card tab.
+
+   <Image src='/img/integration/genetec/card-format-setting.png' width={800} alone />
+
+2. Click **+ Add** button.
+
+3. When the **Add New Smart Card** window appears, set **Smart Card Type** to **Custom Smart Card**.
+
+   <Image src='/img/integration/genetec/card-format-setting-custom.png' alone />
+
+4. Enter **Name**. To use a secondary site key, set **Secondary Key** to **Active**.
+
+4. Select the card tab and configure the options.
+
+   <details>
+   <summary>MIFARE</summary>
+
+   {/* * **Encryption Type** : Set the encryption type to **SL1** or **SL3**. */}
+   
+   * **Primary Key**: The key that encrypts communication between the smart card and the card reader.
+
+   * **Secondary Key**: Used for authentication when the card's primary site key does not match.
+
+   * **Start Block Index**: The starting block where user information and templates are saved.
+
+   * **Skip Bytes**: Set the starting point for reading the card number.
+
+   * **Data Size**: Configure the data size of the card to be read.
+
+   </details>
+
+   <details>
+   <summary>DESFire</summary>
+
+   * **DESFire Advanced**: You can use DESFire cards issued by third parties. Only DESFire can be configured.
+
+   * **Primary Key**: The key that encrypts communication between the smart card and the card reader.
+
+   * **Secondary Key**: Used for authentication when the card's primary site key does not match.
+
+   * **App ID**: Configure to read a specific area on the card. Acts as a directory containing **File ID**.
+
+   * **File ID**: Set the file ID.
+
+   * **Encryption Type**: Set the encryption type to **DES/3DES** or **AES**.
+
+   * **Skip Bytes**: Set the starting point for reading the card number.
+
+   * **Data Size**: Configure the data size of the card to be read.
+
+   </details>
+
+   <details>
+   <summary>Felica</summary>
+
+   * **System Code**: Enter the system code to read FeliCa cards in hexadecimal, with a maximum of 4 characters.
+
+   * **Service Code**: Enter the service code to read FeliCa cards in hexadecimal, with a maximum of 4 characters.
+
+   * **ID Field**: Set the blocks to read from the card. Click **+ Add** to set up to 8 blocks (**Block Number** 0–150).
+
+   </details>
+
+6. Click **Apply**.
+
+:::info
+
+* Key values must be 2–96 characters and converted to HEX before applying (**Convert to HEX**).
+
+* FeliCa is supported only on BioStation 3 firmware version 1.3.0 or later.
+
+* To use **DESFire Advanced**, please accurately enter the information for **App Master Key**, **App Master Key Index**, **File Read Access Key**, **File Read Access Key Index**, **File Write Access Key**, **File Write Access Key Index**, **App ID**, **File ID**, **Encryption Type**.
+
+:::
 
 ## Door Configuration
 
@@ -679,7 +884,7 @@ Root Cause:
 
 Any input type changes made via:
 
-**Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
+**Config Tool** → **Access control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
 
 <br/>
 
