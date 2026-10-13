@@ -160,3 +160,87 @@ If you do not follow the on-screen instructions, face enrollment may take a long
 1. Click the **Search** button.
 
 1. All cardholders who have face templates appear.
+
+## Private Authentication Mode
+
+Set a different authentication mode for each user, in addition to or instead of the device’s default authentication mode.
+
+1. In the **Enrolment Credentials** window, click **Private Auth**.
+
+   <Image src='/img/integration/genetec/enrolment-credentials-private-auth.png' width={800} alone />
+
+2. In the **Private Auth Mode** window, turn on **Private Mode**.
+
+   <Image src='/img/integration/genetec/private-auth-mode1.png' width={900} alone />
+
+3. Click **+ Add**. The **Add New Auth Mode** window appears.
+
+4. Set **Extended Auth Mode** if needed.
+
+   <Image src='/img/integration/genetec/private-auth-mode2.png' width={900} alone />
+
+   * **Not Use**: **Biometrics** (fingerprint or face) is used as one credential.
+
+   * **Use**: **Fingerprint** and **Face / Visual Face** can be combined as separate credentials.
+
+5. Drag the desired credentials (**Biometrics**, **Fingerprint**, **Face / Visual Face**, **Card**, **ID**, **PIN**) to the center area to make an authentication mode, then click **OK**.
+
+6. Set **Include Device Default Authentication Mode**.
+
+   * ON: Both the device default authentication modes and the private authentication modes are used.
+
+   * OFF: Only the private authentication modes are used.
+
+7. Check the added modes in the **Auth Mode** list, then click **Save**.
+
+:::info
+
+**Extended Auth Mode** is only supported by FaceStation F2, BioStation 3, and BioEntry W3.
+
+:::
+
+## AoC Enrollment (Access On Card)
+
+Select Access On Card to store user information on the card. This includes card ID, PIN, access group, period, fingerprint template, face template, and private authentication mode.
+
+Before issuing, configure the smart card format (Smart Card Setting) and apply it to the device used for enrollment.
+
+1. In the **Enrolment Credentials** window, click **AoC Enrollment**.
+
+   <Image src='/img/integration/genetec/enrolment-credentials-aoc-enrollment.png' width={800} alone />
+
+2. When the **Enroll Card** window appears, select Smart Card from the **Card Type** options.
+
+   <Image src='/img/integration/genetec/aoc-enroll-card.png' width={900} alone />
+
+3. Select the device for card enrollment from the **Device** field.
+
+4. Once selected, the card layout format set on the device is displayed in the **Card Layout Format** field.
+
+5. Select **Access On Card** from the **Smart Card Type** options.
+
+6. Select a fingerprint or face template if available. If no template is available, skip this step.
+
+   * **Fingerprint Template on Card**: Check **Use**, then check **Select** for each finger to write. Check **Duress** for a duress fingerprint.
+
+      <Image src='/img/integration/genetec/aoc-enroll-card1.png' width={900} alone />
+
+   * **Face Template on Card**: Check **Use**, then check *Select* for the face template to write.
+
+      <Image src='/img/integration/genetec/aoc-enroll-card2.png' width={900} alone />
+
+7. (Optional) **Private Authentication Mode**: Click **+ Add** to add authentication rules written to the smart card.
+
+   <Image src='/img/integration/genetec/aoc-enroll-card3.png' width={900} alone />
+
+8. Click the **Write Smart Card** button.
+
+:::info
+
+* The cardholder must have an access rule and biometric data (fingerprint or face) enrolled before an **Access On Card** can be issued.
+
+* **Access On Card** cannot set the card ID manually.
+
+* The **Fingerprint Template on Card** and **Face Template on Card** sections follow the card layout (Template Count, Use Face Template).
+
+:::
