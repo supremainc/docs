@@ -117,7 +117,7 @@ const config = {
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
             ...(!isPreview ? [
-            '/device/xpass_2_v2/**.{md,mdx}',
+            'device/xpass_2_v2/**.{md,mdx}',
           ] : []),
           ],
           remarkPlugins: [
