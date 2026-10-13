@@ -666,47 +666,21 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '플러그인',
+          label: '근태 관리 사용하기',
           link: {
             type: 'doc',
-            id: 'platform/biostar_x/plugins',
+            id: 'platform/biostar_x/tna',
           },
           items: [
-            {
-              type: 'category',
-              label: '근태 관리 사용하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/tna',
-              },
-              items: [
-                'platform/biostar_x/tna-rule-setting',
-                'platform/biostar_x/tna-rule-shift-paycode',
-                'platform/biostar_x/tna-rule-shift-day',
-                'platform/biostar_x/tna-rule-shift-schedule',
-                'platform/biostar_x/tna-rule-shift-overtime',
-                'platform/biostar_x/tna-rule-schedule',
-                'platform/biostar_x/tna-report',
-                'platform/biostar_x/tna-report-edit',
-                'platform/biostar_x/tna-settings'
-              ]
-            },
-            // {
-            //   type: 'category',
-            //   label: '방문자 신청 및 관리하기',
-            //   link: {
-            //     type: 'doc',
-            //     id: 'platform/biostar_x/visitor',
-            //   },
-            //   items: [
-            //     'platform/biostar_x/visitor-register',
-            //     'platform/biostar_x/visitor-register-manage',
-            //     'platform/biostar_x/visitor-register-checkin-manage',
-            //     'platform/biostar_x/visitor-register-checkout-manage',
-            //     'platform/biostar_x/visitor-register-all-manage',
-            //     'platform/biostar_x/visitor-remove-expire-personal'
-            //   ]
-            // }
+            'platform/biostar_x/tna-rule-setting',
+            'platform/biostar_x/tna-rule-shift-paycode',
+            'platform/biostar_x/tna-rule-shift-day',
+            'platform/biostar_x/tna-rule-shift-schedule',
+            'platform/biostar_x/tna-rule-shift-overtime',
+            'platform/biostar_x/tna-rule-schedule',
+            'platform/biostar_x/tna-report',
+            'platform/biostar_x/tna-report-edit',
+            'platform/biostar_x/tna-settings'
           ]
         },
         {

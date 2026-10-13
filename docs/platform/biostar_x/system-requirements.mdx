@@ -20,17 +20,16 @@ keywords: [ 시스템 최소 요구사항, 운영체제, 데이터베이스, CPU
 
 메인 서버는 **BioStar X**의 중앙 관리 시스템이 설치되는 서버입니다. 사용자가 웹 브라우저로 접속하여 시스템을 관리하고, 사용자 정보나 출입 권한 설정 등의 모든 업무를 처리합니다. 또한 시스템 전체의 상태를 모니터링하고, 이벤트 로그나 알람을 관리하는 역할을 담당합니다.
 
-<div className='overflow-x col5--15-10-25'>
+<div className='overflow-x'>
 
-| \> | 항목 | 소규모 조직 | 중규모 조직 | 대규모 조직 |
-| -- | -- | -- | -- | -- |
-| 사용 환경 | 장치 수 | 1 - 50 대 | 51 - 100 대 | 101 - 1,000 대 |
-| 시스템 환경 | 운영체제 | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025 |
-| ^ | 데이터베이스 | \> | \> | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
-| ^ | CPU | 2.3GHz 6코어 | 2.3GHz 8코어 | 최소 2.3GHz<br/>권장 4.0GHz 16코어 |
-| ^ | RAM | 16GB | 32GB | 최소 64GB<br/>권장 128GB |
-| ^ | SSD | 256GB | 512GB | 1TB |
-| ^ | HDD | \> | \> | <Cmd sid='common.imageLog' product='2' /> 기능을 사용 시, 1,000만 개의 이미지 로그 기준 200GB 필요 |
+| \> | 항목 | 사양 |
+| -- | -- | -- |
+| 시스템 환경 | 운영체제 | Windows 11 |
+| ^ | 데이터베이스 | MariaDB 11.4.4 |
+| ^ | CPU | 2.3GHz 6코어 |
+| ^ | RAM | 16GB |
+| ^ | SSD | 256GB |
+| ^ | HDD | <Cmd sid='common.imageLog' product='2' /> 기능 사용 시, 1,000만 개의 이미지 로그 기준 200GB 필요 |
 
 </div>
 
@@ -38,68 +37,9 @@ keywords: [ 시스템 최소 요구사항, 운영체제, 데이터베이스, CPU
 
 * **BioStar X**는 64비트 운영체제에서만 설치할 수 있습니다.
 
-* MS SQL Server 보안 통신은 TLS 1.2를 지원합니다.
-
-* MS SQL Server와 **BioStar X**가 서로 다른 PC에 설치되어 있으면 **BioStar X**가 설치된 PC에 [Microsoft OLE DB Driver for SQL Server](https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server)를 설치해야 합니다.
-
-* 대규모 조직에서는 MS SQL Server 데이터베이스를 설치하는 것을 권장합니다.
-
-* 데이터베이스를 MS SQL Server를 사용하고, **BioStar X T&A**를 사용한다면 [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17)가 필요하므로 사용자의 환경에 적합한 드라이버를 설치하세요.
-
 * Mac 운영체제에서 제공하는 부트 캠프의 Windows 가상 환경은 지원하지 않습니다.
 
-* 이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다. 더 많은 장치를 연결하려면 커뮤니케이션 서버를 추가하세요.
-
 :::
-
-### SQL Server 라이선스 요구사항 {#sqlserver-requriements}
-
-데이터베이스로 SQL Server를 사용하는 경우, **BioStar X**의 안정적인 운영을 위해서는 연결된 장치 수에 따라 적절한 SQL Server 라이선스가 필요합니다. 각 환경별 권장 라이선스 구성을 참고하여 조직의 규모와 필요에 맞는 라이선스를 선택하세요.
-
-:::info
-
-SQL Server 라이선스에 대한 자세한 내용은 [Microsoft SQL Server 라이선스](https://www.microsoft.com/sql-server/sql-server-2022-pricing)를 참고하세요.
-
-:::
-
-#### 일반 사용 {#general}
-
-| 조직 | 장치 수 | 코어 수 |
-| -- | -- | -- |
-| 소규모 조직 | 1 - 50 대 | 4 - 6 |
-| 중규모 조직 | 50 - 300 대 | 8 - 12 |
-| 대규모 조직 | 300 - 1,000 대 | 16 - 24 |
-
-#### BioStar X API 사용 {#useapi}
-
-| 조직 | 장치 수 | 코어 수 |
-| -- | -- | -- |
-| 소규모 조직 | 1 - 50 대 | 4 - 6 |
-| 중규모 조직 | 50 - 300 대 | 8 - 12 |
-| 대규모 조직 | 300 - 1,000 대 | 16 - 24 |
-
-
-## 커뮤니케이션 서버 {#communication-server}
-
-커뮤니케이션 서버는 출입통제 장치들과의 통신을 전담하는 서버입니다. 메인 서버와 별도로 설치하여 많은 수의 장치를 안정적으로 관리할 수 있도록 도와줍니다. 한 대의 커뮤니케이션 서버로 최대 1,000대의 장치를 연결할 수 있으며, 필요에 따라 여러 대의 커뮤니케이션 서버를 추가할 수 있습니다.
-
-<div className='overflow-x'>
-
-| \> | 항목 | 사양 |
-| -- | -- | -- |
-| 시스템 환경 | 운영체제 | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025 |
-| ^ | CPU | 최소 2.3GHz, 권장 4.0GHz 16코어 |
-| ^ | RAM | 최소 64GB, 권장 128GB |
-| ^ | SSD | 1TB |
-
-</div>
-
-:::info
-
-이더넷(TCP/IP)으로 연결할 수 있는 장치는 최대 1,000대입니다.
-
-:::
-
 
 ## 클라이언트 {#client}
 
@@ -107,12 +47,12 @@ SQL Server 라이선스에 대한 자세한 내용은 [Microsoft SQL Server 라�
 
 <div className='overflow-x'>
 
-| \> | 항목 | 소규모 조직 | 중규모 조직 | 대규모 조직 |
-| -- | -- | -- | -- | -- |
-| 시스템 환경 | CPU | 2.5GHz | 2.5GHz | 최소 2.5GHz |
-| ^ | RAM | 16GB | 32GB | 최소 32GB |
-| ^ | GPU | \> | \> | VMS 사용 시, 최소 NVIDIA GeForce RTX 4060 |
-| ^ | 웹 브라우저 | \> | \> | Google 크롬 100 버전 이상 |
+| \> | 항목 | 사양 |
+| -- | -- | -- |
+| 시스템 환경 | CPU | 2.3GHz |
+| ^ | RAM | 16GB |
+| ^ | GPU | VMS 사용 시, 최소 NVIDIA GeForce RTX 4060 |
+| ^ | 웹 브라우저 | Google 크롬 100 버전 이상 |
 
 </div>
 
