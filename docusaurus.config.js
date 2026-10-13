@@ -115,6 +115,9 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
+            ...(!isPreview ? [
+            '/device/xpass_2_v2/**.{md,mdx}',
+          ] : []),
           ],
           remarkPlugins: [
             [remarkCmd, { locale: locale || 'ko' }],
