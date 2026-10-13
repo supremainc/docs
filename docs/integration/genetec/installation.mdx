@@ -5,25 +5,39 @@ description: Provides minimum system requirements and step-by-step instructions 
 keywords: [ Installation, Suprema Plugin, Genetec Config Tool ]
 ---
 
-## Minimum System Requirements
+## Recommended System Architecture
 
-<div className='overflow-x col5--15-10-25'>
+<Image src='/img/integration/genetec/recommended-system-architecture.png' alone />
 
-| \> | Item | Small Business Server | Medium Business Server | Enterprise Business Server |
-| :-- | :-- | :-- | :-- | :-- |
-| Environment | Total Devices | 50 | Up to 100 | More than 100 |
-| System requirement | OS | \> | \> | Microsoft Windows 10 or later (64-bit) |
-| ^ | CPU | 8 Core or higher | 16 Core or higher | Enterprise-level deployment requires prior consultation |
-| ^ | RAM | 32 GB or higher | 64 GB Core or higher | ^ |
-| ^ | Communication | \> | \> | Supports the Standard Transmission Control Protocol (TCP/IP) networking communication protocol between servers, clients, and devices. |
-| ^ | ^ | \> | \> | Supports Dynamic Host Configuration Protocol (DHCP) or Static IP address. |
-| ^ | ^ | \> | \> | Supports network configuration. |
-| ^ | ^ | \> | \> | Supports Network Time Protocol (NTP). |
-| ^ | ^ | \> | \> | Supports HTTPS communication protected by Secure Socket Layer (SSL) between the client (web browser) and platform. |
-| ^ | Encryption | \> | \> | Supports AES-256 for Fingerprint Template, and Face Template. |
-| ^ | ^ | \> | \> | Supports AES-256 for Fingerprint Template and Face Template (Optional). |
+:::info
 
-</div>
+* Recommend using dedicated server for Plugin per 100 biometric devices.
+
+* Only one Extractor Plugin per Main Directory.
+
+:::
+
+## Server Recommendation & System Requirements - Standalone Devices
+
+| Category | Item | 0-20 devices | Up to 100 devices | 100+ devices |
+| -- | -- | -- | -- | -- |
+| **Recommendation** | | Existing server may be used (subject to resource review) | Dedicated plugin server recommended | Additional plugin server required |
+| **System Requirement** | **OS** | \> | \> | Microsoft Windows 10 or later (64-bit) |
+| ^ | **CPU** | - | 8 Core or higher | Consult required |
+| ^ | **RAM** | - | 32 GB or higher | Consult required |
+| ^ | **Communication** | \> | \> | Supports TCP/IP between servers, clients, and devices.<br/>Supports DHCP or Static IP address.<br/>Supports network configuration.<br/>Supports Network Time Protocol (NTP).<br/>Supports HTTPS (SSL) between client (web browser) and platform. |
+
+## Server Recommendation & System Requirements - CS40
+
+| Category | Item | Maximum | Remarks |
+| -- | -- | -- | -- |
+| **Device Capacity** | **CS40 per server** | Up to 60 | Based on a server specification of 8 CPU cores and 32 GB RAM |
+| ^ | **CS40 per Cloud link** | Up to 30 | - |
+| ^ | **Slave devices per CS40** | Up to 8 | When using DM20: **Up to 4** |
+| **System Requirement** | **OS** | \> | Microsoft Windows 10 or later (64-bit) |
+| ^ | **CPU** | \> | 8 Core or higher | 
+| ^ | **RAM** | \> | 32 GB or higher |
+| ^ | **Communication** | \> | Supports TCP/IP between servers, clients, and devices.<br/>Supports DHCP or Static IP address.<br/>Supports network configuration.<br/>Supports Network Time Protocol (NTP).<br/>Supports HTTPS (SSL) between client (web browser) and platform. |
 
 :::caution
 
