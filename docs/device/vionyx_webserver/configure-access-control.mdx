@@ -34,7 +34,7 @@ description: 출입문에 접근하는 사람을 얼굴 인식으로 식별하�
 
 ## 출입 통제 이벤트 동작 방식
 
-출입 통제 이벤트는 다음 세 가지 요소를 조합하여 출입 허용 여부를 판단합니다. 설정을 시작하기 전에 각 요소의 역할을 확인하세요.
+출입 통제 이벤트는 다음 요소를 조합하여 출입 허용 여부를 판단합니다. 설정을 시작하기 전에 각 요소의 역할을 확인하세요.
 
 | 구성 요소 | 역할 | 필수 여부 |
 | --- | --- | --- |
@@ -175,7 +175,7 @@ import DetectPeople from './_ai-event-detect-people.mdx';
 
 * <Cmd sid='door_access_tailgating_any_valid_succeeds' product='cam' />: 검증 영역에 등록된 사용자가 한 명 이상 있으면 출입을 허용합니다. 미식별자가 함께 있어도 출입을 허용하므로 방문객 동행이 잦은 곳에 적합합니다.
 
-* <Cmd sid='door_access_tailgating_no_effect' product='cam' />: 검증 영역의 인원 수를 고려하지 않고, 출입 통제 영역에 들어온 사람의 식별 결과만으로 출입 허용 여부를 판단합니다.
+* <Cmd sid='door_access_tailgating_no_effect' product='cam' />: 검증 영역의 인원수를 고려하지 않고, 출입 통제 영역에 들어온 사람의 식별 결과만으로 출입 허용 여부를 판단합니다.
 
 다음은 출입 통제 영역에 등록된 사용자가 있고, 검증 영역에 다른 사람이 함께 있을 때 옵션별 판단 결과입니다.
 
@@ -226,7 +226,7 @@ import DetectPeople from './_ai-event-detect-people.mdx';
 
 ### 설정 저장
 
-모든 설정을 완료한 후 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 이전 화면으로 돌아가며, 새로 생성된 AI 이벤트가 목록에 추가됩니다.
+모든 설정을 완료한 후 오른쪽 상단의 <Cmd sid='create' product='cam' /> 버튼을 클릭하세요. 이전 화면으로 돌아가며, 새로 생성된 AI 이벤트가 목록에 추가됩니다.
 
 <ProdImg src='/img/cam-server/ai-analysis-events-access-control-settings-complete.png' />
 

@@ -31,8 +31,6 @@ AI 규칙을 사용하면 이벤트 유형과 조건에 따라 오디오 재생,
 
    * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
-   * <DocLink docId='device/vionyx_webserver/configure-access-control' />
-
 * 오디오를 사용할 때 재생할 오디오 클립을 미리 준비하세요.
 
 * 웹훅을 사용할 때 수신 URL을 미리 준비하세요.
@@ -40,6 +38,12 @@ AI 규칙을 사용하면 이벤트 유형과 조건에 따라 오디오 재생,
 * 릴레이를 사용할 때 장치 또는 하위 장치의 릴레이 포트가 연결되어 있는지 확인하세요.
 
 * 오디오, 웹훅, 릴레이 중 하나 이상의 동작을 설정해야 합니다.
+
+:::info
+
+AI 이벤트 중 <Cmd sid='ai_analysis_door_access' product='cam' />는 AI 규칙의 조건으로 사용할 수 없습니다.
+
+:::
 
 
 ## AI 규칙 생성
@@ -86,8 +90,6 @@ AI 규칙을 사용하면 이벤트 유형과 조건에 따라 오디오 재생,
   * <Cmd sid='ai_analysis_line_crossing' product='cam' />
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
-
-  * <Cmd sid='ai_analysis_door_access' product='cam' />
 
 * <Cmd sid='event' product='cam' />: 규칙이 실행될 AI 이벤트를 선택하세요. 이벤트 목록에는 선택한 유형에 해당하는 AI 이벤트가 표시됩니다. 이벤트 표시는 `(ID:N) event_name` 형식으로 표시됩니다.
 
@@ -185,7 +187,7 @@ AI 규칙을 사용하면 이벤트 유형과 조건에 따라 오디오 재생,
 
       <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
 
-* <Cmd sid='contact_type' product='cam' />: 릴레이의 접점 타입을 선택하세요. 포트를 선택하면 설정할 수 있습니다. 기본값은 <Cmd sid='normal_close' product='cam' />입니다.
+* <Cmd sid='contact_type' product='cam' />: 릴레이의 접점 타입을 선택하세요. 릴레이 포트를 선택하면 설정할 수 있습니다. 기본값은 <Cmd sid='normal_close' product='cam' />입니다.
 
    * <Cmd sid='normal_open' product='cam' />: 평상시 열려 있다가 릴레이가 동작하면 닫히는 접점입니다.
 
