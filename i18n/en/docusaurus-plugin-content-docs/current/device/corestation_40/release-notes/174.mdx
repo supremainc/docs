@@ -7,6 +7,13 @@ title: Firmware Version 1.7.4
 
 Release<Separator/>2026-10-07
 
+## New Features and Improvements
+
+---
+
+    {/* (CSTFW-1066) [Setup Manager] 보안 취약점 수정 */}
+1. Improved CoreStation Setup Manager security vulnerabilities
+
 ## Bug Fixes
 
 ---
@@ -22,5 +29,11 @@ Release<Separator/>2026-10-07
     {/* (CSTFW-1043) [Lock Overrride] Wiegand reader로 door를 생성 후, Wiegand 장치가 disable일 때, Lock Override 카드 인증이 안되는 현상
     (CSTFW-1045) Wiegand Reader로 door 생성 후, Wiegand 장치가 disable일 때 Lock Override 카드 인증이 안되는 현상 */}
 1. **Lock Override** card authentication not working on a door created with a Wiegand reader when the reader is disabled. <Badge>1.7.2</Badge>
+
+    {/* (CSTFW-1056) 경비/해제를 위한 인증 시 lock override로 동작 */}
+1. Registered card operating as a lock override instead of arm/disarm during arm/disarm authentication. <Badge>1.7.2</Badge>
+
+    {/* (CSTFW-1054) Master,slave장치,ODSP reader가 device disable 상태에서 lock override 카드 동작 안함 */}
+1. Lock Override Card authentication not working when a device is disabled. <Badge>1.7.2</Badge>
 
 </BugLists>
