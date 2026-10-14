@@ -33,6 +33,7 @@ const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd
 
 const cmdCamKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/ko.json`, 'utf-8'));
 const cmdCamEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/en.json`, 'utf-8'));
+const cmdCamJa = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/cam/ja.json`, 'utf-8'));
 
 const cmdClueKo = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/ko.json`, 'utf-8'));
 const cmdClueEn = JSON.parse(readFileSync(`${__dirname}/../static/data/remark-cmd/clue/en.json`, 'utf-8'));
@@ -714,6 +715,7 @@ export function rehypeProcessCmdComponent(docPath = '', language = 'ko') {
   const camLocaleMap = {
     ko: cmdCamKo,
     en: cmdCamEn,
+    ja: cmdCamJa
   };
 
   const clueLocaleMap = {
