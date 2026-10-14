@@ -1,0 +1,78 @@
+.page {
+  max-width: 1400px;
+}
+
+.header p {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.productSelect {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.productSelect select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+/* 모델이 많으면 테이블만 가로로 스크롤 */
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+.specTable {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 0;
+}
+
+.specTable th,
+.specTable td {
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.specTable tbody th {
+  font-weight: 500;
+}
+
+.colGroup {
+  width: 8rem;
+}
+
+.colName {
+  width: 12rem;
+}
+
+.modelHeader {
+  color: var(--ifm-color-primary);
+}
+
+.groupCell {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.value {
+  /* API 값의 줄바꿈(\n)을 그대로 표시 */
+  white-space: pre-line;
+}
+
+.updatedAt {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+}
