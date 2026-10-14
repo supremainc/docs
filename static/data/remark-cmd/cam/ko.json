@@ -258,6 +258,7 @@
   "device": "디바이스",
   "device_health_check_failed": "서버 응답 대기 시간이 초과되었습니다. 수동으로 페이지를 새로고침해주세요.",
   "device_health_check_success": "서버가 정상적으로 응답합니다. 로그인 페이지로 이동합니다.",
+  "device_id": "장치 ID",
   "device_info": "디바이스 정보",
   "device_info_load_failed": "디바이스 정보 로드에 실패했습니다",
   "device_restarting_health_check": "시스템이 재시작 중입니다. 서버 응답을 대기합니다...",

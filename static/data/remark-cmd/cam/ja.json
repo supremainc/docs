@@ -258,6 +258,7 @@
   "device": "デバイス",
   "device_health_check_failed": "サーバーの応答がタイムアウトしました。手動でページを更新してください。",
   "device_health_check_success": "サーバーが正常に応答しています。ログインページに移動します。",
+  "device_id": "デバイスID",
   "device_info": "デバイス情報",
   "device_info_load_failed": "デバイス情報の読み込みに失敗しました",
   "device_restarting_health_check": "システムが再起動中です。サーバーの応答を待っています...",
