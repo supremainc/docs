@@ -22031,6 +22031,22 @@
     "width": 566,
     "height": 358
   },
+  "/img/integration/genetec/aoc-enroll-card.png": {
+    "width": 1000,
+    "height": 643
+  },
+  "/img/integration/genetec/aoc-enroll-card1.png": {
+    "width": 1000,
+    "height": 643
+  },
+  "/img/integration/genetec/aoc-enroll-card2.png": {
+    "width": 1000,
+    "height": 690
+  },
+  "/img/integration/genetec/aoc-enroll-card3.png": {
+    "width": 1000,
+    "height": 682
+  },
   "/img/integration/genetec/area-view-hardware.png": {
     "width": 966,
     "height": 606
@@ -22054,6 +22070,22 @@
   "/img/integration/genetec/card-enrollment.png": {
     "width": 1000,
     "height": 241
+  },
+  "/img/integration/genetec/card-format-setting-custom.png": {
+    "width": 1000,
+    "height": 529
+  },
+  "/img/integration/genetec/card-format-setting-smart.png": {
+    "width": 1000,
+    "height": 533
+  },
+  "/img/integration/genetec/card-format-setting-wiegand.png": {
+    "width": 1000,
+    "height": 527
+  },
+  "/img/integration/genetec/card-format-setting.png": {
+    "width": 1000,
+    "height": 378
   },
   "/img/integration/genetec/card-format-setting1.png": {
     "width": 843,
@@ -22191,6 +22223,14 @@
     "width": 799,
     "height": 530
   },
+  "/img/integration/genetec/enrolment-credentials-aoc-enrollment.png": {
+    "width": 1000,
+    "height": 182
+  },
+  "/img/integration/genetec/enrolment-credentials-private-auth.png": {
+    "width": 1000,
+    "height": 182
+  },
   "/img/integration/genetec/face-enrollment.png": {
     "width": 1093,
     "height": 484
@@ -22259,9 +22299,21 @@
     "width": 496,
     "height": 403
   },
+  "/img/integration/genetec/private-auth-mode1.png": {
+    "width": 1000,
+    "height": 721
+  },
+  "/img/integration/genetec/private-auth-mode2.png": {
+    "width": 1000,
+    "height": 707
+  },
   "/img/integration/genetec/profile-image-quality-setting.png": {
     "width": 655,
     "height": 458
+  },
+  "/img/integration/genetec/recommended-system-architecture.png": {
+    "width": 1056,
+    "height": 468
   },
   "/img/integration/genetec/Rectangle 10 (Stroke).png": {
     "width": 97,
