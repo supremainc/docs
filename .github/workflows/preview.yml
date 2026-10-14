@@ -30,12 +30,6 @@ jobs:
         # svg-img 페이지가 참조하는 genpdf/svg-components-map.mjs는 .gitignore에
         # 등록된 생성 파일이므로, 빌드 전에 MDXComponents.js를 파싱해 재생성한다.
         run: node genpdf/generateSvgMap.js
-      - name: Fetch product specs
-        # 제품 스펙 조회 페이지(src/pages/products-specs)의 데이터를 DW API에서 최신으로 받는다.
-        # API 키가 브라우저에 노출되지 않도록 빌드 시점에 받아 페이지에 포함한다.
-        run: node utils/fetchProductSpecs.mjs
-        env:
-          DW_API_KEY: ${{ secrets.DW_API_KEY }}
       - name: Build website
         run: yarn build:preview
       - name: Remove duplicated locale img folders
