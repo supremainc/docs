@@ -26,6 +26,7 @@
     "build:postman": "node generate-postman-collection.js",
     "build:postman:vionyx": "node generate-vionyx-postman-collection.js",
     "addcodesample": "node utils/addCodeSamples.js",
+    "fetch:specs": "node utils/fetchProductSpecs.mjs",
     "prepare": "husky"
   },
   "dependencies": {
