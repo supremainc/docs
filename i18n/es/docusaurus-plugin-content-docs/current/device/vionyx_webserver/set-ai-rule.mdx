@@ -30,8 +30,6 @@ Antes de empezar la configuración de reglas, revise lo siguiente.
 
   * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
-  * <DocLink docId='device/vionyx_webserver/configure-access-control' />
-
 * Prepare los clips de audio que se reproducirán antes de usar audio.
 
 * Prepare con antelación la URL del receptor del webhook.
@@ -39,6 +37,12 @@ Antes de empezar la configuración de reglas, revise lo siguiente.
 * Al usar relés, verifique que el puerto de relé del dispositivo o subdispositivo esté conectado.
 
 * Configure al menos una acción: audio, webhook o relé.
+
+:::info
+
+En eventos de IA, <Cmd sid='ai_analysis_door_access' product='cam' /> no puede utilizarse como condición para reglas de IA.
+
+:::
 
 ## Crear regla de IA
 
@@ -49,7 +53,7 @@ Antes de empezar la configuración de reglas, revise lo siguiente.
 
 1. Haga clic en el menú <Cmd sid='ai_and_rule_short' product='cam' /> en la esquina superior izquierda de la pantalla.
 
-2. Haga clic en <Cmd sid='rule_settings' product='cam' /> en la barra lateral izquierda.
+2. Haz clic en <Cmd sid='rule_settings' product='cam' /> en la barra lateral izquierda.
 
    <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
 
@@ -84,8 +88,6 @@ Las condiciones determinan si una regla se ejecuta cuando ocurre un evento de IA
   * <Cmd sid='ai_analysis_line_crossing' product='cam' />
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
-
-  * <Cmd sid='ai_analysis_door_access' product='cam' />
 
 * <Cmd sid='event' product='cam' />: Seleccione el evento de IA que activará la regla. La lista de eventos muestra los eventos de IA que coinciden con el tipo seleccionado. Los eventos aparecen en el formato `(ID:N) event_name`.
 
@@ -183,7 +185,7 @@ En la sección <Cmd sid='action' product='cam' />, haga clic en el interruptor <
 
     <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
 
-* <Cmd sid='contact_type' product='cam' />: Seleccione el tipo de contacto del relé. Seleccione un puerto para establecer las opciones. El valor predeterminado es <Cmd sid='normal_close' product='cam' />.
+* <Cmd sid='contact_type' product='cam' />: Seleccione el tipo de contacto del relé. Seleccione un puerto de repetidor para establecer las opciones. El valor predeterminado es <Cmd sid='normal_close' product='cam' />.
 
   * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
 

@@ -30,8 +30,6 @@ Before starting rule setup, check the following.
 
   * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
-  * <DocLink docId='device/vionyx_webserver/configure-access-control' />
-
 * Prepare the audio clips to play before using audio.
 
 * Prepare the webhook receiver URL beforehand.
@@ -39,6 +37,12 @@ Before starting rule setup, check the following.
 * When using relays, verify that the relay port on the device or subdevice is connected.
 
 * Set at least one action: audio, webhook, or relay.
+
+:::info
+
+In AI events, <Cmd sid='ai_analysis_door_access' product='cam' /> cannot be used as a condition for AI rules.
+
+:::
 
 ## Create AI rule
 
@@ -84,8 +88,6 @@ Conditions determine whether a rule executes when an AI event occurs. In the <Cm
   * <Cmd sid='ai_analysis_line_crossing' product='cam' />
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
-
-  * <Cmd sid='ai_analysis_door_access' product='cam' />
 
 * <Cmd sid='event' product='cam' />: Select the AI event that will trigger the rule. The event list shows AI events that match the selected type. Events appear in the format `(ID:N) event_name`.
 
@@ -183,7 +185,7 @@ In the <Cmd sid='action' product='cam' /> section, click the <Cmd sid='relay' pr
 
     <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
 
-* <Cmd sid='contact_type' product='cam' />: Select the relay contact type. Select a port to set options. The default is <Cmd sid='normal_close' product='cam' />.
+* <Cmd sid='contact_type' product='cam' />: Select the relay contact type. Select a relay port to set options. The default is <Cmd sid='normal_close' product='cam' />.
 
   * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
 

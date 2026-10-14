@@ -30,8 +30,6 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 
   * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
 
-  * <DocLink docId='device/vionyx_webserver/configure-access-control' />
-
 * オーディオを使用する場合は、再生するオーディオクリップを事前に用意してください。
 
 * Webhook を使用する場合は、受信URLを事前に用意してください。
@@ -39,6 +37,12 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
 * リレーを使用する場合、デバイスまたはサブデバイスのリレーポートが接続されているか確認してください。
 
 * オーディオ、Webhook、リレーのうち、少なくとも一つの動作を設定する必要があります。
+
+:::info
+
+AIイベントのうち <Cmd sid='ai_analysis_door_access' product='cam' /> は、AIルールの条件として使用できません。
+
+:::
 
 ## AIルールの作成
 
@@ -84,8 +88,6 @@ AIルールを使用すると、イベント種類と条件に応じてオーデ
   * <Cmd sid='ai_analysis_line_crossing' product='cam' />
 
   * <Cmd sid='ai_analysis_people_counting' product='cam' />
-
-  * <Cmd sid='ai_analysis_door_access' product='cam' />
 
 * <Cmd sid='event' product='cam' />：ルールを実行するAIイベントを選択します。イベント一覧には選択したタイプに該当するAIイベントが表示されます。イベントは `(ID:N) event_name` 形式で表示されます。
 
@@ -183,7 +185,7 @@ webhook 動作の設定を保存するには、<Cmd sid='apply' product='cam' />
 
     <ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-relay-keep-option.png' />
 
-* <Cmd sid='contact_type' product='cam' />: リレーの接点タイプを選択してください。ポートを選択して設定します。デフォルトは <Cmd sid='normal_close' product='cam' /> です。
+* <Cmd sid='contact_type' product='cam' />: リレーの接点タイプを選択してください。リレーポートを選択して設定します。デフォルトは <Cmd sid='normal_close' product='cam' /> です。
 
   * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
 
