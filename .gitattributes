@@ -23,3 +23,6 @@ Dockerfile text eol=lf
 *.gif -text
 *.pdf -text
 *.zip -text
+
+# .gitattributes에 추가
+.husky/*   text eol=lf
