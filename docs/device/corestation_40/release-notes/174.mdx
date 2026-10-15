@@ -3,9 +3,16 @@ id: 174
 title: 펌웨어 버전 1.7.4
 ---
 
-# 펌웨어 버전 1.7.4 (빌드 번호 1.7.4_260929)
+# 펌웨어 버전 1.7.4 (빌드 번호 1.7.4_261014)
 
-릴리즈<Separator/>2026-10-07
+릴리즈<Separator/>2026-10-15
+
+## 신규 기능 및 개선
+
+---
+
+    {/* (CSTFW-1066) [Setup Manager] 보안 취약점 수정 */}
+1. CoreStation Setup Manager 보안 취약점 개선
 
 ## 버그 수정
 
@@ -22,5 +29,11 @@ title: 펌웨어 버전 1.7.4
     {/* (CSTFW-1043) [Lock Overrride] Wiegand reader로 door를 생성 후, Wiegand 장치가 disable일 때, Lock Override 카드 인증이 안되는 현상
     (CSTFW-1045) Wiegand Reader로 door 생성 후, Wiegand 장치가 disable일 때 Lock Override 카드 인증이 안되는 현상 */}
 1. Wiegand 리더가 비활성 상태일 때 해당 리더로 만든 출입문에서 **비상 개방 카드** 인증이 되지 않는 문제 <Badge>1.7.2</Badge>
+
+    {/* (CSTFW-1056) 경비/해제를 위한 인증 시 lock override로 동작 */}
+1. 경비/해제 인증 시 등록된 카드가 경비/해제가 아닌 비상 개방으로 동작하는 문제 <Badge>1.7.2</Badge>
+
+    {/* (CSTFW-1054) Master,slave장치,ODSP reader가 device disable 상태에서 lock override 카드 동작 안함 */}
+1. 장치가 비활성 상태일 때 **비상 개방 카드** 인증이 되지 않는 문제 <Badge>1.7.2</Badge>
 
 </BugLists>
