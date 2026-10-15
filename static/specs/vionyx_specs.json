@@ -246,8 +246,6 @@
         "rs485": {
           "label": "RS-485",
           "label_id": "specs.interface.rs485",
-          "annotation_label": "anno1",
-          "annotation_dupl": true,
           "value": {
             "ko": "1채널",
             "en": "1 ch",
