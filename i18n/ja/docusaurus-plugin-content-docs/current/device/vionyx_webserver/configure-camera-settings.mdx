@@ -94,7 +94,7 @@ description: 設置環境に合わせて画像品質、ホワイトバランス�
 
 撮影環境の照明と周波数の不一致による画面のちらつきを抑えるには、<Cmd sid='video' product='cam' /> セクションで <Cmd sid='anti_flicker' product='cam' /> オプションを設定してください。
 
-* <Cmd sid='off' product='cam' />：ちらつき防止機能を使用しない
+* <Cmd sid='off' product='cam' />（デフォルト）：ちらつき防止機能を使用しない
 
 * <Cmd>50HZ</Cmd>: 50Hzの蛍光灯/LED環境
 
@@ -146,7 +146,7 @@ description: 設置環境に合わせて画像品質、ホワイトバランス�
 
 カメラの設置場所に応じて、<Cmd sid='mounting_type' product='cam' /> を設定してください。設置タイプによりサポートされるAI機能が決まります。
 
-* <Cmd sid='ceiling' product='cam' />: 天井に設置した場合に選択してください。すべてのAI機能を使用できます。
+* <Cmd sid='ceiling' product='cam' />（デフォルト）: 天井に設置した場合に選択してください。すべてのAI機能を使用できます。
 
 * <Cmd sid='wall' product='cam' />: 壁面に設置した場合に選択してください。顔認証AIのみ使用でき、オブジェクト追跡は利用できません。
 
@@ -160,11 +160,11 @@ description: 設置環境に合わせて画像品質、ホワイトバランス�
 
 ## カメラヒーターの設定
 
-気温が低い、または湿度が高い環境では、レンズに曇りや霜が付き、映像がぼやけてAI認識精度が低下することがあります。この場合はカメラヒーターをオンにして、レンズの視界を確保してください。 <Cmd sid='heater' product='cam' /> セクションで <Cmd sid='heater' product='cam' /> オプションをオン／オフします。（既定値：<Cmd sid='off' product='cam' />）
+気温が低い、または湿度が高い環境では、レンズに曇りや霜が付き、映像がぼやけてAI認識精度が低下することがあります。この場合はカメラヒーターをオンにして、レンズの視界を確保してください。 <Cmd sid='heater' product='cam' /> セクションで <Cmd sid='heater' product='cam' /> オプションをオン／オフします。
 
 * <Cmd sid='on' product='cam' />: ヒーターが動作します。 30分後に自動でオフになります。
 
-* <Cmd sid='off' product='cam' />: ヒーターの動作を停止します。
+* <Cmd sid='off' product='cam' />（デフォルト）: ヒーターの動作を停止します。
 
 :::info
 
