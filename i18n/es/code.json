@@ -1279,5 +1279,74 @@
   },
   "component.DocbreadcrumOption.download": {
     "message": "Descargar"
+  },
+  "askAi.panel.label": {
+    "message": "Asistente de IA de Docs"
+  },
+  "askAi.newChat": {
+    "message": "Nuevo chat"
+  },
+  "askAi.close": {
+    "message": "Cerrar"
+  },
+  "askAi.suggestion.addUser": {
+    "message": "¿Cómo se registra un usuario en BioStar X?"
+  },
+  "askAi.suggestion.accessGroup": {
+    "message": "¿Cuál es la diferencia entre un grupo de acceso y un nivel de acceso?"
+  },
+  "askAi.suggestion.requirements": {
+    "message": "¿Cuáles son los requisitos del sistema para el servidor de BioStar X?"
+  },
+  "askAi.suggestion.deviceIp": {
+    "message": "¿Cómo se cambia la dirección IP de un dispositivo?"
+  },
+  "askAi.scrollToBottom": {
+    "message": "Ir al final"
+  },
+  "askAi.welcome": {
+    "message": "¿En qué puedo ayudarle?"
+  },
+  "askAi.welcome.hint": {
+    "message": "Las respuestas se basan en sus últimas 5 preguntas. Para preguntar sobre otro tema, inicie un nuevo chat."
+  },
+  "askAi.placeholder": {
+    "message": "Escriba su pregunta..."
+  },
+  "askAi.input": {
+    "message": "Entrada de pregunta"
+  },
+  "askAi.send": {
+    "message": "Enviar"
+  },
+  "askAi.stop": {
+    "message": "Detener respuesta"
+  },
+  "askAi.thinking": {
+    "message": "Preparando la respuesta"
+  },
+  "askAi.copy": {
+    "message": "Copiar"
+  },
+  "askAi.reload": {
+    "message": "Regenerar"
+  },
+  "askAi.button": {
+    "message": "Ask AI"
+  },
+  "askAi.error.failed": {
+    "message": "No se pudo generar la respuesta. Inténtelo de nuevo más tarde."
+  },
+  "askAi.error.rateLimitedWithTime": {
+    "message": "Demasiadas preguntas. Inténtelo de nuevo en {seconds} segundos."
+  },
+  "askAi.error.rateLimited": {
+    "message": "Demasiadas preguntas. Inténtelo de nuevo más tarde."
+  },
+  "askAi.error.unavailable": {
+    "message": "El servicio no está disponible temporalmente. Inténtelo de nuevo más tarde."
+  },
+  "askAi.error.network": {
+    "message": "No se pudo conectar con el servidor. Compruebe la conexión de red."
   }
 }

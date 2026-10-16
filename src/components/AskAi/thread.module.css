@@ -1,0 +1,429 @@
+/*
+ * assistant-ui 기본 디자인(registry: thread, tooltip-icon-button, sources)을 옮긴 스타일.
+ * 색상은 shadcn 기본(neutral) 테마 토큰을 쓰고, 답변 본문(.md)은 사이트 스타일(Infima)을 따른다.
+ */
+
+.tokens {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --input-border: color-mix(in oklab, var(--foreground) 10%, transparent);
+  --input-border-focus: color-mix(in oklab, var(--foreground) 25%, transparent);
+  --radius: 1rem;
+}
+
+:global([data-theme='dark']) .tokens {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --ring: oklch(0.556 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ---------- 패널 ---------- */
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 0.875rem;
+}
+
+.header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--ifm-navbar-height);
+  padding: 0 0.75rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.headerActions .iconButton {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ---------- 아이콘 버튼, 툴팁 ---------- */
+.iconButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  outline: none;
+  transition: all 150ms;
+}
+
+.iconButton:hover {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.iconButton:active {
+  transform: scale(0.9);
+}
+
+.iconButton:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring) 50%, transparent);
+}
+
+.iconButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.iconButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tooltip {
+  z-index: 1000;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 0.75rem;
+  animation: fadeIn 150ms;
+}
+
+.tooltipArrow {
+  fill: var(--foreground);
+}
+
+/* ---------- 스레드 ---------- */
+.threadRoot {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.viewport {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem 1rem 0;
+}
+
+.containerEmpty {
+  justify-content: center;
+}
+
+.welcome {
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+  animation: fadeIn 200ms both;
+}
+
+.welcomeMessage {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.welcomeHint {
+  margin: 0.5rem 0 0;
+  color: var(--muted-foreground);
+  font-size: 0.8125rem;
+}
+
+.messageGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.messageGroup:empty {
+  display: none;
+}
+
+.viewportFooter {
+  position: relative;
+  padding-bottom: 1rem;
+  background: var(--background);
+}
+
+.viewportFooterDocked {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+}
+
+.scrollToBottom {
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: -1.125rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--background);
+}
+
+.scrollToBottom:disabled {
+  visibility: hidden;
+}
+
+/* ---------- 입력창 ---------- */
+.composerShell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  background: color-mix(in oklab, var(--muted) 30%, transparent);
+  transition: border-color 150ms;
+}
+
+.composerShell:focus-within {
+  border-color: var(--input-border-focus);
+}
+
+.composerInput {
+  min-height: 2.5rem;
+  max-height: 12rem;
+  padding: 0.25rem 0.625rem;
+  border: 0;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.composerInput::placeholder {
+  color: color-mix(in oklab, var(--muted-foreground) 60%, transparent);
+}
+
+.composerAction {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sendButton,
+.sendButton:hover {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.stopIcon {
+  width: 0.875rem !important;
+  height: 0.875rem !important;
+  fill: currentColor;
+}
+
+/* ---------- 메시지 ---------- */
+.animateIn {
+  animation: fadeIn 150ms both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
+}
+
+.userMessage {
+  align-self: flex-end;
+  max-width: 85%;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--muted);
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.userMessage p {
+  margin: 0;
+}
+
+.assistantContent {
+  padding: 0 0.5rem;
+  overflow-wrap: break-word;
+}
+
+.assistantFooter {
+  display: flex;
+  min-height: 1.875rem;
+  margin-left: 0.25rem;
+  padding-top: 0.375rem;
+}
+
+.actionBar {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.indicator {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.error {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--destructive);
+  border-radius: 0.375rem;
+  background: color-mix(in oklab, var(--destructive) 10%, transparent);
+  color: var(--destructive);
+}
+
+/* ---------- 출처 (registry: sources, outline 배지) ---------- */
+.source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0.75rem 0.375rem 0 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.source:hover {
+  background: var(--muted);
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.source svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.sourceTitle {
+  max-width: 9.375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- 답변 본문: 패널 폭에 맞게 사이트 스타일의 여백만 줄인다 ---------- */
+.md > * {
+  margin-bottom: 0.75rem;
+}
+
+.md > :last-child {
+  margin-bottom: 0;
+}
+
+.md table {
+  font-size: 0.8125rem;
+}
+
+.md th,
+.md td {
+  padding: 0.375rem 0.5rem;
+}
+
+/* ---------- 제안 질문 (registry: thread의 ThreadSuggestions) ---------- */
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  animation: fadeIn 200ms both;
+}
+
+.suggestion {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 0.875rem;
+  text-align: start;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.suggestion:hover {
+  background: color-mix(in oklab, var(--foreground) 3%, transparent);
+}
+
+.suggestionMarker {
+  color: color-mix(in oklab, var(--muted-foreground) 60%, transparent);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+}
+
+.suggestion:hover .suggestionMarker {
+  color: var(--foreground);
+}
+
+.suggestionTitle {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

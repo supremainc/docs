@@ -1279,5 +1279,74 @@
   },
   "component.DocbreadcrumOption.download": {
     "message": "ダウンロード"
+  },
+  "askAi.panel.label": {
+    "message": "Docs AIアシスタント"
+  },
+  "askAi.newChat": {
+    "message": "新しいチャット"
+  },
+  "askAi.close": {
+    "message": "閉じる"
+  },
+  "askAi.suggestion.addUser": {
+    "message": "BioStar Xでユーザーを登録する方法は？"
+  },
+  "askAi.suggestion.accessGroup": {
+    "message": "アクセスグループとアクセスレベルの違いは何ですか？"
+  },
+  "askAi.suggestion.requirements": {
+    "message": "BioStar Xサーバーのシステム要件を教えてください。"
+  },
+  "askAi.suggestion.deviceIp": {
+    "message": "デバイスのIPアドレスを変更する方法は？"
+  },
+  "askAi.scrollToBottom": {
+    "message": "一番下へ移動"
+  },
+  "askAi.welcome": {
+    "message": "何をお手伝いしましょうか？"
+  },
+  "askAi.welcome.hint": {
+    "message": "直近5件の質問を参考に回答します。別のトピックについて質問するときは、新しいチャットを開始してください。"
+  },
+  "askAi.placeholder": {
+    "message": "質問を入力してください..."
+  },
+  "askAi.input": {
+    "message": "質問の入力"
+  },
+  "askAi.send": {
+    "message": "送信"
+  },
+  "askAi.stop": {
+    "message": "回答を停止"
+  },
+  "askAi.thinking": {
+    "message": "回答を準備しています"
+  },
+  "askAi.copy": {
+    "message": "コピー"
+  },
+  "askAi.reload": {
+    "message": "再生成"
+  },
+  "askAi.button": {
+    "message": "Ask AI"
+  },
+  "askAi.error.failed": {
+    "message": "回答を生成できませんでした。しばらくしてからもう一度お試しください。"
+  },
+  "askAi.error.rateLimitedWithTime": {
+    "message": "質問が多すぎます。{seconds}秒後にもう一度お試しください。"
+  },
+  "askAi.error.rateLimited": {
+    "message": "質問が多すぎます。しばらくしてからもう一度お試しください。"
+  },
+  "askAi.error.unavailable": {
+    "message": "サービスを一時的に利用できません。しばらくしてからもう一度お試しください。"
+  },
+  "askAi.error.network": {
+    "message": "サーバーに接続できませんでした。ネットワーク接続を確認してください。"
   }
 }

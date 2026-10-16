@@ -40,7 +40,11 @@ const config = {
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
   customFields: {
-    context: process.env.CONTEXT || 'production'
+    context: process.env.CONTEXT || 'production',
+    solis: {
+      baseUrl: 'https://solis-test.supremainc.com',
+      clientCode: 'aws-test',
+    },
   },
   clientModules: [
     require.resolve('./src/clientModules/cookieConsentScrollFix.js'),
@@ -605,6 +609,10 @@ const config = {
           },
           {
             type: 'search',
+            position: 'right',
+          },
+          {
+            type: 'custom-askAi',
             position: 'right',
           },
           {

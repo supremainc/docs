@@ -216,7 +216,8 @@
   "theme.lastUpdated.lastUpdatedAtBy": {
     "message": "최종 업데이트 | {atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
-  },  "theme.navbar.mobileVersionsDropdown.label": {
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
     "message": "버전",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
@@ -1278,5 +1279,74 @@
   },
   "component.DocbreadcrumOption.download": {
     "message": "다운로드"
+  },
+  "askAi.panel.label": {
+    "message": "Docs AI 어시스턴트"
+  },
+  "askAi.newChat": {
+    "message": "새 대화"
+  },
+  "askAi.close": {
+    "message": "닫기"
+  },
+  "askAi.suggestion.addUser": {
+    "message": "BioStar X에서 사용자를 등록하는 방법은?"
+  },
+  "askAi.suggestion.accessGroup": {
+    "message": "출입 그룹과 출입 레벨의 차이는 무엇인가요?"
+  },
+  "askAi.suggestion.requirements": {
+    "message": "BioStar X 서버 설치 사양을 알려 주세요."
+  },
+  "askAi.suggestion.deviceIp": {
+    "message": "장치의 IP 주소를 변경하는 방법은?"
+  },
+  "askAi.scrollToBottom": {
+    "message": "맨 아래로 이동"
+  },
+  "askAi.welcome": {
+    "message": "무엇을 도와드릴까요?"
+  },
+  "askAi.welcome.hint": {
+    "message": "최근 질문 5개를 참고해 답변합니다. 다른 주제를 물어볼 때는 새 대화를 시작하세요."
+  },
+  "askAi.placeholder": {
+    "message": "질문을 입력하세요..."
+  },
+  "askAi.input": {
+    "message": "질문 입력"
+  },
+  "askAi.send": {
+    "message": "보내기"
+  },
+  "askAi.stop": {
+    "message": "답변 중지"
+  },
+  "askAi.thinking": {
+    "message": "답변을 준비하는 중"
+  },
+  "askAi.copy": {
+    "message": "복사"
+  },
+  "askAi.reload": {
+    "message": "다시 생성"
+  },
+  "askAi.button": {
+    "message": "Ask AI"
+  },
+  "askAi.error.failed": {
+    "message": "답변을 생성하지 못했습니다. 잠시 후 다시 시도하세요."
+  },
+  "askAi.error.rateLimitedWithTime": {
+    "message": "질문이 너무 많습니다. {seconds}초 후에 다시 시도하세요."
+  },
+  "askAi.error.rateLimited": {
+    "message": "질문이 너무 많습니다. 잠시 후에 다시 시도하세요."
+  },
+  "askAi.error.unavailable": {
+    "message": "서비스를 일시적으로 사용할 수 없습니다. 잠시 후에 다시 시도하세요."
+  },
+  "askAi.error.network": {
+    "message": "서버에 연결하지 못했습니다. 네트워크 연결을 확인하세요."
   }
 }

@@ -1279,5 +1279,74 @@
   },
   "component.DocbreadcrumOption.download": {
     "message": "Download"
+  },
+  "askAi.panel.label": {
+    "message": "Docs AI Assistant"
+  },
+  "askAi.newChat": {
+    "message": "New chat"
+  },
+  "askAi.close": {
+    "message": "Close"
+  },
+  "askAi.suggestion.addUser": {
+    "message": "How do I register a user in BioStar X?"
+  },
+  "askAi.suggestion.accessGroup": {
+    "message": "What is the difference between an access group and an access level?"
+  },
+  "askAi.suggestion.requirements": {
+    "message": "What are the system requirements for the BioStar X server?"
+  },
+  "askAi.suggestion.deviceIp": {
+    "message": "How do I change the IP address of a device?"
+  },
+  "askAi.scrollToBottom": {
+    "message": "Scroll to bottom"
+  },
+  "askAi.welcome": {
+    "message": "How can I help you?"
+  },
+  "askAi.welcome.hint": {
+    "message": "Answers are based on your last 5 questions. To ask about a different topic, start a new chat."
+  },
+  "askAi.placeholder": {
+    "message": "Ask a question..."
+  },
+  "askAi.input": {
+    "message": "Question input"
+  },
+  "askAi.send": {
+    "message": "Send"
+  },
+  "askAi.stop": {
+    "message": "Stop generating"
+  },
+  "askAi.thinking": {
+    "message": "Preparing an answer"
+  },
+  "askAi.copy": {
+    "message": "Copy"
+  },
+  "askAi.reload": {
+    "message": "Regenerate"
+  },
+  "askAi.button": {
+    "message": "Ask AI"
+  },
+  "askAi.error.failed": {
+    "message": "Couldn't generate an answer. Try again later."
+  },
+  "askAi.error.rateLimitedWithTime": {
+    "message": "Too many questions. Try again in {seconds} seconds."
+  },
+  "askAi.error.rateLimited": {
+    "message": "Too many questions. Try again later."
+  },
+  "askAi.error.unavailable": {
+    "message": "The service is temporarily unavailable. Try again later."
+  },
+  "askAi.error.network": {
+    "message": "Couldn't connect to the server. Check your network connection."
   }
 }
