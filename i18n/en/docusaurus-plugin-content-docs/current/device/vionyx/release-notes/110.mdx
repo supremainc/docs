@@ -52,16 +52,8 @@ Release<Separator/>2026-10-16
     {/* (AIODHUB-87) People Count: Live View에서 Count 라벨 위치 조정 지원 */}
 1. Added support for adjusting People Count label position in Live View
 
-    {/* (AIODHUB-55, AIODHUB-17) Bulk 등록/삭제: Bulk 얼굴 등록 시 단건 등록과 동일한 사전 검사 적용 및 항목별 결과 안내 개선, Bulk 삭제 비동기 처리 */}
-1. Improved Bulk Face Enrollment/deletion
-    - Applied the same pre-checks as single enrollment and improved per-item result notifications during Bulk Face Enrollment
-    - Processed bulk deletion asynchronously
-
     {/* (AIODHUB-64) Operator 권한: Operator 계정에 날짜 및 시간 설정 권한 부여 */}
 1. Granted **Date & Time** setting permission to **Operator** accounts
-
-    {/* (AIODHUB-81) Relay 포트: 사용 중인 Relay 포트 중복 사용 차단 */}
-1. Blocked duplicate use of relay ports already in use and added usage location guidance
 
     {/* (AIODHUB-63, AIODHUB-96, AIODHUB-97, AIODHUB-98, AIODHUB-15) 사람 검출 및 얼굴 인증: 사람 검출 모델 1.3.5 업데이트, 얼굴 인증 모델 갱신, 인증 성공 LED 표시 시점 및 얼굴 등록 품질 검증 실패 안내 문구 개선 */}
 1. Improved person detection and face authentication
@@ -78,20 +70,8 @@ Release<Separator/>2026-10-16
     {/* (ACFEFW-76, ACFEFW-14, AIODHUB-74, TASK 420) 계정·초기화: 패스워드 변경 후 90일 경과 시 변경 권장 팝업 표시, Config Reset 동작 개선 및 요청 timeout 120초로 변경 */}
 1. Improved password change recommendation popup to display after 90 days since the last password change
 
-1. Improved config reset
-    - Improved config reset failing
-    - Extended the config reset response timeout
-
-    {/* (ACFEFW-74, ACFEFW-85, AIODHUB-69, AIODHUB-72) Door/Schedule 설정: Schedule 목록 숫자 순서 정렬, Door/AI Event 삭제 전 연결된 항목 확인 */}
-1. Improved Door/Schedule settings
-    - Improved number sorting order when sorting the Schedule list by name
-    - Improved checking and notifying of linked items before deleting a Door/AI Event
-
     {/* (TASK 443) 접속: 다른 계정의 동시 접속 제한으로 접속이 차단되는 제약 완화 */}
 1. Eased the restriction that blocked access due to concurrent login limits from other accounts
-
-    {/* (TASK 459) 얼굴 검출 이벤트: 얼굴별 인증 상태 및 인증 보류 이유 정보 추가 */}
-1. Added per-face authentication status and authentication hold reason information to face detection events
 
 ## Bug Fixes
 
@@ -123,8 +103,5 @@ Release<Separator/>2026-10-16
 
     {/* (TASK 406, TASK 407) Line Crossing: 웹페이지 Line Crossing 설정 문제 및 이벤트 발생 시 highlight가 표시되지 않는 현상 개선 */}
 1. **Line Crossing** setting errors and highlights not displayed when events occur. <Badge>1.0.0</Badge>
-
-    {/* (TASK 503) 노출: 밝기 제어가 얼굴 영역 가중치를 덮어쓰는 현상 개선 */}
-1. Brightness control overwriting face area weighting. <Badge>1.0.0</Badge>
 
 </BugLists>
