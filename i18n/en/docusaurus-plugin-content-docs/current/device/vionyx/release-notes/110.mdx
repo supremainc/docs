@@ -1,0 +1,130 @@
+---
+id: 110
+title: Firmware Version 1.1.0
+---
+
+# Firmware Version 1.1.0 (Build No. 1.0.1_261015)
+
+Release<Separator/>2026-10-16
+
+## New Features and Improvements
+
+---
+
+    {/* (AICP-35) RS-485 설정: 지원 Master I/O 모듈 등록 및 상태 확인 (최대 8대) */}
+1. Added I/O module registration and status monitoring in RS-485 settings (up to 8 devices)
+
+    {/* (AICP-36, TASK 487) Rule Action: 인증/미인증 구분별 Relay 동작 설정 지원 */}
+1. Added relay action settings based on registered/unregistered user distinction in Rule actions
+
+    {/* (AICP-37) Schedule: 주간 일정 생성/편집 및 Rule 연결 */}
+1. Added weekly schedule creation/editing and rule linking
+
+    {/* (AICP-38, TASK 471, TASK 495) Count option: People Count 동작 옵션 제공, Count Limit 설정 시 제한 인원 이하에서도 인원 변경 시 이벤트 발행 및 초과 시 별도 이벤트 발행 */}
+1. Added count functionality for AI events (**People Tracking**, **Line Crossing**, **Intrusion**)
+
+    {/* (AICP-41) 사람 검출 영역: 사람 검출 영역을 전체/얼굴 영역/사용자 지정 영역으로 설정 지원 */}
+1. Added support for setting the people detection area to **All Area**, **Face Area Only**, or **Designated Area**
+
+    {/* (AICP-42, AIODHUB-37, AIODHUB-43, AIODHUB-95) 출입 통제 (Beta): Door, Access Level, Door Rule, AI Event, Anti-Tailgating 설정 제공, Door 설정에서 Relay/Input 포트 사용 현황 확인 */}
+1. Added Access Control
+    - Provides Door, Access Level, Door Rule, AI Event, and Anti-Tailgating settings
+    - Check Relay/Input port usage in Door settings
+
+    {/* (AICP-43) 시스템 로그: 출입 통제 로그 추가 */}
+1. Added access control logs to system logs
+
+    {/* (AICP-44, AIODHUB-31, AIODHUB-32) 카메라 히터 수동 제어: 히터 수동 ON/OFF 지원 (기본값 OFF, 켠 뒤 30분 후 자동 OFF) */}
+1. Added manual camera **Heater** On/Off control (automatically turns off 30 minutes after being turned on)
+
+    {/* (AICP-45, AIODHUB-49) ONVIF Profile S: Profile S 옵션 설정 지원 */}
+1. Added ONVIF Profile S fallback activation option
+
+    {/* (ACFEFW-95, ACFEFW-96, ACFEFW-98) Adaptive AE: 설정 ON/OFF 제공 (기본값 ON), 얼굴 영역 및 장면 변화에 따른 노출 제어 개선으로 과노출 상태가 지속되는 현상 개선 */}
+1. Added **Adaptive AE Mode** On/Off setting (improves overexposure through exposure control based on face area and scene changes)
+
+    {/* (AIODHUB-83, AIODHUB-85, TASK 500) 야간 IR 자동 전환: IR 자동 전환 ON/OFF 지원 (재부팅 후 설정 유지) */}
+1. Added **Auto IR Switch** On/Off support (settings retained after reboot)
+
+    {/* (AIODHUB-78, AIODHUB-79, AIODHUB-80) Line Crossing 기준점: Line Crossing 이벤트 판정 기준점(Center/Bottom) 선택 기능 추가 */}
+1. Added **Line Crossing** event detection reference point (Center/Bottom) selection
+
+    {/* (AIODHUB-87) People Count: Live View에서 Count 라벨 위치 조정 지원 */}
+1. Added support for adjusting People Count label position in Live View
+
+    {/* (AIODHUB-55, AIODHUB-17) Bulk 등록/삭제: Bulk 얼굴 등록 시 단건 등록과 동일한 사전 검사 적용 및 항목별 결과 안내 개선, Bulk 삭제 비동기 처리 */}
+1. Improved Bulk Face Enrollment/deletion
+    - Applied the same pre-checks as single enrollment and improved per-item result notifications during Bulk Face Enrollment
+    - Processed bulk deletion asynchronously
+
+    {/* (AIODHUB-64) Operator 권한: Operator 계정에 날짜 및 시간 설정 권한 부여 */}
+1. Granted **Date & Time** setting permission to **Operator** accounts
+
+    {/* (AIODHUB-81) Relay 포트: 사용 중인 Relay 포트 중복 사용 차단 */}
+1. Blocked duplicate use of relay ports already in use and added usage location guidance
+
+    {/* (AIODHUB-63, AIODHUB-96, AIODHUB-97, AIODHUB-98, AIODHUB-15) 사람 검출 및 얼굴 인증: 사람 검출 모델 1.3.5 업데이트, 얼굴 인증 모델 갱신, 인증 성공 LED 표시 시점 및 얼굴 등록 품질 검증 실패 안내 문구 개선 */}
+1. Improved person detection and face authentication
+    - Improved detection performance through a person detection model update
+    - Updated the face authentication model
+    - Improved LED display behavior on successful face authentication
+    - Improved the guidance message when face enrollment quality validation fails
+
+    {/* (ACFEFW-81, ACFEFW-82, ACFEFW-83) 네트워크: DHCP/Static 전환 시 DNS 설정 유지 및 표시 개선, Static 모드에서 Gateway를 선택 항목으로 변경 */}
+1. Improved network settings
+    - Improved DNS settings not being retained or displayed when switching between **DHCP**/**Static**
+    - Changed **Gateway** to optional input in **Static** settings
+
+    {/* (ACFEFW-76, ACFEFW-14, AIODHUB-74, TASK 420) 계정·초기화: 패스워드 변경 후 90일 경과 시 변경 권장 팝업 표시, Config Reset 동작 개선 및 요청 timeout 120초로 변경 */}
+1. Improved password change recommendation popup to display after 90 days since the last password change
+
+1. Improved config reset
+    - Improved config reset failing
+    - Extended the config reset response timeout
+
+    {/* (ACFEFW-74, ACFEFW-85, AIODHUB-69, AIODHUB-72) Door/Schedule 설정: Schedule 목록 숫자 순서 정렬, Door/AI Event 삭제 전 연결된 항목 확인 */}
+1. Improved Door/Schedule settings
+    - Improved number sorting order when sorting the Schedule list by name
+    - Improved checking and notifying of linked items before deleting a Door/AI Event
+
+    {/* (TASK 443) 접속: 다른 계정의 동시 접속 제한으로 접속이 차단되는 제약 완화 */}
+1. Eased the restriction that blocked access due to concurrent login limits from other accounts
+
+    {/* (TASK 459) 얼굴 검출 이벤트: 얼굴별 인증 상태 및 인증 보류 이유 정보 추가 */}
+1. Added per-face authentication status and authentication hold reason information to face detection events
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+    {/* (AIODHUB-82, TASK 496) Bitrate: CBR/VBR 제어 동작 수정 */}
+1. Frame drops occurring in high-noise video. <Badge>1.0.0</Badge>
+
+    {/* (ACFEFW-92, AIODHUB-39, AIODHUB-99) RTSP 스트리밍: 코덱 전환, 다중 연결, 메타데이터 처리 중 연결이 끊기거나 재접속이 안 되는 현상 개선 */}
+1. RTSP video disconnecting or failing to reconnect during codec switching, multiple connections, or metadata processing. <Badge>1.0.0</Badge>
+
+    {/* (ACFEFW-88) Video 설정: 저장 실패 시 화면 값을 이전 설정으로 복구하고 안내 메시지 표시 */}
+1. Screen values not reverting and unclear failure notification when saving video settings fails. <Badge>1.0.0</Badge>
+
+    {/* (ACFEFW-89) Overlay: Font Size 7 이상 설정 시 글자 크기가 작아지는 현상 개선 (1~20 범위 정상 반영) */}
+1. Font size becoming smaller when Overlay font size is set to 7 or higher. <Badge>1.0.0</Badge>
+
+    {/* (ACFEFW-67, ACFEFW-94, ACFEFW-17) 시스템: Manual 시간 모드에서 설정한 시간이 되돌아가는 현상, 펌웨어 업데이트 후 웹페이지가 로그인 화면으로 복구되지 않는 현상, 사용 중인 Audio Clip 삭제 시 Rule 설정 오류 개선 */}
+1. Set time reverting when **Time** mode is **Manual**. <Badge>1.0.0</Badge>
+
+1. Web page not recovering to the login screen after firmware update. <Badge>1.0.0</Badge>
+
+1. **Rule** settings remaining invalid when an **Audio Clip** in use is deleted. <Badge>1.0.0</Badge>
+
+    {/* (TASK 418) ONVIF: 네트워크 변경 후 ONVIF discovery 복구, 특정 IP 설정에서 VMS에 연결되지 않는 현상 개선 */}
+1. ONVIF discovery not recovering after network changes and failing to connect to VMS with certain IP settings. <Badge>1.0.0</Badge>
+
+    {/* (TASK 406, TASK 407) Line Crossing: 웹페이지 Line Crossing 설정 문제 및 이벤트 발생 시 highlight가 표시되지 않는 현상 개선 */}
+1. **Line Crossing** setting errors and highlights not displayed when events occur. <Badge>1.0.0</Badge>
+
+    {/* (TASK 503) 노출: 밝기 제어가 얼굴 영역 가중치를 덮어쓰는 현상 개선 */}
+1. Brightness control overwriting face area weighting. <Badge>1.0.0</Badge>
+
+</BugLists>
