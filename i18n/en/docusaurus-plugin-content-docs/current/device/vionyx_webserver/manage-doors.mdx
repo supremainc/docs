@@ -96,7 +96,7 @@ In the <Cmd sid='select_relay' product='cam' /> section, set the relay that cont
 
 * <Cmd sid='port' product='cam' />: Select the relay port connected to the door lock. Required. Select a relay port on the camera or on a downstream I/O device. Do not select ports used by another door or AI rule.
 
-* <Cmd sid='switch_type' product='cam' />: Select the lock contact type. If <Cmd sid='select_none' product='cam' /> remains selected, saving changes it to <Cmd sid='normal_open' product='cam' />.
+* <Cmd sid='switch_type' product='cam' />: Select the lock contact type.
 
   * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
 
@@ -174,13 +174,7 @@ In the <Cmd sid='schedule' product='cam' /> section, set the door to stay unlock
 
 * <Cmd sid='unlock_schedule' product='cam' />: Keep the door unlocked during the selected schedule. Use this to keep the lobby door unlocked during busy business hours.
 
-* <Cmd sid='lock_schedule' product='cam' />: Keep the door locked during the selected schedule. In this time zone, registered users cannot access, and the Exit button does not work.
-
-:::caution
-
-During the time period set in <Cmd sid='lock_schedule' product='cam' /> prevents people inside from exiting using the exit button. Do not set <Cmd sid='lock_schedule' product='cam' /> for time period when people may remain inside. To open a door, execute <Cmd sid='manual_unlock' product='cam' /> from <Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' />. For more information, see <DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />.
-
-:::
+* <Cmd sid='lock_schedule' product='cam' />: Keep the door locked during the selected schedule. During this time slot, enrolled users cannot access the door. However, people inside can exit by pressing the Exit button.
 
 :::info
 

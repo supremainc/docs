@@ -40,7 +40,7 @@ Los eventos de control de acceso deciden si permiten el acceso al combinar los s
 | --- | --- | --- |
 | <Cmd sid='validation_area' product='cam' /> | Es un área más amplia que rodea la zona de control de acceso. Verifique la cantidad de personas y el estado de identificación en esta área para detectar tailgating. | Si |
 | <Cmd sid='door_access_area' product='cam' /> | Es el área justo frente a la puerta. Cuando una persona entra en esta área, el sistema lo considera un intento de acceso e inicia la evaluación. | Si |
-| <Cmd sid='event_entry_line' product='cam' /> | Es una línea que distingue la dirección del movimiento. Las personas que salen desde el interior no se consideran intentos de acceso. | Opción |
+| <Cmd sid='event_entry_line' product='cam' /> | Esta línea determina quién cruza la puerta de acceso. Según la dirección seleccionada, el sistema determina la entrada, la salida o ambas. | Si |
 | <Cmd sid='face_area' product='cam' /> | Es el área donde el sistema rastrea primero los rostros para identificar usuarios. | Opción |
 
 La cámara clasifica a las personas en la zona en uno de los siguientes estados.
@@ -116,17 +116,21 @@ En la sección <Cmd sid='area' product='cam' />, defina el área de validación,
 
 * <Cmd sid='door_access_area' product='cam' />(Naranja): Defínala justo frente a la puerta, por donde la persona debe pasar para ingresar. Cuando una persona ingresa en esta área, el sistema determina el acceso.
 
-* <Cmd sid='event_entry_line' product='cam' />: Línea que indica la dirección del movimiento para el acceso. Arrastre los puntos de ambos extremos para colocar la línea a través del área de control de acceso. Una persona que sale de adentro hacia afuera no cuenta como intento de acceso al pasar por el área de control de acceso.
+* <Cmd sid='event_entry_line' product='cam' />: Esta línea determina quién cruza la puerta de acceso. Arrastre los puntos de ambos extremos para colocar la línea a través del área de control de acceso. Luego, seleccione la dirección de cruce.
 
-{/* TODO (pending developer confirmation): Confirm whether access decisions exclude movement direction A → B or B → A, then add placement guidance / Screenshot shows the entry line goes outside the verification area → confirm whether this is a drag limit, a save error, or based on the person detection area, then revise the info text */}
+  * <Cmd>A → B</Cmd>: Detecte solo a las personas que crucen de A a B.
+
+  * <Cmd>B → A</Cmd>: Detecte solo a las personas que crucen de B a A.
+
+  * <Cmd>A ↔ B</Cmd>: Detecte ambas direcciones. El sistema distingue entre las personas que entran y las que salen.
+
+   Para detectar solo una dirección, verifique las posiciones de A y B en la Vista en vivo y luego seleccione <Cmd>A → B</Cmd> o <Cmd>B → A</Cmd>.
 
 :::info
 
 * El área de validación debe incluir por completo el área de control de acceso. El sistema no guarda si el área de control de acceso se extiende fuera del área de validación.
 
 * Extienda la línea de entrada del evento más allá del área de control de acceso, pero manténgala dentro del área de verificación.
-
-* No es posible cambiar la dirección de la línea de entrada del evento (<Cmd>A ↔ B</Cmd>).
 
 * Para inicializar la forma y el tamaño del área configurada, haga clic en <IcCamReset title='reset' />.
 
@@ -152,6 +156,8 @@ Defina el área para la detección facial. Al activarla, el sistema prioriza el 
 * Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área facial configurada.
 
 * Haga clic en <IcCamTrash title='delete' /> para eliminar un área facial agregada.
+
+* En los ajustes de la cámara, si usa la opción <Cmd sid='adaptive_ae_mode' product='cam' />, ajústela. Haga que el área del rostro incluya el lugar donde una persona se coloca o pasa. Verifique que el rostro aparezca con claridad.
 
 :::
 

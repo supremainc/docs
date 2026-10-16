@@ -97,7 +97,7 @@ description: 카메라가 제어할 출입문을 등록하고, 출입 통제 이
 
 * <Cmd sid='port' product='cam' />: 출입문 잠금 장치가 연결된 릴레이 포트를 선택하세요. 필수 항목입니다. 카메라의 릴레이 포트와 하위 I/O 장치의 릴레이 포트를 선택할 수 있습니다. 다른 출입문이나 AI 규칙에서 사용 중인 포트는 선택할 수 없습니다.
 
-* <Cmd sid='switch_type' product='cam' />: 잠금 장치의 접점 타입을 선택하세요. <Cmd sid='select_none' product='cam' />으로 두고 저장하면 <Cmd sid='normal_open' product='cam' />으로 저장됩니다.
+* <Cmd sid='switch_type' product='cam' />: 잠금 장치의 접점 타입을 선택하세요.
 
    * <Cmd sid='normal_open' product='cam' />: 평상시 열려 있다가 릴레이가 동작하면 닫히는 접점입니다.
 
@@ -175,13 +175,7 @@ description: 카메라가 제어할 출입문을 등록하고, 출입 통제 이
 
 * <Cmd sid='unlock_schedule' product='cam' />: 선택한 일정의 시간대에는 출입문을 계속 열어 둡니다. 방문객이 많은 업무 시간에 로비 출입문을 열어 둘 때 사용하세요.
 
-* <Cmd sid='lock_schedule' product='cam' />: 선택한 일정의 시간대에는 출입문을 계속 잠가 둡니다. 이 시간대에는 등록된 사용자도 출입할 수 없으며, 퇴실 버튼도 동작하지 않습니다.
-
-:::caution
-
-<Cmd sid='lock_schedule' product='cam' />로 설정한 시간대에는 실내에 있는 사람이 퇴실 버튼으로 나갈 수 없습니다. 실내에 사람이 남아 있을 수 있는 시간대에는 <Cmd sid='lock_schedule' product='cam' />을 지정하지 마세요. 출입문을 열어야 할 때는 <Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' /> 메뉴에서 <Cmd sid='manual_unlock' product='cam' />를 실행하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />를 참고하세요.
-
-:::
+* <Cmd sid='lock_schedule' product='cam' />: 선택한 일정의 시간대에는 출입문을 계속 잠가 둡니다. 이 시간대에는 등록된 사용자도 출입할 수 없지만, 실내에 있는 사람은 퇴실 버튼으로 출입문을 열고 나갈 수 있습니다.
 
 :::info
 

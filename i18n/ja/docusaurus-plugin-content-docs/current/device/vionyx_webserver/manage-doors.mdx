@@ -96,7 +96,7 @@ description: カメラが制御するドアを登録し、アクセス制御イ�
 
 * <Cmd sid='port' product='cam' />：ドアのロック装置が接続されているリレーポートを選択します。必須項目です。カメラのリレーポートと下位I/Oデバイスのリレーポートを選択できます。他のドアまたはAIルールで使用中のポートは選択できません。
 
-* <Cmd sid='switch_type' product='cam' />：ロック装置の接点タイプを選択します。<Cmd sid='select_none' product='cam' />のまま保存すると、<Cmd sid='normal_open' product='cam' />として保存されます。
+* <Cmd sid='switch_type' product='cam' />：ロック装置の接点タイプを選択します。
 
   * <Cmd sid='normal_open' product='cam' />: 通常は開いており、リレーが動作すると閉じる接点です。
 
@@ -174,13 +174,7 @@ description: カメラが制御するドアを登録し、アクセス制御イ�
 
 * <Cmd sid='unlock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを解錠したままにします。来訪者が多い業務時間にロビーのドアを解錠しておく場合に使用してください。
 
-* <Cmd sid='lock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを施錠したままにします。この時間帯は、登録済みのユーザーも入退室できず、退室ボタンも動作しません。
-
-:::caution
-
-<Cmd sid='lock_schedule' product='cam' />で設定した時間帯は、室内にいる人が退室ボタンで退出できません。室内に人が残る可能性がある時間帯には、<Cmd sid='lock_schedule' product='cam' />を指定しないでください。ドアを開ける必要がある場合は、<Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' />メニューで<Cmd sid='manual_unlock' product='cam' />を実行してください。詳しくは、<DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />を参照してください。
-
-:::
+* <Cmd sid='lock_schedule' product='cam' />：選択したスケジュールの時間帯では、ドアを施錠したままにします。この時間帯は登録済みユーザーでも入室できませんが、室内にいる人は退室ボタンを押して出入口ドアを開けて退出できます。
 
 :::info
 

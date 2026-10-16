@@ -72,12 +72,14 @@ Haz clic en el botón en la columna <Cmd sid='control' product='cam' /> para con
 | --- | --- |
 | <Cmd sid='door_open' product='cam' /> | Abre la puerta de entrada una vez. La puerta de entrada vuelve a bloquearse cuando se agota el tiempo de apertura establecido. |
 | <Cmd sid='manual_unlock' product='cam' /> | Desbloquea la puerta de entrada y mantenla abierta hasta que ejecutes la característica <Cmd sid='release' product='cam' />. |
-| <Cmd sid='manual_lock' product='cam' /> | Bloquea la puerta de entrada y mantenla bloqueada hasta que ejecutes la característica <Cmd sid='release' product='cam' />. Durante este tiempo, los usuarios inscritos no pueden acceder a la puerta de entrada. |
+| <Cmd sid='manual_lock' product='cam' /> | Bloquea la puerta de entrada y mantenla bloqueada hasta que ejecutes la característica <Cmd sid='release' product='cam' />. Durante este período, los usuarios inscritos no pueden ingresar y el botón Salir no abre la puerta. |
 | <Cmd sid='release' product='cam' /> | Finaliza <Cmd sid='manual_lock' product='cam' /> o <Cmd sid='manual_unlock' product='cam' /> y devuelve la puerta de entrada a su estado anterior. |
 
 :::caution
 
-En el estado <Cmd sid='manual_unlock' product='cam' />, cualquier persona puede acceder sin importar la autenticación facial. Después de completar las tareas requeridas, haz clic en el botón <Cmd sid='release' product='cam' />.
+* En el estado <Cmd sid='manual_unlock' product='cam' />, cualquier persona puede acceder sin importar la autenticación facial. Después de completar las tareas requeridas, haga clic en el botón <Cmd sid='release' product='cam' />.
+
+* En el modo <Cmd sid='manual_lock' product='cam' />, las personas que están dentro no pueden salir con el botón Salir. Antes de ejecutar <Cmd sid='manual_lock' product='cam' />, confirme que no quede nadie dentro.
 
 :::
 
