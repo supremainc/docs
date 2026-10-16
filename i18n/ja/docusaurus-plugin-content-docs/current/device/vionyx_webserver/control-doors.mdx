@@ -72,12 +72,14 @@ description: ドアの施錠状態と開閉状態をリアルタイムで確認�
 | --- | --- |
 | <Cmd sid='door_open' product='cam' /> | ドアを一度開けます。ドアに設定した開放時間が経過すると、ドアは自動的に施錠します。 |
 | <Cmd sid='manual_unlock' product='cam' /> | ドアを解錠し、<Cmd sid='release' product='cam' /> 機能を実行するまで開放したままにします。 |
-| <Cmd sid='manual_lock' product='cam' /> | ドアを施錠し、<Cmd sid='release' product='cam' /> 機能を実行するまで施錠したままにします。この間、登録済みユーザーも入退室できません。 |
+| <Cmd sid='manual_lock' product='cam' /> | ドアを施錠し、<Cmd sid='release' product='cam' /> 機能を実行するまで施錠したままにします。この時間帯は、登録済みのユーザーも入退室できず、退室ボタンも動作しません。 |
 | <Cmd sid='release' product='cam' /> | <Cmd sid='manual_lock' product='cam' /> または <Cmd sid='manual_unlock' product='cam' />を終了し、ドアを手動制御前の状態に戻します。 |
 
 :::caution
 
-<Cmd sid='manual_unlock' product='cam' /> 状態では、顔認証に関係なく誰でも入退室できます。必要な作業が終わったら、必ず <Cmd sid='release' product='cam' /> ボタンをクリックしてください。
+* <Cmd sid='manual_unlock' product='cam' /> 状態では、顔認証に関係なく誰でも入退室できます。必要な作業が終わったら、必ず <Cmd sid='release' product='cam' /> ボタンをクリックしてください。
+
+* <Cmd sid='manual_lock' product='cam' />状態では、室内にいる人は退室ボタンで退出できません。<Cmd sid='manual_lock' product='cam' />を実行する前に、室内に人が残っていないことを確認してください。
 
 :::
 

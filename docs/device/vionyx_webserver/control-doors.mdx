@@ -73,12 +73,14 @@ description: 출입문의 잠금 상태와 개폐 상태를 실시간으로 확�
 | --- | --- |
 | <Cmd sid='door_open' product='cam' /> | 출입문을 한 번 엽니다. 출입문에 설정한 개방 시간이 지나면 다시 잠깁니다. |
 | <Cmd sid='manual_unlock' product='cam' /> | 출입문을 잠금 해제하고, <Cmd sid='release' product='cam' /> 기능을 실행할 때까지 계속 열어 둡니다. |
-| <Cmd sid='manual_lock' product='cam' /> | 출입문을 잠그고, <Cmd sid='release' product='cam' /> 기능을 실행할 때까지 계속 잠가 둡니다. 이 동안에는 등록된 사용자도 출입할 수 없습니다. |
+| <Cmd sid='manual_lock' product='cam' /> | 출입문을 잠그고, <Cmd sid='release' product='cam' /> 기능을 실행할 때까지 계속 잠가 둡니다. 이 동안에는 등록된 사용자도 출입할 수 없으며, 퇴실 버튼으로도 출입문을 열 수 없습니다. |
 | <Cmd sid='release' product='cam' /> | <Cmd sid='manual_lock' product='cam' /> 또는 <Cmd sid='manual_unlock' product='cam' />를 끝내고, 출입문을 수동 제어 이전 상태로 되돌립니다. |
 
 :::caution
 
-<Cmd sid='manual_unlock' product='cam' /> 상태에서는 얼굴 인식과 관계없이 누구나 출입할 수 있습니다. 필요한 작업을 마치면 반드시 <Cmd sid='release' product='cam' /> 버튼을 클릭하세요.
+* <Cmd sid='manual_unlock' product='cam' /> 상태에서는 얼굴 인식과 관계없이 누구나 출입할 수 있습니다. 필요한 작업을 마치면 반드시 <Cmd sid='release' product='cam' /> 버튼을 클릭하세요.
+
+* <Cmd sid='manual_lock' product='cam' /> 상태에서는 실내에 있는 사람이 퇴실 버튼으로 나갈 수 없습니다. <Cmd sid='manual_lock' product='cam' />을 실행하기 전에 실내에 사람이 남아 있지 않은지 확인하세요.
 
 :::
 

@@ -1,7 +1,7 @@
 ---
 id: configure-camera-settings
 title: Configure Camera Settings
-description: This guide explains how to set image quality, white balance, sensitivity, backlight compensation WDR, anti-flicker, IR auto switch, and the heater to suit the installation environment, and how to specify the installation type.
+description: This guide explains how to set image quality, white balance, sensitivity, backlight compensation WDR, anti-flicker, IR auto switch, Adaptive AE mode, and the heater to suit the installation environment. It also explains how to specify the installation type.
 ---
 
 Adjust camera settings to capture optimal footage in the installation environment. Changes appear in Live View immediately, so check results while adjusting image quality, white balance, sensitivity, and backlight compensation. Available AI features vary by mounting type (ceiling or wall).
@@ -17,6 +17,8 @@ Adjust camera settings in the following situations.
 * To reduce flicker from fluorescent or LED lighting.
 
 * When supplemental lighting is available or color video is required, and IR switching at night must stay off
+
+* When ambient light makes a face appear too dark or too bright, face authentication may be difficult
 
 * To optimize the camera and AI features for the installation location.
 
@@ -115,6 +117,28 @@ Set whether the camera automatically switches to IR (night) mode when ambient li
 :::info
 
 Firmware version 1.1.0 or later supports the <Cmd sid='ir_auto_switch' product='cam' /> option.
+
+:::
+
+## Adaptive AE mode setting
+
+Near a window or where sunlight changes a lot, Facial Authentication may be difficult. Use Adaptive AE mode in this case. The camera learns where faces often appear and adjusts exposure so faces look properly lit. In the <Cmd sid='video' product='cam' /> section, enable or disable the <Cmd sid='adaptive_ae_mode' product='cam' /> option.
+
+* <Cmd sid='on' product='cam' />(default): Adjusts exposure based on face area brightness.
+
+  * Keeps face area brightness consistent under strong ambient light or changing sunlight.
+
+  * Image brightness stays stable regardless of clothing colors, whether people pass by or stay.
+
+  * When lighting turns on or off, readjusts exposure to the new brightness.
+
+* <Cmd sid='off' product='cam' />: does not use Adaptive AE mode correction. When enabled again, correction runs automatically.
+
+:::info
+
+* <Cmd sid='adaptive_ae_mode' product='cam' /> operates based on the AI event face area and person detection range. To set the area, see <DocLink docId='device/vionyx_webserver/configure-ai-events-and-rules' />.
+
+* Firmware version 1.1.0 or later supports the <Cmd sid='adaptive_ae_mode' product='cam' /> option.
 
 :::
 

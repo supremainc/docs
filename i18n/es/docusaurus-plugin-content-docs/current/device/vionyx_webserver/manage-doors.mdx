@@ -96,7 +96,7 @@ En la sección <Cmd sid='select_relay' product='cam' />, seleccione el relé que
 
 * <Cmd sid='port' product='cam' />: Seleccione el puerto del relé conectado a la cerradura de la puerta. Obligatorio. Seleccione un puerto de relé en la cámara o en un dispositivo de E/S aguas abajo. No seleccione puertos usados por otra puerta o regla de IA.
 
-* <Cmd sid='switch_type' product='cam' />: Seleccione el tipo de contacto de la cerradura. Si <Cmd sid='select_none' product='cam' /> permanece seleccionado, al guardar el sistema lo cambia a <Cmd sid='normal_open' product='cam' />.
+* <Cmd sid='switch_type' product='cam' />: Seleccione el tipo de contacto de la cerradura.
 
   * <Cmd sid='normal_open' product='cam' />: Normalmente abierto y se cierra cuando se activa el relé.
 
@@ -174,13 +174,7 @@ En la sección <Cmd sid='schedule' product='cam' />, configure la puerta para qu
 
 * <Cmd sid='unlock_schedule' product='cam' />: Mantenga la puerta desbloqueada durante el horario seleccionado. Úselo para mantener la puerta del vestíbulo desbloqueada durante las horas de mayor actividad.
 
-* <Cmd sid='lock_schedule' product='cam' />: Mantenga la puerta bloqueada durante el horario seleccionado. En esta franja horaria, los usuarios inscritos no pueden acceder, y el botón Salir no funciona.
-
-:::caution
-
-Durante el período establecido en <Cmd sid='lock_schedule' product='cam' />, las personas dentro no pueden salir con el botón Salir. No establezca <Cmd sid='lock_schedule' product='cam' /> para un período en el que las personas puedan permanecer dentro. Para abrir una puerta, ejecute <Cmd sid='manual_unlock' product='cam' /> desde <Cmd sid='access' product='cam' /> → <Cmd sid='door_control' product='cam' />. Para más información, consulte <DocLink docId='device/vionyx_webserver/control-doors#controllDoor' />.
-
-:::
+* <Cmd sid='lock_schedule' product='cam' />: Mantenga la puerta bloqueada durante el horario seleccionado. Durante este intervalo, los usuarios inscritos no pueden acceder a la puerta. Sin embargo, las personas en el interior pueden salir al presionar el botón Salir.
 
 :::info
 

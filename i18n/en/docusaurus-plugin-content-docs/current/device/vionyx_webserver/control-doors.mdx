@@ -72,12 +72,14 @@ Click the button in the <Cmd sid='control' product='cam' /> column to control th
 | --- | --- |
 | <Cmd sid='door_open' product='cam' /> | Open the entrance door once. The entrance door locks again after the configured open time elapses. |
 | <Cmd sid='manual_unlock' product='cam' /> | Unlock the entrance door and keep it open until you execute the <Cmd sid='release' product='cam' /> feature. |
-| <Cmd sid='manual_lock' product='cam' /> | Lock the entrance door and keep it locked until you execute the <Cmd sid='release' product='cam' /> feature. During this time, registered users cannot access the entrance door. |
+| <Cmd sid='manual_lock' product='cam' /> | Lock the entrance door and keep it locked until you execute the <Cmd sid='release' product='cam' /> feature. During this period, registered users cannot enter, and the Exit button cannot open the door. |
 | <Cmd sid='release' product='cam' /> | End <Cmd sid='manual_lock' product='cam' /> or <Cmd sid='manual_unlock' product='cam' /> and return the entrance door to its previous state. |
 
 :::caution
 
-In the <Cmd sid='manual_unlock' product='cam' /> state, anyone can access regardless of facial authentication. After completing required tasks, click the <Cmd sid='release' product='cam' /> button.
+* In the <Cmd sid='manual_unlock' product='cam' /> state, anyone can access regardless of facial authentication. After completing required tasks, click the <Cmd sid='release' product='cam' /> button.
+
+* In <Cmd sid='manual_lock' product='cam' /> mode, people inside cannot exit using the Exit button. Before executing <Cmd sid='manual_lock' product='cam' />, confirm that no one remains inside.
 
 :::
 
