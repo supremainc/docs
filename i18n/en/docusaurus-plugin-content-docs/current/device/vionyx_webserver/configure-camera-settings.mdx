@@ -94,7 +94,7 @@ Enable WDR (Wide Dynamic Range) to allow the camera to capture bright and dark a
 
 To reduce screen flicker caused by a mismatch between lighting and frequency, set the <Cmd sid='anti_flicker' product='cam' /> option in the <Cmd sid='video' product='cam' /> section.
 
-* <Cmd sid='off' product='cam' />(default): Disable anti-flicker.
+* <Cmd sid='off' product='cam' /> (default): Disable anti-flicker.
 
 * <Cmd>50HZ</Cmd>: 50 Hz fluorescent/LED environment
 
@@ -110,7 +110,7 @@ Select the option that matches the lighting frequency in the scene. Incorrect se
 
 Set whether the camera automatically switches to IR (night) mode when ambient light dims. Disable auto switching in areas with supplemental lighting or where color video is required. In the <Cmd sid='video' product='cam' /> section, enable or disable the <Cmd sid='ir_auto_switch' product='cam' /> option.
 
-* <Cmd sid='on' product='cam' />(Default): Automatically switches to IR mode when ambient light dims, based on the illuminance sensor and image brightness.
+* <Cmd sid='on' product='cam' /> (default): Automatically switches to IR mode when ambient light dims, based on the illuminance sensor and image brightness.
 
 * <Cmd sid='off' product='cam' />: Does not switch to IR mode in low-light environments.
 
@@ -124,7 +124,7 @@ Firmware version 1.1.0 or later supports the <Cmd sid='ir_auto_switch' product='
 
 Near a window or where sunlight changes a lot, Facial Authentication may be difficult. Use Adaptive AE mode in this case. The camera learns where faces often appear and adjusts exposure so faces look properly lit. In the <Cmd sid='video' product='cam' /> section, enable or disable the <Cmd sid='adaptive_ae_mode' product='cam' /> option.
 
-* <Cmd sid='on' product='cam' />(default): Adjusts exposure based on face area brightness.
+* <Cmd sid='on' product='cam' /> (default): Adjusts exposure based on face area brightness.
 
   * Keeps face area brightness consistent under strong ambient light or changing sunlight.
 
@@ -132,7 +132,7 @@ Near a window or where sunlight changes a lot, Facial Authentication may be diff
 
   * When lighting turns on or off, readjusts exposure to the new brightness.
 
-* <Cmd sid='off' product='cam' />: does not use Adaptive AE mode correction. When enabled again, correction runs automatically.
+* <Cmd sid='off' product='cam' />: Does not use Adaptive AE mode correction. When enabled again, correction runs automatically.
 
 :::info
 
@@ -146,9 +146,9 @@ Near a window or where sunlight changes a lot, Facial Authentication may be diff
 
 Set <Cmd sid='mounting_type' product='cam' /> according to the camera's installation location. Supported AI features depend on the mounting type.
 
-* Select <Cmd sid='ceiling' product='cam' />(default) for ceiling installation. All AI features are available.
+* <Cmd sid='ceiling' product='cam' /> (default): Select for ceiling installation. All AI features are available.
 
-* Select <Cmd sid='wall' product='cam' /> for wall installation. Only Facial Authentication AI is available; object tracking is not supported.
+* <Cmd sid='wall' product='cam' />: Select for wall installation. Only Facial Authentication AI is available; object tracking is not supported.
 
 :::info
 
