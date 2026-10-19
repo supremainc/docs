@@ -1,0 +1,197 @@
+---
+id: manage-access-levels
+title: Manage Access Levels
+description: Group doors, access times, and users into an access level, assign user access permissions, and edit or delete access levels.
+---
+
+An access level defines **which users** can access **which doors**, and **when**. In access control events, users identified by Facial Authentication cannot enter unless they are assigned to the door’s access level and within the access time.
+
+Create an access level in the following situations.
+
+* When you want only certain departments or team members to have access to a door
+
+* When you want to set different access times for each user group, such as allowing access only during weekday business hours
+
+* When you want to grant separate permissions to users who access only during certain time periods, such as night shift workers
+
+## Before you start
+
+Before creating an access level, check the following.
+
+* Add doors before assigning them to an access level. For more information, see <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+* Register users with facial credentials before assigning them to the access level. For more information, see <DocLink docId='device/vionyx_webserver/add-users' />.
+
+* Create schedules in advance to restrict access times. If no schedule exists, use the default Always schedule. For more information, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+## Add an access level
+
+<Steps>
+<Step>
+
+### Start adding an access level
+
+1. Click the <Cmd sid='access' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='access_level' product='cam' /> on the left sidebar.
+
+   <ProdImg src='/img/cam-server/cam-acs-level.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. When the <Cmd sid='add_access_level' product='cam' /> pop-up appears, enter the access level information, then assign users.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-add.png' />
+
+</Step>
+<Step>
+
+### Enter basic information
+
+In the <Cmd sid='info' product='cam' /> section, enter information to identify the access level.
+
+* <Cmd sid='id' product='cam' />: The unique ID of the access level. The system enters it automatically. Change it if needed. Do not use an ID that matches another access level. Enter up to 64 characters. Use letters, numbers, hyphens(`-`), and underscores(`_`).
+
+* <Cmd sid='name' product='cam' />: Enter the access level name. This field is required. Do not use a name that matches another access level. Use a name that indicates who and when, such as **Development team—always access** or **Night shift workers**.
+
+* <Cmd sid='description' product='cam' />: Enter a description for the access level.
+
+</Step>
+<Step>
+
+### Select doors
+
+In the <Cmd sid='select_doors' product='cam' /> section, select the doors to allow access from the <Cmd sid='door' product='cam' /> list. Required. More than one door can be selected.
+
+:::info
+
+Add at least one door before selecting a door from the list. First, add a door in <Cmd sid='access' product='cam' /> → <Cmd sid='door' product='cam' />. For more information on registering doors, see <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+:::
+
+</Step>
+<Step>
+
+### Select access time
+
+In the <Cmd sid='select_access_time' product='cam' /> section, select a schedule to allow access from the <Cmd sid='schedule' product='cam' /> list. This field is required. The default is **Always**. The system allows access only during the selected schedule. It denies access at other times, including for registered users.
+
+:::info
+
+For more information on schedule management, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+:::
+
+</Step>
+<Step>
+
+### Assign users
+
+In the <Cmd sid='assign_user' product='cam' /> section, add users to apply the access level.
+
+1. Click <Cmd sid='add_button' product='cam' /> in the upper right corner of the <Cmd sid='assign_user' product='cam' /> section.
+
+2. When the <Cmd sid='select_user' product='cam' /> pop-up appears, click the checkbox for each user to assign.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-assign-users.png' />
+
+   * Select the checkbox (<Num num='1' />) in the list header to select all users.
+
+   * Enter a user name in the search field (<Num num='2' />) to find a specific user.
+
+   * Select a criterion in the sort list (<Num num='3' />) to change the sort order.
+
+3. Click <Cmd sid='save' product='cam' />. The system adds the selected users to the <Cmd sid='assign_user' product='cam' /> list.
+
+   <Image src='/img/cam-server/cam-acs-level-add-assigned-users.png' />
+
+To remove an assigned user from the access level, in the <Cmd sid='assign_user' product='cam' /> list, click the <IcCamTrash title='delete' /> button for that user.
+
+:::info
+
+* The <Cmd sid='select_user' product='cam' /> list shows only users registered with facial credentials.
+
+* A user can be assigned to multiple access levels. Each user can be assigned to a limited number of access levels.
+
+:::
+
+</Step>
+<Step>
+
+### Save access level
+
+After completing all settings, click <Cmd sid='save' product='cam' />. The system adds the saved access level to the access level list. It applies it immediately to assigned users.
+
+<ProdImg src='/img/cam-server/cam-acs-level-added-list.png' />
+
+</Step>
+</Steps>
+
+## Check the access level list
+
+The access level list shows access levels, access times for each level, and assigned users.
+
+<ProdImg src='/img/cam-server/cam-acs-level-list.png' />
+
+* Enter the access level name in the search field (<Num num='1' />) to find a specific access level.
+
+* Select a value from the Rows list (<Num num='2' />) at the top right of the screen to change the number of access levels shown per page.
+
+* To change the sort criterion, select one in <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+The following information appears in the access level list.
+
+| Item | Description |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | The unique ID of the access level. |
+| <Cmd sid='name' product='cam' /> | The name of the access level. |
+| <Cmd sid='description' product='cam' /> | The description entered when adding or editing the access level. |
+| <Cmd sid='schedule' product='cam' /> | The schedule that allows access. |
+| <Cmd sid='users' product='cam' /> | The number of users assigned to the access level. |
+| <Cmd sid='actions' product='cam' /> | Edit (<IcCamEdit />) or delete (<IcCamTrash />) access levels. |
+
+:::info
+
+Click the number in <Cmd sid='users' product='cam' /> to view the assigned user list.
+
+<ProdImg src='/img/cam-server/cam-acs-level-list-users-popup.png' />
+
+:::
+
+## Edit access level
+
+1. In the access level list, click the <IcCamEdit title='Edit' /> button to the right of the access level.
+
+2. When the <Cmd sid='edit_access_level' product='cam' /> popup appears, edit the doors, access time, and assigned users.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-edit.png' />
+
+3. Click <Cmd sid='save' product='cam' /> to save the changes.
+
+Saving changes applies them immediately to all assigned users.
+
+## Delete access level
+
+Delete access levels one at a time, or select multiple access levels to delete at once.
+
+* **Delete one**: In the access level list, click <IcCamTrash title='delete' /> at the far right of the access level to delete.
+
+* **Delete multiple**: In the access level list, select the checkboxes for the access levels to delete, and click <Cmd sid='delete' product='cam' /> at the top right of the screen.
+
+  <ProdImg src='/img/cam-server/cam-acs-level-select-delete.png' />
+
+If a confirmation message appears, review it and click <Cmd sid='ok' product='cam' />. Deleting an access level removes it from all assigned users. Doors and users are not deleted. Deleted access levels cannot be recovered.
+
+:::caution
+
+Deleting an access level prevents users assigned only to that level from accessing doors. Check assigned users before deleting.
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+Set door rules to execute additional actions, such as voice prompts, webhook notifications, and emergency lights, based on access decisions.
+
+</NextItem>
+</NextStep>

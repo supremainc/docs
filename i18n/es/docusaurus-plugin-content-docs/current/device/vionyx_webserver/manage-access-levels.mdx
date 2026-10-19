@@ -1,0 +1,197 @@
+---
+id: manage-access-levels
+title: Administrar Niveles de Acceso
+description: Agrupa puertas, horarios de acceso y usuarios en un nivel de acceso, asigna permisos de acceso a los usuarios y edita o elimina niveles de acceso.
+---
+
+Un nivel de acceso define **qué usuarios** pueden acceder a **qué puertas**, y **cuándo**. En los eventos de control de acceso, los usuarios identificados mediante autenticación facial no pueden ingresar a menos que estén asignados al nivel de acceso de la puerta y dentro del horario de acceso.
+
+Crea un nivel de acceso en las siguientes situaciones.
+
+* Cuando solo ciertos departamentos o miembros del equipo deben tener acceso a una puerta
+
+* Cuando debes establecer horarios de acceso diferentes para cada grupo de usuarios, como permitir el acceso solo en días hábiles y en horario laboral
+
+* Cuando debes otorgar permisos separados a usuarios que acceden solo en ciertos periodos de tiempo, como los trabajadores del turno nocturno
+
+## Antes de comenzar
+
+Antes de crear un nivel de acceso, revisa lo siguiente.
+
+* Agrega puertas antes de asignarlas a un nivel de acceso. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+* Inscribe a los usuarios con credenciales faciales antes de asignarlos al nivel de acceso. Para obtener más información, consulta <DocLink docId='device/vionyx_webserver/add-users' />.
+
+* Crea horarios con anticipación para restringir el acceso por horario. Si no existe un horario, usa el horario predeterminado Siempre. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+## Agregar un nivel de acceso
+
+<Steps>
+<Step>
+
+### Empieza a agregar un nivel de acceso
+
+1. Haz clic en el menú <Cmd sid='access' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='access_level' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/cam-acs-level.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. Cuando aparezca la ventana emergente <Cmd sid='add_access_level' product='cam' />, ingresa la información del nivel de acceso y luego asigna usuarios.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-add.png' />
+
+</Step>
+<Step>
+
+### Ingrese información básica
+
+En la sección <Cmd sid='info' product='cam' />, ingresa la información para identificar el nivel de acceso.
+
+* <Cmd sid='id' product='cam' />: El ID único del nivel de acceso. El sistema lo ingresa automáticamente. Cámbialo si es necesario. No uses un ID que coincida con otro nivel de acceso. Ingresa hasta 64 caracteres. Usa letras, números, guiones (`-`) y guiones bajos (`_`).
+
+* <Cmd sid='name' product='cam' />: Ingresa el nombre del nivel de acceso. Este campo es obligatorio. No use un nombre que coincida con otro nivel de acceso. Use un nombre que indique quién y cuándo, como **Equipo de desarrollo—acceso siempre** o **Trabajadores del turno nocturno**.
+
+* <Cmd sid='description' product='cam' />: Ingrese una descripción para el nivel de acceso.
+
+</Step>
+<Step>
+
+### Seleccione puertas
+
+En la sección <Cmd sid='select_doors' product='cam' />, seleccione en la lista <Cmd sid='door' product='cam' /> las puertas a las que permitirá el acceso. Obligatorio. Se pueden seleccionar varias puertas.
+
+:::info
+
+Agregue al menos una puerta antes de seleccionar una puerta en la lista. Primero, agregue una puerta en <Cmd sid='access' product='cam' /> → <Cmd sid='door' product='cam' />. Para obtener más información sobre el registro de puertas, consulte <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+:::
+
+</Step>
+<Step>
+
+### Seleccione horario de acceso
+
+En la sección <Cmd sid='select_access_time' product='cam' />, seleccione un horario de la lista <Cmd sid='schedule' product='cam' /> para permitir el acceso. Este campo es obligatorio. El valor predeterminado es **Siempre**. El sistema permite el acceso solo durante el horario seleccionado. El sistema niega el acceso en otros horarios, incluidos los usuarios inscritos.
+
+:::info
+
+Para más información sobre la gestión de horarios, consulte <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+:::
+
+</Step>
+<Step>
+
+### Asigne usuarios
+
+En la sección <Cmd sid='assign_user' product='cam' />, agregue usuarios para aplicar el nivel de acceso.
+
+1. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la sección <Cmd sid='assign_user' product='cam' />.
+
+2. Cuando aparezca la ventana emergente <Cmd sid='select_user' product='cam' />, haga clic en la casilla de verificación de cada usuario que asignará.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-assign-users.png' />
+
+   * Seleccione la casilla de verificación (<Num num='1' />) en el encabezado de la lista para seleccionar a todos los usuarios.
+
+   * Ingrese un nombre de usuario en el campo de búsqueda (<Num num='2' />) para encontrar un usuario específico.
+
+   * Seleccione un criterio en la lista de ordenación (<Num num='3' />) para cambiar el orden de clasificación.
+
+3. Haz clic en <Cmd sid='save' product='cam' />. El sistema agrega los usuarios seleccionados a la lista <Cmd sid='assign_user' product='cam' />.
+
+   <Image src='/img/cam-server/cam-acs-level-add-assigned-users.png' />
+
+Para quitar un usuario asignado del nivel de acceso, en la lista <Cmd sid='assign_user' product='cam' />, haga clic en el botón <IcCamTrash title='delete' /> de ese usuario.
+
+:::info
+
+* La lista <Cmd sid='select_user' product='cam' /> muestra solo los usuarios inscritos con credenciales faciales.
+
+* Un usuario puede asignarse a varios niveles de acceso. Cada usuario puede asignarse a un número limitado de niveles de acceso.
+
+:::
+
+</Step>
+<Step>
+
+### Guardar nivel de acceso
+
+Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' />. El sistema agrega el nivel de acceso guardado a la lista de niveles de acceso. Lo aplica de inmediato a los usuarios asignados.
+
+<ProdImg src='/img/cam-server/cam-acs-level-added-list.png' />
+
+</Step>
+</Steps>
+
+## Revisar la lista de niveles de acceso
+
+La lista de niveles de acceso muestra niveles de acceso, horarios de acceso por nivel y usuarios asignados.
+
+<ProdImg src='/img/cam-server/cam-acs-level-list.png' />
+
+* Ingresa el nombre del nivel de acceso en el campo de búsqueda (<Num num='1' />) para encontrar un nivel de acceso específico.
+
+* Selecciona un valor en la lista Filas (<Num num='2' />) en la parte superior derecha de la pantalla para cambiar la cantidad de niveles de acceso que aparecen por página.
+
+* Para cambiar el criterio de ordenamiento, selecciona uno en <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+La siguiente información aparece en la lista de niveles de acceso.
+
+| Ítem | Descripción |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | El identificador único del nivel de acceso. |
+| <Cmd sid='name' product='cam' /> | El nombre del nivel de acceso. |
+| <Cmd sid='description' product='cam' /> | La descripción ingresada al agregar o editar el nivel de acceso. |
+| <Cmd sid='schedule' product='cam' /> | El horario que permite el acceso. |
+| <Cmd sid='users' product='cam' /> | La cantidad de usuarios asignados al nivel de acceso. |
+| <Cmd sid='actions' product='cam' /> | Edita (<IcCamEdit />) o elimina (<IcCamTrash />) niveles de acceso. |
+
+:::info
+
+Haz clic en el número en <Cmd sid='users' product='cam' /> para ver la lista de usuarios asignados.
+
+<ProdImg src='/img/cam-server/cam-acs-level-list-users-popup.png' />
+
+:::
+
+## Editar nivel de acceso
+
+1. En la lista de niveles de acceso, haz clic en el botón <IcCamEdit title='Edit' /> a la derecha del nivel de acceso.
+
+2. Cuando aparezca la ventana emergente <Cmd sid='edit_access_level' product='cam' />, edita las puertas, el horario de acceso y los usuarios asignados.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-edit.png' />
+
+3. Haga clic en <Cmd sid='save' product='cam' /> para guardar los cambios.
+
+Al guardar los cambios, el sistema los aplica de inmediato a todos los usuarios asignados.
+
+## Borrar nivel de acceso
+
+Elimina niveles de acceso de uno en uno o selecciona varios niveles de acceso para eliminarlos a la vez.
+
+* **Eliminar uno**: En la lista de niveles de acceso, haz clic en <IcCamTrash title='delete' /> al extremo derecho del nivel de acceso para eliminarlo.
+
+* **Eliminar varios**: En la lista de niveles de acceso, selecciona las casillas de verificación de los niveles de acceso que vas a eliminar y haz clic en <Cmd sid='delete' product='cam' /> en la parte superior derecha de la pantalla.
+
+  <ProdImg src='/img/cam-server/cam-acs-level-select-delete.png' />
+
+Si aparece un mensaje de confirmación, revíselo y haga clic en <Cmd sid='ok' product='cam' />. Al eliminar un nivel de acceso, el sistema lo quita de todos los usuarios asignados. Las puertas y los usuarios no se eliminan. Los niveles de acceso eliminados no se pueden recuperar.
+
+:::caution
+
+Eliminar un nivel de acceso impide que los usuarios asignados solo a ese nivel accedan a las puertas. Revise los usuarios asignados antes de eliminar.
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+Defina reglas de puertas según decisiones de acceso: indicaciones de voz, notificaciones por webhook y luces de emergencia.
+
+</NextItem>
+</NextStep>

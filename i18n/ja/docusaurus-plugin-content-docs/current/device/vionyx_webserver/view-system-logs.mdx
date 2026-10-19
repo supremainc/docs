@@ -1,17 +1,10 @@
 ---
 id: view-system-logs
 title: システムログの確認
-description: カメラのアクセスログ、イベントログ、システムログの確認とエクスポート方法を説明します。
-keywords:
-  - ログ
-  - システムログ
-  - イベントログ
-  - アクセスログ
-  - CSV
-  - エクスポート
+description: カメラログを種類、レベル、アクターなどの条件で照会し、CSVにエクスポートする方法と、デバイスログをダウンロードする方法を説明します。
 ---
 
-カメラのユーザーアクセス、イベント発生、システム運用記録をログとして確認し、管理できます。 Webインターフェースで必要な条件でログをフィルターし、CSV形式でエクスポートできます。さらに詳しい分析が必要な場合は、暗号化されたデバイスログをダウンロードできます。
+カメラのユーザーアクセス、イベント発生、AI分析、システム運用記録をログとして確認し、管理できます。 Webインターフェースでログの種類、レベル、アクターなどの条件でログをフィルターしたり、CSV形式でエクスポートしたりできます。さらに詳しい分析が必要な場合は、暗号化されたデバイスログをダウンロードできます。
 
 次の場合にログを確認してください。
 
@@ -25,6 +18,8 @@ keywords:
 
 * トラブルシューティングのためにシステムログを収集したい場合
 
+* ログに残った操作が管理者または運用者の手動操作か、カメラの自動実行かを区別したい場合
+
 :::info
 
 * ログは機器のメモリ容量に応じて自動的に保持されます。
@@ -33,7 +28,7 @@ keywords:
 
 * メモリが満杯になると、最も古いログから自動的に削除されます。
 
-* システムログは、管理者および読み書き権限を持つ運用者のみが閲覧できます。
+* <Cmd sid='system_logs' product='cam' /> メニューは、管理者および読み書き権限を持つ運用者のみが使用できます。ただし、ログの種類のうち <Cmd sid='system' product='cam' /> ログは管理者のみが閲覧できます。
 
 :::
 
@@ -41,11 +36,11 @@ keywords:
 
 1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='system_logs' product='cam' /> をクリックしてください。 すべてのログを確認できます。
+2. 画面左のサイドバーで <Cmd sid='system_logs' product='cam' /> をクリックしてください。すべてのログを確認できます。
 
    <ProdImg src='/img/cam-server/cam-webserver-system-log.png' />
 
-3. ログ種類、レベル、タイプでログをフィルターするには、ログ一覧の左上にある <Cmd sid='all_logs' product='cam' />、<Cmd sid='all_levels' product='cam' />、<Cmd sid='all_types' product='cam' /> から必要な条件を選択してください。
+3. ログの種類、レベル、タイプ、アクターでログをフィルターするには、ログ一覧の左上にある <Cmd sid='all_logs' product='cam' />、<Cmd sid='all_levels' product='cam' />、<Cmd sid='all_types' product='cam' />、<Cmd sid='all_actors' product='cam' /> から必要な条件を選択してください。
 
    <ProdImg src='/img/cam-server/cam-webserver-system-log-filter.png' className='none' />
 
@@ -53,7 +48,7 @@ keywords:
 
 :::info
 
-* 特定期間のログを確認するには、日付と時刻の入力フィールドをクリックしてください。 カレンダーと時刻の選択ツールが表示されたら、開始日と時刻を選択してください。 終了日と時刻も同じ方法で設定できます。
+* 特定期間のログを確認するには、日付と時刻の入力フィールドをクリックしてください。カレンダーと時刻の選択ツールが表示されたら、開始日と時刻を選択してください。終了日と時刻も同じ方法で設定できます。
 
   <ProdImg src='/img/cam-server/cam-webserver-system-log-date.png' width='40%' />
 
@@ -69,15 +64,15 @@ keywords:
 
 * <Cmd sid='ai_analysis' product='cam' />: AI分析に関連するイベント記録を確認できます。
 
-* <Cmd sid='access' product='cam' />: ユーザーがカメラのウェブインターフェースにアクセスした記録を確認できます。
+* <Cmd sid='access' product='cam' />: ログイン、ログアウト、アカウント作成など、ユーザーのアクセスとアカウント関連の記録を確認できます。
 
 * <Cmd sid='event' product='cam' />: イベント発生、Webhook送信、ルールの実行などの記録を確認できます。
 
-* <Cmd sid='system' product='cam' />: カメラの起動、再起動、初期化などのシステム運用記録を確認できます。 このログは**管理者のみが閲覧できます**。
+* <Cmd sid='system' product='cam' />: カメラの起動、再起動、初期化などのシステム運用記録を確認できます。このログは**管理者のみが閲覧できます**。
 
 :::info
 
-<Cmd sid='log_category_download' product='cam' /> を選択すると、デバイスの暗号化されたログファイルをダウンロードできます。 詳しくは <DocLink inner='#downloadDeviceLogs' /> を参照してください。
+<Cmd sid='log_category_download' product='cam' /> を選択すると、デバイスの暗号化されたログファイルをダウンロードできます。詳しくは <DocLink inner='#downloadDeviceLogs' /> を参照してください。
 
 :::
 
@@ -91,6 +86,14 @@ keywords:
 
 * <Cmd sid='log_level_error' product='cam' />: エラーメッセージのログを確認できます。
 
+### アクター {/* #logActors */}
+
+ログを生成した主体をアクターと呼びます。アクターは次のとおり分類されます。
+
+* <Cmd sid='actor_type_user' product='cam' />: Webインターフェースで操作を直接実行した管理者または運用者です。
+
+* <Cmd sid='actor_system' product='cam' />: AIルールやスケジュールなどに従って操作を自動で実行したカメラです。
+
 ## ログのエクスポート
 
 ログをCSV形式でダウンロードし、外部で分析または保存できます。
@@ -99,7 +102,7 @@ keywords:
 
 2. 画面左のサイドバーで <Cmd sid='system_logs' product='cam' /> をクリックしてください。
 
-3. ログ一覧の左上にある <Cmd sid='all_logs' product='cam' /> で、エクスポートするログ種類を選択してください。 検索期間を設定すると、特定期間のログもエクスポートできます。
+3. ログ一覧の左上にある <Cmd sid='all_logs' product='cam' />、<Cmd sid='all_levels' product='cam' />、<Cmd sid='all_types' product='cam' />、<Cmd sid='all_actors' product='cam' /> で、エクスポートするログの条件を選択してください。検索期間を設定すると、特定期間のログもエクスポートできます。選択した条件と期間がCSVファイルにそのまま反映されます。
 
 4. 画面右上の <Cmd sid='csv_export' product='cam' /> ボタンをクリックしてください。
 
@@ -131,9 +134,10 @@ keywords:
 
 | **ログの種類** | **保持期間** |
 | --- | --- |
-| **システムログ** | 約1か月 |
-| **アクセスログ** | 約1か月 |
-| **イベントログ** | 約1か月 |
+| <Cmd sid='ai_analysis' product='cam' /> | 約1か月 |
+| <Cmd sid='access' product='cam' /> | 約1か月 |
+| <Cmd sid='event' product='cam' /> | 約1か月 |
+| <Cmd sid='system' product='cam' /> | 約1か月 |
 
 </div>
 
@@ -149,7 +153,7 @@ keywords:
 
 ## デバイスログのダウンロード {/* #downloadDeviceLogs */}
 
-デバイスに保存されたログファイルを暗号化された形式でダウンロードできます。 デバイスログは、問題解決のためにカメラシステムで発生したすべてのイベントと運用記録を含む詳細なログファイルです。 このファイルは暗号化されているため、セキュリティが保たれます。必要に応じて <Support /> に提供し、問題解決に活用できます。
+デバイスに保存されたログファイルを暗号化された形式でダウンロードできます。デバイスログは、カメラシステムで発生したすべてのイベントと運用記録を含む詳細ログファイルです。このファイルは暗号化されているため、セキュリティが保たれます。必要に応じて <Support /> に提供し、問題解決に活用できます。
 
 1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
 
@@ -159,8 +163,10 @@ keywords:
 
    <ProdImg src='/img/cam-server/cam-webserver-system-log-download-device-log.png' />
 
-4. ログ一覧の右上にある <Cmd sid='log_category_download' product='cam' /> ボタンをクリックしてください。
+4. 特定のアクターが生成したログのみをダウンロードするには、<Cmd sid='all_actors' product='cam' /> でアクターを選択してください。選択しない場合は、すべてのアクターのログをダウンロードします。アクターの詳細は <DocLink inner='#logActors' /> を参照してください。
 
-デバイスログファイルをローカルにダウンロードできます。 ファイル名は `device_logs_{device-serial-number}_YYYYMMDDTHHMMSS.zip.enc` 形式です。
+5. ログ一覧の右上にある <Cmd sid='log_category_download' product='cam' /> ボタンをクリックしてください。
+
+デバイスログファイルをローカルにダウンロードできます。ファイル名は `device_logs_{device-serial-number}_YYYYMMDDTHHMMSS.zip.enc` 形式です。
 
 > 例: *device_logs_1234567890_20240326T153000.zip.enc*

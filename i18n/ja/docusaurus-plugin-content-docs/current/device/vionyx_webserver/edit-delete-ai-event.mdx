@@ -2,20 +2,15 @@
 id: edit-delete-ai-event
 title: AIイベントの編集と削除
 description: 作成したAIイベントの設定を編集したり、不要なイベントを削除したりできます。
-keywords:
-  - AIイベント
-  - 管理
-  - 設定
-  - 削除
 ---
 
 作成したAIイベントの設定を編集したり、不要になったイベントを削除したりできます。
 
 ## AIイベント設定の編集
 
-1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='ai_analysis' product='cam' /> をクリックしてください。
 
    <ProdImg src='/img/cam-server/manage-ai-event-list.png' />
 
@@ -31,21 +26,23 @@ keywords:
 
 各イベント設定の詳細については、次のドキュメントを参照してください。
 
-* [<Cmd sid='ai_analysis_people_tracking' product='cam' className='normal' />](configure-people-tracking)
+* <DocLink docId='device/vionyx_webserver/configure-people-tracking' />
 
-* [<Cmd sid='ai_analysis_intrusion' product='cam' className='normal' />](configure-intrusion)
+* <DocLink docId='device/vionyx_webserver/configure-intrusion' />
 
-* [<Cmd sid='ai_analysis_line_crossing' product='cam' className='normal' />](configure-line-crossing)
+* <DocLink docId='device/vionyx_webserver/configure-line-crossing' />
 
-* [<Cmd sid='ai_analysis_people_counting' product='cam' className='normal' />](configure-counting-people)
+* <DocLink docId='device/vionyx_webserver/configure-counting-people' />
+
+* <DocLink docId='device/vionyx_webserver/configure-access-control' />
 
 :::
 
 ## AIイベントの削除
 
-1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
 
-2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+2. 画面左のサイドバーで <Cmd sid='ai_analysis' product='cam' /> をクリックしてください。
 
    <ProdImg src='/img/cam-server/manage-ai-event-list.png' />
 
@@ -55,7 +52,7 @@ keywords:
 
 :::info
 
-* 削除したAIイベントは復元できません。 削除すると、AIイベントに連動するルール（Rule）も削除されます。
+* 削除したAIイベントは復元できません。削除すると、AIイベントに連動するルール（Rule）も削除されます。
 
 * AIイベントを削除すると、システムログに削除イベントが記録されます。
 

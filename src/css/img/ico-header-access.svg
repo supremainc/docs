@@ -1,0 +1,6 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect id="Lock" x="4.5" y="8.5" width="12" height="9" rx="2.5" stroke="#111111"/>
+<path id="Lock_2" d="M10 12.5C10 12.2239 10.2239 12 10.5 12C10.7761 12 11 12.2239 11 12.5V15.5C11 15.7761 10.7761 16 10.5 16C10.2239 16 10 15.7761 10 15.5V12.5Z" fill="#111111"/>
+<rect id="Lock_3" x="9" y="10.5" width="3" height="2" rx="1" stroke="#111111"/>
+<path id="Lock_4" d="M6.5 9V5.67347C6.5 3.64467 8.29086 2 10.5 2C12.7091 2 14.5 3.64467 14.5 5.67347V9" stroke="#111111"/>
+</svg>

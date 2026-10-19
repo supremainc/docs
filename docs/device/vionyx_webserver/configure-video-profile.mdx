@@ -2,7 +2,6 @@
 id: configure-video-profile
 title: 비디오 프로필 설정하기
 description: 채널별 뷰 모드와 스트림 인코딩 값을 설정하고, 화면 좌우 반전과 초기화 정책까지 운영 관점에서 관리하는 방법을 안내합니다.
-keywords: [비디오 프로필, 스트림, 코덱, 해상도, 프레임 레이트, 비트레이트, 좌우 반전]
 ---
 
 라이브 화면에 표시되는 영상 품질과 저장되는 녹화 영상의 품질은 비디오 프로필 설정에 따라 달라집니다. 비디오 프로필 설정에서는 채널별로 뷰 모드와 스트림 인코딩 값을 조정할 수 있습니다. 또한, 설치 환경에 따라 좌우 반전(Mirror) 설정과 채널 설정 초기화 기능도 제공합니다.
@@ -60,12 +59,12 @@ AI 이벤트를 이미 운영 중이라면, 좌우 반전 또는 초기화 시 A
 
    * <Cmd sid='view_type_double' product='cam' />: 360˚ 영역을 촬영한 영상을 왜곡 보정하여 파노라마 형식의 상하 분할 화면으로 볼 수 있는 모드입니다.
 
-   * <Cmd sid='view_type_quad' product='cam' />: 사람의 시야에 적합하도록 왜곡 보정한 특정 화면 4개를 동시에 볼 수 있는 모드입니다.
+   * <Cmd sid='view_type_quad' product='cam' />: 사람의 시야에 적합하게 왜곡 보정한 특정 화면 4개를 동시에 볼 수 있는 모드입니다.
 
 
 ## 스트림 유형 선택
 
-<Cmd sid='stream' product='cam' />에서 설정할 스트림을 선택하세요. 메인 또는 서브 스트림 중 하나를 선택하고, <Cmd sid='profile' product='cam' /> 섹션에서 상세값을 조정하세요.
+<Cmd sid='stream' product='cam' />에서 설정할 스트림을 선택하세요. 메인 또는 서브 스트림 중 하나를 선택하고, <Cmd sid='profile' product='cam' /> 섹션에서 상세 값을 조정하세요.
 
 * <Cmd sid='stream_type_main' product='cam' />: 녹화 및 고화질 모니터링
 
@@ -124,7 +123,7 @@ AI 이벤트를 이미 운영 중이라면, 좌우 반전 또는 초기화 시 A
 
 * **고정 비트 레이트**(Constant Bitrate, CBR): 프레임의 데이터 크기를 고정하여 영상을 전송하는 방식입니다. 네트워크 대역폭이 일정한 환경에서 안정적인 영상 스트리밍을 제공하지만, 영상의 복잡도에 따라 화질이 저하될 수 있습니다.
 
-* **GOV**(Group of Video): H.264/H.265 압축에서 I-Frame부터 다음 I-Frame 직전까지의 프레임 집합을 의미합니다. GOV 안에는 완전한 이미지 정보를 담는 I-Frame(키 프레임)과, 이전 프레임 대비 변경 정보만 담는 P-Frame이 포함됩니다. GOV 길이가 길수록 I-Frame 수가 줄어 영상 데이터 양이 줄고, GOV 길이가 짧을수록 I-Frame 수가 늘어 영상 데이터 양이 증가합니다.
+* **GOV**(Group of Video): H.264/H.265 압축에서 I-Frame부터 다음 I-Frame 직전까지의 프레임 집합을 의미합니다. GOV 안에는 완전한 이미지 정보를 담는 I-Frame(키 프레임)과, 이전 프레임 대비 변경 정보만 담는 P-Frame이 포함됩니다. GOV 길이가 길수록 I-Frame 수가 줄어 영상 데이터양이 줄고, GOV 길이가 짧을수록 I-Frame 수가 늘어 영상 데이터양이 증가합니다.
 
 :::
 
@@ -146,7 +145,7 @@ AI 이벤트가 설정된 상태에서는 좌우 반전 변경이 제한될 수 
 
 ## 채널 설정 초기화
 
-설정한 채널의 뷰 모드와 스트림 설정을 공장 초기값으로 복원하려면, <Cmd sid='reset' product='cam' /> 섹션에서 <Cmd sid='restore_to_default' product='cam' /> 버튼을 클릭하세요.
+설정한 채널의 뷰 모드와 스트림 설정을 공장 초깃값으로 복원하려면, <Cmd sid='reset' product='cam' /> 섹션에서 <Cmd sid='restore_to_default' product='cam' /> 버튼을 클릭하세요.
 
 :::info
 

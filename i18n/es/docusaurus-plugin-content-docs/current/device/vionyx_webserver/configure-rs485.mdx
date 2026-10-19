@@ -1,0 +1,229 @@
+---
+id: configure-rs485
+title: Configurar RS-485
+description: Opere la cámara como maestro RS-485. Busque y agregue dispositivos esclavos de E/S de Suprema. Luego administre los nombres y el firmware, o elimínelos.
+---
+
+En los ajustes de RS-485, agregue y administre dispositivos de E/S de Suprema conectados al puerto RS-485 de la cámara como esclavos. La cámara actúa como maestro del puerto RS-485. Vincule los relés del dispositivo esclavo registrado a reglas de IA para controlar dispositivos externos, como abrir puertas o encender luces de emergencia.
+
+Revise los ajustes de <Cmd sid='rs485' product='cam' /> en las siguientes situaciones.
+
+* Al agregar un dispositivo de E/S a la cámara para aumentar las salidas de relé o los puertos de entrada
+
+* Cuando ocurre un evento de IA y necesita controlar dispositivos externos mediante el relé de un dispositivo esclavo
+
+* Al revisar el estado de conexión del dispositivo esclavo o actualizar el firmware
+
+* Al eliminar un dispositivo esclavo que ya no se usa
+
+:::info
+
+* La versión de firmware 1.1.0 solo admite el modo maestro. La cámara no admite el modo esclavo para conectarse a otro dispositivo como esclavo.
+
+* Agregue hasta 8 dispositivos esclavos.
+
+* Los dispositivos de E/S de Suprema son los únicos dispositivos esclavos compatibles. Los dispositivos de autenticación de huella digital y los dispositivos de autenticación facial no pueden conectarse como dispositivos esclavos.
+
+  * [Secure I/O 2](/device/securemodule) (SIO2)
+
+  * [Door Module](/device/doormodule) (DM-20)
+
+  * [Door Interface](/device/doorinterface) (DI-24)
+
+  * [Output Module](/device/outputmodule) (OM-120)
+
+  * [Input Module](/device/inputmodule) (IM-120)
+
+:::
+
+## Antes de comenzar
+
+Revise lo siguiente antes de agregar dispositivos esclavos.
+
+* Confirme que el dispositivo esclavo esté conectado correctamente al puerto RS-485 de la cámara.
+
+* Confirme que el dispositivo esclavo tenga asignado un ID de OSDP. Los dispositivos con un ID de OSDP de 0 (sin asignar) no se pueden agregar.
+
+* Confirme que los dispositivos en el mismo bus RS-485 tengan IDs de OSDP únicos.
+
+* Si agregó el dispositivo esclavo a otro dispositivo maestro, inicialice el dispositivo.
+
+## Agregar dispositivos esclavos
+
+Busque dispositivos esclavos conectados al puerto RS-485 y agréguelos a la cámara.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485.png' />
+
+3. En <Cmd sid='slave_device' product='cam' />, haz clic en <Cmd sid='add_button' product='cam' />.
+
+4. Aparece la ventana emergente <Cmd sid='add_slave_devices' product='cam' /> y la búsqueda de dispositivos inicia automáticamente. Espere a que finalice la búsqueda.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-scanning.png' />
+
+5. Seleccione la casilla de verificación del dispositivo que agregará en los resultados de búsqueda. Seleccione varios dispositivos.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-select.png' />
+
+   Los dispositivos detectados incluyen la siguiente información.
+
+   * <Cmd sid='serial_number_short' product='cam' />: Número de serie del dispositivo
+
+   * <Cmd sid='device' product='cam' />: Modelo del dispositivo
+
+   * <Cmd sid='input' product='cam' />: Número de puertos de entrada
+
+   * <Cmd sid='relay' product='cam' />: Número de puertos de relé
+
+   * <Cmd sid='osdp_id' product='cam' />: ID de OSDP asignado al dispositivo
+
+6. Haga clic en <Cmd sid='save' product='cam' /> para agregar el dispositivo seleccionado. Seleccione al menos un dispositivo para habilitar el botón.
+
+Cuando el sistema agrega el dispositivo correctamente, aparece un mensaje de éxito en la esquina superior derecha. La lista <Cmd sid='slave_device' product='cam' /> muestra los dispositivos en orden de ID de OSDP. De forma predeterminada, el nombre del dispositivo es el número de serie. Cámbielo en [Editar dispositivo esclavo](#edit-slave-device).
+
+### Cuando no se encuentran dispositivos
+
+Si aparece el mensaje <Cmd sid='rs485_scan_no_device' product='cam' /> en los resultados de búsqueda, revise lo siguiente y luego haga clic en <Cmd sid='search_again' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-no-device.png' />
+
+* Verifique que el cableado RS-485 del dispositivo esclavo esté conectado correctamente.
+
+* Si el dispositivo esclavo está agregado a otro dispositivo maestro, inicialícelo.
+
+* Confirme que el dispositivo esclavo tenga asignado un ID de OSDP.
+
+## Verificar el estado del dispositivo esclavo
+
+Verifique la información del dispositivo y el estado de conexión en la lista <Cmd sid='slave_device' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-registered.png' />
+
+Cuando se desconecta la comunicación entre el dispositivo y la cámara, la tarjeta del dispositivo muestra <Cmd sid='disconnected' product='cam' /> y la hora de desconexión. Verifique la alimentación del dispositivo y el cableado RS-485. El indicador desaparece cuando el dispositivo se reconecta.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-connection-status.png' />
+
+:::info
+
+Compruebe los registros de conexión y desconexión del dispositivo esclavo en el registro del sistema. Consulte [Ver registros del sistema](view-system-logs) para obtener más información.
+
+:::
+
+## Editar dispositivo esclavo {/* #edit-slave-device */}
+
+Cambie el nombre de un dispositivo esclavo agregado.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> en la barra lateral izquierda.
+
+3. Pase el cursor sobre la tarjeta del dispositivo para editar y luego haga clic en el botón <IcCamEdit title='Edit' /> en la esquina superior derecha.
+
+4. En la ventana emergente <Cmd sid='slave_settings' product='cam' />, introduzca un nombre nuevo en el campo <Cmd sid='name' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-edit.png' />
+
+5. Haga clic en <Cmd sid='apply' product='cam' /> para guardar los cambios.
+
+Cuando el sistema guarda los cambios correctamente, aparece un mensaje de éxito en la esquina superior derecha de la pantalla.
+
+:::info
+
+En la ventana emergente <Cmd sid='slave_settings' product='cam' />, vea solo el ID de OSDP. No lo cambie.
+
+:::
+
+## Actualizar firmware del dispositivo esclavo
+
+En la ventana emergente <Cmd sid='slave_settings' product='cam' />, compruebe la versión actual del firmware y actualice el dispositivo esclavo.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> en la barra lateral izquierda.
+
+3. Pase el cursor sobre la tarjeta del dispositivo para actualizar y luego haga clic en el botón <IcCamEdit title='Edit' /> en la esquina superior derecha.
+
+4. En la ventana emergente <Cmd sid='slave_settings' product='cam' />, compruebe la versión actual en <Cmd sid='fw_version' product='cam' /> y luego haga clic en el botón <Cmd sid='update' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-edit.png' />
+
+5. Arrastre y suelte el archivo de firmware, o haga clic en <Cmd sid='choose_file' product='cam' /> para seleccionar un archivo.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-fw-update.png' />
+
+6. Revise el aviso de interrupción del servicio y seleccione la casilla <Cmd sid='rs485_fw_consent' product='cam' />.
+
+7. Haga clic en <Cmd sid='firmware_upload' product='cam' /> para iniciar la actualización.
+
+El estado y el progreso aparecen durante la actualización. Consulte el registro del sistema para ver registros de actualizaciones de firmware del dispositivo esclavo exitosas y fallidas.
+
+:::caution
+
+* La actualización interrumpe el relé y las entradas del dispositivo de destino, interrumpe las entradas de los dispositivos esclavos y deshabilita temporalmente el canal seguro. Ejecute la actualización cuando el dispositivo no esté en uso.
+
+* No apague el dispositivo ni desconecte el cableado RS-485 durante la actualización.
+
+* El sistema bloquea la actualización mientras otra actualización de firmware está en curso. Inténtelo de nuevo cuando finalice la actualización actual.
+
+:::
+
+## Eliminar dispositivo esclavo
+
+Elimine los dispositivos esclavos que ya no se usan. Elimine los dispositivos de uno en uno o seleccione varios para eliminarlos a la vez.
+
+:::caution
+
+No se pueden eliminar los dispositivos usados en reglas de IA. Cuando intente eliminar un dispositivo, aparece el nombre de la regla que lo usa. Primero, quite de la regla el ajuste de relé del dispositivo y vuelva a intentarlo. Para editar reglas, consulte <DocLink docId='device/vionyx_webserver/set-ai-rule#setRelayAction' />.
+
+:::
+
+### Eliminar dispositivos uno por uno
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> en la barra lateral izquierda.
+
+3. Coloque el cursor sobre la tarjeta del dispositivo para eliminar y haga clic en el botón <IcCamTrash title='Delete' /> en la esquina superior derecha.
+
+   * Como alternativa, haga clic en el botón <IcCamEdit title='Edit' /> y luego haga clic en <Cmd sid='remove' product='cam' /> en la ventana emergente <Cmd sid='slave_settings' product='cam' />.
+
+4. Cuando aparezca la ventana emergente <Cmd sid='remove_device' product='cam' />, haga clic en <Cmd sid='apply' product='cam' />.
+
+### Eliminar varios dispositivos a la vez
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> en la barra lateral izquierda.
+
+3. Seleccione la casilla en cada tarjeta del dispositivo para eliminar. La cantidad de dispositivos seleccionados aparece junto a <Cmd sid='select_device' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-multi-delete.png' />
+
+4. Haz clic en <Cmd sid='delete' product='cam' />.
+
+5. Cuando aparezca la ventana emergente <Cmd sid='remove_device' product='cam' />, haga clic en <Cmd sid='apply' product='cam' />.
+
+Cuando la eliminación se completa correctamente, aparece un mensaje de éxito en la esquina superior derecha de la pantalla.
+
+## Solución de Problemas
+
+Pueden aparecer los siguientes mensajes de error al agregar, editar o eliminar un dispositivo esclavo.
+
+<div className='table-fixed'>
+
+| Mensaje | Causa y solución |
+| --- | --- |
+| <Cmd sid='rs485_err_add_failed' product='cam' /> | El sistema no pudo comunicarse con el dispositivo. Revise el cableado RS-485 y vuelva a intentarlo. |
+| <Cmd sid='rs485_err_slave_limit' product='cam' /> | El sistema ya agregó 8 dispositivos. Elimine los dispositivos sin uso y luego agregue el dispositivo de nuevo. |
+| <Cmd sid='rs485_err_duplicate_serial' product='cam' /> | Ya hay un dispositivo con el mismo número de serie en la lista. Revise la lista. |
+| <Cmd sid='rs485_err_osdp_duplicate' product='cam' /> | Otro dispositivo usa el mismo ID de OSDP. Cambie el ID de OSDP en el dispositivo esclavo y vuelva a buscar. |
+| <Cmd sid='rs485_err_address_collision' product='cam' /> | El ID de OSDP entra en conflicto con el de otro dispositivo en el bus RS-485. Cambie el ID de OSDP en el dispositivo esclavo y vuelva a buscar. |
+| <Cmd sid='rs485_osdp_park_hint' product='cam' /> | Este dispositivo tiene un ID de OSDP de 0 (sin asignar). Asigne un ID de OSDP al dispositivo y vuelva a buscar. |
+| <Cmd sid='rs485_scan_timeout' product='cam' /> | El dispositivo no respondió antes de que se agotara el tiempo de espera de búsqueda. Revise el cableado y vuelva a buscar. |
+| <Cmd sid='rs485_err_slave_in_use' product='cam' /> | Una regla de IA usa el dispositivo. Quite el ajuste de relé del dispositivo de la regla y vuelva a intentarlo. |
+| <Cmd sid='rs485_initializing' product='cam' /> | La cámara está inicializando el puerto RS-485. Vuelva a intentarlo en un momento. |
+
+</div>

@@ -1,0 +1,150 @@
+---
+id: manage-schedule
+title: スケジュール管理
+description: AIルールの動作を実行する曜日と時間帯をスケジュールとして作成し、スケジュールを編集または削除する方法を説明します。
+---
+
+スケジュールは、曜日と時間帯を組み合わせた週間タイムテーブルです。スケジュールを作成してAIルールの動作に割り当てると、その動作はスケジュールに含まれる時間帯のみ実行されます。作成したスケジュールは複数のAIルールで共有できます。
+
+次のような場合にスケジュールを作成してください。
+
+* 平日の業務時間内のみWebhookを送信する場合
+
+* 夜間のみ侵入検知の警告音声を再生する場合
+
+* 週末にリレーが動作しないよう制限する場合
+
+:::info
+
+デバイスには **Always** スケジュールが標準で用意されています。 Alwaysスケジュールは毎日24時間動作し、編集や削除はできません。
+
+:::
+
+## スケジュールリストの確認
+
+1. 画面左上の <Cmd sid='ai_and_rule_short' product='cam' /> メニューをクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='schedule' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-list.png' />
+
+スケジュールリストで、登録済みスケジュールと各スケジュールを使用するAIルールを確認できます。 
+
+* 画面上部の <Cmd sid='schedule' product='cam' />(<Num num='1' />) の横に、登録済みスケジュール数が表示されます。
+
+* 特定のスケジュールを探すには、検索フィールド(<Num num='2' />)にスケジュール名またはIDを入力してください。
+
+* 各ページに表示するスケジュール数を変更するには、画面右上の行数リスト(<Num num='3' />)で希望の値を選択してください。
+
+* 並べ替え基準を変更するには、<Cmd sid='sort_by_name' product='cam' />(<Num num='4' />)のリストから希望の基準を選択してください。
+
+スケジュールリストに表示される項目は次のとおりです。
+
+| 項目 | 説明 |
+| --- | --- |
+| <Cmd sid='column_id' product='cam' /> | スケジュールの固有番号です。 Alwaysスケジュールは `0` です。 |
+| <Cmd sid='name' product='cam' /> | スケジュール名です。 |
+| <Cmd sid='description' product='cam' /> | スケジュールを追加または編集するときに入力した説明です。 |
+| <Cmd sid='used_by' product='cam' /> | スケジュールを使用するAIルールです。使用中のAIルールがない場合、<Cmd sid='none' product='cam' />と表示されます。 AIルールが複数ある場合、<Cmd sid='used_by_more' product='cam' replace='N' /> の形式で表示されます。 |
+| <Cmd sid='actions' product='cam' /> | スケジュールを編集（<IcCamEdit />）または削除（<IcCamTrash />）できます。 |
+
+## スケジュールの追加
+
+<Steps>
+<Step>
+
+### スケジュールの追加を開始
+
+1. スケジュール一覧画面の右上にある <Cmd sid='add_button' product='cam' /> ボタンをクリックします。
+
+2. <Cmd sid='add_schedule' product='cam' /> ポップアップが開いたら、スケジュール情報を入力します。
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-add.png' />
+
+</Step>
+<Step>
+
+### 名前と説明を入力
+
+* <Cmd sid='name' product='cam' />：スケジュール名を入力します。必須項目で、ほかのスケジュールと同じ名前は使用できません。最大48文字まで入力できます。
+
+* <Cmd sid='description' product='cam' />：スケジュールの説明を入力します。例えば **月-金 09:00-18:00** のように適用時間帯を記載しておくと、ルールでスケジュールを選択するときに区別しやすくなります。
+
+</Step>
+<Step>
+
+### タイムテーブルで時間帯を指定
+
+<Cmd sid='timetable' product='cam' /> で、スケジュールが動作する曜日と時間帯を選択します。縦軸は曜日（日曜日\~土曜日）、横軸は時間（0時\~24時）です。選択した時間帯はブロックで表示されます。
+
+<ProdImg src='/img/cam-server/ai-rule-schedule-add-time-table.png' />
+
+* **時間帯の選択**：目的の曜日行で、開始時刻から終了時刻までマウスでドラッグします。最小10分単位で選択できます。
+
+* **時間帯の移動**：指定したブロックを左右にドラッグすると、別の時間帯に移動できます。
+
+* **24時間の選択/解除**：曜日名の横にある <Cmd sid='timetable_24h' product='cam' /> ボタンをクリックします。その曜日の24時間すべてが選択され、もう一度クリックすると全解除されます。
+
+* **ブロックの削除**：削除するブロックを選択すると、<IcClose title='Remove block' /> ボタンが表示されます。このボタンをクリックします。 {/* TODO: 블록 삭제 UI 동작 확인 */}
+
+  <Image src='/img/cam-server/ai-rule-schedule-add-time-table-delete.png' alone />
+
+* **全体を初期化**：指定した時間帯をすべて消去して再設定する場合は、<Cmd sid='reset_timetable' product='cam' /> ボタンをクリックします。
+
+</Step>
+<Step>
+
+### スケジュールを保存
+
+すべての設定が完了したら、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。保存したスケジュールはスケジュール一覧に追加され、AIルールの動作設定で選択できます。
+
+:::info
+
+* <Cmd sid='used_by' product='cam' /> は、スケジュールを使用するAIルールを表示する読み取り専用フィールドです。新しく作成したスケジュールは、まだ使用中のAIルールがないため、<Cmd sid='not_used' product='cam' />と表示されます。
+
+* 保存したスケジュールをAIルールに適用する方法は<DocLink docId='device/vionyx_webserver/set-ai-rule' />を参照してください。
+
+:::
+
+</Step>
+</Steps>
+
+## スケジュールの編集
+
+1. スケジュール一覧で編集するスケジュールの右側にある<IcCamEdit title='Edit' />ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table.png' />
+
+2. <Cmd sid='edit_schedule' product='cam' /> ポップアップが表示されたら、名前、説明、タイムテーブルを編集してください。
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-edit-time-table-popup.png' width='600px' />
+
+3. 編集内容を保存するには、<Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+編集したスケジュールは、保存するとすぐに、そのスケジュールを使用するすべてのAIルールに適用されます。
+
+:::info
+
+* スケジュールを複数のAIルールで共有する場合、編集前に<Cmd sid='used_by' product='cam' />列で影響を受けるAIルールを確認してください。
+
+* Always スケジュールは基本スケジュールに変更できません。
+
+:::
+
+## スケジュールの削除
+
+1. スケジュール一覧で削除するスケジュールの右側にある<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/ai-rule-schedule-remove-time-table.png' />
+
+2. 確認メッセージが表示されたら内容を確認し、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+削除したスケジュールは復元できません。
+
+:::info
+
+* AIルールで使用中のスケジュールは削除できません。<Cmd sid='used_by' product='cam' />列に表示されたAIルールで別のスケジュールを選択してから、もう一度削除してください。
+
+* Always スケジュールは基本スケジュールのため削除できません。
+
+:::

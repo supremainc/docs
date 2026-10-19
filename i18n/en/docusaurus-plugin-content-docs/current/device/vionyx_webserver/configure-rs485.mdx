@@ -1,0 +1,229 @@
+---
+id: configure-rs485
+title: Set Up RS-485
+description: Operate the camera as an RS-485 master. Find and add Suprema I/O slave devices, then manage device names and firmware, or remove devices.
+---
+
+In RS-485 settings, add and manage Suprema I/O devices connected to the camera RS-485 port as slave devices. The camera acts as the master for the RS-485 port. Link registered slave device relays to AI rules to control external devices, such as opening doors or turning on emergency lights.
+
+Check <Cmd sid='rs485' product='cam' /> settings in the following situations.
+
+* When adding an I/O device to the camera to increase relay outputs or input ports
+
+* When an AI event occurs and you need to control external devices through a slave device relay
+
+* When checking the slave device connection status or updating firmware
+
+* When removing a slave device that is no longer used
+
+:::info
+
+* Firmware version 1.1.0 supports master mode only. The camera does not support slave mode for connecting to another device as a slave.
+
+* Add up to 8 slave devices.
+
+* Suprema I/O devices are the only supported slave devices. Fingerprint authentication devices and facial authentication devices cannot connect as slave devices.
+
+  * [Secure I/O 2](/device/securemodule) (SIO2)
+
+  * [Door Module](/device/doormodule) (DM-20)
+
+  * [Door Interface](/device/doorinterface) (DI-24)
+
+  * [Output Module](/device/outputmodule) (OM-120)
+
+  * [Input Module](/device/inputmodule) (IM-120)
+
+:::
+
+## Before you start
+
+Check the following before adding slave devices.
+
+* Confirm that the slave device is wired correctly to the camera RS-485 port.
+
+* Confirm that an OSDP ID is assigned to the slave device. Devices with an OSDP ID of 0 (unassigned) cannot be added.
+
+* Confirm that devices on the same RS-485 bus have unique OSDP IDs.
+
+* If the slave device was added to another master device, initialize the device.
+
+## Add slave devices
+
+Search for slave devices connected to the RS-485 port, and add them to the camera.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> on the left sidebar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485.png' />
+
+3. In <Cmd sid='slave_device' product='cam' />, click <Cmd sid='add_button' product='cam' />.
+
+4. The <Cmd sid='add_slave_devices' product='cam' /> pop-up appears, and the device search starts automatically. Wait for the search to complete.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-scanning.png' />
+
+5. Select the checkbox for the device to add in the search results. Select multiple devices.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-select.png' />
+
+   The discovered devices include the following information.
+
+   * <Cmd sid='serial_number_short' product='cam' />: Device serial number
+
+   * <Cmd sid='device' product='cam' />: Device model
+
+   * <Cmd sid='input' product='cam' />: Number of input ports
+
+   * <Cmd sid='relay' product='cam' />: Number of relay ports
+
+   * <Cmd sid='osdp_id' product='cam' />: OSDP ID assigned to the device
+
+6. Click <Cmd sid='save' product='cam' /> to add the selected device. Select at least one device to enable the button.
+
+When the device is added successfully, a success message appears in the upper right corner. The <Cmd sid='slave_device' product='cam' /> list shows devices in OSDP ID order. The device name defaults to the serial number. Change it in [Edit slave device](#edit-slave-device).
+
+### When no devices are found
+
+If the <Cmd sid='rs485_scan_no_device' product='cam' /> message appears in the search results, check the following, then click <Cmd sid='search_again' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-no-device.png' />
+
+* Check that the RS-485 wiring for the slave device is connected correctly.
+
+* If the slave device is added to another master device, initialize it.
+
+* Confirm that an OSDP ID is assigned to the slave device.
+
+## Check slave device status
+
+Check the device information and connection status in the <Cmd sid='slave_device' product='cam' /> list.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-registered.png' />
+
+When communication between the device and the camera disconnects, the device card shows <Cmd sid='disconnected' product='cam' /> and the disconnection time. Check the device power and RS-485 wiring. The indicator disappears when the device reconnects.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-rs485-connection-status.png' />
+
+:::info
+
+Check slave device connection and disconnection records in the system log. Refer to [View system logs](view-system-logs) for more information.
+
+:::
+
+## Edit slave device {/* #edit-slave-device */}
+
+Change the name of an added slave device.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> on the left sidebar.
+
+3. Hover over the device card to edit, and then click the <IcCamEdit title='Edit' /> button at the top right.
+
+4. In the <Cmd sid='slave_settings' product='cam' /> pop-up window, enter a new name in the <Cmd sid='name' product='cam' /> input field.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-edit.png' />
+
+5. Click <Cmd sid='apply' product='cam' /> to save the changes.
+
+When the changes save successfully, a success message appears in the upper right corner of the screen.
+
+:::info
+
+In the <Cmd sid='slave_settings' product='cam' /> pop-up window, view the OSDP ID only. Do not change it.
+
+:::
+
+## Update slave device firmware
+
+In the <Cmd sid='slave_settings' product='cam' /> pop-up window, check the current firmware version and update the slave device.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> on the left sidebar.
+
+3. Hover over the device card to update, and then click the <IcCamEdit title='Edit' /> button at the top right.
+
+4. In the <Cmd sid='slave_settings' product='cam' /> pop-up window, check the current version in <Cmd sid='fw_version' product='cam' />, and then click the <Cmd sid='update' product='cam' /> button.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-edit.png' />
+
+5. Drag and drop the firmware file, or click <Cmd sid='choose_file' product='cam' /> to select a file.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-fw-update.png' />
+
+6. Review the service interruption notice, and then select the <Cmd sid='rs485_fw_consent' product='cam' /> checkbox.
+
+7. Click <Cmd sid='firmware_upload' product='cam' /> to start the update.
+
+The status and progress appear during the update. Check the system log for records of successful and failed slave device firmware updates.
+
+:::caution
+
+* The update interrupts the target device relay and inputs, interrupts all slave device inputs, and temporarily disables the secure channel. Run the update when the device is not in use.
+
+* Do not power off the device or disconnect the RS-485 wiring during the update.
+
+* The system blocks the update while another firmware update is in progress. Try again after the current update finishes.
+
+:::
+
+## Remove slave device
+
+Remove slave devices that are no longer in use. Remove devices one at a time, or select multiple devices to remove at once.
+
+:::caution
+
+Devices used in AI rules cannot be removed. When you try to delete a device, the rule name that uses it appears. First, remove the device relay setting from the rule, then try again. For rule editing, see <DocLink docId='device/vionyx_webserver/set-ai-rule#setRelayAction' />.
+
+:::
+
+### Remove devices one by one
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> on the left sidebar.
+
+3. Hover over the device card to delete, then click the <IcCamTrash title='Delete' /> button at the top right.
+
+   * Alternatively, click the <IcCamEdit title='Edit' /> button, then click <Cmd sid='remove' product='cam' /> in the <Cmd sid='slave_settings' product='cam' /> pop-up window.
+
+4. When the <Cmd sid='remove_device' product='cam' /> pop-up appears, click <Cmd sid='apply' product='cam' />.
+
+### Remove multiple devices at once
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='network' product='cam' /> → <Cmd sid='rs485' product='cam' /> on the left sidebar.
+
+3. Select the checkbox on each device card to delete. The number of selected devices appears next to <Cmd sid='select_device' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-rs485-multi-delete.png' />
+
+4. Click <Cmd sid='delete' product='cam' />.
+
+5. When the <Cmd sid='remove_device' product='cam' /> pop-up appears, click <Cmd sid='apply' product='cam' />.
+
+When deletion succeeds, a success message appears in the upper right corner of the screen.
+
+## Troubleshooting
+
+The following error messages may appear when adding, editing, or deleting a slave device.
+
+<div className='table-fixed'>
+
+| Message | Cause and solution |
+| --- | --- |
+| <Cmd sid='rs485_err_add_failed' product='cam' /> | Could not communicate with the device. Check the RS-485 wiring and try again. |
+| <Cmd sid='rs485_err_slave_limit' product='cam' /> | 8 devices have already been registered. Remove unused devices, and then add the device again. |
+| <Cmd sid='rs485_err_duplicate_serial' product='cam' /> | A device with the same serial number is already in the list. Check the list. |
+| <Cmd sid='rs485_err_osdp_duplicate' product='cam' /> | Another device is using the same OSDP ID. Change the OSDP ID on the slave device, and then search again. |
+| <Cmd sid='rs485_err_address_collision' product='cam' /> | The OSDP ID conflicts with another device on the RS-485 bus. Change the OSDP ID on the slave device, and then search again. |
+| <Cmd sid='rs485_osdp_park_hint' product='cam' /> | This device has an OSDP ID of 0 (unassigned). Assign an OSDP ID to the device, then search again. |
+| <Cmd sid='rs485_scan_timeout' product='cam' /> | The device did not respond within the search timeout. Check the wiring, then search again. |
+| <Cmd sid='rs485_err_slave_in_use' product='cam' /> | An AI rule uses the device. Remove the relay setting for the device from the rule, then try again. |
+| <Cmd sid='rs485_initializing' product='cam' /> | The camera is initializing the RS-485 port. Try again in a moment. |
+
+</div>

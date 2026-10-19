@@ -1,0 +1,231 @@
+---
+id: configure-door-rules
+title: Set Door Rules
+description: Set door rules to automate audio playback, webhook delivery, and relay actions. Trigger actions on access granted, denied, or pass-through.
+---
+
+Door rules automatically play audio, send webhooks, or execute relay actions based on access decisions at the door. When access is granted, the door opens automatically based on door settings, so set additional actions in door rules.
+
+Set door rules in the following situations.
+
+* When a welcome message plays on access granted and an instruction message plays on access denied
+
+* When an unauthorized person follows someone in and a beacon light or alarm should activate
+
+* When access logs should be sent to an external access control system or monitoring server
+
+## Before you start
+
+Before setting door rules, check the following.
+
+* Add doors before applying rules. For more information, see <DocLink docId='device/vionyx_webserver/manage-doors' />.
+
+* Upload audio clips before using audio playback. For more information, refer to <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+* Prepare the webhook receiver URL before using webhooks.
+
+* Connect beacon lights and alarms to the relay port to use relays. For more information on connecting external devices, see the <Linkto to='device/vionyx/installation'>ViOnyx Installation Guide</Linkto>.
+
+## Access decision results
+
+In door rules, set the actions to execute for each access decision result.
+
+| Access decision results | Trigger condition |
+| --- | --- |
+| <Cmd sid='door_rule_outcome_granted' product='cam' /> | The system identified a user with an access level during access hours and granted access. |
+| <Cmd sid='door_rule_outcome_denied_unidentified' product='cam' /> | Facial Authentication did not authenticate the person, or the person is not registered. |
+| <Cmd sid='door_rule_outcome_denied_access_level' product='cam' /> | The system identified a registered user, but the user lacks the door access level or is outside access hours. |
+| <Cmd sid='door_rule_outcome_denied_door_mode' product='cam' /> | The system denied access because the door is manually locked or locked by schedule. |
+| <Cmd sid='door_rule_outcome_denied_anti_tailgating' product='cam' /> | The system denied access because the verification zone did not meet the tailgating condition. |
+| <Cmd sid='door_rule_outcome_passed' product='cam' /> | A user granted access crossed the event entry line and entered. |
+| <Cmd sid='door_rule_outcome_passed_after_denied' product='cam' /> | A person denied access crossed the event entry line and entered. This security event indicates suspected forced entry. |
+
+## Add a door rule
+
+<Steps>
+<Step>
+
+### Start creating a rule
+
+1. Click the <Cmd sid='access' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click the <Cmd sid='door_rule_settings' product='cam' /> on the left sidebar.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. When the <Cmd sid='add_door_rule' product='cam' /> screen appears, enter the rule name and set conditions and actions.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-add-rule.png' />
+
+</Step>
+<Step>
+
+### Enter rule name
+
+Enter the rule name in the <Cmd sid='name' product='cam' /> input field. Required.
+
+</Step>
+<Step>
+
+### Set conditions
+
+In the <Cmd sid='condition' product='cam' /> section, select the doors to apply the rule to.
+
+* <Cmd sid='channel' product='cam' />: The channel is fixed to CH 1. Support for fisheye view only.
+
+* <Cmd sid='door' product='cam' />: Select the door to apply the rule to. Required.
+
+</Step>
+<Step>
+
+### Set actions
+
+The <Cmd sid='action' product='cam' /> section shows <Cmd sid='audio' product='cam' />, <Cmd sid='webhook' product='cam' />, and <Cmd sid='relay' product='cam' /> actions for each access decision result. For the access decision result that triggers the action, enable the action toggle, then click <IcCamEdit title='Edit' />. The action settings pop-up appears.
+
+You must enable at least 1 action to save the rule. See below for action-specific settings.
+
+:::info
+
+Outside the action schedule, the action does not execute if an access decision result occurs. Manage schedules in <Cmd sid='ai_and_rule_short' product='cam' /> → <Cmd sid='schedule' product='cam' />. For more information, see <DocLink docId='device/vionyx_webserver/manage-schedule' />.
+
+:::
+
+#### Audio action settings
+
+When an access decision result occurs, the camera plays an audio clip.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />: Select the audio clip to play. Required.
+
+* <Cmd sid='repeat' product='cam' />: Select the number of times to repeat audio playback.
+
+* <Cmd sid='schedule' product='cam' />: Select the schedule for audio playback. Required. The default is <Cmd sid='always' product='cam' />.
+
+Click <Cmd sid='apply' product='cam' /> to save the audio action settings.
+
+:::info
+
+Prepare audio clips before configuring audio actions. Upload audio clips in <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. For more information, refer to <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+:::
+
+#### Webhook action settings
+
+When an access decision result occurs, the system sends a webhook to an external server.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-webhook.png' />
+
+* <Cmd sid='method' product='cam' />: The webhook transmission method. Only the `POST` method is supported.
+
+* <Cmd sid='url' product='cam' />: Enter the URL to receive the webhook. Required.
+
+* <Cmd sid='header' product='cam' />: Set the HTTP headers to include in the webhook. The system adds the `Content-Type: application/json` header by default. Click <Cmd sid='add_button' product='cam' /> to add headers. Do not use duplicate header names. Do not use system-reserved header names.
+
+* <Cmd sid='body' product='cam' />: Select the fields to include in the webhook body. Required. In each row, select the data to send on the left, and enter the JSON key in the center field. The right field shows variables that change to actual values when an event occurs. Click <Cmd sid='add_button' product='cam' /> to add a custom field, or click <IcCamTrash title='delete' /> to delete it. The maximum body size is 64KB.
+
+* <Cmd sid='schedule' product='cam' />: Select a schedule for sending webhooks. Required. The default is <Cmd sid='always' product='cam' />.
+
+To save the settings, click <Cmd sid='apply' product='cam' />.
+
+:::info
+
+* For security, values entered in the header and body do not appear again after saving. When editing a rule, saved values remain. New entries replace existing values.
+
+* Check webhook delivery results in the system log. For details, see <DocLink docId='device/vionyx_webserver/view-system-logs' />.
+
+:::
+
+#### Relay action settings
+
+When an access decision occurs, the system activates the selected relay. Use this to integrate a beacon, a siren, or an auxiliary lock.
+
+<ProdImg src='/img/cam-server/cam-acs-door-add-rule-relay.png' />
+
+* <Cmd sid='port' product='cam' />: Select the relay port to activate. Required. Relay ports used for door locks cannot be selected.
+
+* <Cmd sid='open_time' product='cam' />: Set how long to keep the relay active. Move the slider or enter a value in the input field. Set from 1 to 120 seconds. Default: 3 seconds.
+
+  * <Cmd sid='keep_until_event_off' product='cam' />: Select this option to keep the relay active until the access control event ends, regardless of open time.
+
+* <Cmd sid='contact_type' product='cam' />: Select the relay contact type. Required. Set this after selecting a port.
+
+  * <Cmd sid='normal_open' product='cam' />: Normally open, and closes when the relay activates.
+
+  * <Cmd sid='normal_close' product='cam' />: Normally closed, and opens when the relay activates.
+
+* <Cmd sid='schedule' product='cam' />: Select a schedule to trigger the relay. Required. The default is <Cmd sid='always' product='cam' />.
+
+To save the settings, click <Cmd sid='apply' product='cam' />.
+
+:::caution
+
+<Cmd sid='contact_type' product='cam' /> is a setting applied to the relay port, not a rule. Changing <Cmd sid='contact_type' product='cam' /> shows a confirmation message. Click <Cmd sid='ok' product='cam' /> to apply it immediately to all rules and doors that use the port. Changing this while the port is manually locked or unlocked inverts the output. A locked door may open.
+
+:::
+
+</Step>
+<Step>
+
+### Save rule
+
+After completing all settings, click <Cmd sid='save' product='cam' /> in the upper-right. The system adds saved rules to the door rule list and applies them immediately.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-added-list.png' />
+
+:::info
+
+Create up to 20 door rules.
+
+:::
+
+</Step>
+</Steps>
+
+## View the door rule list
+
+The door rule list shows saved rules and each rule’s target.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-check.png' />
+
+* Enter the door rule name in the search field (<Num num='1' />) to find a specific rule.
+
+* Select a value in Rows (<Num num='2' />) to change the number of rules per page.
+
+* To change the sort criterion, select one in <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />).
+
+The following items are displayed in the door rule list.
+
+| Item | Description |
+| --- | --- |
+| <Cmd sid='column_no' product='cam' /> | The rule number. |
+| <Cmd sid='name' product='cam' /> | The rule name. |
+| <Cmd sid='door' product='cam' /> | The door the rule applies to. |
+| <Cmd sid='event' product='cam' /> | The access decision result with one or more enabled actions. If multiple results exist, the list shows only part of them. |
+| <Cmd sid='schedule' product='cam' /> | The schedule applied to the rule. |
+| <Cmd sid='on_off' product='cam' /> | Turns the rule on or off. |
+| <Cmd sid='actions' product='cam' /> | Provides controls to edit (<IcCamEdit />) or delete (<IcCamTrash />) the rule. |
+
+{/* TODO(개발자 확인): 목록의 '일정' 열이 동작별 일정 중 무엇을 표시하는지 확인 */}
+
+## Enable/disable door rules
+
+In the door rule list, click the toggle in the <Cmd sid='on_off' product='cam' /> column to enable or disable the rule. Disabled rules do not execute actions when an access decision result occurs. Use this to pause a rule without deleting it.
+
+<ProdImg src='/img/cam-server/cam-acs-door-rule-list-enable-disable.png' />
+
+## Edit door rule
+
+1. In the door rule list, click the <IcCamEdit title='Edit' /> button at the far right of the rule to edit.
+
+2. When the <Cmd sid='edit_door_rule' product='cam' /> screen appears, edit the conditions and actions.
+
+   <ProdImg src='/img/cam-server/cam-acs-door-rule-edit.png' />
+
+3. To save your changes, click <Cmd sid='save' product='cam' /> in the upper right of the screen.
+
+## Delete door rule
+
+In the door rule list, click the <IcCamTrash title='delete' /> button at the far right of the rule to delete. When the confirmation message appears, click <Cmd sid='ok' product='cam' />. Deleted rules cannot be recovered.

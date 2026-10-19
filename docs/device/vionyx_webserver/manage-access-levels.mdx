@@ -1,0 +1,202 @@
+---
+id: manage-access-levels
+title: 출입 레벨 관리하기
+description: 출입문과 출입 시간, 사용자를 하나의 출입 레벨로 묶어 사용자별 출입 권한을 부여하고, 출입 레벨을 수정하거나 삭제하는 방법을 안내합니다.
+---
+
+출입 레벨은 **어떤 사용자**가 **어느 출입문**을 **언제** 출입할 수 있는지 하나로 묶은 출입 권한입니다. 출입 통제 이벤트에서 얼굴 인식으로 식별된 사용자라도, 해당 출입문의 출입 레벨에 배정되어 있지 않거나 출입 시간이 아니면 출입할 수 없습니다.
+
+아래와 같은 상황에서 출입 레벨을 만드세요.
+
+* 특정 부서나 팀원만 출입문에 출입할 수 있게 할 때
+
+* 평일 업무 시간에만 출입을 허용하는 등 사용자 그룹별로 출입 시간을 다르게 지정할 때
+
+* 야간 근무자처럼 특정 시간대에만 출입하는 사용자에게 별도 권한을 줄 때
+
+
+## 시작하기 전에
+
+출입 레벨을 만들기 전에 아래 사항을 확인하세요.
+
+* 출입 레벨에 지정할 출입문을 먼저 등록하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-doors' />를 참고하세요.
+
+* 출입 레벨에 배정할 사용자를 얼굴 사용자로 등록하세요. 자세한 내용은 <DocLink docId='device/vionyx_webserver/add-users' />를 참고하세요.
+
+* 출입 시간을 제한하려면 일정을 미리 만들어 두세요. 일정을 만들지 않으면 기본 제공되는 Always 일정을 사용할 수 있습니다. 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-schedule' />를 참고하세요.
+
+
+## 출입 레벨 추가
+
+<Steps>
+<Step>
+
+### 출입 레벨 추가 시작
+
+1. 화면 왼쪽 상단의 <Cmd sid='access' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='access_level' product='cam' />을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-level.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='add_access_level' product='cam' /> 팝업이 나타나면 출입 레벨 정보를 입력하고, 사용자를 배정하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-add.png' />
+
+</Step>
+<Step>
+
+### 기본 정보 입력
+
+<Cmd sid='info' product='cam' /> 섹션에서 출입 레벨을 구분할 정보를 입력하세요.
+
+* <Cmd sid='id' product='cam' />: 출입 레벨의 고유 ID입니다. 자동으로 입력되며, 필요하면 변경할 수 있습니다. 다른 출입 레벨과 같은 ID는 사용할 수 없습니다. 최대 64자까지 입력할 수 있으며, 영문 및 숫자, 하이픈(`-`), 언더스코어(`_`)를 사용할 수 있습니다.
+
+* <Cmd sid='name' product='cam' />: 출입 레벨 이름을 입력하세요. 필수 항목이며, 다른 출입 레벨과 같은 이름은 사용할 수 없습니다. **개발팀 상시 출입**, **야간 근무자**처럼 대상과 시간을 알 수 있는 이름을 지정하세요.
+
+* <Cmd sid='description' product='cam' />: 출입 레벨에 대한 설명을 입력하세요.
+
+</Step>
+<Step>
+
+### 출입문 선택
+
+<Cmd sid='select_doors' product='cam' /> 섹션의 <Cmd sid='door' product='cam' /> 목록에서 출입을 허용할 출입문을 선택하세요. 필수 항목입니다. 1개 이상의 출입문을 선택할 수 있습니다.
+
+:::info
+
+등록된 출입문이 없으면 목록에서 출입문을 선택할 수 없습니다. <Cmd sid='access' product='cam' /> → <Cmd sid='door' product='cam' />에서 출입문을 먼저 등록하세요. 출입문 등록에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-doors' />를 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 출입 시간 선택
+
+<Cmd sid='select_access_time' product='cam' /> 섹션의 <Cmd sid='schedule' product='cam' /> 목록에서 출입을 허용할 일정을 선택하세요. 필수 항목이며, 기본값은 **Always**입니다. 선택한 일정의 시간대에만 출입이 허용되며, 그 밖의 시간에는 등록된 사용자도 출입이 거부됩니다.
+
+:::info
+
+일정 관리에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/manage-schedule' />를 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 사용자 배정
+
+<Cmd sid='assign_user' product='cam' /> 섹션에서 출입 레벨을 적용할 사용자를 추가하세요.
+
+1. <Cmd sid='assign_user' product='cam' /> 섹션 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='select_user' product='cam' /> 팝업이 나타나면 배정할 사용자의 체크박스를 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-assign-users.png' />
+
+   * 목록의 모든 사용자를 선택하려면 목록 머리글의 체크박스(<Num num='1' />)를 선택하세요.
+
+   * 특정 사용자를 찾으려면 검색 필드(<Num num='2' />)에 사용자 이름을 입력하세요.
+
+   * 정렬 기준을 변경하려면 정렬 목록(<Num num='3' />)에서 원하는 기준을 선택하세요.
+
+1. <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 선택한 사용자가 <Cmd sid='assign_user' product='cam' /> 목록에 추가됩니다.
+
+   <Image src='/img/cam-server/cam-acs-level-add-assigned-users.png' />
+
+배정한 사용자를 출입 레벨에서 제외하려면 <Cmd sid='assign_user' product='cam' /> 목록에서 해당 사용자의 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::info
+
+* <Cmd sid='select_user' product='cam' /> 목록에는 얼굴 사용자로 등록된 사용자만 표시됩니다.
+
+* 사용자 한 명은 여러 출입 레벨에 배정할 수 있습니다. 사용자당 배정할 수 있는 출입 레벨 개수에는 제한이 있습니다.
+
+:::
+
+</Step>
+<Step>
+
+### 출입 레벨 저장
+
+모든 설정을 완료한 후 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 저장한 출입 레벨은 출입 레벨 목록에 추가되며, 배정한 사용자에게 즉시 적용됩니다.
+
+<ProdImg src='/img/cam-server/cam-acs-level-added-list.png' />
+
+</Step>
+</Steps>
+
+
+## 출입 레벨 목록 확인
+
+출입 레벨 목록에서 등록된 출입 레벨과 각 출입 레벨의 출입 시간, 배정된 사용자를 확인할 수 있습니다.
+
+<ProdImg src='/img/cam-server/cam-acs-level-list.png' />
+
+* 특정 출입 레벨을 찾으려면 검색 필드(<Num num='1' />)에 출입 레벨 이름을 입력하세요.
+
+* 한 페이지에 표시할 출입 레벨 개수를 변경하려면 화면 오른쪽 상단의 행 수 목록(<Num num='2' />)에서 원하는 값을 선택하세요.
+
+* 정렬 기준을 변경하려면 <Cmd sid='sort_by_id' product='cam' />(<Num num='3' />)에서 원하는 기준을 선택하세요.
+
+출입 레벨 목록에 표시되는 항목은 다음과 같습니다.
+
+| 항목 | 설명 |
+| --- | --- |
+| <Cmd sid='id' product='cam' /> | 출입 레벨의 고유 ID입니다. |
+| <Cmd sid='name' product='cam' /> | 출입 레벨 이름입니다. |
+| <Cmd sid='description' product='cam' /> | 출입 레벨을 추가하거나 수정할 때 입력한 설명입니다. |
+| <Cmd sid='schedule' product='cam' /> | 출입을 허용하는 일정입니다. |
+| <Cmd sid='users' product='cam' /> | 출입 레벨에 배정된 사용자 수입니다. |
+| <Cmd sid='actions' product='cam' /> | 출입 레벨을 수정(<IcCamEdit />)하거나 삭제(<IcCamTrash />)할 수 있는 기능을 제공합니다. |
+
+:::info
+
+<Cmd sid='users' product='cam' /> 항목의 숫자를 클릭하면 배정된 사용자 목록을 확인할 수 있습니다.
+
+<ProdImg src='/img/cam-server/cam-acs-level-list-users-popup.png' />
+
+:::
+
+
+## 출입 레벨 수정
+
+1. 출입 레벨 목록에서 수정하려는 출입 레벨의 오른쪽에 있는 <IcCamEdit title='Edit' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='edit_access_level' product='cam' /> 팝업이 나타나면 출입문, 출입 시간, 배정된 사용자 등을 수정하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-edit.png' />
+
+1. 수정한 내용을 저장하려면 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+수정한 내용은 저장하는 즉시 배정된 모든 사용자에게 적용됩니다.
+
+
+## 출입 레벨 삭제
+
+출입 레벨을 하나씩 삭제하거나, 여러 개를 선택하여 한 번에 삭제할 수 있습니다.
+
+* **하나씩 삭제**: 출입 레벨 목록에서 삭제하려는 출입 레벨의 오른쪽에 있는 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+* **여러 개 삭제**: 출입 레벨 목록에서 삭제하려는 출입 레벨의 체크박스를 선택한 후, 화면 오른쪽 상단의 <Cmd sid='delete' product='cam' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-acs-level-select-delete.png' />
+
+확인 메시지가 나타나면 내용을 확인하고 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요. 출입 레벨을 삭제하면 배정된 모든 사용자에게서 해당 출입 레벨이 해제됩니다. 출입문과 사용자는 삭제되지 않습니다. 삭제한 출입 레벨은 복구할 수 없습니다.
+
+:::caution
+
+출입 레벨을 삭제하면 해당 출입 레벨로만 출입하던 사용자는 더 이상 출입문을 출입할 수 없습니다. 삭제하기 전에 배정된 사용자를 확인하세요.
+
+:::
+
+<NextStep>
+<NextItem to='configure-door-rules' >
+
+출입 판단 결과에 따라 음성 안내, 웹훅 알림, 비상등 같은 추가 동작을 실행하려면 출입문 규칙을 설정하세요.
+
+</NextItem>
+</NextStep>

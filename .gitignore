@@ -37,3 +37,4 @@ generatepdf.bat
 uploadtr.bat
 genpdf/svg-components-map.mjs
 bun.lock
+/docs/device/vionyx_webserver/reference/

@@ -2,11 +2,9 @@
 id: getting-started
 title: Getting Started
 description: This guide walks you through certificate installation, password setup, and login when you first access the ViOnyx Web Server.
-keywords:
-  - ViOnyx
-  - Web Server
-  - Getting Started
 ---
+
+import PWRule from './_password-rule.mdx';
 
 After installing the ViOnyx camera, complete the initial setup through a web browser. This document explains all required steps, from certificate installation to setting the administrator password and logging in.
 
@@ -57,7 +55,7 @@ The ViOnyx Web Server uses a secure HTTPS connection. A security warning appears
 
 ### Run the certificate import wizard
 
-1. In the left pane of the **Management Console**, expand **Trusted Root Certification Authorities**.
+1. In the left panel of the **Management Console**, expand **Trusted Root Certification Authorities**.
 
 2. Right-click **Certificates** under it, then select **All Tasks** → **Import**.
 
@@ -129,21 +127,7 @@ The password must meet all of the following requirements:
 
 * The values in the <Cmd sid='password' product='cam' /> and <Cmd sid='confirm_password' product='cam' /> fields must match exactly.
 
-* The password must be at least 12 characters long. Maximum length: 64 characters.
-
-* Include at least one lowercase letter (`a-z`) and one uppercase letter (`A-Z`).
-
-* Include at least one digit (`0-9`) and one special character.
-
-  > Example special characters: `"` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`
-
-* Do not include sequences of 4 or more consecutive characters (e.g., `1234`, `abcd`) or 4 or more identical characters.
-
-* The username (case-insensitive) must not be included in the password.
-
-  > admin, Admin, ADMIN, Admin123! etc.
-
-* Common weak passwords such as `password`, `qwerty`, `123456` are not allowed.
+<PWRule />
 
 :::
 
@@ -176,7 +160,7 @@ Change the administrator ID (admin) in <Cmd sid='system' product='cam' /> → <C
 <NextStep>
 <NextItem to='live-basic'>
 
-Explains the main features and usage of the <Cmd sid='live' product='cam' className='normal' /> menu.
+Explains the main features and how to use the <Cmd sid='live' product='cam' /> menu.
 
 </NextItem>
 <NextItem to='configure-ai-events-and-rules'>
