@@ -53,16 +53,16 @@
         "models": [
             "VQF12-R"
         ],
-        "version": "1.0.1",
+        "version": "1.1.0",
         "manuals": {
-            "ko": "device/vionyx/ViOnyx_IG_1.02_KO_260820.pdf",
-            "en": "device/vionyx/ViOnyx_IG_1.02_EN_260820.pdf",
-            "es": "device/vionyx/ViOnyx_IG_1.02_ES_260820.pdf",
-            "ja": "device/vionyx/ViOnyx_IG_1.02_JA_260820.pdf"
+            "ko": "device/vionyx/ViOnyx_IG_1.03_KO_261019.pdf",
+            "en": "device/vionyx/ViOnyx_IG_1.03_EN_261019.pdf",
+            "es": "device/vionyx/ViOnyx_IG_1.03_ES_261019.pdf",
+            "ja": "device/vionyx/ViOnyx_IG_1.03_JA_261019.pdf"
         },
         "release_notes": {
-            "ko": "device/vionyx/ViOnyx_ReleaseNotes_1.0.1_KO_260609.pdf",
-            "en": "device/vionyx/ViOnyx_ReleaseNotes_1.0.1_EN_260609.pdf"
+            "ko": "device/vionyx/ViOnyx_ReleaseNotes_1.1.0_KO_261019.pdf",
+            "en": "device/vionyx/ViOnyx_ReleaseNotes_1.1.0_EN_261019.pdf"
         },
         "a_e": "",
         "dt": {
