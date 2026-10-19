@@ -16,71 +16,67 @@ Este tema explica cómo establecer una contraseña e iniciar sesión la primera 
 
 * Use una computadora conectada a la misma red que la cámara.
 
-* Si el dispositivo no obtiene una dirección IP después de un restablecimiento de fábrica, cambia a la dirección IP predeterminada (`https://192.168.1.100`), así que conéctese usando esa dirección.
+* Si el dispositivo no obtiene una dirección IP después de la inicialización de fábrica, cambia a la dirección IP predeterminada (`https://192.168.1.100`). Abra la dirección en un navegador web.
 
 :::
 
 1. Solicite el paquete de instalación (*VionyxTool.zip*) a [Ventas de Suprema](https://www.supremainc.com/es/support/main.asp).
 
-2. Extraiga el archivo de instalación y luego ejecute *vionyx_tool.exe*.
+2. Extraiga el archivo de instalación y luego ejecute *ViOnyxTool_X.X.X.exe*.
 
-   <Image src="/img/camera/web-server-settings1.png" width='80%' alone />
+   <Image src="/img/camera/web-server-settings1.png" width={800} />
 
-3. Haga clic en Buscar cámaras.
+3. Haz clic en <Cmd sid='search_for_cameras' product='cam' />.
 
-4. En la lista de cámaras detectadas, busque el número de serie de la cámara (**DEVICE ID**) y verifique la **IP ADDRESS**.
+4. En la lista de cámaras detectadas, busca el <Cmd sid='device_id' product='cam' />(S/N). Luego revisa la <Cmd>IP ADDRESS</Cmd>.
 
-   <Image src="/img/camera/web-server-settings2.png" width='80%' alone />
+   <Image src="/img/camera/web-server-settings2.png" width={800} />
 
-5. Inicie el navegador web.
-
-6. Ingrese la **IP ADDRESS** de la cámara, incluida `https://`, en la barra de direcciones y luego presione **Enter**.
+5. Abre un navegador web y ve a la dirección IP asignada a la cámara (`https://{IP ADDRESS}`).
 
    > Ejemplo: `https://192.168.1.100/`
 
-7. Aparecerá la página del servidor web de ViOnyx.
+6. Aparecerá la página del servidor web de ViOnyx.
 
 ## Establecer la contraseña
 
 La primera vez que acceda al servidor web de ViOnyx, establezca una contraseña.
 
-1. Consulte [Acceda al servidor web de la cámara](#access-web-server), luego abra un navegador web y vaya al servidor web de ViOnyx en `https://IP_ADDRESS`.
+1. Consulta [Acceda al servidor web de la cámara](#access-web-server). Luego abre un navegador y ve a la IP asignada (`https://{IP ADDRESS}`).
 
    > Ejemplo: `https://192.168.1.100/`
 
-   <Image src="/img/camera/password-setting1-vionyx.png" />
+   <Image src="/img/camera/password-setting1-vionyx.png" width={572} />
 
-2. Ingrese la contraseña en el campo <Cmd sid='password' product='cam' />.
-
-3. Ingrese de nuevo la misma contraseña en el campo <Cmd sid='confirm_password' product='cam' />.
-
-4. Asegúrese de que la contraseña que introdujo cumpla con todos los siguientes requisitos.
+2. Revisa los requisitos de contraseña a continuación y luego ingresa una contraseña en el campo <Cmd sid='password' product='cam' />.
 
    :::note
 
    **Requisitos de la contraseña**
 
-   * **Confirmación de contraseña**: Los valores de los campos <Cmd sid='password' product='cam' /> y <Cmd sid='confirm_password' product='cam' /> deben coincidir exactamente.
-
    * **Longitud**: Introduzca entre 12 y 64 caracteres.
 
    * **Composición de caracteres**: Debe incluir al menos 1 de cada uno de los siguientes: letras mayúsculas en inglés (A-Z), letras minúsculas en inglés (a-z), dígitos (0-9) y caracteres especiales (`"` `!` `@` `#` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`).
 
-     * No se permiten espacios, Hangul ni otros caracteres Unicode.
+      * No se permiten espacios, Hangul ni otros caracteres Unicode.
 
    * **Reglas de seguridad**: Para evitar vulnerabilidades de seguridad, no se permiten los siguientes patrones.
 
-     * Secuencias consecutivas de 4 o más letras o números (p. ej., abcd, 1234, 4321)
+      * Secuencias consecutivas de 4 o más letras o números (p. ej., abcd, 1234, 4321)
 
-     * Caracteres o dígitos idénticos repetidos 4 o más veces (p. ej., aaaa, 1111)
+      * Caracteres o dígitos idénticos repetidos 4 o más veces (p. ej., aaaa, 1111)
 
-     * Contiene el ID de usuario (no distingue entre mayúsculas y minúsculas)
+      * Contiene el ID de usuario (no distingue entre mayúsculas y minúsculas)
 
-     * Palabras o patrones comunes que son fáciles de adivinar (p. ej., password, qwerty)
+      * Palabras o patrones comunes que son fáciles de adivinar (p. ej., password, qwerty)
+
+   * **Confirmación de contraseña**: Los valores de los campos <Cmd sid='password' product='cam' /> y <Cmd sid='confirm_password' product='cam' /> deben coincidir exactamente.
 
    :::
 
-5. Cuando se cumplan todas las condiciones, <Cmd sid='submit' product='cam' /> se activará. Haga clic en el botón para finalizar la configuración de la contraseña.
+3. Ingrese de nuevo la misma contraseña en el campo <Cmd sid='confirm_password' product='cam' />.
+
+4. Cuando la contraseña cumpla todos los requisitos, <Cmd sid='submit' product='cam' /> se activará. Haga clic en el botón para finalizar la configuración de la contraseña.
 
 :::caution
 
@@ -92,7 +88,7 @@ Tenga cuidado de no perder la contraseña. Si la pierde, deberá restablecer la 
 
 Una vez establecida la contraseña, se le redirigirá automáticamente a la página de inicio de sesión. Introduzca el ID de administrador y la contraseña que configuró para acceder al servidor web de ViOnyx.
 
-<Image src="/img/camera/password-setting2-vionyx.png" />
+<Image src="/img/camera/password-setting2-vionyx.png" width={572} />
 
 1. Ingrese **admin** en el campo <Cmd sid='id' product='cam' />.
 
@@ -102,4 +98,4 @@ Una vez establecida la contraseña, se le redirigirá automáticamente a la pág
 
 3. Haga clic en el botón <Cmd sid='sign_in' product='cam' />. Después de iniciar sesión correctamente, aparecerá el visor en vivo de la cámara del servidor web ViOnyx.
 
-4. Consulte el [servidor web ViOnyx](../vionyx_webserver) para configurar la cámara.
+4. Consulte el [Servidor Web de ViOnyx](../vionyx_webserver) para configurar la cámara.
