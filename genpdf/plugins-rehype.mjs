@@ -1660,6 +1660,26 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Centerpoint') {
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['status', 'center'] },
+          children: [{ type: 'text', value: '' }]
+        }
+        return;
+      }
+
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Bottompoint') {
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['status', 'bottom'] },
+          children: [{ type: 'text', value: '' }]
+        }
+        return;
+      }
+
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'StatusFail') {
         parent.children[index] = {
           type: 'element',
