@@ -2380,6 +2380,7 @@ function createSidebars(preview) {
             id: 'device/vionyx/release-notes/index',
           },
           items: [
+            'device/vionyx/release-notes/110',
             'device/vionyx/release-notes/101',
             'device/vionyx/release-notes/100',
           ]
