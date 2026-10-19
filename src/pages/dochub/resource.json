@@ -78,14 +78,14 @@
         "models": [
             "VQF12-R"
         ],
-        "version": "1.0.1",
+        "version": "1.1.0",
         "manuals": {
-            "ko": "device/vionyx/ViOnyx Web Server_UG_1.0.1_KO_260701.pdf",
-            "en": "device/vionyx/ViOnyx Web Server_UG_1.0.1_EN_260701.pdf",
-            "es": "device/vionyx/ViOnyx Web Server_UG_1.0.1_ES_260701.pdf",
-            "ja": "device/vionyx/ViOnyx Web Server_UG_1.0.1_JA_260701.pdf"
+            "ko": "device/vionyx/ViOnyx Web Server_UG_1.1.0_KO_261019.pdf",
+            "en": "device/vionyx/ViOnyx Web Server_UG_1.1.0_EN_261019.pdf",
+            "es": "device/vionyx/ViOnyx Web Server_UG_1.1.0_ES_261019.pdf",
+            "ja": "device/vionyx/ViOnyx Web Server_UG_1.1.0_JA_261019.pdf"
         },
-        "release_date": "2026-06-16"
+        "release_date": "2026-10-19"
     },
     {
         "category": "biometric",
