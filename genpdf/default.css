@@ -1780,6 +1780,14 @@ span.normalok {
   background-color: #aaa;
 }
 
+span.center {
+  background-color: #1FC8E8;
+}
+
+span.bottom {
+  background-color: #EA4235;
+}
+
 .status {
   border-radius: 9999px;
   width: .75rem;
