@@ -1,7 +1,6 @@
 import React, {Suspense, lazy, useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import {translate} from '@docusaurus/Translate';
 import {useNavbarMobileSidebar} from '@docusaurus/theme-common/internal';
 import {setAskAiOpen, useAskAiOpen} from './store';
@@ -31,8 +30,6 @@ function DesktopItem() {
         <SparklesIcon aria-hidden />
         <span>{label()}</span>
       </button>
-      {/* 데스크톱 항목은 모바일에서도 CSS로만 숨겨지므로, 패널은 여기서 한 번만 렌더링한다. */}
-      <BrowserOnly>{() => <PanelHost />}</BrowserOnly>
     </>
   );
 }
@@ -55,14 +52,19 @@ function MobileItem() {
   );
 }
 
-function PanelHost() {
+/**
+ * 채팅 패널. 페이지를 이동해도 대화와 열림 상태가 유지되도록 navbar가 아닌
+ * src/theme/Root.js(페이지 이동 시 다시 그려지지 않는 최상위 컴포넌트)에서 한 번만 렌더링한다.
+ */
+export function AskAiPanelHost() {
   const open = useAskAiOpen();
   // 한 번 연 뒤에는 닫아도 언마운트하지 않아, 다시 열었을 때 대화가 남아 있게 한다.
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (open) setLoaded(true);
-    document.documentElement.classList.toggle('ask-ai-open', open);
+    // Docusaurus가 페이지 이동 때마다 <html>의 class를 다시 쓰므로, 클래스 대신 data 속성을 쓴다.
+    document.documentElement.toggleAttribute('data-ask-ai-open', open);
     if (!open) return undefined;
     const onKeyDown = (event) => {
       if (event.key === 'Escape') setAskAiOpen(false);

@@ -48,7 +48,7 @@
 
 /* 패널이 열리면 본문(navbar 포함)을 패널 폭만큼 왼쪽으로 줄인다. */
 @media (min-width: 997px) {
-  :global(html.ask-ai-open) body {
+  :global(html[data-ask-ai-open]) body {
     margin-right: var(--ask-ai-width);
   }
 }

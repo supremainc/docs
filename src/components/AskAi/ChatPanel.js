@@ -46,7 +46,8 @@ export default function ChatPanel({onClose}) {
       className={clsx(styles.tokens, styles.panel)}
       aria-label={translate({id: 'askAi.panel.label', message: 'Docs AI 어시스턴트'})}>
       <header className={styles.header}>
-        <h2 className={styles.title}>Docs AI Assistant</h2>
+        {/* h2를 쓰면 문서 목차(GenerateToc)가 이 제목까지 수집하므로 heading 요소를 쓰지 않는다. */}
+        <div className={styles.title}>Docs AI Assistant</div>
         <div className={styles.headerActions}>
           <TooltipIconButton
             tooltip={translate({id: 'askAi.newChat', message: '새 대화'})}
