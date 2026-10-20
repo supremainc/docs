@@ -6,11 +6,14 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import {getLocalizedConfigValue} from './utils/localization.js';
+import remarkCjkFriendly from "remark-cjk-friendly/parseOnly";
+import remarkCjkFriendlyGfmStrikethrough from "remark-cjk-friendly-gfm-strikethrough/parseOnly";
 const {rehypeExtendedTable} = require("rehype-extended-table");
 const remarkCmd = require('./src/plugins/remark-cmd/remark-cmd');
 const remarkImageSize = require('./src/plugins/remark-image-size/remark-image-size');
 const svgrCmdTemplate = require('./src/plugins/remark-cmd/svgrCmdTemplate');
 const mergeDateVcs = require('./utils/mergeDateVcs');
+const remarkCjkFriendlyPlugins = [remarkCjkFriendly, remarkCjkFriendlyGfmStrikethrough];
 
 const isDev = process.env.NODE_ENV === 'development';
 const isPreview = process.env.CONTEXT === 'preview';
@@ -126,6 +129,7 @@ const config = {
           remarkPlugins: [
             [remarkCmd, { locale: locale || 'ko' }],
             [remarkImageSize, { locale: locale || 'ko' }],
+            remarkCjkFriendlyPlugins
           ],
           rehypePlugins: [ rehypeExtendedTable ],
           showLastUpdateTime: true,
@@ -147,6 +151,9 @@ const config = {
           showReadingTime: false,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Changelogs',
+          remarkPlugins: [
+            remarkCjkFriendlyPlugins,
+          ]
         },
         theme: {
           customCss: './src/css/custom.scss',
