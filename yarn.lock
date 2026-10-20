@@ -6920,6 +6920,11 @@ get-east-asian-width@^1.0.0, get-east-asian-width@^1.3.1, get-east-asian-width@^
   resolved "https://registry.yarnpkg.com/get-east-asian-width/-/get-east-asian-width-1.6.0.tgz#216900f91df11a8b2c198c3e1d93d6c035a776b9"
   integrity sha512-QRbvDIbx6YklUe6RxeTeleMR0yv3cYH6PsPZHcnVn7xv7zO1BHN8r0XETu8n6Ye3Q+ahtSarc3WgtNWmehIBfA==
 
+get-east-asian-width@^1.4.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/get-east-asian-width/-/get-east-asian-width-1.7.0.tgz#7ee99f0bd5ab7c622002deeabba232923726d1d4"
+  integrity sha512-XjH1AECxf0giL2V1aU8vKyRR2ppRUb5c0EvT7zuJTokQ74bNo52zOtghqdWIqrhUD79fo3x0WfKZdOqxF6LG1Q==
+
 get-intrinsic@^1.2.4, get-intrinsic@^1.2.5, get-intrinsic@^1.2.6:
   version "1.2.7"
   resolved "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.2.7.tgz"
@@ -8850,6 +8855,25 @@ mdast-util-to-hast@^13.0.0:
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
+mdast-util-to-markdown-cjk-friendly-gfm-strikethrough@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-markdown-cjk-friendly-gfm-strikethrough/-/mdast-util-to-markdown-cjk-friendly-gfm-strikethrough-1.0.0.tgz#9a69e9f3f9b852b484405ff0f3b19e6af6edc1e8"
+  integrity sha512-1ePVfB4P/vz3xSsm6H3D32r6VYGErxclnuLLFK02/2ReF+UdEKm7caulK6Vm0LBIp5gPRtB2Z1OYDznCkX3k2w==
+  dependencies:
+    mdast-util-gfm-strikethrough "^2.0.0"
+    mdast-util-to-markdown "^2.1.2"
+    micromark-extension-cjk-friendly-util "3.0.1"
+    micromark-util-symbol "^2.0.1"
+
+mdast-util-to-markdown-cjk-friendly@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-markdown-cjk-friendly/-/mdast-util-to-markdown-cjk-friendly-1.0.0.tgz#c87a3ec3a446dc871f6ab2f3d3cc064aefe8a73e"
+  integrity sha512-BoaAm8mlJ+LAYz0Qs532Y3ciTuQYgBUPZcSFbvC/ZKmEMAKgulw84YvQK1gI34t/vL2euSfuaWlqczkTBgamkw==
+  dependencies:
+    mdast-util-to-markdown "^2.1.2"
+    micromark-extension-cjk-friendly-util "3.0.1"
+    micromark-util-symbol "^2.0.1"
+
 mdast-util-to-markdown@^2.0.0:
   version "2.1.2"
   resolved "https://registry.npmjs.org/mdast-util-to-markdown/-/mdast-util-to-markdown-2.1.2.tgz"
@@ -8862,6 +8886,23 @@ mdast-util-to-markdown@^2.0.0:
     mdast-util-to-string "^4.0.0"
     micromark-util-classify-character "^2.0.0"
     micromark-util-decode-string "^2.0.0"
+    unist-util-visit "^5.0.0"
+    zwitch "^2.0.0"
+
+mdast-util-to-markdown@^2.1.2:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-markdown/-/mdast-util-to-markdown-2.2.0.tgz#40e9db55768d7dd11fae4462531cf0223a2b4f35"
+  integrity sha512-2Jn/ADrHFFyyniBMi0bncTbJqU78K3/TEYvzvwrWWzD9MYPUa/Gm4r3nOeKFQg/PDM5BsbDYdc8ackW4NTY6NA==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    "@types/unist" "^3.0.0"
+    longest-streak "^3.0.0"
+    mdast-util-phrasing "^4.0.0"
+    mdast-util-to-string "^4.0.0"
+    micromark-util-character "^2.0.0"
+    micromark-util-classify-character "^2.0.0"
+    micromark-util-decode-string "^2.0.0"
+    micromark-util-html-tag-name "^2.0.0"
     unist-util-visit "^5.0.0"
     zwitch "^2.0.0"
 
@@ -8981,6 +9022,39 @@ micromark-core-commonmark@^2.0.0:
     micromark-util-subtokenize "^2.0.0"
     micromark-util-symbol "^2.0.0"
     micromark-util-types "^2.0.0"
+
+micromark-extension-cjk-friendly-gfm-strikethrough@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/micromark-extension-cjk-friendly-gfm-strikethrough/-/micromark-extension-cjk-friendly-gfm-strikethrough-2.0.1.tgz#cbd4bcdf8ad553a43d2bff4d33da3069b19957d9"
+  integrity sha512-wVC0zwjJNqQeX+bb07YTPu/CvSAyCTafyYb7sMhX1r62/Lw5M/df3JyYaANyp8g15c1ypJRFSsookTqA1IDsUg==
+  dependencies:
+    devlop "^1.1.0"
+    get-east-asian-width "^1.4.0"
+    micromark-extension-cjk-friendly-util "3.0.1"
+    micromark-util-character "^2.1.1"
+    micromark-util-chunked "^2.0.1"
+    micromark-util-resolve-all "^2.0.1"
+    micromark-util-symbol "^2.0.1"
+
+micromark-extension-cjk-friendly-util@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/micromark-extension-cjk-friendly-util/-/micromark-extension-cjk-friendly-util-3.0.1.tgz#a1e1d4f59de17f9eb398c4c8d0d96c1c5294aede"
+  integrity sha512-GcbXqTTHOsiZHyF753oIddP/J2eH8j9zpyQPhkof6B2JNxfEJabnQqxbCgzJNuNes0Y2jTNJ3LiYPSXr6eJA8w==
+  dependencies:
+    get-east-asian-width "^1.4.0"
+    micromark-util-character "^2.1.1"
+    micromark-util-symbol "^2.0.1"
+
+micromark-extension-cjk-friendly@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/micromark-extension-cjk-friendly/-/micromark-extension-cjk-friendly-2.0.2.tgz#332dd65f8fd36ba0a5ea5429e535a307194b0896"
+  integrity sha512-/BqZNCkDWg3Hj9zEEcRitZ5uMF3X78qmBFuP17oAjnVDZ0+H1GHiDKMJZDpJsXasCHEn/kzl6QHozUiWgCHtPQ==
+  dependencies:
+    devlop "^1.1.0"
+    micromark-extension-cjk-friendly-util "3.0.1"
+    micromark-util-chunked "^2.0.1"
+    micromark-util-resolve-all "^2.0.1"
+    micromark-util-symbol "^2.0.1"
 
 micromark-extension-directive@^3.0.0:
   version "3.0.2"
@@ -9242,7 +9316,7 @@ micromark-util-character@^1.0.0, micromark-util-character@^1.1.0:
     micromark-util-symbol "^1.0.0"
     micromark-util-types "^1.0.0"
 
-micromark-util-character@^2.0.0:
+micromark-util-character@^2.0.0, micromark-util-character@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/micromark-util-character/-/micromark-util-character-2.1.1.tgz"
   integrity sha512-wv8tdUTJ3thSFFFJKtpYKOYiGP2+v96Hvk4Tu8KpCAsTMs6yi+nVmGh1syvSCsaxz45J6Jbw+9DD6g97+NV67Q==
@@ -9250,7 +9324,7 @@ micromark-util-character@^2.0.0:
     micromark-util-symbol "^2.0.0"
     micromark-util-types "^2.0.0"
 
-micromark-util-chunked@^2.0.0:
+micromark-util-chunked@^2.0.0, micromark-util-chunked@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/micromark-util-chunked/-/micromark-util-chunked-2.0.1.tgz"
   integrity sha512-QUNFEOPELfmvv+4xiNg2sRYeS/P84pTW0TCgP5zc9FpXetHY0ab7SxKyAQCNCc1eK0459uoLI1y5oO5Vc1dbhA==
@@ -9322,7 +9396,7 @@ micromark-util-normalize-identifier@^2.0.0:
   dependencies:
     micromark-util-symbol "^2.0.0"
 
-micromark-util-resolve-all@^2.0.0:
+micromark-util-resolve-all@^2.0.0, micromark-util-resolve-all@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/micromark-util-resolve-all/-/micromark-util-resolve-all-2.0.1.tgz"
   integrity sha512-VdQyxFWFT2/FGJgwQnJYbe1jjQoNTS4RjglmSjTUlpUMa95Htx9NHeYW4rGDJzbjvCsl9eLjMQwGeElsqmzcHg==
@@ -9353,7 +9427,7 @@ micromark-util-symbol@^1.0.0, micromark-util-symbol@^1.0.1:
   resolved "https://registry.npmjs.org/micromark-util-symbol/-/micromark-util-symbol-1.1.0.tgz"
   integrity sha512-uEjpEYY6KMs1g7QfJ2eX1SQEV+ZT4rUD3UcF6l57acZvLNK7PBZL+ty82Z1qhK1/yXIY4bdx04FKMgR0g4IAag==
 
-micromark-util-symbol@^2.0.0:
+micromark-util-symbol@^2.0.0, micromark-util-symbol@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/micromark-util-symbol/-/micromark-util-symbol-2.0.1.tgz"
   integrity sha512-vs5t8Apaud9N28kgCrRUdEed4UJ+wWNvicHLPxCa9ENlYuAY31M0ETy5y1vA33YoNPDFTghEbnh6efaE8h4x0Q==
@@ -11433,6 +11507,22 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.npmjs.org/relateurl/-/relateurl-0.2.7.tgz"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
+
+remark-cjk-friendly-gfm-strikethrough@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/remark-cjk-friendly-gfm-strikethrough/-/remark-cjk-friendly-gfm-strikethrough-2.3.1.tgz#470bb2f553929004a60dda9cc301d93c0303f1c4"
+  integrity sha512-JE3TGgouk/sy92SemNMEUhO5mNP4on04cmzOV3s3R5Dbk160ewmpM4tgPiinKKvoJ5UW2fTu7FOYsjVbusSA9w==
+  dependencies:
+    mdast-util-to-markdown-cjk-friendly-gfm-strikethrough "1.0.0"
+    micromark-extension-cjk-friendly-gfm-strikethrough "2.0.1"
+
+remark-cjk-friendly@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/remark-cjk-friendly/-/remark-cjk-friendly-2.3.2.tgz#f3a2e21a723a6a3174a5bbec321179685b982a66"
+  integrity sha512-iHlhOWkssAegh94zMXag9K7MAhTfzQY3uBk9WolicJEz/dUELhhOn094ykUa9NmuS+giZ/LKcKyoa7pCeyLsXg==
+  dependencies:
+    mdast-util-to-markdown-cjk-friendly "1.0.0"
+    micromark-extension-cjk-friendly "2.0.2"
 
 remark-code-title@^0.2.5:
   version "0.2.5"
