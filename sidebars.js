@@ -2054,6 +2054,7 @@ function createSidebars(preview) {
             id: 'device/device_manager/release-notes/index',
           },
           items: [
+            'device/device_manager/release-notes/125',
             'device/device_manager/release-notes/124',
             'device/device_manager/release-notes/123',
             'device/device_manager/release-notes/122',
