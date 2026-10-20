@@ -1348,5 +1348,17 @@
   },
   "askAi.error.network": {
     "message": "서버에 연결하지 못했습니다. 네트워크 연결을 확인하세요."
+  },
+  "askAi.feedback.title": {
+    "message": "이 답변이 도움이 되었나요?"
+  },
+  "askAi.feedback.thanks": {
+    "message": "피드백을 보내 주셔서 감사합니다."
+  },
+  "askAi.feedback.successSubtext": {
+    "message": "보내 주신 의견은 AI 답변의 품질을 높이는 데 활용됩니다."
+  },
+  "askAi.feedback.privacyNote": {
+    "message": "피드백과 함께 이 답변의 내용이 전송됩니다. 제출한 피드백은 AI 답변 개선에만 사용하며, 개인 식별 정보는 수집하지 않습니다."
   }
 }

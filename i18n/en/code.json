@@ -1348,5 +1348,17 @@
   },
   "askAi.error.network": {
     "message": "Couldn't connect to the server. Check your network connection."
+  },
+  "askAi.feedback.title": {
+    "message": "Was this answer helpful?"
+  },
+  "askAi.feedback.thanks": {
+    "message": "Thank you for your feedback."
+  },
+  "askAi.feedback.successSubtext": {
+    "message": "Your feedback helps us improve the quality of AI answers."
+  },
+  "askAi.feedback.privacyNote": {
+    "message": "The content of this answer is sent with your feedback. Feedback is used only to improve AI answers, and no personally identifiable information is collected."
   }
 }

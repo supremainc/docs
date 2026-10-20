@@ -1348,5 +1348,17 @@
   },
   "askAi.error.network": {
     "message": "サーバーに接続できませんでした。ネットワーク接続を確認してください。"
+  },
+  "askAi.feedback.title": {
+    "message": "この回答は役に立ちましたか？"
+  },
+  "askAi.feedback.thanks": {
+    "message": "フィードバックをお送りいただきありがとうございます。"
+  },
+  "askAi.feedback.successSubtext": {
+    "message": "いただいたご意見は、AI回答の品質向上に活用されます。"
+  },
+  "askAi.feedback.privacyNote": {
+    "message": "フィードバックと一緒にこの回答の内容が送信されます。送信されたフィードバックはAI回答の改善にのみ使用され、個人を特定できる情報は収集されません。"
   }
 }

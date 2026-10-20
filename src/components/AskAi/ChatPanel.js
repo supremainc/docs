@@ -29,6 +29,7 @@ import Translate, {translate} from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {createSolisAdapter} from './solisAdapter';
 import {MarkdownText} from './MarkdownText';
+import ChatFeedback from './ChatFeedback';
 import {TooltipIconButton} from './TooltipIconButton';
 import styles from './thread.module.css';
 
@@ -99,6 +100,10 @@ function ThreadRoot() {
             <ThreadPrimitive.Messages>{() => <ThreadMessage />}</ThreadPrimitive.Messages>
           </div>
 
+          <AuiIf condition={(s) => s.thread.messages.length > 0 && !s.thread.isRunning}>
+            <ThreadFeedback />
+          </AuiIf>
+
           <ThreadPrimitive.ViewportFooter className={clsx(styles.viewportFooter, !isEmpty && styles.viewportFooterDocked)}>
             <ThreadScrollToBottom />
             <Composer />
@@ -110,6 +115,17 @@ function ThreadRoot() {
       </ThreadPrimitive.Viewport>
     </ThreadPrimitive.Root>
   );
+}
+
+// 답변이 끝날 때마다 새로 나타나도록 메시지 수를 key로 쓴다.
+function ThreadFeedback() {
+  const count = useAuiState((s) => s.thread.messages.length);
+  // 피드백과 함께 보낼 마지막 답변의 텍스트
+  const answer = useAuiState((s) => {
+    const last = [...s.thread.messages].reverse().find((message) => message.role === 'assistant');
+    return last ? last.content.filter((part) => part.type === 'text').map((part) => part.text).join('\n') : '';
+  });
+  return <ChatFeedback key={count} answer={answer} />;
 }
 
 function ThreadMessage() {

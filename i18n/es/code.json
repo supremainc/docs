@@ -1348,5 +1348,17 @@
   },
   "askAi.error.network": {
     "message": "No se pudo conectar con el servidor. Compruebe la conexión de red."
+  },
+  "askAi.feedback.title": {
+    "message": "¿Le resultó útil esta respuesta?"
+  },
+  "askAi.feedback.thanks": {
+    "message": "Gracias por enviar sus comentarios."
+  },
+  "askAi.feedback.successSubtext": {
+    "message": "Sus comentarios nos ayudan a mejorar la calidad de las respuestas de IA."
+  },
+  "askAi.feedback.privacyNote": {
+    "message": "El contenido de esta respuesta se envía junto con sus comentarios. Los comentarios se utilizan solo para mejorar las respuestas de IA y no se recopila información de identificación personal."
   }
 }
