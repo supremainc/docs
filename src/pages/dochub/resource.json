@@ -55,10 +55,10 @@
         ],
         "version": "1.1.0",
         "manuals": {
-            "ko": "device/vionyx/ViOnyx_IG_1.03_KO_261019.pdf",
-            "en": "device/vionyx/ViOnyx_IG_1.03_EN_261019.pdf",
-            "es": "device/vionyx/ViOnyx_IG_1.03_ES_261019.pdf",
-            "ja": "device/vionyx/ViOnyx_IG_1.03_JA_261019.pdf"
+            "ko": "device/vionyx/ViOnyx_IG_1.03_KO_261014.pdf",
+            "en": "device/vionyx/ViOnyx_IG_1.03_EN_261014.pdf",
+            "es": "device/vionyx/ViOnyx_IG_1.03_ES_261014.pdf",
+            "ja": "device/vionyx/ViOnyx_IG_1.03_JA_261014.pdf"
         },
         "release_notes": {
             "ko": "device/vionyx/ViOnyx_ReleaseNotes_1.1.0_KO_261019.pdf",
