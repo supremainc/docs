@@ -6196,12 +6196,12 @@
     "height": 699
   },
   "/img/camera/password-setting1-vionyx.png": {
-    "width": 1652,
-    "height": 929
+    "width": 572,
+    "height": 437
   },
   "/img/camera/password-setting2-vionyx.png": {
-    "width": 1652,
-    "height": 929
+    "width": 572,
+    "height": 427
   },
   "/img/camera/product-vionyx.png": {
     "width": 2696,
@@ -6236,12 +6236,12 @@
     "height": 452
   },
   "/img/camera/web-server-settings1.png": {
-    "width": 1202,
-    "height": 888
+    "width": 800,
+    "height": 559
   },
   "/img/camera/web-server-settings2.png": {
-    "width": 1202,
-    "height": 888
+    "width": 800,
+    "height": 559
   },
   "/img/cardpresso-print-server-short-cut.png": {
     "width": 600,
@@ -8879,6 +8879,10 @@
     "width": 1200,
     "height": 778
   },
+  "/img/device/factory-reset-cs40.png": {
+    "width": 800,
+    "height": 657
+  },
   "/img/device/fingerprint-authentication.svg": {
     "width": 514,
     "height": 143
@@ -9560,8 +9564,8 @@
     "height": 944
   },
   "/img/device/installation-example-cs40.png": {
-    "width": 899,
-    "height": 677
+    "width": 918,
+    "height": 857
   },
   "/img/device/installation-example-di24.png": {
     "width": 823,
@@ -10587,6 +10591,10 @@
     "width": 300,
     "height": 313
   },
+  "/img/device/reset-network-settings-cs40.png": {
+    "width": 800,
+    "height": 313
+  },
   "/img/device/restoring-factory-defaults-bep2.svg": {
     "width": 221,
     "height": 544
@@ -10639,9 +10647,9 @@
     "width": 970,
     "height": 860
   },
-  "/img/device/system-configuration-cs40.svg": {
-    "width": 507,
-    "height": 272
+  "/img/device/system-configuration-cs40.png": {
+    "width": 1454,
+    "height": 843
   },
   "/img/device/system-configuration-di24.png": {
     "width": 1183,
@@ -16512,16 +16520,24 @@
     "height": 699
   },
   "/img/en/camera/password-setting1-vionyx.png": {
-    "width": 1652,
-    "height": 925
+    "width": 572,
+    "height": 437
   },
   "/img/en/camera/password-setting2-vionyx.png": {
-    "width": 1652,
-    "height": 929
+    "width": 572,
+    "height": 427
   },
   "/img/en/camera/vionyx-dimension.svg": {
     "width": 1238,
     "height": 510
+  },
+  "/img/en/camera/web-server-settings1.png": {
+    "width": 800,
+    "height": 559
+  },
+  "/img/en/camera/web-server-settings2.png": {
+    "width": 800,
+    "height": 559
   },
   "/img/en/cardpresso-print-server-short-cut.png": {
     "width": 600,
@@ -17844,8 +17860,8 @@
     "height": 933
   },
   "/img/en/device/installation-example-cs40.png": {
-    "width": 909,
-    "height": 694
+    "width": 918,
+    "height": 857
   },
   "/img/en/device/installation-example-di24.png": {
     "width": 800,
@@ -18730,6 +18746,10 @@
   "/img/en/device/system-configuration-cs20.png": {
     "width": 965,
     "height": 849
+  },
+  "/img/en/device/system-configuration-cs40.png": {
+    "width": 1454,
+    "height": 843
   },
   "/img/en/device/system-configuration-cs40.svg": {
     "width": 511,
@@ -23072,16 +23092,24 @@
     "height": 699
   },
   "/img/ja/camera/password-setting1-vionyx.png": {
-    "width": 1652,
-    "height": 924
+    "width": 572,
+    "height": 437
   },
   "/img/ja/camera/password-setting2-vionyx.png": {
-    "width": 1652,
-    "height": 929
+    "width": 572,
+    "height": 427
   },
   "/img/ja/camera/vionyx-dimension.svg": {
     "width": 1238,
     "height": 510
+  },
+  "/img/ja/camera/web-server-settings1.png": {
+    "width": 800,
+    "height": 559
+  },
+  "/img/ja/camera/web-server-settings2.png": {
+    "width": 800,
+    "height": 559
   },
   "/img/ja/clue/add-device-complete.png": {
     "width": 1711,
