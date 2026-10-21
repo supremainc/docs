@@ -93,17 +93,15 @@ import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
 
 :::info
 
-* 장치와 연동된 제품을 초기화한 뒤 다른 장치에 연결하려면 **INIT** 버튼을 2초 이상 누르세요.
-
 * 제품을 재부팅하려면 **RESET** 버튼을 누르세요.
+
+* 네트워크 설정을 초기화하거나 장치에 저장된 모든 정보와 인증서를 삭제하려면 **INIT** 버튼을 사용하세요. 자세한 내용은 [네트워크 설정 초기화](installation#reset-network-settings) 또는 [공장 초기화](installation#factory-reset)를 참고하세요.
 
 * 제품과 Wiegand 장치를 연결할 때 Wiegand 장치의 전원으로 제품의 전원 출력(12V, 최대 1.5A)을 사용할 수 있습니다. 200mA를 소모하는 Wiegand 장치를 3대 연결하면 남아 있는 전원 출력 단자에 최대 900mA를 소모하는 장치를 연결할 수 있습니다.
 
 * RTC 배터리 용량은 226mah이며, 기대 수명은 설치 환경 및 동작 방법에 따라 다를 수 있습니다. RTC 배터리 교체 시에는 CR2032를 준수하세요.
 
 :::
-
-<PageBreak />
 
 ### 통신 상태 LED
 
@@ -125,8 +123,6 @@ import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
 | Endurance | Ⅳ |
 | Standby Power | Ⅰ |
 | Single Point Locking Device with Key Locks | Ⅰ |
-
-<PageBreak />
 
 ### CoreStation 상태 LED
 
@@ -177,15 +173,13 @@ import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
 
 BioStar X와 연동하여 출입통제와 근태관리를 모두 사용할 수 있으며, RS-485(OSDP), Wiegand, Supervised Input, AUX와 같은 다양한 인터페이스를 제공합니다.
 
-<Image src='/img/device/installation-example-cs40.png' width="65%" className='none' />
-
-<PageBreak />
+<Image src='/img/device/installation-example-cs40.png' width={800} />
 
 ### 시스템 구성도
 
 이 제품은 RS-485 장치를 최대 64대까지 연결할 수 있으며, Door Module을 데이지 체인으로 연결하면 Wiegand 장치를 132대까지 확장할 수 있습니다.
 
-<Image src='/img/device/system-configuration-cs40.svg' width="100%" />
+<Image src='/img/device/system-configuration-cs40.png' />
 
 <PageBreak />
 
