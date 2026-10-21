@@ -101,10 +101,10 @@ export function createDocsClient(baseUrl, clientCode) {
   }
 
   /** API 호출 하나를 보내고 결과를 돌려준다. 2xx가 아닌 응답이면 `status`를 담은 Error를 throw한다. */
-  async function request(path, { method = 'GET', bearer, body, signal } = {}) {
-    // 1. URL을 만든다. JSON 본문이 있으면 Content-Type을 붙인다.
+  async function request(path, { method = 'GET', bearer, body, headers: extra, signal } = {}) {
+    // 1. URL을 만든다. 호출자가 준 헤더(폴링 커서 등)을 포함시킨다, JSON 본문이 있으면 Content-Type을 붙인다.
     const url = root + path;
-    const headers = {};
+    const headers = { ...extra };
     if (body !== undefined) headers['Content-Type'] = 'application/json';
     // 2. 세션 토큰이 필요한 호출이면 토큰을 싣고, 이 브라우저에 키가 있으면 DPoP proof도 싣는다.
     if (bearer) {
@@ -112,10 +112,13 @@ export function createDocsClient(baseUrl, clientCode) {
       const dpop = await proof(method, url, bearer);
       if (dpop) headers.DPoP = dpop;
     }
-    // 3. 쿠키 없이(credentials: 'omit'), HTTP 캐시를 쓰지 않고 보낸다.
+    // 3. 쿠키 없이(credentials: 'omit') 보낸다.
+    //    `cache: 'no-store'`는 넣지 않는다: Chrome은 HTTP 캐시를 건너뛰는 요청이면 CORS preflight 캐시도
+    //    건너뛰어, 폴링할 때마다 preflight를 다시 보낸다. 응답은 그래도 캐시되지 않는다 — 서버가 모든
+    //    응답에 `Cache-Control: no-store`를 붙인다.
     const response = await fetch(url, {
       method, headers, body: body === undefined ? undefined : JSON.stringify(body), signal,
-      credentials: 'omit', cache: 'no-store',
+      credentials: 'omit',
     });
     // 4. 204 No Content(취소 호출의 응답)는 읽을 본문이 없다.
     if (response.status === 204) return null;
@@ -182,10 +185,12 @@ export function createDocsClient(baseUrl, clientCode) {
       try {
         // 4. 이벤트를 순서대로 읽는다. `after`는 커서다: 이 값 뒤의 이벤트는 아직 읽지 않았다.
         let after = run.next_seq;
+        // 커서를 쿼리 문자열이 아니라 X-Solis-After 헤더에 담는다: URL이 실행 내낸 같으므로 브라우자가 CORS preflight 한 번을 모든 폴링에 재사용 한다 (즉, 폴링마다 preflight를 다시 보내지 않는다)
+        const events = `/runs/${run.run_id}/events?wait=10`;
         while (true) {
           signal?.throwIfAborted();
           // 5. 롱 폴링: 새 이벤트가 없으면 서버가 최대 10초(wait=10) 기다렸다가 응답한다.
-          const page = await request(`/runs/${run.run_id}/events?after=${after}&wait=10`, { bearer, signal });
+          const page = await request(events, { bearer, headers: { 'X-Solis-After': String(after) }, signal });
           // 6. 받은 이벤트를 순서대로 호출자에게 넘기고, 커서를 그 뒤로 옮긴다.
           for (const event of page.events) onEvent(event);
           after = page.next_seq;
