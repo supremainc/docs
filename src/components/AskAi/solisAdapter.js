@@ -1,16 +1,29 @@
 import {translate} from '@docusaurus/Translate';
 import {createDocsClient} from './docs-client.mjs';
+import {
+  HISTORY_TURNS,
+  MAX_HISTORY_ANSWER_LENGTH,
+  MAX_QUESTION_LENGTH,
+  MAX_QUESTIONS_PER_CHAT,
+} from './limits';
 
 // 서버 API(/runs)는 질문 문자열(message) 하나만 받으므로, 후속 질문을 이해할 수 있도록
-// 화면의 최근 대화를 질문 앞에 붙여 함께 보낸다.
-const HISTORY_TURNS = 5; // 함께 보낼 최근 질문·답변 쌍의 수
-const MAX_ANSWER_LENGTH = 1000; // 이전 답변은 이 길이까지만 보낸다(질문 문장이 묻히지 않도록)
+// 화면의 최근 대화를 질문 앞에 붙여 함께 보낸다. 제한 값은 limits.js에 있다.
 
 export function createSolisAdapter(baseUrl, clientCode) {
   const client = createDocsClient(baseUrl, clientCode);
 
   return {
     async *run({messages, abortSignal}) {
+      // 화면에서 입력을 막지만, 다시 생성 등 다른 경로로 들어온 경우에도 한 번 더 확인한다.
+      if (messages.filter((message) => message.role === 'user').length > MAX_QUESTIONS_PER_CHAT) {
+        throw new Error(
+          translate(
+            {id: 'askAi.limit.reached', message: '한 대화에서는 질문을 최대 {max}개까지 할 수 있습니다. 새 대화를 시작하세요.'},
+            {max: MAX_QUESTIONS_PER_CHAT},
+          ),
+        );
+      }
       const question = withHistory(messages);
 
       let text = '';
@@ -73,7 +86,7 @@ function textOf(message) {
 }
 
 function withHistory(messages) {
-  const question = textOf(messages[messages.length - 1]);
+  const question = textOf(messages[messages.length - 1]).slice(0, MAX_QUESTION_LENGTH);
   const turns = [];
   // 현재 질문 앞의 메시지를 뒤에서부터 (질문, 답변) 쌍으로 읽고, 답변이 끝난 것만 고른다.
   for (let i = messages.length - 2; i > 0 && turns.length < HISTORY_TURNS; i -= 2) {
@@ -82,7 +95,7 @@ function withHistory(messages) {
     if (asked.role !== 'user' || answer.role !== 'assistant' || answer.status?.type !== 'complete') continue;
     const answerText = textOf(answer)
       .replace(/!\[[^\]]*\]\([^)]*\)/g, '') // 이미지는 문맥에 도움이 되지 않으므로 뺀다
-      .slice(0, MAX_ANSWER_LENGTH);
+      .slice(0, MAX_HISTORY_ANSWER_LENGTH);
     turns.unshift(`User: ${textOf(asked)}\nAssistant: ${answerText}`);
   }
   if (turns.length === 0) return question;

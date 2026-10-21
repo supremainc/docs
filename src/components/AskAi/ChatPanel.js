@@ -31,6 +31,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {createSolisAdapter} from './solisAdapter';
 import {MarkdownText} from './MarkdownText';
 import ChatFeedback from './ChatFeedback';
+import {HISTORY_TURNS, MAX_QUESTION_LENGTH, MAX_QUESTIONS_PER_CHAT} from './limits';
 import {TooltipIconButton} from './TooltipIconButton';
 import styles from './thread.module.css';
 
@@ -41,6 +42,7 @@ export default function ChatPanel({onClose}) {
   const adapter = useMemo(() => createSolisAdapter(baseUrl, clientCode), [baseUrl, clientCode]);
   // 새 대화를 누르면 key를 바꿔 런타임을 새로 만든다(진행 중인 답변도 함께 취소된다).
   const [threadKey, setThreadKey] = useState(0);
+  const newChat = () => setThreadKey((key) => key + 1);
 
   return (
     <aside
@@ -57,7 +59,7 @@ export default function ChatPanel({onClose}) {
         <div className={styles.headerActions}>
           <TooltipIconButton
             tooltip={translate({id: 'askAi.newChat', message: '새 대화'})}
-            onClick={() => setThreadKey((key) => key + 1)}>
+            onClick={newChat}>
             <SquarePenIcon />
           </TooltipIconButton>
           <TooltipIconButton tooltip={translate({id: 'askAi.close', message: '닫기'})} onClick={onClose}>
@@ -65,7 +67,7 @@ export default function ChatPanel({onClose}) {
           </TooltipIconButton>
         </div>
       </header>
-      <Thread key={threadKey} adapter={adapter} />
+      <Thread key={threadKey} adapter={adapter} onNewChat={newChat} />
     </aside>
   );
 }
@@ -81,18 +83,22 @@ const suggestionConfig = () =>
     ]),
   });
 
-function Thread({adapter}) {
+function Thread({adapter, onNewChat}) {
   const runtime = useLocalRuntime(adapter);
   return (
     <AssistantRuntimeProvider runtime={runtime} config={suggestionConfig()}>
-      <ThreadRoot />
+      <ThreadRoot onNewChat={onNewChat} />
     </AssistantRuntimeProvider>
   );
 }
 
+const questionCount = (s) => s.thread.messages.filter((message) => message.role === 'user').length;
+// 질문 수가 한도에 이르고 마지막 답변까지 끝나면 입력창 대신 새 대화 안내를 보여 준다.
+const isAtQuestionLimit = (s) => questionCount(s) >= MAX_QUESTIONS_PER_CHAT && !s.thread.isRunning;
+
 // ---------- 아래는 assistant-ui 기본 디자인(registry: thread)을 옮긴 것이다 ----------
 
-function ThreadRoot() {
+function ThreadRoot({onNewChat}) {
   const isEmpty = useAuiState((s) => s.thread.messages.length === 0);
 
   return (
@@ -113,7 +119,12 @@ function ThreadRoot() {
 
           <ThreadPrimitive.ViewportFooter className={clsx(styles.viewportFooter, !isEmpty && styles.viewportFooterDocked)}>
             <ThreadScrollToBottom />
-            <Composer />
+            <AuiIf condition={(s) => !isAtQuestionLimit(s)}>
+              <Composer />
+            </AuiIf>
+            <AuiIf condition={isAtQuestionLimit}>
+              <QuestionLimitNotice onNewChat={onNewChat} />
+            </AuiIf>
             <AuiIf condition={(s) => s.thread.messages.length === 0 && s.composer.isEmpty}>
               <ThreadSuggestions />
             </AuiIf>
@@ -160,8 +171,8 @@ function ThreadWelcome() {
         <Translate id="askAi.welcome">무엇을 도와드릴까요?</Translate>
       </p>
       <p className={styles.welcomeHint}>
-        <Translate id="askAi.welcome.hint">
-          최근 질문 5개를 참고해 답변합니다. 다른 주제를 물어볼 때는 새 대화를 시작하세요.
+        <Translate id="askAi.welcome.hint" values={{count: HISTORY_TURNS}}>
+          {'최근 질문 {count}개를 참고해 답변합니다. 다른 주제를 물어볼 때는 새 대화를 시작하세요.'}
         </Translate>
       </p>
     </div>
@@ -185,6 +196,34 @@ function ThreadSuggestions() {
   );
 }
 
+// 입력한 글자 수. 한도의 80%를 넘을 때부터 보여 준다.
+function QuestionLength() {
+  const length = useAuiState((s) => s.composer.text.length);
+  if (length < MAX_QUESTION_LENGTH * 0.8) return null;
+  return (
+    <span className={clsx(styles.questionLength, length >= MAX_QUESTION_LENGTH && styles.questionLengthFull)}>
+      {length} / {MAX_QUESTION_LENGTH}
+    </span>
+  );
+}
+
+function QuestionLimitNotice({onNewChat}) {
+  return (
+    <div className={styles.limitNotice} role="status">
+      <p>
+        {translate(
+          {id: 'askAi.limit.reached', message: '한 대화에서는 질문을 최대 {max}개까지 할 수 있습니다. 새 대화를 시작하세요.'},
+          {max: MAX_QUESTIONS_PER_CHAT},
+        )}
+      </p>
+      <button type="button" className={styles.limitButton} onClick={onNewChat}>
+        <SquarePenIcon aria-hidden />
+        {translate({id: 'askAi.newChat', message: '새 대화'})}
+      </button>
+    </div>
+  );
+}
+
 function Composer() {
   return (
     <ComposerPrimitive.Root>
@@ -195,9 +234,11 @@ function Composer() {
           rows={1}
           autoFocus
           enterKeyHint="send"
+          maxLength={MAX_QUESTION_LENGTH}
           aria-label={translate({id: 'askAi.input', message: '질문 입력'})}
         />
         <div className={styles.composerAction}>
+          <QuestionLength />
           <AuiIf condition={(s) => !s.composer.canCancel}>
             <ComposerPrimitive.Send asChild>
               <TooltipIconButton

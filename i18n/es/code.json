@@ -1308,7 +1308,7 @@
     "message": "¿En qué puedo ayudarle?"
   },
   "askAi.welcome.hint": {
-    "message": "Las respuestas se basan en sus últimas 5 preguntas. Para preguntar sobre otro tema, inicie un nuevo chat."
+    "message": "Las respuestas se basan en sus últimas {count} preguntas. Para preguntar sobre otro tema, inicie un nuevo chat."
   },
   "askAi.placeholder": {
     "message": "Escriba su pregunta..."
@@ -1360,5 +1360,8 @@
   },
   "askAi.feedback.privacyNote": {
     "message": "El contenido de esta respuesta se envía junto con sus comentarios. Los comentarios se utilizan solo para mejorar las respuestas de IA y no se recopila información de identificación personal."
+  },
+  "askAi.limit.reached": {
+    "message": "Puede hacer hasta {max} preguntas en un chat. Para continuar, inicie un nuevo chat."
   }
 }

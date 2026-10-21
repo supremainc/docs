@@ -1308,7 +1308,7 @@
     "message": "How can I help you?"
   },
   "askAi.welcome.hint": {
-    "message": "Answers are based on your last 5 questions. To ask about a different topic, start a new chat."
+    "message": "Answers are based on your last {count} questions. To ask about a different topic, start a new chat."
   },
   "askAi.placeholder": {
     "message": "Ask a question..."
@@ -1360,5 +1360,8 @@
   },
   "askAi.feedback.privacyNote": {
     "message": "The content of this answer is sent with your feedback. Feedback is used only to improve AI answers, and no personally identifiable information is collected."
+  },
+  "askAi.limit.reached": {
+    "message": "You can ask up to {max} questions in one chat. Start a new chat to continue."
   }
 }
