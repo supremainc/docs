@@ -177,6 +177,13 @@ const config = {
     ]
   ],
   plugins: [
+    [
+      "docusaurus-plugin-copy-page-button",
+      {
+        injectButton: false,
+        generateMarkdownRoutes: false,
+      },
+    ],
     [ '@docusaurus/plugin-client-redirects', {
       redirects: [
         {

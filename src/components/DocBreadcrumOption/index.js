@@ -8,6 +8,7 @@ import IcoDown from '@site/static/img/menus/ico-down-arrow.svg';
 import DocPrint from './dochub-print.svg';
 import DocHubLink from './dochub-down.svg';
 import {useDocsSidebar} from '@docusaurus/plugin-content-docs/client';
+import {useLocation} from '@docusaurus/router';
 import Resources from "@site/src/pages/dochub/resource.json";
 
 const DocuementButton = () => {
@@ -17,12 +18,16 @@ const DocuementButton = () => {
   const dropdownRef = useRef(null);
   const currentSidebar = useDocsSidebar() || null;
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const { pathname } = useLocation();
+  const docType = pathname.includes('release-notes') ? 'release_notes' : 'manuals';
 
   const currentResource = useMemo(
-    () => Resources.find((item) => item.sidebar === currentSidebar?.name),
-    [currentSidebar]
+    () =>
+      Resources.find((item) => item.path && pathname.includes(item.path)) ||
+      Resources.find((item) => item.sidebar === currentSidebar?.name),
+    [pathname, currentSidebar]
   );
-  const currentManual = currentResource?.manuals?.[currentLocale] || currentResource?.manuals?.en || null;
+  const currentManual = currentResource?.[docType]?.[currentLocale] || currentResource?.[docType]?.en || null;
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
@@ -67,7 +72,7 @@ const DocuementButton = () => {
       file_extension: fullUrl.split(".").pop(),
       link_url: fullUrl,
       link_text: translate({ message: 'component.DocbreadcrumOption.download' }),
-      doc_type: "manuals",
+      doc_type: docType,
       product_name: currentResource?.product,
     });
 

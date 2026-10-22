@@ -6030,6 +6030,11 @@ docusaurus-plugin-cookie-consent@^4.6.0:
   resolved "https://registry.yarnpkg.com/docusaurus-plugin-cookie-consent/-/docusaurus-plugin-cookie-consent-4.6.0.tgz#0cb6db64e7857b38fb32b83c5b5bea281498c9a0"
   integrity sha512-eSFlW0PRODcLtrkkXujbkgt4dIGQWPsVyfIs3O09+Q1KzV7EyPVowec1vwROa7opJwYnON/yEf/czdP1D3XM/Q==
 
+docusaurus-plugin-copy-page-button@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-copy-page-button/-/docusaurus-plugin-copy-page-button-0.8.4.tgz#f78dd7709e73a61ac31f38dedce3c5b1a6bf6c52"
+  integrity sha512-OBWmUEFIqR3BJ5giae6D518b69ZfZQ5HKrazrY2IPA6tDNX2F3m1ejeyE0oqcVcE7GVkE+K0+vJ5T+kIos8u1w==
+
 docusaurus-plugin-image-zoom@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/docusaurus-plugin-image-zoom/-/docusaurus-plugin-image-zoom-3.0.1.tgz"

@@ -12,8 +12,8 @@
         },
         "a_e": "platform/bsx/Suprema_BioStar X_Platform_AE-Specification_1.0.1_260109.docx",
         "release_notes": {
-            "ko": "platform/bsx/BioStar X_ReleaseNotes_1.0.2_KO_260507.pdf",
-            "en": "platform/bsx/BioStar X_ReleaseNotes_1.0.2_EN_260507.pdf"
+            "ko": "platform/bsx/BioStar X_ReleaseNotes_1.0.3_KO_260922.pdf",
+            "en": "platform/bsx/BioStar X_ReleaseNotes_1.0.3_EN_260922.pdf"
         },
         "release_date": "2026-09-21"
     },
@@ -666,6 +666,7 @@
     {
         "category": "rfmobile",
         "product": "XPass 2 CLUe",
+        "path": "/device/xpass_2/release-notes-clue",
         "models": [
             "XP2-MDPB",
             "XP2-MAPB",
