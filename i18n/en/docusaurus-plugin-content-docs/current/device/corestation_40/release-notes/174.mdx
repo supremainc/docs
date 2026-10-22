@@ -3,9 +3,9 @@ id: 174
 title: Firmware Version 1.7.4
 ---
 
-# Firmware Version 1.7.4 (Build No. 1.7.4_261016)
+# Firmware Version 1.7.4 (Build No. 1.7.4_261020)
 
-Release<Separator/>2026-10-20
+Release<Separator/>2026-10-22
 
 ## New Features and Improvements
 
@@ -35,5 +35,8 @@ Release<Separator/>2026-10-20
 
     {/* (CSTFW-1054) Master,slave장치,ODSP reader가 device disable 상태에서 lock override 카드 동작 안함 */}
 1. Lock Override Card authentication not working when a device is disabled. <Badge>1.7.2</Badge>
+
+    {/* (CSTFW-1070) OSDP Standard로 SCBK를 default로 사용하지 않은 제품을 삭제후 다시 연결할 때 연결이 안되는 이슈 */}
+1. Device not connecting when deleted and re-registered after an SCB Key is applied in an OSDP standard environment. <Badge>1.0.0</Badge>
 
 </BugLists>
