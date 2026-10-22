@@ -15,6 +15,8 @@ import {
  * @param {string} config.feedbackTypeEntryId - 피드백 유형 필드 ID
  * @param {string} config.pageUrlEntryId - 페이지 URL 필드 ID  
  * @param {string} config.detailEntryId - 상세 내용 필드 ID
+ * @param {string} config.pageUrl - 전송할 페이지 URL (생략하면 현재 페이지 URL)
+ * @param {string} config.extraDetail - 상세 내용 뒤에 덧붙여 전송할 텍스트 (생략 가능)
  * @param {Function} config.onSuccess - 성공 콜백
  * @param {Function} config.onReset - 초기화 콜백
  */
@@ -23,6 +25,8 @@ export function useFeedback({
   feedbackTypeEntryId = FEEDBACK_CONFIG.ENTRY_IDS.FEEDBACK_TYPE,
   pageUrlEntryId = FEEDBACK_CONFIG.ENTRY_IDS.PAGE_URL, 
   detailEntryId = FEEDBACK_CONFIG.ENTRY_IDS.DETAIL_CONTENT,
+  pageUrl,
+  extraDetail,
   onSuccess,
   onReset
 } = {}) {
@@ -35,10 +39,12 @@ export function useFeedback({
 
   // 페이지 URL 설정
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (pageUrl) {
+      setCurrentPageUrl(pageUrl);
+    } else if (typeof window !== 'undefined') {
       setCurrentPageUrl(window.location.href);
     }
-  }, []);
+  }, [pageUrl]);
 
   // 피드백 선택 핸들러
   const handleFeedbackClick = useCallback((type) => {
@@ -68,7 +74,7 @@ export function useFeedback({
       
       // 상세 내용
       const processedContent = processDetailContent(detailText, feedbackType);
-      formData.append(detailEntryId, processedContent);
+      formData.append(detailEntryId, extraDetail ? `${processedContent}\n\n${extraDetail}` : processedContent);
 
       // 필수 필드들
       formData.append('fvv', FEEDBACK_CONFIG.FORM_FIELDS.FVV);
@@ -88,7 +94,7 @@ export function useFeedback({
       console.error('Google Forms 제출 오류:', error);
       return false;
     }
-  }, [feedbackType, currentPageUrl, detailText, googleFormId, feedbackTypeEntryId, pageUrlEntryId, detailEntryId]);
+  }, [feedbackType, currentPageUrl, detailText, extraDetail, googleFormId, feedbackTypeEntryId, pageUrlEntryId, detailEntryId]);
 
   // 제출 핸들러
   const handleSubmit = useCallback(async () => {

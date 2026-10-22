@@ -1,0 +1,156 @@
+/* 챗봇 피드백. 색상은 thread.module.css의 토큰(.tokens)을 쓴다. */
+.feedback {
+  /* 메시지 목록의 아래 여백(3.5rem)을 줄여 마지막 답변 바로 아래에 붙인다. */
+  margin: -2.5rem 0.5rem 1.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+  animation: fadeIn 200ms both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  color: var(--muted-foreground);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.feedbackButton,
+.quickSubmitButton,
+.cancelButton,
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 2rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.feedbackButton:hover,
+.quickSubmitButton:hover,
+.cancelButton:hover,
+.active {
+  background: var(--muted);
+}
+
+.submitButton {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.submitButton:disabled,
+.feedbackButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.textareaLabel {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.required {
+  margin-left: 0.25rem;
+  color: var(--muted-foreground);
+  font-weight: 400;
+}
+
+.feedbackTextarea {
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  outline: none;
+  resize: vertical;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+}
+
+.feedbackTextarea:focus {
+  border-color: var(--input-border-focus);
+}
+
+.characterCount {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+}
+
+.requiredNote,
+.errorMessage {
+  color: var(--destructive);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.privacyNote {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+}
+
+.successMessage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.375rem;
+}
+
+.successMessage p {
+  margin: 0;
+}
+
+.successIcon {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.successSubtext {
+  grid-column: 2;
+  color: var(--muted-foreground);
+}
+
+.spinner {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 9999px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

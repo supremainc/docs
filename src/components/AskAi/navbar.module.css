@@ -1,0 +1,74 @@
+/* ---------- navbar 버튼 (shadcn Button outline / sm) ---------- */
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.375rem;
+  background: var(--ifm-navbar-background-color);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  color: var(--ifm-navbar-link-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.navButton:hover,
+.navButtonActive {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.navButton svg,
+.mobileButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.mobileButton {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* ---------- 패널 배치 ---------- */
+:global(html) {
+  --ask-ai-width: 600px;
+}
+
+/* 패널이 열리면 본문(navbar 포함)을 패널 폭만큼 왼쪽으로 줄인다. */
+@media (min-width: 997px) {
+  :global(html[data-ask-ai-open]) body {
+    margin-right: var(--ask-ai-width);
+  }
+}
+
+.panelHost {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: calc(var(--ifm-z-index-fixed) + 10);
+  width: var(--ask-ai-width);
+}
+
+.panelHost[hidden] {
+  display: none;
+}
+
+/* 좁은 화면에서는 본문을 밀지 않고 전체 화면을 덮는다. */
+@media (max-width: 996px) {
+  .panelHost {
+    width: 100%;
+  }
+}
