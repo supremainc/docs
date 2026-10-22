@@ -22,8 +22,10 @@ const DocuementButton = () => {
   const docType = pathname.includes('release-notes') ? 'release_notes' : 'manuals';
 
   const currentResource = useMemo(
-    () => Resources.find((item) => item.sidebar === currentSidebar?.name),
-    [currentSidebar]
+    () =>
+      Resources.find((item) => item.path && pathname.includes(item.path)) ||
+      Resources.find((item) => item.sidebar === currentSidebar?.name),
+    [pathname, currentSidebar]
   );
   const currentManual = currentResource?.[docType]?.[currentLocale] || currentResource?.[docType]?.en || null;
 

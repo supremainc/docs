@@ -666,6 +666,7 @@
     {
         "category": "rfmobile",
         "product": "XPass 2 CLUe",
+        "path": "/device/xpass_2/release-notes-clue",
         "models": [
             "XP2-MDPB",
             "XP2-MAPB",
