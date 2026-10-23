@@ -76,47 +76,33 @@ Fingerprint authentication is available only on BS3M-ODB and BS3M-OAPB.
 
 ## Operation
 
-### Server matching
-
-You can set up server matching.
+Set authentication options.
 
 1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
 
-2. After pressing <Cmd sid='ui_256' product='dev' />, activate <Cmd sid='ui_265' product='dev' /> in <Cmd sid='ui_187' product='dev' />.
+2. Press <Cmd sid='ui_256' product='dev' />, then enable the desired options in <Cmd sid='ui_265' product='dev' />.
 
    <Image src='/img/device/bs3m-operation.png' />
 
-   * <Cmd sid='ui_187' product='dev' />: When server matching is set, user authentication is performed by BioStar X without the device performing user authentication. It can be used when the device has too much user information or when the device is installed outside.
+   * <Cmd sid='ui_186' product='dev' />: With server matching, BioStar X authenticates users instead of the device. This is useful when the device stores large amounts of user information. It also helps avoid exposing a device that stores credential information outside.
 
-:::info
+      :::info
 
-* <Cmd sid='ui_185' product='dev' /> can only use cards and IDs.
+      * <Cmd sid='ui_185' product='dev' /> can only use fingerprint, card, and ID.
 
-* If you use <Cmd sid='ui_185' product='dev' />, you must enable server matching on both the device and BioStar X. For more information on BioStar X server matching settings, please refer to the <Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X Administrator Guide</Linkto>.
+      * If you use <Cmd sid='ui_185' product='dev' />, you must enable server matching on both the device and BioStar X. For more information on BioStar X server matching settings, please refer to the <Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X Administrator Guide</Linkto>.
 
-:::
-
-<PageBreak />
-
-### QR authentication
-
-You can activate QR code authentication.
-
-1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.
-
-2. After pressing <Cmd sid='ui_256' product='dev' />, activate <Cmd sid='ui_265' product='dev' /> for <Cmd sid='ui_041' product='dev' />.
-
-   <Image src='/img/device/bs3m-operation.png' />
+      :::
 
    * <Cmd sid='ui_041' product='dev' />: Set whether to use QR code authentication through the device's camera.
 
+      :::info
+
+      A separate device license is required to use <Cmd sid='ui_041' product='dev' />. For more information, refer to [License](settings#license).
+
+      :::
+
    * <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. This can only be set when <Cmd sid='ui_041' product='dev' /> is activated.
-
-   :::info
-
-   A separate device license is required to use <Cmd sid='ui_041' product='dev' />. For more information, refer to [License](settings#license).
-
-   :::
 
 ## PIN
 
@@ -319,3 +305,5 @@ You can set how to register T&A mode.
    * <Cmd sid='ui_081' product='dev' />: Set to use only a T&A event selected by the administrator. Available when <Cmd sid='ui_083_list' product='dev' /> is set to <Cmd sid='ui_071' product='dev' />.
 
    * <Cmd sid='ui_279' product='dev' />: Set whether to use the job code.
+
+<PageBreak />
