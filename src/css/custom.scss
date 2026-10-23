@@ -1652,6 +1652,21 @@ footer {
       }
     }
   }
+  .col4--20-25-35 {
+    table {
+      td {
+        &:nth-of-type(1), &:nth-of-type(3) {
+          width: 20%;
+        }
+        &:nth-of-type(2) {
+          width: 25%;
+        }
+        &:nth-of-type(4) {
+          width: 35%;
+        }
+      }
+    }
+  }
   .menu-icon-table {
     table {
       th {
