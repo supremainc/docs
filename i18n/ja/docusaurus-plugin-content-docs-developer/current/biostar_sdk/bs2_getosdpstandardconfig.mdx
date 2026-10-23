@@ -1,0 +1,52 @@
+# BS2_GetOsdpStandardConfig
+
+<Badge only>+ v2.9.1</Badge> Get the device's OSDP setting information.
+
+This setting information is also used to update the master-OSDP-slave device topology configuration within the SDK.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetOsdpStandardConfig(void* context, uint32_t deviceId, BS2OsdpStandardConfig* config);
+```
+
+:::info
+
+[See BS2OsdpStandardConfig Structure](configuration_api#bs2osdpstandardconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[In\] `config` : Pointer to store OSDP setting information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+BS2OsdpStandardConfig config = { 0, };
+int sdkResult = BS2_GetOsdpStandardConfig(context_, id, &config);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_GetOsdpStandardConfig call failed: %d", sdkResult);
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2OsdpStandardConfig config;
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetOsdpStandardConfig(sdkContext, deviceID, out config);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+return result;
+```
+

@@ -1,0 +1,119 @@
+# BS2_SetOsdpStandardDeviceSecurityKey
+
+<Badge only>+ v2.9.1</Badge> **CoreStation40** Set security key for OSDP devices.
+
+The device identifier can send the identifier of the master device or the identifier of the slave device, but the operation is slightly different.
+
+If key information is sent with the identifier of the master device as a device identifier, the master device will replace its primary key value with a new set key value.
+
+At this time, OSDP slave devices should not be connected, and if there are connected devices, `BS_SDK_ERROR_FAIL_MASTER_SET_KEY` error may occur.
+
+The master device sends a new key to process secure communication each time the OSDP device is connected.
+
+Sending the OSDP slave device identifier as the device identifier, the master device sends the key it is holding to the slave device.
+
+In other words, this command instructs the master device to send the key it holds to the specified OSDP device. Therefore, no separate key delivery is required in this case. (=NULL)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetOsdpStandardDeviceSecurityKey(void* context, BS2_DEVICE_ID masterOrSlaveId, const BS2OsdpStandardDeviceSecurityKey* key);
+```
+
+:::info
+
+[See BS2OsdpStandardDeviceSecurityKey Structure](slave_control_api#bs2osdpstandarddevicesecuritykey) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `masterOrSlaveId` : Device Identifier
+
+- \[In\] `key` : Security key information structure pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+int sdkResult = BS_SDK_SUCCESS;
+
+bool useMaster = true;
+BS2_DEVICE_ID id = (BS2_DEVICE_ID)Utility::selectMasterOrSlaveID(deviceList, useMaster);
+if (useMaster)
+{
+    BS2OsdpStandardDeviceSecurityKey key = { 0, };
+    string keyInfo = Utility::getInput<string>("Please enter the OSDP security key.");
+    memcpy(key.key, keyInfo.c_str(), min(keyInfo.size(), BS2_OSDP_STANDARD_KEY_SIZE));
+
+    sdkResult = BS2_SetOsdpStandardDeviceSecurityKey(context_, id, &key);
+}
+else
+{
+    sdkResult = BS2_SetOsdpStandardDeviceSecurityKey(context_, id, NULL);
+}
+
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_SetOsdpStandardDeviceSecurityKey call failed: %d", sdkResult);
+
+return sdkResult;
+```
+
+```csharp title='C#'
+UInt32 id = Util.GetInputMasterOrSlaveID(deviceID);
+BS2ErrorCode result = BS2ErrorCode.BS_SDK_SUCCESS;
+
+if (id == deviceID)     // set key to master
+{
+    BS2OsdpStandardDeviceSecurityKey keyInfo = Util.AllocateStructure<BS2OsdpStandardDeviceSecurityKey>();
+
+    Util.HighlightLine(">>>> Please enter the OSDP security key.", "security key");
+    Console.Write(">>>> ");
+    string keyString = Console.ReadLine();
+    byte[] buff = Encoding.UTF8.GetBytes(keyString);
+
+    Array.Clear(keyInfo.key, 0, BS2Environment.BS2_OSDP_STANDARD_KEY_SIZE);
+    Array.Copy(buff, 0, keyInfo.key, 0, keyString.Length);
+
+    IntPtr ptrKey = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(BS2OsdpStandardDeviceSecurityKey)));
+    Marshal.StructureToPtr(keyInfo, ptrKey, false);
+
+    result = (BS2ErrorCode)API.BS2_SetOsdpStandardDeviceSecurityKey(sdkContext, id, ptrKey);
+
+    Marshal.FreeHGlobal(ptrKey);
+}
+else
+{
+    result = (BS2ErrorCode)API.BS2_SetOsdpStandardDeviceSecurityKey(sdkContext, id, IntPtr.Zero);
+}
+
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+
+return result;
+```
+
+## See Also
+
+[BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice)
+
+[BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice)
+
+[BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice)
+
+[BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice)
+
+[BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice)
+
+[BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability)
+
+[BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)

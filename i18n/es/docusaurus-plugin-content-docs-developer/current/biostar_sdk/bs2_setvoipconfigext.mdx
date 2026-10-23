@@ -1,0 +1,131 @@
+# BS2_SetVoipConfigExt
+
+<Badge only>+ v2.8.3</Badge> Save the extended VoIP settings.
+
+Compared to [BS2VoipConfig](configuration_api#bs2voipconfig)various settings have been added, such as specifying outbound proxy or setting volume.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetVoipConfigExt(void* context, uint32_t deviceId, const BS2VoipConfigExt* config);
+```
+
+:::info
+
+[See BS2VoipConfigExt Structures](configuration_api#bs2voipconfigext) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : VoIP Settings Information Pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+BS2VoipConfigExt config = { 0, };
+
+config.enabled = true;
+config.useOutboundProxy = false;
+config.registrationDuration = 300;
+
+string ipAddr = "192.168.0.9";
+memcpy(config.address, ipAddr.c_str(), ipAddr.size());
+config.port = 5060;
+config.volume.speaker = 50;
+config.volume.mic = 50;
+
+string sipID = "myAccount";
+memcpy(config.id, sipID.c_str(), sipID.size());
+string sipPW = "myPassword";
+memcpy(config.password, sipPW.c_str(), sipPW.size());
+string authCode = "1234";
+memcpy(config.authorizationCode, authCode.c_str(), authCode.size());
+
+config.exitButton = '0';  // keypad 0
+config.showExtensionNumber = true;
+config.numPhoneBook = 2;
+
+string phoneNum = "600";
+memcpy(config.phonebook[0].phoneNumber, phoneNum.c_str(), phoneNum.size());
+string phoneDesc = "LB James";
+memcpy(config.phonebook[0].description, phoneDesc.c_str(), phoneDesc.size());
+phoneNum = "601";
+memcpy(config.phonebook[1].phoneNumber, phoneNum.c_str(), phoneNum.size());
+phoneDesc = "C Kershaw";
+memcpy(config.phonebook[1].description, phoneDesc.c_str(), phoneDesc.size());
+
+int sdkResult = BS2_SetVoipConfigExt(context, id, &config);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_SetVoipConfigExt call failed: %d", sdkResult);
+```
+
+```csharp title='C#'
+BS2VoipConfigExt config = Util.AllocateStructure<BS2VoipConfigExt>();
+
+config.enabled = Convert.ToByte(1);
+config.useOutboundProxy = Convert.ToByte(0);
+config.registrationDuration = 300;
+
+string strIpAddr = "192.168.0.9";
+byte[] arrIpAddr = Encoding.UTF8.GetBytes(strIpAddr);
+Array.Clear(config.address, 0, BS2Environment.BS2_URL_SIZE);
+Array.Copy(arrIpAddr, 0, config.address, 0, arrIpAddr.Length);
+config.port = 5060;
+
+config.volume.speaker = 50;
+config.volume.mic = 50;
+
+string strSIPID = "myAccount";
+byte[] arrSIPID = Encoding.UTF8.GetBytes(strSIPID);
+Array.Clear(config.id, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrSIPID, 0, config.id, 0, arrSIPID.Length);
+
+string strSIPPW = "myPassword";
+byte[] arrSIPPW = Encoding.UTF8.GetBytes(strSIPPW);
+Array.Clear(config.password, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrSIPPW, 0, config.password, 0, arrSIPPW.Length);
+
+string strAuthCode = "1234";
+byte[] arrAuthCode = Encoding.UTF8.GetBytes(strAuthCode);
+Array.Clear(config.authorizationCode, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrAuthCode, 0, config.authorizationCode, 0, arrAuthCode.Length);
+
+config.exitButton = Convert.ToByte('0');  // keypad 0
+config.showExtensionNumber = Convert.ToByte(true);
+config.numPhoneBook = 2;
+
+string strPhoneNum = "600";
+byte[] arrPhoneNum = Encoding.UTF8.GetBytes(strPhoneNum);
+Array.Clear(config.phonebook[0].phoneNumber, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrPhoneNum, 0, config.phonebook[0].phoneNumber, 0, arrPhoneNum.Length);
+string strPhoneDesc = "LB James";
+byte[] arrPhoneDesc = Encoding.UTF8.GetBytes(strPhoneDesc);
+Array.Clear(config.phonebook[0].description, 0, BS2Environment.BS2_VOIP_MAX_DESCRIPTION_LEN_EXT);
+Array.Copy(arrPhoneDesc, 0, config.phonebook[0].description, 0, arrPhoneDesc.Length);
+strPhoneNum = "601";
+arrPhoneNum = Encoding.UTF8.GetBytes(strPhoneNum);
+Array.Clear(config.phonebook[1].phoneNumber, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrPhoneNum, 0, config.phonebook[1].phoneNumber, 0, arrPhoneNum.Length);
+strPhoneDesc = "C Kershaw";
+arrPhoneDesc = Encoding.UTF8.GetBytes(strPhoneDesc);
+Array.Clear(config.phonebook[1].description, 0, BS2Environment.BS2_VOIP_MAX_DESCRIPTION_LEN_EXT);
+Array.Copy(arrPhoneDesc, 0, config.phonebook[1].description, 0, arrPhoneDesc.Length);
+
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_SetVoipConfigExt(sdkContext, deviceID, ref config);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+```
+

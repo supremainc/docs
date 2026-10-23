@@ -1,0 +1,45 @@
+# BS2_GetUserInfosEx
+
+<Badge only>+ 2.4.0</Badge> Gets the user information of the given user ID. This API is only for devices that has been upgraded to the v2.4 FW group. You can check the FW list from the v2.4 release notes.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserInfosEx(void* context, uint32_t deviceId, char* uids, uint32_t uidCount, BS2UserBlobEx* userBlob);
+```
+
+:::info
+
+[See BS2UserBlobEx Structure](user_management_api#bs2userblobex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetUserList](bs2_getuserlist)
+
+[BS2_EnrolUserEx](bs2_enroluserex)
+
+[BS2_RemoveUser](bs2_removeuser)
+
+[BS2_RemoveAllUser](bs2_removealluser)

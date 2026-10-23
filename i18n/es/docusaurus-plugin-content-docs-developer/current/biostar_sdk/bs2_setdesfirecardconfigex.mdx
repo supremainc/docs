@@ -1,0 +1,35 @@
+# BS2_SetDesFireCardConfigEx
+
+<Badge only>+ v2.6.4</Badge> Sets DesFire advanced configuration in the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDesFireCardConfigEx(void* context, uint32_t deviceId, BS2DesFireCardConfigEx* config);
+```
+
+:::info
+
+[See BS2DesFireCardConfigEx Structure](configuration_api#bs2desfirecardconfigex) 
+
+:::
+
+## Paramter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : Pointer of DesFire advanced configuration
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDesFireCardConfigEx](bs2_getdesfirecardconfigex)

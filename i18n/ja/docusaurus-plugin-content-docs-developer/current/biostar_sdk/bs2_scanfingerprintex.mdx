@@ -1,0 +1,45 @@
+# BS2_ScanFingerprintEx
+
+<Badge only>+ v2.5.0</Badge> Scans a fingerprint from a device and extracts template data and scan image scores.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ScanFingerprintEx(void* context, uint32_t deviceId, BS2Fingerprint* finger, uint32_t templateIndex, uint32_t quality, uint8_t templateFormat, uint32_t* outquality, OnReadyToScan ptrReadyToScan);
+```
+
+:::info
+
+[See BS2Fingerprint Structure](fingerprint_api#bs2fingerprint) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `finger` : Pointer to store the template data
+
+- \[In\] `templateIndex` : Template data index
+
+- \[In\] `quality` : Required quality of fingerprint template
+
+- \[In\] `templateFormat` : Format of the template
+
+- \[Out\] `outquality` : Template quality score
+
+- \[Out\] `ptrReadyToScan` : Callback function that is called when it's ready to scan a fingerprint 
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS`' will be returned.
+
+  If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_VerifyFingerprint](bs2_verifyfingerprint)

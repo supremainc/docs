@@ -1,0 +1,72 @@
+# BS2_PartialUpdateUserSmallEx
+
+<Badge only>+ v2.8.3</Badge> Updates partial information of an already registered user. The user you want to renew must be a registered user.
+
+You can optionally specify the partial information you want to update using the mask.
+
+If you want to delete partial information, you can delete it in combination with [BS2User](user_management_api#bs2user) infoMask.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_PartialUpdateUserSmallEx(void* context, uint32_t deviceId, BS2_USER_MASK mask, BS2UserSmallBlobEx* userBlob, uint32_t userCount);
+```
+
+:::info
+
+[See BS2UserSmallBlobEx structure](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `mask` : Mask for the part of the user you want to update
+
+   | Value | Description |
+   | --- | --- |
+   | 0x0002 | User settings (personal authentication mode, validity period) |
+   | 0x0004 | User Name |
+   | 0x0008 | Image |
+   | 0x0010 | PIN |
+   | 0x0020 | Card |
+   | 0x0040 | Fingerprint |
+   | 0x0080 | Face |
+   | 0x0100 | Access group |
+   | 0x0200 | Jobcode |
+   | 0x0400 | Private Message |
+   | 0x0800 | Face (**Visual Face Support**) |
+   | 0x1000 | User setting (**Visual Face Support**) |
+
+- \[In\] `userBlob` : Partial user information you want to update
+
+- \[In\] `userCount` : Number of users
+
+
+
+## Return Value
+
+If successful, return `BS_SDK_SUCCESS` and generate `BS2_EVENT_USER_UPDATE_PARTIAL_SUCCESS` event.
+
+If it fails, it returns a corresponding error code, and if it is a device occurrence error, the event `BS2_EVENT_USER_UPDATE_PARTIAL_FAIL` is generated.
+
+## See Also
+
+[BS2_PartialUpdateUser](bs2_partialupdateuser)
+
+[BS2_PartialUpdateUserEx](bs2_partialupdateuserex)
+
+[BS2_PartialUpdateUserSmall](bs2_partialupdateusersmall)
+
+[BS2_PartialUpdateUserSmallEx](bs2_partialupdateusersmallex)
+
+[BS2_PartialUpdateUserFaceEx](bs2_partialupdateuserfaceex)
+
+## Sample Code
+
+Sample Code Reference [BS2_PartialUpdateUserFaceEx](bs2_partialupdateuserfaceex)

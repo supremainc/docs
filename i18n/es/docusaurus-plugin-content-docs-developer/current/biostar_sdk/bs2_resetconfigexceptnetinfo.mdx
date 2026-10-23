@@ -1,0 +1,40 @@
+# BS2_ResetConfigExceptNetInfo
+
+<Badge only>+ v2.6.0</Badge> Initializes the setting information of the device. (Excluding network settings)
+
+Supported in the following versions or higher.
+
+Devices not shown below are supported.
+
+| Model | Ver. |
+| --- | --- |
+| BS2 | V1.6.0 |
+| BSA2 | V1.5.0 |
+| CS-40 | V1.1.0 |
+| BEP2 | V1.1.0 |
+| BSL2 | V1.3.0 |
+| BEW2 | V1.2.0 |
+| BLN2 | V1.0.0 |
+| FS2 | V1.1.0 |
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ResetConfigExceptNetInfo(void* context, uint32_t deviceId, uint8_t includingDB);
+```
+
+## Paramter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `includingDB` : Weather to delete access group, level, schedule, holiday group, door, zone information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

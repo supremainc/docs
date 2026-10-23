@@ -1,0 +1,123 @@
+# Version 2.7.1 (V2.7.1.1)
+
+Date: 2020-09-15
+
+## New Features
+
+- Supports FaceStation F2
+
+- Supports Thermal camera - Facial temperature & Mask detection features
+
+- Supports the feature of changing of the user-defined PIN encryption key
+
+1. FaceStation F2 is supported, user related structures & API are added.
+
+   - Refer to structure [BS2UserSettingEx](../user_management_api#bs2usersettingex)
+
+   - Refer to structure [BS2TemplateEx](../face_api#bs2templateex)
+
+   - Refer to structure [BS2FaceEx](../face_api#bs2faceex)
+
+   - Refer to structure [BS2UserFaceExBlob](../user_management_api#bs2userfaceexblob)
+
+   - Refer to API [BS2_ScanFaceEx](../bs2_scanfaceex)
+
+   - Refer to API [BS2_ExtraceTemplateFaceEx](../bs2_extracetemplatefaceex)
+
+   - Refer to API [BS2_EnrollUserFaceEx](../bs2_enrolluserfaceex)
+
+   - Refer to API [BS2_GetUserInfosFaceEx](../bs2_getuserinfosfaceex)
+
+   - Refer to API [BS2_GetUserDatasFaceEx](../bs2_getuserdatasfaceex)
+
+1. Several authentication modes for FaceStation F2 have been added, and you can configure with API and structure below.
+
+   - Refer to structure [BS2AuthConfigExt](../configuration_api#bs2authconfigext)
+
+   - Refer to API [BS2_GetAuthConfigExt](../bs2_getauthconfigext)
+
+   - Refer to API [BS2_SetAuthConfigExt](../bs2_setauthconfigext)
+
+1. You can extract template by jpg image from FaceStation F2. The template file can be stored on AoC.
+
+   - Refer to structure [BS2SmartCardHeader](../smartcard_api#bs2smartcardheader)
+
+   - Refer to API [BS2_ExtraceTemplateFaceEx](../bs2_extracetemplatefaceex)
+
+1. Thermal camera - Facial temperature & Mask detection can be configured with API & structure below.
+
+   - Refer to structure [BS2FaceConfigExt](../configuration_api#bs2faceconfigext)
+
+   - Refer to API [BS2_GetFaceConfigExt](../bs2_getfaceconfigext)
+
+   - Refer to API [BS2_SetFaceConfigExt](../bs2_setfaceconfigext)
+
+1. Thermal camera information structure and configurable API are available.
+
+   - Refer to structure [BS2ThermalCameraConfig](../configuration_api#bs2thermalcameraconfig)
+
+   - Refer to API [BS2_GetThermalCameraConfig](../bs2_getthermalcameraconfig)
+
+   - Refer to API [BS2_SetThermalCameraConfig](../bs2_setthermalcameraconfig)
+
+1. New event log structure & API to support temperature information have been added.
+
+   - Refer to callback function [OnLogReceivedEx](../log_management_api#onlogreceivedex)
+
+   - Refer to structure [BS2EventSmallBlobEx](../log_management_api#bs2eventsmallblobex)
+
+   - Refer to API [BS2_StartMonitoringLogEx](../bs2_startmonitoringlogex)
+
+   - Refer to API [BS2_GetLogSmallBlobEx](../bs2_getlogsmallblobex)
+
+   - Refer to API [BS2_GetLogSmallBlobExFromDir](../bs2_getlogsmallblobexfromdir)
+
+1. User-defined PIN encryption key can be changed, and the PIN can be extracted with APIs.
+
+   - Refer to API [BS2_SetDataEncryptKey](../bs2_setdataencryptkey)
+
+   - Refer to API [BS2_MakePinCodeWithKey](../bs2_makepincodewithkey)
+
+## Modified Features
+
+1. A structure is modified to support FaceStation F2's configuration.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+1. Masking information of some API retrieving user information with userMask has been added. (Refer to userMask parameter for each API)
+
+   - Refer to API [BS2_GetUserDatas](../bs2_getuserdatas)
+
+   - Refer to API [BS2_GetUserDatasEx](../bs2_getuserdatasex)
+
+   - Refer to API [BS2_GetSupportedUserMask](../bs2_getsupportedusermask)
+
+   - Refer to API [BS2_GetUserSmallDatas](../bs2_getusersmalldatas)
+
+   - Refer to API [BS2_GetUserSmallDatasEx](../bs2_getusersmalldatasex)
+
+   - Refer to API [BS2_GetUserDatasFromDir](../bs2_getuserdatasfromdir)
+
+   - Refer to API [BS2_GetUserDatasExFromDir](../bs2_getuserdatasexfromdir)
+
+   - Refer to API [BS2_GetUserSmallDatasFromDir](../bs2_getusersmalldatasfromdir)
+
+   - Refer to API [BS2_GetUserSmallDatasExFromDir](../bs2_getusersmalldatasexfromdir)
+
+   - Refer to API [BS2_GetUserInfosFaceEx](../bs2_getuserinfosfaceex)
+
+   - Refer to API [BS2_GetUserDatasFaceEx](../bs2_getuserdatasfaceex)
+
+1. In the past, parameters like fingerSupported, faceSupported were used meaning fingerprint authentication(matching) or facial authentication(matching).
+
+   This was confusing because FaceStation2 or returned `fingerSupported = true`.
+
+   From 2.7.1, additional information fingerScanSupported and faceScanSupported is supported to provide more accurate information.
+
+   With this, FaceStation2 returns `fingerScanSupported = false`.
+
+   - Refer to API [BS2_GetDeviceInfoEx](../bs2_getdeviceinfoex)
+
+   - Refer to structure [BS2SimpleDeviceInfoEx](../device_api#bs2simpledeviceinfoex)
+
+1. For security reasons, support for the function `BS2_GetDataEncryptKey` has been deprecated.

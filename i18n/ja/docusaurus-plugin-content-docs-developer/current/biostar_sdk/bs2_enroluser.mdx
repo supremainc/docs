@@ -1,0 +1,49 @@
+# BS2_EnrolUser
+
+Enrolls new user.
+
+:::info
+
+Please use [BS2_EnrollUserFaceEx](bs2_enrolluserfaceex) for user enrollment to **FaceStation F2**.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_EnrolUser(void* context, uint32_t deviceId, BS2UserBlob* userBlob, uint32_t userCount, uint8_t overwrite);
+```
+
+:::info
+
+[See BS2UserBlob Structure](user_management_api#bs2userblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `userBlob` : User information trying to enroll
+
+- \[In\] `userCount` : Number of users
+
+- \[In\] `overwrite` : Whether to overwrite duplicated user
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetUserList](bs2_getuserlist)
+
+[BS2_RemoveUser](bs2_removeuser)
+
+[BS2_RemoveAllUser](bs2_removealluser)

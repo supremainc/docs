@@ -1,0 +1,111 @@
+# Version 2.8.3 (V2.8.3.2)
+
+Date: 2022-10-05
+
+## New Features
+
+- BioStation 3 connection support (Device name: BS3-DB, BS3-APWB)
+
+- Add User Information Partial Renewal Function.
+
+- Add User statistics acquisition Function.
+
+- Add file log function for debugging that allows file segmentation and storage.
+
+1. BioStation 3 Added connection support, related extended VoIP settings, and RTSP settings.
+
+   - Add structure [BS2VoipConfigExt](../configuration_api#bs2voipconfigext)
+
+   - Add API [BS2_GetVoipConfigExt](../bs2_getvoipconfigext)
+
+   - Add API [BS2_SetVoipConfigExt](../bs2_setvoipconfigext)
+
+   - Add structure [BS2RtspConfig](../configuration_api#bs2rtspconfig)
+
+   - Add API [BS2_GetRtspConfig](../bs2_getrtspconfig)
+
+   - Add API [BS2_SetRtspConfig](../bs2_setrtspconfig)
+
+1. Added function to partially update user information.
+
+   - Add API [BS2_PartialUpdateUser](../bs2_partialupdateuser)
+
+   - Add API [BS2_PartialUpdateUserEx](../bs2_partialupdateuserex)
+
+   - Add API [BS2_PartialUpdateUserSmall](../bs2_partialupdateusersmall)
+
+   - Add API [BS2_PartialUpdateUserSmallEx](../bs2_partialupdateusersmallex)
+
+   - Add API [BS2_PartialUpdateUserFaceEx](../bs2_partialupdateuserfaceex)
+
+1. Added functionality to get user statistics held by the device.
+
+   - Add structure [BS2UserStatistic](../user_management_api#bs2userstatistic)
+
+   - Add API [BS2_GetUserStatistic](../bs2_getuserstatistic)
+
+1. Added file log function for debugging that allows file segmentation to be saved.
+
+   - Add API [BS2_SetDebugFileLogEx](../bs2_setdebugfilelogex)
+
+## Modified Features
+
+1. When outputting log files for debugging, the time information displayed has been modified to display up to milliseconds.
+
+   - Refer to API [BS2_SetDebugFileLog](../bs2_setdebugfilelog)
+
+1. The face setting method changes.
+
+   In the face detection stage, face width, which represents the width of the face image, search range, which represents the search range, are entered in pixels.
+
+   This was a rather difficult input unit for the user to set up.
+
+   The detection distance, wide search provided afterward is changed to a more sensible setting unit by entering the distance to the detected face in cm.
+
+   As of the time SDK V2.8.3 is distributed, only **BioStation 3** can be distance-based, and then extended to **FaceStation F2** is planned.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+1. Added information such as user update support, simulated unlock support, RTSP support, Visual QR support, and extension number registered in Extended VoIP.
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. In the user structure, an infoMask has been added to indicate what credential information the user has.
+
+   Also, by modifying the mask value of the infoMask and lowering it to the device, it is possible to change/delete the information that the user has partially.
+
+   - Refer to API [BS2User](../user_management_api#bs2user)
+
+1. The problem of not applying conditions such as start index and request quantity when obtaining the log of USB has been corrected.
+
+   We also fixed an issue that occurs when the acquired log time is abnormally large.
+
+   - Refer to API [BS2_GetLogFromDir](../bs2_getlogfromdir)
+
+   - Refer to API [BS2_GetLogBlobFromDir](../bs2_getlogblobfromdir)
+
+   - Refer to API [BS2_GetLogSmallBlobFromDir](../bs2_getlogsmallblobfromdir)
+
+   - Refer to API [BS2_GetLogSmallBlobExFromDir](../bs2_getlogsmallblobexfromdir)
+
+   - Refer to API [BS2_GetLogFromDirWithKey](../bs2_getlogfromdirwithkey)
+
+   - Refer to API [BS2_GetLogBlobFromDirWithKey](../bs2_getlogblobfromdirwithkey)
+
+   - Refer to API [BS2_GetLogSmallBlobFromDirWithKey](../bs2_getlogsmallblobfromdirwithkey)
+
+   - Refer to API [BS2_GetLogSmallBlobExFromDirWithKey](../bs2_getlogsmallblobexfromdirwithkey)
+
+1. When using the filtered log of USB, the problem of date search not being successful has been corrected.
+
+   - Refer to API[BS2_GetFilteredLogFromDir](../bs2_getfilteredlogfromdir)
+
+   - Refer to API[BS2_GetFilteredLogFromDirWithKey](../bs2_getfilteredlogfromdirwithkey)
+
+1. A simple bug in the C# example has been fixed.
+
+1. Improved usability of SSL at low speed network environments.
+
+1. Fixed the bug that crashed if the access group existed during a USB import.
+
+1. Edited to stabilize code internally in SDK.

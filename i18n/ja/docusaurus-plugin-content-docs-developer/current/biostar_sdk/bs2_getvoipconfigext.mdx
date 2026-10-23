@@ -1,0 +1,33 @@
+# BS2_GetVoipConfigExt
+
+<Badge only>+ v2.8.3</Badge> Gets the extended VoIP settings.
+
+[BS2VoipConfig](configuration_api#bs2voipconfig) comparing Various settings have been added, such as specifying outbound proxy and setting the volume.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetVoipConfigExt(void* context, uint32_t deviceId, BS2VoipConfigExt* config);
+```
+
+:::info
+
+[See BS2VoipConfigExt View Structures](configuration_api#bs2voipconfigext) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[Out\] `config` : Pointer to store VoIP settings information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

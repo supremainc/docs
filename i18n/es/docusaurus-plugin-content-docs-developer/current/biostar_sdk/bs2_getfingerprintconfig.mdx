@@ -1,0 +1,31 @@
+# BS2_GetFingerprintConfig
+
+Retrieves fingerprint matching settings from the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFingerprintConfig(void* context, uint32_t deviceId, BS2FingerprintConfig* config);
+```
+
+:::info
+
+[See BS2FingerprintConfig Structure](configuration_api#bs2fingerprintconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Fingerprint configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

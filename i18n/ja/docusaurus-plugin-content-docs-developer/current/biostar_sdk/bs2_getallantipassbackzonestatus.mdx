@@ -1,0 +1,59 @@
+# BS2_GetAllAntiPassbackZoneStatus
+
+Retrieves the status of all Anti Passback zones.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllAntiPassbackZoneStatus(void* context, BS2_DEVICE_ID deviceId, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[See BS2ZoneStatus Structure](zone_control_api#bs2zonestatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `zoneStatusObj` : Zone status list pointer
+
+- \[Out\] `numZoneStatus` : Number of zone status records
+
+:::info
+
+The `zoneStatusObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAntiPassbackZone](bs2_getantipassbackzone)
+
+[BS2_GetAllAntiPassbackZone](bs2_getallantipassbackzone)
+
+[BS2_GetAntiPassbackZoneStatus](bs2_getantipassbackzonestatus)
+
+[BS2_SetAntiPassbackZone](bs2_setantipassbackzone)
+
+[BS2_SetAntiPassbackZoneAlarm](bs2_setantipassbackzonealarm)
+
+[BS2_RemoveAntiPassbackZone](bs2_removeantipassbackzone)
+
+[BS2_RemoveAllAntiPassbackZone](bs2_removeallantipassbackzone)
+
+[BS2_ClearAntiPassbackZoneStatus](bs2_clearantipassbackzonestatus)
+
+[BS2_ClearAllAntiPassbackZoneStatus](bs2_clearallantipassbackzonestatus)

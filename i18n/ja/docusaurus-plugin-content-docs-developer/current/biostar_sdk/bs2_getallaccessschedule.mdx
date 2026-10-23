@@ -1,0 +1,49 @@
+# BS2_GetAllAccessSchedule
+
+Retrieves all time schedules.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllAccessSchedule(void* context, uint32_t deviceId, BS2Schedule** accessScheduleObj, uint32_t* numAccessSchedule);;
+```
+
+:::info
+
+[See BS2Schedule Structure](access_control_api#bs2schedule) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `accessScheduleObj` : Access schedule list pointer
+
+- \[Out\] `numAccessSchedule` : Number of access schedules
+
+:::info
+
+The `accessScheduleObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAccessSchedule](bs2_getaccessschedule)
+
+[BS2_SetAccessSchedule](bs2_setaccessschedule)
+
+[BS2_RemoveAccessSchedule](bs2_removeaccessschedule)
+
+[BS2_RemoveAllAccessSchedule](bs2_removeallaccessschedule)

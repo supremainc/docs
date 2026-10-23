@@ -1,0 +1,29 @@
+# BS2_GetInputConfigEx
+
+<Badge only>+ v2.8.1</Badge> **IM-120** Retrieves Expanded Configuration related to the Input.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetInputConfigEx(void* context, uint32_t deviceId, BS2InputConfigEx* config);
+```
+
+:::info
+
+[BS2InputConfigEx Structure](configuration_api#bs2inputconfigex) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[Out\] `config` : Pointer where Input Expandable Setting Information will be saved
+
+## Return Values
+
+Return `BS_SDK_SUCCESS` when successful, and return an appropriate error code when an error occurs.

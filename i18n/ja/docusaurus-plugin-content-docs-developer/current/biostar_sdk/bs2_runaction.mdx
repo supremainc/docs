@@ -1,0 +1,31 @@
+# BS2_RunAction
+
+<Badge only>+ v2.8.1</Badge> Commands the device to take certain actions.
+
+Using this API, you can control LED, buzzer, sound, relay and more.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RunAction(void* context, uint32_t deviceId, const BS2Action* action);
+```
+
+:::info
+
+[BS2Action Structure](configuration_api#bs2action) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[In\] `action` : Structure address where certain actions are defined
+
+## Return Values
+
+Return `BS_SDK_SUCCESS` when successful, and return an appropriate error code when an error occurs.

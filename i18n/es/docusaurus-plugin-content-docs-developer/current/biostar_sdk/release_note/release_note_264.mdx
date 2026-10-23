@@ -1,0 +1,81 @@
+# Version 2.6.4 (V2.6.4.1)
+
+Date: 2020-02-25
+
+## New Features
+
+- Supports the API retrieving logs filtered by EventMask
+
+- Supports DesFire Advanced format setting
+
+- Supports the card type selection feature
+
+- Supports duplicate fingerprints/face check
+
+1. The API retrieving logs filtered by Event Mask so that you can use memory efficiently than before.
+
+   - Refer to structure [BS2EventSmallBlob](../log_management_api#bs2eventsmallblob)
+
+   - Refer to API [BS2_GetLogSmallBlob](../bs2_getlogsmallblob)
+
+   - Refer to API [BS2_GetLogSmallBlobFromDir](../bs2_getlogsmallblobfromdir)
+
+1. DesFire Advanced format setting is now supported.
+
+   - Refer to structure [BS2SimpleDeviceInfoEx](../device_api#bs2simpledeviceinfoex)
+
+   - Refer to structure [BS2DesFireCardConfigEx](../configuration_api#bs2desfirecardconfigex)
+
+   - Refer to API [BS2_GetDesFireCardConfigEx](../bs2_getdesfirecardconfigex)
+
+   - Refer to API [BS2_SetDesFireCardConfigEx](../bs2_setdesfirecardconfigex)
+
+1. Card type selection is available so that you can select/deselect the card type you want to read fro the device.
+
+   - Refer to structure [BS2SystemConfig](../configuration_api#bs2systemconfig)
+
+   - Refer to API [BS2_SetSystemConfig](../bs2_setsystemconfig)
+
+1. Duplicate fingerprint and face check is available.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+   - Refer to API [BS2_GetFingerprintConfig](../bs2_getfingerprintconfig)
+
+   - Refer to API [BS2_SetFingerprintConfig](../bs2_setfingerprintconfig)
+
+   - Refer to structure [BS2FingerprintConfig](../configuration_api#bs2fingerprintconfig)
+
+   - Refer to API [BS2_GetFaceConfig](../bs2_getfaceconfig)
+
+   - Refer to API [BS2_SetFaceConfig](../bs2_setfaceconfig)
+
+## Modified Features
+
+1. Fixed the issue of device malfunctioning and rebooting when `BS2Job.numJobs` in `BS2UserBlobEx` exceeds the maximum value 16.
+
+   - Refer to structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
+
+   - Refer to API [BS2_VerifyUserEx](../bs2_verifyuserex)
+
+   - Refer to API [BS2_IdentifyUserEx](../bs2_identifyuserex)
+
+   - Refer to API [BS2_EnrolUserEx](../bs2_enroluserex)
+
+   - Refer to API [BS2_VerifyUserSmallEx](../bs2_verifyusersmallex)
+
+   - Refer to API [BS2_IdentifyUserSmallEx](../bs2_identifyusersmallex)
+
+   - Refer to API [BS2_EnrollUserSmallEx](../bs2_enrollusersmallex)
+
+1. Fixed the issue of BioStation 2 not available for user images.
+
+1. Fixed the error `BS_SDK_INVALID_CODE_SIGN` when upgrading SIO2.
+
+1. Fixed the error `BS_SDK_ERROR_NOT_SUPPORTED` when calling BS2_GetCardModel for BLN2-PAB.
+
+   - Refer to API [BS2_GetCardModel](../bs2_getcardmodel)
+
+1. Fixed the issue that SDK doesn't recognize device disconnection when the device is constantly disconnected.
+
+1. Fixed the issue of Linux SDK crash.

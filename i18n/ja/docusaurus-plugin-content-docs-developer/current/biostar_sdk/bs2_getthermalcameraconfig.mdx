@@ -1,0 +1,36 @@
+# BS2_GetThermalCameraConfig
+
+<Badge only>+ v2.7.1</Badge> **FaceStation F2**, **FaceStation 2** Retrieves configuration of thermal camera.
+
+| Device type | Supported version |
+| --- | --- |
+| FaceStation 2 | V1.4.0 |
+| FaceStation F2 | V1.0.0 |
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetThermalCameraConfig(void* context, uint32_t deviceId, BS2ThermalCameraConfig* config);
+```
+
+:::info
+
+[See BS2ThermalCameraConfig Structure](configuration_api#bs2thermalcameraconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Thermal camera settings pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

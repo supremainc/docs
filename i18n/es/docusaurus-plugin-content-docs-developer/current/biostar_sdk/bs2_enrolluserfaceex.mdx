@@ -1,0 +1,45 @@
+# BS2_EnrollUserFaceEx
+
+<Badge only>+ v2.7.1</Badge> Enrolls new user.
+
+This API includes the ability to register Visual Face credentials.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_EnrollUserFaceEx(void* context, uint32_t deviceId, BS2UserFaceExBlob* userBlob, uint32_t userCount, uint8_t overwrite);
+```
+
+:::info
+
+[See BS2UserFaceExBlob Structure](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `userBlob` : User information trying to enroll
+
+- \[In\] `userCount` : Number of users
+
+- \[In\] `overwrite` : Whether to overwrite duplicated user
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_EnrollUserFaceEx](bs2_enrolluserfaceex)
+
+[BS2_GetUserInfosFaceEx](bs2_getuserinfosfaceex)
+
+[BS2_GetUserDatasFaceEx](bs2_getuserdatasfaceex)

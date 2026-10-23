@@ -1,0 +1,71 @@
+# Version 2.9.8 (v2.9.8.0)
+
+Date: 2024-9-30
+
+## New Features
+
+- Supports a feature that allows selecting how the user ID or name are displayed on the authentication result screen of the device.
+
+- Supports a feature that selects the SIP transmission method of Intercom on the BioStation 3.
+
+- Supports a feature of selecting the resolution of the video output when using Intercom and RTSP.
+
+- Added an option that allows rejecting authentication for users wearing a mask during face authentication.
+
+- Added an option to enable or disable the Scramble Keypad, which randomizes the position of numeric keys when entering a PIN on the X-Station 2.
+
+- Added feature to set the RS-485 baud rate of slave devices.
+
+- Added feature to set the Aux Input of the CoreStation.
+
+1. Added a feature that allows selecting how the user ID or name are displayed on the authentication result screen of the device.
+
+   * Refer to structure [BS2DisplayConfig](../configuration_api#bs2displayconfig) - `authMsgUserName`, `authMsgUserID`
+
+1. Added a setting to allow changing the data transmission method of the IP intercom on BioStation 3 to UDP, TCP, or TLS.
+
+   - Refer to the structure [BS2VoipConfigExt](../configuration_api#bs2voipconfigext) - `transport` (Supported Device: BioStation 3)
+
+1. Added a setting to allow selecting the video resolution for streaming when using IP intercom and RTSP on BioStation 3.
+
+   - Refer to the structure [BS2VoipConfigExt](../configuration_api#bs2voipconfigext) - `resolution` (Supported Device: BioStation 3)
+
+   - Refer to the structure [BS2RtspConfig](../configuration_api#bs2rtspconfig) - `resolution` (Supported Device: BioStation 3, BioEntry W3)
+
+1. Added an option to reject authentication for users wearing masks during face authentication. This feature only applies to face authentication devices based on visual faces, such as BioStation 3, FaceStation F2, and BioEntry W3.
+
+   - Refer to the structure [BS2FaceConfigExt](../configuration_api#bs2faceconfigext) - `maskCheckMode`
+
+   - Refer to the structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) - `authDenyMaskSupported`
+
+1. Added a feature to X-Station 2 to enable a scramble keypad that randomly changes the position of number keys when entering a PIN.
+
+   - Refer to the structure [BS2DisplayConfig](../configuration_api#bs2displayconfig) - `scrambleKeyboardMode`
+
+   - Refer to the structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities) - `scrambleKeyboardModeSupported`
+
+1. Added feature to set the RS-485 baud rate of slave devices.
+
+   - Add API [bs2_setslavebaudrate](../bs2_setslavebaudrate)
+
+1. Added a feature the Aux Input setting feature for CoreStation40.
+
+   - Refer to the structure [BS2InputConfig](../configuration_api#bs2inputconfig) - aux
+
+## Modified Features
+
+1. Fixed a memory error that occurred when executing `BS2_ReleaseContext()` in C++(x64) debug mode.
+
+1. Fixed the issue where real-time logs could not be received when reconnecting using `BS2_SetAutoConnection`.
+
+1. Applied SONAME to the header of the so Linux Library files.
+
+1. Removed the 'Not use' value in the mode of the `BS2_RS485Config` and `BS2_RS485ConfigEx` structures.
+
+1. Improved C# Sample Source
+
+   - Improved the `ConfigControl` example to allow selecting slave devices when performing `getDeviceCapabilities()`.
+
+   - Improved memory release for imagedata in the `UserControl` example.
+
+   - Improved the conversion method for `wiegandDeviceID` in the `SlaveControl` example.

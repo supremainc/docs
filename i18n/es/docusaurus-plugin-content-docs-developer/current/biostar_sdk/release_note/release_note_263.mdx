@@ -1,0 +1,292 @@
+# Version 2.6.3 (V2.6.3.5)
+
+Date: 2019-07-24
+
+## New Features
+
+- Supports device XPass D2 Keypad
+
+- Supports device Face Lite
+
+- Supports device XPass 2 and XPass 2 Keypad
+
+- Supports IPv6 (BS2 FW 1.8.0 only)
+
+- Gets configured server port
+
+- Supports setting packet response time out
+
+- User enrollment API `BS2_EnrollUser` and `BS2_EnrollUserEx` have been added
+
+- API `BS2UserSmallBlob`/`BS2UserSmallBlobEx` for efficient use of memory in regards to large capacity of `BS2UserBlob`/`BS2UserBlobEx` (pointer processing of User Photo area)
+
+- Supports more than 1000 admin users (Only some devices, higher than BS2 1.8.0, A2 1.7.0, L2 1.5.0, N2 1.2.0, FS 1.3.0, FaceLite 1.0.1, CS40 1.3.0, P2 1.3.0, W2 1.4.0, Xpass 2 1.0.0)
+
+- Supports fingerprint template quality score
+
+- Supports file log print
+
+1. Device XPass D2 Keypad is supported.
+
+1. Device Face Lite is supported.
+
+1. Device XPass 2 and XPass 2 Keypad are supported.
+
+1. IPv6 connection is supported.
+
+   When initialize SDK, IPv6 is disabled as default.
+
+   - Add structure [BS2IPV6Config](../configuration_api#bs2ipv6config)
+
+   - Add structure [BS2IPv6DeviceInfo](../device_api#bs2ipv6deviceinfo)
+
+   - Add API [BS2_SetDebugExCallback](../bs2_setdebugexcallback)
+
+   - Add API [BS2_GetIPConfigViaUDPEx](../bs2_getipconfigviaudpex)
+
+   - Add API [BS2_SetIPConfigViaUDPEx](../bs2_setipconfigviaudpex)
+
+   - Add API [BS2_GetIPV6Config](../bs2_getipv6config)
+
+   - Add API [BS2_SetIPV6Config](../bs2_setipv6config)
+
+   - Add API [BS2_GetIPV6ConfigViaUDP](../bs2_getipv6configviaudp)
+
+   - Add API [BS2_SetIPV6ConfigViaUDP](../bs2_setipv6configviaudp)
+
+   - Add API [BS2_GetIPV6ConfigViaUDPEx](../bs2_getipv6configviaudpex)
+
+   - Add API [BS2_SetIPV6ConfigViaUDPEx](../bs2_setipv6configviaudpex)
+
+   - Add API [BS2_GetEnableIPV4](../bs2_getenableipv4)
+
+   - Add API [BS2_SetEnableIPV4](../bs2_setenableipv4)
+
+   - Add API [BS2_GetEnableIPV6](../bs2_getenableipv6)
+
+   - Add API [BS2_SetEnableIPV6](../bs2_setenableipv6)
+
+   - Add API [BS2_SetServerPortIPV6](../bs2_setserverportipv6)
+
+   - Add API [BS2_GetServerPortIPV6](../bs2_getserverportipv6)
+
+   - Add API [BS2_SetSSLServerPortIPV6](../bs2_setsslserverportipv6)
+
+   - Add API [BS2_GetSSLServerPortIPV6](../bs2_getsslserverportipv6)
+
+   - Add API [BS2_GetSpecifiedDeviceInfo](../bs2_getspecifieddeviceinfo)
+
+   - Add API [BS2_SearchDevicesCoreStationEx](../bs2_searchdevicescorestationex)
+
+1. The APIs getting server port have been added.
+
+   - Add API [BS2_GetServerPort](../bs2_getserverport)
+
+   - Add API [BS2_GetSSLServerPort](../bs2_getsslserverport)
+
+1. You can set packet response timeout with device.
+
+   - Add API [BS2_SetDefaultResponseTimeout](../bs2_setdefaultresponsetimeout)
+
+   - Add API [BS2_GetDefaultResponseTimeout](../bs2_getdefaultresponsetimeout)
+
+1. `BS2_EnrollUser` and `BS2_EnrollUserEx` for user enrollment API have been added.
+
+   It is the exactly same as the existing BS2_EnrolUser and BS2_EnrolUserEx APIs but only changed to correct spelling.
+
+   - Add API [BS2_EnrollUser](../bs2_enrolluser)
+
+   - Add API [BS2_EnrollUserEx](../bs2_enrolluserex)
+
+1. Member [BS2UserPhoto](../user_management_api#bs2userphoto) of user structures [BS2UserBlob](../user_management_api#bs2userblob) and [BS2UserBlobEx](../user_management_api#bs2userblobex) is designed to have fixed memory.
+
+   Even if you do not use the photo, it uses fixed-size of memory.
+
+   It wouldn't be a problem if there are few users to transfer and receive. However, if there are many users, then allocated memory is getting bigger as well.
+
+   In 2.6.3, we added API that can use memory more efficiently through pointer processing of [BS2UserPhoto](../user_management_api#bs2userphoto).
+
+   - Add structure [BS2UserSmallBlob](../user_management_api#bs2usersmallblob)
+
+   - Add structure [BS2UserSmallBlobEx](../user_management_api#bs2usersmallblobex)
+
+   - Add API [BS2_EnrollUserSmall](../bs2_enrollusersmall)
+
+   - Add API [BS2_EnrollUserSmallEx](../bs2_enrollusersmallex)
+
+   - Add API [BS2_GetUserSmallInfos](../bs2_getusersmallinfos)
+
+   - Add API [BS2_GetUserSmallDatas](../bs2_getusersmalldatas)
+
+   - Add API [BS2_GetUserSmallInfosEx](../bs2_getusersmallinfosex)
+
+   - Add API [BS2_GetUserSmallDatasEx](../bs2_getusersmalldatasex)
+
+   - Add API [BS2_VerifyUserSmall](../bs2_verifyusersmall)
+
+   - Add API [BS2_IdentifyUserSmall](../bs2_identifyusersmall)
+
+   - Add API [BS2_VerifyUserSmallEx](../bs2_verifyusersmallex)
+
+   - Add API [BS2_IdentifyUserSmallEx](../bs2_identifyusersmallex)
+
+   - Add API [BS2_GetUserSmallInfosFromDir](../bs2_getusersmallinfosfromdir)
+
+   - Add API [BS2_GetUserSmallDatasFromDir](../bs2_getusersmalldatasfromdir)
+
+   - Add API [BS2_GetUserSmallInfosExFromDir](../bs2_getusersmallinfosexfromdir)
+
+   - Add API [BS2_GetUserSmallDatasExFromDir](../bs2_getusersmalldatasexfromdir)
+
+1. You can add device operators up to 1000.
+
+   Still, you can only add maximum 10 operators if you use the existing structure [BS2AuthConfig](../configuration_api#bs2authconfig).
+
+   In 2.6.3, you can add operators up to 1000 with the new structure with the new API.
+
+   :::caution
+
+   The exsiting [BS2AuthConfig](../configuration_api#bs2authconfig) and operators are valid until you call the new API. However, if at any one time you call the newly added API below, the existing [BS2AuthConfig](../configuration_api#bs2authconfig) setting will be ignored so you need to use only the new API and structure.
+
+   If you want to use the new API with the new structure, please move the operator list managed by existing `BS2AuthConfig` securely to the new structure [BS2AuthOperatorLevel](../device_api#bs2authoperatorlevel) where can manage 1000 operators.
+
+   :::
+
+   - Add structure [BS2AuthOperatorLevel](../device_api#bs2authoperatorlevel)
+
+   - Add API [BS2_GetAuthOperatorLevelEx](../bs2_getauthoperatorlevelex)
+
+   - Add API [BS2_GetAllAuthOperatorLevelEx](../bs2_getallauthoperatorlevelex)
+
+   - Add API [BS2_SetAuthOperatorLevelEx](../bs2_setauthoperatorlevelex)
+
+   - Add API [BS2_RemoveAuthOperatorLevelEx](../bs2_removeauthoperatorlevelex)
+
+   - Add API [BS2_RemoveAllAuthOperatorLevelEx](../bs2_removeallauthoperatorlevelex)
+
+1. You can check fingerprint template quality score.
+
+   - Refer to structure [BS2Fingerprint](../fingerprint_api#bs2fingerprint)
+
+   - Add API [BS2_GetFingerTemplateQuality](../bs2_getfingertemplatequality)
+
+1. File log print(debugging) is supported.
+
+   - Add API [BS2_SetDebugFileLog](../bs2_setdebugfilelog)
+
+## Modified features
+
+1. In the past, when upgrading the firmware file, the code sign check was performed by the device.
+
+   In 2.6.3 it has been modified to perform in the SDK so that SDK can return an error to improper firmware file.
+
+   - Refer to API [BS2_UpgradeFirmware](../bs2_upgradefirmware)
+
+1. Fixed an issue where all communication could not work intermittently if the socket was disconnected immediately.
+
+1. Fixed an issue where multiple devices could not connect to each other intermittently when attempting SSL connection at the same time.
+
+1. Fixed an intermittent crash when searching for devices.
+
+   - Refer to API [BS2_SearchDevicesEx](../bs2_searchdevicesex)
+
+1. Fixed an issue where intermittent hangs may occur in the memory return stage for terminating the SDK library or for reallocating resources in the library.
+
+   - Refer to API [BS2_ReleaseContext](../bs2_releasecontext)
+
+   - Refer to API [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount)
+
+1. Fixed an issue where iClass SEOS card device returns wrong error(`BS_SDK_ERROR_NOT_SUPPORTED`) when getting card config.
+
+   - Refer to API [BS2_GetCardConfigEx](../bs2_getcardconfigex)
+
+1. Fixed an issue where devices that use different SSL certificate files will not connect intermittently when attempting SSL connection at the same time.
+
+1. Fixed an issue with incorrect floor level in Lift control.
+
+   - Refer to API [BS2_GetFloorLevel](../bs2_getfloorlevel)
+
+1. Fixed the restriction that the fingerprint template was fixed to 384 bytes when using server matching.
+
+1. Fixed a problem that some fingerprint related APIs did not work in slave device.
+
+   - Refer to API [BS2_ScanFingerprint](../bs2_scanfingerprint)
+
+   - Refer to API [BS2_VerifyFingerprint](../bs2_verifyfingerprint)
+
+1. The supported and unsupported settings for each device may vary.
+
+   However, in some cases, timeout error occurs in a setting that is not supported.
+
+   This has been modified to return `BS_SDK_ERROR_NOT_SUPPORTED`.
+
+   - Refer to API [BS2_GetConfig](../bs2_getconfig)
+
+1. Fixed the problem that the call result is not returned normally after calling access schedule setting.
+
+   - Refer to API [BS2_SetAccessSchedule](../bs2_setaccessschedule)
+
+1. When the device is connected in server mode, the processing is modified from synchronous to asynchronous.
+
+1. Fixed to clean up sockets that failed to open when initialize SDK.
+
+1. Modified to clear SSL resources at the end of SSL connection.
+
+1. Improved performance when sending and receiving packets in socket.
+
+   (If an error occurs, retries every 5ms. After retry 10 times or error 100ms or longer, it prcoessed as disconnected)
+
+1. Modified the meaning of parameters in API event processing thread for better understanding.
+
+   [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount) (\~2.6.2):
+
+   It sets threads number including reserved threads, not only event processing thread. Minimum value is 8.
+
+   6 reserved threads : timer(2), server matching(1), notification(1), TCP processing(1), UDP processing(1)
+
+   For example, if you set this as 8, you need to minus reserved threads 6. The number of actual event processing threads is 2.
+
+   [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount) (2.6.3\~):
+
+   It sets only for event processing thread. Minimum value is 2.
+
+   | API | Default(\~2.6.2) | Minimum(\~2.6.2) | Default(2.6.3\~) | Minimum(2.6.3\~) |
+   | --- | --- | --- | --- | --- |
+   | BS2_SetMaxThreadCount | MAX(NumberOfCpuCores\*5, 15) | 8 | MAX(NumberOfCpuCores\*5, 15) | 2 |
+   | BS2_SetMaxConnectThreadCount | 8 | 1 | 8 | 1 |
+
+1. Modified to allow to connect devices with the same IP in different port for the API [BS2_ConnectDeviceViaIP](../bs2_connectdeviceviaip).
+
+1. [C# Sample] Changed the parameter alarmFlags(BS2Door) to unconditionalLock.
+
+1. [C# Sample] Modified the size of BS2SoundAction and added parameter 'delay'.
+
+1. [C# Sample] LogControl - Modified BS2EventMaskEnum.JOB_CODE to BS2EventMaskEnum.ALL for BS2_GetLogBlob.
+
+1. [C# Sample] CardControl - Removed unnecessary blacklist code.
+
+1. [C# Sample] ConfigControl - Modified startTime.weekDay to endTime.weekDay in BS2_SetDstConfig.
+
+1. [C# Sample] SlaveControl - Added sample for slave device.
+
+1. Added an option to turn on and off card type on a device, rather than reading all card types supported by the device.
+
+   - Refer to structure [BS2SystemConfig](../configuration_api#bs2systemconfig)
+
+1. Sensitivity setting feature for filtering fake faces has been added.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+1. Face fast enrollment option has been added.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+1. Duplicated face(or fingerprint) check feature has been added.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+   - Refer to structure [BS2FingerprintConfig](../configuration_api#bs2fingerprintconfig)
+
+1. The option to support GDPR(General Data Protection Regulation) has been added.
+
+   - Refer to structure [BS2SystemConfig](../configuration_api#bs2systemconfig)

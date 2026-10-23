@@ -1,0 +1,29 @@
+# BS2_GetLicenseConfig
+
+<Badge only>+ v2.9.1</Badge> Gets the device license activation information in the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLicenseConfig(void* context, uint32_t deviceId, BS2LicenseConfig* config);
+```
+
+:::info
+
+[See BS2LicenseConfig Structure](configuration_api#bs2licenseconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[Out\] `config` : Pointer to store license information
+
+## Return Value
+
+Returns `BS_SDK_SUCCESS` if successful, or a corresponding error code if an error occurs.

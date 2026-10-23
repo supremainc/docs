@@ -1,0 +1,63 @@
+# BS2_GetAllDoorStatus
+
+Retrieves the status of all doors.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllDoorStatus(void* context, uint32_t deviceId, BS2DoorStatus** doorStatusObj, uint32_t* numDoorStatus);
+```
+
+:::info
+
+[See BS2DoorStatus Structure](door_control_api#bs2doorstatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `doorStatusObj` : Door status list pointer
+
+- \[Out\] `numDoorStatus` : Number of door status records
+
+:::info
+
+The `doorStatusObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDoor](bs2_getdoor)
+
+[BS2_GetAllDoor](bs2_getalldoor)
+
+[BS2_GetDoorStatus](bs2_getdoorstatus)
+
+[BS2_SetDoor](bs2_setdoor)
+
+[BS2_SetDoor](bs2_setdoor)
+
+[BS2_SetDoorAlarm](bs2_setdooralarm)
+
+[BS2_RemoveDoor](bs2_removedoor)
+
+[BS2_RemoveAllDoor](bs2_removealldoor)
+
+[BS2_ReleaseDoor](bs2_releasedoor)
+
+[BS2_LockDoor](bs2_lockdoor)
+
+[BS2_UnlockDoor](bs2_unlockdoor)

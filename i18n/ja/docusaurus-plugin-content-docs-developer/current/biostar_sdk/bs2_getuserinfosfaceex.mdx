@@ -1,0 +1,45 @@
+# BS2_GetUserInfosFaceEx
+
+<Badge only>+ v2.7.1</Badge> Gets the user information of the given user ID.
+
+This API can retrieve Visual Face credentials.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserInfosFaceEx(void* context, uint32_t deviceId, char* uids, uint32_t uidCount, BS2UserFaceExBlob* userBlob);
+```
+
+:::info
+
+[See BS2UserFaceExBlob Also](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_EnrollUserFaceEx](bs2_enrolluserfaceex)
+
+[BS2_GetUserInfosFaceEx](bs2_getuserinfosfaceex)
+
+[BS2_GetUserDatasFaceEx](bs2_getuserdatasfaceex)

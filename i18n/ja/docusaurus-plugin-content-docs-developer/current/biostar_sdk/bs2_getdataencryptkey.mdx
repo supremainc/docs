@@ -1,0 +1,41 @@
+`[Deprecated]` Gets the encryption key for the device.
+
+:::info
+
+You are not able to retrieve a key value due to security reason.
+
+:::
+
+### Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDataEncryptKey(void* context, uint32_t deviceId, BS2EncryptKey* keyInfo);
+```
+
+:::info
+
+[See BS2EncryptKey Structure](sdk_api#bs2encryptkey) 
+
+:::
+
+### Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `keyInfo` : The address of encryption key information structure to return
+
+### Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+### See Also
+
+[BS2_SetDataEncryptKey](bs2_setdataencryptkey)
+
+[BS2_RemoveDataEncryptKey](bs2_removedataencryptkey)

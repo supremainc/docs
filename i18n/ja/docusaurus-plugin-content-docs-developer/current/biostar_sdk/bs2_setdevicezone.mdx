@@ -1,0 +1,53 @@
+# BS2_SetDeviceZone
+
+Configures a Ethernet zone.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceZone(void* context, BS2_DEVICE_ID deviceId, const BS2DeviceZone* deviceZones, uint32_t deviceZoneCount);
+```
+
+:::info
+
+[See BS2DeviceZone Structure](zone_control_api#bs2devicezone) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `deviceZones` : List of Device zones
+
+- \[In\] `deviceZoneCount` : Number of Device zones
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDeviceZone](bs2_getdevicezone)
+
+[BS2_GetAllDeviceZone](bs2_getalldevicezone)
+
+[BS2_RemoveDeviceZone](bs2_removedevicezone)
+
+[BS2_RemoveAllDeviceZone](bs2_removealldevicezone)
+
+[BS2_SetDeviceZoneAlarm](bs2_setdevicezonealarm)

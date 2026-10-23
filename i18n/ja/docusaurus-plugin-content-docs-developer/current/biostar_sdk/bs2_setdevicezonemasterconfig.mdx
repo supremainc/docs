@@ -1,0 +1,45 @@
+# BS2_SetDeviceZoneMasterConfig
+
+Configures the zone master config of the Ethernet zone.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceZoneMasterConfig(void* context, BS2_DEVICE_ID deviceId, const BS2DeviceZoneMasterConfig* config);
+```
+
+:::info
+
+[See BS2DeviceZoneMasterConfig Structure](zone_control_api#bs2devicezonemasterconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : Zone master config pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDeviceZoneMasterConfig](bs2_getdevicezonemasterconfig)
+
+[BS2_RemoveDeviceZoneMasterConfig](bs2_removedevicezonemasterconfig)

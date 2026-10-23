@@ -1,0 +1,61 @@
+# BS2_GetAllLiftStatus
+
+Retrieves the status of all lifts.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllLiftStatus(void* context, BS2_DEVICE_ID deviceId, BS2LiftStatus** liftStatusObj, uint32_t* numLiftStatus);
+```
+
+:::info
+
+[See BS2LiftStatus Structure](lift control api#bs2liftstatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `liftStatusObj` : Lift status list pointer
+
+- \[Out\] `numLiftStatus` : Number of lift status
+
+:::info
+
+The liftStatusObj variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetLift](bs2_getlift)
+
+[BS2_GetAllLift](bs2_getalllift)
+
+[BS2_GetLiftStatus](bs2_getliftstatus)
+
+[BS2_SetLift](bs2_setlift)
+
+[BS2_SetLiftAlarm](bs2_setliftalarm)
+
+[BS2_RemoveLift](bs2_removelift)
+
+[BS2_RemoveAllLift](bs2_removealllift)
+
+[BS2_ReleaseFloor](bs2_releasefloor)
+
+[BS2_ActivateFloor](bs2_activatefloor)
+
+[BS2_DeActivateFloor](bs2_deactivatefloor)

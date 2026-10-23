@@ -1,0 +1,238 @@
+# Face API
+
+This API allows to scan/verify the face template.
+
+---
+
+<DocCardList />
+
+---
+
+## Structure
+
+### BS2Face
+
+```cpp
+typedef struct {
+   uint8_t faceIndex;      
+   uint8_t numOfTemplate;      
+   uint8_t flag;               
+   uint8_t reserved;       
+
+   uint16_t imageLen;      
+   uint8_t reserved2[2];       
+
+   uint8_t imageData[BS2_FACE_IMAGE_SIZE];
+   uint8_t templateData[BS2_TEMPLATE_PER_FACE][BS2_FACE_TEMPLATE_LENGTH];
+} BS2Face;
+```
+
+1. `faceIndex`
+
+   Index of face
+
+1. `numOfTemplate`
+
+   Number of face templates.
+
+1. `flag`
+
+   This values is used inside the device based on FaceStation2 V1.4.0 and FaceLite V1.2.0.
+
+   The flag value received from the device can be used, but if it is not known, it can be set to 0.
+
+1. `reserved`
+
+   Reserved space.
+
+1. `imageLen`
+
+   Size of the face image.
+
+1. `reserved2`
+
+   Reserve space.
+
+1. `imageData`
+
+   Face image data.
+
+1. `data`
+
+   Face template data.
+
+### BS2AuthGroup
+
+```cpp
+typedef struct {
+   BS2_AUTH_GROUP_ID       id;
+   char                name[BS2_MAX_AUTH_GROUP_NAME_LEN];
+   uint8_t             reserved[32];
+} BS2AuthGroup;
+
+```
+
+1. `id`
+
+   Group ID for group matching.
+
+1. `name`
+
+   Name of the matching group that will be displayed on BioStar 2
+
+1. `reserved`
+
+   Reserved space.
+
+### BS2TemplateEx
+
+```cpp
+typedef struct {
+   uint8_t       data[552];
+   uint8_t       isIR;
+   uint8_t       reserved[3];
+} BS2TemplateEx;
+```
+
+**Visual Face based**
+
+1. `data`
+
+   IR or visual image template data
+
+1. `isIR`
+
+   True when it comes to an IR image, false when it comes to a visual image
+
+1. `reserved`
+
+   Reserved
+
+### BS2FaceEx
+
+```cpp
+typedef struct {
+   uint8_t       faceIndex;
+   uint8_t       numOfTemplate;
+   uint8_t       flag;
+   uint8_t       reserved;
+   
+   uint32_t      imageLen;
+   union {
+      struct {
+         uint16_t irImageLen;
+         uint8_t  unused[6];         ///< 6 bytes (packing)
+         uint8_t  imageData[BS2_MAX_WARPED_IMAGE_LENGTH];            ///< 40 * 1024 bytes
+         uint8_t  irImageData[BS2_MAX_WARPED_IR_IMAGE_LENGTH];       ///< 30 * 1024 bytes
+         BS2TemplateEx templateEx[BS2_MAX_TEMPLATES_PER_FACE_EX];    ///< 20 * 556 bytes
+      };
+
+      uint8_t   *rawImageData;
+
+      BS2TemplateEx *onlyTemplateEx;
+   };
+} BS2FaceEx;
+```
+
+**Visual Face based**
+
+1. `faceIndex`
+
+   Index of face
+
+1. `numOfTemplate`
+
+   The number of template including Visual, IR
+
+1. `flag`
+
+   * Flag whether the image is a WARPed image.
+
+   * WARP is a kind of generalization that extracts the face among the physical image which contains different body parts.
+
+   * When flag is set to 1, the device refers to 5 pieces of information defined by the struct in the union.
+
+   * When flag is set to 0, the device refers to rawImageData in the union.
+
+   * If the user wants to register a face with a random image that is not WARPed,
+
+   * please set the flag as `BS2_FACE_EX_FLAG_NONE(0)`, set as image data in the address space of rawImageData, and set the size of image data as imageLen.
+
+   * When this happens, the device will automatically go through the WARP process with rawImageData and fill in the information in the struct.
+
+   * Please note that rawImageData and struct are tied in an union.
+
+   * <Badge only>+ v2.9.6</Badge> An option `BS2_FACE_EX_FLAG_TEMPLATE_ONLY(0x20)` has been added to allow transmitting only the template excluding the facial image when sending facial data.
+
+   * This is particularly useful in environments where privacy protection is emphasized.
+
+   * When using this option, the onlyTemplateEx should be allocated with template data for each numOfTemplate.
+
+   * Additionally, `unableToSaveImageOfVisualFace` in [BS2FaceConfig](configuration_api#bs2faceconfig) must be set to 1 (true).
+
+   | Value | Description |
+   | --- | :--: |
+   | BS2_FACE_EX_FLAG_NONE | 0x00 |
+   | BS2_FACE_EX_FLAG_WARPED | 0x01 |
+   | BS2_FACE_EX_FLAG_TEMPLATE_ONLY | 0x20 |
+   | BS2_FACE_EX_FLAG_ALL | 0xFF |
+
+1. `reserved`
+
+   Reserved
+
+1. `imageLen`
+
+   The size of image data
+
+1. `irImageLen`
+
+   The size of IR image data
+
+1. `unused`
+
+   Unused space. (for packing)
+
+1. `imageData`
+
+   WARPed facial image data. This is made by rawImageData automatically.
+
+   | Device type | Version | FW version | Image size | Image type | `rawImageData` |
+   | :--: | :--: | :--: | :--: | :--: | :--: |
+   | FaceStation F2 | V1 | less than 2.0.0 | 250 × 250 | JPG | JPG |
+   | FaceStation F2 | V2 | 2.0.0 or later | 112 × 112 | PNG | JPG, PNG |
+   | BioStation 3 | V1 | All version | 112 × 112 | PNG | JPG, PNG |
+
+1. `irImageData`
+
+   IR image data. IR image might not exist in the WARP process.
+
+   It is generated automatically when trying authentication.
+
+1. `templateEx`
+
+   Template data of Visual or IR image
+
+1. `rawImageData`
+
+   * Non-WARPed image data. See `imageData`
+
+   * The maximum resolution for an unwarped image is 4000 pixels in both width and height. However, a resolution of 1920 pixels or less is recommended.
+
+   * The recommended file size is 10 MB or less.
+
+   * Please use a clear and high-quality image with the face directly facing the camera. If the original image is blurred or distorted, Warped Image generation may fail.
+
+   * Whether Warped Image generation succeeds depends on the resolution and size of the face area in the original image.
+
+   * The face area in the original image should be at least 224 × 224 pixels, and it is recommended to use an image where the total image width is at least 190% of the face width.
+
+   * If the face in the original image is too small or too large, Warped Image generation may fail.
+
+   * If generation still fails even though the resolution and file size requirements are met, adjust the image resolution or the face ratio so that the face area is included at an appropriate size, and then try again.
+
+1. `onlyTemplateEx`
+
+   <Badge only>+ v2.9.6</Badge> This represents contiguous memory information of `BS2TemplateEx` data, which is template information, and must be allocated as many as `numOfTemplate`.
+
+   This is only used when the flag is `BS2_FACE_EX_FLAG_TEMPLATE_ONLY`.

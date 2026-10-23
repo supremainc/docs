@@ -1,0 +1,31 @@
+# BS2_GetTriggerActionConfig
+
+Retrieves trigger and action settings from the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetTriggerActionConfig(void* context, uint32_t deviceId, BS2TriggerActionConfig* config);
+```
+
+:::info
+
+[See BS2TriggerActionConfig Structure](configuration_api#bs2triggeractionconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Trigger and action configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

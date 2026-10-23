@@ -1,0 +1,41 @@
+# BS2_SetOsdpStandardDeviceStatusListener
+
+<Badge only>+ v2.9.1</Badge> Register a listener function that detects state changes of the OSDP device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetOsdpStandardDeviceStatusListener(void* context, OnOsdpStandardDeviceStatusChanged ptrOsdpStandardDeviceStatus);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `ptrOsdpStandardDeviceStatus` : Callback function to receive changed device information when OSDP device state change is detected
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+int sdkResult = BS2_SetOsdpStandardDeviceStatusListener(context_, fpOsdpStandardDeviceStatusChanged);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_SetOsdpStandardDeviceStatusListener call failed: %d", sdkResult);
+
+return sdkResult;
+```
+
+```csharp title='C#'
+cbOnOsdpStandardDeviceStatusChanged = new API.OnOsdpStandardDeviceStatusChanged(onOSDPStandardDeviceStatusChanged);
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_SetOsdpStandardDeviceStatusListener(sdkContext, cbOnOsdpStandardDeviceStatusChanged);
+if (BS2ErrorCode.BS_SDK_SUCCESS != result)
+    Console.WriteLine("Got error({0}).", result);
+
+return result;
+```
+

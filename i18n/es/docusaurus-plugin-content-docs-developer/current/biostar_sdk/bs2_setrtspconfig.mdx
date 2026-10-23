@@ -1,0 +1,85 @@
+# BS2_SetRtspConfig
+
+<Badge only>+ v2.8.3</Badge> Save the RTSP settings.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetRtspConfig(void* context, uint32_t deviceId, const BS2RtspConfig* config);
+```
+
+:::info
+
+[See BS2RtspConfig Structure](configuration_api#bs2rtspconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[In\] `config` : RTSP setting information pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+BS2RtspConfig config = { 0, };
+
+config.enabled = true;
+
+string acc = "myAccount";
+memset(config.id, 0x0, BS2_USER_ID_SIZE);
+memcpy(config.id, acc.c_str(), acc.size());
+
+string pw = "myPassword";
+memset(config.password, 0x0, BS2_USER_ID_SIZE);
+memcpy(config.password, pw.c_str(), pw.size());
+
+string addr = "192.168.0.10";   // rtsp://192.168.0.10
+memset(config.address, 0x0, BS2_URL_SIZE);
+memcpy(config.address, addr.c_str(), addr.size());
+
+config.port = 554;
+
+int sdkResult = BS2_SetRtspConfig(context, deviceID, &config);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_SetRtspConfig call failed: %d", sdkResult);
+```
+
+```csharp title='C#'
+BS2RtspConfig config = Util.AllocateStructure<BS2RtspConfig>();
+
+config.enabled = Convert.ToByte(1);
+
+string strRTSPID = "myAccount";
+byte[] arrRTSPID = Encoding.UTF8.GetBytes(strRTSPID);
+Array.Clear(config.id, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrRTSPID, 0, config.id, 0, arrRTSPID.Length);
+
+string strRTSPPW = "myPassword";
+byte[] arrRTSPPW = Encoding.UTF8.GetBytes(strRTSPPW);
+Array.Clear(config.password, 0, BS2Environment.BS2_USER_ID_SIZE);
+Array.Copy(arrRTSPPW, 0, config.password, 0, arrRTSPPW.Length);
+
+string strIpAddr = "192.168.0.10";  // rtsp://192.168.0.10
+byte[] arrIpAddr = Encoding.UTF8.GetBytes(strIpAddr);
+Array.Clear(config.address, 0, BS2Environment.BS2_URL_SIZE);
+Array.Copy(arrIpAddr, 0, config.address, 0, arrIpAddr.Length);
+
+config.port = (ushort)554;
+
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_SetRtspConfig(sdkContext, deviceID, ref config);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+```
+

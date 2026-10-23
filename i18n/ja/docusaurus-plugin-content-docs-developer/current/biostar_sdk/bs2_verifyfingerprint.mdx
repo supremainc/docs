@@ -1,0 +1,35 @@
+# BS2_VerifyFingerprint
+
+Compares the template data to check if it is the same finger.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_VerifyFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger);
+```
+
+:::info
+
+[See BS2Fingerprint Structure](fingerprint_api#bs2fingerprint) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `finger` : Template data pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_ScanFingerprint](bs2_scanfingerprint)

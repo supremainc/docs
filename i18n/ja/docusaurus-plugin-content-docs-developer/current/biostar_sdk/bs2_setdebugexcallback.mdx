@@ -1,0 +1,48 @@
+# BS2_SetDebugExCallback
+
+<Badge only>+ v2.5.0</Badge> Registers the callback function that gets called for debugging message.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDebugExCallback(CBDebugExPrint ptrCBDebugExPrint, uint32_t level, uint32_t module);
+```
+
+## Parameter
+
+- \[In\] `ptrCBDebugExPrint` : Callback function that is called for debugging message
+
+- \[In\] `level` : Debugging information level
+
+   | Value | Description |
+   | :--: | --- |
+   | 0x00000000 | None |
+   | 0x00000001 | Fatal |
+   | 0x00000002 | Error |
+   | 0x00000004 | Warning |
+   | 0x00000008 | Information |
+   | 0x00000010 | Trace |
+   | 0xFFFFFFFF | All |
+
+- \[In\] `module` : Debugging module information
+
+   | Value | Description |
+   | :--: | --- |
+   | 0x00000000 | None |
+   | 0x00000001 | Keep alive |
+   | 0x00000002 | Socket Manager |
+   | 0x00000004 | Socket Handler |
+   | 0x00000008 | Device |
+   | 0x00000010 | Device Manager |
+   | 0x00000020 | Event Dispatcher |
+   | 0x00000040 | API |
+   | 0x00000080 | Misc |
+   | 0xFFFFFFFF | All |
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

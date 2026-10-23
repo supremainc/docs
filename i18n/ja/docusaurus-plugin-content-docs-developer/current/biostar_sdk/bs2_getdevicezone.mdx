@@ -1,0 +1,63 @@
+# BS2_GetDeviceZone
+
+Retrieves selected Ethernet zones.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceZone(void* context, BS2_DEVICE_ID deviceId, const BS2_DEVICE_ZONE_TABLE_ID* Ids, uint32_t IdCount, BS2DeviceZone** deviceZoneObj, uint32_t* numDeviceZone);
+```
+
+:::info
+
+[See BS2DeviceZone Structure](zone_control_api#bs2devicezone) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `Ids` : List of Device zone IDs to retrieve
+
+- \[In\] `IdCount` : Size of Device zone ID list
+
+- \[Out\] `deviceZoneObj` : Device zone list pointer
+
+- \[Out\] `numDeviceZone` : Number of Device zones
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAllDeviceZone](bs2_getalldevicezone)
+
+[BS2_SetDeviceZone](bs2_setdevicezone)
+
+[BS2_RemoveDeviceZone](bs2_removedevicezone)
+
+[BS2_RemoveAllDeviceZone](bs2_removealldevicezone)
+
+[BS2_SetDeviceZoneAlarm](bs2_setdevicezonealarm)

@@ -1,0 +1,59 @@
+# BS2_GetLiftLockUnlockZoneStatus
+
+<Badge only>+ v2.7.0</Badge> Retrieves the status of selected Lift Lock/Unlock zones.
+
+## Declartion
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLiftLockUnlockZoneStatus(void* context, uint32_t deviceId, uint32_t* zoneIds, uint32_t zoneIdCount, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[See BS2ZoneStatus Structure](zone_control_api#bs2zonestatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zoneIds` : List of Lift lock/unlock zone ID
+
+- \[In\] `zoneIdCount` : Size of Lift lock/unlock zone id list
+
+- \[Out\] `zoneStatusObj` : Zone status list pointer
+
+- \[Out\] `numZoneStatus` : Number of zone status list
+
+:::info
+
+The `zoneStatusObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetLiftLockUnlockZone](bs2_getliftlockunlockzone)
+
+[BS2_GetAllLiftLockUnlockZone](bs2_getallliftlockunlockzone)
+
+[BS2_GetAllLiftLockUnlockZoneStatus](bs2_getallliftlockunlockzonestatus)
+
+[BS2_SetLiftLockUnlockZone](bs2_setliftlockunlockzone)
+
+[BS2_SetLiftLockUnlockZoneAlarm](bs2_setliftlockunlockzonealarm)
+
+[BS2_RemoveLiftLockUnlockZone](bs2_removeliftlockunlockzone)
+
+[BS2_RemoveAllLiftLockUnlockZone](bs2_removeallliftlockunlockzone)

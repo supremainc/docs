@@ -1,0 +1,37 @@
+# BS2_GetConfig
+
+Retrieves configuration blob from the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetConfig(void* context, uint32_t deviceId, BS2Configs* configs);
+```
+
+:::info
+
+[See BS2Configs Structure](configuration_api#bs2configs) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `configs` : Configuration blob
+
+:::info
+
+If the `configMask` from the configs is not supported from the device, an error will be returned.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,31 @@
+# BS2_RemoveDataEncryptKey
+
+<Badge only>+ v2.6.0</Badge> Removes the encryption key for the device.
+
+If function is called successfully, the device will revert to the default key value, and all data on the device will be erased.
+
+### Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveDataEncryptKey(void* context, uint32_t deviceId);
+```
+
+### Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+### Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+### See Also
+
+[BS2_GetDataEncryptKey](bs2_getdataencryptkey)
+
+[BS2_SetDataEncryptKey](bs2_setdataencryptkey)

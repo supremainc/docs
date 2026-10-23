@@ -1,0 +1,57 @@
+# BS2_GetUserDatabaseInfoFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> Get full user information (number of users, number of cards, number of fingerprints, number of faces) from the data extracted by USB.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserDatabaseInfoFromDirWithKey(void* context, const char* szDir, uint32_t* numUsers, uint32_t* numCards, uint32_t* numFingers, uint32_t* numFaces, IsAcceptableUserID ptrIsAcceptableUserID, const BS2EncryptKey* key);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[Out\] `szDir` : Data Storage Path
+
+- \[Out\] `numUsers` : Total number of users
+
+- \[Out\] `numCards` : Total number of cards
+
+- \[Out\] `numFingers` : Total number of fingerprints
+
+- \[Out\] `numFaces` : Total number of faces
+
+- \[In\] `ptrIsAcceptableUserID` : Callback function to ask the server if it is the user ID to allow
+
+- \[In\] `key` : Encryption key and the key value specified by [BS2_SetData EncryptKey](bs2_setdata_encryptkey).
+
+:::info
+
+The `uidsObjs` variable must return memory to the system after using via the [BS2_ReleaseObject](bs2_releaseobject) function.
+
+:::
+
+## Return value
+
+Returns `BS_SDK_SUCCESS` if performed successfully, or a corresponding error code if an error occurs.
+
+## See Also
+
+[BS2_GetUserListFromDirWithKey](bs2_getuserlistfromdirwithkey)
+
+[BS2_GetUserInfosFromDirWithKey](bs2_getuserinfosfromdirwithkey)
+
+[BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey)
+
+[BS2_GetUserInfosExFromDirWithKey](bs2_getuserinfosexfromdirwithkey)
+
+[BS2_GetUserDatasExFromDirWithKey](bs2_getuserdatasexfromdirwithkey)
+
+[BS2_GetLogFromDirWithKey](bs2_getlogfromdirwithkey)
+
+[BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey)
+
+[BS2_GetFilteredLogFromDirWithKey](bs2_getfilteredlogfromdirwithkey)

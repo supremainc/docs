@@ -1,0 +1,55 @@
+# BS2_SetDeviceZoneAGEntranceLimit
+
+Configures Ethernet access group entrance limit.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStation A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+* BioEntry W2 (1.2.0 only)
+
+* BioStation L2 (1.3.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceZoneAGEntranceLimit(void* context, BS2_DEVICE_ID deviceId, const BS2DeviceZoneAGEntranceLimit* deviceZoneAGEntranceLimits, uint32_t deviceZoneAGEntranceLimitCount);
+```
+
+:::info
+
+[See BS2DeviceZoneAGEntranceLimit Structure](zone_control_api#bs2devicezoneagentrancelimit) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `deviceZoneAGEntranceLimits` : Device zone access group entrance limit list
+
+- \[In\] `deviceZoneAGEntranceLimitCount` : Number of device zone access group
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDeviceZoneAGEntranceLimit](bs2_getdevicezoneagentrancelimit)
+
+[BS2_GetAllDeviceZoneAGEntranceLimit](bs2_getalldevicezoneagentrancelimit)
+
+[BS2_RemoveDeviceZoneAGEntranceLimit](bs2_removedevicezoneagentrancelimit)
+
+[BS2_RemoveAllDeviceZoneAGEntranceLimit](bs2_removealldevicezoneagentrancelimit)

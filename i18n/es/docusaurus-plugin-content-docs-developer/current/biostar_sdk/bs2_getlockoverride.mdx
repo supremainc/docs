@@ -1,0 +1,72 @@
+# BS2_GetLockOverride
+
+<Badge only>+ v2.9.12</Badge> Gets Lock Override information from the device by specifying conditions.
+
+Search conditions can be specified by setting cardID and issueCount in `BS2LockOverride`.
+
+:::info
+
+* Normally, when a door is in a locked state, it will not open even when authentication is attempted.
+
+* Starting from version 2.9.12, a feature is provided to emergency-open doors in emergency situations such as fires or disasters.
+
+* When a card is set as Lock Override, the door can be opened by authenticating with that card when the door is in a locked state.
+
+* Cards already assigned to users can be enrolled as Lock Override, or cards not assigned to users can be enrolled.
+
+* When enrolling a card assigned to a user as Lock Override, set the user ID in the userID field of the Lock Override information.
+
+* Even if a card assigned to a user is enrolled as Lock Override, when the door is not in a locked state, it operates the same as the normal authentication procedure.
+
+* However, when authentication is attempted while the door is in a locked state, the emergency opening procedure proceeds, ignoring the locked state and opening the door.
+
+* For cards not assigned to users, they do not operate normally and only attempt emergency opening when in a locked state.
+
+* Additionally, even if the card is enrolled in the blacklist, emergency opening is possible by ignoring the blacklist.
+
+* Even if the slave device does not support this feature, if the master device supports it, the emergency opening feature can be used.
+
+   - Up to 8 Lock Overrides can be enrolled per user.
+
+   - Up to 1,000 Lock Overrides can be enrolled per device.
+
+   - Cards that can be used as Lock Override are CSN cards and Secure cards.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+int BS2_GetLockOverride(void* context, BS2_DEVICE_ID deviceId, const BS2LockOverride* request, uint32_t numOfRequest, BS2LockOverride** responseObj, uint32_t* numOfResponse);
+```
+
+:::info
+
+[View BS2LockOverride structure](smartcard_api#bs2lockoverride) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `request` : Address of the search condition structure array
+
+- \[In\] `numOfRequest` : Number of search condition structures
+
+- \[Out\] `responseObj` : Pointer to receive the search result lock override information
+
+- \[Out\] `numOfResponse` : Number of search result lock override information
+
+:::info
+
+The `responseObj` variable must return memory to the system through the [BS2_ReleaseObject](bs2_releaseobject) function after use.
+
+:::
+
+## Return Value
+
+Returns `BS_SDK_SUCCESS` when performed successfully, and returns the corresponding error code when an error occurs.

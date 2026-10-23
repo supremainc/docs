@@ -1,0 +1,31 @@
+# BS2_GetVoipConfig
+
+Retrieves VoIP settings from the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetVoipConfig(void* context, uint32_t deviceId, BS2VoipConfig* config);
+```
+
+:::info
+
+[See BS2VoipConfig Structure](configuration_api#bs2voipconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : VoIP settings pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

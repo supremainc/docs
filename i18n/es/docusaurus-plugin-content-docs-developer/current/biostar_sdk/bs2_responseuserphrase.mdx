@@ -1,0 +1,39 @@
+# BS2_ResponseUserPhrase
+
+<Badge only>+ v2.7.0</Badge> Transfers the user phrase to the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ResponseUserPhrase(void* context, uint32_t deviceId, uint16_t seq, int handleResult, const BS2_USER_PHRASE userPhrase);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `seq` : Packet sequence number
+
+- \[In\] `handleResult` : Matching result (`BS_SDK_SUCCESS` or `BS_SDK_ERROR_XXX`)
+
+- \[In\] `userPhrase` : Matched user phrase
+
+:::info
+
+Packet sequence number must be equivalent to the value sent from the `OnUserPhrase`.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_SetUserPhraseHandler](bs2_setuserphrasehandler)

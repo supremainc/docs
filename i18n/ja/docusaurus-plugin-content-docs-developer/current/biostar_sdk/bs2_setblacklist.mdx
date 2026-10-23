@@ -1,0 +1,43 @@
+# BS2_SetBlackList
+
+Configures a blacklist.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetBlackList(void* context, uint32_t deviceId, BS2BlackList* blacklists, uint32_t blacklistCount);
+```
+
+:::info
+
+[See BS2BlackList Structure](blacklist_api#bs2blacklist) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `blacklists` : List of Blacklists to be stored
+
+- \[In\] `blacklistCount` : Number of blacklists
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetBlackList](bs2_getblacklist)
+
+[BS2_GetAllBlackList](bs2_getallblacklist)
+
+[BS2_RemoveBlackList](bs2_removeblacklist)
+
+[BS2_RemoveAllBlackList](bs2_removeallblacklist)

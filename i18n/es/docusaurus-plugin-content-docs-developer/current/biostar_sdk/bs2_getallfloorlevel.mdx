@@ -1,0 +1,49 @@
+# BS2_GetAllFloorLevel
+
+Retrieves all floor levels.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllFloorLevel(void* context, uint32_t deviceId, BS2FloorLevel** floorLevelObj, uint32_t* numFloorLevel);
+```
+
+:::info
+
+[See BS2FloorLevel Structure](lift control api#bs2floorlevel) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `floorLevelObj` : Floor level list pointer
+
+- \[Out\] `numFloorLevel` : Number of floor levels
+
+:::info
+
+The floorLevelObjvariable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetFloorLevel](bs2_getfloorlevel)
+
+[BS2_SetFloorLevel](bs2_setfloorlevel)
+
+[BS2_RemoveFloorLevel](bs2_removefloorlevel)
+
+[BS2_RemoveAllFloorLevel](bs2_removeallfloorlevel)

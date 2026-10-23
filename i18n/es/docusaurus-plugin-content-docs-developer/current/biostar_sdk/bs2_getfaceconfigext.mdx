@@ -1,0 +1,31 @@
+# BS2_GetFaceConfigExt
+
+<Badge only>+ v2.7.1</Badge> Retrieves configuration of thermal camera and mask detection.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFaceConfigExt(void* context, uint32_t deviceId, BS2FaceConfigExt* config);
+```
+
+:::info
+
+[See BS2FaceConfigExt Structure](configuration_api#bs2faceconfigext) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Face settings pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

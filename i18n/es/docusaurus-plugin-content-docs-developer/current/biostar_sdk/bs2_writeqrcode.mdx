@@ -1,0 +1,29 @@
+# BS2_WriteQRCode
+
+<Badge only>+ V2.8</Badge> Write the character strings to use QR code in the structure BS2CSN Card for **X-Station 2**
+
+Available QR Code Data of X-Station 2 QR is up to 32 characters with the printable ASCII code from 32 (space) to 126(\~) in ASCII table.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_WriteQRCode(const char* qrText, BS2CSNCard* card);
+```
+
+:::info
+
+[See BS2CSNCard](smartcard_api#bs2csncard) 
+
+:::
+
+## Parameter
+
+- \[In\] `qrText` : Character string setting as QR Code
+
+- \[Out\] `card` : Structure pointer of `BS2CSNCard` with applied QR Code
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is not supported character string, the error code `BS_SDK_ERROR_INVALID_PARAM` will be returned.

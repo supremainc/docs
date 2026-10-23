@@ -1,0 +1,27 @@
+# BS2_SetDefaultResponseTimeout
+
+<Badge only>+ v2.6.3</Badge> Sets default response timeout between device and server. It defines timeout of API except some APIs such as connection(hardcoded 3s) and `BS2_GetFilteredLog(300s)`.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDefaultResponseTimeout(void* context, long ms);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `ms` : Respond waiting time (milli seconds)
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDefaultResponseTimeout](bs2_getdefaultresponsetimeout)

@@ -1,0 +1,49 @@
+# BS2_SetLiftLockUnlockZone
+
+<Badge only>+ v2.7.0</Badge> Configures a Lift Lock/Unlock zone.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetLiftLockUnlockZone(void* context, uint32_t deviceId, BS2LiftLockUnlockZone* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[See BS2LiftLockUnlockZone Structure](zone_control_api#bs2liftlockunlockzone) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zones` : Lift lock/unlock zone list
+
+- \[In\] `zoneCount` : Number of Lift lock/unlock zone list
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetLiftLockUnlockZone](bs2_getliftlockunlockzone)
+
+[BS2_GetAllLiftLockUnlockZone](bs2_getallliftlockunlockzone)
+
+[BS2_GetLiftLockUnlockZoneStatus](bs2_getliftlockunlockzonestatus)
+
+[BS2_GetAllLiftLockUnlockZoneStatus](bs2_getallliftlockunlockzonestatus)
+
+[BS2_SetLiftLockUnlockZoneAlarm](bs2_setliftlockunlockzonealarm)
+
+[BS2_RemoveLiftLockUnlockZone](bs2_removeliftlockunlockzone)
+
+[BS2_RemoveAllLiftLockUnlockZone](bs2_removeallliftlockunlockzone)

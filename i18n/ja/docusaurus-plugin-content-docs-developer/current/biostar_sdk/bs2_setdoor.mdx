@@ -1,0 +1,55 @@
+# BS2_SetDoor
+
+Configures a door. 2 devices connected through TCP/IP cannot be allocated to 1 logical door.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDoor(void* context, uint32_t deviceId, BS2Door* doors, uint32_t doorCount);
+```
+
+:::info
+
+[See BS2Door Structure](door_control_api#bs2door) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `doors` : List of the doors to be stored
+
+- \[In\] `doorCount` : Number of doors
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDoor](bs2_getdoor)
+
+[BS2_GetAllDoor](bs2_getalldoor)
+
+[BS2_GetDoorStatus](bs2_getdoorstatus)
+
+[BS2_GetAllDoorStatus](bs2_getalldoorstatus)
+
+[BS2_SetDoorAlarm](bs2_setdooralarm)
+
+[BS2_RemoveDoor](bs2_removedoor)
+
+[BS2_RemoveAllDoor](bs2_removealldoor)
+
+[BS2_ReleaseDoor](bs2_releasedoor)
+
+[BS2_LockDoor](bs2_lockdoor)
+
+[BS2_UnlockDoor](bs2_unlockdoor)

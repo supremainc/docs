@@ -1,0 +1,89 @@
+# Version 2.7.0 (V2.7.0.0)
+
+Date: 2020-07-21
+
+## New Features
+
+- Supports XPass D2 Revision, XPass D2 Keypad Revision
+
+- Supports lift lock/unlock zone features based on schedule
+
+- Supports User phrase (Private message) feature on the server
+
+- Supports Global APB By Door Open
+
+1. Device XPass D2 Revision, XPass D2 Keypad Revision are supported.
+
+1. Lift lock/unlock zone which works based on schedules regardless of access group is supported.
+
+   - Refer to structure [BS2LiftFloors](../zone_control_api#bs2liftfloors)
+
+   - Refer to structure [BS2LiftLockUnlockZone](../zone_control_api#bs2liftlockunlockzone)
+
+   - Refer to API [BS2_GetLiftLockUnlockZone](../bs2_getliftlockunlockzone)
+
+   - Refer to API [BS2_GetAllLiftLockUnlockZone](../bs2_getallliftlockunlockzone)
+
+   - Refer to API [BS2_GetLiftLockUnlockZoneStatus](../bs2_getliftlockunlockzonestatus)
+
+   - Refer to API [BS2_GetAllLiftLockUnlockZoneStatus](../bs2_getallliftlockunlockzonestatus)
+
+   - Refer to API [BS2_SetLiftLockUnlockZone](../bs2_setliftlockunlockzone)
+
+   - Refer to API [BS2_SetLiftLockUnlockZoneAlarm](../bs2_setliftlockunlockzonealarm)
+
+   - Refer to API [BS2_RemoveLiftLockUnlockZone](../bs2_removeliftlockunlockzone)
+
+   - Refer to API [BS2_RemoveAllLiftLockUnlockZone](../bs2_removeallliftlockunlockzone)
+
+1. User phrase feature that you can request the user phrase(private message) to the server is supported.
+
+   - Refer to structure [BS2DisplayConfig](../configuration_api#bs2displayconfig)
+
+   - Refer to API [BS2_SetUserPhraseHandler](../bs2_setuserphrasehandler)
+
+   - Refer to API [BS2_ResponseUserPhrase](../bs2_responseuserphrase)
+
+1. Global APB By Door Open is supported.
+
+   Global APB By Door Open has two steps; i) User authentication ii) Actual access based on the door sensor
+
+   You can figure out the user who actually doesn't go in even after successful authentication and the door unlock using this feature.
+
+   - Refer to structure [BS2DoorSensor](../door_control_api#bs2doorsensor)
+
+   - Refer to API [BS2_SetGlobalAPBViolationByDoorOpenHandler](../bs2_setglobalapbviolationbydooropenhandler)
+
+   - Refer to API [BS2_CheckGlobalAPBViolationByDoorOpen](../bs2_checkglobalapbviolationbydooropen)
+
+## Modified Features
+
+1. Fixed the issue that the device returns `BS_SDK_ERROR_CANNOT_FIND_DEVICE` after successful connection due to corrupted communication key exchange. (Only some latest FW)
+
+1. Fixed the issue that SDK can't process received packets from the device with IPv6 connection mode.
+
+   - Refer to structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
+
+   - Refer to API [BS2_VerifyUserEx](../bs2_verifyuserex)
+
+   - Refer to API [BS2_IdentifyUserEx](../bs2_identifyuserex)
+
+   - Refer to API [BS2_EnrolUserEx](../bs2_enroluserex)
+
+   - Refer to API [BS2_VerifyUserSmallEx](../bs2_verifyusersmallex)
+
+   - Refer to API [BS2_IdentifyUserSmallEx](../bs2_identifyusersmallex)
+
+   - Refer to API [BS2_EnrollUserSmallEx](../bs2_enrollusersmallex)
+
+1. Fixed the issue with the error `BS2_SDK_ERROR_INVALID_PACKET` when received log from the device due to the image log larger than 16KB.
+
+   - Refer to API [BS2_GetLogBlob](../bs2_getlogblob)
+
+   - Refer to API [BS2_GetLogSmallBlob](../bs2_getlogsmallblob)
+
+   - Refer to API [BS2_GetLogBlobFromDir](../bs2_getlogblobfromdir)
+
+   - Refer to API [BS2_GetLogSmallBlobFromDir](../bs2_getlogsmallblobfromdir)
+
+   - Refer to API [BS2_GetImageLog](../bs2_getimagelog)

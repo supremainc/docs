@@ -1,0 +1,41 @@
+# BS2_UpdateResource
+
+Updates the resource.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_UpdateResource(void* context, uint32_t deviceId, BS2ResourceElement* resourceElement, uint8_t keepVerifyingSlaveDevice, OnProgressChanged ptrProgressChanged);
+```
+
+:::info
+
+[See BS2ResourceElement Structure](device_api#bs2resourceelement) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `resourceElement` : Resource element
+
+- \[In\] `keepVerifyingSlaveDevice` : Flag that decides whether to enable the authentication on the slave device when upgrading the resource
+
+- \[In\] `ptrProgressChanged` : Progress change listener
+
+:::info
+
+keepVerifyingSlaveDevice parameter needs to be checked whether it is supported from the firmware.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

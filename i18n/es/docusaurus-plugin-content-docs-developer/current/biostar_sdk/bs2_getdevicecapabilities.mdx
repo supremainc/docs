@@ -1,0 +1,33 @@
+# BS2_GetDeviceCapabilities
+
+<Badge only>+ V2.8</Badge> Get the device's capabilities such as card support or finger support.
+
+(SIO2 and DM-20 do not support this API.)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceCapabilities(void* context, uint32_t deviceId, BS2DeviceCapabilities* capabilities);
+```
+
+:::info
+
+[See BS2DeviceCapabilities](device_api#bs2devicecapabilities) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `capabilities` : Address which stores Device Capabilities
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

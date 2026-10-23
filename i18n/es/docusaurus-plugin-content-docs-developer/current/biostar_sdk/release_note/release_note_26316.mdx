@@ -1,0 +1,45 @@
+# Version 2.6.3 (V2.6.3.16)
+
+Date: 2019-11-04
+
+## Modified features
+
+1. Fixed the problem where the devices listed below may fail to connect when connecting.
+
+   * BioEntry Plus 2.0
+
+   * BioEntry W 2.0
+
+   * BioLiteNet 2.0
+
+   * Xpass 2.0
+
+   * Xpass Slim 2.0
+
+1. Fixes a problem where the return value dualIDSupported and useAlphanumericID becomes 0 when `BS2_GetDeviceInfo` is called after directly connection a device by IP or port instead of searching for and connecting a device.
+
+   * Refer to API [BS2_SearchDevices](../bs2_searchdevices)
+
+   * Refer to API [BS2_ConnectDevice](../bs2_connectdevice)
+
+   * Refer to API [BS2_ConnectDeviceViaIP](../bs2_connectdeviceviaip)
+
+   * Refer to API [BS2_GetDeviceInfo](../bs2_getdeviceinfo)
+
+   * Refer to structure [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo)
+
+1. Fixes a problem where a timeout error (`BS_SDK_ERROR_TIMEOUT`) may occur if the devices listed below attempt a factory reset.
+
+   * BioEntry Plus 2.0
+
+   * BioEntry W 2.0
+
+   * BioLiteNet 2.0
+
+   * Xpass 2.0
+
+   * Xpass Slim 2.0
+
+   * Refer to API [BS2_FactoryReset](../bs2_factoryreset)
+
+1. Fixed a problem where the connection would be terminated normally if the device was disconnected and the packet was exchanged in the SDK without closing the connection yet.

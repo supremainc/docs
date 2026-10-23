@@ -1,0 +1,25 @@
+# BS2_IsConnected
+
+Checks device connection status.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_IsConnected(void* context, BS2_DEVICE_ID deviceId, int* connected);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `connected` : Device connection status
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

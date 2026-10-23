@@ -1,0 +1,31 @@
+# BS2_GetFaceConfig
+
+Retrieves face settings from the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFaceConfig(void* context, uint32_t deviceId, BS2FaceConfig* config);
+```
+
+:::info
+
+[See BS2FaceConfig Structure](configuration_api#bs2faceconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Face settings pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

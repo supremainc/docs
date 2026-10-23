@@ -1,0 +1,11 @@
+# Version 2.6.3 (V2.6.3.12)
+
+Date: 2019-09-30
+
+## Modified features
+
+1. Fixed an issue that could lead to infinite loops when network communication is lost and `WSA_INVALID_HANDLE` occurs after the device is connected through SDK.
+
+1. Fixes a problem that can cause too many debugging logs output during packet processing during communication.
+
+   - Newly added `DEBUG_LOG_OPERATION_ALL`(0xFF), the level used in [BS2_SetDebugExCallback](../bs2_setdebugexcallback) and [BS2_SetDebugFileLog](../bs2_setdebugfilelog).

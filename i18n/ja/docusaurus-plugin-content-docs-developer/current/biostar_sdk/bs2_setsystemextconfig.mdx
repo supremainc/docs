@@ -1,0 +1,31 @@
+# BS2_SetSystemExtConfig
+
+Stores Master and slave device encryption settings on the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSystemExtConfig(void* context, uint32_t deviceId, BS2SystemConfigExt* config);
+```
+
+:::info
+
+[See BS2SystemConfigExt Structure](configuration_api#bs2systemconfigext) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : Master and slave device encryption settings pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

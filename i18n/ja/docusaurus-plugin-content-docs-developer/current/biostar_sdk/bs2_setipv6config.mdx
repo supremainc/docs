@@ -1,0 +1,29 @@
+# BS2_SetIPV6Config
+
+<Badge only>+ v2.6.3</Badge> Stores IPv6 configuration information.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetIPV6Config(void* context, uint32_t deviceId, const BS2IPV6Config* config);
+```
+
+:::info
+
+[See BS2IPV6Config Structure](configuration_api#bs2ipv6config) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : IPv6 configuration pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
