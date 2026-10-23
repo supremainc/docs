@@ -121,6 +121,6 @@ BioStar 2 Device SDK v2.4 에서 추가된 새로운 함수들은 2.4 펌웨어 
 
 1. UDP 패킷 페이로드 크기가 v2.4 FW 부터 변경되었습니다. SDK는 이전 펌웨어와 새 펌웨어의 페이로드 크기를 모두 지원하도록 수정되었습니다.
 
-1. [BS2_GetConfig](../bs2_getconfig)의 모든 마스크가 제대로 작동하지 않았습니다. 이것은 버퍼 크기가 추가된 구조체 [BS2MultiWiegandConfig](../configuration_api#bs2multiwiegandconfig) 보다 작게 설정 되었기 때문에 발생했습니다. 이제 버퍼 크기가 증가하여 모든 마스크가 제대로 작동합니다.
+1. [BS2_GetConfig](../bs2_getconfig)의 모든 마스크가 제대로 작동하지 않았습니다. 이것은 버퍼 크기가 추가된 구조체 [BS2MultiWiegandConfig](../configuration_api) 보다 작게 설정 되었기 때문에 발생했습니다. 이제 버퍼 크기가 증가하여 모든 마스크가 제대로 작동합니다.
 
 1. BioEntry Plus와 BioEntry W는 다중 wiegand 기능을 사용할 수 있었지만 SDK에서는 제외되었습니다. 이제 이 장치들도 여러 wiegand 기능을 사용하여 작동 할 수 있습니다.

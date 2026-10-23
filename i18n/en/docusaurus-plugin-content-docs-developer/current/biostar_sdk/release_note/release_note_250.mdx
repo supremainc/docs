@@ -36,7 +36,7 @@ You need to re-build SDK to SDK version upgrade as BioStar 2 Device SDK structur
 
    - Add API [BS2_SetSlaveExDevice](../bs2_setslaveexdevice)
 
-   - Add structure [BS2Rs485SlaveDeviceEX](../configuration_api#bs2rs485slavedeviceex)
+   - Add structure [BS2Rs485SlaveDeviceEX](../slave_control_api#bs2rs485slavedeviceex)
 
 1. Intrusion Alarm Zone supports following features. Normally Intrusion detection system sends signals when the installed sensor on the security facility detected intrusion or abnormal signals and it has two different ways - unmanned and local. In the Unmanned Intrusion detection system, security guards from the control center which is the remote location perform tasks when the an abnormal situation. On the other hand, in the Local Intrusion detection system, resident security guards from its own control center perform the overall task. BioStar targets users who feel pressured by the cost of an Unmanned intrusion system or whose local security guards based on their own Intrusion detection system. Currently, a normal Intrusion Alarm Zone(biostar1.X) is provided, and 3rd party alarm system intrusion detection On/Off device integration will be provided in the near future. In the long term, a professional local control system that can be applied to Video and Visual map features is a goal.
 
@@ -52,7 +52,7 @@ You need to re-build SDK to SDK version upgrade as BioStar 2 Device SDK structur
 
    - Add API [BS2_SetIntrusionAlarmZoneArm](../bs2_setintrusionalarmzonearm)
 
-   - Add structure [BS2IntrusionAlarmZoneBlob](../configuration_api#bs2intrusionalarmzoneblob)
+   - Add structure [BS2IntrusionAlarmZoneBlob](../zone_control_api#bs2intrusionalarmzoneblob)
 
 1. Ethernet Zone is the feature that a specific device(Not BioStar V2.x) performs as Zone Master using Ethernet TCP communication method between devices(Master \<-\> Member). Currently, it supports corresponding features to the existing 1.x Entrance Limit, Fire Alarm Zone.
 
@@ -64,7 +64,7 @@ You need to re-build SDK to SDK version upgrade as BioStar 2 Device SDK structur
 
    - Add API [BS2_SetDeviceZoneAlarm](../bs2_setdevicezonealarm)
 
-   - Add structure [BS2DeviceZoneConfig](../configuration_api#bs2devicezoneconfig)
+   - Add structure [BS2DeviceZoneConfig](../configuration_api)
 
 1. USB log and User export support following features. It is used as T&A using Export/Import user & log data via USB at site where network connection is unavailable. (Usage Scenario) Users are registered at the head office where BioStar server is installed and USB memory which includes registered users is sent to the site, and T&A result is generated with log of the previous month at the beginning of every month. Practically it should be supported as a file type so that it can be handled via USB copy even when this USB data is re-forwarded.
 

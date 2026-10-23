@@ -127,6 +127,6 @@ New APIs have been added that will work only with the v2.4 FW group. Please chec
 
 1. The UDP packet payload size has been changed starting from the v2.4 FW group. The SDK was modified to support both payload sizes for the old and new firmware.
 
-1. The ALL mask of [BS2_GetConfig](../bs2_getconfig) was not working properly. This was caused because the buffer size was set smaller than the added structure [BS2MultiWiegandConfig](../configuration_api#bs2multiwiegandconfig). Now the buffer size has been increased so the ALL mask will work properly.
+1. The ALL mask of [BS2_GetConfig](../bs2_getconfig) was not working properly. This was caused because the buffer size was set smaller than the added structure [BS2MultiWiegandConfig](../configuration_api). Now the buffer size has been increased so the ALL mask will work properly.
 
 1. The BioEntry Plus and BioEntry W did had the capability of using the multiple wiegand feature, but was ruled out in the SDK. Now these devices can operate using the multiple wiegand feature.
