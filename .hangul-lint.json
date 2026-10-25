@@ -1,0 +1,11 @@
+{ 
+   "ignoreWords": [
+      "BioStar",
+      "특성상",
+      "쿼리문"
+   ], 
+   "disabledRules": [
+      "loan.common.001"
+   ], 
+   "rules": [] 
+}
