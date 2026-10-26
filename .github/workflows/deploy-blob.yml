@@ -1,0 +1,56 @@
+name: Deploy to Azure Blob Storage
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  STORAGE_ACCOUNT: supremadocs
+  RESOURCE_GROUP: technical-writer
+  AFD_PROFILE: afd-suprema-docs
+  AFD_ENDPOINT: suprema-docs
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # 문서 최종 수정일(병합 날짜)을 Git 히스토리에서 읽으므로 전체 히스토리가 필요하다. (utils/mergeDateVcs.js)
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+      - name: Build project
+        run: npm run build
+      - name: Clean up image directories
+        # 이미지는 별도 Blob 컨테이너(supremadocs)에서 제공하므로 업로드하지 않는다.
+        run: rm -rf build/img build/en/img build/es/img build/ja/img
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Sync build to $web
+        env:
+          AZCOPY_AUTO_LOGIN_TYPE: AZCLI
+        run: |
+          azcopy sync build "https://${STORAGE_ACCOUNT}.blob.core.windows.net/\$web" \
+            --recursive \
+            --delete-destination=true \
+            --compare-hash=MD5 \
+            --put-md5
+      - name: Purge Front Door cache
+        run: |
+          az afd endpoint purge \
+            --resource-group "$RESOURCE_GROUP" \
+            --profile-name "$AFD_PROFILE" \
+            --endpoint-name "$AFD_ENDPOINT" \
+            --content-paths "/*"
