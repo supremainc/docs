@@ -8,25 +8,41 @@ keywords:
   - Genetec Config Tool
 ---
 
-## 最小システム要件
+## 推奨システムアーキテクチャ
 
-<div className='overflow-x col5--15-10-25'>
+<Image src='/img/integration/genetec/recommended-system-architecture.png' alone />
 
-| \>     | 項目    | 小規模ビジネス サーバー | 中規模ビジネス サーバー | 大規模ビジネス サーバー                                                            |
-| :----- | :---- | :----------- | :----------- | :---------------------------------------------------------------------- |
-| 環境     | 端末 合計 | 50           | 最大 100       | 100 超                                                                   |
-| システム要件 | OS    | \>           | \>           | Microsoft Windows 10 以降（64 ビット）                                         |
-| ^      | CPU   | 8 コア以上       | 16 コア以上      | エンタープライズ規模の導入には事前相談が必要です                                                |
-| ^      | RAM   | 32 GB 以上     | 64 GB コア以上   | ^                                                                       |
-| ^      | 通信    | \>           | \>           | サーバー、クライアント、デバイス間の標準伝送制御プロトコル（TCP/IP）ネットワーク通信プロトコルをサポートします。             |
-| ^      | ^     | \>           | \>           | 動的ホスト構成プロトコル（DHCP）または固定 IP アドレスをサポートします。                                |
-| ^      | ^     | \>           | \>           | ネットワーク設定をサポートします。                                                       |
-| ^      | ^     | \>           | \>           | ネットワーク タイム プロトコル（NTP）をサポートします。                                          |
-| ^      | ^     | \>           | \>           | クライアント（Web ブラウザー）とプラットフォーム間のセキュア ソケット レイヤー（SSL）で保護された HTTPS 通信をサポートします。 |
-| ^      | 暗号化   | \>           | \>           | 指紋テンプレートと顔テンプレートに AES-256 をサポートします。                                     |
-| ^      | ^     | \>           | \>           | 指紋テンプレートと顔テンプレートに AES-256 をサポートします（オプション）。                              |
+:::info
 
-</div>
+- 生体認証端末100台ごとに、プラグイン用の専用サーバーの使用を推奨します。
+
+- メインディレクトリごとにエクストラクタープラグインは一つのみです。
+
+:::
+
+## サーバー推奨事項とシステム要件
+
+### スタンドアロン端末
+
+| ｶﾃｺﾞﾘｰ     | 項目      | 0～20 台                       | 100 台以下           | 100台以上                                                                                                                                                                        |
+| ---------- | ------- | ---------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **推奨**     |         | 既存のサーバーを使用できます（リソースの確認が必要です） | 専用プラグインサーバーを推奨します | 追加のプラグインサーバーが必要です                                                                                                                                                             |
+| **システム環境** | **OS**  | \>                           | \>                | Microsoft Windows 10 以降（64 ビット）                                                                                                                                               |
+| ^          | **CPU** | -                            | 8 コア以上            | 要相談                                                                                                                                                                           |
+| ^          | **RAM** | -                            | 32 GB 以上          | 要相談                                                                                                                                                                           |
+| ^          | **通信**  | \>                           | \>                | サーバー、クライアント、端末間で TCP/IP をサポートします。<br/>DHCP または固定 IP アドレスをサポートします。<br/>ネットワーク設定をサポートします。<br/>ネットワークタイムプロトコル（NTP）をサポートします。<br/>クライアント（Web ブラウザー）とプラットフォーム間の HTTPS（SSL）をサポートします。 |
+
+### CS40
+
+| ｶﾃｺﾞﾘｰ     | 項目                      | 最大    | 備考                                                                                                                                                                            |
+| ---------- | ----------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **端末収容数**  | **サーバーあたりの CS40**       | 最大 60 | 8 CPU コア、32 GB RAM のサーバー仕様に基づく                                                                                                                                                |
+| ^          | **クラウドリンクあたりの CS40 台数** | 最大 30 | -                                                                                                                                                                             |
+| ^          | **CS40 あたりのスレーブ装置数**    | 最大 8  | DM20 または DI24 を使用する場合：**最大 4**                                                                                                                                                |
+| **システム環境** | **OS**                  | \>    | Microsoft Windows 10 以降（64 ビット）                                                                                                                                               |
+| ^          | **CPU**                 | \>    | 8 コア以上                                                                                                                                                                        |
+| ^          | **RAM**                 | \>    | 32 GB 以上                                                                                                                                                                      |
+| ^          | **通信**                  | \>    | サーバー、クライアント、端末間で TCP/IP をサポートします。<br/>DHCP または固定 IP アドレスをサポートします。<br/>ネットワーク設定をサポートします。<br/>ネットワークタイムプロトコル（NTP）をサポートします。<br/>クライアント（Web ブラウザー）とプラットフォーム間の HTTPS（SSL）をサポートします。 |
 
 :::caution
 
@@ -60,14 +76,14 @@ keywords:
 
    > `https://[IP Address of Cloud link]/Features/DuiRIO/Enabled/Set?value=true`
 
-2. 推奨および最大値。 デバイス接続。
+2. 推奨および最大値。デバイス接続。
 
    <div className='overflow-x table-fixed'>
 
-   | 番号 ユーザー数  | クラウド リンク 1 つあたりの推奨デバイス数 | 最大値 接続可能なデバイス |
-   | --------- | ----------------------- | ------------- |
-   | 20,000 以上 | 最大 40                   | 非推奨           |
-   | 10,000 未満 | 最大 50                   | 最大 64         |
+   | 番号ユーザー数   | クラウド リンク 1 つあたりの推奨デバイス数 | 最大値接続可能なデバイス |
+   | --------- | ----------------------- | ------------ |
+   | 20,000 以上 | 最大 40                   | 非推奨          |
+   | 10,000 未満 | 最大 50                   | 最大 64        |
 
    </div>
 
@@ -105,27 +121,27 @@ USB タイプの指紋登録デバイスを使用するには、別途ドライ�
 
    <Image src='/img/integration/genetec/plugin-installation-setup.png' alone />
 
-2. **次へ** をクリックします。
+2. **Next** をクリックします。
 
    <Image src='/img/integration/genetec/plugin-installation1.png' alone />
 
-3. Suprema Plugin をインストールするパスを設定し、**次へ** をクリックします。
+3. Suprema Plugin をインストールするパスを設定し、**Next** をクリックします。
 
    <Image src='/img/integration/genetec/plugin-installation2.png' alone />
 
-4. インストールの準備ができたら、**次へ** をクリックします。
+4. インストールの準備ができたら、**Next** をクリックします。
 
    <Image src='/img/integration/genetec/plugin-installation3.png' alone />
 
-5. インストールが開始されます。 正常に完了するまでお待ちください。
+5. インストールが開始されます。正常に完了するまでお待ちください。
 
    <Image src='/img/integration/genetec/plugin-installation4.png' alone />
 
-6. インストール完了後、コマンド プロンプト ウィンドウが表示されます。 任意のキーを押してウィンドウを閉じます。
+6. インストール完了後、コマンド プロンプト ウィンドウが表示されます。任意のキーを押してウィンドウを閉じます。
 
    <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
 
-7. **閉じる** ボタンをクリックします。
+7. **Close** ボタンをクリックします。
 
    <Image src='/img/integration/genetec/plugin-installation7.png' alone />
 
@@ -147,11 +163,11 @@ USB タイプの指紋登録デバイスを使用するには、別途ドライ�
 
    <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
 
-4. **Select plugin type** で **Suprema Extractor Plugin** を選択し、**次へ** をクリックします。
+4. **Select plugin type** で **Suprema Extractor Plugin** を選択し、**Next** をクリックします。
 
    <Image src='/img/integration/genetec/config-tool-extractor-plugin1.png' width={600} alone />
 
-5. **Entity name** と **Entity description** を入力し、**次へ** をクリックします。
+5. **Entity name** と **Entity description** を入力し、**Next** をクリックします。
 
    <Image src='/img/integration/genetec/config-tool-extractor-plugin2.png' width={600} alone />
 
@@ -161,11 +177,11 @@ USB タイプの指紋登録デバイスを使用するには、別途ドライ�
 
    :::
 
-6. 情報を確認し、**作成** をクリックします。
+6. 情報を確認し、**Create** をクリックします。
 
    <Image src='/img/integration/genetec/config-tool-extractor-plugin3.png' width={600} alone />
 
-7. **Suprema Extractor Plugin** が作成されます。 **閉じる** をクリックします。
+7. **Suprema Extractor Plugin** が作成されます。 **Close** をクリックします。
 
    <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
 
@@ -173,11 +189,11 @@ USB タイプの指紋登録デバイスを使用するには、別途ドライ�
 
    <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
 
-9. **Select plugin type** で **Suprema Device Plugin** を選択し、**次へ** をクリックします。
+9. **Select plugin type** で **Suprema Device Plugin** を選択し、**Next** をクリックします。
 
    <Image src='/img/integration/genetec/config-tool-device-plugin1.png' width={600} alone />
 
-10. **Entity name** と **Entity description** を入力し、**次へ** をクリックします。
+10. **Entity name** と **Entity description** を入力し、**Next** をクリックします。
 
     <Image src='/img/integration/genetec/config-tool-device-plugin2.png' width={600} alone />
 
@@ -187,11 +203,11 @@ USB タイプの指紋登録デバイスを使用するには、別途ドライ�
 
     :::
 
-11. 情報を確認し、**作成** をクリックします。
+11. 情報を確認し、**Create** をクリックします。
 
     <Image src='/img/integration/genetec/config-tool-device-plugin3.png' width={600} alone />
 
-12. **Suprema Device Plugin** が作成されます。 **閉じる** をクリックします。
+12. **Suprema Device Plugin** が作成されます。 **Close** をクリックします。
 
     <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
 

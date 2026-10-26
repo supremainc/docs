@@ -26,9 +26,9 @@ keywords:
 
         2. Inicio de sesión de Security Desk: 1 ea
 
-        3. Complemento extractor Suprema: 1 ea por **Genetec Security Center Server**
+        3. Suprema extractor plugin: 1 ea por **Genetec Security Center Server**
 
-        4. Complemento de dispositivo Suprema: 1 ea por **complemento de dispositivo Suprema**
+        4. Suprema device plugin: 1 ea por **Suprema device plugin**
 
            :::info
 
@@ -110,7 +110,7 @@ Para garantizar el funcionamiento correcto del complemento, habilite el protocol
 
    :::note
 
-   Cuando el protocolo RIO está habilitado, la pestaña **RIO** aparece en la página **Hardware** dentro de **Config Tool** → **Access Control** → **Cloud Link**. 
+   Al habilitar el protocolo RIO, aparece la pestaña **RIO** en la página **Hardware**, en **Config Tool** → **Access control** → **Cloud Link**. 
 
    <Image src='/img/integration/genetec/rio-protocol-hardware.png' width={800} alone />
 
@@ -120,7 +120,7 @@ Para garantizar el funcionamiento correcto del complemento, habilite el protocol
 
 Si desea **extraer plantillas faciales de las imágenes de perfil de los titulares de tarjetas** en GSC, ajuste el tamaño de la imagen para garantizar su calidad.
 
-- Ruta: **Config Tool** → **Access Control** → **General settings**
+- Ruta: **Config Tool** → **Access control** → **General settings**
 
   <Image src='/img/integration/genetec/profile-image-quality-setting.png' width={600} alone />
 
@@ -612,7 +612,7 @@ Puede configurar los ajustes detallados de SIP Intercom.
 
 ## Asignar dispositivo a Cloud Link
 
-1. En **Config Tool**, haga clic en **Access Control** debajo de **Tasks**.
+1. En **Config Tool**, haga clic en **Access control** debajo de **Tasks**.
 
    <Image src='/img/integration/genetec/config-tool-tasks-access-control.png' width={800} alone />
 
@@ -642,15 +642,222 @@ Puede configurar los ajustes detallados de SIP Intercom.
 
    <Image src='/img/integration/genetec/card-format-setting2.png' width={800} alone />
 
-   - Orden de bytes: admite MSB o LSB
+   - **Byte Order**: Admite **MSB** o **LSB**.
 
-   - Tipo de CSN Card_Format: después de habilitar el **tipo de CSN Card_Format** y seleccionar un formato Wiegand, el **plugin convierte los datos de la tarjeta recibidos del dispositivo al formato Wiegand seleccionado y los entrega a Cloud Link**.
+   - CSN Card\_**Format type**: Después de habilitar CSN Card\_**Format type** y seleccionar un formato Wiegand, el **plugin convierte los datos de la tarjeta recibidos del dispositivo al formato Wiegand seleccionado y los entrega a Cloud Link**.
 
    - Configuración de tarjeta Wiegand: los dispositivos pueden leer tarjetas Wiegand según el **formato de tarjeta Wiegand seleccionado**.
 
-   - Credencial personalizada: al usar un formato de credencial personalizada, verifique antes la compatibilidad con los dispositivos Suprema.
+   - **Custom Credential**: Al utilizar un formato de **Custom Credential**, debe verificarse previamente la compatibilidad con los dispositivos Suprema.
 
-3. Haga clic en **botón de guardar** para aplicar el tipo y formato de tarjeta seleccionados a todos los dispositivos.
+3. Haga clic en el **botón Save** para configurar el tipo y el formato de tarjeta seleccionados en todos los dispositivos.
+
+### Ajuste de tarjeta Wiegand
+
+Agregue un formato de tarjeta Wiegand para dispositivos Suprema.
+
+1. Vaya a **Config Tool** → **Tasks** → **Suprema Plugin Configurations** → pestaña **Formato Wiegand**.
+
+   <Image src='/img/integration/genetec/card-format-setting.png' width={800} alone />
+
+2. Haga clic en el botón **+ Add**.
+
+   <Image src='/img/integration/genetec/card-format-setting-wiegand.png' alone />
+
+   - **Information**: Ingrese **Name**, **Description** y **Total Bits**. Para usar un código de instalación, marque **Facility Code Field** y establezca el **Start Bit** y el **End Bit**.
+
+   - **ID Field**: Defina el **Start Bit** y el **End Bit** del ID. Haga clic en **+ Add** para agregar más campos de ID.
+
+   - **Parity Bits**: Haga clic en **+ Add** y defina **Position**, **Type** (**Odd** / **Even**), **Start Bit** y **End Bit**.
+
+   - **Genetec Mapping**: Ingrese el **Genetec Card Format Name**, luego haga clic en **+ Add** para agregar cada campo (p. ej., FC, CN, IL) y defina su **Start Bit**, **Length**, **Reverse** y **Output Order**.
+
+     - **Output Order**: Seleccione **Yes** para usar LSB o desmarque (**No**) para usar MSB.
+
+3. Haga clic en **Apply**.
+
+:::info
+
+- **Genetec Card Format Name** debe ser exactamente igual que el nombre del formato de tarjeta personalizado configurado en **Config Tool** → **Access control** → **General settings**.
+
+- Defina cada campo de **Genetec Mapping** (**Start Bit**, **Length**, **Reverse**, **Output Order**) igual que el campo correspondiente de ese formato de tarjeta personalizado. Los nombres de los campos (FC, CN, IL, etc.) no tienen que coincidir.
+
+- Ingrese el valor de **Total Bits** antes de agregar **Parity Bits**.
+
+- Se pueden usar hasta 15 formatos Wiegand. Los formatos predefinidos no se pueden modificar ni eliminar.
+
+:::
+
+### Ajuste de tarjeta inteligente Suprema
+
+Defina el diseño de las tarjetas inteligentes Suprema (**MIFARE**, **iCLASS**, **DESFire**, **iCLASS Seos**).
+
+1. Vaya a **Config Tool** → **Tasks** → **Suprema Plugin Configurations** → pestaña **Tarjeta inteligente**.
+
+   <Image src='/img/integration/genetec/card-format-setting.png' width={800} alone />
+
+2. Haga clic en el botón **+ Add**.
+
+3. Cuando aparezca la ventana **Add New Smart Card**, establece **Smart Card Type** en **Suprema Smart Card**.
+
+   <Image src='/img/integration/genetec/card-format-setting-smart.png' alone />
+
+4. Ingresa **Name**. Para usar una clave de sitio secundaria, establece **Secondary Key** en **Active**.
+
+5. Selecciona la pestaña Tarjeta y configura las opciones.
+
+   <details>
+   <summary>MIFARE</summary>
+
+   {/* - **Encryption Type** : Establece el tipo de cifrado en **SL1** o **SL3**. */}
+
+   - **Primary Key**: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+   - **Secondary Key**: Sirve para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide.
+
+   - **Start Block Index**: Bloque inicial donde se guardan la información del usuario y las plantillas.
+
+   </details>
+
+   <details>
+   <summary>iCLASS</summary>
+
+   - **Primary Key**: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+   - **Secondary Key**: Sirve para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide.
+
+   - **Start Block Index**: Bloque inicial donde se guardan la información del usuario y las plantillas.
+
+   </details>
+
+   <details>
+   <summary>DESFire</summary>
+
+   - **DESFire Advanced**: Usa tarjetas DESFire emitidas por terceros. Solo se puede configurar DESFire.
+
+   - **Primary Key**: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+   - **Secondary Key**: Sirve para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide.
+
+   - **App ID**: Configura esta opción para leer un área específica de la tarjeta. Funciona como un directorio que contiene **File ID**.
+
+   - **File ID**: Establece el ID de archivo.
+
+   - **Encryption Type**: Establece el tipo de cifrado en **DES/3DES** o **AES**.
+
+   </details>
+
+   <details>
+   <summary>iClass Seos</summary>
+
+   - **Primary Key**: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+   - **Secondary Key**: Sirve para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide.
+
+   - **ADF Address Value**: Dirección ADF donde se almacenan las credenciales digitales.
+
+   </details>
+
+6. En **Layout**, establece el número y el tamaño de las plantillas de huellas digitales y faciales que se pueden escribir en Access On Card.
+
+   - **Template Count**: Establece el número de plantillas de huellas digitales que se incluirán en el diseño.
+
+   - **Template Size**: Define la cantidad de bytes que usa cada plantilla de huellas digitales.
+
+   - **Use Face Template**: Elige si se usará la plantilla facial.
+
+   - **Face Template Size**: Establece la cantidad de bytes que usa la plantilla facial.
+
+7. Haga clic en **Apply**.
+
+:::info
+
+- Los valores de clave deben tener 2–96 caracteres y convertirse a HEX antes de aplicarlos. Ingresa la clave en el campo de entrada de la derecha, haz clic en **Convert to HEX**, y usa el **Converting Result** como clave.
+
+- **Use Face Template** está disponible en BioStation 3 Max, BioEntry W3, BioStation 3 y FaceStation F2.
+
+- Para usar **DESFire Advanced**, ingresa con precisión la información de **App Master Key**, **App Master Key Index**, **File Read Access Key**, **File Read Access Key Index**, **File Write Access Key**, **File Write Access Key Index**, **App ID**, **File ID**, **Encryption Type**.
+
+:::
+
+### Ajuste personalizado de tarjeta inteligente
+
+Establece el diseño de tarjetas inteligentes emitidas por terceros. Las tarjetas inteligentes personalizadas admiten **MIFARE**, **DESFire** y **FeliCa**.
+
+1. Vaya a **Config Tool** → **Tasks** → **Suprema Plugin Configurations** → pestaña **Tarjeta inteligente**.
+
+   <Image src='/img/integration/genetec/card-format-setting.png' width={800} alone />
+
+2. Haga clic en el botón **+ Add**.
+
+3. Cuando aparezca la ventana **Add New Smart Card**, establezca **Smart Card Type** en **Custom Smart Card**.
+
+   <Image src='/img/integration/genetec/card-format-setting-custom.png' alone />
+
+4. Ingresa **Name**. Para usar una clave de sitio secundaria, establece **Secondary Key** en **Active**.
+
+5. Selecciona la pestaña Tarjeta y configura las opciones.
+
+   <details>
+   <summary>MIFARE</summary>
+
+   {/* - **Encryption Type** : Establece el tipo de cifrado en **SL1** o **SL3**. */}
+
+   - **Primary Key**: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+   - **Secondary Key**: Sirve para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide.
+
+   - **Start Block Index**: Bloque inicial donde se guardan la información del usuario y las plantillas.
+
+   - **Skip Bytes**: Configure el punto de inicio para leer el número de tarjeta.
+
+   - **Data Size**: Configure el tamaño de datos de la tarjeta que leerá.
+
+   </details>
+
+   <details>
+   <summary>DESFire</summary>
+
+   - **DESFire Advanced**: Usa tarjetas DESFire emitidas por terceros. Solo se puede configurar DESFire.
+
+   - **Primary Key**: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+   - **Secondary Key**: Sirve para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide.
+
+   - **App ID**: Configura esta opción para leer un área específica de la tarjeta. Funciona como un directorio que contiene **File ID**.
+
+   - **File ID**: Establece el ID de archivo.
+
+   - **Encryption Type**: Establece el tipo de cifrado en **DES/3DES** o **AES**.
+
+   - **Skip Bytes**: Configure el punto de inicio para leer el número de tarjeta.
+
+   - **Data Size**: Configure el tamaño de datos de la tarjeta que leerá.
+
+   </details>
+
+   <details>
+   <summary>Felica</summary>
+
+   - **System Code**: Ingrese el código del sistema para leer tarjetas FeliCa en hexadecimal, con un máximo de 4 caracteres.
+
+   - **Service Code**: Ingrese el código de servicio para leer tarjetas FeliCa en hexadecimal, con un máximo de 4 caracteres.
+
+   - **ID Field**: Configure los bloques que leerá de la tarjeta. Haga clic en **+ Add** para configurar hasta 8 bloques (**Block Number** 0–150).
+
+   </details>
+
+6. Haga clic en **Apply**.
+
+:::info
+
+- Los valores de clave deben tener entre 2 y 96 caracteres y convertirse a HEX antes de aplicarlos (**Convert to HEX**).
+
+- FeliCa solo se admite en el firmware BioStation 3 versión 1.3.0 o superior.
+
+- Para usar **DESFire Advanced**, ingresa con precisión la información de **App Master Key**, **App Master Key Index**, **File Read Access Key**, **File Read Access Key Index**, **File Write Access Key**, **File Write Access Key Index**, **App ID**, **File ID**, **Encryption Type**.
+
+:::
 
 ## Configuración de puertas
 
@@ -682,7 +889,7 @@ Causa raíz:
 
 Cualquier cambio en el tipo de entrada realizado desde:
 
-**Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** no se **aplicará al dispositivo Suprema** directamente.
+La configuración de **Config Tool** → **Access control** → **Cloud Link** → **Peripherals Tab** **no se aplicará al dispositivo Suprema** directamente.
 
 <br/>
 

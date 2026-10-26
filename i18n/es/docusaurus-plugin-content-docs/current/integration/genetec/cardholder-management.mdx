@@ -10,19 +10,19 @@ keywords:
 
 ## Enrolamiento de tarjetas
 
-1. En **Config Tool**, haz clic en **Gestión de titulares de tarjetas** en **Tareas**.
+1. En **Config Tool**, haz clic en **Cardholder management** en **Tasks**.
 
    <Image src='/img/integration/genetec/card-enrollment.png' width={800} alone />
 
-2. Haz clic en el botón **Nuevo** de la parte inferior.
+2. Haz clic en el botón **New** de la parte inferior.
 
    <Image src='/img/integration/genetec/new-ico.png' alone />
 
-3. Ingresa el **Nombre** y el **Apellido**, luego haz clic en el botón **Agregar una credencial**. En la ventana emergente que aparece, haz clic en **Entrada automática**.
+3. Ingresa el **First name** y el **Last name**, luego haz clic en el botón **Add a credential**. En la ventana emergente que aparece, haz clic en **Automatic entry**.
 
    <Image src='/img/integration/genetec/card-enrollment-add-credential1.png' width={800} alone />
 
-4. Selecciona la **Puerta** asignada al dispositivo Suprema como lector y luego acerca una tarjeta al dispositivo.
+4. Selecciona la **Door** asignada al dispositivo Suprema como lector y luego acerca una tarjeta al dispositivo.
 
    <Image src='/img/integration/genetec/card-enrollment-add-credential2.png' width={800} alone />
 
@@ -64,11 +64,11 @@ Si no sigues las instrucciones en pantalla, el enrolamiento facial puede tardar 
 
 :::info
 
-- **Resolución**: Mayor que 250 x 250 píxeles
+- **Resolution**: Mayor que 250 x 250 píxeles
 
-- **Tamaño de imagen**: Hasta 10 MB
+- **Image size**: Hasta 10 MB
 
-- **Formato admitido**: solo JPG, JPEG o PNG
+- **Supported format**: solo JPG, JPEG o PNG
 
 :::
 
@@ -86,11 +86,11 @@ Si no sigues las instrucciones en pantalla, el enrolamiento facial puede tardar 
 
    <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
 
-4. Haz clic en el botón **+Agregar** para crear una plantilla facial; luego haz clic en el botón **Escanear** y escanea el rostro en el dispositivo.
+4. Haz clic en el botón **+ Add** para crear una plantilla facial; luego haz clic en el botón **Scan** y escanea el rostro en el dispositivo.
 
    <Image src='/img/integration/genetec/enroll-from-device4.png' alone />
 
-5. Comprueba que el rostro se haya escaneado correctamente y luego haz clic en el botón **Enrolar** para enrolarlo.
+5. Comprueba que el rostro se haya escaneado correctamente y luego haz clic en el botón **Enroll** para enrolarlo.
 
 ### Enrolar plantilla facial con foto de perfil de Genetec
 
@@ -106,11 +106,11 @@ Si no sigues las instrucciones en pantalla, el enrolamiento facial puede tardar 
 
    <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
 
-4. Haz clic en el botón **+Agregar** para crear una plantilla facial; luego activa **Usar foto de Genetec** para cargar automáticamente la foto de perfil del usuario. El dispositivo Suprema extrae plantillas faciales de las fotos de perfil de usuario.
+4. Haz clic en el botón **+ Add** para crear una plantilla facial; luego activa **Use Genetec Photo** para cargar automáticamente la foto de perfil del usuario. El dispositivo Suprema extrae plantillas faciales de las fotos de perfil de usuario.
 
    <Image src='/img/integration/genetec/enroll-from-device5.png' alone />
 
-5. Comprueba la foto cargada y luego haz clic en el botón **Enrolar** para enrolar el rostro.
+5. Comprueba la foto cargada y luego haz clic en el botón **Enroll** para enrolar el rostro.
 
 ## Enrolamiento masivo
 
@@ -118,7 +118,7 @@ Si no sigues las instrucciones en pantalla, el enrolamiento facial puede tardar 
 
    <Image src='/img/integration/genetec/global-settings1.png' alone />
 
-2. Haz clic en el botón **Carga masiva de rostros**. Puedes revisar el progreso de extracción facial.
+2. Haz clic en el botón **Bulk Face Upload**. Puedes revisar el progreso de extracción facial.
 
    <Image src='/img/integration/genetec/global-settings2.png' alone />
 
@@ -136,30 +136,114 @@ Si no sigues las instrucciones en pantalla, el enrolamiento facial puede tardar 
 
 ## Cómo buscar un titular de tarjeta con una plantilla facial
 
-1. Haz clic en **Búsqueda avanzada** en la página **Gestión de titulares de tarjetas**.
+1. Haz clic en **Advanced search** en la página **Cardholder management**.
 
    <Image src='/img/integration/genetec/advanced-search.png' width={500} alone />
 
-2. Haz clic en **Campos personalizados**, actívalo y haz clic en **Agregar criterio**. Luego, selecciona **BiometricsTimestamp**.
+2. Haz clic en **Custom fields**, actívalo y haz clic en **Add criterion**. Luego, selecciona **BiometricsTimestamp**.
 
    <Image src='/img/integration/genetec/advanced-search-custom-fields1.png' width={500} alone />
 
-3. Selecciona **Rango específico** y define el período de búsqueda.
+3. Selecciona **Specific range** y define el período de búsqueda.
 
    :::note
 
-   **Ejemplo**
+   **Example**
 
-   - **Desde**: fecha de instalación del complemento
+   - **From**: fecha de instalación del complemento
 
-   - **Hasta**: hoy
+   - **To**: hoy
 
    :::
 
-   Para buscar por una hora específica, haz clic en **Definir hora** e ingresa la hora.
+   Para buscar por una hora específica, haz clic en **Set time** e ingresa la hora.
 
    <Image src='/img/integration/genetec/advanced-search-custom-fields2.png' alone />
 
-4. Haz clic en el botón **Buscar**.
+4. Haz clic en el botón **Search**.
 
 5. Aparecen todos los titulares de tarjetas que tienen plantillas faciales.
+
+## Modo de autenticación privada
+
+Configura un modo de autenticación diferente para cada usuario, además del modo predeterminado del dispositivo o en lugar de este.
+
+1. En la ventana **Enrolment Credentials**, haz clic en **Private Auth**.
+
+   <Image src='/img/integration/genetec/enrolment-credentials-private-auth.png' width={800} alone />
+
+2. En la ventana **Private Auth Mode**, activa **Private Mode**.
+
+   <Image src='/img/integration/genetec/private-auth-mode1.png' width={900} alone />
+
+3. Haz clic en **+ Add**. Aparece la ventana **Add New Auth Mode**.
+
+4. Configura **Extended Auth Mode** si es necesario.
+
+   <Image src='/img/integration/genetec/private-auth-mode2.png' width={900} alone />
+
+   - **Not Use**: **Biometrics** (huella digital o rostro) se usa como una credencial.
+
+   - **Use**: **Fingerprint** y **Face / Visual Face** se pueden combinar como credenciales separadas.
+
+5. Arrastra las credenciales deseadas (**Biometrics**, **Fingerprint**, **Face / Visual Face**, **Card**, **ID**, **PIN**) al área central para crear un modo de autenticación y haz clic en **OK**.
+
+6. Configura **Include Device Default Authentication Mode**.
+
+   - ON: Se usan los modos de autenticación predeterminados y los modos de autenticación privada.
+
+   - OFF: Solo se usan los modos de autenticación privada.
+
+7. Verifica los modos agregados en la lista **Auth Mode** y haz clic en **Save**.
+
+:::info
+
+**Extended Auth Mode** solo es compatible con FaceStation F2, BioStation 3 y BioEntry W3.
+
+:::
+
+## Inscripción de AoC (Access On Card)
+
+Selecciona Access On Card para almacenar la información del usuario en la tarjeta. Incluye el ID de tarjeta, el PIN, el grupo de acceso, el período, la plantilla de huella digital, la plantilla facial y el modo de autenticación privada.
+
+Antes de emitirla, configura el formato de tarjeta inteligente (Smart Card Setting) y aplícalo al dispositivo usado para la inscripción.
+
+1. En la ventana **Enrolment Credentials**, haz clic en **AoC Enrollment**.
+
+   <Image src='/img/integration/genetec/enrolment-credentials-aoc-enrollment.png' width={800} alone />
+
+2. Cuando aparezca la ventana **Enroll Card**, selecciona Tarjeta inteligente en las opciones de **Card Type**.
+
+   <Image src='/img/integration/genetec/aoc-enroll-card.png' width={900} alone />
+
+3. Selecciona el dispositivo para la inscripción de tarjetas en el campo **Device**.
+
+4. Después de seleccionarlo, el campo **Card Layout Format** muestra el formato de diseño configurado en el dispositivo.
+
+5. Selecciona **Access On Card** en las opciones de **Smart Card Type**.
+
+6. Seleccione una plantilla de huella digital o una plantilla facial si está disponible. Si no tiene una plantilla disponible, omita este paso.
+
+   - **Fingerprint Template on Card**: Selecciona **Use** y, luego, selecciona **Select** para cada dedo que vas a escribir. Marque **Duress** para una huella digital bajo coacción.
+
+     <Image src='/img/integration/genetec/aoc-enroll-card1.png' width={900} alone />
+
+   - **Face Template on Card**: Marque **Use** y luego marque _Seleccionar_ para elegir la plantilla facial que va a escribir.
+
+     <Image src='/img/integration/genetec/aoc-enroll-card2.png' width={900} alone />
+
+7. (Opcional) **Private Authentication Mode**: Haga clic en **+ Add** para agregar reglas de autenticación para escribir en la tarjeta inteligente.
+
+   <Image src='/img/integration/genetec/aoc-enroll-card3.png' width={900} alone />
+
+8. Haga clic en el botón **Write Smart Card**.
+
+:::info
+
+- El titular de la tarjeta debe tener una regla de acceso y datos biométricos (huella digital o rostro) inscritos antes de emitir un **Access On Card**.
+
+- **Access On Card** no puede configurar el ID de la tarjeta manualmente.
+
+- Las secciones **Fingerprint Template on Card** y **Face Template on Card** siguen el diseño de la tarjeta (**Template Count**, **Use Face Template**).
+
+:::
