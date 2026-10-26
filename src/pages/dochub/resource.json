@@ -832,7 +832,7 @@
         "models": [
             "CS-40"
         ],
-        "version": "1.7.3",
+        "version": "1.7.4",
         "manuals": {
             "ko": "device/corestation_40/CoreStation_IG_1.12_KO_260622.pdf",
             "en": "device/corestation_40/CoreStation_IG_1.12_EN_260622.pdf",
@@ -840,15 +840,15 @@
             "ja": "device/corestation_40/CoreStation_IG_1.12_JA_260622.pdf"
         },
         "release_notes": {
-            "ko": "device/corestation_40/CoreStation_ReleaseNotes_1.7.3_KO_260612.pdf",
-            "en": "device/corestation_40/CoreStation_ReleaseNotes_1.7.3_EN_260612.pdf"
+            "ko": "device/corestation_40/CoreStation_RN_1.7.4_KO_261022.pdf",
+            "en": "device/corestation_40/CoreStation_RN_1.7.4_EN_261022.pdf"
         },
         "a_e": "device/corestation_40/SUPREMA_CoreStation_AE-Specification_250731.docx",
         "dt": {
             "ko": "",
             "en": ""
         },
-        "release_date": "2026-07-06"
+        "release_date": "2026-10-22"
     },
     {
         "category": "intelligent",
