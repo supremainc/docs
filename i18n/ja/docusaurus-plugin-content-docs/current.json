@@ -691,6 +691,10 @@
     "message": "SSO & SCIM を設定する",
     "description": "The label for category 'SSO & SCIM 설정하기' in sidebar 'biostar_air'"
   },
+  "sidebar.biostarx.category.감사 추적 관리하기": {
+    "message": "監査トレイルを管理する​",
+    "description": "The label for category '감사 추적 관리하기' in sidebar 'biostarx'"
+  },
   "sidebar.aicamwebserver.category.출입 통제 관리하기": {
     "message": "入退室制御管理",
     "description": "The label for category '출입 통제 관리하기' in sidebar 'aicamwebserver'"

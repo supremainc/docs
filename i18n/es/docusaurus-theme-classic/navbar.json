@@ -125,7 +125,7 @@
   },
   "item.label.Secure I/O 2": {
     "message": "Secure I/O 2",
-    "description": "Navbar item with label Secure I/O 2"
+    "description": "Opción de la barra de navegación: «Secure I/O 2»"
   },
   "item.label.Extended Module": {
     "message": "Extended Module",

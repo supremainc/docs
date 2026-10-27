@@ -72,51 +72,35 @@ La autenticación por huella está disponible solo en BS3M-ODB y BS3M-OAPB.
 
 4. Pulsa <Cmd sid='ui_037' product='dev' /> para eliminar el elemento seleccionado.
 
-<PageBreak />
-
 ## Operación
 
-### Autenticación en servidor
-
-Configura la autenticación en servidor.
+Configure las opciones de autenticación.
 
 1. Presione <Image src='/img/common/ico-menu.svg' ico alone /> y autentíquese con la credencial de nivel de administrador.
 
-2. Después de pulsar <Cmd sid='ui_256' product='dev' />, active <Cmd sid='ui_265' product='dev' /> en <Cmd sid='ui_187' product='dev' />.
+2. Presione <Cmd sid='ui_256' product='dev' />, luego habilite las opciones deseadas en <Cmd sid='ui_265' product='dev' />.
 
    <Image src='/img/device/bs3m-operation.png' />
 
-   * <Cmd sid='ui_187' product='dev' />: Cuando se establece la autenticación en servidor, BioStar X realiza la autenticación del usuario sin que el dispositivo la realice. Se puede usar cuando el dispositivo tiene demasiada información de usuarios o cuando el dispositivo está instalado en exteriores.
+   * <Cmd sid='ui_186' product='dev' />: Con la comparación en el servidor, BioStar X autentica a los usuarios en lugar del dispositivo. Esto resulta útil cuando el dispositivo almacena grandes cantidades de información de usuarios. También ayuda a evitar exponer en el exterior un dispositivo que almacena información de credenciales.
 
-:::info
+      :::info
 
-* <Cmd sid='ui_185' product='dev' /> solo puede usar tarjetas e ID.
+      * <Cmd sid='ui_185' product='dev' /> solo puede usar huella, tarjeta e ID.
 
-* Si usa <Cmd sid='ui_185' product='dev' />, habilite la coincidencia con el servidor tanto en el dispositivo como en BioStar X. Para obtener información detallada sobre la configuración de la coincidencia con servidor en BioStar X, consulte la <Linkto to='platform/biostar_x/settings-server-server#servermatching'>Guía del administrador de BioStar X</Linkto>.
+      * Si usa <Cmd sid='ui_185' product='dev' />, habilite la coincidencia con el servidor tanto en el dispositivo como en BioStar X. Para obtener información detallada sobre la configuración de la coincidencia con servidor en BioStar X, consulte la <Linkto to='platform/biostar_x/settings-server-server#servermatching'>Guía del administrador de BioStar X</Linkto>.
 
-:::
-
-<PageBreak />
-
-### Autenticación QR
-
-Active la autenticación mediante código QR.
-
-1. Presione <Image src='/img/common/ico-menu.svg' ico alone /> y autentíquese con la credencial de nivel de administrador.
-
-2. Después de pulsar <Cmd sid='ui_256' product='dev' />, active <Cmd sid='ui_265' product='dev' /> para <Cmd sid='ui_041' product='dev' />.
-
-   <Image src='/img/device/bs3m-operation.png' />
+      :::
 
    * <Cmd sid='ui_041' product='dev' />: Configure si se utiliza la autenticación por código QR a través de la cámara del dispositivo.
 
+      :::info
+
+      Se requiere una licencia de dispositivo independiente para usar <Cmd sid='ui_041' product='dev' />. Para obtener más información, consulta [Licencia](settings#license).
+
+      :::
+
    * <Cmd sid='ui_329' product='dev' />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario. Solo se puede configurar cuando <Cmd sid="ui_041" product="dev" /> está activado.
-
-   :::info
-
-   Se requiere una licencia de dispositivo independiente para usar <Cmd sid='ui_041' product='dev' />. Para obtener más información, consulta [Licencia](settings#license).
-
-   :::
 
 ## PIN
 
@@ -129,8 +113,6 @@ Configura si se utiliza el teclado aleatorio al ingresar contraseñas.
    <Image src='/img/device/bs3m-pin.png' />
 
    * <Cmd sid='ui_204' product='dev' />: Las posiciones de las teclas numéricas pueden mezclarse aleatoriamente al ingresar una contraseña para evitar filtraciones.
-
-<PageBreak />
 
 ## Opciones de visualización del resultado de autenticación
 
@@ -263,8 +245,6 @@ Cambie la configuración de la autenticación facial.
          * <Cmd sid='ui_370' product='dev' />: El dispositivo solo se puede usar para comprobar si se lleva mascarilla. Cuando este modo está activado, cualquier usuario que lleve mascarilla puede acceder, sin importar la autenticación.
 
          :::
-
-<PageBreak />
 
 ### Huella <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {/* #fingerprint */}
 

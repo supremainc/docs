@@ -415,16 +415,16 @@
         ],
         "version": "1.1.0",
         "manuals": {
-            "ko": "device/biostation_3_max/BioStation 3 Max_UG_1.01_KO_260625.pdf",
-            "en": "device/biostation_3_max/BioStation 3 Max_UG_1.01_EN_260625.pdf",
-            "es": "device/biostation_3_max/BioStation 3 Max_UG_1.01_ES_260625.pdf",
-            "ja": "device/biostation_3_max/BioStation 3 Max_UG_1.01_JA_260625.pdf"
+            "ko": "device/biostation_3_max/BioStation 3 Max_UG_1.02_KO_261026.pdf",
+            "en": "device/biostation_3_max/BioStation 3 Max_UG_1.02_EN_261026.pdf",
+            "es": "device/biostation_3_max/BioStation 3 Max_UG_1.02_ES_261026.pdf",
+            "ja": "device/biostation_3_max/BioStation 3 Max_UG_1.02_JA_261026.pdf"
         },
         "release_notes": {
             "ko": "device/biostation_3_max/BioStation 3 Max_RN_1.1.0_KO_260923.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_RN_1.1.0_EN_260923.pdf"
         },
-        "a_e": "device/biostation_3_max/SUPREMA_BioStation_3_Max_AE-Specification_260625.docx",
+        "a_e": "device/biostation_3_max/SUPREMA_BioStation_3_Max_AE-Specification_261026.docx",
         "dt": {
             "ko": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_EN.pdf"

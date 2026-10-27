@@ -31,7 +31,19 @@ You can change the display and sound settings of the device.
 
    * <Cmd sid='ui_184' product='dev' />: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. <Cmd sid='ui_184' product='dev' /> can be set using the BioStar X API. If not set, does not display a message when authentication is successful even if <Cmd sid='ui_184' product='dev' /> is enabled on the device.
 
-   * <Cmd sid='ui_365' product='dev' />: Set whether the screen saver is enabled or not. It reduces unnecessary energy consumption by lowering the brightness of the screen when the device is not in use.
+   * <Cmd sid='ui_398' product='dev' />: Select the idle screen that appears when the device is not in use.
+
+      * <Cmd sid='ui_364' product='dev' />: Shows the selected home screen without another idle screen.
+
+      * <Cmd sid='ui_365' product='dev' />: Shows the screensaver. Reduce power consumption by lowering screen brightness when the device is not in use.
+
+      * <Cmd sid='ui_399' product='dev' />: Plays videos added in BioStar X. Set <Cmd sid='ui_400' product='dev' /> to loop the video during the specified time. At other times, select <Cmd sid='ui_364' product='dev' /> or <Cmd sid='ui_365' product='dev' />. For more information about video playback, refer to the [BioStar X Administrator Guide](https://docs.supremainc.com/en/platform/biostar_x/settings-device-details-advanced#playVideo).
+
+         :::info
+
+         Add up to 3 videos.
+
+         :::
 
    * <Cmd sid='ui_131' product='dev' />: Set the time (sec) for the menu screen to disappear automatically. If there is no button input during a set time, the screen will return to the home screen.
 
@@ -43,9 +55,11 @@ You can change the display and sound settings of the device.
 
    * <Cmd sid='ui_153' product='dev' />: Set the volume.
 
-   * <Cmd sid='ui_028' product='dev' />: Adjust the speaker's output volume when using intercom.
+   * <Cmd sid='ui_401' product='dev' />: Adjust the volume of videos played on the idle screen.
 
-   * <Cmd sid='ui_026' product='dev' />: Adjust the microphone's input volume when using intercom.
+   * <Cmd sid='ui_028' product='dev' />: Adjust the speaker volume when using the IP intercom.
+
+   * <Cmd sid='ui_026' product='dev' />: Adjust the microphone volume when using the IP intercom.
 
 :::info
 
@@ -425,6 +439,6 @@ Select the type of user ID to register to the device.
 
    * <Cmd sid='ui_200' product='dev' />: You can enter a user ID with numbers only.
 
-   * <Cmd sid='ui_237' product='dev' />: You can enter a user ID using alphanumeric characters and certain symbols `_` `-`.
+   * <Cmd sid='ui_237' product='dev' />: Enter a user ID using alphanumeric characters and certain symbols (`_`, `-`, and `.`).
 
 3. Select to the desired item.
