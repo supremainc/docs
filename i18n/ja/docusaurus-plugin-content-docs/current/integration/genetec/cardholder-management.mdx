@@ -10,7 +10,7 @@ keywords:
 
 ## カード登録
 
-1. **Config Tool** で、**タスク** の **Cardholder management** をクリックします。
+1. **Config Tool** で、**Tasks** の **Cardholder management** をクリックします。
 
    <Image src='/img/integration/genetec/card-enrollment.png' width={800} alone />
 
@@ -18,7 +18,7 @@ keywords:
 
    <Image src='/img/integration/genetec/new-ico.png' alone />
 
-3. **First name** と **Last name** を入力し、**Add a credential** ボタンをクリックします。 表示されたポップアップで、**Automatic entry** をクリックします。
+3. **First name** と **Last name** を入力し、**Add a credential** ボタンをクリックします。表示されたポップアップで、**Automatic entry** をクリックします。
 
    <Image src='/img/integration/genetec/card-enrollment-add-credential1.png' width={800} alone />
 
@@ -56,7 +56,7 @@ keywords:
 
 - 動かずに、画面を見つめて顔を登録します。
 
-- 画面に 2 つの顔が表示されないように注意してください。 顔は 1 人ずつ登録してください。
+- 画面に 2 つの顔が表示されないように注意してください。顔は 1 人ずつ登録してください。
 
 - 暗い場所では顔を登録しないでください。
 
@@ -118,7 +118,7 @@ keywords:
 
    <Image src='/img/integration/genetec/global-settings1.png' alone />
 
-2. **Bulk Face Upload** ボタンをクリックします。 顔抽出の進行状況を確認できます。
+2. **Bulk Face Upload** ボタンをクリックします。顔抽出の進行状況を確認できます。
 
    <Image src='/img/integration/genetec/global-settings2.png' alone />
 
@@ -140,7 +140,7 @@ keywords:
 
    <Image src='/img/integration/genetec/advanced-search.png' width={500} alone />
 
-2. **Custom fields** をクリックし、**On** に切り替えて、**Add criterion** をクリックします。 次に、**BiometricsTimestamp** を選択します。
+2. **Custom fields** をクリックし、**On** に切り替えて、**Add criterion** をクリックします。次に、**BiometricsTimestamp** を選択します。
 
    <Image src='/img/integration/genetec/advanced-search-custom-fields1.png' width={500} alone />
 
@@ -163,3 +163,87 @@ keywords:
 4. **Search** ボタンをクリックします。
 
 5. 顔テンプレートを持つすべてのカードホルダーが表示されます。
+
+## 個人認証モード
+
+端末のデフォルトの認証モードに加えて、または代わりに、ユーザーごとに別の認証モードを設定します。
+
+1. **Enrolment Credentials** ウィンドウで、**Private Auth** をクリックします。
+
+   <Image src='/img/integration/genetec/enrolment-credentials-private-auth.png' width={800} alone />
+
+2. **Private Auth Mode** ウィンドウで、**Private Mode** をオンにします。
+
+   <Image src='/img/integration/genetec/private-auth-mode1.png' width={900} alone />
+
+3. **+ Add** をクリックします。 **Add New Auth Mode** ウィンドウが表示されます。
+
+4. 必要に応じて **Extended Auth Mode** を設定します。
+
+   <Image src='/img/integration/genetec/private-auth-mode2.png' width={900} alone />
+
+   - **Not Use**：**Biometrics**（指紋または顔）を単一のクレデンシャルとして使用します。
+
+   - **Use**：**Fingerprint** と **Face / Visual Face** を別々のクレデンシャルとして組み合わせて使用します。
+
+5. 必要なクレデンシャル（**Biometrics**、**Fingerprint**、**Face / Visual Face**、**Card**、**ID**、**PIN**）を中央エリアにドラッグして認証モードを作成し、**OK** をクリックします。
+
+6. **Include Device Default Authentication Mode** を設定します。
+
+   - 有効：端末のデフォルト認証モードと個人認証モードの両方を使用します。
+
+   - 無効：個人認証モードのみを使用します。
+
+7. **Auth Mode** リストで追加したモードを確認し、**Save** をクリックします。
+
+:::info
+
+FaceStation F2、BioStation 3、BioEntry W3 のみが **Extended Auth Mode** をサポートします。
+
+:::
+
+## AoC 登録（Access On Card）
+
+カードにユーザー情報を保存するには、Access On Card を選択します。これには、カード ID、PIN、アクセスグループ、期間、指紋テンプレート、顔テンプレート、個人認証モードが含まれます。
+
+発行前に、スマートカード形式（Smart Card Setting）を設定し、エンロールに使用する端末に適用します。
+
+1. **Enrolment Credentials** ウィンドウで、**AoC Enrollment** をクリックします。
+
+   <Image src='/img/integration/genetec/enrolment-credentials-aoc-enrollment.png' width={800} alone />
+
+2. **Enroll Card** ウィンドウが表示されたら、**Card Type** オプションで **スマートカード** を選択します。
+
+   <Image src='/img/integration/genetec/aoc-enroll-card.png' width={900} alone />
+
+3. **Device** フィールドで、カード登録に使用する端末を選択します。
+
+4. 選択すると、端末で設定したカードレイアウト形式が **Card Layout Format** フィールドに表示されます。
+
+5. **Smart Card Type** オプションで **Access On Card** を選択します。
+
+6. 利用できる場合は、指紋テンプレートまたは顔テンプレートを選択します。テンプレートがない場合、この手順をスキップする。
+
+   - **Fingerprint Template on Card**：**Use**をチェックし、書き込む指ごとに**Select**をチェックする。強制用指紋には**Duress**をチェックする。
+
+     <Image src='/img/integration/genetec/aoc-enroll-card1.png' width={900} alone />
+
+   - **Face Template on Card**：**Use**をチェックし、書き込む顔テンプレートで_選択_をチェックする。
+
+     <Image src='/img/integration/genetec/aoc-enroll-card2.png' width={900} alone />
+
+7. （任意）**Private Authentication Mode**：**+ Add**をクリックし、スマートカードに書き込む認証ルールを追加する。
+
+   <Image src='/img/integration/genetec/aoc-enroll-card3.png' width={900} alone />
+
+8. **Write Smart Card**ボタンをクリックする。
+
+:::info
+
+- **Access On Card**を発行する前に、カード所有者にはアクセスルールと生体データ(指紋または顔)が登録(エンロール)されている必要がある。
+
+- **Access On Card** ではカードIDを手動で設定できません。
+
+- **Fingerprint Template on Card**と**Face Template on Card**のセクションは、カードレイアウト（**Template Count**、**Use Face Template**）に従う。
+
+:::

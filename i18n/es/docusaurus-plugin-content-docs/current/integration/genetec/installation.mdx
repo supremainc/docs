@@ -8,25 +8,41 @@ keywords:
   - Genetec Config Tool
 ---
 
-## Requisitos mínimos del sistema
+## Arquitectura del sistema recomendada
 
-<div className='overflow-x col5--15-10-25'>
+<Image src='/img/integration/genetec/recommended-system-architecture.png' alone />
 
-| >                     | Ítem               | Servidor para pequeña empresa | Servidor para mediana empresa | Servidor para empresa grande                                                                                                          |
-| :-------------------- | :----------------- | :---------------------------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
-| Entorno               | Total Dispositivos | 50                            | Hasta 100                     | Más de 100                                                                                                                            |
-| Requisito del sistema | SO                 | >                             | >                             | Microsoft Windows 10 o posterior (64 bits)                                                                                            |
-| ^                     | CPU                | 8 núcleos o más               | 16 núcleos o más              | La implementación de nivel empresarial requiere consulta previa                                                                       |
-| ^                     | RAM                | 32 GB o más                   | 64 GB Core o más              | ^                                                                                                                                     |
-| ^                     | Comunicación       | >                             | >                             | Admite el protocolo estándar de comunicación de red Transmission Control Protocol (TCP/IP) entre servidores, clientes y dispositivos. |
-| ^                     | ^                  | >                             | >                             | Admite Dynamic Host Configuration Protocol (DHCP) o una dirección IP estática.                                                        |
-| ^                     | ^                  | >                             | >                             | Admite la configuración de red.                                                                                                       |
-| ^                     | ^                  | >                             | >                             | Admite Network Time Protocol (NTP).                                                                                                   |
-| ^                     | ^                  | >                             | >                             | Admite comunicación HTTPS protegida por Secure Socket Layer (SSL) entre el cliente (navegador web) y la plataforma.                   |
-| ^                     | Cifrado            | >                             | >                             | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial.                                                            |
-| ^                     | ^                  | >                             | >                             | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial (opcional).                                                 |
+:::info
 
-</div>
+- Se recomienda usar un servidor dedicado para el plugin por cada 100 dispositivos biométricos.
+
+- Solo un plugin extractor por directorio principal.
+
+:::
+
+## Recomendación del servidor y requisitos del sistema
+
+### Dispositivos independientes
+
+| Categoría                 | Ítem             | 0-20 dispositivos                                                   | Hasta 100 dispositivos                            | 100 o más dispositivos                                                                                                                                                                                                                                                                                                   |
+| ------------------------- | ---------------- | ------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Recomendación**         |                  | Se puede usar el servidor existente (sujeto a revisión de recursos) | Se recomienda un servidor dedicado para el plugin | Se requiere un servidor adicional para el plugin                                                                                                                                                                                                                                                                         |
+| **Requisito del sistema** | **SO**           | >                                                                   | >                                                 | Microsoft Windows 10 o posterior (64 bits)                                                                                                                                                                                                                                                                               |
+| ^                         | **CPU**          | -                                                                   | 8 núcleos o más                                   | Requiere consulta                                                                                                                                                                                                                                                                                                        |
+| ^                         | **RAM**          | -                                                                   | 32 GB o más                                       | Requiere consulta                                                                                                                                                                                                                                                                                                        |
+| ^                         | **Comunicación** | >                                                                   | >                                                 | Incluye soporte para TCP/IP entre servidores, clientes y dispositivos.<br/>Incluye soporte para DHCP o dirección IP estática.<br/>Incluye soporte para ajustes de red.<br/>Incluye soporte para Protocolo de tiempo de red (NTP).<br/>Incluye soporte para HTTPS (SSL) entre el cliente (navegador web) y la plataforma. |
+
+### CS40
+
+| Categoría                     | Ítem                               | Máximo   | Observaciones                                                                                                                                                                                                                                                                                                            |
+| ----------------------------- | ---------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Capacidad de dispositivos** | **CS40 por servidor**              | Hasta 60 | Según una especificación de servidor de 8 núcleos de CPU y 32 GB de RAM                                                                                                                                                                                                                                                  |
+| ^                             | **CS40 por enlace a la nube**      | Hasta 30 | -                                                                                                                                                                                                                                                                                                                        |
+| ^                             | **Dispositivos esclavos por CS40** | Hasta 8  | Al usar DM20 o DI24: **Hasta 4**                                                                                                                                                                                                                                                                                         |
+| **Requisito del sistema**     | **SO**                             | >        | Microsoft Windows 10 o posterior (64 bits)                                                                                                                                                                                                                                                                               |
+| ^                             | **CPU**                            | >        | 8 núcleos o más                                                                                                                                                                                                                                                                                                          |
+| ^                             | **RAM**                            | >        | 32 GB o más                                                                                                                                                                                                                                                                                                              |
+| ^                             | **Comunicación**                   | >        | Incluye soporte para TCP/IP entre servidores, clientes y dispositivos.<br/>Incluye soporte para DHCP o dirección IP estática.<br/>Incluye soporte para ajustes de red.<br/>Incluye soporte para Protocolo de tiempo de red (NTP).<br/>Incluye soporte para HTTPS (SSL) entre el cliente (navegador web) y la plataforma. |
 
 :::caution
 
@@ -105,15 +121,15 @@ Comuníquese con el equipo de socios comerciales de Suprema para obtener ayuda.
 
    <Image src='/img/integration/genetec/plugin-installation-setup.png' alone />
 
-2. Haga clic en **Siguiente**.
+2. Haga clic en **Next**.
 
    <Image src='/img/integration/genetec/plugin-installation1.png' alone />
 
-3. Establezca la ruta donde se instalará el complemento Suprema y luego haga clic en **Siguiente**.
+3. Establezca la ruta donde se instalará el complemento Suprema y luego haga clic en **Next**.
 
    <Image src='/img/integration/genetec/plugin-installation2.png' alone />
 
-4. Si la instalación está lista, haga clic en **Siguiente**.
+4. Si la instalación está lista, haga clic en **Next**.
 
    <Image src='/img/integration/genetec/plugin-installation3.png' alone />
 
@@ -125,7 +141,7 @@ Comuníquese con el equipo de socios comerciales de Suprema para obtener ayuda.
 
    <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
 
-7. Haga clic en el botón **Cerrar**.
+7. Haga clic en el botón **Close**.
 
    <Image src='/img/integration/genetec/plugin-installation7.png' alone />
 
@@ -139,19 +155,19 @@ Comuníquese con el equipo de socios comerciales de Suprema para obtener ayuda.
 
    <Image src='/img/integration/genetec/config-tool.png' alone />
 
-2. Haga clic en **Plugins** en **Tareas**.
+2. Haga clic en **Plugins** en **Tasks**.
 
    <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
 
-3. Haga clic en **Agregar una entidad** en la pantalla **Plugins** y luego seleccione **Plugin** de la lista.
+3. Haga clic en **Add an entity** en la pantalla **Plugins** y luego seleccione **Plugin** de la lista.
 
    <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
 
-4. En **Select plugin type**, seleccione **Suprema Extractor Plugin** y haga clic en **Siguiente**.
+4. En **Select plugin type**, seleccione **Suprema Extractor Plugin** y haga clic en **Next**.
 
    <Image src='/img/integration/genetec/config-tool-extractor-plugin1.png' width={600} alone />
 
-5. Ingrese el **Entity name** y la **Entity description**, y luego haga clic en **Siguiente**.
+5. Ingrese el **Entity name** y la **Entity description**, y luego haga clic en **Next**.
 
    <Image src='/img/integration/genetec/config-tool-extractor-plugin2.png' width={600} alone />
 
@@ -161,23 +177,23 @@ Comuníquese con el equipo de socios comerciales de Suprema para obtener ayuda.
 
    :::
 
-6. Verifique la información y haga clic en **Crear**.
+6. Verifique la información y haga clic en **Create**.
 
    <Image src='/img/integration/genetec/config-tool-extractor-plugin3.png' width={600} alone />
 
-7. Se creará el **Suprema Extractor Plugin**. Haga clic en **Cerrar**.
+7. Se creará el **Suprema Extractor Plugin**. Haga clic en **Close**.
 
    <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
 
-8. Haga clic en **Agregar una entidad** en la pantalla **Plugins** y luego seleccione **Plugin** de la lista.
+8. Haga clic en **Add an entity** en la pantalla **Plugins** y luego seleccione **Plugin** de la lista.
 
    <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
 
-9. En **Select plugin type**, seleccione **Suprema Device Plugin** y haga clic en **Siguiente**.
+9. En **Select plugin type**, seleccione **Suprema Device Plugin** y haga clic en **Next**.
 
    <Image src='/img/integration/genetec/config-tool-device-plugin1.png' width={600} alone />
 
-10. Ingrese el **Entity name** y la **Entity description**, y luego haga clic en **Siguiente**.
+10. Ingrese el **Entity name** y la **Entity description**, y luego haga clic en **Next**.
 
     <Image src='/img/integration/genetec/config-tool-device-plugin2.png' width={600} alone />
 
@@ -187,11 +203,11 @@ Comuníquese con el equipo de socios comerciales de Suprema para obtener ayuda.
 
     :::
 
-11. Verifique la información y haga clic en **Crear**.
+11. Verifique la información y haga clic en **Create**.
 
     <Image src='/img/integration/genetec/config-tool-device-plugin3.png' width={600} alone />
 
-12. Se creará el **Suprema Device Plugin**. Haga clic en **Cerrar**.
+12. Se creará el **Suprema Device Plugin**. Haga clic en **Close**.
 
     <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
 
