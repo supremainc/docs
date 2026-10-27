@@ -1364,6 +1364,7 @@ function createSidebars(preview) {
             id: 'device/corestation_20/release-notes/index',
           },
           items: [
+            'device/corestation_20/release-notes/106',
             'device/corestation_20/release-notes/105',
             'device/corestation_20/release-notes/104',
             'device/corestation_20/release-notes/103',

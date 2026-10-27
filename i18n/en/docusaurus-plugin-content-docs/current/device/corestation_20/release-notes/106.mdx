@@ -1,0 +1,41 @@
+---
+id: 106
+title: Firmware Version 1.0.6
+---
+
+# Firmware Version 1.0.6 (Build No. 1.0.6_261023)
+
+Release<Separator/>2026-10-27
+
+:::caution
+
+- After upgrading the firmware to v1.0.3, it is not able to downgrade to an earlier version of the firmware.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+    {/* (CS20FW-353) [Setup Manager] 보안 취약점 개선
+    (CS20FW-354) [Setup Manager] CVE 취약점 개선 */}
+1. Improved CoreStation Setup Manager security vulnerabilities
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+    {/* (CS20FW-335) [FISF-3102] 복원 장치에 물리적으로 연결되지 않은 Slave가 BioStar에서 연결된 것으로 표시되고, 장치 정보가 Unknown (버전정보 0.0.0)으로 표시되는 현상 - 1.0.5 */}
+1. Disconnected slave devices shown as online after restoring CoreStation settings. <Badge>1.0.5</Badge>
+
+    {/* (CS20FW-341) 사용자에 Lock Override 카드가 설정되어 있으면 Trigger&Action으로 하위 Wiegand Reader가 Disable Device 동작되지 않는 문제 - 1.0.4 */}
+1. Child Wiegand reader not being locked by **Trigger & Action** when a **Lock Override** card is assigned to a user. <Badge>1.0.4</Badge>
+
+    {/* (CS20FW-340) Wiegand reader로 Door 생성 후 Wiegand 장치가 disable 상태일 때, LockOverride 카드 인증이 안되는 현상 (특정사용자) - 1.0.4 */}
+1. **Lock Override** card authentication not working on a door created with a Wiegand reader when the reader is disabled. <Badge>1.0.4</Badge>
+
+</BugLists>
