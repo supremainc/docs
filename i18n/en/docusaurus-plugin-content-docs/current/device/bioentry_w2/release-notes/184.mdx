@@ -1,0 +1,40 @@
+---
+id: 184
+title: Firmware Version 1.8.4
+---
+
+# Firmware Version 1.8.4 (Build No. 1.8.4_260807)
+
+Release<Separator/>2026-10-27
+
+:::caution
+
+Devices with the new SE processor cannot downgrade to a lower version after upgrading the firmware to v1.7.1 or later. Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+    {/* (BEWIIFWDI-1133) 서버와 장치 간 시간 동기화 관련 동작 개선 */}
+1. Improved time synchronization behavior between server and devices.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+    {/* (BEWIIFWDI-1127) Visual Face 포함해 Smart Card발급 후 인증시도 시 유효기간 만료로 인증실패되는 현상 수정 */}
+1. Authentication fails with a ‘period expired’ message when using a smart card issued with a visual face included. <Badge>1.0.0</Badge>
+
+    {/* (BEWIIFWDI-1115) 두번째 등록된 Card로 인증시 첫번째 등록된 카드ID로 출력되는 문제 */}
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.8.0</Badge>
+
+    {/* (BEWIIFWDI-1138) DST 적용 시 Schedule(Daily)에 따른 Access Group 인증 성공 이상 동작 */}
+1. Access group authentication behaves abnormally according to the schedule (Daily) when DST is applied. <Badge>1.2.0</Badge>
+
+</BugLists>
