@@ -1,0 +1,194 @@
+---
+id: troubleshooting
+title: Troubleshooting
+description: Provides solutions for common plugin issues, such as connection failures, events not received, SSL certificate errors, and slow performance, along with frequently asked questions.
+keywords: [ Troubleshooting, FAQ, Connection Error ]
+---
+
+<details className='faqs'>
+<summary>**Connection Failed Error**</summary>
+
+**Symptoms:**
+
+* The plugin cannot connect to the BioStar X server.
+
+* Authentication or connection errors appear in the logs.
+
+**Solutions:**
+
+1. **Verify network connectivity**
+
+   ping (BioStar X server IP) -t
+
+1. **Verify credentials**
+
+   * Confirm that the configured username and password are correct.
+
+   * Log in directly to the BioStar X web interface using the same credentials.
+
+1. **Check firewall and routing**
+
+   * Ensure the required ports (for example, HTTP or HTTPS and `C:\Program Files\BioStar X(x64)\setting.conf`) are allowed between the Milestone XProtect and BioStar X servers.
+
+   * Check the collision of port status.
+
+1. **Confirm BioStar X server status**
+
+   * Verify that the BioStar X service is running.
+
+   * Restart the BioStar X service if necessary, in accordance with your change management process.
+
+</details>
+
+<details className='faqs'>
+<summary>**No Events Received Issue**</summary>
+
+**Symptoms:**
+
+* The plugin connects successfully, but no events are displayed in Milestone XProtect.
+
+* Event lists remain empty even when access activity occurs.
+
+**Solutions:**
+
+1. **Review event polling configuration**
+
+   * Set **Event polling interval (ms)** to a shorter interval, such as 1000–5000 ms, for near real-time event updates.
+
+   * Increase **Event polling max count** to 200 or 500 to handle higher event volumes.
+
+1. **Verify event generation in BioStar X**
+
+   * Trigger test events (for example, present a credential at a reader) to confirm events are generated.
+
+   * Check BioStar X event logs to confirm that events are recorded on the BioStar X side.
+
+</details>
+
+<details className='faqs'>
+<summary>**SSL Certificate Errors**</summary>
+
+**Symptoms:**
+
+* SSL/TLS connection failures between Milestone XProtect and BioStar X.
+
+* Certificate validation or trust errors in the logs.
+
+**Solutions:**
+
+1. **Self-signed certificates**
+
+   * For initial testing, you may temporarily set "Use SSL" to false to confirm connectivity over HTTP, if permitted by your security policy.
+
+   * Import the BioStar X server certificate or issuing CA certificate into the Windows certificate store on the Milestone XProtect server to establish trust.
+
+1. **Public or enterprise certificates**
+
+   * Verify that the certificate is valid and not expired.
+
+   * Ensure the full certificate chain (including intermediate CAs) is installed correctly on the BioStar X server.
+
+</details>
+
+<details className='faqs'>
+<summary>**Slow Performance**</summary>
+
+**Symptoms:**
+
+* Delayed event processing in Milestone XProtect.
+
+* High CPU or network utilization on the Milestone XProtect or BioStar X servers.
+
+**Solutions:**
+
+1. **Adjust polling settings for load balancing**
+
+   * Increase the **Event polling interval (ms)** to reduce the frequency of polling and server load.
+
+   * Decrease **Event polling max count** if processing large batches of events is causing delays.
+
+1. **Check network latency and bandwidth**
+
+   * Ensure that latency between the Milestone XProtect and BioStar X servers is within acceptable bounds for your deployment.
+
+   * If necessary, work with your network team to optimize routing, bandwidth, or Quality of Service (QoS) for access control traffic.
+
+</details>
+
+<details className='faqs'>
+<summary>**"No access control plugins are available..." error pop-up message occurs**</summary>
+
+**Symptom:**
+
+<Image src='/img/integration/milestone/troubleshooting-no-plugins.png' alone />
+
+Create Access Control System Integration
+
+* No access control plugins are available. Verify that plugins are installed on the event server and that the Event Server service is running.
+
+**Solution:**
+
+<Image src='/img/integration/milestone/troubleshooting-restart-event-server.png' alone />
+
+1. Right-click on the **Milestone Event Server** icon in the taskbar.
+
+1. Select **Restart Event Server service** and then restart the **Milestone Event Server**, **Management Client**, and **Smart Client** to verify that the error is resolved.
+
+</details>
+
+## Frequently Asked Questions
+
+<details className='faqs'>
+<summary>**How many devices can the plugin handle?**</summary>
+
+The plugin can typically support more than 1000 devices per plugin instance, subject to server hardware, database performance, and network capacity. For very large deployments, consider performance testing and scaling using multiple instances if required.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can I use multiple BioStar X servers?**</summary>
+
+Each MIPAccessControl plugin instance connects to a single BioStar X server. To integrate multiple BioStar X servers, configure a separate MIPAccessControl access control system instance in Milestone XProtect for each server.
+
+</details>
+
+<details className='faqs'>
+<summary>**What is the difference between polling-related options?**</summary>
+
+The plugin uses HTTP-based polling of the BioStar X API at intervals defined by the **Event polling interval (ms)** and **Event polling max count** settings. Shorter intervals and higher max counts provide faster event delivery but increase load on both systems. Longer intervals and lower counts reduce load but may delay event visibility.
+
+</details>
+
+<details className='faqs'>
+<summary>**How do I update the plugin?**</summary>
+
+1. Download the latest version of the plugin installer from your distribution source.
+
+1. In Milestone Management Client, stop or disable the relevant MIPAccessControl access control system instance if required by your operational procedures.
+
+1. Run the new installer (MilestonePluginSetup.msi) with administrative privileges.
+
+1. Restart the Milestone Management Client and, if required, restart the Milestone XProtect Access Control services.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can I customize event types?**</summary>
+
+Event categorizations and mappings used by the plugin are defined in the EventTypeCategories.json configuration file. You can adjust this file to customize how BioStar X events are grouped and displayed in Milestone XProtect, subject to your change control process and testing.
+
+</details>
+
+<details className='faqs'>
+<summary>**Is the plugin compatible with BioStar X cloud deployments?**</summary>
+
+The plugin is designed primarily for on-premises BioStar X installations. Use with cloud-hosted BioStar X depends on secure network connectivity, routing, and API accessibility between the Milestone XProtect server and the BioStar X environment.
+
+</details>
+
+<details className='faqs'>
+<summary>**How do I back up my configuration?**</summary>
+
+Plugin configuration, including connection and mapping settings, is stored in the Milestone XProtect configuration database. Ensure that your regular Milestone XProtect backup procedures are in place; these backups will include MIPAccessControl plugin settings.
+
+</details>
