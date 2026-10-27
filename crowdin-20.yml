@@ -24,6 +24,7 @@
       # "/docs/integration/**/*.mdx",
       "/docs/integration/ccure/appendices.mdx",
       "/docs/integration/genetec/appendices.mdx",
+      "/docs/integration/milestone/appendices.mdx",
       "/docs/integration/ccure/troubleshooting.mdx",
     ],
     "type": "mdx_v1"
