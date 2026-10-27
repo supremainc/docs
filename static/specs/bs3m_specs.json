@@ -120,19 +120,19 @@
             "model1": {
               "label": "BS3M-DB, BS3M-ODB",
               "value": {
-               "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
-               "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
-               "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
-               "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>、FeliCa"
+               "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+               "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+               "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+               "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3、FeliCa"
               }
             },
             "model2": {
               "label": "BS3M-APB, BS3M-OAPB",
               "value": {
-               "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-               "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-               "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-               "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>、FeliCa、iCLASS SE/SR/Seos"
+               "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+               "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+               "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+               "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3、FeliCa、iCLASS SE/SR/Seos"
               }
             }
           }
@@ -146,7 +146,7 @@
             "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
             "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
           },
-          "annotation_label": "anno3"
+          "annotation_label": "anno2"
         },
         "mobile": {
           "label": "모바일",
@@ -167,8 +167,8 @@
           "label": "QR/바코드",
           "label_id": "specs.credentials.qr_barcode",
           "value": true,
-          "annotation_label": "anno4",
-          "annotation_value": "anno5"
+          "annotation_label": "anno3",
+          "annotation_value": "anno4"
         },
         "qr_barcode_read_range": {
         "label": "QR/바코드 인식 권장 거리",
@@ -179,7 +179,7 @@
             "es": "De 8 a 25 cm",
             "ja": "8 ~ 25 cm"
          },
-         "annotation_label": "anno6"
+         "annotation_label": "anno5"
         }
       }
     },
@@ -363,7 +363,7 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "100,000",
-          "annotation_value": "anno7"
+          "annotation_value": "anno6"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
@@ -505,7 +505,7 @@
           "label": "PoE+",
           "label_id": "specs.interface.poe_plus",
           "type": "model",
-          "annotation_label": "anno8",
+          "annotation_label": "anno7",
           "items": {
             "model1": {
               "label": "BS3M-DB, BS3M-ODB",

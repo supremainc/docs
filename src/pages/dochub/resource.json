@@ -415,16 +415,16 @@
         ],
         "version": "1.1.0",
         "manuals": {
-            "ko": "device/biostation_3_max/BioStation 3 Max_UG_1.01_KO_260625.pdf",
-            "en": "device/biostation_3_max/BioStation 3 Max_UG_1.01_EN_260625.pdf",
-            "es": "device/biostation_3_max/BioStation 3 Max_UG_1.01_ES_260625.pdf",
-            "ja": "device/biostation_3_max/BioStation 3 Max_UG_1.01_JA_260625.pdf"
+            "ko": "device/biostation_3_max/BioStation 3 Max_UG_1.02_KO_261026.pdf",
+            "en": "device/biostation_3_max/BioStation 3 Max_UG_1.02_EN_261026.pdf",
+            "es": "device/biostation_3_max/BioStation 3 Max_UG_1.02_ES_261026.pdf",
+            "ja": "device/biostation_3_max/BioStation 3 Max_UG_1.02_JA_261026.pdf"
         },
         "release_notes": {
             "ko": "device/biostation_3_max/BioStation 3 Max_RN_1.1.0_KO_260923.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_RN_1.1.0_EN_260923.pdf"
         },
-        "a_e": "device/biostation_3_max/SUPREMA_BioStation_3_Max_AE-Specification_260625.docx",
+        "a_e": "device/biostation_3_max/SUPREMA_BioStation_3_Max_AE-Specification_261026.docx",
         "dt": {
             "ko": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3_max/BioStation 3 Max_DrillingTemplate_EN.pdf"
@@ -705,7 +705,7 @@
             "XPD2-GDB",
             "XPD2-GKDB"
         ],
-        "version": "1.8.4",
+        "version": "1.8.5",
         "manuals": {
             "ko": "device/xpass_d2/XPass D2_IG_1.12_KO_260624.pdf",
             "en": "device/xpass_d2/XPass D2_IG_1.12_EN_260624.pdf",
@@ -713,15 +713,15 @@
             "ja": "device/xpass_d2/XPass D2_IG_1.12_JA_260624.pdf"
         },
         "release_notes": {
-            "ko": "device/xpass_d2/XPass D2_ReleaseNotes_1.8.4_KO_260722.pdf",
-            "en": "device/xpass_d2/XPass D2_ReleaseNotes_1.8.4_EN_260722.pdf"
+            "ko": "device/xpass_d2/XPass D2_ReleaseNotes_1.8.5_KO_260730.pdf",
+            "en": "device/xpass_d2/XPass D2_ReleaseNotes_1.8.5_EN_260730.pdf"
         },
         "a_e": "device/xpass_d2/SUPREMA_XPass_D2_AE-Specification_260622.docx",
         "dt": {
             "ko": "device/xpass_d2/XPass D2_DrillingTemplate_KO.pdf",
             "en": "device/xpass_d2/XPass D2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-07-22"
+        "release_date": "2026-07-30"
     },
     {
         "category": "rfmobile",

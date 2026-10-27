@@ -29,9 +29,9 @@ Registre información de usuario que incluya datos de autenticación biométrica
 
    * <Image src='/img/common/ico-photo.svg' ico alone />: Registre una foto de usuario.
 
-   * **Nombre**: Introduzca el nombre de usuario.
+   * **Nombre**: Introduzca el nombre de usuario. Ingrese hasta 48 caracteres, incluidos símbolos especiales (`~` `!` `@` `#` `$` `%` `^` `&` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}` `;` `.` `'`). No se permiten nombres que comiencen con `&` `@` `~`.
 
-   * **ID**: Ingrese un número entre 1 y 4294967295 para registrar un ID de usuario. Si <Cmd sid='ui_168' product='dev' /> está configurado en <Cmd sid='ui_237' product='dev' />, puede usar una combinación de caracteres alfanuméricos y los símbolos `_` `-` como ID, con un máximo de 32 caracteres.
+   * **ID**: Ingrese un número entre 1 y 4294967295 para registrar un ID de usuario. Si <Cmd sid='ui_168' product='dev' /> está establecido en <Cmd sid='ui_237' product='dev' />, ingrese hasta 32 caracteres con caracteres alfanuméricos y ciertos símbolos (`_` `-` `.`). Los ID no pueden incluir espacios. Use puntos (`.`), pero el ID no puede ser un solo punto (`.`) ni dos puntos (`..`).
 
    * <Cmd sid='ui_228' product='dev' />: Registre un rostro para la autenticación del usuario. Pulsa <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' /> y sigue las instrucciones en pantalla para registrar tu rostro. Presione <Image src='/img/common/ico-add.svg' ico alone /> para añadir más rostros. Consulte [Inscribir rostros de usuario](#enrolling-user-faces) para obtener más información sobre el registro de rostros.
 
@@ -39,7 +39,19 @@ Registre información de usuario que incluya datos de autenticación biométrica
 
    * <Cmd sid='ui_323' product='dev' />: Registre una tarjeta para la autenticación del usuario. Presione <Cmd sid='ui_323' product='dev' /> → <Cmd sid='ui_108' product='dev' />, luego escanee la tarjeta en la unidad de autenticación de tarjetas RF para asignarla al usuario. Presione <Cmd sid='ui_323' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> para registrar más tarjetas.
 
+      :::info
+
+      Haga clic en <Cmd sid='ui_256' product='dev' /> y active <Cmd sid='ui_265' product='dev' /> con <Cmd sid='ui_041' product='dev' /> para usar la autenticación <Cmd sid='ui_042' product='dev' />; se requiere una licencia de dispositivo independiente. Para obtener más información, consulta [Licencia](settings#license).
+
+      :::
+
    * <Cmd sid='ui_040' product='dev' />: Ingrese el PIN que desea usar. Presione <Cmd sid='ui_040' product='dev' /> → <Cmd sid='ui_108' product='dev' /> e introduzca el PIN que desea usar. Para confirmarlo, introduzca el PIN nuevamente y luego presione <Cmd sid='ui_037' product='dev' />. Para evitar filtraciones, ingrese un PIN de 4 a 16 dígitos.
+
+      :::info
+
+      Al usar la función <Cmd sid='ui_128' product='dev' />, ingrese un número de al menos 8 dígitos.
+
+      :::
 
    * <Cmd sid='ui_172' product='dev' />: Seleccione los permisos que desea asignar al usuario.
 
@@ -58,6 +70,8 @@ Registre información de usuario que incluya datos de autenticación biométrica
       :::
 
    * <Cmd sid='ui_250' product='dev' />: Configure la duración de uso de la cuenta de usuario.
+
+   * <Cmd sid='ui_363' product='dev' />: <Badge only>BS3M-ODB, BS3M-OAPB</Badge> Seleccione el número de huella digital para usar como huella digital de coacción. Si alguien lo coacciona para abrir una puerta, autentíquese con esta huella digital para enviar alarma a BioStar X. Inscriba al menos 2 huellas digitales para usar esta característica.
 
    * <Cmd sid='ui_371' product='dev' />: Configura el modo ampliado de autenticación personal. Este modo le permite combinar métodos de autenticación del usuario, incluidos ambos rostros. De lo contrario, utilice el modo de autenticación básico del dispositivo.
 
@@ -89,9 +103,7 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
    :::
 
-<PageBreak />
-
-### Inscripción de huella digital del usuario <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {/* #enrolling-user-fingerprint */}
+### Inscripción de huella digital de usuario <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {/* #enrolling-user-fingerprint */}
 
 1. Presione <Image src='/img/common/ico-menu.svg' ico alone /> y autentíquese con la credencial de nivel de administrador.
 
@@ -140,8 +152,6 @@ El gestor de usuarios o el administrador pueden modificar la información de usu
 * <Cmd sid='ui_320' product='dev' /> se puede registrar en BioStar X. Para obtener información detallada sobre cómo registrar un Grupo de Acceso, consulte la <Linkto to='platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup'>Guía del Administrador de BioStar X</Linkto>.
 
 :::
-
-<PageBreak />
 
 ## Eliminar todos los usuarios
 

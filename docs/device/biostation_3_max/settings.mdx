@@ -27,7 +27,19 @@ keywords: [화면, 소리, 통신, 장치]
 
    * <Cmd sid='ui_184' product='dev' />: 사용자가 인증할 때 화면에 표시할 개인 메시지 사용 여부를 설정할 수 있습니다. <Cmd sid='ui_184' product='dev' />는 BioStar X API를 이용하여 설정할 수 있습니다. 설정하지 않은 경우, 장치에서 <Cmd sid='ui_184' product='dev' />를 활성화하더라도 인증 성공 시 메시지가 표시되지 않습니다.
 
-   * <Cmd sid='ui_365' product='dev' />: 화면 보호기 사용 여부를 설정할 수 있습니다. 화면 보호기를 사용하면 장치를 사용하지 않을 때 화면 밝기를 줄여 불필요한 전력 소모를 줄일 수 있습니다.
+   * <Cmd sid='ui_398' product='dev' />: 장치를 사용하지 않을 때 화면에 표시할 대기화면을 설정할 수 있습니다.
+
+      * <Cmd sid='ui_364' product='dev' />: 다른 대기화면 없이, 설정한 홈 화면을 표시합니다.
+
+      * <Cmd sid='ui_365' product='dev' />: 화면 보호기를 표시합니다. 장치를 사용하지 않을 때 화면 밝기를 낮춰 전력 소모를 줄일 수 있습니다.
+
+      * <Cmd sid='ui_399' product='dev' />: BioStar X에 등록한 영상을 재생합니다. <Cmd sid='ui_400' product='dev' />을 설정하면 지정한 시간 동안 영상이 반복 재생되며, 그 외 시간에는 <Cmd sid='ui_364' product='dev' /> 또는 <Cmd sid='ui_365' product='dev' /> 중 표시할 화면을 선택할 수 있습니다. 동영상 재생에 대한 자세한 내용은 [BioStar X 관리자 설명서](https://docs.supremainc.com/platform/biostar_x/settings-device-details-advanced#playVideo)를 참조하세요.
+
+         :::info
+
+         동영상은 최대 3개까지 등록할 수 있습니다.
+
+         :::
 
    * <Cmd sid='ui_131' product='dev' />: 메뉴 화면이 자동으로 사라지는 시간(초)을 설정할 수 있습니다. 설정한 시간 동안 버튼 입력이 없다면 홈 화면으로 이동합니다.
 
@@ -39,9 +51,11 @@ keywords: [화면, 소리, 통신, 장치]
 
    * <Cmd sid='ui_153' product='dev' />: 소리 크기를 설정할 수 있습니다.
 
-   * <Cmd sid='ui_028' product='dev' />: IP 인터폰 사용 시 스피커에서 출력되는 음량의 크기를 조절할 수 있습니다.
+   * <Cmd sid='ui_401' product='dev' />: 대기 화면에서 재생되는 영상의 음량을 조절할 수 있습니다.
 
-   * <Cmd sid='ui_026' product='dev' />: IP 인터폰 사용 시 마이크에 입력되는 음량의 크기를 조절할 수 있습니다.
+   * <Cmd sid='ui_028' product='dev' />: IP 인터폰 사용 시 스피커에서 출력되는 음량을 조절할 수 있습니다.
+
+   * <Cmd sid='ui_026' product='dev' />: IP 인터폰 사용 시 마이크에 입력되는 음량을 조절할 수 있습니다.
 
 :::info
 
@@ -421,6 +435,6 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
    * <Cmd sid='ui_200' product='dev' />: 사용자 ID를 숫자로만 입력할 수 있습니다.
 
-   * <Cmd sid='ui_237' product='dev' />: 사용자 ID를 영문, 숫자, 일부 기호 `_` `-`를 조합하여 입력할 수 있습니다.
+   * <Cmd sid='ui_237' product='dev' />: 사용자 ID를 영숫자와 일부 특수 기호(`_` `-` `.`)를 조합하여 입력할 수 있습니다.
 
 1. 원하는 항목을 선택하세요.

@@ -471,5 +471,9 @@
   "ui_394": "Log",
   "ui_395": "Face Detection",
   "ui_396": "OSS Notice",
-  "ui_397": "Duplicate Auth Prevention Timeout"
+  "ui_397": "Duplicate Auth Prevention Timeout",
+  "ui_398": "Idle Screen",
+  "ui_399": "Video",
+  "ui_400": "Video Schedule",
+  "ui_401": "Video Volume"
 }
