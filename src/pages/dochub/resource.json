@@ -1140,9 +1140,9 @@
         "sidebar": "genetec",
         "version": "",
         "manuals": {
-            "en": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_EN_260629.pdf",
-            "es": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_ES_260629.pdf",
-            "ja": "Integration/genetec/Suprema Plugin for Genetec_UG_1.00_JA_260629.pdf"
+            "en": "Integration/genetec/Suprema Plugin for Genetec_UG_1.01_EN_261027.pdf",
+            "es": "Integration/genetec/Suprema Plugin for Genetec_UG_1.01_ES_261027.pdf",
+            "ja": "Integration/genetec/Suprema Plugin for Genetec_UG_1.01_JA_261027.pdf"
         },
         "release_notes": {
             "ko": "",
@@ -1153,7 +1153,7 @@
             "ko": "",
             "en": ""
         },
-        "release_date": "2026-06-29"
+        "release_date": "2026-10-27"
     },
     {
         "category": "integration",
