@@ -1,0 +1,137 @@
+---
+id: installation
+title: Instalación
+description: Describe los requisitos previos, los requisitos del sistema y de red, y cómo instalar el complemento de Milestone x Suprema.
+keywords:
+  - Requisitos previos
+  - Requisitos del sistema
+  - Instalación del complemento
+---
+
+## Requisitos previos
+
+Para usar la integración de Suprema con Milestone XProtect, cumpla los siguientes requisitos previos. Revise las condiciones de soporte antes de instalar la integración de Suprema con Milestone XProtect.
+
+- XProtect 2026 R1
+
+- Instale BioStar X
+
+- Use Milestone XProtect con licencia y BioStar X.
+
+   :::info
+
+   Instale primero XProtect VMS y BioStar X.
+
+   :::
+
+- Complete todos los ajustes de control de acceso de BioStar X.
+
+- Requisitos del sistema
+
+  - CPU: Quad Core de 4 GHz
+
+  - RAM: Mínimo 10 GB
+
+  - Espacio en disco duro: Mínimo 1 TB de espacio libre
+
+  - **Requisitos de Milestone XProtect**
+
+    - Versión: XProtect Professional o XProtect Corporate 25.2 o posterior.
+
+    - Plataforma: Windows Server 2016, Windows Server 2019 o Windows Server 2022.
+
+    - .NET Framework: 4.8.1 o posterior.
+
+  - **Requisitos de BioStar X**
+
+    - Versión: BioStar X 2.6.0 o posterior.
+
+    - Red: Conectividad TCP/IP entre el servidor de Milestone XProtect y el servidor de BioStar X.
+
+    - Acceso: credenciales de administrador para el sistema BioStar X.
+
+  - **Requisitos de red**
+
+     Puertos:
+
+    - Puerto HTTP: _Cambie el puerto predefinido 9000 por un puerto disponible_
+
+       El puerto predeterminado (9000) ya se usa en Milestone y entra en conflicto con los ajustes de BioStar X. Cambie el puerto 9000 por un puerto adecuado o disponible.
+
+       El puerto está en `C:\Program Files\BioStar X(x64)\setting.conf`. Abra el archivo setting.conf y seleccione "Ejecutar como administrador".
+
+      <div className='grid-container'>
+
+      <Image src='/img/integration/milestone/setting-conf-folder.png' width={600} alone />
+
+      <Image src='/img/integration/milestone/setting-conf-port.png' width={400} alone />
+
+      </div>
+
+    - Puerto HTTPS: _Cambie el puerto predefinido 443 por un puerto disponible_
+
+       Milestone ya usa el puerto predeterminado (443), por lo que entra en conflicto con los ajustes de BioStar X. Cambie el puerto 443 por un puerto adecuado o disponible.
+
+      <Image src='/img/integration/milestone/biostar-x-setting-https-port.png' alone />
+
+  - Protocolos: TCP/IP, HTTP/HTTPS
+
+  - Firewall: Permita la comunicación bidireccional entre los servidores de Milestone XProtect y BioStar X a través de los puertos configurados.
+
+  - Sistema operativo:
+
+     Microsoft Windows® 10 Pro (64 bits)\*
+
+     Microsoft Windows® 10 Enterprise (64 bits)\*
+
+     Microsoft Windows® 11 Pro (64 bits)\*
+
+     Microsoft Windows® 11 Enterprise (64 bits)\*
+
+  - Otros: Microsoft .NET Framework 4.5.1
+
+## Instalación del complemento Milestone x Suprema
+
+El **complemento Milestone x Suprema** se usa para conectar el sistema de control de acceso y XProtect VMS. En otras palabras, funciona como middleware para intercambiar datos entre BioStar X y XProtect VMS.
+
+Antes de la instalación, detenga manualmente el **Milestone XProtect Event Server**.
+
+Para hacerlo, vaya al área de notificación, haga clic con el botón derecho en el ícono de Milestone XProtect Event Server y luego haga clic en Detener el servicio de Event Server. Cuando la instalación finalice correctamente, inicie el servicio de nuevo.
+
+:::info
+
+Estos complementos se compilaron con MIP SDK 2023 R3 y se probaron con Milestone XProtect Professional 2023 R3. Para otras versiones de XProtect, comuníquese con el [Equipo de soporte técnico global de Suprema](https://support.supremainc.com).
+
+:::
+
+1. **Descargue el complemento (v1.1.1)**
+
+   - Obtenga el instalador MilestonePluginSetup.msi desde su fuente de distribución.
+
+   - Verifique que tenga privilegios administrativos locales en el servidor Milestone XProtect.
+
+2. **Ejecute el instalador**
+
+   Haz clic con el botón derecho en MilestonePluginSetup.msi → Ejecutar como administrador.
+
+3. **Sigue el asistente de instalación**
+
+   - Acepta el acuerdo de licencia.
+
+     <Image src='/img/integration/milestone/install-license-agreement.png' alone />
+
+   - Selecciona el directorio de instalación (se recomienda la ruta predeterminada).
+
+     <Image src='/img/integration/milestone/install-destination-location.png' alone />
+
+   - Completa el proceso de instalación.
+
+     <Image src='/img/integration/milestone/install-complete.png' alone />
+
+4. **Verifica la instalación**
+
+   - Confirma que `MIPAccessControl.dll` esté presente en el directorio de complementos de control de acceso de Milestone XProtect.
+
+   - Reinicia Milestone Management Client para cargar el complemento.
+
+   <Image src='/img/integration/milestone/install-verify.png' alone />

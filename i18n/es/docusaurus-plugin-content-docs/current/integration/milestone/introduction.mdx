@@ -1,0 +1,89 @@
+---
+id: introduction
+title: Introducción
+description: Ofrece una descripción general de la integración de Suprema con Milestone XProtect, incluidas sus características, el diagrama del sistema, las diferencias estructurales entre BioStar X y XProtect, y las funcionalidades.
+keywords:
+  - Resúmen
+  - Características
+  - Diagrama del sistema
+---
+
+:::info
+
+Para obtener más detalles sobre la funcionalidad de XProtect VMS y XProtect Smart Client, consulte los manuales del software de Milestone.
+
+:::
+
+## Público objetivo
+
+Este documento está dirigido a operadores y administradores del sistema, y describe la integración entre Suprema BioStar X y Milestone XProtect. Los operadores y administradores del sistema requieren conocimientos básicos de Milestone XProtect y conocimientos avanzados de Suprema BioStar X.
+
+El complemento **MIPAccessControl** ofrece una integración fluida entre Milestone XProtect y los sistemas de control de acceso BioStar X de Suprema. Esta guía describe cómo instalar, configurar y operar el complemento para supervisar eventos de control de acceso, administrar dispositivos y controlar puertas, elevadores y zonas de seguridad.
+
+## Características
+
+BioStar X de Suprema es una potente plataforma de seguridad basada en la web, que permite integrarse fácilmente con sistemas de terceros. Esta integración se basa en el servidor BioStar X de Suprema y permite a los operadores ver eventos de control de acceso y alarmas en XProtect Smart Client.
+
+Con todas las características de BioStar X, XProtect VMS crea una solución integral de control de acceso. Además, al vincular el video con eventos de control de acceso, los operadores controlan cámaras y ven video en tiempo real y grabado desde una sola interfaz fácil de usar.
+
+<br/>
+
+La integración de Suprema con Milestone XProtect ofrece las siguientes características:
+
+- Gestión y administración de usuarios, puertas, zonas y elevadores con XProtect Smart Client.
+
+  - **Supervisar eventos en tiempo real**: Realice el seguimiento del acceso a puertas, infracciones, alarmas y el estado del sistema.
+
+  - **Controlar dispositivos**: Bloquee y desbloquee puertas, habilite y deshabilite elevadores, y active o desactive zonas.
+
+  - **Administrar titulares de tarjeta**: Vea información del usuario, fotos y permisos de acceso.
+
+  - **Recibir alertas**: Reciba notificaciones sobre eventos de seguridad y cambios del sistema.
+
+  - Vea eventos de control de acceso en vivo e históricos desde el software de Milestone y busque eventos históricos con varios parámetros.
+
+- Reconozca la alarma de control de acceso de BioStar X en XProtect Smart Client.
+
+- Abra y cierre puertas mediante la función Maps de XProtect Smart Client.
+
+## Diagrama del sistema
+
+<Image src='/img/integration/milestone/system-diagram.png' className='none' alone />
+
+## Diferencias estructurales entre BioStar X y XProtect
+
+BioStar X es una plataforma de seguridad que puede administrar todos los componentes de control de acceso, pero XProtect usa una topología simple basada en ACU. Por lo tanto, BioStar X y XProtect tienen pocas diferencias. Por ejemplo, Puerta, Zona y Elevador de BioStar X tienen el mismo nivel que Puerta de XProtect, pero el elemento de BioStar X incluye más opciones específicas. Consulte la imagen a continuación.
+
+<Image src='/img/integration/milestone/structural-differences.png' className='none' alone />
+
+## Funciones
+
+En XProtect Smart Client, use las siguientes funciones con este complemento:
+
+- Obtiene al usuario (titular de la tarjeta) de BioStar X.
+
+- Obtiene la puerta de BioStar X.
+
+- Obtiene la zona de BioStar X.
+
+- Obtiene el ascensor de BioStar X.
+
+- Muestra el estado de la puerta en tiempo real.
+
+- Muestra el evento de control de acceso en tiempo real.
+
+- Muestra la alarma de control de acceso de BioStar X.
+
+- Reconoce la alarma de control de acceso de BioStar X.
+
+- Controla el estado de la puerta de BioStar X (Borrar alarma, Borrar APB, Abrir, Bloquear puerta, Desbloquear puerta, Liberar puerta).
+
+- Controla el estado de la zona de BioStar X (Borrar alarma, Borrar APB).
+
+- Controla el estado del ascensor de BioStar X (Borrar alarma).
+
+- Vincula puertas y cámaras para supervisarlas juntas.
+
+- Asigna y supervisa la puerta, la zona y el ascensor en Mapas.
+
+- Genera un informe de eventos de control de acceso.

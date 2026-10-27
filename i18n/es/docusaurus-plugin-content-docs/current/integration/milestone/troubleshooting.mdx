@@ -1,0 +1,197 @@
+---
+id: troubleshooting
+title: Solución de Problemas
+description: "Ofrece soluciones a problemas comunes del plugin: fallas de conexión, eventos no recibidos, errores de certificado SSL y bajo rendimiento. Incluye preguntas frecuentes."
+keywords:
+  - Solución de Problemas
+  - Preguntas frecuentes
+  - Error de conexión
+---
+
+<details className='faqs'>
+<summary>**Error: conexión fallida**</summary>
+
+**Síntomas:**
+
+- El plugin no puede conectarse al servidor BioStar X.
+
+- En los registros aparecen errores de autenticación o de conexión.
+
+**Soluciones:**
+
+1. **Verifica la conectividad de red**
+
+   ping (IP del servidor BioStar X) -t
+
+2. **Verifica las credenciales**
+
+   - Confirma que el nombre de usuario y la contraseña configurados sean correctos.
+
+   - Inicia sesión directamente en la interfaz web de BioStar X con las mismas credenciales.
+
+3. **Revisa el firewall y el enrutamiento**
+
+   - Permite los puertos requeridos (por ejemplo, HTTP o HTTPS y `C:\Program Files\BioStar X(x64)\setting.conf`) entre los servidores Milestone XProtect y BioStar X.
+
+   - Revisa conflictos en el estado de los puertos.
+
+4. **Confirma el estado del servidor BioStar X**
+
+   - Verifica que el servicio de BioStar X se esté ejecutando.
+
+   - Reinicia el servicio de BioStar X si es necesario, según el proceso de gestión de cambios de tu organización.
+
+</details>
+
+<details className='faqs'>
+<summary>**Problema: no se reciben eventos**</summary>
+
+**Síntomas:**
+
+- El plugin se conecta correctamente, pero Milestone XProtect no muestra eventos.
+
+- Las listas de eventos permanecen vacías, aunque se registre actividad de acceso.
+
+**Soluciones:**
+
+1. **Revisa los ajustes de sondeo de eventos**
+
+   - Configura **Intervalo de sondeo de eventos (ms)** con un intervalo menor, como 1000–5000 ms, para recibir actualizaciones de eventos casi en tiempo real.
+
+   - Aumenta **Recuento máximo de sondeo de eventos** a 200 o 500 para manejar mayores volúmenes de eventos.
+
+2. **Verifique la generación de eventos en BioStar X**
+
+   - Genere eventos de prueba (por ejemplo, presente una credencial en un lector) para confirmar que el sistema genera eventos.
+
+   - Revise los registros de eventos de BioStar X para confirmar que BioStar X registra los eventos.
+
+</details>
+
+<details className='faqs'>
+<summary>**Errores de certificados SSL**</summary>
+
+**Síntomas:**
+
+- Fallas al conectar mediante SSL/TLS entre Milestone XProtect y BioStar X.
+
+- Errores de validación de certificados o de confianza en los registros.
+
+**Soluciones:**
+
+1. **Certificados autofirmados**
+
+   - Para las pruebas iniciales, establezca "Use SSL" en false de forma temporal para confirmar la conectividad mediante HTTP, si la política de seguridad lo permite.
+
+   - Importe el certificado del servidor de BioStar X o el certificado de la CA emisora en el almacén de certificados de Windows del servidor Milestone XProtect para establecer la confianza.
+
+2. **Certificados públicos o empresariales**
+
+   - Verifique que el certificado sea válido y no esté vencido.
+
+   - Asegúrese de que la cadena completa de certificados (incluidas las CA intermedias) esté instalada correctamente en el servidor BioStar X.
+
+</details>
+
+<details className='faqs'>
+<summary>**Rendimiento lento**</summary>
+
+**Síntomas:**
+
+- Procesamiento de eventos retrasado en Milestone XProtect.
+
+- Uso alto de CPU o de red en los servidores Milestone XProtect o BioStar X.
+
+**Soluciones:**
+
+1. **Ajuste el sondeo para equilibrar la carga**
+
+   - Aumente el **Intervalo de sondeo de eventos (ms)** para reducir la frecuencia de sondeo y la carga del servidor.
+
+   - Reduzca el **Conteo máximo de sondeo de eventos** si el procesamiento de lotes grandes de eventos causa demoras.
+
+2. **Verifique la latencia de red y el ancho de banda**
+
+   - Asegúrese de que la latencia entre los servidores Milestone XProtect y BioStar X esté dentro de los límites aceptables para su implementación.
+
+   - Si es necesario, trabaje con el equipo de red para optimizar el enrutamiento, el ancho de banda o la calidad de servicio (QoS) para el tráfico de control de acceso.
+
+</details>
+
+<details className='faqs'>
+<summary>**Aparece el mensaje emergente de error "No access control plugins are available..."**</summary>
+
+**Síntoma:**
+
+<Image src='/img/integration/milestone/troubleshooting-no-plugins.png' alone />
+
+Crear integración del sistema de control de acceso
+
+- No hay complementos de control de acceso disponibles. Verifique que los plugins estén instalados en el servidor de eventos y que el servicio Event Server esté en ejecución.
+
+**Solución:**
+
+<Image src='/img/integration/milestone/troubleshooting-restart-event-server.png' alone />
+
+1. Haga clic con el botón derecho en el icono **Milestone Event Server** de la barra de tareas.
+
+2. Seleccione **Reiniciar servicio de Event Server** y luego reinicie **Milestone Event Server**, **Management Client** y **Smart Client** para confirmar que el error se resolvió.
+
+</details>
+
+## Preguntas frecuentes
+
+<details className='faqs'>
+<summary>**¿Cuántos dispositivos puede manejar el plugin?**</summary>
+
+Por lo general, el plugin admite más de 1,000 dispositivos por instancia, según el hardware del servidor, el rendimiento de la base de datos y la capacidad de la red. Para implementaciones muy grandes, considere hacer pruebas de rendimiento y escalar con varias instancias si es necesario.
+
+</details>
+
+<details className='faqs'>
+<summary>**¿Puedo usar varios servidores de BioStar X?**</summary>
+
+Cada instancia del plugin MIPAccessControl se conecta a un solo servidor de BioStar X. Para integrar varios servidores de BioStar X, configure una instancia independiente del sistema de control de acceso MIPAccessControl en Milestone XProtect para cada servidor.
+
+</details>
+
+<details className='faqs'>
+<summary>**¿Cuál es la diferencia entre las opciones relacionadas con el sondeo?**</summary>
+
+El plugin usa sondeo basado en HTTP de la API de BioStar X en intervalos definidos por los ajustes **Intervalo de sondeo de eventos (ms)** y **Recuento máximo de sondeo de eventos**. Los intervalos más cortos y los recuentos máximos más altos aceleran la entrega de eventos, pero aumentan la carga en ambos sistemas. Los intervalos más largos y los recuentos más bajos reducen la carga, pero pueden retrasar la visibilidad de los eventos.
+
+</details>
+
+<details className='faqs'>
+<summary>**¿Cómo actualizo el plugin?**</summary>
+
+1. Descargue la versión más reciente del instalador del plugin desde su fuente de distribución.
+
+2. En Milestone Management Client, detenga o deshabilite la instancia correspondiente del sistema de control de acceso MIPAccessControl si lo requieren sus procedimientos operativos.
+
+3. Ejecute el nuevo instalador (MilestonePluginSetup.msi) con privilegios de administrador.
+
+4. Reinicie Milestone Management Client y, si es necesario, reinicie los servicios de control de acceso de Milestone XProtect.
+
+</details>
+
+<details className='faqs'>
+<summary>**¿Puedo personalizar los tipos de eventos?**</summary>
+
+Las categorizaciones y las asignaciones de eventos que usa el plugin se definen en el archivo de configuración EventTypeCategories.json. Puede ajustar este archivo para personalizar la agrupación y la visualización de los eventos de BioStar X en Milestone XProtect, según su proceso de control de cambios y las pruebas.
+
+</details>
+
+<details className='faqs'>
+<summary>**¿El plugin es compatible con implementaciones de BioStar X en la nube?**</summary>
+
+El plugin está diseñado principalmente para instalaciones locales de BioStar X. El uso con BioStar X alojado en la nube depende de la conectividad de red segura, el enrutamiento y la accesibilidad de la API entre el servidor de Milestone XProtect y el entorno de BioStar X.
+
+</details>
+
+<details className='faqs'>
+<summary>**¿Cómo hago una copia de seguridad de mis ajustes?**</summary>
+
+La base de datos de configuración de Milestone XProtect almacena los ajustes del plugin, incluidos los ajustes de conexión y asignación. Verifica que estén implementados los procedimientos habituales de copia de seguridad de Milestone XProtect; estas copias de seguridad incluirán los ajustes del plugin MIPAccessControl.
+
+</details>
