@@ -11,13 +11,13 @@ keywords:
 <details className='faqs'>
 <summary>**接続失敗エラー**</summary>
 
-**症状:**
+**症状：**
 
 - プラグインがBioStar Xサーバーに接続できません。
 
 - ログに認証エラーまたは接続エラーが記録されます。
 
-**解決方法:**
+**解決方法：**
 
 1. **ネットワーク接続を確認**
 
@@ -31,7 +31,7 @@ keywords:
 
 3. **ファイアウォールとルーティングを確認**
 
-   - Milestone XProtect サーバーと BioStar X サーバー間で、必要なポート（例: HTTP または HTTPS。`C:\Program Files\BioStar X(x64)\setting.conf` を確認）を許可してください。
+   - Milestone XProtect サーバーと BioStar X サーバー間で、必要なポート（例：HTTP または HTTPS。`C:\Program Files\BioStar X(x64)\setting.conf` を確認）を許可してください。
 
    - ポートの競合を確認してください。
 
@@ -46,23 +46,23 @@ keywords:
 <details className='faqs'>
 <summary>**イベントを受信できない問題**</summary>
 
-**症状:**
+**症状：**
 
 - プラグインは正常に接続しますが、Milestone XProtectにイベントが表示されません。
 
 - 入退室が発生しても、イベントリストが空のままです。
 
-**解決方法:**
+**解決方法：**
 
 1. **イベントポーリングの設定を確認**
 
-   - ほぼリアルタイムでイベントを更新するには、**イベントポーリング間隔 (ms)** を 1000～5000 ms などの短い間隔に設定します。
+   - ほぼリアルタイムでイベントを更新するには、**Event polling interval (ms)** を 1000～5000 ms などの短い間隔に設定します。
 
-   - 大量のイベントに対応するには、**イベントポーリング最大数** を200または500に増やします。
+   - 大量のイベントに対応するには、**Event polling max count** を200または500に増やします。
 
 2. **BioStar X でイベント生成を確認**
 
-   - テストイベントをトリガーします（例: リーダーに認証情報を提示）。イベントが生成されることを確認します。
+   - テストイベントをトリガーします（例：リーダーに認証情報を提示）。イベントが生成されることを確認します。
 
    - BioStar X のイベントログを確認し、BioStar X 側にイベントが記録されていることを確認します。
 
@@ -71,13 +71,13 @@ keywords:
 <details className='faqs'>
 <summary>**SSL 証明書エラー**</summary>
 
-**症状:**
+**症状：**
 
 - Milestone XProtect と BioStar X 間で SSL/TLS 接続が失敗します。
 
 - ログに証明書の検証エラーまたは信頼エラーが表示されます。
 
-**解決方法:**
+**解決方法：**
 
 1. **自己署名証明書**
 
@@ -96,13 +96,13 @@ keywords:
 <details className='faqs'>
 <summary>**パフォーマンス低下**</summary>
 
-**症状:**
+**症状：**
 
 - Milestone XProtect でイベント処理が遅延します。
 
 - Milestone XProtect または BioStar X サーバーで CPU 使用率またはネットワーク使用率が高くなります。
 
-**解決方法:**
+**解決方法：**
 
 1. **負荷分散のためにポーリング設定を調整**
 
@@ -129,7 +129,7 @@ keywords:
 
 - 利用可能なアクセス制御プラグインがありません。イベントサーバーにプラグインがインストールされていることと、Event Server サービスが実行中であることを確認してください。
 
-**解決方法:**
+**解決方法：**
 
 <Image src='/img/integration/milestone/troubleshooting-restart-event-server.png' alone />
 
@@ -158,7 +158,7 @@ keywords:
 <details className='faqs'>
 <summary>**ポーリング関連オプションの違いは何ですか。**</summary>
 
-プラグインは、**イベント ポーリング間隔 (ms)** と **イベント ポーリング最大回数** の設定で定義された間隔で、BioStar X API を HTTP ベースでポーリングします。間隔を短くし、最大回数を増やすと、イベント配信は速くなりますが、両システムの負荷が増えます。間隔を長くし、回数を減らすと負荷は下がりますが、イベントの表示が遅れる場合があります。
+プラグインは、**Event polling interval (ms)** と **Event polling max count** の設定で定義された間隔で、BioStar X API を HTTP ベースでポーリングします。間隔を短くし、最大回数を増やすと、イベント配信は速くなりますが、両システムの負荷が増えます。間隔を長くし、回数を減らすと負荷は下がりますが、イベントの表示が遅れる場合があります。
 
 </details>
 

@@ -56,9 +56,9 @@ keywords:
 
 1. **Revisa los ajustes de sondeo de eventos**
 
-   - Configura **Intervalo de sondeo de eventos (ms)** con un intervalo menor, como 1000–5000 ms, para recibir actualizaciones de eventos casi en tiempo real.
+   - Configura **Event polling interval (ms)** con un intervalo menor, como 1000–5000 ms, para recibir actualizaciones de eventos casi en tiempo real.
 
-   - Aumenta **Recuento máximo de sondeo de eventos** a 200 o 500 para manejar mayores volúmenes de eventos.
+   - Aumenta **Event polling max count** a 200 o 500 para manejar mayores volúmenes de eventos.
 
 2. **Verifique la generación de eventos en BioStar X**
 
@@ -106,9 +106,9 @@ keywords:
 
 1. **Ajuste el sondeo para equilibrar la carga**
 
-   - Aumente el **Intervalo de sondeo de eventos (ms)** para reducir la frecuencia de sondeo y la carga del servidor.
+   - Aumente el **Event polling interval (ms)** para reducir la frecuencia de sondeo y la carga del servidor.
 
-   - Reduzca el **Conteo máximo de sondeo de eventos** si el procesamiento de lotes grandes de eventos causa demoras.
+   - Reduzca el **Event polling max count** si el procesamiento de lotes grandes de eventos causa demoras.
 
 2. **Verifique la latencia de red y el ancho de banda**
 
@@ -158,7 +158,7 @@ Cada instancia del plugin MIPAccessControl se conecta a un solo servidor de BioS
 <details className='faqs'>
 <summary>**¿Cuál es la diferencia entre las opciones relacionadas con el sondeo?**</summary>
 
-El plugin usa sondeo basado en HTTP de la API de BioStar X en intervalos definidos por los ajustes **Intervalo de sondeo de eventos (ms)** y **Recuento máximo de sondeo de eventos**. Los intervalos más cortos y los recuentos máximos más altos aceleran la entrega de eventos, pero aumentan la carga en ambos sistemas. Los intervalos más largos y los recuentos más bajos reducen la carga, pero pueden retrasar la visibilidad de los eventos.
+El plugin usa sondeo basado en HTTP de la API de BioStar X en intervalos definidos por los ajustes **Event polling interval (ms)** y **Event polling max count**. Los intervalos más cortos y los recuentos máximos más altos aceleran la entrega de eventos, pero aumentan la carga en ambos sistemas. Los intervalos más largos y los recuentos más bajos reducen la carga, pero pueden retrasar la visibilidad de los eventos.
 
 </details>
 
