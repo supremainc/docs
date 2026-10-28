@@ -39,6 +39,24 @@ date: 2026-11-02T09:00
 
 * [ViOnyx 웹 서버](/device/vionyx_webserver/)
 
+  * AI 이벤트
+
+    * [출입 통제 이벤트 설정하기](/device/vionyx_webserver/configure-access-control): 얼굴 인식으로 출입자를 식별하고 테일게이팅을 판단하는 방법 안내
+
+    * 다음 페이지에서 **사람 검출** 옵션 추가
+
+      * [사용자 추적 이벤트 설정하기](/device/vionyx_webserver/configure-people-tracking)
+
+      * [침입 감지 이벤트 설정하기](/device/vionyx_webserver/configure-intrusion)
+
+      * [라인 통과 감지 이벤트 설정하기](/device/vionyx_webserver/configure-line-crossing)
+
+      * [인원 카운팅 이벤트 설정하기](/device/vionyx_webserver/configure-counting-people)
+
+    * [AI 규칙(Rule) 설정하기](/device/vionyx_webserver/set-ai-rule#setRelayAction): 사용자 선택 및 릴레이 동작 설정 추가
+
+    * [일정 관리하기](/device/vionyx_webserver/manage-schedule): AI 규칙이 동작할 요일과 시간대를 일정으로 설정하는 방법 안내
+
   * 출입 통제
 
     * [출입 통제 관리하기](/device/vionyx_webserver/manage-access-control): 출입문을 등록하고 사용자에게 출입 권한을 부여해 얼굴 인식 결과로 출입문을 제어하는 방법 안내
@@ -49,9 +67,7 @@ date: 2026-11-02T09:00
 
     * [출입문 규칙 설정하기](/device/vionyx_webserver/configure-door-rules): 출입 판단 결과에 따라 오디오 재생, 웹훅 전송, 릴레이 동작을 실행하는 방법 안내
 
-    * [출입 통제 이벤트 설정하기](/device/vionyx_webserver/configure-access-control): 얼굴 인식으로 출입자를 식별하고 테일게이팅을 판단하는 방법 안내
-
-  * [일정 관리하기](/device/vionyx_webserver/manage-schedule): AI 규칙이 동작할 요일과 시간대를 일정으로 설정하는 방법 안내
+  * [라이브 영상 보기](/device/vionyx_webserver/live-basic): 화면 캡처 및 AI 표시 옵션 안내 추가
 
   * [RS-485 설정하기](/device/vionyx_webserver/configure-rs485): 슈프리마 I/O 장치를 슬레이브로 추가하고 관리하는 방법 안내
 
@@ -59,13 +75,7 @@ date: 2026-11-02T09:00
 
   * [네트워크 설정하기](/device/vionyx_webserver/configure-network): 포트, 영상 전송 및 암호화, ONVIF, Tunnel 설정 안내 추가
 
-  * AI 이벤트 및 규칙
-
-    * [사용자 추적 이벤트 설정하기](/device/vionyx_webserver/configure-people-tracking), [라인 통과 감지 이벤트 설정하기](/device/vionyx_webserver/configure-line-crossing), [침입 감지 이벤트 설정하기](/device/vionyx_webserver/configure-intrusion): 이벤트 발생 조건 및 카운트 설정 추가
-
-    * [AI 규칙(Rule) 설정하기](/device/vionyx_webserver/set-ai-rule#setRelayAction): 사용자 선택 및 릴레이 동작 설정 추가
-
-  * [라이브 영상 보기](/device/vionyx_webserver/live-basic): 화면 캡처 및 AI 표시 옵션 안내 추가
+  * [운영자 관리하기](/device/vionyx_webserver/manage-operators): ONVIF 전용 계정 안내 추가
 
   * [시스템 로그 확인하기](/device/vionyx_webserver/view-system-logs), [시스템 로그 유형](/device/vionyx_webserver/system-log-type): 출입 통제 로그 추가
 
