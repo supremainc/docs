@@ -1,0 +1,153 @@
+---
+id: configuration
+title: Configuración
+description: Describe cómo configurar el complemento MIPAccessControl en XProtect Management Client, activar la licencia del complemento en línea o sin conexión, y asociar cámaras con puntos de acceso.
+keywords:
+  - MIPAccessControl
+  - Activación de licencia
+  - Asociación de cámaras
+---
+
+## Procedimiento de configuración
+
+<Image src='/img/integration/milestone/configuration-procedure.png' className='none' alone />
+
+## Configuración del complemento MIPAccessControl
+
+1. Primero complete los ajustes de control de acceso en BioStar X.
+
+2. Ejecute 'Milestone XProtect Professional+ 2025 R3 Management Client'.
+
+   Además, verifique que la licencia de puerta de control de acceso esté incluida para habilitar el complemento de Suprema.
+
+   <Image src='/img/integration/milestone/plugin-setup-license.png' alone />
+
+3. Vaya al nodo **Access Control – system**. Haga clic con el botón derecho en él y haga clic en **Create new**.
+
+   <Image src='/img/integration/milestone/plugin-setup-create-new.png' alone />
+
+4. Ingrese el nombre del complemento. Seleccione **MIPAccessControl** como el **Integration plug-in** e ingrese la **BioStar X Server Address**, el **Username** y la **Password**.
+
+   <Image src='/img/integration/milestone/plugin-setup-create-integration.png' alone />
+
+5. El complemento se activa, obtiene los ajustes de BioStar X y finaliza.
+
+   <div className='grid-container'>
+
+   <Image src='/img/integration/milestone/plugin-setup-connecting.png' width={500} alone />
+
+   <Image src='/img/integration/milestone/plugin-setup-associate-cameras.png' width={500} alone />
+
+   </div>
+
+6. Haga clic en el complemento y abra la pestaña **General settings**. Actualice el nombre del sistema de control de acceso, los ajustes de red y la información de inicio de sesión.
+
+   Si cambia algún ajuste en BioStar X, presione **Refresh Configuration** cada vez y luego haga clic en **Guardar**.
+
+   1. Dirección del servidor BioStar X: 192.168.16.103:5002
+
+      :::info
+
+      Para HTTPS, use (your_BioStar X_IP):(HTTPS_PORT).
+
+      :::
+
+   2. **Username** / **Password**: ID de BioStar X / PW
+
+   3. **Connection Timeout (ms)**: 30000
+
+      - **Event polling interval (ms)**: 5000 (predeterminado) → 3000 (recomendado)
+
+      - **Event polling max count**: 100
+
+   4. [Acceso al portal de licencias del complemento](#milestone-suprema-plugin-license-portal)
+
+      Use el **License Portal Port** (localhost:8088) para acceder al portal de licencias.
+
+      > https://localhost:8088
+
+   <Image src='/img/integration/milestone/plugin-setup-general-settings.png' alone />
+
+   <div className='overflow-x'>
+   | Ajuste | Descripción | Valor predeterminado | Rango |
+   | -- | -- | -- | -- |
+   | **Connection Timeout** | Tiempo de espera de conexión para llamadas a la API, en milisegundos. | 30000 | 5000–120000 |
+   | **Event polling interval (ms)** | Intervalo en milisegundos entre solicitudes de sondeo de eventos. | 5000 (5 segundos) | 100–7200000 |
+   | **Event polling max count** | Cantidad máxima de eventos que el sistema obtiene por ciclo de sondeo. | 100 | 10, 50, 100, 200, 500 |
+   | **Cardholder image override enabled** | Permite reemplazar las imágenes del titular de la tarjeta desde fuentes externas, cuando sea compatible. | true | true/false |
+   | **Use Captured as Profile Photo** | Usa las imágenes capturadas del control de acceso como fotos de perfil cuando estén disponibles. | true | true/false |
+   </div>
+
+   - **Doors and associated cameras**: Asocie las cámaras con puntos de acceso. Consulte [Asociar la cámara](#associating-the-camera).
+
+   - **Access control events**: Active o desactive eventos de control de acceso desde BioStar X. Cree y asigne categorías definidas por el usuario.
+
+   - **Access control actions**: Cree una acción o un comando de control de acceso que el operador ejecuta en los puntos de acceso asociados. Por ejemplo, cuando un titular de la tarjeta solicita abrir la puerta, XProtect muestra una notificación y luego el operador envía un comando para abrir la puerta.
+
+   - **Cardholders**: Vea o busque la información del titular de la tarjeta. La información del titular de la tarjeta se sincroniza con la información de usuario de BioStar X. En BioStar X, la información de usuario incluye nombre de usuario, grupo de acceso, número de tarjeta RFID, plantilla de huella digital, plantilla de rostro y PIN.
+
+      Consulte cómo obtener los ajustes relacionados de BioStar X para usuarios, puertas y dispositivos.
+
+7. Pestaña **Doors and associated cameras**. Además, asocie las cámaras con puntos de acceso. Consulte [Asociar la cámara](#associating-the-camera).
+
+   <Image src='/img/integration/milestone/plugin-setup-doors-cameras.png' alone />
+
+8. Pestaña **Access control events**, que muestra todos los eventos de control de acceso de BioStar X.
+
+   Active o desactive eventos de control de acceso desde BioStar X. Cree y asigne categorías definidas por el usuario.
+
+   <Image src='/img/integration/milestone/plugin-setup-access-control-events.png' alone />
+
+9. Pestaña **Cardholders**. Muestre la información actual del usuario (titular de la tarjeta) de BioStar X.
+
+   Vea o busque la información del titular de la tarjeta. La información del titular de la tarjeta se sincroniza con la información de usuario de BioStar X. En BioStar X, la información de usuario incluye nombre de usuario, grupo de acceso, número de tarjeta RFID, plantilla de huella digital, plantilla facial y PIN.
+
+   <Image src='/img/integration/milestone/plugin-setup-cardholders.png' alone />
+
+## Portal de licencias del complemento de Milestone x Suprema {/* #milestone-suprema-plugin-license-portal */}
+
+Active con una clave de licencia mediante el servicio de licencias de Suprema; el sistema verifica y almacena los datos de la licencia de forma segura. Registre la licencia desde el servidor de licencias de Suprema para que el complemento funcione.
+
+### Activación en línea
+
+1. Accede al portal de licencias en `localhost:8088` en modo en línea (si el servidor está conectado a Internet). Solicite al administrador de licencias de Suprema ([int@suprema.co.kr](mailto:int@suprema.co.kr)) una clave de licencia única (16 caracteres) y el nombre del proyecto.
+
+   <Image src='/img/integration/milestone/license-online1.png' alone />
+
+2. Cuando tengas la clave de licencia y el nombre del proyecto, aplícalos con **Activate Online**.
+
+   <Image src='/img/integration/milestone/license-online2.png' alone />
+
+### Activación fuera de línea
+
+1. Accede al portal de licencias en `localhost:8088` en modo sin conexión (aunque tu servidor esté sin conexión (sin acceso a Internet), se accederá al portal con 'localhost'). Solicite al administrador de licencias de Suprema ([int@suprema.co.kr](mailto:int@suprema.co.kr)) una clave de licencia única (16 caracteres) y el nombre del proyecto.
+
+   <Image src='/img/integration/milestone/license-offline1.png' alone />
+
+2. Cuando tengas la clave de licencia y el nombre del proyecto, genera `Token.lic` en la carpeta de descargas (predeterminada). Envía el archivo de token al administrador de licencias.
+
+   <Image src='/img/integration/milestone/license-offline2.png' alone />
+
+3. El administrador de licencias proporcionará el archivo **.suprema**, resultado de sincronizar los datos de configuración del sistema desde el token con el servidor de licencias. Aplica el "token de activación" con el archivo **.suprema**.
+
+   <Image src='/img/integration/milestone/license-offline3.png' alone />
+
+4. Solicitud de licencia sin conexión completada correctamente.
+
+   <Image src='/img/integration/milestone/license-offline4.png' alone />
+
+## Asociar la cámara {/* #associating-the-camera */}
+
+Si BioStar X se conecta correctamente, aparece la pantalla **Associate cameras**. En este paso, asocia las cámaras con los puntos de acceso en Milestone XProtect Management Client.
+
+1. Busca la cámara en el panel **Cameras** y arrástrala a los puntos de acceso asociados.
+
+   <Image src='/img/integration/milestone/associate-cameras1.png' alone />
+
+2. Cuando termines de asociar los puntos de acceso con las cámaras, haz clic en **Next** para completar los ajustes.
+
+   <Image src='/img/integration/milestone/associate-cameras2.png' alone />
+
+3. Cuando aparezca la ventana de confirmación de éxito, haz clic en **Close**.
+
+   <Image src='/img/integration/milestone/associate-cameras3.png' alone />

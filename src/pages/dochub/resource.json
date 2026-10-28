@@ -1197,5 +1197,26 @@
             "en": ""
         },
         "release_date": "2026-06-29"
+    },
+    {
+        "category": "integration",
+        "product": "Milestone",
+        "sidebar": "milestone",
+        "version": "",
+        "manuals": {
+            "en": "Integration/milestone/Suprema Integration with Milestone XProtect_SG_UG_3.0_EN_261029.pdf",
+            "es": "Integration/milestone/Suprema Integration with Milestone XProtect_SG_UG_3.0_ES_261029.pdf",
+            "ja": "Integration/milestone/Suprema Integration with Milestone XProtect_SG_UG_3.0_JA_261029.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-10-29"
     }
 ]

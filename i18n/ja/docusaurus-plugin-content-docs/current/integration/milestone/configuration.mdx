@@ -1,0 +1,153 @@
+---
+id: configuration
+title: 設定
+description: XProtect Management Client で MIPAccessControl プラグインをセットアップする方法、プラグインライセンスをオンラインまたはオフラインで有効化する方法、およびカメラをアクセスポイントに関連付ける方法を説明します。
+keywords:
+  - MIPAccessControl
+  - ライセンスの有効化
+  - カメラの関連付け
+---
+
+## 設定手順
+
+<Image src='/img/integration/milestone/configuration-procedure.png' className='none' alone />
+
+## MIPAccessControl プラグインのセットアップ
+
+1. まず BioStar X でアクセス制御の設定を完了してください。
+
+2. 「Milestone XProtect Professional+ 2025 R3 Management Client」を起動します。
+
+   Suprema プラグインを有効にするには、Access Control のドアライセンスが含まれていることも確認してください。
+
+   <Image src='/img/integration/milestone/plugin-setup-license.png' alone />
+
+3. **Access Control – system** ノードに移動します。右クリックし、**Create new** をクリックします。
+
+   <Image src='/img/integration/milestone/plugin-setup-create-new.png' alone />
+
+4. プラグイン名を入力します。 **Integration plug-in**として **MIPAccessControl** を選択し、**BioStar X Server Address**、**Username**、**Password** を入力します。
+
+   <Image src='/img/integration/milestone/plugin-setup-create-integration.png' alone />
+
+5. プラグインを実行すると、BioStar X の設定の取得が完了します。
+
+   <div className='grid-container'>
+
+   <Image src='/img/integration/milestone/plugin-setup-connecting.png' width={500} alone />
+
+   <Image src='/img/integration/milestone/plugin-setup-associate-cameras.png' width={500} alone />
+
+   </div>
+
+6. プラグインをクリックし、**General settings** タブを選択します。アクセス制御システム名、ネットワーク設定、ログイン情報を更新します。
+
+   BioStar X の設定を変更するたびに、**Refresh Configuration** をクリックしてから **保存** をクリックします。
+
+   1. BioStar X サーバーアドレス： 192.168.16.103:5002
+
+      :::info
+
+      HTTPS の場合、(your_BioStar X_IP):(HTTPS_PORT) を使用します。
+
+      :::
+
+   2. **Username** / **Password**： BioStar X ID / PW
+
+   3. **Connection Timeout (ms)**： 30000
+
+      - **Event polling interval (ms)**： 5000（デフォルト） → 3000（推奨）
+
+      - **Event polling max count**： 100
+
+   4. [プラグインライセンスポータルにアクセス](#milestone-suprema-plugin-license-portal)
+
+      ライセンスポータルにアクセスするには、**License Portal Port**（localhost:8088）を使用します。
+
+      > https://localhost:8088
+
+   <Image src='/img/integration/milestone/plugin-setup-general-settings.png' alone />
+
+   <div className='overflow-x'>
+   | 設定 | 説明 | デフォルト値 | 範囲 |
+   | -- | -- | -- | -- |
+   | **Connection Timeout** | API 呼び出しの接続タイムアウト。単位はミリ秒です。 | 30000 | 5000–120000 |
+   | **Event polling interval (ms)** | イベントポーリング要求間の間隔（ミリ秒）。 | 5000 (5 seconds) | 100–7200000 |
+   | **Event polling max count** | ポーリングサイクルごとに取得するイベントの最大数。 | 100 | 10、50、100、200、500 |
+   | **Cardholder image override enabled** | サポートされている場合、外部ソースからカードホルダー画像を上書きできるようにします。 | true | true/false |
+   | **Use Captured as Profile Photo** | 利用可能な場合、キャプチャした入退室管理画像をプロフィール写真として使用します。 | true | true/false |
+   </div>
+
+   - **Doors and associated cameras**：カメラをアクセス ポイントに関連付けます。「[カメラの関連付け](#associating-the-camera)」を参照してください。
+
+   - **Access control events**：BioStar X の入退室管理イベントを有効化または無効化し、ユーザー定義カテゴリを作成して割り当てます。
+
+   - **Access control actions**：関連付けたアクセス ポイントでオペレーターが実行する入退室管理アクションまたはコマンドを作成します。たとえば、カードホルダーがドア解錠を要求すると、XProtect が通知を表示し、オペレーターがドア解錠コマンドを送信します。
+
+   - **Cardholders**：カードホルダー情報を表示または検索します。カードホルダー情報は BioStar X のユーザー情報と同期します。BioStar X のユーザー情報には、ユーザー名、アクセス グループ、RFID カード番号、指紋テンプレート、顔テンプレート、PIN が含まれます。
+
+      ユーザー、ドア、デバイスの関連する BioStar X 設定を取得します。
+
+7. **Doors and associated cameras** タブを選択します。カメラをアクセス ポイントに関連付けます。「[カメラの関連付け](#associating-the-camera)」を参照してください。
+
+   <Image src='/img/integration/milestone/plugin-setup-doors-cameras.png' alone />
+
+8. **Access control events** タブを選択します。BioStar X の入退室管理イベントがすべて表示されます。
+
+   BioStar X の入退室管理イベントを有効化または無効化し、ユーザー定義カテゴリを作成して割り当てます。
+
+   <Image src='/img/integration/milestone/plugin-setup-access-control-events.png' alone />
+
+9. **Cardholders** タブを選択します。 BioStar X の現在のユーザー（カードホルダー）情報を表示します。
+
+   カードホルダー情報を表示または検索します。カードホルダー情報は BioStar X のユーザー情報と同期します。BioStar X のユーザー情報には、ユーザー名、アクセス グループ、RFID カード番号、指紋テンプレート、顔テンプレート、PIN が含まれます。
+
+   <Image src='/img/integration/milestone/plugin-setup-cardholders.png' alone />
+
+## Milestone x Suprema プラグインライセンスポータル {/* #milestone-suprema-plugin-license-portal */}
+
+Suprema ライセンスサービスでライセンスキーを使用して有効化します。ライセンスデータを検証し、安全に保存します。プラグインを動作させるには、Suprema ライセンスサーバーでライセンスを登録します。
+
+### オンラインアクティベーション
+
+1. オンライン環境では、ライセンスポータル `localhost:8088` にアクセスします (サーバーがインターネットに接続されている場合)。 Suprema のライセンスマネージャー（[int@suprema.co.kr](mailto:int@suprema.co.kr)）に依頼し、固有のライセンスキー（16 文字）とプロジェクト名を入手してください。
+
+   <Image src='/img/integration/milestone/license-online1.png' alone />
+
+2. ライセンスキーとプロジェクト名を取得したら、**Activate Online** をクリックして適用します。
+
+   <Image src='/img/integration/milestone/license-online2.png' alone />
+
+### オフラインアクティベーション
+
+1. オフライン環境では、ライセンスポータル `localhost:8088` にアクセスします (サーバーがオフライン (インターネットにアクセスできない) の場合でも、ライセンスポータルには 'localhost' でアクセスします)。 Suprema のライセンスマネージャー（[int@suprema.co.kr](mailto:int@suprema.co.kr)）に依頼し、固有のライセンスキー（16 文字）とプロジェクト名を入手してください。
+
+   <Image src='/img/integration/milestone/license-offline1.png' alone />
+
+2. ライセンスキーとプロジェクト名を取得したら、ダウンロードフォルダー（既定）で **`Token.lic` を生成** をクリックして適用します。トークンファイルをライセンスマネージャーに送信します。
+
+   <Image src='/img/integration/milestone/license-offline2.png' alone />
+
+3. ライセンスマネージャーは、トークンのシステム設定データをライセンスサーバーと同期した結果として、**.suprema** ファイルを提供します。 **.suprema** ファイルを使用してアクティベーショントークンを適用します。
+
+   <Image src='/img/integration/milestone/license-offline3.png' alone />
+
+4. オフラインライセンスの適用が完了しました。
+
+   <Image src='/img/integration/milestone/license-offline4.png' alone />
+
+## カメラの関連付け {/* #associating-the-camera */}
+
+BioStar X を正しく接続すると、**Associate cameras** 画面が表示されます。この手順では、Milestone XProtect Management Client でカメラをアクセスポイントに関連付けます。
+
+1. **Cameras** ペインでカメラを見つけ、関連付けるアクセスポイントにドラッグします。
+
+   <Image src='/img/integration/milestone/associate-cameras1.png' alone />
+
+2. すべてのアクセスポイントをカメラに関連付けたら、**Next** をクリックして設定を完了します。
+
+   <Image src='/img/integration/milestone/associate-cameras2.png' alone />
+
+3. 成功確認ウィンドウが表示されたら、**Close** をクリックします。
+
+   <Image src='/img/integration/milestone/associate-cameras3.png' alone />

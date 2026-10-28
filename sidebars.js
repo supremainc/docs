@@ -3060,6 +3060,27 @@ function createSidebars(preview) {
         'integration/ccure/appendices'
       ]
     }
+  ],
+  milestone: [
+    {
+      type: 'category',
+      label: 'Milestone',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/milestone/index',
+      },
+      items: [
+        'integration/milestone/introduction',
+        'integration/milestone/installation',
+        'integration/milestone/configuration',
+        'integration/milestone/synchronization',
+        'integration/milestone/troubleshooting',
+        'integration/milestone/appendices'
+      ]
+    }
   ]
 };
 

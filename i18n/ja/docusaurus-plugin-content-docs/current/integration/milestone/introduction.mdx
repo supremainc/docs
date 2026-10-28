@@ -1,0 +1,89 @@
+---
+id: introduction
+title: 概要
+description: Suprema の Milestone XProtect とのインテグレーションの概要、特長、システム図、BioStar X と XProtect の構造上の違い、機能について説明します。
+keywords:
+  - 概要
+  - 機能
+  - システム構成図
+---
+
+:::info
+
+XProtect VMS と XProtect Smart Client の機能の詳細は、Milestone ソフトウェアのマニュアルを参照してください。
+
+:::
+
+## 対象読者
+
+本書はシステムオペレーターおよびシステム管理者を対象とし、Suprema BioStar X と Milestone XProtect のインテグレーションについて説明します。システムオペレーター/管理者には、Milestone XProtect の基本知識と、Suprema BioStar X の深い知識が必要です。
+
+**MIPAccessControl** プラグインは、Milestone XProtect と Suprema BioStar X アクセス制御システム間のシームレスなインテグレーションを提供します。本ガイドでは、アクセス制御イベントの監視、デバイスの管理、ドア、エレベーター、セキュリティゾーンの制御を行うための、プラグインのインストール、設定、操作方法を説明します。
+
+## 機能
+
+Suprema の BioStar X は強力な Web ベースのセキュリティプラットフォームで、サードパーティシステムと容易に連携できます。このインテグレーションは Suprema の BioStar X サーバーを基盤とし、オペレーターは XProtect Smart Client 上でアクセス制御イベントとアラームを表示できます。
+
+BioStar X のすべての機能により、XProtect VMS は包括的なアクセス制御ソリューションを実現します。さらに、映像とアクセス制御イベントを連携させることで、オペレーターは使いやすい単一のインターフェースからカメラを制御し、リアルタイム映像と録画映像を確認できます。
+
+<br/>
+
+Suprema の Milestone XProtect とのインテグレーションは、次の機能を提供します：
+
+- XProtect Smart Client でユーザー、ドア、ゾーン、エレベーターを管理、運用します。
+
+  - **リアルタイムイベントを監視**：ドア通行、違反、アラーム、システム状態を追跡します。
+
+  - **デバイスを制御**：ドアを施錠/解錠し、エレベーターを有効化/無効化し、ゾーンを警戒/解除します。
+
+  - **カード保持者を管理**：ユーザー情報、写真、アクセス権限を確認します。
+
+  - **アラートを受信**：セキュリティイベントとシステム変更の通知を受信します。
+
+  - Milestone ソフトウェア内でライブおよび過去のアクセス制御イベントを表示し、オペレーターは条件を指定して過去イベントを検索できます。
+
+- XProtect Smart Client で BioStar X のアクセス制御アラームを確認済みにします。
+
+- XProtect Smart Client のマップ機能でドアを開閉します。
+
+## システム構成図
+
+<Image src='/img/integration/milestone/system-diagram.png' className='none' alone />
+
+## BioStar X と XProtect の構造上の違い
+
+BioStar X はアクセス制御のすべてのコンポーネントを管理できますが、XProtect はシンプルな ACU ベースのトポロジーを使用します。そのため、BioStar X と XProtect の違いはわずかです。たとえば、BioStar X のドア、ゾーン、エレベーターは XProtect のドアと同じ階層ですが、BioStar X の要素にはより多くの詳細属性があります。以下の図を参照してください。
+
+<Image src='/img/integration/milestone/structural-differences.png' className='none' alone />
+
+## 機能
+
+このプラグインを使用すると、XProtect Smart Clientで次の機能を使用できます：
+
+- BioStar X からユーザー（カードホルダー）を取得します。
+
+- BioStar X からドアを取得します。
+
+- BioStar X からゾーンを取得します。
+
+- BioStar X からエレベーターを取得します。
+
+- ドアのステータスをリアルタイムで表示します。
+
+- 入退室管理イベントをリアルタイムで表示します。
+
+- BioStar X の入退室管理アラームを表示します。
+
+- BioStar X の入退室管理アラームを確認済みにします。
+
+- BioStar X のドアステータスを制御します（アラーム解除、APB 解除、開扉、施錠、解錠、ドア解放）。
+
+- BioStar X のゾーンステータスを制御します（アラーム解除、APB 解除）。
+
+- BioStar X のエレベーターステータスを制御します（アラーム解除）。
+
+- ドアとカメラをリンクして、まとめて監視します。
+
+- マップでドア、ゾーン、エレベーターを割り当てて監視します。
+
+- 入退室管理イベントのレポートを生成します。

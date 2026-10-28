@@ -1,0 +1,197 @@
+---
+id: troubleshooting
+title: トラブルシューティング
+description: 接続失敗、イベント未受信、SSL証明書エラー、性能低下など、一般的なプラグインの問題の解決方法と、よくある質問を説明します。
+keywords:
+  - トラブルシューティング
+  - FAQ
+  - 接続エラー
+---
+
+<details className='faqs'>
+<summary>**接続失敗エラー**</summary>
+
+**症状：**
+
+- プラグインがBioStar Xサーバーに接続できません。
+
+- ログに認証エラーまたは接続エラーが記録されます。
+
+**解決方法：**
+
+1. **ネットワーク接続を確認**
+
+   ping (BioStar X server IP) -t
+
+2. **認証情報を確認**
+
+   - 設定したユーザー名とパスワードが正しいか確認してください。
+
+   - 同じ認証情報でBioStar XのWebインターフェースに直接ログインしてください。
+
+3. **ファイアウォールとルーティングを確認**
+
+   - Milestone XProtect サーバーと BioStar X サーバー間で、必要なポート（例：HTTP または HTTPS。`C:\Program Files\BioStar X(x64)\setting.conf` を確認）を許可してください。
+
+   - ポートの競合を確認してください。
+
+4. **BioStar Xサーバーの状態を確認**
+
+   - BioStar Xサービスが稼働しているか確認してください。
+
+   - 必要に応じて、変更管理プロセスに従ってBioStar Xサービスを再起動してください。
+
+</details>
+
+<details className='faqs'>
+<summary>**イベントを受信できない問題**</summary>
+
+**症状：**
+
+- プラグインは正常に接続しますが、Milestone XProtectにイベントが表示されません。
+
+- 入退室が発生しても、イベントリストが空のままです。
+
+**解決方法：**
+
+1. **イベントポーリングの設定を確認**
+
+   - ほぼリアルタイムでイベントを更新するには、**Event polling interval (ms)** を 1000～5000 ms などの短い間隔に設定します。
+
+   - 大量のイベントに対応するには、**Event polling max count** を200または500に増やします。
+
+2. **BioStar X でイベント生成を確認**
+
+   - テストイベントをトリガーします（例：リーダーに認証情報を提示）。イベントが生成されることを確認します。
+
+   - BioStar X のイベントログを確認し、BioStar X 側にイベントが記録されていることを確認します。
+
+</details>
+
+<details className='faqs'>
+<summary>**SSL 証明書エラー**</summary>
+
+**症状：**
+
+- Milestone XProtect と BioStar X 間で SSL/TLS 接続が失敗します。
+
+- ログに証明書の検証エラーまたは信頼エラーが表示されます。
+
+**解決方法：**
+
+1. **自己署名証明書**
+
+   - 初期テストでは、セキュリティポリシーで許可される場合に限り、「Use SSL」を一時的に false に設定し、HTTP での接続を確認します。
+
+   - 信頼を確立するため、BioStar X のサーバー証明書または発行 CA 証明書を Milestone XProtect サーバーの Windows 証明書ストアにインポートします。
+
+2. **公開証明書または企業証明書**
+
+   - 証明書が有効で、有効期限が切れていないことを確認します。
+
+   - BioStar X サーバーに証明書チェーン全体（中間 CA を含む）が正しくインストールされていることを確認します。
+
+</details>
+
+<details className='faqs'>
+<summary>**パフォーマンス低下**</summary>
+
+**症状：**
+
+- Milestone XProtect でイベント処理が遅延します。
+
+- Milestone XProtect または BioStar X サーバーで CPU 使用率またはネットワーク使用率が高くなります。
+
+**解決方法：**
+
+1. **負荷分散のためにポーリング設定を調整**
+
+   - ポーリング頻度とサーバー負荷を減らすため、**Event polling interval (ms)** を増やします。
+
+   - イベントの大量処理が遅延の原因の場合、**Event polling max count** を減らします。
+
+2. **ネットワーク遅延と帯域幅を確認**
+
+   - Milestone XProtect と BioStar X サーバー間の遅延が、導入環境で許容範囲内であることを確認します。
+
+   - 必要に応じて、ネットワーク担当と連携し、アクセス制御トラフィックのルーティング、帯域幅、Quality of Service（QoS）を最適化します。
+
+</details>
+
+<details className='faqs'>
+<summary>**「No access control plug-ins are available...」エラーのポップアップが表示される**</summary>
+
+**症状：**
+
+<Image src='/img/integration/milestone/troubleshooting-no-plugins.png' alone />
+
+アクセス制御システムインテグレーションを作成
+
+- 利用可能なアクセス制御プラグインがありません。イベントサーバーにプラグインがインストールされていることと、Event Server サービスが実行中であることを確認してください。
+
+**解決方法：**
+
+<Image src='/img/integration/milestone/troubleshooting-restart-event-server.png' alone />
+
+1. タスクバーの **Milestone Event Server** アイコンを右クリックします。
+
+2. **Event Server サービスを再起動** を選択し、**Milestone Event Server**、**Management Client**、および **Smart Client** を再起動して、エラーが解消されたことを確認してください。
+
+</details>
+
+## よくある質問
+
+<details className='faqs'>
+<summary>**プラグインが処理できるデバイス数はどれくらいですか。**</summary>
+
+プラグインは通常、プラグインインスタンスあたり 1,000 台を超えるデバイスをサポートできます。上限は、サーバーハードウェア、データベースのパフォーマンス、ネットワーク容量によって左右されます。非常に大規模な環境では、パフォーマンステストを検討し、必要に応じて複数インスタンスでスケールしてください。
+
+</details>
+
+<details className='faqs'>
+<summary>**複数の BioStar X サーバーを使用できますか。**</summary>
+
+各 MIPAccessControl プラグインインスタンスは、単一の BioStar X サーバーに接続します。複数の BioStar X サーバーを統合する場合、サーバーごとに Milestone XProtect で個別の MIPAccessControl アクセス制御システム インスタンスを設定します。
+
+</details>
+
+<details className='faqs'>
+<summary>**ポーリング関連オプションの違いは何ですか。**</summary>
+
+プラグインは、**Event polling interval (ms)** と **Event polling max count** の設定で定義された間隔で、BioStar X API を HTTP ベースでポーリングします。間隔を短くし、最大回数を増やすと、イベント配信は速くなりますが、両システムの負荷が増えます。間隔を長くし、回数を減らすと負荷は下がりますが、イベントの表示が遅れる場合があります。
+
+</details>
+
+<details className='faqs'>
+<summary>**プラグインを更新するにはどうすればよいですか。**</summary>
+
+1. 配布元から、プラグインインストーラーの最新バージョンをダウンロードします。
+
+2. Milestone Management Client で、運用手順で必要な場合は該当する MIPAccessControl アクセス制御システム インスタンスを停止または無効にします。
+
+3. 管理者権限で新しいインストーラー（MilestonePluginSetup.msi）を実行します。
+
+4. Milestone Management Client を再起動し、必要に応じて Milestone XProtect Access Control サービスも再起動します。
+
+</details>
+
+<details className='faqs'>
+<summary>**イベントタイプをカスタマイズできますか。**</summary>
+
+プラグインが使用するイベントの分類とマッピングは、EventTypeCategories.json 設定ファイルで定義されています。変更管理プロセスとテストに従ってこのファイルを調整し、BioStar X イベントを Milestone XProtect でグループ化する方法と表示方法をカスタマイズできます。
+
+</details>
+
+<details className='faqs'>
+<summary>**プラグインは BioStar X のクラウド環境に対応していますか。**</summary>
+
+プラグインは主にオンプレミスの BioStar X インストール向けに設計されています。クラウドでホストされる BioStar X との併用は、Milestone XProtect サーバーと BioStar X 環境間の安全なネットワーク接続、ルーティング、API へのアクセスに依存します。
+
+</details>
+
+<details className='faqs'>
+<summary>**設定をバックアップするにはどうすればよいですか？**</summary>
+
+接続設定とマッピング設定を含むプラグイン設定は、Milestone XProtect の設定データベースに保存されます。通常の Milestone XProtect のバックアップ手順を整備してください。これらのバックアップには MIPAccessControl プラグインの設定が含まれます。
+
+</details>

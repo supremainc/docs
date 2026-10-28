@@ -560,6 +560,11 @@ const config = {
                 type: 'doc',
                 label: 'Software House',
                 docId: 'integration/ccure/index'
+              },
+              {
+                type: 'doc',
+                label: 'Milestone',
+                docId: 'integration/milestone/index'
               }
             ]
           },

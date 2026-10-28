@@ -1,0 +1,137 @@
+---
+id: installation
+title: インストール
+description: 前提条件、システム要件とネットワーク要件、および Milestone x Suprema プラグインのインストール方法について説明します。
+keywords:
+  - 前提条件
+  - システム要件
+  - プラグインのインストール
+---
+
+## 前提条件
+
+Suprema インテグレーションを Milestone XProtect で使用するには、次の前提条件が必要です。 Suprema インテグレーションを Milestone XProtect にインストールする前に、サポート条件を確認してください。
+
+- XProtect 2026 R1
+
+- BioStar X をインストール
+
+- ライセンス済みの Milestone XProtect と BioStar X が必要です。
+
+   :::info
+
+   まず XProtect VMS と BioStar X をインストールしてください。
+
+   :::
+
+- BioStar X のアクセス制御の設定をすべて完了してください。
+
+- システム要件
+
+  - CPU：4 GHz クアッドコア
+
+  - RAM：最小 10 GB
+
+  - ハードディスク容量：空き容量が最小 1 TB あること
+
+  - **Milestone XProtect の要件**
+
+    - バージョン：XProtect Professional または XProtect Corporate 25.2 以上。
+
+    - プラットフォーム：Windows Server 2016、Windows Server 2019、または Windows Server 2022。
+
+    - .NET Framework：4.8.1 以上。
+
+  - **BioStar X の要件**
+
+    - バージョン：BioStar X 2.6.0 以上。
+
+    - ネットワーク：Milestone XProtect サーバーと BioStar X サーバー間の TCP/IP 接続。
+
+    - アクセス：BioStar X システムの管理者認証情報。
+
+  - **ネットワーク要件**
+
+     ポート：
+
+    - HTTP ポート：_事前定義されたポート 9000 を使用可能なポートに変更_
+
+       既定のポート（9000）は Milestone ですでに使用されているため、BioStar X の設定と競合します。ポート：9000 を適切な空きポートに変更してください。
+
+       `C:\Program Files\BioStar X(x64)\setting.conf` でポートを確認します。管理者として実行した状態で setting.conf ファイルを開きます。
+
+      <div className='grid-container'>
+
+      <Image src='/img/integration/milestone/setting-conf-folder.png' width={600} alone />
+
+      <Image src='/img/integration/milestone/setting-conf-port.png' width={400} alone />
+
+      </div>
+
+    - HTTPS ポート：_事前定義のポート 443 を使用可能なポートに変更_
+
+       Milestone が既定のポート（443）を既に使用しているため、BioStar X の設定と競合します。ポート：443 を適切な空きポートに変更してください。
+
+      <Image src='/img/integration/milestone/biostar-x-setting-https-port.png' alone />
+
+  - プロトコル：TCP/IP、HTTP/HTTPS
+
+  - ファイアウォール：設定したポートで、Milestone XProtect サーバーと BioStar X サーバー間の双方向通信を許可します。
+
+  - オペレーティング システム：
+
+     Microsoft Windows® 10 Pro（64 ビット）\*
+
+     Microsoft Windows® 10 Enterprise（64 ビット）\*
+
+     Microsoft Windows® 11 Pro（64 ビット）\*
+
+     Microsoft Windows® 11 Enterprise（64 ビット）\*
+
+  - その他：Microsoft .NET 4.5.1 Framework
+
+## Milestone x Suprema プラグインのインストール
+
+**Milestone x Suprema プラグイン**は、アクセスコントロールシステムと XProtect VMS を接続するために使用します。つまり、BioStar X と XProtect VMS 間でデータを交換するミドルウェアとして動作します。
+
+インストールの前に、**Milestone XProtect Event Server を手動で停止します**。
+
+システム トレイで Milestone XProtect Event Server アイコンを右クリックし、［Event Server サービスを停止］をクリックします。インストールが正常に完了したら、**Event Server サービスを再度開始します**。
+
+:::info
+
+これらのプラグインは MIP SDK 2023 R3 でビルドし、Milestone XProtect Professional 2023 R3 でテストしました。 XProtect の他のバージョンについては、[Suprema グローバル技術サポートチーム](https://support.supremainc.com)にお問い合わせください。
+
+:::
+
+1. **プラグイン（v1.1.1）をダウンロード**
+
+   - 配布元から MilestonePluginSetup.msi インストーラーを入手します。
+
+   - Milestone XProtect サーバーでローカル管理者権限があることを確認します。
+
+2. **インストーラーを実行**
+
+   MilestonePluginSetup.msi を右クリックし、［管理者として実行］を選択します。
+
+3. **インストールウィザードに従う**
+
+   - ライセンス契約に同意します。
+
+     <Image src='/img/integration/milestone/install-license-agreement.png' alone />
+
+   - インストール先ディレクトリを選択します（既定のパスを推奨します）。
+
+     <Image src='/img/integration/milestone/install-destination-location.png' alone />
+
+   - インストールを完了します。
+
+     <Image src='/img/integration/milestone/install-complete.png' alone />
+
+4. **インストールを確認**
+
+   - Milestone XProtect アクセス制御プラグインのディレクトリに `MIPAccessControl.dll` が存在することを確認します。
+
+   - プラグインを読み込むために、Milestone Management Client を再起動します。
+
+   <Image src='/img/integration/milestone/install-verify.png' alone />
