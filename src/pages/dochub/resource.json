@@ -354,16 +354,16 @@
         ],
         "version": "1.5.1",
         "manuals": {
-            "ko": "device/biostation_3/BioStation 3_UG_1.12_KO_260904.pdf",
-            "en": "device/biostation_3/BioStation 3_UG_1.12_EN_260904.pdf",
-            "es": "device/biostation_3/BioStation 3_UG_1.12_ES_260904.pdf",
-            "ja": "device/biostation_3/BioStation 3_UG_1.12_JA_260904.pdf"
+            "ko": "device/biostation_3/BioStation 3_UG_1.13_KO_261030.pdf",
+            "en": "device/biostation_3/BioStation 3_UG_1.13_EN_261030.pdf",
+            "es": "device/biostation_3/BioStation 3_UG_1.13_ES_261030.pdf",
+            "ja": "device/biostation_3/BioStation 3_UG_1.13_JA_261030.pdf"
         },
         "release_notes": {
             "ko": "device/biostation_3/BioStation 3_RN_1.5.1_KO_260922.pdf",
             "en": "device/biostation_3/BioStation 3_RN_1.5.1_EN_260922.pdf"
         },
-        "a_e": "device/biostation_3/SUPREMA_BioStation_3_AE-Specification_260907.docx",
+        "a_e": "device/biostation_3/SUPREMA_BioStation_3_AE-Specification_261029.docx",
         "dt": {
             "ko": "device/biostation_3/BioStation 3_DrillingTemplate_KO.pdf",
             "en": "device/biostation_3/BioStation 3_DrillingTemplate_EN.pdf"
@@ -1197,5 +1197,26 @@
             "en": ""
         },
         "release_date": "2026-06-29"
+    },
+    {
+        "category": "integration",
+        "product": "Milestone",
+        "sidebar": "milestone",
+        "version": "",
+        "manuals": {
+            "en": "Integration/milestone/Suprema Integration with Milestone XProtect_UG_3.0_EN_261030.pdf",
+            "es": "Integration/milestone/Suprema Integration with Milestone XProtect_UG_3.0_ES_261030.pdf",
+            "ja": "Integration/milestone/Suprema Integration with Milestone XProtect_UG_3.0_JA_261030.pdf"
+        },
+        "release_notes": {
+            "ko": "",
+            "en": ""
+        },
+        "a_e": "",
+        "dt": {
+            "ko": "",
+            "en": ""
+        },
+        "release_date": "2026-10-30"
     }
 ]
