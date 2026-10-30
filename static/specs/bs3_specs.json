@@ -229,6 +229,45 @@
             "ja": [ "IR：200 万画素", "ビジュアル：200 万画素" ]
           }
         },
+        "dimensions": {
+          "label": "크기 (W x H x D)",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "82.5 x 171 x 23.4 (mm)"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": "72.9 x 164 (mm)"
+            }
+          }
+        },
+        "weight": {
+            "label": "무게",
+            "label_id": "specs.general.weight",
+            "type": "model",
+            "items": {
+               "model1": {
+                  "label": "장치",
+                  "label_id": "specs.general.weight.device",
+                  "value": [ "BS3-DB: 370 g", "BS3-APWB: 380 g" ]
+               },
+               "model2": {
+                  "label": "브래킷",
+                  "label_id": "specs.general.weight.bracket",
+                  "value": {
+                     "ko": "90 g (와셔 및 볼트 포함)",
+                     "en": "90 g (including washers and bolts)",
+                     "es": "90 g (incluye arandelas y tornillos)",
+                     "ja": "90 g (ワッシャーおよびボルトを含む)"
+                  }
+               }
+            }
+        },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
@@ -262,11 +301,6 @@
           "label_id": "specs.storage.max_users",
           "value": "100,000",
           "annotation_value": "anno6"
-        },
-        "max_user_profile_images": {
-          "label": "최대 사용자 프로필 이미지 수",
-          "label_id": "specs.storage.max_user_profile_images",
-          "value": "100,000"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
