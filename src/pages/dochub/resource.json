@@ -1204,9 +1204,9 @@
         "sidebar": "milestone",
         "version": "",
         "manuals": {
-            "en": "Integration/milestone/Suprema Integration with Milestone XProtect_SG_UG_3.0_EN_261029.pdf",
-            "es": "Integration/milestone/Suprema Integration with Milestone XProtect_SG_UG_3.0_ES_261029.pdf",
-            "ja": "Integration/milestone/Suprema Integration with Milestone XProtect_SG_UG_3.0_JA_261029.pdf"
+            "en": "Integration/milestone/Suprema Integration with Milestone XProtect_UG_3.0_EN_261030.pdf",
+            "es": "Integration/milestone/Suprema Integration with Milestone XProtect_UG_3.0_ES_261030.pdf",
+            "ja": "Integration/milestone/Suprema Integration with Milestone XProtect_UG_3.0_JA_261030.pdf"
         },
         "release_notes": {
             "ko": "",
@@ -1217,6 +1217,6 @@
             "ko": "",
             "en": ""
         },
-        "release_date": "2026-10-29"
+        "release_date": "2026-10-30"
     }
 ]
