@@ -7371,6 +7371,10 @@
     "width": 945,
     "height": 471
   },
+  "/img/common/sdk_hero_ko.png": {
+    "width": 945,
+    "height": 471
+  },
   "/img/common/setting-system-restore-complete.png": {
     "width": 635,
     "height": 415
@@ -7939,13 +7943,9 @@
     "width": 250,
     "height": 444
   },
-  "/img/device/bs3-auth-option-qr.png": {
-    "width": 250,
-    "height": 163
-  },
   "/img/device/bs3-auth-option.png": {
     "width": 250,
-    "height": 70
+    "height": 163
   },
   "/img/device/bs3-auth-result-display-option.png": {
     "width": 250,
@@ -8894,6 +8894,10 @@
   "/img/device/facestationf2-main.png": {
     "width": 1200,
     "height": 778
+  },
+  "/img/device/factory-reset-cs20.png": {
+    "width": 800,
+    "height": 315
   },
   "/img/device/factory-reset-cs40.png": {
     "width": 800,
@@ -10491,9 +10495,9 @@
     "width": 720,
     "height": 947
   },
-  "/img/device/name-function-each-part-bs3.png": {
-    "width": 732,
-    "height": 925
+  "/img/device/name-function-each-part-bs3.svg": {
+    "width": 710,
+    "height": 950
   },
   "/img/device/name-function-each-part-bs3m.svg": {
     "width": 903,
@@ -10606,6 +10610,10 @@
   "/img/device/qr-scanning-xs2.svg": {
     "width": 300,
     "height": 313
+  },
+  "/img/device/reset-network-settings-cs20.png": {
+    "width": 800,
+    "height": 315
   },
   "/img/device/reset-network-settings-cs40.png": {
     "width": 800,
@@ -16907,10 +16915,6 @@
     "width": 1706,
     "height": 405
   },
-  "/img/en/common/sdk_hero.png": {
-    "width": 945,
-    "height": 471
-  },
   "/img/en/device/auth-dynamic-roi.png": {
     "width": 800,
     "height": 1280
@@ -17239,13 +17243,9 @@
     "width": 250,
     "height": 444
   },
-  "/img/en/device/bs3-auth-option-qr.png": {
-    "width": 250,
-    "height": 159
-  },
   "/img/en/device/bs3-auth-option.png": {
     "width": 250,
-    "height": 68
+    "height": 159
   },
   "/img/en/device/bs3-auth-result-display-option.png": {
     "width": 250,
@@ -18691,9 +18691,9 @@
     "width": 841,
     "height": 940
   },
-  "/img/en/device/name-function-each-part-bs3.png": {
-    "width": 805,
-    "height": 925
+  "/img/en/device/name-function-each-part-bs3.svg": {
+    "width": 741,
+    "height": 950
   },
   "/img/en/device/name-function-each-part-bs3m.svg": {
     "width": 903,
@@ -20322,6 +20322,10 @@
   "/img/es/device/bs3m-odb-oapb-dimension.svg": {
     "width": 1097,
     "height": 663
+  },
+  "/img/es/device/name-function-each-part-bs3.svg": {
+    "width": 725,
+    "height": 950
   },
   "/img/es/device/name-function-each-part-bs3m.svg": {
     "width": 1016,
@@ -22379,6 +22383,154 @@
     "width": 254,
     "height": 188
   },
+  "/img/integration/milestone/associate-cameras1.png": {
+    "width": 500,
+    "height": 317
+  },
+  "/img/integration/milestone/associate-cameras2.png": {
+    "width": 500,
+    "height": 317
+  },
+  "/img/integration/milestone/associate-cameras3.png": {
+    "width": 555,
+    "height": 141
+  },
+  "/img/integration/milestone/biostar-x-setting-https-port.png": {
+    "width": 500,
+    "height": 624
+  },
+  "/img/integration/milestone/configuration-procedure.png": {
+    "width": 1001,
+    "height": 466
+  },
+  "/img/integration/milestone/install-complete.png": {
+    "width": 500,
+    "height": 388
+  },
+  "/img/integration/milestone/install-destination-location.png": {
+    "width": 500,
+    "height": 388
+  },
+  "/img/integration/milestone/install-license-agreement.png": {
+    "width": 500,
+    "height": 344
+  },
+  "/img/integration/milestone/install-verify.png": {
+    "width": 800,
+    "height": 678
+  },
+  "/img/integration/milestone/license-offline1.png": {
+    "width": 650,
+    "height": 768
+  },
+  "/img/integration/milestone/license-offline2.png": {
+    "width": 650,
+    "height": 631
+  },
+  "/img/integration/milestone/license-offline3.png": {
+    "width": 650,
+    "height": 739
+  },
+  "/img/integration/milestone/license-offline4.png": {
+    "width": 650,
+    "height": 768
+  },
+  "/img/integration/milestone/license-online1.png": {
+    "width": 650,
+    "height": 725
+  },
+  "/img/integration/milestone/license-online2.png": {
+    "width": 650,
+    "height": 754
+  },
+  "/img/integration/milestone/plugin-setup-access-control-events.png": {
+    "width": 800,
+    "height": 422
+  },
+  "/img/integration/milestone/plugin-setup-associate-cameras.png": {
+    "width": 700,
+    "height": 516
+  },
+  "/img/integration/milestone/plugin-setup-cardholders.png": {
+    "width": 800,
+    "height": 519
+  },
+  "/img/integration/milestone/plugin-setup-connecting.png": {
+    "width": 700,
+    "height": 503
+  },
+  "/img/integration/milestone/plugin-setup-create-integration.png": {
+    "width": 700,
+    "height": 416
+  },
+  "/img/integration/milestone/plugin-setup-create-new.png": {
+    "width": 700,
+    "height": 737
+  },
+  "/img/integration/milestone/plugin-setup-doors-cameras.png": {
+    "width": 800,
+    "height": 421
+  },
+  "/img/integration/milestone/plugin-setup-general-settings.png": {
+    "width": 800,
+    "height": 743
+  },
+  "/img/integration/milestone/plugin-setup-license.png": {
+    "width": 800,
+    "height": 629
+  },
+  "/img/integration/milestone/setting-conf-folder.png": {
+    "width": 600,
+    "height": 494
+  },
+  "/img/integration/milestone/setting-conf-port.png": {
+    "width": 500,
+    "height": 253
+  },
+  "/img/integration/milestone/structural-differences.png": {
+    "width": 1000,
+    "height": 421
+  },
+  "/img/integration/milestone/sync-check1.png": {
+    "width": 400,
+    "height": 393
+  },
+  "/img/integration/milestone/sync-check2.png": {
+    "width": 1000,
+    "height": 447
+  },
+  "/img/integration/milestone/sync-check3.png": {
+    "width": 1000,
+    "height": 471
+  },
+  "/img/integration/milestone/sync-check4.png": {
+    "width": 1000,
+    "height": 214
+  },
+  "/img/integration/milestone/sync-check5.png": {
+    "width": 1000,
+    "height": 458
+  },
+  "/img/integration/milestone/sync-check6.png": {
+    "width": 400,
+    "height": 276
+  },
+  "/img/integration/milestone/sync-check7.png": {
+    "width": 600,
+    "height": 542
+  },
+  "/img/integration/milestone/system-diagram.png": {
+    "width": 1000,
+    "height": 572
+  },
+  "/img/integration/milestone/troubleshooting-no-plugins.png": {
+    "width": 500,
+    "height": 124
+  },
+  "/img/integration/milestone/troubleshooting-restart-event-server.png": {
+    "width": 400,
+    "height": 382
+  },
   "/img/ja/cam-server/ai-advanced-face-shot-type.png": {
     "width": 1133,
     "height": 583
@@ -23470,6 +23622,10 @@
   "/img/ja/device/bs3m-odb-oapb-dimension.svg": {
     "width": 1097,
     "height": 663
+  },
+  "/img/ja/device/name-function-each-part-bs3.svg": {
+    "width": 755,
+    "height": 950
   },
   "/img/ja/device/name-function-each-part-bs3m.svg": {
     "width": 930,
