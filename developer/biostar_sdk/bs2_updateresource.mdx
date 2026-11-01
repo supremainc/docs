@@ -1,0 +1,39 @@
+# BS2_UpdateResource
+
+리소스를 업데이트합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_UpdateResource(void* context, uint32_t deviceId, BS2ResourceElement* resourceElement, uint8_t keepVerifyingSlaveDevice, OnProgressChanged ptrProgressChanged);
+```
+
+:::info
+
+[BS2ResourceElement 구조체 보기](device_api#bs2resourceelement) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `resourceElement` : 리소스 아이템
+
+- [In] `keepVerifyingSlaveDevice` : 리소스 업그레이드시 슬레이브 장치의 인증을 허용 여부
+
+- [In] `ptrProgressChanged` : progress change listener
+
+:::info
+
+keepVerifyingSlaveDevice 파라미터는 펌웨어에서 지원하는지 확인해야 한다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

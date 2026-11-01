@@ -1,0 +1,25 @@
+# BS2_Initialize
+
+Context를 초기화합니다.
+
+:::info
+
+장치 제어 API를 호출하기전에 반드시 먼저 호출되어야 합니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_Initialize(void* context);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

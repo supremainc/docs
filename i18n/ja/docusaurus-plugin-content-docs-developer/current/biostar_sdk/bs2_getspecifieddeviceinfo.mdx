@@ -1,0 +1,45 @@
+# BS2_GetSpecifiedDeviceInfo
+
+<Badge only>+ v2.6.3</Badge> Gets specified device information.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSpecifiedDeviceInfo(void* context, uint32_t deviceId, BS2EnumSpecifiedDeviceInfo specifiedDeviceInfo, void* pOutDeviceInfo, uint32_t nDeviceInfoSize, uint32_t* pOutDeviceInfoSize);
+```
+
+:::info
+
+See [BS2SimpleDeviceInfo Structure](device_api#bs2simpledeviceinfo)
+
+See [BS2SimpleDeviceInfoEx Structure](device_api#bs2simpledeviceinfoex)
+
+See [BS2IPv6DeviceInfo Structure](device_api#bs2ipv6deviceinfo) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `specifiedDeviceInfo` : Device ID trying to get
+
+   | Value | Structure |
+   | :--: | --- |
+   | 1 | BS2SimpleDeviceInfo |
+   | 2 | BS2SimpleDeviceInfoEx |
+   | 3 | BS2IPv6DeviceInfo |
+
+- \[Out\] `pOutDeviceInfo` : Address to store the device information
+
+- \[In\] `nDeviceInfoSize` : Memory size of address to store the device information
+
+- \[Out\] `pOutDeviceInfoSize` : Size of device information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.

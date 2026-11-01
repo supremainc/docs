@@ -1,0 +1,59 @@
+# BS2_GetFingerTemplateQuality
+
+<Badge only>+ v2.6.4</Badge> Checks the quality score of the fingerprint from the fingerprint template data.
+
+Validates fingerprint templates for Suprema, ANSI and ISO types, and measures and returns quality scores.
+
+For unsupported or unrecognized formats, return an error.
+
+:::info
+
+Should define template within 384 Bytes,
+
+The score, out parameter is defined as below.
+
+| score | Quality |
+| --- | --- |
+| 0 - 20 | Worst |
+| 21 - 40 | Bad |
+| 41 - 60 | Normal |
+| 61 - 80 | Good |
+| 81 - 100 | Best |
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFingerTemplateQuality(const uint8_t* templateBuffer, const int32_t templateSize, int32_t* score);
+```
+
+## Parameter
+
+- \[In\] `templateBuffer` : The address of template data within 384 bytes
+
+- \[In\] `templateSize` : Size of real template
+
+- \[Out\] `score` : Address of memory where template quality score is to be returned
+
+## Return Value
+
+* If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+* `BS_SDK_ERROR_UNKNOWN_FINGER_TEMPLATE` is returned if an unsupported or unusual template is passed.
+
+* If NULL is returned for score or templateBuffer, `BS_SDK_ERROR_NULL_POINTER` is returned.
+
+* If templateSize is less than 0 or exceeds 384, `BS_SDK_ERROR_INVALID_PARAM` is returned.
+
+## See Also
+
+[BS2_ScanFingerprint](bs2_scanfingerprint)
+
+[BS2_ScanFingerprintEx](bs2_scanfingerprintex)
+
+[BS2_VerifyFingerprint](bs2_verifyfingerprint)
+
+[BS2_GetLastFingerprintImage](bs2_getlastfingerprintimage)

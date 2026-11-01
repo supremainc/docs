@@ -1,0 +1,31 @@
+# BS2_GetInputConfig
+
+Retrieves supervised input port settings from the device. This applies to the device such as CS40, SIO2, and DM20 only.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetInputConfig(void* context, uint32_t deviceId, BS2InputConfig* config);
+```
+
+:::info
+
+[See BS2InputConfig Structure](configuration_api#bs2inputconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Input port configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

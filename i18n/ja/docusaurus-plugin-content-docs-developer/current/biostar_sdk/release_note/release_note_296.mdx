@@ -1,0 +1,77 @@
+# Version 2.9.6 (V2.9.6.0)
+
+Date: 2024-02-05
+
+## New Features
+
+- BioEntry W3 connection support (Device name: BEW3-DB, BEW3-APB).
+
+- XPass 2 connection support (Device name: XP2-MAPB).
+
+- Support for storing only the template when saving facial information.
+
+- Added feature to ignore repetitive input signals when using third-party controllers connected via Wiegand.
+
+- Supports displaying authentication success/failure results from third-party controllers on Suprema devices.
+
+- Added function to initialize by selecting a network.
+
+1. Supports new devices.
+
+   - BioEntry W3 (BEW3-DB, BEW3-APB)
+
+   - XPass 2 (XP2-MAPB)
+
+1. Added feature to allow transmitting only the template, excluding the facial image, when sending facial data.
+
+   This is particularly useful in environments where privacy protection is emphasized.
+
+   This feature only applies to face authentication devices based on visual face, such as BioStation 3, FaceStation F2, and BioEntry W3.
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+   - Refer to structure [BS2FaceEx](../face_api#bs2faceex)
+
+1. In environments where Suprema devices are connected to third-party controllers via Wiegand, if the feedback for authentication is repetitively input to the Suprema device from a specific model of the controller, a feature has been added to ignore this.
+
+   - Refer to structure [BS2Trigger](../configuration_api#bs2trigger)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Added feature to display authentication results on the device screen when Suprema devices are connected to third-party controllers as peripheral devices.
+
+   - Refer to structure [BS2DisplayConfig](../configuration_api#bs2displayconfig)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Added function to initialize by selecting a network.
+
+   When connected to multiple networks, specifying a particular network for initialization allows for searching for devices on that sub-network after performing initialization.
+
+   - Add API [BS2_InitializeEx](../bs2_initializeex)
+
+## Modified Features
+
+1. Fixed an issue where a `BS_SDK_ERROR_NOT_SUPPORTED` error would occur when importing or setting face configuration on CoreStation 40.
+
+   - Refer to API [BS2_GetFaceConfig](../bs2_getfaceconfig)
+
+   - Refer to API [BS2_SetFaceConfig](../bs2_setfaceconfig)
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig)
+
+1. The device log filtering API [BS2_GetFilteredLog](../bs2_getfilteredlog), [BS2_GetFilteredLogSinceEventId](../bs2_getfilteredlogsinceeventid) has been `Deprecated`.
+
+   It is recommended that filtering be performed on the server using [BS2_GetLog](../bs2_getlog) and [BS2_StartMonitoringLog](../bs2_startmonitoringlog).
+
+   - Refer to API [BS2_GetFilteredLog](../bs2_getfilteredlog)
+
+   - Refer to API [BS2_GetFilteredLogSinceEventId](../bs2_getfilteredlogsinceeventid)
+
+   - Refer to API [BS2_GetLog](../bs2_getlog)
+
+   - Refer to API [BS2_StartMonitoringLog](../bs2_startmonitoringlog)
+
+   - Refer to API [BS2_StopMonitoringLog](../bs2_stopmonitoringlog)
+
+1. Fixes were made to stabilize the code internally in the SDK.

@@ -1,0 +1,17 @@
+# 2.3.1.b 버전
+
+날짜 2016-11-24
+
+## 수정된 버그
+
+1. 최대 64대의 장치만 연결할 수 있는 버그가 수정되었습니다. 최대 1024대까지 연결 가능합니다.
+
+1. BioStar 2 Device SKD C# 예제 프로그램의 SFEnum.cs 파일에 존재하던 `BS2APBZoneReaderTypeEnum` 이 실제 사용되는 값과 일치되지 않아 실제 값에 맞게 변경되었습니다.
+
+   | Enum | 변경 전 | 변경 후 |
+   | --- | --- | --- |
+   | `BS2_APB_ZONE_READER_NONE` | 0 | -1 |
+   | `BS2_APB_ZONE_READER_ENTRY` | 1 | 0 |
+   | `BS2_APB_ZONE_READER_EXIT` | 2 | 1 |
+
+1. `BS2_ReadImageLog` 함수가 16kB가 넘는 이미지를 처리하지 못하는 버그가 수정되었습니다. 이제는 SDK 에서 16kB가 넘는 이미지 로그를 문제 없이 처리할 수 있습니다.

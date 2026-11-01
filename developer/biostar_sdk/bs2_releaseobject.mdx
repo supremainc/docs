@@ -1,0 +1,29 @@
+# BS2_ReleaseObject
+
+동적으로 할당 받은 메모리를 시스템에 반환합니다. 포인터 값이 `NULL`이면 아무런 동작을 하지 않습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+void BS2_ReleaseObject(void* object);
+```
+
+## 파라미터
+
+- [In] `object` : 동적 할당된 메모리 주소
+
+## 반환값
+
+Void
+
+## 함께 보기
+
+[BS2_GetDevices](bs2_getdevices)
+
+[BS2_GetLog](bs2_getlog)
+
+[BS2_GetFilteredLog](bs2_getfilteredlog)
+
+[BS2_GetUserList](bs2_getuserlist)

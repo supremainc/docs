@@ -1,0 +1,33 @@
+# BS2_GetDesFireCardConfigEx
+
+<Badge only>+ v2.6.4</Badge> 장치의 DesFire 카드 고급설정 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDesFireCardConfigEx(void* context, uint32_t deviceId, BS2DesFireCardConfigEx* config);
+```
+
+:::info
+
+[BS2DesFireCardConfigEx 구조체 보기](configuration_api#bs2desfirecardconfigex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `config` : DesFire 카드 설정 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생힐 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_SetDesFireCardConfigEx](bs2_setdesfirecardconfigex)

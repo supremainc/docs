@@ -1,0 +1,41 @@
+# Version 2.7.2 (V2.7.2.12)
+
+Date: 2020-12-11
+
+## New Features
+
+- Supports screensaver activation (FaceStation 2, FaceStation F2)
+
+- FaceStation F2 server matching support (1:1 Matching when using card together)
+
+1. You can turn the screensaver on and off. FaceStation 2, FaceStation F2 only.
+
+   - Refer to structure [BS2DisplayConfig](../configuration_api#bs2displayconfig)
+
+   - Refer to API [BS2_GetDisplayConfig](../bs2_getdisplayconfig)
+
+   - Refer to API [BS2_SetDisplayConfig](../bs2_setdisplayconfig)
+
+1. FaceStation F2 server matching support. (Card only)
+
+   - Refer to API [BS2_SetServerMatchingHandler](../bs2_setservermatchinghandler)
+
+   - Refer to API [BS2_VerifyUserFaceEx](../bs2_verifyuserfaceex)
+
+## Modified Features
+
+1. Fixed an issue where devices could not connect normally when in Device to Server connection mode.
+
+1. In the process of unloading SDK through [BS2_ReleaseContext](../bs2_releasecontext), a problem that may not be normally unloaded due to a specific thread has been fixed.
+
+1. Body temperature measurement range has been modified. (30º \~ 45º =\> 1º \~ 45º)
+
+   - Refer to structure [BS2FaceConfigExt](../configuration_api#bs2faceconfigext) (`thermalThresholdLow`, `thermalThresholdHigh`)
+
+1. Fixed a problem where `BS_SDK_ERROR_NOT_SUPPORTED` or `BS_SDK_ERROR_TIMEOUT` error was returned when enrolling a user with multiple images to FaceStation F2.
+
+   - Refer to API [BS2_EnrollUserFaceEx](../bs2_enrolluserfaceex)
+
+1. Fixed a problem in which a specific function was called from some devices, but the `BS_SDK_ERROR_TIMEOUT` error was returned as a result value even if it succeeded.
+
+   - Refer to API [BS2_ResetConfigExceptNetInfo](../bs2_resetconfigexceptnetinfo)

@@ -1,0 +1,59 @@
+# BS2_GetUserDatabaseInfoFromDir
+
+<Badge only>+ v2.5.0</Badge> USB로 추출한 Data에서 전체 사용자 정보(사용자개수, 카드개수, 지문개수, 얼굴 개수)를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserDatabaseInfoFromDir(void* context, const char* szDir, uint32_t* numUsers, uint32_t* numCards, uint32_t* numFingers, uint32_t* numFaces, IsAcceptableUserID ptrIsAcceptableUserID);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [Out] `szDir` : Data 저장 경로
+
+- [Out] `numUsers` : 총 사용자 수
+
+- [Out] `numCards` : 총 카드 수
+
+- [Out] `numFingers` : 총 지문 수
+
+- [Out] `numFaces` : 총 얼굴 수
+
+- [In] `ptrIsAcceptableUserID` : TBD
+
+:::info
+
+`uidsObjs` 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_AllocateUsbContext](bs2_allocateusbcontext)
+
+[BS2_ReleaseUsbContext](bs2_releaseusbcontext)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

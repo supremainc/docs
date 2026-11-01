@@ -1,0 +1,136 @@
+# Version 2.8.0 (V2.8.0.6)
+
+Date: 2021-06-07
+
+## New Features
+
+- Supports X-Station 2
+
+- Supports Intelligent Slave Feature (FW upgrade is required)
+
+- Supports getting Face Image Warping (FaceStation F2 only)
+
+- Supports the function of Device Capabilities to know the connected device capability
+
+- Adds the relevant log events of Mobile Card Verification
+
+- Adds new model names to check card supporting
+
+1. X-Station 2 Configurations are available to use.
+
+   - Refer to structure [BS2BarcodeConfig](../configuration_api#bs2barcodeconfig)
+
+   - Refer to API [BS2_GetBarcodeConfig](../bs2_getbarcodeconfig)
+
+   - Refer to API [BS2_SetBarcodeConfig](../bs2_setbarcodeconfig)
+
+   - Refer to API [BS2_WriteQRCode](../bs2_writeqrcode)
+
+1. The relevant function of Intelligent Slave is available to use. Intelligent Slave is a function that enables many users' 1:1 or 1:N matching by transmitting the authentication result to OSDP card data when authentication using biometrics is performed in an environment in which the Suprema biometric device and a third-party controller are connected.
+
+   [Intelligent Slave Support](https://support.supremainc.com/en/support/solutions/articles/24000066085--biostar-2-intelligent-slave-support)
+
+   - Refer to structure [BS2Rs485Config](../configuration_api#bs2rs485config)
+
+   - Refer to API [BS2_GetRs485Config](../bs2_getrs485config)
+
+   - Refer to API [BS2_SetRs485Config](../bs2_setrs485config)
+
+1. Getting Image Warping from the raw image file of user face is available to use.
+
+   - Refer to API [BS2_GetNormalizedImageFaceEx](../bs2_getnormalizedimagefaceex)
+
+1. Getting Device Capacity Information has been added.
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+   - Refer to API [BS2_GetDeviceCapabilities](../bs2_getdevicecapabilities)
+
+1. New log event 'Mobile Card Verification' has been added to distinguish the user credential.
+
+   - Refer to structure [BS2Event and refer to the subcode](../log_management_api#bs2event)
+
+1. API [BS2_GetCardModel](../bs2_getcardmodel) has been added to support the below model names.
+
+   - Refer to API [BS2_GetCardModel](../bs2_getcardmodel)
+
+   - BEW2-ODPB
+
+   - BEW2-OAPB
+
+   - BEW2-OHPB
+
+## Modified Features
+
+1. Fixed the error BS_SDK_ERROR_TIMEOUT where the below case.
+
+   **RS485 Master: CoreStation 40**
+
+   **RS485 Slave: FaceStation 2 / FaceLite**
+
+   Assigning a face template for FaceStation 2 or FaceLite to a user and enrolling it on CoreStation 40.
+
+   - Refer to API [BS2_EnrolUser](../bs2_enroluser)
+
+   - Refer to API [BS2_EnrollUser](../bs2_enrolluser)
+
+   - Refer to API [BS2_EnrolUserEx](../bs2_enroluserex)
+
+   - Refer to API [BS2_EnrollUserEx](../bs2_enrolluserex)
+
+   - Refer to API [BS2_EnrollUserSmall](../bs2_enrollusersmall)
+
+   - Refer to API [BS2_EnrollUserSmallEx](../bs2_enrollusersmallex)
+
+   - Refer to API [BS2_EnrollUserFaceEx](../bs2_enrolluserfaceex)
+
+1. Fixed the issue that device transfers for more than 700 users were relatively slow compared to V2.7.2.x and earlier.
+
+   - Refer to API [BS2_EnrolUser](../bs2_enroluser)
+
+   - Refer to API [BS2_EnrollUser](../bs2_enrolluser)
+
+   - Refer to API [BS2_EnrolUserEx](../bs2_enroluserex)
+
+   - Refer to API [BS2_EnrollUserEx](../bs2_enrolluserex)
+
+   - Refer to API [BS2_EnrollUserSmall](../bs2_enrollusersmall)
+
+   - Refer to API [BS2_EnrollUserSmallEx](../bs2_enrollusersmallex)
+
+   - Refer to API [BS2_EnrollUserFaceEx](../bs2_enrolluserfaceex)
+
+1. Fixed the return value from BS_SDK_SUCCESS to BS_SDK_ERROR_NOT_SUPPORTED when requesting Config from FaceLite that does not support Event config.
+
+   - Refer to API [BS2_GetEventConfig](../bs2_geteventconfig)
+
+1. Fixed the issue that the SDK allocation and release were repeated, making device connection impossible if a certain number of times were exceeded.
+
+   - Refer to API [BS2_AllocateContext](../bs2_allocatecontext)
+
+   - Refer to API [BS2_ReleaseContext](../bs2_releasecontext)
+
+1. Fixed the issue that calling [BS2_ReleaseContext](../bs2_releasecontext) cannot release the resource intermittently and the port 51212/port 51213 occupied.
+
+1. Fixed the issue that a deadlock could occur during event processing due to repeated connecting device/disconnecting device calls.
+
+1. Fixed the issue that the application may crash intermittently during calling [BS2_ReleaseContext](../bs2_releasecontext).
+
+1. Fixed the issue that the device could be reset if the fields of timeout were not assigned a multiple of 10 when updating the display settings.
+
+   - Refer to structure [BS2DisplayConfig](../configuration_api#bs2displayconfig) menuTimeout, msgTimeout, backlightTimeout
+
+   - Refer to API [BS2_SetDisplayConfig](../bs2_setdisplayconfig)
+
+1. Fixed the issue that CPU Usages goes up to 99% when [BS2_SearchDevices](../bs2_searchdevices) is called repeatedly in a 4-core environment.
+
+1. Added 'Not used' to the White LED Settings for FaceStation F2.
+
+1. **FaceStation F2 Only** The meaning and setting values of lightCondition in the [BS2FaceConfig](../configuration_api#bs2faceconfig) have been changed as follows.
+
+   | Supported Ver. | Meaning | 0 | 1 | 2 | 3 |
+   | --- | --- | --- | --- | --- | --- |
+   | 1.0.0 \~ 1.0.5 | Ambient Brightness | Indoor | Outdoor | Auto | \- |
+   | 1.1.0 or higher | Light Brightness | Normal | High | \- (<Dep>[Deprecated]</Dep>) | Not used |
+
+   - Refer to structure [BS2FaceConfig](../configuration_api#bs2faceconfig) lightCondition

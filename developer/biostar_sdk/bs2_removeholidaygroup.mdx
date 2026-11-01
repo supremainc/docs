@@ -1,0 +1,35 @@
+# BS2_RemoveHolidayGroup
+
+주어진 휴일 그룹을 제거합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveHolidayGroup(void* context, uint32_t deviceId, uint32_t* holidayGroupIds, uint32_t holidayGroupIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `holidayGroupIds` : 제거할 holiday group id 리스트
+
+- [In] `holidayGroupIdCount` : holiday group id 리스트의 크기
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetHolidayGroup](bs2_getholidaygroup)
+
+[BS2_GetAllHolidayGroup](bs2_getallholidaygroup)
+
+[BS2_SetHolidayGroup](bs2_setholidaygroup)
+
+[BS2_RemoveAllHolidayGroup](bs2_removeallholidaygroup)

@@ -1,0 +1,35 @@
+# BS2_GetConfig
+
+Configuration blob을 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetConfig(void* context, uint32_t deviceId, BS2Configs* configs);
+```
+
+:::info
+
+[BS2Configs 구조체 보기](configuration_api#bs2configs) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `configs` : 저장하고자 하는 configuration blob.
+
+:::info
+
+configs의 configMask가 장치에서 지원하지 않으면 에러를 반환합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

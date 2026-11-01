@@ -1,0 +1,55 @@
+# BS2_SetAuthGroup
+
+인증 그룹을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAuthGroup(void* context, uint32_t deviceId, BS2AuthGroup* authGroups, uint32_t authGroupCount);
+```
+
+:::info
+
+[BS2AuthGroup 구조체 보기](face_api#bs2authgroup) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `authGroups` : 저장하고자 하는 auth group 리스트
+
+- [In] `authGroupCount` : auth group 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+Console.WriteLine("Trying to set auth groups to device.");
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_SetAuthGroup(sdkContext, deviceID, authGroupListObj, (UInt32)authGroupList.Count);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+}
+
+Marshal.FreeHGlobal(authGroupIDObj);
+BS2_ReleaseObject(uidObj);
+```
+
+## 함께 보기
+
+[BS2_GetAuthGroup](bs2_getauthgroup)
+
+[BS2_GetAllAuthGroup](bs2_getallauthgroup)
+
+[BS2_RemoveAuthGroup](bs2_removeauthgroup)
+
+[BS2_RemoveAllAuthGroup](bs2_removeallauthgroup)

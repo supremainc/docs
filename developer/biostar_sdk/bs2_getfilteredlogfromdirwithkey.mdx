@@ -1,0 +1,67 @@
+# BS2_GetFilteredLogFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> USB로 추출한 Data에서 주어진 조건을 만족하는 모든 로그 레코드를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFilteredLogFromDirWithKey(void* context, const char* szDir, char* uid, BS2_EVENT_CODE eventCode, BS2_TIMESTAMP start, BS2_TIMESTAMP end, uint8_t tnakey, BS2Event** logsObj, uint32_t* numLog, const BS2EncryptKey* key);
+```
+
+:::info
+
+[BS2Event 구조체 보기](log_management_api#bs2event) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `szDir` : Data 저장 경로
+
+- [In] `uid` : 사용자 식별자이며 NULL일 경우 모든 사용자를 의미합니다.
+
+- [In] `eventCode` : 로그 이벤트 코드이며 0일 경우 모든 이벤트를 의미합니다.
+
+- [In] `start` : 조건 검색의 시작 시간이며 0일 경우 제한이 없음을 의미합니다.
+
+- [In] `end` : 조건 검색의 마지막 시간이며 0일 경우 제한이 없음을 의미합니다.
+
+- [In] `tnakey` : TNA key이며 0일 경우 모든 TNA key를 의미합니다.
+
+- [Out] `logsObj` : 로그 레코드의 주소를 저장할 포인터
+
+- [Out] `numLog` : 로그 레코드의 개수
+
+- [In] `key` : 암호화 키이며 [BS2_SetDataEncryptKey](bs2_setdataencryptkey)로 지정한 키값입니다.
+
+:::info
+
+`logsObj` 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetUserDatabaseInfoFromDirWithKey](bs2_getuserdatabaseinfofromdirwithkey)
+
+[BS2_GetUserListFromDirWithKey](bs2_getuserlistfromdirwithkey)
+
+[BS2_GetUserInfosFromDirWithKey](bs2_getuserinfosfromdirwithkey)
+
+[BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey)
+
+[BS2_GetUserInfosExFromDirWithKey](bs2_getuserinfosexfromdirwithkey)
+
+[BS2_GetUserDatasExFromDirWithKey](bs2_getuserdatasexfromdirwithkey)
+
+[BS2_GetLogFromDirWithKey](bs2_getlogfromdirwithkey)
+
+[BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey)

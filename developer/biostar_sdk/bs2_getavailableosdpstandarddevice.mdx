@@ -1,0 +1,70 @@
+# BS2_GetAvailableOsdpStandardDevice
+
+<Badge only>+ v2.9.1</Badge> **CoreStation40** 마스터 장치 식별자를 지정하여 추가 연결이 가능한 OSDP 장치 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAvailableOsdpStandardDevice(void* context, uint32_t deviceId, BS2OsdpStandardDeviceAvailable* osdpDevices);
+```
+
+:::info
+
+[BS2OsdpStandardDeviceAvailable 구조체 보기](slave_control_api#bs2osdpstandarddeviceavailable) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 마스터 장치 식별자
+
+- [Out] `osdpDevices` : OSDP 장치 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+BS2OsdpStandardDeviceAvailable osdpDevice = { 0, };
+
+BS2_DEVICE_ID id = Utility::selectDeviceID(deviceList, false, false);
+int sdkResult = BS2_GetAvailableOsdpStandardDevice(context_, id, &osdpDevice);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_GetAvailableOsdpStandardDevice call failed: %d", sdkResult);
+
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2OsdpStandardDeviceAvailable osdpDevices;
+
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetAvailableOsdpStandardDevice(sdkContext, deviceID, out osdpDevices);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+
+return result;
+```
+
+## 함께 보기
+
+[BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice)
+
+[BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice)
+
+[BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice)
+
+[BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice)
+
+[BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice)
+
+[BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability)
+
+[BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)

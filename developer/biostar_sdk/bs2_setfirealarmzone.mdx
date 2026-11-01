@@ -1,0 +1,47 @@
+# BS2_SetFireAlarmZone
+
+화재 경보 구역을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetFireAlarmZone(void* context, uint32_t deviceId, BS2FireAlarmZone* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[BS2FireAlarmZone 구조체 보기](zone_control_api#bs2firealarmzone) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zones` : fire alarm zone 리스트
+
+- [In] `zoneCount` : fire alarm zone 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetFireAlarmZone](bs2_getfirealarmzone)
+
+[BS2_GetAllFireAlarmZone](bs2_getallfirealarmzone)
+
+[BS2_GetFireAlarmZoneStatus](bs2_getfirealarmzonestatus)
+
+[BS2_GetAllFireAlarmZoneStatus](bs2_getallfirealarmzonestatus)
+
+[BS2_SetFireAlarmZoneAlarm](bs2_setfirealarmzonealarm)
+
+[BS2_RemoveFireAlarmZone](bs2_removefirealarmzone)
+
+[BS2_RemoveAllFireAlarmZone](bs2_removeallfirealarmzone)

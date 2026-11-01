@@ -19,7 +19,7 @@ import { Start } from '@site/src/components/Winkey';
 import { NextStep, NextItem } from '@site/src/components/NextStep';
 import { Glossary, GlossaryAll } from '@site/src/components/Glossary';
 import Num from '@site/src/components/Num';
-import { StatusOK, StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark, Centerpoint, Bottompoint } from '@site/src/components/Status';
+import { StatusOK, StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark, Centerpoint, Bottompoint, Dep } from '@site/src/components/Status';
 import Overview from '@site/src/components/Overview';
 import Separator from '@site/src/components/Separator';
 import Badge from '@site/src/components/Badge';
@@ -258,7 +258,7 @@ export default {
     GlossaryAll,
     Num,
     StatusOK,
-    StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark, Centerpoint, Bottompoint,
+    StatusFail, StatusUpdating, StatusNormal, Mastermark, Slavemark, Centerpoint, Bottompoint, Dep,
     Overview,
     Separator,
     Badge,

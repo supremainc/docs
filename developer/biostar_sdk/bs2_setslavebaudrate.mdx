@@ -1,0 +1,27 @@
+# BS2_SetSlaveBaudrate
+
+<Badge only>+ v2.9.8</Badge> 마스터 장치에 연결된 슬레이브 장치의 RS-485 전송 속도를 변경합니다.
+
+슬레이브와 다시 연결하려면 마스터 장치의 RS-485 전송 속도도 슬레이브의 전송속도와 동일하게 변경해야 합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSlaveBaudrate(IntPtr context, UInt32 deviceId, UInt32 slaveId, UInt32 baudrate);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `slaveId` : 슬레이브 장치 식별자
+
+- [In] `baudrate` : RS-485 통신 속도
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

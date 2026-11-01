@@ -1,0 +1,78 @@
+# BS2_EnrollUserFaceEx
+
+<Badge only>+ v2.7.1</Badge> 새로운 사용자를 등록합니다.
+
+이 API는 Visual Face 인증 수단을 등록할 수 있는 기능을 포함합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_EnrollUserFaceEx(void* context, uint32_t deviceId, BS2UserFaceExBlob* userBlob, uint32_t userCount, uint8_t overwrite);
+```
+
+:::info
+
+[BS2UserFaceExBlob 구조체 보기](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `userBlob` : 등록하고자 하는 사용자 정보
+
+- [In] `userCount` : 사용자 개수
+
+- [In] `overwrite` : 중복된 사용자 덮어쓰기 여부
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+sdkResult = BS2_EnrollUserFaceEx(context_, id, &userBlob, 1, 1);
+if (BS_SDK_SUCCESS != sdkResult)
+    TRACE("BS2_EnrollUserFaceEx call failed: %d", sdkResult);
+
+if (userBlob.cardObjs)
+    delete[] userBlob.cardObjs;
+
+if (userBlob.fingerObjs)
+    delete[] userBlob.fingerObjs;
+
+if (userBlob.faceObjs)
+    delete[] userBlob.faceObjs;
+
+if (userBlob.faceExObjs)
+{
+    //for (uint32_t index = 0; index < user.numFaces; index++)
+    //{
+    //  if (userBlob.faceExObjs[index].flag == 0)   // raw image
+    delete[] userBlob.faceExObjs;
+    //}
+}
+```
+
+```csharp title='C#'
+sdkResult = (BS2ErrorCode)API.BS2_EnrollUserFaceEx(sdkContext, deviceID, userBlob, 1, 1);
+List<BS2User> userList = new List<BS2User>();
+Int32 selection = Util.GetInput();
+cbFaceOnReadyToScan = new API.OnReadyToScan(ReadyToScanForFace);
+BS2User user = userList[selection];
+BS2UserBlob[] userBlob11 = Util.AllocateStructureArray<BS2UserBlob>(1); 
+```
+
+## 함께 보기
+
+[BS2_EnrollUserFaceEx](bs2_enrolluserfaceex)
+
+[BS2_GetUserInfosFaceEx](bs2_getuserinfosfaceex)
+
+[BS2_GetUserDatasFaceEx](bs2_getuserdatasfaceex)

@@ -1,0 +1,55 @@
+# BS2_GetAllFireAlarmZoneStatus
+
+Retrieves the status of all Fire Alarm zones.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllFireAlarmZoneStatus(void* context, uint32_t deviceId, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[See BS2ZoneStatus Structure](zone_control_api#bs2zonestatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `zoneStatusObj` : Zone status list pointer
+
+- \[Out\] `numZoneStatus` : Number of zone status records
+
+:::info
+
+The `zoneStatusObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetFireAlarmZone](bs2_getfirealarmzone)
+
+[BS2_GetAllFireAlarmZone](bs2_getallfirealarmzone)
+
+[BS2_GetFireAlarmZoneStatus](bs2_getfirealarmzonestatus)
+
+[BS2_SetFireAlarmZone](bs2_setfirealarmzone)
+
+[BS2_SetFireAlarmZoneAlarm](bs2_setfirealarmzonealarm)
+
+[BS2_RemoveFireAlarmZone](bs2_removefirealarmzone)
+
+[BS2_RemoveAllFireAlarmZone](bs2_removeallfirealarmzone)

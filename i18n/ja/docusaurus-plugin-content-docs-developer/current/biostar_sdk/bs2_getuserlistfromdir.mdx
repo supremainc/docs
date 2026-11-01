@@ -1,0 +1,41 @@
+# BS2_GetUserListFromDir
+
+Gets enrolled user ID as array from storage path in device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserListFromDir(void* context, const char* szDir, char** uidsObj, uint32_t* numUid, IsAcceptableUserID ptrIsAcceptableUserID);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[Out\] `szDir` : Storage path in device
+
+- \[Out\] `uidsObjs` : Pointer to store the user ID list's address
+
+- \[Out\] `numUid` : Number of users
+
+- \[In\] `ptrIsAcceptableUserID` : TBD
+
+:::info
+
+The `uidsObjs` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)

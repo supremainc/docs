@@ -1,0 +1,49 @@
+# BS2_AllocateUsbContext
+
+<Dep>[Deprecated]</Dep>
+
+<Badge only>+ v2.5.0</Badge> Allocates context which manages & controls USB device. Log and user data can be retrieved from USB device through the USB context.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+void* BS2_AllocateUsbContext(const char* szDir);
+```
+
+## Parameter
+
+- \[In\] `szDir` : USB device directory
+
+:::info
+
+The `logsObj` variable needs to return the memory to the system by the `BS2_ReleaseObject` function after being used.
+
+:::
+
+## Return Value
+
+Returns `NULL` when there is not enough system memory, if not, returns the allocated Context.
+
+## See Also
+
+[BS2_ReleaseUsbContext](bs2_releaseusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

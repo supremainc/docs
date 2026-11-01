@@ -1,0 +1,59 @@
+# BS2_GetUserStatistic
+
+<Badge only>+ v2.8.3</Badge> 장치가 보유한 사용자 관련 통계 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserStatistic(void* context, uint32_t deviceId, BS2UserStatistic* userStatistic);
+```
+
+:::info
+
+[BS2UserStatistic 구조체 보기](user_management_api#bs2userstatistic) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `userStatistic` : 사용자 관련 통계 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+BS2UserStatistic statistic = { 0, };
+int sdkResult = BS2_GetUserStatistic(context_, id, &statistic);
+if (BS_SDK_SUCCESS != sdkResult)
+{
+    printf("BS2_GetUserStatistic call failed: %d", sdkResult);
+    return;
+}
+
+printf("numUsers:%u", statistic.numUsers);
+printf("numCards:%u", statistic.numCards);
+```
+
+```csharp title='C#'
+BS2UserStatistic statistic;
+Console.WriteLine("Trying to get user statistic");
+BS2ErrorCode sdkResult = (BS2ErrorCode)API.BS2_GetUserStatistic(sdkContext, deviceID, out statistic);
+if (sdkResult != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", sdkResult);
+    return;
+}
+
+Console.WriteLine("numUsers : {0}", statistic.numUsers);
+Console.WriteLine("numCards : {0}",  statistic.numCards);
+```
+

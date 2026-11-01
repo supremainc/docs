@@ -1,0 +1,39 @@
+# SSL API
+
+API that configures the SSL communication
+
+---
+
+<DocCardList />
+
+---
+
+## Callback Function
+
+```cpp
+typedef const char* (*GetRootCaFilePath)(uint32_t deviceId);
+typedef const char* (*GetServerCaFilePath)(BS2_DEVICE_ID deviceId);
+typedef const char* (*GetServerPrivateKeyFilePath)(uint32_t deviceId);
+typedef const char* (*GetPassword)(uint32_t deviceId);
+typedef void (*OnErrorOccured)(BS2_DEVICE_ID deviceId, int errCode);
+```
+
+1. `GetRootCaFilePath`
+
+   Callback function that is called when to retrieve the root CA file directory.
+
+1. `GetServerCaFilePath`
+
+   Callback function that is called when to retrieve the server CA file directory.
+
+1. `GetServerPrivateKeyFilePath`
+
+   Callback function that is called when to retrieve the server private key file directory.
+
+1. `GetPassword`
+
+   Callback function that is called when to retrieve the password.
+
+1. `OnErrorOccured`
+
+   Callback function that is called when an error has occurred.

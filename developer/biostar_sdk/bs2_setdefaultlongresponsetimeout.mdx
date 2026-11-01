@@ -1,0 +1,27 @@
+# BS2_SetDefaultLongResponseTimeout
+
+<Badge only>+ v2.9.12</Badge> [BS2_ScanCard](bs2_scancard), [BS2_WriteCard](bs2_writecard), [BS2_EraseCard](bs2_erasecard) 와 같이, 장치로부터 응답시간이 긴 API들의 패킷 응답 시간을 직접 변경할 수 있습니다.
+
+기본 값은 30초입니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDefaultLongResponseTimeout(void* context, long ms);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `ms` : 대기시간 (milli seconds)
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDefaultLongResponseTimeout](bs2_getdefaultlongresponsetimeout)

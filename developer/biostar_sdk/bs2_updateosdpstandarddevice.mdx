@@ -1,0 +1,216 @@
+# BS2_UpdateOsdpStandardDevice
+
+<Badge only>+ v2.9.1</Badge> **CoreStation40** 갱신할 OSDP 장치 정보들과 개수를 지정하여, OSDP 장치 정보를 일괄 갱신합니다.
+
+갱신에 대한 장치별 결과는 `outResultObj` 및 `outNumOfResult`를 통해 반환됩니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_UpdateOsdpStandardDevice(void* context, uint32_t deviceId, const BS2OsdpStandardDeviceUpdate* osdpDevices, uint32_t numOfDevice, BS2OsdpStandardDeviceResult** outResultObj, uint32_t* outNumOfResult);
+```
+
+:::info
+
+[BS2OsdpStandardDeviceUpdate 구조체 보기](slave_control_api#bs2osdpstandarddeviceupdate)
+
+[BS2OsdpStandardDeviceResult 구조체 보기](slave_control_api#bs2osdpstandarddeviceresult) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 마스터 장치 식별자
+
+- [In] `osdpDevices` : 갱신 할 OSDP 장치 정보 배열 포인터
+
+- [In] `numOfDevice` : osdpDevices의 장치 수
+
+- [Out] `outResultObj` : 결과를 돌려받을 구조체 배열 포인터
+
+- [Out] `outNumOfResult` : 결과 구조체의 개수
+
+:::info
+
+`outResultObj` 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+BS2OsdpStandardConfig config = { 0, };
+vector<BS2OsdpStandardDeviceUpdate> updateData;
+
+BS2_DEVICE_ID id = Utility::selectDeviceID(deviceList, false, false);
+int sdkResult = cc.getOsdpStandardConfig(id, config);
+if (BS_SDK_SUCCESS != sdkResult)
+    return sdkResult;
+
+uint32_t numOfActivated = cc.printOSDPDeviceID(config);
+uint32_t numOfDevice = Utility::getInput<uint32_t>("How many devices do you want to update? (0~%u)", numOfActivated);
+if (0 < numOfDevice)
+{
+    for (uint32_t idx = 0; idx < numOfDevice; idx++)
+    {
+        BS2OsdpStandardDeviceUpdate item = { 0, };
+        item.deviceID = (BS2_DEVICE_ID)Utility::getInput<uint32_t>("[%u] Please enter the slave ID to be updated.", idx + 1);
+
+        if (!ConfigControl::getOsdpID(config, item.deviceID, item.osdpID))
+        {
+            cout << "The OSDP ID could not be found." << endl;
+            return BS_SDK_ERROR_INTERNAL;
+        }
+
+        if (Utility::isYes("Do you want to change the OSDP ID? (CurrentID: %u)", item.osdpID))
+        {
+            item.osdpID = (uint8_t)Utility::getInput<uint32_t>("Please enter the OSDP ID. [0 ~ 126]");
+        }
+
+        item.activate = Utility::isYes("Do you like to enable the OSDP device?");
+        item.useSecureSession = Utility::isYes("Does the OSDP device use secure communication?");
+        item.deviceType = BS2_DEVICE_TYPE_3RD_OSDP_DEVICE;
+
+        updateData.push_back(item);
+    }
+
+    vector<BS2OsdpStandardDeviceResult> listResult;
+    BS2OsdpStandardDeviceResult* outResultObj = NULL;
+    uint32_t outNumOfResult(0);
+    int sdkResult = BS2_UpdateOsdpStandardDevice(context_, id, const_cast<BS2OsdpStandardDeviceUpdate*>(updateData.data()), updateData.size(), &outResultObj, &outNumOfResult);
+    if (BS_SDK_SUCCESS != sdkResult)
+    {
+        printf("BS2_UpdateOsdpStandardDevice call failed: %d", sdkResult);
+    }
+
+    if (outResultObj)
+    {
+        listResult.clear();
+        for (uint32_t idx = 0; idx < outNumOfResult; idx++)
+        {
+            listResult.push_back(outResultObj[idx]);
+        }
+
+        BS2_ReleaseObject(outResultObj);
+    }
+}
+
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2OsdpStandardConfig config;
+if (!CommonControl.getOsdpStandardConfig(sdkContext, deviceID, out config))
+    return;
+
+UInt32 numOfActivated = 0;
+printOSDPDeviceID(ref config, ref numOfActivated);
+
+string tempStr = String.Format("How many devices do you want to update? (0~{0})", numOfActivated);
+Util.HighlightLineMulti(tempStr, "How many", "update");
+Console.Write(">>>> ");
+int numOfDevice = Util.GetInput(1);
+if (0 < numOfDevice)
+{
+    BS2OsdpStandardDeviceUpdate[] updateData = Util.AllocateStructureArray<BS2OsdpStandardDeviceUpdate>(numOfDevice);
+    for (int idx = 0; idx < numOfDevice; idx++)
+    {
+        tempStr = String.Format(">>>> [{0}] Please enter the slave ID to be updated.", idx + 1);
+        Util.HighlightLine(tempStr, "device ID to be updated");
+        Console.Write(">>>> ");
+        updateData[idx].deviceID = Util.GetInput((UInt32)0);
+
+        if (!getOsdpID(ref config, updateData[idx].deviceID, ref updateData[idx].osdpID))
+        {
+            Console.WriteLine("The OSDP ID could not be found.");
+            return;
+        }
+
+        Console.WriteLine("Do you want to change the OSDP ID? (CurrentID: {0}) [Y/n]", updateData[idx].osdpID);
+        Console.Write(">>>> ");
+        if (Util.IsYes())
+        {
+            Util.HighlightLine(">>>> Please enter the OSDP ID. [0 ~ 126]", "OSDP ID");
+            Console.Write(">>>> ");
+            updateData[idx].osdpID = Util.GetInput((byte)0);
+        }
+
+        Util.HighlightLine(">>>> Do you like to enable the OSDP device? [Y/n]", "enable");
+        Console.Write(">>>> ");
+        updateData[idx].activate = Convert.ToByte(Util.IsYes());
+
+        Util.HighlightLine(">>>> Does the OSDP device use secure communication? [Y/n]", "use secure communication");
+        Console.Write(">>>> ");
+        updateData[idx].useSecureSession = Convert.ToByte(Util.IsYes());
+        updateData[idx].deviceType = Convert.ToByte(BS2DeviceTypeEnum.THIRD_OSDP_DEVICE);
+    }
+
+    List<BS2OsdpStandardDeviceResult> listResult = new List<BS2OsdpStandardDeviceResult>();
+    int structSize = Marshal.SizeOf(typeof(BS2OsdpStandardDeviceUpdate));
+    IntPtr ptrArray = Marshal.AllocHGlobal(structSize * updateData.Length);
+    long ptrCurrent = ptrArray.ToInt64();
+    BS2ErrorCode result = BS2ErrorCode.BS_SDK_SUCCESS;
+    try
+    {
+        for (int idx = 0; idx < updateData.Length; idx++)
+        {
+            IntPtr ptrTemp = new IntPtr(ptrCurrent);
+            Marshal.StructureToPtr(updateData[idx], ptrTemp, false);
+            ptrCurrent += structSize;
+        }
+
+        IntPtr outResultObj = IntPtr.Zero;
+        UInt32 numOfResult = 0;
+        result = (BS2ErrorCode)API.BS2_UpdateOsdpStandardDevice(sdkContext, deviceID, ptrArray, (UInt32)updateData.Length, out outResultObj, out numOfResult);
+        if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+        {
+            Console.WriteLine("Got error({0}).", result);
+        }
+        else
+        {
+            IntPtr curResult = outResultObj;
+            int resultSize = Marshal.SizeOf(typeof(BS2OsdpStandardDeviceResult));
+            for (UInt32 resultIdx = 0; resultIdx < numOfResult; resultIdx++)
+            {
+                BS2OsdpStandardDeviceResult item = (BS2OsdpStandardDeviceResult)Marshal.PtrToStructure(curResult, typeof(BS2OsdpStandardDeviceResult));
+                //print(ref item, resultIdx);
+                listResult.Add(item);
+                curResult += resultSize;
+            }
+
+            API.BS2_ReleaseObject(outResultObj);
+            Console.WriteLine("Call success.");
+        }
+    }
+    finally
+    {
+        Marshal.FreeHGlobal(ptrArray);
+    }
+}
+
+return result;
+```
+
+## 함께 보기
+
+[BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice)
+
+[BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice)
+
+[BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice)
+
+[BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice)
+
+[BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice)
+
+[BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability)
+
+[BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)

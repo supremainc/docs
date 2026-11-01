@@ -1,0 +1,63 @@
+# BS2_GetLiftStatus
+
+주어진 Lift의 상태 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetLiftStatus(void* context, BS2_DEVICE_ID deviceId, BS2_LIFT_ID* liftIds, uint32_t liftIdCount, BS2LiftStatus** liftStatusObj, uint32_t* numLiftStatus);
+```
+
+:::info
+
+[BS2LiftStatus구조체 보기](lift_control_api#bs2liftstatus) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `liftIds` : 가져오고자 하는 lift id 리스트
+
+- [In] `liftIdCount` : lift id 리스트의 크기
+
+- [Out] `liftStatusObj` : lift status 레코드의 주소를 저장할 포인터
+
+- [Out] `numLiftStatus` : lift status 레코드의 개수
+
+:::info
+
+liftStatusObj 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetLift](bs2_getlift)
+
+[BS2_GetAllLift](bs2_getalllift)
+
+[BS2_GetAllLiftStatus](bs2_getallliftstatus)
+
+[BS2_SetLift](bs2_setlift)
+
+[BS2_SetLiftAlarm](bs2_setliftalarm)
+
+[BS2_RemoveLift](bs2_removelift)
+
+[BS2_RemoveAllLift](bs2_removealllift)
+
+[BS2_ReleaseFloor](bs2_releasefloor)
+
+[BS2_ActivateFloor](bs2_activatefloor)
+
+[BS2_DeActivateFloor](bs2_deactivatefloor)

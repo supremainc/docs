@@ -1,0 +1,43 @@
+# BS2_ReleaseUsbContext
+
+<Dep>[지원 중단]</Dep>
+
+<Badge only>+ v2.5.0</Badge> [BS2_AllocateUsbContext](bs2_allocateusbcontext) 함수로부터 할당된 Context를 파괴합니다. 포인터 값이 NULL이면 아무런 동작을 하지 않습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+void BS2_ReleaseUsbContext(void* context);
+```
+
+## 파라미터
+
+- [In] `context` : USB Context
+
+## 반환값
+
+없음.
+
+## 함께 보기
+
+[BS2_AllocateUsbContext](bs2_allocateusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

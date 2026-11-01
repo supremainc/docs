@@ -1,0 +1,31 @@
+# BS2_GetIPConfig
+
+Retrieves IP settings from the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetIPConfig(void* context, uint32_t deviceId, BS2IpConfig* config);
+```
+
+:::info
+
+[See BS2IpConfig Structure](configuration_api#bs2ipconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : IP configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

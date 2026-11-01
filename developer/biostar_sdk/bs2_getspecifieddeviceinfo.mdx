@@ -1,0 +1,45 @@
+# BS2_GetSpecifiedDeviceInfo
+
+<Badge only>+ v2.6.3</Badge> specifiedDeviceInfo를 통해 장치 정보를 선택적으로 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSpecifiedDeviceInfo(void* context, uint32_t deviceId, BS2EnumSpecifiedDeviceInfo specifiedDeviceInfo, void* pOutDeviceInfo, uint32_t nDeviceInfoSize, uint32_t* pOutDeviceInfoSize);
+```
+
+:::info
+
+[BS2SimpleDeviceInfo 구조체 보기](device_api#bs2simpledeviceinfo)
+
+[BS2SimpleDeviceInfoEx 구조체 보기](device_api#bs2simpledeviceinfoex)
+
+[BS2IPv6DeviceInfo 구조체 보기](device_api#bs2ipv6deviceinfo) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `specifiedDeviceInfo` : 취득하고자하는 장치 정보의 식별자
+
+   | 식별자 | 구조체 |
+   | :--: | --- |
+   | 1 | `BS2SimpleDeviceInfo` |
+   | 2 | `BS2SimpleDeviceInfoEx` |
+   | 3 | `BS2IPv6DeviceInfo` |
+
+- [Out] `pOutDeviceInfo` : 장치 정보를 저장할 주소
+
+- [In] `nDeviceInfoSize` : 장치 정보를 저장할 주소에 할당된 메모리 크기
+
+- [Out] `pOutDeviceInfoSize` : 취득한 장치 정보의 크기
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

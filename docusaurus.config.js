@@ -189,6 +189,17 @@ const config = {
         generateMarkdownRoutes: false,
       },
     ],
+    [ '@docusaurus/plugin-content-docs', {
+      id: 'developer',
+      path: 'developer',
+      routeBasePath: 'developer',
+      remarkPlugins: [
+        [remarkCmd, { locale: locale || 'ko' }],
+        [remarkImageSize, { locale: locale || 'ko' }],
+      ],
+      rehypePlugins: [ rehypeExtendedTable ],
+      sidebarPath: './sidebarsDeveloper.js',
+    }],
     [ '@docusaurus/plugin-client-redirects', {
       redirects: [
         {
@@ -654,7 +665,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini', 'http' ],
+        additionalLanguages: [ 'csharp', 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini', 'http', 'cpp' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },

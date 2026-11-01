@@ -1,0 +1,49 @@
+# BS2_SetDeviceZoneAlarm
+
+Ethernet 구역의 경보 상태를 갱신합니다.
+
+## 지원 장치
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceZoneAlarm(void* context, BS2_DEVICE_ID deviceId, uint8_t alarmed, BS2_ZONE_ID* zoneIds, uint32_t zoneIdCount);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `alarmed` : 경보 발생 유무
+
+- [In] `zoneIds` : device zone id 리스트
+
+- [In] `zoneIdCount` : device zone id 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDeviceZone](bs2_getdevicezone)
+
+[BS2_GetAllDeviceZone](bs2_getalldevicezone)
+
+[BS2_SetDeviceZone](bs2_setdevicezone)
+
+[BS2_RemoveDeviceZone](bs2_removedevicezone)
+
+[BS2_RemoveIntrusionAlarmZone](bs2_removeintrusionalarmzone)
+
+[BS2_RemoveAllDeviceZone](bs2_removealldevicezone)

@@ -1,0 +1,39 @@
+# BS2_GetSupportedUserMask
+
+<Badge only>+ v2.5.0</Badge> Gets user settings supported by the device.
+
+This information can be different by device type.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSupportedUserMask(void* context, uint32_t deviceId, BS2_USER_MASK* userMask);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `userMask` : User mask
+
+| Value | Description |
+| :--: | --- |
+| 0x0004 | User name |
+| 0x0008 | Image |
+| 0x0010 | PIN |
+| 0x0020 | Card |
+| 0x0040 | Fingerprint |
+| 0x0080 | Face |
+| 0x0200 | Jobcode |
+| 0x0400 ​ | User phrase(personal message) ​ |
+| 0x0800 ​ | Face (**FaceStation F2**) ​ |
+| 0x1000 ​ | User setting(**FaceStation F2**) ​ |
+| 0xFFFF | All information |
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,59 @@
+# BS2_GetUserOverride
+
+<Badge only>+ v2.9.12</Badge> 사용자 ID를 지정하여, 연장된 출입문 개방 시간을 사용하는 사용자 정보를 가져옵니다.
+
+:::info
+
+장애인이나 배달원 등 출입에 더 많은 시간이 필요한 사용자를 위해, 표준 개방 시간보다 길게 출입문을 열어둘 수 있는 기능입니다.
+
+[BS2Door](door_control_api#bs2door)의 extendedAutoLockTimeout를 통해 해당 출입문에 연장 개방 시간을 설정하고, [BS2UserOverride](user_management_api#bs2useroverride)를 통해 연장 개방 시간을 적용할 사용자를 지정합니다.
+
+연장된 개방 시간 사용 시, 다음 규칙을 따릅니다.
+
+- 연장 개방 시간 대상 사용자와 비대상 사용자가 연속으로 인증하는 경우, 마지막에 인증한 사용자를 기준으로 개방 시간이 적용됩니다.
+
+- 2단계 인증 사용 시, 인증 사용자 중 한 명이라도 연장 개방 시간 대상자라면 연장된 개방 시간으로 출입문이 열립니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserOverride(void* context, BS2_DEVICE_ID deviceId, const char* userIDs, uint32_t numOfUsers, BS2UserOverride** overrideObjs, uint32_t* numOfOverrides);
+```
+
+:::info
+
+[BS2UserOverride 구조체 보기](user_management_api#bs2useroverride) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `userIDs` : 조회 대상이 되는 사용자 ID를 지정
+
+- [In] `numOfUsers` : 조회 대상의 사용자 수
+
+- [Out] `overrideObjs` : 연장된 출입문 개방 시간을 사용하는 사용자 정보가 저장될 포인터
+
+- [Out] `numOfOverrides` : 취득한 사용자의 수를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 실패했을 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAllUserOverride](bs2_getalluseroverride)
+
+[BS2_SetUserOverride](bs2_setuseroverride)
+
+[BS2_RemoveUserOverride](bs2_removeuseroverride)
+
+[BS2_RemoveAllUserOverride](bs2_removealluseroverride)

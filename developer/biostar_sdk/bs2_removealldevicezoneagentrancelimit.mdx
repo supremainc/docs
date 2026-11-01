@@ -1,0 +1,39 @@
+# BS2_RemoveAllDeviceZoneAGEntranceLimit
+
+모든 인증 제한 구역을 제거합니다.
+
+## 지원 장치
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveAllDeviceZoneAGEntranceLimit(void* context, BS2_DEVICE_ID deviceId);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDeviceZoneAGEntranceLimit](bs2_getdevicezoneagentrancelimit)
+
+[BS2_GetAllDeviceZoneAGEntranceLimit](bs2_getalldevicezoneagentrancelimit)
+
+[BS2_SetDeviceZoneAGEntranceLimit](bs2_setdevicezoneagentrancelimit)
+
+[BS2_RemoveDeviceZoneAGEntranceLimit](bs2_removedevicezoneagentrancelimit)

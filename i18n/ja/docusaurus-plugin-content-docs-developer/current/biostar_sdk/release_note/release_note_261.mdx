@@ -1,0 +1,31 @@
+# Version 2.6.1
+
+Date: 2018-04-24
+
+:::caution
+
+* Up to version 2.5.0, Device SDK statically included OpenSSL library,
+
+* but starting with 2.6.0, it has been changed to link in shared library form.
+
+* Therefore, you need to run the appropriate OpenSSL library after installation.
+
+* The 2.6.0 library has been tested based on the OpenSSL 1.0.2n library.
+
+* The sample files contain the OpenSSL 1.0.2n Windows library file.
+
+:::
+
+## Modified Features
+
+1. Fields that has been moved from `BS2SimpleDeviceInfo` to `BS2SimpleDeviceInfoEx` are recovered.
+
+   This will guarantee backward compatibility for v2.5.0 related codes.
+
+   - Refer to structure [bs2simpledeviceinfo](../device_api#bs2simpledeviceinfo)
+
+   - Refer to structure [bs2simpledeviceinfoex](../device_api#bs2simpledeviceinfoex)
+
+1. SSL certificates used from the C# example program has been updated.
+
+1. Old FW files included in the C# example program has been deleted.

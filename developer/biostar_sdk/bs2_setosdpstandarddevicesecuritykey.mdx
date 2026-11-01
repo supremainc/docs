@@ -1,0 +1,119 @@
+# BS2_SetOsdpStandardDeviceSecurityKey
+
+<Badge only>+ v2.9.1</Badge> **CoreStation40** OSDP 장치들에 대한 보안키를 설정합니다.
+
+장치 식별자로 마스터 장치의 식별자 또는 슬레이브 장치의 식별자 모두 전달이 가능하지만, 동작에 있어서는 다소 차이가 있습니다.
+
+장치 식별자로 마스터 장치의 식별자와 함께 키 정보를 전달하면, 마스터 장치는 자신의 기본키 값을 새로 설정받은 키로 교체하게됩니다.
+
+이때, OSDP 슬레이브 장치들은 연결되어 있지 않은 상태이어야 하며, 연결된 장치가 있는 경우 `BS_SDK_ERROR_FAIL_MASTER_SET_KEY` 오류가 발생될 수 있습니다.
+
+마스터 장치는 이후 OSDP 장치가 연결되어질 때마다 새로운 키를 전달하여 보안 통신을 수행하게 됩니다.
+
+장치 식별자로 OSDP 슬레이브 장치 식별자를 전달하면, 마스터 장치는 자신이 자신이 들고있는 키는 슬레이브 장치로 전달하게됩니다.
+
+다시 말해 마스터장치에게 지정한 OSDP 장치로 보유하고 있는 키를 전송하도록 지시하는 명령입니다. 따라서 이 경우는 별도의 키 전달이 필요하지 않습니다. (=NULL)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetOsdpStandardDeviceSecurityKey(void* context, BS2_DEVICE_ID masterOrSlaveId, const BS2OsdpStandardDeviceSecurityKey* key);
+```
+
+:::info
+
+[BS2OsdpStandardDeviceSecurityKey 구조체 보기](slave_control_api#bs2osdpstandarddevicesecuritykey) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `masterOrSlaveId` : 장치 식별자
+
+- [In] `key` : 보안키 정보 구조체 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+int sdkResult = BS_SDK_SUCCESS;
+
+bool useMaster = true;
+BS2_DEVICE_ID id = (BS2_DEVICE_ID)Utility::selectMasterOrSlaveID(deviceList, useMaster);
+if (useMaster)
+{
+    BS2OsdpStandardDeviceSecurityKey key = { 0, };
+    string keyInfo = Utility::getInput<string>("Please enter the OSDP security key.");
+    memcpy(key.key, keyInfo.c_str(), min(keyInfo.size(), BS2_OSDP_STANDARD_KEY_SIZE));
+
+    sdkResult = BS2_SetOsdpStandardDeviceSecurityKey(context_, id, &key);
+}
+else
+{
+    sdkResult = BS2_SetOsdpStandardDeviceSecurityKey(context_, id, NULL);
+}
+
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_SetOsdpStandardDeviceSecurityKey call failed: %d", sdkResult);
+
+return sdkResult;
+```
+
+```csharp title='C#'
+UInt32 id = Util.GetInputMasterOrSlaveID(deviceID);
+BS2ErrorCode result = BS2ErrorCode.BS_SDK_SUCCESS;
+
+if (id == deviceID)     // set key to master
+{
+    BS2OsdpStandardDeviceSecurityKey keyInfo = Util.AllocateStructure<BS2OsdpStandardDeviceSecurityKey>();
+
+    Util.HighlightLine(">>>> Please enter the OSDP security key.", "security key");
+    Console.Write(">>>> ");
+    string keyString = Console.ReadLine();
+    byte[] buff = Encoding.UTF8.GetBytes(keyString);
+
+    Array.Clear(keyInfo.key, 0, BS2Environment.BS2_OSDP_STANDARD_KEY_SIZE);
+    Array.Copy(buff, 0, keyInfo.key, 0, keyString.Length);
+
+    IntPtr ptrKey = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(BS2OsdpStandardDeviceSecurityKey)));
+    Marshal.StructureToPtr(keyInfo, ptrKey, false);
+
+    result = (BS2ErrorCode)API.BS2_SetOsdpStandardDeviceSecurityKey(sdkContext, id, ptrKey);
+
+    Marshal.FreeHGlobal(ptrKey);
+}
+else
+{
+    result = (BS2ErrorCode)API.BS2_SetOsdpStandardDeviceSecurityKey(sdkContext, id, IntPtr.Zero);
+}
+
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+
+return result;
+```
+
+## 함께 보기
+
+[BS2_AddOsdpStandardDevice](bs2_addosdpstandarddevice)
+
+[BS2_GetOsdpStandardDevice](bs2_getosdpstandarddevice)
+
+[BS2_GetAvailableOsdpStandardDevice](bs2_getavailableosdpstandarddevice)
+
+[BS2_UpdateOsdpStandardDevice](bs2_updateosdpstandarddevice)
+
+[BS2_RemoveOsdpStandardDevice](bs2_removeosdpstandarddevice)
+
+[BS2_GetOsdpStandardDeviceCapability](bs2_getosdpstandarddevicecapability)
+
+[BS2_SetOsdpStandardDeviceSecurityKey](bs2_setosdpstandarddevicesecuritykey)

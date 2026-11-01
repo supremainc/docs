@@ -1,0 +1,51 @@
+# BS2_SetDeviceZoneAlarm
+
+Configures the alarm status of the Ethernet zone.
+
+## Supported devices
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceZoneAlarm(void* context, BS2_DEVICE_ID deviceId, uint8_t alarmed, BS2_ZONE_ID* zoneIds, uint32_t zoneIdCount);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `alarmed` : Whether the alarm has been triggered or not
+
+- \[In\] `zoneIds` : List of Device zone IDs
+
+- \[In\] `zoneIdCount` : Number of Device zone IDs
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDeviceZone](bs2_getdevicezone)
+
+[BS2_GetAllDeviceZone](bs2_getalldevicezone)
+
+[BS2_SetDeviceZone](bs2_setdevicezone)
+
+[BS2_RemoveDeviceZone](bs2_removedevicezone)
+
+[BS2_RemoveIntrusionAlarmZone](bs2_removeintrusionalarmzone)
+
+[BS2_RemoveAllDeviceZone](bs2_removealldevicezone)

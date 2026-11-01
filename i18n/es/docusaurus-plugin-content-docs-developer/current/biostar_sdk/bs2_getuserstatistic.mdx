@@ -1,0 +1,59 @@
+# BS2_GetUserStatistic
+
+<Badge only>+ v2.8.3</Badge> Gets the user-related statistics that the device has.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserStatistic(void* context, uint32_t deviceId, BS2UserStatistic* userStatistic);
+```
+
+:::info
+
+[See BS2UserStatistic Structure](user_management_api#bs2userstatistic) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Id
+
+- \[Out\] `userStatistic` : Pointer to store user-related statistics
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+BS2UserStatistic statistic = { 0, };
+int sdkResult = BS2_GetUserStatistic(context_, id, &statistic);
+if (BS_SDK_SUCCESS != sdkResult)
+{
+    printf("BS2_GetUserStatistic call failed: %d", sdkResult);
+    return;
+}
+
+printf("numUsers:%u", statistic.numUsers);
+printf("numCards:%u", statistic.numCards);
+```
+
+```csharp title='C#'
+BS2UserStatistic statistic;
+Console.WriteLine("Trying to get user statistic");
+BS2ErrorCode sdkResult = (BS2ErrorCode)API.BS2_GetUserStatistic(sdkContext, deviceID, out statistic);
+if (sdkResult != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", sdkResult);
+    return;
+}
+
+Console.WriteLine("numUsers : {0}", statistic.numUsers);
+Console.WriteLine("numCards : {0}",  statistic.numCards);
+```
+

@@ -1,0 +1,39 @@
+# BS2_VerifyFingerprint
+
+저장된 템플릿 데이터를 서로 비교하여 동일 지문인지 확인합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_VerifyFingerprint(void* context, uint32_t deviceId, BS2Fingerprint* finger);
+```
+
+:::info
+
+[BS2Fingerprint 구조체 보기](fingerprint_api#bs2fingerprint) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `finger` : 템플릿 데이터 포인터
+
+## 반환값
+
+동일한 손가락일 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_ScanFingerprint](bs2_scanfingerprint)
+
+[BS2_ScanFingerprintEx](bs2_scanfingerprintex)
+
+[BS2_GetLastFingerprintImage](bs2_getlastfingerprintimage)
+
+[BS2_GetFingerTemplateQuality](bs2_getfingertemplatequality)

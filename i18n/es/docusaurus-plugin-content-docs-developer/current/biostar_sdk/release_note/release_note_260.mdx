@@ -1,0 +1,279 @@
+# Version 2.6.0
+
+## Date: 2018-10-31
+
+:::info
+
+After V2.5.0, it was reflected in V2.6.0 through bug fixes and additional supplements, but missing contents were added to the manual.
+
+:::
+
+### New Features
+
+- Support reading USB memory (BioStation A2, FaceStation 2)
+
+- Supports Debugging API
+
+- Supports server port change
+
+- Supports Global APB zone feature
+
+- Supports device connection status check feature
+
+- Supports automatic connection check and change feature
+
+1. Added USB memory read feature.
+
+   - Add API [BS2_AllocateUsbContext](../bs2_allocateusbcontext)
+
+   - Add API [BS2_ReleaseUsbContext](../bs2_releaseusbcontext)
+
+   - Add API [BS2_GetUserDatabaseInfoFromDir](../bs2_getuserdatabaseinfofromdir)
+
+   - Add API [BS2_GetUserListFromDir](../bs2_getuserlistfromdir)
+
+   - Add API [BS2_GetUserInfosFromDir](../bs2_getuserinfosfromdir)
+
+   - Add API [BS2_GetUserDatasFromDir](../bs2_getuserdatasfromdir)
+
+   - Add API [BS2_GetUserInfosExFromDir](../bs2_getuserinfosexfromdir)
+
+   - Add API [BS2_GetUserDatasExFromDir](../bs2_getuserdatasexfromdir)
+
+   - Add API [BS2_GetLogFromDir](../bs2_getlogfromdir)
+
+   - Add API [BS2_GetLogBlobFromDir](../bs2_getlogblobfromdir)
+
+   - Add API [BS2_GetFilteredLogFromDir](../bs2_getfilteredlogfromdir)
+
+1. Added to refer to debug information that occurs in the SDK.
+
+   - Add API [BS2_SetDebugExCallback](../bs2_setdebugexcallback)
+
+1. Added server port designation feature.
+
+   - Add API [BS2_SetServerPort](../bs2_setserverport)
+
+   - Add API [BS2_SetSSLServerPort](../bs2_setsslserverport)
+
+1. Added Global APB zone feature.
+
+   - Add API [BS2_SetCheckGlobalAPBViolationHandler](../bs2_setcheckglobalapbviolationhandler)
+
+   - Add API [BS2_CheckGlobalAPBViolation](../bs2_checkglobalapbviolation)
+
+1. Added device connection status check feature.
+
+   - Add API [BS2_IsConnected](../bs2_isconnected)
+
+1. Added to automatic connection check and change feature.
+
+   - Add API [BS2_IsAutoConnection](../bs2_isautoconnection)
+
+   - Add API [BS2_SetAutoConnection](../bs2_setautoconnection)
+
+### Modified Features
+
+1. In some functions, the event mask judgment condition set when acquiring logs has been modified.
+
+   (Logs that satisfy all set masks → Logs that satisfy even one)
+
+   - Refer to API [BS2_GetLogBlob](../bs2_getlogblob)
+
+   - Refer to API [BS2_GetLogBlobFromDir](../bs2_getlogblobfromdir)
+
+1. Fixed an Invalid Parameter error that occurs when the set userMask is greater than 0x3FF when obtaining user information in some functions.
+
+   - Refer to API [BS2_GetUserDatas](../bs2_getuserdatas)
+
+   - Refer to API [BS2_GetUserDatasEx](../bs2_getuserdatasex)
+
+   - Refer to API [BS2_GetUserDatasFromDir](../bs2_getuserdatasfromdir)
+
+   - Refer to API [BS2_GetUserDatasExFromDir](../bs2_getuserdatasexfromdir)
+
+1. Fixed a problem where a crash could occur in the context release phase when using Multi context.
+
+   In addition, fixed a problem that could cause an access violation intermittently.
+
+   - Refer to API [BS2_AllocateContext](../bs2_allocatecontext)
+
+   - Refer to API [BS2_ReleaseContext](../bs2_releasecontext)
+
+1. Fixed a problem where a crash could occur due to a buffer overflow while receiving a packet from the SDK.
+
+1. Fixed a problem that caused a timeout occurs when deleting all users from an Entry family device.
+
+   * Refer to API [BS2_RemoveAllUser](../bs2_removealluser)
+
+1. Fixed a problem where a Not Supported error occurs when userMask is `BS2_USER_MASK_ALL` when obtaining user information.
+
+   - Refer to API [BS2_GetSupportedConfigMask](../bs2_getsupportedconfigmask)
+
+   - Refer to API [BS2_GetSupportedUserMask](../bs2_getsupportedusermask)
+
+   - Refer to API [BS2_GetUserDatas](../bs2_getuserdatas)
+
+   - Refer to API [BS2_GetUserDatasEx](../bs2_getuserdatasex)
+
+1. Fixed a problem where a crash could occur when there is no data when obtaining logs.
+
+   - Refer to API [BS2_GetLog](../bs2_getlog)
+
+   - Refer to API [BS2_GetFilteredLog](../bs2_getfilteredlog)
+
+   - Refer to API [BS2_GetLogFromDir](../bs2_getlogfromdir)
+
+1. Fixed a problem where packet for multi packet could be discarded during RS485 communications.
+
+1. Fixed a problem where the timer may not work on Linux SDK. (Change from signal method to thread method)
+
+1. Fixed a problem that dead-lock could occur due to memory allocation in signal handle in Linux SDK.
+
+1. Added socket close option `SOCK_CLOEXEC` when using socket on Linux.
+
+1. Fixed a problem with lock/unlock incorrect sync objects internally when using the Server matching function.
+
+1. Keep alive code has been improved to detect the disconnected status among the device status.
+
+1. Fixed a problem where Intrusion Alarm Zone information was not set.
+
+   In addition, incorrect error judgment conditions during validation have been corrected.
+
+   Before: (0 \< door) AND (if there no card data), (0 \< card) AND (if there no door ID)
+
+   After: (0 \< door) AND (if there no door ID), (0 \< card) AND (if there no card data)
+
+   * Refer to API [BS2_SetIntrusionAlarmZone](../bs2_setintrusionalarmzone)
+
+1. Fixed blocking until the timeout occurs when loading an image log that does not actually exist.
+
+   - Refer to API [BS2_GetImageLog](../bs2_getimagelog)
+
+   - Refer to API [BS2_GetLogBlobFromDir](../bs2_getlogblobfromdir)
+
+1. Fixed a problem so that allocation memory errors do not occur when there is no data in the **Intrusion Alarm Zone**.
+
+   In addition, it has been modified to return only the count when zoneBlob is NULL.
+
+   * Refer to API [BS2_GetIntrusionAlarmZone](../bs2_getintrusionalarmzone)
+
+1. Fixed a problem where TCP connection was no longer possible when Socket-related internal resources were exhausted.
+
+1. It has been modified so that it is returned as an Invalid Parameter when door ID exceeds 65535 when setting the door from an Entry family device.
+
+   * Refer to API [BS2_SetDoor](../bs2_setdoor)
+
+1. Added cryptographic activation code to handshake phase on TCP connection.
+
+1. Fixed a problem where fingerprint information was not stored on FaceStation 2.
+
+1. Fixed a problem where a crash occurs when using the [BS2_SearchDevicesCoreStation](../bs2_searchdevicescorestation) function.
+
+1. Fixed to validate a template and image size of the face when using the [BS2_EnrolUser](../bs2_enroluser) function.
+
+1. Fixed a problem of returning Not supported when using the below function.
+
+   - Refer to API [BS2_GetCardConfigEx](../bs2_getcardconfigex)
+
+   - Refer to API [BS2_GetRs485ConfigEx](../bs2_getrs485configex)
+
+---
+
+## Date: 2018-04-15
+
+:::caution
+
+* Up to version 2.5.0, Device SDK statically included OpenSSL library, but starting with 2.6.0, it has been changed to link in shared library form.
+
+* Therefore, you need to run the appropriate OpenSSL library after installation. The 2.6.0 library has been tested based on the OpenSSL 1.0.2n library.
+
+* The sample files contain the OpenSSL 1.0.2n Windows library file.
+
+:::
+
+### New Features
+
+- Supports for new device connections (BioLite N2, Xpass D2)
+
+- Supports Daylight saving time (DST)
+
+- Supports Interlock zone
+
+- Supports data encryption key setting of device
+
+- Factory default without network setting
+
+1. New devices BioLite N2, Xpass D2 are supported. Xpass D2 is a slave exclusive card device.
+
+1. Daylight Saving Time can be set up to 2 devices. In addition, relevant information has been added to the log to let you know when daylight saving time is in effect.
+
+   - Add API [BS2_GetDstConfig](../bs2_getdstconfig)
+
+   - Add API [BS2_SetDstConfig](../bs2_setdstconfig)
+
+   - Add structure [BS2DstConfig](../configuration_api#bs2dstconfig)
+
+   - Modify structure [BS2Event](../log_management_api#bs2event)
+
+1. Interlock zone setting is supported. It is used when one door and the other door need to be exclusively locked to each other. Currently only CoreStation is available.
+
+   - Add API [BS2_GetInterlockZone](../bs2_getinterlockzone)
+
+   - Add API [BS2_GetInterlockZoneStatus](../bs2_getinterlockzonestatus)
+
+   - Add API [BS2_GetAllInterlockZoneStatus](../bs2_getallinterlockzonestatus)
+
+   - Add API [BS2_SetInterlockZone](../bs2_setinterlockzone)
+
+   - Add API [BS2_SetInterlockZoneAlarm](../bs2_setinterlockzonealarm)
+
+   - Add API [BS2_RemoveInterlockZone](../bs2_removeinterlockzone)
+
+   - Add API [BS2_RemoveAllInterlockZone](../bs2_removeallinterlockzone)
+
+   - Add structure [BS2InterlockZoneBlob](../zone_control_api#bs2interlockzoneblob)
+
+1. Data Encryption key of the device can be changed and verified.
+
+   - Add API [BS2_GetDataEncryptKey](../bs2_getdataencryptkey)
+
+   - Add API [BS2_SetDataEncryptKey](../bs2_setdataencryptkey)
+
+   - Add API [BS2_RemoveDataEncryptKey](../bs2_removedataencryptkey)
+
+1. Supports new device initialization API `BS2_ResetConfigExceptNetInfo`. This API can factory default without network information unlike `BS2_ResetConfig`.
+
+   - Add API [BS2_ResetConfigExceptNetInfo](../bs2_resetconfigexceptnetinfo)
+
+1. Supports feature feasibility check API `BS2_GetDeviceInfoEx`. This API `BS2_GetDeviceInfo` uses structure `BS2SimpleDeviceInfoEx` which has recent fields moved from the BS2SimpleDeviceInfo.
+
+   - Add API [BS2_GetDeviceInfoEx](../bs2_getdeviceinfoex)
+
+   - Add structure [BS2SimpleDeviceInfoEx](../device_api#bs2simpledeviceinfoex)
+
+### Modified features
+
+1. Simultaneous use of Wiegand In / Out is supported.
+
+   This function can be used by setting the mode value to 2 when Wiegand is set.
+
+   * Refer to structure [BS2WiegandConfig](../configuration_api#bs2wiegandconfig)
+
+1. Device security tamper setting is supported.
+
+   The `secureTamper` of `BS2SystemConfig` can check and set whether the current security tamper is set.
+
+   This structure must be configured after reading through `BS2_GetSystemConfig`, and then only necessary information should be modified through `BS2_SetSystemConfig`.
+
+   * Refer to structure [BS2SystemConfig](../configuration_api#bs2systemconfig)
+
+1. Fingerprinter is supported on FaceStation 2 or FaceLite
+
+   Both FaceStation 2 and FaceLite do not have a fingerprint sensor and therefore do not support fingerprint authentication directly from those devices. However, fingerprint devices can be connected to as a slave device to either device, then it means fingerprint matching is supported.
+
+   Thus, `BS2SimpleDeviceInfo`.fingersupported changed from 0 to 1.
+
+   Whether or not the device currently supports fingerprint matching can be checked via fingerSupported in `BS2SimpleDeviceInfo`.
+
+   * Refer to structure [BS2SimpleDeviceInfo](../device_api#bs2simpledeviceinfo)

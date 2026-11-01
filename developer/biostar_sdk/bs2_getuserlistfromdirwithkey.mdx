@@ -1,0 +1,53 @@
+# BS2_GetUserListFromDirWithKey
+
+<Badge only>+ v2.8.2</Badge> USB로 추출한 Data에서 등록되어있는 사용자 식별자를 배열로 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserListFromDirWithKey(void* context, const char* szDir, char** uidsObj, uint32_t* numUid, IsAcceptableUserID ptrIsAcceptableUserID, const BS2EncryptKey* key);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [Out] `szDir` : Data 저장 경로
+
+- [Out] `uidsObjs` : 사용자 식별자 리스트의 주소를 저장할 포인터
+
+- [Out] `numUid` : 총 사용자 수
+
+- [In] `ptrIsAcceptableUserID` : 허용할 user ID인지 여부를 서버로 묻기위한 callback 함수
+
+- [In] `key` : 암호화 키이며 [BS2_SetDataEncryptKey](bs2_setdataencryptkey)로 지정한 키값입니다.
+
+:::info
+
+`uidsObjs` 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetUserDatabaseInfoFromDirWithKey](bs2_getuserdatabaseinfofromdirwithkey)
+
+[BS2_GetUserInfosFromDirWithKey](bs2_getuserinfosfromdirwithkey)
+
+[BS2_GetUserDatasFromDirWithKey](bs2_getuserdatasfromdirwithkey)
+
+[BS2_GetUserInfosExFromDirWithKey](bs2_getuserinfosexfromdirwithkey)
+
+[BS2_GetUserDatasExFromDirWithKey](bs2_getuserdatasexfromdirwithkey)
+
+[BS2_GetLogFromDirWithKey](bs2_getlogfromdirwithkey)
+
+[BS2_GetLogBlobFromDirWithKey](bs2_getlogblobfromdirwithkey)
+
+[BS2_GetFilteredLogFromDirWithKey](bs2_getfilteredlogfromdirwithkey)

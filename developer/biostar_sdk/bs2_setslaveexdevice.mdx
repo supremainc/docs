@@ -1,0 +1,37 @@
+# BS2_SetSlaveExDevice
+
+장치가 CoreStation일 경우에 마스터 장치에 슬레이브 장치를 추가/수정/삭제합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSlaveExDevice(void* context, uint32_t deviceId, uint32_t channelPort, BS2Rs485SlaveDeviceEX* slaveDevices, uint32_t slaveDeviceCount);
+```
+
+:::info
+
+[BS2Rs485SlaveDevice 구조체 보기](slave_control_api#bs2rs485slavedevice) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `channelPort` : channel port
+
+- [In] `slaveDevices` : slave device 리스트
+
+- [In] `slaveDeviceCount` : slave device 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetSlaveExDevice](bs2_getslaveexdevice)

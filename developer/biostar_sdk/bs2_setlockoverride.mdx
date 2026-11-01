@@ -1,0 +1,60 @@
+# BS2_SetLockOverride
+
+<Badge only>+ v2.9.12</Badge> 장치에 Lock Override 정보를 설정합니다.
+
+:::info
+
+* 일반적으로 출입문이 잠금(Lock) 상태인 경우, 인증을 시도하더라도 문이 열리지 않습니다.
+
+* 2.9.12 버전부터는 화재나 재난 등 비상 상황에서 출입문을 긴급 개방할 수 있는 기능을 제공합니다.
+
+* 카드를 Lock Override로 설정하면, 출입문이 잠금 상태일 때 해당 카드로 인증하여 문을 개방할 수 있습니다.
+
+* 이미 사용자에게 할당된 카드를 Lock Override로 등록하거나, 사용자에게 할당되지 않은 카드를 등록할 수도 있습니다.
+
+* 사용자에게 할당된 카드를 Lock Override로 등록할 경우, Lock Override 정보의 userID에 해당 사용자 ID를 설정해야 합니다.
+
+* 사용자에게 할당된 카드가 Lock Override로 등록되어 있더라도 출입문이 잠금 상태가 아니라면, 일반적인 인증 절차와 동일하게 동작합니다.
+
+* 반면 출입문이 잠금 상태일 때 인증을 시도하면, 잠금 상태를 무시하고 출입문을 개방하는 긴급 개방 절차로 진행됩니다.
+
+* 사용자에게 할당되지 않은 카드인 경우, 평상시에는 동작하지 않으며 잠금 상태일 때만 긴급 개방을 시도합니다.
+
+* 또한, 해당 카드가 블랙리스트에 등록되어 있더라도 이를 무시하고 긴급 개방이 가능합니다.
+
+* 슬레이브 장치가 해당 기능을 지원하지 않더라도, 마스터 장치가 지원하는 경우 긴급 개방 기능을 사용할 수 있습니다.
+
+   - 사용자당 최대 8개까지 Lock Override를 등록할 수 있습니다.
+
+   - 장치당 최대 1,000개까지 Lock Override를 등록할 수 있습니다.
+
+   - Lock Override로 사용할 수 있는 카드는 CSN 카드와 Secure 카드입니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+int BS2_SetLockOverride(void* context, BS2_DEVICE_ID deviceId, const BS2LockOverride* request, uint32_t numOfRequest);
+```
+
+:::info
+
+[BS2LockOverride 구조체 보기](smartcard_api#bs2lockoverride) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 ID
+
+- [In] `request` : 장치에 설정할 Lock Override 구조체 배열의 주소
+
+- [In] `numOfRequest` : 설정할 구조체 배열의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

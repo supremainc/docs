@@ -1,0 +1,45 @@
+# BS2_SetInterlockZone
+
+<Badge only>+ v2.6.0</Badge> 인터락 구역을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetInterlockZone(void* context, uint32_t deviceId, BS2InterlockZoneBlob* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[BS2InterlockZoneBlob구조체 보기](zone_control_api#bs2interlockzoneblob) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `zones` : 설정하고자 하는 zone 리스트
+
+- [In] `zoneCount` : 설정하고자 하는 zone 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetInterlockZone](bs2_getinterlockzone)
+
+[BS2_GetInterlockZoneStatus](bs2_getinterlockzonestatus)
+
+[BS2_GetAllInterlockZoneStatus](bs2_getallinterlockzonestatus)
+
+[BS2_SetInterlockZoneAlarm](bs2_setinterlockzonealarm)
+
+[BS2_RemoveInterlockZone](bs2_removeinterlockzone)
+
+[BS2_RemoveAllInterlockZone](bs2_removeallinterlockzone)

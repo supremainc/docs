@@ -1,0 +1,27 @@
+# BS2_SetMaxThreadCount
+
+최대 스레드 개수를 지정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetMaxThreadCount(void* context, uint32_t maxThreadCount);
+```
+
+## 파라미터
+
+- [In] `context` : 장치 관리 Context
+
+- [Out] `maxThreadCount` : 최대 스레드 개수
+
+:::info
+
+기본 스레드 개수는 4\*cpu core 개수입니다. 8보다 낮은 값은 설정이 불가합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.

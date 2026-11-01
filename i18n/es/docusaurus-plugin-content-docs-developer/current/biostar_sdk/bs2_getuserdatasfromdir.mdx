@@ -1,0 +1,67 @@
+# BS2_GetUserDatasFromDir
+
+Gets User ID corresponding UserMask from storage path in device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserDatasFromDir(void* context, const char* szDir, char* uids, uint32_t uidCount, BS2UserBlob* userBlob, BS2_USER_MASK userMask);
+```
+
+:::info
+
+[See BS2UserBlob Structure](user_management_api#bs2userblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Storage path in device
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+- \[In\] `userMask` : User Mask
+
+| Value | Description |
+| :--: | --- |
+| 0x0000 | User ID |
+| 0x0001 | User data |
+| 0x0002 | User setting |
+| 0x0004 | User name |
+| 0x0008 | Image |
+| 0x0010 | PIN |
+| 0x0020 | Card |
+| 0x0040 | Fingerprint |
+| 0x0080 | Face |
+| 0x0100 | Access group |
+| 0x0200 ​ | Job code​ |
+| 0x0400 ​ | User phrase(personal message) ​ |
+| 0x0800 ​ | Face (**FaceStation F2**) ​ |
+| 0x1000 ​ | User setting(**FaceStation F2**) ​ |
+| 0xFFFF | All information |
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)

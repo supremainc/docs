@@ -1,0 +1,43 @@
+# Fingerprint API
+
+지문을 스캔하고 템플릿 데이터 추출 및 매치하는 함수를 제공하는 API입니다.
+
+---
+
+<DocCardList />
+
+---
+
+## 구조체
+
+### BS2Fingerprint
+
+```cpp
+typedef struct {
+   uint8_t index;
+   uint8_t flag;
+   uint8_t reserved[2];
+   uint8_t data[BS2_TEMPLATE_PER_FINGER][BS2_FINGER_TEMPLATE_SIZE];
+} BS2Fingerprint;
+```
+
+1. `index`
+
+   손가락 인덱스입니다.
+
+1. `flag`
+
+   지문의 용도를 지시하는 flag입니다.
+
+   | 값 | 설명 |
+   | :--: | --- |
+   | 0 | 일반 지문 |
+   | 1 | Duress 지문 |
+
+1. `reserved`
+
+   예약된 공간입니다.
+
+1. `data`
+
+   지문 템플릿 데이터입니다.

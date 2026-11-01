@@ -1,0 +1,67 @@
+# Version 2.9.13 (v2.9.13.0)
+
+Date: 2026-08-30
+
+## New Features
+
+- Supported XPass Q2 (XPQ2-DPB)
+
+- Added unicast device discovery using the device IP address
+
+- Added an option to accept DesFire cards only through EV2 Secure Messaging
+
+- Added device capability flags
+
+- Included security evidence in the distribution package
+
+1. Supports new devices.
+
+   * XPass Q2 (XPQ2-DPB)
+
+1. Added unicast device discovery using the device IP address.
+
+   The request is sent directly to one IPv4 address instead of being broadcast, so a device is still found when broadcast is blocked or the device is on another subnet.
+
+   Note that a response timeout is reported as success. Check the device count returned by [BS2_GetDevices](../bs2_getdevices) rather than the return code.
+
+   - Add API [BS2_SearchDeviceByIP](../bs2_searchdevicebyip)
+
+1. Added an option to accept DesFire cards only through EV2 Secure Messaging.
+
+   When enabled, a card that cannot use EV2 Secure Messaging fails authentication and the reason is reported as `BS2_SUB_EVENT_AUTH_FAIL_EV2SM_REQUIRED`.
+
+   Please refer to the linked API descriptions below for supported devices and firmware versions.
+
+   - Refer to structure [BS2CardConfig](../configuration_api#bs2cardconfig)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+1. Added device capability flags.
+
+   A flag only indicates whether the device supports the feature, not whether the SDK provides a way to use it.
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+   - `y2k38Supported`, `ev2smSupported`, `videoStandbySupported`
+
+   - `authFailLockoutSupported`, `doorUnlockLockImproveSupported`, `toggleDoorSupported`
+
+   - `antiTailgatingSupported`, `elevatorCabinAuthSupported`, `reAuthPreventionSupported`
+
+1. Included security evidence in the distribution package.
+
+   - SBOM (CycloneDX, Syft)
+
+   - Vulnerability report (Grype)
+
+   - `SHA256SUMS.txt`
+
+   - Security assessment
+
+## Modified Features
+
+1. The device search API [BS2_SearchDevicesEx](../bs2_searchdevicesex) has been deprecated.
+
+   Use [BS2_SearchDevices](../bs2_searchdevices) together with [BS2_SetEnableIPV4](../bs2_setenableipv4) / [BS2_SetEnableIPV6](../bs2_setenableipv6) instead.
+
+   [BS2_SearchDeviceByIP](../bs2_searchdevicebyip) is not a replacement. Its argument is the address of the target device, not a host or broadcast address.

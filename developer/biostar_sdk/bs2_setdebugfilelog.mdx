@@ -1,0 +1,80 @@
+# BS2_SetDebugFileLog
+
+<Badge only>+ v2.6.4</Badge> SDK 내의 로그 메시지를 파일로 출력시켜 응용프로그램 등의 디버깅에 활용할 수 있습니다.
+
+파일은 절대경로 또는 상대경로로 지정할 수 있으며, 이후 SDK 운영중에 발생되는 로그메시지는 해당 경로에 자동으로 생성됩니다.
+
+이때 저장되는 파일명은 `YYYYMMDD.log`의 형태를 갖습니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDebugFileLog(uint32_t level, uint32_t module, const char* logPath);
+```
+
+## 파라미터
+
+- [In] `level` : 오류 수준을 지정
+
+   | 매크로 | 값 | 의미 |
+   | --- | --- | --- |
+   | DEBUG_LOG_FATAL | 0x00000001 | 치명적인 오류 |
+   | DEBUG_LOG_ERROR | 0x00000002 | 일반 오류 |
+   | DEBUG_LOG_WARN | 0x00000004 | 경고 |
+   | DEBUG_LOG_API | 0x00000008 | API 호출 IN 및 OUT |
+   | DEBUG_LOG_INFO | 0x00000010 | 오류 외의 정보 |
+   | DEBUG_LOG_TRACE | 0x00000100 | SDK 자체 디버깅 목적의 정보 |
+   | DEBUG_LOG_SYSTEM | 0x0000000F | 모든 오류수준을 출력 |
+   | DEBUG_LOG_OPERATION_ALL | 0x000000FF | 모든 오류수준과 일반 정보를 출력 |
+   | DEBUG_LOG_ALL | 0xFFFFFFFF | 모든 정보 출력 |
+
+- [In] `module` : 모듈을 지정
+
+   | 매크로 | 값 |
+   | --- | --- |
+   | DEBUG_MODULE_KEEP_ALIVE | 0x00000001 |
+   | DEBUG_MODULE_SOCKET_MANAGER | 0x00000002 |
+   | DEBUG_MODULE_SOCKET_HANDLER | 0x00000004 |
+   | DEBUG_MODULE_DEVICE | 0x00000008 |
+   | DEBUG_MODULE_DEVICE_MANAGER | 0x00000010 |
+   | DEBUG_MODULE_EVENT_DISPATCHER | 0x00000020 |
+   | DEBUG_MODULE_API | 0x00000040 |
+   | DEBUG_MODULE_MISC | 0x00000080 |
+   | DEBUG_MODULE_PACKET | 0x00000100 |
+   | DEBUG_MODULE_NOTIFY_MANAGER | 0x00000400 |
+   | DEBUG_MODULE_EVENT | 0x00000800 |
+   | DEBUG_MODULE_USB | 0x00001000 |
+   | DEBUG_MODULE_ALL | 0xFFFFFFFF |
+
+- [In] `logPath` : 로그파일이 출력될 경로
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+const char* CURRENT_DIR = ".";
+int sdkResult = BS2_SetDebugFileLog(DEBUG_LOG_ALL, DEBUG_MODULE_ALL, CURRENT_DIR);
+if (BS_SDK_SUCCESS != sdkResult)
+{
+   printf("BS2_SetDebugFileLog call failed: %d", sdkResult);
+   return;
+}
+```
+
+```csharp title='C#'
+const string CURRENT_DIR = ".";
+IntPtr ptrDir = Marshal.StringToHGlobalAnsi(CURRENT_DIR);
+result = (BS2ErrorCode)API.BS2_SetDebugFileLog(Constants.DEBUG_LOG_OPERATION_ALL, Constants.DEBUG_MODULE_ALL, ptrDir);
+Marshal.FreeHGlobal(ptrDir);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+   Console.WriteLine("Got error({0}).", result);
+   return;
+}
+```
+

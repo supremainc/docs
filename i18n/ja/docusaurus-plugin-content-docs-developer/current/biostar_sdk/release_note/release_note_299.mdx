@@ -1,0 +1,43 @@
+# Version 2.9.9 (v2.9.9.0)
+
+Date: 2025-6-13
+
+## New Features
+
+- Supports selection of AES128 or Crypto1 encryption methods for Mifare Plus cards
+
+- Supports new devices: CoreStation 20 (CS-20, CS-20P) and Door Interface (DI-24)
+
+1. Added option to select either AES128 or Crypto1 encryption methods for Mifare Plus cards.
+
+   - Currently, this feature is supported only on XPass 2 v1.4.3 and XPass D2 v1.8.2.
+
+   - Refer to structure [BS2CardConfig](../configuration_api#bs2cardconfig)
+
+   - Refer to structure [BS2CustomCardConfig](../configuration_api#bs2customcardconfig)
+
+   - Refer to structure [BS2MifareCardConfigEx](../configuration_api#bs2mifarecardconfigex)
+
+1. Supports new devices.
+
+   - CoreStation 20(CS-20, CS-20P)
+
+   - Door Interface(DI-24)
+
+   - Refer to structure [BS2InputConfigEx](../configuration_api#bs2inputconfigex)
+
+   - Refer to structure [BS2Rs485ConfigEXDynamic](../configuration_api#bs2rs485configexdynamic)
+
+   - Add API [bs2_getrs485configexdynamic](../bs2_getrs485configexdynamic), [BS2_SetRS485ConfigExDynamic](../bs2_setrs485configexdynamic)
+
+   - Refer to structure [BS2FacilityCodeConfig](../configuration_api#bs2facilitycodeconfig)
+
+   - Add API [BS2_GetFacilityCodeConfig](../bs2_getfacilitycodeconfig), [BS2_SetFacilityCodeConfig](../bs2_setfacilitycodeconfig)
+
+   - Refer to structure [BS2Rs485ConfigEXDynamic](../configuration_api#bs2rs485configexdynamic)
+
+## Modified Features 
+
+1. Fixes were made to stabilize the code internally in the SDK.
+
+1. Improved Card ID handling for SCC smart cards in the card sample source.

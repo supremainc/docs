@@ -1,0 +1,43 @@
+# BS2_ReleaseUsbContext
+
+<Dep>[Deprecated]</Dep>
+
+<Badge only>+ v2.5.0</Badge> Releases context which is allocated from the API [BS2_AllocateUsbContext](bs2_allocateusbcontext). It doesn't do anything if pointer value is NULL.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+void BS2_ReleaseUsbContext(void* context);
+```
+
+## Parameter
+
+- \[In\] `context` : USB Context
+
+## Return Value
+
+Void
+
+## See Also
+
+[BS2_AllocateUsbContext](bs2_allocateusbcontext)
+
+[BS2_GetUserDatabaseInfoFromDir](bs2_getuserdatabaseinfofromdir)
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
+
+[BS2_GetLogFromDir](bs2_getlogfromdir)
+
+[BS2_GetLogBlobFromDir](bs2_getlogblobfromdir)
+
+[BS2_GetFilteredLogFromDir](bs2_getfilteredlogfromdir)

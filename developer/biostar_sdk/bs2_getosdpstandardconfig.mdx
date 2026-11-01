@@ -1,0 +1,52 @@
+# BS2_GetOsdpStandardConfig
+
+<Badge only>+ v2.9.1</Badge> 장치의 OSDP 설정 정보를 가져옵니다.
+
+또한 이 설정정보는 SDK 내의 마스터-OSDP 슬레이브 장치 토폴로지 구성을 업데이트 시키는데 사용됩니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetOsdpStandardConfig(void* context, uint32_t deviceId, BS2OsdpStandardConfig* config);
+```
+
+:::info
+
+[BS2OsdpStandardConfig 구조체 보기](configuration_api#bs2osdpstandardconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `config` : OSDP 설정 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```cpp title='C++'
+BS2OsdpStandardConfig config = { 0, };
+int sdkResult = BS2_GetOsdpStandardConfig(context_, id, &config);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_GetOsdpStandardConfig call failed: %d", sdkResult);
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2OsdpStandardConfig config;
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetOsdpStandardConfig(sdkContext, deviceID, out config);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+return result;
+```
+

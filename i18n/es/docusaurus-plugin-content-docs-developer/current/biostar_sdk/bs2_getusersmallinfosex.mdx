@@ -1,0 +1,51 @@
+# BS2_GetUserSmallInfosEx
+
+<Badge only>+ v2.6.3</Badge> Gets the user information of the given user ID with efficient use of memory.
+
+The only difference between [BS2_GetUserInfosEx](bs2_getuserinfosex) which is using structure [BS2UserBlob](user_management_api#bs2userblob) is that the 3rd parameter `BS2UserPhoto` of `BS2UserSmallBlob`Ex is using pointer for efficient memory use.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserSmallInfosEx(void* context, uint32_t deviceId, char* uids, uint32_t uidCount, BS2UserSmallBlobEx* userBlob);
+```
+
+:::info
+
+[See BS2UserSmallBlobEx Structure](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_EnrollUserSmall](bs2_enrollusersmall)
+
+[BS2_EnrollUserSmallEx](bs2_enrollusersmallex)
+
+[BS2_GetUserSmallInfos](bs2_getusersmallinfos)
+
+[BS2_GetUserSmallInfosEx](bs2_getusersmallinfosex)
+
+[BS2_GetUserSmallDatas](bs2_getusersmalldatas)
+
+[BS2_GetUserSmallDatasEx](bs2_getusersmalldatasex)

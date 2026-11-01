@@ -1,0 +1,31 @@
+# BS2_SetCardConfig
+
+Stores smart card settings on the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetCardConfig(void* context, uint32_t deviceId, BS2CardConfig* config);
+```
+
+:::info
+
+[See BS2CardConfig Structure](configuration_api#bs2cardconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : Smart card configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

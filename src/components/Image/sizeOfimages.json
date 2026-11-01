@@ -7015,6 +7015,10 @@
     "width": 1200,
     "height": 495
   },
+  "/img/common/biostar_2_sdk_framework_1.png": {
+    "width": 600,
+    "height": 388
+  },
   "/img/common/bsair-cloud-architecture.webp": {
     "width": 1439,
     "height": 710
@@ -7355,9 +7359,17 @@
     "width": 800,
     "height": 455
   },
+  "/img/common/pre-build_event_command_line.png": {
+    "width": 1000,
+    "height": 595
+  },
   "/img/common/qr.svg": {
     "width": 29,
     "height": 29
+  },
+  "/img/common/sdk_hero.png": {
+    "width": 945,
+    "height": 471
   },
   "/img/common/setting-system-restore-complete.png": {
     "width": 635,
@@ -7382,6 +7394,10 @@
   "/img/common/smartcardapi-structure.png": {
     "width": 2072,
     "height": 1192
+  },
+  "/img/common/workflow.png": {
+    "width": 650,
+    "height": 540
   },
   "/img/cover/bioentryp2.png": {
     "width": 370,
@@ -16890,6 +16906,10 @@
   "/img/en/clue/test-period-set-device-list.png": {
     "width": 1706,
     "height": 405
+  },
+  "/img/en/common/sdk_hero.png": {
+    "width": 945,
+    "height": 471
   },
   "/img/en/device/auth-dynamic-roi.png": {
     "width": 800,

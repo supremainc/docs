@@ -1,0 +1,43 @@
+# BS2_GetDeviceZoneMasterConfig
+
+Ethernet 구역의 master 장치 설정을 가져옵니다.
+
+## 지원 장치
+
+* BioStation 2 (1.5.0 only)
+
+* BioStatioin A2 (1.4.0 only)
+
+* BioEntry P2 (1.0.0 only)
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDeviceZoneMasterConfig(void* context, BS2_DEVICE_ID deviceId, BS2DeviceZoneMasterConfig* config);
+```
+
+:::info
+
+[BS2DeviceZoneMasterConfig구조체 보기](zone_control_api#bs2devicezonemasterconfig) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `config` : zone master 설정을 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_SetDeviceZoneMasterConfig](bs2_setdevicezonemasterconfig)
+
+[BS2_RemoveDeviceZoneMasterConfig](bs2_removedevicezonemasterconfig)

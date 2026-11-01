@@ -1,0 +1,49 @@
+# BS2_SearchDeviceByIP
+
+<Badge only>+ v2.9.13</Badge> Searches for a device at a specific IPv4 address and updates the list of devices available in the current context. The list of devices can be obtained via the [BS2_GetDevices](bs2_getdevices) function.
+
+The request is sent directly to the given address as a unicast, so a device is still found when broadcast is blocked or when the device is on another subnet.
+
+:::info
+
+Overwrite the old device list.
+
+:::
+
+:::caution
+
+A response timeout is reported as `BS_SDK_SUCCESS`. Calling this function with an address where no device exists also returns success.
+
+Do not decide by the return value. Check the number of devices returned by [BS2_GetDevices](bs2_getdevices).
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SearchDeviceByIP(void* context, const char* deviceIpAddr);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceIpAddr` : IPv4 address of the device to search for
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+An IPv6 address is rejected with `BS_SDK_ERROR_INVALID_ADDRESS`.
+
+## See Also
+
+[BS2_GetDevices](bs2_getdevices)
+
+[BS2_SearchDevices](bs2_searchdevices)
+
+[BS2_SetDeviceSearchingTimeout](bs2_setdevicesearchingtimeout)

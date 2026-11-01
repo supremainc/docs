@@ -1,0 +1,51 @@
+# BS2_SetDebugFileLog
+
+<Badge only>+ v2.6.3</Badge> The log messages in the SDK can be output to a file, which can be used for debugging applications.
+
+The file can be specified as an absolute path or a relative path, and log messages generated during the operation of the SDK will be automatically stored in the corresponding path.
+
+The file name to be saved is in the form of `YYYYMMDD.log`.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDebugFileLog(uint32_t level, uint32_t module, const char* logPath);
+```
+
+## Parameter
+
+- \[In\] `level` : Debug level
+
+   | Macro | Value | Description |
+   | --- | --- | --- |
+   | DEBUG_LOG_FATAL | 0x00000001 | Fatal error |
+   | DEBUG_LOG_ERROR | 0x00000002 | Normal error |
+   | DEBUG_LOG_WARN | 0x00000004 | Warning |
+   | DEBUG_LOG_INFO | 0x00000008 | Information including errors |
+   | DEBUG_LOG_TRACE | 0x00000100 | Information for SDK self-debugging purposes |
+   | DEBUG_LOG_OPERATION_ALL | 0x000000FF | All the logs except TRACE |
+   | DEBUG_LOG_ALL | 0xFFFFFFFF | All information |
+
+- \[In\] `module` : Specified module
+
+   | Macro | Value | Description |
+   | --- | --- | --- |
+   | DEBUG_MODULE_KEEP_ALIVE | 0x00000001 | Keep alive module |
+   | DEBUG_MODULE_SOCKET_MANAGER | 0x00000002 | Socket management module |
+   | DEBUG_MODULE_SOCKET_HANDLER | 0x00000004 | Socket handling module |
+   | DEBUG_MODULE_DEVICE | 0x00000008 | Device module |
+   | DEBUG_MODULE_DEVICE_MANAGER | 0x00000010 | Device management module |
+   | DEBUG_MODULE_EVENT_DISPATCHER | 0x00000020 | Event dispatcher module |
+   | DEBUG_MODULE_API | 0x00000040 | API |
+   | DEBUG_MODULE_MISC | 0x00000080 | etc |
+   | DEBUG_MODULE_ALL | 0xFFFFFFFF | All module |
+
+- \[In\] `logPath` : Path log file is stored
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

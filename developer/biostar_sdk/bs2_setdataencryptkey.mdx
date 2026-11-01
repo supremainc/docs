@@ -1,0 +1,51 @@
+# BS2_SetDataEncryptKey
+
+<Badge only>+ v2.7.1</Badge> 사용자의 PIN 코드 암호화 키 값을 변경 합니다.
+
+만일 장치의 PIN 암호화 키가 현재 설정하고자 하는 키와 동일하다면, 해당 설정은 무시될 것입니다.
+
+또한 장치의 PIN 암호화 키가 현재 설정하고자 하는 키와 다르다면, 해당 키로 설정이 되어지고 장치의 사용자 정보는 모두 지워집니다.
+
+:::important
+
+* PIN 암호화 키를 변경하면, 변경한 사용자 정의 키로 사용하도록 장치의 사용자가 모두 지워지게됩니다.
+
+* 사용자는 [BS2_EnrolUser](bs2_enroluser) 등의 함수를 통해 다시 장치에 추가하여져야 합니다.
+
+* 함수 [BS2_MakePinCode](bs2_makepincode)는 기본 키 값으로 사용자 PIN 코드를 암호화 함니다.
+
+* 만일 PIN 암호화 키를 사용자 정의 값으로 변경했다면, [BS2_MakePinCodeWithKey](bs2_makepincodewithkey)를 호출하여 사용자에 재할당 되어져야 합니다.
+
+:::
+
+### 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDataEncryptKey(void* context, uint32_t deviceId, const BS2EncryptKey* keyInfo);
+```
+
+:::info
+
+[BS2EncryptKey 구조체 보기](sdk_api#bs2encryptkey) 
+
+:::
+
+### 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `keyInfo` : 설정할 키 정보 구조체의 주소
+
+### 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+### 함께 보기
+
+[BS2_MakePinCodeWithKey](bs2_makepincodewithkey)
+
+[BS2_RemoveDataEncryptKey](bs2_removedataencryptkey)

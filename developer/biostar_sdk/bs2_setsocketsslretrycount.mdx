@@ -1,0 +1,31 @@
+# BS2_SetSocketSSLRetryCount
+
+<Badge only>+ v2.9.1</Badge> SSL 소켓 통신 시, 통신구간에서 소켓으로부터 패킷을 읽고쓰는 도중 오류가 발생하게되면, SDK는 자동으로 일정 횟수 만큼 재시도를 하는데, 이 함수를 통해 재시도 횟수를 변경할 수 있습니다.
+
+:::caution
+
+재시도 횟수를 높이는 것은 일시적인 오류를 극복할 수 있는 좋은 방법이지만, 네트워크 연결끊김 등 직접적인 원인 발생 시 오히려 재연결이 필요한 시점에, 무의미하게 읽기/쓰기를 재시도함으로써 리소스 낭비가 발생할 여지가 있으므로 주의가 필요합니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSocketSSLRetryCount(void* context, uint32_t count);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `count` : 재시도 횟수 설정 값
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetSocketSSLRetryCount](bs2_getsocketsslretrycount)

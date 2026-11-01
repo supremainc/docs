@@ -1,0 +1,39 @@
+# BS2_GetUserInfosFaceExFromDir
+
+<Badge only>+ v2.7.1</Badge> USB로 추출한 Data에서 사용자 식별자에 해당하는 사용자 정보를 가져옵니다.
+
+FaceStaion F2 장치로부터 export된 USB file을 지원합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserInfosFaceExFromDir(void* context, const char* szDir, char* uids, uint32_t uidCount, BS2UserFaceExBlob* userBlob);
+```
+
+:::info
+
+[BS2UserFaceExBlob 구조체 보기](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `szDir` : Data 저장 경로
+
+- [In] `uids` : 가져오고자 하는 사용자 식별자 리스트
+
+- [In] `uidCount` : 사용자 식별자 개수
+
+- [Out] `userBlob` : 사용자 정보를 저장할 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetUserDatasFaceExFromDir](bs2_getuserdatasfaceexfromdir)

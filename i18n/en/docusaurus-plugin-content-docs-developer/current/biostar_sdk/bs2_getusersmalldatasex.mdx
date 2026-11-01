@@ -1,0 +1,73 @@
+# BS2_GetUserSmallDatasEx
+
+<Badge only>+ v2.6.3</Badge> Gets selected data of user with efficient use of memory.
+
+You can get selected data of the user ID using userMask.
+
+The only difference between [BS2_GetUserDatasEx](bs2_getuserdatasex) which is using structure [BS2UserBlobEx](user_management_api#bs2userblobex) is that the 3rd parameter `BS2UserPhoto` of `BS2UserSmallBlob`Ex is using pointer for efficient memory use.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserSmallDatasEx(void* context, uint32_t deviceId, char* uids, uint32_t uidCount, BS2UserSmallBlobEx* userBlob, BS2_USER_MASK userMask);
+```
+
+:::info
+
+[See BS2UserSmallBlobEx Structure](user_management_api#bs2usersmallblobex) 
+
+:::
+
+## Paramter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+- \[In\] `userMask` : User Mask
+
+| Value | Description |
+| :--: | --- |
+| 0x0000 | User ID |
+| 0x0001 | User data |
+| 0x0002 | User setting |
+| 0x0004 | User name |
+| 0x0008 | Image |
+| 0x0010 | PIN |
+| 0x0020 | Card |
+| 0x0040 | Fingerprint |
+| 0x0080 | Face |
+| 0x0100 | Access group |
+| 0x0200 | Jobcode |
+| 0x0400 ​ | User phrase(personal message) ​ |
+| 0x0800 ​ | Face (**FaceStation F2**) ​ |
+| 0x1000 ​ | User setting(**FaceStation F2**) ​ |
+| 0xFFFF | All information |
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_EnrollUserSmall](bs2_enrollusersmall)
+
+[BS2_EnrollUserSmallEx](bs2_enrollusersmallex)
+
+[BS2_GetUserSmallInfos](bs2_getusersmallinfos)
+
+[BS2_GetUserSmallInfosEx](bs2_getusersmallinfosex)
+
+[BS2_GetUserSmallDatas](bs2_getusersmalldatas)
+
+[BS2_GetUserSmallDatasEx](bs2_getusersmalldatasex)

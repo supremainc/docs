@@ -1,0 +1,98 @@
+# BS2_GetAllAuthGroup
+
+모든 인증 그룹을 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllAuthGroup(void* context, uint32_t deviceId, BS2AuthGroup** authGroupObj, uint32_t* numAuthGroup);
+```
+
+:::info
+
+[BS2AuthGroup 구조체 보기](face_api#bs2authgroup) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `authGroupObj` : auth group 리스트를 저장할 포인터
+
+- [Out] `numAuthGroup` : auth group 리스트의 개수
+
+:::info
+
+`authGroupObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+if (Util.IsYes())
+{
+    Console.WriteLine("Trying to get all auth gruops from device.");
+    result = (BS2ErrorCode)API.BS2_GetAllAuthGroup(sdkContext, deviceID, out authGroupObj, out numAuthGroup);
+}
+else
+{
+    Console.WriteLine("Enter the ID of the access group which you want to get: [ID_1,ID_2 ...]");
+    Console.Write(">>>> ");
+    char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+    string[] authGroupIDs = Console.ReadLine().Split(delimiterChars);
+    List<UInt32> authGroupIDList = new List<UInt32>();
+
+    foreach (string authGroupID in authGroupIDs)
+    {
+        if (authGroupID.Length > 0)
+        {
+            UInt32 item;
+            if (UInt32.TryParse(authGroupID, out item))
+            {
+                authGroupIDList.Add(item);
+            }
+        }
+    }
+
+    if (authGroupIDList.Count > 0)
+    {
+        IntPtr authGroupIDObj = Marshal.AllocHGlobal(4 * authGroupIDList.Count);
+        IntPtr curAuthGroupIDObj = authGroupIDObj;
+        foreach (UInt32 item in authGroupIDList)
+        {
+            Marshal.WriteInt32(curAuthGroupIDObj, (Int32)item);
+            curAuthGroupIDObj = (IntPtr)((long)curAuthGroupIDObj + 4);
+        }
+
+        Console.WriteLine("Trying to get auth gruops from device.");
+        result = (BS2ErrorCode)API.BS2_GetAuthGroup(sdkContext, deviceID, authGroupIDObj, (UInt32)authGroupIDList.Count, out authGroupObj, out numAuthGroup);
+
+        Marshal.FreeHGlobal(authGroupIDObj);
+    }
+    else
+    {
+        Console.WriteLine("Invalid parameter");
+    }
+}
+BS2_ReleaseObject(uidObj);
+```
+
+## 함께 보기
+
+[BS2_GetAuthGroup](bs2_getauthgroup)
+
+[BS2_SetAuthGroup](bs2_setauthgroup)
+
+[BS2_RemoveAuthGroup](bs2_removeauthgroup)
+
+[BS2_RemoveAllAuthGroup](bs2_removeallauthgroup)

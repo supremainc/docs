@@ -1,0 +1,43 @@
+# Fingerprint API
+
+API that provides functions to scan, extract, and compare fingerprint template data.
+
+---
+
+<DocCardList />
+
+---
+
+## Structure
+
+### BS2Fingerprint
+
+```cpp
+typedef struct {
+   uint8_t index;
+   uint8_t flag;
+   uint8_t reserved[2];
+   uint8_t data[BS2_TEMPLATE_PER_FINGER][BS2_FINGER_TEMPLATE_SIZE];
+} BS2Fingerprint;
+```
+
+1. `index`
+
+   The index of finger. This is a flag that user can manage manually, not changing automatically. If you want to manage fingerprint index, please assign a number when you enroll fingerprint.
+
+1. `flag`
+
+   Flag that indicates the purpose of the fingerprint.
+
+   | Value | Description |
+   | :--: | --- |
+   | 0 | Normal fingerprint |
+   | 1 | Duress fingerprint |
+
+1. `reserved`
+
+   Reserved space.
+
+1. `data`
+
+   The data of fingerprint template.

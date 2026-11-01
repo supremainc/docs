@@ -1,0 +1,29 @@
+# BS2_SetMaxThreadCount
+
+Specifies the maximum thread count.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetMaxThreadCount(void* context, uint32_t maxThreadCount);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[Out\] `maxThreadCount` : Maximum thread count
+
+:::info
+
+The default thread count is 4\*cpu core. You can't set this lower than 8.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,57 @@
+# BS2_GetAllAntiPassbackZoneStatus
+
+모든 안티패스백 구역의 상태 정보를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllAntiPassbackZoneStatus(void* context, BS2_DEVICE_ID deviceId, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[BS2ZoneStatus 구조체 보기](zone_control_api#bs2zonestatus) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `zoneStatusObj` : zone status 레코드의 주소를 저장할 포인터
+
+- [Out] `numZoneStatus` : zone status 레코드의 개수
+
+:::info
+
+`zoneStatusObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetAntiPassbackZone](bs2_getantipassbackzone)
+
+[BS2_GetAllAntiPassbackZone](bs2_getallantipassbackzone)
+
+[BS2_GetAntiPassbackZoneStatus](bs2_getantipassbackzonestatus)
+
+[BS2_SetAntiPassbackZone](bs2_setantipassbackzone)
+
+[BS2_SetAntiPassbackZoneAlarm](bs2_setantipassbackzonealarm)
+
+[BS2_RemoveAntiPassbackZone](bs2_removeantipassbackzone)
+
+[BS2_RemoveAllAntiPassbackZone](bs2_removeallantipassbackzone)
+
+[BS2_ClearAntiPassbackZoneStatus](bs2_clearantipassbackzonestatus)
+
+[BS2_ClearAllAntiPassbackZoneStatus](bs2_clearallantipassbackzonestatus)

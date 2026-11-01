@@ -1,0 +1,39 @@
+# BS2_SetMifareCardConfigEx
+
+<Badge only>+ v2.9.9</Badge> 장치의 Mifare 카드 중 AES128 암호화 된 카드에 사용되는 설정 정보를 저장합니다.
+
+:::info
+
+보안강화를 위해 키 값은 취득할 수 없습니다.
+
+:::
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetMifareCardConfigEx(void* context, BS2_DEVICE_ID deviceId, const BS2MifareCardConfigEx* config);
+```
+
+:::info
+
+[BS2MifareCardConfigEx 구조체 보기](configuration_api#bs2mifarecardconfigex) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `config` : Smart card 설정 정보 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetMifareCardConfigEx](bs2_getmifarecardconfigex)

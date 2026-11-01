@@ -1,0 +1,43 @@
+# BS2_SetAccessSchedule
+
+Configures a time schedule.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAccessSchedule(void* context, uint32_t deviceId, BS2Schedule* accessShedules, uint32_t accessSheduleCount);
+```
+
+:::info
+
+[See BS2Schedule Structure](access_control_api#bs2schedule) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `accessShedules` : List of access schedules to be stored
+
+- \[In\] `accessSheduleCount` : Number of access schedules
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAccessSchedule](bs2_getaccessschedule)
+
+[BS2_GetAllAccessSchedule](bs2_getallaccessschedule)
+
+[BS2_RemoveAccessSchedule](bs2_removeaccessschedule)
+
+[BS2_RemoveAllAccessSchedule](bs2_removeallaccessschedule)

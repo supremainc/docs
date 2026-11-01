@@ -1,0 +1,49 @@
+# Communication API
+
+As API that configures the SSL communication, there are communication interfaces include LAN, USB, and RS485. To get real-time device connectivity and search results, please register the callback function via the [BS2_SetDeviceEventListener](bs2_setdeviceeventlistener) function.
+
+---
+
+<DocCardList />
+
+---
+
+## Callback Function
+
+```cpp
+typedef void (*OnDeviceFound)(uint32_t deviceId);
+typedef void (*OnDeviceAccepted)(BS2_DEVICE_ID deviceId);
+typedef void (*OnDeviceConnected)(uint32_t deviceId);
+typedef void (*OnDeviceDisconnected)(uint32_t deviceId);
+typedef void (*OnAlarmFired)(BS2_DEVICE_ID deviceId, const BS2Event* event);
+typedef void (*OnInputDetected)(BS2_DEVICE_ID deviceId, const BS2Event* event);
+typedef void (*OnConfigChanged)(BS2_DEVICE_ID deviceId, uint32_t configMask);
+```
+
+1. `OnDeviceFound`
+
+   Callback function that is called when a new BioStar device is found in Subnet.
+
+1. `OnDeviceAccepted`
+
+   Callback function that is called when the BioStar device requests a connection to the BioStar application.
+
+1. `OnDeviceConnected`
+
+   Callback function that is called when the device and the BioStar application are connected.
+
+1. `OnDeviceDisconnected`
+
+   Callback function that is called when the connection between the device and the BioStar application is lost.
+
+1. `OnAlarmFired`
+
+   Callback function that is called when an alarm set in the Zone occurs.
+
+1. `OnInputDetected`
+
+   Callback function that is called when an input signal is generated.
+
+1. `OnConfigChanged`
+
+   Callback function that is called when the configuration is changed by manipulating the terminal.

@@ -1,0 +1,41 @@
+# BS2_GetSlaveDevice
+
+RS485 네트워크에서 슬레이브 장치를 검색합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSlaveDevice(void* context, uint32_t deviceId, BS2Rs485SlaveDevice** slaveDeviceObj, uint32_t* slaveDeviceCount);
+```
+
+:::info
+
+[BS2Rs485SlaveDevice 구조체 보기](slave_control_api#bs2rs485slavedevice) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `slaveDeviceObj` : slave device 리스트를 저장할 포인터
+
+- [Out] `slaveDeviceCount` : slave device 리스트의 개수
+
+:::info
+
+`slaveDeviceObj` 변수는 사용한 뒤 [BS2_ReleaseObject](bs2_releaseobject) 함수를 이용해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_SetSlaveDevice](bs2_setslavedevice)

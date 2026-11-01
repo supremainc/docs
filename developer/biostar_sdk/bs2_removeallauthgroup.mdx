@@ -1,0 +1,40 @@
+# BS2_RemoveAllAuthGroup
+
+모든 인증 그룹을 제거합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_RemoveAllAuthGroup(void* context, uint32_t deviceId);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+Console.WriteLine("Trying to remove all access gruops from device.");
+result = (BS2ErrorCode)API.BS2_RemoveAllAccessGroup(sdkContext, deviceID);
+Marshal.FreeHGlobal(authGroupIDObj);
+BS2_ReleaseObject(uidObj);
+```
+
+## 함께 보기
+
+[BS2_GetAuthGroup](bs2_getauthgroup)
+
+[BS2_GetAllAuthGroup](bs2_getallauthgroup)
+
+[BS2_SetAuthGroup](bs2_setauthgroup)
+
+[BS2_RemoveAuthGroup](bs2_removeauthgroup)

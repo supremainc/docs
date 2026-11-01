@@ -1,0 +1,46 @@
+# BS2_ClearLog
+
+로그를 모두 삭제합니다.
+
+함수 호출 이후 내부적으로 관리되는 id값([BS2Event](log_management_api#bs2event), [BS2EventBlob](log_management_api#bs2eventblob) 참조)이 초기화되거나 바뀌지 않습니다.
+
+새롭게 생성되는 로그의 id는 항상 이전에 발생했던 id값의 +1 증가된 값으로 생성될 것입니다.
+
+id값은 uint32_t의 최대값인 0xFFFFFFFF만큼 증가하고 0부터 다시 증가하게 됩니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+int BS2_ClearLog(void* context, uint32_t deviceId);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 샘플 코드
+
+```csharp title='C#'
+void clearLog(IntPtr sdkContext, UInt32 deviceID, bool isMasterDevice)
+{
+    Console.WriteLine("Trying to clear log.");
+    BS2ErrorCode result = (BS2ErrorCode)API.BS2_ClearLog(sdkContext, deviceID);
+    if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    {
+        Console.WriteLine("Got error({0}).", result);
+    }
+}
+```
+
+## 함께 보기
+
+[BS2_GetLog](bs2_getlog)
+
+[BS2_GetFilteredLog](bs2_getfilteredlog)

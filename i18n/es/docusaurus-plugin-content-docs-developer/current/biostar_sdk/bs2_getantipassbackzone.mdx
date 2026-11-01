@@ -1,0 +1,53 @@
+# BS2_GetAntiPassbackZone
+
+Retrieves selected Anti Passback zones.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAntiPassbackZone(void* context, uint32_tdeviceId, uint32_t* zoneIds, uint32_t zoneIdCount, BS2AntiPassbackZone** zoneObj, uint32_t* numZone);
+```
+
+:::info
+
+[See BS2AntiPassbackZone Structure](zone_control_api#bs2antipassbackzone) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zoneIds` : List of Anti Passback zone IDs to retrieve
+
+- \[In\] `zoneIdCount` : Size of Anti Passback zone ID list
+
+- \[Out\] `zoneObj` : Anti Passback zone list pointer
+
+- \[Out\] `numZone` : Number of Anti Passback zones
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAllAntiPassbackZone](bs2_getallantipassbackzone)
+
+[BS2_SetAntiPassbackZone](bs2_setantipassbackzone)
+
+[BS2_RemoveAntiPassbackZone](bs2_removeantipassbackzone)
+
+[BS2_RemoveAllAntiPassbackZone](bs2_removeallantipassbackzone)

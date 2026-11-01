@@ -1,0 +1,55 @@
+# BS2_GetAllScheduledLockUnlockZoneStatus
+
+Retrieves the status of all Scheduled Lock/Unlock zones.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllScheduledLockUnlockZoneStatus(void* context, uint32_t deviceId, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[See BS2ZoneStatus Structure](zone_control_api#bs2zonestatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `zoneStatusObj` : Zone status list pointer
+
+- \[Out\] `numZoneStatus` : Number of zone status records
+
+:::info
+
+The `zoneStatusObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetScheduledLockUnlockZone](bs2_getscheduledlockunlockzone)
+
+[BS2_GetAllScheduledLockUnlockZone](bs2_getallscheduledlockunlockzone)
+
+[BS2_GetScheduledLockUnlockZoneStatus](bs2_getscheduledlockunlockzonestatus)
+
+[BS2_SetScheduledLockUnlockZone](bs2_setscheduledlockunlockzone)
+
+[BS2_SetScheduledLockUnlockZoneAlarm](bs2_setscheduledlockunlockzonealarm)
+
+[BS2_RemoveScheduledLockUnlockZone](bs2_removescheduledlockunlockzone)
+
+[BS2_RemoveAllScheduledLockUnlockZone](bs2_removeallscheduledlockunlockzone)

@@ -1,0 +1,21 @@
+# BS2_AllocateContext
+
+`BS2_AllocateContext()` function creates a context that controls and manages the devices.
+
+Device management context manages and supervises the network connection status of the connected devices and is responsible of calling the APIs provided by the SDK.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+void* BS2_AllocateContext();
+```
+
+## Return Value
+
+Returns `NULL` when there is not enough system memory, if not, returns the allocated Context.
+
+## See Also
+
+[BS2_ReleaseContext](bs2_releasecontext)

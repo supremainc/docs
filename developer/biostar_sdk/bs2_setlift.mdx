@@ -1,0 +1,53 @@
+# BS2_SetLift
+
+Lift을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetLift(void* context, uint32_t deviceId, BS2Lift* lifts, uint32_t liftCount);
+```
+
+:::info
+
+[BS2Lift구조체 보기](lift_control_api#bs2lift) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [In] `lifts` : 저장하고자 하는 lift 리스트
+
+- [In] `liftCount` : lift 리스트의 개수
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetLift](bs2_getlift)
+
+[BS2_GetAllLift](bs2_getalllift)
+
+[BS2_GetLiftStatus](bs2_getliftstatus)
+
+[BS2_GetAllLiftStatus](bs2_getallliftstatus)
+
+[BS2_SetLiftAlarm](bs2_setliftalarm)
+
+[BS2_RemoveLift](bs2_removelift)
+
+[BS2_RemoveAllLift](bs2_removealllift)
+
+[BS2_ReleaseFloor](bs2_releasefloor)
+
+[BS2_ActivateFloor](bs2_activatefloor)
+
+[BS2_DeActivateFloor](bs2_deactivatefloor)

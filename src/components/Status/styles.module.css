@@ -49,3 +49,11 @@
 .slave {
   background: #a49c9e;
 }
+
+.deprecate {
+  color: var(--ifm-warning-color);
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--ifm-color-deprecated-lightest);
+  font-weight: bold;
+}

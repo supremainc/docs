@@ -1,0 +1,36 @@
+# Version 2.9.4 (V2.9.4.0)
+
+Date: 2023-08-08
+
+## New Features
+
+- BioStation 2a connection support (Device name: BS2A-ODPB, BS2A-OAPWB)
+
+- Read support with Custom smart card
+
+1. New device BioStation 2a connection is supported.
+
+1. Support for reading Custom smart card.
+
+   - Refer to structure [BS2CustomMifareCard](../configuration_api#bs2custommifarecard)
+
+   - Add structure [BS2CustomDesFireCard](../configuration_api#bs2customdesfirecard)
+
+   - Add structure [BS2CustomCardConfig](../configuration_api#bs2customcardconfig)
+
+   - Add API [BS2_GetCustomCardConfig](../bs2_getcustomcardconfig)
+
+   - Add API [BS2_SetCustomCardConfig](../bs2_setcustomcardconfig)
+
+   - Refer to structure [BS2DeviceCapabilities](../device_api#bs2devicecapabilities)
+
+## Modified Features
+
+1. Supported Linux environments have been upgraded to Ubuntu 22.04.
+
+   | SDK Version | Supported Linux Version |
+   | --- | --- |
+   | Before V2.9.4 | Ubuntu 18.04 |
+   | Later V2.9.4 | Ubuntu 22.04 |
+
+1. Fixes were made to stabilize the code internally in the SDK.

@@ -1,0 +1,39 @@
+<Dep>[지원 중단]</Dep> 장치의 데이터 암호화 키를 가져옵니다.
+
+:::info
+
+보안강화를 위해 키 값은 취득할 수 없습니다.
+
+:::
+
+### 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetDataEncryptKey(void* context, uint32_t deviceId, BS2EncryptKey* keyInfo);
+```
+
+:::info
+
+[BS2EncryptKey 구조체 보기](sdk_api#bs2encryptkey) 
+
+:::
+
+### 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `keyInfo` : 반환되어질 암호화 키 정보 구조체의 주소
+
+### 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+### 함께 보기
+
+[BS2_SetDataEncryptKey](bs2_setdataencryptkey)
+
+[BS2_RemoveDataEncryptKey](bs2_removedataencryptkey)

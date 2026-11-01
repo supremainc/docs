@@ -1,0 +1,25 @@
+# BS2_GetSocketRetryCount
+
+<Badge only>+ v2.9.1</Badge> 일반 TCP/IP 소켓 통신 시, 통신구간에서 소켓으로부터 패킷을 읽고쓰는 도중 오류가 발생하게되면, SDK는 자동으로 일정 횟수 만큼 재시도를 하는데, 이 함수는 SDK에 설정된 재시도 횟수 설정 값을 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetSocketRetryCount(void* context, uint32_t* count);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [Out] `count` : 재시도 횟수 설정 값 포인터
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_SetSocketRetryCount](bs2_setsocketretrycount)

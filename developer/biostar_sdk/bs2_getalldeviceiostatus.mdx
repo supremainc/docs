@@ -1,0 +1,41 @@
+# BS2_GetAllDeviceIOStatus
+
+<Badge only>+ v2.9.12</Badge> 현재 장치 및 슬레이브 장치들의 현재 입출력 포트 상태를 가져옵니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllDeviceIOStatus(void* context, BS2_DEVICE_ID deviceId, BS2IOStatus** statusObj, uint32_t* numOfStatus);
+```
+
+:::info
+
+[BS2IOStatus 구조체 보기](log_management_api#bs2iostatus) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 식별자
+
+- [Out] `statusObj` : 장치로부터 취득한 IO 상태정보가 저장될 구조체 포인터입니다.
+
+- [Out] `numOfStatus` : 장치로부터 취득한 IO 상태정보 개수
+
+:::info
+
+statusObj 변수는 사용 후 [BS2_ReleaseObject](bs2_releaseobject) 함수를 통해 시스템에 메모리를 반환해야 합니다.  
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDeviceIOStatus](bs2_getdeviceiostatus)

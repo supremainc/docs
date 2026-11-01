@@ -1,0 +1,27 @@
+# BS2_SetDeviceTime
+
+장치의 시간을 설정합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceTime(void* context, uint32_t deviceId, BS2_TIMESTAMP gmtTime);
+```
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `deviceId` : 장치 ID
+
+- [In] `gmtTime` : 설정할 GMT(UTC+0) 시간
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_GetDeviceTime](bs2_getdevicetime)

@@ -1,0 +1,37 @@
+# BS2_SetCheckGlobalAPBViolationHandler
+
+<Badge only>+ v2.5.0</Badge> 안티패스백 경보가 발생했을 때 글로벌 판정을 위해 호출되는 콜백 함수를 등록합니다.
+
+## 함수
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetCheckGlobalAPBViolationHandler(void* context, OnCheckGlobalAPBViolation ptrCheckGlobalAPBViolation);
+```
+
+:::info
+
+ [OnCheckGlobalAPBViolation 콜백함수 보기](zone_control_api#oncheckglobalapbviolation) 
+
+:::
+
+## 파라미터
+
+- [In] `context` : Context
+
+- [In] `ptrCheckGlobalAPBViolation` : 안티패스백 경보가 발생했을 때 글로벌 판정을 위해 호출되는 콜백 함수
+
+:::info
+
+글로벌 안티패스백 서비스를 이용하기 위해서는 [BS2AuthConfig](configuration_api#bs2authconfig)의 `useGlobalAPB`가 `true`로 설정되어 있어야 합니다.
+
+:::
+
+## 반환값
+
+성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
+
+## 함께 보기
+
+[BS2_CheckGlobalAPBViolation](bs2_checkglobalapbviolation)

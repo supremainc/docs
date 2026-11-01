@@ -1,0 +1,35 @@
+# BS2_GetNormalizedImageFaceEx
+
+<Badge only>+ v2.8</Badge> **Visual Face based** Getting Image Warping from the raw image file of user face is available to use.
+
+For 1:1 Server Matching, the Server Application can store the image warping per user. And then, the server would send the image warping of the user to the device when server matching is enabled and request the 1:1 verification.
+
+For more details about image warping, refer to `flag` in [BS2FaceEx](face_api#bs2faceex).
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetNormalizedImageFaceEx(void* context, uint32_t deviceId, const uint8_t* unwarpedImage, uint32_t unwarpedImageLen, uint8_t* warpedImage, uint32_t* warpedImageLen);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `unwarpedImage` : Pointer of unwarpedImage, raw data of face image. (Refer to `rawImageData` in [BS2FaceEx](face_api#bs2faceex))
+
+- \[In\] `unwarpedImageLen` : Data size of unwarpedImage
+
+- \[Out\] `warpedImage` : Pointer of the buffer to get image warping
+
+- \[Out\] `warpedImageLen` : Data size of warpedImage
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

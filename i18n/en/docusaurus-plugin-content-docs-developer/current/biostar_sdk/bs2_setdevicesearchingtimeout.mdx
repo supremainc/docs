@@ -1,0 +1,29 @@
+# BS2_SetDeviceSearchingTimeout
+
+Specifies the device searching time. It defines timeout of API `BS2_SearchDevices` or `BS2_SearchDevicesEx`.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetDeviceSearchingTimeout(void* context, uint32_t second);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `second` : Device searching timeout
+
+:::info
+
+The default timeout is 5 sec.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

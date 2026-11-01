@@ -1,0 +1,35 @@
+# BS2_MakePinCodeWithKey
+
+<Badge only>+ v2.7.1</Badge> Encryptes PIN code with the user-defined PIN encryption key.
+
+The user-defined PIN encryption key must be the one set by [BS2_SetDataEncryptKey](bs2_setdataencryptkey).
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_MakePinCodeWithKey(void* context, char* plaintext, unsigned char* ciphertext, const BS2EncryptKey* key)
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `plaintext` : Plain text needs to be encrypted
+
+- \[Out\] `ciphertext` : Buffer to store encrypted data
+
+- \[In\] `key` : User-defined encryption key information structure
+
+:::info
+
+`ciphertext` buffer size is *BS2_PIN_HASH_SIZE*.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
