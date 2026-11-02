@@ -25,7 +25,7 @@ date: 2026-11-02T09:00
 
 ### BioStar X
 
-* [지원 장치](/platform/biostar_x/supported-device): 장치별 최소 펌웨어 버전 표기 추가
+* [지원 장치](/platform/biostar_x/supported-device): 장치 사진 및 최소 펌웨어 버전 표기 추가
 
 ## 장치
 
@@ -83,13 +83,13 @@ date: 2026-11-02T09:00
 
   * [설정](/device/biostation_3_max/settings): 대기 화면 동영상 재생 및 동영상 음량 설정 추가
 
-  * [사용자](/device/biostation_3_max/user): 사용자 ID와 이름에 입력할 수 있는 특수 문자 안내 업데이트 및 협박 지문 설정 추가
+  * [사용자](/device/biostation_3_max/user#registering-user-information): 사용자 ID와 이름에 입력할 수 있는 특수 문자 안내 업데이트 및 협박 지문 설정 추가
 
-  * [인증](/device/biostation_3_max/authentication): 서버 매칭에서 지문 인증 지원 안내 업데이트
+  * [인증](/device/biostation_3_max/authentication#인증-옵션): 서버 매칭에서 지문 인증 지원 안내 업데이트
 
 * [XPass Q2](/device/xpass_q2)
 
-  * [시작하기](/device/xpass_q2/getting-started): QR 코드와 바코드의 인식 권장 거리 안내 추가
+  * [시작하기](/device/xpass_q2/getting-started#how-to-scan-qrbarcode): QR 코드와 바코드의 인식 권장 거리 안내 추가
 
   * [제품 사양](/device/xpass_q2/product-specifications) 업데이트
 
