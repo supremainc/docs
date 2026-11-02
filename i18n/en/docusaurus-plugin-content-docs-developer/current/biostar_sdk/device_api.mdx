@@ -62,8 +62,8 @@ typedef struct
    | 0x01 | BioEntry Plus |
    | 0x02 | BioEntry W |
    | 0x03 | BioLite Net |
-   | 0x04 | Xpass |
-   | 0x05 | Xpass S2 |
+   | 0x04 | XPass |
+   | 0x05 | XPass S2 |
    | 0x06 | Secure IO 2 |
    | 0x07 | DM-20 |
    | 0x08 | BioStation 2 |
@@ -89,10 +89,10 @@ typedef struct
    | 0x1C | XPass D2 Keypad Revision |
    | 0x1D | FaceStation F2 Finger |
    | 0x1E | FaceStation F2 |
-   | 0x1F | XStation 2 QR |
-   | 0x20 | XStation 2 |
+   | 0x1F | X-Station 2 QR |
+   | 0x20 | X-Station 2 |
    | 0x21 | Input Module 120 |
-   | 0x22 | XStation 2 Finger |
+   | 0x22 | X-Station 2 Finger |
    | 0x23 | BioStation 3 |
    | 0x24 | 3rd party OSDP device |
    | 0x25 | 3rd party OSDP IO device |
@@ -270,11 +270,11 @@ typedef struct
    | BS2_SUPPORT_DST | 0x00000004 | Whether daylight savings time is used |
    | BS2_SUPPORT_DESFIREEX | 0x00000008 | Whether DesFire advanced setting is supported <Badge only>+ v2.6.4</Badge> |
    | BS2_SUPPORT_FACE_EX | 0x00000010 | Whether support face matching for FSF2 <Badge only>+ v2.7.1</Badge> |
-   | BS2_SUPPORT_QR | 0x00000020 | Whether support QR matching **XStation 2 QR** <Badge only>+ v2.8.0</Badge> |
+   | BS2_SUPPORT_QR | 0x00000020 | Whether support QR matching **X-Station 2 QR** <Badge only>+ v2.8.0</Badge> |
    | BS2_SUPPORT_FINGER_SCAN | 0x00010000 | Whether support fingerprint scan <Badge only>+ v2.7.1</Badge> |
    | BS2_SUPPORT_FACE_SCAN | 0x00020000 | Whether support face scan for FS2 and FL <Badge only>+ v2.7.1</Badge> |
    | BS2_SUPPORT_FACE_EX_SCAN | 0x00040000 | Whether support face scan for FSF2 <Badge only>+ v2.7.1</Badge> |
-   | BS2_SUPPORT_QR_SCAN | 0x00080000 | Whether support QR scan **XStation 2** <Badge only>+ v2.8.0</Badge> |
+   | BS2_SUPPORT_QR_SCAN | 0x00080000 | Whether support QR scan **X-Station 2** <Badge only>+ v2.8.0</Badge> |
    | BS2_SUPPORT_ALL | 0x000FFFFF | Whether to provide additional full information |
 
 1. `reserved`

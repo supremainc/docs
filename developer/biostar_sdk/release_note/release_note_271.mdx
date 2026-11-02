@@ -1,16 +1,16 @@
 # 2.7.1 버전 (V2.7.1.1)
 
-날짜 2020-09-15
+릴리즈<Separator/>2020-09-15
 
 ## 새로운 기능
 
-- 신규장치 FaceStation F2 지원 추가.
+- 신규 장치 FaceStation F2 지원 추가
 
 - 열화상 감지 및 마스크 착용 여부를 검출 기능 지원
 
-- 사용자 정의 PIN 암호화 키 변경 기능 추가.
+- 사용자 정의 PIN 암호화 키 변경 기능 추가
 
-1. 신규장치 FaceStation F2을 지원하며, 사용자 관련 함수 및 구조체가 추가되었습니다.
+1. 신규 장치 FaceStation F2를 지원하며, 사용자 관련 함수 및 구조체가 추가되었습니다.
 
    - 구조체 [BS2UserSettingEx](../user_management_api#bs2usersettingex) 참조
 
@@ -62,7 +62,7 @@
 
 1. 측정된 체온정보가 포함된 이벤트로그를 수신할 수 있는 함수가 추가되었습니다.
 
-   - 콜백함수 [OnLogReceivedEx](../log_management_api#onlogreceivedex) 참조
+   - 콜백 함수 [OnLogReceivedEx](../log_management_api#onlogreceivedex) 참조
 
    - 구조체 [BS2EventSmallBlobEx](../log_management_api#bs2eventsmallblobex) 참조
 
@@ -110,11 +110,11 @@
 
 1. 장치 지원정보에서 fingerSupported, faceSupported와 같은 정보들이, 내부적으로 지문인증(매칭), 얼굴인증(매칭)을 지원하는 의미로 사용되었었습니다.
 
-   따라서 FaceStation2가 `fingerSupported = true`를 반환하고, CoreStation이 `fingerSupported = true`를 반환하는 등, 혼란이 있었습니다.
+   따라서 FaceStation 2가 `fingerSupported = true`를 반환하고, CoreStation이 `fingerSupported = true`를 반환하는 등, 혼란이 있었습니다.
 
    V2.7.1에서는 fingerScanSupported, faceScanSupported와 같은 정보를 추가로 제공할 수 있도록 추가되었습니다.
 
-   이제부터 FaceStation2에서 fingerScanSupported는 false를 반환합니다.
+   이제부터 FaceStation 2에서 fingerScanSupported는 false를 반환합니다.
 
    - 함수 [BS2_GetDeviceInfoEx](../bs2_getdeviceinfoex) 참조
 

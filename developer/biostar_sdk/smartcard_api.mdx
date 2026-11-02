@@ -103,9 +103,9 @@ typedef struct {
 
    :::caution
 
-   * AOC 카드 구조상 template은 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)에 저장됩니다.
+   * AOC 카드 구조 상 template은 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)에 저장됩니다.
 
-   * 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장되어집니다. 지문과 얼굴이 함께 저장되어지지 않습니다.
+   * 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장되어집니다. 지문과 얼굴이 함께 저장되지 않습니다.
 
    * 따라서 AOC 카드에 지문 template을 담고자 한다면, `numOfFacetemplate`은 반드시 0으로 설정 되어야 합니다. 
 
@@ -179,9 +179,9 @@ typedef struct {
 
    * 지문과 얼굴이 갖는 기본적인 template의 크기가 다르지만 (지문:384, 얼굴:552), 이 경우에도 변함없이 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)의 templateData의 전체크기를 고려하여 저장하시면 됩니다.
 
-   * AOC 카드 구조상 template은 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)에 저장됩니다.
+   * AOC 카드 구조 상 template은 [BS2SmartCardCredentials](smartcard_api#bs2smartcardcredentials)에 저장됩니다.
 
-   * 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장되어집니다. 지문과 얼굴이 함께 저장되어지지 않습니다.
+   * 그리고 이곳에는 지문 또는 얼굴이 선택적으로 저장되어집니다. 지문과 얼굴이 함께 저장되지 않습니다.
 
    * 따라서 AOC 카드에 얼굴 template을 담고자 한다면, numOfTemplate은 반드시 0으로 설정 되어야 합니다.
 

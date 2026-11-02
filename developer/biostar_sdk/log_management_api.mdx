@@ -20,7 +20,7 @@ typedef void (*OnLogReceived)(uint32_t deviceId, BS2Event* log);
 
 1. `deviceId`
 
-   새로운 로그를 보내준 장치 ID입니다.
+   새로운 로그를 보낸 장치 ID입니다.
 
 1. `log`
 
@@ -30,7 +30,7 @@ typedef void (*OnLogReceived)(uint32_t deviceId, BS2Event* log);
 
 <Badge only>+ v2.7.1</Badge> 장치로부터 새로운 로그를 수신했을 때 호출되는 콜백 함수입니다.
 
-열화상 카메라를 통해 측정된 체온이 세번째 인자로 수신되며, [BS2FaceConfigExt](configuration_api#bs2faceconfigext)의 auditTemperature가 true로 설정되어져야 합니다.
+열화상 카메라를 통해 측정된 체온이 세 번째 인자로 수신되며, [BS2FaceConfigExt](configuration_api#bs2faceconfigext)의 auditTemperature가 true로 설정되어져야 합니다.
 
 ```cpp
 typedef void (*OnLogReceivedEx)(uint32_t deviceId, BS2Event* log, uint32_t temperature);
@@ -38,7 +38,7 @@ typedef void (*OnLogReceivedEx)(uint32_t deviceId, BS2Event* log, uint32_t tempe
 
 1. `deviceId`
 
-   새로운 로그를 보내준 장치 ID입니다.
+   새로운 로그를 보낸 장치 ID입니다.
 
 1. `log`
 
@@ -157,7 +157,7 @@ typedef struct {
 
 1. `value`
 
-   ioDeviceID에 대한 port value를 나타하며 다음을 의미합니다.
+   ioDeviceID에 대한 port value를 나타내며 다음을 의미합니다.
 
    * `BS2_PORT_VALUE_UNKNOWN` : -1
 
@@ -266,7 +266,7 @@ typedef struct {
    | ^ | BS2_SUB_EVENT_DUAL_AUTH_FAIL_ACCESS_GROUP | 0x02 | 유효하지 않은 사용자로 2인 인증 시도 |
    | ^ | BS2_SUB_EVENT_HIGH_TEMPERATURE | 0x00 | 고온 감지 |
    | ^ | BS2_SUB_EVENT_NO_TEMPERATURE | 0x01 | 체온 감지 실패 |
-   | ^ | BS2_SUB_EVENT_UNMASKED_FACE | 0x02 | 마스트 미착용 |
+   | ^ | BS2_SUB_EVENT_UNMASKED_FACE | 0x02 | 마스크 미착용 |
    | ^ | BS2_SUB_EVENT_BYPASS_NO_VIOLATION | 0x00 | Bypass violation (No) |
    | ^ | BS2_SUB_EVENT_BYPASS_THERMAL_VIOLATION | 0x01 | Bypass violation (체온) |
    | ^ | BS2_SUB_EVENT_BYPASS_MASK_VIOLATION | 0x02 | Bypass violation (마스크) |
@@ -311,9 +311,9 @@ typedef struct {
    | ^ | BS2_SUB_EVENT_ACCESS_DENIED_UNMASKED_FACE | 0x15 | 출입거부(마스크 미착용) |
    | APB | BS2_SUB_EVENT_ZONE_HARD_APB | 0x01 | 하드 APB 구역 |
    | ^ | BS2_SUB_EVENT_ZONE_SOFT_APB | 0x02 | 소프트 APB 구역 |
-   | Door | BS2_SUB_EVENT_DOOR_FLAG_SCHEDULE | 0x01 | 출임문 플래그 (Schedule) |
-   | ^ | BS2_SUB_EVENT_DOOR_FLAG_OPERATOR | 0x04 | 출임문 플래그 (Operator) |
-   | ^ | BS2_SUB_EVENT_DOOR_FLAG_EMERGENCY | 0x02 | 출임문 플래그 (Emergency) |
+   | Door | BS2_SUB_EVENT_DOOR_FLAG_SCHEDULE | 0x01 | 출입문 플래그 (Schedule) |
+   | ^ | BS2_SUB_EVENT_DOOR_FLAG_OPERATOR | 0x04 | 출입문 플래그 (Operator) |
+   | ^ | BS2_SUB_EVENT_DOOR_FLAG_EMERGENCY | 0x02 | 출입문 플래그 (Emergency) |
    | Floor | BS2_SUB_EVENT_FLOOR_FLAG_SCHEDULE | 0x01 | 층 플래그 (Schedule) |
    | ^ | BS2_SUB_EVENT_FLOOR_FLAG_OPERATOR | 0x04 | 층 플래그 (Operator) |
    | ^ | BS2_SUB_EVENT_FLOOR_FLAG_ACTION | 0x08 | 층 플래그 (Action) |
@@ -321,7 +321,7 @@ typedef struct {
 
 1. `mainCode`
 
-   로그 유형의 주코드 값입니다.
+   로그 유형의 주 코드 값입니다.
 
    | 범주 | 이벤트 코드 | 값 | 설명 |
    | --- | --- | :--: | --- |
@@ -405,10 +405,10 @@ typedef struct {
    | ^ | BS2_EVENT_DOOR_RELEASE | 0x5C00 | 출입문 해제 |
    | ^ | BS2_EVENT_DOOR_LOCK | 0x5D00 | 출입문 잠금 |
    | ^ | BS2_EVENT_DOOR_UNLOCK | 0x5E00 | 출입문 개방 |
-   | Zone | BS2_EVENT_ZONE_APB_VIOLATION | 0x6000 | 구역내 APB 규칙 위반 |
+   | Zone | BS2_EVENT_ZONE_APB_VIOLATION | 0x6000 | 구역 내 APB 규칙 위반 |
    | ^ | BS2_EVENT_ZONE_APB_ALARM | 0x6100 | BS2_EVENT_ZONE_APB_VIOLATION 이벤트 발생 경보 시작 |
    | ^ | BS2_EVENT_ZONE_APB_ALARM_CLEAR | 0x6200 | BS2_EVENT_ZONE_APB_VIOLATION 이벤트 발생 경보 해제 |
-   | ^ | BS2_EVENT_ZONE_TIMED_APB_VIOLATION | 0x6300 | 구역내 TIMED APB 규칙 위반 |
+   | ^ | BS2_EVENT_ZONE_TIMED_APB_VIOLATION | 0x6300 | 구역 내 TIMED APB 규칙 위반 |
    | ^ | BS2_EVENT_ZONE_TIMED_APB_ALARM | 0x6400 | BS2_EVENT_ZONE_TIMED_APB_VIOLATION 이벤트 발생 경보 시작 |
    | ^ | BS2_EVENT_ZONE_TIMED_APB_ALARM_CLEAR | 0x6500 | BS2_EVENT_ZONE_TIMED_APB_VIOLATION 이벤트 발생 경보 해제 |
    | ^ | BS2_EVENT_ZONE_FIRE_ALARM_INPUT | 0x6600 | 화재 발생 |
@@ -625,7 +625,7 @@ typedef struct {
 
 1. `mainCode`
 
-   로그 유형의 주코드 값입니다.
+   로그 유형의 주 코드 값입니다.
 
 1. `reserved`
 

@@ -1,6 +1,6 @@
 # 2.5.0 버전
 
-날짜 2017-09-25
+릴리즈<Separator/>2017-09-25
 
 :::caution
 
@@ -30,7 +30,7 @@ BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SD
 
    - 구조체 [BS2CardConfigEx](../configuration_api#bs2cardconfigex) 추가
 
-1. CoreStation 지원은 신규 장치인 CoreStation을 지원하는 기능이다. CoreStation은 Master의 Controller 역할을 하는 장치로서 하위 Slave 장치들과 연동하여 전반적인 기능을 수행합니다. 일반 장치와 다른 점은 Controller 역할만을 하기에 자체적으로 카드와 지문과 같은 크리덴셜의 입력을 받을 수 없습니다. 또한, 장치에서 별도의 UI를 제공하지 않기에 CoreStation에 대한 제어 및 설정은 BioStar 를 통해 지원합니다.
+1. CoreStation 지원은 신규 장치인 CoreStation을 지원하는 기능이다. CoreStation은 Master의 Controller 역할을 하는 장치로서 하위 Slave 장치들과 연동하여 전반적인 기능을 수행합니다. 일반 장치와 다른 점은 Controller 역할만을 하기에 자체적으로 카드와 지문과 같은 크리덴셜의 입력을 받을 수 없습니다. 또한, 장치에서 별도의 UI를 제공하지 않기에 CoreStation에 대한 제어 및 설정은 BioStar를 통해 지원합니다.
 
    - 함수 [BS2_GetSlaveExDevice](../bs2_getslaveexdevice) 추가
 
@@ -54,7 +54,7 @@ BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SD
 
    - 구조체 [BS2IntrusionAlarmZoneBlob](../zone_control_api#bs2intrusionalarmzoneblob) 추가
 
-1. Ethernet Zone 지원은 Zone Master 역할을 BioStar V2.x 서버가 아닌 특정 장치가 하며 장치 사이(Master ↔ Member)의 통신 방식으로 Ethernet TCP 통신 방식을 사용하는 Zone입니다.기존 1.x Entrance Limit, Fire Alarm Zone에 사응하는 기능만을 현재는 지원합니다.
+1. Ethernet Zone 지원은 Zone Master 역할을 BioStar V2.x 서버가 아닌 특정 장치가 하며 장치 사이(Master ↔ Member)의 통신 방식으로 Ethernet TCP 통신 방식을 사용하는 Zone입니다. 기존 1.x Entrance Limit, Fire Alarm Zone에 사응하는 기능만을 현재는 지원합니다.
 
    - 함수 [BS2_GetDeviceZone](../bs2_getdevicezone) 추가
 

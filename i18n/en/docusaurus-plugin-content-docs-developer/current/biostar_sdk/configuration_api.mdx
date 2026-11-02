@@ -10,6 +10,8 @@ The following APIs are used to read and write system configuration information.
 
 ## Structure
 
+<div className='table-fixed'>
+
 ### BS2FactoryConfig
 
 ```cpp
@@ -310,7 +312,7 @@ typedef struct {
    | 1 | Normal mode |
    | 2 | Strict mode |
 
-   Only valid for A2. Not used with FaceStation2 or FaceLite.
+   Only valid for A2. Not used with FaceStation 2 or FaceLite.
 
 1. `useServerMatching`
 
@@ -1001,7 +1003,7 @@ typedef struct {
 
    Activates "Keypad card ID" option.
 
-   Default value is 0, it is only valid for Gangbox Keypad type of Xpass 2, XPass D2.
+   Default value is 0, it is only valid for Gangbox Keypad type of XPass 2, XPass D2.
 
    | Value | Description |
    | :--: | --- |
@@ -2554,7 +2556,7 @@ typedef struct {
 
    The default values of min and max are as follows.
 
-   | Default(min) | Default(max) |  |
+   | - | Default(min) | Default(max) |
    | :--: | :--: | :--: |
    | FSF2 | 66 | 250 |
    | BS3 | 130 | 350 |
@@ -2566,7 +2568,7 @@ typedef struct {
 
    The default values of x and width are as follows.
 
-   | Default(x) | Default(width) |  |
+   | - | Default(x) | Default(width) |
    | :--: | :--: | :--: |
    | FSF2 | 144 | 432 |
    | BS3 | 90 | 540 |
@@ -2904,7 +2906,7 @@ typedef struct {
    | 0x1000000 | 1x Card configuration |
    | 0x2000000 | Multi-Wiegand configuration |
    | 0x4000000 | Extended System configuration |
-   | ~0x8000000~ | ~Daylight Saving configuration (Deprecated)~ |
+   | ~0x8000000~ | ~Daylight Saving configuration~ <Dep>[Deprecated]</Dep> |
    | 0x10000000 | RS485 Extended configuration |
    | 0x20000000 | Extended Card configuration |
    | 0x40000000 | Daylight Saving configuration |
@@ -3178,7 +3180,7 @@ typedef struct {
    | 1 | Normal mode |
    | 2 | Strict mode |
 
-   It is available only in BioStation A2, not available in FaceStation2 or FaceLite.
+   It is available only in BioStation A2, not available in FaceStation 2 or FaceLite.
 
 1. `useServerMatching`
 
@@ -3853,7 +3855,7 @@ typedef struct {
    | :--: | --- |
    | \* | `*` ASCII code 42 |
    | \# | `#` ASCII code 35 |
-   | 0\~9 | '0'\~'9' ASCII code (48\~57) |
+   | 0\~9 | `0` \~ `9` ASCII code (48\~57) |
 
 1. `reserved1`
 
@@ -4679,7 +4681,7 @@ typedef struct {
    uint32_t        deviceID;       ///< 
    uint16_t        deviceType;     ///< 2 bytes
    uint8_t         enableOSDP;     ///< 1 byte
-   uint8_t         connected;      ///< 1 bytes (packing)
+   uint8_t         connected;      ///<div 1 bytes (packing)
 
    union {
          uint8_t         channelInfo;
@@ -4787,6 +4789,8 @@ The RS-485 communication speed which can be configured as below.
 1. `channels`
 
    List of RS-485 channels, which can be configured up to 8 channels.
+
+</div>
 
 [^1]: Maximum Transmission Unit
 

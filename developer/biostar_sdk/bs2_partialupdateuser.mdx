@@ -30,8 +30,8 @@ int BS2_PartialUpdateUser(void* context, uint32_t deviceId, BS2_USER_MASK mask, 
 
    | 값 | 설명 |
    | :--: | --- |
-   | 0x0002 | 사용자설정(개인인증모드,유효기간) |
-   | 0x0004 | 사용자명 |
+   | 0x0002 | 사용자설정(개인 인증 모드,유효기간) |
+   | 0x0004 | 사용자 이름 |
    | 0x0008 | 이미지 |
    | 0x0010 | PIN |
    | 0x0020 | 카드 |
@@ -47,7 +47,7 @@ int BS2_PartialUpdateUser(void* context, uint32_t deviceId, BS2_USER_MASK mask, 
 
 - [In] `userCount` : 사용자 개수
 
-## 반환값
+## 반환 값
 
 성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, `BS2_EVENT_USER_UPDATE_PARTIAL_SUCCESS` 이벤트가 발생됩니다.
 

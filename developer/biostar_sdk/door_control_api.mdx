@@ -1,6 +1,6 @@
 # Door Control API
 
-출입문의 내외부에 어떤 장치가 설치되어 있는지, 장치가 출입문을 어떻게 제어할것인지, 이중 인증 방지 구역을 어떻게 적용할 것인지 설정할 수 있습니다.
+출입문의 내외부에 어떤 장치가 설치되어 있는지, 장치가 출입문을 어떻게 제어할 것인지, 이중 인증 방지 구역을 어떻게 적용할 것인지 설정할 수 있습니다.
 
 ---
 
@@ -162,8 +162,8 @@ typedef struct {
    | 값 | 설명 |
    | :--: | --- |
    | 0 | 경보 없음 |
-   | 1 | 강제 문열림 |
-   | 4 | 장시간 문열림 |
+   | 1 | 강제 문 열림 |
+   | 4 | 장시간 문 열림 |
    | 2 | APB 위반 |
    | 8 | Lock override |
    | 16 | 화재 경보 |
@@ -210,11 +210,11 @@ typedef struct {
 
 1. `doorID`
 
-   출입문 식별자입니다. 1세대 장치는 최대값 65535로 제한됩니다.
+   출입문 식별자입니다. 1세대 장치는 최댓값 65535로 제한됩니다.
 
 1. `name`
 
-   BioStar 애플리케이션에서 보여질 출입문 이름입니다. 1세대 장치는 이름 설정이 불가합니다.
+   BioStar 애플리케이션에서 보이는 출입문 이름입니다. 1세대 장치는 이름 설정이 불가합니다.
 
 1. `entryDeviceID`
 
@@ -238,7 +238,7 @@ typedef struct {
 
 1. `autoLockTimeout`
 
-   출입문이 열린 후 자동으로 닫힐때까지 걸리는 시간으로 초 단위입니다.
+   출입문이 열린 후 자동으로 닫힐 때까지 걸리는 시간으로 초 단위입니다.
 
 1. `heldOpenTimeout`
 
@@ -276,7 +276,7 @@ typedef struct {
 
    | 값 | 설명 |
    | :--: | --- |
-   | 0 | autoLock timeout 이후에 door close할 경우에만 door lock을 함. (door open시 실제로 door가 close될때까지 기다림) |
+   | 0 | autoLock timeout 이후에 door close할 경우에만 door lock을 함. (door open시 실제로 door가 close될 때까지 기다림) |
    | 1 | autoLock timeout 이후에 door open/close에 상관없이 door lock을 함 |
 
 1. `forcedOpenAlarm`
@@ -304,7 +304,7 @@ typedef struct {
 
 1. `dualAuthApprovalType`
 
-   출입을 허용할 때 사용자의 출입 그룹이 이중 인증 출입 권한을 가지는 그룹에 속한지 검사하는 flag입니다.
+   출입을 허용할 때 사용자의 출입 그룹이 이중 인증 출입 권한을 가지는 그룹에 속했는지 검사하는 flag입니다.
 
    | 값 | 설명 |
    | :--: | --- |
