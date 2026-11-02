@@ -603,8 +603,7 @@ const config = {
               },
               {
                 label: 'BioStar Device SDK',
-                to: 'https://kb.supremainc.com/bs2sdk/doku.php',
-                target: '_blank',
+                to: '/developer/biostar_sdk/start'
               },
               {
                 label: 'BioStar 2 API',
