@@ -53,4 +53,5 @@ jobs:
             --resource-group "$RESOURCE_GROUP" \
             --profile-name "$AFD_PROFILE" \
             --endpoint-name "$AFD_ENDPOINT" \
-            --content-paths "/*"
+            --content-paths "/*" \
+            --no-wait
