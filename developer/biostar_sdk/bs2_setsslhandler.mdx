@@ -20,13 +20,13 @@ int BS2_SetSSLHandler(void* context, PreferMethod ptrPreferMethod, GetRootCaFile
 
 - [In] `ptrGetServerCaFilePath` : 서버 CA 파일 경로를 얻고자 할 때 호출되는 콜백 함수
 
-- [In] `ptrGetServerPrivateKeyFilePath` : 서버 PrivateKey 파일 경로을 얻고자 할 때 호출되는 콜백 함수
+- [In] `ptrGetServerPrivateKeyFilePath` : 서버 PrivateKey 파일 경로를 얻고자 할 때 호출되는 콜백 함수
 
 - [In] `ptrGetPassword` : Password을 얻고자 할 때 호출되는 콜백 함수
 
 - [In] `ptrOnErrorOccured` : 에러가 발생했을 때 호출되는 콜백 함수
 
-## 반환값
+## 반환 값
 
 성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
 

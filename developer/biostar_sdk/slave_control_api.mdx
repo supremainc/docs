@@ -205,7 +205,7 @@ typedef struct {
 
    * CoreStation40 각각의 채널들은 Suprema 장치 채널, OSDP 장치 채널들로 혼용되어 운용될 수 있습니다.
 
-   * 채널에 OSDP로 장치가 연결이되면 허용이 가능한 최대 장치수는 2대로 제한되며, 이미 해당 채널이 최대치에 도달했으면 channelType은 3을 갖으며 더이상 연결이 불가함을 나타냅니다.
+   * 채널에 OSDP로 장치가 연결이되면 허용이 가능한 최대 장치수는 2대로 제한되며, 이미 해당 채널이 최대치에 도달했으면 channelType은 3을 가지며 더 이상 연결이 불가함을 나타냅니다.
 
    | 값 | 설명 |
    | :--: | --- |
@@ -449,9 +449,9 @@ typedef struct {
 
 1. `compliance`
 
-   PD의 기능(function)에 따른 준수수준(compliance level)을 나타냅니다.
+   PD의 기능(function)에 따른 준수 수준(compliance level)을 나타냅니다.
 
-   기능은 input, output, led, audio, textOutput 등이 있으며, 기능 별로 준수수준이 상이하므로 관련 OSDP 문서를 참고바랍니다.
+   기능은 input, output, led, audio, textOutput 등이 있으며, 기능 별로 준수 수준이 상이하므로 관련 OSDP 문서를 참고바랍니다.
 
 1. `count`
 

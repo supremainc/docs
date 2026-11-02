@@ -1,6 +1,6 @@
 # 응답 코드
 
-API에서 반환되는 응답 코드입니다. 응답 코드의 의미는 아래와 같습니다. 응답 코드를 검색하려면 <Kbd>Ctrl+F</Kbd>를 누르십시오.
+API에서 반환되는 응답 코드입니다. 응답 코드의 의미는 아래와 같습니다. 응답 코드를 검색하려면 <Kbd>Ctrl+F</Kbd>를 누르세요.
 
 | 코드 | 설명 |
 | --- | --- |
@@ -9,7 +9,7 @@ API에서 반환되는 응답 코드입니다. 응답 코드의 의미는 아래
 | `BS_SDK_FIRST_AUTH_SUCCESS` | 첫 번째 사용자가 인증되었습니다. |
 | `BS_SDK_SECOND_AUTH_SUCCESS` | 두 번째 사용자가 인증되었습니다. |
 | `BS_SDK_DUAL_AUTH_SUCCESS` | 이중 인증(2인 인증)에 성공하였습니다. |
-| `BS_SDK_WIEGAND_BYPASS_SUCCESS` | 위겐드 바이패스에 성공하였습니다. (FaceStation2만 해당) |
+| `BS_SDK_WIEGAND_BYPASS_SUCCESS` | Wiegand 바이패스에 성공하였습니다. (FaceStation 2만 해당) |
 | `BS_SDK_ERROR_FROM_DEVICE_DRIVER` | 장치 드라이버에 오류가 발생하였습니다. |
 | `BS_SDK_ERROR_CANNOT_OPEN_SOCKET` | 소켓을 생성할 수 없습니다. |
 | `BS_SDK_ERROR_CANNOT_CONNECT_SOCKET` | 소켓 접속이 실패하였습니다. |
@@ -48,7 +48,7 @@ API에서 반환되는 응답 코드입니다. 응답 코드의 의미는 아래
 | `BS_SDK_ERROR_FACE_CAPTURE_FAIL` | 얼굴 검출에 실패했습니다. |
 | `BS_SDK_ERROR_FACE_SCAN_TIMEOUT` | 얼굴 검출 대기 시간이 만료되었습니다. |
 | `BS_SDK_ERROR_FACE_SCAN_CANCELLED` | 얼굴 검출이 취소되었습니다. |
-| `BS_SDK_ERROR_FACE_SCAN_FAILED` | 얼굴 검출에 실패했습니다. (FaceStation2, FaceLite만 해당) |
+| `BS_SDK_ERROR_FACE_SCAN_FAILED` | 얼굴 검출에 실패했습니다. (FaceStation 2, FaceLite만 해당) |
 | `BS_SDK_ERROR_CANNOT_OPEN_DIR` | 폴더를 열 수 없습니다. |
 | `BS_SDK_ERROR_CANNOT_OPEN_FILE` | 파일을 열 수 없습니다. |
 | `BS_SDK_ERROR_CANNOT_WRITE_FILE` | 파일을 쓸 수 없습니다. |
@@ -117,14 +117,14 @@ API에서 반환되는 응답 코드입니다. 응답 코드의 의미는 아래
 | `BS_SDK_ERROR_NO_USER_NAME` | 사용자 이름이 등록되지 않았습니다. |
 | `BS_SDK_ERROR_NO_USER_IMAGE` | 사용자 프로필 사진이 등록되지 않았습니다. |
 | `BS_SDK_ERROR_READER_FULL` | 리더 장치를 더 이상 추가할 수 없습니다. |
-| `BS_SDK_ERROR_CACHE_MISSED` | 캐쉬 데이터를 찾을 수 없습니다. |
+| `BS_SDK_ERROR_CACHE_MISSED` | 캐시 데이터를 찾을 수 없습니다. |
 | `BS_SDK_ERROR_OPERATOR_FULL` | 관리자를 더 이상 추가할 수 없습니다. |
-| `BS_SDK_ERROR_INVALID_LINK_ID` | 유효하지 링크 식별자입니다. |
+| `BS_SDK_ERROR_INVALID_LINK_ID` | 유효하지 않은 링크 식별자입니다. |
 | `BS_SDK_ERROR_TIMER_CANCELED` | 타이머가 취소되었습니다. |
 | `BS_SDK_ERROR_USER_JOB_FULL` | 더 이상 Job code를 추가할 수 없습니다. |
 | `BS_SDK_ERROR_CANNOT_UPDATE_FACE` | 얼굴 업데이트에 실패하였습니다. |
 | `BS_SDK_ERROR_FACE_FULL` | 얼굴 개수를 초과하였습니다. |
-| `BS_SDK_ERROR_FLOOR_SCHEDULE_FULL` | 층에대한 스케쥴 개수를 초과하였습니다. |
+| `BS_SDK_ERROR_FLOOR_SCHEDULE_FULL` | 층에대한 스케줄 개수를 초과하였습니다. |
 | `BS_SDK_ERROR_CANNOT_FIND_AUTH_GROUP` | 인증 그룹을 찾을 수 없습니다. |
 | `BS_SDK_ERROR_AUTH_GROUP_FULL` | 인증 그룹 개수를 초과하였습니다. |
 | `BS_SDK_ERROR_USER_PHRASE_FULL` | 사용자 구문 오류입니다. |
@@ -248,5 +248,5 @@ API에서 반환되는 응답 코드입니다. 응답 코드의 의미는 아래
 | `BS_SDK_ERROR_DEVICE_BUSY` | 장치가 응답할 수 없습니다. |
 | `BS_SDK_ERROR_INTERNAL` | SDK 내부 오류입니다. |
 | `BS_SDK_ERROR_INVALID_FILE_FORMAT` | 지원하지 않는 파일 형식입니다. |
-| `BS_SDK_ERROR_INVALID_SCHEDULE_ID` | 유효하지 않은 스케쥴 식별자입니다. |
+| `BS_SDK_ERROR_INVALID_SCHEDULE_ID` | 유효하지 않은 스케줄 식별자입니다. |
 | `BS_SDK_ERROR_UNKNOWN_FINGER_TEMPLATE` | 지원하지 않는 지문 타입입니다. (Suprema 또는 ANSI, ISO 타입이 아님) |

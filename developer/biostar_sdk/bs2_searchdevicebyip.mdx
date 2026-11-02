@@ -14,7 +14,7 @@
 
 응답 시간 초과가 `BS_SDK_SUCCESS`로 보고됩니다. 장치가 없는 주소로 호출해도 성공이 반환됩니다.
 
-반환값으로 판단하지 마시고, [BS2_GetDevices](bs2_getdevices)가 반환하는 장치 수로 확인해야 합니다.
+반환 값으로 판단하지 마시고, [BS2_GetDevices](bs2_getdevices)가 반환하는 장치 수로 확인해야 합니다.
 
 :::
 
@@ -32,7 +32,7 @@ int BS2_SearchDeviceByIP(void* context, const char* deviceIpAddr);
 
 - [In] `deviceIpAddr` : 검색할 장치의 IPv4 주소
 
-## 반환값
+## 반환 값
 
 성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
 

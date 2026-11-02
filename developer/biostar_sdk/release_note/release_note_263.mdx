@@ -1,6 +1,6 @@
 # 2.6.3 버전 (V2.6.3.5)
 
-날짜 2019-07-24
+릴리즈<Separator/>2019-07-24
 
 ## 새로운 기능
 
@@ -20,7 +20,7 @@
 
 - 큰 용량의 BS2UserBlob / BS2UserBlobEx 에 대해서 효율적인 메모리 사용을 위해 BS2UserSmallBlob / BS2UserSmallBlobEx 을 지원 (User Photo 영역을 포인터 처리)
 
-- Admin User 1000 명 이상 지원 (BS2 1.8.0, A2 1.7.0, L2 1.5.0, N2 1.2.0, FS 1.3.0, FaceLite 1.0.1, CS40 1.3.0, P2 1.3.0, W2 1.4.0, Xpass 2 1.0.0 이상 버전, 표기되지 않은 장치는 지원되지 않음)
+- Admin User 1000 명 이상 지원 (BS2 1.8.0, A2 1.7.0, L2 1.5.0, N2 1.2.0, FS 1.3.0, FaceLite 1.0.1, CS40 1.3.0, P2 1.3.0, W2 1.4.0, XPass 2 1.0.0 이상 버전, 표기되지 않은 장치는 지원되지 않음)
 
 - 지문템플릿 품질점수 지원
 
@@ -102,9 +102,7 @@
 
    photo 기능을 사용하지 않는 경우에도 적지않은 크기의 메모리를 고정적으로 사용하게 됩니다.
 
-   송수신하는 사용자 수가 많지 않은 경우 크게 문제되지 않으나,
-
-   사용자 수가 많아지면 차지하는 메모리의 크기도 비례적으로 커지게 되는 문제가 발생할 수 있습니다.
+   송수신하는 사용자 수가 많지 않은 경우 크게 문제되지 않으나, 사용자 수가 많아지면 차지하는 메모리의 크기도 비례적으로 커지게 되는 문제가 발생할 수 있습니다.
 
    2.6.3에서는 [BS2UserPhoto](../user_management_api#bs2userphoto)의 포인터 처리를 통해, 보다 효율적으로 메모리를 사용할 수 있는 함수를 새롭게 추가하였습니다.
 
@@ -194,9 +192,7 @@
 
    - 함수 [BS2_SearchDevicesEx](../bs2_searchdevicesex) 참조
 
-1. SDK 라이브러리의 사용종료 또는 라이브러리 내의 리소스 재할당을 위한 메모리 반납 단계에서
-
-   간헐적으로 무응답(hang) 현상이 나타날 수 있는 문제를 수정하였습니다.
+1. SDK 라이브러리의 사용 종료 또는 라이브러리 내의 리소스 재할당을 위한 메모리 반납 단계에서 간헐적으로 무응답(hang) 현상이 나타날 수 있는 문제를 수정하였습니다.
 
    - 함수 [BS2_ReleaseContext](../bs2_releasecontext) 참조
 
@@ -220,9 +216,7 @@
 
    - 함수 [BS2_VerifyFingerprint](../bs2_verifyfingerprint) 참조
 
-1. 장치 별로 지원하는 장치설정과 지원하지 않는 장치설정이 다를 수 있는데,
-
-   특정 설정을 지원하지 않는 장치로부터 설정을 가져오는 경우 timeout까지 기다리는 부분을
+1. 장치 별로 지원하는 장치설정과 지원하지 않는 장치설정이 다를 수 있는데, 특정 설정을 지원하지 않는 장치로부터 설정을 가져오는 경우 timeout까지 기다리는 부분을
 
    `BS_SDK_ERROR_NOT_SUPPORTED`를 반환하도록 수정하였습니다.
 
@@ -244,26 +238,26 @@
 
 1. 이벤트 처리 thread 생성 함수의 인자의 의미를 조정하였습니다.
 
-   [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount) (2.6.3 이전):
+   - [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount) (2.6.3 이전):
 
-   인자 값이 이벤트 처리 thread의 수만을 의미하지 않았습니다.
+      인자 값이 이벤트 처리 thread의 수만을 의미하지 않았습니다.
 
-   실제로는 timer(2), server matching(1), notification(1), TCP/UDP 처리 각(1)
+      실제로는 timer(2), server matching(1), notification(1), TCP/UDP 처리 각(1)
 
-   총 6개의 예약 thread를 포함한 이벤트 처리 thread수를 지정해야했습니다.
+      총 6개의 예약 thread를 포함한 이벤트 처리 thread수를 지정해야했습니다.
 
-   인자로 지정되는 thread의 최소값은 8이었습니다.
+      인자로 지정되는 thread의 최솟값은 8이었습니다.
 
-   실제 인자 값 8을 설정하면 내부적으로 예약 thread 총 6개를 뺀 실제 이벤트 처리 thread 수 2개를 설정하였습니다.
+      실제 인자 값 8을 설정하면 내부적으로 예약 thread 총 6개를 뺀 실제 이벤트 처리 thread 수 2개를 설정하였습니다.
 
-   [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount) (2.6.3 이후):
+   - [BS2_SetMaxThreadCount](../bs2_setmaxthreadcount) (2.6.3 이후):
 
-   인자로 지정하는 thread수가 이벤트 처리용 thread 수를 의미합니다. 따라서 최소값은 2입니다. 
+      인자로 지정하는 thread수가 이벤트 처리용 thread 수를 의미합니다. 따라서 최솟값은 2입니다. 
 
-   | 함수 | 초기값(이전) | 최소값(이전) | 초기값(이후) | 최소값(이후) |
-   | --- | --- | --- | --- | --- |
-   | `BS2_SetMaxThreadCount` | MAX(NumberOfCpuCores\*5, 15) | 8 | MAX(NumberOfCpuCores\*5, 15) | 2 |
-   | `BS2_SetMaxConnectThreadCount` | 8 | 1 | 8 | 1 |
+      | 함수 | 초기값(이전) | 최솟값(이전) | 초기값(이후) | 최솟값(이후) |
+      | --- | --- | --- | --- | --- |
+      | `BS2_SetMaxThreadCount` | MAX(NumberOfCpuCores\*5, 15) | 8 | MAX(NumberOfCpuCores\*5, 15) | 2 |
+      | `BS2_SetMaxConnectThreadCount` | 8 | 1 | 8 | 1 |
 
 1. [BS2_ConnectDeviceViaIP](../bs2_connectdeviceviaip) 사용시, 동일한 IP의 장치인 경우 복수 연결을 허용하지 않았으나, 동일 IP라도 다른 port인 경우 연결을 허용하도록 수정되었습니다.
 

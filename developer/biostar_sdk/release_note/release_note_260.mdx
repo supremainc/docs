@@ -76,15 +76,13 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 1. 일부 함수에서 log 취득 시, 설정된 event mask 판단 조건이 수정되었습니다.
 
-   (설정된 mask들 모두 만족하는 로그 =\> 하나라도 만족하는 로그)
+   (설정된 mask들 모두 만족하는 로그 → 하나라도 만족하는 로그)
 
    - 함수 [BS2_GetLogBlob](../bs2_getlogblob) 참조
 
    - 함수 [BS2_GetLogBlobFromDir](../bs2_getlogblobfromdir) 참조
 
-1. 일부 함수에서 사용자 정보 취득 시,
-
-   설정된 userMask가 0x3FF보다 크면 Invalid Parameter 오류가 발생하는 문제를 수정하였습니다.
+1. 일부 함수에서 사용자 정보 취득 시, 설정된 userMask가 0x3FF보다 크면 Invalid Parameter 오류가 발생하는 문제를 수정하였습니다.
 
    - 함수 [BS2_GetUserDatas](../bs2_getuserdatas) 참조
 
@@ -168,7 +166,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 1. TCP 연결 시 handshake 단계에서 암호화 기능 활성화 코드가 추가되었습니다.
 
-1. FaceStation2에서 지문 정보가 저장이 되지 않는 문제를 수정하였습니다.
+1. FaceStation 2에서 지문 정보가 저장이 되지 않는 문제를 수정하였습니다.
 
 1. 함수 [BS2_SearchDevicesCoreStation](../bs2_searchdevicescorestation) 호출 시 crash 되는 문제 수정되었습니다.
 
@@ -196,7 +194,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 ### 새로운 기능
 
-- 새로운 장치 연결 (BioLite N2, Xpass D2) 지원
+- 새로운 장치 연결 (BioLite N2, XPass D2) 지원
 
 - 일광절약 시간(DST) 지원
 
@@ -206,7 +204,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 - 네트워크 설정을 제외한 장치 초기화 지원
 
-1. 새로운 장치 BioLite N2, Xpass D2에 대한 연결을 지원합니다. Xpass D2는 slave 전용 카드 모델입니다.
+1. 새로운 장치 BioLite N2, XPass D2에 대한 연결을 지원합니다. XPass D2는 slave 전용 카드 모델입니다.
 
 1. 일광절약 시간 설정은 장치당 2개까지 가능합니다. 또한 일광절약 시간 적용 여부를 알수 있도록 로그에 관련 정보가 추가되었습니다.
 
@@ -250,9 +248,9 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
 1. 장치의 기능 지원 유무에 관한 정보를 가져오는 함수 `BS2_GetDeviceInfoEx`를 지원합니다. 이 함수는 `BS2_GetDeviceInfo` 함수를 호출할 때 사용되는 `BS2SimpleDeviceInfo` 구조체에서 최근 추가된 항목들을 옮긴 구조체 `BS2SimpleDeviceInfoEx`를 사용합니다.
 
-- 함수 [BS2_GetDeviceInfoEx](../bs2_getdeviceinfoex) 추가
+   - 함수 [BS2_GetDeviceInfoEx](../bs2_getdeviceinfoex) 추가
 
-- 구조체 [BS2SimpleDeviceInfoEx](../device_api#bs2simpledeviceinfoex) 추가
+   - 구조체 [BS2SimpleDeviceInfoEx](../device_api#bs2simpledeviceinfoex) 추가
 
 ### 수정 기능
 
@@ -270,7 +268,7 @@ V2.5.0 이후 버그 수정 및 추가 보완 작업을 통해 V2.6.0으로 연�
 
    * 구조체 [BS2SystemConfig](../configuration_api#bs2systemconfig) 참조
 
-1. FaceStation2와 FaceLite의 지문 매칭 기능 지원
+1. FaceStation 2와 FaceLite의 지문 매칭 기능 지원
 
    얼굴인증 장치 FS2 혹은 FL는 지문센서가 없으며, 따라서 지문인증을 지원하지 않습니다.
 

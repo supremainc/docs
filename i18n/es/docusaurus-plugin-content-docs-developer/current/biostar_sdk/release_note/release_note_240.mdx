@@ -1,6 +1,6 @@
 # Version 2.4.0
 
-Date: 2017-3-24
+Release<Separator/>2017-3-24
 
 :::caution
 
@@ -14,7 +14,7 @@ New APIs have been added that will work only with the v2.4 FW group. Please chec
 
 - Add structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
 
-- Add [ssl api](../ssl_api)
+- Add [SSL API](../ssl_api)
 
 **v2.4 Firmware Group**
 
@@ -31,13 +31,13 @@ New APIs have been added that will work only with the v2.4 FW group. Please chec
 
 1. A brand new lift controller OM-120 has been released. New APIs and structures were added to allow SDK users to integrate this device and features to their own system.
 
-   * Add [lift control api](../lift_control_api)
+   * Add [Lift Control API](../lift_control_api)
 
    The OM-120 is a new device having capability of controlling 12 relays which can be used for lifts. There is now a new concept as floors, which will work exactly like the doors. Once a user authenticates, the floors connected to the relays of the OM-120 will be activated depending on the floor level the access group has. The floor level is the same concept of the access level and they both will be allocated to an access group.
 
 1. The new FaceStation 2 will be released in the 2nd quarter of 2017. The v2.4 has implemented all features so the FaceStation 2 can be used right away with its release.
 
-   * Add [face api](../face_api) 
+   * Add [Face API](../face_api) 
 
    The FaceStation 2 will be supporting a feature called group matching, which is a feature where you can have maximum 5000 users to be used for 1:N matching. The user can select the group that they belong to, and continue with the face matching.
 
@@ -63,15 +63,11 @@ New APIs have been added that will work only with the v2.4 FW group. Please chec
 
 1. Personal messages will be supported from the next version of the firmware for certain devices. This was implemented to be ready to use once the releases are made.
 
-   * Add structure [BS2UserBlobEx](../user_management_api#bs2userblobex)
-
-   This feature will be supported starting from the FaceStation 2. The rest of the devices with a display screen will support this feature in the future release.
-
-   Due to the limitation on size of the existing [BS2UserBlob](../user_management_api#bs2userblob) structure, there were needs to create a new structure to implement a new feature. The new [BS2UserBlobEx](../user_management_api#bs2userblobex) structure will work only with the v2.4 FW group which includes a field for personal messages.
+   * Add structure [BS2UserBlobEx](../user_management_api#bs2userblobex). This feature will be supported starting from the FaceStation 2. The rest of the devices with a display screen will support this feature in the future release. Due to the limitation on size of the existing [BS2UserBlob](../user_management_api#bs2userblob) structure, there were needs to create a new structure to implement a new feature. The new [BS2UserBlobEx](../user_management_api#bs2userblobex) structure will work only with the v2.4 FW group which includes a field for personal messages.
 
 1. SSL Communication will be available between the server and devices. This will allow the devices to be only connected to a server where the certificate is valid.
 
-   * Add [ssl api](../ssl_api)
+   * Add [SSL API](../ssl_api)
 
 ## Changed Objects
 

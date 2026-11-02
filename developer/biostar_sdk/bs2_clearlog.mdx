@@ -6,7 +6,7 @@
 
 새롭게 생성되는 로그의 id는 항상 이전에 발생했던 id값의 +1 증가된 값으로 생성될 것입니다.
 
-id값은 uint32_t의 최대값인 0xFFFFFFFF만큼 증가하고 0부터 다시 증가하게 됩니다.
+id값은 uint32_t의 최댓값인 0xFFFFFFFF만큼 증가하고 0부터 다시 증가하게 됩니다.
 
 ## 함수
 
@@ -21,7 +21,7 @@ int BS2_ClearLog(void* context, uint32_t deviceId);
 
 - [In] `deviceId` : 장치 식별자
 
-## 반환값
+## 반환 값
 
 성공적으로 수행될 경우 `BS_SDK_SUCCESS`를 반환하고, 에러가 발생할 경우 상응하는 에러 코드를 반환합니다.
 
