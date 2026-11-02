@@ -85,7 +85,7 @@ date: 2026-11-02T09:00
 
   * [사용자](/device/biostation_3_max/user#registering-user-information): 사용자 ID와 이름에 입력할 수 있는 특수 문자 안내 업데이트 및 협박 지문 설정 추가
 
-  * [인증](/device/biostation_3_max/authentication#인증-옵션): 서버 매칭에서 지문 인증 지원 안내 업데이트
+  * [인증](/device/biostation_3_max/authentication#operation): 서버 매칭에서 지문 인증 지원 안내 업데이트
 
 * [XPass Q2](/device/xpass_q2)
 
