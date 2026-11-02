@@ -4,7 +4,7 @@
 
 ## 1. 다중 Wiegand 형식 지원이 필요한 이유
 
-장치에 Wiegand 형식이 하나만 저장되어 있으면, 다른 Wiegand 형식의 카드를 읽으려 할 때마다 장치의 Wiegand 설정을 변경해야 합니다. 장치에 여러 개의 Wiegand 형식을 저장해 두면, 서로 다른 Wiegand 형식의 카드를 읽기 위해 장치의 Wiegand 설정을 변경할 필요가 없습니다. 다중 Wiegand 형식 지원은 보안 강화를 위해 출입 카드의 Wiegand 형식을 변경하기로 결정한 경우에 특히 중요합니다(예: 26-bit Prox 에서 35-bit Corporate 1000 으로 변경). 모든 직원의 카드를 동시에 교체하는 것은 사실상 불가능하므로 전환 기간이 반드시 발생합니다. 이 기간 동안 카드 리더는 서로 다른 Wiegand 형식의 카드를 읽을 수 있어야 합니다. 다중 Wiegand 형식을 지원하지 않는 리더는 이 상황에 대응할 수 없습니다.
+장치에 Wiegand 형식이 하나만 저장되어 있으면, 다른 Wiegand 형식의 카드를 읽으려 할 때마다 장치의 Wiegand 설정을 변경해야 합니다. 장치에 여러 개의 Wiegand 형식을 저장해 두면, 서로 다른 Wiegand 형식의 카드를 읽기 위해 장치의 Wiegand 설정을 변경할 필요가 없습니다. 다중 Wiegand 형식 지원은 보안 강화를 위해 출입 카드의 Wiegand 형식을 변경하기로 결정한 경우에 특히 중요합니다(예: 26-bit Prox에서 35-bit Corporate 1000으로 변경). 모든 직원의 카드를 동시에 교체하는 것은 사실상 불가능하므로 전환 기간이 반드시 발생합니다. 이 기간 동안 카드 리더는 서로 다른 Wiegand 형식의 카드를 읽을 수 있어야 합니다. 다중 Wiegand 형식을 지원하지 않는 리더는 이 상황에 대응할 수 없습니다.
 
 ## 2. 다중 Wiegand 형식 지원의 동작 방식
 
@@ -41,11 +41,11 @@ public struct BS2WiegandConfig
 }
 ```
 
-- `wiegandInputMask`: 슬레이브 장치와 Wiegand 장치에 사용할 Wiegand 형식의 인덱스를 나타내는 bitmask입니다. 슬레이브 장치는 더미 장치로 동작하며 Wiegand 설정을 자체적으로 저장하지 않습니다. (슬레이브 장치란 RS485를 통해 다른 슈프리마 장치에 더미 리더기로 연결된 슈프리마 장치를 말합니다) `BS2WiegandMultiConfig` 자료 구조의 formats 배열 필드에서 첫 번째와 세 번째 요소(배열 인덱스: 0 과 2)를 지정하려면 bitmask를 `0000000000001010`으로 설정해야 합니다. 0 번째 bit는 하위 호환성을 위해 예약되어 있기 때문입니다. 이 `wiegandInputMask` 필드는 슬레이브 장치(또는 Wiegand 장치)에서 Wiegand 카드(iClass 또는 Prox)를 읽을 때 적용됩니다.
+- `wiegandInputMask`: 슬레이브 장치와 Wiegand 장치에 사용할 Wiegand 형식의 인덱스를 나타내는 bitmask입니다. 슬레이브 장치는 더미 장치로 동작하며 Wiegand 설정을 자체적으로 저장하지 않습니다. (슬레이브 장치란 RS485를 통해 다른 슈프리마 장치에 더미 리더기로 연결된 슈프리마 장치를 말합니다) `BS2WiegandMultiConfig` 자료 구조의 formats 배열 필드에서 첫 번째와 세 번째 요소(배열 인덱스: 0과 2)를 지정하려면 bitmask를 `0000000000001010`으로 설정해야 합니다. 0 번째 bit는 하위 호환성을 위해 예약되어 있기 때문입니다. 이 `wiegandInputMask` 필드는 슬레이브 장치(또는 Wiegand 장치)에서 Wiegand 카드(iClass 또는 Prox)를 읽을 때 적용됩니다.
 
-- `wiegandCardMask`: 마스터 장치에 사용할 Wiegand 형식의 인덱스를 나타내는 bitmask입니다. 장치가 마스터 장치로 동작할 때, 이 필드에 지정된 Wiegand 형식과 일치하는 Wiegand 카드를 읽습니다. `BS2WiegandMultiConfig` 자료 구조의 formats 배열 필드에서 첫 번째와 세 번째 요소(배열 인덱스: 0 과 2)를 지정하려면 bitmask를 `0000000000001010`으로 설정해야 합니다. 0 번째 bit는 하위 호환성을 위해 예약되어 있기 때문입니다. 이 `wiegandCardMask` 필드는 마스터 장치에서 Wiegand 카드(iClass 또는 Prox)를 읽을 때 적용됩니다.
+- `wiegandCardMask`: 마스터 장치에 사용할 Wiegand 형식의 인덱스를 나타내는 bitmask입니다. 장치가 마스터 장치로 동작할 때, 이 필드에 지정된 Wiegand 형식과 일치하는 Wiegand 카드를 읽습니다. `BS2WiegandMultiConfig` 자료 구조의 formats 배열 필드에서 첫 번째와 세 번째 요소(배열 인덱스: 0과 2)를 지정하려면 bitmask를 `0000000000001010`으로 설정해야 합니다. 0 번째 bit는 하위 호환성을 위해 예약되어 있기 때문입니다. 이 `wiegandCardMask` 필드는 마스터 장치에서 Wiegand 카드(iClass 또는 Prox)를 읽을 때 적용됩니다.
 
-- `wiegandCSNIndex`: 마스터 장치와 슬레이브 장치 모두에서 카드 일련번호(card serial number)를 변환하는 데 사용할 Wiegand 형식의 인덱스입니다. Wiegand 가 아닌 카드(Mifare 또는 EM)를 장치에 인식시키면, 장치는 카드에서 일련번호를 읽어 이 필드에 지정된 Wiegand 형식으로 변환합니다. 이 필드에는 인덱스를 하나만 설정할 수 있습니다. `BS2WiegandMultiConfig` 자료 구조의 formats 배열 필드의 세 번째 요소(배열 인덱스: 2)에 저장된 Wiegand 형식으로 카드 일련번호를 변환하려면 `wiegandCSNIndex`를 3으로 설정해야 합니다. 이 `wiegandCSNIndex` 필드는 마스터 및 슬레이브 장치 모두에서 Wiegand가 아닌 카드(Mifare 또는 EM)를 읽을 때 적용됩니다.
+- `wiegandCSNIndex`: 마스터 장치와 슬레이브 장치 모두에서 카드 일련번호(card serial number)를 변환하는 데 사용할 Wiegand 형식의 인덱스입니다. Wiegand가 아닌 카드(Mifare 또는 EM)를 장치에 인식시키면, 장치는 카드에서 일련번호를 읽어 이 필드에 지정된 Wiegand 형식으로 변환합니다. 이 필드에는 인덱스를 하나만 설정할 수 있습니다. `BS2WiegandMultiConfig` 자료 구조의 formats 배열 필드의 세 번째 요소(배열 인덱스: 2)에 저장된 Wiegand 형식으로 카드 일련번호를 변환하려면 `wiegandCSNIndex`를 3으로 설정해야 합니다. 이 `wiegandCSNIndex` 필드는 마스터 및 슬레이브 장치 모두에서 Wiegand가 아닌 카드(Mifare 또는 EM)를 읽을 때 적용됩니다.
 
 위 세 개의 mask 필드가 모두 0으로 설정되면, 장치는 `BS2WiegandConfig` 자료 구조의 `BS2WiegandFormat` 필드에 저장된 Wiegand 형식과 일치하는 Wiegand 카드를 읽으려고 시도합니다.
 
