@@ -10,6 +10,8 @@
 
 ## 콜백 함수
 
+<div className='table-fixed'>
+
 ### OnLogReceived
 
 장치로부터 새로운 로그를 수신했을 때 호출되는 콜백 함수입니다.
@@ -600,7 +602,7 @@ typedef struct {
 typedef struct {
    uint32_t dateTime;
    uint32_t deviceID;    
-   union {                                       ///< 2 bytes
+   union {                                       ///<div 2 bytes
       BS2_EVENT_CODE code;
       struct {
             uint8_t subCode;
@@ -942,3 +944,5 @@ typedef struct{
 1. `reserved2`
 
    예약된 공간입니다.
+
+</div>

@@ -10,6 +10,8 @@
 
 ## 구조체
 
+<div className='table-fixed'>
+
 ### BS2CSNCard
 
 ```cpp
@@ -298,7 +300,7 @@ typedef struct {
     uint8_t size;               ///< 1 byte
 
     BS2_USER_ID userID;             ///< 32 bytes
-    uint8_t reserved[4];            ///< 4 bytes
+    uint8_t reserved[4];            ///<div 4 bytes
 } BS2LockOverride;
 ```
 
@@ -326,3 +328,5 @@ typedef struct {
 1. `userID`
 
    할당하고자 하는 카드가 이미 특정 사용자에게 할당된 상태라면, 해당 사용자의 ID를 설정할 수 있습니다.
+
+</div>

@@ -10,6 +10,8 @@ API that controls the device log.
 
 ## Callback Function
 
+<div className='table-fixed'>
+
 ### OnLogReceived
 
 Callback function that is called when receiving a new log from the device.
@@ -592,7 +594,7 @@ typedef struct {
 typedef struct {
    uint32_t dateTime;
    uint32_t deviceID;    
-   union {                                       ///< 2 bytes
+   union {                                       ///<div 2 bytes
       BS2_EVENT_CODE code;
       struct {
          uint8_t subCode;
@@ -932,3 +934,5 @@ typedef struct{
 1. `reserved2`
 
    Reserved space.
+
+</div>
