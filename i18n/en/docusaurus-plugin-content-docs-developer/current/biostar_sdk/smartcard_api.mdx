@@ -10,6 +10,8 @@ API that provides a function that reads and writes card data.
 
 ## Structure
 
+<div className='table-fixed'>
+
 ### BS2CSNCard
 
 ```cpp
@@ -305,7 +307,7 @@ typedef struct {
    uint8_t size;               ///< 1 byte
 
    BS2_USER_ID userID;             ///< 32 bytes
-   uint8_t reserved[4];            ///< 4 bytes
+   uint8_t reserved[4];            ///<div 4 bytes
 } BS2LockOverride;
 ```
 
@@ -333,3 +335,5 @@ typedef struct {
 1. `userID`
 
    If the card to be assigned is already assigned to a specific user, set the ID of that user.
+
+</div>

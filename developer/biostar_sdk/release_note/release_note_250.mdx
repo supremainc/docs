@@ -4,7 +4,7 @@
 
 :::caution
 
-BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SDK 버전을 업데이트하기 위해서는 SDK을 다시 빌드해야 합니다. 
+BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SDK 버전을 업데이트하기 위해서는 SDK를 다시 빌드해야 합니다. 
 
 :::
 
@@ -38,7 +38,7 @@ BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SD
 
    - 구조체 [BS2Rs485SlaveDeviceEX](../slave_control_api#bs2rs485slavedeviceex) 추가
 
-1. Intrusion Alarm Zone 지원은 다음과 같습니다. 경비 시스템이란 경비 대상 시설물에 감지기를 설치하여 침입 혹은 이상 신호가 발생할 경우 신호를 수신하여 대처하는 시스템으로, 무인 경비와 로컬 경비로 나뉩니다. 무인 경비는 원격지의 관제 센터에서 출동 요원이 대처하지만, 로컬 경비는 자체 관제 센터에서 상주 경비원이 대처하는 시스템이라고 합니다. 바이오스타의 타겟은 무인 경비의 비용에 부담을 느끼거나 자체 경비 시스템을 갖추고 있는 고객의 로컬 경비를 대상으로 합니다. 현재는 일반적인 경비 구역 기능(biostar1.X)을 제공하며, 향후 3rd party alarm 시스템의 경비/해제 장치 통합, 장기적으로는 Video와 Visual map기능에서의 적용 등 전문 로컬 관제 시스템 구축을 목표로 합니다.
+1. Intrusion Alarm Zone 지원은 다음과 같습니다. 경비 시스템이란 경비 대상 시설물에 감지기를 설치하여 침입 혹은 이상 신호가 발생할 경우 신호를 수신하여 대처하는 시스템으로, 무인 경비와 로컬 경비로 나뉩니다. 무인 경비는 원격지의 관제 센터에서 출동 요원이 대처하지만, 로컬 경비는 자체 관제 센터에서 상주 경비원이 대처하는 시스템이라고 합니다. 바이오스타의 목표는 무인 경비의 비용에 부담을 느끼거나 자체 경비 시스템을 갖추고 있는 고객의 로컬 경비를 대상으로 합니다. 현재는 일반적인 경비 구역 기능(biostar1.X)을 제공하며, 향후 3rd party alarm 시스템의 경비/해제 장치 통합, 장기적으로는 Video와 Visual map기능에서의 적용 등 전문 로컬 관제 시스템 구축을 목표로 합니다.
 
    - 함수 [BS2_GetIntrusionAlarmZone](../bs2_getintrusionalarmzone) 추가
 
@@ -54,7 +54,7 @@ BioStar 2 Device SDK를 구성하고 있는 구조체가 바뀜에 따라서, SD
 
    - 구조체 [BS2IntrusionAlarmZoneBlob](../zone_control_api#bs2intrusionalarmzoneblob) 추가
 
-1. Ethernet Zone 지원은 Zone Master 역할을 BioStar V2.x 서버가 아닌 특정 장치가 하며 장치 사이(Master ↔ Member)의 통신 방식으로 Ethernet TCP 통신 방식을 사용하는 Zone입니다. 기존 1.x Entrance Limit, Fire Alarm Zone에 사응하는 기능만을 현재는 지원합니다.
+1. Ethernet Zone 지원은 Zone Master 역할을 BioStar V2.x 서버가 아닌 특정 장치가 하며 장치 사이(Master ↔ Member)의 통신 방식으로 Ethernet TCP 통신 방식을 사용하는 Zone입니다. 기존 1.x Entrance Limit, Fire Alarm Zone에 사용하는 기능만을 현재는 지원합니다.
 
    - 함수 [BS2_GetDeviceZone](../bs2_getdevicezone) 추가
 

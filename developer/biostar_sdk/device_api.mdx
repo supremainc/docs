@@ -10,6 +10,8 @@
 
 ## 구조체
 
+<div className='table-fixed'>
+
 ### BS2SimpleDeviceInfo
 
 ```cpp
@@ -652,7 +654,7 @@ typedef struct {
    uint8_t reAuthPreventionSupported: 1;
    uint8_t unused: 1;
 
-   uint8_t reserved[423];      ///< 423 bytes
+   uint8_t reserved[423];      ///<div 423 bytes
 
 } BS2DeviceCapabilities;
 ```
@@ -1023,3 +1025,5 @@ typedef struct {
 1. `reserved`
 
    예약된 공간입니다.
+
+</div>

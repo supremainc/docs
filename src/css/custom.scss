@@ -1160,8 +1160,8 @@ footer {
       margin-bottom: var(--ifm-list-paragraph-margin);
     }
   }
-  ul + ul {
-    // margin-top: -.3rem;
+  ul + ol {
+    margin-top: 2rem;
   }
   ul + ul > li:first-of-type {
     margin-top: 0;
