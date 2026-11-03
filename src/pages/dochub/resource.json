@@ -19,6 +19,17 @@
     },
     {
         "category": "platform",
+        "product": "BioStar X Hardening Guide",
+        "sidebar": "bsx_hardening",
+        "version": "1.0.0",
+        "manuals": {
+            "ko": "platform/bsx/BioStar X Hardening Guide_AG_1.0.0_KO_260622.pdf",
+            "en": "platform/bsx/BioStar X Hardening Guide_AG_1.0.0_EN_260622.pdf"
+        },
+        "release_date": "2026-06-22"
+    },
+    {
+        "category": "platform",
         "product": "BioStar Air",
         "sidebar": "biostar_air",
         "version": "2.13.0",
