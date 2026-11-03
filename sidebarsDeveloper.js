@@ -60,6 +60,7 @@ export default {
                 'biostar_sdk/bs2_setmaxthreadcount',
                 'biostar_sdk/bs2_computecrc16ccitt',
                 'biostar_sdk/bs2_getcardmodel',
+                'biostar_sdk/bs2_getdataencryptkey',
                 'biostar_sdk/bs2_setdataencryptkey',
                 'biostar_sdk/bs2_removedataencryptkey',
                 'biostar_sdk/bs2_setdevicesearchingtimeout',
@@ -383,6 +384,7 @@ export default {
                 'biostar_sdk/bs2_gettriggeractionconfig',
                 'biostar_sdk/bs2_settriggeractionconfig',
                 'biostar_sdk/bs2_geteventconfig',
+                'biostar_sdk/bs2_seteventconfig',
                 'biostar_sdk/bs2_getwiegandmulticonfig',
                 'biostar_sdk/bs2_setwiegandmulticonfig',
                 'biostar_sdk/bs2_getcard1xconfig',
@@ -724,6 +726,33 @@ export default {
                     'biostar_sdk/bs2_removeallliftlockunlockzone'
                   ]
                 }
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Lift Control API',
+              className: 'apis',
+              link: {
+                type: 'doc',
+                id: 'biostar_sdk/lift_control_api'
+              },
+              items: [
+                'biostar_sdk/bs2_getlift',
+                'biostar_sdk/bs2_getalllift',
+                'biostar_sdk/bs2_getliftstatus',
+                'biostar_sdk/bs2_getallliftstatus',
+                'biostar_sdk/bs2_setlift',
+                'biostar_sdk/bs2_setliftalarm',
+                'biostar_sdk/bs2_removelift',
+                'biostar_sdk/bs2_removealllift',
+                'biostar_sdk/bs2_releasefloor',
+                'biostar_sdk/bs2_activatefloor',
+                'biostar_sdk/bs2_deactivatefloor',
+                'biostar_sdk/bs2_getfloorlevel',
+                'biostar_sdk/bs2_getallfloorlevel',
+                'biostar_sdk/bs2_setfloorlevel',
+                'biostar_sdk/bs2_removefloorlevel',
+                'biostar_sdk/bs2_removeallfloorlevel'
               ]
             },
             {
