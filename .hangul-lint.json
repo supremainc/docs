@@ -1,9 +1,10 @@
-{ 
-   "ignoreWords": [
-      "BioStar",
-      "특성상",
-      "쿼리문"
-   ], 
-   "disabledRules": [], 
-   "rules": [] 
+{
+  "ignoreWords": [
+    "BioStar",
+    "특성상",
+    "쿼리문",
+    "페어링"
+  ],
+  "disabledRules": [],
+  "rules": []
 }

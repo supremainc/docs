@@ -1,0 +1,255 @@
+---
+id: settings-device-using-wireless-door-lock
+title: How to Use a Wireless Door Lock
+description: This document explains how to register a wireless door lock to a CoreStation in BioStar X, and manage authentication modes and status.
+---
+
+A wireless door lock lets CoreStation control access without wiring to the door. The wireless door lock communicates wirelessly with the OSDP antenna connected to CoreStation.
+
+This document explains how to use a wireless door lock, from activating a device license to adding the OSDP antenna and wireless door lock, setting authentication modes, and managing status.
+
+## Before you start
+
+Add a wireless door lock to a CoreStation registered in **BioStar X**. For more information on registering CoreStation, see <DocLink docId='platform/biostar_x/settings-adding-devices' />.
+
+### Supported versions and devices
+
+* **CoreStation v1.7.1** or later, **BioStar X v1.0.0** or later
+
+* OSDP antenna: U&Z CX8936 (OSDP v2.2 or later)
+
+* Wireless door lock: U&Z CX217x (Handle), CX212x (Knob)
+
+* Card: CSN card, MIFARE or DESFire type
+
+### Connection limits
+
+Connect an OSDP antenna to CoreStation before connecting a wireless door lock.
+
+* Up to 2 OSDP antennas per 1 CoreStation
+
+* Up to 6 wireless door locks per 1 OSDP antenna (up to 12 wireless door locks per 1 CoreStation)
+
+### Prerequisites
+
+* Wireless lock device license (contact your BioStar X reseller)
+
+* SERVICEKEY card (provided by the wireless door lock supplier)
+
+:::info
+
+You can issue a device license for up to 12 devices, equal to the number of wireless door locks you want to connect. The total cannot exceed 12 devices, regardless of the number of device licenses.
+
+:::
+
+## Register a wireless door lock
+
+<Steps>
+<Step>
+
+### Activate a device license
+
+Enrolling and using the wireless door lock requires a separate device license.
+
+Use **BioStar X** to activate wireless door lock device licenses on a CoreStation.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.server.license.device' product='2' /> on the left sidebar.
+
+3. Click <Cmd sid='user.list.csvImport.browse' product='2' />.
+
+   <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+
+4. Load the wireless door lock device license you received.
+
+5. Check <Cmd sid='setting.server.license.device.list' product='2' />, and to activate the device license, click <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+:::info
+
+* If license activation fails, check the error message and try again.
+
+* The device license file is an encrypted file and cannot be modified arbitrarily.
+
+* The serial number (S/N) determines the device license. If you change the device serial number (S/N) without authorization, Suprema does not provide warranty service for the license.
+
+* For more information on device licenses, see <DocLink docId='platform/biostar_x/licensing#deviceLicense' />.
+
+:::
+
+</Step>
+<Step>
+
+### Add OSDP antenna
+
+To add a wireless door lock to CoreStation, add the OSDP antenna first.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
+
+3. Right-click the CoreStation device in the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list.
+
+4. Click <Cmd sid='device.menu.addOsdpDevice' product='2' /> from the popup menu.
+
+   <Image src='/img/biostarx-setting-device-list-add-osdp.png' />
+
+5. When the <Cmd sid='device.menu.selectOsdpDeviceType' product='2' /> window appears, select <Cmd sid='device.info.osdpModule' product='2' /> and click <Cmd sid='button.ok' product='2' />.
+
+   <Image src='/img/biostarx-setting-device-select-osdp-antenna.png' />
+
+6. When the port list appears, select a port with <Cmd sid='device.info.portStatus' product='2' /> set to <Cmd sid='device.info.portStatusAvailable' product='2' /> to add the OSDP antenna.
+
+   <Image src='/img/biostarx-setting-device-add-osdp-module.png' />
+
+7. Set <Cmd sid='device.info.information' product='2' /> and <Cmd sid='device.info.osdpNetworkRS485' product='2' />, then click <Cmd sid='button.apply' product='2' />.
+
+   <Image src='/img/biostarx-setting-device-add-osdp-device.png' />
+
+   :::note
+
+   <Cmd sid='device.info.osdpOsdpID' product='2' /> defaults to 0. Enter the <Cmd sid='device.info.osdpOsdpID' product='2' /> set on the OSDP antenna.
+
+   :::
+
+</Step>
+<Step>
+
+### Add wireless door lock
+
+Add the wireless door lock with the OSDP antenna.
+
+1. Right-click the added OSDP antenna.
+
+2. Click <Cmd sid='device.menu.autoAddWirelessDoorLock' product='2' /> from the popup menu.
+
+   <Image src='/img/biostarx-setting-device-osdp-popup.png' />
+
+3. Tag the provided SERVICEKEY card on the wireless door lock.
+
+The device list shows the connected wireless door lock under the OSDP antenna. When the connection succeeds, the wireless door lock's blue LED turns on.
+
+<Image src='/img/biostarx-setting-device-osdp-conneted-wireless-door-lock.png' />
+
+:::info
+
+* The SERVICEKEY card is a dedicated card. Tag it to enter service mode and pair with the OSDP antenna. Obtain the SERVICEKEY card from the wireless door lock vendor.
+
+* Set the connected wireless door lock as an entry or exit device for a door. For more information on registering doors, see <DocLink docId='platform/biostar_x/settings-door-add' />.
+
+:::
+
+</Step>
+<Step>
+
+### Set authentication mode {/* #setAuthmode */}
+
+Set the authentication mode for access through the wireless door lock. The wireless door lock uses only CSN cards for authentication.
+
+1. Click the wireless door lock in the device list.
+
+2. In the <Cmd sid='device.info.authentication' product='2' /> section, under <Cmd sid='device.info.authenticationMode' product='2' />, click <Cmd sid='button.plusAdd' product='2' />.
+
+3. When the <Cmd sid='device.addNewAuthMode' product='2' /> window appears, drag <Cmd sid='user.authMode.card' product='2' /> to an empty area.
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-auth-mode.png' />
+
+4. Select the desired schedule from the <Cmd sid='schedule.schedule' product='2' /> item.
+
+5. Click <Cmd sid='button.ok' product='2' /> to enroll the authentication mode.
+
+6. Click <Cmd sid='button.apply' product='2' /> at the bottom right of the screen to save the settings.
+
+:::info
+
+* When authentication with a CSN card succeeds, the wireless door lock turns on the green LED. If authentication fails, the wireless door lock turns on the red LED.
+
+* If no schedule is available, click <Cmd sid='button.plusAddSchedule' product='2' /> in the <Cmd sid='schedule.schedule' product='2' /> item to add a schedule.
+
+* For more information on adding schedules, see <DocLink docId='platform/biostar_x/settings-schedule' />.
+
+:::
+
+</Step>
+</Steps>
+
+## Change wireless door lock settings
+
+After adding the wireless door lock, you can change the device name, status, and authentication settings.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
+
+3. Click the wireless door lock in the device list.
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-details.png' />
+
+   * <Cmd sid='device.info.osdpName' product='2' />: Enter a device name. If left blank, the system assigns it automatically.
+
+   * <Cmd sid='device.info.osdpStatus' product='2' />: Set the device status. If set to <Cmd sid='common.inactive' product='2' /> Inactive, CoreStation does not communicate with the wireless door lock. Use this when inspecting the wireless door lock or replacing the battery. For information on changing the status in the device list, see <DocLink inner='#changeStatus' />.
+
+   * <Cmd sid='device.info.authenticationMode' product='2' />: The wireless door lock can only use a CSN card as an authentication mode. For more information, see <DocLink inner='#setAuthmode' />.
+
+   * <Cmd sid='device.info.usersHaveFullAccess' product='2' />: Grant full access to users registered on the connected CoreStation without setting an access group.
+
+4. Click <Cmd sid='button.apply' product='2' /> to save the settings.
+
+## Change wireless door lock status {/* #changeStatus */}
+
+In the device list, activate or deactivate the wireless door lock.
+
+1. Right-click the wireless door lock under <Cmd sid='menu.device.allDeviceGroups' product='2' />.
+
+2. Click <Cmd sid='device.menu.activeWirelessDoorLock' product='2' /> or <Cmd sid='device.menu.deActiveWirelessDoorLock' product='2' /> in the popup menu.
+
+<Image src='/img/biostarx-setting-device-status-wl-door-lock.png' />
+
+## Delete a wireless door lock
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
+
+3. In the device list, click the checkbox on the far left of the wireless door lock to delete.
+
+4. Click <Cmd sid='button.deleteDevice' product='2' /> at the top right of the device list.
+
+   <Image src='/img/biostarx-setting-device-list-remove-wl-door-lock.png' />
+
+5. When the deletion confirmation message appears, click <Cmd sid='button.delete' product='2' />.
+
+:::tip
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-setting-device-remove-wl-door-lock.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+* You can also delete a wireless door lock from the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list on the left of the device list. Right-click the wireless door lock to delete, and click <Cmd sid='device.menu.deleteWirelessDoorLock' product='2' />.
+
+</Column>
+</Columns>
+
+:::
+
+:::info
+
+Deleting a wireless door lock keeps device licenses on CoreStation active. The system allows the same number of additional wireless door lock connections as the number of wireless door locks deleted.
+
+:::
+
+## Check wireless door lock status in Monitoring
+
+1. Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='common.gnb.device' product='2' /> tab on the left sidebar of the screen.
+
+3. Click the wireless door lock in the device list.
+
+A panel appears on the right side, showing details and recent events for the wireless door lock.
+
+<Image src='/img/biostarx-monitoring-device-wl-door-lock.png' />

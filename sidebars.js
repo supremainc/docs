@@ -861,6 +861,7 @@ function createSidebars(preview) {
                 'platform/biostar_x/settings-adding-devices',
                 'platform/biostar_x/settings-adding-wiegand',
                 'platform/biostar_x/settings-adding-slave-device',
+                'platform/biostar_x/settings-device-using-wireless-door-lock',
                 'platform/biostar_x/settings-device-manage-device-users',
                 'platform/biostar_x/settings-device-upgrade-firmware',
                 'platform/biostar_x/settings-device-using-functions'
