@@ -1,0 +1,255 @@
+---
+id: settings-device-using-wireless-door-lock
+title: 무선 도어락 사용하기
+description: BioStar X에서 CoreStation에 무선 도어락을 등록하고 인증 모드와 상태를 관리하는 방법을 안내합니다.
+---
+
+무선 도어락을 사용하면 출입문까지 배선하지 않고도 CoreStation으로 출입을 통제할 수 있습니다. 무선 도어락은 CoreStation에 연결된 OSDP 안테나와 무선으로 통신합니다.
+
+이 문서에서는 장치 라이선스 활성화부터 OSDP 안테나와 무선 도어락 등록, 인증 모드 설정, 상태 관리까지 무선 도어락을 사용하는 방법을 안내합니다.
+
+## 시작하기 전에
+
+**BioStar X**에 등록된 CoreStation에 무선 도어락을 추가할 수 있습니다. CoreStation 등록 방법은 <DocLink docId='platform/biostar_x/settings-adding-devices' />를 참고하세요.
+
+### 지원 버전 및 장치
+
+* **CoreStation v1.7.1** 이상, **BioStar X v1.0.0** 이상
+
+* OSDP 안테나: U&Z CX8936 (OSDP v2.2 이상)
+
+* 무선 도어락: U&Z CX217x (Handle), CX212x (Knob)
+
+* 카드: MIFARE 또는 DESFire 유형의 CSN 카드
+
+### 연결 제한
+
+무선 도어락을 연결하려면 CoreStation에 OSDP 안테나가 연결되어 있어야 합니다.
+
+* CoreStation 1대당 OSDP 안테나 최대 2대
+
+* OSDP 안테나 1대당 무선 도어락 최대 6대(CoreStation 1대당 무선 도어락 최대 12대)
+
+### 준비물
+
+* 무선 도어락 장치 라이선스(BioStar X 구입처에 문의)
+
+* SERVICEKEY 카드(무선 도어락 구입처에서 제공)
+
+:::info
+
+연결하려는 무선 도어락 대수만큼 최대 12대까지 장치 라이선스를 발급받을 수 있습니다. 장치 라이선스 여러 개를 활성화해도 12대를 초과할 수 없습니다.
+
+:::
+
+## 무선 도어락 장치 등록
+
+<Steps>
+<Step>
+
+### 장치 라이선스 활성화
+
+무선 도어락을 등록하고 사용하려면 별도의 장치 라이선스가 필요합니다.
+
+**무선 도어락** 장치 라이선스는 **BioStar X**를 통해 CoreStation에 활성화할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.server.license.device' product='2' />를 클릭하세요.
+
+1. <Cmd sid='user.list.csvImport.browse' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+
+1. 발급받은 무선 도어락 장치 라이선스를 불러오세요.
+
+1. <Cmd sid='setting.server.license.device.list' product='2' />을 확인하고, 장치 라이선스를 활성화하려면 <Cmd sid='setting.server.license.button.activate' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* 라이선스 활성화에 실패하면 오류 메시지를 확인하고 다시 시도하세요.
+
+* 장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다.
+
+* 장치 라이선스는 장치 일련번호(S/N)를 기준으로 발급됩니다. 비정상적인 방법으로 장치 일련번호(S/N)를 변경하면 라이선스에 대한 보증 서비스가 제공되지 않습니다.
+
+* 장치 라이선스에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/licensing#deviceLicense' />을 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+### OSDP 안테나 등록
+
+CoreStation에 무선 도어락을 추가하려면 OSDP 안테나를 먼저 등록해야 합니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
+
+1. <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록의 CoreStation 장치에서 마우스 오른쪽 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='device.menu.addOsdpDevice' product='2' />를 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-list-add-osdp.png' />
+
+1. <Cmd sid='device.menu.selectOsdpDeviceType' product='2' /> 창이 나타나면 <Cmd sid='device.info.osdpModule' product='2' />를 선택하고 <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-select-osdp-antenna.png' />
+
+1. 포트 목록이 나타나면 <Cmd sid='device.info.portStatus' product='2' />가 <Cmd sid='device.info.portStatusAvailable' product='2' />으로 되어 있는 포트 중에서 OSDP 안테나를 추가할 포트를 선택하세요.
+
+   <Image src='/img/biostarx-setting-device-add-osdp-module.png' />
+
+1. <Cmd sid='device.info.information' product='2' />, <Cmd sid='device.info.osdpNetworkRS485' product='2' /> 항목을 설정하고 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-add-osdp-device.png' />
+
+   :::note
+
+   <Cmd sid='device.info.osdpOsdpID' product='2' />는 기본값이 0으로 설정되어 있습니다. OSDP 안테나에 설정되어 있는 <Cmd sid='device.info.osdpOsdpID' product='2' />를 입력하세요.
+
+   :::
+
+</Step>
+<Step>
+
+### 무선 도어락 등록
+
+OSDP 안테나에 무선 도어락을 등록하세요.
+
+1. 추가된 OSDP 안테나에서 마우스 오른쪽 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='device.menu.autoAddWirelessDoorLock' product='2' />를 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-osdp-popup.png' />
+
+1. 제공받은 SERVICEKEY 카드를 무선 도어락에 태그하세요.
+
+장치 목록의 OSDP 안테나 아래에 연결한 무선 도어락이 표시됩니다. 연결에 성공하면 무선 도어락에 파란색 LED가 켜집니다.
+
+<Image src='/img/biostarx-setting-device-osdp-conneted-wireless-door-lock.png' />
+
+:::info
+
+* SERVICEKEY 카드는 무선 도어락을 서비스 모드로 진입시켜 OSDP 안테나와 페어링 및 연동할 때 태그하는 전용 카드입니다. SERVICEKEY 카드는 무선 도어락 구입처에서 제공받을 수 있습니다.
+
+* 연결된 무선 도어락은 출입문의 입실 또는 퇴실 장치로 설정할 수 있습니다. 출입문 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-door-add' />를 참고하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 인증 모드 설정 {/* #setAuthmode */}
+
+무선 도어락을 통해 출입할 때 인증 모드를 설정할 수 있습니다. 무선 도어락은 CSN 카드만 인증 모드로 사용할 수 있습니다.
+
+1. 장치 목록에서 무선 도어락을 클릭하세요.
+
+1. <Cmd sid='device.info.authentication' product='2' /> 섹션의 <Cmd sid='device.info.authenticationMode' product='2' />에서 <Cmd sid='button.plusAdd' product='2' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='device.addNewAuthMode' product='2' /> 창이 나타나면 <Cmd sid='user.authMode.card' product='2' />를 빈 영역에 끌어다 놓으세요.
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-auth-mode.png' />
+
+1. <Cmd sid='schedule.schedule' product='2' /> 항목에서 원하는 스케줄을 선택하세요.
+
+1. 인증 모드를 등록하려면 <Cmd sid='button.ok' product='2' /> 버튼을 클릭하세요.
+
+1. 설정을 저장하려면 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+* CSN 카드를 사용하여 무선 도어락에 인증을 시도할 때 성공하면 무선 도어락에 녹색 LED가 켜집니다. 인증에 실패하면 빨간색 LED가 켜집니다.
+
+* 원하는 스케줄이 없다면 <Cmd sid='schedule.schedule' product='2' /> 항목에서 <Cmd sid='button.plusAddSchedule' product='2' /> 버튼을 클릭하여 스케줄을 추가 설정할 수 있습니다.
+
+* 스케줄 추가에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-schedule' />를 참고하세요.
+
+:::
+
+</Step>
+</Steps>
+
+## 무선 도어락 설정 변경
+
+무선 도어락을 등록한 뒤에도 장치 이름, 상태, 인증 설정을 변경할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
+
+1. 장치 목록에서 무선 도어락 장치를 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-details.png' />
+
+   * <Cmd sid='device.info.osdpName' product='2' />: 장치 이름을 입력할 수 있습니다. 입력하지 않더라도 자동 지정됩니다.
+
+   * <Cmd sid='device.info.osdpStatus' product='2' />: 장치 상태를 설정할 수 있습니다. <Cmd sid='common.inactive' product='2' />으로 설정하면 CoreStation이 무선 도어락과 통신하지 않습니다. 무선 도어락을 점검하거나 배터리를 교체할 때 이용하세요. 장치 목록에서 상태를 변경하는 방법은 <DocLink inner='#changeStatus' />을 참고하세요.
+
+   * <Cmd sid='device.info.authenticationMode' product='2' />: 무선 도어락은 인증 모드로 CSN 카드만 사용할 수 있습니다. 자세한 내용은 <DocLink inner='#setAuthmode' />을 참고하세요.
+
+   * <Cmd sid='device.info.usersHaveFullAccess' product='2' />: 무선 도어락이 연결된 CoreStation에 등록된 사용자에게 출입 그룹 설정 없이 모든 출입 권한을 부여할 수 있습니다.
+
+1. 설정을 저장하려면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+## 무선 도어락 상태 변경 {/* #changeStatus */}
+
+장치 목록에서 무선 도어락의 상태를 활성화하거나 비활성화할 수 있습니다.
+
+1. <Cmd sid='menu.device.allDeviceGroups' product='2' />의 무선 도어락에서 마우스 오른쪽 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='device.menu.activeWirelessDoorLock' product='2' /> 또는 <Cmd sid='device.menu.deActiveWirelessDoorLock' product='2' />를 클릭하세요.
+
+<Image src='/img/biostarx-setting-device-status-wl-door-lock.png' />
+
+## 무선 도어락 삭제
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />를 클릭하세요.
+
+1. 장치 목록에서 삭제하려는 무선 도어락 장치의 가장 왼쪽에 체크박스를 클릭하세요.
+
+1. 장치 목록 오른쪽 상단의 <Cmd sid='button.deleteDevice' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-list-remove-wl-door-lock.png' />
+
+1. 삭제 확인 메시지가 나타나면 <Cmd sid='button.delete' product='2' /> 버튼을 클릭하세요.
+
+:::tip
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-setting-device-remove-wl-door-lock.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+장치 목록 왼쪽의 <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록에서 무선 도어락을 삭제할 수도 있습니다. 삭제하려는 무선 도어락에서 마우스 오른쪽 버튼을 클릭하고, <Cmd sid='device.menu.deleteWirelessDoorLock' product='2' />를 클릭하세요.
+
+</Column>
+</Columns>
+
+:::
+
+:::info
+
+무선 도어락을 삭제해도 CoreStation에 활성화된 장치 라이선스는 유지됩니다. 삭제한 무선 도어락의 수만큼 다른 무선 도어락을 연결할 수 있습니다.
+
+:::
+
+## 모니터링에서 무선 도어락 상태 확인
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.arena' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='common.gnb.device' product='2' /> 탭을 클릭하세요.
+
+1. 장치 목록에서 무선 도어락을 클릭하세요.
+
+화면 오른쪽에 무선 도어락의 상세 정보와 최근 이벤트를 확인할 수 있는 패널이 나타납니다.
+
+<Image src='/img/biostarx-monitoring-device-wl-door-lock.png' />
