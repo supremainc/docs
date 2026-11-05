@@ -82,7 +82,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
     },
     {
       title: 'BioStar Device SDK',
-      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
+      url: `developer/biostar_sdk/start`,
       Svg: require('@site/static/img/cover-sdk.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`,
