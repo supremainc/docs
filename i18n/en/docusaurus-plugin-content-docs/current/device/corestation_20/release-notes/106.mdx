@@ -3,9 +3,9 @@ id: 106
 title: Firmware Version 1.0.6
 ---
 
-# Firmware Version 1.0.6 (Build No. 1.0.6_261023)
+# Firmware Version 1.0.6 (Build No. 1.0.6_261102)
 
-Release<Separator/>2026-10-27
+Release<Separator/>2026-11-03
 
 :::caution
 
@@ -37,5 +37,8 @@ Release<Separator/>2026-10-27
 
     {/* (CS20FW-340) Wiegand reader로 Door 생성 후 Wiegand 장치가 disable 상태일 때, LockOverride 카드 인증이 안되는 현상 (특정사용자) - 1.0.4 */}
 1. **Lock Override** card authentication not working on a door created with a Wiegand reader when the reader is disabled. <Badge>1.0.4</Badge>
+
+    {/* (CS20FW-359) Schedule Unlock 설정과 Manual Locked를 설정한 후 LockOverride 카드 인증시 Door Unlock이 되지 않는 이슈 - 발생버전: v1.0.4 */}
+1. Door not unlocking on **Lock Override** card authentication when both schedule unlock and manual lock are set. <Badge>1.0.4</Badge>
 
 </BugLists>
