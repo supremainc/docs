@@ -806,7 +806,7 @@
             "CS-20",
             "CS-20P"
         ],
-        "version": "1.0.5",
+        "version": "1.0.6",
         "manuals": {
             "ko": "device/corestation_20/CoreStation 20_IG_1.01_KO_260622.pdf",
             "en": "device/corestation_20/CoreStation 20_IG_1.01_EN_260622.pdf",
@@ -814,15 +814,15 @@
             "ja": "device/corestation_20/CoreStation 20_IG_1.01_JA_260622.pdf"
         },
         "release_notes": {
-            "ko": "device/corestation_20/CoreStation 20_ReleaseNotes_1.0.5_KO_260624.pdf",
-            "en": "device/corestation_20/CoreStation 20_ReleaseNotes_1.0.5_EN_260624.pdf"
+            "ko": "device/corestation_20/CoreStation 20_RN_1.0.6_KO_261103.pdf",
+            "en": "device/corestation_20/CoreStation 20_RN_1.0.6_EN_261103.pdf"
         },
         "a_e": "device/corestation_20/SUPREMA_CoreStation 20_AE-Specification_250731.docx",
         "dt": {
             "ko": "",
             "en": ""
         },
-        "release_date": "2026-07-06"
+        "release_date": "2026-11-05"
     },
     {
         "category": "intelligent",
