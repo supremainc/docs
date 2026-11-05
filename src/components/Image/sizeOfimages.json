@@ -2579,6 +2579,10 @@
     "width": 418,
     "height": 323
   },
+  "/img/biostarx-monitoring-device-wl-door-lock.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/biostarx-monitoring-door-ac-details.png": {
     "width": 1200,
     "height": 503
@@ -2963,6 +2967,14 @@
     "width": 300,
     "height": 332
   },
+  "/img/biostarx-setting-device-add-osdp-device.png": {
+    "width": 1647,
+    "height": 565
+  },
+  "/img/biostarx-setting-device-add-osdp-module.png": {
+    "width": 670,
+    "height": 445
+  },
   "/img/biostarx-setting-device-adding-slave-device.png": {
     "width": 301,
     "height": 333
@@ -3203,6 +3215,10 @@
     "width": 1500,
     "height": 598
   },
+  "/img/biostarx-setting-device-list-add-osdp.png": {
+    "width": 1670,
+    "height": 457
+  },
   "/img/biostarx-setting-device-list-batch-edit.png": {
     "width": 1000,
     "height": 199
@@ -3223,6 +3239,10 @@
     "width": 600,
     "height": 334
   },
+  "/img/biostarx-setting-device-list-remove-wl-door-lock.png": {
+    "width": 1409,
+    "height": 260
+  },
   "/img/biostarx-setting-device-list-with-slace.png": {
     "width": 1200,
     "height": 217
@@ -3235,9 +3255,21 @@
     "width": 300,
     "height": 267
   },
+  "/img/biostarx-setting-device-osdp-conneted-wireless-door-lock.png": {
+    "width": 889,
+    "height": 296
+  },
+  "/img/biostarx-setting-device-osdp-popup.png": {
+    "width": 314,
+    "height": 271
+  },
   "/img/biostarx-setting-device-remove-group.png": {
     "width": 352,
     "height": 242
+  },
+  "/img/biostarx-setting-device-remove-wl-door-lock.png": {
+    "width": 312,
+    "height": 234
   },
   "/img/biostarx-setting-device-rename-group.png": {
     "width": 358,
@@ -3247,9 +3279,17 @@
     "width": 600,
     "height": 401
   },
+  "/img/biostarx-setting-device-select-osdp-antenna.png": {
+    "width": 670,
+    "height": 256
+  },
   "/img/biostarx-setting-device-set-ip.png": {
     "width": 600,
     "height": 456
+  },
+  "/img/biostarx-setting-device-status-wl-door-lock.png": {
+    "width": 719,
+    "height": 336
   },
   "/img/biostarx-setting-device-sync-device.png": {
     "width": 1500,
@@ -3274,6 +3314,14 @@
   "/img/biostarx-setting-device-usb-byte-order.png": {
     "width": 1000,
     "height": 180
+  },
+  "/img/biostarx-setting-device-wl-door-lock-auth-mode.png": {
+    "width": 744,
+    "height": 588
+  },
+  "/img/biostarx-setting-device-wl-door-lock-details.png": {
+    "width": 1648,
+    "height": 624
   },
   "/img/biostarx-setting-directory-ad-server.png": {
     "width": 1400,
@@ -7024,8 +7072,8 @@
     "height": 495
   },
   "/img/common/biostar_2_sdk_framework_1.png": {
-    "width": 600,
-    "height": 388
+    "width": 1000,
+    "height": 615
   },
   "/img/common/bsair-cloud-architecture.webp": {
     "width": 1439,
@@ -7376,6 +7424,10 @@
     "height": 29
   },
   "/img/common/sdk_hero.png": {
+    "width": 945,
+    "height": 471
+  },
+  "/img/common/sdk_hero_ko.png": {
     "width": 945,
     "height": 471
   },
@@ -13255,6 +13307,10 @@
     "width": 418,
     "height": 323
   },
+  "/img/en/biostarx-monitoring-device-wl-door-lock.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/biostarx-monitoring-door-ac-details.png": {
     "width": 1200,
     "height": 503
@@ -13639,6 +13695,14 @@
     "width": 300,
     "height": 332
   },
+  "/img/en/biostarx-setting-device-add-osdp-device.png": {
+    "width": 1647,
+    "height": 565
+  },
+  "/img/en/biostarx-setting-device-add-osdp-module.png": {
+    "width": 670,
+    "height": 445
+  },
   "/img/en/biostarx-setting-device-adding-slave-device.png": {
     "width": 301,
     "height": 333
@@ -13879,6 +13943,10 @@
     "width": 1683,
     "height": 586
   },
+  "/img/en/biostarx-setting-device-list-add-osdp.png": {
+    "width": 1670,
+    "height": 457
+  },
   "/img/en/biostarx-setting-device-list-batch-edit.png": {
     "width": 1000,
     "height": 199
@@ -13899,6 +13967,10 @@
     "width": 600,
     "height": 334
   },
+  "/img/en/biostarx-setting-device-list-remove-wl-door-lock.png": {
+    "width": 1409,
+    "height": 266
+  },
   "/img/en/biostarx-setting-device-list-with-slace.png": {
     "width": 1200,
     "height": 217
@@ -13911,9 +13983,21 @@
     "width": 307,
     "height": 283
   },
+  "/img/en/biostarx-setting-device-osdp-conneted-wireless-door-lock.png": {
+    "width": 747,
+    "height": 296
+  },
+  "/img/en/biostarx-setting-device-osdp-popup.png": {
+    "width": 377,
+    "height": 271
+  },
   "/img/en/biostarx-setting-device-remove-group.png": {
     "width": 449,
     "height": 247
+  },
+  "/img/en/biostarx-setting-device-remove-wl-door-lock.png": {
+    "width": 375,
+    "height": 234
   },
   "/img/en/biostarx-setting-device-rename-group.png": {
     "width": 435,
@@ -13923,9 +14007,17 @@
     "width": 600,
     "height": 388
   },
+  "/img/en/biostarx-setting-device-select-osdp-antenna.png": {
+    "width": 670,
+    "height": 256
+  },
   "/img/en/biostarx-setting-device-set-ip.png": {
     "width": 672,
     "height": 509
+  },
+  "/img/en/biostarx-setting-device-status-wl-door-lock.png": {
+    "width": 719,
+    "height": 336
   },
   "/img/en/biostarx-setting-device-sync-device.png": {
     "width": 1500,
@@ -13950,6 +14042,14 @@
   "/img/en/biostarx-setting-device-usb-byte-order.png": {
     "width": 1000,
     "height": 180
+  },
+  "/img/en/biostarx-setting-device-wl-door-lock-auth-mode.png": {
+    "width": 744,
+    "height": 588
+  },
+  "/img/en/biostarx-setting-device-wl-door-lock-details.png": {
+    "width": 1648,
+    "height": 624
   },
   "/img/en/biostarx-setting-directory-ad-server.png": {
     "width": 1400,
@@ -16894,10 +16994,6 @@
   "/img/en/clue/test-period-set-device-list.png": {
     "width": 1706,
     "height": 405
-  },
-  "/img/en/common/sdk_hero.png": {
-    "width": 945,
-    "height": 471
   },
   "/img/en/device/auth-dynamic-roi.png": {
     "width": 800,
