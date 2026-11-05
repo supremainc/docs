@@ -1,0 +1,43 @@
+# BS2_SetAccessLevel
+
+Configures an access level.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetAccessLevel(void* context, uint32_t deviceId, BS2AccessLevel* accessLevels, uint32_t accessLevelCount);
+```
+
+:::info
+
+[See BS2AccessLevel Structure](access_control_api#bs2accesslevel) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `accessLevels` : List of access levels to be stored
+
+- \[In\] `accessLevelCount` : Number of access levels
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAccessLevel](bs2_getaccesslevel)
+
+[BS2_GetAllAccessLevel](bs2_getallaccesslevel)
+
+[BS2_RemoveAccessLevel](bs2_removeaccesslevel)
+
+[BS2_RemoveAllAccessLevel](bs2_removeallaccesslevel)

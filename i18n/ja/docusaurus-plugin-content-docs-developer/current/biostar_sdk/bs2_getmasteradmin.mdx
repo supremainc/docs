@@ -1,0 +1,113 @@
+# BS2_GetMasterAdmin
+
+<Badge only>+ v2.9.12</Badge> Gets master admin information from devices supporting the CE RED (Radio Equipment Directive) Master Admin feature.
+
+:::caution
+
+Suprema devices comply with CE RED (Radio Equipment Directive) and support the Master Admin feature.
+
+Without admin configuration, anyone could access the admin menu and modify settings, creating a security vulnerability.
+
+The Master Admin feature mandates full admin enrollment to prevent such risks.
+
+Devices supporting this feature must complete master admin enrollment, and device usage is restricted until configuration is complete.
+
+This differs from the existing operator [View BS2AuthOperatorLevel structure](device_api#bs2authoperatorlevel), so please be cautious.
+
+All device features become available after master admin enrollment is successfully completed.
+
+Below is information about devices and versions that support the Master Admin feature.
+
+| Device Type | Supported Version |
+| --- | --- |
+| BS3 | V1.4.0 and later |
+| XS2 | V1.4.0 and later |
+| BS2a | V1.2.0 and later |
+| BEW3 | Support planned |
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetMasterAdmin(void* context, BS2_DEVICE_ID deviceId, BS2UserFaceExBlob* masterAdmin);
+```
+
+:::info
+
+[View BS2UserFaceExBlob structure](user_management_api#bs2userfaceexblob) 
+
+:::
+
+## Parameters
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `masterAdmin` : Pointer to store the master admin information
+
+## Return Value
+
+Returns `BS_SDK_SUCCESS` when performed successfully, and returns the corresponding error code when an error occurs.
+
+## Sample Code
+
+```cpp title='C++'
+
+BS2UserFaceExBlob masterAdmin;
+memset(&masterAdmin, 0x0, sizeof(masterAdmin));
+int sdkResult = BS2_GetMasterAdmin(context_, id, &masterAdmin);
+if (BS_SDK_SUCCESS != sdkResult)
+{
+    TRACE("BS2_GetMasterAdmin call failed: %d", sdkResult);
+    return sdkResult;
+}
+
+print(masterAdmin);
+
+if (masterAdmin.cardObjs && 0 < masterAdmin.user.numCards)
+    BS2_ReleaseObject(masterAdmin.cardObjs);
+
+if (masterAdmin.fingerObjs && 0 < masterAdmin.user.numFingers)
+    BS2_ReleaseObject(masterAdmin.fingerObjs);
+
+if (0 < masterAdmin.user.numFaces)
+{
+    if (masterAdmin.faceObjs)
+        BS2_ReleaseObject(masterAdmin.faceObjs);
+    else if (masterAdmin.faceExObjs)
+        BS2_ReleaseObject(masterAdmin.faceExObjs);
+}
+
+```
+
+```cpp title='C#'
+
+BS2UserFaceExBlob userBlob;
+Console.WriteLine("Trying to get master admin");
+BS2ErrorCode sdkResult = (BS2ErrorCode)API.BS2_GetMasterAdmin(sdkContext, deviceID, out userBlob);
+if (sdkResult != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0})." , sdkResult);
+    return;
+}
+
+print(userBlob);
+
+if (userBlob.cardObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.cardObjs);
+if (userBlob.fingerObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.fingerObjs);
+if (userBlob.faceObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.faceObjs);
+if (userBlob.faceExObjs != IntPtr.Zero)
+    API.BS2_ReleaseObject(userBlob.faceExObjs);
+
+```
+
+## See Also
+
+[BS2_SetMasterAdmin](bs2_setmasteradmin)

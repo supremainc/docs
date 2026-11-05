@@ -1,0 +1,49 @@
+# BS2_GetAllBlackList
+
+Retrieves all blacklists.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllBlackList(void* context, uint32_t deviceId, BS2BlackList** blacklistObj, uint32_t* numBlacklist);
+```
+
+:::info
+
+[See BS2BlackList Structure](blacklist_api#bs2blacklist) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `blacklistObj` : Blacklist list pointer
+
+- \[Out\] `numBlacklist` : Number of blacklists
+
+:::info
+
+The `blacklistObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetBlackList](bs2_getblacklist)
+
+[BS2_SetBlackList](bs2_setblacklist)
+
+[BS2_RemoveBlackList](bs2_removeblacklist)
+
+[BS2_RemoveAllBlackList](bs2_removeallblacklist)

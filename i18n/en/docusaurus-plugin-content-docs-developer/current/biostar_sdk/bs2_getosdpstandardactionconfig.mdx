@@ -1,0 +1,51 @@
+# BS2_GetOsdpStandardActionConfig
+
+<Badge only>+ v2.9.1</Badge> Get the LED/buzzer settings for each action of the OSDP device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetOsdpStandardActionConfig(void* context, uint32_t deviceId, BS2OsdpStandardActionConfig* config);
+```
+
+:::info
+
+[See BS2OsdpStandardActionConfig Structure](configuration_api#bs2osdpstandardactionconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[In\] `config` : Pointer to store LED/buzzer information of OSDP device
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+int sdkResult = BS2_GetOsdpStandardActionConfig(context_, id, &config);
+if (BS_SDK_SUCCESS != sdkResult)
+    printf("BS2_GetOsdpStandardActionConfig call failed: %d", sdkResult);
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetOsdpStandardActionConfig(sdkContext, deviceID, out config);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+    Console.WriteLine("Got error({0}).", result);
+else
+    Console.WriteLine("Call success.");
+return result;
+```
+
+## See Also
+
+[BS2_SetOsdpStandardActionConfig](bs2_setosdpstandardactionconfig)

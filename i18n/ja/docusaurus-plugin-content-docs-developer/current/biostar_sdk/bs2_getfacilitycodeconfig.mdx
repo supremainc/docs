@@ -1,0 +1,33 @@
+# BS2_GetFacilityCodeConfig
+
+<Badge only>+ v2.9.9</Badge> Get the `BS2FacilityCode` used as an authentication code when the OSDP connection between the Door Interface (DI-24) and the master device is lost.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetFacilityCodeConfig(void* context, BS2_DEVICE_ID deviceId, BS2FacilityCodeConfig* config);
+```
+
+:::info
+
+[See BS2FacilityCodeConfig Structure](configuration_api#bs2facilitycodeconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[Out\] `config` : Pointer to store credentials `BS2FacilityCodeConfig`
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_SetFacilityCodeConfig](bs2_setfacilitycodeconfig)

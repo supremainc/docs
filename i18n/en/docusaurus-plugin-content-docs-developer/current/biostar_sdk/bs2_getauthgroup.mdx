@@ -1,0 +1,53 @@
+# BS2_GetAuthGroup
+
+Retrieves selected authentication groups.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAuthGroup(void* context, uint32_t deviceId, uint32_t* authGroupIds, uint32_t authGroupIdCount, BS2AuthGroup** authGroupObj, uint32_t* numAuthGroup);
+```
+
+:::info
+
+[See BS2AuthGroup Structure](face_api#bs2authgroup) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `authGroupIds` : List of authentication groups to retrieve
+
+- \[In\] `authGroupIdCount` : Number of authentication groups to retrieve
+
+- \[Out\] `authGroupObj` : Authentication group list pointer
+
+- \[Out\] `numAuthGroup` : Number of authentication groups
+
+:::info
+
+The `authGroupObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetAllAuthGroup](bs2_getallauthgroup)
+
+[BS2_SetAuthGroup](bs2_setauthgroup)
+
+[BS2_RemoveAuthGroup](bs2_removeauthgroup)
+
+[BS2_RemoveAllAuthGroup](bs2_removeallauthgroup)

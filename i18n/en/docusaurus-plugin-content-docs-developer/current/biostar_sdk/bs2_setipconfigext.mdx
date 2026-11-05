@@ -1,0 +1,31 @@
+# BS2_SetIPConfigExt
+
+Stores DNS and server URL settings on the device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetIPConfigExt(void* context, uint32_t deviceId, BS2IpConfigExt* config);
+```
+
+:::info
+
+[See BS2IpConfigExt Structure](configuration_api#bs2ipconfigext) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : DNS, server URL configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,33 @@
+# BS2_SetUserPhraseHandler
+
+<Badge only>+ v2.7.0</Badge> Registers the server user phrase handler.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetUserPhraseHandler(void* context, OnUserPhrase ptrQuery);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `ptrQuery` : Callback function to ask for user phrase to the server after successful authentication
+
+:::info
+
+To use the server matching service, the [BS2DisplayConfig](configuration_api#bs2displayconfig)'s `queryUserPhrase` should be set as true.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS`' will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_ResponseUserPhrase](bs2_responseuserphrase)

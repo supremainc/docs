@@ -1,0 +1,59 @@
+# BS2_GetAllIntrusionAlarmZoneStatus
+
+Retrieves the status of all Intrusion Alarm zones.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetAllIntrusionAlarmZoneStatus(void* context, uint32_t deviceId, BS2ZoneStatus** zoneStatusObj, uint32_t* numZoneStatus);
+```
+
+:::info
+
+[See BS2ZoneStatus Structure](zone_control_api#bs2zonestatus) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zoneIds` : List of Intrusion alarm zone IDs to retrieve
+
+- \[In\] `zoneIdCount` : Size of Intrusion alarm zone ID list
+
+- \[Out\] `zoneStatusObj` : Zone status list pointer
+
+- \[Out\] `numZoneStatus` : Number of zone status list
+
+:::info
+
+The `zoneStatusObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetIntrusionAlarmZone](bs2_getintrusionalarmzone)
+
+[BS2_GetIntrusionAlarmZoneStatus](bs2_getintrusionalarmzonestatus)
+
+[BS2_SetIntrusionAlarmZone](bs2_setintrusionalarmzone)
+
+[BS2_SetIntrusionAlarmZoneAlarm](bs2_setintrusionalarmzonealarm)
+
+[BS2_RemoveIntrusionAlarmZone](bs2_removeintrusionalarmzone)
+
+[BS2_RemoveAllIntrusionAlarmZone](bs2_removeallintrusionalarmzone)
+
+[BS2_SetIntrusionAlarmZoneArm](bs2_setintrusionalarmzonearm)

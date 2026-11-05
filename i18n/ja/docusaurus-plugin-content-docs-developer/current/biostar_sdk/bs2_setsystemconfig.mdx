@@ -1,0 +1,31 @@
+# BS2_SetSystemConfig
+
+Stores system settings on the device
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSystemConfig(void* context, uint32_t deviceId, BS2SystemConfig* config);
+```
+
+:::info
+
+[See BS2SystemConfig Structure](configuration_api#bs2systemconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : System configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,49 @@
+# BS2_SetScheduledLockUnlockZone
+
+Configures a Scheduled Lock/Unlock zone.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetScheduledLockUnlockZone(void* context, uint32_t deviceId, BS2ScheduledLockUnlockZone* zones, uint32_t zoneCount);
+```
+
+:::info
+
+[See BS2ScheduledLockUnlockZone Structure](zone_control_api#bs2scheduledlockunlockzone) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `zones` : List of Scheduled Lock/Unlock zones
+
+- \[In\] `zoneCount` : Number of Scheduled Lock/Unlock zones
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetScheduledLockUnlockZone](bs2_getscheduledlockunlockzone)
+
+[BS2_GetAllScheduledLockUnlockZone](bs2_getallscheduledlockunlockzone)
+
+[BS2_GetScheduledLockUnlockZoneStatus](bs2_getscheduledlockunlockzonestatus)
+
+[BS2_GetAllScheduledLockUnlockZoneStatus](bs2_getallscheduledlockunlockzonestatus)
+
+[BS2_SetScheduledLockUnlockZoneAlarm](bs2_setscheduledlockunlockzonealarm)
+
+[BS2_RemoveScheduledLockUnlockZone](bs2_removescheduledlockunlockzone)
+
+[BS2_RemoveAllScheduledLockUnlockZone](bs2_removeallscheduledlockunlockzone)

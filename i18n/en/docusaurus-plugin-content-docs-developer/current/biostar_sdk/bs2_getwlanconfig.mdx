@@ -1,0 +1,37 @@
+# BS2_GetWlanConfig
+
+Retrieves wireless LAN settings from the device.
+
+:::info
+
+You are not able to retrieve a key value due to security reason.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetWlanConfig(void* context, uint32_t deviceId, BS2WlanConfig* config);
+```
+
+:::info
+
+[See BS2WlanConfig Structure](configuration_api#bs2wlanconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `config` : Wireless LAN configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

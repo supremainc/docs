@@ -1,0 +1,31 @@
+# BS2_MakePinCode
+
+Encrypts normal characters to PIN.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_MakePinCode(void* context, char* plaintext, unsigned char* ciphertext);
+```
+
+## Parameter
+
+- \[In\] `context` : Device management Context
+
+- \[In\] `plaintext` : Plain text string to be encrypted.
+
+- \[Out\] `ciphertext` : Buffer to store the encrypted data.
+
+:::info
+
+`ciphertext` buffer size is `BS2_PIN_HASH_SIZE`.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

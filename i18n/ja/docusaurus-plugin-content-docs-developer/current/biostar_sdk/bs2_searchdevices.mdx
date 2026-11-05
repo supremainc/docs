@@ -1,0 +1,31 @@
+# BS2_SearchDevices
+
+Searches BioStar devices from the subnet and refresh the available device list in current Context. Use the [BS2_GetDevices](bs2_getdevices) function to get the device list.
+
+:::info
+
+This will overwrite the existing device list.
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SearchDevices(void* context);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetDevices](bs2_getdevices)

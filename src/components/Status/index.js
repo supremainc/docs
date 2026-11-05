@@ -48,3 +48,9 @@ export function Bottompoint() {
         <span className={clsx(styles.status, styles.bottom)}></span>
     )
 }
+
+export function Dep({children}) {
+    return (
+        <span className={styles.deprecate}>{children}</span>
+    )
+}

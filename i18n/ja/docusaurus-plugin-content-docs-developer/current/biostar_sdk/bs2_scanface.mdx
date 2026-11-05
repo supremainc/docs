@@ -1,0 +1,35 @@
+# BS2_ScanFace
+
+**IR Face based** Scans the face from a device and extracts template and image data.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ScanFace(void* context, uint32_t deviceId, BS2Face* face, uint8_t erollmentThreshold, OnReadyToScan ptrReadyToScan);
+```
+
+:::info
+
+[See BS2Face Structure](face_api#bs2face) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[Out\] `face` : Pointer to store the face data
+
+- \[In\] `erollmentThreshold` : Required enrollment threshold - Please refer to the [BS2FaceConfig.enrollThreshold](configuration_api#bs2faceconfig)
+
+- \[Out\] `ptrReadyToScan` : Callback function that is called when it's ready to scan a face 
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+  If there is an error, the corresponding error code will be returned.

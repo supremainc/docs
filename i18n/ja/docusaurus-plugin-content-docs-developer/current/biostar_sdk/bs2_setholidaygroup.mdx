@@ -1,0 +1,43 @@
+# BS2_SetHolidayGroup
+
+Configures a holiday group.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetHolidayGroup(void* context, uint32_t deviceId, BS2HolidayGroup* holidayGroups, uint32_t holidayGroupCount);
+```
+
+:::info
+
+[See BS2HolidayGroup Structure](access_control_api#bs2holidaygroup) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `holidayGroups` : List of holiday groups to be stored
+
+- \[In\] `holidayGroupCount` : Number of holiday groups
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetHolidayGroup](bs2_getholidaygroup)
+
+[BS2_GetAllHolidayGroup](bs2_getallholidaygroup)
+
+[BS2_RemoveHolidayGroup](bs2_removeholidaygroup)
+
+[BS2_RemoveAllHolidayGroup](bs2_removeallholidaygroup)

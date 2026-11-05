@@ -1,0 +1,45 @@
+# BS2_GetUserSmallInfosFromDir
+
+<Badge only>+ v2.6.3</Badge> Gets the user information of the given user ID from USB exported data.
+
+The only difference between [BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir) which is using structure [BS2UserBlob](user_management_api#bs2userblob) is that the 5th parameter `BS2UserPhoto` of `BS2UserSmallBlob` is using pointer for efficient memory use.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserSmallInfosFromDir(void* context, const char* szDir, char* uids, uint32_t uidCount, BS2UserSmallBlob* userBlob);
+```
+
+:::info
+
+[See BS2UserSmallBlob Structure](user_management_api#bs2usersmallblob) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `szDir` : Storage path in device
+
+- \[In\] `uids` : User ID list trying to get
+
+- \[In\] `uidCount` : Number of user ID
+
+- \[Out\] `userBlob` : Pointer to store the user information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+## See Also
+
+[BS2_GetUserSmallInfosFromDir](bs2_getusersmallinfosfromdir)
+
+[BS2_GetUserSmallDatasFromDir](bs2_getusersmalldatasfromdir)
+
+[BS2_GetUserSmallInfosExFromDir](bs2_getusersmallinfosexfromdir)
+
+[BS2_GetUserSmallDatasExFromDir](bs2_getusersmalldatasexfromdir)

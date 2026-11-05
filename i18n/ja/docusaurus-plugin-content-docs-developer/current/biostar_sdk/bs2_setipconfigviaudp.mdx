@@ -1,0 +1,31 @@
+# BS2_SetIPConfigViaUDP
+
+Stores IP settings on the device via the UDP broadcasting. This API is not available for the device already connected to the server.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetIPConfigViaUDP(void* context, uint32_t deviceId, BS2IpConfig* config);
+```
+
+:::info
+
+[See BS2IpConfig Structure](configuration_api#bs2ipconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `config` : IP configurations pointer
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

@@ -1,0 +1,97 @@
+# BS2_GetCustomCardConfig
+
+<Badge only>+ v2.9.4</Badge> Retrieves Custom smart card settings.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetCustomCardConfig(void* context, uint32_t deviceId, BS2CustomCardConfig* config);
+```
+
+:::info
+
+[See to structure BS2CustomCardConfig](configuration_api#bs2customcardconfig) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device Identifier
+
+- \[In\] `config` : Pointer to get Custom smart card information
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned. If there is an error, the corresponding error code will be returned.
+
+## Sample Code
+
+```cpp title='C++'
+ConfigControl cc(context);
+DeviceControl dc(context);
+BS2DeviceCapabilities capabilies = { 0, };
+BS2CustomCardConfig config = { 0, };
+
+BS2_DEVICE_ID id = Utility::getSelectedDeviceID(device);
+
+int sdkResult = dc.getDeviceCapabilities(id, capabilies);
+if (BS_SDK_SUCCESS != sdkResult)
+    return sdkResult;
+
+if (!capabilies.customSmartCardSupported)
+{
+    TRACE("Not supported function.");
+    return BS_SDK_ERROR_NOT_SUPPORTED;
+}
+
+sdkResult = cc.getCustomCardConfig(id, config);
+if (BS_SDK_SUCCESS == sdkResult)
+    ConfigControl::print(config);
+else
+    return sdkResult;
+
+if (Utility::isYes("Do you want to scan card test?"))
+{
+    UserControl uc(context);
+    BS2Card cardID;
+
+    sdkResult = uc.scanCard(id, &cardID);
+    if (BS_SDK_SUCCESS == sdkResult)
+        UserControl::print(cardID);
+}
+
+return sdkResult;
+```
+
+```csharp title='C#'
+BS2DeviceCapabilities capa;
+if (!CommonControl.getDeviceCapabilities(sdkContext, deviceID, out capa))
+    return;
+
+if (!Convert.ToBoolean(capa.functionExSupported & (byte)BS2CapabilityFunctionExSupport.FUNCTIONEX_SUPPORT_CUSTOMSMARTCARD))
+{
+    Console.WriteLine("Not supported function.");
+    return;
+}
+
+BS2CustomCardConfig config;
+Console.WriteLine("Trying to get CustomCardConfig");
+BS2ErrorCode result = (BS2ErrorCode)API.BS2_GetCustomCardConfig(sdkContext, deviceID, out config);
+if (result != BS2ErrorCode.BS_SDK_SUCCESS)
+{
+    Console.WriteLine("Got error({0}).", result);
+    return;
+}
+else
+{
+    print(config);
+}
+```
+
+## See Also
+
+[BS2_SetCustomCardConfig](bs2_setcustomcardconfig)

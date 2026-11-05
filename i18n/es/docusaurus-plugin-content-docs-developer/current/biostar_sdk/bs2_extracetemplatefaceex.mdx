@@ -1,0 +1,45 @@
+# BS2_ExtractTemplateFaceEx
+
+<Badge only>+ v2.7.1</Badge> **Visual Face based** Extracts template data by the face image.
+
+It is used to store templates on AOC(Access On Card).
+
+:::caution
+
+The extracted image must be delivered through [BS2_GetNormalizedImageFaceEx](bs2_getnormalizedimagefaceex).
+
+:::
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ExtractTemplateFaceEx(void* context, uint32_t deviceId, const uint8_t* imageData, uint32_t imageDataLen, bool isWarped, BS2TemplateEx* templateEx);
+```
+
+:::info
+
+[See BS2TemplateEx Structure](face_api#bs2templateex) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `imageData` : Image data including face pointer
+
+- \[In\] `imageDataLen` : Size of imageData
+
+- \[In\] `isWarped` : Whether it is WARPped image or not
+
+- \[Out\] `templateEx` : Face template that is extracted from the image pointed by imageData
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.

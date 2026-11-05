@@ -723,6 +723,7 @@ function createSidebars(preview) {
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
             'platform/biostar_x/add-sub-db',
+            'platform/biostar_x/ad-encrypt',
             'platform/biostar_x/remove-server'
           ]
         },

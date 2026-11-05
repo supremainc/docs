@@ -1,0 +1,33 @@
+# BS2_ConnectDeviceIPV6
+
+Connects the device in IPv6 mode using the device identifier.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_ConnectDeviceIPV6(void* context, uint32_t deviceId);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device's ID trying to connect with. 
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS`' will be returned.
+
+  If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_SearchDevices](bs2_searchdevices)
+
+[BS2_ConnectDeviceViaIP](bs2_connectdeviceviaip)
+
+[BS2_DisconnectDevice](bs2_disconnectdevice)
+
+[BS2_ConnectDevice](bs2_connectdevice)

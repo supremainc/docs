@@ -1,0 +1,39 @@
+# BS2_SetSlaveExDevice
+
+In case of CoreStation, Add/Modify/Delete a slave device from the master device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_SetSlaveExDevice(void* context, uint32_t deviceId, uint32_t channelPort, BS2Rs485SlaveDeviceEX* slaveDevices, uint32_t slaveDeviceCount);
+```
+
+:::info
+
+[See BS2Rs485SlaveDevice Structure](slave_control_api#bs2rs485slavedevice) 
+
+:::
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[In\] `deviceId` : Device ID
+
+- \[In\] `channelPort` : Channel port
+
+- \[In\] `slaveDevices` : List of slave device
+
+- \[In\] `slaveDeviceCount` : Number of slave device
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetSlaveExDevice](bs2_getslaveexdevice)

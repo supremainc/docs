@@ -1,0 +1,51 @@
+# BS2_GetUserDatabaseInfoFromDir
+
+Gets all user data(Number of users, cards, fingerprints, faces) from storage path in device.
+
+## Declaration
+
+```cpp
+#include "BS_API.h"
+
+int BS2_GetUserDatabaseInfoFromDir(void* context, const char* szDir, uint32_t* numUsers, uint32_t* numCards, uint32_t* numFingers, uint32_t* numFaces, IsAcceptableUserID ptrIsAcceptableUserID);
+```
+
+## Parameter
+
+- \[In\] `context` : Context
+
+- \[Out\] `szDir` : Storage path in device
+
+- \[Out\] `numUsers` : Number of total users
+
+- \[Out\] `numCards` : Number of total cards
+
+- \[Out\] `numFingers` : Number of total fingerprints
+
+- \[Out\] `numFaces` : Number of total faces
+
+- \[In\] `ptrIsAcceptableUserID` : TBD
+
+:::info
+
+The `zoneObj` variable needs to return the memory to the system by the [BS2_ReleaseObject](bs2_releaseobject) function after being used.
+
+:::
+
+## Return Value
+
+If successfully done, `BS_SDK_SUCCESS` will be returned.
+
+If there is an error, the corresponding error code will be returned.
+
+## See Also
+
+[BS2_GetUserListFromDir](bs2_getuserlistfromdir)
+
+[BS2_GetUserInfosFromDir](bs2_getuserinfosfromdir)
+
+[BS2_GetUserDatasFromDir](bs2_getuserdatasfromdir)
+
+[BS2_GetUserInfosExFromDir](bs2_getuserinfosexfromdir)
+
+[BS2_GetUserDatasExFromDir](bs2_getuserdatasexfromdir)
