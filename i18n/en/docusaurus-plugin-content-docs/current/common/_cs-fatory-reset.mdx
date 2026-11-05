@@ -1,14 +1,46 @@
 ## Factory reset {/* #factory-reset */}
 
-You can factory reset the CoreStation in the Corestation Setup Manager.
-
-1. Access the Corestation Setup Manager and click **CONFIGURE**.
-
-2. Click **Factory Default**.
+Delete all information stored on the device and initialize the settings.
 
 :::info
 
 * You can only use Factory Default when the root certificate is stored on the device.
+
+* For more information on how to initialize the product, contact <Support />.
+
+:::
+
+### Initialize on the device
+
+1. Connect the device to power.
+
+2. Quickly press the **INIT** button three times.
+
+   <Include product='corestation_40'><Image src='/img/device/factory-reset-cs40.png' className='none' alone /></Include>
+
+   <Include product='corestation_20'><Image src='/img/device/factory-reset-cs20.png' className='none' alone /></Include>
+
+3. When the **STATUS LED** blinks yellow, press and hold the **INIT** button.
+
+<PageBreak />
+
+### Initialize in CoreStation Setup Manager
+
+1. Connect the product to the PC using an Ethernet cable.
+
+2. Enter `https://169.254.0.1:3001` in the web browser address field, then open CoreStation Setup Manager.
+
+   :::info
+
+   Use a web browser version 75 or higher of Chrome.
+
+   :::
+
+3. Click **CONFIGURE**.
+
+4. In **Information**, click **Factory Default**.
+
+:::info
 
 * You can view or manage the network settings of CoreStation and monitor the status of slave devices, input and output ports, and Wiegand ports by accessing the Corestation Setup Manager.
 
@@ -27,7 +59,5 @@ You can factory reset the CoreStation in the Corestation Setup Manager.
 * For more information about the CoreStation Setup Manager, see the <Linkto to='device/corestation_setup_manager'>CoreStation Setup Manager</Linkto>.
 
 * The latest BioStar X version can be checked when the device is connected to the network and can be reset.
-
-* For more information, contact the [Suprema Technical Support Team](https://support.supremainc.com).
 
 :::

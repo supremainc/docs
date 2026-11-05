@@ -4,7 +4,7 @@
 
 #### 基本情報
 
-デバイスの基本情報を確認できます。 この情報は編集できません。
+デバイスの基本情報を確認できます。この情報は編集できません。
 
 * <Cmd sid='device_non_editable_fields_product' product='air' />：デバイスの製品名です。
 
@@ -24,19 +24,19 @@
 
 * <Cmd sid='device_edit_actions_reboot' product='air' />：デバイスに問題や異常が発生した場合、リモートで再起動できます。
 
-* <Cmd sid='device_edit_actions_factory_reset' product='air' />：デバイスに保存されているすべての設定を初期化します。 この操作を実行すると、デバイスのすべての設定とデータが削除されます。
+* <Cmd sid='device_edit_actions_factory_reset' product='air' />：デバイスに保存されているすべての設定を初期化します。この操作を実行すると、デバイスのすべての設定とデータが削除されます。
 
-* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />：ネットワーク設定を除くすべての設定を初期化します。 この操作を実行すると、デバイスのすべての設定とデータが削除されますが、ネットワーク設定は保持されます。
+* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />：ネットワーク設定を除くすべての設定を初期化します。この操作を実行すると、デバイスのすべての設定とデータが削除されますが、ネットワーク設定は保持されます。
 
 #### 基本設定
 
 デバイスの基本設定を変更できます。
 
-* <Cmd sid='device_editable_fields_nick_name' product='air' />：デバイス一覧およびログに表示されるデバイスの別名です。 直接編集できます。
+* <Cmd sid='device_editable_fields_nick_name' product='air' />：デバイス一覧およびログに表示されるデバイスの別名です。直接編集できます。
 
 <Xclude type={props.type} ref='xpassd2'>
 
-* <Cmd sid='device_editable_fields_timezone' product='air' />：サイトとデバイスの時計が異なる場合にログを一貫して保つために、デバイスのタイムゾーンを設定します。 サマータイム（Daylight Saving Time、DST）を適用するには、<Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にします。
+* <Cmd sid='device_editable_fields_timezone' product='air' />：サイトとデバイスの時計が異なる場合にログを一貫して保つために、デバイスのタイムゾーンを設定します。サマータイム（Daylight Saving Time、DST）を適用するには、<Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にします。
 
 </Xclude>
 
@@ -106,7 +106,7 @@
 
 #### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {/* #nfcRfcard */}
 
-* <Cmd sid='device_editable_fields_card' product='air' />：トグルスイッチをクリックしてカードによる入退室認証をオンまたはオフにできます。 カード認証に対応するカードの種類を選択してください。
+* <Cmd sid='device_editable_fields_card' product='air' />：トグルスイッチをクリックしてカードによる入退室認証をオンまたはオフにできます。カード認証に対応するカードの種類を選択してください。
 
   * <Cmd sid='device_editable_fields_card_em4100' product='air' />
 
@@ -122,7 +122,7 @@
 
    :::note
 
-   Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。 カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
+   Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
 
    :::
 
@@ -132,13 +132,13 @@
 
 #### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {/* #device_card_wiegand_card */}
 
-Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='air' /> と <Cmd sid='device_card_wiegand_card_hid_prox' product='air' /> のカードを選択できます。 トグルスイッチをクリックして機能を有効にした後、<Cmd sid='device_card_wiegand_card' product='air' />で希望するカード形式を選択してください。
+Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='air' /> と <Cmd sid='device_card_wiegand_card_hid_prox' product='air' /> のカードを選択できます。トグルスイッチをクリックして機能を有効にした後、<Cmd sid='device_card_wiegand_card' product='air' />で希望するカード形式を選択してください。
 
 :::info
 
 * この機能はデバイスによってサポートされない場合があります。
 
-* Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。 カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
+* Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
 
 :::
 
@@ -168,7 +168,7 @@ Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='
 
 <Include type={props.type} ref='cs-20'>
 
-* <Cmd sid='device_cs20_scb_key' product='air' />：Serial Communication Block (SCB) のセキュリティキーを入力してください。 最大 32 文字まで入力できます。シリアル通信のセキュリティに使用します。
+* <Cmd sid='device_cs20_scb_key' product='air' />：Serial Communication Block (SCB) のセキュリティキーを入力してください。最大 32 文字まで入力できます。シリアル通信のセキュリティに使用します。
 
 * <Cmd sid='device_cs20_scb_key_confirm' product='air' />：セキュリティキーの誤入力を防ぐため、同じ値を再入力してください。
 
@@ -180,7 +180,7 @@ Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='
 
 :::info
 
-* OSDP機器を追加する前に、SCBキーを設定してください。 既に追加されたOSDP機器がある場合、SCBキーを変更できません。
+* OSDP機器を追加する前に、SCBキーを設定してください。既に追加されたOSDP機器がある場合、SCBキーを変更できません。
 
 * サードパーティのOSDP機器メーカーが特定のSCBキーを使用する場合、CS-20でそのOSDP機器と同じキーを設定できます。
 
@@ -218,7 +218,7 @@ Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='
 
 :::info
 
-Fail Safe Lockを使用するには<Cmd>N/C</Cmd>リレーを、Fail Secure Lockを使用するには<Cmd>N/O</Cmd>リレーを接続してください。 リレー接続の詳細は[CoreStation 20 インストールガイド](../../device/corestation_20/installation)を参照してください。
+Fail Safe Lockを使用するには<Cmd>N/C</Cmd>リレーを、Fail Secure Lockを使用するには<Cmd>N/O</Cmd>リレーを接続してください。リレー接続の詳細は[CoreStation 20 インストールガイド](../../device/corestation_20/installation)を参照してください。
 
 :::
 
@@ -236,7 +236,7 @@ Wiegand入力に関連する詳細項目を設定できます。
 
 #### <Cmd sid='device_cs20_supervised_input' product='air' className='normal' />
 
-Supervised InputポートをInputポートとして使用するよう設定でき、Supervised Inputで使用する抵抗値を設定できます。 抵抗値は 1 kΩ、2.2 kΩ、4.7 kΩ、10 kΩ を設定できます。
+Supervised InputポートをInputポートとして使用するよう設定でき、Supervised Inputで使用する抵抗値を設定できます。抵抗値は 1 kΩ、2.2 kΩ、4.7 kΩ、10 kΩ を設定できます。
 
 <Image src='/img/air/bsair-device-panel-edit-info-supervised-input.png' />
 
@@ -260,25 +260,25 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
 <Include type={props.type} ref='xpassd2'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式としてRFカードのみを選択できます。
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。認証方式としてRFカードのみを選択できます。
 
 </Include>
 
 <Include type={props.type} ref='bew3'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式としてRFカードと顔認証を組み合わせて選択できます。
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。認証方式としてRFカードと顔認証を組み合わせて選択できます。
 
 </Include>
 
 <Include type={props.type} ref='bs3'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式として、RFカード、顔認証、ID、PINを組み合わせて選択できます。
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。認証方式として、RFカード、顔認証、ID、PINを組み合わせて選択できます。
 
 </Include>
 
 <Include type={props.type} ref='bs3'>
 
-* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />：認証画面にユーザー名またはIDを表示するかどうかを選択できます。 画面に表示しないように設定するには、<Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> オプションを選択します。
+* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />：認証画面にユーザー名またはIDを表示するかどうかを選択できます。画面に表示しないように設定するには、<Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> オプションを選択します。
 
 * <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />：設定した時間内にクレデンシャルを認証できない場合、認証は失敗します。
 
@@ -298,7 +298,7 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
 :::info
 
-選択したスケジュールに応じて認証方式を個別に設定できます。 例えば、勤務時間中はカード認証のみを許可し、勤務時間外はカードとPINの組み合わせを許可できます。
+選択したスケジュールに応じて認証方式を個別に設定できます。例えば、勤務時間中はカード認証のみを許可し、勤務時間外はカードとPINの組み合わせを許可できます。
 
 :::
 
@@ -344,13 +344,13 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
   * <Cmd sid='new_layout_device_bew3_block_8_4_value1' product='air' />：認証を実行した後にユーザーのマスク着用を確認するか、体温を測定します。
 
-  * <Cmd sid='new_layout_device_bew3_block_8_4_value2' product='air' />：ユーザーのマスク着用を確認するか体温を測定した後に認証を実行します。 この場合、マスクを着用していない、または基準温度を超えているユーザーは認証できません。
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value2' product='air' />：ユーザーのマスク着用を確認するか体温を測定した後に認証を実行します。この場合、マスクを着用していない、または基準温度を超えているユーザーは認証できません。
 
-  * <Cmd sid='new_layout_device_bew3_block_8_4_value3' product='air' />：デバイスをマスク着用の確認または体温測定専用としてのみ使用できます。 この場合、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value3' product='air' />：デバイスをマスク着用の確認または体温測定専用としてのみ使用できます。この場合、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。
 
 * <Cmd sid='bs3_qr_barcode_toogle1' product='air' />：デバイスのカメラによるQR/バーコード認証の使用可否を設定できます。
 
-* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定できます。 この機能を使用するには、<Cmd sid='bs3_qr_barcode_toogle1' product='air' /> オプションを有効にする必要があります。
+* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定できます。この機能を使用するには、<Cmd sid='bs3_qr_barcode_toogle1' product='air' /> オプションを有効にする必要があります。
 
 :::info
 
@@ -386,7 +386,7 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
   <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2,xpassd2'>
 
-  * <Cmd sid='device_edit_tna_mode_option3' product='air' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択できます。
+  * <Cmd sid='device_edit_tna_mode_option3' product='air' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。勤怠イベントに適用するスケジュールを選択できます。
 
   </Include>
 
@@ -462,7 +462,7 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
 ### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {/* #wiegandoutput */}
 
-外部システム（例：アラームパネル）との統合のための機能です。 この機能を使用するには、<Cmd sid='use_wiegand_out_label' product='air' /> オプションを有効にします。
+外部システム（例：アラームパネル）との統合のための機能です。この機能を使用するには、<Cmd sid='use_wiegand_out_label' product='air' /> オプションを有効にします。
 
 * <Cmd sid='wiegand_output_mode' product='air' />：Wiegand 信号の出力モードを設定します。
 
@@ -470,7 +470,7 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
     * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />：エラーコードを設定でき、Wiegand を使用したカード認証に失敗した場合に送信する値を選択できます。
 
-  * <Cmd sid='device_wiegand_output_mode_bypass' product='air' />：Wiegand 認証に関係なく CSN を送信します。 ドア制御機能のないデバイスとして使用する場合に設定します。
+  * <Cmd sid='device_wiegand_output_mode_bypass' product='air' />：Wiegand 認証に関係なく CSN を送信します。ドア制御機能のないデバイスとして使用する場合に設定します。
 
 * <Cmd sid='wiegand_output_info' product='air' />：認証時にデバイスへ出力する情報を選択します。
 
@@ -504,7 +504,7 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
 * <Cmd sid='device_intercom_txt_sip_server_port' product='air' />：SIPサーバーのポートを入力してください。
 
-* <Cmd sid='device_intercom_txt_registration_duration' product='air' />：登録維持時間を入力します。 デバイスは登録維持時間が終了するたびにSIPサーバーへの登録を試みます。
+* <Cmd sid='device_intercom_txt_registration_duration' product='air' />：登録維持時間を入力します。デバイスは登録維持時間が終了するたびにSIPサーバーへの登録を試みます。
 
 * <Cmd sid='device_intercom_txt_sip_username' product='air' />：SIPアカウントのユーザー名を入力してください。
 
@@ -548,7 +548,7 @@ Supervised InputポートをInputポートとして使用するよう設定で�
 
 ### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {/* #rtspStreaming */}
 
-**Real Time Streaming Protocol**（RTSP）ストリーミングの詳細項目を設定できます。 デバイスのカメラを通じてリアルタイムで映像を配信できます。
+**Real Time Streaming Protocol**（RTSP）ストリーミングの詳細項目を設定できます。デバイスのカメラを通じてリアルタイムで映像を配信できます。
 
 * <Cmd sid='device_bs3_rtsp_toogle' product='air' />：RTSPストリーミング機能をオンまたはオフに切り替えます。
 

@@ -2,18 +2,22 @@
 
 Initialize the device's network settings.
 
-1. Power on.
+1. Power on the device.
 
-2. Press the reset button until the device automatically reboots.
+2. Press and hold the Initialize button until the device reboots automatically.
 
-3. Connect the device using the initialized network information.
+3. Network settings initialize as follows. In BioStar X, connect the device using the initialized network information.
 
-   * **TCP/IP Address**: DHCP address assignment (if DHCP address assignment fails, will be set to 169.254.x.x).
+   * **TCP/IP address**: DHCP is enabled, so the device gets an IP address automatically.
 
-   * **Server Mode**: Disable
+      :::info
 
-   * **RS-485**: Default, 115200 bps
+      If DHCP address assignment fails, the device sets the address to 169.254.x.x.
 
-4. Change the TCP/IP or RS-485 information.
+      :::
 
-5. Check if the network information is correctly set after turning the power off and on.
+   * **Server mode**: Prevents the device from requesting a direct connection to the server.
+
+   * **RS-485**: Set as the default, with a baud rate of 115200 bps.
+
+4. Turn the device off and on again. Confirm the network settings are correct.

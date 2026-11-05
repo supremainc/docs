@@ -1,14 +1,46 @@
 ## 工場初期化 {/* #factory-reset */}
 
-CoreStation Setup Manager で工場初期化を実行します。
-
-1. CoreStation Setup Manager に接続し、**CONFIGURE** をクリックします。
-
-2. **Factory Default** をクリックします。
+デバイスに保存されているすべての情報とルート証明書を削除し、設定を初期化します。
 
 :::info
 
 * デバイスにルート証明書が保存されていない場合、工場初期化を実行できません。
+
+* 製品の初期化方法の詳細については <Support />にお問い合わせください。
+
+:::
+
+### デバイスで初期化する
+
+1. 装置に電源を接続してください。
+
+2. **INIT** ボタンをすばやく三回押してください。
+
+   <Include product='corestation_40'><Image src='/img/device/factory-reset-cs40.png' className='none' alone /></Include>
+
+   <Include product='corestation_20'><Image src='/img/device/factory-reset-cs20.png' className='none' alone /></Include>
+
+3. デバイスの **STATUS LED** が黄色に点滅したら、**INIT** ボタンを長押ししてください。
+
+<PageBreak />
+
+### CoreStation Setup Manager で初期化する
+
+1. イーサネットケーブルで製品を PC に接続してください。
+
+2. Web ブラウザーのアドレス入力欄に `https://169.254.0.1:3001` を入力し、CoreStation Setup Manager にアクセスしてください。
+
+   :::info
+
+   Chrome 75 以降の Web ブラウザを使用します。
+
+   :::
+
+3. **CONFIGURE** をクリックします。
+
+4. **Information** 項目で **Factory Default** をクリックしてください。
+
+:::info
 
 * CoreStation Setup Manager に接続して製品のネットワーク設定を管理し、スレーブデバイスや入出力ポート、Wiegand ポートの接続状態を確認します。
 
@@ -20,14 +52,12 @@ CoreStation Setup Manager で工場初期化を実行します。
 
 <Include product='corestation_40'>
 
-* CoreStation Setup Manager は、製品のファームウェア バージョン 1.3.1 以上でサポートされます。 ファームウェア バージョン 1.3.1 未満を使用している場合は、BioStar X に接続してファームウェアを最新バージョンにアップグレードします。
+* CoreStation Setup Manager は、製品のファームウェア バージョン 1.3.1 以上でサポートされます。ファームウェア バージョン 1.3.1 未満を使用している場合は、BioStar X に接続してファームウェアを最新バージョンにアップグレードします。
 
 </Include>
 
-* CoreStation Setup Managerの詳細については、<Linkto to='device/corestation_setup_manager'>CoreStation Setup Manager</Linkto> をご覧ください。
+* CoreStation Setup Manager の詳細については、<Linkto to='device/corestation_setup_manager'>CoreStation Setup Manager</Linkto> をご覧ください。
 
 * BioStar X の最新バージョンは、製品がネットワークに接続され、リセットが可能な状態で確認できます。
-
-* 詳細は [Suprema テクニカルサポート](https://support.supremainc.com)までお問い合わせください。
 
 :::
