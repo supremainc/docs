@@ -12,9 +12,12 @@ function DocCardListForCurrentSidebarCategory({className, prefix}) {
 }
 function DocCardListItem({item, prefix}) {
   return (
-    <article className={clsx(styles.docCardListItem, 'col col--6')}>
-      <DocCard item={item} prefix={prefix} />
-    </article>
+    <>
+      {item.customProps?.subTitle && (<h2 style={{flex: '0 0 100%', padding: '0 var(--ifm-spacing-horizontal)'}}>{item.customProps.subTitle}</h2>)}
+      <article className={clsx(styles.docCardListItem, 'col col--6')}>
+        <DocCard item={item} prefix={prefix} />
+      </article>
+    </>
   );
 }
 export default function DocCardList(props) {

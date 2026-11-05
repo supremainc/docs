@@ -70,6 +70,7 @@ export default {
                 'biostar_sdk/bs2_disabledevicelicense',
                 'biostar_sdk/bs2_querydevicelicense',
                 'biostar_sdk/bs2_initializeex',
+                'biostar_sdk/bs2_setdebugexcallback'
               ]
             },
             {
@@ -284,18 +285,6 @@ export default {
             },
             {
               type: 'category',
-              label: 'Debugging API',
-              className: 'apis',
-              link: {
-                type: 'doc',
-                id: 'biostar_sdk/debugging_api'
-              },
-              items: [
-                'biostar_sdk/bs2_setdebugexcallback'
-              ]
-            },
-            {
-              type: 'category',
               label: 'User Management API',
               className: 'apis',
               link: {
@@ -504,7 +493,13 @@ export default {
                 'biostar_sdk/bs2_setauthgroup',
                 'biostar_sdk/bs2_removeauthgroup',
                 'biostar_sdk/bs2_removeallauthgroup',
-                'biostar_sdk/bs2_scanfaceex',
+                {
+                  type: 'doc',
+                  id: 'biostar_sdk/bs2_scanfaceex',
+                  customProps: {
+                    subTitle: 'FaceEx API'
+                  }
+                },
                 'biostar_sdk/bs2_extracetemplatefaceex',
                 'biostar_sdk/bs2_getnormalizedimagefaceex'
               ]
