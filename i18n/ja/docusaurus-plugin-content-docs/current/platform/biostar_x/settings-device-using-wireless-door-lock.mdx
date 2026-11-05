@@ -1,0 +1,255 @@
+---
+id: settings-device-using-wireless-door-lock
+title: ワイヤレスドアロックの使用
+description: BioStar XでCoreStationにワイヤレスドアロックを登録し、認証モードと状態を管理する方法を説明します。
+---
+
+ワイヤレスドアロックを使用すると、出入口まで配線せずにCoreStationで入退室を制御できます。ワイヤレスドアロックは、CoreStationに接続されたOSDPアンテナと無線で通信します。
+
+このドキュメントでは、デバイスライセンスの有効化から、OSDPアンテナとワイヤレスドアロックの登録、認証モードの設定、状態管理まで、ワイヤレスドアロックの使用方法を説明します。
+
+## 開始する前に
+
+**BioStar X**に登録されたCoreStationにワイヤレスドアロックを追加できます。 CoreStationの登録方法は <DocLink docId='platform/biostar_x/settings-adding-devices' />を参照してください。
+
+### サポート対象バージョンとデバイス
+
+* **CoreStation v1.7.1** 以上、**BioStar X v1.0.0** 以上
+
+* OSDPアンテナ：U&Z CX8936（OSDP v2.2 以上）
+
+* ワイヤレスドアロック：U&Z CX217x（ハンドル）、CX212x（ノブ）
+
+* カード：MIFARE または DESFire タイプのCSNカード
+
+### 接続制限
+
+ワイヤレスドアロックを接続するには、CoreStationにOSDPアンテナが接続されている必要があります。
+
+* CoreStation 1台あたりOSDPアンテナ最大2台
+
+* OSDPアンテナ1台あたりワイヤレスドアロック最大6台（CoreStation 1台あたりワイヤレスドアロック最大12台）
+
+### 準備するもの
+
+* ワイヤレスドアロック用デバイスライセンス（BioStar Xの購入先にお問い合わせください）
+
+* SERVICEKEYカード（ワイヤレスドアロックの購入先から提供されます）
+
+:::info
+
+接続予定のワイヤレスドアロックの台数分、最大 12 台までデバイスライセンスを発行できます。複数のデバイスライセンスを有効化しても 12 台を超えることはできません。
+
+:::
+
+## ワイヤレスドアロックの登録
+
+<Steps>
+<Step>
+
+### デバイスライセンスの有効化
+
+ワイヤレスドアロックを登録して使用するには、別途デバイスライセンスが必要です。
+
+**ワイヤレスドアロック**のデバイスライセンスは、**BioStar X**でCoreStationに有効化できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.server.license.device' product='2' />をクリックします。
+
+3. <Cmd sid='user.list.csvImport.browse' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+
+4. 発行されたワイヤレスドアロックのデバイスライセンスを読み込みます。
+
+5. <Cmd sid='setting.server.license.device.list' product='2' /> を確認し、デバイスライセンスを有効化するには <Cmd sid='setting.server.license.button.activate' product='2' /> ボタンをクリックします。
+
+:::info
+
+* ライセンスの有効化に失敗した場合は、エラーメッセージを確認し、再試行してください。
+
+* デバイスライセンスファイルは暗号化されているため、任意に変更できません。
+
+* デバイスライセンスはデバイスのシリアル番号（S/N）を基準に発行されます。不正な方法でデバイスのシリアル番号（S/N）を変更した場合、ライセンスの保証サービスは提供されません。
+
+* デバイスライセンスの詳細については、<DocLink docId='platform/biostar_x/licensing#deviceLicense' />をご参照ください。
+
+:::
+
+</Step>
+<Step>
+
+### OSDPアンテナの登録
+
+CoreStationにワイヤレスドアロックを追加するには、先にOSDPアンテナを登録する必要があります。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> をクリック。
+
+3. <Cmd sid='menu.device.allDeviceGroups' product='2' /> リストでCoreStationデバイスを右クリックします。
+
+4. ポップアップメニューで <Cmd sid='device.menu.addOsdpDevice' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-list-add-osdp.png' />
+
+5. <Cmd sid='device.menu.selectOsdpDeviceType' product='2' /> ウィンドウが表示されたら、<Cmd sid='device.info.osdpModule' product='2' /> を選択し、<Cmd sid='button.ok' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-select-osdp-antenna.png' />
+
+6. ポートリストが表示されたら、<Cmd sid='device.info.portStatus' product='2' /> が <Cmd sid='device.info.portStatusAvailable' product='2' /> のポートから、OSDPアンテナの追加先ポートを選択します。
+
+   <Image src='/img/biostarx-setting-device-add-osdp-module.png' />
+
+7. <Cmd sid='device.info.information' product='2' />、<Cmd sid='device.info.osdpNetworkRS485' product='2' /> 項目を設定し、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-add-osdp-device.png' />
+
+   :::note
+
+   <Cmd sid='device.info.osdpOsdpID' product='2' /> の既定値は0です。 OSDPアンテナに設定されている <Cmd sid='device.info.osdpOsdpID' product='2' /> を入力します。
+
+   :::
+
+</Step>
+<Step>
+
+### ワイヤレスドアロックの登録
+
+OSDPアンテナにワイヤレスドアロックを登録します。
+
+1. 追加したOSDPアンテナを右クリックします。
+
+2. ポップアップメニューで <Cmd sid='device.menu.autoAddWirelessDoorLock' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-osdp-popup.png' />
+
+3. 提供されたSERVICEKEYカードをワイヤレスドアロックにかざします。
+
+デバイスリストで、OSDPアンテナの下に接続したワイヤレスドアロックが表示されます。接続に成功すると、ワイヤレスドアロックの青色LEDが点灯します。
+
+<Image src='/img/biostarx-setting-device-osdp-conneted-wireless-door-lock.png' />
+
+:::info
+
+* SERVICEKEYカードは、ワイヤレスドアロックをサービスモードに切り替え、OSDPアンテナとペアリングして連動する際にかざす専用カードです。 SERVICEKEYカードは、ワイヤレスドアロックの購入先から入手できます。
+
+* 接続したワイヤレスドアロックは、出入口の入室または退室デバイスとして設定できます。出入口の登録の詳細については、<DocLink docId='platform/biostar_x/settings-door-add' />を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### 認証モードを設定する {/* #setAuthmode */}
+
+ワイヤレスドアロックで入退室する際に、認証モードを設定できます。ワイヤレスドアロックで認証モードとして使用できるのはCSNカードのみです。
+
+1. デバイス一覧でワイヤレスドアロックをクリックします。
+
+2. <Cmd sid='device.info.authentication' product='2' /> セクションの <Cmd sid='device.info.authenticationMode' product='2' /> で <Cmd sid='button.plusAdd' product='2' /> ボタンをクリックします。
+
+3. <Cmd sid='device.addNewAuthMode' product='2' /> ウィンドウが表示されたら、<Cmd sid='user.authMode.card' product='2' />を空いている領域にドラッグ＆ドロップします。
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-auth-mode.png' />
+
+4. 「<Cmd sid='schedule.schedule' product='2' />」項目で使用するスケジュールを選択します。
+
+5. <Cmd sid='button.ok' product='2' /> ボタンをクリックして認証モードを登録します。
+
+6. 設定を保存するには、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックしてください。
+
+:::info
+
+* CSNカードでワイヤレスドアロックの認証を試みて成功すると、緑色LEDが点灯します。認証に失敗すると、赤色LEDが点灯します。
+
+* 使用するスケジュールがない場合は、<Cmd sid='schedule.schedule' product='2' /> 項目で <Cmd sid='button.plusAddSchedule' product='2' /> ボタンをクリックしてスケジュールを追加できます。
+
+* スケジュール追加の詳細は <DocLink docId='platform/biostar_x/settings-schedule' />を参照してください。
+
+:::
+
+</Step>
+</Steps>
+
+## ワイヤレスドアロックの設定を変更する
+
+ワイヤレスドアロックを登録した後も、デバイス名、状態、認証設定を変更できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> をクリック。
+
+3. デバイス一覧でワイヤレスドアロックをクリックします。
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-details.png' />
+
+   * <Cmd sid='device.info.osdpName' product='2' />：デバイス名を入力できます。入力しなくても自動的に割り当てられます。
+
+   * <Cmd sid='device.info.osdpStatus' product='2' />：デバイスの状態を設定できます。<Cmd sid='common.inactive' product='2' />に設定すると、CoreStationはワイヤレスドアロックと通信しません。ワイヤレスドアロックを点検する場合や電池を交換する場合に使用します。デバイス一覧で状態を変更する方法は<DocLink inner='#changeStatus' />を参照してください。
+
+   * <Cmd sid='device.info.authenticationMode' product='2' />：ワイヤレスドアロックで認証モードとして使用できるのはCSNカードのみです。詳細については、<DocLink inner='#setAuthmode' />をご参照ください。
+
+   * <Cmd sid='device.info.usersHaveFullAccess' product='2' />：ワイヤレスドアロックが接続されたCoreStationに登録されたユーザーに、入退室グループを設定せずにすべての入退室権限を付与できます。
+
+4. 設定を保存するには、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+## ワイヤレスドアロックの状態を変更する {/* #changeStatus */}
+
+デバイスリストでワイヤレスドアロックの状態を有効化または無効化できます。
+
+1. <Cmd sid='menu.device.allDeviceGroups' product='2' />のワイヤレスドアロックで右クリックしてください。
+
+2. ポップアップメニューで <Cmd sid='device.menu.activeWirelessDoorLock' product='2' /> または <Cmd sid='device.menu.deActiveWirelessDoorLock' product='2' /> をクリックします。
+
+<Image src='/img/biostarx-setting-device-status-wl-door-lock.png' />
+
+## ワイヤレスドアロックの削除
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> をクリック。
+
+3. デバイス一覧で削除する無線ドアロックの一番左にあるチェックボックスをクリックします。
+
+4. デバイスリストの右上にある <Cmd sid='button.deleteDevice' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-list-remove-wl-door-lock.png' />
+
+5. 削除確認メッセージが表示されたら、<Cmd sid='button.delete' product='2' /> ボタンをクリックしてください。
+
+:::tip
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-setting-device-remove-wl-door-lock.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+デバイス一覧の左側にある<Cmd sid='menu.device.allDeviceGroups' product='2' />一覧からも無線ドアロックを削除できます。削除する無線ドアロックを右クリックし、<Cmd sid='device.menu.deleteWirelessDoorLock' product='2' />をクリックします。
+
+</Column>
+</Columns>
+
+:::
+
+:::info
+
+ワイヤレスドアロックを削除しても、CoreStationは有効化済みのデバイスライセンスを保持します。削除したワイヤレスドアロックの台数分、別のワイヤレスドアロックを接続できます。
+
+:::
+
+## モニタリングでワイヤレスドアロックの状態を確認
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.arena' />をクリックします。
+
+2. 画面左側のサイドバーで<Cmd sid='common.gnb.device' product='2' />タブをクリックします。
+
+3. デバイス一覧でワイヤレスドアロックをクリックします。
+
+画面右側に、ワイヤレスドアロックの詳細情報と最近のイベントを確認できるパネルが表示されます。
+
+<Image src='/img/biostarx-monitoring-device-wl-door-lock.png' />
