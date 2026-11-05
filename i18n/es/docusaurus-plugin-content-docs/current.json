@@ -509,7 +509,7 @@
   },
   "sidebar.biostar_air.category.파트너 기술자 관리하기": {
     "message": "Administrar técnicos de socios",
-    "description": "La etiqueta para la categoría 'Administrar técnicos asociados' en la barra lateral 'biostar_air'"
+    "description": "La etiqueta para la categoría \"Administrar técnicos asociados\" en la barra lateral \"biostar_air\""
   },
   "sidebar.aicamwebserver.category.ViOnyx Web Server": {
     "message": "Servidor Web de ViOnyx",
@@ -517,7 +517,7 @@
   },
   "sidebar.aicamwebserver.category.AI 이벤트 관리하기": {
     "message": "Administrar Eventos de IA",
-    "description": "La etiqueta para la categoría 'AI 이벤트 관리하기' en la barra lateral 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'Administrar eventos de IA' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.카메라 설정하기": {
     "message": "Configurar la Cámara",
@@ -681,18 +681,22 @@
   },
   "sidebar.biostar_air.category.구역 관리": {
     "message": "Administración de Zonas",
-    "description": "The label for category '구역 관리' in sidebar 'biostar_air'"
+    "description": "La etiqueta para la categoría 'Administrar zonas' en la barra lateral 'biostar_air'"
   },
   "sidebar.biostar_air.category.안전": {
     "message": "Seguridad",
-    "description": "The label for category '안전' in sidebar 'biostar_air'"
+    "description": "La etiqueta para la categoría 'Seguridad' en la barra lateral 'biostar_air'"
   },
   "sidebar.biostar_air.category.SSO & SCIM 설정하기": {
     "message": "Configurar SSO Y SCIM",
-    "description": "The label for category 'SSO & SCIM 설정하기' in sidebar 'biostar_air'"
+    "description": "La etiqueta para la categoría 'Configurar SSO y SCIM' en la barra lateral 'biostar_air'"
+  },
+  "sidebar.biostarx.category.감사 추적 관리하기": {
+    "message": "Gestionar Registro De Auditoría",
+    "description": "La etiqueta para la categoría 'Administrar el registro de auditoría' en la barra lateral 'biostarx'"
   },
   "sidebar.aicamwebserver.category.출입 통제 관리하기": {
     "message": "Administrar Control De Acceso",
-    "description": "The label for category '출입 통제 관리하기' in sidebar 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'Administrar el control de acceso' en la barra lateral 'aicamwebserver'"
   }
 }
