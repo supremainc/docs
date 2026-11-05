@@ -18,11 +18,79 @@ BioStar 2 Device SDK 패키지는 다음과 같은 폴더와 파일로 구성되
 
 ## 프레임워크
 
-![Framework](/img/common/biostar_2_sdk_framework_1.png)
+<Image src='/img/common/biostar_2_sdk_framework_1.png' width='80%' className='none' />
 
 ## 워크플로우
 
-![Workflow](/img/common/workflow.png)
+```mermaid
+---
+config:
+  theme: base
+  sequence:
+    mirrorActors: false
+  themeCSS: 'background-color: #ffffff; border-radius: 8px;'
+  themeVariables:
+    actorBkg: '#d4effa'
+    actorBorder: '#5b8fa8'
+    actorTextColor: '#000000'
+    actorLineColor: '#7aa7bd'
+    signalColor: '#000000'
+    signalTextColor: '#000000'
+    activationBkgColor: '#d3d3d3'
+    activationBorderColor: '#8c8c8c'
+    noteBkgColor: 'transparent'
+    noteBorderColor: 'transparent'
+    noteTextColor: '#000000'
+---
+sequenceDiagram
+    participant App as 3rdParty #58;<br/>Application [1]
+    participant Mgr as null #58;<br/>SFDeviceMgr [1]
+    participant Dev as null #58;<br/>SFDevice [1]
+    participant TCP as Network task<br/>manager #58; TCP task [1]
+    participant Pkt as Network task manager #58;<br/>Packet task [1]
+
+    App->>+Mgr: BS_GetLog
+    Note right of Mgr: Handle GetLog
+    Mgr->>+Dev: GetLog
+    Note right of Dev: Handle GetLog
+
+    Dev->>+TCP: Request to<br/>send packets
+    Note right of TCP: Sending to network
+    deactivate TCP
+    TCP->>+Dev: Got ACK
+    Note right of Dev: Update timestamp
+    deactivate Dev
+
+    TCP->>+Pkt: Push received<br/>packet onto queue
+    Note right of Pkt: Accumulate payload in parser
+    deactivate Pkt
+    Pkt->>+Pkt: Peek at next item
+    Note right of Pkt: Parsing payload
+    deactivate Pkt
+
+    TCP->>+Pkt: Push received<br/>packet onto queue
+    Note right of Pkt: Accumulate payload in parser
+    deactivate Pkt
+    Pkt->>+Pkt: Peek at next item
+    Note right of Pkt: Parsing payload
+    Pkt->>+Dev: Notifies the SFDevice that a log<br/>record has been added.
+    deactivate Pkt
+    Note right of Dev: Update timestamp
+    deactivate Dev
+
+    TCP->>+Pkt: Push last packet<br/>onto queue
+    Note right of Pkt: Accumulate payload in parser
+    deactivate Pkt
+    Pkt->>+Pkt: Peek at next item
+    Note right of Pkt: Parsing payload
+    Pkt->>+Dev: Notifies the SFDevice that a log<br/>record has been added.
+    deactivate Pkt
+    Note right of Dev: Update timestamp
+    deactivate Dev
+
+    Dev-->>-Mgr: return result
+    Mgr-->>-App: return result
+```
 
 ## 호환되는 장치
 

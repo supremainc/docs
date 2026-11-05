@@ -603,7 +603,7 @@ const config = {
               },
               {
                 label: 'BioStar Device SDK',
-                to: '/developer/biostar_sdk/start'
+                to: 'developer/biostar_sdk/start',
               },
               {
                 label: 'BioStar 2 API',
