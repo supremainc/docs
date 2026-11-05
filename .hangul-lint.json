@@ -1,11 +1,12 @@
-{ 
-   "ignoreWords": [
-      "BioStar",
-      "특성상",
-      "쿼리문",
-      "구조체",
-      "밀리초"
-   ], 
-   "disabledRules": [], 
-   "rules": [] 
+{
+  "ignoreWords": [
+    "BioStar",
+    "특성상",
+    "쿼리문",
+    "구조체",
+    "밀리초",
+    "페어링"
+  ],
+  "disabledRules": [],
+  "rules": []
 }

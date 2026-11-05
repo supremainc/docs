@@ -1,0 +1,255 @@
+---
+id: settings-device-using-wireless-door-lock
+title: Cómo Usar Una Cerradura Inalámbrica
+description: Este documento explica cómo inscribir una cerradura inalámbrica en CoreStation con BioStar X y administrar modos de autenticación y estado.
+---
+
+Una cerradura inalámbrica permite que CoreStation controle el acceso sin cablear hasta la puerta. La cerradura inalámbrica se comunica con la antena OSDP conectada a CoreStation.
+
+Este documento explica cómo usar una cerradura inalámbrica. Active una licencia, agregue la antena OSDP y la cerradura. Establezca modos de autenticación y gestione el estado.
+
+## Antes de comenzar
+
+Agregue una cerradura inalámbrica a una CoreStation inscrita en **BioStar X**. Consulte <DocLink docId='platform/biostar_x/settings-adding-devices' /> para obtener más información sobre cómo inscribir CoreStation.
+
+### Versiones y dispositivos compatibles
+
+* **CoreStation v1.7.1** o posterior, **BioStar X v1.0.0** o posterior
+
+* Antena OSDP: U&Z CX8936 (OSDP v2.2 o posterior)
+
+* Cerradura inalámbrica U&Z: CX217x (Manija), CX212x (Perilla)
+
+* Tarjeta: tarjeta CSN, tipo MIFARE o DESFire
+
+### Límites de conexión
+
+Conecte una antena OSDP a CoreStation antes de conectar una cerradura inalámbrica.
+
+* Hasta 2 antenas OSDP por 1 CoreStation
+
+* Hasta 6 cerraduras inalámbricas por 1 antena OSDP (hasta 12 por 1 CoreStation)
+
+### Requisitos previos
+
+* Licencia de dispositivo de cerradura inalámbrica (comuníquese con su distribuidor de BioStar X)
+
+* Tarjeta SERVICEKEY (proporcionada por el proveedor de la cerradura inalámbrica)
+
+:::info
+
+Se puede emitir una licencia de dispositivo para hasta 12 dispositivos, equivalente al número de cerraduras inalámbricas que se deseen conectar. El total no puede superar 12 dispositivos, independientemente de la cantidad de licencias de dispositivo.
+
+:::
+
+## Agregar cerradura inalámbrica
+
+<Steps>
+<Step>
+
+### Activar una licencia de dispositivo
+
+Inscribir y usar la cerradura inalámbrica requiere una licencia de dispositivo independiente.
+
+Use **BioStar X** para activar licencias de dispositivo de cerradura inalámbrica en una CoreStation.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.server.license.device' product='2' /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid='user.list.csvImport.browse' product='2' />.
+
+   <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+
+4. Cargue la licencia de dispositivo de cerradura inalámbrica que recibió.
+
+5. Marca <Cmd sid='setting.server.license.device.list' product='2' />, y para activar la licencia del dispositivo, haz clic en <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+:::info
+
+* Si la activación de la licencia falla, revise el mensaje de error e inténtelo de nuevo.
+
+* El archivo de licencia del dispositivo está cifrado y no puede modificarse de forma arbitraria.
+
+* El número de serie (S/N) determina la licencia del dispositivo. Si cambia el número de serie (S/N) del dispositivo sin autorización, Suprema no ofrece servicio de garantía para la licencia.
+
+* Para obtener más información sobre las licencias de dispositivos, consulte <DocLink docId='platform/biostar_x/licensing#deviceLicense' />.
+
+:::
+
+</Step>
+<Step>
+
+### Agregar antena OSDP
+
+Para agregar una cerradura inalámbrica a CoreStation, primero agregue la antena OSDP.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+
+3. Haga clic con el botón derecho en el dispositivo CoreStation en la lista <Cmd sid='menu.device.allDeviceGroups' product='2' />.
+
+4. Haga clic en <Cmd sid='device.menu.addOsdpDevice' product='2' /> en el menú emergente.
+
+   <Image src='/img/biostarx-setting-device-list-add-osdp.png' />
+
+5. Cuando aparezca la ventana <Cmd sid='device.menu.selectOsdpDeviceType' product='2' />, seleccione <Cmd sid='device.info.osdpModule' product='2' /> y haga clic en <Cmd sid='button.ok' product='2' />.
+
+   <Image src='/img/biostarx-setting-device-select-osdp-antenna.png' />
+
+6. Cuando aparezca la lista de puertos, seleccione un puerto con <Cmd sid='device.info.portStatus' product='2' /> configurado en <Cmd sid='device.info.portStatusAvailable' product='2' /> para agregar la antena OSDP.
+
+   <Image src='/img/biostarx-setting-device-add-osdp-module.png' />
+
+7. Configure <Cmd sid='device.info.information' product='2' /> y <Cmd sid='device.info.osdpNetworkRS485' product='2' />, y luego haga clic en <Cmd sid='button.apply' product='2' />.
+
+   <Image src='/img/biostarx-setting-device-add-osdp-device.png' />
+
+   :::note
+
+   El valor predeterminado de <Cmd sid='device.info.osdpOsdpID' product='2' /> es 0. Ingrese el <Cmd sid='device.info.osdpOsdpID' product='2' /> configurado en la antena OSDP.
+
+   :::
+
+</Step>
+<Step>
+
+### Agregar cerradura inalámbrica
+
+Agregue la cerradura inalámbrica con la antena OSDP.
+
+1. Haga clic con el botón derecho en la antena OSDP agregada.
+
+2. Haga clic en <Cmd sid='device.menu.autoAddWirelessDoorLock' product='2' /> en el menú emergente.
+
+   <Image src='/img/biostarx-setting-device-osdp-popup.png' />
+
+3. Acerque la tarjeta SERVICEKEY proporcionada a la cerradura inalámbrica.
+
+La lista de dispositivos muestra la cerradura inalámbrica conectada bajo la antena OSDP. Cuando la conexión se complete, el LED azul de la cerradura inalámbrica se enciende.
+
+<Image src='/img/biostarx-setting-device-osdp-conneted-wireless-door-lock.png' />
+
+:::info
+
+* La tarjeta SERVICEKEY es una tarjeta dedicada. Acérquela para entrar en el modo de servicio y emparejarla con la antena OSDP. Obtenga la tarjeta SERVICEKEY del proveedor de la cerradura inalámbrica.
+
+* Configure la cerradura inalámbrica conectada como dispositivo de entrada o salida para una puerta. Para obtener más información sobre el registro de puertas, consulte <DocLink docId='platform/biostar_x/settings-door-add' />.
+
+:::
+
+</Step>
+<Step>
+
+### Configurar modo de autenticación {/* #setAuthmode */}
+
+Configure el modo de autenticación para el acceso mediante la cerradura inalámbrica. La cerradura inalámbrica usa solo tarjetas CSN para la autenticación.
+
+1. Haga clic en la cerradura inalámbrica en la lista de dispositivos.
+
+2. En la sección <Cmd sid='device.info.authentication' product='2' />, debajo de <Cmd sid='device.info.authenticationMode' product='2' />, haz clic en <Cmd sid='button.plusAdd' product='2' />.
+
+3. Cuando aparezca la ventana <Cmd sid='device.addNewAuthMode' product='2' />, arrastre <Cmd sid='user.authMode.card' product='2' /> a un área vacía.
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-auth-mode.png' />
+
+4. Seleccione el horario deseado en el campo <Cmd sid='schedule.schedule' product='2' />.
+
+5. Haga clic en <Cmd sid='button.ok' product='2' /> para inscribir el modo de autenticación.
+
+6. Haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla para guardar los ajustes.
+
+:::info
+
+* Cuando la autenticación con una tarjeta CSN es exitosa, la cerradura inalámbrica enciende el LED verde. Si la autenticación falla, la cerradura inalámbrica enciende el LED rojo.
+
+* Si no hay ningún horario disponible, haga clic en <Cmd sid='button.plusAddSchedule' product='2' /> en la opción <Cmd sid='schedule.schedule' product='2' /> para agregar un horario.
+
+* Para obtener más información sobre cómo agregar horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
+
+:::
+
+</Step>
+</Steps>
+
+## Cambiar los ajustes de la cerradura inalámbrica
+
+Después de agregar la cerradura inalámbrica, cambie el nombre del dispositivo, el estado y los ajustes de autenticación.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+
+3. Haga clic en la cerradura inalámbrica en la lista de dispositivos.
+
+   <Image src='/img/biostarx-setting-device-wl-door-lock-details.png' />
+
+   * <Cmd sid='device.info.osdpName' product='2' />: Ingrese un nombre de dispositivo. Si lo deja en blanco, el sistema lo asigna automáticamente.
+
+   * <Cmd sid='device.info.osdpStatus' product='2' />: Establezca el estado del dispositivo. Si establece <Cmd sid='common.inactive' product='2' /> Inactivo, CoreStation no se comunica con la cerradura inalámbrica. Use esta opción al inspeccionar la cerradura inalámbrica o al reemplazar la batería. Para obtener información sobre cómo cambiar el estado en la lista de dispositivos, consulte <DocLink inner='#changeStatus' />.
+
+   * <Cmd sid='device.info.authenticationMode' product='2' />: La cerradura inalámbrica solo puede usar una tarjeta CSN como modo de autenticación. Para más información, consulte <DocLink inner='#setAuthmode' />.
+
+   * <Cmd sid='device.info.usersHaveFullAccess' product='2' />: Otorgue acceso total a los usuarios inscritos en la CoreStation conectada sin definir un grupo de acceso.
+
+4. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración.
+
+## Cambiar el estado de la cerradura inalámbrica {/* #changeStatus */}
+
+En la lista de dispositivos, active o desactive la cerradura inalámbrica.
+
+1. Haga clic con el botón derecho en la cerradura inalámbrica en <Cmd sid='menu.device.allDeviceGroups' product='2' />.
+
+2. Haga clic en <Cmd sid='device.menu.activeWirelessDoorLock' product='2' /> o <Cmd sid='device.menu.deActiveWirelessDoorLock' product='2' /> en el menú emergente.
+
+<Image src='/img/biostarx-setting-device-status-wl-door-lock.png' />
+
+## Eliminar cerradura inalámbrica
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+
+3. En la lista de dispositivos, haga clic en la casilla de verificación del extremo izquierdo de la cerradura inalámbrica para eliminarla.
+
+4. Haga clic en <Cmd sid='button.deleteDevice' product='2' /> en la esquina superior derecha de la lista de dispositivos.
+
+   <Image src='/img/biostarx-setting-device-list-remove-wl-door-lock.png' />
+
+5. Cuando aparezca el mensaje de confirmación de eliminación, haz clic en <Cmd sid='button.delete' product='2' />.
+
+:::tip
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-setting-device-remove-wl-door-lock.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+También puede eliminar una cerradura inalámbrica desde la lista <Cmd sid='menu.device.allDeviceGroups' product='2' /> que está a la izquierda de la lista de dispositivos. Haga clic con el botón derecho en la cerradura inalámbrica que desea eliminar y haga clic en <Cmd sid='device.menu.deleteWirelessDoorLock' product='2' />.
+
+</Column>
+</Columns>
+
+:::
+
+:::info
+
+Eliminar una cerradura inalámbrica mantiene activas las licencias de dispositivos en CoreStation. El sistema permite la misma cantidad de conexiones adicionales de cerraduras inalámbricas que la cantidad de cerraduras inalámbricas eliminadas.
+
+:::
+
+## Revisar el estado de la cerradura inalámbrica en Monitoreo
+
+1. Haz clic en <Cmd sid='shell.header.arena' /> en <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en la pestaña <Cmd sid='common.gnb.device' product='2' /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en la cerradura inalámbrica en la lista de dispositivos.
+
+Aparece un panel a la derecha que muestra detalles y eventos recientes de la cerradura inalámbrica.
+
+<Image src='/img/biostarx-monitoring-device-wl-door-lock.png' />
