@@ -808,10 +808,10 @@
         ],
         "version": "1.0.6",
         "manuals": {
-            "ko": "device/corestation_20/CoreStation 20_IG_1.01_KO_260622.pdf",
-            "en": "device/corestation_20/CoreStation 20_IG_1.01_EN_260622.pdf",
-            "es": "device/corestation_20/CoreStation 20_IG_1.01_ES_260622.pdf",
-            "ja": "device/corestation_20/CoreStation 20_IG_1.01_JA_260622.pdf"
+            "ko": "device/corestation_20/CoreStation 20_IG_1.02_KO_261105.pdf",
+            "en": "device/corestation_20/CoreStation 20_IG_1.02_EN_261105.pdf",
+            "es": "device/corestation_20/CoreStation 20_IG_1.02_ES_261105.pdf",
+            "ja": "device/corestation_20/CoreStation 20_IG_1.02_JA_261105.pdf"
         },
         "release_notes": {
             "ko": "device/corestation_20/CoreStation 20_RN_1.0.6_KO_261103.pdf",
@@ -845,10 +845,10 @@
         ],
         "version": "1.7.4",
         "manuals": {
-            "ko": "device/corestation_40/CoreStation_IG_1.12_KO_260622.pdf",
-            "en": "device/corestation_40/CoreStation_IG_1.12_EN_260622.pdf",
-            "es": "device/corestation_40/CoreStation_IG_1.12_ES_260622.pdf",
-            "ja": "device/corestation_40/CoreStation_IG_1.12_JA_260622.pdf"
+            "ko": "device/corestation_40/CoreStation_IG_1.13_KO_261105.pdf",
+            "en": "device/corestation_40/CoreStation_IG_1.13_EN_261105.pdf",
+            "es": "device/corestation_40/CoreStation_IG_1.13_ES_261105.pdf",
+            "ja": "device/corestation_40/CoreStation_IG_1.13_JA_261105.pdf"
         },
         "release_notes": {
             "ko": "device/corestation_40/CoreStation_RN_1.7.4_KO_261022.pdf",

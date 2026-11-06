@@ -15,6 +15,7 @@ keywords:
 ## 認証モード
 
 デバイスの認証モードを設定できます。<Cmd sid='ui_228' product='dev' />、<Cmd sid='ui_312' product='dev' />、<Cmd sid='ui_040' product='dev' />、<Cmd sid='ui_323' product='dev' />、<Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして使用でき、各認証モードごとに使用するスケジュールも設定できます。
+デバイスの認証モードを設定できます。<Cmd sid='ui_228' product='dev' />、<Cmd sid='ui_312' product='dev' />、<Cmd sid='ui_040' product='dev' />、<Cmd sid='ui_323' product='dev' />、<Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして使用でき、各認証モードごとに使用するスケジュールも設定できます。
 
 :::info
 
@@ -31,11 +32,13 @@ keywords:
 3. <Image src='/img/common/ico-add.svg' ico alone /> を選択します。
 
 4. <Image src='/img/common/ico-add1.svg' ico alone /> を押すと、追加できるクレデンシャルが画面に表示されます。必要なクレデンシャルを追加します。クレデンシャルが追加された状態で <Image src='/img/common/ico-cancel.svg' ico alone /> を押すと、追加したクレデンシャルを削除できます。
+4. <Image src='/img/common/ico-add1.svg' ico alone /> を押すと、追加できるクレデンシャルが画面に表示されます。必要なクレデンシャルを追加します。クレデンシャルが追加された状態で <Image src='/img/common/ico-cancel.svg' ico alone /> を押すと、追加したクレデンシャルを削除できます。
 
    <Image src='/img/device/bs3m-add-auth-mode.png' />
 
    * <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone />: 顔、<Image src='/img/common/ico-authmode-fingerprint-bs3m.png' ico alone />: 指紋、<Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone />: カード / QRコード、<Image src='/img/common/ico-authmode-id-bs3m.png' ico alone />: ID、<Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone />: PIN
 
+   * 選択した認証方法を順番にすべて認証するように組み合わせることも、一部のみを選択して認証するように組み合わせることもできます。選択した認証方法を順番にすべて認証するように組み合わせることも、一部のみを選択して認証するように組み合わせることもできます。 例えば、<Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone /> を組み合わせる場合は、カード / QR コード、顔、PIN のすべてで認証する必要があります。<Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone /> を組み合わせる場合は、カード / QR コードで認証した後、顔または PIN を入力する必要があります。
    * 選択した認証方法を順番にすべて認証するように組み合わせることも、一部のみを選択して認証するように組み合わせることもできます。選択した認証方法を順番にすべて認証するように組み合わせることも、一部のみを選択して認証するように組み合わせることもできます。 例えば、<Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone /> を組み合わせる場合は、カード / QR コード、顔、PIN のすべてで認証する必要があります。<Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone /> を組み合わせる場合は、カード / QR コードで認証した後、顔または PIN を入力する必要があります。
 
 5. 目的の認証モードを設定した後、<Cmd sid='ui_203' product='dev' /> を設定します。
@@ -43,9 +46,11 @@ keywords:
    :::info
 
    * <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+   * <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
 
    * <Cmd sid='ui_203' product='dev' /> の設定については、<Linkto to='platform/biostar_x/settings-schedule'>BioStar X 管理者マニュアル</Linkto>をご参照ください。
 
+   * <Cmd sid='ui_042' product='dev' /> 認証を使用するには、<Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_265' product='dev' /> で <Cmd sid='ui_041' product='dev' /> が有効になっている必要があり、別途デバイスライセンスが必要です。詳細は[ライセンス](settings#license)を参照してください。
    * <Cmd sid='ui_042' product='dev' /> 認証を使用するには、<Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_265' product='dev' /> で <Cmd sid='ui_041' product='dev' /> が有効になっている必要があり、別途デバイスライセンスが必要です。詳細は[ライセンス](settings#license)を参照してください。
 
    :::
@@ -68,6 +73,7 @@ keywords:
 
 2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
 
+3. <Image src='/img/common/ico-delete.svg' ico alone /> をクリックして削除する項目を選択します。複数選択することもできます。
 3. <Image src='/img/common/ico-delete.svg' ico alone /> をクリックして削除する項目を選択します。複数選択することもできます。
 
 4. 選択した項目を削除するには <Cmd sid='ui_037' product='dev' /> を押します。
@@ -177,11 +183,15 @@ keywords:
       :::info
 
       最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト設定のまま使用することを推奨します。各オプションのデフォルト値は次のとおりです。
+      最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト設定のまま使用することを推奨します。各オプションのデフォルト値は次のとおりです。
 
+      * 最大顔回転角度：15
       * 最大顔回転角度：15
 
       * 顔認識距離：最小 30 cm、最大 100 cm
+      * 顔認識距離：最小 30 cm、最大 100 cm
 
+      * 顔認識領域拡張：無効
       * 顔認識領域拡張：無効
 
       :::
@@ -195,6 +205,7 @@ keywords:
       :::
 
    * <Cmd sid='ui_157' product='dev' />：ビジュアルフェイスに実際の画像とテンプレートの両方を保存するか、画像を保存せずテンプレートのみを保存するかを設定できます。無効にすると、保存されているビジュアルフェイスの画像はすべて削除され、今後登録されるビジュアルフェイスも画像を除いたテンプレートのみ保存されます。
+   * <Cmd sid='ui_157' product='dev' />：ビジュアルフェイスに実際の画像とテンプレートの両方を保存するか、画像を保存せずテンプレートのみを保存するかを設定できます。無効にすると、保存されているビジュアルフェイスの画像はすべて削除され、今後登録されるビジュアルフェイスも画像を除いたテンプレートのみ保存されます。
 
       :::info
 
@@ -206,9 +217,9 @@ keywords:
 
    * <Cmd sid='ui_278' product='dev' />：顔認証時のデバイス動作モードを設定できます。
 
-     * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
+      * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
 
-     * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
+      * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
 
    * <Cmd sid='ui_247' product='dev' />：写真などの偽造顔を用いたユーザー認証を防止できます。 <Cmd sid='ui_278' product='dev' /> を <Cmd sid='ui_359' product='dev' /> に設定すると有効になります。
 
@@ -220,33 +231,33 @@ keywords:
 
    * <Cmd sid='ui_070' product='dev' />：マスク検出など顔認証に関する高度な設定を変更できます。
 
-     * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。
+      * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。
 
-     * <Cmd sid='ui_067' product='dev' />：マスク着用の確認方法を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
+      * <Cmd sid='ui_067' product='dev' />：マスク着用の確認方法を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
 
-        :::info
+         :::info
 
-       * <Cmd sid='ui_127' product='dev' />：マスク未着用のユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。
+         * <Cmd sid='ui_127' product='dev' />：マスク未着用のユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。
 
-       * <Cmd sid='ui_126' product='dev' />：マスク未着用のユーザーも認証できますが、マスク未着用イベントがログに記録されます。
+         * <Cmd sid='ui_126' product='dev' />：マスク未着用のユーザーも認証できますが、マスク未着用イベントがログに記録されます。
 
-       * <Cmd sid='ui_125' product='dev' />：マスク未着用のユーザーのみ認証でき、このモードを使用する場合、マスク確認モードは <Cmd sid='ui_369' product='dev' /> に固定されます。
+         * <Cmd sid='ui_125' product='dev' />：マスク未着用のユーザーのみ認証でき、このモードを使用する場合、マスク確認モードは <Cmd sid='ui_369' product='dev' /> に固定されます。
 
-        :::
+         :::
 
-     * <Cmd sid='ui_124' product='dev' />：マスク着用を検知する感度を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
+      * <Cmd sid='ui_124' product='dev' />：マスク着用を検知する感度を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
 
-     * <Cmd sid='ui_368' product='dev' />：デバイスの用途に応じて確認モードを設定できます。
+      * <Cmd sid='ui_368' product='dev' />：デバイスの用途に応じて確認モードを設定できます。
 
-        :::info
+         :::info
 
-       * <Cmd sid='ui_267' product='dev' />：認証を実行した後にユーザーのマスク着用を確認します。
+         * <Cmd sid='ui_267' product='dev' />：認証を実行した後にユーザーのマスク着用を確認します。
 
-       * <Cmd sid='ui_369' product='dev' />：ユーザーのマスク着用を確認した後に認証を実行します。
+         * <Cmd sid='ui_369' product='dev' />：ユーザーのマスク着用を確認した後に認証を実行します。
 
        * <Cmd sid='ui_370' product='dev' />：デバイスをマスク着用確認専用として使用できます。このモードを使用すると、認証に関係なくマスクを着用したユーザーはすべて入退室できます。
 
-        :::
+         :::
 
 ### 指紋 <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {/* #fingerprint */}
 
@@ -263,9 +274,11 @@ keywords:
    * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
 
    * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。設定した時間内に認証を完了できないと、認証失敗となります。
+   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。設定した時間内に認証を完了できないと、認証失敗となります。
 
    * <Cmd sid='ui_254' product='dev' />：指紋をスキャンしたときに元画像を表示できます。
 
+   * <Cmd sid='ui_197' product='dev' />：指紋センサーの感度を設定できます。より精密な指紋情報を取得するには、センサー感度を高く設定してください。
    * <Cmd sid='ui_197' product='dev' />：指紋センサーの感度を設定できます。より精密な指紋情報を取得するには、センサー感度を高く設定してください。
 
    * <Cmd sid='ui_003' product='dev' />：指紋認証速度を設定できます。 <Cmd sid='ui_275' product='dev' /> を選択すると、端末に登録されている指紋テンプレートの総数に応じて認証パフォーマンスが設定されます。
@@ -275,7 +288,9 @@ keywords:
    * <Cmd sid='ui_198' product='dev' />：<Cmd sid='ui_277' product='dev' /> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <Cmd sid='ui_362' product='dev' /> に設定すると、指紋をスキャンしていないときでもセンサーが常にオンになります。
 
    * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
+   * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
 
+   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。有効にすると、指紋の品質が低い場合にユーザーに通知して、指紋を正しくスキャンするのを支援します。
    * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。有効にすると、指紋の品質が低い場合にユーザーに通知して、指紋を正しくスキャンするのを支援します。
 
    * <Cmd sid='ui_118' product='dev' />：指紋登録時に重複指紋かどうかを検査できます。
@@ -294,6 +309,7 @@ keywords:
 
    * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
 
+   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> を選択し、画面に表示するアイコン、<Cmd sid='ui_085' product='dev' />、<Cmd sid='ui_203' product='dev' /> を設定します。
    * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> を選択し、画面に表示するアイコン、<Cmd sid='ui_085' product='dev' />、<Cmd sid='ui_203' product='dev' /> を設定します。
 
    * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_199' product='dev' /> に設定したときに使用できます。
