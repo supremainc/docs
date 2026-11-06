@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+User-agent: Algolia Crawler
+Allow: /
+
+# Allow Algolia Crawler to access all content for indexing
+User-agent: Algolia Crawler/*
+Allow: /
