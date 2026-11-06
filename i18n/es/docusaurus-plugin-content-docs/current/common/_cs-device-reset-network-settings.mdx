@@ -1,0 +1,25 @@
+## Inicializar los ajustes de red {/* #reset-network-settings */}
+
+Inicialice la configuración de red del dispositivo.
+
+1. Conecte el dispositivo a la corriente.
+
+2. Mantenga presionado el botón **INIT** durante al menos 3 segundos.
+
+   <Include product='corestation_40'><Image src='/img/device/reset-network-settings-cs40.png' className='none' alone /></Include>
+
+   <Include product='corestation_20'><Image src='/img/device/reset-network-settings-cs20.png' className='none' alone /></Include>
+
+3. El dispositivo inicializa los ajustes de red de la siguiente manera. En BioStar X, conecte el dispositivo usando la información de red inicializada.
+
+   * **Dirección TCP/IP**: DHCP está habilitado, por lo que el dispositivo obtiene una dirección IP automáticamente.
+
+      :::info
+
+      Si falla la asignación de direcciones DHCP, el dispositivo establece la dirección en 169.254.x.x.
+
+      :::
+
+   * **Modo de servidor**: Evita que el dispositivo solicite una conexión directa al servidor.
+
+   * **RS-485**: Establece la velocidad de comunicación en 115200 bps.

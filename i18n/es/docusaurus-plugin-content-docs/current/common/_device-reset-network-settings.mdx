@@ -4,16 +4,20 @@ Inicialice la configuración de red del dispositivo.
 
 1. Encienda el dispositivo.
 
-2. Presione el botón de reinicio hasta que el dispositivo se reinicie automáticamente.
+2. Mantenga presionado el botón Inicializar hasta que el dispositivo se reinicie automáticamente.
 
-3. Conecte el dispositivo usando la información de red inicializada.
+3. El dispositivo inicializa los ajustes de red de la siguiente manera. En BioStar X, conecte el dispositivo usando la información de red inicializada.
 
-   * **Dirección TCP/IP**: asignación de dirección DHCP (si la asignación de dirección DHCP falla, se establecerá en 169.254.x.x).
+   * **Dirección TCP/IP**: DHCP está habilitado, por lo que el dispositivo obtiene una dirección IP automáticamente.
 
-   * **Modo servidor**: Deshabilitar
+      :::info
 
-   * **RS-485**: predeterminado, 115200 bps
+      Si falla la asignación de direcciones DHCP, el dispositivo establece la dirección en 169.254.x.x.
 
-4. Cambie la información de TCP/IP o RS-485.
+      :::
 
-5. Compruebe si la información de red está configurada correctamente después de apagar y encender el equipo.
+   * **Modo de servidor**: Evita que el dispositivo solicite una conexión directa al servidor.
+
+   * **RS-485**: Establézcalo como predeterminado, con una velocidad en baudios de 115200 bps.
+
+4. Apague el dispositivo y vuelva a encenderlo. Confirme que la configuración de red sea correcta.

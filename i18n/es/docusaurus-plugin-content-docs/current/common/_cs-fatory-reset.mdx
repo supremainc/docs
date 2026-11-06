@@ -1,14 +1,46 @@
-## Restablecimiento de fábrica {/* #factory-reset */}
+## Restablecimiento de fábrica {/* #factory-default */}
 
-Restablece de fábrica el CoreStation en el Corestation Setup Manager.
-
-1. Accede al Corestation Setup Manager y haz clic en **CONFIGURE**.
-
-2. Haz clic en **Factory Default**.
+Elimina toda la información almacenada en el dispositivo e inicializa la configuración.
 
 :::info
 
 * Utilice Factory Default solo cuando el certificado raíz esté almacenado en el dispositivo.
+
+* Para obtener más información sobre cómo inicializar el producto, comuníquese con <Support />.
+
+:::
+
+### Inicializar en el dispositivo
+
+1. Conecte el dispositivo a la corriente.
+
+2. Presione rápidamente el botón **INIT** tres veces.
+
+   <Include product='corestation_40'><Image src='/img/device/factory-reset-cs40.png' className='none' alone /></Include>
+
+   <Include product='corestation_20'><Image src='/img/device/factory-reset-cs20.png' className='none' alone /></Include>
+
+3. Cuando el **LED de ESTADO** parpadee en amarillo, mantenga presionado el botón **INIT**.
+
+<PageBreak />
+
+### Inicializar en CoreStation Setup Manager
+
+1. Conecte el producto a la PC mediante un cable Ethernet.
+
+2. Ingrese `https://169.254.0.1:3001` en la barra de direcciones del navegador web y luego abra CoreStation Setup Manager.
+
+   :::info
+
+   Utilice Chrome versión 75 o superior.
+
+   :::
+
+3. Haz clic en **CONFIGURE**.
+
+4. En **Información**, haga clic en **Valores predeterminados de fábrica**.
+
+:::info
 
 * Accede al Corestation Setup Manager para ver o gestionar la configuración de red de CoreStation y supervisar el estado de los dispositivos esclavos, los puertos de entrada y salida y los puertos Wiegand.
 
@@ -27,7 +59,5 @@ Restablece de fábrica el CoreStation en el Corestation Setup Manager.
 * Para obtener más información sobre el <Linkto to='device/corestation_setup_manager'>Administrador de configuración CoreStation</Linkto>, consulte esta sección.
 
 * Comprueba la versión más reciente de BioStar X cuando el dispositivo esté conectado a la red y pueda restablecerse.
-
-* Para más información, comuníquese con el [Equipo de soporte técnico de Suprema](https://support.supremainc.com).
 
 :::

@@ -3267,10 +3267,6 @@
     "width": 352,
     "height": 242
   },
-  "/img/biostarx-setting-device-remove-wl-door-lock.png": {
-    "width": 1409,
-    "height": 260
-  },
   "/img/biostarx-setting-device-rename-group.png": {
     "width": 358,
     "height": 252
@@ -7072,8 +7068,8 @@
     "height": 495
   },
   "/img/common/biostar_2_sdk_framework_1.png": {
-    "width": 600,
-    "height": 388
+    "width": 1000,
+    "height": 615
   },
   "/img/common/bsair-cloud-architecture.webp": {
     "width": 1439,
