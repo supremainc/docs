@@ -4,15 +4,33 @@
 // DW API(dw-api.suprema.co.kr)는 사내망 전용이므로 GitHub Actions에서는 호출할 수 없습니다.
 // 사내망에서 실행한 뒤 생성된 _specs.json을 preview 브랜치에 커밋하세요.
 //
-// 사용법: .env에 DW_API_KEY를 설정한 뒤 `yarn fetch:specs` 실행
+// 사용법: .env에 DW_API_KEY를 설정한 뒤 실행
+//   yarn fetch:specs                  PRODUCTS 목록의 제품만 받아 _specs.json에 저장
+//   yarn fetch:specs:all              PRODUCTS와 관계없이 모든 제품을 받아 _specs-all.json에 저장
+//   yarn fetch:specs --all --out <경로>  모든 제품을 받아 지정한 경로에 저장
 import fs from 'fs';
 import path from 'path';
 import 'dotenv/config';
 
 const API_BASE = 'https://dw-api.suprema.co.kr';
 const API_KEY = process.env.DW_API_KEY;
-const OUTPUT = path.resolve('src/pages/products-specs/_specs.json');
 const PAGE_SIZE = 1000;
+
+const args = process.argv.slice(2);
+const FETCH_ALL = args.includes('--all');
+const outIndex = args.indexOf('--out');
+if (outIndex !== -1 && !args[outIndex + 1]) {
+  console.error('--out 뒤에 저장할 파일 경로를 입력하세요.');
+  process.exit(1);
+}
+// --all 결과는 페이지용 _specs.json을 덮어쓰지 않도록 별도 파일에 저장합니다.
+const OUTPUT = path.resolve(
+  outIndex !== -1
+    ? args[outIndex + 1]
+    : FETCH_ALL
+      ? 'src/pages/products-specs/_specs-all.json'
+      : 'src/pages/products-specs/_specs.json',
+);
 
 // 페이지에 표시할 제품 (표시 순서 유지)
 const PRODUCTS = [
@@ -40,13 +58,14 @@ const PRODUCTS = [
   'Secure Module',
 ];
 
-async function fetchProduct(productName) {
+// 조건에 맞는 레코드를 페이지 단위로 모두 받습니다.
+async function fetchItems({ filter, orderby, label }) {
   const items = [];
   for (let page = 1; ; page++) {
     const params = new URLSearchParams({
-      '$select': 'ModelName,Section,AttributeGroup,AttributeName,AttributeCode,AttributeValue',
-      '$filter': `CompanyName eq 'SP' and ProductName eq '${productName.replace(/'/g, "''")}' and AttributeValue ne null`,
-      '$orderby': 'DisplayOrder asc',
+      '$select': 'ProductName,ModelName,Section,AttributeGroup,AttributeName,AttributeCode,AttributeValue',
+      '$filter': filter,
+      '$orderby': orderby,
       '$top': String(PAGE_SIZE),
       '$skip': String((page - 1) * PAGE_SIZE),
     });
@@ -54,14 +73,41 @@ async function fetchProduct(productName) {
       headers: { 'X-Api-Key': API_KEY },
     });
     if (!res.ok) {
-      throw new Error(`${productName}: HTTP ${res.status} ${await res.text()}`);
+      throw new Error(`${label}: HTTP ${res.status} ${await res.text()}`);
     }
     const { Data } = await res.json();
     items.push(...Data.Items);
-    if (page >= (Data.Paging?.TotalPages ?? 1)) {
+    const totalPages = Data.Paging?.TotalPages ?? 1;
+    if (FETCH_ALL) console.log(`  ${page}/${totalPages} 페이지 수신`);
+    if (page >= totalPages) {
       return items;
     }
   }
+}
+
+function fetchProduct(productName) {
+  return fetchItems({
+    filter: `CompanyName eq 'SP' and ProductName eq '${productName.replace(/'/g, "''")}' and AttributeValue ne null`,
+    orderby: 'DisplayOrder asc',
+    label: productName,
+  });
+}
+
+// PRODUCTS 목록과 관계없이 모든 제품의 레코드를 받아 ProductName별로 나눕니다.
+// 제품 내 순서는 DisplayOrder 순을 유지합니다.
+async function fetchAllProducts() {
+  const items = await fetchItems({
+    filter: `CompanyName eq 'SP' and AttributeValue ne null`,
+    orderby: 'ProductName asc, DisplayOrder asc',
+    label: '전체 제품',
+  });
+  const byProduct = new Map();
+  for (const item of items) {
+    if (!item.ProductName) continue;
+    if (!byProduct.has(item.ProductName)) byProduct.set(item.ProductName, []);
+    byProduct.get(item.ProductName).push(item);
+  }
+  return byProduct;
 }
 
 // 평면 레코드를 Section > AttributeGroup > Attribute 구조로 묶고, 속성마다 모델별 값을 담습니다.
@@ -109,15 +155,25 @@ async function main() {
 
   const products = [];
   const missing = [];
-  for (const productName of PRODUCTS) {
-    const items = await fetchProduct(productName);
-    if (items.length === 0) {
-      missing.push(productName);
-      continue;
+  if (FETCH_ALL) {
+    console.log('PRODUCTS 목록과 관계없이 모든 제품의 데이터를 받습니다.');
+    for (const [productName, items] of await fetchAllProducts()) {
+      const product = groupByProduct(items);
+      products.push({ name: productName, ...product });
+      console.log(`${productName}: 모델 ${product.models.length}개, 속성 ${items.length}건`);
     }
-    const product = groupByProduct(items);
-    products.push({ name: productName, ...product });
-    console.log(`${productName}: 모델 ${product.models.length}개, 속성 ${items.length}건`);
+    console.log(`전체 제품 ${products.length}개`);
+  } else {
+    for (const productName of PRODUCTS) {
+      const items = await fetchProduct(productName);
+      if (items.length === 0) {
+        missing.push(productName);
+        continue;
+      }
+      const product = groupByProduct(items);
+      products.push({ name: productName, ...product });
+      console.log(`${productName}: 모델 ${product.models.length}개, 속성 ${items.length}건`);
+    }
   }
 
   // 데이터가 바뀌지 않았으면 파일을 그대로 두어 updatedAt만 바뀐 커밋이 생기지 않게 합니다.
