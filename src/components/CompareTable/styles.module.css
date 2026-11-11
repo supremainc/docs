@@ -6,18 +6,184 @@
   display: block;
 }
 
-.tableContainer {
-  margin: .5rem 0 2rem 0;
-}
-
 .subtitle {
   margin-top: 2.5rem;
 }
 
+/* 비교표 */
+.tableContainer {
+  margin: .5rem 0 2rem 0;
+}
 
+/* 비교표가 있는 문서는 열 개수와 관계없이 본문 너비를 최대로 고정합니다.
+   - 빈 오른쪽 열(TOC 자리)을 숨겨 본문이 전체 너비를 사용합니다.
+   - min-width: 0으로 표 너비가 본문 열을 늘리지 않게 하고, 넘치는 부분은 표 안에서 스크롤합니다. */
+:global(.row):has(.tableContainer) > :global(.col--3) {
+  display: none;
+}
+
+:global(.row):has(.tableContainer) > :global(.col) {
+  min-width: 0;
+}
+
+/* 가로·세로 스크롤 영역. 헤더와 첫 열을 sticky로 고정합니다. */
+.scroll {
+  overflow: auto;
+  max-height: calc(100vh - 250px);
+  border: 1px solid var(--ifm-table-border-color);
+  border-radius: var(--ifm-global-radius);
+}
+
+/* Infima의 markdown table 기본값(display: block)을 덮어씁니다. */
+.compare {
+  display: table;
+  table-layout: auto;
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .875rem;
+}
+
+.caption {
+  caption-side: top;
+  padding: .5rem .75rem;
+  font-weight: var(--ifm-font-weight-bold);
+  text-align: left;
+}
+
+.compare th,
+.compare td {
+  padding: .5rem .75rem;
+  border: 0;
+  border-right: 1px solid var(--ifm-table-border-color);
+  border-bottom: 1px solid var(--ifm-table-border-color);
+  /* --ifm-background-color는 라이트 모드에서 transparent이므로 sticky 셀이 비쳐 보입니다. */
+  background-color: var(--ifm-background-surface-color);
+  vertical-align: middle;
+}
+
+.compare td {
+  min-width: 120px;
+  text-align: center;
+}
+
+.compare tr {
+  background-color: transparent;
+  border: 0;
+}
+
+/* 카테고리 하위 행 줄무늬. 각 tbody의 첫 행은 카테고리 행이므로
+   nth-child(odd)가 데이터 기준 짝수 번째 행입니다.
+   반투명 줄무늬 색을 background-image로 겹쳐 sticky 셀의 불투명 배경을 유지합니다. */
+.compare tbody tr:nth-child(odd):not(.groupRow) > * {
+  background-image: linear-gradient(
+    var(--ifm-table-stripe-background),
+    var(--ifm-table-stripe-background)
+  );
+}
+
+/* 행 hover. 줄무늬와 같은 방식으로 겹쳐 sticky 셀도 함께 강조합니다. */
+.compare tbody tr:not(.groupRow):hover > * {
+  background-image: linear-gradient(
+    color-mix(in srgb, var(--ifm-color-primary) 12%, transparent),
+    color-mix(in srgb, var(--ifm-color-primary) 12%, transparent)
+  );
+}
+
+.compare thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.compare thead th {
+  background-color: var(--ifm-color-emphasis-100);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 첫 열(기능·사양 이름) 고정 */
+.stickyCol {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  /* 표 너비가 남아도 첫 열은 180px로 고정합니다. */
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  text-align: right;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.compare thead .stickyCol {
+  z-index: 3;
+}
+
+/* 카테고리 행 */
+.groupRow th {
+  padding: 0;
+  background-color: var(--ifm-color-emphasis-200);
+  text-align: left;
+}
+
+.groupToggle {
+  position: sticky;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: var(--ifm-font-weight-bold);
+  cursor: pointer;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor;
+  transition: transform .15s ease;
+}
+
+.caretCollapsed {
+  transform: rotate(-90deg);
+}
+
+/* 변경 전/후 값 */
+.before {
+  display: block;
+  font-size: .5rem;
+}
+
+.after {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
 
 @media print {
   .tableContainer {
     break-inside: avoid;
+  }
+
+  .scroll {
+    overflow: visible;
+    max-height: none;
+    border: 0;
+  }
+
+  .compare thead,
+  .stickyCol,
+  .groupToggle {
+    position: static;
+  }
+
+  .caret {
+    display: none;
   }
 }

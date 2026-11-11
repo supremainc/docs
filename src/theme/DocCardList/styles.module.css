@@ -1,5 +1,6 @@
 .docCardListItem {
   margin-bottom: 2rem;
+  min-height: 114px;
 }
 
 .docCardListItem > * {
