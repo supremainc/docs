@@ -196,60 +196,86 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.dochub-table.tabulator {
+/* Infima의 기본 table 스타일(display: block, 테두리, 줄무늬)을 덮어씁니다. */
+.dochub-table {
+  display: table;
+  width: 100%;
+  min-width: 620px;
+  margin: 0;
+  border-collapse: collapse;
   background: transparent;
   font-size: 0.9rem;
-  border: none !important;
-  border-radius: 0 !important;
-  min-width: 620px;
 }
 
-.dochub-table .tabulator-header {
+/* 열 너비 비율: 제품 2 : 버전 1 : 문서 4 : 출시일 1 */
+.dochub-col-product { width: 25%; }
+.dochub-col-version { width: 12.5%; }
+.dochub-col-docs { width: 50%; }
+.dochub-col-release { width: 12.5%; }
+
+.dochub-table thead tr {
   background: transparent;
-  border-bottom: 1px solid #e8e8e8 !important;
+  border: 0;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.dochub-table .tabulator-header .tabulator-col {
-  background: transparent;
-  border-right: none;
-}
-
-.dochub-table .tabulator-header .tabulator-col .tabulator-col-content {
+.dochub-table th {
   padding: 20px 32px;
-}
-
-.dochub-table .tabulator-col-title {
+  border: 0;
+  background: transparent;
+  text-align: left;
   font-size: 0.69rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ifm-font-color-header);
+  white-space: nowrap;
 }
 
-.dochub-table .tabulator-tableholder .tabulator-table {
+.dochub-sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.dochub-sort-button:hover {
+  color: var(--ifm-color-cmd);
+}
+
+.dochub-sort-indicator {
+  font-size: 0.6rem;
+  letter-spacing: 0;
+}
+
+.dochub-table tbody tr {
   background: transparent;
-}
-
-.dochub-table .tabulator-row {
-  min-height: 117px;
-  align-content: center;
-}
-.dochub-table .tabulator-row,
-.dochub-table .tabulator-row.tabulator-row-even {
-  background: transparent !important;
-  border-bottom: 1px solid #f0f0f0 !important;
+  border: 0;
+  border-bottom: 1px solid #f0f0f0;
   transition: background 0.1s;
 }
 
-.dochub-table .tabulator-row:hover,
-.dochub-table .tabulator-row.tabulator-row-even:hover {
-  background: #f8f9fa !important;
+.dochub-table tbody tr:nth-child(2n) {
+  background: transparent;
 }
 
-.dochub-table .tabulator-cell {
+.dochub-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.dochub-table td {
+  /* 표 셀의 height는 최소 높이로 동작합니다. */
+  height: 117px;
   padding: 20px 32px;
-  border-right: none;
-  align-content: center;
+  border: 0;
+  vertical-align: middle;
 }
 
 /* ── Product cell ────────────────────────────────────── */
@@ -266,7 +292,7 @@
   color: var(--ifm-font-color-title);
 }
 
-.dochub-table .tabulator-row:hover .dochub-product-name {
+.dochub-table tbody tr:hover .dochub-product-name {
   color: var(--ifm-color-cmd);
 }
 
@@ -359,18 +385,16 @@
   border-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme='dark'] .dochub-table .tabulator-header {
-  border-color: #2a2a2a !important;
+[data-theme='dark'] .dochub-table thead tr {
+  border-color: #2a2a2a;
 }
 
-[data-theme='dark'] .dochub-table .tabulator-row,
-[data-theme='dark'] .dochub-table .tabulator-row.tabulator-row-even {
-  border-color: #242424 !important;
+[data-theme='dark'] .dochub-table tbody tr {
+  border-color: #242424;
 }
 
-[data-theme='dark'] .dochub-table .tabulator-row:hover,
-[data-theme='dark'] .dochub-table .tabulator-row.tabulator-row-even:hover {
-  background: rgba(163, 35, 67, 0.07) !important;
+[data-theme='dark'] .dochub-table tbody tr:hover {
+  background: rgba(163, 35, 67, 0.07);
 }
 
 
@@ -411,21 +435,12 @@
     gap: 0.25rem 0.75rem;
   }
 
-  .dochub-table .tabulator-cell {
+  .dochub-table th,
+  .dochub-table td {
     padding: 14px 16px;
   }
 
-  .dochub-table .tabulator-header .tabulator-col .tabulator-col-content {
-    padding: 14px 16px;
-  }
-
-  .dochub-table .tabulator-row {
-    min-height: 80px;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .dochub-table .tabulator-row.tabulator-selectable:hover {
-    cursor: auto;
+  .dochub-table td {
+    height: 80px;
   }
 }
