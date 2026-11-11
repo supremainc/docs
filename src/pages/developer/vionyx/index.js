@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import { buildOrganization } from '@site/src/utils/structuredData';
 import { useHistory, useLocation } from '@docusaurus/router';
 import collectionData from '@site/static/specs/vionyx-api-postman-collection.json';
 import { Sidebar, RequestDetail, WelcomeScreen, toSlug, useIsMobile } from '@site/src/components/ApiDocs';
@@ -105,28 +106,23 @@ export default function ApiV2Page() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "TechArticle",
-            "headline": "ViOnyx AI Camera API Reference",
-            "description": "Complete REST API documentation for the ViOnyx AI camera",
-            "author": {
-              "@type": "Organization",
-              "name": "Suprema Inc.",
-              "url": "https://www.supremainc.com"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Suprema Inc.",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://supremainc.com/en/asset/images/common/sns_img02.jpg"
-              }
-            },
-            "datePublished": "2026-08-10",
-            "dateModified": new Date().toISOString().split('T')[0],
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://docs.supremainc.com/developer/vionyx"
-            }
+            "@graph": [
+              buildOrganization("https://docs.supremainc.com"),
+              {
+                "@type": "TechArticle",
+                "headline": "ViOnyx AI Camera API Reference",
+                "description": "Complete REST API documentation for the ViOnyx AI camera",
+                "isPartOf": { "@id": "https://docs.supremainc.com/#website" },
+                "author": { "@id": "https://docs.supremainc.com/#organization" },
+                "publisher": { "@id": "https://docs.supremainc.com/#organization" },
+                "datePublished": "2026-08-10",
+                "dateModified": new Date().toISOString().split('T')[0],
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://docs.supremainc.com/developer/vionyx"
+                }
+              },
+            ],
           })}
         </script>
       </Head>
