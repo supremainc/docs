@@ -8943,6 +8943,14 @@
     "width": 1200,
     "height": 778
   },
+  "/img/device/factory-reset-cs20.png": {
+    "width": 699,
+    "height": 275
+  },
+  "/img/device/factory-reset-cs40.png": {
+    "width": 800,
+    "height": 657
+  },
   "/img/device/fingerprint-authentication.svg": {
     "width": 514,
     "height": 143
@@ -9620,12 +9628,12 @@
     "height": 903
   },
   "/img/device/installation-example-cs20.png": {
-    "width": 817,
-    "height": 944
+    "width": 788,
+    "height": 857
   },
   "/img/device/installation-example-cs40.png": {
-    "width": 899,
-    "height": 677
+    "width": 918,
+    "height": 857
   },
   "/img/device/installation-example-di24.png": {
     "width": 823,
@@ -10651,6 +10659,14 @@
     "width": 300,
     "height": 313
   },
+  "/img/device/reset-network-settings-cs20.png": {
+    "width": 699,
+    "height": 275
+  },
+  "/img/device/reset-network-settings-cs40.png": {
+    "width": 800,
+    "height": 313
+  },
   "/img/device/restoring-factory-defaults-bep2.svg": {
     "width": 221,
     "height": 544
@@ -10700,12 +10716,12 @@
     "height": 663
   },
   "/img/device/system-configuration-cs20.png": {
-    "width": 970,
-    "height": 860
+    "width": 972,
+    "height": 869
   },
-  "/img/device/system-configuration-cs40.svg": {
-    "width": 507,
-    "height": 272
+  "/img/device/system-configuration-cs40.png": {
+    "width": 1454,
+    "height": 843
   },
   "/img/device/system-configuration-di24.png": {
     "width": 1183,
@@ -17957,11 +17973,11 @@
   },
   "/img/en/device/installation-example-cs20.png": {
     "width": 788,
-    "height": 933
+    "height": 857
   },
   "/img/en/device/installation-example-cs40.png": {
-    "width": 909,
-    "height": 694
+    "width": 918,
+    "height": 857
   },
   "/img/en/device/installation-example-di24.png": {
     "width": 800,
@@ -18844,12 +18860,12 @@
     "height": 663
   },
   "/img/en/device/system-configuration-cs20.png": {
-    "width": 965,
-    "height": 849
+    "width": 968,
+    "height": 865
   },
-  "/img/en/device/system-configuration-cs40.svg": {
-    "width": 511,
-    "height": 296
+  "/img/en/device/system-configuration-cs40.png": {
+    "width": 1454,
+    "height": 843
   },
   "/img/en/device/system-configuration-di24.png": {
     "width": 1178,
