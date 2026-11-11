@@ -3267,6 +3267,10 @@
     "width": 352,
     "height": 242
   },
+  "/img/biostarx-setting-device-remove-wl-door-lock.png": {
+    "width": 312,
+    "height": 234
+  },
   "/img/biostarx-setting-device-rename-group.png": {
     "width": 358,
     "height": 252
@@ -9632,8 +9636,8 @@
     "height": 903
   },
   "/img/device/installation-example-cs20.png": {
-    "width": 817,
-    "height": 944
+    "width": 788,
+    "height": 857
   },
   "/img/device/installation-example-cs40.png": {
     "width": 918,
@@ -10664,8 +10668,8 @@
     "height": 313
   },
   "/img/device/reset-network-settings-cs20.png": {
-    "width": 800,
-    "height": 315
+    "width": 699,
+    "height": 275
   },
   "/img/device/reset-network-settings-cs40.png": {
     "width": 800,
@@ -10720,8 +10724,8 @@
     "height": 663
   },
   "/img/device/system-configuration-cs20.png": {
-    "width": 970,
-    "height": 860
+    "width": 972,
+    "height": 869
   },
   "/img/device/system-configuration-cs40.png": {
     "width": 1454,
@@ -17977,7 +17981,7 @@
   },
   "/img/en/device/installation-example-cs20.png": {
     "width": 788,
-    "height": 933
+    "height": 857
   },
   "/img/en/device/installation-example-cs40.png": {
     "width": 918,
@@ -18864,8 +18868,8 @@
     "height": 663
   },
   "/img/en/device/system-configuration-cs20.png": {
-    "width": 965,
-    "height": 849
+    "width": 968,
+    "height": 865
   },
   "/img/en/device/system-configuration-cs40.png": {
     "width": 1454,
