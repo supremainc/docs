@@ -56,17 +56,19 @@ export default function DocItemLayout({children}) {
       {/* {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>} */}
       <div className="col col--3">
         {/* {docTOC.desktop} */}
-        <CopyPageButton  
-          enabledActions={[ 'copy', 'chatgpt', 'claude', 'gemini', 'perplexity' ]} 
-          customStyles={{
-            'button': {
-              'style': {
-                'position': 'sticky',
-                'top': 'calc(var(--ifm-navbar-height) + 1rem)'
+        {!docTOC.hidden && (
+          <CopyPageButton  
+            enabledActions={[ 'copy', 'chatgpt', 'claude', 'gemini', 'perplexity' ]} 
+            customStyles={{
+              'button': {
+                'style': {
+                  'position': 'sticky',
+                  'top': 'calc(var(--ifm-navbar-height) + 1rem)'
+                }
               }
-            }
-          }}
-        />
+            }}
+          />
+        )}
         {!docTOC.hidden ? <GenerateToc device="desktop" /> : null}
       </div>
     </div>

@@ -41,6 +41,7 @@ function CardCategory({item}) {
   // href에서 추정한 docId(자동 생성 카테고리 인덱스 등 실제 문서가 아닐 수 있음)는
   // version.docs에서 안전하게 조회한다.
   const groupDoc = docId ? version.docs[docId] : undefined;
+  console.log(groupDoc);
 
   // Unexpected: categories that don't have a link have been filtered upfront
   if (!href) {

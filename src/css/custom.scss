@@ -531,25 +531,6 @@ footer {
 }
 // layout 스타일
 
-// Tabulator 스타일
-.tabulator-cell {
-  white-space: normal !important;
-  span.before {
-    font-size: .5rem;
-    // display: none;
-  }
-  span.before::after {
-    content: "\A";
-    white-space: pre;
-    // display: none;
-  }
-  span.after {
-    font-weight: bold;
-    color: var(--ifm-color-primary);
-  }
-}
-// Tabulator 스타일
-
 // Zoom 스타일
 .medium-zoom-overlay,
 .medium-zoom-image--opened {

@@ -1,241 +1,245 @@
-import React, { useRef, useEffect, useCallback, useMemo } from "react";
-import { TabulatorFull as Tabulator } from "tabulator-tables";
-import  "tabulator-tables/dist/css/tabulator.min.css";
+import React, { Fragment, useCallback, useMemo, useState } from 'react';
+import { createColumnHelper, tableFeatures, useTable } from '@tanstack/react-table';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import clsx from 'clsx';
 import styles from './styles.module.css';
 import Locale from './resources.json';
 
-// 공통 상수 정의
-const COMMON_COLUMN_PROPS = {
-  hozAlign: "center",
-  headerHozAlign: "center", 
-  headerVertical: false,
-  headerSort: false,
-};
+// 비교표는 빌드 시 정적 HTML <table>로 렌더링되어야 합니다(SSR).
+// 크롤러가 내용을 읽을 수 있도록 다음을 지키세요.
+// - 표를 useEffect나 <BrowserOnly> 안에서 렌더링하지 않습니다.
+// - 초기 상태는 모든 카테고리를 펼친 상태로 둡니다.
+// - 가상 스크롤을 사용하지 않습니다.
 
-const FROZEN_COLUMN_PROPS = {
-  hozAlign: "right",
-  headerHozAlign: "center",
-  headerVertical: false,
-  headerSort: false,
-  width: 180,
-  frozen: true
-};
+const features = tableFeatures({});
+const helper = createColumnHelper();
+const FUNCTION_COLUMN_ID = 'function';
 
-// 커스텀 Hook으로 getLocale 함수 제공
 function useLocale() {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  
-  const getLocale = useCallback((id) => {
-    return Locale[currentLocale]?.[id] || Locale["en"]?.[id];
-  }, [currentLocale]);
-  
-  return getLocale;
-}
-
-// 공통 포매터 함수
-function useCustomLocaleFormatter() {
-  const getLocale = useLocale();
-  
-  return useCallback((cell) => {
-    const value = cell.getValue();
-    // value가 before/after 오브젝트일 때 분기
-    if (typeof value === "object" && value !== null && "before" in value && "after" in value) {
-      const before = value.before;
-      const after = value.after;
-      const beforeText = before === true ? "✔️" : before === false ? "❌" : getLocale(before);
-      const afterText = after === true ? "✔️" : after === false ? "❌" : getLocale(after);
-      return `<span class="before">${beforeText}</span><span class="after">${afterText}</span>`;
-    } else if (value === true) {
-      return "✔️";
-    } else if (value === false) {
-      return "❌";
-    } else {
-      return getLocale(value) || value;
-    }
-  }, [getLocale]);
-}
-
-export function RenderTableSpecs({ data }) {
-  const getLocale = useLocale();
-  const customFormatter = useCustomLocaleFormatter();
-  const tableRef = useRef(null);
-  const tabulatorInstance = useRef(null);
-
-  // 중첩된 구조의 데이터를 평면화된 형태로 변환
-  const transformedData = useMemo(() => {
-    if (!data || data.length === 0) {
-      return [];
-    }
-    
-    // 각 데이터 항목을 평면화
-    const flattenedData = data.map(item => {
-      const { category, function: functionName, models } = item;
-      
-      const rowData = {
-        category,
-        function: functionName
-      };
-      
-      // 각 모델의 모든 변형을 해당 필드에 매핑
-      Object.entries(models).forEach(([modelName, modelVariants]) => {
-        Object.entries(modelVariants).forEach(([variant, value]) => {
-          const fieldName = variant.replace(/[-]/g, ''); // 하이픈 제거하여 필드명 생성
-          rowData[fieldName] = value;
-        });
-      });
-      
-      return rowData;
-    });
-    
-    return flattenedData;
-  }, [data]);
-
-  // 컬럼 정의를 원본 JSON 구조 기반으로 동적 생성
-  const columns = useMemo(() => {
-    if (!data || data.length === 0) {
-      return [];
-    }
-
-    const createColumn = (title, field) => ({
-      title,
-      field,
-      ...COMMON_COLUMN_PROPS,
-      // width: 120,
-      minWidth: 120,
-      formatter: customFormatter
-    });
-
-    const createColumnGroup = (title, columns) => ({
-      title,
-      headerHozAlign: "center",
-      columns
-    });
-
-    // 첫 번째 데이터 항목에서 모델 구조를 가져옴
-    const firstItem = data[0];
-    const { models } = firstItem;
-
-    // 컬럼 구성
-    const columns = [
-      { 
-        title: getLocale("product_specs"), 
-        field: "function",
-        ...FROZEN_COLUMN_PROPS,
-        formatter: customFormatter
-      }
-    ];
-
-    // 각 제품(모델)별로 컬럼 그룹 생성
-    Object.entries(models).forEach(([productName, variants]) => {
-      const productColumns = Object.keys(variants).map(variant => {
-        const fieldName = variant.replace(/[-]/g, ''); // 하이픈 제거하여 필드명 생성
-        return createColumn(variant, fieldName);
-      });
-      
-      if (productColumns.length > 0) {
-        columns.push(createColumnGroup(productName, productColumns));
-      }
-    });
-
-    return columns;
-  }, [data, getLocale, customFormatter]);
-
-  const groupHeader = useCallback((value, count) => {
-    return getLocale(value.toLowerCase()) + " (" + count + ")";
-  }, [getLocale]);
-
-  useEffect(() => {
-    if (tableRef.current && !tabulatorInstance.current) {
-      tabulatorInstance.current = new Tabulator(tableRef.current, {
-        height: "calc(100vh - 350px)",
-        autoResize: false,
-        data: transformedData,
-        layout: "fitColumns",
-        groupBy: "category",
-        groupToggleElement: "header",
-        groupHeader,
-        columns
-      });
-    }
-
-    return () => {
-      if (tabulatorInstance.current) {
-        tabulatorInstance.current.destroy();
-        tabulatorInstance.current = null;
-      }
-    };
-  }, [transformedData, columns, groupHeader]);
-
-  return (
-    <div ref={tableRef} className={styles.tableContainer}></div>
+  return useCallback(
+    (id) => Locale[currentLocale]?.[id] || Locale.en?.[id],
+    [currentLocale],
   );
 }
 
-export function RenderTableFuncs({ data, width }) {
-  const getLocale = useLocale();
-  const customFormatter = useCustomLocaleFormatter();
-  const tableRef = useRef(null);
-  const tabulatorInstance = useRef(null);
+// 번역 문자열의 <br/>를 React 줄바꿈으로 변환합니다.
+function MultilineText({ text }) {
+  const parts = String(text).split(/<br\s*\/?>/i);
+  return parts.map((part, i) => (
+    <Fragment key={i}>
+      {i > 0 && <br />}
+      {part}
+    </Fragment>
+  ));
+}
 
-  // 데이터에서 동적으로 컬럼 정의를 생성
-  const columns = useMemo(() => {
-    if (!data || data.length === 0) return [];
+// 기호만으로는 의미가 전달되지 않으므로 aria-label과 title에 텍스트를 함께 넣습니다.
+function StatusMark({ symbol, label }) {
+  return (
+    <span role="img" aria-label={label} title={label}>
+      {symbol}
+    </span>
+  );
+}
 
-    const createColumn = (title, field) => ({
-      title,
-      field,
-      width: width || null, // 기본 너비를 120으로 설정, props로 전달된 경우 사용
-      minWidth: 150,
-      ...COMMON_COLUMN_PROPS,
-      formatter: customFormatter
-    });
+function Value({ value, getLocale }) {
+  if (value === true) {
+    return <StatusMark symbol="✔️" label={getLocale('supported')} />;
+  }
+  if (value === false) {
+    return <StatusMark symbol="❌" label={getLocale('not_supported')} />;
+  }
+  if (value === '🔶') {
+    return <StatusMark symbol="🔶" label={getLocale('varies_by_model')} />;
+  }
+  if (value === null || value === undefined || value === '') {
+    return null;
+  }
+  return <MultilineText text={getLocale(value) || value} />;
+}
 
-    // 첫 번째 데이터 항목에서 제품 컬럼들을 추출
-    const firstItem = data[0];
-    const productColumns = Object.keys(firstItem).filter(
-      key => key !== 'category' && key !== 'function'
+function CellValue({ value, getLocale }) {
+  // 변경 전/후 값을 함께 보여 주는 형식: { before, after }
+  if (typeof value === 'object' && value !== null && 'before' in value && 'after' in value) {
+    return (
+      <>
+        <span className={styles.before}>
+          <Value value={value.before} getLocale={getLocale} />
+        </span>
+        <span className={styles.after}>
+          <Value value={value.after} getLocale={getLocale} />
+        </span>
+      </>
     );
+  }
+  return <Value value={value} getLocale={getLocale} />;
+}
 
+// 데이터 순서를 유지하며 category 기준으로 행을 묶습니다.
+function groupRowsByCategory(rows) {
+  const groups = new Map();
+  rows.forEach((row) => {
+    const { category } = row.original;
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(row);
+  });
+  return [...groups.entries()];
+}
+
+function CompareTable({ data, columns, caption }) {
+  const getLocale = useLocale();
+  const table = useTable({ features, columns, data });
+  const [collapsed, setCollapsed] = useState({});
+  const columnCount = table.getAllLeafColumns().length;
+
+  const toggle = (category) =>
+    setCollapsed((prev) => ({ ...prev, [category]: !prev[category] }));
+
+  return (
+    <div className={styles.tableContainer}>
+      <div className={styles.scroll}>
+        <table className={styles.compare}>
+          {caption && <caption className={styles.caption}>{caption}</caption>}
+          <thead>
+            {table.getHeaderGroups().map((group) => (
+              <tr key={group.id}>
+                {group.headers
+                  .filter((header) => header.rowSpan > 0)
+                  .map((header) => (
+                    <th
+                      key={header.id}
+                      colSpan={header.colSpan}
+                      rowSpan={header.rowSpan}
+                      scope={header.column.columns.length > 0 ? 'colgroup' : 'col'}
+                      className={
+                        header.column.id === FUNCTION_COLUMN_ID ? styles.stickyCol : undefined
+                      }
+                    >
+                      {header.column.columnDef.header}
+                    </th>
+                  ))}
+              </tr>
+            ))}
+          </thead>
+          {groupRowsByCategory(table.getRowModel().rows).map(([category, rows]) => {
+            const isCollapsed = Boolean(collapsed[category]);
+            return (
+              <tbody key={category}>
+                <tr className={styles.groupRow}>
+                  <th colSpan={columnCount} scope="rowgroup">
+                    <button
+                      type="button"
+                      className={styles.groupToggle}
+                      aria-expanded={!isCollapsed}
+                      onClick={() => toggle(category)}
+                    >
+                      <span className={clsx(styles.caret, isCollapsed && styles.caretCollapsed)} aria-hidden="true" />
+                      {getLocale(String(category).toLowerCase()) || category} ({rows.length})
+                    </button>
+                  </th>
+                </tr>
+                {!isCollapsed &&
+                  rows.map((row) => (
+                    <tr key={row.id}>
+                      {row.getAllCells().map((cell) =>
+                        cell.column.id === FUNCTION_COLUMN_ID ? (
+                          <th key={cell.id} scope="row" className={styles.stickyCol}>
+                            <table.FlexRender cell={cell} />
+                          </th>
+                        ) : (
+                          <td key={cell.id}>
+                            <table.FlexRender cell={cell} />
+                          </td>
+                        ),
+                      )}
+                    </tr>
+                  ))}
+              </tbody>
+            );
+          })}
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function functionColumn(header, getLocale) {
+  return helper.accessor((row) => row.function, {
+    id: FUNCTION_COLUMN_ID,
+    header,
+    cell: (info) => <CellValue value={info.getValue()} getLocale={getLocale} />,
+  });
+}
+
+function valueColumn(id, header, accessor, getLocale) {
+  return helper.accessor(accessor, {
+    id,
+    header,
+    cell: (info) => <CellValue value={info.getValue()} getLocale={getLocale} />,
+  });
+}
+
+/**
+ * 사양 비교표. 열은 제품 → 세부 모델의 2단 구조입니다.
+ * data: [{ category, function, models: { [product]: { [variant]: value } } }]
+ */
+export function RenderTableSpecs({ data, caption }) {
+  const getLocale = useLocale();
+
+  const rows = useMemo(
+    () =>
+      (data ?? []).map(({ category, function: fn, models }) => {
+        const values = {};
+        Object.values(models ?? {}).forEach((variants) => {
+          Object.entries(variants).forEach(([variant, value]) => {
+            values[variant] = value;
+          });
+        });
+        return { category, function: fn, values };
+      }),
+    [data],
+  );
+
+  const columns = useMemo(() => {
+    if (!data?.length) return [];
     return [
-      { 
-        title: getLocale("main_function"), 
-        field: "function", 
-        ...FROZEN_COLUMN_PROPS,
-        formatter: (cell) => {
-          const value = cell.getValue();
-          return getLocale(value) || value;
-        }
-      },
-      ...productColumns.map(product => createColumn(product, product))
+      functionColumn(getLocale('product_specs'), getLocale),
+      ...Object.entries(data[0].models).map(([product, variants]) =>
+        helper.group({
+          id: `product:${product}`,
+          header: product,
+          columns: Object.keys(variants).map((variant) =>
+            valueColumn(variant, variant, (row) => row.values[variant], getLocale),
+          ),
+        }),
+      ),
     ];
-  }, [data, getLocale, customFormatter]);
+  }, [data, getLocale]);
 
-  const groupHeader = useCallback((value, count) => {
-    return getLocale(value.toLowerCase()) + " (" + count + ")";
-  }, [getLocale]);
+  return <CompareTable data={rows} columns={columns} caption={caption} />;
+}
 
-  useEffect(() => {
-    if (tableRef.current && !tabulatorInstance.current) {
-      tabulatorInstance.current = new Tabulator(tableRef.current, {
-        height: "calc(100vh - 350px)",
-        data: data,
-        layout:"fitColumns",
-        resizableColumnFit:true,
-        groupBy: "category",
-        groupToggleElement: "header",
-        groupHeader,
-        columns
-      });
-    }
+/**
+ * 기능 비교표. 열은 제품 단위입니다.
+ * data: [{ category, function, [product]: value }]
+ */
+export function RenderTableFuncs({ data, caption }) {
+  const getLocale = useLocale();
+  const rows = data ?? [];
 
-    return () => {
-      if (tabulatorInstance.current) {
-        tabulatorInstance.current.destroy();
-        tabulatorInstance.current = null;
-      }
-    };
-  }, [data, columns, groupHeader]);
+  const columns = useMemo(() => {
+    if (!data?.length) return [];
+    const products = Object.keys(data[0]).filter(
+      (key) => key !== 'category' && key !== 'function',
+    );
+    return [
+      functionColumn(getLocale('main_function'), getLocale),
+      ...products.map((product) =>
+        valueColumn(product, product, (row) => row[product], getLocale),
+      ),
+    ];
+  }, [data, getLocale]);
 
-  return <div ref={tableRef} className={styles.tableContainer}></div>;
+  return <CompareTable data={rows} columns={columns} caption={caption} />;
 }

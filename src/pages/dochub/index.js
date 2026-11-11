@@ -1,7 +1,12 @@
-import React, { useEffect, useRef, useCallback, useState } from "react";
-import { renderToStaticMarkup } from 'react-dom/server';
-import { TabulatorFull as Tabulator } from "tabulator-tables";
-import "tabulator-tables/dist/css/tabulator.min.css";
+import React, { useMemo, useState } from "react";
+import {
+  createColumnHelper,
+  createSortedRowModel,
+  rowSortingFeature,
+  sortFn_alphanumeric,
+  tableFeatures,
+  useTable,
+} from "@tanstack/react-table";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -133,201 +138,183 @@ function useLocaleData() {
   return Locale[currentLocale] || Locale["en"];
 }
 
+// 표는 빌드 시 정적 HTML <table>로 렌더링됩니다(SSR).
+// 크롤러가 문서 목록을 읽을 수 있도록 useEffect나 <BrowserOnly> 안에서 렌더링하지 마세요.
+const features = tableFeatures({
+  rowSortingFeature,
+  sortedRowModel: createSortedRowModel(),
+  sortFns: { alphanumeric: sortFn_alphanumeric },
+});
+const helper = createColumnHelper();
+
+const DOC_KEYS = ["manuals", "release_notes", "dt", "a_e"];
+const REQUIRED_FIELDS = ["category", "product", "release_date"];
+
+function getDocUrl(value, locale) {
+  if (!value) return null;
+  if (typeof value === "object") {
+    return value[locale] || value.en || null;
+  }
+  return value;
+}
+
+function trackDownload(e) {
+  const link = e.currentTarget;
+  window.gtag?.("event", "file_download", {
+    file_name: link.href.split("/").pop(),
+    file_extension: link.href.split(".").pop(),
+    link_url: link.href,
+    link_text: link.dataset.docLabel,
+    doc_type: link.dataset.docType,
+    product_name: link.dataset.product,
+  });
+}
+
+function ProductCell({ row }) {
+  const models = Array.isArray(row.models) ? row.models.join(", ") : "";
+  return (
+    <div className="dochub-product-cell">
+      <span className="dochub-product-name">{row.product}</span>
+      {models && (
+        <span className="dochub-models">
+          <span className="dochub-model-label">MODEL:</span> {models}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function DocLinks({ row, docLabels, locale }) {
+  return (
+    <div className="dochub-doc-items">
+      {DOC_KEYS.map((key) => {
+        const url = getDocUrl(row[key], locale);
+        if (!url) return null;
+        const Icon = key === "a_e" ? Wordicon : Pdficon;
+        return (
+          <a
+            key={key}
+            href={encodeURI(`${BLOB_BASE_URL}${url}`)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dochub-doc-item"
+            data-product={row.product}
+            data-doc-type={key}
+            data-doc-label={docLabels[key]}
+            onClick={trackDownload}
+            download
+          >
+            <Icon className="dochub-doc-icon" aria-hidden="true" />
+            <span className="dochub-doc-label">{docLabels[key]}</span>
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
+// 빌드(Node)와 브라우저의 시간대가 달라도 같은 날짜가 나오도록 UTC 기준으로 표시합니다.
+function ReleaseDate({ value, locale }) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return (
+    <time className="dochub-release-date" dateTime={value}>
+      {new Intl.DateTimeFormat(locale, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        timeZone: "UTC",
+      }).format(date)}
+    </time>
+  );
+}
+
+function SortIndicator({ direction }) {
+  return (
+    <span className="dochub-sort-indicator" aria-hidden="true">
+      {direction === "asc" ? "▲" : direction === "desc" ? "▼" : "↕"}
+    </span>
+  );
+}
+
 function DocHub({ data }) {
-  const tableRef = useRef(null);
-  const tabulatorInstance = useRef(null);
-  const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [validationErrors, setValidationErrors] = useState([]);
-  const selectedCategoryRef = useRef("all");
-  const searchQueryRef = useRef("");
   const localeData = useLocaleData();
   const { i18n: { currentLocale } } = useDocusaurusContext();
 
-  selectedCategoryRef.current = selectedCategory;
-  searchQueryRef.current = searchQuery;
+  const categories = useMemo(
+    () => [...new Set(data.map((item) => item.category?.trim()).filter(Boolean))],
+    [data],
+  );
 
-  useEffect(() => {
-    const cats = [...new Set(data.map(item => item.category?.trim()).filter(Boolean))];
-    setCategories(cats);
-
-    const REQUIRED = ["category", "product", "release_date"];
-    const errors = data.reduce((acc, item, i) => {
-      const missing = REQUIRED.filter(f => !item[f]);
-      if (missing.length) {
-        acc.push({ index: i + 1, product: item.product || `항목 ${i + 1}`, missing });
-      }
-      return acc;
-    }, []);
-    setValidationErrors(errors);
-  }, [data]);
-
-  const applyFilters = useCallback((tableInstance, query, category) => {
-    if (!tableInstance) return;
-    tableInstance.setFilter((rowData) => {
-      let match = true;
-      if (category && category !== "all") {
-        match = match && rowData.category?.trim() === category;
-      }
-      if (query) {
-        const q = query.toLowerCase();
-        const inProduct = rowData.product?.toLowerCase().includes(q);
-        const inModels = Array.isArray(rowData.models) &&
-          rowData.models.some(m => m.toLowerCase().includes(q));
-        match = match && (inProduct || inModels);
-      }
-      return match;
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!tableRef.current) return;
-
-    const { docLabels } = localeData;
-    const DOC_FIELDS = [
-      { key: "manuals", label: docLabels.manuals },
-      { key: "release_notes", label: docLabels.release_notes },
-      { key: "dt", label: docLabels.dt },
-      { key: "a_e", label: docLabels.a_e },
-    ];
-
-    const getUrl = (val) => {
-      if (!val) return null;
-      if (typeof val === "object") {
-        if (currentLocale === "ko") {
-          return val["ko"] || val["en"] || null;
+  const validationErrors = useMemo(
+    () =>
+      data.reduce((acc, item, i) => {
+        const missing = REQUIRED_FIELDS.filter((f) => !item[f]);
+        if (missing.length) {
+          acc.push({ index: i + 1, product: item.product || `항목 ${i + 1}`, missing });
         }
-        return val[currentLocale] || val["en"] || null;
+        return acc;
+      }, []),
+    [data],
+  );
+
+  const filteredData = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return data.filter((row) => {
+      if (selectedCategory !== "all" && row.category?.trim() !== selectedCategory) {
+        return false;
       }
-      return val;
-    };
-
-    const productFormatter = (cell) => {
-      const row = cell.getRow().getData();
-      const models = Array.isArray(row.models) ? row.models.join(", ") : "";
-      return `<div class="dochub-product-cell">
-        <span class="dochub-product-name">${row.product}</span>
-        ${models ? `<span class="dochub-models"><span class="dochub-model-label">MODEL:</span> ${models}</span>` : ""}
-      </div>`;
-    };
-
-    const versionFormatter = (cell) => {
-      const v = cell.getValue();
-      if (!v) return "";
-      const row = cell.getRow().getData();
-      return `<span class="dochub-version-badge">${v}</span>`;
-    };
-
-    const releaseDateFormatter = (cell) => {
-      const row = cell.getRow().getData();
-      const v = row.release_date;
-      if (!v) return "";
-      const date = new Date(v);
-      if (isNaN(date)) return v; // If not a valid date, return original value
-      return `<span class="dochub-release-date">${date.toLocaleDateString(currentLocale, { year: 'numeric', month: 'short', day: 'numeric' })}</span>`;
-    }
-
-    const pdfIconHtml = renderToStaticMarkup(React.createElement(Pdficon, { className: 'dochub-doc-icon' }));
-    const wordIconHtml = renderToStaticMarkup(React.createElement(Wordicon, { className: 'dochub-doc-icon' }));
-
-    const docFormatter = (cell) => {
-      const row = cell.getRow().getData();
-      const items = DOC_FIELDS.map(({ key, label }) => {
-        const url = getUrl(row[key]);
-        if (!url) return "";
-        const iconHtml = key === 'a_e' ? wordIconHtml : pdfIconHtml;
-        const fullUrl = `${BLOB_BASE_URL}${url}`;
-        return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" class="dochub-doc-item"
-          data-product="${row.product}"
-          data-doc-type="${key}"
-          data-doc-label="${label}"
-          download>
-          ${iconHtml}
-          <span class="dochub-doc-label">${label}</span>
-        </a>`;
-      }).filter(Boolean);
-      return `<div class="dochub-doc-items">${items.join("")}</div>`;
-    };
-
-    const table = new Tabulator(tableRef.current, {
-      data: data,
-      layout: "fitColumns",
-      renderVertical: "virtual",
-      columns: [
-        {
-          title: localeData.colProduct,
-          field: "product",
-          formatter: productFormatter,
-          minWidth: 160,
-          maxWidth: 420,
-          widthGrow: 2,
-        },
-        {
-          title: localeData.colVersion,
-          field: "version",
-          formatter: versionFormatter,
-          minWidth: 100,
-          widthGrow: 1,
-          hozAlign: "left",
-          headerSort: true,
-        },
-        {
-          title: localeData.colDocumentation,
-          field: "manuals",
-          formatter: docFormatter,
-          minWidth: 240,
-          widthGrow: 4,
-          headerSort: false,
-        },
-        {
-          title: localeData.colReleaseDate,
-          field: "release date",
-          formatter: releaseDateFormatter,
-          minWidth: 100,
-          widthGrow: 1,
-          headerSort: false,
-        },
-      ],
+      if (!q) return true;
+      const inProduct = row.product?.toLowerCase().includes(q);
+      const inModels =
+        Array.isArray(row.models) && row.models.some((m) => m.toLowerCase().includes(q));
+      return inProduct || inModels;
     });
+  }, [data, searchQuery, selectedCategory]);
 
-    tabulatorInstance.current = table;
+  const columns = useMemo(
+    () => [
+      helper.accessor("product", {
+        id: "product",
+        header: localeData.colProduct,
+        sortFn: "alphanumeric",
+        cell: (info) => <ProductCell row={info.row.original} />,
+      }),
+      helper.accessor("version", {
+        id: "version",
+        header: localeData.colVersion,
+        sortFn: "alphanumeric",
+        sortUndefined: "last",
+        cell: (info) => {
+          const v = info.getValue();
+          return v ? <span className="dochub-version-badge">{v}</span> : null;
+        },
+      }),
+      helper.display({
+        id: "documentation",
+        header: localeData.colDocumentation,
+        cell: (info) => (
+          <DocLinks
+            row={info.row.original}
+            docLabels={localeData.docLabels}
+            locale={currentLocale}
+          />
+        ),
+      }),
+      helper.accessor("release_date", {
+        id: "release_date",
+        header: localeData.colReleaseDate,
+        enableSorting: false,
+        cell: (info) => <ReleaseDate value={info.getValue()} locale={currentLocale} />,
+      }),
+    ],
+    [localeData, currentLocale],
+  );
 
-    table.on("tableBuilt", () => {
-      applyFilters(table, searchQueryRef.current, selectedCategoryRef.current);
-    });
-
-    return () => {
-      table.destroy();
-      tabulatorInstance.current = null;
-    };
-  }, [data, currentLocale, localeData, applyFilters]);
-
-  useEffect(() => {
-    applyFilters(tabulatorInstance.current, searchQuery, selectedCategory);
-  }, [searchQuery, selectedCategory, applyFilters]);
-
-  useEffect(() => {
-    const el = tableRef.current;
-    if (!el) return;
-
-    const handleClick = (e) => {
-      const link = e.target.closest("a.dochub-doc-item");
-      if (!link) return;
-
-      window.gtag?.("event", "file_download", {
-        file_name: link.href.split("/").pop(),
-        file_extension: link.href.split(".").pop(),
-        link_url: link.href,
-        link_text: link.dataset.docLabel,
-        doc_type: link.dataset.docType,
-        product_name: link.dataset.product,
-      });
-    };
-
-    el.addEventListener("click", handleClick);
-    return () => el.removeEventListener("click", handleClick);
-  }, []);
+  const table = useTable({ features, columns, data: filteredData });
 
   return (
     <div className="dochub-page">
@@ -347,6 +334,7 @@ function DocHub({ data }) {
             type="text"
             className="dochub-search-input"
             placeholder={localeData.searchPlaceholder}
+            aria-label={localeData.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -356,15 +344,19 @@ function DocHub({ data }) {
       {/* Pill 카테고리 탭 */}
       <div className="dochub-tabs">
         <button
+          type="button"
           className={`dochub-tab${selectedCategory === "all" ? " active" : ""}`}
+          aria-pressed={selectedCategory === "all"}
           onClick={() => setSelectedCategory("all")}
         >
           {localeData.allCategories}
         </button>
-        {categories.map(cat => (
+        {categories.map((cat) => (
           <button
+            type="button"
             key={cat}
             className={`dochub-tab${selectedCategory === cat ? " active" : ""}`}
+            aria-pressed={selectedCategory === cat}
             onClick={() => setSelectedCategory(cat)}
           >
             {localeData.categories?.[cat] || cat}
@@ -395,7 +387,61 @@ function DocHub({ data }) {
 
       {/* 테이블 */}
       <div className="dochub-table-wrapper">
-        <div ref={tableRef} className="dochub-table" />
+        <table className="dochub-table">
+          <colgroup>
+            <col className="dochub-col-product" />
+            <col className="dochub-col-version" />
+            <col className="dochub-col-docs" />
+            <col className="dochub-col-release" />
+          </colgroup>
+          <thead>
+            {table.getHeaderGroups().map((group) => (
+              <tr key={group.id}>
+                {group.headers.map((header) => {
+                  const { column } = header;
+                  const label = column.columnDef.header;
+                  if (!column.getCanSort()) {
+                    return (
+                      <th key={header.id} scope="col">
+                        {label}
+                      </th>
+                    );
+                  }
+                  const sorted = column.getIsSorted();
+                  return (
+                    <th
+                      key={header.id}
+                      scope="col"
+                      aria-sort={
+                        sorted === "asc" ? "ascending" : sorted === "desc" ? "descending" : "none"
+                      }
+                    >
+                      <button
+                        type="button"
+                        className="dochub-sort-button"
+                        onClick={column.getToggleSortingHandler()}
+                      >
+                        {label}
+                        <SortIndicator direction={sorted} />
+                      </button>
+                    </th>
+                  );
+                })}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <tr key={row.id}>
+                {row.getAllCells().map((cell) => (
+                  <td key={cell.id}>
+                    <table.FlexRender cell={cell} />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
