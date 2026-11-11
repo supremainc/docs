@@ -11,6 +11,47 @@ import {translate} from '@docusaurus/Translate';
 import SupLogo from '@site/static/img/suprema-logo.svg';
 import Cloudicon from '@site/static/img/air-cloud.svg';
 import SearchBar from '@theme/SearchBar';
+import Head from '@docusaurus/Head';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import {
+  buildWebsite,
+  buildOrganization,
+  getInLanguage,
+  websiteId,
+  organizationId,
+} from '@site/src/utils/structuredData';
+
+function HomepageStructuredData() {
+  const { siteConfig, i18n: { currentLocale } } = useDocusaurusContext();
+  const siteUrl = siteConfig.url;
+  const homeUrl = `${siteUrl}${useBaseUrl('/')}`;
+  const inLanguage = getInLanguage(currentLocale);
+
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildOrganization(siteUrl),
+      buildWebsite(siteUrl, siteConfig.tagline, inLanguage),
+      {
+        '@type': 'WebPage',
+        '@id': `${homeUrl}#webpage`,
+        url: homeUrl,
+        name: siteConfig.title,
+        description: siteConfig.tagline,
+        inLanguage,
+        isPartOf: { '@id': websiteId(siteUrl) },
+        about: { '@id': organizationId(siteUrl) },
+        publisher: { '@id': organizationId(siteUrl) },
+      },
+    ],
+  };
+
+  return (
+    <Head>
+      <script type="application/ld+json">{JSON.stringify(graph)}</script>
+    </Head>
+  );
+}
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -131,6 +172,7 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description={`${siteConfig.tagline}`}>
+      <HomepageStructuredData />
       <main className={styles.heroLayout}>
         <ScrollHint />
         <HomepageHeader />
