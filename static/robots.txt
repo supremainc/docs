@@ -1,9 +1,11 @@
 User-agent: *
+Content-Signal: search=yes, ai-input=yes
 Allow: /
 
 User-agent: Algolia Crawler
 Allow: /
 
-# Allow Algolia Crawler to access all content for indexing
-User-agent: Algolia Crawler/*
-Allow: /
+Sitemap: https://docs.supremainc.com/sitemap.xml
+Sitemap: https://docs.supremainc.com/en/sitemap.xml
+Sitemap: https://docs.supremainc.com/es/sitemap.xml
+Sitemap: https://docs.supremainc.com/ja/sitemap.xml
