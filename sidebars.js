@@ -666,6 +666,346 @@ function createSidebars(preview) {
       ]
     }
   ],
+  bs2_system_configuration: [
+    {
+      type: 'category',
+      label: 'BioStar 2 시스템 구성',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'how-to/bs2_system_configuration/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: '일반',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/general',
+          },
+          items: [
+            'how-to/bs2_system_configuration/installation',
+            'how-to/bs2_system_configuration/server-start-failure',
+            'how-to/bs2_system_configuration/install-mariadb',
+            'how-to/bs2_system_configuration/install-mssql',
+            'how-to/bs2_system_configuration/web-client-connection',
+            'how-to/bs2_system_configuration/http-https-protocol',
+            'how-to/bs2_system_configuration/http-to-https',
+            'how-to/bs2_system_configuration/license-activation',
+            'how-to/bs2_system_configuration/hexadecimal-card-key',
+            'how-to/bs2_system_configuration/hashkey-management',
+            'how-to/bs2_system_configuration/server-port-settings',
+            'how-to/bs2_system_configuration/daylight-saving-time',
+            'how-to/bs2_system_configuration/login-id-options',
+            'how-to/bs2_system_configuration/usb-user-log-import-export',
+            'how-to/bs2_system_configuration/biostar1-migration-tool',
+            'how-to/bs2_system_configuration/custom-language-file-upgrade',
+            'how-to/bs2_system_configuration/setting-conf-auto-backup',
+            'how-to/bs2_system_configuration/mssql-windows-auth',
+          ]
+        },
+        {
+          type: 'category',
+          label: '사용자',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/user',
+          },
+          items: [
+            'how-to/bs2_system_configuration/user-enrollment',
+            'how-to/bs2_system_configuration/csn-wiegand-card-enrollment',
+            'how-to/bs2_system_configuration/smart-card-issuance',
+            'how-to/bs2_system_configuration/custom-level',
+            'how-to/bs2_system_configuration/custom-level-example-v263',
+            'how-to/bs2_system_configuration/wiegand-output-by-auth-mode',
+            'how-to/bs2_system_configuration/private-auth-mode',
+            'how-to/bs2_system_configuration/slave-fingerprint-enrollment',
+            'how-to/bs2_system_configuration/alphanumeric-user-id',
+            'how-to/bs2_system_configuration/user-export-import',
+            'how-to/bs2_system_configuration/custom-user-fields',
+            'how-to/bs2_system_configuration/device-user-deletion',
+            'how-to/bs2_system_configuration/email-field-symbols',
+            'how-to/bs2_system_configuration/csv-mobile-access-card',
+            'how-to/bs2_system_configuration/visual-face-enrollment',
+            'how-to/bs2_system_configuration/csv-visual-face-batch',
+            'how-to/bs2_system_configuration/new-user-export-import',
+            'how-to/bs2_system_configuration/biostar-qr-issuance',
+            'how-to/bs2_system_configuration/third-party-qr',
+            'how-to/bs2_system_configuration/csv-pin-input',
+            'how-to/bs2_system_configuration/wiegand-card-id-leading-zero',
+            'how-to/bs2_system_configuration/csv-import-error-description',
+            'how-to/bs2_system_configuration/hide-face-preview-image',
+            'how-to/bs2_system_configuration/visual-face-image-extraction',
+            'how-to/bs2_system_configuration/visual-face-migration',
+            'how-to/bs2_system_configuration/user-partial-update-bs3',
+            'how-to/bs2_system_configuration/simplified-mobile-face-enrollment',
+            'how-to/bs2_system_configuration/visual-face-import-by-user-id',
+            'how-to/bs2_system_configuration/user-partial-update-bs3-fw-100',
+            'how-to/bs2_system_configuration/login-mfa',
+          ]
+        },
+        {
+          type: 'category',
+          label: '장치',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/device',
+          },
+          items: [
+            'how-to/bs2_system_configuration/add-devices',
+            'how-to/bs2_system_configuration/corestation-settings',
+            'how-to/bs2_system_configuration/corestation-external-wiegand',
+            'how-to/bs2_system_configuration/device-server-sync',
+            'how-to/bs2_system_configuration/device-user-data-sync',
+            'how-to/bs2_system_configuration/dm-20-settings',
+            'how-to/bs2_system_configuration/third-party-controller-auth-result',
+            'how-to/bs2_system_configuration/group-matching',
+            'how-to/bs2_system_configuration/wiegand-output-settings',
+            'how-to/bs2_system_configuration/device-administrator',
+            'how-to/bs2_system_configuration/device-batch-upgrade',
+            'how-to/bs2_system_configuration/device-batch-edit',
+            'how-to/bs2_system_configuration/secure-communication-tls',
+            'how-to/bs2_system_configuration/enrollment-device-registration',
+            'how-to/bs2_system_configuration/sip-auth-id',
+            'how-to/bs2_system_configuration/xpass-d2-settings',
+            'how-to/bs2_system_configuration/rs485-mode',
+            'how-to/bs2_system_configuration/duress-event-action',
+            'how-to/bs2_system_configuration/one-device-legacy-mode',
+            'how-to/bs2_system_configuration/secure-tamper',
+            'how-to/bs2_system_configuration/wiegand-in-out-simultaneous',
+            'how-to/bs2_system_configuration/factory-default-keep-network',
+            'how-to/bs2_system_configuration/d2-keypad-settings',
+            'how-to/bs2_system_configuration/device-overview-user-management',
+            'how-to/bs2_system_configuration/custom-input-event-name',
+            'how-to/bs2_system_configuration/wiegand-auth-result-user-id',
+            'how-to/bs2_system_configuration/input-event-alert-sound',
+            'how-to/bs2_system_configuration/credential-duplication-check',
+            'how-to/bs2_system_configuration/card-type-selection',
+            'how-to/bs2_system_configuration/anti-tailgating-input',
+            'how-to/bs2_system_configuration/batch-edit-administrators',
+            'how-to/bs2_system_configuration/device-administrator-limit',
+            'how-to/bs2_system_configuration/corestation-faq',
+            'how-to/bs2_system_configuration/bs2-output-port-trigger-action',
+            'how-to/bs2_system_configuration/facestation-f2-thermal',
+            'how-to/bs2_system_configuration/intelligent-slave',
+            'how-to/bs2_system_configuration/smart-card-byte-order',
+            'how-to/bs2_system_configuration/x-station-2-corestation-slave',
+            'how-to/bs2_system_configuration/qr-as-card',
+            'how-to/bs2_system_configuration/device-text-message',
+            'how-to/bs2_system_configuration/device-custom-language',
+            'how-to/bs2_system_configuration/face-detection-setting',
+          ]
+        },
+        {
+          type: 'category',
+          label: '출입문',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/door',
+          },
+          items: [
+            'how-to/bs2_system_configuration/door-settings',
+            'how-to/bs2_system_configuration/door-open-event-logs',
+            'how-to/bs2_system_configuration/timed-anti-passback',
+          ]
+        },
+        {
+          type: 'category',
+          label: '출입통제',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/ac',
+          },
+          items: [
+            'how-to/bs2_system_configuration/access-group-creation',
+            'how-to/bs2_system_configuration/access-group-level-count',
+            'how-to/bs2_system_configuration/unlimited-access-group-level',
+            'how-to/bs2_system_configuration/unlimited-floor-level',
+          ]
+        },
+        {
+          type: 'category',
+          label: '구역',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/zone',
+          },
+          items: [
+            'how-to/bs2_system_configuration/apb-zone',
+            'how-to/bs2_system_configuration/fire-alarm-zone',
+            'how-to/bs2_system_configuration/scheduled-lock-unlock-zone',
+            'how-to/bs2_system_configuration/alarm-zone',
+            'how-to/bs2_system_configuration/interlock-zone',
+            'how-to/bs2_system_configuration/muster-zone',
+            'how-to/bs2_system_configuration/apb-reset-by-user',
+            'how-to/bs2_system_configuration/scheduled-unlock-zone-elevator',
+            'how-to/bs2_system_configuration/apb-zone-door-sensor',
+            'how-to/bs2_system_configuration/occupancy-limit-zone',
+          ]
+        },
+        {
+          type: 'category',
+          label: '보고서',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/report',
+          },
+          items: [
+            'how-to/bs2_system_configuration/ac-report',
+          ]
+        },
+        {
+          type: 'category',
+          label: '근태관리',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/ta',
+          },
+          items: [
+            'how-to/bs2_system_configuration/ta-overview',
+            'how-to/bs2_system_configuration/ta-device-settings',
+            'how-to/bs2_system_configuration/ta-fixed-shift',
+            'how-to/bs2_system_configuration/ta-flexible-shift',
+            'how-to/bs2_system_configuration/ta-floating-shift',
+            'how-to/bs2_system_configuration/ta-break-time',
+            'how-to/bs2_system_configuration/ta-report-edit',
+            'how-to/bs2_system_configuration/ta-temporary-schedule',
+            'how-to/bs2_system_configuration/ta-day-start-time',
+            'how-to/bs2_system_configuration/ta-worktime-without-ta-key',
+            'how-to/bs2_system_configuration/ta-case-study',
+            'how-to/bs2_system_configuration/ta-weekend-days',
+            'how-to/bs2_system_configuration/ta-meal-deduction',
+            'how-to/bs2_system_configuration/ta-shift-over-24h',
+            'how-to/bs2_system_configuration/ta-first-in-last-out',
+            'how-to/bs2_system_configuration/ta-report-sorting',
+            'how-to/bs2_system_configuration/ta-report-custom-user-field',
+            'how-to/bs2_system_configuration/ta-custom-level',
+            'how-to/bs2_system_configuration/ta-general-user-report-update',
+            'how-to/bs2_system_configuration/ta-wiegand-device',
+            'how-to/bs2_system_configuration/ta-punch-log-deletion',
+            'how-to/bs2_system_configuration/ta-hostname-access-issue',
+          ]
+        },
+        {
+          type: 'category',
+          label: '모니터링',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/monitoring',
+          },
+          items: [
+            'how-to/bs2_system_configuration/monitoring-overview',
+            'how-to/bs2_system_configuration/monitoring-tna-key-field',
+            'how-to/bs2_system_configuration/monitoring-page-search',
+            'how-to/bs2_system_configuration/event-log-door-field',
+            'how-to/bs2_system_configuration/graphic-map',
+            'how-to/bs2_system_configuration/user-enrollment-source',
+            'how-to/bs2_system_configuration/muster-status-sorting',
+            'how-to/bs2_system_configuration/thermal-camera-temperature-log',
+            'how-to/bs2_system_configuration/monitoring-door-open-logs',
+          ]
+        },
+        {
+          type: 'category',
+          label: '비디오',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/video',
+          },
+          items: [
+            'how-to/bs2_system_configuration/video-overview',
+            'how-to/bs2_system_configuration/live-video-view',
+          ]
+        },
+        {
+          type: 'category',
+          label: '모바일',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/mobile-app',
+          },
+          items: [
+            'how-to/bs2_system_configuration/cloud-mobile-app',
+            'how-to/bs2_system_configuration/mobile-app-user-enrollment',
+            'how-to/bs2_system_configuration/mobile-app-biomini-fingerprint',
+            'how-to/bs2_system_configuration/mobile-app-push-alarm',
+            'how-to/bs2_system_configuration/mobile-app-door-control',
+            'how-to/bs2_system_configuration/device-manager-app',
+            'how-to/bs2_system_configuration/device-manager-app-smart-card-layout',
+          ]
+        },
+        {
+          type: 'category',
+          label: '설정',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/setting',
+          },
+          items: [
+            'how-to/bs2_system_configuration/alert-settings',
+            'how-to/bs2_system_configuration/audit-trail',
+            'how-to/bs2_system_configuration/trigger-action',
+            'how-to/bs2_system_configuration/device-disconnect-email',
+            'how-to/bs2_system_configuration/device-disconnect-popup',
+            'how-to/bs2_system_configuration/server-matching',
+            'how-to/bs2_system_configuration/custom-admin-monitoring',
+            'how-to/bs2_system_configuration/aoc-personal-info-deletion',
+            'how-to/bs2_system_configuration/log-auto-deletion',
+            'how-to/bs2_system_configuration/desfire-ev1-advanced',
+            'how-to/bs2_system_configuration/ad-user-group-sync',
+            'how-to/bs2_system_configuration/ad-user-id-mapping',
+            'how-to/bs2_system_configuration/user-id-sorting',
+            'how-to/bs2_system_configuration/security-settings',
+            'how-to/bs2_system_configuration/specific-devices-option',
+            'how-to/bs2_system_configuration/alert-list-alarm-monitor',
+            'how-to/bs2_system_configuration/image-log-storage',
+            'how-to/bs2_system_configuration/mobile-access-v2714',
+            'how-to/bs2_system_configuration/suprema-mobile-access',
+            'how-to/bs2_system_configuration/custom-level-zone',
+            'how-to/bs2_system_configuration/dynamic-site-configuration',
+            'how-to/bs2_system_configuration/ad-account-login',
+            'how-to/bs2_system_configuration/smtp-settings',
+            'how-to/bs2_system_configuration/custom-smart-card-layout',
+            'how-to/bs2_system_configuration/smart-card-layout-improvement',
+            'how-to/bs2_system_configuration/backup-restore',
+            'how-to/bs2_system_configuration/osdp-wireless-door-lock',
+            'how-to/bs2_system_configuration/webcam-profile-visual-face',
+            'how-to/bs2_system_configuration/felica-smart-card-layout',
+            'how-to/bs2_system_configuration/auto-user-sync-all-devices',
+            'how-to/bs2_system_configuration/secure-communication-connection',
+            'how-to/bs2_system_configuration/server-device-port-usage',
+            'how-to/bs2_system_configuration/connection-modes',
+            'how-to/bs2_system_configuration/odbc-driver-17',
+          ]
+        },
+        {
+          type: 'category',
+          label: '인테그레이션',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/integration',
+          },
+          items: [
+            'how-to/bs2_system_configuration/milestone-integration',
+          ]
+        },
+        {
+          type: 'category',
+          label: '방문자',
+          link: {
+            type: 'doc',
+            id: 'how-to/bs2_system_configuration/visitor',
+          },
+          items: [
+            'how-to/bs2_system_configuration/visitor-self-registration',
+            'how-to/bs2_system_configuration/visitor-fingerprint-search',
+          ]
+        }
+      ]
+    }
+  ],
   biostarx: [
     {
       type: 'category',
@@ -1259,6 +1599,11 @@ function createSidebars(preview) {
           label: 'BioStar X 보안 강화',
           description: getLocalizedConfigValue('hardeningGuideDescription'),
           href: '/how-to/bsx_hardening/',
+        },
+        {
+          type: 'link',
+          label: 'BioStar 2 시스템 구성',
+          href: '/how-to/bs2_system_configuration/'
         }
       ]
     }
