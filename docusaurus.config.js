@@ -24,7 +24,7 @@ const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 const config = {
   title: getLocalizedConfigValue('title'),
   tagline: getLocalizedConfigValue('tagline'),
-  favicon: 'https://supremainc.com/ko/asset/images/common/Website_favicon.png',
+  favicon: '/img/website_favicon.png',
   // Set the production url of your site here
   url: !isPreview ? 'https://docs.supremainc.com' : 'https://supremainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
