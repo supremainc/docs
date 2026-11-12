@@ -1,0 +1,41 @@
+# How to enable user group synchronization in Active Directory
+
+Active Directory function is supported starting with BioStar 2 Version 2.7.5.
+
+Furthermore, with BioStar 2 Version 2.7.8, unlike previous versions of BioStar 2 Version 2.7.8, users can now selectively synchronize user information through the **User Group** section.
+
+Go to **Setting** → **Active Directory**, you can set up the **Active Directory** setting with the screen below.
+
+Red square area **User Group** is newly added from BioStar 2 Version 2.7.8.
+
+<Image src='/img/how-to/active_directory_01.png' width='1000' alone />
+
+The initial value is **Inactive**, which synchronizes all users.
+
+Once you move the bar to **Active**, now BioStar 2 will synchronize users according to the **User Group Base DN** and **User Group** setting.
+
+<Image src='/img/how-to/active_directory_02.png' width='1000' alone />
+
+## User Group Base DN
+
+When you click the button **Pull User Group** after inserting the value, the user group information of AD server gets imported.
+
+:::info
+
+Initial value **None** before you click the button.
+
+:::
+
+## User Group
+
+* If **User Group** is selected, 'Update' button gets activated.
+
+* The information is saved once you click **Update**. If the user group information does not get updated at least once, an error will popup when user attempts to synchronize.
+
+* If **Pull User Group** is selected once again, the existing User Group settings get reset.
+
+:::info
+
+User Group information on AD is not displayed in BioStar.
+
+:::

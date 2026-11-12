@@ -1,0 +1,133 @@
+# How to Configure SMTP and Test the Recipient Address
+
+To directly send email links from the BioStar 2 interface to recipients for Visual Face Mobile Enrollment and QR access keys, it is important to set up the SMTP setting. After configuring the SMTP setting, we can check whether the mail is being sent properly by sending a test mail to the recipient address. This page includes how to set up the SMTP Settings including 2-Step Verification in Gmail and Outlook Office 365.
+
+**Location**
+
+1. Settings
+
+1. Email Setting
+
+1. Email Contents Setting
+
+1. Click the SMTP Settings tab
+
+## How to Configure SMTP through Gmail
+
+As of May 2022, Google no longer supports SMTP usage of third-party apps by directly inputting their username and password required for login at Gmail. Therefore, to use Gmail to configure the SMTP, the user must create 2-step verification and a separate app password that is generated in the process below.
+
+### 2-Step Verification through Gmail
+
+[Link](https://evermap.com/Tutorial_AMM_UseAppPasswords.asp) for the process for using Google with two factor authentication.
+
+1. Log into your Gmail account and go to the Security tab.
+
+   <Image src='/img/how-to/smtp_settings_1.png' width='1000' alone />
+
+1. Under Security, select **2-Step Verification** and turn it on.
+
+   <Image src='/img/how-to/smtp_settings_2.png' width='800' alone />
+
+1. To configure 2-Step Verification, log into your account again.
+
+   <Image src='/img/how-to/smtp_settings_3.png' width='1000' alone />
+
+1. Use your phone to complete configuration.
+
+   <Image src='/img/how-to/smtp_settings_4.png' width='500' alone />
+
+1. Create the **App passwords**.
+
+   <Image src='/img/how-to/smtp_settings_5.png' width='600' alone />
+
+1. Add new App Name (ex. custom name: Suprema) and press Generate.
+
+   <Image src='/img/how-to/smtp_settings_6.png' width='600' alone />
+   
+   <Image src='/img/how-to/smtp_settings_7.png' width='500' alone />
+
+   :::info
+   
+   This password will be used to log into your SMTP server. Please record this password as it will not be displayed once you press **DONE**.
+
+   :::
+
+1. Click the **SMTP Settings** tab.
+
+   **Settings** → **Email Settings** → **Email Contents Settings** → **SMTP Settings** tab
+
+1. Fill out the information below.
+
+   <Image src='/img/how-to/smtp_settings_8.png' width='400' alone />
+
+   * **SMTP Server Name**: Enter the value at the blank space according to your preference.
+
+   * **Description**: Enter the value at the blank space according to your preference.
+
+   * **Server Address**: smtp.gmail.com
+
+   * **Port**: 587
+
+   * **User Name**: User's Gmail address
+
+   * **Password**: Generated app password created in Step 6
+
+   * **Security Type**: TLS
+
+   * **Sender**: User's Gmail address
+
+1. After clicking Apply, input Test Mail Recipient Address and press Send Mail.
+
+   <Image src='/img/how-to/smtp_settings_9.png' width='700' alone />
+
+1. Check for successful test mail at the Recipient Address.
+
+   <Image src='/img/how-to/smtp_settings_10.png' width='300' alone />
+
+   <Image src='/img/how-to/smtp_settings_11.png' width='700' alone />
+
+## How to Configure SMTP through Office365
+
+Unlike Google, Office365's email is not blocked. Therefore, the username and password used for the login at the email can be used directly to configure the SMTP settings in BioStar2.
+
+1. Open **SMTP Settings** tab.
+
+   **Settings** → **Email Settings** → **Email Contents Settings** → **SMTP Settings** tab
+
+1. Fill out the information below.
+
+   <Image src='/img/how-to/smtp_settings_12.png' width='400' alone />
+
+   * **SMTP Server Name**: Enter the value at the blank space according to your preference.
+
+   * **Description**: Enter the value at the blank space according to your preference.
+
+   * **Server Address**: smtp.office365.com
+
+   * **Port**: 587
+
+   * **User Name**: User's Office365 password
+
+   * **Password**: User's Office365 password
+
+   * **Security Type**: TLS
+
+   * **Sender**: User's Office365 email address
+
+1. After clicking **Apply**, input **Test Mail Recipient Address** and press **Send Email**.
+
+1. Check for successful test mail at the Recipient Address.
+
+   <Image src='/img/how-to/smtp_settings_10.png' width='300' alone />
+   
+   <Image src='/img/how-to/smtp_settings_14.png' width='1000' alone />
+
+### 2-Step Verification through Office365
+
+Even though 2-Step Verification is not mandatory to configure SMTP settings in Office365, it still can be configured. The process is very similar to the 2-Step Verification with Gmail, and you can follow the steps provided in this link to configure 2-Step Verification.
+
+[2-Step Verification for Microsoft Account](https://support.microsoft.com/en-us/account-billing/turning-two-step-verification-on-or-off-for-your-microsoft-account-b1a56fc2-caf3-a5a1-f7e3-4309e99987ca#:-:text=To%20turn%20two%2Dstep%20verification,verification%20to%20turn%20it%20off)
+
+<Image src='/img/how-to/smtp_settings_15.png' width='400' alone />
+
+The only thing you need to change from the original format of SMTP settings in Office365 once you have enabled 2-Step Verification is the **Password**. Add the App Password generated from creating the 2-Step Verification at Office365 to configure the SMTP.

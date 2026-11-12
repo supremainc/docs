@@ -1,0 +1,97 @@
+# How to Enable and Use Multi-Factor Authentication for Login
+
+* **Affected Version**: BioStar 2 v2.9.7 or above
+
+* **Supported Products**: BioMini, BioMini Plus 2
+
+In version 2.9.7, Suprema introduced a new feature called **Multi-Factor Authentication for Login**. This allows users to enhance the security of their accounts by adding a fingerprint authentication step, using a fingerprint scanner, to the existing ID and password login method in BioStar 2.
+
+## Basic Concepts
+
+The basic concept for this new feature is as the following.
+
+<Image src='/img/how-to/1m.png' width='1000' alone />
+
+## Cautions
+
+1. To use this new feature, the following Suprema's fingerprint scanners must already be connected to the BioStar 2 server or client.
+
+   * BioMini
+
+   * BioMini Plus 2
+
+1. When a user with Multi-Factor Auth for Login enabled accesses BioStar 2 through the BioStar 2 Cloud, fingerprint authentication for login is NOT supported, so Multi-Factor Auth for Login CAN'T be used.
+
+1. Multi-Factor Auth for Login CAN'T be used if the Use for BioStar 2 Login option is enabled for an Active Directory server account.
+
+1. Users with Multi-Factor Auth for Login enabled CAN'T be registered for BioStar 2 services other than BioStar 2 AC.
+
+## Execution Procedures
+
+:::info
+
+Before adding the fingerprint scanner, it needs to install a USB agent in the BioStar 2 server in advance. To install a USB agent, plesae follow the below steps.
+
+<Image src='/img/how-to/2m.png' width='1000' alone /> 
+
+:::
+
+1. Add a Suprema fingerprint scanner in BioStar 2 (BioMini or BioMini Plus 2).
+
+   Connect your Suprema fingerprint scanner to BioStar 2 and check if the icon of the USB scanner appears correctly.
+
+   <Image src='/img/how-to/3m.png' width='800' alone />
+
+1. Apply the feature **Multi-Factor Auth for Login** to a user.
+
+   1. Go to the USER section and select the user to whom you will apply the new feature. First, enroll the user's fingerprint using the connected Suprema fingerprint scanner.
+
+      <Image src='/img/how-to/4m.png' width='1000' alone />
+
+   1. Select an option other than None in Operator Level filed and set the Multi-Factor Auth for Login option to Use. Next, enter the Login ID and Password.
+
+      <Image src='/img/how-to/5m.png' width='1000' alone /> 
+
+      :::info
+
+      If you select None as the option in Operator Level, the Multi-Factor Authentication for Login feature will NOT be visible, as shown in the picture below.
+
+      <Image src='/img/how-to/6m.png' width='900' alone /> 
+
+      :::
+
+1. Log in to BioStar 2 Using **Multi-Factor Auth for Login** Feature.
+
+   1. Go to the BioStar 2 login page. Enter the ID and Password set in Step 2-2, then click Login.
+
+      <Image src='/img/how-to/7m.png' width='300' alone />
+
+   1. You will then see a screen prompting you to authenticate using your fingerprint. At this point, scan your fingerprint using the connected Suprema fingerprint scanner.
+
+      <Image src='/img/how-to/8m.png' width='300' alone />
+
+      :::info
+
+      Please consider the following cautions when authenticating using your fingerprint:
+
+      1. The scan time limit is fixed at 18 seconds and cannot be changed.
+
+      1. You can attempt to scan your fingerprint up to three consecutive times. If the fingerprint is not accurately scanned within these three attempts, authentication will fail.
+
+      1. In case of authentication failure, click the Retry button to attempt fingerprint authentication again. However, please note that only two retry attempts are allowed.
+
+         <Image src='/img/how-to/9m.png' width='400' alone />
+
+      1. If fingerprint authentication fails after a total of 3 attempts, including 2 retry attempts, the login process will revert to the ID and password entry step.
+
+         <Image src='/img/how-to/10m.png' width='300' alone />
+
+      :::
+
+   1. If authentication is successful, you will be logged in to BioStar 2 as normal.
+
+      <Image src='/img/how-to/11m.png' width='1000' alone />
+
+## Video Demo
+
+<YouTube className='fit--content' videoId="YpuhBSbxMNI" />

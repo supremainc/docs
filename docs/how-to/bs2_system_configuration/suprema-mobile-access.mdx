@@ -1,0 +1,267 @@
+# How to Use Suprema Mobile Access
+
+## Overview
+
+Suprema Mobile Access service began from BioStar2 version 2.7.12. However, some inconveniences have been identified through the previous version. So, Suprema has upgraded its features to be more user-friendly in BioStar2 version 2.7.14. In addition, the service name was changed from Suprema Mobile Credential to Suprema Mobile Access, and Suprema Mobile Credential App and Portal to Airfob Pass and Airfob Portal, providing customers with better service than before.
+
+Throughout this article, we would like to focus on new customers interested in Mobile Access and also previous users of Suprema Mobile Credential on BioStar2 version 2.7.12.
+
+We would like to introduce the changes and upgrades of the BioStar2 version 2.7.14 criteria and guide you on how to use them.
+
+**Data Flow of Suprema Mobile Access from BioStar 2 Software to a device**
+
+<Image src='/img/how-to/01.png' width='600' alone />
+
+:::caution
+
+* **Suprema Mobile Access** and **Suprema Mobile Credential** are **same** products. Branding has been changed since April 27, 2020. ([Related Article](https://support.supremainc.com/en/support/solutions/articles/24000054376))
+
+* **Suprema Mobile Access** and **BioStar 2 Mobile Card** are **different** products. Links for the detailed information are listed up on the bottom of this page. Or, you can read that first before reading the below.([Related Article 1](https://support.supremainc.com/en/support/solutions/articles/24000050105)/[Related Article 2](https://support.supremainc.com/en/support/solutions/articles/24000050338))
+
+* **CANNOT** enroll a new Suprema Mobile Access directly from Suprema devices; assign through the BioStar 2 or manually input the card number.
+
+* **The way of registering a device is different** in **BioStar2 version 2.7.12** and **version 2.7.14**. If you are using **BioStar2 version 2.7.12**, you need to remove all user data in the device, delete the device from BioStar2 and reset the device to factory default before starting Mobile Credential. But if you are using **BioStar2 version2.7.14**, then you can register device in Airfob Portal even though the device was already in use in BioStar 2.
+
+:::
+
+## How To Use Suprema Mobile Access with BioStar 2 Software
+
+<YouTube className='fit--content' videoId="oRLgoyVX9i0" />
+
+### Overall procedure for registering a device in BioStar 2
+
+Brief explanation for a set up procedure.
+
+For more details, skip this and go to the below **3. Detail Procedure for BioStar2 version 2.7.14**.
+
+<Image src='/img/how-to/3kk16gqwiqvfor_yw72nsfibhfdopva7ma.png' width='1000' alone />
+
+### Overall procedure for registering a device on Airfob Pass App
+
+If you are using BioStar2 version 2.7.12 or you want to register a device through Airfob Pass App, refer the below overall procedure.
+
+* This is a brief explanation about the set up procedure.
+
+<Image src='/img/how-to/j1k71bqxceq4scvoa29mjk_qexwpkjaopw.png' width='1000' alone />
+
+### Detail procedure for registering a device in BioStar 2
+
+:::info
+
+From BioStar2 version 2.7.14, you do not need to have a clean factory default condition device anymore.
+
+:::
+
+1. Join Airfob Portal.
+
+   * Portal address: `https://www.airfob.com/en/home`
+
+   * Click **Get Started** to sign up and create your site. You may need to purchase credits.
+
+   * In BioStar 2 version 2.7.14 or higher version, **Regular** card is only supported in BioStar2. ([Related Article](https://support.supremainc.com/en/support/solutions/articles/24000054376))
+
+   * 50 free Credits are given when a new **Regular** site is created for demo and test purpose. No Maintenance Credits are given.
+
+      <Image src='/img/how-to/airfob_portal_main_page_done.jpg' width='1000' alone />
+
+1. Configure Airfob Portal information to BioStar 2 Settings.
+
+   * Go to **BioStar 2** → **Settings** → **Mobile Access**.
+
+   * BioStar 2 Mobile Credential setting should be based on the portal site data.
+
+   * Email & Password: the data of the user who signed in the portal.
+
+   * **Site ID**: the Site ID which user created through the portal.
+
+      <Image src='/img/how-to/how_to_find_site_id_in_portal.airfob.png' width='1000' alone />
+
+   * The domain and the port below are default. Please don't change it.
+
+   * Domain: `https://api.mc.suprema.io` (default)
+
+   * **Port**: protocol port number of portal site (default).
+
+      <Image src='/img/how-to/mobile_access_site_id_info.jpg' width='1000' alone />
+
+   * If you want to know more details for the configuration of Mobile Credential, click [Enhancement in Suprema Mobile Access Usage in 2.7.14](mobile-access-v2714).
+
+   :::info
+
+   XPass 2, XPass D2 (Rev 2) and BLN2 are available to use Suprema Mobile Access. Suprema has released the feature for other devices in order. For more information on Mobile Access supported devices, please refer to [Supported Devices List of Mobile Access](https://support.supremainc.com/en/support/solutions/articles/24000058364).
+
+   :::
+
+1. Add a device to BioStar 2 Software and Airfob Portal.
+
+   * Go to **BioStar 2** → **Device** → **Search Device** or **Advanced Search** to search a connected device.
+
+      <Image src='/img/how-to/device_search.png' width='200' alone />
+
+      <Image src='/img/how-to/added_devcie.png' width='600' alone />
+
+   * Go to **BioStar 2** → **Settings** → **Mobile Credential** and click **+ Add** button from Device Registration.
+
+   * Device will communicate with Airfob Portal and obtain a certificate.
+
+      <Image src='/img/how-to/add_red_device_to_mobile_access.png' width='1000' alone />
+      
+1. Add new user to BioStar 2.
+
+   * Go to **BioStar 2** → **User** → **Add User**.
+
+   * Enter user name, and email address (mandatory).
+
+   * Click **Credential** → **Mobile** and enter the card ID to register the Suprema Mobile Access card.
+
+   <Image src='/img/how-to/add_new_user_in_biostar_2_for_mobile_access.jpg' width='800' alone />
+
+   <Image src='/img/how-to/tt-bkjgpejnl_h_e1dzinintqzimqmmszq.png' width='1000' alone />
+
+1. Confirm the email and authenticate the created mobile credential on a mobile.
+
+   1. Please confirm the email of the new user of BioStar 2 to his or her mobile and click the download link from the email content.
+
+   1. You need to make sure that the requested field is correctly filled in.
+
+      <Image src='/img/how-to/neruf0uffdgpdtzsnjj3zp1xq1arihmlmg.png' width='300' alone />
+
+   1. Turn on BLE or NFC of your mobile configuration.
+
+   1. Place your Mobile Access card on the device.
+
+      <Image src='/img/how-to/qxcpdredq0mmoyyefqcd8iljzcujq-dvvq.png' width='300' alone />
+
+### Additional information for Suprema Mobile Access
+
+1. When you issue the Mobile Credential card, you can put character, ` ` (space), number and `_` (under bar) for user name.
+
+1. If the card is blocked, the card number will be updated in **Setting** → **Card** → **Blacklisted Card**.
+
+1. If you delete users (delete selected users / delete all users), then issued cards will be automatically deleted from the Airfob Portal.
+
+1. Even though you delete all users, Administrator user will remain and the Mobile Access card for Administrator will be kept.
+
+### Suprema Mobile Access Q&A
+
+<details className='faqs'>
+<summary>**How can we get the Mobile Access License Policy and how can we purchase Mobile Credential Credits?**</summary>
+
+Please contact your Suprema regional sales representative. If you do not know the exact sales representative, please contact Suprema through our official web site. ([Link](https://www.supremainc.com/en/about/contact-us.asp))
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we keep using BioStar 2 Mobile Card if we has been used? How does the policy go for BioStar 2 Mobile Card?**</summary>
+
+As long as you do not uninstall the application, you can keep using the old version. But we recommend you use the new mobile access card, due to better performance and many improvements on user interfaces. BioStar 2 Mobile card will be discontinued from September 2020. Once you upgrade the new FirmWare to the devices, you will not be available to use the current BioStar 2 Mobile Card. Please visit the site and find more information. ([Link](https://support.supremainc.com/)-Login Required)
+
+</details>
+
+<details className='faqs'>
+<summary>**What if we use XPass 2 and other Suprema devices, such as BioStation A2 and want to use Suprema Mobile Access?**</summary>
+
+You need to use different credentials (Mobile Card, Fingerprint, RF card, etc) for BioStation A2 (April, 2020).
+
+</details>
+
+<details className='faqs'>
+<summary>**The reader just has to be Mifare device type correct? Or could the FOB reader be added to use multi technology.**</summary>
+
+The reader must be working with 13.56 MHz frequency, So multi-technology reader does have 13.56 MHz and Airfob Patch will work on it.
+
+</details>
+
+<details className='faqs'>
+<summary>**For the mobile access to work, must the system where the BioStar Software installed be on the internet always, or can it work offline?**</summary>
+
+If you want to manage everything from BioStar2, then BioStar2 server needs an internet connection. But in case of BioStar 2 in local network then you will need to manually enroll all of the user information on the Airfob portal.
+
+</details>
+
+<details className='faqs'>
+<summary>**Are there firmware upgrade available for all models to become master device of XPass D2 (Rev 2) and provide Mobile Access feature to the solution? Or only XPass 2 at the moment?**</summary>
+
+Currently, XPass 2, XPass D2 (Rev 2), and BioLite N2 support Suprema Mobile Access. We are going to expand supporting devices that are able to use Suprema Mobile Access.
+
+**The relevant article**
+
+[Upgraded Hardware Introduction: XPass D2 (Rev 2)](https://support.supremainc.com/en/support/solutions/articles/24000054221)
+
+[Supported Devices List of Mobile Access](https://support.supremainc.com/en/support/solutions/articles/24000058364)
+
+The version information of the compatible firmware of RS485 Master is as follows.
+
+* XPass 2: v1_2_0_20200409
+
+* BioLite N2: Has been released in 2Q 2020.
+
+* CoreStation: Has been released in 3Q 2020.
+
+* BioStation L2: Has been released in 3Q 2020.
+
+* BioStation A2: Hass been released in 3Q 2020.
+
+* BioStaton 2: Has been released in 3Q 2020.
+
+* FaceStation 2 / FaceLite: Has been released in 3Q 2020.
+
+* BioEntry W2: Has been released in 3Q 2020.
+
+* BioEntry P2: Has been released in 3Q 2020
+
+</details>
+
+<details className='faqs'>
+<summary>**What happens to the URL address after Airfob Portal changed?**</summary>
+
+The previous `https://mc.suprema.io` will just redirect to the new portal address, `https://www.airfob.com/en/home`.
+
+</details>
+
+<details className='faqs'>
+<summary>**Would multi card work for regular cards?**</summary>
+
+Yes, multi card is supported regardless of regular or dynamic card.
+
+</details>
+
+<details className='faqs'>
+<summary>**What is correct terms for Suprema Mobile Access?**</summary>
+
+Check the table in below,
+
+* Service Name: Suprema Mobile Access
+
+* Card Name: Mobile Access Card
+
+* Portal Name: Airfob Portal
+
+* App Name: Airfob Pass
+
+* Patch Name: Airfob Patch
+
+</details>
+
+<details className='faqs'>
+<summary>**Does BioStar 2 support both regular and dynamic sites?**</summary>
+
+No, currently (BioStar 2.8.2) it does only support regular sites. BioStar 2 will support dynamic in the future but no version plan yet.
+
+</details>
+
+### Useful Links for information about Suprema Mobile Access
+
+* Airfob Portal: [Link](https://support.supremainc.com/en/support/solutions/articles/24000054376)
+
+* Airfob Support Page: [Link](https://mocasystemen.crunch.help/)
+
+* Related Webinars:
+
+   * [Overview of BioStar 2's Latest Release and How To Use Suprema Mobile Access](https://support.supremainc.com/en/support/solutions/articles/24000054883)
+
+   * [Overview of Suprema Mobile Access's Features](https://support.supremainc.com/en/support/solutions/articles/24000055757)
+
+* MOCA SYSTEM Inc. YouTube channel: [Link](https://www.youtube.com/channel/UCCO6H0SkkzwfiEDM7NvFOaA/videos)
+
+* SUPREMA Official Website: [Suprema Mobile Access](https://www.supremainc.com/en/platform/suprema-mobile-access.asp)

@@ -1,0 +1,21 @@
+# Adding Administrators Using Batch Edit of Devices
+
+From BioStar 2 v2.7.3, the way new settings are applied is changed when adding administrators using batch edit of devices.
+
+To find more information about the batch edit from BioStar 2, please refer a below article.
+
+* [\[BioStar 2\] User Batch Edit](https://support.supremainc.com/en/support/solutions/articles/24000029847--biostar-2-user-batch-edit-)
+
+1. Regardless of the version of device firmware, it will be stored in append mode.
+
+   * Before BioStar 2 v2.7.3, it was an overwritten mode when you use batch edit.
+
+1. If there is an administrator in a new device and you add a new administrator by batch edit from device tab, it will be stored 'original administrator + new administrator added by batch'.
+
+1. If there is an administrator in a new device and you edit an administrator who is already saved by batch edit to another operator level, the administrator will be stored with a changed operator level.
+
+1. If the maximum administrator went over after you add new administrators by batch edit, there will be no error message and exceeded administrators will not be stored.
+
+   * You cannot select and manage administrators as you prefer.
+
+1. After the batch edit was operated in append mode, you will no longer be able to delete administrators by batch edit.

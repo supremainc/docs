@@ -1,0 +1,33 @@
+# Support to Log in to Biostar 2 with Active Directory Account
+
+To meet the market requirement to manage user and administrator privileges through a single directory, Suprema has improved the function to log in to BioStar 2 through an Active Directory account starting with BioStar 2.8.16.
+
+:::info
+
+If you are new to BioStar 2's Active Directory integration, please refer to the below document.
+
+* [\[BioStar 2\] How To Configure Active Directory in BioStar2](https://support.supremainc.com/en/support/solutions/articles/24000044140)
+
+* [\[BioStar 2\] How To Confirm Active Directory Information](https://support.supremainc.com/en/support/solutions/articles/24000041940) 
+
+:::
+
+## How to enable the "Use for BioStar 2 Login"
+
+Go to **Settings** → **Active Directory** → **Active Directory Server**.
+
+<Image src='/img/how-to/2.8.16-7-1.png' width='300' alone />
+
+## Precautions
+
+1. Only Active Directory users synced to BioStar 2 can log in, and you must set operator Level for this user.
+
+1. When syncing with Active Directory, Active Directory users who have the same login ID as the Login ID used in BioStar 2 or whose ID is **1** will be excluded.
+
+1. Except for User ID 1 (Administrator) user, the window for entering Login ID/Password is not displayed on the user detail page regardless of Operator Level.
+
+   * Sample:
+
+   <Image src='/img/how-to/active_directory_account_use_for_biostar_2.jpg' width='800' alone />
+
+1. User ID **1 (Administrator)** can log in to use BioStar 2 if there is an issue such as a system failure in the Active Directory server.

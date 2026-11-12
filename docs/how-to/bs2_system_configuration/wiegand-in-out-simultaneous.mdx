@@ -1,0 +1,27 @@
+# Simultaneous use of Wiegand In & Out
+
+Configuring Wiegand In & Out at the same time is required when a special card reader which is not produced by Suprema is used under the environment where the Suprema reader is connected to 3rd party controllers. In this case, the Wiegand Input signal is sent to the Suprema reader when this special card is scanned on the special card reader. Once the Suprema reader receives the Wiegand Input signal from the special reader, it requests you to authenticate your identity with a means of additional authentication.
+
+For example, if you use the authentication mode **Card** + **Fingerprint**, you should first scan the special card on the special card reader which is not produced by Suprema. After that, the Wiegand input signal is sent to the Suprema reader, you should scan your fingerprint on the Suprema reader. Then, the Wiegand output signal is sent to the 3rd party controller.
+
+<Image src='/img/how-to/biostar2_wiegand_input_output_1.png' width='1000' alone />
+
+:::note
+
+**Supported Devices**
+
+* Devices with two ports for Wiegand.
+
+* BioStation 2, BioStation A2, FaceStation 2, BioStation 3, BioStation 2a
+
+:::
+
+## How to configure?
+
+1. Go to Device setting.
+
+1. Extend Advanced setting of device.
+
+1. Select **Input/Output** option for **Wiegand**.
+
+   <Image src='/img/how-to/biostar2_wiegand_input_output_2.png' width='1000' alone />

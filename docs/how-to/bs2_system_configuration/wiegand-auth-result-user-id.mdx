@@ -1,0 +1,51 @@
+# How to configure Wiegand authentication result as User ID
+
+As of BioStar 2.7.8, an option to send User ID as Wiegand output results has been added.
+
+:::note
+
+**Supported FW list**
+
+*  BioStation 2: 1.8.0 or later
+
+*  BioStation A2: 1.7.0 or later
+
+*  BioStation L2: 1.5.1 or later
+
+*  BioEntry W2: 1.4.1 or later
+
+*  FaceStation 2: 1.3.0 or later
+
+*  BioEntry P2: 1.3.0 or later
+
+*  BioLite N2: 1.2.0 or later
+
+*  XPass 2: 1.1.0 o later
+
+*  FaceLite 1.1.0 or later
+
+*  FaceStation F2 1.0.0 or later
+
+*  X-Station 2 1.0.0 or later
+
+:::
+
+<Image src='/img/how-to/wiegand_card_id.png' width='1000' alone />
+
+* In case of Bypass or AoC among Smart Card, Card ID is displayed.
+
+* Secure Credential Card supports user ID output.
+
+* Slave device cannot configure the option
+
+* User ID output is supported both number ID and alphanumeric ID mode.
+
+* When both user ID output and Bypass are enabled, the card Wiegand output works as card ID.
+
+When Wiegand output is set as User ID, output is sent in hexadecimal value of ASCII code by grouping by 1 byte.
+
+For example,
+
+* Number ID: When user ID is 1234, 0x04 is sent.
+
+* Alphanumeric ID: When user ID is 1234, 0x31 32 33 34 is sent.

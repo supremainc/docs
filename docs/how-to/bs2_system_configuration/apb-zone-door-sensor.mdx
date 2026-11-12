@@ -1,0 +1,59 @@
+# APB zone based on the door status (Door sensor)
+
+Sometimes Anti-Passback status doesn't show the actual status when a user does not actually enter the gate after successful authentication.
+
+BioStar 2 has an additional option using the door status (Door sensor) to show the actual Anti-Passback status.
+
+With the option enabled, your Anti-Passback zone considers **two factors**; 1. Authentication, 2. Door sensor.
+
+:::info
+
+* To use this feature, you need to match both BioStar 2 server version and device firmware version.
+
+* **BioStar 2 Version**: V2.8.3 or later
+
+* **Star-marked versions(\*)** are released in 2020 3Q. (*July 29, 2020*)
+
+:::
+
+<Image src='/img/how-to/2.8.3_1_.png' width='700' alone />
+
+:::note
+
+**New devices support this feature:**
+
+* FaceStation F2 FW 1.0.0 or above with BioStar V2.8.6 or above
+
+* X-Station 2 FW 1.0.0 or above with BioStar V2.8.11 or above
+
+:::
+
+## How to enable the door-status-based APB?
+
+1. Door setting
+
+   * Door sensor is necessary.
+
+   * Enable the option 'User sensor when Entry Confirmed APB enabled' (Default is off).
+
+   <Image src='/img/how-to/apbdoorsensor_01.png' width='1000' alone />
+
+1. APB zone setting
+
+   The Anti-passback status can follow the rule for each door based on the option **Entry Confirmed APB**.
+
+   <Image src='/img/how-to/apbdoorsensor_02.png' width='1000' alone />
+
+## How differently does it work when the option is enabled & disabled?
+
+**Device 1 with 'Use Sensor when Entry Confirmed APB enabled' ON**
+
+The APB alert is not triggered even when you authenticate without the exit door authentication until the door opened/closed.
+
+<Image src='/img/how-to/apbdoorsensor_03.png' width='1000' alone />
+
+**Device 2 with 'Use Sensor when Entry Confirmed APB enabled' OFF**
+
+The APB alert is triggered even if your door was not opened.
+
+<Image src='/img/how-to/apbdoorsensor_04.png' width='1000' alone />

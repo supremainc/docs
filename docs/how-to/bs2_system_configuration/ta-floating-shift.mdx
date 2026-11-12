@@ -1,0 +1,77 @@
+# How to create T&A settings for organizations with floating shift
+
+:::info
+
+* Floating shift is supported on BioStar 2.7.0 and higher
+
+* TA License is required
+
+:::
+
+A floating shift is a shift in which the employee has irregular shift changing everyday. BioStar automatically assigns each shift and calculates working time with floating shift.
+
+<Image src='/img/how-to/floatingshift_01.png' width='1000' alone />
+
+In this example on the screen, you can see Kate and YJ's irregular shifts changing everyday. Let's see how these irregular shifts can be applied to in BioStar Time Attendance.
+
+1. Please create time code. For 3 different shifts, you can use a single time code if time rate is all the same for all shifts. However, in this example, we used different time code to distinguish visually.
+
+   <Image src='/img/how-to/floatingshift_07.png' width='1000' alone />
+
+1. In Time Attendance-Shift, click shift. If you click floating type, time segment can be added up to 5.
+
+   :::info
+
+   For detailed options like Rounding, Meal deduction etc., please refer to the fixed shift article. [How to create T&A settings for organizations with fixed shift](ta-fixed-shift) 
+
+   :::
+
+   <Image src='/img/how-to/floatingshift_02.png' width='1000' alone />
+
+   In this example, we will add 3 different time segment in this shift.
+
+   1. 00:00-08:00 (Punch in granted time range 00:00-00:30)
+
+      <Image src='/img/how-to/floatingshift_03.png' width='1000' alone />
+
+   1. 08:00-17:00 (Punch in granted time range 07:00-08:30)
+
+      <Image src='/img/how-to/floatingshift_04.png' width='1000' alone />
+
+   1. 17:00-23:59 (Punch in granted time range 15:00-17:30)
+
+      <Image src='/img/how-to/floatingshift_05.png' width='1000' alone />
+
+   :::info
+
+   Time can be overlapped between time segment as long as punch in granted time range is not. 
+
+   :::
+
+   :::caution
+
+   * Punch in granted time range must not be overlapped.
+
+   * For the time segment includes day start time, punch in granted time range can not be earlier than it.
+
+   :::
+
+1. If you finished setting Shift, please go back to the main Time Attendance menu and click Schedule Template.
+
+   Apply the floating shift you created to all days.
+
+   <Image src='/img/how-to/floatingshift_06.png' width='1000' alone />
+
+1. Go back to the main Time Attendance menu, and go to the Schedules tap then click **Add Schedule**.
+
+   Select schedule template, period and corresponding user.
+
+   <Image src='/img/how-to/floatingshift_08.png' width='1000' alone />
+
+1. Go to **Time Attendance setting** and configure T&A devices.
+
+   * BioStar 2 will sync events logs of selected devices only.
+
+   * Refer to [How to Configure a T&A Device](ta-device-settings) to configure T&A keys for the device.
+
+   <Image src='/img/how-to/how_to_create_t_a_settings_for_organizations_with_fixed_shift_7.png' width='1000' alone />

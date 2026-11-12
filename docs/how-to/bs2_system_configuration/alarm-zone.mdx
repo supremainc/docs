@@ -1,0 +1,133 @@
+# How to Configure an Alarm Zone
+
+Alarm zone has been introduced with BioStar 2.5. It is used to detect any attempts of intrusion during an armed period.
+
+You can trigger the device to make sounds or send a relay on the event of an intrusion.
+
+This is basically something you would turn on at the end of the day after closing your offices and you would disarm the device when you start work on the next day.
+
+<Image src='/img/how-to/2x_sysconfig_alarm_zone_001.png' width='600' alone />
+
+Refer to the bottom of the article to see which devices support this zone.
+
+Note that only local zone with RS485 connection is supported right now. Global zone, which would be server matching of the zone information is currently unavailable.
+
+The alarm zone can detect intrusion based on the configured input. Sensors on the door are also used for detecting intrusion.
+
+You can configure various output and sound for the Alarm status. In the Trigger & Action menu you can configure the zone settings so that an email is sent to the administrator on a specific event.
+
+While it has an armed status, users will be unable to enter and an attempt to authenticate will be logged as intrusion alarm access denied. For further information on the types of event logs, please refer to the knowledge base configuration guide regarding Alarm Zone.
+
+## Configuration
+
+1. Add a device to BioStar 2.
+
+1. Add the device to a door.
+
+   Refer to door configuration link [How to add and configure doors](door-settings)
+
+1. Click the **ZONE** menu.
+
+1. Click **ADD ZONE**.
+
+   <Image src='/img/how-to/2x_sysconfig_alarm_zone_002.png' width='300' alone />
+
+   :::info
+
+   You need a BioStar 2 AC Standard License to use the Zone menu. 
+
+   :::
+
+1. Select Intrusion Alarm and click **Apply**.
+
+   <Image src='/img/how-to/2x_sysconfig_alarm_zone_003.png' width='1000' alone />
+
+1. Select a **Name** for your Alarm zone.
+
+   :::info
+
+   Currently only Local Mode (RS-485 connection) is available with BioStar 2.5. 
+
+   :::
+
+1. Select your **Door** that will sense the intrusion.
+
+1. Set the Zone to **Active**.
+
+1. Set the **Delay Time** as required.
+
+   :::info
+
+   Arm Delay Time: device will wait and make a beep sound for the number of seconds configured before arming.
+
+   Disarm Delay Time: device will not make an alarm action on **Intrusion alarm detected** event for the configured number of seconds when intrusion is detected. 
+
+   :::
+
+1. Click **+ Add** to choose the method to arm/disarm the device.
+
+   :::info
+
+   There are 3 methods to arm/disarm the device.
+
+   1. **Access Card**: This will require registering a CSN/Wiegand Card for arming and user authentication to arm/disarm the device. You can make up to 128 Access Cards.
+
+   1. **Device**: This option is available for devices that have a keypad.
+
+      * A2: Press the red Arm button that appears on the LCD screen beside the menu button. Press the same button to disarm.
+
+      * BioStation 2, BioStation L2: Press F1 for 1 second to arm and press F2 for 1 second.
+
+   1. **Input**: Use this option to arm/disarm a device with external input signals. 
+
+   :::
+
+1. Choose the **Access Group** that will be able to arm/disarm the zone. Up to 128 access groups may be configured.
+
+   <Image src='/img/how-to/2x_sysconfig_alarm_zone_004.png' width='1000' alone />
+
+1. Configure the input to detect intrusion by clicking **+ Add**. The door sensor is also used to detect intrusion.
+
+   <Image src='/img/how-to/2x_sysconfig_alarm_zone_005.png' width='1000' alone />
+
+1. Configure the Alarm to trigger on a specific event by clicking + Add and choosing your option. You can configure a sound to be made by the device or send an output relay.
+
+   The events shown in the image below are the events available for the Alarm zone.
+
+   <Image src='/img/how-to/2x_sysconfig_alarm_zone_006.png' width='1000' alone />
+
+   :::info
+
+   If you want to turn off the **Alert Sound** after an Alarm event you have to **Clear Alarm** in the **Monitoring** → **Device Status** menu 
+
+   :::
+
+## Video Demonstration
+
+Below is a sample video of arming an A2 with device arm/disarm setting. An authentication attempt is made during arm status. Then the zone is disarmed.
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/2x_sysconfig_a2_alarm_final.mp4" type="video/mp4" />
+</video>
+
+:::caution
+
+You can clear the alarm in the **Zone Status** tab of the **Monitoring** page but, you cannot disable the arm status within BioStar 2's menu. 
+
+:::
+
+## Supported Devices
+
+*  The devices below support alarm zone from BioStar 2.5: 
+
+   <Image src='/img/how-to/alarmzone1.png' width='700' alone />
+
+*  The devices below support alarm zone from BioStar 2.6.0: 
+
+   <Image src='/img/how-to/alarmzone2.png' width='700' alone />
+
+*  The devices below support alarm zone from BioStar 2.9: 
+
+   <Image src='/img/how-to/intrusion_alarm_zone_supported_devices.png' width='1000' alone />
+
+Other entry devices do not support this zone.

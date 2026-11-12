@@ -1,0 +1,19 @@
+# Can't Keep the Custom Language Resource File of BioStar 2 Upgrade Progress
+
+The BioStar 2 resource file is located at `BioStar 2 installed folder\nginx\html\resources` as the below image. This article is for the user who met an issue after upgrading BioStar 2 server when the user has a 'customized' or 'modified' language resource file for BioStar 2. The following sample image is language resource file list which are fundamentally supported in BioStar 2.
+
+<Image src='/img/how-to/v9_5.png' width='600' alone />
+
+If you have any BioStar 2 language resource file inquiry, please contact your regional sales representative OR leave a message through Suprema official web site.
+
+* [Link for the direct contact info for regional sales representatives](https://www.supremainc.com/en/about/contact-us.asp)
+
+If you created and used a custom resource file for the BioStar 2 server, all resource file include the custom resource file were deleted and not kept after the BioStar 2 upgrading before BioStar 2.7.10. So after the upgrading, you could not log in your BioStar 2 because the software configuration is still set in your custom language, but there is no resource file which the BioStar 2 server is looking for.
+
+From BioStar 2.7.10, the custom resource file existence will be checked during the upgrading process. If the custom resource file exists, then the resource file will be kept even though other default resource files are deleted and newly installed. Also, if the resource file is deleted by chance or on purpose, then you can log in your BioStar 2 server in English configuration instead of blocking the user log in.
+
+:::warning
+
+If you 'DELETE' the BioStar 2 server with all data, then all resource files including the custom resource files will be deleted as designed.
+
+:::

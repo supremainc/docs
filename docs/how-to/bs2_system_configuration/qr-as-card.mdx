@@ -1,0 +1,81 @@
+# Added the Use QR as Card Option
+
+**Affect Products & Versions**
+
+* **BioStar 2**: BioStar v2.8.16 or above
+
+* **Device & Firmware**: X-Station 2 v1.2.0 or above
+
+:::caution
+
+* X-Station 2 with QR hardware sensor models (XS2-QAPB, XS2-QDPB) support in default after upgrading firmware.
+
+* Other X-Station 2 models (XS2-DPB, XS2-ODPB, XS2-APB, XS2-OAPB) needs to activate license for Camera QR feature. (Contact [supremainc.com](https://www.supremainc.com/en/about/contact-us.asp))
+
+:::
+
+In the previous BioStar 2, when a customer using a CSN card tried to authenticate a user through a QR code with the same value as the CSN, customers could not use it due to the difference in authentication logic between QR and CSN. Suprema allows authentication with a QR code of the same data as the issued CSN card or Wiegand card to reflect the market requirements.
+
+:::caution
+
+To use this function, BioStar 2 and X-Station 2 firmware versions must match.
+
+:::
+
+**Device** → X-Station 2 detail page → **Authentication** → **QR/Barcode**
+
+<Image src='/img/how-to/2.8.16-6-1.png' width='900' alone />
+
+:::note
+
+**Background**
+
+* This feature is useful who is looking for Integration with Visitor Management System + QR code. With 3rd party Visitor Management System, you can generate the QR code for Visitors. However, this data is not available to use with Suprema system.
+
+* In the previous BioStar 2 and X-Station 2 FW, you could not synchronize this data to Suprema X-Station 2 because X-Station 2 QR can only use BioStar 2 QR or ASCII QR data type.
+
+* From 2.8.16, you can use the QR code in decimal as X-Station 2 User credential.
+
+**How it works**
+
+Suprema is offering [BioStar 2 API](https://support.supremainc.com/en/support/solutions/articles/24000073033) - a server-level RESTful API - with which you can communciate with a BioStar 2 server. The API allows you to update BioStar 2 User from the server with the decimal data of QR code in the CSN card information of BioStar 2 user. Once you get the QR raw data from the 3rd party Visitor Management system, you can integrate it with BioStar 2 server.
+
+:::
+
+## Feature notice
+
+1. **Use QR as Card** is available only when **Use QR/Barcode** is Enabled.
+
+1. This function is not supported for BioStar 2 QR.
+
+1. This function is not supported for Smart Card.
+
+## Sample user scenario
+
+1. A user (user ID 2, Tom) has been assigned a CSN card.
+
+   <Image src='/img/how-to/2.8.16-6-2.png' width='1000' alone />
+
+1. Prepare the X-Station 2 QR model device.
+
+   For comparison, we prepared one device supported by the **Use QR as Card** function and one not supported.
+
+   <Image src='/img/how-to/2.8.16-6-3.png' width='900' alone />
+
+1. User Tom taps the CSN card (RF card) he has on the X-Station 2. At this time, both X-Station 2 return **Access Granted** for user Tom.
+
+   <Image src='/img/how-to/2.8.16-6-4.png' width='1000' alone />
+
+1. Generates a QR code with the same value as the CSN that Tom has.
+
+   * **QR type**: Free Text
+
+   * **QR value**: 1251686652985216
+
+   * **QR sample**:
+
+      <Image src='/img/how-to/2.8.16-6-5.png' width='100' alone />
+
+1. User Tom tries to authenticate on X-Station 2 with the above QR code. Only enabled devices with the **Use QR as Card** function will return **Access Granted**.
+
+   <Image src='/img/how-to/2.8.16-6-6.png' width='1000' alone />

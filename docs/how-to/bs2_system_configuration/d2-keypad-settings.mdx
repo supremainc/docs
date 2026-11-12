@@ -1,0 +1,57 @@
+# How to Configure D2 Keypad
+
+XPass D2 Keypad is a new device introduced with BioStar 2.6.2.
+
+It is a dummy reader for reading cards or PIN, which means it doesn't perform data matching on itself.
+
+The device can be used as a slave device, or a Wiegand reader to send Wiegand output.
+
+The device sends out Wiegand signals with the default 26bit format and the Wiegand configuration will be done with a separate tool.
+
+* Link to the information about the tool: [How to use Suprema Device Manager App](device-manager-app)
+
+## Adding as a Slave Device
+
+You will need a master device to add the slave D2 Keypad device.
+
+Refer to the article below to learn how to search for slave devices.
+
+[RS485 Mode (Master, Default, Slave)](rs485-mode)
+
+<Image src='/img/how-to/d2keypad_slave.jpg' width='200' alone />
+
+If you enable the option 'Input card ID from keypad', user can authenticate by entering the card number on the D2 Keypad.
+
+<Image src='/img/how-to/d2keypad_option1.jpg' width='900' alone />
+
+:::note
+
+**Possible key input ranges**
+
+The range of numbers that can be received by the keypad is 8 bytes (0 to 18,446,744,073,709,551,615).
+
+:::
+
+## Using the device as a Wiegand Reader
+
+If you have already used the device as a slave device before, you must reset the device to use it as a Wiegand reader (sending Wiegand output).
+
+1. Delete the device from BioStar 2 client as a slave device.
+
+   <Image src='/img/how-to/d2keypad_delete.png' width='300' alone />
+
+1. Detach the metal bracket from the device.
+
+1. Press the reset button.
+
+   <Image src='/img/how-to/d2keypad_reset.jpg' width='400' alone />
+
+1. Use the device as a Wiegand reader by adding it as a **Wiegand Device** on a master device.
+
+   <Image src='/img/how-to/2x_sc_xpass_d2_04.png' width='300' alone />
+
+:::info
+
+You cannot use the device as a slave device and use Wiegand output at the same time.
+
+:::

@@ -1,0 +1,49 @@
+# Anti-Tailgating At Doors With Input Signals
+
+The anti-tailgating feature is supported from the BioStar 2.7.8 and the latest firmware of Suprema devices. To use this feature, you need to upgrade both BioStar 2 and device firmwares to the versions listed below or above.
+
+<Image src='/img/how-to/v8_6.png' width='700' alone />
+
+When you match both BioStar 2 server and device firmware version, you can configure anti-tailgating feature in **Door** and **Device**.
+
+<Image src='/img/how-to/v8_7.png' width='500' alone />
+
+## Anti-tailgating at door
+
+In the door configuration page, you can see the anti-tailgating feature as below.
+
+You can configure anti-tailgating as an exit button or a door sensor.
+
+<Image src='/img/how-to/v8_8.png' width='1000' alone />
+
+* If there is an input and the anti-tailgating feature is 'ON', you can see the Access Denied (Anti-Tailgating) in Event Log.
+
+:::info
+
+The anti-tailgating feature is supported when the input is on, however, there is no 'Input Detected' log.
+
+:::
+
+<Image src='/img/how-to/v8_9.png' width='1000' alone />
+
+:::caution
+
+Alarm and Trigger & Action event for doors are not supported by the anti-tailgating feature.
+
+:::
+
+<Image src='/img/how-to/v8_10.png' width='1000' alone />
+
+## Anti-tailgating on the device
+
+With the supporting firmware version, you can configure the Trigger & Action for devices with the anti-tailgating feature.
+
+* **BioStar 2** → **Device** → (Choose your device) → **Advanced** → **Trigger & Action**
+
+<Image src='/img/how-to/v8_11.png' width='1000' alone />
+
+:::caution
+
+If you try to re-add the anti-tailgating feature configured device in the lower BioStar 2 version, you need to do factory reset the device.
+
+:::

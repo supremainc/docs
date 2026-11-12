@@ -1,0 +1,79 @@
+# How to configure HTTP or HTTPS protocol
+
+Starting Biostar 2.5, the default protocol that BioStar 2 web server uses is HTTPS to ensure better security in the communication between the server and client.
+
+You can still change to HTTP, but no information will be encrypted in that communication protocol.
+
+Below is the port configuration for HTTPS you will see on installation.
+
+Use a different port than 443 if it is being used.
+
+<Image src='/img/how-to/2x_sysconfig_https_default_001.jpg' width='500' alone />
+
+Do not be alarmed when the connection to your BioStar 2 client shows as not secure.
+
+This is because the server's certificate has to be installed on the client PC first.
+
+Follow the guideline below to resolve the error message.
+
+<Image src='/img/how-to/2x_sysconfig_https_default_002.png' width='800' alone />
+
+:::warning
+
+If you are going to use the HTTPS protocol, you must apply the certificate (steps 8 and following). If the certificate is not applied, you will experience slowness and other erratic behavior on the web client such as no response to clicks. 
+
+:::
+
+## Configuration for HTTPS
+
+1. Open **BioStar Setting**.
+
+   If the default HTTPS port (443) is used by another service, change it to another value.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_004.png' width='600' alone />
+
+1. Open BioStar 2's web browser with `https:<server IP>:<port number>` on Chrome.
+
+   It will appear with a warning page as below:
+
+   <Image src='/img/how-to/2x_faq_bs2_https_005.png' width='400' alone />
+
+   <Image src='/img/how-to/2x_faq_bs2_https_007.png' width='700' alone />
+
+1. Click Proceed to XXX.XXX.XX.XX (unsafe).
+
+1. Log in with a BioStar 2 administrator account.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_001.png' width='500' alone />
+
+1. Go to **Setting** → **HTTPS**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_009.png' width='1000' alone />
+
+1. Click **Cert.Download** button to obtain a file named **cert-register.zip**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_010.png' width='1000' alone />
+
+1. Unzip the **cert-register.zip** and run **cert-register.exe** file.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_011.png' width='600' alone />
+
+1. On the **Enrollment Certification** window, enter the IP address of BioStar 2 server along with the HTTPS port you assigned on step 4 and then click **Enrollment** button.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_012.png' width='300' alone />
+
+1. Read the **Security Warning** message and click **Yes**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_013.png' width='500' alone />
+
+1. Once the tool has successfully installed the certificate, you will see the following window to complete the process. Please click **OK** to confirm it.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_014.png' width='100' alone />
+
+1. To verify the installation, restart the web browser and try to open the BioStar 2 web page. Make sure error message you encountered on step 2 is no longer presented.
+
+:::info
+
+To change the protocol from HTTP to HTTPS, refer to the article below: [How to change from HTTP to HTTPS](http-to-https)
+
+:::

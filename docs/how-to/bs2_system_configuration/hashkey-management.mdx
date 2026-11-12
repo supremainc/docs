@@ -1,0 +1,153 @@
+# How to Manually Manage Server & Device HashKey
+
+## Concept
+
+This is a new security feature that is introduced with BioStar 2.6. which allows you to choose your own HashKey to encrypt your database and devices.
+
+:::caution
+
+Do not proceed with using this feature before fully understanding the effect of the encryption feature.
+
+If you are going to apply this feature to an existing site, it will lead to data loss and require you to reconfigure all the PIN and password.
+
+The server and devices are unusable during the migration process and Secure Tamper is always on when you use this feature.
+
+:::
+
+You must turn on the **Secure communication with device** feature to use this feature.
+
+Please take note of the cautions before using this feature:
+
+**Device**
+
+* ALL the users on the device are deleted and transferred to the device again when this feature is turned on.
+
+* When a new device is added to the server that has been encrypted, ALL data will be deleted and synced again with the server
+
+* Secure Tamper will be on by default when you use this feature. You cannot turn the feature off. This means that when the device is removed from the bracket, ALL data in the device will be deleted.
+
+**User**
+
+* Any users with PIN or password have to reconfigure the password because it is not usable after the encryption.
+
+* You cannot apply this feature if any user has a PIN or password. You have to delete all of them before proceeding.
+
+* If smart cards were issued before the encryption, card + fingerprint authentication will work but card + PIN will not work. The smart card will have to be issued again with a new PIN.
+
+:::info
+
+The reason why PIN and ID passwords cannot be used after the encryption is because those items have irreversible encryption.
+
+:::
+
+**Database**
+
+* The database goes through a migration phase to encrypt the database once you apply the feature. BioStar client is not usable at this state.
+
+* The migration encrypts personal data (password, PIN, face, and finger template) in the database.
+
+**HashKey**
+
+* The manually configured security key is stored in a secret location and not the database
+
+* In P2 and N2 devices, the security key is stored in the secure element which is separate hardware from the flash memory
+
+* You must keep a record of your manual security key that you configured
+
+## Configuration
+
+1. Log in to Biostar 2 with the admin account for **user ID 1**. Other administrator users can't access **Advanced Security Settings**.
+
+1. Go to **Setting** → **SECURITY** → **Advanced Security Settings**.
+
+1. Turn on **Secure communication with device**.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_001.png' width='1000' alone />
+
+1. Click **Continue** when a warning popup appears.
+
+1. Turn on **Server & device Hashkey management**.
+
+   :::caution
+
+   Do not proceed with using this feature before fully understanding the effect of the cautions mentioned above.
+
+   :::
+
+1. Click **Continue** when a warning popup appears.
+
+   :::info
+
+   If you still have any users with PW or PIN other than the default admin (ID 1) user you have to delete all of the password and PIN before proceeding.
+
+   If not, you cannot turn on the feature.
+
+   :::
+
+1. Click **Change** on the **HashKey** item.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_002.png' width='1000' alone />
+
+1. Enter your new encryption value.
+
+   :::info
+
+   Your Hashkey must be 32 letters in length.
+
+   :::
+
+1. Enter your default administrator password. This will be the password for the default ID 1 admin.
+
+1. Click **OK**.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_003.png' width='700' alone />
+
+1. Click **Apply**.
+
+1. When the migration page appears, click **Start**.
+
+1. Wait for the data migration to complete.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_004.png' width='400' alone />
+
+1. Login to BioStar 2 with your new admin password. The ID is **admin**.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_005.png' width='400' alone />
+
+## Turning the Feature Off
+
+When turning the feature off again, the same PIN and PW restrictions must be applied.
+
+You will have to delete all user's PINs and passwords to proceed.
+
+1. Log in to Biostar 2 with the admin account.
+
+1. Go to **Setting** → **SECURITY** → **Advanced Security Settings**.
+
+1. Turn off **Server & device Hashkey management**.
+
+   :::info
+
+   If you still have any users with PW or PIN other than the default admin (ID 1) user you have to delete all of the password and PIN before proceeding.
+
+   Else you cannot turn off the feature.
+
+   :::
+
+1. A popup will appear to ask you to change the default admin password.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_006.png' width='700' alone />
+
+1. enter your password and click **OK**.
+
+1. Click **Apply**.
+
+1. When the migration page appears, click **Start**.
+
+1. Wait for the data migration to complete.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_004.png' width='400' alone />
+
+1. Login to BioStar 2 with your new admin password. The ID is **admin**.
+
+   <Image src='/img/how-to/2x_sc_encryption_key_management_005.png' width='400' alone />

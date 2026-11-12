@@ -1,0 +1,67 @@
+# Improved the Scheduled Unlock Zone Function to Support Elevator
+
+I'd like to introduce a feature which can manage Elevator control, not only Floor Level and Access Group but also allowing user to access a specific floor by confirmed schedule. With this function, you can manage a Scheduled Unlock Zone of Elevator just like a Scheduled Unlock Zone of Door.
+
+The existing Scheduled Unlock Zone operates based on the Door, but we improved the feature to working on the Elevator. However, it does not work on the entire elevator, it operates on specific Floors.
+
+:::info
+
+* To use this feature, you need to match both BioStar 2 server version and device firmware version.
+
+* **BioStar 2 Version**: V2.8.3 or later
+
+* Some firmware versions are not released yet. **Star mark versions(\*)** will be released in 2020 3Q. (*July 29, 2020*)
+
+:::
+
+<Image src='/img/how-to/2.8.3_1_.png' width='700' alone /> 
+
+:::note
+
+**New devices support this feature: **
+
+* FaceStation F2 FW 1.0.0 or above with BioStar V2.8.6 or above
+
+* X-Station 2 FW 1.0.0 or above with BioStar V2.8.11 or above
+
+:::
+
+1. To Configure Scheduled Unlock Zone of Elevator.
+
+   * The default configuration of Scheduled Unlock Zone is **Door**. If you want to configure Elevator Scheduled Unlock Zone, you need to toggle **Door/Elevator** button.
+
+   * After changing the button to **Elevator**, Elevator and Floor menu will come up.
+
+   <Image src='/img/how-to/2.8.3_2_.png' width='700' alone />
+
+1. Choose Elevator and Floor.
+
+   * Floor combo box will come up when you choose an Elevator.
+
+   * You can choose **one Elevator and multiple Floors**.
+
+   * You can choose the Elevator which already configured in another Scheduled Unlock Zone.
+
+      <Image src='/img/how-to/2.8.3_3_.png' width='1000' alone />
+
+   * You can configure **Started by User Authentication** feature as well.
+   
+      <Image src='/img/how-to/2.8.3_4_.png' width='1000' alone />
+
+1. Checking Elevator's Scheduled Unlock Zone Status.
+
+   * When the schedule is started, then the Scheduled Unlock Zone of Elevator will be changed to **Scheduled Unlock** in Status column.
+   
+      <Image src='/img/how-to/2.8.3_5_.png' width='1000' alone />
+
+   * You can check each Floor status at **BioStar 2** → **Monitoring** → **Floor Status** menu.
+   
+      <Image src='/img/how-to/2.8.3_6_.png' width='1000' alone />
+
+   * You can check the Elevator Scheduled Unlock Zone at **BioStar 2** → **Monitoring** → **Zone Status** menu.
+   
+      <Image src='/img/how-to/2.8.3_7_.png' width='1000' alone />
+
+   * You can find Scheduled Unlock Zone history in **BioStar 2** → **Monitoring** → **Event Log** as follows.
+   
+      <Image src='/img/how-to/2.8.3_8_.png' width='1000' alone />

@@ -1,0 +1,77 @@
+# Supports visual face import: Enroll Visual face when the file name of the image matches the user ID
+
+* **Affected Version**: BioStar 2.9.0 or above
+
+In previous BioStar 2 versions, to add a visual face template for users through the CSV import function, one had to fill in the CSV file column table with the image file name.
+
+However, with BioStar 2 Version 2.9.0 now the process got simplified by offering the **Visual Face Import** menu, one can enroll visual face template by simply matching the image file name to a User ID.
+
+:::info
+
+* Can upload ONLY one visual face image file for each user by **Visual Face Import**
+
+* User ID MUST match the visual face image file name
+
+   * Make sure to check the user ID setting for either Number or Alphanumeric. [How to use Alphanumeric IDs](alphanumeric-user-id)
+
+* Recommended to use image files minimum of 250*250, and the max size of the image is up to 10MB.
+
+* Supported image file formats are JPG, JPEG, and PNG
+
+* **Visual Face Import** does not work when accessing through the cloud domain
+
+:::
+
+Now with BioStar 2 Version 2.9.0 You can enrolle user's visual face when the file name of the image matches the user ID.
+
+1. Make a separate folder and put all the image files that be used as visual face templates.
+
+   :::info
+
+   If you are planning on creating a new user using the image file, note that User ID will be created using image file name.
+
+   <Image src='/img/how-to/supports_visual_face_1.png' width='700' alone />
+
+   :::
+
+2. **BioStar 2** → **User** → <IcMoreW/> → **Visual Face Import**
+
+   <Image src='/img/how-to/supports_visual_face_2.png' width='200' alone />
+
+3. **Visual Face Import** → **Face Image Directory** → Browse: Click the file which was separately made for Visual Templates in Step 1
+
+   <Image src='/img/how-to/supports_visual_face_3.png' width='400' alone />
+
+## New Visual Face Import
+
+When a user already has visual face.
+
+* Import image files whose name matches user ID
+
+* Import image files whose name matches user ID + Add new user by using file name as user ID
+
+   * If there is no user ID that matches the visual face template file name then BioStar 2 will automatically make a new user ID using the visual face template file name.
+
+* **Preserve**: If the user is already added in BioStar 2, the visual face template file will be added to the added user ID. However, if the user ID already holds one visual face template, it will simply move on to the next user.
+
+* **Overwrite**: This option will delete the previously added visual face template on all added users and then add the new visual face template.
+
+* **Use as Profile Image**: when new user by using file name as user ID & Use as profile Image are both checked.
+
+   * The new user account will have the same image for the profile picture and visual face template.
+
+   * When **Use as profile image** is checked for original users, the newly added visual face template will also be used as the user’s profile picture.
+
+:::info
+
+When visual face template detection from the files has failed, BioStar 2 system will consider it as not a proper update and will not create a new user, nor add or delete the visual face template.
+
+Warning Message will be shown as below, by downloading one can find the reason for each error.
+
+<Image src='/img/how-to/supports_visual_face_4.png' width='200' alone />
+
+Click Download to see the reason for failed visual face templates.
+
+<Image src='/img/how-to/supports_visual_face_5.png' width='600' alone />
+
+:::

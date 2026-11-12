@@ -1,0 +1,79 @@
+# How to configure a private authentication mode
+
+Suprema devices can have a specific operation mode that is required for authentication. However, there will be situations where different types of authentication modes need to be used per different user to provide an easy way to authenticate or for higher security by forcing the users to use more credentials that the device is set to require.
+
+## How it works
+
+Each user can have a specific authentication mode set that will provide an extra option for authentication or to overwrite the default settings of the device.
+
+## How to set a private authentication mode on user
+
+1. Select a user from the user menu and move down to the **Credential** menu.
+
+   <Image src='/img/how-to/private1.png' width='1000' alone />
+
+1. Click on the Auth Mode's toggle button to enable the **Private Authentication Mode**.
+
+   <Image src='/img/how-to/private2.png' width='500' alone />
+
+1. Click the **+ Add** Button.
+
+   <Image src='/img/how-to/private3.png' width='500' alone />
+
+1. Configure a certain authentication mode and click the **OK** button.
+
+   <Image src='/img/how-to/private4.png' width='800' alone />
+
+   1. Extended Auth Mode with FaceStation F2.
+
+   This mode allows you to combine user authentication methods, including faces. Otherwise, you can use the device's basic authentication mode.
+
+   <Image src='/img/how-to/private4-1.png' width='800' alone />
+
+1. Save the changes.
+
+## Include/Exclude Device Default Authentication Mode
+
+In BioStar 2, there is an additional option to choose whether to include or exclude the authentication mode of the device. If this is set as 'Include', it means that the user can use the other authentication modes set on the device. If this is set as 'Exclude', then it means that the user can only use the authentication mode is set as private authentication.
+
+<Image src='/img/how-to/private10.png' width='500' alone />
+
+<Image src='/img/how-to/private11.png' width='500' alone />
+
+## Scenarios for Include Device Default Authentication Mode
+
+1. When the device has a similar authentication mode to the private authentication mode.
+
+   **Device**
+
+   <Image src='/img/how-to/private5.png' width='500' alone />
+
+   **User**
+
+   <Image src='/img/how-to/private6.png' width='500' alone />
+
+   In this case, when the user uses a card to authenticate, this user will need to place the card, then scan the fingerprint, and then input the PIN. The device's authentication mode will be ignored since the private authentication mode has a specific mode when authenticating with the card. The user will still be able to use fingerprint-only authentication, ID + fingerprint authentication, and ID + PIN authentication. The rest of the users will be able to all authentication modes that are set on the device.
+
+1. When the device does not have an authentication mode that is set as the private authentication mode.
+
+   **Device**
+
+   <Image src='/img/how-to/private7.png' width='500' alone />
+
+   **User**
+
+   <Image src='/img/how-to/private6.png' width='500' alone />
+
+   In this case, all users that don't have a private authentication mode related to the card will not be able to authenticate using a card. However, the user with the private authentication will be able to use a card for the authentication. Also, the user will still be able to use fingerprint only, ID + fingerprint, or ID + PIN.
+
+## Scenario for Exclude Device Default Authentication Mode
+
+**Device**
+
+<Image src='/img/how-to/private8.png' width='500' alone />
+
+**User**
+
+<Image src='/img/how-to/private9.png' width='500' alone />
+
+In this case, the user with the private authentication mode needs to place the card, then scan a finger, and then input a PIN to authenticate. However, the user will not be able to use the fingerprint-only authentication.

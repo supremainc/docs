@@ -1,0 +1,53 @@
+# How to Connect to the Web Client
+
+Since BioStar 2 has a web-based client. You do not have to install the client on the PC you are accessing from!
+
+Below is how to access your web-client.
+
+## Accessing from the same network
+
+If you're accessing the client from the same network, it is important to know your Web Server HTTPS port.
+
+This setting can be found in your BioStar Setting.
+
+<Image src='/img/how-to/2xtraining_how_to_connect_to_the_web_client_001.png' width='600' alone />
+
+Now that you know your port, you can use the following to connect to the client if you're on the server PC:
+
+   * localhost:\[Port #\]
+
+Example) localhost:443
+
+   * 127.0.0.1:\[Port #\]
+
+Example) 127.0.0.1:443
+
+   * Clicking on BioStar 2 icon.
+
+   <Image src='/img/how-to/2xtraining_how_to_connect_to_the_web_client_002.png' width='83' alone /> 
+
+:::caution
+
+Do not use 'localhost' with HTTPS to access BioStar 2. (Due to Security concerns)
+
+The localhost option does not work for HTTP in BioStar 2.6 and above. You have to input the full IP as shown below.
+
+:::
+
+If you're accessing the client from another PC in the network, you would have to enter the IP of the server PC and the port number:
+
+* \[Server PC IP\]:\[HTTP Port#\]
+
+Example) 192.168.0.14:443
+
+## Accessing from an external network
+
+If you want to access the web client from an external network, you first have to set your Biostar Cloud.
+
+Please refer to [How to configure Cloud and Mobile App](cloud-mobile-app) to set up your BioStar Cloud.
+
+After setting up your cloud, enter the following to access BioStar 2:
+
+Example) `https:{your domain name}.biostar2.com`
+
+<Image src='/img/how-to/2xtraining_how_to_connect_to_the_web_client_003.jpg' width='500' alone />

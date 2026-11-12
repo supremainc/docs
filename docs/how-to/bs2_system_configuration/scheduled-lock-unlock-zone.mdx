@@ -1,0 +1,55 @@
+# How to configure a Scheduled Lock/Unlock Zone
+
+As you use an access control system, there are time you need to unlock entrances or doors for guests and employees to pass by. On the other hand, there are times you need to lock the doors so that no one can enter a building or a facility. In BioStar 2, you can use **Scheduled Lock/Unlock Zone** to meet such needs.
+
+To use **Scheduled Lock/Unlock zone**, a BioStar 2 AC Standard License has to be activated.
+
+[How to Activate Biostar 2 License](license-activation)
+
+**Scheduled Lock/Unlock zone** is a feature based on the doors not the devices. To create a door using the device, check the link below.
+
+[How to add and configure doors](door-settings)
+
+## How to configure Scheduled Lock Zone
+
+1. Go to **Zone** → **Add Zone** → Select **Scheduled Lock** → **Apply**.
+
+   <Image src='/img/how-to/scheduled_lock_001.png' width='600' alone />
+
+1. Configure the detail settings of the Scheduled Lock Zone.
+
+   <Image src='/img/how-to/scheduled_lock_002.png' width='900' alone />
+
+   1. If **Door Lock Type** is set as Exit Allowed, the users will be able to exit using the exit device of the door. It can be set as Access not allowed.
+
+   1. Select a predefined schedule or create a schedule for the Scheduled Lock Zone.
+
+   1. On the Alarm tab, you can select the action that will be done when someone tries to authenticate during the scheduled lock time.
+
+   1. You can set a Bypass Group which is an access group that is allowed to pass the door even the scheduled lock is activated on the configured time.
+
+1. Click the **Apply** button.
+
+   <Image src='/img/how-to/scheduled_lock_003.png' width='800' alone />
+
+## How to configure Scheduled Unlock Zone
+
+1. Go to **Zone** → **Add Zone** → Select **Scheduled Unlock** → **Apply**.
+
+   <Image src='/img/how-to/scheduled_lock_004.png' width='600' alone />
+
+1. Configure the detail settings of the Scheduled Unlock Zone.
+
+   <Image src='/img/how-to/scheduled_lock_005.png' width='900' alone />
+
+   The Scheduled Unlock Zone has a feature where you can set it to start by a user authentication. If you set this option as active, a user who belongs to the access group configured to the Scheduled Unlock Authentication has to authenticate during the configured time to start the Scheduled Unlock. This is to prevent the door to be opened when there is nobody in charge at the site.
+
+1. Click the **Apply** button.
+
+   <Image src='/img/how-to/scheduled_lock_006.png' width='800' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/how_to_configure_a_scheduled_lock_unlock_zone.mp4" type="video/mp4" />
+</video>

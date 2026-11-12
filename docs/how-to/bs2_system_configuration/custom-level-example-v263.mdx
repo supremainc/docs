@@ -1,0 +1,127 @@
+# How to Configure a Custom Level (Example for 2.6.3)
+
+Below can be an example of how you can realize features that are changed in 2.4.0.
+
+:::info
+
+* Employee name: Max
+
+* Employee title: IT Assistant Manager
+
+* Employee group(User Group): IT
+
+* Device used when entering from the main entrance(Device Group): BioStation L2
+
+* Working Space(Door Group): IT Main Office A1
+
+* Department(Access Group): IT Department
+
+* Junior Employee:
+
+   * Name: Kantakana
+
+   * Title: IT Specialist
+
+:::
+
+Admin Item Settings and Admin Menu Settings can be properly configured to reflect the example above.
+
+This user is an Assistant Manager, he can **Edit** or **Read** records for **Device**, **Door**, and **Time and Attendance** in order to manage his subordinate workers.
+
+But he can only **Read** information of **User**, and cannot edit general **Account Settings** of the system as well as who has access to certain areas (**Access Group**).
+
+You will be able to see in Step 7 when you set **Custom Level**, you can see how this can be implemented.
+
+1. Because Max belong to IT Department, we can setup Access Group and Access Level via the Access Control menu.
+
+   <Image src='/img/how-to/custom_level_-_1.png' width='600' alone />
+
+1. When Creating Access Group, you will be prompted to create Access Level.
+
+   * Assigning a user will not be necessary as we will assign a user to a specific user group, which will do it later on in this material.
+
+   * We will also create a Door Group in the next step, you can come back to this step later to assign a proper User Group for Access Group, and Door Group for Access Level.
+
+   <Image src='/img/how-to/custome_level_-_2.png' width='1000' alone />
+
+1. Let's go to the Door menu to setup Door Group, right-click on All Doors and click **Add Group** to add Door Group.
+
+   * You can see the Door Group created below it, here it is named to IT Main Office A1.
+
+   * You can assign this door to the Access Group **IT Main Office A1** that we created previously.
+
+   <Image src='/img/how-to/custom_level_-_3.png' width='700' alone />
+
+   <Image src='/img/how-to/custom_level_-_4.png' width='1000' alone />
+
+1. Now move on to Device Tab and just as we've done it, right-click on All Devices to click **Add Device Group**.
+
+   * You can see the Device Group created below it, here it is named to BioStation L2 (IT).
+
+   <Image src='/img/how-to/custome_level_-_5.png' width='500' alone />
+
+1. Click the device, and then assign its group to Device Group **BioStation L2 (IT)** that we just created.
+
+   <Image src='/img/how-to/custome_level_-_6.png' width='1000' alone />
+
+1. Let's go to **Settings** → **Account** → **Add Custom Level**.
+
+   <Image src='/img/how-to/custom_level_-_it_assist.png' width='600' alone />
+
+1. Here it will be named **IT Assistant Manager**, and we will set all of the Admin Item Settings that we created previously.
+
+   * We will create a User Group in the next step, and then you can come back to this menu to assign the created User Group.
+
+   * This user will only have **Read** rights for all of the **Admin Menu Settings**.
+
+   <Image src='/img/how-to/it_assit.png' width='1000' alone />
+
+1. Finally, let's create a user by going to User menu.
+
+   * Likewise, right-click on All Users and click **Add User Group**, here it is named **IT**.
+
+   <Image src='/img/how-to/user_group_it.png' width='300' alone />
+
+1. Add a new user and set the appropriate Group(User Group), Operator Level, and Access Group that we just created.
+
+   * Set the Login ID and Password that you can remember well.
+
+      * At this point, you can go back to step 7 and assign the created custom level to the user group that this user has set → this will automatically set the user Max to be accounted for the custom level.
+
+   * Also try to enroll a fingerprint with one of your fingers for this user.
+
+      <Image src='/img/how-to/max_-_it_assist.png' width='1000' alone />
+
+      * At this point please go back to step 2, to assign property User Group and Door Group that we created for the Access Group and the Access Level.
+
+1. Now when you log out and log in as Max, you can see that privilege of this user is limited.
+
+   * Below is the example of this user not being able to add any user on the User menu or edit Access Group, Monitoring, and Time Attendance menus.
+
+   * But as it was mentioned earlier this user has rights to edit/read Device and Door.
+
+   <Image src='/img/how-to/custom_level_-_11.png' width='1000' alone />
+
+   <Image src='/img/how-to/device.png' width='1000' alone />
+
+1. Now to test this, I will create a user named Kantakana, who is an IT Specialist working under Max in the IT Department that also belongs to the User Group of **IT**.
+
+   This user will have an operator level of just **User** which is set by default that is only able to read his own information as well as his own Time Attendance records.
+
+   * To do this please log out of Max's account, and then log back in as the default administrator (User ID = 1).
+
+   * Go to the User menu and click **Add User** and then create a user as below.
+
+   * Try enrolling the fingerprint of this user with your device using one of your fingers.
+
+   <Image src='/img/how-to/kantakana.png' width='1000' alone />
+
+1. Now log out and log back in as Max, then go to Monitoring menu → Real-time log. Put the finger that you enrolled for Kantakana on the device. You will be able to see that Max can monitor when his associate employee Kantakana showed up to work by looking at when he authenticated. When you authenticate the fingerprint enrolled for Max on the device, you can also see that Max has the privilege to monitor his own logs.
+
+   <Image src='/img/how-to/max_kantakana_monitoring.png' width='1000' alone />
+
+1. In contrast, when you log in as Kantakana. You can see that he can only Read his own User information as well as his Time Attendance records, but he cannot edit anything on it as his privilege is limited.
+
+   * Thus if he wants to view his own monitoring records as well as to fix them in case if he comes to work late or goes for a leave, or the system is down so that it failed to record his attendance properly, he has to contact his manager Max to edit this information.
+   
+   <Image src='/img/how-to/kantakana_login.png' width='1000' alone />

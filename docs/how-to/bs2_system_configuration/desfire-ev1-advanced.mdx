@@ -1,0 +1,49 @@
+# How to enable DESFire EV1 Advanced Option
+
+Some users want to read a DESFire card issued by 3rd party program on the Suprema device. If the card is issued with each key set to a different value than the default, then all key settings should also be done on the Suprema device.
+
+<Image src='/img/how-to/how_to_enable_desfire_ev1_advanced_option_01.png' width='1000' alone />
+
+Before BioStar 2.7.0, only PICC Master key can be set but on BioStar 2.7.0 and higher, you can set App master, File read access File write access key and index. Also, Encryption type AES is added.
+
+**Compatible firmware**
+
+*  BioStation 2: 1.7.0 or later
+
+*  BioStation A2: 1.6.0 or later
+
+*  BioStation L2: 1.4.0 or later
+
+*  BioEntry W2: 1.3.0 or later
+
+*  FaceStation 2: 1.2.0 or later
+
+*  CoreStation: 1.2.0 or later
+
+*  BioEntry P2: 1.2.0 or later
+
+*  BioLite N2: 1.1.0 or later
+
+:::info
+
+Entry devices with firmware version V2.x are not supported.
+
+:::
+
+From BioStar 2.7.0, you can configure detailed key settings by enabling DESFire advanced option.
+
+**Caution**: please note that when the Advanced option is enabled, mobile cards can not be supported. Encryption type AES is also added.
+
+<Image src='/img/how-to/how_to_enable_desfire_ev1_advanced_option_02.png' width='1000' alone />
+
+:::info
+
+Only one encryption type can be applied to the entire key.
+
+:::
+
+However, the problem is you don't see option for PICC key with the option enabled. To set the PICC Key, disable the DESFire Advanced option, set PICC Key by Primary/Secondary setting to the device first.
+
+<Image src='/img/how-to/how_to_enable_desfire_ev1_advanced_option_03.png' width='1000' alone />
+
+Which means, to configure DESFire advanced option with PICC key having a value other than default, you need to set twice with disabling the option and disabling the option again.

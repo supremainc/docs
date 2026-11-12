@@ -1,0 +1,103 @@
+# How to configure Daylight Saving Time
+
+You should configure Daylight Saving Time in three parts: BioStar 2 Server, BioStar 2 Client and Device. To utilize Daylight Saving Time, you must configure the same Daylight Saving Time for both BioStar 2 Client and device.
+
+* **Applied version**: BioStar 2.6.0 or above
+
+Supported device:
+
+<Image src='/img/how-to/biostar2_dst_7.png' width='600' alone />
+
+:::note
+
+**New devices that support this feature**:
+
+* FaceLite 2 V1.0.0 or above
+
+* XPass 2 V1.0.0 or above
+
+* FaceStation F2 V1.0.0 or above
+
+* X-Station 2 V1.0.0 or above
+
+:::
+
+## BioStar 2 Server
+
+1. Go to **Setting** → **DAYLIGHT SAVING TIME**.
+
+   <Image src='/img/how-to/biostar2_dst_1.png' width='1000' alone />
+
+1. Create new Daylight Saving Time by clicking **+ Add** button.
+
+   <Image src='/img/how-to/biostar2_dst_2.png' width='1000' alone />
+
+   <Image src='/img/how-to/biostar2_dst_3.png' width='700' alone />
+
+   * The maximum number of Daylight Saving Time you can create: Up to 200
+
+   * The maximum length of DST name: 48 letters
+
+## BioStar 2 Client
+
+1. Go to **Setting** → **PREFERENCE**.
+
+   <Image src='/img/how-to/biostar2_dst_4.png' width='1000' alone />
+
+1. Select Daylight Saving Time you want to configure. You can choose maximum two periods for Daylight Saving Time. **Please note that you cannot configure two Daylight Saving Time which period are overlapped**.
+
+   <Image src='/img/how-to/biostar2_dst_5.png' width='900' alone />
+
+   :::info
+
+   * All users who login to BioStar 2 can configure Daylight Saving Time in Setting → Preference. In other word, a user without the privilege for monitoring can configure it as well.
+
+   * If Daylight Saving Time is configured in BioStar 2 Client (**Setting** → **PREFERENCE**), it cannot be modified or deleted. If you go to **Setting** → **DAYLIGHT SAVING TIME**, selected DST's icon is deactivated.
+
+   :::
+
+1. During the Daylight Saving Time, the time of event logs (Monitoring & Real-time log) will apply +1 hour considering DST and Timezone.
+
+## Device
+
+If you want to configure DST in BioStar 2.
+
+1. Go to the Device setting in BioStar 2.
+
+1. Select Daylight Saving Time. You can select maximum two DST. Please note that you cannot configure two Daylight Saving Time which period are overlapped.
+
+   <Image src='/img/how-to/biostar2_dst_6.png' width='1000' alone />
+
+:::info
+
+* If Daylight Saving Time is configured in device menu, it can be modified or deleted unlike BioStar2 Client. If you go to **Setting** → **DAYLIGHT SAVING TIME**, selected DST's icon is activated.
+
+* Master device (or Default device) can select maximum two Daylight Saving Time.
+
+* Slave device cannot select Daylight Saving Time by itself but its time will be displayed based on Daylight Saving Time which is configured in Master Device.
+
+* The Event log is managed based on UTC-0. However, the information on UTC, Time Zone and whether DST (Daylight Saving Time) is applied or not is managed together.
+
+:::
+
+If you want to configure DST on the device directly.
+
+1. Go to the Device menu on the device.
+
+1. Go to **DEVICE** → **Daylight Saving Time**.
+
+1. If you create new Daylight Saving Time, the DST will be automatically named as DST 1 (Daylight Saving Time 1), DST 2 (Daylight Saving Time 2) in turn. The name of DST is different depending on device model.
+
+1. If you delete DST 1 (Daylight Saving Time 1), DST 2 (Daylight Saving Time 2) will be changed into DST 1 (Daylight Saving Time 1).
+
+:::info
+
+* If you reset the device without network setting, Daylight Saving Time will be remained without initialization. 
+
+* Visitor's start & expiry time depends on the server PC's Windows time zone.
+
+* Visitor's update follows the BioStar 2 time zone, DST applied.
+
+* Visitor's authentication time follows the device's time, which follows the BioStar 2 time zone even with DST applied. 
+
+:::

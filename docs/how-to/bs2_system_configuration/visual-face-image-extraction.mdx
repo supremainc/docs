@@ -1,0 +1,41 @@
+# Improved Image Extraction for Visual Face Credentials
+
+* Affected Version: BioStar 2.9.0 or above
+
+This article guides you about improved image extraction for Visual Face Credentials in BioStar 2 and algorithm comparison.
+
+Suprema has applied improved algorithms to FaceStation F2 v2.x.x and BioStation 3 so that customers can experience improved Visual Face performance. At the same time, in the BioStar 2 server, the method of extracting images for Visual Face credentials in v2.9.0 has been improved to increase the convenience of customers.
+
+## Improved Image Extraction for Visual Face Credentials on BioStar 2
+
+### BioStar 2 v2.9.0 or above: NEW
+
+1. The user photo for the Visual Face credential is uploaded to BioStar 2.
+
+1. According to the algorithm in BioStar 2, the face part to be used as the Visual Face credential is extracted, and the original photo is cropped with the Warped Image.
+
+1. Check if devices can extract the Visual Face Template from the cropped Warped Image on BioStar 2.
+
+<Image src='/img/how-to/2.9.0_l1-1.png' width='1000' alone />
+
+### BioStar 2 v2.8.6 - v2.8.17: Previous
+
+1. The user photo for the Visual Face credential is uploaded to BioStar 2.
+
+1. According to the algorithm in BioStar 2, the face part to be used as the Visual Face credential is extracted, and the original photo is cropped with the Warped Image.
+
+1. Transfer the Warped Image to the FaceStation F2 device.
+
+1. Check if the Visual Face Template can be extracted from the Warped Image received by the FaceStation F2 device.
+
+   * For this reason, in the past, original photos for Visual Face could be registered in BioStar 2 but could not be transferred to the device.
+
+<Image src='/img/how-to/2.9.0_l1-2.png' width='1000' alone />
+
+## Visual Face Algorithm Comparison Table
+
+* "TEMPLATES" of the old algorithm (FaceStation F2 v1.x.x) and the new algorithm (BioStar 2.9.0 and above, FaceStation F2 v2.x.x, BioStation 3) are NOT compatible with each other.
+
+* "WARPED IMAGES" of BioStar 2.9.0 and above, FaceStation F2, and BioStation 3 are compatible.
+
+<Image src='/img/how-to/2.9.0_l1-3.png' width='600' alone />

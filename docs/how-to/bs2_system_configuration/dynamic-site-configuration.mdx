@@ -1,0 +1,121 @@
+# Supports Dynamic Site Configuration
+
+Suprema officially supports Suprema Mobile Access Dynamic Site from BioStar2 Version 2.8.9.
+
+<Image src='/img/how-to/d01.png' width='1000' alone />
+
+## Dynamic Site Policy
+
+* **Dynamic Site** allows you to reissue, revoke, or discontinue mobile access cards or specify the expiration date of it. It deducts credits according to the period of use or devices. Dynamic can be used in gyms, libraries, or shared facilities where it provides membership services.
+
+* BioStar 2 server must be connected to the Internet and run **ONLY** when issuing or deleting a Dynamic Card.
+
+* Mobile devices for which Dynamic Cards have been issued must **ALWAYS** be connected to the Internet. In unavoidable cases, a maximum exception time of 5 minutes is allowed, but after that, it will be marked as network disconnected, and the access card cannot be used.
+
+* There is only one site that can be registered in **BioStar 2** → **Settings** → **Mobile Access**. Dynamic Site and Regular Site cannot be connected together in one BioStar 2 server.
+
+* If you create a Dynamic Site on Airfob Portal, you can issue a Suprema Mobile Access card for free for **1 MONTH** without purchasing a license. When the free trial period has expired, and if you have not purchased a separate credit for the Dynamic Site, you will be notified as follows:
+
+   * **BioStar 2**: Alert message will show if the administrator tries to issue or delete the mobile access card. (The site is currently under payment required status. Please change the site's credit from the Airfob Portal and try again.) 
+
+   * **Airfob Portal**: Free usage period expiration email sent to Dynamic Site administrator account. 
+
+   * **Airfob Pass**: Card issued at Dynamic Site is changed now to suspended.
+
+* The credit deduction method of Dynamic site is different from Regular.
+
+   * **Card Issuance Limitation**: Unlimited
+
+   * **Credit Deduction Policy**: 1 Credit deduction per device registered
+
+   * **Billing Method**: Monthly
+   
+      :::info
+      
+      Contact Sales Representative for further details. ([Link](https://www.supremainc.com/en/about/contact-us.asp))
+      
+      :::
+
+* Detailed description about the difference between Dynamic Site and Regular Site: [Related Article](https://mocasystemen.crunch.help/admin/site-type)
+
+:::info
+
+* If the dynamic site is connected, when the Mobile Access Card is issued, the message about credit deduction is **NOT** confirmed. (Same for both issuing directly from the user page and issuing through CSV.)
+
+* If the dynamic site is connected, you must enter the expiration date of the Mobile Access Card.
+
+* When batch issuing a Mobile Access Card for a Dynamic Site through CSV Import, the import **FAILS** if there is no information about **the start and end date of the validity period for the card**.
+
+   <Image src='/img/how-to/d02.png' width='1000' alone />
+
+* After creating a dynamic site, even if a device is added, the credit is verified as **0**. Even if the credit is 0, you **CAN** proceed with issuing and authenticating a Mobile Access Card for the Dynamic Site for free for **1 MONTH**.
+
+   <Image src='/img/how-to/d03.png' width='700' alone />
+
+:::
+
+## How To Issue Dynamic Card
+
+1. Go to the Airfob Portal and create a Dynamic Site. (Airfob Portal: `https://portal.airfob.com/en`)
+
+   How to create Airfob Portal Site. ([Related Article](https://mocasystemen.crunch.help/admin/create-site))
+
+   <Image src='/img/how-to/d04.png' width='600' alone />
+
+1. Go to **BioStar 2** → **Settings** → Mobile Access and connect with your Dynamic Site you created at **Step 1**.
+
+   <Image src='/img/how-to/d05.png' width='1000' alone />
+
+1. Go to **BioStar 2** → **Settings** → Mobile Access and add your device which supports Suprema Mobile Access.
+
+   <Image src='/img/how-to/d06.png' width='1000' alone />
+
+   * Confirm your device is right model and right firmware version.
+
+   * Related Article: [Supported Devices List of Mobile Access](https://support.supremainc.com/en/support/solutions/articles/24000058364)
+
+   * Device list in the Airfob Portal will be automatically updated.
+
+   <Image src='/img/how-to/d07.png' width='900' alone />
+
+1. Add a user from the **BioStar 2** → **User** menu.
+
+   * **Essentials**: Name and email address.
+
+   * **Optional**: User profile image, department, job title information.
+
+   <Image src='/img/how-to/d08.png' width='1000' alone />
+
+1. Enroll Mobile Access Card.
+
+   * Can choose between manually entering card ID or using random card ID.
+
+   * Can choose whether you will refer to profile photo, department and job title. (You can **ONLY** choose when you enroll user with each item.)
+
+   * Need to configure validity period for Mobile Access Card in Dynamic Site.
+
+   <Image src='/img/how-to/d09.png' width='600' alone />
+
+1. After completing the card issuance in BioStar 2, access the Airfob Portal to check if the card issuance was successful.
+
+   * **Before Activation**: Mobile Access Card download link is sent to the user and the download has not yet been received.
+
+   * **Activated**: The user has downloaded the Mobile Access Card to the mobile phone.
+
+   <Image src='/img/how-to/d10.png' width='1000' alone />
+
+1. Open the mailbox on your phone and download the Mobile Access Card. There are two ways to download:
+
+   1. Click the download button in the email. ([Related Article](https://mocasystemen.crunch.help/user/card-download))
+
+   1. Use an activation code. ([Related Article](https://mocasystemen.crunch.help/user/activation-code))
+
+      <Image src='/img/how-to/d11.png' width='900' alone />
+
+   * Need to configure validity period for Mobile Access Card in Dynamic Site.
+
+      <Image src='/img/how-to/d12.png' width='1000' alone />
+
+1. Turn on the phone's NFC or BLE function and authenticate the Mobile Access Card to the device registered in **Step 3**. You can check the user authentication log in **BioStar 2** → **Monitoring**.
+
+   <Image src='/img/how-to/d13.png' width='1000' alone />

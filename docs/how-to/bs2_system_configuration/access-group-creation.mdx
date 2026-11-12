@@ -1,0 +1,55 @@
+# How to make access groups
+
+Before creating access groups, please make sure to set the devices to have 'Full Access' as disabled.
+
+'Full Access' indicates that the device ignores access group configuration and makes an auth decision solely dependent on the user data and auth mode it has.
+
+For the case of simple and limited access control use, 'Full Access' mode is not a problem. However, it's recommended to use Access Group to control the access of the users while using automatic user synchronization function, because it sends all the user data to the connected devices.
+
+Check the fundamental course contents for more information about the detailed concept of Access Group.
+
+:::note
+
+**Additional advantage of Access Group**
+
+* By setting a user group to an access group, you can automatically assign the same access group to new users in the user group.
+
+* By creating a certain access group with VIP or management members, it can be easy to set the access group to be 'Bypass Group' for zones, such as APB and Scheduled Lock. So, the access group members can enter and exit through doors without limitation.
+
+:::
+
+## Create Access Group
+
+1. Go to **ACCESS CONTROL** and click **ADD ACCESS LEVEL** button.
+
+   Access level consists of door and time zone, and access group is made of access levels and users. So, it's necessary to create an access level first, and then assign users to access level to make an access group.
+
+   <Image src='/img/how-to/37.png' width='800' alone />
+
+1. Create a door and a schedule, then click apply to create an access level.
+
+   <Image src='/img/how-to/39.png' width='900' alone />
+
+1. Click **ADD ACCESS GROUP** button and add an access level and a user group or individual users, Then, click **Apply**.
+
+   <Image src='/img/how-to/40.png' width='1000' alone />
+
+1. Check the new access group's list.
+
+   <Image src='/img/how-to/41.png' width='1000' alone />
+
+1. Go to user tap and check access group from the user list.
+
+   <Image src='/img/how-to/42.png' width='1000' alone />
+
+:::info
+
+If you create a new user from the device directly and the device is not assigned to a door, the device will be recognized for T&A use only. So, the new user can make an authentication even when the full access is disabled on that device. 
+
+:::
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/access_group.mp4" type="video/mp4" />
+</video>

@@ -1,0 +1,78 @@
+# Intelligent Slave Support
+
+Previously, Suprema BioStar 2 FW supported the below OSDP slave usage.
+
+1. 3rd party ACU holds the card with the biometric information and the Suprema reader is an OSDP slave reader.
+
+1. Suprema device handles the Access On Card (Template On Card) and sends the result to the 3rd party ACU.
+
+The customers who want to manage their user information on Suprema device and send out the card data of the verified users from Suprema device can not to use Suprema device without FW change.
+
+From v2.8.10 with upcoming FW, Suprema supports Intelligent Slave Feature.
+
+## Intelligent Slave
+
+Intelligent Slave is a function that enables many users' 1:1 or 1:N matching by transmitting the authentication result to OSDP card data when authentication using biometrics is performed in an environment in which the Suprema biometric device and a third-party controller are connected.
+
+<Image src='/img/how-to/2.8.10-1-1.png' width='800' alone />
+
+**System configuration for Intelligent Slave**
+
+Previously, customization was required to connect the Suprema device to a third-party ACU as an OSDP Slave device. However, from BioStar 2.8.10, if the firmware version is appropriate for some devices, you can use the Intelligent Slave function without customization.
+
+## Supported device and firmware information
+
+BioStar 2.8.10 or above are needed.
+
+* Reference the article below: [\[BioStar 2\] Firmware List of Supporting Intelligent Slave](https://support.supremainc.com/en/support/solutions/articles/24000068102--biostar-2-firmware-list-of-supporting-intelligent-slave)
+
+| Device         | Firmware        |
+| -------------- | --------------- |
+| BioEntry W2    | v1.6.3 or later |
+| BioStation L2  | v1.6.1 or later |
+| BioEntry P2    | v1.4.1 or later |
+| XPass 2        | v1.2.3 or later |
+| FaceStation F2 | v1.1.2 or later |
+| BioLite N2     | v1.4.1 or later |
+| X-Station 2    | v1.1.0 or later |
+| BioStation 3   | v1.0.0 or later |
+| BioEntry W3    | v1.0.0 or later |
+| BioStation 2a  | v1.0.0 or later |
+
+## How to configure Intelligent Slave
+
+<Image src='/img/how-to/2.8.10-1-3.png' width='800' alone />
+
+1. Confirm if BioStar 2 and device firmware are versions that support Intelligent Slave.
+
+1. Confirm your device is in RS-485 Default mode.
+
+   <Image src='/img/how-to/2.8.10-1-4.png' width='300' alone />
+
+   1. Confirm if the baud rate of RS485 is the same as the baud rate of the 3rd party ACU. Usually, the default of the 3rd party ACU is 9600. Please set the same parameter of the Suprema device from the baud rate of 3rd party ACU.
+   
+   <Image src='/img/how-to/2.8.10-1-5.png' width='700' alone /> 
+
+   :::info
+
+   Once the Suprema device is connected to a slave device to the 3rd party ACU through RS485 (OSDP), the Suprema device becomes a Peripheral Device of the OSDP automatically.
+
+   :::
+
+1. Check the Intelligent Slave at the end of the network on the device detail page.
+
+   * **Exception Code**: The default is **Disabled**. Suprema device can send to aggregate accurate logs in exceptional situations such as authentication failures or the no card of the verified user information. Depending on the system requirement of the 3rd party ACU, you can enable this option and set it in decimal or hexadecimal. You can enter decimal numbers from 0 to 18446744073709551615, and you can enter hexadecimal numbers from 0 to FFFFFFFFFFFFFFFF or hexadecimal characters. (Up to 8 bytes)
+
+      <Image src='/img/how-to/2.8.10-1-6.png' width='1000' alone />
+
+   * **Output Info**: You can output either your Card ID or User ID when authentication is successfully done.
+
+      <Image src='/img/how-to/2.8.10-1-7.png' width='300' alone />
+
+   * **OSDP ID**: You can enter the OSDP address of the device. You MUST enter the value between 0 and 126.
+
+      <Image src='/img/how-to/2.8.10-1-8.png' width='300' alone />
+
+1. Create a new user in BioStar 2 to synchronize the user data to the connected Suprema device. In addition, check if there is a user verification success log.
+
+1. Connect your device to the 3rd party ACU through RS485 (OSDP) and check the operation.

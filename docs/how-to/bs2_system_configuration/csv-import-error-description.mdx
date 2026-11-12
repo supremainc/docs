@@ -1,0 +1,25 @@
+# Added Error_Description Column to User List File (User_Import_Error) That Failed CSV Import
+
+**Affect Products & Versions**
+
+* **BioStar 2**: BioStar v2.8.16 or above
+
+Many customers use the **CSV Import** function to register or edit a large number of users in BioStar 2. However, when trying to register or edit users with CSV fails, customers could check only the list of failed users, and it was challenging to find the cause of the failure.
+
+Suprema has improved the function so that if the **CSV Import** function fails from BioStar 2.8.16 or later, the cause of the failure can be checked for each user so that customers can use the **CSV Import** function more conveniently.
+
+## Sample Case - User's expired date exceeds BioStar 2 specification
+
+1. User 3 is newly registered through CSV import. In this file, the expired date of this user is configured to 2050.
+
+   * Maximum user expired date specification of BioStar 2.8.16: December 31, 2030, 23:59:59.
+   
+   <Image src='/img/how-to/2.8.16-2-1.png' width='1000' alone />
+
+1. A failure pop-up occurs when **CSV Import** is performed. At this time, click the **Download** icon.
+
+   <Image src='/img/how-to/2.8.16-2-2.png' width='300' alone />
+
+1. When you open the downloaded CSV file, you can find the name of the failed user and the reason for the failure in the **Error_Description** column.
+
+   <Image src='/img/how-to/2.8.16-2-3.png' width='1000' alone />

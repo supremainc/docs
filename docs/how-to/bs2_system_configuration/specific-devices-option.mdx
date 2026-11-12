@@ -1,0 +1,53 @@
+# 'Specific Devices (Only Devices Belonging to the Access Group)' Option
+
+From BioStar 2 Version 2.7.11, a new user synchronization option **Specific Devices (Only devices belonging to the access group)** got added
+
+The user synchronization option, 'Specific Devices (Only devices belonging to the access group)', is partially an auto synchronization mode.
+
+This means that depending on the access group configuration, user data will automatically sync to specific devices.
+
+<Image src='/img/how-to/v11_1.png' width='800' alone />
+
+<Image src='/img/how-to/v11_2.png' width='1000' alone />
+
+## What is the concept of 'Specific Devices (Only devices belonging to the access group)'?
+
+Transfer the access group data to the belonged device.
+
+Transfer user data to the Master device of each door relay (access level) and floor relay (floor level).
+
+If a user is not included in one or more access groups among all access groups in which the device is included, then the user should be deleted.
+
+If a user is included in one or more access groups among all access groups which the device is included, then the user should be stored in the device and updated.
+
+Some special access groups which the device is not included need to get user data.
+
+* Unordered List Item e.g. bypass group, etc.
+
+Users who registered as device administrator should be transferred to devices whether the user is registered in the access group or not.
+
+## How to configure the 'Specific Devices (Only devices belonging to the access group)'?
+
+1. Choose the mode from **BioStar 2** → **Settings** → **Server** → **User/Device Management** → **Automatic User Synchronization**.
+
+   <Image src='/img/how-to/v11_3.png' width='800' alone />
+
+1. The pop-up warning message will show. This warning message gives you a guide that you need to click **Delete Data & Sync Device** for each device to use the new user synchronization mode. Click **OK**.
+
+   <Image src='/img/how-to/v11_4.png' width='400' alone />
+
+   :::caution
+
+   * If you do not proceed **Delete Data & Sync Device**, then each device will keep invalid user information that has been used before the synchronization.
+
+   * When invalid user data gets stored in the device, this may cause new issues during BioStar 2 operation.
+
+   :::
+
+1. Two new database tables will be created in AC DataBase (t_acsgrsent, t_usersent).
+
+   <Image src='/img/how-to/v11_5.png' width='100' alone />
+
+1. Proceeding **Delete Data & Sync Device** for each device. These procedures must be done manually for all devices in your BioStar 2 server.
+
+   <Image src='/img/how-to/v11_6.png' width='300' alone />

@@ -1,0 +1,381 @@
+# 14 Subjects of CoreStation FAQ
+
+## 1. CoreStation Network Reset and Factory Default
+
+<details className='faqs'>
+<summary>**How to reset CoreStation network?**</summary>
+
+Push init button on CoreStation more than 3 seconds.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Network and Factory Default W2, P2, CoreStation](https://support.supremainc.com/en/support/solutions/articles/24000014900)
+
+:::
+
+</details>
+
+<details className='faqs'>
+<summary>**How to do factory default setting of CoreStation?**</summary>
+
+1. Factory default setting by BioStar2
+
+   * Connect CoreStation with BioStar2
+
+   * Go to **Server** and set **Secure Communication with Device** as **USE** and click **Apply**
+
+   * Wait until CoreStation connects to Server
+
+   * Push init button on CoreStation 4 times straight
+
+1. Factory default setting by CoreStation SETUP Manager
+
+   * Connect CoreStation with PC
+
+   * Access web browser at `https://169.254.0.1:3001`
+
+   * Log in CoreStation SETUP Manager
+
+   * Click 'Factory Default' button on configuration page 
+
+:::info
+
+For more details, please refer to the link below.
+
+[How to configure CoreStation IP configuration via SETUP Manager](https://support.supremainc.com/en/support/solutions/articles/24000051368--corestation-how-to-configure-corestation-ip-configuration-via-setup-manager) 
+
+:::
+
+</details>
+
+## 2. CoreStation Network Setting
+
+<details className='faqs'>
+<summary>**How to set CoreStation IP?**</summary>
+
+1. Connect CoreStation with PC in 1:1 and access web browser at `https://169.254.0.1:3001` and log in CoreStation SETUP Manager. You can configure CoreStation IP.
+
+1. Connect CoreStation with BioStar2 and configure CoreStation IP in Device setting. 
+
+:::info
+
+For more details, please refer to the link below.
+
+[Suprema CoreStation SETUP Manager](https://support.supremainc.com/en/support/solutions/articles/24000052471-suprema-corestation-setup-manager)
+
+[CoreStation Setup Manager Release](https://support.supremainc.com/en/support/solutions/articles/24000048983--biostar-2-corestation-setup-manager-release) 
+
+:::
+
+</details>
+
+## 3. The number of door controlled by CoreStation
+
+<details className='faqs'>
+<summary>**How many doors does a CoreStation support? **</summary>
+
+CoreStation has built-in 4 relays which are to control 4 doors. By adding slave device via RS485, it can control up to 52 doors and via Wiegand, control up to 132 doors.
+
+</details>
+
+<details className='faqs'>
+<summary>**How many RS485 (OSDP) devices can be connected to CoreStation?**</summary>
+
+64ch. Each port supports up to 31 slave devices with daisy chain.
+
+</details>
+
+<details className='faqs'>
+<summary>**How many Wiegand devices can be connected to CoreStation?**</summary>
+
+132ch. CoreStation has 4 Wiegand ports and 64ea DM-20 which has 2 Wiegand ports can connect to CoreStation by RS485.
+
+</details>
+
+<details className='faqs'>
+<summary>**How many doors can DM-20 support?**</summary>
+
+DM-20 has 4 relays which support 4 doors with RS485 devices.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Maximum Slave Devices with CoreStation](https://support.supremainc.com/en/support/solutions/articles/24000024806)
+
+[CoreStation 2 Sample Door Configuration](https://support.supremainc.com/en/support/solutions/articles/24000020224--biostar-2-corestation-2-sample-door-configuration) 
+
+:::
+
+</details>
+
+## 4. How to use 3rd party reader with CoreStation
+
+<details className='faqs'>
+<summary>**Can we use 3rd party card reader with CoreStation?**</summary>
+
+Yes, All standard card readers that support Wiegand output can work with CoreStation.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we use 3rd party keypad reader with CoreStation?**</summary>
+
+No, CoreStation doesn't support the single key output from Wiegand signal so it cannot use with 3rd party keypad reader.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we use 3rd party fingerprint reader with CoreStation?**</summary>
+
+Yes, 3rd party fingerprint reader can connect with CoreStation by Wiegand. CoreStation has a matcher that supports Suprema template. You can either use Suprema fingerprint slave reader BER2 or Suprema intelligent fingerprint reader by RS485 (OSDP) connection.
+
+:::info
+
+For more details, please refer to the link below.
+
+[OSDP Protocol Support](https://support.supremainc.com/en/support/solutions/articles/24000016700--biostar-2-osdp-protocol-support) 
+
+:::
+
+</details>
+
+## 5. How to use XPD2 or BER2 with 3rd party controller
+
+<details className='faqs'>
+<summary>**Can we use XPD2 with 3rd party controller?**</summary>
+
+Yes, XPD2 can connect with 3rd party controller by Wiegand or RS485. You can easily configure XPD2 setting via Suprema Device Manager Application via mobile phone.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we use BER2 with 3rd party controller?**</summary>
+
+Yes, If the 3rd party controller can store fingerprint template, BER2 can be used with the ACU.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Suprema Device Manager Mobile App New Features and Configuration Guide](https://support.supremainc.com/en/support/solutions/articles/24000037496--biostar-2-suprema-device-manager-mobile-app-new-features-and-configuration-guide)
+
+[OSDP Protocol Support](https://support.supremainc.com/en/support/solutions/articles/24000016700--biostar-2-osdp-protocol-support) 
+
+:::
+
+</details>
+
+## 6. How to replace a 3rd party controller and Wiegand reader with CoreStation, XPD2 and/or BER2
+
+<details className='faqs'>
+<summary>**Can we connect Wiegand cable with RS485 cable of XPD2 and BER2?**</summary>
+
+Yes, Check Wiegand cable at the site is shielded twisted 2 pair cable. If it is, you can connect Wiegand 3 core cable with RS485 cable (TRX+,TRX-,GND) of XPD2 and/or BER2.
+
+</details>
+
+<details className='faqs'>
+<summary>**How many can XPD2 and BER2 connect with CoreStation when being cabled by RS485 and Wiegand cable together?**</summary>
+
+Max.10ea.
+
+:::info
+
+For more details, please refer to the link below.
+
+[How to replace a 3rd party controller and Wiegand RFID readers with Suprema CoreStation controller, BER2 and/or XPD2](https://support.supremainc.com/en/support/solutions/articles/24000051367--corestation-how-to-replace-a-3rd-party-controller-and-wiegand-rfid-readers-with-suprema-corestation) 
+
+:::
+
+</details>
+
+## 7. Suprema platform compatibility with CoreStation
+
+<details className='faqs'>
+<summary>**Which Suprema device can be used with CoreStation?**</summary>
+
+1. Slave RFID reader: XPD2
+
+1. Slave Biometric reader: BER2
+
+1. All intelligent biometric readers
+
+1. All peripherals
+
+</details>
+
+<details className='faqs'>
+<summary>**Does XPD2 support Airfob Pass?**</summary>
+
+Yes, XPD2 supports Airfob Pass (Suprema Mobile Access)
+
+:::info
+
+For more details, please refer to the link below.
+
+[Upgraded Hardware Introduction: XPass D2 (Rev 2)](https://support.supremainc.com/en/support/solutions/articles/24000054221--biostar-2-upgraded-hardware-introduction-xpass-d2-rev-2-) 
+
+:::
+
+</details>
+
+## 8. Maximum Biometric Devices with CoreStation
+
+<details className='faqs'>
+<summary>**How many fingerprint reader can connect with CoreStation?**</summary>
+
+64ch. Performance would be different depending on the number of users at the site. CoreStation matching speed is 400,000/1sec for Genuine Matching which is 1:N matching where the user's fingerprint template is in the device.
+
+</details>
+
+<details className='faqs'>
+<summary>**How many face authentication reader can connect with CoreStation?**</summary>
+
+5ch. Face reader can connect to each RS-485 port of CoreStation one by one.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Maximum Slave Devices with CoreStation](https://support.supremainc.com/en/support/solutions/articles/24000024806) 
+
+:::
+
+</details>
+
+## 9. Integration
+
+<details className='faqs'>
+<summary>**Which VMS system can be used with CoreStation?**</summary>
+
+Milestone. Suprema BioStar2 software is integrated with Milestone Xprotect. You can monitor video and control from a single interface.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Milestone VMS Integration](https://support.supremainc.com/en/support/solutions/articles/24000018675--biostar-2-milestone-vms-integration)
+
+:::
+
+</details>
+
+<details className='faqs'>
+<summary>**How can we integrate CoreStation with 3rd party software?**</summary>
+
+You can use BioStar2 Device SDK. Please download it from the link. 
+
+:::info
+
+For more details, please refer to the link below.
+
+[BioStar 2 Device SDK manual](#)
+
+[BioStar 2 Device SDK Download Link](https://download.supremainc.com/) 
+
+:::
+
+</details>
+
+## 10. Power
+
+<details className='faqs'>
+<summary>**What is the specification of Power AUX IN of CoreStation?**</summary>
+
+12V DC, 3A
+
+</details>
+
+<details className='faqs'>
+<summary>**What is the power output of CoreStation?**</summary>
+
+12V, up to 1.5A. Slave device or Wiegand device or lock etc. can be powered within 1.5A. In case of exceeding 1.5A, you need separate power supply.
+
+</details>
+
+## 11. Installation
+
+<details className='faqs'>
+<summary>**How to connect slave device with CoreStation by RS485?**</summary>
+
+Use an AWG24 twisted pair with a maximum length of 1.2km for RS485 cable which has 120 ohm impedance. It is mandatory to wire in parallel format.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Daisy Chain and RS485 Connection](https://support.supremainc.com/en/support/solutions/articles/24000017277--both-biostar-daisy-chain-and-rs485-connection) 
+
+:::
+
+</details>
+
+## 12. Configuration
+
+<details className='faqs'>
+<summary>**Can we use PIN Only Mode with XPass D2 Keypad reader?**</summary>
+
+Yes, You can create virtual card number in User Configuration in BioStar2 and enable XPD2 authentication mode to **Input card ID from keypad** available.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we configure supervised input?**</summary>
+
+Yes, CoreStation input No.0\~7. can be used for normal TTL input or supervised input.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we use fire alarm panel with CorStation?**</summary>
+
+Yes, you can connect CoreStation input with fire alarm panel. BioStar2 Standard license is required.
+
+:::info
+
+For more details, please refer to the link below.
+
+[Using Card Only or PIN Only Mode with XPass D2](https://support.supremainc.com/en/support/solutions/articles/24000030386--biostar-2-using-card-only-or-pin-only-mode-with-xpass-d2)
+
+[CoreStation 2 Sample Door Configuration](https://support.supremainc.com/en/support/solutions/articles/24000020224--biostar-2-corestation-2-sample-door-configuration)
+
+[How to configure Fire Alarm Zone?](fire-alarm-zone) 
+
+:::
+
+</details>
+
+## 13. Offline function
+
+<details className='faqs'>
+<summary>**When the host computer to go offline, can CoreStation work?**</summary>
+
+Yes, It works in local zone mode. CoreStation has capacity of storing 5,000,000 logs. When the network is back, it will upload all the logs to the host. However, it is not supported in global zone mode.
+
+</details>
+
+<details className='faqs'>
+<summary>**When slave device is cut from CoreStation, can the slave work?**</summary>
+
+No, it's not supported.
+
+</details>
+
+<details className='faqs'>
+<summary>**Can we connect CoreStation to another CoreStation by RS485 for back-up?**</summary>
+
+No, it's not supported.
+
+</details>
+
+## 14. Replacement function
+
+<details className='faqs'>
+<summary>**When CoreStation is failed and should be replaced, do we have to reconfigure settings?**</summary>
+
+Yes, Currently, you should reconfigure all the settings. but we are working on developing f/w to restore configuration of the CoreStation.
+
+</details>

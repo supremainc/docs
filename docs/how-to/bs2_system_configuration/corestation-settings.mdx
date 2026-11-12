@@ -1,0 +1,127 @@
+# How to configure CoreStation
+
+Three new devices have been introduced with the release of BioStar 2.5:
+
+CoreStation, Suprema's first controller for a centralized access system; P2, the next-generation model of BioEntry Plus; R2, the dummy reader designed to be used with CoreStation.
+
+<Image src='/img/how-to/2x_sysconfig_corestation_001.png' width='800' alone />
+
+Since it is a centralized controller, CoreStation does not have a reading capability unlike other edge devices and its role is to control the slave and Wiegand devices that are connected to the device.
+
+It has 4 relays, 4 Wiegand inputs, and 5 RS485 channels where you can connect slave devices.
+
+<Image src='/img/how-to/2x_sysconfig_corestation_002.png' width='800' alone />
+
+The device's input is a supervised input. This means that the device can sense if the input has tampered just like the DM-20.
+
+A log distinguishing a normal input or shorted input will be recorded in the event log and a device action can be configured accordingly as well.
+
+The device has a staggering matching performance, 400,000 matches per second.
+
+This means you can have 8 devices sending biometric information at the same time and still have a match result in a second.
+
+The device can store up to 500,000 users and 1 million fingerprints for 1:1 matching.
+
+The benefit of having a centralized controller is that your dummy readers, which are on the door, do not store any user information.
+
+Additionally, if your site had RS485 wiring with no ethernet you can reuse the wiring as is.
+
+By creating a daisy chain of 64 DM-20 with 2 Wiegand readers per device and 4 Wiegand readers on CoreStation's interface, you can control up to 132 doors with a single CoreStation.
+
+:::info
+
+FaceStation 2 and FaceLite are also Slave devices that can be used like CoreStation. However, for face registration, FaceStation 2 or FaceLite must be configured separately for registration purposes.
+
+* Details: [\[CoreStation\] How to use Face Authentication Terminal (FaceStation 2, FaceLite) with CoreStation](https://support.supremainc.com/en/support/solutions/articles/24000056987--corestation-how-to-use-face-recognition-terminal-facestation-2-facelite-with-corestation)
+
+FaceStation F2 cannot be used as a Slave device for CoreStation. 
+
+:::
+
+**System diagram**
+
+<Image src='/img/device/system-configuration-cs40.png' />
+
+It can control multiple DM-20s with a daisy chain and also control multiple biometric device and card readers at once. The slave devices will be connected by a RS-485 connection and the 3rd party RF readers will be connected via Wiegand wiring.
+
+The CoreStation itself will have to be wired with an ethernet to be connected to the BioStar 2 server.
+
+<Image src='/img/how-to/2x_sysconfig_corestation_004.png' width='900' alone />
+
+CoreStation also comes with an optional enclosure which includes power supply unit and the power distribution board.
+
+You will have to purchase the battery locally at your country according to the specification guideline.
+
+The battery will keep the CoreStation operational for around 30 minutes in idle status if the power goes out.
+
+This time will differ based on the number of devices that are connected and how much the slave devices are used during this time.
+
+The enclosure has a tamper switch that sends a tamper event every time the enclosure is opened. An event log will be created when the CoreStation loses power as well.
+
+:::info
+
+If you are curious about what combinations you could use to install an access control system with CoreStation, refer to the following PDF file: CoreStation Configuration Options(#)
+
+:::
+
+<Image src='/img/how-to/2x_sysconfig_corestation_005.png' width='800' alone />
+
+**R2 / P2**
+
+The R2 and P2 devices are 2 additional devices that are introduced with BioStar 2.5. Both have the same exterior look. However, the R2 devices only have a power and RS-485 connection because their purpose is to scan the card/fingerprint and send it to the master device.
+
+:::info
+
+For detailed device specifications, refer to the [A&E specification page](#) or our homepage products page. 
+
+:::
+
+## Configuring CoreStation
+
+CoreStation should be wired with Ethernet to connect to the server and the slave devices should be wired with RS485.
+
+1. Log in to BioStar 2.
+
+1. Click **Device**.
+
+1. Click **Search Device**.
+
+1. Select CoreStation and click **Add**.
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_006.png' width='1000' alone />
+
+1. Right click on CoreStation and click **Search Slave Device**.
+
+1. Click **Search** and then Add your slave devices.
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_007.png' width='800' alone />
+
+1. Click on CoreStation.
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_008.png' width='300' alone />
+
+1. On **Advanced** configure your **Tamper** and **AC Fail** based on your wiring on the Aux Input to receive tamper and power failure logs.
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_009.png' width='1000' alone />
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_010.png' width='600' alone />
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_011.png' width='600' alone />
+
+1. If you're using a supervised input, configure the resistor value as necessary on **Supervised Input**.
+
+   <Image src='/img/how-to/2x_sysconfig_corestation_013.png' width='900' alone />
+
+   :::info
+
+   * For a detailed wiring guideline, refer to the device manual and the guide on the enclosure.
+
+   * Refer to the link below to understand the concept of Supervised Input: [DM-20 Wiring Examples](#) 
+
+   :::
+
+## Sample Wiring Video
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/2x_sysconfig_corestation_video.mp4" type="video/mp4" />
+</video>

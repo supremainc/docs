@@ -1,0 +1,49 @@
+# Issuing Suprema Mobile Access Cards via BioStar 2 User CSV Import
+
+Sometimes, you may face situations in which you must register multiple cards to a user at once. For such cases, you can investigate with CSV Import feature in BioStar 2 → User menu. In the same way you register normal RF cards, you can register Mobile Access cards via BioStar 2 CSV Import feature.
+
+The following steps are examples of how to issue multiple Suprema Mobile Access cards at once via CSV Import.
+
+1. Go to BioStar 2 → Settings → Mobile Access and connect with your Site which you created in Airfob Portal.
+
+   * Detailed steps are described in the linked article.
+
+   * [How to Use Suprema Mobile Access](suprema-mobile-access)
+
+   <Image src='/img/how-to/2.8.4_1_1_.png' width='1000' alone />
+
+1. Create a CSV file which has user information.
+
+   * If you are using normal CSN card (RF card) and Mobile Access card at once, please make sure to separate two card types in two columns.
+
+   * We will add 'Test User 6' with Mobile Access cards as the image below.
+
+   <Image src='/img/how-to/2.8.4_1_2_.png' width='800' alone />
+
+1. Import User CSV file in BioStar 2 → Users according to the following steps.
+
+   * You should map Mobile Access card column with 'csn_mobile' column.
+
+   * Although you import a CSV file containing user information that already exists, the previously issued Mobile Access cards will not be reissued.
+
+   <Image src='/img/how-to/2.8.4_1_3_.png' width='1000' alone />
+
+   :::warning
+
+   * Please be aware of mapping columns in **BioStar 2** → **User** → **CSV Import**.
+
+   * If you map csn_mobile column with wrong RF card column, then total number of credit will be automatically decreased and you CANNOT revert wrongly issued mobile access cards.
+
+   :::
+
+1. Check your Airfob Portal, then you can find the total number of credit has been decreased.
+
+   Credit in Airfob Portal is deducted as much as the number of newly issued Mobile Access cards.
+
+   * Before import CSV file
+
+      <Image src='/img/how-to/2.8.4_1_4_.png' width='1000' alone />
+
+   * After import CSV file
+
+      <Image src='/img/how-to/pmqpoq2cevw-rrxclb-w_aafxu--j15jwa.png' width='1000' alone />

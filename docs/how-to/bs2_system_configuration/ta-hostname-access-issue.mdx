@@ -1,0 +1,31 @@
+# Troubleshooting: Cannot Access the "Time Attendance" Server via Hostname Since v2.9.9
+
+## Overview
+
+Starting from BioStar 2 v2.9.9, several security vulnerabilities in the Time Attendance module has been improved, especially concerning external service interactions over HTTP.
+
+Due to these enhancements, accessing the BioStar 2 Time Attendance server using a **hostname** (instead of the BioStar 2 server's IP address) may result in a **403 Forbidden error**.
+
+For details and to know the workaround, refer to the following content.
+
+## Problem Scenario
+
+If you access the BioStar 2 server using the **hostname** and attempt to open the **BioStar 2 Time Attendance** function, you will encounter the **403 Forbidden error**, as shown in the picture below.
+
+* Example) Forbidden error occurs
+
+   <Image src='/img/how-to/forb1.png' width='400' alone />
+
+## Workaround
+
+You need to properly whitelist hostnames in the server_url file so that the TA service can be accessed via hostname:port(TA), according to the following steps.
+
+1. Open the **server_url** file located in `C:\Program Files\BioStar 2(x64)`.
+
+1. Add the line for the **hostname:TA_port** below the BioStar 2 IP address and save the file.
+
+   For example, if the used hostname is **ABC** and the TA port has been set as **3002**, you need to fill in **ABC:3002** in the **server_url** file and save the file.
+
+   <Image src='/img/how-to/forb2.png' width='400' alone />
+
+1. **Restart** the BioStar 2 Time Attendance service. After that, the BioStar 2 Time Attendance function should work normally, even when accessing BioStar 2 using the hostname.

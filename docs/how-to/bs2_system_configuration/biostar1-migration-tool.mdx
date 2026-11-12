@@ -1,0 +1,41 @@
+# BioStar 1.x to BioStar 2.x Migration Tool
+
+BioStar 2 provides the BioStar 1.x to BioStar 2.x Migration Tool from version 2.7.6.
+
+<Image src='/img/how-to/migrationtool_top_01.png' width='1000' alone />
+
+User information and logs stored in the BioStar 1 database can be easily transferred to BioStar 2 and used as-is. If you previously used the BioStar 1 system, but have chosen BioStar 2 to more effectively control internal and external access and manage employee attendance, use the BioStar 1.x to BioStar 2.x Migration Tool to transfer user data.
+
+:::info
+
+1. Use the BioStar 1.x to BioStar 2.x Migration Tool only once during the initial installation of BioStar 2. The BioStar 1.x to BioStar 2.x Migration Tool is not intended for the free compatibility of data between BioStar 1 and BioStar 2; instead, it is a helpful tool which allows organizations that previously used BioStar 1 to conveniently transfer existing user data when planning to use BioStar 2. If the user data has already been created in BioStar 2 and migration is performed using this tool, all existing users stored in BioStar 2 will be deleted except User 1.
+
+1. Check the operating environment before running the BioStar 1.x to BioStar 2.x Migration Tool.
+
+   * Proceed with the migration directly from the administrator PC where both BioStar 1 and BioStar 2 are installed.
+
+   * Proceed with the migration with the BioStar 2 server running.
+
+   * Proceed with the migration in an environment where the BioStar 1 database can be accessed.
+
+:::
+
+The BioStar 1.x to BioStar 2.x Migration Tool is provided through the BioStar 2 installation package for version 2.7.6 or later.
+
+:::info
+
+Korean and English versions of the BioStar 1.x to BioStar 2.x Migration Tool Quick Guide are included in the installation package. For more information about using the BioStar 1.x to BioStar 2.x Migration Tool, refer to the Quick Guide.
+
+:::
+
+User and log data can be migrate using the BioStar 1.x to BioStar 2.x Migration Tool. When migrating users, user groups, user profiles, and card (CSN only) data can be moved. When migrating logs, user logs can be moved either by setting the full or duration.
+
+When the data transfer is complete, a pop-up will appear with the migration result values.
+
+:::info
+
+* If the migration is interrupted during the data transfer, the data will only be saved up to the point where the transfer was made. If you retry the migration, the migration of the entire data from the beginning will resume for Users, and it will continue from the interrupted part for Log.
+
+* If user duplication or transfer failure occurs during user migration, you can view the list of user IDs in the error report. Click the error report in the report pop-up to create the migrationResult.txt file. The migrationResult.txt file can be found in `C:\Program Files\BioStar 2(x64)\biostar-migration`.
+
+:::

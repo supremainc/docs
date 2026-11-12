@@ -1,0 +1,107 @@
+# How to enroll users
+
+Although there are various ways of adding new users to your system, the below three methods are most frequently used.
+
+1. Adding new users to the BioStar 2 server directly and synchronizing the data to the devices.
+
+1. Adding new users through BioStar 2 mobile app directly to the server and synchronizing the data to the devices.
+
+1. Adding users from the device and pulling them to the server, and transferring to the other devices from the server.
+
+* If the **Automatic User Synchronization** option is turned on, it will transfer the data automatically. Check the link below for detailed information. [How to sync user data enrolled/edited from the device](device-user-data-sync)
+
+In this article, the \#1 method is covered and explained in detail.
+
+## Add new users through BioStar 2 client
+
+1. Go to **USER** tap and click **ADD USER** button.
+
+   <Image src='/img/how-to/11.png' width='1000' alone />
+
+1. Fill out the mandatory and optional fields in the information section. The mandatory fields are **Name** and **ID**. And if you want to allow the user to use the mobile app, you can set the user to have one of BioStar Operator levels and its Login ID and Password.
+
+   <Image src='/img/how-to/2.png' width='900' alone />
+
+1. Choose credentials you want to assign.
+
+   <Image src='/img/how-to/11.jpg' width='600' alone />
+
+   For the PIN, it's required to input four digits or higher numbers, and Auth Mode indicates whether you use private authentication mode for this user. And when you enroll fingerprints, make sure to start with the high-quality score (80 is recommended).This is because poor fingerprint quality can affect the matching performance.
+
+   * QR/Barcode:
+
+   [How to Issue BioStar 2 QR](https://support.supremainc.com/en/support/solutions/articles/24000068744--biostar-2-how-to-issue-biostar-2-qr-in-biostar-2-sw)
+
+   [How To User Third party QR](https://support.supremainc.com/en/support/solutions/articles/24000068745--biostar-2-how-to-use-third-party-qr-in-biostar-2)
+
+   1. Fingerprint enrollment steps:
+
+      * 1. Select device
+
+      * 2. Set the quality score to 80 or higher
+
+      * 3. Click '+ Add' button and select the fingerprint number, for instance, 1st and 2nd
+
+      * 4. Click Scan button and scan your fingerprint on the sensor
+
+      * 5. Follow the direction and click 'Enroll' button after checking the enrolled fingerprint status
+
+      :::info
+
+      10 different fingerprints for one user can be enrolled. 
+
+      :::
+
+      <Image src='/img/how-to/5.png' width='600' alone />
+
+   1. Face enrollment steps: Available devices: FaceStation 2, FaceLite
+
+      * 1. Select device
+
+      * 2. Click '+ Add' button and select the Face number, for instance, 1st and 2nd
+
+      * 3. Click Scan button and scan your face in front of the device
+
+      * 4. Follow the direction and click 'Enroll' button after checking the enrolled face status
+
+      FaceStation 2 and FaceLite can have up to 5 faces per user.
+
+   1. Visual Face enrollment steps: Available devices: FaceStation F2
+
+      * 1. Select device
+
+      * 2. Click '+ Add' button and select the Face number, for instance, 1st and 2nd
+
+      * 3. Click Scan button and scan your face in front of the device
+
+         * Click **Upload Image** if you have the photo for the user
+
+      * 4. Follow the direction and click 'Enroll' button after checking the enrolled face status
+
+      FaceStation F2 can have up to 2 faces per user. For more details, please refer to the below article. [How to Enroll Visual Face Credential](visual-face-enrollment)
+
+1. Enroll new cards by clicking '+Card' button. A total of 8 cards can be enrolled for one user.
+
+   Three different registration methods are supported:
+
+   * Register a card by reading the card to the device
+
+   * Assign a card from the previously registered cards
+
+   * Enter card number manually and assign it to the user
+
+   <Image src='/img/how-to/7.png' width='600' alone />
+
+1. Check overall data and make sure to click 'Apply' to register to the server DB.
+
+   <Image src='/img/how-to/9.png' width='1000' alone />
+
+1. If the server is set to use automatic user synchronization, the device will receive the new user data immediately and be able to let the user use the device without additional user transfer to the device.
+
+   <Image src='/img/how-to/10.png' width='1000' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/addnewuser.mp4" type="video/mp4" />
+</video>

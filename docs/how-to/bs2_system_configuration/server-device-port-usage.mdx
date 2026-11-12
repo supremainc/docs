@@ -1,0 +1,67 @@
+# BioStar 2 Server and Device Port Usage
+
+BioStar 2 uses several ports to establish device and data communication.
+
+This information is crucial if you are installing the devices on remote networks with WAN or VPN.
+
+If you need more information regarding connection modes please refer to [Connection Modes in BioStar 2](connection-modes).
+
+The server port of BioStar 2 is 51212 by default, but it can be configured to another port in **Setting** → **Server**.
+
+:::info
+
+* **Maria DB** uses port 3312
+
+* **T&A module** uses port 3000, 3002
+
+* **Nginx** uses port 9000
+
+To check out the full list of port usage, refer to our [Freshdesk FAQ article](https://support.supremainc.com/en/support/solutions/articles/24000005909--biostar-2-server-and-device-port-usage).
+
+:::
+
+## Server to Device
+
+With server to device mode, the device connection is initiated from the BioStar Client and the client makes a connection to the server. This is why you cannot see the device from another client when it's already connected to particular client. In this case, the port number is like the below.
+
+<Image src='/img/how-to/server1.jpg' width='1000' alone />
+
+If you are installing devices in a remote network, it is recommended that you use device to server, so that the device will automatically connect to the server if it loses connection.
+
+Refer to the images below to see what ports should be open and forwarded as necessary in your firewall and router.
+
+## Server to Device Mode
+
+<Image src='/img/how-to/server2.jpg' width='700' alone />
+
+## Device to Server Mode
+
+<Image src='/img/how-to/server3.jpg' width='700' alone />
+
+## Changing the Web Server Port
+
+The server HTTP port or HTTPS port which is used to communicate with the client can be changed in BioStar Setting.
+
+BioStar Setting is included in the installation of BioStar. You can search for the application in the start menu.
+
+You will have to stop the services to change the port.
+
+<Image src='/img/how-to/server4.jpg' width='600' alone />
+
+## Changing the Server Port
+
+The server port can be changed in **Setting** → **Server** in BioStar 2's menu.
+
+<Image src='/img/how-to/server1.jpg' width='1000' alone />
+
+## Changing the Device Port
+
+You can change the device port in the device menu after selecting the device. It is found in the network tab.
+
+<Image src='/img/how-to/2xfaq_server_and_device_port_use_006.png' width='1000' alone />
+
+Below is a screenshot of BioStation 2's device manual.
+
+For device with LCDs, you can set it on the device as well.
+
+<Image src='/img/how-to/2xfaq_server_and_device_port_use_007.png' width='300' alone />

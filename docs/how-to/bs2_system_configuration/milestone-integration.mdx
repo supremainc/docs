@@ -1,0 +1,323 @@
+# How to utilize BioStar 2 integrating with Milestone
+
+## The summary of Procedure
+
+1. Install BioStar 2.
+
+1. Install one of Milestone XProtect VMS (with professional license or higher).
+
+1. Install BioStar 2 Integration for Milestone XProject.
+
+   <Image src='/img/how-to/milestone_1.png' width='200' alone />
+
+1. Add IP Camera in Milestone XProtect VMS.
+
+1. Create new Access Control to connect Milestone to BioStar 2.
+
+1. Utilize XProtect Smart Client.
+
+Before you integrate Milestone with BioStar 2, check the Prerequisites below.
+
+<Image src='/img/how-to/milestone_2.png' width='700' alone />
+
+### Install BioStar 2
+
+Refer to the below link if you do not know how to install BioStar 2.
+
+[BioStar 2 Installation](installation)
+
+:::info
+
+If you use port number 443 and 9000 for BioStar 2, you should change it into other numbers. This is because the port number for BioStar 2 will have collided with the port number used when XProtect Management Client 2017 R3 is installed. When you set the port number 443 and 9000 for BioStar 2 and then try to install XProtect Management Client 2017 R3, you will get the below error.
+
+When you set the port number 443 for BioStar 2 and then try to install XProtect Management Client 2017 R3, you will get the below error.
+
+<Image src='/img/how-to/milestone_3.png' width='600' alone />
+
+Therefore we recommend that you change the port number for HTTPS on BioStar 2 and 9000 port to avoid port conflict issues. Also, even if you changed HTTPS port for BioStar 2, the icon and configuration file do not be changed automatically. So, please update manually the icon and 'server_url.conf' file to the port number for BioStar 2's HTTPS.
+
+<Image src='/img/how-to/milestone_50.png' width='900' alone />
+
+:::
+
+### Install one of Milestone XProtect VMS (with professional license or higher)
+
+You can download the installation file of Milestone XProtect VMS in the [following link](https://www.milestonesys.com/support/resources/download-software/).
+
+While you install the application, it is required to activate Milestone's license.
+
+### Install BioStar 2 Integration for Milestone XProject
+
+You should install two installation files below.
+
+Please click the link to download the installation files. (https://www.supremainc.com/en/solutions/suprema-integration-milestone.asp?sKIND_TYPE=GD01501)
+
+<Image src='/img/how-to/milestone_1.png' width='200' alone />
+
+* AC Plugin for BioStar2.exe is used to connect the access control system and XProtect VMS.
+
+* WorkspacePluginforBioStar2.exe provides the functionality for using BioStar 2 in the XProtect Smart Client.
+
+You can refer to BioStar2 Integration for Milestone XProtect Setup Guide to install them.
+
+After succeeding in installation of two applications, start the Milestone XProtect Event Server manually. You can find it in the system tray and right-click on the below icon.
+
+<Image src='/img/how-to/milestone_4.png' width='200' alone />
+
+### Add IP Camera in Milestone XProtect VMS
+
+1. When you run XProtect Management Client 2017 R3 and connect to your PC, you can see the below screen.
+
+   <Image src='/img/how-to/milestone_5.png' width='1000' alone />
+
+1. Prepare IP camera.
+
+1. Go to **Servers** → **Recording Servers**.
+
+1. Right click one of **Recording Servers** and select **Add Hardware**.
+
+   <Image src='/img/how-to/milestone_6.png' width='700' alone />
+
+1. Select **Express (recommended)** and then click **Next** button.
+
+   <Image src='/img/how-to/milestone_7.png' width='1000' alone />
+
+1. Add new user and enter **User Name** & **Password** for IP camera. Then, click **Next** button.
+
+   <Image src='/img/how-to/milestone_45.png' width='1000' alone />
+
+1. If you enter the information correctly, available camera will be found. To add IP camera, click **Next** button.
+
+   <Image src='/img/how-to/milestone_8.png' width='1000' alone />
+
+1. Click **Next** button.
+
+   <Image src='/img/how-to/milestone_9.png' width='1000' alone />
+
+1. Click folder icon and select one default camera group. Then, click **Finish** button.
+
+   <Image src='/img/how-to/milestone_10.png' width='1000' alone />
+
+1. If you succeed in add IP camera, you can see your camera in the Recording Servers's tree.
+
+   <Image src='/img/how-to/milestone_11.png' width='700' alone />
+
+### Create new Access Control to connect Milestone to BioStar 2
+
+1. Right click **Access Control** and select **Create new**.
+
+   <Image src='/img/how-to/milestone_12.png' width='300' alone />
+
+1. Enter all items.
+
+   * **Name**: Enter name of Access Control you want to use.
+
+   * **Integration plug-in**: Select **BioStar2 Server**.
+
+   * **Address**: Enter URL for access to BioStar 2 (including port number).
+
+   * **User**: Login ID for BioStar 2.
+
+   * **Password**: Password for BioStar 2.
+
+   <Image src='/img/how-to/milestone_13.png' width='600' alone />
+
+   <Image src='/img/how-to/milestone_14.png' width='600' alone />
+
+   :::info
+
+   If you fail to connect to the access control system (BioStar 2 AC), you will get the below error.
+
+   Please check if all settings are correct.
+
+   <Image src='/img/how-to/milestone_15.png' width='700' alone /> 
+
+   :::
+
+1. If you succeed in connection to the access control system (BioStar 2 AC), you can see below picture.
+
+   <Image src='/img/how-to/milestone_16.png' width='600' alone />
+
+1. If BioStar 2 connected to Milestone successfully, the below screen will appear.
+
+   After selecting IP camera you will use in the right panel, **drag the cameras to the access points** for each door in the left list.
+
+   <Image src='/img/how-to/milestone_17.png' width='600' alone />
+
+1. If you succeeded in integrate Milestone with BioStar2 with IP camera, you can see below picture.
+
+   <Image src='/img/how-to/milestone_18.png' width='600' alone />
+
+1. Once you succeed in integration between BioStar 2 and Milestone, you can add/edit the access control properties at any time.
+
+   To manage them, you need to select one of Access Control.
+
+   At the bottom, there are 5 tabs you can configure.
+
+   <Image src='/img/how-to/milestone_19.png' width='1000' alone />
+
+   * **General Settings**: You can update the access control system name, network settings and login information.
+
+   * **Doors and Associated Cameras**: You can associate the cameras with access points.
+
+   * **Access Control Events**: You can activate or deactivate the access control event from BioStar 2, also create and assign the user-defined categories.
+
+   * **Access Request Notifications**: You can create an access control action or command which is performed by the operator on the associated access points. For example, when a card holder requests the door open, XProtect display a notification and then operator sending a door open command.
+
+   * **Cardholders**: You can view or search the cardholder information. The cardholder information is synchronized with user information of BioStar 2. In BioStar 2, user information includes user name, access group, RFID card number, fingerprint template, face template and PIN.
+
+### Major Features
+
+1. Access Control Events
+
+   This function is used for classifying Access Control Events into certain Event Category. In general, there are a variety of different events in each access control system. To manage them efficiently in Milestone, you should map all access control events to certain Event Category.
+
+   <Image src='/img/how-to/milestone_20.png' width='1000' alone />
+
+   If you want to create customized Event Category, you can make it by clicking **User-defined Categories** button.
+
+   <Image src='/img/how-to/milestone_21.png' width='1000' alone />
+
+1. Cardholders
+
+   The user who is enrolled in BioStar 2 is synchronized with the cardholder in Milestone.
+
+   **List of all Users**
+
+   * BioStar 2:
+
+      <Image src='/img/how-to/milestone_22.png' width='1000' alone />
+
+   * Milestone:
+
+      <Image src='/img/how-to/milestone_23.png' width='1000' alone />
+
+   **User Details**
+
+   * BioStar 2:
+
+      <Image src='/img/how-to/milestone_24.png' width='1000' alone />
+
+   * Milestone:
+
+      <Image src='/img/how-to/milestone_25.png' width='1000' alone />
+
+   :::info
+
+   Although the information on user/door/device is changed except for real-time events in BioStar 2, it will not be updated in Milestone automatically. In these cases, you should click **Refresh Configuration** button in Milestone (**Access Control** → **General Settings**). Otherwise, the user information between BioStar 2 and Milestone are different.
+
+   <Image src='/img/how-to/milestone_26.png' width='1000' alone />
+
+   :::
+
+### Utilize XProtect Smart Client
+
+If you succeed in integration with Milestone with BioStar2, you can monitor real-time video, identify the detected alarm from the door, access to BioStar 2 and check the event logs displayed in BioStar 2 by utilizing XProtect Smart Client.
+
+<Image src='/img/how-to/milestone_27.png' width='1000' alone />
+
+* Live
+
+* Alarm Manager
+
+* BioStar2
+
+* Access Control
+
+### Major Features
+
+#### Live
+
+In Milestone XProtect Smart Client, you can monitor real-time video recorded by IP camera. After you select the camera you associated in Milestone XProtect management, drag it into the right panel.
+
+<Image src='/img/how-to/milestone_28.png' width='1000' alone />
+
+Then, you can see the real-time video recorded by IP camera.
+
+<Image src='/img/how-to/milestone_29.png' width='1000' alone />
+
+In addition, you can adjust direction or zoom in/out by clicking the icon located in left-bottom side.
+
+<Image src='/img/how-to/milestone_30.png' width='1000' alone />
+
+:::info
+
+You can customize the View in Live tab.
+
+For example, if you want to monitor video and check the information on users who authenticate their identity with PIN/Fingerprint template at the same time, click **Setup** button.
+
+<Image src='/img/how-to/milestone_31.png' width='1000' alone />
+
+Then, you can see various options you can configure. First of all, click **Create New View** icon.
+
+<Image src='/img/how-to/milestone_32.png' width='500' alone />
+
+After that, you can select one option you want to customize in the view. By clicking the icon shaped pencil, you can modify the name. Then, click **Set** button.
+
+<Image src='/img/how-to/milestone_33.png' width='500' alone />
+
+Next, drag **Access Monitor** in **System Overview**. In the Access Monitor Settings, you should specify the settings for the Access Monitor and click **OK** button.
+
+<Image src='/img/how-to/milestone_34.png' width='1000' alone />
+
+Once you click **OK** button, you can see the customized view. Please note that you should click Setup button again to escape the setting of View. If you see below screenshot, you can monitor video and the information on users who authenticate their identity to enter the door simultaneously.
+
+<Image src='/img/how-to/milestone_35.png' width='1000' alone />
+
+<Image src='/img/how-to/milestone_36.png' width='1000' alone />
+
+If someone fails to authenticate their identity, the notification will be displayed in the right-bottom side and display the real-time video.
+
+<Image src='/img/how-to/milestone_37.png' width='1000' alone />
+
+:::
+
+#### Alarm Manager
+
+If an alarm occurs in BioStar 2, the alarm message will be generated in Milestone.
+
+* BioStar 2:
+
+   <Image src='/img/how-to/milestone_38.png' width='1000' alone />
+
+* Milestone:
+
+   <Image src='/img/how-to/milestone_39.png' width='1000' alone />
+
+In Milestone, Alarm Manager will judge if generated event should be dealt with alarm based on Access Control Events tab and Alarm Definitions.
+
+**How to configure the alarm**
+
+This setting is required to view or acknowledge the access control event alarms of BioStar 2 in XProtect Smart Client. The alarm can be set in Setting menu of BioStar 2 and if the event alarm happens, XProtect Smart Client displays the alarm in Alarm Manager.
+
+Go to Alarms in the Site Navigation and select **Alarm Definitions**. Then, right click **Alarm Definitions** and click **Add New**.
+
+<Image src='/img/how-to/milestone_40.png' width='700' alone />
+
+Enter **Name** in **Alarm definition** section.
+
+Select **Access Control Event Categories** and one of Events you want to set in **Trigger** section. In below picture, I selected **Alarm**.
+
+Selet one option for **Sources** in **Trigger** section. In below picture, I selected **All doors**.
+
+<Image src='/img/how-to/milestone_41.png' width='1000' alone />
+
+At this point, please check Access Control Events which **Alarm** event is allocated. You can map Alarm event to certain Access Control Events. In below picture, I set Alarm event for the Access Control Event, **Access denied (Blacklist)**.
+
+<Image src='/img/how-to/milestone_42.png' width='1000' alone />
+
+#### BioStar2
+
+In Milestone XProtect Smart Client, you can access to BioStar 2 and add/modify the data (e.g. **User**, **Device**, **Door**) in BioStar 2.
+
+<Image src='/img/how-to/milestone_43.png' width='1000' alone />
+
+#### Access Control
+
+You can check Events, Doors and Cardholders for BioStar 2 in Milestone.
+
+<Image src='/img/how-to/milestone_44.png' width='1000' alone />
+
+You can also create the PDF report for Event records by clicking **Access report** button.
+
+<Image src='/img/how-to/milestone_46.png' width='1000' alone />

@@ -1,0 +1,69 @@
+# How to change from HTTP to HTTPS
+
+## Can we use HTTPS for BioStar 2?
+
+Yes, the BioStar 2 supports a secure communication protocol called HTTPs between the BioStar 2 Server and the BioStar 2 Clients. HTTPs consists of communication over HTTP with encryption of Secure Socket Layer. This will provide protection of the privacy and the integrity of the data exchanged between the BioStar 2 Server and the BioStar 2 Clients.
+
+:::caution
+
+If you are going to use the HTTPS protocol, you must apply the certificate (steps 8 and following). If the certificate is not applied, you will experience slowness and other erratic behavior on the web client such as no response to clicks. 
+
+:::
+
+## To enable HTTPS protocol
+
+1. Login the BioStar 2 as an Administrator account.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_001.png' width='500' alone />
+
+1. Go to **Setting** → **SERVER**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_002.png' width='1000' alone />
+
+1. To enable HTTPS protocol, select **HTTPS** for **Web Server Protocol** and then click **Apply**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_003.png' width='1000' alone />
+
+1. Open BioStar Setting program (**All programs** → **BioStar 2** → **BioStar Setting**) and make sure that all service is up and running. You may have the port 443 already designated for another application as displayed below and in this case, make sure you assign the unoccupied **HTTPS Port** and then click **Start** to run the service.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_004.png' width='600' alone />
+
+1. Try open the BioStar 2 web page along with the HTTPS port as displayed below.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_005.png' width='400' alone />
+
+1. The following error page may appear due to the security certificate presented by current BioStar 2 server is not issued by the trusted certificate authority.
+
+   If your organization does not have a public SSL certificate and wants to get rid of the following error message, you can proceed with the following steps to issue a private security certificate using a tool provided by Suprema. Please select Advanced option and click **Proceed to xxx.xxx.xxx.xxx(unsafe)** for the temporary access.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_007.png' width='700' alone />
+
+1. Once again, login with the administrator account.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_001.png' width='500' alone />
+
+1. Go to **Setting** → **HTTPS** which is newly created menu when you switch the Web Server protocol to HTTPS.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_009.png' width='1000' alone />
+
+1. Click **Cert.Download** button to obtain a file named **cert-register.zip**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_010.png' width='1000' alone />
+
+1. Unzip the **cert-register.zip** and run **cert-register.exe** file.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_011.png' width='600' alone />
+
+1. On the **Enrollment Certification** window, please enter the ip address of BioStar 2 server along with the HTTPS port you assigned on step 4 and then click **Enrollment** button.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_012.png' width='300' alone />
+
+1. Read the **Security Warning** message and if you are happy to proceed, please click **Yes**.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_013.png' width='500' alone />
+
+1. Once the tool successfully installed the certificate, you will see the following window to complete the process. Please click **OK** to confirm it.
+
+   <Image src='/img/how-to/2x_faq_bs2_https_014.png' width='100' alone />
+
+1. To verify the installation, restart the web browser and try to open the BioStar 2 web page. Make sure the error message you encountered on step 6 is no longer presented.

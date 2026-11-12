@@ -1,0 +1,103 @@
+# How to use Suprema Device Manager App
+
+## What is Suprema Device Manager App?
+
+XPass D2 configuration app via BLE communication.
+
+<Image src='/img/how-to/dm1.jpg' width='1000' alone />
+
+:::info
+
+Device manager app can be used with XPass D2 FW 1.1.0 or higher. Manager app is compatible with all the XPass D2 models (MDB, GDB, and GKDB).
+
+:::
+
+## What settings Suprema Device Manager App supports?
+
+It supports all the required XPass D2 settings even including FW upgrade.
+
+<Image src='/img/how-to/dm2.jpg' width='1000' alone />
+
+## How can it be used?
+
+1. Download Suprema device manager app and start the app.
+
+   <Image src='/img/how-to/dm7.jpg' width='200' alone />
+
+   :::caution
+
+   Device Manager app requires a **permission of LOCATION** for an essential authority.
+
+   If you do not allow the permission, application will not perform well. 
+
+   :::
+
+1. Tap **Template Management** to create a template.
+
+   <Image src='/img/how-to/img_8020_1_.png' width='1000' alone />
+
+1. Change the necessary settings with the device admin password and save the template.The device admin password is for access permission control. Once the admin password is set. Password not matched apps cannot access to the device until the device factory reset is made.
+
+   <Image src='/img/how-to/img_8022.png' width='1000' alone />
+
+1. Choose the template and tap **Start** button and approach the app near to the device.
+
+   <div className='grid-container'>
+
+   <Image src='/img/how-to/img_8024.png' width='1000' alone />
+   
+   <Image src='/img/how-to/img_8025.png' width='1000' alone />
+
+   </div>
+
+1. Once it succeeds to finish the configuration settings, the app shows the success message.
+
+   <Image src='/img/how-to/img_8027.png' width='1000' alone />
+
+## Additional Functionality
+
+1. Tap **Device Discovery**.
+
+   <Image src='/img/how-to/img_8020_1_.png' width='1000' alone />
+
+1. Choose the device to connect, or near to the device.
+
+   <Image src='/img/how-to/img_8033.png' width='1000' alone />
+
+1. Enter the password to access.
+
+   <Image src='/img/how-to/img_8028.png' width='1000' alone />
+
+1. Tap the right top icon and select the menu item.
+
+   <Image src='/img/how-to/img_8030.png' width='1000' alone />
+
+1. FW upgrade, Device Restart, Scan Card, and Change PW are supported.
+
+   :::info
+   
+   For the FW upgrade, FW files should be stored in the mobile device memory.)
+
+   :::
+
+## When can the device manager app make a connection?
+
+If anyone can download the app and make a connection and change the settings of the reader that is already in use, it can create a security issue. Therefore, there is a below mechanism protecting the existing connection.
+
+* When the device is out of the box. There is a default key. The device manager app can access with the private key entered by the device admin password. Once the connection is made, the key value of the device default key is changed to the entered private key values.
+
+   <Image src='/img/how-to/dm4.jpg' width='1000' alone />
+
+* Simply, when the device is already in use status. The device manager app cannot make a connection with the default key. It is checked by whether or not the device has RS485 key received from a master device, or the device has a changed Wiegand output setting.
+
+   <Image src='/img/how-to/dm5.jpg' width='1000' alone />
+
+* In order to return to the default key, the device needs a factory restore by pressing a reset button on the back for four times consecutively. Then, the device will remove all the previous connection and return the default key. For the security side, since the device will become disconnected and occur tamper event, administrators will need to check the necessity measures after checking the situation.
+
+   <Image src='/img/how-to/dm6.jpg' width='1000' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/device_mp_24.mp4" type="video/mp4" />
+</video>

@@ -1,0 +1,133 @@
+# How to use video
+
+Video integration of BioStar2: It's simple integration to see recorded video and picture from NVR for certain log events.
+
+For video/picture confirmation, Realtime monitoring is supported by BioStar2 in BioStar 2.6.2 and above.
+
+Refer to the following article: [How to Configure Live Video View](live-video-view).
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/video_menu.mp4" type="video/mp4" />
+</video>
+
+:::info
+
+* In BioStar 2.5, the video feature is only supported for the 64bit Maria DB version. It is not supported with 32bit and MSSQL DB. In BioStar 2.6 and above, video feature is supported with MSSQL database.
+
+* BioStar2 installation path stores a video file and an image file `C:\Program Files\BioStar 2(x64)\ve\records`.
+
+   * System administrator should manage the storage of HDD.
+
+   * These files will be kept for minimum 2 weeks as default parameter.
+
+   * The period can be adjusted more than 2 weeks (Maximum 15 weeks).
+
+   * If the remaining storage of C drive is less than 10%, past recording files will be deleted in accordance with BioStar2 setting.
+
+:::
+
+1. Confirm if BioStar2 Server machine is installed on x64 machine.
+
+1. Confirm if Video Server of BioStar Setting is running.
+
+   <Image src='/img/how-to/1_video.png' width='600' alone />
+
+1. Confirm if a license of BioStar2 Video license is activated.
+
+   :::info
+
+   The activation of the Video License is different depending on the version of BioStar 2 Server:
+
+   1. BioStar v2.6 or higher: Video
+
+      * From BioStar 2.6, Video license is dedicated license, not included in the BioStar2 AC license.
+      
+      * Needs Biostar Ac Advanced license.
+
+   1. Old version of BioStar v2.5
+
+      * Video License is included in BioStar2 AC Standard License or above.
+
+      * Upgrading to BioStar2 V2.8.14 or higher is highly recommended.
+
+   :::
+
+   <Image src='/img/how-to/video_license.png' width='1000' alone />
+
+1. Confirm if you add a device and configure a door. Video configuration will operate in accordance with a log event of a configured door of a device.
+
+1. Click on **Video** menu.
+
+   <Image src='/img/how-to/3_video.png' width='400' alone />
+
+   :::info
+
+   **Supported NVR**: ACTi, Dahua, Hikvision
+
+   :::
+
+   :::caution
+
+   **Please confirm the following information and check your NVR connection with BioStar2 2.5 before you proceed your project.**
+
+   1. Hikvision NVR
+
+      * SDK version: v5.2.771
+
+      * Tested NVR list: DS-7608NI-E2, DS-7616NI-E2, iVMS4200 v2.4 (PC-NVR)
+
+   1. Dahua NVR
+
+      * SDK version: v2.14.50523
+
+      * Tested NVR list: DH-NVR608-32-4K, DH-NVR4416, SmartPSS V1.13.1.R.20160504 (PC-NVR)
+
+   1. Acti NVR
+
+      * SDK version: v3.0.12.42
+
+      * Tested NVR list: NVR3 V.3.0.13.27_20161128 Enterprise (PC-NVR)
+
+   :::
+
+1. Click **Add New NVR** → Enter information of NVR.
+
+   <Image src='/img/how-to/4_video.png' width='300' alone />
+
+   <Image src='/img/how-to/5_video.png' width='500' alone />
+
+1. To add a camera of NVR, click **Add New Camera** or right click on the NVR list.
+
+   <Image src='/img/how-to/6_video.png' width='500' alone />
+
+1. Click one of the added camera and confirm the camera and configure certain log event to take a video or picture.
+
+   :::info
+
+   * **Log type**: Choose one of log types. It supports Video type and Image type.
+
+   * **Door**: Choose one of doors to take a video/image from NVR.
+
+   * **Event**: Choose certain logs from all log list. Biostar2 will keep the recorded video/image for the certain logs.
+
+   :::
+
+   <Image src='/img/how-to/7_video.png' width='900' alone />
+
+1. Make the certain log event to check the settings with NVR.
+
+   :::info
+
+   Biostar2 will indicate the video/image after 3 mins. 
+
+   :::
+
+1. Go to **Monitoring** menu and click **Event log**.
+
+1. Confirm the log event and see **view** list. To confirm the recorded data from NVR, click <IcAppPlay/> or an image icon to the view list.
+
+   <Image src='/img/how-to/9_video.png' width='900' alone />
+
+1. If you click on **Large screen** from the left side, you can confirm large size of video file/image file.
+
+   <Image src='/img/how-to/10_video.png' width='600' alone />

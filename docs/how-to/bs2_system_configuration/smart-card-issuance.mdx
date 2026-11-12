@@ -1,0 +1,105 @@
+# How to issue smart cards
+
+The BioStar 2 system is designed to authenticate users by matching the authentication templates stored inside the device with their fingerprint templates. However, there are needs for securing personal information such as fingerprint templates. In BioStar 2, the administrator can use a concept called smart card which will allow issuing cards to store users' fingerprint templates inside the card and they carry it around for authentication. This will lead to a more secure environment since the devices don't need to hold the user information inside them.
+
+To issue a smart card, such as Access on Card or Secure Credential card, you will have to configure the smart card format first and apply it to the device.
+
+:::info
+
+* While Access on Card doesn't need any user information transferred to the device, Secure Credential Card needs basic user information stored inside the device.
+
+   * Secure Credential Card is used when only to store the fingerprint template inside the card. 
+
+* To delete the user fingerprint template information from BioStar 2 DB after writing Access On Card, enable **Delete personal & credential data when issuing an AoC**.
+
+   * Direction: **Settings** → **Server** → **Delete personal & credential data when issuing an AoC**
+
+   * In addition, please disable **Automatic User Synchronization**. If not, the BioStar 2 server will synchronize the user information to the connected devices automatically.
+
+* To understand the benefits and differences between the two smart cards, refer to the following link [FAQ](http://support.supremainc.com/solution/articles/24000015986--biostar-2-difference-between-secure-credential-and-access-on-card-smart-card-) 
+
+:::
+
+## Configuring a smart card format
+
+1. Go to **Settings** → **Card Format** → **Add Smart Card**.
+
+   <Image src='/img/how-to/sc001.png' width='600' alone />
+
+1. Enter the name of the smart card format. There are 4 types of cards supported for the AoC card and the SC card, Mifare, iClass, DESFire, and iClass Seos (added in BioStar 2.6). Select the card that will be used for the smart card.
+
+   <Image src='/img/how-to/2x_sc_seos_support_01.png' width='1000' alone />
+
+   :::info
+
+   * You can use hexadecimal Keys starting in BioStar 2.6. Refer to the [How to Configure Hexadecimal Card Key](hexadecimal-card-key).
+
+   * DESFire card supports one of two types of encryption methods.
+
+      * DES/3DES(Default)
+
+      * AES(Optional)
+
+   * Refer to the [FAQ article](http://support.supremainc.com/solution/articles/24000016523--biostar-2-do-suprema-devices-support-elite-key-seos-cards-) to check which devices/firmware support SEOS cards. 
+
+   :::
+
+1. You can select to use up to 2 card keys for the card. To use the Secondary Key, you will have to activate it first. Check the checkbox if you need to use the key.
+
+   :::info
+
+   If you're trying to write a key to a blank card without a key, configure the primary key and turn on the secondary key but leave the secondary key blank.
+   
+   <Image src='/img/how-to/2x_sc_smart_card_blank.png' width='1000' alone /> 
+
+   :::
+
+1. You can configure how many templates you want to store inside the card and which block to start storing the information on. You can also configure the template size, if you don't have enough space on the card to fit the template.
+
+   <Image src='/img/how-to/sc004.png' width='1000' alone />
+
+## Applying the configured smart card format to the devices
+
+To make the device read the smart cards, you will have to set the device to have the smart card format.
+
+1. Go to **Device** → **Select the device** → **Authentication Tab** → **Card ID Format**.
+
+1. You will find the smart card format layout menu. Select the layout that you want to apply.
+
+<Image src='/img/how-to/sc005.png' width='500' alone />
+
+## Formatting a card
+
+The card needs to be formatted before being used as a smart card. The card information stored in the blocks will be deleted.
+
+1. Go to **User** → **Select a user** → **+ Card**.
+
+   <Image src='/img/how-to/sc006.png' width='500' alone />
+
+1. Select **Read Card** from the **Card Type** menu.
+
+   <Image src='/img/how-to/sc007.png' width='700' alone />
+
+1. Select the device to format the card.
+
+1. Click **Format Card** and place the card on the device. If the format is successfully done, you will hear a sound from the device.
+
+## Issuing a smart card
+
+1. From the same screen, please change the **Card Type** to **Enroll Smart Card**.
+
+   <Image src='/img/how-to/sc009.png' width='700' alone />
+
+1. Select the device to enroll the smart card.
+
+1. Select the smart card type. Access on Card and Secure Credential Card is supported.
+
+   1. The Access on Card will use the user ID same for the secure ID.
+
+   1. The Secure Credential Card's secure ID can be modified.
+
+1. Select the fingerprint template to be written on the card. For example, click the **1st** button to select the 1st template to be written on the card. The template will get highlighted. A fingerprint must be added first to use the template.
+
+   <Image src='/img/how-to/sc010.png' width='700' alone />
+
+1. Click the **Write Smart Card** button.

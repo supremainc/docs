@@ -1,0 +1,137 @@
+# How to Install BioStar 2 with MSSQL
+
+BioStar 2 is a web-based, open, and integrated security platform that provides comprehensive functionality for access control and time & attendance. There are two types of databases to use in BioStar 2 (Maria DB and MSSQL). The databases each have different methods for installing BioStar 2. Here, we will cover how to install BioStar2 with MSSQL step-by-step.
+
+:::info
+
+Direct installation of BioStar 2 with the MS-SQL database currently is not supported. Therefore, users who want to use BioStar 2 through the MS-SQL database need to configure the MS-SQL settings to set up the environment for BioStar 2 prior to the BioStar 2 installation process.
+
+:::
+
+## MS-SQL Installation
+
+1. Download Microsoft SQL Server Express or Install Microsoft SQL Server Standard Edition.
+
+1. Right-click the Setup file and run as administrator.
+
+1. Choose the installation type as **Custom**.
+
+   <Image src='/img/how-to/mssql_install_1.png' width='1000' alone />
+
+1. Click the first item on the list.
+
+1. At Feature Selection, you can select the Instance Features on the MS-SQL to your preference.
+
+1. At Instance Configuration, specify the name of ID for the SQL Server. It is highly recommended to name it **SUPREMA**.
+
+1. At Database Engine Configuration, select **Mixed Mode**, and the set the password for the sa account.
+
+1. After completing the installation, open SQL Server Configuration Manager.
+
+   <Image src='/img/how-to/mssql_install_2.png' width='1000' alone />
+
+1. Right-click **Protocols for SUPREMA** and click **TCP/IP Properties**.
+
+1. Choose **Yes** for Enabled, and set up the TCP Port (ex. Here, it is set to 1433). Press Apply.
+
+1. You must restart the service to apply changes. Go to SQL Server Services, and right-click the second item from the list. Click **Restart**.
+
+1. Go back to SQL Server Installation Center. Click the third item on the list. This will redirect you to the link to download the SQL. Server Management Studio.
+
+1. Download the SQL Server Management Studio. Run as administrator. You will need to restart to complete the installation.
+
+1. After restart, open Microsoft SQL Server Management Studio.
+
+1. Create 3 New databases. Right-click Databases and select New Database. Name the Databases **BioStar2_AC**, **BioStar2_TA**, and **BioStar2_VE**.
+
+   <Image src='/img/how-to/mssql_install_3.png' width='1000' alone />
+
+1. In the Database Files section, we recommend setting the Initial Size (MB) to 3000 and setting the Autogrowth/Maxsize to (By 10MB, Unlimited).
+
+   <Image src='/img/how-to/mssql_install_4.png' width='1000' alone />
+
+   <Image src='/img/how-to/mssql_install_5.png' width='1000' alone />
+
+1. Expand Security and right-click Logins. Select New Login.
+
+1. Choose Login name. It is recommended to choose biostar2. Then select **SQL Server authentication** and set the password.
+
+   <Image src='/img/how-to/mssql_install_6.png' width='900' alone />
+
+1. At **Server Roles**, select **sysadmin** to give privileges to the new user (biostar2). At User Mapping, select the newly created databases to assign to biostar2. Also assign biostar2 as the db_owner for each database. This account will be used to log into the three MS-SQL databases.
+
+   <Image src='/img/how-to/mssql_install_7.png' width='1000' alone />
+
+## BioStar 2 Installation
+
+Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at BioStar 2 Package to check the system requirements for your computer.
+
+<Image src='/img/how-to/mssql_install_8.png' width='1000' alone />
+
+1. Download the latest BioStar 2 Setup file at BioStar 2 Package. You can choose the (x64) or (x86) setup based on your computer's system requirements.
+
+1. After downloading the BioStar 2 setup file, right-click and click "Extract All...".
+
+1. Right-click the BioStar 2 Setup and run as administrator.
+
+1. Select Setup Language.
+
+1. After carefully reading the license agreement, select **I accept the agreement** and click **Next** to proceed.
+
+   <Image src='/img/how-to/mssql_install_9.png' width='500' alone />
+
+1. The first account that will be used to login to BioStar 2 will be the admin. Customize the admin password based on the password requirements displayed at the Setup. Please note that it is difficult to recover the admin password, so make sure to not forget the admin password once you have set it. Click **Next** to proceed.
+
+   <Image src='/img/how-to/mssql_install_10.png' width='500' alone />
+
+1. Choose **Custom installation** as the Database installation type.
+
+   <Image src='/img/how-to/mssql_install_11.png' width='700' alone />
+
+1. Choose DB Type as MS-SQL. Input the Server IP (you can see the Server IP by typing **ipconfig** on the Command Prompt). Input the Server port (Here, it is 1433 configured previously at MS-SQL).
+
+1. Input the DB name based on the database created at the Server Management Studio.
+
+   <Image src='/img/how-to/mssql_install_12.png' width='700' alone />
+
+1. Select destination location for the installation.
+
+1. Select the folder for the Encrypt Key Storage Directory. The encrypt key is critical for operating BioStar 2, and please do not alter the location of the file or the file once you have set the location. Click **Next** to proceed.
+
+   <Image src='/img/how-to/mssql_install_13.png' width='500' alone />
+
+1. Read the Responsibility for protecting personal information.
+
+   <Image src='/img/how-to/mssql_install_14.png' width='500' alone />
+
+1. Here, you can customize the port setting. Change the default port setting if that port is being used.
+
+   <Image src='/img/how-to/mssql_install_15.png' width='500' alone />
+
+1. Select the components to be installed at BioStar 2. Choose the USB Device Agent if the installation of the USB Fingerprint Reader (BioMini Plus 2) or the USB Card Reader (DE620) is required. If you install the USB Device Agent, you will need to restart your computer to complete the installation process.
+
+   <Image src='/img/how-to/mssql_install_16.png' width='500' alone />
+
+1. After the installation process has been completed, open BioStar 2 Settings to confirm the system status. Check the Service Status and the HTTPS Port.
+
+   <Image src='/img/how-to/mssql_install_17.png' width='900' alone />
+
+## How to Install Certificate for BioStar 2
+
+If you try to open BioStar 2 right after installation, you will get the following privacy error message. Currently, there is no certificate installed at BioStar 2. So, the web protocol is displaying **Not secure**. Please refer to [How to configure HTTP or HTTPS protocol](http-https-protocol) for steps to install the certificate for BioStar 2. Then, it will be displayed as **Connection is secure**.
+
+<Image src='/img/how-to/mariadb_installation_10.png' width='400' alone />
+
+<Image src='/img/how-to/mariadb_installation_11.png' width='400' alone />
+
+:::info
+
+For the best experience at BioStar 2, use Google Chrome as the browser to access BioStar 2.
+
+:::
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/how_to_install_biostar_2_with_mssql.mp4" type="video/mp4" />
+</video>

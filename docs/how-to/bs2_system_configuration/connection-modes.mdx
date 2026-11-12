@@ -1,0 +1,79 @@
+# Connection Modes in BioStar 2
+
+The concept of device connection is different in BioStar 2 compared to BioStar 1's server mode and direct mode.
+
+1. Log upload is automatic regardless of the connection type if you set the **Log Upload** to automatic in **Setting** → **Server**.
+
+   <Image src='/img/how-to/2x_connection_mode_001.png' width='1000' alone />
+
+1. Device connection is automatic if the device gets disconnected regardless of the connection type.
+
+1. Connection type is not called direct mode or server mode.
+
+   * It is either **Server** → Device connection (default) or Device → **Server**.
+
+   * Use **Device** → Server mode if the devices remain disconnected often on the default connection mode.
+
+## Configuring Device to Server Connection
+
+1. Select your device in the device tree at the **DEVICE** menu.
+
+   <Image src='/img/how-to/2x_connection_mode_003.png' width='300' alone />
+
+1. On the **Network** → **Server** tab check **Device** → **Server Connection**.
+
+1. **Enter your IP** and **Server Port**.
+
+   <Image src='/img/how-to/2x_connection_mode_004.png' width='1000' alone />
+
+1. Click **Apply**.
+
+1. Delete the device from the device tree.
+
+1. Device will appear as a **Waiting Device**.
+
+1. Right click and click **Add Waiting Device**.
+
+   <Image src='/img/how-to/2x_connection_mode_005.png' width='400' alone />
+
+## Troubleshooting Connection Change Issues
+
+If a device show on the device tree or Waiting Device after changing it to server mode, try the method below:
+
+1. Delete the device if it appears disconnected as direct mode.
+
+1. Refresh your browser by pressing F5.
+
+1. If the device fails to appear after refreshing, check if you can ping the device.
+
+   <Image src='/img/how-to/2x_connection_mode_006.jpg' width='500' alone />
+
+1. If the ping is failing, it means that your device has no network connection. Check your network connection.
+
+1. Check that you have set the correct server port. You can find it in **Setting** → **Server**.
+
+   :::info
+
+   Default server port is 51212.
+
+   :::
+
+   <Image src='/img/how-to/2x_connection_mode_007.png' width='700' alone />
+
+1. If the device is showing a Blue / Yellow LED, it means that it hasn't received an IP. Check your DHCP server.
+
+   <Image src='/img/how-to/1x_connection_mode_008..png' width='300' alone />
+
+1. If the device does not appear even after you can ping the device, try setting the device to factory default or resetting the network settings.
+
+   Instructions for each device are in the device manual.
+
+   [Download BioStar 2 Device Manuals](http://www.supremainc.com/sites/default/files/BioStar/Manuals/BioStar2/BioStar_2.3_Manuals.zip) 
+
+:::info
+
+If you have BioStar 1.91\~ and BioStar 2 server running at the same time, the device will connect to BioStar 1 on server mode.
+
+Turn off your BioStar 1.91\~ server.
+
+:::

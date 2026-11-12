@@ -1,0 +1,91 @@
+# How to configure an Anti-Passback (APB) Zone?
+
+## Configuring a Local Anti-Passback Zone
+
+For local anti-passback, you do not need an AC license. Follow the steps below to configure a local APB.
+
+1. Add a master device to BioStar 2 in the **DEVICE** menu.
+
+1. Add a slave device to the master device in the **DEVICE** menu with a RS485 connection.
+
+   :::info
+
+   Refer to [How to add devices](add-devices) to learn how to add master and slave devices. 
+
+   :::
+
+1. Click on the **DOOR** menu.
+
+1. Click **ADD DOOR**.
+
+1. Select your **Entry Device**.
+
+1. Select your **Exit Device**.
+
+   :::info
+
+   Anti-Passback tab will appear when you add the exit device.
+
+   :::
+
+1. Configure the **Door Relay**, **Exit Button**, **Door Sensor** as necessary.
+
+1. On the **Anti PassBack** tab, select type to **Hard**.
+
+   :::info
+
+   Soft Anti-Passback records logs but allows user entry on anti-passback violation.
+
+   Hard Anti-Passback records logs and does not allow user entry on anti-passback violation.
+
+   :::
+
+1. On **Reset Time**, set the time when the anti-passback violation will be reset (after \# of minutes).
+
+1. Click **Apply** to apply the settings.
+
+   <Image src='/img/how-to/2xsc_local_anti_passback_zone_001.png' width='1000' alone />
+
+## Configuring the Anti-Passback Zone
+
+Before you start, check the license activation status. If a standard edition is activated, the 'Zone' tap can be seen from the left menu buttons as below.
+
+<Image src='/img/how-to/65.png' width='800' alone />
+
+1. Click **ADD ZONE** and select **Anti-passback** and click **Apply**.
+
+   <Image src='/img/how-to/66.png' width='700' alone />
+
+1. Enter the name of the APB zone, and make configuration as desired. If you want to block users who violate the APB rule, set the type to **Hard APB** and check **Reset Time** not to be shorter than the expected duration of the block time. And set **Entry Devices** and **Exit Devices**.
+
+   <Image src='/img/how-to/sc_zone_apb.png' width='900' alone />
+
+:::info
+
+* For a ethernet based zone, select **Global** for the **Mode**. The server will be the master device making anti-passback decisions. 
+
+* When choosing the **Global** mode you have the option to select a network failure action.
+
+   * If the device cannot communicate with the server, it will operate based on your configured action.
+
+   * Refer to the administrator's manual (help menu) for details.
+
+:::
+
+1. Set an action if needed to make an alarm sound using the device relay.
+
+   <Image src='/img/how-to/68.png' width='600' alone />
+
+1. Set the APB Bypass group who will enter the doors in the APB zone regardless of the APB rule. It's recommended to be used for the admin users for the convenient fix and revision at the site.
+
+   <Image src='/img/how-to/69.png' width='900' alone />
+
+1. After finishing the setting, test the APB and check alert and the zone status from monitoring.
+
+   <Image src='/img/how-to/70.png' width='800' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/apb.mp4" type="video/mp4" />
+</video>

@@ -1,0 +1,91 @@
+# How to Configure Hexadecimal Card Key
+
+Until BioStar 2.6, the card key value was entered as decimal numbers in the smart card layout.
+
+However, the actual key value stored in the card was converted to an ASCII value.
+
+This caused confusion when integrating existing solutions with BioStar 2 because the industry standard uses hexadecimal values for the card key.
+
+Hence to allow easy integration, the card key configuration is now entered in hexadecimal form in BioStar 2.6.
+
+## Configuring Card Key in Smart Card Layout
+
+1. Log in to BioStar 2 with an administrator account with **Setting** configuration privileges.
+
+1. Click **Settings**.
+
+1. Click **CARD FORMAT**.
+
+   <Image src='/img/how-to/2x_sc_smart_card_key_001.png' width='900' alone />
+
+1. Right-Click **Smart Card**.
+
+1. Click **ADD SMART CARD**.
+
+1. Enter a **Name** for the smart card layout.
+
+1. Check **Primary Key**.
+
+1. Enter a hexadecimal key in the **New Primary Key** textbox.
+
+1. Repeat entering the key in the **Confirm New Primary Key** textbox.
+
+   :::note
+
+   **Possible key input ranges**
+
+   Mifare: 6 byte range of 0 to FFFFFFFFFFFF
+
+   iClass: 8 byte range of 0 to FFFFFFFFFFFFFFFF
+
+   Desfire: 16 Byte range of 0 to FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF
+
+   :::
+
+   <Image src='/img/how-to/2x_sc_smart_card_key_002.png' width='1000' alone />
+
+   :::info
+
+   If an odd hexadecimal value is input, 0 will be added in the beginning of the value.
+
+   If the max length is not filled, the key will be filled with FF automatically.
+
+   In example:
+
+   User enters **1230** → Result: 12 30 FF FF FF
+
+   User enters **AF0** → Result: 0A F0 FF FF FF FF
+
+   :::
+
+1. Check the **Secondary Key** to Active.
+
+   <Image src='/img/how-to/2x_sc_smart_card_key_003.png' width='200' alone />
+
+1. If you had no key configured on the card previously, check the **Secondary Key** and leave it blank.
+
+   :::warning
+
+   If you previously configured the key value in lower versions of BioStar 2, you will have to convert the value to a hexadecimal number first. Use the Hex converter tool on the right to convert the value.
+
+   <Image src='/img/how-to/2x_sc_smart_card_key_004.png' width='500' alone />
+
+   :::
+
+1. Change the **Start Block Index** to configure where the layout will be written if it is required.
+
+1. Change the **Template Count** if desired. Be wary of your card size.
+
+1. Change the **Template size** if required.
+
+1. Click **Apply**.
+
+1. Go to the **DEVICE** menu.
+
+1. Select your device.
+
+1. Select your **Layout** in **Authentication** → **Smart Card Layout**.
+
+1. Click **Apply**.
+
+   <Image src='/img/how-to/2x_sc_smart_card_key_005.png' width='900' alone />

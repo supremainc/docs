@@ -1,0 +1,75 @@
+# Supports for Microsoft ODBC Driver 17 for SQL Server (from BioStar 2 v2.9.9)
+
+## Overview
+
+From BioStar 2 v2.9.9, BioStar 2 supports the **Microsoft ODBC Driver 17 to connect with SQL** to communicate with MS SQL that uses Windows authentication.
+
+To know how you can set the Windows authentication for MS SQL, please refer to the following article. [\[BioStar 2\] Supports Windows Authentication for MS SQL Database Server Connections](https://support.supremainc.com/en/support/solutions/articles/24000053794--biostar-2-supports-windows-authentication-for-ms-sql-database-server-connections)
+
+:::note
+
+So, in the situation that you installed MS SQL with Windows authentication, but if you didn't install the **Microsoft ODBC Driver 17 for SQL Server** together, when you try to install BioStar 2 with MS SQL, you will encounter the **specific warning pop-up** in the BioStar 2 installation pop-up.
+
+BioStar 2 v2.9.9 or higher supports only version **17** of the Microsoft ODBC Driver, such as 17.10.6 or 17.10.4.1. 
+
+:::
+
+To check the detailed scenarios, please refer to the following content.
+
+### How To Check
+
+You can check if the **Microsoft ODBC Driver 17 for SQL Server** has been installed or not by going to **Settings** → **Apps & features** in the Windows of your PC, where you will install the BioStar 2 server.
+
+<Image src='/img/how-to/odbc1.png' width='800' alone />
+
+### How To Install 
+
+If **Microsoft ODBC Driver 17 for SQL Server** has not been installed yet, you can download and install it by accessing the [following link](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver16#previous-releases).
+
+## Installation Scenarios
+
+### Normal Installation
+
+If the **Microsoft ODBC Driver 17 for SQL Server** has been installed in advance, there is no separate warning pop-up even if you select the option **MSSQL Windows auth** in the BioStar 2 installation pop-up. So, you can install BioStar 2 without problem.
+
+<Image src='/img/how-to/odbc2.png' width='500' alone />
+
+You can check if the **Microsoft ODBC Driver 17 for SQL Server** has been installed or not by going to Settings → Apps & features in the Windows of your PC, where you will install the BioStar 2 server.
+
+<Image src='/img/how-to/odbc3.png' width='800' alone />
+
+### Installation Warning
+
+Two situations may trigger a warning during installation:
+
+1. Driver Not Installed:
+
+   If the Microsoft ODBC Driver 17 for SQL Server has not been installed in advance, you will see the following warning pop-up when checking the box for **MSSQL Windows auth** in the BioStar 2 installation pop-up.
+
+   * A warning pop-up appears in the BioStar 2 installation pop-up
+
+      <Image src='/img/how-to/odbc4.png' width='500' alone />
+
+   * Not installed **Microsoft ODBC Driver 17 for SQL Server**
+
+      <Image src='/img/how-to/odbc5.png' width='900' alone />
+
+1. Incorrect Version Installed:
+
+   If the Microsoft ODBC Driver for SQL Server has been installed in advance but is not version 17, you will see the following warning pop-up when checking the box for **MSSQL Windows auth** in the BioStar 2 installation pop-up.
+
+   * A warning pop-up appears in the BioStar 2 installation pop-up
+
+      <Image src='/img/how-to/odbc6.png' width='500' alone />
+
+   * Installed **Microsoft ODBC Driver for SQL Server**, but it is not version 17
+
+      <Image src='/img/how-to/odbc7.png' width='1000' alone />
+
+## Summary
+
+**Before installing BioStar 2:**
+
+* Confirm that the **Microsoft ODBC Driver 17 for SQL Server** is installed on your server.
+
+* If not, download and install the correct version from Microsoft.

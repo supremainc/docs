@@ -1,0 +1,81 @@
+# BioStar 2 Installation
+
+Before you start, please check the system requirements
+
+Refer to the [FAQ page](http://support.supremainc.com/solution/articles/24000012962--biostar-2-system-requirements-supported-operating-system)
+
+:::info
+
+From BioStar 2.8.0, Personal Data Encryption is 'ENABLED' as a default setting.
+
+Refer to the [\[BioStar 2\] BioStar 2.8.0 New Features and Configuration Guide](https://support.supremainc.com/en/support/solutions/articles/24000055635)
+
+<Image src='/img/how-to/encryptionon.png' width='1000' alone />
+
+:::
+
+1. Run the setup file according to the server OS version. If it is 64bit OS, run the setup file named BioStar 2 Setup(x64).xxxx.exe.
+
+   <Image src='/img/how-to/64bit.png' width='300' alone />
+
+1. Choose the language and check to accept the agreement.
+
+   <Image src='/img/how-to/install1.jpg' width='500' alone />
+
+1. Decide the database installation type.
+
+   :::info
+
+   * **Express installation** automatically install BioStar 2 default database, MariaDB.
+
+   * **Custom Installation** is required when installing BioStar 2 DB instance in the existing database, such as MSSQL and MariaDB.
+
+   :::
+
+   <Image src='/img/how-to/install3.jpg' width='500' alone />
+
+1. When Express Installation is selected, enter the root database password according to the requirement. When Custom Installation is selected, enter the existing database IP, Port, and account information.
+
+   :::caution
+
+   It's very important to keep the password not to be lost, since it's necessary to enter when upgrading the sever version. 
+
+   :::
+
+   <Image src='/img/how-to/install2.jpg' width='500' alone />
+
+   <Image src='/img/how-to/install4.jpg' width='500' alone />
+
+   <Image src='/img/how-to/install5.jpg' width='500' alone />
+
+1. Select the location where BioStar 2 will be installed. We recommend to install at the default location.
+
+   <Image src='/img/how-to/install6.jpg' width='500' alone />
+
+1. Check the port availability and change it when the default is taken by another application.
+
+   <Image src='/img/how-to/install8.jpg' width='500' alone />
+
+1. Select components you want to install. For the case of using BioMini or USB card enrollment device at a HR desk, It's necessary to install USB device Agent.
+
+   <Image src='/img/how-to/install9.jpg' width='500' alone />
+
+1. Check the details and click 'Install' button to start.
+
+   <Image src='/img/how-to/install10.jpg' width='500' alone />
+
+   <Image src='/img/how-to/install11.jpg' width='500' alone />
+
+1. Wait the installation progress until it finishes. Try not to stop the installation during the progress.
+
+1. Also, BioStar setting will be shown along with a pop-up asking for a USB card enrollment device driver installation. If you want to use a USB card enrollment device at the installed server PC, please continue to install the driver.
+
+   <Image src='/img/how-to/install12.jpg' width='500' alone />
+
+1. After finishing the installation, check the BioStar Setting to confirm the system status.
+
+   <Image src='/img/how-to/install13.jpg' width='600' alone />
+
+### See Also
+
+[When you cannot start BioStar 2 Server](2xfaq_how_to_troubleshoot_when_you_cannot_start_biostar_2_server)

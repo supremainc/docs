@@ -1,0 +1,83 @@
+# How to configure Secure Tamper
+
+When **Tamper On** option is ON: If the device is separated from the bracket (**Tamper On** event happens), the information on all users, logs, encryption key and SSL certificates configured in the device will be deleted promptly.
+
+:::note
+
+**Supported device**:
+
+* BioStation 2 V1.6.0 or above
+
+* BioStation A2 V1.5.0 or above
+
+* BioStation L2 V1.4.0 or above
+
+* CoreStation V1.1.0 or above
+
+* BioEntry P2 V1.1.0 or above
+
+* BioLite N2 V1.0.0 or above
+
+* BioEntry W2 V1.2.0 or above
+
+* BioEntry R2 V1.0.0 or above
+
+* XPass D2 V1.0.0 or above
+
+* FaceStation 2 V1.1.0 or above
+
+* FaceStation F2 V1.0.0 or above
+
+* FaceLite V1.0.0 or above
+
+* X-Station 2 V1.0.0 or above
+
+* BioStation 3 V1.0.0 or above
+
+* BioStation 2a V1.0.0 or above
+
+:::
+
+:::info
+
+* Once the **Tamper On** event is generated, the users saved in BioStar 2 can no longer be synchronized with the device. In this case, you should transfer users to the device manually.
+
+* Slave device is not supported.
+
+:::
+
+## How to configure
+
+There are two cases to configure.
+
+### Case 1
+
+If you set **Secure communication with device** to **Not Use** in **Setting** → **SERVER**, you should follow below instructions to configure secure tamper.
+
+<Image src='/img/how-to/biostar2_secure_tamper_1.png' width='600' alone />
+
+1. Go to Device **Setting** → **Advanced**.
+
+1. Change **Secure Tamper** into **On**.
+
+   <Image src='/img/how-to/biostar2_secure_tamper_2.png' width='800' alone />
+
+1. When the Tamper On event happens, you can see below message in BioStar 2.
+
+   <Image src='/img/how-to/biostar2_secure_tamper_3.png' width='400' alone />
+
+   Then, you can see the below event logs in Monitoring section. Especially, if you check the users and logs on the device directly, they would be deleted completely.
+
+   <Image src='/img/how-to/biostar2_secure_tamper_4.png' width='1000' alone />
+
+### Case 2
+
+If you set **Secure communication with device** to **Use** in **Setting** → **SERVER**, you can see additional options below. Please see **Server & device encryption key manual management**.
+
+<Image src='/img/how-to/biostar2_secure_tamper_5.png' width='1000' alone />
+
+If you change **Server & device encryption key manual management** into **Use**, you can see below warning message.
+
+Please note that, if you configure this setting, the function **Secure Tamper** will be applied automatically. Before you apply this setting, please be careful.
+
+<Image src='/img/how-to/biostar2_secure_tamper_7.png' width='400' alone />

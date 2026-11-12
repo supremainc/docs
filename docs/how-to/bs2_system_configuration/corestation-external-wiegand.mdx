@@ -1,0 +1,117 @@
+# How to configure CoreStation with an external wiegand device
+
+:::info
+
+If you would like to get basic information about configuration of CoreStation, please refer to [How to configure CoreStation](corestation-settings).
+
+:::
+
+In this article, you will be able to learn how to connect an external Wiegand device to CoreStations. And use it for certain operations such as authentication and entrance management with a door.
+
+:::note
+
+**Materials used in this example**:
+
+* HID Proximity Reader 5355
+
+* CoreStation
+
+* HID Prox Card 125kHz
+
+:::
+
+1. When you take a look at the CoreStation (CS-40) manual, you can see a wiring diagram for the product. [CoreStation Manual](#)
+
+<Image src='/img/how-to/wiegand_in.png' width='900' alone />
+
+1. In this example, we will make use of **Wiegand 2** input as well as a power supply on this side
+
+1. When you find the correct manual for the Wiegand reader product that you use, you can also find its wiring diagram in it. Wire your Wiegand reader properly to CoreStation.
+
+1. When you have wired it correctly you should have the wiring set up as below.
+
+:::info
+
+TTL Output ports 4&5 will be used for LED & Buzzer.
+
+:::
+
+<Image src='/img/how-to/final_picture.png' width='800' alone />
+
+1. Now let's go to BioStar 2, go to the Device menu, and click Search Device, add the CoreStation device.
+
+<Image src='/img/how-to/corestation_device.png' width='900' alone />
+
+1. Right-click on added CoreStation 40, and click **Add Wiegand Device**, in the new popup window **Add Wiegand Device** add **Wiegand Reader 2**.
+
+<Image src='/img/how-to/add_wiegand_device.png' width='1000' alone />
+
+1. Click on added Wiegand Reader 2 and set the settings as you like. If you would like to control LED/Buzzer, you can set it to a certain output.
+
+:::info
+
+In this example, since Output 4 & Output 5 are close to Wiegand 2 Input, we will assign them to these output ports.
+
+:::
+
+<Image src='/img/how-to/led_buzzer.png' width='1000' alone />
+
+1. Now go to the user tab, and select a user, in this example the default administrator is selected. Let's click on the **+ Card** button on a Credential section to assign a card to this user.
+
+<Image src='/img/how-to/credential.png' width='900' alone />
+
+1. In the **Enroll Card** popup window, please set appropriate Wiegand settings according to the type of card that you will use. The device will scan the card to obtain its card ID information automatically. In our case 26-bit SIA Standard will be used as the card format.
+
+1. Set Registration Option as **Register by Card Reader**.
+
+1. Set Device as **Wiegand Reader 2**.
+
+1. Click **Read Card** and scan the device with the card.
+
+1. Click **Enroll**.
+
+<Image src='/img/how-to/wiegand_card.png' width='600' alone />
+
+:::info
+
+Do not forget to hit the **Apply** button on all main menus to take the changes into effect.
+
+<Image src='/img/how-to/apply.png' width='1000' alone />
+
+:::
+
+1. Go to the Monitoring menu and click on the Real-time log. When you scan cards on the Wiegand reader, you will be able to see that the Wiegand reader sends card information to CoreStation for authentication, and that authentication is successful with the card ID that we registered for the user. You will also be able to hear the Buzzer sound and see LED lights turn to green when scanning the card.
+
+<Image src='/img/how-to/real_time_wiegand.png' width='1000' alone />
+
+1. Now let's take this a little bit further. Go to the Door menu and click on the **Add Door** button. Set its appropriate name (in this example we will call it **Suprema**).
+
+1. Set the entry device as Wiegand Reader.
+
+1. Set Door Relay as Relay 2.
+
+1. Set Exit Button and Door Sensor to Supervised Inputs 4&5.
+
+1. Set the Open Time, this will dictate how much time you will have between locking and unlocking when the relay goes ON and OFF.
+
+<Image src='/img/how-to/door_config.png' width='1000' alone />
+
+1. Go back to devices and click on CoreStation. Scroll down and expand the Advanced tab and turn on Supervised Inputs 4&5 as we had set them up for Exit Button and Door Sensor. The resistance can stay as 2.2K Ohms, as they are default. When you hit apply you can see that Supervised Inputs 4&5 will turn on their Green LEDs.
+
+:::info
+
+For the reasons why 2.2k Ohms of **circuit resistance** for these **Supervised Inputs** are necessary, please refer to article [DM-20 Wiring Examples](#).
+
+:::
+
+<Image src='/img/how-to/supervised_inputs.png' width='1000' alone />
+
+1. Now go back to the Monitoring menu → Real-Time log. Scan the card on the Wiegand reader. You will now see that not only authentication is successful but also the Door Relay will go ON and OFF, indicating the door is being unlocked and locked. You can also notice this by seeing the red LED turning ON and OFF on Relay 2, as well as the tipping sound that is coming from it. The time delay between unlocking and locking will depend on Open Time that you set in step 11.
+
+<Image src='/img/how-to/door_lock.png' width='1000' alone />
+
+## Relay work video
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/lxio6068.mp4" type="video/mp4" />
+</video>

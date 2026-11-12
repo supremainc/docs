@@ -1,0 +1,111 @@
+# Changing the Device Language (Custom)
+
+**English Display at English Language Setting / Spanish Display at Custom Language Setting**
+
+<Image src='/img/how-to/changing_text_custom_14.png' width='900' alone />
+
+It is possible to customize languages, or to change the message displayed on the device by configuring the device's resource file. Follow the steps below to change the texts displayed on the device (Facestation F2).
+
+## How to set up?
+
+1. Download the Resource file zip folder that matches the device at [\[BioStar 2\] Changing the Device Language (Translation)](https://support.supremainc.com/en/support/solutions/articles/24000015061--biostar-2-changing-the-device-language-translation-) and unzip the zip folder.
+
+   <Image src='/img/how-to/changing_text_english_1.png' width='400' alone />
+
+   <Image src='/img/how-to/changing_text_english_2.png' width='600' alone />
+
+1. Download the Resource Tool. It is located inside the latest resource file.
+
+1. Open `ResourceTool_IncludeFSF2.exe` and run as administrator.
+
+   <Image src='/img/how-to/changing_text_english_3.png' width='700' alone />
+
+1. Press **Open** and choose the relevant resource inside the Resource file that fits the device. Select **All file** to search the resource file. Make sure that the device and the resource file's firmware match.
+
+   <Image src='/img/how-to/changing_text_english_4.png' width='500' alone />
+
+   <Image src='/img/how-to/changing_text_english_5.png' width='900' alone />
+
+1. Fill out the information at **TagWrite** (Firmware Version, Device Type, Card Type). Note that the **DeviceType** must match to read resources at BioStar 2.
+
+   <Image src='/img/how-to/changing_text_english_6.png' width='500' alone />
+
+1. Change the text under **Resource Table** for text customization displayed on the device by editing here directly.
+
+   <Image src='/img/how-to/changing_text_english_7.png' width='500' alone />
+
+1. The edited information can be saved by pressing **Save**. Make sure to save the files in Resource file format (.rc).
+
+   <Image src='/img/how-to/changing_text_english_8.png' width='500' alone />
+
+   <Image src='/img/how-to/changing_text_english_9.png' width='900' alone />
+
+## Changing Language Display at Custom Setting
+
+Here is a demonstration of putting a custom language to the device. I will set the language to **Custom** and change the **Access Granted** window to display it in Spanish **Accesso Permitido**.
+
+:::info
+
+If you use a language that requires a special font, scroll down the list and find the font at the end of the .rc file, uncomment and erase the section (for example, erase Latin :), and add **60000** to apply the font.
+
+:::
+
+<Image src='/img/how-to/changing_text_custom_1.png' width='800' alone />
+
+<Image src='/img/how-to/changing_text_custom_2.png' width='800' alone />
+
+**ex. Selecting Latin Font to display the username or text in Latin**
+
+1. Find the **Custom** section at the **Resource Table**.
+
+   <Image src='/img/how-to/changing_text_custom_3.png' width='500' alone />
+
+1. Find **Access Granted** and double click to edit. Change to **Acceso Permitido**.
+
+   <Image src='/img/how-to/changing_text_custom_4.png' width='500' alone />
+   
+   <Image src='/img/how-to/changing_text_custom_5.png' width='500' alone />
+
+1. Press **Build**. A **.bin** file will be created at the location of the Resource Tool. I will rename the file to `FSF2_RES_Spanish`.
+
+   <Image src='/img/how-to/changing_text_custom_6.png' width='500' alone />
+   
+   <Image src='/img/how-to/changing_text_custom_7.png' width='900' alone />
+
+1. Copy the new **.bin** to **Program Files** → **BioStar 2(x64)** → **resource**. Continue with administrator permission.
+
+   <Image src='/img/how-to/changing_text_custom_8.png' width='600' alone />
+   
+   <Image src='/img/how-to/changing_text_custom_9.png' width='800' alone />
+
+1. Login to BioStar 2.
+
+1. Go to Device and choose the device to customize.
+
+   <Image src='/img/how-to/changing_text_english_17.png' width='1000' alone />
+
+1. Go to **Advanced** → **Display/Sound**. Press **Update Resources**.
+
+   <Image src='/img/how-to/changing_text_custom_10.png' width='1000' alone />
+
+1. The **.bin** file inserted to the resource folder should show up. Press the **.bin** file and press **Apply**.
+
+   <Image src='/img/how-to/changing_text_custom_11.png' width='800' alone />
+
+   If successful, this message will appear.
+
+   <Image src='/img/how-to/changing_text_english_19.png' width='200' alone />
+
+1. The device will reset after applying the resource file. Go back to the **Display/Sound** settings and change the **Language** to **Custom**. Press **Apply**.
+
+   <Image src='/img/how-to/changing_text_custom_12.png' width='1000' alone />
+   
+   <Image src='/img/how-to/changing_text_custom_13.png' width='1000' alone />
+
+1. Check to see if the customization is applied on the device through authentication.
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/changing_the_device_language_or_device_text_message_custom_.mp4" type="video/mp4" />
+</video>

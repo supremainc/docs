@@ -1,0 +1,49 @@
+# Supports Setting the Byte Order for Smart Cards
+
+**Affect Products & Versions**
+
+* **BioStar 2**: BioStar v2.8.16 or above
+
+* **Device Models & Firmware**: TBA (Suprema will update when the firmware is released.)
+
+In the existing BioStar 2, even if the 3rd party controller used the Smart Card in LSB format, the Suprema device could only transmit data in MSB format. From BioStar 2.8.16, Suprema supports the option to send the Smart Card in the LSB format from the Suprema device for the convenience of customers.
+
+:::caution
+
+This function is available only when you match the version of BioStar 2 and the firmware version of each device.
+
+:::
+
+* **Device** → Device's detail page → **Authentication** → **Card Type** → **Smart Card** → **Smart Card Output Byte Order**
+
+   <Image src='/img/how-to/2.8.16-3-1.png' width='800' alone />
+
+1. This function is supported only when the Suprema device is directly connected to BioStar 2 via Ethernet.
+
+   * RS-485 Mode: Default, Master, Slave (but connected via Ethernet)
+
+   * You CANNOT set when the Suprema device is connected as a slave device of the Suprema device.
+
+1. Options are only applicable for Wiegand output and OSDP output.
+
+   * Write Smart Card and Read Card are not affected.
+
+1. Operation according to RS-485 Mode.
+
+   * Default, Master, Slave (but connected via Ethernet): Operates according to the device's **Smart Card Output Byte Order** setting.
+
+   * When connected to the Slave device of the Suprema device: The Slave transmits the Card ID to the Master device and operates according to the **Smart Card Output Byte Order** setting in the Master device.
+
+1. Operation according to Wiegand Output.
+
+   * When Output info is Card ID: Operates according to the setting.
+
+   * When Output info is User ID: Not influenced.
+
+1. Actions according to the card type.
+
+   * MIFARE, DESFire: Operates according to the **Smart Card Output Byte Order** setting.
+
+   * iClass: Not influenced. Output PAC data as it is.
+
+   * BioStar 2 QR: Not influenced.

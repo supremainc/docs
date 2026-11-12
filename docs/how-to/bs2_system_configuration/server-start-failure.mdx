@@ -1,0 +1,27 @@
+# When you cannot start BioStar 2 Server
+
+In this document, we would like to introduce troubleshooting guides when you cannot start BioStar 2 Server.
+
+## Cause
+
+This issue can occur when the default BioStar port 80 is already being used by other program or applications.
+
+## Resolution
+
+1. Run **Windows Task manager**. Please end the **biostar-server.exe** process.
+
+   <Image src='/img/how-to/biostar2_cannot_start_server_01.png' width='400' alone />
+
+1. Open **BioStar Setting** as administrator privilege.
+
+   <Image src='/img/how-to/biostar2_cannot_start_server_02.png' width='400' alone />
+
+1. Change the HTTP Port number and start the BioStar Server again.
+
+   <Image src='/img/how-to/biostar2_cannot_start_server_03.png' width='600' alone />
+
+:::info
+
+Once you change the port number to for example 81, you need to add this port number at the back of the URL. For example, `http://localhost:81` or `http://serverip:81`.
+
+:::

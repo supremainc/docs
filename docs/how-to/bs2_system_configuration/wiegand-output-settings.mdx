@@ -1,0 +1,49 @@
+# How to configure Wiegand Output
+
+With BioStar 2, Wiegand formats can be predefined and assigned to each device with simple configurations. Users can avoid repetitive applying of the same format to multiple devices one by one.
+
+1. Go to **Card Format** in Setting of BioStar 2.
+
+   <Image src='/img/how-to/w1.png' width='900' alone />
+
+1. Select one of the default Wiegand format options or add a new Wiegand format by clicking on the table rows.
+
+   <Image src='/img/how-to/w2.png' width='1000' alone />
+
+1. Wiegand format can be set by assigning the total bits, ID field, and parity bits. For example, in order to configure 34 bits card format with parity bit checks by half of each even and odd parity check logic, it's necessary to set **Start Bit** and **End Bit** for each part.
+
+   <Image src='/img/how-to/w8.png' width='1000' alone />
+
+1. Go to **Device** and expand the 'Advanced' setting tap and scroll down and set to use **Out** and choose one of predefined format.
+
+   <Image src='/img/how-to/w3.png' width='1000' alone />
+
+1. Check **Pulse Width** and **Pulse Interval**, and adjust it if they are not matched to the 3rd party system values.
+
+   <Image src='/img/how-to/w4.png' width='700' alone />
+
+1. Set **Enable Fail Code** or **Bypass Mode** depending on the system usage. 
+
+   :::info
+
+   Enable Fail Code: Set to send out a fail code at auth failure. It enables 3rd party system to be able to detect auth fail events by checking the designated failure code number.
+
+   Bypass Mode: It makes the device send out Card Data to the 3rd party device without making an authentication. With this mode, the device works as a dummy device, and card data can only be transmitted through Wiegand. 
+
+   :::
+
+1. Click **Apply**, and check the wiring between the devices, and swipe a card or put a fingerprint on the sensor.
+
+   <Image src='/img/how-to/w5.jpg' width='600' alone />
+
+1. Check 3rd party system monitoring, and input value. If there are no events and responses, check the wiring and pulse and Wiegand format. If there are error message, please try to change the card ID format and reading mode, such as **Byte Order**.
+
+   **From Lenel Onguard**
+   
+   <Image src='/img/how-to/w6.png' width='900' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/wiegand_out.mp4" type="video/mp4" />
+</video>

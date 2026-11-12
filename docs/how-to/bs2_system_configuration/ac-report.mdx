@@ -1,0 +1,268 @@
+# How to Generate Access Control (AC) Report
+
+BioStar 2 version 2.9.3 allows users to generate Access Control (AC) reports.
+
+Access Control (AC) Report provides registered users information in BioStar 2 software, on-site information shown in BioStar 2 software, including event logs, and generates a referable report.
+
+You can find the **Report** Menu at the bottom lefthand side of the menu bar. Report Menu consists of **Saved Reports** → **User** → **Event**.
+
+<Image src='/img/how-to/generate_access_control_ac_report_1.png' width='1000' alone />
+
+* Saved Reports
+
+  * If you have a weekly or monthly report that needs to be made and don't want to create individual templates repetitively, you can use the saved reports feature.
+
+   * Saved Reports will not save the created report itself. It will only keep the template format. For example, if you want to create a monthly, weekly report on Users in Device, you can set up a template and re-use it with the saved reports feature. You will set up the report template on Monday; on Monday, there were only 50 users on the device; using the same template on Thursday will show the most updated information. If some users were deleted or added after Monday, it would show the most recent result based on the saved template.
+
+* User: User Information
+
+   * Select particular users or user groups to generate a report at one glance.
+
+   * Column settings include list number, User ID, User Name, Email, User Group, Access Group, Status, Period, Operator Level, Department, Title, and Telephone.
+
+* User: User In Device
+
+   * This feature can be handy for those with various numbers of devices at the site, while each device has different users assigned.
+
+   * It allows us to see/check users assigned to different devices.
+
+* User: User Detail
+
+   * Select certain users or user groups to see their information simultaneously.
+
+   * You can select whether to include the user profile image or not.
+
+   * User Detail information includes the user group/title/department/email/telephone/status/period/operator level / Login ID / User IP / Access Group
+
+   * User Detail Report can be exported in PDF or CSV file format and printed in these formats.
+
+* User: User Photo Gallery
+
+   * Select users or user groups to have a photo montage of selected users & user groups.
+
+* User: Users Without Credential
+
+   * Let's say you want to find out which users need to add particular credentials; you can select from card/fingerprint / PIN/face to see which one does not have chosen credentials. Credentials can be mutually selected.
+
+* User: Private Auth Mode By User
+
+   * Generally, not all users have"Private Auth Mode" set up; in this report menu, you can see those with **Private Auth Mode** activated.
+
+* User: Number Of Credentials By User
+
+   * Use this feature when you need a whole report for users with credentials information.
+
+   * The report shows if the user has PIN data, the registered number of the card, the number of fingerprints, and the number of faces.
+
+* User: All Cards
+
+   * If you want to see all users' card information in BioStar 2, use this menu. You can search from card types CSN/ Wiegand / Secure Credential / Access on Card / CSN Mobile / Wiegand Mobile/ QR / BioStar 2 QR.
+
+   * The search can be set up only to show assigned cards or all cards in BioStar 2 software users.
+
+* User: Unassigned Cards
+
+   * Cards registered in BioStar 2 software but have not been assigned to a particular user.
+
+* User: Blacklist Cards
+
+   * List of blocklist cards in BioStar 2.
+
+* User: Expired Users
+
+   * You can set a specific period for each user in BioStar 2 software; when a certain period set for users expires, these users will be shown in this part of the report.
+
+* User: Users To Be Expired Within X Days
+
+   * It can be pretty hard to check each user's set period. To make this part more accessible, the users to be expired within X days feature will allow you to see and quickly check those who need alterations in a period setting.
+
+   * You can set up x days value. X value can not be less than 0 or greater than 365.
+
+* User: Idle Users For The Last X Months 
+
+   * The definition of Idle users is those who have not authenticated with devices connected to BioStar 2 software in the device menu. No authentication process on access control devices for X months will be Idle Users.
+
+   * If you would like to see particular users that show no recent authentication record, please use this feature to stay updated. 
+
+   * X value can not be less than one or greater than 60.
+
+* User: Inactive Users
+
+   * Allows you to keep track of those who once had access to this particular BioStar 2 software and now no longer have access to it. 
+
+* Event: Custom Report 
+
+   * Custom Report lets you customize reports based on your selection of events. As an example, if you prioritize zone status and would like to get a report solely focused on this matter, then you can go to the zone category and select APB, Scheduled Lock/Unlock, Intrusion Alarm, Interlock, Muster, Occupancy Limit.
+
+   * Custom Report has below events to be selected from
+
+1. Access
+
+   * Granted
+
+   * Denied
+
+   * Duress
+
+   * Door
+
+   * Elevator
+
+1. Device
+
+   * User Sync Succeeded
+
+   * User Sync Failed
+
+   * Status
+
+   * Communication
+
+1. Alarm
+
+   * Alarm
+
+   * Alarm Cleared
+
+   * Input
+
+   * Relay
+
+   * Tamper
+
+   * Action
+
+1. Zone
+
+   * APB
+
+   * Scheduled Lock/Unlock
+
+   * Intrusion Alarm
+
+   * Interlock, Muster
+
+   * Occupancy Limit
+
+1. Video
+
+   * Video
+
+:::caution
+
+Each report page has **Save Report** → **Export** → **Print** → **Column Setting**.
+
+:::
+
+<Image src='/img/how-to/generate_access_control_ac_report_2.png' width='1000' alone />
+
+* **Column Setting**: includes list number, User ID, User Name, Email, User Group, Access Group, Status, Period, Operator Level, Department, Title, and Telephone.
+
+* **Save Report**: Save the selected users or user groups template with the column setting data.
+
+* **Export**: You can export the report in PDF or CSV format.
+
+<Image src='/img/how-to/generate_access_control_ac_report_3.png' width='600' alone />
+
+You can configure a schedule to automatically generate custom reports created by setting the **DYNAMIC** period. **Biostar 2 Admin Login** is required to use **Automatic Report Schedule**.
+
+To generate the report automatically, you must make the **DYNAMIC** type report and save the report.
+
+1. Make DYNAMIC report.
+
+   1. Go to **REPORT** → **Event** → **Custom Report**.
+
+      <Image src='/img/how-to/generate_access_control_ac_report_4.png' width='200' alone />
+
+   1. Select Events when you confirm it.
+
+      <Image src='/img/how-to/generate_access_control_ac_report_5.png' width='900' alone />
+
+   1. Choose **DYNAMIC** and select a specific period.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_6.png' width='500' alone />
+
+   1. Set Filters and set Columns properly.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_7.png' width='800' alone />
+
+   1. Confirm the report content, and click **Save Report** to save the filtered Dynamic Report so that you can load the report information to **Automatic Schedule**. **This is important to move to the next step**.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_8.png' width='1000' alone />
+
+   1. You can confirm the saved report from Saved Reports as follows.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_9.png' width='200' alone />
+
+   1. Rename the saved report if you would like to change the report title of the automatically generated report.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_10.png' width='200' alone />
+
+1. Configure the file location and the login information of BioStar 2.
+
+   1. Click **Settings**.
+   
+   1. Update the Automatic Report Export Path manually.
+   
+   1. Enter the BioStar 2 Admin Login information under the BioStar 2 Admin User ID and Password.
+   
+      If not entered, it is created in **Documents\BioStar2** of the user's PC.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_11.png' width='1000' alone />
+
+1. Configure Automatic Report Schedule and Format.
+
+   1. Click on **Schedule** on the top menu bar of **REPORT**.
+   
+   1. Click **Add Schedule** to update the Automatic Report Configuration.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_12.png' width='1000' alone />
+      
+   1. Choose the saved custom report from steps 1-6 and set the **Frequency** → **Daily with Generate Time**.
+   
+      Weekly or Monthly is not supported.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_13.png' width='1000' alone />
+   
+   1. Confirm the list.
+   
+      <Image src='/img/how-to/generate_access_control_ac_report_14.png' width='1000' alone />
+
+:::info
+
+The settings menu in BioStar 2 report is mainly used for setting the automatic report feature, as shown below.
+
+<Image src='/img/how-to/generate_access_control_ac_report_15.png' width='1000' alone />
+
+In **BioStar 2** → **Report** → **Setting** In order to create a customized automatic scheduled report, in setting you must set up **Automatic Report Export Path** and also set up **BioStar 2 Admin Login** If you do not plan on using a customized automatic scheduled report, you do not have to fill in the data and set it up.
+
+<Image src='/img/how-to/2xtraining_custom_user_field_005.png' width='1000' alone />
+
+:::
+
+:::note
+
+**FAQs**
+
+<details className='faqs'>
+<summary>**Does the REPORT feature support the custom field of the user information in BioStar 2?**</summary>
+
+Unfortunately, it does not support the user custom field in the Report.
+
+</details>
+
+<details className='faqs'>
+<summary>**What is the maximum period setting supported for the report feature?**</summary>
+
+You can configure one year period from the start date time to the end date time.
+
+</details>
+
+<details className='faqs'>
+<summary>**When will the automatic report schedule's regular report type be supported?**</summary>
+
+There is no scheduled plan for this. Please get in touch with the Suprema Sales team or Suprema Local Distributor for further inquiry.
+
+</details>
+
+:::

@@ -1,0 +1,127 @@
+# How to use monitoring
+
+In the monitoring, six different sub monitoring types are supported to support each category of events more easily detected and noticed.
+
+## Event Log
+
+All the events are listed, but it's not updated automatically and needs to be refreshed to display new events.
+
+:::info
+
+When to use: Event Log is designed for fast and easy specific past event search. Set the filter and save it for easy search and selected event display 
+
+:::
+
+1. Click funnel shaped icon on the each column and check event types to be filtered and searched.
+
+   <Image src='/img/how-to/44.png' width='1000' alone />
+
+1. The filtered combination can be saved and referred as a fixed search option.
+
+   <Image src='/img/how-to/45.png' width='1000' alone />
+
+## Real-Time Log
+
+Update and display events in real-time. But, as it has a page limit for event display, only the latest events are remained to be displayed.
+
+:::info
+
+When to use: to check the system events in real time for current event monitoring purpose.
+
+Note that refreshing browser clears event data on the display. 
+
+:::
+
+<Image src='/img/how-to/46.png' width='900' alone />
+
+## Device Status
+
+Display the device status with device related alarm events and clear option.
+
+:::info
+
+When to use: Verify the device status, such as device connection and device level alarm events.
+
+Device Alarm: Supervised Input, Tamper, RS485_Disconnected, System Reset 
+
+:::
+
+<Image src='/img/how-to/48.png' width='1000' alone />
+
+## Door Status
+
+Display the door status with relay status and door control options.
+
+:::note
+
+**When to use**: Check the relay status and manage doors manually from the client browser to open or lock the doors.
+
+**Door Control Buttons**
+
+* **Lock**: Lock the door relay and not allow to open it until 'Unlock' or 'Open' button from BioStar 2 client is pressed.
+
+* **Unlock**: Unlock the door relay and not allow to be locked or normal until 'Lock' or 'Open' button from BioStar 2 client is pressed.
+
+* **Open**: Open the door relay during the predefined time period.
+
+* **Clear Alarm**: Acknowledging and clear door related alarm events, such as forced/held open alarm and one door APB.
+
+* **Clear APB**: Clear one door APB violation and users' In/Out status and make it to be the default status, which means users can enter the door regardless of their previous In/Out event.
+
+:::
+
+<Image src='/img/how-to/49.png' width='1000' alone />
+
+## Zone Status
+
+Display the zone status and its alarm on/off options.
+
+:::note
+
+* **When to use**: Check the zone status and release zone related alarms.
+
+* **Zone Alarms**: Local APB, FireAlarm
+
+:::info
+
+In order to use **Zone**, the standard edition license needs to be activated. And if you refresh and move to another tap, the last event is cleared from the browser.
+
+:::
+
+1. When APB violation event occurs, the zone shows the last event with the user name who violates a APB rule.
+
+   <Image src='/img/how-to/52.png' width='1000' alone />
+
+1. Click the APB zone and click **Clear APB** if it's necessary to reset the APB status.
+
+   Note that the clear APB sets the zone to be the default status of allowing all the users entering the door regardless of their previous status. And the individual APB reset will be supported from the future updated version.
+
+   <Image src='/img/how-to/51.png' width='1000' alone />
+
+## Alert History
+
+BioStar 2 supports acknowledge memo options to receive the selected alert events and take a memo for future reference.
+
+:::note
+
+**When to use**: Check the past alert history and actions taken to handle the alarm events.
+
+In order to receive alerts, the events should be set to make an alert from the global setting. 
+
+:::
+
+1. Go to the global setting and click **Alert**.
+
+   <Image src='/img/how-to/53.png' width='900' alone />
+
+1. Mark the events to be alerted and click **Apply**.
+
+   <Image src='/img/how-to/54.png' width='1000' alone />
+
+1. Check the alert message box and type the actions taken in the memo section.
+
+   <Image src='/img/how-to/55.png' width='500' alone />
+
+1. Go to **MONITORING**, and go to **Alert History** and click the memo icon in the status section. You can see the note taken to handle this event.
+
+   <Image src='/img/how-to/56.png' width='1000' alone />

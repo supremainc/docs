@@ -1,0 +1,55 @@
+# How to configure an action for duress authentication event
+
+* **Applied version**: BioStar2 v2.6 or higher version
+
+In BioStar2 v2.6, you can make a trigger and an action for user authentication event.
+
+For duress authentication success, you can configure the trigger and action as below.
+
+:::info
+
+Duress Finger is a special fingerprint chosen to trigger certain event upon the authentication by it. If a user authenticates himself/herself with a duress fingerprint, the authentication gets recorded in a log as duress fingerprint authentication. The system administrator can set a separate alarm using the log.
+
+:::
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/duressinput_2_.mp4" type="video/mp4" />
+</video>
+
+1. Go to User Menu and enroll two fingerprint templates.
+
+1. Choose **Duress** option for one of the fingers and then, click **Enroll** button.
+
+   <Image src='/img/how-to/duress_01.png' width='500' alone />
+
+1. Click **Apply** of user information.
+
+1. Go to **Device** menu and click one of the connected devices.
+
+1. Click **Advance**.
+
+   <Image src='/img/how-to/duress_02.png' width='700' alone />
+
+1. Go to **Trigger&Action** of the device configuration and click **+ Add**.
+
+   <Image src='/img/how-to/duress_03.png' width='1000' alone />
+
+1. Search the event type like **1:N duress** or **1:1 duress** from the event list of Trigger and select it.
+
+   <Image src='/img/how-to/duress_04.png' width='700' alone />
+
+1. Choose output of Action to make output signal from selected port.
+
+   You can't select used relay port such as a door and another action item.
+
+   For signal setting, click **Add signal** and make the configuration.
+
+   <Image src='/img/how-to/duress_05.png' width='300' alone />
+
+1. Select the predefined signal setting and click **Apply**.
+
+   <Image src='/img/how-to/duress_06.png' width='700' alone />
+
+1. Go to monitoring menu and confirm the log event and action.
+
+   <Image src='/img/how-to/duress_07.png' width='1000' alone />

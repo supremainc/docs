@@ -1,0 +1,85 @@
+# How to Use Custom Smart Card Layout on Suprema Device Manager App
+
+* Suprema Device Manager: v1.1.8 or above (Android OS)
+
+* XPass D2: v1.7.1 or above
+
+## What is Suprema Device Manager?
+
+* This app is an application that allows you to check or change the settings of XPass 2 and XPass D2 and upgrade firmware. This application can be installed and used on users' mobile devices.
+
+* [How to use Suprema Device Manager App](device-manager-app)
+
+## What is the Custom Smart Card, and why do you need this feature?
+
+* Among the cases where a third-party system is integrated with BioStar 2/Suprema devices, there are cases where the Suprema device needs to read a smart card issued by a third-party system other than BioStar 2. We added the Custom Smart Card Layout function on BioStar 2 and Suprema Device Manager to support some of these cases.
+
+* This article explains using the Suprema Device Manager app and the XPass D2 case.
+
+:::info
+
+* For an introduction to the Custom Smart Card Layout function of BioStar 2, please refer to the following article.
+
+* Relevant Article: [How to Setup Custom Smart Card Layout](https://support.supremainc.com/en/support/solutions/articles/24000087955)
+
+:::
+
+## Cases where Custom Smart Card Layout needs to be set up through Suprema Device Manager
+
+1. When XPass D2 is used as a dummy reader for a 3rd party device.
+
+1. When it is difficult to change XPass D2 settings through BioStar 2.
+
+## Preparations
+
+* Suprema Device Manager app (supported on Android OS)
+
+* XPass D2 with v1.7.1 firmware
+
+:::info
+
+* If the firmware of your device is not v1.7.1, you can also upgrade the firmware through the Suprema Device Manager app (However, you must save the firmware on your mobile device).
+
+* Refer to the linked document to understand how to upgrade XPass D2 firmware through the Surpema Device Manager app. [How to use Suprema Device Manager App](device-manager-app)
+
+:::
+
+## Precautions
+
+* Custom Smart Cards function only supports two types: MIFARE and DESFire.
+
+* The customer needs to contact the Suprema team to receive consultation except for the above card types.
+
+   :::info
+
+   * Contact Suprema Sales ([Link](https://www.supremainc.com/en/about/contact-us.asp))
+
+   * Contact Suprema Tech team ([Link](https://www.supremainc.com/en/support/main.asp))
+
+   :::
+
+* Support only Binary data type.
+
+* The customer needs to contact the Suprema team to receive consultation except for the above data type. Please refer to the contact info above.
+
+* Can configure the Byte order: MSB or LSB.
+
+   :::caution
+
+   * This is NOT the card with BIOMETRIC.
+
+   * The original Smart Card Layout function name has been changed to **Suprema Smart Card Layout**.
+
+   :::
+
+### Steps 1 - 4 are the same for both MIFARE and DESFire cases
+
+<Image src='/img/how-to/devicemanagercustomsmart1.png' width='1000' alone />
+
+1. MIFARE
+
+   <Image src='/img/how-to/devicemanagercustomsmart2.png' width='1000' alone />
+
+1. DESFire & DESFIre Advanced
+
+   <Image src='/img/how-to/devicemanagercustomsmart3.png' width='1000' alone />

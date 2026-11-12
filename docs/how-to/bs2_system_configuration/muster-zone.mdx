@@ -1,0 +1,135 @@
+# How to Configure a Muster Zone
+
+BioStar 2.6 introduced **Muster Zone**, which is a zone that allows you to track how many people are in a specified zone in case an emergency occurs.
+
+This feature can also be used to send out an alarm when a user stays in a danger zone for an extended period of time.
+
+This zone is only available as a Global zone, which means that the server takes the role of making the logical calculations and not the device. The statuses of the zones are determined based on the logs uploaded by the devices in the zone.
+
+:::info
+
+* If the user information on the device is different from the information in the server, the user is shown based on the user information in the server. 
+
+* Schedule, bypass users, reset time is not supported with this feature. 
+
+:::
+
+## Configuring a Muster Zone
+
+1. Log in to BioStar 2 with an administrator account with **ZONE** configuration privileges.
+
+1. Users, doors, and access groups should be configured beforehand.
+
+   Refer to the article to learn how to configure **Access Groups** [How to make access groups](access-group-creation) and **Doors** [How to add and configure doors](door-settings).
+
+1. Click on the **ZONE** menu.
+
+1. Click **ADD ZONE**.
+
+1. Select **Muster** and click **Apply**.
+
+1. **Name** your muster zone.
+
+1. Only **Global** zone is available.
+
+1. Configure your **Entry and Exit Devices**.
+
+1. Select your **Access Groups** to choose which users to track.
+
+   :::info
+
+   The Access Group configuration only applies the users in the Access Groups.
+
+   The schedule and other Access Group settings are not applicable for the Muster Zone.
+
+   :::
+
+   <Image src='/img/how-to/2x_sc_muster_zone_01.png' width='1000' alone />
+
+1. Configure your **Max Time Limit** if you want to track how long a user should stay in the zone until an alert is made.
+
+   If you do not want to use this feature, leave the value as 0.
+
+   :::info
+
+   Maximum value for Max Time Limit is 4320 minutes (3 days).
+
+   :::
+
+1. If you want to configure an alarm action when the max time limit has exceeded, click **+ Add** on **Alarm** → **Action**.
+
+1. Select if you want to configure an **Alert Sound** on the device or send out a relay signal through **Output** and click **Apply**.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_02.png' width='1000' alone />
+
+## Checking the Muster Zone Status
+
+1. Click on the **MONITORING** tab.
+
+1. Click the **Zone Status** tab.
+
+1. Click **Muster Status** on the View column.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_03.png' width='1000' alone />
+
+1. The status will be updated every minute, but if you want to update it before that click the circular arrow button.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_04.png' width='1000' alone />
+
+   :::info
+
+   The logs appearing on refresh will take longer to appear than the real time log. It will appear based on the time the logs are stored in the database, which may take 5\~10 seconds after the actual log event.
+
+   :::
+
+1. If a **Max Time Limit** was configured, the exceeded user will be marked as a red row.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_05.png' width='1000' alone />
+
+   :::info
+
+   The 'exceeded' event will clear when the user exit and enters the zone again. 
+
+   :::
+
+1. Click on <IcMoreW/> to export a report.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_06.png' width='100' alone />
+
+1. For a text file export of the report, click **CSV Export**.
+
+1. For a PDF export, click **Print**.
+
+1. Change the **File Format** to **PDF**.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_07.png' width='800' alone />
+
+1. Click **Print**.
+
+   <Image src='/img/how-to/2x_sc_muster_zone_08.png' width='1000' alone />
+
+:::caution
+
+You must turn off the popup block feature to use the PDF Print feature. 
+
+:::
+
+## Creating a Muster Zone Email Trigger
+
+Refer to the article below to create an email trigger.
+
+[How to configure Trigger and Action on Setting](trigger-action)
+
+You can configure **Muster Zone Alarm Detected** event to send an email to the configured email address.
+
+<Image src='/img/how-to/2x_sc_muster_zone_09.png' width='1000' alone />
+
+Below is a sample email notice you would receive when a user exceeds the configured **max time limit** in the muster zone.
+
+<Image src='/img/how-to/2x_sc_muster_zone_10.png' width='700' alone />
+
+## Video Demonstration
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/x2_sc_muster_zone_video.mp4" type="video/mp4" />
+</video>

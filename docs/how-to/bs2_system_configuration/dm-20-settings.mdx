@@ -1,0 +1,95 @@
+# How to Configure DM-20
+
+1. Go to the **DEVICE** menu and click on the device that will be the master device.
+
+1. Set **RS485** to **Master**.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_001.png' width='900' alone />
+
+1. Click **Apply**.
+
+1. Right-click on your device and select **Search Slave Device**.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_002.png' width='400' alone />
+
+1. If it is wired correctly via RS-485 the DM-20 should appear on the device list.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_003.png' width='600' alone />
+
+1. Click **Add**.
+
+:::info
+
+If you click on the DM-20 on the device menu, you can upgrade the firmware and also change the supervised input resistor values.
+
+You can learn more about supervised input in the following link: [DM-20 Wiring Examples](#) 
+
+:::
+
+**DM-20 device menu**
+
+<Image src='/img/how-to/2x_sc_dm_20_configuration_004.png' width='1000' alone />
+
+## Configuring DM-20 for Device Trigger and Action
+
+1. Click on the master device in the **DEVICE** menu.
+
+1. Go to **Advanced** → **Trigger & Action**.
+
+1. Click **+ Add**.
+
+1. On the **Device** dropdown list select DM-20.
+
+1. Configure other items as required.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_005.png' width='1000' alone />
+
+## Configuring DM-20 for Door Relay
+
+In this example, we will use a Wiegand reader for the exit device.
+
+For other door configuration possibilities, refer to the following article: [DM-20 Wiring Examples](#)
+
+1. On the **DEVICE** menu, right-click on the master device and click **Add Wiegand Device**.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_006.png' width='300' alone />
+
+1. Click **Add**.
+
+1. Click on the **DOOR** menu.
+
+1. Click **ADD DOOR**.
+
+1. Set the **Entry Device** as the master device.
+
+1. Set the **Exit Device** as the **Wiegand Reader**.
+
+1. Configure the **Door Relay**, **Exit Button**, and **Door Sensor** with DM-20's input and relay as required.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_007.png' width='1000' alone />
+
+1. Click **Apply**.
+
+## Configuring DM-20 to Trigger Relay Based on Event
+
+1. Click on the **Setting** menu on the top bar of the web client.
+
+1. Select **TRIGGER & ACTION**.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_008.png' width='400' alone />
+
+1. Click ADD **TRIGGER & ACTION**.
+
+1. Select a **Schedule** when this trigger will be active.
+
+1. Choose which type of event will trigger the output (Device / Door / Zone).
+
+1. Select your Device / Door / Zone that will be the basis of this event.
+
+1. Select your DM-20 on the **Device** tab.
+
+1. Configure your **Output** relay and **Signal** interval.
+
+   <Image src='/img/how-to/2x_sc_dm_20_configuration_009.png' width='1000' alone />
+
+1. Click **Apply**.

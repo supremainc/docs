@@ -1,0 +1,147 @@
+# How to Use the New Feature "Timed Anti Passback"
+
+* **Affected Version**: BioStar v2.9.5 or above
+
+From v.2.9.5 of BioStar 2, the function **Timed Anti Passback (Timed APB)** has been introduced newly. With this new function, the user can set the reset time for anti-passback about the specific door to limit frequent access attempts to that door. With this feature, once the user authenticates on the entry device, the user cannot re-authenticate on the same entry device or the exit device connected with the entry device until the defined **Reset time** has been gone.
+
+:::info
+
+To use this new feature, there is no need to use the paid-for versions of the BioStar 2 license since this option can be set directly in the configured door in DOOR, not the Anti-passback Zone of ZONE in BioStar 2. 
+
+:::
+
+## Expectation effectiveness
+
+This function can be expected to prevent unauthorized people from using the authorized person's authentication method to go through the door without permission. To understand it deeply, please refer to the below example case.
+
+:::info
+
+Example Case) A case for using the new function **Timed Anti Passback**.
+
+:::
+
+Let's say there is two people, person A and Person B, Person A has brought one's card for authentication but Person B has forgotten the card, so Person A enters the door using Person A's card and throughs (passes) the card to person B, when this new feature **Times Anti Passback** was not applied, Person B still could access the door. However, now, due to the specific time set feature **Reset Time**, the unauthorized person can no longer enter the door using the same Person A's card until the card used passes the defined **Reset Time**.
+
+## Major Features
+
+1. Under BioStar 2 v2.9.7 or lower version, this new function can be applied to the door that consists of either **the Entry device only** or **the Entry device + the Exit device**.
+
+   <Image src='/img/how-to/1_t.png' width='1000' alone />
+
+   However, from BioStar 2 v2.9.8 or higher version, this new function can be applied to the device itself, such as **the Entry device** **the exit device** or **the Entry device + the Exit device**, NOT the door.
+
+   <Image src='/img/how-to/2t.png' width='1000' alone />
+
+1. The **Timed Anti Passback** event code is supported in Event Log of Monitoring in BioStar 2.
+
+   <Image src='/img/how-to/3t.png' width='1000' alone />
+
+1. Under BioStar 2 v2.9.7 or lower version, unlike the Anti-passback inside of the **Zone** menu, **Timed Anti Passback** DOES NOT support the **Bypass Group** function.
+
+   :::info
+
+   Example) Bypass Group function of Anti-passback in ZONE.
+
+   <Image src='/img/how-to/4t.png' width='800' alone /> 
+
+   :::
+
+   However, from BioStar 2 v2.9.8 or higher version, **Timed Anti PassBack** function also supports the **Bypass Group** function.
+
+   <Image src='/img/how-to/5t.png' width='1000' alone />
+
+1. The input unit is in minutes (min.), with a default setting of 10 minutes. Users can input a time between 0 and 60 minutes.
+
+## Precautions
+
+1. You cannot use this new function at the same time as the existing **Anti-passback** function. So, you must be careful about the 2 exceptional cases below when using the **Timed Antipass Back** function.
+
+   * **Case 1. A case where you already use "anti-passback" in ZONE**
+
+      If you try to set the **Timed Anti Passback** after configuring the Anti-passback zone, you will see the error popup below. On the contrary, when you try configuring the Anti-passback zone after already setting the **Timed Anti Passback**, you will also see the error popup below.
+   
+      <Image src='/img/how-to/6t.png' width='1000' alone />
+
+   * **Case 2. In case you want to set "anti-passback" in DOOR**
+
+      If Soft APB or Hard APB in Anti PassBack, the option **Timed APB** will be automatically deactivated. Timed Anti Passback CAN NOT BE USED WITH Anti PassBack Soft APB or Hard APB.
+
+      <Image src='/img/how-to/7t.png' width='1000' alone />
+
+1. Supports the Alarm Function.
+
+   * **If using BioStar 2 v2.9.7 or lower version:**
+
+      The alarm function Does Not support **Timed Anti Passback** yet but only supports **Anti PassBack** in the configured door.
+
+      <Image src='/img/how-to/8t.png' width='700' alone />
+
+   * **If using BioStar 2 v2.9.8 or higher version:**
+
+      The alarm function supports both **Timed Anti Passback** and **Anti PassBack** for the configured door.
+
+      <Image src='/img/how-to/9t.png' width='700' alone />
+
+1. If the door is set up with a wireless door lock, **Timed Anti Passback** CAN NOT be used.
+
+1. **Timed Anti PassBack** and **Use sensor when Entry Confirmed APB** enabled features cannot be used simultaneously.
+
+   <Image src='/img/how-to/10t.png' width='1000' alone />
+
+## Execution Procedure
+
+1. Click **DOOR** in BioStar 2.
+
+   <Image src='/img/how-to/11t.png' width='400' alone />
+
+1. Click **ADD DOOR**.
+
+   <Image src='/img/how-to/12t.png' width='300' alone />
+
+1. Set the configuration you want to use.
+
+   <Image src='/img/how-to/13t.png' width='1000' alone />
+
+   :::info
+
+   You can select the **Entry device only** or the **Entry device** + **Exit device** depending on your environment.
+
+   <Image src='/img/how-to/14t.png' width='1000' alone /> 
+
+   :::
+
+1. If using BioStar 2 v2.9.7 or lower version.
+
+   Enable **Timed APB** and set the applicable **Reset Time** in Timed Anti PassBack. After completing it, click **Apply**.
+
+   <Image src='/img/how-to/15t.png' width='1000' alone />
+
+   After completing it, if you want set **Bypass Group**, select some specific access groups in **Bypass Group**.
+
+   <Image src='/img/how-to/16t.png' width='900' alone />
+
+   And then, if you want to set the Alarm for **Timed Anti PassBack**, configure the alarm by clicking the **Add** button. If completing all settings, click **Apply**.
+
+   <Image src='/img/how-to/17t.png' width='1000' alone />
+
+1. After completing Step 4, you can go through the set door (if using BioStar 2 v2.9.7 or lower version) or the set device (if using BioStar 2 v2.9.8 or higher version) only after the set-**Reset Time** has passed.
+
+   For example, if you set the **Reset Time** to 1 minute, you can go through the set door 1 minute only after you have passed.
+
+   :::info
+
+   If you want to disable the set **Timed Anti PassBack**, please follow the below guide per the BioStar 2 version used.
+
+   1. If using BioStar 2 v2.9.7 or lower version:
+
+      Disable **Timed APB** and click **Apply**.
+
+      <Image src='/img/how-to/18t.png' width='1000' alone />
+
+   1. If using BioStar 2 v2.9.8 or higher version:
+   
+      Select **No device** and click **Apply**.
+
+      <Image src='/img/how-to/19t.png' width='1000' alone /> 
+
+   :::

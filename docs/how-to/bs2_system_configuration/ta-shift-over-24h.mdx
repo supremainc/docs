@@ -1,0 +1,65 @@
+# Sample T&A shift setting for working more than 24 hours
+
+Before BioStar 2.7.2, you can't calculate T&A for shift working 24 hours or more. This is because BioStar 2 is processed on the basis of 'Day start time' so before the 'Day start time' it is the previous day, after the 'Day start time' it is the next day.
+
+From BioStar 2.7.2, the option 'Allowed a day before/after time' is added so that you can calculate T&A for working 24 hours or more by allowing a day before/after time. It is likely to expand the day from 24 hours up to 36 hours for a shift.
+
+:::info
+
+You can set up to 6 hours for each 'A day before' & 'A day after' - in total 12 hours. 
+
+:::
+
+In this example, we will use the 'Allowed a day before / after time' option to explain how we can apply over 24 hours working shift.
+
+Here are three different shift.
+
+:::note
+
+**Employee Scheduling Example: Company D**
+
+* An employee is required to work overnight once in 4 days
+
+* Day 1: 09:00 - 18:00
+
+* Day 2: 09:00 - 09:00 (00:00-09:00 overtime)
+
+* Day 3: 13:00 - 22:00
+
+* Day 4: Day off
+
+* Day 5: 09:00 - 18:00
+
+* Day 6: 09:00 - 09:00
+
+* ...
+
+* ...
+
+:::
+
+## Shift 1 - For day 1, day 5, day 9 ...
+
+<Image src='/img/how-to/24ta_02.png' width='1000' alone />
+
+## Shift 2 - For day 2, day 6, day 10...
+
+<Image src='/img/how-to/24ta_03.png' width='1000' alone />
+
+## Shift 3 - For day 3, day 7, day 11...
+
+<Image src='/img/how-to/24ta_04.png' width='1000' alone />
+
+## Day 4, day 8, day 12... are off
+
+You must configure 'Day start time' after the previous day's 'Day start time' otherwise the shift overlaps. 
+
+## Schedule Template
+
+<Image src='/img/how-to/24ta_05.png' width='1000' alone />
+
+## Daily Report
+
+<Image src='/img/how-to/24ta_06.png' width='1000' alone />
+
+On the 2 April, you can see the total working hours is 26.

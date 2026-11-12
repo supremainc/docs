@@ -1,0 +1,67 @@
+# Supports Windows Authentication for MS SQL Database Server Connections
+
+From BioStar 2.7.14, Windows Authentication Mode for MS SQL database Connection is supported. To use the Windows Authentication mode in your BioStar 2 Server, you need to configure the login account setting of MSSQL Database Server according to the article below.
+
+:::info
+
+* If you used MS SQL Server Authentication mode in the former version and try to upgrade to BioStar 2.7.14 or later, you can select ONLY 'SQL Server Authentication' mode.
+
+* You can convert from 'SQL Server Authentication' mode to 'Windows Authentication' mode or in the opposite direction in BioStar 2.7.14 or later.
+
+:::
+
+Depends on Windows Account Policy of a server machine, there are two ways to configure MSSQL Windows Authentication.
+
+## 1. Basic Configuration for Non Active Directory PC environment
+
+* Run the MS SQL Server Management Studio.
+
+* Go to **Security** → **Logins** → **NT AUTHORITY\SYSTEMS** and double click.
+
+* Go to **Server Roles** and assign public and sysadmin roles.
+
+* Go to **User Mapping** page and choose master, AC DB, TA DB, and VE DB you created.
+
+<Image src='/img/how-to/2.7.14-sql_1.png' width='1000' alone />
+
+## 2. Basic Configuration for Active Directory PC environment
+
+* Login MS SQL Server Management Studio program with administrator account.
+
+* Right click at **Security** → **Logins** and choose **New Login...**.
+
+* Choose 'Windows authentication' mode and click **Search** button.
+
+   <Image src='/img/how-to/2.7.14-sql_2.png' width='1000' alone />
+
+* Click 'Locations' button and choose your Active Directory.
+
+   <Image src='/img/how-to/2.7.14-sql_3.png' width='900' alone />
+
+* Check your name and click **OK**.
+
+   <Image src='/img/how-to/2.7.14-sql_4.png' width='900' alone />
+
+* Go to **Server Roles** tab and assign **sysadmin** authority.
+
+   <Image src='/img/how-to/2.7.14-sql_5.png' width='800' alone />
+
+* Go to **User Mapping** tab and make default schema of master, AC DB, TA DB and VE DB to 'dbo'.
+
+* Click **OK**.
+
+   <Image src='/img/how-to/2.7.14-sql_6.png' width='800' alone />
+
+## 3. Installation Change
+
+* During the installation, you can find **mssql windows auth**. Check box if you choose **Custom Installation** → **MS-SQL**.
+
+* If Windows Authentication mode is activated, the ID and password input box will be deactivated.
+
+<Image src='/img/how-to/2.7.14-sql_7.png' width='500' alone />
+
+:::warning
+
+If there is any issue during checking the DB connection, you cannot move on to the next step. 
+
+:::

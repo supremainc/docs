@@ -1,0 +1,86 @@
+# How to Configure a T&A Schedule to Calculate or Ignore Break Time
+
+If you would like to keep track or ignore the break time of users during the day, refer to the configuration below.
+
+For a basic step by step guide on fixed and flexible shift configuration, refer to the fixed and flexible shift articles:
+
+[How to create T&A settings for organizations with fixed shift](ta-fixed-shift)
+
+[How to create T&A settings for organizations with flexible shift](ta-flexible-shift)
+
+## Configuring Break Time
+
+1. On your **Shift** page turn off First check-in & Last check-out.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_01.png' width='600' alone />
+
+1. Turn on **Break by Punch**.
+
+1. Configure **Max. allowed break time** as required.
+
+   :::info
+
+   If the user exceeds the max allowed break time, it will appear in the report as **Over Break Time**.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_02.png' width='900' alone />
+
+   :::
+
+1. Proceed with **add schedule template**, **add schedule** as required.
+
+1. Go to the device setting menu by pressing the gear icon.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_03.png' width='25' alone />
+
+1. Select your registered device and click **Setting**.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_04.png' width='800' alone />
+
+1. Select your **T&A mode** as desired.
+
+   :::info
+
+   Refer to [How to Configure a T&A Device](ta-device-settings) for T&A modes. 
+
+   :::
+
+1. Configure T&A types of **Check In**, **Check Out**, **Break Start**, **Break End**, **Meal Time Start**, **Meal Time End**.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_05.png' width='1000' alone />
+
+   The user should enter the T&A key in following procedure during the day **Check In** → **Break Start** → **Break End** → **Break Start** → **Break End** → **Check out**.
+
+1. Click **Apply**.
+
+:::info
+
+For devices without T&A keys, refer to [How to calculate exact worktime/breaktime for devices without T&A key?](ta-worktime-without-ta-key).
+
+:::
+
+## Configuring to Ignore Break Time
+
+This configuration will calculate the work time based on the first and last punch of the day.
+
+1. On your **Shift** page, turn on First check-in & Last check-out.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_06.png' width='600' alone />
+
+1. Turn off **Break by Punch**.
+
+1. Proceed with **add schedule template**, **add schedule** as required.
+
+1. Go to the device setting menu by pressing the gear icon.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_03.png' width='25' alone />
+
+1. Select your registered device and click **Setting**.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_04.png' width='800' alone />
+
+1. On T&A Mode select **Not Use** and click **Apply**.
+
+   <Image src='/img/how-to/2x_sc_ta_break_time_configuration_07.png' width='300' alone />
+
+   Users will not have to press a T&A button on authentication because the work time is calculated based on the first and last punch of the configured work day.
+   

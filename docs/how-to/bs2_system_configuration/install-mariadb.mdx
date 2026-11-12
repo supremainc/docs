@@ -1,0 +1,79 @@
+# How to Install BioStar 2 with Maria DB
+
+BioStar 2 is a web-based, open, and integrated security platform that provides comprehensive functionality for access control and time & attendance. There are two types of databases to use in BioStar 2 (Maria DB and MSSQL). The databases each have different methods for installing BioStar 2. Here, we will cover how to install BioStar2 with Maria DB step-by-step.
+
+Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at [BioStar 2 Package](https://www.supremainc.com/en/support/biostar-2-package.asp) to check the system requirements for your computer.
+
+<Image src='/img/how-to/mariadb_installation_1.png' width='1000' alone />
+
+## BioStar 2 Installation
+
+1. Download the latest BioStar 2 Setup file at BioStar 2 Package. You can choose the (x64) or (x86) setup based on your computer's system requirements.
+
+1. After downloading the BioStar 2 setup file, right-click and click **Extract All...**.
+
+1. Right-click the BioStar 2 Setup and run as administrator.
+
+1. Select Setup Language.
+
+1. After carefully reading the license agreement, select **I accept the agreement** and click **Next** to proceed.
+
+   <Image src='/img/how-to/mariadb_installation_2.png' width='500' alone />
+
+1. The first account that will be used to login to BioStar 2 will be the admin. Customize the admin password based on the password requirements displayed at the Setup. Please note that it is difficult to recover the admin password, so make sure to not forget the admin password once you have set it. Click **Next** to proceed.
+
+   <Image src='/img/how-to/mariadb_installation_3.png' width='500' alone />
+
+1. Choose **Express installation** as the Database installation type.
+
+   <Image src='/img/how-to/mariadb_installation_4.png' width='500' alone />
+
+1. Set the password for the Maria DB root account. The procedure is very similar to the setup for the admin password.
+
+1. Select destination location for the installation.
+
+1. Select the folder for the Encrypt Key Storage Directory. The encrypt key is critical for operating BioStar 2, and please do not alter the location of the file or the file once you have set the location. Click **Next** to proceed.
+
+   <Image src='/img/how-to/mariadb_installation_5.png' width='500' alone />
+
+1. Read the Responsibility for protecting personal information.
+
+   <Image src='/img/how-to/mariadb_installation_6.png' width='500' alone />
+
+1. Here, you can customize the port setting. Change the default port setting if that port is being used.
+
+   <Image src='/img/how-to/mariadb_installation_7.png' width='500' alone />
+
+1. Select the components to be installed at BioStar 2. Choose the USB Device Agent if the installation of the USB Fingerprint Reader (BioMini Plus 2) or the USB Card Reader (DE620) is required. If you install the USB Device Agent, you will need to restart your computer to complete the installation process.
+
+   <Image src='/img/how-to/mariadb_installation_8.png' width='500' alone />
+
+   1. If BioMini Plus 2 is currently connected to your PC, please remove it from the USB port before installation.
+
+   1. Install the certificate for the Thumbprint.
+
+   1. Install the Suprema Fingerprint Scanner Driver and the InstallDriver for the USB Card Reader(DE620).
+
+1. After the installation process has been completed, open BioStar 2 Settings to confirm the system status. Check the Service Status and the HTTPS Port.
+
+   <Image src='/img/how-to/mariadb_installation_9.png' width='600' alone />
+
+## How to Install Certificate for BioStar 2
+
+If you try to open BioStar 2 right after installation, you will get the following privacy error message. Currently, there is no certificate installed at BioStar 2. So, the web protocol is displaying **Not secure**. Please refer to [How to configure HTTP or HTTPS protocol](http-https-protocol) for steps to install the certificate for BioStar 2. Then, it will be displayed as **Connection is secure**.
+
+<Image src='/img/how-to/mariadb_installation_10.png' width='400' alone />
+
+<Image src='/img/how-to/mariadb_installation_11.png' width='400' alone />
+
+:::info
+
+For the best experience at BioStar 2, use Google Chrome as the browser to access BioStar 2.
+
+:::
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/how_to_install_biostar_2_with_maria_db.mp4" type="video/mp4" />
+</video>

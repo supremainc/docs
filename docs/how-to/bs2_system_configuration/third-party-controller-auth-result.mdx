@@ -1,0 +1,71 @@
+# How to control authentication result with a third party controller
+
+When you use a Suprema device to send Wiegand signals to a controller, you will always have one LED / Sound type that shows on reading the card regardless of authentication success or failure on the controller side.
+
+In BioStar version 2.4 and above, you can control the device LED / Sound with the controller using the device input.
+
+## Configuring the Device
+
+You must update the firmware of the devices to the versions compatible with BioStar 2.4.
+
+:::info
+
+Refer to the **BioStar 2 Overview** → **Versions** menu in the administrator guide for compatible firmware versions.
+
+You can access it by pressing the **Help** button. 
+
+:::
+
+The devices (with LCD) that can use the Pop-up / Sound control features are as follows:
+
+* Access Granted & Access Denied
+
+* BioStation L2, BioStation 2, BioStation A2, BioLite N2, FaceStation 2, FaceLite, FaceStation F2
+
+The devices (without LCD) that can use the LED / Sound control features are as follows:
+
+* Access Granted, Access Denied, Red LED, Green LED, Device Sound
+
+* Generation 1 devices: XPass S2, XPass, BioEntry Plus, BioEntry W
+
+* Generation 2 devices: BioEntry W2, XPass 2
+
+<br/>
+
+1. Log in to BioStar 2.
+
+1. Go to **DEVICE** menu.
+
+1. Click on the desired device.
+
+1. Go to **Advanced** → **Trigger & Action**.
+
+1. Click **+ Add**.
+
+1. On **Trigger** select **Input**.
+
+1. Choose which input **Port** will be used for this function.
+
+1. Configure the **Switch**, **Duration** of the input signal, and used **Schedule** as necessary.
+
+1. On **Action** select **Function**.
+
+1. On the **Configuration** option choose your desired action.
+
+   **Configuration options of devices with LCD**
+   
+   <Image src='/img/how-to/2x_sc_led_control_1.png' width='1000' alone />
+
+   **Configuration options of devices without LCD**
+
+   <Image src='/img/how-to/2x_sc_led_control_2.png' width='1000' alone />
+
+## Sample Configuration
+
+* Configuration: BioStation 2 input 0 configured to Access Granted and BioStation 2 input 1 configured to Access Denied.
+
+* Result: On making a signal to input 0, the device will show an Access Granted icon and make an Access Granted sound.
+
+* On making a signal to input 1, the device will show an Access Denied icon and make an Access Denied sound.
+
+<Image src='/img/how-to/2x_sc_led_control_3.png' width='1000' alone />

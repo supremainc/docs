@@ -1,0 +1,71 @@
+# How to add devices
+
+BioStar 2 supports two connection modes shown in the image below. Check the fundamental course contents for more information.
+
+<Image src='/img/how-to/direction.png' width='1000' alone />
+
+## Add devices to the BioStar 2 server
+
+1. Go to **Device** and click **Search Device**.
+
+   <Image src='/img/how-to/12.png' width='1000' alone />
+
+1. Select the devices you want to add to your server.
+
+   BioStar 2 has two communication modes, **Device** → **Server** and **Server** → **Device**.
+
+   There's no functional difference between the two. However, **Device** → **Server** direction can prevent the device connection from being changed or disconnected from the designated server.
+
+   <Image src='/img/how-to/14.png' width='1000' alone />
+
+   If you want to change the device IP address or their communication modes to **Device** → **Server**, click **Set IP** instead of **Add** button.
+
+   <Image src='/img/how-to/15.png' width='1000' alone />
+
+1. Set the server IP address and click **Apply**. Then, the device will automatically try to make a connection.
+
+   <Image src='/img/how-to/16.png' width='700' alone />
+
+1. With the **Device** → **Server** direction, the device will be shown on the **Waiting Device** list. Refresh the browser to check the connection. Once you find the device, you can confirm and add it to the server by right-clicking on the device tree and clicking **Add Waiting Device** button.
+
+   <Image src='/img/how-to/17.png' width='700' alone />
+
+   <Image src='/img/how-to/18.png' width='1000' alone />
+
+## Add slave devices connected via RS-485 interface
+
+1. Check the physical device connection and change the device to be the master device in the device setting.
+
+   <Image src='/img/how-to/19.png' width='600' alone />
+
+   :::info
+
+   * Master: Making logical decisions and controlling local zone.
+
+   * Slave: Become a dummy reader to send credential input to the master device.
+
+   * logical decisions: The master device matches user biometric information and user information received from the slave device, opens the door according to the result, and delivers the result to the slave device. It also controls the Local Zone.
+
+   :::
+
+1. Change the device to be **Slave Mode** to be searchable by the master device. Connect to the master device via RS-485 cable, and check the physical wiring connection, and go to BioStar 2 and **DEVICE** tap and right-click on the device tree and then click **Search Slave Device**.
+
+   <Image src='/img/how-to/20.png' width='1000' alone />
+
+   <Image src='/img/how-to/22.png' width='1000' alone />
+
+1. Check the search result and click **Add** button.
+
+   Up to 31 slave devices can be connected through a daisy chain, and up to 8 fingerprint devices can be connected among the total.
+
+   But, if there's a need of making many fingerprint matching with multiple devices at the same time, it's recommended to use the limited number of slave fingerprint devices for the optimal matching performance.
+
+   <Image src='/img/how-to/23.png' width='600' alone />
+
+   <Image src='/img/how-to/25.png' width='1000' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/devices.mp4" type="video/mp4" />
+</video>

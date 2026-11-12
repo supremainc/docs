@@ -1,0 +1,41 @@
+# Supports Visual Face Migration
+
+* Affected Version: BioStar 2.9.0 or above
+
+In order to improve the usability of customers, the criteria of the algorithm for extracting Visual Face templates from photos have been updated while improving the Visual Face performance. Accordingly, even with Visual Face credentials that had no problems with registration and used in BioStar 2 v2.8.6 - v2.8.17 and FaceStation F2 v1.x.x, the latest BioStar 2, v2.9.0 and above, and FaceStation F2 v2.x.x, BioStation 3 may not be available.
+
+In Suprema, Visual Face Migration in BioStar 2.9.0 notifies which user's photo needs to be replaced so that customers who have been using Visual Face since FaceStation F2 v1.x.x do not experience inconvenience even after upgrading or adding new devices.
+
+To understand Visual Face extraction improvements, please refer to the article below: [Improved Image Extraction for Visual Face Credentials](visual-face-image-extraction)
+
+:::info
+
+* The user must manually run this function.
+
+* Upgrading BioStar 2 to v2.9.0 or higher version does NOT automatically check the compatibility of Visual Face.
+
+:::
+
+## How to Use Visual Face Migration
+
+1. Go to **BioStar 2** → **User**.
+
+1. Click a on the right top and then select the **Visual Face Migration**.
+
+   <Image src='/img/how-to/2.9.0_l2-1.png' width='1000' alone />
+
+1. Click **Continue** after reading the warning pop-up message, Visual Face Migration process goes on.
+
+   :::info
+   
+   Please notice that the migration process will take some time, and depending on the number of your Visual Face credentials, the consumed time will vary.
+
+   :::
+
+   <Image src='/img/how-to/2.9.0_l2-2.png' width='400' alone />
+
+1. When the Visual Face Migration is complete, a result pop-up appears. You can check the total number of Visual Faces enrolled in BioStar 2, the number of migration succeeded visual faces, and the migration failed visual faces.
+
+   <Image src='/img/how-to/2.9.0_l2-3.png' width='600' alone />
+
+1. If a migration error case occurs, the list of users who have failed migration will be provided as a CSV file. You can delete the Visual Faces that have failed migration at once by clicking **Delete**.

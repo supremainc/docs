@@ -1,0 +1,37 @@
+# How to delete logs periodically (System Log Level configuration)
+
+:::info
+
+This only applies to AC system logs.
+
+:::
+
+Log data has important clues to the Technical Support team when you have an issue. As the contents of this log data become more detailed, issues can be solved more easily and quickly.
+
+With BioStar 2.6.0, you can adjust the level for this log so that more detailed error messages will appear in the log due to level changes when major issues are encountered. Also, BioStar 2.6.0 can erase the log periodically in case the drive is too full to save space.
+
+<Image src='/img/how-to/how_to_automatically_delete_logs_periodically.jpg' width='1000' alone />
+
+* **System log duration**: The storage period is from 0 to 120, and the default is 60 days.
+
+The log categories can be divided into six categories: System, Debug, Network, Web, SQL, and Web Socket.
+
+The log level can be set from 0 to 5, and if set to 5, no system log is left.
+
+log level:
+
+0 = Trace (log is too much left)
+
+1 = Debug
+
+2 = Info
+
+3 = Warning
+
+4 = Error
+
+5 = No message (do not leave log)
+
+For prior to BioStar 2.6.0, in the log.conf file, log categories are divided into six categories (SYS, DBG, NET, WEB, SQL, WSS).
+
+If you modify the log level directly in the log.conf file, it will be applied when you turn the server off and on, and you can see the settings in the UI.

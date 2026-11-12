@@ -1,0 +1,57 @@
+# Enhanced Security Settings
+
+Starting from BioStar 2 Version 2.7.11, SUPREMA has improved security related features.
+
+**Improved features are as followed**
+
+1. Added logic to check file extensions to limit malicious file uploads.
+
+1. Improved to select whether to allow simultaneous access using the same account.
+
+1. Limited to connect only when the IP information of the account and the IP information of the accessing PC match when logging in by adding an IP address item to the user information.
+
+## Added logic to check file extensions to limit malicious file uploads
+
+Users must check the file extensions and its types before uploading files to edit or modify data in BioStar 2 server and for device display configuration.
+
+Check the table below for file extension types allowed in BioStar 2.
+
+<Image src='/img/how-to/v11_7.png' width='700' alone />
+
+## Users can select whether to allow simultaneous access using the same account
+
+Beginning from BioStar 2 Version 2.7.11, the user can activate or inactivate the simultaneous connection with one BioStar 2 log-in account. The default configuration is **Active**, user can open multiple BioStar 2 sessions with one account.
+
+However, if a user **Inactive** this feature, the user will no longer be able to open multiple BioStar 2 sessions in one or multiple PC through one user account.
+
+<Image src='/img/how-to/v11_8.png' width='900' alone />
+
+When this feature is set inactive, user will be automatically signed out from the originally logged in BioStar 2 session when user tries to log-in to new BioStar 2 session.
+
+Furthermore, when clicking a random spot in the original (old) login session of BioStar 2, a pop-up message 'Login Required' warning will appear and automatically log out the user from the original (old) session.
+
+<Image src='/img/how-to/new_old_login_session_info.jpg' width='400' alone />
+
+## Limited Access: Access is granted only when the IP information of the account and the IP information of the accessing PC match when logging in by adding an IP address item to the user information
+
+Starting from BioStar 2 Version 2.7.11, an improvement on configure limitation user PC IP has been made.
+
+* **User** → (Selected User Page) → information section, **User IP** set up is supported.
+
+* Unlike Name and Period, User IP is not a mandatory field. User can enroll a new user without **USER IP** information.
+
+* When USER IP is set for the user, that user can only access BioStar 2 using specifically registered **USER IP**.
+
+<Image src='/img/how-to/v11_10.png' width='1000' alone />
+
+:::caution
+
+* User IP format should be 'XXX.XXX.XXX.XXX' and number should be 0\~255.
+
+   <Image src='/img/how-to/v11_11.png' width='600' alone />
+
+* Only one User IP address can be registered/set for one user.
+
+   <Image src='/img/how-to/v11_12.png' width='700' alone />
+
+:::

@@ -1,0 +1,109 @@
+# How to Configure a T&A Device
+
+You must configure T&A devices and the devices' T&A mode in order for the devices' logs to be reflected on the T&A report.
+
+## Configuring a T&A Device
+
+1. Go to the **Time Attendance** menu.
+
+1. Click on the setting (gear) icon.
+
+   <Image src='/img/how-to/2x_sc_configure_t&a_device001.jpg' width='300' alone />
+
+1. Check the devices you want to use as a T&A device.
+
+1. Click **+ Register**.
+
+   <Image src='/img/how-to/2x_sc_configure_t&a_device002.png' width='1000' alone />
+
+Now the devices will appear on the **Registered Devices** list.
+
+## Configuring the T&A Mode
+
+Device with a touchscreen/keypad and devices without them have different options for T&A Modes.
+
+:::note
+
+* **Available T&A Modes by device type**
+
+   * With touchscreen/keypad: Not Use, By User, By Schedule, Last Choice, Fixed
+
+   * Without touchscreen/keypad: Not Use, By Schedule, Fixed
+
+* **IMPORTANT: Device Type Notice**
+
+   The configuration shown below applies to devices **WITH touchscreen/keypad** (e.g., BioStation 3, BioStation 2a, X-Station 2, FaceStation F2, BioLite N2, FaceStation 2).
+
+   For devices **WITHOUT touchscreen/keypad** (e.g., XPass 2, BioEntry W2, BioEntry W3):
+
+   * Do NOT assign multiple codes in the same device configuration
+
+   * Each T&A function (Check In, Check Out, Break Start, etc.) must be assigned to a SEPARATE physical device using Fixed mode
+
+   * See: [How to calculate exact worktime/breaktime for devices without T&A key?](ta-worktime-without-ta-key)
+
+:::
+
+Below is a configuration example where the user selects a T&A event after authentication.
+
+1. Select **By User** for **T&A Mode**.
+
+1. Change **T&A Required** to **Yes**.
+
+1. For **Code 1**, set **Label** to Checking In.
+
+1. For **Code 1**, set the **T&A type** to Check In.
+
+1. For **Code 2**, set the **Label** to Checking Out.
+
+1. For **Code 2**, set the **T&A type** to Check Out.
+
+1. Click **Apply**.
+
+   <Image src='/img/how-to/2x_sc_configure_t&a_device003.png' width='1000' alone />
+
+When a user authentication succeeds, the device screen will display the options (Check In or Check Out) and the user selects one to record the T&A event.
+
+:::note
+
+**T&A Punch Log Types**
+
+There are 6 different T&A Punch Log types: Check In, Check Out, Break Start, Break End, Meal Time Start, Meal Time End.
+
+BioStar 2 supports up to 16 T&A codes per device. For devices with touchscreen/keypad, you can assign multiple codes to different T&A types, and users will select the appropriate type at the device. 
+
+:::
+
+## T&A Mode Options
+
+The meanings of the available T&A Modes are as follows:
+
+* **By User**: User will have to select their T&A event type. If **T&A Required** is checked on, authentication will not complete until the user select's hir or her T&A event type.
+
+* **By Schedule**: The T&A type will change automatically based on the schedule that is configured. You can create a new schedule in **Setting** → **Schedule** → **Add Schedule**.
+
+   <Image src='/img/how-to/2x_sc_configure_t_a_device005.png' width='1000' alone />
+
+   <Image src='/img/how-to/2x_sc_configure_t&a_device004.png' width='1000' alone />
+
+* **Last Choice**: The T&A type will remain with the last choice made by the user. For instance, if a user entered using the Check In T&A type, the device T&A type will remain as Check In until someone else changes it.
+
+* **Fixed**: The T&A type will always be one fixed T&A type. The user will not have to press a T&A key.
+
+* **Not Use**: The T&A type is not recorded. This may be an option if you are not calculating break times and are only using First Check-in & Last Check-out option in your shift.
+
+## Frequently Asked Questions
+
+<details className='faqs'>
+<summary>**Does Code 1 have to be "Check In" and Code 2 "Check Out"?**</summary>
+
+For devices with function keys, the code number does not matter. The system uses the Label (Caption) field to determine the T&A type. However, using Code 1 for **Check In** and Code 2 for **Check Out** is recommended for consistency.
+
+</details>
+
+<details className='faqs'>
+<summary>**What does the system refer to - the Caption or the Code number?**</summary>
+
+The system primarily refers to the Caption (Label) field, not the code number. The code number is an identifier, but the Caption determines the T&A function in the log.
+
+</details>

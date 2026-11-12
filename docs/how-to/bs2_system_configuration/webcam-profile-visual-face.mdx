@@ -1,0 +1,119 @@
+# How to Use the New Feature "Enroll Profile Photo & Visual Face Using a Webcam"
+
+* **Affected Version**: BioStar v2.9.5 or above
+
+From v.2.9.5 of BioStar 2, the function **Enroll Profile Photo & Visual Face Using a Webcam** has been introduced.
+
+With this new function, the user can add a photo taken by a webcam connected to a PC to be used as a user's profile or a visual face credential.
+
+:::info
+
+Visual Face Credentials created with photos taken with a PC webcam are only compatible with FaceStation F2 and BioStation 3 devices. 
+
+:::
+
+## Expectation effectiveness
+
+This new function is expected to be helpful in sites where enrolling the visual face credential through the devices is difficult.
+
+## Major Features
+
+1. To use this new feature, you need to have a PC installed with a webcam first. Then, when you receive the request for permission to access the browser's camera, you need to grant it.
+
+   :::info
+
+   * Depending on the browser, the process for granting permission to use the camera may vary.
+
+   * BioStar 2 recommends using Google Chrome version 75 or higher.
+
+   * This feature can only be used to **HTTPS**, and it does not support HTTP. Please make sure BioStar 2 Setting is enabled with HTTPS.
+
+   :::
+
+1. You can also upload a photo from your PC to enroll by clicking Upload photo. However, you need to be cautious about the below items.
+
+   :::info
+
+   * The supported image file size is up to 10MB.
+
+   * Supported image file formats are JPG, JPEG, and PNG.
+
+   * After clicking Take Photo, it may take a few seconds for the photo to be taken.
+
+   :::
+
+## Precautions
+
+You need to be cautious about the below items when enrolling a visual face by using a webcam.
+
+* Maintain a reasonable distance from the webcam.
+
+* Enroll your face straight ahead without moving.
+
+* Do not change the user's facial expression.
+
+* Do not enroll a face while the user is wearing masks, hats, or eye patches.
+
+* Do not enroll a face with the user raising their head or bowing.
+
+* Do not wear thick makeup.
+
+* Users should not enroll their faces with their eyes closed.
+
+* Make sure that both of the user's shoulders correctly appear on the screen.
+
+* Be careful not to display two faces on the screen. Enroll one person at a time.
+
+## How to enroll the visual face and user profile using a webcam
+
+1. Connect a webcam to your PC first and log in to BioStar 2.
+
+1. Click USER and then click ADD USER. Then, select a user for whom you want to enroll the profile photo using a webcam.
+
+   <Image src='/img/how-to/1w.png' width='300' alone />
+
+1. Click **Add Photo**. Then, click **Allow** if you see the popup requesting permission to access the browser's camera.
+
+   <Image src='/img/how-to/3w.png' width='1000' alone />
+
+   :::info
+
+   If the webcam has been activated usually, you can see the red icon of the screenshot below in the BioStar 2 tab of the browser after clicking **+ Add Photo**.
+
+   <Image src='/img/how-to/2w.png' width='400' alone /> 
+
+   :::
+
+1. You can see the screen displayed through the webcam activated in the **Image Registration** pop-up. Then, bring your face to the webcam and click **Take photo**.
+
+   <Image src='/img/how-to/4w.png' width='700' alone />
+
+   :::info
+
+   * After clicking **Take photo**, it may take a few seconds for the photo to be taken.
+
+   * You need to use the option **Upload photo** to use the photo stored already on your PC instead of taking a photo.
+
+   :::
+
+   Note that following steps are for enrolling the visual face credential with the taken photo.
+
+1. <Badge only>Optional</Badge> Check the option **Use as Visual Face Credential** about the photo pictured by the webcam and click **OK**.
+
+   <Image src='/img/how-to/5w.png' width='700' alone />
+
+   :::info
+
+   * **Use as profile image**: If you check this option and click OK, the photo pictured by the webcam or the photo uploaded from your PC will be enrolled in the user profile image.
+
+   * **Use as Visual Face Credential**: If you check this option and click OK, the photo pictured by the webcam or the photo uploaded from your PC will be enrolled as the user's visual face credential. If then, you can authenticate on devices that support a visual face.
+
+   :::
+
+1. <Badge only>Optional</Badge> Then, the photo will be enrolled as both the user's profile image and visual face credential automatically. To complete the enrollment, click **Apply**.
+
+   <Image src='/img/how-to/6w.png' width='1000' alone />
+
+## Demo
+
+<YouTube className='fit--content' videoId="loIYBHMJ4m8" />

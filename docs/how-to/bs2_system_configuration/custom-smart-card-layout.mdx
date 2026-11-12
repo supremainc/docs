@@ -1,0 +1,103 @@
+# How to Setup Custom Smart Card Layout
+
+* **Affected Version**: BioStar 2.9.4 or above
+
+* **Affected Products & Versions**:
+
+   * XPass D2 Firmware Version v1.7.1 (Released in April 2023) and above
+
+   * Device Manager App v1.1.8 (Android, Released in January 2023) and above
+
+Are you using BioStar 2 software and Suprema devices through integration with 3rd party and needed ways to read smart cards issued by the 3rd party? BioStar 2 version 2.9.4 now supports a Custom Smart Card Layout feature, allowing 3rd party issued smart card to be read.
+
+:::caution
+
+Please be aware that the **Custom Smart Card Layout** feature only supports reading custom smart cards; issuing (printing) custom smart cards is currently not one of its features. Furthermore, for RS-485 master device without a custom smart card layout feature, the custom smart card reading feature will also not work on the connected slave device. 
+
+:::
+
+In BioStar 2 Version 2.9.4, Smart Cards are categorized into two main types.
+
+1. Suprema Smart Cards and 2. Custom Smart Cards.
+
+1. **Suprema Smart Cards**
+
+   Suprema Smart Cards are specifically issued using Suprema Device or through BioStar 2 software containing each user's biometric information.
+
+1. **Custom Smart Cards**
+
+   Custom Smart Cards, on the other hand, are cards issued by third-party products or systems without biometric data.
+
+   It's important to note that while BioStar 2 supports custom smart card reading, it does not support the issuance of custom smart cards, as stated above in the pre-text. 
+
+   :::info
+
+   The Custom Smart Card Layout feature supports two card formats: MIFARE and DESFire.
+
+   :::
+
+Notable feature of Custom Smart Card Layout.
+
+* Supports RAW type of card data.
+
+* Supports smart card byte order.
+
+* Capability to skip bytes during data reading through byte-skipping settings.
+
+The smart card byte order has been supported since BioStar 2 version 2.8.16; this feature ensures smart card data is read and processed correctly, regardless of the byte order used in the card's data structure. This compatibility feature eliminates potential issues related to byte order mismatches, making it easier to work correctly.
+
+The capability to skip bytes during data reading through byte-skipping settings. This feature is especially useful when specific card data is stored within a larger data block. By defining the number of bytes to skip, retrieving the necessary information from the card, enhances data retrieval efficiency.
+
+<Image src='/img/how-to/how_to_setup_custom_smart_card_layout_1.png' width='700' alone />
+
+[\[Tutorial Video\] How to Configure Custom Smart Card Layout](https://suprema5-my.sharepoint.com/personal/phit_ahn_suprema_co_kr/_layouts/15/stream.aspx?id=%2Fpersonal%2Fphit%5Fahn%5Fsuprema%5Fco%5Fkr%2FDocuments%2FArticles%2F%5BTutorial%20Video%5D%20How%20to%20Configure%20Custom%20Smart%20Card%20Layout%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview)
+
+The custom smart card layout set in the video can be applied to numerous devices connected to BioStar 2 version 2.9.4 with the **Device Batch Edit** feature.
+
+Log in to BioStar 2 version 2.9.4 and higher → Devices → Select multiple devices with the **Custom Smart Card** layout feature, enable **Custom Smart Card**, and select the particular layout you have previously created.
+
+<Image src='/img/how-to/how_to_setup_custom_smart_card_layout_2.png' width='1000' alone />
+
+## \[Custom Smart Card\] features setup in "BioStar 2 Software" → "Devices"
+
+1. Login to BioStar 2.
+
+1. Go to Devices.
+
+1. Select the device supporting the **Custom Smart Card** feature.
+
+1. **Authentication** → **Card Type**
+
+1. Enable Custom Smart Card.
+
+:::info
+
+The custom smart card feature is set as 'disabled' by default.
+
+:::
+
+<Image src='/img/how-to/how_to_setup_custom_smart_card_layout_3.png' width='1000' alone />
+
+## How to enroll custom smart cards to users in BioStar 2 Version 2.9.4 and above
+
+1. Login to BioStar 2.
+
+1. Go to User.
+
+1. Click on one of the users to add a custom card credential or clock on **ADD USER** to create a new user with a custom card credential.
+
+1. **Credential** → **Card** → **Card Type** → **Smart Card**
+
+1. Select the device support Custom Smart Card feature.
+
+   <Image src='/img/how-to/how_to_setup_custom_smart_card_layout_4.png' width='1000' alone />
+
+1. Registration Option for the custom smart card works the same as enrolling CSN card in BioStar 2 software.
+
+   :::info
+   
+   **Credential** → **Card** → **Card Type** → **Read Card**: The read card feature in BioStar 2 can be applied to custom smart cards as well.
+
+   :::
+
+   [How to Use Custom Smart Card Layout](https://support.supremainc.com/en/support/solutions/articles/24000087590)

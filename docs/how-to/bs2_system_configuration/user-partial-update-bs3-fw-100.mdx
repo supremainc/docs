@@ -1,0 +1,73 @@
+# Supports user information partial update_BioStation 3 Firmware version 1.0.0 and above
+
+* **Affected Version**: BioStar 2.9.0 or above
+
+* **Affected Products & Versions**: BioStaion 3 Firmware version1.0.0 or above
+
+This new feature allows the user configuration process to be divided into parts. When user information gets changed, only the modified details will be sent to the device instead of updating all the user's information.
+
+## Previous Versions of BioStar 2 User information Update process
+
+<Image src='/img/how-to/supports_user_information_partial_update_biostation_3_firmware_version_1.0.0_and_above_1.png' width='1000' alone />
+
+When only one factor of user information got updated or edited, even the not changed (initially saved) elements had to go through synchronization, causing unnecessary network traffic.
+
+## BioStar 2 version 2.9.0 user information partial update process
+
+:::info
+
+ONLY below user information is effective. Exception: **Batch Edit** all synchronized even for non-edited factors.
+
+:::
+
+* Name
+
+* Photo
+
+* Status
+
+* Period
+
+* Credential
+
+* Authentication Mode
+
+* Status
+
+* Access Group
+
+<Image src='/img/how-to/supports_user_information_partial_update_biostation_3_firmware_version_1.0.0_and_above_2.png' width='1000' alone />
+
+<br/>
+
+1. **BioStar 2** Version 2.9.0 → **User**.
+
+   User's information include: User Name, User Profile Picture, Pin, Visual Face, and Card for credential
+
+   <Image src='/img/how-to/supports_user_information_partial_update_biostation_3_firmware_version_1.0.0_and_above_3.png' width='500' alone />
+
+1. Add new user information, in this case, fingerprint will be added as a new credential.
+
+   <Image src='/img/how-to/supports_user_information_partial_update_biostation_3_firmware_version_1.0.0_and_above_4.jpg' width='500' alone />
+
+1. BioStar 2 version 2.9.0 will now ONLY be synchronized by the newly added fingerprint credential.
+
+   <Image src='/img/how-to/supports_user_information_partial_update_biostation_3_firmware_version_1.0.0_and_above_5.png' width='400' alone />
+
+   This new feature can reduce unnecessary network traffic since BioStar 2 will now only synchronize the modified user information.
+   
+   Furthermore, the biometric template will only be overwritten if the user intends to sync with the device, increasing the user experience for biometric authentication.
+
+## Newly added logs for user information partial update
+
+* User partial update failed.
+
+* User partial update failed (User does not exist)
+
+* User partial update failed (Exceeded max credential count)
+
+* User partial update failed (Different fingerprint template format)
+
+* User partial update failed (Visual face extraction failed)
+
+The above logs could be found & Searched in **BioStar 2** → **Monitoring** on both Event log and Real-time log.

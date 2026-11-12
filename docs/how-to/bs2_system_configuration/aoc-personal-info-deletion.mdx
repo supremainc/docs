@@ -1,0 +1,17 @@
+# How to delete personal information when issuing Access on card
+
+AoC (Access on Card) allows users to store biometric information and access information in the card.
+
+However, one critical point of AoC Smart card is that you can leave personal information on the server.
+
+In order to solve this problem, from BioStar 2 Version 2.6.0, there is a new added option, which automatically deletes personal information from the server when issuing AoC to eliminate this inconvenience.
+
+**Setting** → **Server** → **Activate Delete personal & credential data when issuing an AoC**
+
+When you activate (turn on) the option above, all personal information will be deleted automatically when issuing Access on Card.
+
+<Image src='/img/how-to/how_to_delete_personal_information_when_issuing_access_on_card_01.png' width='1000' alone />
+
+Now, unlike in previous versions of BioStar 2, users no longer need to delete personal information on the DB for major projects manually.
+
+Following personal information gets deleted: PIN, fingerprint, face, email, phone, birthday, gender (birthday and gender are data only in DB).

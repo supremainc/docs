@@ -1,0 +1,45 @@
+# How to Configure XPass D2
+
+XPass D2 is a new device introduced with BioStar 2.6.
+
+It is a dummy reader for reading cards, which means it doesn't perform data matching on itself.
+
+The device can be used as a slave device, or a Wiegand reader to send Wiegand output.
+
+The device sends out a Wiegand signal with the default 26bit format and the Wiegand configuration will be done with a separate tool Device manager.
+
+Please refer to the article: [How to use Suprema Device Manager App](device-manager-app)
+
+## Adding as a Slave Device
+
+You will need a master device to add the slave D2 device.
+
+Refer to the article below to learn how to search for a slave device.
+
+[RS485 Mode (Master, Default, Slave)](rs485-mode)
+
+<Image src='/img/how-to/2x_sc_xpass_d2_01.png' width='300' alone />
+
+## Using the device as a Wiegand Reader
+
+If you already have used the device as a slave device before, you must reset the device to use it as a Wiegand reader (sending Wiegand output).
+
+1. Delete the device (slave device) from BioStar 2 client.
+
+   <Image src='/img/how-to/2x_sc_xpass_d2_02.png' width='300' alone />
+
+1. Detach the metal bracket from the device.
+
+1. Press the reset button.
+
+   <Image src='/img/how-to/2x_sc_xpass_d2_03.png' width='500' alone />
+
+1. Use the device as a Wiegand reader by adding it as a **Wiegand Device** on a master device.
+
+   <Image src='/img/how-to/2x_sc_xpass_d2_04.png' width='300' alone />
+
+:::info
+
+You cannot use the device as a slave device and use Wiegand output at the same time.
+
+:::

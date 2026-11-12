@@ -1,0 +1,99 @@
+# How to import & export User & Log between BioStar 2 and Suprema reader using USB memory
+
+In general, a project site where it is hard to connect the network or the reader is operated standalone, the information on Users and Logs can be imported or exported using USB memory for the purpose of T&A. For example, you can enroll new user through BioStar 2 server in the head office. Then, after exporting the user data to USB memory, the user information stored in USB memory can be imported to the reader which is located in real-site away from the main office. Like this scenario, the logs are also exported from the device operated standalone and then imported to BioStar 2 server in order to apply to T&A report for the employee.
+
+From BioStar v2.6.2, below features are introduced.
+
+* Export User from BioStar 2 to USB memory
+
+* Import User from USB memory to BioStar 2
+
+* Import Log from USB memory to BioStar 2
+
+:::info
+
+If you want to import either user or log from the device to BioStar 2 server using USB, you should export the information on user or log respectively from the device, not using **All** option. 
+
+:::
+
+## Export User from BioStar 2 to USB memory
+
+1. Go to User tab in BioStar 2.
+
+1. Select the users who you want to export.
+
+1. Click <IcMoreW/> button located on the right side.
+
+1. If you click **Data File Export**, you can save the files about users in either USB memory or allocated path of PC.
+
+   <Image src='/img/how-to/usb_2.png' width='1000' alone />
+
+1. Then, you can see the files about user.
+
+   <Image src='/img/how-to/usb_3.png' width='600' alone />
+
+1. At this point, below information will be transferred from BioStar 2 server.
+
+   * Profile image
+
+   * User ID
+
+   * User Name
+
+   * User Group
+
+   * Period
+
+   * Access group
+
+   * PIN
+
+   * Private Authentication Mode (including Device Auth Mode)
+
+   * Credential (Face, Fingerprint, Card)
+
+   * 1:1 Security Level
+
+1. The user data exported from BioStar 2 server can be imported to Suprema reader through the USB memory.
+
+:::warning
+
+When you import users to the device, all users in the device will be deleted and overwritten with the users exported from the server. 
+
+:::
+
+## Import User from USB memory to BioStar 2
+
+1. Go to User tab in BioStar 2.
+
+1. Select the users who you want to import.
+
+1. Click <IcMoreW/> button located on the right side.
+
+1. If you click **Data File Import**, you can save the files about users in either USB memory or allocated path of PC.
+
+   <Image src='/img/how-to/usb_4.png' width='1000' alone />
+
+1. You can select a file about user information which is saved in USB memory.
+
+## Import Log from USB memory to BioStar 2
+
+1. Go to Monitoring tab in BioStar 2.
+
+1. Go to Event Log section.
+
+1. Click <IcMoreW/> button located on the right side.
+
+1. If you click **Data File Import**, you can save the files about users in either USB memory or allocated path of PC.
+
+   <Image src='/img/how-to/usb_5.png' width='1000' alone />
+
+1. Select the log file saved in USB memory as TGZ file format.
+
+1. Then, you can see the event logs exported from the device in BioStar 2 Server with success message.
+
+   <Image src='/img/how-to/usb_6.png' width='1000' alone />
+
+### Supported Device & Firmware version
+
+<Image src='/img/how-to/usb_7.png' width='800' alone />

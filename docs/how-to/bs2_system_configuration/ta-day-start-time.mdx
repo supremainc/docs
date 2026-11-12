@@ -1,0 +1,19 @@
+# What is "Day Start Time" and how does it work?
+
+BioStar allow administrators to change **Day Start Time** as you desire when creating shifts. But what is Day Start Time exactly?
+
+Day Start Time is the dividing point between one day and another. Normally, midnight (00:00) is the time period from one day to the next day. If you set **Day Start Time** as midnight (00:00), all worktime between 00:00:00 to 23:59:59 will be counted as 1 day. In other words, the 24 hour shift cycles every 24 hours starting from the **Day Start Time** you set up.
+
+For example, the day start time is set to midnight (00:00).
+
+If an employee starts work from 8am and finish at 5pm, Biostar will calculate worktime accordingly and gives total worktime of 9 hours.
+
+<Image src='/img/how-to/day_start_1.png' width='400' alone />
+
+However, if an employee starts work from 8pm and finish at 5am, BioStar will not calculate worktime correctly. This is because of the day start time.
+
+<Image src='/img/how-to/day_start_2.png' width='400' alone />
+
+Since the shift cycles every 24 hours based on the day start time, the first four hours from 8pm to midnight will be calculated as day 1, and the last five hours from midnight to 5am will be calculated as day 2.
+
+<Image src='/img/how-to/day_start_3.png' width='600' alone />

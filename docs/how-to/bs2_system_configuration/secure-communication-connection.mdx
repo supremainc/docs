@@ -1,0 +1,87 @@
+# The Configuration For the Connection of When Using the "Secure Communication With Device" Function
+
+This article introduces the configuration for the connection when using the **Secure communication with device** function in both **Server to Device** mode and **Device to Server** mode.
+
+You can find the concept of **Secure communication with device**, as well as the configuration for the connection when using the **Secure communication with device**.
+
+:::info
+
+To understand the definition of each connection mode, such as **Server to Device** mode or **Device to Server** mode, please refer to the following article. [BioStar 2 Server and Device Port Usage](server-device-port-usage)
+
+:::
+
+### Server to Device Mode
+
+<Image src='/img/how-to/std_mode.png' width='600' alone />
+
+### Device to Server Mode
+
+<Image src='/img/how-to/dts_mode.png' width='600' alone />
+
+## Concept
+
+What is the **Secure communication with device**?
+
+To secure the data that will be transferred between the BioStar 2 server and the Suprema Device, the users can use the specific function **Secure communication with device** in BioStar 2. If the function is enabled, the certificate will be transferred from the BioStar 2 server to the Suprema device. To know how you can enable the function, please refer to the following procedures.
+
+* Add the device to the **BioStar 2 server** → Go to **Settings** → **Security** → **Advanced Security Settings** → Enable the function **Secure communication with device** and click **Apply**.
+
+   <Image src='/img/how-to/concept.png' width='700' alone />
+
+* For more details, please refer to the following article.
+
+   [How to configure Secure Communication between Device and Server (TLS/SSL)](secure-communication-tls)
+
+## The configuration for the connection
+
+How will the Suprema device be connected to BioStar 2 when the **Secure communication with device** function has been enabled?
+
+Once the **Secure communication with device** function have been enabled, the BioStar 2 server will transfer the certificate to the Suprema device in order to configure the secure communication between them. And, in order to understand which process is applied when using either **Device to Server** mode or **Server to Device** mode, please refer to the following two cases.
+
+### If using the "Server to Device" mode
+
+<Image src='/img/how-to/4.std_mode.png' width='600' alone />
+
+1. The Suprema device needs to be connected to BioStar 2 first, according to the following sequences.
+
+   1. The BioStar 2 Server sends a request for the connection using a random port to the port of the Suprema device 51211.
+
+   1. When the device receives a connection request, it sends a response using port 51211 to the BioStar 2 Server's random port.
+
+   1. The Suprema device is connected to the BioStar 2 server.
+
+1. If you enable the **Secure communication with device** function in BioStar 2, the BioStar 2 Server sends the certificate for secure communication by using its random port to the Suprema device's port 51211 through the existing connection.
+
+1. After completing transferring the certificate, the existing connection between the Suprema device and the BioStar 2 server is temporarily disconnected.
+
+1. BioStar 2 server is reconnected with the Suprema device again by using the same sequences of Step 1.
+
+:::info
+
+BioStar 2's random port to be used at this time may not be the same as the one used in Step 1. 
+
+:::
+
+### If using the "Device to Server" mode
+
+<Image src='/img/how-to/5._dts_mode.png' width='600' alone />
+
+1. The Suprema device needs to be connected to BioStar 2 first, according to the following sequences.
+
+   1. The Suprema device sends a request for the connection using a random port to the port of the BioStar 2 server 51212.
+
+   1. When the BioStar 2 server receives a connection request, it sends a response using port 51212 to the Suprema device's random port.
+
+   1. The Suprema device is connected to the BioStar 2 server.
+
+1. If you enable the **Secure communication with device** function in the BioStar 2, the BioStar 2 Server sends the certificate for secure communication by using its port 51212 to the Suprema device's random port through the existing connection.
+
+1. After completing transferring the certificate, the existing connection between the Suprema device and the BioStar 2 server is temporarily disconnected.
+
+1. The BioStar 2 server is reconnected with the Suprema device again using the same sequences as Step 1. However, at this time of reconnection, the BioStar 2 port to be used is not 51212, but 51213.
+
+:::info
+
+The random port of the Suprema device used at this time may not be the same as the one used in Step 1. 
+
+:::

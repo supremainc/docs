@@ -1,0 +1,77 @@
+# How To Read The Encoded FeliCa Standard Card Through Custom Smart Card Layout
+
+* **Affected Version**: BioStar 2 v2.9.6 or above
+
+* **Affected Products & Versions**: BioStaion 3 v1.3.0 or above
+
+In v2.9.6, Suprema added the FeliCa standard to the Custom Smart Card function, a function that was first introduced in BioStar 2 v2.9.4. So, from v2.9.6, you can enroll and use the FeliCa standard card issued by a third-party system in BioStar 2 with some of Suprema devices.
+
+About the Custom Smart Card function, refer to the following article: [How to Setup Custom Smart Card Layout](custom-smart-card-layout)
+
+## Background
+
+The existing Custom Smart Card function only supports MIFARE and DESFire. To satisfy client's requests, Suprema has upgraded the function in v2.9.6 by adding the FeliCa standard.
+
+## Basic Concepts
+
+The Custom Smart Card function allows the smart card issued by a third-party system to be read by BioStar 2 and some Suprema devices. In short, it means that the smart card issued by a third-party system can be enrolled and used in BioStar 2.
+
+The upgrade of the Custom Smart Card function in v2.9.6 not only allows MIFARE/DESFire type in BioStar 2 but also a FeliCa standard smart card and use it with some Suprema devices.
+
+<Image src='/img/how-to/1f.png' width='1000' alone />
+
+:::info
+
+Please be cautious that it DOES NOT mean that you can issue and use a smart card of FeliCa standard in BioStar 2 through this added new feature. 
+
+:::
+
+## Execution Procedure
+
+### Add the layout for smart card of FeliCa standard to be used
+
+1. Go to **Settings** and click **CARD FORMAT**.
+
+   <Image src='/img/how-to/2f.png' width='900' alone />
+
+1. Click **Smart Card** and **ADD SMART CARD**.
+
+   <Image src='/img/how-to/3f.png' width='900' alone />
+
+1. Select the option **Custom Smart Card** in **Smart Card Type** and then select FeliCa among the 3 card types. Then, put the card information such as **System Code**, **Service Code**, and **ID Field**. After that, click **Apply**.
+
+   <Image src='/img/how-to/4f.png' width='1000' alone />
+
+### Appy the layout of Step 1 to the device
+
+1. Go to the **DEVICE** and select the device to be used.
+
+   <Image src='/img/how-to/5f.png' width='700' alone />
+
+1. Go to the **Card Type** and enable the option in **Custom Smart Card**. And, select the box of FeliCa Standard in FeliCa and select the one among the generated layouts in **Custom Smart Card Layout**.
+
+   * Follow the procedures in the picture below in order.
+
+   <Image src='/img/how-to/6f.png' width='1000' alone />
+
+### Enroll the FeliCa standard smart card to the device
+
+1. Go to the USER and select a user.
+
+   <Image src='/img/how-to/7f.png' width='700' alone />
+
+1. Select the option **Card** in Credential.
+
+   <Image src='/img/how-to/8f.png' width='900' alone />
+
+1. In the arising popup, select a **Smart Card** in **Card Type** and a device to be used in **Device**. And then, select **Custom Smart Card** in **Smart Card Type**. Then, enroll the FeliCa standard card to be used by selecting one option among 3 options in the **Registration Option**.
+
+   :::info
+
+   If it's the first time to enroll the FeliCa standard card of smart card type, you need to select either **Register by Card Reader** or **Enter Manually**.
+
+   :::
+
+   Follow the procedures in the picture below in order.
+
+   <Image src='/img/how-to/9f.png' width='1000' alone />

@@ -1,0 +1,61 @@
+# How to Configure Group Matching
+
+Group Matching is a feature that has been introduced in BioStar 2.4.1.
+
+It is used for FaceStation 2 to allow 1:n matching up to 5000 users.
+
+:::info
+
+If you are not familiar with 1:n or 1:1 matching, refer to the [FAQ link](http://support.supremainc.com/solution/articles/24000006373--general-about-1-1-and-1-n-authentication).
+
+:::
+
+The reason why FaceStation 2 allows matching up to 3000 users is not because of the lack of storage space in the device, but because our algorithm is designed to guarantee a satisfactory performance up to that level.
+
+Group matching matches users only in the group that is specified. One matching group still has a maximum of 3000 users, but by combining multiple groups, you can have up to 5000 users in 1:n mode.
+
+:::info
+
+* You can create a maximum of 10 matching groups.
+
+* Each group can hold up to 3000 face templates (1 face template enrolled per user).
+
+* Total sum of face templates with group matching (all groups combined) cannot exceed 5000.
+
+:::
+
+## Configuration Process
+
+1. Log in to BioStar 2.
+
+1. Click on **Setting**.
+
+1. Click Face **Group Matching**.
+
+   <Image src='/img/how-to/2x_sc_group_matching_001.jpg' width='600' alone />
+
+1. Set **Group Matching** to **Use**.
+
+1. On **Group Matching Device Settings** click **+ Add**.
+
+1. Select your FaceStation 2 device.
+
+1. Click **Add**.
+
+1. On **Matching Group Settings** click **+ Add**.
+
+1. On the **Group Name** label enter the desired group name.
+
+   <Image src='/img/how-to/2x_sc_group_matching_002.jpg' width='700' alone />
+
+1. On the **User Group** dropdown list, select one or multiple user groups that will be included in the group.
+
+1. Click **Apply**.
+
+1. Sync the device in the **DEVICE** menu.
+
+Now when FaceStation 2 detects a face, the face group matching option will pop up.
+
+<Image src='/img/how-to/2x_sc_group_matching_003.jpg' width='300' alone />
+
+The user will have to tap on their group and then the device will scan the user's face for authentication.

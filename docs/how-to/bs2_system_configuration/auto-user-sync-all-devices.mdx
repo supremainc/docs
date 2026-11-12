@@ -1,0 +1,59 @@
+# Overview of "All Devices (Including User Update from Device)" - An Automatic User Synchronization Option
+
+BioStar 2 supports Automatic User Synchronization, which ensures that existing and updated user data (added, modified, or deleted) on the BioStar 2 server is synchronized to all connected devices. Four synchronization options are available.
+
+* Not Used
+
+* All Devices
+
+* All Devices (Including user update from device)
+
+* Specific Devices (Only devices belonging to the access group)
+
+This article focuses on the All Devices (Including user update from device) option and provides case studies to illustrate its behavior.
+
+<Image src='/img/how-to/all_dev.png' width='600' alone />
+
+For more details, you can refer to the contents below.
+
+## What is This Function?
+
+When using All Devices (Including User Update from Device), user information (added, modified, or deleted) on the BioStar 2 server is automatically synchronized with all connected Suprema devices. This behavior is identical to the All Devices option.The key difference is that this option also allows new users added directly on a device to be synchronized back to the server.
+
+:::info
+
+**Including User Update from Device** does not synchronize modifications or deletions made on a device to the server. Only newly added users are synchronized from the device to the BioStar 2 server. 
+
+:::
+
+## Case Studies
+
+Please refer to the following examples to distinguish which case is possible and which case is impossible to synchronize the user data from the device to the BioStar 2 server if using the function All Devices (including user update from device).
+
+### Possible Synchronization from Device to Server:
+
+* A new user is added directly via the device.
+
+   <YouTube className='fit--content' videoId="LK-Zr-rgeFU" />
+
+* A new credential is added to an existing registered user.
+
+   <YouTube className='fit--content' videoId="NTDFi2NPpxg" />
+
+* Additional information (e.g., user name) is added to an existing user.
+
+   <YouTube className='fit--content' videoId="7pdaraB251A" />
+
+* etc
+
+### Not Synchronized from Device to Server:
+
+* Modifying the expiration date of an already registered user via the device.
+
+   <YouTube className='fit--content' videoId="OH_Nro_zVPU" />
+
+* Changing the name of an already registered user directly on the device.
+
+   <YouTube className='fit--content' videoId="HjXoqrfrR2M" />
+
+* etc

@@ -1,0 +1,117 @@
+# How to Configure a Custom Level
+
+The custom level feature allows you to give specified privileges to administrators in specific menus.
+
+## BioStar version 2.6 and above
+
+From BioStar 2.6.3, the Admin Item Setting is changed so that a custom level can be assigned for a specific User Group, Device Group, Door Group, and Access Group. Also Monitoring menu is now allowing the administrator to assign **Read** rights.
+
+1. Go to the **Settings** → **ACCOUNT**.
+
+   <Image src='/img/how-to/biostar2_custom_level_1.png' width='900' alone />
+
+1. Create new Custom Level. At this point, you can configure the item settings and menu settings.
+
+   <Image src='/img/how-to/custom_level_-_2.6.3.png' width='1000' alone />
+
+   You can also see now that the Monitoring Admin Menu Setting allows **Read** assignment.
+
+   **Admin Item Settings** includes User Group, Device Group, Door Group, and Access Group (including Elevator Group).
+
+   Each item can be configured for each group or for all groups.
+
+   **Admin Menu Settings** consists of Dashboard, User, Device, Door, Elevator, Zone, Access Control, Monitoring, Time and Attendance, Setting, and Video categories.
+
+   For each menu you can set **Edit** and **Read** privileges.
+
+   When checking **Edit** it will automatically check **Read**.
+
+   Depending on such privilege settings, **Add Button** column value will be changed (N/A, Disabled, or Enabled)
+
+:::info
+
+* The expansion of Admin Item Settings to universal setting of the Custom Level will influence the Admin Menu Settings.
+
+* The Account button can now be visible to all users that have administrator privilege as opposed to the previous versions in which only the default administrator (with User ID: 1) had privilege to access this feature.
+
+* Up to BioStar 2.6.2, custom level administrators could not receive alerts but they can now receive alerts in BioStar 2.6.3 and above.
+
+:::
+
+To see an example of this change please refer to [How to Configure a Custom Level (Example for 2.6.3)](custom-level-example-v263)
+
+Up to BioStar 2.6.2, Admin Item Settings were only limited to Monitoring section as in the screenshot below.
+
+<Image src='/img/how-to/biostar2_custom_level_2.png' width='1000' alone />
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/how_to_configure_a_custom_level.mp4" type="video/mp4" />
+</video>
+
+## BioStar version 2.4 and above
+
+In BioStar version 2.4, the custom level was further expanded to allow custom levels that controls specific users, devices, doors, and access groups.
+
+<Image src='/img/how-to/2xtraining_custom_admin_007_.png' width='900' alone />
+
+However, be aware that the custom items only apply to its specific menu.
+
+This means that even if you apply a specific user in the **User** menu item and specific devices in the **Device** menu item, the custom operator will see *all* logs of devices and users in the **Monitoring** menu because the settings do not apply other menus.
+
+:::warning
+
+**Known Issue**
+
+You can only add new custom levels with the default administrator (ID 1) account in BioStar 2.4.
+
+Refer to the following link: [Freshdesk Known Issue Forum](http://support.supremainc.com/support/discussions/topics/24000001177) 
+
+:::
+
+## BioStar version 2.3
+
+In BioStar 2.3, the feature to create custom administrators was introduced. You can add a custom administrator at **Settings** → **ACCOUNT**.
+
+Below is a sample scenario where we will create a custom administrator that can only edit users and the T&A menu.
+
+1. Click on **Setting** → **ACCOUNT**.
+
+   <Image src='/img/how-to/2xtraining_custom_admin_002.png' width='500' alone />
+
+1. Click **ADD CUSTOM LEVEL**.
+
+   <Image src='/img/how-to/2xtraining_custom_admin_003.png' width='600' alone />
+
+1. Type in a name for the custom level.
+
+1. Click on **Edit** for **User** and **Time & Attendance** for the operating level.
+
+1. Select a user to use this custom level by clicking on **+ Add**.
+
+   <Image src='/img/how-to/2xtraining_custom_admin_004.png' width='1000' alone />
+
+1. Now if you check the user in the **USER** tab, you will see that this user has the custom **Operator Level**. Create a **Login ID** and **Password** for the user. Click **Apply**.
+
+   <Image src='/img/how-to/2xtraining_custom_admin_005.png' width='1000' alone />
+
+1. Log out and log in as your new custom admin user.
+
+1. You will see that this user only has full access and privilege for the **USER** and **TIME & ATTENDANCE** menu.
+
+   <Image src='/img/how-to/2xtraining_custom_admin_006.png' width='500' alone />
+
+## Before versions before 2.3
+
+Before the release of BioStar 2.3, there were only 4 operator levels for users. There functions were limited to their roles as shown below:
+
+* Administrator: full privileges over all operations
+
+* User Operator: only full privileges to edit users
+
+* Monitoring Operator: only full privileges over the monitoring page
+
+* Mobile User: only privilege to read all menus.
+
+<Image src='/img/how-to/2xtraining_custom_admin_001.png' width='700' alone />

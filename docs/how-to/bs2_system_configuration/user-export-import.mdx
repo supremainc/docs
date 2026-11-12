@@ -1,0 +1,129 @@
+# How to export and import users
+
+In BioStar 2 you can import users in bulk with their basic user information such as user name, user ID, card ID and etc.
+
+You can export the user information in BioStar 2 in a CSV file and you can import them using CSV file as well.
+
+:::info
+
+* CSV import does not allow you to import user fingerprint template. 
+
+* CSV Import supports Batch Registration of Visual Face. Check the article below: [Supports Batch Registration of Visual Face Using CSV Import](csv-visual-face-batch)
+
+* CSV Import supports Mobile Access Card Enrollment. Check the article below: [Issuing Suprema Mobile Access Cards via BioStar 2 User CSV Import](csv-mobile-access-card)
+
+:::
+
+Starting in BioStar 2.3, the CSV import feature was improved to have the following features:
+
+1. Mapping of the columns.
+
+1. Option to preserve or overwrite users with same user ID.
+
+1. Error Output when import fails.
+
+   :::info
+   
+   Outputs the row that failed to import.
+
+   :::
+
+## Exporting Users
+
+1. Click on the **USER** menu.
+
+1. Select a user or multiple users to export.
+
+   :::info
+
+   If you want to export all users in the server, click on the dropdown button and click **Select All**.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_001.png' width='200' alone /> 
+
+   :::
+
+1. Click on ... below the user search bar.
+
+1. Click **CSV Export**.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_002.png' width='200' alone />
+
+1. The csv file is stored in your Windows **Downloads** folder.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_003.png' width='100' alone />
+
+## Sorting Before Exporting
+
+You can click on the column names to **sort** the values by them. When you export them after sorting, the excel data are sorted as it's sorted on BioStar 2.
+
+<Image src='/img/how-to/2x_sc_csv_import_export_009.png' width='1000' alone />
+
+## Importing Users
+
+The best method to know the import format is to export a user first.
+
+See the instructions above to export a user.
+
+You can open a .csv file with any text editing tool or a program like Microsoft Excel.
+
+The columns are separated with commas so it may be hard to read with a basic text editor.
+
+However a program such as Microsoft Excel shows separate columns so it is easier to edit in such programs.
+
+1. Export a user from BioStar 2 as shown in the instruction above.
+
+1. Open the file with Windows Excel (or you can use any text editing tool).
+
+1. To add new users, use the same format to add extra rows.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_004.png' width='900' alone />
+
+1. Remember to save the file format as a .csv file (separated with commas) and not a .txt or excel file.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_005.png' width='600' alone />
+
+   :::info
+
+   * If you enter the user information in a language other than English or Korean, save the CSV file in UTF-8 format.
+
+   * Supports DD/MM/YYYY format, Date format does not support MM/DD/YYYY format
+
+   * If there are additional columns in the CSV file other than the basic user columns, BioStar 2 will fail to import the CSV file. 
+
+   :::
+
+1. Go to the **USER** tab in BioStar 2.
+
+1. Click on ...
+
+1. Click CSV Import.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_006.png' width='100' alone />
+
+1. Select your file in your local PC and click **Next**.
+
+1. Check that the columns are set properly. The CSV Field name should match the User Data Field name if you used a csv format that was exported from BioStar 2.
+
+1. Select an option for cases where the same ID exists in BioStar 2.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_007.png' width='400' alone />
+
+1. Click **Next**.
+
+   :::info
+
+   If an error occurs a popup message will appear that will allow you to download a file.
+
+   When you download this file, it will hold the row that failed to upload.
+
+   Check the content to see if there are any issue in those rows.
+
+   <Image src='/img/how-to/2x_sc_csv_import_export_008.png' width='300' alone /> 
+
+   :::
+
+## Video Demo
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/2x_sc_how_to_export_and_import_users.mp4" type="video/mp4" />
+</video>

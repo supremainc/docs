@@ -1,0 +1,108 @@
+# How to Enroll Visual Face Credential
+
+From BioStar 2.8.6, Suprema started to support FaceStation F2, which is our first model to support Visual Face credential. If you would like to check more information about FaceStation F2, please check on the linked page. ([Link](https://www.supremainc.com/en/hardware/fusion-multimodal-terminal-facestation-f2.asp))
+
+There are three ways to register your Visual Face credentials; registering through BioStar 2, registering user credentials directly from the device menu, or registering through a mobile device. In this article, we will look at how to register through BioStar 2, which is the basic of user credential registration, and how to easily register contactless, which is newly supported method by Suprema.
+
+* Supported number of Visual Face poses: maximum 2 per each user
+
+## 1. Enroll Visual Face credential via BioStar 2
+
+1. BioStar 2.8.6 or higher supports Visual Face Credentials by default.
+
+1. Add a FaceStation F2 device to your BioStar 2.
+
+1. In the BioStar 2 user menu, select a user to whom you want to register Visual Face credentials.
+
+1. Select Visual Face from the Credential list.
+
+   <Image src='/img/how-to/2.8.6_visual_1.png' width='800' alone />
+
+1. Select your FaceStation F2 device and click the + Add button on the left to set it as the Nth credential to be registered.
+
+1. After clicking the Scan button, place your face in front of the FaceStation F2 device.
+
+   <Image src='/img/how-to/2.8.6_visual_2.png' width='500' alone />
+
+1. When scanning is complete, your face is checked on the screen.
+
+1. You can use this as a user Profile Image.
+
+   <Image src='/img/how-to/2.8.6_visual_3.png' width='500' alone />
+
+1. If you want to register as a photo without scanning the user's face, please press the **Upload Image** button.
+
+1. Select a user's picture and register it.
+
+   * Supported image file formats are JPG, JPEG and PNG.
+
+   * Supported image file size: minimum 250 x 250, maximum 10 MB.
+
+   * From BioStar 2.8.10, the minimum size limit is removed.
+   
+   <Image src='/img/how-to/2.8.6_visual_4.png' width='500' alone />
+
+## 2. Enroll Visual Face via Visual Face Mobile Enrollment
+
+:::warning
+
+This function requires the use of BioStar 2 Cloud service. BioStar 2 license is required to use Cloud service. To purchase a license, contact the place of your purchase or your Suprema sales representative. [Contacts](https://www.supremainc.com/en/wheretobuy/list.asp) 
+
+:::
+
+1. Enable BioStar 2 cloud service.
+
+   <Image src='/img/how-to/2.8.6_visual_5.png' width='100' alone />
+
+1. Go to **BioStar 2** → **Settings** → **Email Setting** and set an email that the customer will receive the Visual Face Mobile Enrollment link from.
+
+   <Image src='/img/how-to/2.8.6_visual_6.png' width='100' alone />
+
+   In order to improve user convenience when writing email content, Suprema improved the following functions from BioStar 2.8.8.
+
+   * No need to set anything to be written in the email contents.
+   
+      <Image src='/img/how-to/288-10.png' width='1000' alone />
+
+1. This function is performed through the SMTP setting. SMTP settings are the same as in Email Alert of Trigger & Action.
+
+   <Image src='/img/how-to/2.8.6_visual_7.png' width='500' alone />
+
+1. When the setting is complete, enter the address to receive the test mail in Test Mail Recipient Address and click Send Mail. If your SMTP settings are correct, you will receive a test mail to the address you entered.
+
+   <Image src='/img/how-to/2.8.6_visual_8.png' width='500' alone />
+
+1. If the test email was sent properly, click the Apply button to save the settings.
+
+1. Add users to BioStar 2. At this time, you must fill in the email information of this user information.
+
+   <Image src='/img/how-to/2.8.6_visual_9.png' width='1000' alone />
+
+1. After creating a user, select the user to whom you'll send the email from the user list.
+
+1. Click the button at the top right corner, then click Send Visual Face Mobile Enrollment Link. If the email was sent successfully, a pop-up saying 'Success' will appear.
+
+   <Image src='/img/how-to/2.8.6_visual_10.png' width='1000' alone />
+
+1. Take a picture of the user on a mobile device with a camera, such as a mobile phone or tablet.
+
+1. Click the link received by e-mail on the mobile device with your photo.
+
+   * Unlike BioStar 2.8.6, BioStar 2.8.8 or later delivers the body of the Visual Face registration email in a common format.
+   
+      <Image src='/img/how-to/288-11.png' width='700' alone />
+
+1. Follow the guide shown on the screen to register your face photo.
+
+   * Supported image file formats are JPG, JPEG and PNG.
+
+   * Supported image file size is minimum 250 x 250, maximum 10MB.
+
+   * From BioStar 2.8.10, the minimum size limit is removed.
+
+   * Visual Face Enrollment link will expire after 24 hours.
+
+1. If the Visual Face credentials are well registered, it is confirmed that the link is invalid on the final screen.
+
+   <Image src='/img/how-to/2.8.6_visual_12.png' width='1000' alone />
+   

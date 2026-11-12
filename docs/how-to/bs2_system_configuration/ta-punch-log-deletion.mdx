@@ -1,0 +1,35 @@
+# Supports Deleting Time & Attendance Punch Logs after a Certain Period
+
+* **Affected Version**: BioStar 2.8.17, BioStar 2.9.0 or higher version
+
+Unlike the BioStar 2 AC, in the case of the BioStar 2 TA server, there was no function to automatically delete old attendance records. In the case of users who have been using BioStar 2 for a long time or who use the T&A function and sites with many T&A records, the old T&A records took up system capacity.
+
+As of BioStar 2.8.17, Suprema has improved the function to delete the records of BioStar 2 TA when the user-specified period exceeds like the existing functions of BioStar 2 AC.
+
+## Cautions
+
+1. When the function is activated, the ENTIRE T&A records that have exceeded the storage deadline as shown below:
+
+   * Synchronized punch logs from the AC DB (records authenticated by the device)
+
+   * Modified punch logs manually modified by administrators, etc.
+
+   * Leave records manually set by administrators, etc.
+
+1. It is HIGHLY recommended to back up the BioStar 2 DB before using this function.
+
+   * Once applied, all the already deleted attendance and leave records cannot be restored.
+
+   * Ex) If you previously set it to 30 days and then changed it to 60 days, the 30-day record corresponding to the difference between the two settings is not stored in the DB and cannot be restored.
+
+## How to use the function
+
+1. Go to **BioStar 2** → **Time Attendance** → **Setting** → **Punchlogs**.
+
+   <Image src='/img/how-to/image1_2.8.17.png' width='500' alone />
+
+1. Activate the function through the Active/Inactive toggle at the bottom of the screen, and enter the expiration date to save time and attendance records. 
+
+1. Click the **Apply** icon on the right.
+
+   <Image src='/img/how-to/image2_2.8.17.png' width='1000' alone />

@@ -1,0 +1,71 @@
+# How to Configure an Interlock Zone
+
+To provide a secure interlock area, one of the doors must be locked when the external input, such as door status sensor, indicates that the other door is opened. This feature is usually considered important in laboratories or operation rooms where security of dust is of high concern.
+
+<Image src='/img/how-to/interlock.png' width='400' alone />
+
+* **Applied version**: BioStar2 v2.6
+
+:::note
+
+**Compatible case:**
+
+Only Local zone is supported for interlock zone.
+
+CoreStation should be a RS485 Master of the local zone.
+
+* FW: v1.1.0 or higher version
+
+The interlock zone will be supported by CoreStation firmware. It means that you can use any devices for Interlock Zone Configuration as slave devices of CoreStation.
+
+Please note that Corestation does not support FaceStation F2 and BioStation 3 as Slave devices.
+
+:::
+
+<video controls width="100%">
+   <source src="https://supremadocs.blob.core.windows.net/mov/interlock_zone.mp4" type="video/mp4" />
+</video>
+
+1. Activate BioStar 2 AC license as standard or higher level For license inquiries, please contact to our sales representative.
+
+1. Confirm the **Zone** menu.
+
+1. Go to **Device** menu.
+
+1. Add CoreStation and its slave devices.
+
+   <Image src='/img/how-to/interlock_device.png' width='400' alone />
+
+1. Confirm the firmware version of the CoreStation is 1.1.0 or higher version.
+
+1. Go to **Door** menu and make two doors.
+
+1. Confirm if each door is configured for Door Sensor.
+
+   <Image src='/img/how-to/interlock_door.png' width='1000' alone />
+
+1. Click **Zone**.
+
+1. Add Interlock Zone.
+
+1. Configure the door of the Interlock Zone.
+
+   :::info
+
+   You can select up to 4 doors. 
+
+   :::
+
+   <Image src='/img/how-to/interlock_door2.png' width='1000' alone />
+
+1. If you would like to make an alert sound or output signal, set an alarm of the Interlock zone.
+
+   <Image src='/img/how-to/interlock_alert.png' width='900' alone />
+
+1. To confirm the configuration of the Interlock setting, go to **Monitoring**.
+
+1. Open one of the doors and keep the opened status, then try to authentication to same door.
+
+1. Confirm the **Interlock door open denied alarm** as follows.
+
+   <Image src='/img/how-to/interlock_log.png' width='1000' alone />
