@@ -498,14 +498,14 @@ export function Apps({ externalLinks: externalLinksProp }) {
     {
       title: 'Suprema CLUe',
       play: 'https://play.google.com/store/apps/details?id=com.suprema.moon',
-      ios: 'https://apps.apple.com/kr/app/suprema-clue/id1639027796',
+      ios: 'https://apps.apple.com/app/suprema-clue/id1639027796',
       img: require('@site/static/img/clue-app.png').default,
       height: '60px'
     },
     {
       title: 'Suprema Pass',
       play: 'https://play.google.com/store/apps/details?id=com.supremainc.supremapass',
-      ios: 'https://apps.apple.com/no/app/suprema-pass/id6745057639',
+      ios: 'https://apps.apple.com/app/suprema-pass/id6745057639',
       img: require('@site/static/img/sup-pass-app.png').default,
       height: '60px'
     },
