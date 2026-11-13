@@ -323,7 +323,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass 2 V2',
       url: `/device/xpass_2_v2`,
-      img: require('@site/static/img/cover/xpass2.png').default,
+      img: require('@site/static/img/cover/xpass2.webp').default,
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
         message: "옥외형 콤팩트 RFID 장치"
