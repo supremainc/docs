@@ -130,7 +130,7 @@ export function AiCamera({ productLinks: productLinksProp }) {
     {
       title: 'ViOnyx',
       url: `/device/vionyx`,
-      img: require('@site/static/img/camera/product-vionyx.png').default,
+      img: require('@site/static/img/camera/product-vionyx.webp').default,
       desc: `${translate({
         id: "externalLinks.ViOnyx.desc",
         message: "AI 기반 지능형 영상 분석 카메라"
@@ -157,7 +157,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioStation 3 Max',
       url: `/device/biostation_3_max`,
-      img: require('@site/static/img/cover/biostation3max.png').default,
+      img: require('@site/static/img/cover/biostation3max.webp').default,
       desc: `${translate({
         id: "externalLinks.BioStation3Max.desc",
         message: "AI 기반 얼굴/지문 멀티인증 단말기"
@@ -167,7 +167,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioEntry W3',
       url: `/device/bioentry_w3`,
-      img: require('@site/static/img/cover/bioentryw3.png').default,
+      img: require('@site/static/img/cover/bioentryw3.webp').default,
       desc: `${translate({
         id: "externalLinks.BioEntryW3.desc",
         message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
@@ -177,7 +177,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioStation 2a',
       url: `/device/biostation_2a`,
-      img: require('@site/static/img/cover/biostaion2a.png').default,
+      img: require('@site/static/img/cover/biostaion2a.webp').default,
       desc: `${translate({
         id: "externalLinks.BioStation2a.desc",
         message: "AI 프로세서의 놀라운 지문 인식 성능"
@@ -187,7 +187,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioStation 3',
       url: `/device/biostation_3`,
-      img: require('@site/static/img/cover/biostation3.png').default,
+      img: require('@site/static/img/cover/biostation3.webp').default,
       desc: `${translate({
         id: "externalLinks.BioStation3.desc",
         message: "차세대 출입통제 솔루션"
@@ -197,7 +197,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'FaceStation F2',
       url: '/device/facestation_f2',
-      img: require('@site/static/img/cover/facestationf2.png').default,
+      img: require('@site/static/img/cover/facestationf2.webp').default,
       desc: `${translate({
         id: "externalLinks.FaceStationF2.desc",
         message: "퓨전 얼굴인증 장치"
@@ -207,7 +207,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'FaceStation 2',
       url: `/device/facestation_2`,
-      img: require('@site/static/img/cover/facestation2.png').default,
+      img: require('@site/static/img/cover/facestation2.webp').default,
       desc: `${translate({
         id: "externalLinks.FaceStation2.desc",
         message: "얼굴 인증 출입근태 단말기"
@@ -217,7 +217,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioLite N2',
       url: `/device/biolite_n2`,
-      img: require('@site/static/img/cover/bioliten2.png').default,
+      img: require('@site/static/img/cover/bioliten2.webp').default,
       desc: `${translate({
         id: "externalLinks.BioLiteN2.desc",
         message: "옥외형 지문 인식 출입·근태 장치"
@@ -227,7 +227,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioEntry W2',
       url: `/device/bioentry_w2`,
-      img: require('@site/static/img/cover/bioentryw2.png').default,
+      img: require('@site/static/img/cover/bioentryw2.webp').default,
       desc: `${translate({
         id: "externalLinks.BioentryW2.desc",
         message: "옥외형 지문인식 출입통제 단말기"
@@ -237,7 +237,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioEntry P2',
       url: `/device/bioentry_p2`,
-      img: require('@site/static/img/cover/bioentryp2.png').default,
+      img: require('@site/static/img/cover/bioentryp2.webp').default,
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc",
         message: "콤팩트 지문인식 단말기"
@@ -247,7 +247,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioEntry R2',
       url: `/device/bioentry_r2`,
-      img: require('@site/static/img/cover/bioentryr2.png').default,
+      img: require('@site/static/img/cover/bioentryr2.webp').default,
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc",
         message: "콤팩트 지문인식 리더"
@@ -257,7 +257,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'X-Station 2',
       url: `/device/xstation_2`,
-      img: require('@site/static/img/cover/xstation2-oapb.png').default,
+      img: require('@site/static/img/cover/xstation2-oapb.webp').default,
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
@@ -283,7 +283,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass Q2',
       url: `/device/xpass_q2`,
-      img: require('@site/static/img/cover/xpassq2.png').default,
+      img: require('@site/static/img/cover/xpassq2.webp').default,
       desc: `${translate({
         id: "externalLinks.XPassQ2.desc",
         message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
@@ -293,7 +293,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'X-Station 2',
       url: `/device/xstation_2`,
-      img: require('@site/static/img/cover/xstation2-odpb.png').default,
+      img: require('@site/static/img/cover/xstation2-odpb.webp').default,
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
@@ -303,7 +303,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass 2',
       url: `/device/xpass_2`,
-      img: require('@site/static/img/cover/xpass2.png').default,
+      img: require('@site/static/img/cover/xpass2.webp').default,
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
         message: "옥외형 콤팩트 RFID 장치"
@@ -313,7 +313,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass D2',
       url: `/device/xpass_d2`,
-      img: require('@site/static/img/cover/xpassd2.png').default,
+      img: require('@site/static/img/cover/xpassd2.webp').default,
       desc: `${translate({
         id: "externalLinks.XPass2.desc",
         message: "옥외형 콤팩트 RFID 리더"
@@ -323,7 +323,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass S2',
       url: `/device/xpass_s2`,
-      img: require('@site/static/img/cover/xpasss2.png').default,
+      img: require('@site/static/img/cover/xpasss2.webp').default,
       desc: `${translate({
         id: "externalLinks.XPassS2.desc",
         message: "IP RFID 출입통제 단말기"
@@ -349,7 +349,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     {
       title: 'CoreStation 20',
       url: '/device/corestation_20',
-      img: require('@site/static/img/cover/corestation20.png').default,
+      img: require('@site/static/img/cover/corestation20.webp').default,
       desc: `${translate({
         id: "externalLinks.CoreStation20.desc",
         message: "강력한 보안, 유연한 확장성"
@@ -359,7 +359,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     {
       title: 'CoreStation',
       url: '/device/corestation_40',
-      img: require('@site/static/img/cover/corestation.png').default,
+      img: require('@site/static/img/cover/corestation.webp').default,
       desc: `${translate({
         id: "externalLinks.CoreStation.desc",
         message: "지능형 바이오인식 컨트롤러"
@@ -369,7 +369,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
     {
       title: 'Enclosure',
       url: '/device/enclosure',
-      img: require('@site/static/img/cover/encr10.png').default,
+      img: require('@site/static/img/cover/encr10.webp').default,
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
         message: "CoreStation 전용 함체"
@@ -395,7 +395,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Door Interface',
       url: '/device/doorinterface',
-      img: require('@site/static/img/cover/doorinterface.png').default,
+      img: require('@site/static/img/cover/doorinterface.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.di24.desc",
         message: "확장 가능한 제어, 끊김 없는 출입"
@@ -405,7 +405,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Input Module',
       url: '/device/inputmodule',
-      img: require('@site/static/img/cover/inputmodule.png').default,
+      img: require('@site/static/img/cover/inputmodule.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.im120.desc",
         message: "다중 입력 확장 모듈"
@@ -415,7 +415,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Output Module',
       url: '/device/outputmodule',
-      img: require('@site/static/img/cover/outputmodule.png').default,
+      img: require('@site/static/img/cover/outputmodule.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.om120.desc",
         message: "다중 출력 제어 모듈"
@@ -425,7 +425,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Door Module',
       url: '/device/doormodule',
-      img: require('@site/static/img/cover/doormodule.png').default,
+      img: require('@site/static/img/cover/doormodule.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.dm20.desc",
         message: "다중 출입문 보안 I/O 모듈"
@@ -435,7 +435,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Secure I/O 2',
       url: '/device/securemodule',
-      img: require('@site/static/img/cover/securemodule.png').default,
+      img: require('@site/static/img/cover/securemodule.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.sio2.desc",
         message: "출입문 보안 컨트롤 모듈"
@@ -445,7 +445,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module',
       url: '/device/extendedmodule',
-      img: require('@site/static/img/cover/extendedmodule.png').default,
+      img: require('@site/static/img/cover/extendedmodule.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
@@ -455,7 +455,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module-SC',
       url: '/device/extendedmodule_sc',
-      img: require('@site/static/img/cover/extendedmodule-sc.png').default,
+      img: require('@site/static/img/cover/extendedmodule-sc.webp').default,
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
