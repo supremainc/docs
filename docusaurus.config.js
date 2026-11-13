@@ -20,6 +20,19 @@ const isPreview = process.env.CONTEXT === 'preview';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
 const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
+// 로케일별로 필요한 웹 폰트만 불러온다 (렌더링 차단 및 CSS 크기 감소 목적).
+// 가변 폰트는 굵기를 개별 값(400;500;...)이 아닌 범위(100..900)로 지정해야 @font-face 선언이 한 벌만 생성된다.
+const localeFontFamily = {
+  ko: 'Noto+Sans+KR:wght@100..900',
+  ja: 'Noto+Sans+JP:wght@100..900',
+  en: 'Noto+Sans:wght@100..900',
+  es: 'Noto+Sans:wght@100..900',
+};
+const googleFontsUrl =
+  'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Noto+Sans+Coptic&family=' +
+  (localeFontFamily[locale] || localeFontFamily.ko) +
+  '&display=swap';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: getLocalizedConfigValue('title'),
@@ -81,6 +94,29 @@ const config = {
     }
   },
   headTags: [
+    // Google Fonts: 미리 연결한 뒤 렌더링을 막지 않도록 비동기로 적용
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: googleFontsUrl,
+        media: 'print',
+        onload: "this.media='all'",
+      },
+    },
+    {
+      tagName: 'noscript',
+      attributes: {},
+      innerHTML: `<link rel="stylesheet" href="${googleFontsUrl}">`,
+    },
     ...(!isPreview ? [
       // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
       {
