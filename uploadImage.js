@@ -230,7 +230,8 @@ class ImageUploader {
             // 파일 업로드
             await blockBlobClient.upload(fileBuffer, fileBuffer.length, {
                 blobHTTPHeaders: {
-                    blobContentType: contentType
+                    blobContentType: contentType,
+                    blobCacheControl: 'public, max-age=604800', // 7일
                 },
                 metadata: {
                     originalPath: this.getRelativePath(filePath),
