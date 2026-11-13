@@ -10,6 +10,7 @@ import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
 import SupLogo from '@site/static/img/suprema-logo.svg';
 import Cloudicon from '@site/static/img/air-cloud.svg';
+import bsxBg from './biostarx_sec2_1.webp';
 import SearchBar from '@theme/SearchBar';
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -78,7 +79,15 @@ function HomepageHeader() {
       </div>
       <div className={clsx('container', styles.containerRef)}>
         <div className={clsx(styles.section__banner, styles.bsx)}>
-          
+            <img
+              src={bsxBg}
+              alt=''
+              className={styles.bsx__bg}
+              fetchPriority='high'
+              decoding='async'
+              width={1439}
+              height={1104}
+            />
             <div className={styles.banner__biostar}>
               <div>
                 <Heading as='h2' className={styles.banner__biostarh2}>
