@@ -37,7 +37,7 @@ const googleFontsUrl =
 const config = {
   title: getLocalizedConfigValue('title'),
   tagline: getLocalizedConfigValue('tagline'),
-  favicon: '/img/website_favicon.png',
+  favicon: '/website_favicon.png',
   // Set the production url of your site here
   url: !isPreview ? 'https://docs.supremainc.com' : 'https://supremainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
