@@ -1,16 +1,9 @@
-# 빌드 시간 비교 테스트 (배포하지 않음)
-# - baseline: 기존 방식(전체 언어 순차 빌드)
-# - parallel: 언어별 병렬 빌드 후 병합
-# 두 방식의 소요 시간과 병합 결과물을 비교하기 위한 임시 workflow입니다.
+# 언어별 병렬 빌드 시간 테스트 (배포하지 않음)
+# 언어별로 병렬 빌드한 뒤 결과물을 병합하고, 소요 시간과 병합 결과를 확인합니다.
 name: Build Time Test
 
 on:
   workflow_dispatch:
-    inputs:
-      run_baseline:
-        description: "기존 방식(순차 빌드)도 함께 실행"
-        type: boolean
-        default: true
   push:
     branches:
       - ci/build-time-test
@@ -19,26 +12,6 @@ permissions:
   contents: read
 
 jobs:
-  baseline:
-    name: Baseline (sequential)
-    if: github.event_name == 'push' || inputs.run_baseline
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-      - name: Build project (all locales)
-        run: |
-          start=$(date +%s)
-          npm run build
-          echo "### Baseline 순차 빌드: $(( $(date +%s) - start ))초" >> "$GITHUB_STEP_SUMMARY"
-
   build:
     name: Build (${{ matrix.locale }})
     runs-on: ubuntu-latest
