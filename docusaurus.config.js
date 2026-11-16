@@ -18,6 +18,7 @@ const remarkCjkFriendlyPlugins = [remarkCjkFriendly, remarkCjkFriendlyGfmStriket
 const isDev = process.env.NODE_ENV === 'development';
 const isPreview = process.env.CONTEXT === 'preview';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
+const siteBaseUrl = !isPreview ? '/' : '/docs/';
 const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
 // 로케일별로 필요한 웹 폰트만 불러온다 (렌더링 차단 및 CSS 크기 감소 목적).
@@ -42,7 +43,7 @@ const config = {
   url: !isPreview ? 'https://docs.supremainc.com' : 'https://supremainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: !isPreview ? '/' : '/docs/',
+  baseUrl: siteBaseUrl,
   noIndex: !isPreview ? false : true,
   future: {
     v4: {
@@ -82,16 +83,22 @@ const config = {
         htmlLang: 'ko-KR',
       },
       es: {
+        // 언어별 단독 빌드(--locale es)에서도 /es/ 경로를 유지하도록 명시한다.
+        baseUrl: `${siteBaseUrl}es/`,
         label: 'Español',
         direction: 'ltr',
         htmlLang: 'es-419',
       },
       en: {
+        // 언어별 단독 빌드(--locale en)에서도 /en/ 경로를 유지하도록 명시한다.
+        baseUrl: `${siteBaseUrl}en/`,
         label: 'English',
         direction: 'ltr',
         htmlLang: 'en-US',
       },
       ja: {
+        // 언어별 단독 빌드(--locale ja)에서도 /ja/ 경로를 유지하도록 명시한다.
+        baseUrl: `${siteBaseUrl}ja/`,
         label: '日本語',
         direction: 'ltr',
         htmlLang: 'ja-JP',
