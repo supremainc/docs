@@ -2,7 +2,464 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ------------------------------------------------------------------
+ * BioStar X License Calculator — Modern theme
+ * 컴포넌트 마크업(Tailwind 클래스)은 그대로 두고 이 파일에서만 스타일을 덮어씁니다.
+ * Tailwind 유틸리티 뒤에 선언되므로 같은 우선순위일 때 이 규칙이 적용됩니다.
+ * Docusaurus 테마 변수(--ifm-*)를 사용해 라이트/다크 모드를 지원합니다.
+ * ------------------------------------------------------------------ */
+
 .license-calculator {
-  max-width: 1440px;
+  --lc-primary: var(--ifm-color-primary, #5364d1);
+  --lc-primary-strong: var(--ifm-color-primary-dark, #3f51c9);
+  --lc-on-primary: #ffffff;
+  --lc-primary-soft: rgba(83, 100, 209, 0.08);
+  --lc-primary-ring: rgba(83, 100, 209, 0.22);
+  --lc-surface: #ffffff;
+  --lc-surface-muted: #f8f9fc;
+  --lc-border: #e4e7ef;
+  --lc-border-strong: #cfd4e2;
+  --lc-text: #1b1f2e;
+  --lc-text-muted: #636a80;
+  --lc-text-subtle: #8a90a3;
+  --lc-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --lc-shadow-lg: 0 4px 6px -2px rgba(16, 24, 40, 0.04), 0 12px 24px -4px rgba(16, 24, 40, 0.08);
+  --lc-radius: 14px;
+  --lc-radius-sm: 10px;
+
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 40px 24px 64px;
+  color: var(--lc-text);
+}
+
+[data-theme='dark'] .license-calculator {
+  --lc-on-primary: #15171f;
+  --lc-primary-soft: rgba(148, 156, 255, 0.12);
+  --lc-primary-ring: rgba(148, 156, 255, 0.3);
+  --lc-surface: #1c1f2a;
+  --lc-surface-muted: #222634;
+  --lc-border: #2d3242;
+  --lc-border-strong: #3c4256;
+  --lc-text: #eceef5;
+  --lc-text-muted: #a3a9bc;
+  --lc-text-subtle: #7c8297;
+  --lc-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --lc-shadow-lg: 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+}
+
+.license-calculator *,
+.license-calculator *::before,
+.license-calculator *::after {
+  box-sizing: border-box;
+}
+
+/* 하드코딩된 텍스트 색상을 테마 색상으로 교체 */
+.license-calculator .text-black {
+  color: var(--lc-text);
+}
+
+.license-calculator .text-gray-500,
+.license-calculator .text-gray-600 {
+  color: var(--lc-text-muted);
+}
+
+/* ---------- Page wrapper & title ---------- */
+
+.license-calculator > div {
+  padding: 0;
+}
+
+.license-calculator h1 {
+  margin: 0 0 32px;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Layout: 입력 영역 + 결과 패널 ---------- */
+
+.license-calculator > div > .grid {
+  gap: 24px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .license-calculator > div > .grid {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 32px;
+  }
+
+  .license-calculator > div > .grid > div {
+    grid-column: auto;
+  }
+
+  .license-calculator > div > .grid > [class*='lg:sticky'] {
+    top: calc(var(--ifm-navbar-height, 60px) + 24px);
+  }
+}
+
+/* 입력 카드 사이 간격 + 단계 번호 카운터 */
+.license-calculator > div > .grid > .space-y-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  counter-reset: lc-step;
+}
+
+.license-calculator > div > .grid > .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin: 0;
+}
+
+/* ---------- Cards ---------- */
+
+.license-calculator section.bg-white,
+.license-calculator [class*='lg:sticky'] > .bg-white {
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  background: var(--lc-surface);
+  box-shadow: var(--lc-shadow);
+}
+
+.license-calculator section.bg-white {
+  padding: 24px;
+}
+
+.license-calculator section.bg-white > h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px;
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.license-calculator section.bg-white > h2::before {
+  counter-increment: lc-step;
+  content: counter(lc-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: var(--lc-primary);
+  color: var(--lc-on-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ---------- Site Information: 숫자 입력 ---------- */
+
+.license-calculator section .grid-cols-3 {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.license-calculator section .grid-cols-3 label {
+  margin-bottom: 8px;
+  color: var(--lc-text-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.license-calculator input[type='number'] {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--lc-border-strong);
+  border-radius: var(--lc-radius-sm);
+  background: var(--lc-surface);
+  color: var(--lc-text);
+  font-size: 16px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.license-calculator input[type='number']:hover:not(:disabled) {
+  border-color: var(--lc-text-subtle);
+}
+
+.license-calculator input[type='number']:focus {
+  outline: none;
+  border-color: var(--lc-primary);
+  box-shadow: 0 0 0 4px var(--lc-primary-ring);
+}
+
+.license-calculator input[type='number']:disabled {
+  background: var(--lc-surface-muted);
+  color: var(--lc-text-subtle);
+  cursor: not-allowed;
+}
+
+/* ---------- Feature Add-ons: 선택 타일 ---------- */
+
+.license-calculator section .space-y-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.license-calculator section .space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  margin: 0;
+}
+
+.license-calculator section .space-y-1 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius-sm);
+  background: var(--lc-surface);
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.license-calculator section .space-y-1 > div:hover {
+  border-color: var(--lc-border-strong);
+  box-shadow: var(--lc-shadow);
+}
+
+.license-calculator section .space-y-1 > div:has(input[type='checkbox']:checked) {
+  border-color: var(--lc-primary);
+  background: var(--lc-primary-soft);
+}
+
+.license-calculator section .space-y-1 > div:has(input[type='checkbox']:focus-visible) {
+  box-shadow: 0 0 0 4px var(--lc-primary-ring);
+}
+
+.license-calculator section .space-y-1 label {
+  gap: 12px;
+  cursor: pointer;
+}
+
+.license-calculator section .space-y-1 label > :not([hidden]) ~ :not([hidden]) {
+  margin: 0;
+}
+
+.license-calculator section .space-y-1 label .text-sm {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.license-calculator section .space-y-1 label .text-xs {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* T&A 사용자 수 입력 */
+.license-calculator section .space-y-1 .ml-6 {
+  margin: 0;
+  padding-left: 32px;
+}
+
+.license-calculator section .space-y-1 .ml-6 input[type='number'] {
+  max-width: 160px;
+  height: 36px;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* 커스텀 체크박스 */
+.license-calculator input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  border: 1.5px solid var(--lc-border-strong);
+  border-radius: 6px;
+  background: var(--lc-surface) center / 14px no-repeat;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.license-calculator input[type='checkbox']:checked {
+  border-color: var(--lc-primary);
+  background-color: var(--lc-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+}
+
+.license-calculator input[type='checkbox']:focus-visible {
+  outline: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.license-calculator button[type] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.license-calculator button[type]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--lc-primary-ring);
+}
+
+/* Copy Part Numbers: 주 버튼 */
+.license-calculator .bg-blue-500 {
+  background: var(--lc-primary);
+  color: var(--lc-on-primary);
+}
+
+.license-calculator .bg-blue-500:hover {
+  background: var(--lc-primary-strong);
+}
+
+/* Reset All: 보조 버튼 */
+.license-calculator .bg-gray-500 {
+  border-color: var(--lc-border);
+  background: transparent;
+  color: var(--lc-text-muted);
+}
+
+.license-calculator .bg-gray-500:hover {
+  border-color: var(--lc-border-strong);
+  background: var(--lc-surface-muted);
+  color: var(--lc-text);
+}
+
+/* ---------- Result panel ---------- */
+
+.license-calculator [class*='lg:sticky'] > .bg-white {
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--lc-shadow-lg);
+}
+
+/* 패널 헤더 */
+.license-calculator [class*='lg:sticky'] > .bg-white > .flex:first-child {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--lc-border);
+}
+
+.license-calculator [class*='lg:sticky'] > .bg-white > .flex:first-child h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+/* 패널 본문 */
+.license-calculator [class*='lg:sticky'] .space-y-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.license-calculator [class*='lg:sticky'] .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin: 0;
+}
+
+.license-calculator [class*='lg:sticky'] .space-y-4 h3 {
+  margin: 0 0 10px;
+  color: var(--lc-text-subtle);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Base License 강조 박스 */
+.license-calculator [class*='lg:sticky'] .space-y-4 > div:first-child {
+  padding: 18px 20px;
+  border: 1px solid var(--lc-primary-ring);
+  border-radius: var(--lc-radius-sm);
+  background: linear-gradient(135deg, var(--lc-primary-soft), transparent 140%);
+}
+
+.license-calculator [class*='lg:sticky'] .space-y-4 > div:first-child h3 {
+  margin-bottom: 6px;
+}
+
+.license-calculator [class*='lg:sticky'] .text-blue-600 {
+  margin: 0;
+  color: var(--lc-primary);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 18px;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+/* 파트 넘버 목록 */
+.license-calculator [class*='lg:sticky'] ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius-sm);
+  overflow: hidden;
+}
+
+.license-calculator [class*='lg:sticky'] ul > li,
+.license-calculator [class*='lg:sticky'] ul > :not([hidden]) ~ :not([hidden]) {
+  margin: 0;
+  padding: 10px 14px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+}
+
+.license-calculator [class*='lg:sticky'] ul > li + li {
+  border-top: 1px solid var(--lc-border);
+}
+
+.license-calculator [class*='lg:sticky'] ul > li:nth-child(even) {
+  background: var(--lc-surface-muted);
+}
+
+/* 결과가 없을 때 안내 문구 */
+.license-calculator [class*='lg:sticky'] > .bg-white > p {
+  margin: 0;
+  padding: 48px 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px) {
+  .license-calculator {
+    padding: 24px 16px 48px;
+  }
+
+  .license-calculator section.bg-white {
+    padding: 20px 16px;
+  }
+
+  .license-calculator [class*='lg:sticky'] > .bg-white > .flex:first-child,
+  .license-calculator [class*='lg:sticky'] .space-y-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .license-calculator * {
+    transition: none !important;
+  }
 }
