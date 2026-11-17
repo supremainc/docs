@@ -14,8 +14,15 @@ env:
   AFD_ENDPOINT: suprema-docs
 
 jobs:
-  deploy:
+  build:
+    # 언어별로 병렬 빌드한다. ko는 build/, 나머지는 build/<locale>/에 출력되므로 결과물이 겹치지 않는다.
+    # 언어별 단독 빌드에서도 /<locale>/ 경로가 유지되도록 docusaurus.config.js의 localeConfigs에 baseUrl을 명시해 두었다.
+    name: Build (${{ matrix.locale }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        locale: [ko, en, es, ja]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,11 +34,45 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-      - name: Build project
-        run: npm run build
+      - name: Build project (${{ matrix.locale }})
+        run: npm run build -- --locale ${{ matrix.locale }}
       - name: Clean up image directories
         # 이미지는 별도 Blob 컨테이너(supremadocs)에서 제공하므로 업로드하지 않는다.
         run: rm -rf build/img build/en/img build/es/img build/ja/img
+      - name: Pack build output
+        # 작은 파일이 많아 아티팩트 업로드가 느려지므로 하나의 tar로 묶는다.
+        run: tar -czf site-${{ matrix.locale }}.tar.gz -C build .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ matrix.locale }}
+          path: site-${{ matrix.locale }}.tar.gz
+          compression-level: 0
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: site-*
+          path: artifacts
+          merge-multiple: true
+      - name: Merge build outputs
+        run: |
+          mkdir -p build
+          for f in artifacts/*.tar.gz; do tar -xzf "$f" -C build; done
+      - name: Verify merged output
+        # 결과물이 누락된 채로 sync하면 --delete-destination=true 때문에 운영 파일이 삭제되므로 배포 전에 확인한다.
+        run: |
+          fail=0
+          test -f build/index.html || { echo "::error::build/index.html 없음"; fail=1; }
+          for l in en es ja; do
+            test -f "build/$l/index.html" || { echo "::error::build/$l/index.html 없음"; fail=1; continue; }
+            # 언어별 페이지가 자기 언어 경로(/<locale>/assets)의 자산을 참조하는지 확인
+            grep -q "/$l/assets/" "build/$l/index.html" || { echo "::error::$l 페이지의 자산 경로가 /$l/로 시작하지 않음"; fail=1; }
+          done
+          exit $fail
       - name: Azure login
         uses: azure/login@v2
         with:
