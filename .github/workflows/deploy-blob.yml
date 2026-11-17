@@ -79,7 +79,39 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: Sync build to $web
+      - name: Upload assets first (HTML 제외)
+        # HTML이 먼저 올라가면 새 HTML이 아직 없는 main.<hash>.js를 참조해 404가 나고,
+        # Front Door가 /assets/ 404 응답에도 immutable 캐시 헤더를 붙여 브라우저가 404를 1년간 캐시한다.
+        # 따라서 HTML이 참조할 JS/CSS 등을 먼저 올리고, 기존 파일은 이 단계에서 지우지 않는다.
+        env:
+          AZCOPY_AUTO_LOGIN_TYPE: AZCLI
+        run: |
+          azcopy sync build "https://${STORAGE_ACCOUNT}.blob.core.windows.net/\$web" \
+            --recursive \
+            --exclude-pattern="*.html" \
+            --delete-destination=false \
+            --compare-hash=MD5 \
+            --put-md5
+      - name: Upload HTML (이전 파일은 아직 삭제하지 않음)
+        env:
+          AZCOPY_AUTO_LOGIN_TYPE: AZCLI
+        run: |
+          azcopy sync build "https://${STORAGE_ACCOUNT}.blob.core.windows.net/\$web" \
+            --recursive \
+            --delete-destination=false \
+            --compare-hash=MD5 \
+            --put-md5
+      - name: Purge Front Door cache
+        # Front Door 에지가 HTML을 캐시하므로, 퍼지가 끝나기 전에 이전 JS를 지우면
+        # 에지에 남은 이전 HTML이 삭제된 JS를 참조해 404가 난다. 퍼지 완료까지 기다린다.
+        run: |
+          az afd endpoint purge \
+            --resource-group "$RESOURCE_GROUP" \
+            --profile-name "$AFD_PROFILE" \
+            --endpoint-name "$AFD_ENDPOINT" \
+            --content-paths "/*"
+      - name: Delete stale files
+        # 퍼지가 끝난 뒤에 이번 빌드에 없는 이전 파일을 삭제한다.
         env:
           AZCOPY_AUTO_LOGIN_TYPE: AZCLI
         run: |
@@ -88,11 +120,3 @@ jobs:
             --delete-destination=true \
             --compare-hash=MD5 \
             --put-md5
-      - name: Purge Front Door cache
-        run: |
-          az afd endpoint purge \
-            --resource-group "$RESOURCE_GROUP" \
-            --profile-name "$AFD_PROFILE" \
-            --endpoint-name "$AFD_ENDPOINT" \
-            --content-paths "/*" \
-            --no-wait
