@@ -89,26 +89,10 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: Upload hashed assets with Cache-Control
-        # 파일 이름에 해시가 들어간 assets/ 폴더는 blob 속성으로 1년 immutable 캐시를 지정한다.
-        # Front Door 규칙으로 덮어쓰면 404 응답에도 immutable이 붙어 브라우저가 404를 1년간 캐시하므로,
-        # 실제 파일이 있을 때만 헤더가 붙도록 원본(blob)에서 지정한다.
-        # 해시 파일은 이름이 같으면 내용도 같으므로 평소에는 이미 있는 파일을 건너뛴다.
-        env:
-          AZCOPY_AUTO_LOGIN_TYPE: AZCLI
-          OVERWRITE: ${{ inputs.overwrite_assets && 'true' || 'false' }}
-        run: |
-          for prefix in "" en/ es/ ja/; do
-            test -d "build/${prefix}assets" || continue
-            azcopy copy "build/${prefix}assets" "https://${STORAGE_ACCOUNT}.blob.core.windows.net/\$web/${prefix}" \
-              --recursive \
-              --overwrite="$OVERWRITE" \
-              --cache-control="public, max-age=31536000, immutable" \
-              --put-md5
-          done
-      - name: Upload other files first (HTML 제외)
-        # HTML이 먼저 올라가면 새 HTML이 아직 없는 main.<hash>.js를 참조해 404가 난다.
-        # 따라서 HTML이 참조할 파일을 먼저 올리고, 기존 파일은 이 단계에서 지우지 않는다.
+      - name: Upload assets first (HTML 제외)
+        # HTML이 먼저 올라가면 새 HTML이 아직 없는 main.<hash>.js를 참조해 404가 나고,
+        # Front Door가 /assets/ 404 응답에도 immutable 캐시 헤더를 붙여 브라우저가 404를 1년간 캐시한다.
+        # 따라서 HTML이 참조할 JS/CSS 등을 먼저 올리고, 기존 파일은 이 단계에서 지우지 않는다.
         env:
           AZCOPY_AUTO_LOGIN_TYPE: AZCLI
         run: |
