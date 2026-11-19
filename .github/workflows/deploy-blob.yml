@@ -41,11 +41,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: yarn
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        # yarn.lock에 고정된 버전으로 설치한다. lock 파일과 package.json이 어긋나면 실패한다.
+        run: yarn install --frozen-lockfile
       - name: Build project (${{ matrix.locale }})
-        run: npm run build -- --locale ${{ matrix.locale }}
+        run: yarn build --locale ${{ matrix.locale }}
       - name: Clean up image directories
         # 이미지는 별도 Blob 컨테이너(supremadocs)에서 제공하므로 업로드하지 않는다.
         run: rm -rf build/img build/en/img build/es/img build/ja/img
@@ -128,8 +129,9 @@ jobs:
             --compare-hash=MD5 \
             --put-md5
       - name: Purge Front Door cache
-        # Front Door 에지가 HTML을 캐시하므로, 퍼지가 끝나기 전에 이전 JS를 지우면
-        # 에지에 남은 이전 HTML이 삭제된 JS를 참조해 404가 난다. 퍼지 완료까지 기다린다.
+        # 퍼지는 요청만 보내고 완료를 기다리지 않는다(완료까지 5~10분 이상 걸림).
+        # 퍼지가 끝나기 전에 에지에 남은 이전 HTML은 이전 assets를 참조하지만,
+        # 이전 assets는 아래 정리 단계에서 유예 기간 동안 남겨 두므로 404가 나지 않는다.
         run: |
           az afd endpoint purge \
             --resource-group "$RESOURCE_GROUP" \
