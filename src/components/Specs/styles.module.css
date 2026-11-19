@@ -19,8 +19,11 @@
 .techspecsRowheader {
   float: left;
   width: 22%;
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
   color: var(--ifm-color-color-ol-gray);
+  margin: 0 !important;
+  line-height: var(--ifm-line-height-base);
 }
 
 .techspecsRowheader a {

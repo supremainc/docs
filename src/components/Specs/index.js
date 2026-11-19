@@ -159,19 +159,19 @@ export function SpecSection({data}) {
         {Object.values(specs).map((item, index) => (
           <div className={styles.techspecSection} key={item.label_id || index}>
             {/* techspecsRowheader */}
-            <div className={styles.techspecsRowheader}>
+            <h3 className={styles.techspecsRowheader}>
               {item.label_link ? (
                 <>
                   <Link to={item.label_link}>
                     {translate({id: item.label_id})}
-                    <div className="tooltip" dangerouslySetInnerHTML={{__html: glossary[item.label_link.split('#')[1]].description}}/>
                   </Link>
+                  <div className="tooltip" dangerouslySetInnerHTML={{__html: glossary[item.label_link.split('#')[1]].description}}/>
                 </>
               ) : (
                 <>{translate({id: item.label_id})}</>
               )}
               {item.annotation_label && <AnnotationSup id={item.annotation_label} dupl={item.annotation_dupl} />}
-            </div>
+            </h3>
             
             {/* type에 따라 분기 techspecsBody */}
             {item.type === 'biometric' && (
