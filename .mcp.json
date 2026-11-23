@@ -1,6 +1,0 @@
-{
-  "mcp-korean-spell": {
-    "command": "npx",
-    "args": ["-y", "@winterjung/mcp-korean-spell"]
-  }
-}
