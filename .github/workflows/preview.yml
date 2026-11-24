@@ -11,9 +11,15 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
-    name: Deploy to GitHub Pages
+  build:
+    # 언어별로 병렬 빌드한다. ko는 build/, 나머지는 build/<locale>/에 출력되므로 결과물이 겹치지 않는다.
+    # 언어별 단독 빌드에서도 /docs/<locale>/ 경로가 유지되도록 docusaurus.config.js의 localeConfigs에 baseUrl을 명시해 두었다.
+    name: Build (${{ matrix.locale }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        locale: [ko, en, es, ja]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,14 +36,49 @@ jobs:
         # svg-img 페이지가 참조하는 genpdf/svg-components-map.mjs는 .gitignore에
         # 등록된 생성 파일이므로, 빌드 전에 MDXComponents.js를 파싱해 재생성한다.
         run: node genpdf/generateSvgMap.js
-      - name: Build website
-        run: yarn build:preview
+      - name: Build website (${{ matrix.locale }})
+        run: yarn build:preview --locale ${{ matrix.locale }}
       - name: Remove duplicated locale img folders
-        # Docusaurus는 다국어 빌드 시 static/img 전체를 로케일마다(en/es/ja) 그대로
-        # 복사한다. Image/ProdImg 컴포넌트가 preview에서 공용 루트 /img 경로만
-        # 참조하도록 되어 있어 로케일별 사본은 쓰이지 않으므로 삭제해 아티팩트
-        # 용량을 줄인다 (GitHub Pages 1GB 제한 대응).
+        # Docusaurus는 static/img 전체를 로케일마다(en/es/ja) 그대로 복사한다.
+        # Image/ProdImg 컴포넌트가 preview에서 공용 루트 /img 경로만 참조하므로
+        # 로케일별 사본은 삭제하고, ko 빌드의 build/img만 남긴다 (GitHub Pages 1GB 제한 대응).
         run: rm -rf build/en/img build/es/img build/ja/img
+      - name: Pack build output
+        # 작은 파일이 많아 아티팩트 업로드가 느려지므로 하나의 tar로 묶는다.
+        run: tar -czf site-${{ matrix.locale }}.tar.gz -C build .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ matrix.locale }}
+          path: site-${{ matrix.locale }}.tar.gz
+          compression-level: 0
+          retention-days: 1
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: site-*
+          path: artifacts
+          merge-multiple: true
+      - name: Merge build outputs
+        run: |
+          mkdir -p build
+          for f in artifacts/*.tar.gz; do tar -xzf "$f" -C build; done
+      - name: Verify merged output
+        # force_orphan으로 gh-pages 브랜치를 통째로 교체하므로, 결과물이 누락되면 해당 언어가 사라진다. 배포 전에 확인한다.
+        run: |
+          fail=0
+          test -f build/index.html || { echo "::error::build/index.html 없음"; fail=1; }
+          test -d build/img || { echo "::error::build/img 없음 (preview 공용 이미지)"; fail=1; }
+          for l in en es ja; do
+            test -f "build/$l/index.html" || { echo "::error::build/$l/index.html 없음"; fail=1; continue; }
+            # 언어별 페이지가 자기 언어 경로(/docs/<locale>/assets)의 자산을 참조하는지 확인
+            grep -q "/docs/$l/assets/" "build/$l/index.html" || { echo "::error::$l 페이지의 자산 경로가 /docs/$l/로 시작하지 않음"; fail=1; }
+          done
+          exit $fail
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
