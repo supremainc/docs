@@ -1,17 +1,10 @@
 ---
 id: monitoring-event
-title: Supervisar Evento
-description: Esta guía proporciona métodos para supervisar y gestionar eventos en tiempo real mediante la función de supervisión de eventos. Utilice varias funciones, como eventos de alarma, eventos de advertencia, filtrado y gestión de estados, para manejar los eventos de manera eficiente.
-keywords:
-  - Monitorizar
-  - Supervisión de eventos
-  - Evento en tiempo real
-  - Evento de alarma
-  - Evento de advertencia
-  - Filtrado de eventos
+title: Supervisar Eventos
+description: Aprenda a ver y gestionar eventos en tiempo real con la supervisión de eventos. Utilice funciones como eventos de alarma, eventos de advertencia, filtrado y gestión de estados para gestionar los eventos de manera eficiente.
 ---
 
-En la sección <Cmd sid='arena.eventTable.title' /> en la parte inferior de la página de supervisión, revise y gestione eventos en tiempo real. Gestione eventos de forma eficiente mediante funciones como estado de eventos, manejo de eventos de alarma, filtrado y codificación por colores. Supervise en tiempo real los eventos relacionados con puertas, dispositivos y usuarios y tome medidas rápidas según sea necesario.
+En la sección <Cmd sid='arena.eventTable.title' /> en la parte inferior de la página de supervisión, revise y gestione eventos a medida que ocurren en tiempo real. Gestione eventos de forma eficiente con funciones como estado de eventos, manejo de eventos de alarma, filtrado y codificación por colores. En particular, supervise en tiempo real los eventos relacionados con puertas, dispositivos y usuarios, y tome medidas rápidas según sea necesario.
 
 <Image src='/img/biostarx-monitoring-event-list.png' />
 
@@ -25,57 +18,57 @@ En la sección <Cmd sid='arena.eventTable.title' />, visualice los eventos a med
 
 * <Cmd sid='arena.eventTable.door' />: Puerta donde ocurrió el evento.
 
-* <Cmd sid='arena.eventTable.device' />: Dispositivo en el que ocurrió el evento.
+* <Cmd sid='arena.eventTable.device' />: Dispositivo donde ocurrió el evento.
 
 * <Cmd sid='arena.eventTable.user' />: Usuario que generó el evento.
 
 * <Cmd sid='arena.eventTable.event' />: Información detallada del evento.
 
-* <Cmd sid='arena.eventTable.status' />: Estado del evento. Los eventos activos se muestran como <Cmd sid='arena.preview.event.active' />. Los eventos de alarma muestran un botón <Cmd sid='common.acknowledge' />. Haga clic en <Cmd sid='common.acknowledge' /> para resolver el evento.
+* <Cmd sid='arena.eventTable.status' />: Estado del evento. Los eventos activos aparecen como <Cmd sid='arena.preview.event.active' />. Los eventos de alarma muestran un botón <Cmd sid='common.acknowledge' />. Para resolver el evento, haga clic en <Cmd sid='common.acknowledge' />.
 
   <Image src='/img/biostarx-monitoring-event-list-alarm-active.png' />
 
-* <Cmd sid='arena.eventTable.view' />: Si el evento incluye información de video de la cámara conectada a la puerta, se muestra un ícono de video (<IcVidLog />). Haga clic en este ícono para ver el video.
+* <Cmd sid='arena.eventTable.view' />: Si el evento incluye video de una cámara conectada a la puerta, aparece un ícono de video (<IcVidLog />). Para ver el video, haga clic en el ícono.
 
 :::info
 
-* Haga clic en un evento individual para mostrar información detallada en el lado derecho de la pantalla. Esta información detallada incluye la hora del evento, área, puerta, dispositivo, grupo de usuarios, usuario, puerto y detalles del evento. 
+* Cuando haga clic en un evento, sus detalles aparecen en el lado derecho de la pantalla. Los detalles incluyen la hora del evento, el área, la puerta, el dispositivo, el grupo de usuarios, el usuario, el puerto y la información del evento. 
 
-* Si el evento incluye información de video o imágenes de una cámara conectada a la puerta, también podrá ver los registros de video e imágenes.
+* Si el evento incluye video o imágenes de una cámara conectada a la puerta, también podrá ver los registros de video e imágenes.
 
 :::
 
-## Distinguir eventos por color {/* #event-color */}
+## Colores de eventos {/* #event-color */}
 
-Los eventos en la lista se pueden distinguir por color:
+Los eventos en la lista de eventos se codifican por colores según el tipo.
 
 <Image src='/img/biostarx-monitoring-event-list-types.png' />
 
 * **Sin color**: Evento normal.
 
-* <span style={{fontWeight: 'bold', color: '#ffa200'}}>Naranja</span>: Evento de precaución. Indica eventos que requieren atención, como intentos de acceso no autorizado en áreas restringidas o puertas que quedan abiertas.
+* <span style={{fontWeight: 'bold', color: '#ffa200'}}>Naranja</span>: Evento de precaución. Este evento requiere atención, como cuando un usuario intenta ingresar a un área sin permiso de acceso o cuando una puerta queda abierta.
 
-* <span style={{fontWeight: 'bold', color: '#ff0000'}}>Rojo</span>: Evento de [alarma](../../reference/glossary#alarm). Indica un evento de advertencia que requiere acción en el sistema.
+* <span style={{fontWeight: 'bold', color: '#ff0000'}}>Rojo</span>: Evento de [alarma](../../reference/glossary#alarm). Este evento de advertencia ocurrió en el sistema y requiere acción.
 
 * <span style={{fontWeight: 'bold', color: '#6dae00'}}>Verde</span>: Evento de alarma resuelto.
 
 {/* Differences between Alarm Events and Warning Events */}
 
-## Revisar eventos de alarma {/* #alarm-event */}
+## Ver eventos de alarma {/* #alarm-event */}
 
-Solo los eventos de alarma se pueden ver en la sección <Cmd sid='arena.eventTable.title' />. Haga clic en <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.alarmEvents' /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />. La lista mostrará solo eventos de alarma, los cuales se indican en rojo. Los eventos de alarma se muestran en rojo.
+Vea solo los eventos de alarma en la lista de la sección <Cmd sid='arena.eventTable.title' />. Haga clic en <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.alarmEvents' /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />. En la lista de eventos solo aparecen los eventos de alarma. Los eventos de alarma se muestran en rojo.
 
 <Image src='/img/biostarx-monitoring-event-list-view-only-alarm.png' />
 
 :::info
 
-Para ver todos los eventos, haga clic en <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.allEvents' /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />.
+Para ver todos los eventos, incluidos los eventos de alarma, haga clic en <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.allEvents' /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />.
 
 :::
 
 ## Eventos en tiempo real {/* #real-time-event */}
 
-Revise los eventos a medida que ocurren en tiempo real en la lista de la sección <Cmd sid='arena.eventTable.title' />. Para detener los eventos en tiempo real, haga clic en <IcPause /> <Cmd sid='arena.eventTable.toolbar.pause' /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />. Haga clic en <IcPlay /> <Cmd sid='arena.eventTable.toolbar.play' /> para reanudar los eventos en tiempo real.
+Vea los eventos a medida que ocurren en tiempo real en la lista de eventos de la sección <Cmd sid='arena.eventTable.title' />. Para pausar los eventos en tiempo real, haga clic en <IcPause /> <Cmd sid='arena.eventTable.toolbar.pause' /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />. Para reanudar los eventos en tiempo real, haga clic en <IcPlay/> <Cmd sid='arena.eventTable.toolbar.play' />.
 
 <Image src='/img/biostarx-monitoring-event-list-pause.png' />
 
@@ -83,65 +76,65 @@ Revise los eventos a medida que ocurren en tiempo real en la lista de la secció
 
 ### Aplicar filtros {/* #apply-filter */}
 
-Los usuarios pueden filtrar la lista de eventos según los criterios deseados, lo que permite identificar rápidamente los eventos relevantes. Esto le permite revisar rápidamente los eventos según las condiciones deseadas.
+Filtre la lista de eventos por las condiciones que necesite. Esto le ayuda a encontrar rápidamente eventos que coincidan con esas condiciones.
 
-1. Haga clic en <IcFilter /> en cada columna de encabezado de la sección <Cmd sid='arena.eventTable.title' />.
+1. En la lista de la sección <Cmd sid='arena.eventTable.title' />, haga clic en <IcFilter /> en el encabezado de una columna.
 
    <Image src='/img/biostarx-monitoring-event-list-filter-01.png' />
 
-2. Cuando aparezca la ventana de filtro, seleccione el elemento deseado de la lista izquierda.
+2. Cuando aparezca la ventana de filtro, haga clic en las opciones que necesite en la lista de la izquierda.
 
    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
-   * Selecciona una opción principal para seleccionar todas las opciones secundarias.
+   * Cuando seleccione una opción principal, se seleccionan todas sus opciones secundarias.
 
-   * Haz clic en <IcClose title='Remove' /> para deseleccionar la opción seleccionada. Para borrar todos los elementos, haga clic en <Cmd sid='common.removeAll' />.
+   * Para deseleccionar una opción, haga clic en <IcClose title='Remove' />. Para deseleccionar todas las opciones, haga clic en <Cmd sid='common.removeAll' />.
 
-3. Una vez que haya terminado la configuración, haga clic en <Cmd sid='common.apply' />.
+3. Después de completar todos los ajustes, haz clic en <Cmd sid='common.apply' />.
 
-Solo se mostrarán en la lista los eventos que cumplan las condiciones establecidas.
+La lista de eventos muestra solo los eventos que coinciden con las condiciones que configuró.
 
 :::info
 
-* También puede buscar rápidamente los elementos deseados usando el campo de búsqueda en la ventana de filtro.
+* Para encontrar opciones rápidamente, use el campo de búsqueda en la ventana de filtro.
 
-* Se pueden establecer múltiples condiciones para cada columna de cabecera. Cuando se establece más de una condición, se aplica la condición `AND`.
+* Puede establecer varias condiciones para el encabezado de cada columna. Cuando establece más de una condición, las condiciones se combinan con `AND`.
 
-* Los elementos que se pueden filtrar pueden variar según la columna de encabezado.
+* Las opciones disponibles para filtrar pueden variar según el encabezado de la columna.
 
-* Cuando defines condiciones de filtrado, el ícono <IcFilter2 title='Filter' /> en la columna de encabezado cambia de color.
+* Cuando establece condiciones de filtrado, el ícono <IcFilter2 title='Filter' /> en el encabezado de la columna cambia de color.
 
 :::
 
 ### Eliminar filtros {/* #removefilter */}
 
-Puede borrar las condiciones de filtro aplicadas.
+Elimine las condiciones de filtro que aplicó.
 
-1. En la lista de la sección <Cmd sid='arena.eventTable.title' />, haz clic en el ícono <IcFilter2 title='Filter' /> de la columna de encabezado con filtros aplicados.
+1. En la lista de la sección <Cmd sid='arena.eventTable.title' />, haga clic en <IcFilter2 title='Filter' /> en el encabezado de la columna con el filtro aplicado.
 
-2. Cuando aparezca la ventana de filtro, haz clic en <IcClose title='Remove' /> a la derecha de la opción que vas a deseleccionar en la lista de la derecha. Para borrar todos los filtros, haga clic en <Cmd sid='common.removeAll' />.
+2. Cuando aparezca la ventana de filtro, en la lista de la derecha, haga clic en <IcClose title='Remove' /> junto a la opción que desea eliminar. Para borrar todos los filtros, haga clic en <Cmd sid='common.removeAll' />.
 
    <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
 
-3. Una vez que haya configurado todas las condiciones a borrar, haga clic en <Cmd sid='common.apply' />.
+3. Después de seleccionar todas las condiciones que desea eliminar, haga clic en <Cmd sid='common.apply' />.
 
 :::info
 
-* También puede buscar rápidamente los elementos deseados usando el campo de búsqueda en la ventana de filtro.
+* Para encontrar opciones rápidamente, use el campo de búsqueda en la ventana de filtro.
 
-* Cuando se borran las condiciones de filtrado, el color del ícono en la columna de encabezado vuelve a su estado original.
+* Cuando se eliminen las condiciones de filtrado, el ícono del encabezado de la columna vuelve a su color original.
 
 :::
 
 ## Borrar la lista de eventos {/* #cleareventlist */}
 
-En la sección <Cmd sid='arena.eventTable.title' />, borre eventos. Haga clic en <IcMoreB /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' /> y seleccione <Cmd sid='arena.eventTable.clearEvents' /> en el menú emergente. Si hay muchos eventos innecesarios acumulados en la lista, utilice la función <Cmd sid='arena.eventTable.clearEvents' /> para limpiarla.
+Borre eventos de la lista de la sección <Cmd sid='arena.eventTable.title' />. Haga clic en <IcMoreB/> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' /> y seleccione <Cmd sid='arena.eventTable.clearEvents' /> del menú emergente. Cuando se acumulen muchos eventos innecesarios en la lista de eventos, utilice <Cmd sid='arena.eventTable.clearEvents' /> para limpiar la lista.
 
 <Image src='/img/biostarx-monitoring-event-list-remove.png' />
 
-## Confirmar alarma y registrar acción {/* #acknowledge-alarm-and-record-action */}
+## Confirmar alarmas y registrar acciones {/* #acknowledge-alarm-and-record-action */}
 
-Cuando ocurre un evento de alarma, como la apertura forzada de la puerta, aparece una ventana de mensaje de alarma. La ventana de mensaje de alarma incluye información detallada sobre el evento de alarma activado. En este momento, el administrador puede registrar su confirmación del evento de alarma activado y las acciones realizadas.
+Cuando ocurre un evento de alarma, como la apertura forzada de la puerta, aparece una ventana de mensaje de alarma. La ventana de mensaje de alarma muestra los detalles del evento de alarma. Puede confirmar el evento de alarma y registrar las acciones realizadas.
 
 <Image src='/img/biostarx-monitoring-event-alert-message.png' />
 
@@ -151,64 +144,64 @@ El botón <Cmd sid='common.ignoreAll' /> se muestra solo cuando ocurren dos o m�
 
 :::
 
-### Registrar acción para el evento de alarma {/* #recordactionforalarmevent */}
+### Registrar acciones para un evento de alarma {/* #recordactionforalarmevent */}
 
-Ingresa las acciones relacionadas con el evento de alarma en el campo de entrada de mensaje. Ingresa hasta 500 caracteres. Ingresa las acciones y haz clic en <Cmd sid='common.acknowledge' />. Registra la confirmación y las acciones relacionadas con el evento de alarma. La ventana de mensaje de alarma se cerrará.
+En el campo de mensaje, ingrese las acciones realizadas para el evento de alarma. Ingresa hasta 500 caracteres. Después de ingresar las acciones, haga clic en <Cmd sid='common.acknowledge' />. Se registran la confirmación y las acciones del evento de alarma. La ventana de mensaje de alarma se cerrará.
 
 <Image src='/img/biostarx-monitoring-event-alert-acknowledge-input-detail.png' />
 
 ### Aplazar la confirmación de un evento de alarma {/* #deferalarmeventacknowledgment */}
 
-Aplaza la confirmación del evento de alarma haciendo clic en <Cmd sid='common.ignore' />. Se pueden registrar las acciones realizadas. La ventana de mensaje de alarma se cerrará. Los eventos de alarma aplazados se muestran en la lista de eventos con el estado <Cmd sid='arena.preview.event.active' />, y se puede usar el botón <Cmd sid='common.acknowledge' />.
+Para aplazar la confirmación del evento de alarma, haga clic en <Cmd sid='common.ignore' />. Aún así puede registrar las acciones realizadas. La ventana de mensaje de alarma se cerrará. Los eventos de alarma aplazados aparecen como <Cmd sid='arena.preview.event.active' /> en la lista de eventos, y el botón <Cmd sid='common.acknowledge' /> está disponible.
 
 <Image src='/img/biostarx-monitoring-event-list-alarm-active.png' />
 
-### Verificar eventos de alarma en la lista de eventos
+### Confirmar eventos de alarma en la lista de eventos
 
-Haz clic en <Cmd sid='common.acknowledge' /> que aparece en la columna <Cmd sid='arena.eventTable.status' /> de la lista de eventos para registrar la confirmación y las acciones relacionadas con los eventos de alarma activados. Completa tu entrada y haz clic en <Cmd sid='common.acknowledge' />.
+Para confirmar un evento de alarma y registrar las acciones realizadas, haga clic en <Cmd sid='common.acknowledge' /> en la columna <Cmd sid='arena.eventTable.status' /> de la lista de eventos. Después de completar la entrada, haga clic en <Cmd sid='common.acknowledge' />.
 
 <Image src='/img/biostarx-monitoring-event-alert-acknowledge.png' />
 
 ## Ver eventos de alarma sin confirmar
 
-Esta función muestra todos los eventos de alarma sin confirmar a la vez y permite registrar las acciones realizadas. Es especialmente útil cuando ocurren múltiples eventos de alarma idénticos.
+Vea todos los eventos de alarma sin confirmar a la vez y registre acciones para ellos. Esto es útil cuando el mismo evento de alarma ocurre varias veces.
 
-1. Haz clic en <IcViewAlert /> en la esquina superior derecha de <Cmd sid='arena.eventTable.title' />.
+1. Haga clic en <IcViewAlert /> en la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />.
 
    <Image src='/img/biostarx-monitoring-event-list-view-alerts-01.png' />
 
-2. Cuando aparezca la ventana <Cmd sid='arena.activeAlarm.activeAlarmEvents' />, selecciona en la lista izquierda el evento de alarma para registrar las acciones. Para seleccionar todos los eventos, haz clic en la casilla de verificación ubicada en el extremo izquierdo de la columna de encabezado.
+2. Cuando aparezca la ventana <Cmd sid='arena.activeAlarm.activeAlarmEvents' />, en la lista de la izquierda, seleccione los eventos de alarma para los que desea registrar acciones. Para seleccionar todos los eventos, haga clic en la casilla de verificación ubicada en el extremo izquierdo del encabezado de columna.
 
    <Image src='/img/biostarx-monitoring-event-list-view-alerts-02.png' />
 
-3. Ingresa las acciones relacionadas con el evento de alarma en el campo de entrada <Cmd sid='arena.activeAlarm.memo' />.
+3. En el campo <Cmd sid='arena.activeAlarm.memo' />, introduzca las acciones realizadas para el evento de alarma.
 
 4. Haz clic en <Cmd sid='common.acknowledge' />.
 
-Registra las acciones realizadas para el evento seleccionado. Aparecerá una ventana emergente para ingresar la confirmación del evento de alarma y las acciones realizadas.
+Se registran las acciones de los eventos seleccionados. Se cierra la ventana emergente del evento de alarma.
 
 :::info
 
-Selecciona más de un evento de la lista de eventos de alarma para activar el botón <Cmd sid='common.acknowledge' />.
+El botón <Cmd sid='common.acknowledge' /> se habilita solo cuando selecciona al menos un evento en la lista de eventos de alarma.
 
 :::
 
-## Configurar columnas de la lista de eventos
+## Configurar las columnas de la lista de eventos
 
-Agrega columnas para mostrar en la lista de eventos, reordénalas y ocúltalas según sea necesario.
+Agregue, reordene u oculte las columnas que aparecen en la lista de eventos.
 
-1. Haz clic en <IcMoreB /> → <Cmd sid='arena.eventTable.columnLayout' /> en la esquina superior derecha de <Cmd sid='arena.eventTable.title' />.
+1. En la esquina superior derecha de la sección <Cmd sid='arena.eventTable.title' />, haz clic en <IcMoreB /> → <Cmd sid='arena.eventTable.columnLayout' />.
 
    <Image src='/img/biostarx-monitoring-event-list-column-layout.png' />
 
-2. Cuando aparezca la ventana <Cmd sid='arena.eventTable.columnLayout' />, haz clic en las casillas de las columnas para mostrarlas u ocultarlas. También cambia el orden de las columnas mediante arrastrar y soltar.
+2. Cuando aparezca la ventana <Cmd sid='arena.eventTable.columnLayout' />, active o desactive la casilla de verificación de cada columna para mostrarla u ocultarla. Para cambiar el orden de las columnas, arrastre y suelte las columnas.
 
    <Image src='/img/biostarx-monitoring-event-list-column-layout-popup.png' />
 
-3. Después de realizar todos los cambios en la configuración de columnas, haz clic en <Cmd sid='common.apply' />.
+3. Cuando hayas terminado de cambiar la configuración de columnas, haz clic en <Cmd sid='common.apply' />.
 
 :::info
 
-Haz clic en <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para inicializar la configuración de columnas.
+Para restaurar la configuración de columnas predeterminada, haga clic en <Cmd sid='columnSetting.button.defaultColumn' product='2' />.
 
 :::
