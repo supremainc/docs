@@ -158,7 +158,7 @@
             "BEW2-ODPB",
             "BEW2-OAPB"
         ],
-        "version": "1.8.3",
+        "version": "1.8.4",
         "manuals": {
             "ko": "device/bioentry_w2/BioEntry W2_IG_1.37_KO_260622.pdf",
             "en": "device/bioentry_w2/BioEntry W2_IG_1.37_EN_260622.pdf",
@@ -166,15 +166,15 @@
             "ja": "device/bioentry_w2/BioEntry W2_IG_1.37_JA_260622.pdf"
         },
         "release_notes": {
-            "ko": "device/bioentry_w2/BioEntry W2_ReleaseNotes_1.8.3_KO_260825.pdf",
-            "en": "device/bioentry_w2/BioEntry W2_ReleaseNotes_1.8.3_EN_260825.pdf"
+            "ko": "device/bioentry_w2/BioEntry W2_RN_1.8.4_KO_261030.pdf",
+            "en": "device/bioentry_w2/BioEntry W2_RN_1.8.4_EN_261030.pdf"
         },
         "a_e": "device/bioentry_w2/SUPREMA_BioEntry_W2_AE-Specification_250723.docx",
         "dt": {
             "ko": "device/bioentry_w2/BioEntry W2_DrillingTemplate_KO.pdf",
             "en": "device/bioentry_w2/BioEntry W2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2024-11-05"
+        "release_date": "2026-10-30"
     },
     {
         "category": "biometric",
@@ -602,7 +602,7 @@
             "XS2-DPB",
             "XS2-APB"
         ],
-        "version": "1.4.2",
+        "version": "1.4.3",
         "manuals": {
             "ko": "device/xstation_2/X-Station 2_UG_1.11_KO_260616.pdf",
             "en": "device/xstation_2/X-Station 2_UG_1.11_EN_260616.pdf",
@@ -610,15 +610,15 @@
             "ja": "device/xstation_2/X-Station 2_UG_1.11_JA_260616.pdf"
         },
         "release_notes": {
-            "ko": "device/xstation_2/X-Station 2_RN_1.4.2_KO_260826.pdf",
-            "en": "device/xstation_2/X-Station 2_RN_1.4.2_EN_260826.pdf"
+            "ko": "device/xstation_2/X-Station 2_RN_1.4.3_KO_261103.pdf",
+            "en": "device/xstation_2/X-Station 2_RN_1.4.3_EN_261103.pdf"
         },
         "a_e": "device/xstation_2/SUPREMA_X-Station_2_AE-Specification_260622.docx",
         "dt": {
             "ko": "device/xstation_2/X-Station 2_DrillingTemplate_KO.pdf",
             "en": "device/xstation_2/X-Station 2_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-04-17"
+        "release_date": "2026-11-03"
     },
     {
         "category": "biometric",
