@@ -1,21 +1,18 @@
 ---
 id: tna-rule-schedule
-title: Set the Schedule
-description: Guide users on how to create work schedules by specifying the set work rules, other work rules, duration, and holidays.
-keywords:
-  - Work schedule
-  - Working rules
+title: Set Up Schedules
+description: Learn how to create schedules by assigning the configured Schedule Templates, Rules, periods, and holidays to users.
 ---
 
-You can create work schedules by specifying the set <Cmd sid='tab.shift' product='2' className='normal' />, <Cmd sid='rule.rule' product='2' className='normal' />, duration, and holidays.
+Create schedules by assigning the configured <Cmd sid='tab.shift' product='2' className='normal' />, <Cmd sid='rule.rule' product='2' className='normal' />, period, and holidays to users.
 
-You can also add temporary schedules or personal leave to the created work schedule.
+You can also add temporary schedules or personal leave to a created schedule.
 
 :::info
 
-Before creating the schedule, ensure that you have correctly created the <Cmd sid='tab.payCode' product='2' className='normal' />, <Cmd sid='tab.shift' product='2' className='normal' />, <Cmd sid='tab.shift' product='2' className='normal' />, and holidays. 
+Before you create a schedule, make sure that you have correctly created the <Cmd sid='tab.payCode' product='2' className='normal' />, <Cmd sid='tab.shift' product='2' className='normal' />, <Cmd sid='tab.scheduleTemplate' product='2' className='normal' />, and holidays to use. 
 
-* For more information about work rule settings, refer to the following:
+* For more information about these settings, see the following documents.
 
   * <DocLink docId='platform/biostar_x/tna-rule-shift-paycode' />
 
@@ -33,49 +30,49 @@ Before creating the schedule, ensure that you have correctly created the <Cmd si
 
 ### Add a schedule
 
-Add the work schedule for the registered users as instructed below.
+To add a schedule for registered users, follow these steps.
 
-1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
-2. Click <Cmd sid='ta.schedule' product='2' /> tab on the left sidebar of the screen.
+2. Click the <Cmd sid='ta.schedule' product='2' /> tab in the left sidebar.
 
 3. Click <Cmd sid='schedule.addSchedule' product='2' />.
 
    <Image src='/img/biostarx-tna-schedule-template.png' />
 
-4. When the <Cmd sid='schedule.addSchedule' product='2' /> screen appears, set each item.
+4. When the <Cmd sid='schedule.addSchedule' product='2' /> screen appears, set each option.
 
 :::info
 
-* Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+* To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
-* After saving the settings, click <Cmd sid='ta.apply_add_another' product='2' /> to add another <Cmd sid='ta.schedule' product='2' />.
+* To save the settings and then add another <Cmd sid='ta.schedule' product='2' />, click <Cmd sid='ta.apply_add_another' product='2' />.
 
 :::
 
-### Setting options guide
+### Schedule options
 
-Guide for work schedule configuration options.
+Set the following options for the schedule.
 
 <Image src='/img/biostarx-tna-schedule-template-adding.png' />
 
-* <Cmd sid='form.name' product='2' />: Enter the name of the work schedule.
+* <Cmd sid='form.name' product='2' />: Enter the name of the schedule.
 
-* <Cmd sid='form.description' product='2' />: Enter a description for the work schedule.
+* <Cmd sid='form.description' product='2' />: Enter a description of the schedule.
 
-* <Cmd sid='rule.rule' product='2' />: Select the configured <Cmd sid='rule.rule' product='2' className='normal' />. Setting <Cmd sid='rule.rule' product='2' className='normal' /> disregards the overtime rules set on <Cmd sid='tab.shift' product='2' className='normal' />. Select <Cmd sid='common.none' product='2' /> if not in use.
+* <Cmd sid='rule.rule' product='2' />: Select a configured <Cmd sid='rule.rule' product='2' className='normal' />. When you set a <Cmd sid='rule.rule' product='2' className='normal' />, the overtime rules set in the <Cmd sid='tab.shift' product='2' className='normal' /> do not apply. If you do not use this option, select <Cmd sid='common.none' product='2' />.
 
   :::info
 
-  If the desired <Cmd sid='rule.rule' product='2' className='normal' /> is not available, you can add it. For more information, see <DocLink docId='platform/biostar_x/tna-rule-shift-overtime' />.
+  If the <Cmd sid='rule.rule' product='2' className='normal' /> you need does not exist, you can add one. For more information, see <DocLink docId='platform/biostar_x/tna-rule-shift-overtime' />.
 
   :::
 
-* <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' />: Select the configured <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' />. Once set, <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> cannot be modified.
+* <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' />: Select a configured <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' />. After it is set, the <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> cannot be changed.
 
   :::info
 
-  If the desired <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> is not available, you can add it. For more information, see <DocLink docId='platform/biostar_x/tna-rule-shift-schedule' />.
+  If the <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> you need does not exist, you can add one. For more information, see <DocLink docId='platform/biostar_x/tna-rule-shift-schedule' />.
 
   :::
 
@@ -83,121 +80,121 @@ Guide for work schedule configuration options.
 
   :::info
 
-  The start date cannot be changed once set. The end date can be changed later, and if it is changed to a date earlier than the set date, attendance events for the changed period will be deleted.
+  After the start date is set, it cannot be changed. You can change the end date later. If you change it to an earlier date, the absence events for the removed period are deleted.
 
   :::
 
-* <Cmd sid='schedule.holiday' product='2' />: Select the configured holiday schedule. Select <Cmd sid='common.none' product='2' /> if not in use.
+* <Cmd sid='schedule.holiday' product='2' />: Select a configured holiday schedule. If you do not use this option, select <Cmd sid='common.none' product='2' />.
 
   :::info
 
-  If the desired holiday schedule is not available, you can add it. For more information, see <DocLink docId='platform/biostar_x/settings-schedule#addHolidaySchedule' />.
+  If the holiday schedule you need does not exist, you can add one. For more information, see <DocLink docId='platform/biostar_x/settings-schedule#addHolidaySchedule' />.
 
   :::
 
-* <Cmd sid='schedule.users' product='2' />: Add users to apply the rules.
+* <Cmd sid='schedule.users' product='2' />: Add the users to apply the rules to.
 
 :::info
 
-The number of users included in the overall work schedule cannot exceed the maximum supported by your registered attendance management license. The maximum number of users per license is detailed in <DocLink docId='platform/biostar_x/licensing' />.
+The total number of users in all schedules cannot exceed the maximum number of users that your registered T&A license supports. For the maximum number of users for each license, see <DocLink docId='platform/biostar_x/licensing' />.
 
 :::
 
 ### Edit a schedule
 
-Guide for modifying registered work schedules.
+Edit a registered schedule.
 
-1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
-2. Click <Cmd sid='ta.schedule' product='2' /> tab on the left sidebar of the screen.
+2. Click the <Cmd sid='ta.schedule' product='2' /> tab in the left sidebar.
 
-3. Click the item to modify from the <Cmd sid='ta.schedule' product='2' /> list. Alternatively, click <IcEdit /> for the item to modify on the left sidebar of the screen.
+3. In the <Cmd sid='ta.schedule' product='2' /> list, click the schedule to edit. Alternatively, click <IcEdit /> next to the schedule in the left sidebar.
 
-4. Modify the desired item and click <Cmd sid='button.apply' product='2' />.
+4. Edit the options, and then click <Cmd sid='button.apply' product='2' />.
 
 ### Delete a schedule
 
-Guide for deleting registered work schedules.
+Delete a registered schedule.
 
-1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
-2. Click <Cmd sid='ta.schedule' product='2' /> tab on the left sidebar of the screen.
+2. Click the <Cmd sid='ta.schedule' product='2' /> tab in the left sidebar.
 
-3. Click the checkbox for the item you want to delete from the <Cmd sid='ta.schedule' product='2' /> list.
+3. In the <Cmd sid='ta.schedule' product='2' /> list, select the checkbox for the schedule to delete.
 
    <Image src='/img/biostarx-tna-schedule-remove-item.png' />
 
-4. Click <Cmd sid='schedule.deleteSchedule' product='2' /> at the top right of the screen. Alternatively, click <IcTrash2 /> for the item to delete on the left sidebar of the screen.
+4. Click <Cmd sid='schedule.deleteSchedule' product='2' /> in the upper-right corner of the screen. Alternatively, click <IcTrash2 /> next to the schedule in the left sidebar.
 
 5. When the confirmation message appears, click <Cmd sid='button.yes' product='2' />.
 
 ## Add a temporary schedule
 
-If a schedule is already registered, a temporary different work rule can be applied to the user.
+If a schedule is already registered, you can temporarily apply different rules to a user.
 
-1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
-2. Click <Cmd sid='ta.schedule' product='2' /> tab on the left sidebar of the screen.
+2. Click the <Cmd sid='ta.schedule' product='2' /> tab in the left sidebar.
 
-3. Click <IcBw2 title='Expand' /> for the desired schedule from the list on the left side of the screen.
+3. In the list on the left side of the screen, click <IcBw2 title='Expand' /> for the schedule.
 
-4. A list of users assigned to the schedule will appear, and selecting a user to apply a temporary schedule will show the calendar.
+4. The users assigned to the schedule appear. When you select the user to apply the temporary schedule to, a calendar appears.
 
    <Image src='/img/biostarx-tna-schedule-template-add-temp-user.png' />
 
-5. Click the date to which you want to add a temporary schedule on the calendar.
+5. On the calendar, click the date to add the temporary schedule to.
 
    <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule.png' />
 
-6. Click <Cmd sid='schedule.addTemporarySchedule' product='2' /> in the popup menu.
+6. Click <Cmd sid='schedule.addTemporarySchedule' product='2' /> in the pop-up menu.
 
-7. When the <Cmd sid='schedule.addTemporarySchedule' product='2' /> settings window appears, set each item.
+7. When the <Cmd sid='schedule.addTemporarySchedule' product='2' /> settings window appears, set each option.
 
    <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule-setting.png' />
 
-   To apply the same work schedule to other users, click <IcSearch /> and select the users.
+   To apply the same schedule to other users, click <IcSearch /> and select the users.
 
-8. Click <Cmd sid='button.apply' product='2' /> to apply the set work rules.
+8. To apply the rules you set, click <Cmd sid='button.apply' product='2' />.
 
 :::info
 
-To delete the temporary schedule applied to the user, click the set temporary schedule on the calendar. Click <Cmd sid='button.yes' product='2' /> when the confirmation message window appears.
+To delete a temporary schedule applied to a user, click the temporary schedule on the calendar. When the confirmation message appears, click <Cmd sid='button.yes' product='2' />.
 
 :::
 
-## Add and remove a leave
+## Add and delete leave
 
-You can add a user’s personal leave schedule.
+Add a leave schedule for a user.
 
-1. Click <Cmd sid='shell.header.tna' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
-2. Click <Cmd sid='ta.schedule' product='2' /> tab on the left sidebar of the screen.
+2. Click the <Cmd sid='ta.schedule' product='2' /> tab in the left sidebar.
 
-3. Click <IcBw2 title='Expand' /> for the desired schedule from the list on the left side of the screen.
+3. In the list on the left side of the screen, click <IcBw2 title='Expand' /> for the schedule.
 
-4. A list of users assigned to the schedule will appear, and selecting a user to apply the absence schedule will show the calendar.
+4. The users assigned to the schedule appear. When you select the user to apply the leave schedule to, a calendar appears.
 
    <Image src='/img/biostarx-tna-schedule-template-add-temp-user.png' />
 
-5. Click the date on the calendar to add the user's absence schedule.
+5. On the calendar, click the date to add the leave schedule to.
 
    <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule.png' />
 
-6. Click <Cmd sid='schedule.addLeave' product='2' /> in the popup menu.
+6. Click <Cmd sid='schedule.addLeave' product='2' /> in the pop-up menu.
 
-7. When the <Cmd sid='leave.editLeave' product='2' /> settings window appears, set each item.
+7. When the <Cmd sid='leave.editLeave' product='2' /> settings window appears, set each option.
 
    <Image src='/img/biostarx-tna-schedule-template-add-leave-setting.png' />
 
-   To apply the same absence schedule to other users, click <IcSearch /> and select the users.
+   To apply the same leave schedule to other users, click <IcSearch /> and select the users.
 
-8. Click <Cmd sid='button.apply' product='2' /> to apply the set absence schedule.
+8. To apply the leave schedule you set, click <Cmd sid='button.apply' product='2' />.
 
 :::info
 
-* If the desired absence management time rules are not available, you can add them. For more information on adding time rules, see <DocLink docId='platform/biostar_x/tna-rule-shift-paycode' />.
+* If the Time Code you need for leave does not exist, you can add one. For more information on adding Time Codes, see <DocLink docId='platform/biostar_x/tna-rule-shift-paycode' />.
 
-* To delete the absence schedule applied to the user, click <IcTrash2 /> for the set absence schedule on the calendar. Click <Cmd sid='button.yes' product='2' /> when the confirmation message window appears.
+* To delete a leave schedule applied to a user, click <IcTrash2 /> on the leave schedule in the calendar. When the confirmation message appears, click <Cmd sid='button.yes' product='2' />.
 
   <Image src='/img/biostarx-tna-schedule-remove-leave-item.png' alone />
 
