@@ -1,28 +1,25 @@
 ---
 id: data-generate-reports
-title: Generar Reporte
-description: Los informes se crean en el formato deseado.
-keywords:
-  - Informe
-  - Plantilla
+title: Generar un reporte
+description: Puede generar reportes en el formato que necesite.
 ---
 
 import ReportSaveNotes from '../../common/_bsx-save-report-notes.mdx';
 import SetPeriod from '../../common/_bsx-report-set-period.mdx';
 
-Puede ver todos los eventos que ocurrieron en **BioStar X** o solo el historial de alarmas. Puede filtrar y generar informes personalizados según las condiciones definidas por el usuario.
+Puede ver todos los eventos que ocurrieron en **BioStar X** o solo el historial de alarmas. Puede filtrar y generar reportes personalizados según las condiciones definidas por el usuario.
 
-Haga clic en <Cmd sid='shell.header.data' /> o seleccione <Cmd sid='shell.header.data' /> en la lista de accesos directos en la parte superior izquierda de la pantalla en la página <Cmd sid='shell.header.launcher' />.
+En la página <Cmd sid='shell.header.launcher' />, haga clic en <Cmd sid='shell.header.data' /> o seleccione <Cmd sid='shell.header.data' /> en la lista de accesos directos en la esquina superior izquierda de la pantalla.
 
 ## Ver todos los eventos
 
-Puede ver todos los eventos que ocurrieron en **BioStar X**. Haga clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.allEvents' /> en la barra lateral izquierda de la pantalla.
+Puede ver todos los eventos que ocurrieron en **BioStar X**. En la barra lateral izquierda, haga clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.allEvents' />.
 
 <Image src='/img/biostarx-data-generate-report.png' />
 
-* Para revisar la página anterior o siguiente de los resultados listados, haga clic en <IcFw title='Previous' /> o <IcBw title='Next' /> en la esquina superior derecha de la pantalla.
+* Para ir a la página anterior o siguiente de la lista, haga clic en <IcFw title='Previous' /> o <IcBw title='Next' /> en la esquina superior derecha de la pantalla.
 
-* Para cambiar la cantidad de filas que se muestran en la lista, haga clic en el menú desplegable en la esquina superior derecha de la pantalla y seleccione el valor deseado. Puede seleccionar un mínimo de 25 filas y un máximo de 200 filas.
+* Para cambiar la cantidad de filas en la lista, haga clic en el menú desplegable en la esquina superior derecha de la pantalla y, luego, seleccione un valor. La lista puede mostrar de 25 a 200 filas.
 
   <Image src='/img/biostarx-data-all-events-set-rows.png' />
 
@@ -32,15 +29,15 @@ Puede ver todos los eventos que ocurrieron en **BioStar X**. Haga clic en <Cmd s
 
 ### Establecer condiciones de consulta
 
-Puede filtrar la lista estableciendo las condiciones deseadas en la sección de encabezado de la lista de consulta. Puede establecer condiciones para todos los elementos excepto las fechas. 
+Puede filtrar la lista estableciendo las condiciones deseadas en la sección de encabezado de la lista de consulta. Puede establecer condiciones para todas las columnas excepto la fecha. 
 
-1. En la sección de encabezado de la lista de eventos, haga clic en el botón <IcFilter title='Filter' /> de la columna deseada.
+1. En la sección de encabezado de la lista de eventos, haga clic en el botón <IcFilter title='Filter' /> de la columna.
 
-2. Cuando aparezca la ventana de condiciones de filtro, seleccione los elementos deseados.
+2. Cuando aparezca la ventana de condiciones de filtro, seleccione los valores por los que desea filtrar.
 
    <Image src='/img/biostarx-data-report-add-filter.png' />
 
-3. Una vez completada la selección, haga clic en el botón <Cmd sid='button.addCondition' product='2' />.
+3. Una vez que termine de seleccionar, haga clic en <Cmd sid='button.addCondition' product='2' />.
 
 Solo se mostrarán en la lista los eventos que coincidan con las condiciones seleccionadas.
 
@@ -48,35 +45,35 @@ Solo se mostrarán en la lista los eventos que coincidan con las condiciones sel
 
 ### Borrar condiciones de consulta
 
-Para borrar las condiciones de consulta establecidas, haga clic en el botón <IcClose /> en el conjunto de condiciones debajo de la sección de encabezado. Las condiciones establecidas se borrarán y todos los eventos se mostrarán nuevamente en la lista.
+Para borrar las condiciones de consulta, haga clic en <IcClose /> en las condiciones debajo de la sección de encabezado. Las condiciones establecidas se borrarán y todos los eventos se mostrarán nuevamente en la lista.
 
 <Image src='/img/biostarx-data-all-events-disable-filter.png' />
 
-### Guardar informe
+### Guardar un reporte
 
-Guarde los eventos como un informe con el período de consulta y las condiciones que estableció. 
+Puede guardar los eventos como un reporte con el período de consulta y las condiciones que estableció. 
 
-1. Haga clic en <Cmd sid='data.button.saveReport' /> en la parte superior izquierda de la lista de eventos.
+1. Haga clic en <Cmd sid='data.button.saveReport' /> en la esquina superior izquierda de la lista de eventos.
 
    <Image src='/img/biostarx-data-all-events-filtered-save-report.png' />
 
-2. Cuando un mensaje confirme que la plantilla del informe se guardó correctamente, haga clic en <Cmd sid='button.ok' product='2' />.
+2. Cuando aparezca el mensaje que indica que se guardó la plantilla del reporte, haga clic en <Cmd sid='button.ok' product='2' />.
 
-3. Consulte los informes guardados en <Cmd sid='reportApp.savedReports' product='2' /> en la barra lateral izquierda.
+3. Los reportes guardados aparecen en <Cmd sid='reportApp.savedReports' product='2' /> en la barra lateral izquierda de la pantalla.
 
 <Image src='/img/biostarx-data-all-events-filtered-save-report-result.png' />
 
 <ReportSaveNotes />
 
-### Ver video del evento
+### Ver videos de eventos
 
-Si una cámara está conectada al dispositivo del evento, la columna <Cmd sid='data.column.customReport.view' /> muestra el icono <IcReportVid /> para ese evento. Al hacer clic en el icono, vea el video del momento en que ocurrió el evento en una ventana emergente.
+Si una cámara está conectada al dispositivo donde ocurrió un evento específico, la columna <Cmd sid='data.column.customReport.view' /> muestra el icono <IcReportVid /> de ese evento en la lista de eventos. Para ver el video del momento del evento en una ventana emergente, haga clic en el icono.
 
 <Image src='/img/biostarx-data-all-events-video-log.png' />
 
 :::info
 
-* Si conecta varias cámaras en los ajustes de reglas de cámara, el sistema reproduce el video de la primera cámara. Para obtener más información sobre cómo configurar las reglas para cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-rule' />.
+* Si conecta una o más cámaras en la configuración de reglas de cámara, el sistema reproduce el video de la primera cámara. Para obtener más información sobre cómo configurar las reglas para cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-rule' />.
 
 * Para obtener más información sobre cómo vincular cámaras con puertas, consulte <DocLink docId='platform/biostar_x/settings-videos-rule' />.
 
@@ -86,43 +83,43 @@ Si una cámara está conectada al dispositivo del evento, la columna <Cmd sid='d
 
 ### Exportar a CSV
 
-Puede exportar la lista de eventos consultados como un archivo CSV. 
+Puede exportar la lista de eventos como un archivo CSV. 
 
 1. Haga clic en <Cmd sid='reportApp.export' product='2' /> en la esquina superior derecha de la pantalla.
 
-2. Cuando aparezca la ventana <Cmd sid='reportApp.exportReport' product='2' />, seleccione <Cmd>CSV</Cmd> en <Cmd sid='reportApp.fileFormat' product='2' />.
+2. Cuando aparezca la ventana <Cmd sid='reportApp.exportReport' product='2' />, en <Cmd sid='reportApp.fileFormat' product='2' />, seleccione <Cmd>CSV</Cmd>.
 
    <Image src='/img/biostarx-data-export-all-report-csv.png' />
 
-3. Edite el nombre del archivo que se guardará en <Cmd sid='reportApp.fileName' product='2' />.
+3. En <Cmd sid='reportApp.fileName' product='2' />, puede cambiar el nombre del archivo que se guardará.
 
 4. Ingrese <Cmd sid='auditTrail.export.reason' product='2' /> (opcional) y haga clic en <Cmd sid='reportApp.export' product='2' />.
 
-5. Guarda el archivo CSV en la ubicación deseada de tu ruta local.
+5. Guarde el archivo CSV en una ubicación de su equipo.
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' /> es opcional. Verifique los registros de motivos de exportación en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+<Cmd sid='auditTrail.export.reason' product='2' /> es opcional. Puede ver los motivos de exportación en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
 ## Ver historial de alarmas
 
-Solo puede ver el historial de alarmas (alertas). Haga clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.alertHistory' /> en la barra lateral izquierda de la pantalla.
+Ver solo el historial de alarmas. En la barra lateral izquierda, haga clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.alertHistory' />.
 
 <Image src='/img/biostarx-data-alert-lists.png' />
 
-* Para revisar la página anterior o siguiente de los resultados listados, haga clic en <IcFw title='Previous' /> o <IcBw title='Next' /> en la esquina superior derecha de la pantalla.
+* Para ir a la página anterior o siguiente de la lista, haga clic en <IcFw title='Previous' /> o <IcBw title='Next' /> en la esquina superior derecha de la pantalla.
 
 * Para ir a la primera o última página de la lista consultada, haga clic en <IcFirst title='First' /> o <IcLast title='Last' /> en la esquina superior derecha de la pantalla.
 
-* Para cambiar la cantidad de filas que se muestran en la lista, haga clic en el menú desplegable en la esquina superior derecha de la pantalla y seleccione el valor deseado. Puede seleccionar un mínimo de 25 filas y un máximo de 200 filas.
+* Para cambiar la cantidad de filas en la lista, haga clic en el menú desplegable en la esquina superior derecha de la pantalla y, luego, seleccione un valor. La lista puede mostrar de 25 a 200 filas.
 
   <Image src='/img/biostarx-data-all-events-set-rows.png' />
 
 :::info
 
-Para obtener más información sobre cómo visualizar eventos de alarma (alerta) en el monitoreo de eventos, consulte <DocLink docId='platform/biostar_x/monitoring-event' />.
+Para obtener más información sobre cómo visualizar eventos de alarma en el monitoreo de eventos, consulte <DocLink docId='platform/biostar_x/monitoring-event' />.
 
 :::
 
@@ -132,15 +129,15 @@ Para obtener más información sobre cómo visualizar eventos de alarma (alerta)
 
 ### Establecer condiciones de consulta
 
-Puede filtrar la lista estableciendo las condiciones deseadas en la sección de encabezado de la lista de consulta. Puede establecer condiciones para todos los elementos excepto las fechas. 
+Puede filtrar la lista estableciendo las condiciones deseadas en la sección de encabezado de la lista de consulta. Puede establecer condiciones para todas las columnas excepto la fecha. 
 
-1. En la sección de encabezado de la lista de eventos, haga clic en el botón <IcFilter title='Filter' /> de la columna deseada.
+1. En la sección de encabezado de la lista de eventos, haga clic en el botón <IcFilter title='Filter' /> de la columna.
 
-2. Cuando aparezca la ventana de condiciones de filtro, seleccione los elementos deseados.
+2. Cuando aparezca la ventana de condiciones de filtro, seleccione los valores por los que desea filtrar.
 
    <Image src='/img/biostarx-data-report-add-filter.png' />
 
-3. Una vez completada la selección, haga clic en el botón <Cmd sid='button.addCondition' product='2' />.
+3. Una vez que termine de seleccionar, haga clic en <Cmd sid='button.addCondition' product='2' />.
 
 Solo se mostrarán en la lista los eventos que coincidan con las condiciones seleccionadas.
 
@@ -148,29 +145,29 @@ Solo se mostrarán en la lista los eventos que coincidan con las condiciones sel
 
 ### Borrar condiciones de consulta
 
-Para borrar las condiciones de consulta establecidas, haga clic en el botón <IcClose /> en el conjunto de condiciones debajo de la sección de encabezado. Las condiciones establecidas se borrarán y todos los eventos se mostrarán nuevamente en la lista.
+Para borrar las condiciones de consulta, haga clic en <IcClose /> en las condiciones debajo de la sección de encabezado. Las condiciones establecidas se borrarán y todos los eventos se mostrarán nuevamente en la lista.
 
 <Image src='/img/biostarx-data-alert-events-disable-filter.png' />
 
-### Guardar informe
+### Guardar un reporte
 
-Guarde el historial de alarmas como informe con el período de consulta y las condiciones que estableció. 
+Puede guardar el historial de alarmas como un informe con el período de consulta y las condiciones que estableció. 
 
 1. Haga clic en <Cmd sid='data.button.saveReport' /> en la parte superior izquierda de la lista del historial de alarmas.
 
    <Image src='/img/biostarx-data-alert-lists-save-report.png' />
 
-2. Cuando un mensaje confirme que la plantilla del informe se guardó correctamente, haga clic en <Cmd sid='button.ok' product='2' />.
+2. Cuando aparezca el mensaje que indica que se guardó la plantilla del reporte, haga clic en <Cmd sid='button.ok' product='2' />.
 
-3. Consulte los informes guardados en <Cmd sid='reportApp.savedReports' product='2' /> en la barra lateral izquierda.
+3. Los reportes guardados aparecen en <Cmd sid='reportApp.savedReports' product='2' /> en la barra lateral izquierda de la pantalla.
 
 <Image src='/img/biostarx-data-alert-history-filtered-save-report-result.png' />
 
 <ReportSaveNotes />
 
-## Ver informes de usuarios {/* #viewUserReport */}
+## Ver un informe de usuario {/* #viewUserReport */}
 
-Puede seleccionar plantillas relacionadas con usuarios para generar informes. En la barra lateral izquierda de la pantalla, haga clic en la plantilla deseada bajo <Cmd sid='data.sidebar.user' />.
+Puede generar informes seleccionando plantillas relacionadas con usuarios. En la barra lateral izquierda, haga clic en la plantilla bajo <Cmd sid='data.sidebar.user' />.
 
 <Columns>
 <Column className='width--30'>
@@ -180,33 +177,33 @@ Puede seleccionar plantillas relacionadas con usuarios para generar informes. En
 </Column>
 <Column className='padding--l10'>
 
-* <Cmd sid='data.sidebar.usersInformation' />: Puede ver información detallada del usuario en formato de lista.
+* <Cmd sid='data.sidebar.usersInformation' />: Muestra información detallada del usuario en una lista.
 
-* <Cmd sid='data.sidebar.usersInDevice' />: Puede ver información de los usuarios registrados en el dispositivo.
+* <Cmd sid='data.sidebar.usersInDevice' />: Muestra la información de los usuarios registrados en dispositivos.
 
-* <Cmd sid='data.sidebar.userDetail' />: Puede ver información detallada del usuario en formato de tarjeta.
+* <Cmd sid='data.sidebar.userDetail' />: Muestra información detallada del usuario como tarjetas.
 
-* <Cmd sid='data.sidebar.userPhotoGallery' />: Puede ver las fotos de perfil de los usuarios en formato de galería.
+* <Cmd sid='data.sidebar.userPhotoGallery' />: Muestra fotos de perfil del usuario en una galería.
 
-* <Cmd sid='data.sidebar.usersWithoutCredential' />: Puede ver a los usuarios que no han configurado credenciales.
+* <Cmd sid='data.sidebar.usersWithoutCredential' />: Muestra usuarios sin credenciales registradas.
 
-* <Cmd sid='data.sidebar.privateAuthModeByUser' />: Puede ver la configuración de modos de autenticación privada específicos de cada usuario.
+* <Cmd sid='data.sidebar.privateAuthModeByUser' />: Muestra la configuración del modo de autenticación privada de cada usuario.
 
-* <Cmd sid='data.sidebar.numberOfCredentialsByUser' />: Puede ver la cantidad de credenciales configuradas para el usuario.
+* <Cmd sid='data.sidebar.numberOfCredentialsByUser' />: Muestra la cantidad de credenciales configuradas para cada usuario.
 
-* <Cmd sid='data.sidebar.allCards' />: Puede ver usuarios según las tarjetas enroladas.
+* <Cmd sid='data.sidebar.allCards' />: Muestra usuarios según las tarjetas enroladas.
 
-* * <Cmd sid='data.sidebar.unassignedCards' />: Puede ver las tarjetas que no se han asignado a usuarios.
+* <Cmd sid='data.sidebar.unassignedCards' />: Muestra tarjetas que no están asignadas a usuarios.
 
-* * <Cmd sid='data.sidebar.blacklistCards' />: Puede ver las tarjetas deshabilitadas.
+* <Cmd sid='data.sidebar.blacklistCards' />: Muestra tarjetas deshabilitadas.
 
-* <Cmd sid='data.sidebar.expiredUsers' />: Puede ver a los usuarios cuya fecha de vencimiento ha pasado.
+* <Cmd sid='data.sidebar.expiredUsers' />: Muestra usuarios cuya fecha de vencimiento ha pasado.
 
-* <Cmd sid='data.sidebar.usersToBeExpiredInNDays' />: Puede ver a los usuarios cuya fecha de vencimiento se aproxima en N días. Puede ingresar directamente el número de días antes de generar el informe.
+* <Cmd sid='data.sidebar.usersToBeExpiredInNDays' />: Muestra a los usuarios cuya fecha de vencimiento se encuentra dentro de los próximos N días. Ingrese el número de días antes de generar el informe.
 
-* <Cmd sid='data.report.idleUsersWithValue' />: Puede ver a los usuarios que no han tenido registros de acceso durante los últimos N meses. Puede ingresar directamente el número de meses antes de generar el informe.
+* <Cmd sid='data.report.idleUsersWithValue' />: Muestra a los usuarios sin registros de acceso en los últimos N meses. Ingrese el número de meses antes de generar el informe.
 
-* <Cmd sid='data.sidebar.inactiveUsers' />: Puede ver a los usuarios inactivos.
+* <Cmd sid='data.sidebar.inactiveUsers' />: Muestra usuarios inactivos.
 
 </Column>
 
@@ -214,7 +211,7 @@ Puede seleccionar plantillas relacionadas con usuarios para generar informes. En
 
 :::info
 
-* El informe generado se puede guardar en <Cmd sid='data.sidebar.savedReports' />. Haga clic en el botón <Cmd sid='data.button.saveReport' /> en la esquina superior izquierda del informe.
+* Puede guardar el informe generado en <Cmd sid='data.sidebar.savedReports' />. Haga clic en <Cmd sid='data.button.saveReport' /> en la esquina superior izquierda del informe.
 
 * Para obtener más información sobre cómo gestionar informes, consulte <DocLink inner='#report-management' />.
 
@@ -222,55 +219,55 @@ Puede seleccionar plantillas relacionadas con usuarios para generar informes. En
 
 ## Generar un informe personalizado {/* #custom-report */}
 
-Puede filtrar y generar informes personalizados según las condiciones deseadas. Guarde el informe generado como plantilla para utilizarlo fácilmente cuando genere informes con las mismas condiciones en el futuro.
+Puede filtrar y generar informes personalizados según las condiciones que especifique. Puede guardar el informe generado como plantilla y reutilizarlo para generar informes con las mismas condiciones más adelante.
 
-1. Haga clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.customReport' /> en la barra lateral izquierda de la pantalla.
+1. Haga clic en <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.customReport' /> en la barra lateral izquierda.
 
-2. En la ventana <Cmd sid='data.dialog.customReport.events' />, seleccione los eventos deseados.
+2. En la ventana <Cmd sid='data.dialog.customReport.events' />, seleccione eventos.
 
    <Image src='/img/biostarx-data-custom-report-set-filter.png' />
 
-3. Después de completar la selección de eventos, haga clic en <Cmd sid='common.button.next' />.
+3. Después de terminar de seleccionar eventos, haga clic en <Cmd sid='common.button.next' />.
 
    <Image src='/img/biostarx-data-custom-report-select-items.png' />
 
-   * Busque los elementos deseados en el campo de búsqueda (<IcSearch />).
+   * Busque entradas en el campo de búsqueda (<IcSearch />).
 
-   * Haga clic en <IcRepTrash /> en la lista de la derecha para excluir los elementos seleccionados.
+   * Para eliminar un evento seleccionado, haga clic en <IcRepTrash /> en la lista del extremo derecho.
 
-4. Establezca el periodo de consulta y haga clic en <Cmd sid='common.button.next' />.
+4. Establezca el período de consulta y haga clic en <Cmd sid='common.button.next' />.
 
    <Image src='/img/biostarx-data-custom-report-set-period.png' className='none' />
 
-   * <Cmd sid='data.static' />: Establezca una fecha y hora específicas para definir el periodo de consulta.
+   * <Cmd sid='data.static' />: Establezca una fecha y hora específicas para el período de consulta.
 
-   * <Cmd sid='data.dynamic' />: Establezca la fecha de inicio, la fecha de finalización y la hora basadas en hoy. Es útil al generar informes de forma repetitiva para un periodo específico.
+   * <Cmd sid='data.dynamic' />: Establezca la fecha de inicio, la fecha de finalización y la hora con base en hoy. Es útil al generar informes de forma repetitiva para un período específico.
 
-5. Configure las condiciones según usuarios, puertas y dispositivos, agrupados o individualmente.
+5. Configure las condiciones por usuario, puerta y dispositivo, ya sea por grupo o de forma individual.
 
    <Image src='/img/biostarx-data-custom-report-select-filters.png' className='none' />
 
-   * Haga clic en <IcRepTrash /> en la lista de la derecha para excluir los elementos seleccionados.
+   * Para eliminar una entrada seleccionada, haga clic en <IcRepTrash /> en la lista de la derecha.
 
-6. Seleccione las condiciones deseadas y haga clic en <Cmd sid='common.button.next' />.
+6. Seleccione las condiciones y haga clic en <Cmd sid='common.button.next' />.
 
 7. En la ventana de configuración de columnas, seleccione las columnas que se mostrarán en el informe.
 
    <Image src='/img/biostarx-data-custom-report-set-columns.png' />
 
-8. Después de seleccionar las columnas, haga clic en <Cmd sid='data.button.generate' />.
+8. Después de terminar de seleccionar las columnas, haga clic en <Cmd sid='data.button.generate' />.
 
-9. Genere un informe según las condiciones que estableció.
+9. Se genera un informe con las condiciones que configuró.
 
    <Image src='/img/biostarx-data-custom-report-complete.png' />
 
-10. Haga clic en <Cmd sid='data.button.saveReport' /> en la parte superior izquierda de la lista para guardar el informe generado como plantilla. Consulte los informes guardados en <Cmd sid='data.sidebar.savedReports' /> en la barra lateral izquierda de la pantalla.
+10. Para guardar el informe generado como plantilla, haga clic en <Cmd sid='data.button.saveReport' /> en la esquina superior izquierda de la lista. Los informes guardados aparecen en <Cmd sid='data.sidebar.savedReports' /> en la barra lateral izquierda de la pantalla.
 
     <Image src='/img/biostarx-data-custom-report-saved.png' />
 
 <ReportSaveNotes />
 
-## Gestión de informes {/* #report-management */}
+## Gestionar informes {/* #report-management */}
 
 ### Guardar archivo de informe
 
@@ -280,48 +277,48 @@ Haga clic en <Cmd sid='data.button.export' /> para exportar el informe como arch
 
 :::info
 
-<Cmd sid='auditTrail.export.reason' product='2' /> es opcional. Verifique los registros de motivos de exportación en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+<Cmd sid='auditTrail.export.reason' product='2' /> es opcional. Puede ver los motivos de exportación en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
 ### Imprimir informe
 
-Haga clic en <Cmd sid='data.button.print' /> para imprimir el informe con una impresora conectada a su PC. Cuando aparezca la ventana <Cmd sid='data.printReport' />, configure cada opción y haga clic en <Cmd sid='data.button.print' />.
+Haga clic en <Cmd sid='data.button.print' /> para imprimir el informe con una impresora conectada a su PC. Cuando aparezca la ventana <Cmd sid='data.printReport' />, configure cada campo y haga clic en <Cmd sid='data.button.print' />.
 
 <Image src='/img/biostarx-data-custom-report-print.png' />
 
-La pantalla de vista previa de impresión aparece en una pestaña nueva del navegador web. Haga clic en el botón Imprimir en la parte superior derecha de la pantalla para iniciar la impresión.
+La pantalla de vista previa de impresión aparece en una pestaña nueva del navegador web. Para comenzar a imprimir, haga clic en **Imprimir** en la esquina superior derecha de la pantalla.
 
 :::info
 
-<Cmd sid='printOption.printReason' product='2' /> es opcional. Verifique los registros de motivos de impresión en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+<Cmd sid='printOption.printReason' product='2' /> es opcional. Puede ver los motivos de impresión en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
 ### Eliminar informe
 
-Seleccione el informe guardado que desea eliminar en <Cmd sid='data.sidebar.savedReports' /> en la barra lateral izquierda y haga clic con el botón derecho. Seleccione <Cmd sid='data.sidebar.deleteSavedReport' /> en el menú emergente.
+Para eliminar un informe guardado, haga clic con el botón derecho en el informe en <Cmd sid='data.sidebar.savedReports' /> en la barra lateral izquierda. Haga clic en <Cmd sid='data.sidebar.deleteSavedReport' /> en el menú emergente.
 
 <Image src='/img/biostarx-data-custom-report-remove.png' />
 
 ### Configurar columnas
 
-Cambie los ajustes de las columnas que aparecen en el informe. En los ajustes de columnas, seleccione las columnas que aparecerán o cambie su orden.
+Puede cambiar la configuración de columnas del informe. Seleccione las columnas que desea mostrar o cambie su orden.
 
-1. Haga clic en <Cmd sid='data.dialog.customReport.columns' /> en la parte superior derecha del informe.
+1. Haga clic en <Cmd sid='data.dialog.customReport.columns' /> en la esquina superior derecha del informe.
 
-2. Cuando aparezca la ventana <Cmd sid='common.dialog.columnSetting.title' />, seleccione o deseleccione las columnas deseadas.
+2. Cuando aparezca la ventana <Cmd sid='common.dialog.columnSetting.title' />, seleccione o desmarque las columnas que desea mostrar.
 
    <Image src='/img/biostarx-data-column-setting.png' />
 
-3. Haga clic y arrastre la columna deseada para cambiar su posición.
+3. Para cambiar el orden de las columnas, arrástrelas.
 
-4. Haga clic en <Cmd sid='common.apply' /> para guardar la configuración.
+4. Para guardar la configuración, haga clic en <Cmd sid='common.apply' />.
 
 :::info
 
-* Haga clic en <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para restablecer el diseño de columnas.
+* Para restaurar el diseño de columnas predeterminado, haga clic en <Cmd sid='columnSetting.button.defaultColumn' product='2' />.
 
-* Según el informe generado, las columnas que se puedan seleccionar o deseleccionar pueden variar.
+* Las columnas que puede seleccionar varían según el informe.
 
 :::
