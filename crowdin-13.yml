@@ -2,7 +2,7 @@
 # Your Crowdin credentials
 #
 "project_id" : "13"
-"api_token" : "763fcd04f64c1312bad530dba993f905bad244a6d8b0e9f8da39bf8589242e3ee16d864c28f71eeb"
+"api_token" : "CROWDIN_PERSONAL_TOKEN"
 "base_path" : "."
 "base_url" : "https://supremainc.crowdin.com"
 
