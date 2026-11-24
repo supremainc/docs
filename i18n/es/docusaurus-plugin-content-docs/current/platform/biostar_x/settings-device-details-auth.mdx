@@ -1,7 +1,7 @@
 ---
 id: settings-device-details-auth
 title: Configuración de Autenticación
-description: Se proporcionan instrucciones para varios ajustes relacionados con la autenticación de usuarios en el dispositivo.
+description: Aprenda a configurar varias opciones relacionadas con la autenticación de usuarios en el dispositivo.
 keywords:
   - Dispositivo
   - Autenticación
@@ -9,13 +9,13 @@ keywords:
 
 import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-force.mdx';
 
-Se proporcionan instrucciones para varios ajustes relacionados con la autenticación de usuarios en el dispositivo. La sección <Cmd sid='device.info.authentication' product='2' /> ofrece información paso a paso sobre los métodos de autenticación y las principales opciones de autenticación compatibles con el dispositivo. Tenga en cuenta que los cambios en los ajustes se aplicarán al dispositivo real y configure la política de autenticación según su entorno, consultando las características y precauciones de cada opción.
+Aprenda a configurar varias opciones relacionadas con la autenticación de usuarios en el dispositivo. La sección <Cmd sid='device.info.authentication' product='2' /> ofrece información paso a paso sobre los métodos de autenticación y las principales opciones de autenticación compatibles con el dispositivo. Tenga en cuenta que los cambios que realice se aplican al dispositivo real. Revise las funciones y precauciones de cada opción y, luego, configure una política de autenticación para su entorno.
 
 :::info
 
 * Las opciones de red disponibles pueden variar según el tipo de dispositivo.
 
-* Si el usuario ha realizado cambios, haga clic en <Cmd sid='button.apply' product='2' />. Los cambios no se aplicarán al dispositivo si no se guardan.
+* Si realizó cambios, haga clic en <Cmd sid='button.apply' product='2' />. Los cambios no guardados no se aplican al dispositivo.
 
 :::
 
@@ -27,19 +27,19 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 
 * <Cmd sid='device.info.authenticationMode' product='2' />: Configure el modo de autenticación del dispositivo combinando una o más credenciales. Para obtener más información, consulte <DocLink inner='#added-auth-mode' />.
 
-  * Haga clic en <IcEdit /> para modificar el modo de autenticación agregado.
+  * Para modificar un modo de autenticación agregado, haga clic en <IcEdit />.
 
-  * Haga clic en <IcTrash2 /> para eliminar el modo de autenticación agregado.
+  * Para eliminar un modo de autenticación agregado, haga clic en <IcTrash2 />.
 
-* <Cmd sid='device.info.usersHaveFullAccess' product='2' />: A los usuarios registrados en el dispositivo se les pueden otorgar todos los permisos de acceso sin definir ajustes de grupo de acceso.
+* <Cmd sid='device.info.usersHaveFullAccess' product='2' />: Otorga todos los permisos de acceso a los usuarios registrados en el dispositivo sin definir la configuración del grupo de acceso.
 
-   :::info
+  :::info
 
-   Cuando esta opción está configurada en <Cmd sid='common.use' product='2' />, el dispositivo no se puede registrar en <Cmd sid='common.accessLevel' product='2' /> ni en <Cmd sid='ag.floorLevel.title' product='2' />.
+  Cuando esta opción está configurada en <Cmd sid='common.use' product='2' />, el dispositivo no se puede registrar en <Cmd sid='common.accessLevel' product='2' /> ni en <Cmd sid='ag.floorLevel.title' product='2' />.
 
-   :::
+  :::
 
-* <Cmd sid='device.info.authTimeout' product='2' />: Es el tiempo de espera para autenticar la segunda credencial cuando se utilizan varias credenciales en la opción <Cmd sid='device.info.authenticationMode' product='2' />. Si la credencial no se autentica dentro del tiempo especificado, la autenticación fallará.
+* <Cmd sid='device.info.authTimeout' product='2' />: Configure el tiempo de espera para autenticar la segunda credencial cuando utiliza varias credenciales en <Cmd sid='device.info.authenticationMode' product='2' />. Si la credencial no se autentica dentro del tiempo especificado, la autenticación fallará.
 
 * <Cmd sid='common.serverMatching' product='2' />
 
@@ -49,153 +49,153 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 
   <details>
 
-  <summary>Ver los dispositivos y versiones de firmware que admiten la función <Cmd sid='common.serverMatching' product='2' /></summary>
+  <summary>Ver dispositivos y versiones de firmware que admiten la opción <Cmd sid='common.serverMatching' product='2' /></summary>
 
-  * Firmware de BioStation 3 Max, versión 1.0.0 o posterior
+  * Firmware BioStation 3 Max v1.0.0 o posterior
 
-  * Firmware de XPass Q2, versión 1.0.0 o posterior
+  * Firmware XPass Q2 v1.0.0 o posterior
 
-  * BioEntry W3 versión de firmware 1.0.0 o superior
+  * Firmware BioEntry W3 v1.0.0 o posterior
 
-  * BioStation 3 firmware 1.0.0 o superior
+  * Firmware BioStation 3 v1.0.0 o posterior
 
-  * X-Station 2 versión de firmware 1.0.0 o superior
+  * Firmware X-Station 2 v1.0.0 o posterior
 
-  * FaceStation F2 versión de firmware 1.0.0 o superior
+  * Firmware FaceStation F2 v1.0.0 o posterior
 
-  * Firmware de XPass 2 1.0.0 o posterior
+  * Firmware XPass 2 v1.0.0 o posterior
 
-  * Firmware de BioLite N2 1.0.0 o posterior
+  * Firmware BioLite N2 v1.0.0 o posterior
 
-  * Versión de firmware de XPass D2 1.0.0 o superior
+  * Firmware XPass D2 v1.0.0 o posterior
 
-  * Firmware de BioEntry P2 1.0.0 o posterior
+  * Firmware BioEntry P2 v1.0.0 o posterior
 
-  * FaceStation 2 versión de firmware 1.4.0 o superior
+  * Firmware FaceStation 2 v1.4.0 o posterior
 
-  * Firmware de BioEntry W2 1.0.0 o posterior
+  * Firmware BioEntry W2 v1.0.0 o posterior
 
-  * Firmware de BioStation L2 1.0.0 o posterior
+  * Firmware BioStation L2 v1.0.0 o posterior
 
-  * Firmware de BioStation A2 1.0.0 o posterior
+  * Firmware BioStation A2 v1.0.0 o posterior
 
-  * Firmware de BioStation 2 1.2.0 o posterior
+  * Firmware BioStation 2 v1.2.0 o posterior
 
-  * Versión de firmware de CoreStation 1.0.0 o superior
+  * Firmware CoreStation v1.0.0 o posterior
 
-  * FaceLite no admite la función de autenticación en servidor.
+  * FaceLite no admite la función de verificación en servidor.
 
   * Los dispositivos BioStation 3, BioEntry W3 y FaceStation F2 no pueden usar la verificación en servidor para la autenticación facial.
 
   </details>
 
-* <Cmd sid='device.info.faceDetection' product='2' />: Establezca los pasos del algoritmo para reconocer rostros con la cámara integrada cuando el usuario se autentique.
+* <Cmd sid='device.info.faceDetection' product='2' />: Establezca los pasos del algoritmo para detectar rostros con la cámara integrada del dispositivo cuando el usuario se autentique.
 
-  * <Cmd sid='device.faceDetectionLevel.normal' product='2' />: Detecta rostros a una distancia equivalente a la longitud del brazo de una persona.
+  * <Cmd sid='device.faceDetectionLevel.normal' product='2' />: Detecta rostros a aproximadamente la distancia de un brazo.
 
-  * <Cmd sid='device.faceDetectionLevel.strict' product='2' />: Requiere que el usuario esté más cerca que la longitud del brazo de una persona para detectar un rostro.
+  * <Cmd sid='device.faceDetectionLevel.strict' product='2' />: Requiere que el usuario esté a menos de la distancia de un brazo para detectar un rostro.
 
-  * <Cmd sid='device.faceDetectionLevel.none' product='2' />: No utiliza la funcionalidad de reconocimiento facial.
+  * <Cmd sid='device.faceDetectionLevel.none' product='2' />: No usa la detección facial.
 
-   :::info
+    :::info
 
-   Esta opción es compatible con BioStation A2.
+    BioStation A2 admite esta opción.
 
-   :::
+    :::
 
-* <Cmd sid='device.info.userIdDisplay' product='2' />: Controle si se muestra u oculta la ID de usuario en el dispositivo cuando la autenticación es exitosa.
-
-  * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
-
-* <Cmd sid='device.info.userNameDisplay' product='2' />: Controle si se muestra u oculta el nombre de usuario en el dispositivo cuando la autenticación es exitosa.
+* <Cmd sid='device.info.userIdDisplay' product='2' />: Establezca si desea mostrar u ocultar el ID de usuario que aparece en el dispositivo después de una autenticación correcta.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-* <Cmd sid='device.info.authFailLockout.label' product='2' />: Si la autenticación falla repetidamente en poco tiempo, el dispositivo se bloquea durante un período determinado. Esto bloquea ataques de fuerza bruta. Establezca esta opción en <Cmd sid='device.info.enable' product='2' /> para configurar los ajustes siguientes. El valor predeterminado es <Cmd sid='device.info.disable' product='2' />.
+* <Cmd sid='device.info.userNameDisplay' product='2' />: Establezca si desea mostrar u ocultar el nombre de usuario que aparece en el dispositivo después de una autenticación correcta.
 
-  * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />: Establezca la cantidad de fallas de autenticación permitidas antes del bloqueo en 3\~15 intentos. El valor predeterminado es 5 intentos.
+  * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-  * <Cmd sid='device.info.authFailLockout.monitoringWindow' product='2' />: Establezca la ventana de tiempo para contar fallas de autenticación en 30\~300 segundos. El valor predeterminado es 60 segundos.
+* <Cmd sid='device.info.authFailLockout.label' product='2' />: Si la autenticación falla repetidamente en poco tiempo, el dispositivo se bloquea durante un período determinado. Esto bloquea ataques de fuerza bruta. Cuando esta opción se establece en <Cmd sid='device.info.enable' product='2' />, puede configurar las siguientes opciones. El valor predeterminado es <Cmd sid='device.info.disable' product='2' />.
 
-  * <Cmd sid='device.info.authFailLockout.firstLockout' product='2' />: Establezca en 30\~900 segundos el tiempo de bloqueo que se aplica cuando las fallas llegan a <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />. El valor predeterminado es 60 segundos y el valor es obligatorio.
+  * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />: Establezca la cantidad de fallas de autenticación permitidas antes del bloqueo, de 3 a 15. El valor predeterminado es 5 intentos.
 
-  * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: Tiempo del 2.º bloqueo. El dispositivo lo aplica si las fallas de autenticación continúan incluso después de que se haya levantado el 1.º bloqueo. Establezca esta opción en <Cmd sid='common.use' product='2' /> para ingresar un valor entre 900\~3,600 segundos. El valor predeterminado es 900 segundos.
+  * <Cmd sid='device.info.authFailLockout.monitoringWindow' product='2' />: Establezca la ventana de tiempo para contar fallas de autenticación, de 30 a 300 segundos. El valor predeterminado es 60 segundos.
 
-     :::note
+  * <Cmd sid='device.info.authFailLockout.firstLockout' product='2' />: Establezca el tiempo de bloqueo que se aplica cuando las fallas llegan a <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />, de 30 a 900 segundos. El valor predeterminado es 60 segundos y el valor es obligatorio.
 
-     Establezca esta opción en <Cmd sid='device.info.disable' product='2' /> para aplicar repetidamente solo el 1.º bloqueo, sin un 2.º bloqueo.
+  * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: Establezca el tiempo del 2.º bloqueo, que se aplica cuando las fallas de autenticación continúan después de que finalice el 1.º bloqueo. Cuando esta opción se establece en <Cmd sid='common.use' product='2' />, puede ingresar un valor de 900 a 3,600 segundos. El valor predeterminado es 900 segundos.
 
-     :::
+    :::note
 
-  * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />: Si no ocurren fallas adicionales dentro de este tiempo después de la última falla, el dispositivo inicializa el conteo acumulado de fallas. Configúrelo en 600\~3,600 segundos. El valor predeterminado es 1,800 segundos.
+    Cuando esta opción se establece en <Cmd sid='device.info.disable' product='2' />, solo se aplica repetidamente el 1.º bloqueo, sin un 2.º bloqueo.
 
-   :::info
+    :::
+
+  * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />: Si no ocurren fallas adicionales dentro de este tiempo después de la última falla, el dispositivo inicializa el conteo acumulado de fallas. Establezca un valor de 600 a 3,600 segundos. El valor predeterminado es 1,800 segundos.
+
+  :::info
 
   * Si el dispositivo está bloqueado, cambie <Cmd sid='device.info.authFailLockout.label' product='2' /> a <Cmd sid='device.info.disable' product='2' /> y guarde. El dispositivo se desbloquea de inmediato. Sin embargo, cambiar <Cmd sid='device.info.authFailLockout.secondLockout' product='2' /> a <Cmd sid='device.info.disable' product='2' /> y guardar no desbloquea el dispositivo.
 
-  * Se incluye soporte para la opción <Cmd sid='device.info.authFailLockout.label' product='2' /> en el firmware de BioStation 3 1.5.0 o posterior.
+  * La versión de firmware v1.5.0 o posterior de BioStation 3 admite la opción <Cmd sid='device.info.authFailLockout.label' product='2' />.
 
-   :::
+  :::
 
 ### Agregar modo de autenticación {/* #added-auth-mode */}
 
-Configure el modo de autenticación del dispositivo en la opción <Cmd sid='device.info.authenticationMode' product='2' />. Configure el modo de autenticación combinando credenciales como huella digital, ID, tarjeta, PIN y rostro.
+Configure el modo de autenticación del dispositivo en la opción <Cmd sid='device.info.authenticationMode' product='2' />. Combine credenciales como huella digital, ID, tarjeta, PIN y rostro para configurar el modo de autenticación.
 
-1. En la opción <Cmd sid='device.info.authenticationMode' product='2' />, haga clic en <IcAdd /> <Cmd sid='button.add' product='2' />.
+1. En la opción <Cmd sid='device.info.authenticationMode' product='2' />, haga clic en <IcAdd/> <Cmd sid='button.add' product='2' />.
 
-2. Cuando aparezca la ventana <Cmd sid='device.addNewAuthMode' product='2' />, arrastre el modo de autenticación deseado al área central.
+2. Cuando aparezca la ventana <Cmd sid='device.addNewAuthMode' product='2' />, arrastre un modo de autenticación al área central.
 
    <Image src='/img/biostarx-setting-device-edit-auth-mode-adding.png' />
 
-   Agregue hasta cinco modos de autenticación.
+   Se pueden agregar hasta cinco modos de autenticación.
 
-3. Seleccione el elemento deseado en la opción <Cmd sid='schedule.schedule' product='2' />.
+3. Seleccione un horario en la opción <Cmd sid='schedule.schedule' product='2' />.
 
-4. Cuando finalices la configuración, haz clic en <Cmd sid='button.apply' product='2' />.
+4. Después de completar todos los ajustes, haga clic en <Cmd sid='button.apply' product='2' />.
 
 :::info
 
-Si el horario deseado no está disponible en la opción <Cmd sid='schedule.schedule' product='2' />, haga clic en <IcAdd /> <Cmd sid='schedule.addNewSchedule' product='2' /> para agregar un nuevo horario. Agregue un nuevo horario. Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
+Si el horario no está disponible en la opción <Cmd sid='schedule.schedule' product='2' />, haga clic en <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' />. Agregue un nuevo horario. Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
 
 :::
 
 ## Configuración de autenticación de huellas dactilares
 
-En el grupo <Cmd sid='device.info.fingerprint' product='2' />, configure los detalles relacionados con la autenticación de huellas dactilares del dispositivo.
+En el grupo <Cmd sid='device.info.fingerprint' product='2' />, configure los detalles de la autenticación de huellas dactilares del dispositivo.
 
 <Image src='/img/biostarx-setting-device-detail-fingerprint.png' />
 
 * <Cmd sid='device.info.securityLevel' product='2' />: Establezca el nivel de seguridad utilizado para autenticar huellas dactilares. Los niveles de seguridad más altos incrementan la [tasa de rechazo falso (FRR)](../../reference/glossary#frr) pero disminuyen la [tasa de aceptación falsa (FAR)](../../reference/glossary#far).
 
-* <Cmd sid='device.info.scanTimeout' product='2' />: Establezca el tiempo de espera para el escaneo de huellas dactilares. Si no se escanea dentro del tiempo establecido, la autenticación fallará.
+* <Cmd sid='device.info.scanTimeout' product='2' />: Establezca el tiempo de espera para el escaneo de huellas dactilares. Si el dispositivo no escanea una huella dactilar dentro del tiempo establecido, la autenticación falla.
 
-* <Cmd sid='device.info.sensorSensitivity' product='2' />: Establezca la sensibilidad del sensor de reconocimiento de huellas dactilares. Establece la sensibilidad más alta para obtener información de huella dactilar precisa.
+* <Cmd sid='device.info.sensorSensitivity' product='2' />: Establezca la sensibilidad del sensor de reconocimiento de huellas dactilares. Para obtener información de huellas dactilares más precisa, establezca una sensibilidad más alta.
 
-* <Cmd sid='device.info.1NFastMode' product='2' />: Establezca la velocidad de autenticación de huellas dactilares. Cuando se selecciona <Cmd sid='common.auto' product='2' />, se ajusta el rendimiento de la autenticación según el total de plantillas de huellas dactilares registradas en el dispositivo.
+* <Cmd sid='device.info.1NFastMode' product='2' />: Configure el rendimiento de la autenticación por huella dactilar. Cuando se selecciona <Cmd sid='common.auto' product='2' />, el dispositivo ajusta el rendimiento de la autenticación según el número total de plantillas de huellas dactilares enroladas en el dispositivo.
 
-* <Cmd sid='device.info.templateFormat' product='2' />: Vea el formato de plantilla de huella dactilar configurado.
+* <Cmd sid='device.info.templateFormat' product='2' />: Muestra el formato de plantilla de huella dactilar configurado.
 
-* <Cmd sid='device.info.matchingTimeout' product='2' />: Establezca el tiempo de espera para la comparación de huellas dactilares. Si la autenticación no se completa dentro del tiempo especificado, fallará.
+* <Cmd sid='device.info.matchingTimeout' product='2' />: Establezca el tiempo de espera para la comparación de huellas dactilares. Si la autenticación no se completa dentro del tiempo establecido, la autenticación falla.
 
-* <Cmd sid='device.info.viewImage' product='2' />: Muestre las imágenes de huellas dactilares en la pantalla durante la autenticación.
+* <Cmd sid='device.info.viewImage' product='2' />: Muestra las imágenes de huellas dactilares en la pantalla durante la autenticación.
 
 * <Cmd sid='device.info.sensorMode' product='2' />: Establezca el modo de funcionamiento del sensor de huellas dactilares.
 
-  * <Cmd sid='device.sensorMode.autoOn' product='2' />: El sensor de huellas dactilares se enciende al reconocer el dedo del usuario.
+  * <Cmd sid='device.sensorMode.autoOn' product='2' />: El sensor de huellas dactilares se enciende cuando detecta un dedo.
 
-  * <Cmd sid='device.sensorMode.alwaysOn' product='2' />: El sensor de huellas dactilares permanece siempre encendido.
+  * <Cmd sid='device.sensorMode.alwaysOn' product='2' />: El sensor de huellas dactilares está siempre encendido.
 
-* <Cmd sid='device.info.advancedEnrollment' product='2' />: Evalúe la calidad de las huellas dactilares escaneadas para guardar información de alta calidad. Establézcalo en <Cmd sid='common.use' product='2' /> para notificar al usuario si la calidad de la huella dactilar es baja y ayudar a escanearla correctamente.
+* <Cmd sid='device.info.advancedEnrollment' product='2' />: Comprueba la calidad de las huellas dactilares escaneadas para guardar información de huellas dactilares de alta calidad. Cuando esta opción se establece en <Cmd sid='common.use' product='2' />, el dispositivo notifica al usuario cuando la calidad de la huella dactilar es baja y ayuda al usuario a escanear la huella correctamente.
 
-* <Cmd sid='device.info.fingerprintLFD' product='2' />: Establezca el nivel para la detección de [huellas dactilares falsas](../../reference/glossary#fake_fp). Niveles más altos de detección de huellas falsas pueden aumentar las tasas de rechazo de las huellas reales.
+* <Cmd sid='device.info.fingerprintLFD' product='2' />: Establezca el nivel para la detección de [huellas dactilares falsas](../../reference/glossary#fake_fp). Niveles más altos de detección de huellas falsas también pueden aumentar las tasas de rechazo de las huellas reales.
 
-* <Cmd sid='device.info.duplicateCheck' product='2' />: Verifique registros duplicados al enrolar huellas dactilares.
+* <Cmd sid='device.info.duplicateCheck' product='2' />: Comprueba si hay registros duplicados al enrolar huellas dactilares.
 
 :::info
 
-* Las opciones disponibles para la configuración pueden variar según el tipo de dispositivo.
+* Las opciones disponibles pueden variar según el tipo de dispositivo.
 
-* Cambiar la opción <Cmd sid='device.info.templateFormat' product='2' /> en los ajustes de autenticación por huella digital hará que todas las huellas almacenadas previamente queden inutilizables. Asegúrate de seleccionar una plantilla en la opción <Cmd sid='device.info.templateFormat' product='2' /> antes de enrolar las huellas de los usuarios.
+* Cambiar la opción <Cmd sid='device.info.templateFormat' product='2' /> en los ajustes de autenticación por huella digital hará que todas las huellas almacenadas previamente queden inutilizables. Asegúrese de seleccionar una plantilla en la opción <Cmd sid='device.info.templateFormat' product='2' /> antes de enrolar las huellas del usuario.
 
 * La opción <Cmd sid='device.info.viewImage' product='2' /> es compatible con BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2 y BioStation 2.
 
@@ -205,75 +205,75 @@ En el grupo <Cmd sid='device.info.fingerprint' product='2' />, configure los det
 
 ## Ajustes de autenticación facial {/* #faceDetectionSettings */}
 
-En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.credential.visualface' product='2' />, puedes configurar los ajustes de autenticación facial del dispositivo.
+En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.credential.visualface' product='2' />, configure los detalles de la autenticación facial del dispositivo.
 
 <Image src='/img/biostarx-setting-device-detail-face.png' />
 
-* <Cmd sid='device.info.securityLevel' product='2' />: Define el nivel de seguridad utilizado para autenticar rostros. Los niveles de seguridad más altos incrementan la [tasa de rechazo falso (FRR)](../../reference/glossary#frr) pero disminuyen la [tasa de aceptación falsa (FAR)](../../reference/glossary#far).
+* <Cmd sid='device.info.securityLevel' product='2' />: Defina el nivel de seguridad utilizado para la autenticación facial. Los niveles de seguridad más altos incrementan la [tasa de rechazo falso (FRR)](../../reference/glossary#frr) pero disminuyen la [tasa de aceptación falsa (FAR)](../../reference/glossary#far).
 
-* <Cmd sid='face.operationMode.enrollTime' product='2' />: Si el rostro del usuario no se enrola dentro del tiempo establecido al registrarlo, el enrolamiento se cancelará.
+* <Cmd sid='face.operationMode.enrollTime' product='2' />: Si el rostro del usuario no se enrola dentro del tiempo establecido, el enrolamiento facial se cancela.
 
 * <Cmd sid='device.info.motionSensor' product='2' />: Define la sensibilidad para detectar movimiento alrededor del dispositivo.
 
-* <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />: El dispositivo puede detectar la luminosidad ambiental y ajustar la intensidad del LED IR.
+* <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />: Detecta el brillo ambiental alrededor del dispositivo y ajusta la intensidad del LED IR.
 
-* <Cmd sid='device.info.faceLFD' product='2' />: Ajusta el nivel de detección de rostros falsos. Incrementar el nivel de detección de rostros falsos puede aumentar la tasa de rechazo de rostros reales.
+* <Cmd sid='device.info.faceLFD' product='2' />: Ajusta el nivel de detección de rostros falsos. Incrementar el nivel de detección de registros faciales falsos puede aumentar la tasa de rechazo de rostros reales.
 
-* <Cmd sid='device.authmode.settings.lightBrightness' product='2' />: Ajusta manualmente el brillo de la luz del dispositivo. Define el brillo seleccionando <Cmd sid='device.authmode.settings.ambientBrightness.normal' product='2' /> o <Cmd sid='device.authmode.settings.ambientBrightness.high' product='2' />, o selecciona <Cmd sid='device.authmode.settings.lightBrightness.notUse' product='2' /> para apagar la luz.
+* <Cmd sid='device.authmode.settings.lightBrightness' product='2' />: Ajusta manualmente el brillo de la luz del dispositivo. Seleccione <Cmd sid='device.authmode.settings.ambientBrightness.normal' product='2' /> o <Cmd sid='device.authmode.settings.ambientBrightness.high' product='2' /> para configurar el brillo, o seleccione <Cmd sid='device.authmode.settings.lightBrightness.notUse' product='2' /> para apagar la luz.
 
 * <Cmd sid='device.info.faceQuickEnrollment' product='2' />: Define si se habilita el enrolamiento rápido de rostros.
 
   * <Cmd sid='device.info.enable' product='2' />: Configura el procedimiento de enrolamiento de rostros en un solo paso.
 
-  * <Cmd sid='device.info.disabled' product='2' />: Configura el procedimiento de enrolamiento de rostros en 3 pasos. Establece <Cmd sid='device.info.disabled' product='2' /> para enrolar plantillas de rostros de alta calidad.
+  * <Cmd sid='device.info.disabled' product='2' />: Configura el procedimiento de enrolamiento de rostros en tres pasos. Para enrolar plantillas de rostro de alta calidad, configure esta opción en <Cmd sid='device.info.disabled' product='2' />.
 
 * <Cmd sid='device.info.duplicateCheck' product='2' />: Verifica registros duplicados al enrolar rostros.
 
-* <Cmd sid='device.info.faceDetectSetting' product='2' />: Configura los ajustes ambientales para reconocer el rostro del usuario durante la autenticación.
+* <Cmd sid='device.info.faceDetectSetting' product='2' />: Configura el entorno para detectar el rostro del usuario durante la autenticación facial.
 
   * <Cmd sid='device.info.faceMaxRotation' product='2' />: Define el ángulo máximo de rotación permitido para el rostro.
 
-  * <Cmd sid='device.info.faceDetectDist' product='2' />: Define las distancias mínima y máxima para reconocer el rostro.
+  * <Cmd sid='device.info.faceDetectDist' product='2' />: Define las distancias mínima y máxima para detectar rostros.
 
-  * <Cmd sid='device.info.faceWideSearch' product='2' />: Establece <Cmd sid='common.on' product='2' /> para permitir el reconocimiento facial en toda la vista de la cámara.
+  * <Cmd sid='device.info.faceWideSearch' product='2' />: Para detectar rostros en toda la vista de la cámara, configure esta opción en <Cmd sid='common.on' product='2' />.
 
 * <Cmd sid='device.info.faceOperationMode' product='2' />: Define el modo de operación del dispositivo durante la autenticación facial.
 
   * <Cmd sid='device.info.face.operation_mode.enable' product='2' />: Realiza emparejamiento visual e infrarrojo para mejorar la precisión de la autenticación facial.
 
-  * <Cmd sid='device.info.face.operation_mode.disable' product='2' />: Permite la autenticación rápida de usuarios que caminan dentro del rango de autenticación del dispositivo.
+  * <Cmd sid='device.info.face.operation_mode.disable' product='2' />: Autentica a los usuarios rápidamente mientras caminan dentro del rango de autenticación del dispositivo.
 
-* <Cmd sid='device.info.faceFakeDetection' product='2' />: Evita la autenticación de usuarios mediante rostros falsos, como fotografías. Se activa cuando la opción <Cmd sid='device.info.faceOperationMode' product='2' /> está configurada en <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
+* <Cmd sid='device.info.faceFakeDetection' product='2' />: Evita la autenticación de usuarios mediante rostros falsos, como fotografías. Esta opción se habilita cuando la opción <Cmd sid='device.info.faceOperationMode' product='2' /> está configurada en <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
 
-* <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Almacena tanto la imagen facial real como una plantilla que contiene únicamente los datos de las características extraídas. Desactive esta opción si no desea almacenar la imagen real.
+* <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Almacena tanto la imagen facial real como una plantilla que contiene únicamente los datos de las características extraídas. Para evitar almacenar la imagen real, desactive esta configuración.
 
-* <Cmd sid='device.info.reauthPrevention' product='2' />: Configure la opción para evitar autenticaciones duplicadas cuando el dispositivo detecta de nuevo el rostro del mismo usuario pronto. Configure esta opción como <Cmd sid='device.info.enable' product='2' /> y configure <Cmd sid='device.info.reauthPreventionTime' product='2' /> en 3\~60 segundos.
+* <Cmd sid='device.info.reauthPrevention' product='2' />: Configura si se evita la autenticación duplicada cuando se detecta de nuevo el rostro del mismo usuario en poco tiempo. Cuando esta opción está configurada en <Cmd sid='device.info.enable' product='2' />, puede configurar <Cmd sid='device.info.reauthPreventionTime' product='2' /> de 3 a 60 segundos.
 
   <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
 
-   :::note
+  :::note
 
-   Este ajuste se aplica a <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' />, independientemente de la opción que habilite.
+  Este ajuste se aplica a <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' />, independientemente de la opción que habilite.
 
-   :::
+  :::
 
-* <Cmd sid='device.info.antiTailgating.label' product='2' />: Si la cámara detecta 2 o más rostros al mismo tiempo dentro del rango de captura de la cámara del dispositivo, lo considera tailgating y detiene la autenticación.
+* <Cmd sid='device.info.antiTailgating.label' product='2' />: Si la cámara detecta dos o más rostros al mismo tiempo dentro del rango de captura de la cámara del dispositivo, lo considera tailgating y detiene la autenticación.
 
 * <Cmd sid='device.info.multiFaceAuth.label' product='2' />: Autentica a varios usuarios en secuencia dentro de la vista de la cámara.
 
-   :::note
+  :::note
 
   * Esta opción requiere una licencia de dispositivo independiente. Los dispositivos sin licencia no pueden habilitar esta opción. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-license-device-license' />.
 
-  * Configure esta opción en <Cmd sid='common.use' product='2' /> para usar solo autenticación facial, independientemente del ajuste <Cmd sid='device.info.authenticationMode' product='2' />.
+  * Cuando esta opción está configurada en <Cmd sid='common.use' product='2' />, el dispositivo usa solo autenticación facial, independientemente de la configuración de <Cmd sid='device.info.authenticationMode' product='2' />.
 
   * Los dispositivos que usan esta opción no pueden usar <Cmd sid='device.info.tna' product='2' /> ni <Cmd sid='device.info.serverPrivateMsg' product='2' />.
 
-   :::
+  :::
 
 :::info
 
-* Las opciones disponibles para la configuración pueden variar según el tipo de dispositivo.
+* Las opciones disponibles pueden variar según el tipo de dispositivo.
 
 * Las opciones <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />, <Cmd sid='device.info.faceLFD' product='2' /> y <Cmd sid='device.info.faceQuickEnrollment' product='2' /> son compatibles con los modelos FaceStation 2 y FaceLite.
 
@@ -281,33 +281,33 @@ En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.cred
 
 * Las opciones <Cmd sid='device.info.faceDetectSetting' product='2' /> y <Cmd sid='device.info.faceOperationMode' product='2' /> son compatibles con los modelos BioStation 3 Max, BioStation 3 y FaceStation F2.
 
-* No configure <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> en <Cmd sid='common.use' product='2' /> al mismo tiempo. Configure una opción en <Cmd sid='common.use' product='2' />; la otra cambia automáticamente a <Cmd sid='common.notUse' product='2' />.
+* Las opciones <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> no pueden configurarse ambas en <Cmd sid='common.use' product='2' />. Cuando configura una opción en <Cmd sid='common.use' product='2' />, la otra cambia automáticamente a <Cmd sid='common.notUse' product='2' />.
 
-* Configure <Cmd sid='device.info.reauthPrevention' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> solo en el dispositivo maestro. Configure la opción <Cmd sid='device.info.antiTailgating.label' product='2' /> por separado en los dispositivos maestro y esclavo.
+* Las opciones <Cmd sid='device.info.reauthPrevention' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> solo pueden configurarse en el dispositivo maestro. La opción <Cmd sid='device.info.antiTailgating.label' product='2' /> puede configurarse por separado en los dispositivos maestro y esclavo.
 
 * El soporte para <Cmd sid='device.info.reauthPrevention' product='2' />, <Cmd sid='device.info.antiTailgating.label' product='2' /> y <Cmd sid='device.info.multiFaceAuth.label' product='2' /> puede variar según el modelo del dispositivo y la versión de firmware.
 
-  * Versión de firmware 1.5.0 o posterior para BioStation 3
+  * Firmware BioStation 3 v1.5.0 o posterior
 
 :::
 
 ## Ajustes de QR/código de barras
 
-En el grupo <Cmd sid='user.credential.barcode' product='2' />, puedes configurar los detalles para la autenticación mediante QR/código de barras en el dispositivo.
+En el grupo <Cmd sid='user.credential.barcode' product='2' />, configure los detalles de la autenticación del dispositivo mediante QR/código de barras.
 
 <Image src='/img/biostarx-setting-device-detail-qrbarcode.png' />
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' /> / <Cmd sid='device.info.useBarcode' product='2' />: Establece si se usará la autenticación por código QR o código de barras mediante la cámara del dispositivo.
 
-* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />: Establece el tiempo de espera del escaneo de la cámara. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
+* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />: Establece el tiempo de espera del escaneo de la cámara. Si un QR/código de barras no se escanea dentro del tiempo especificado, la autenticación fallará.
 
-* <Cmd sid='device.info.normalize' product='2' />: Configura la autenticación de códigos QR con los mismos datos que las tarjetas CSN o Wiegand emitidas a los usuarios.
+* <Cmd sid='device.info.normalize' product='2' />: Configure si se permite la autenticación con códigos QR que contengan los mismos datos que las tarjetas CSN o Wiegand emitidas a los usuarios.
 
-* <Cmd sid='device.authmode.settings.motionSensor' product='2' />: Define la sensibilidad para detectar movimiento e iniciar el escaneo de la cámara.
+* <Cmd sid='device.authmode.settings.motionSensor' product='2' />: Defina la sensibilidad para detectar movimiento e iniciar el escaneo de la cámara.
 
 * <Cmd sid='device.info.useBarcodeScanner' product='2' />: Define si se utiliza el escáner del dispositivo para la autenticación QR/código de barras.
 
-* <Cmd sid='device.info.qrScanTimeout' product='2' />: Define el tiempo de espera de escaneo. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
+* <Cmd sid='device.info.qrScanTimeout' product='2' />: Define el tiempo de espera de escaneo. Si un QR/código de barras no se escanea dentro del tiempo especificado, la autenticación fallará.
 
 * <Cmd sid='device.info.useQrLed' product='2' />: Establece si se utilizará la iluminación LED del dispositivo al autenticar códigos QR.
 
@@ -317,27 +317,27 @@ En el grupo <Cmd sid='user.credential.barcode' product='2' />, puedes configurar
 
 * Los dispositivos que admiten las opciones <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' /> y <Cmd sid='device.authmode.settings.motionSensor' product='2' /> son los siguientes.
 
-  * BioStation 3 Max: versión de firmware 1.0.0 o superior
+  * Firmware BioStation 3 Max v1.0.0 o posterior
 
-  * Versión de firmware 1.1.0 o posterior para BioStation 3
+  * Firmware BioStation 3 v1.1.0 o posterior
 
-  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) versión de firmware 1.2.0 o superior
+  * Firmware X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) v1.2.0 o posterior
 
-  * X-Station 2 (XS2-QDPB, XS2-QAPB) versión de firmware 1.4.1 o superior
+  * Firmware X-Station 2 (XS2-QDPB, XS2-QAPB) v1.4.1 o posterior
 
 * Los dispositivos que admiten las opciones <Cmd sid='device.info.useBarcodeScanner' product='2' /> y <Cmd sid='device.info.qrScanTimeout' product='2' /> son los siguientes.
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB)
 
-* Las opciones <Cmd sid='device.info.useBarcode' product='2' />, <Cmd sid='device.info.scanTimeout' product='2' /> y <Cmd sid='device.info.useQrLed' product='2' /> son compatibles con los siguientes dispositivos.
+* Los dispositivos que admiten las opciones <Cmd sid='device.info.useBarcode' product='2' />, <Cmd sid='device.info.scanTimeout' product='2' /> y <Cmd sid='device.info.useQrLed' product='2' /> son los siguientes.
 
-  * Firmware de XPass Q2, versión 1.0.0 o posterior
+  * Firmware XPass Q2 v1.0.0 o posterior
 
 :::
 
 ## Ajustes de autenticación con tarjeta
 
-En el grupo <Cmd sid='setting.card.cardType' product='2' />, puedes definir los tipos de tarjetas que se usarán en el dispositivo.
+En el grupo <Cmd sid='setting.card.cardType' product='2' />, configure los tipos de tarjeta que se usarán en el dispositivo.
 
 :::info
 
@@ -347,7 +347,7 @@ Solo se mostrarán en el grupo <Cmd sid='setting.card.cardType' product='2' /> l
 
 ### <Cmd sid='device.card.CSN' product='2' className='normal' /> {/* #deviceCardcsn */}
 
-Puedes seleccionar los tipos y formatos de tarjetas CSN y definir el orden de bytes.
+Seleccione los tipos de tarjeta CSN y de formato, y configure el orden de bytes.
 
 <Image src='/img/biostarx-setting-device-detail-card-csn.png' />
 
@@ -359,19 +359,19 @@ Puedes seleccionar los tipos y formatos de tarjetas CSN y definir el orden de by
 
 * <Cmd sid='device.info.formatType' product='2' />
 
-  * <Cmd sid='device.info.cardIdFormat.normal' product='2' />: Lee y muestra el número de serie (CSN) de la tarjeta sin conversión adicional.
+  * <Cmd sid='device.info.cardIdFormat.normal' product='2' />: Lee el número de serie de la tarjeta (CSN) sin conversión y lo muestra.
 
-  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />: Transforma y muestra el número de serie (CSN) de la tarjeta según el formato Wiegand definido por el usuario. Consulte <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> para configurar un nuevo formato Wiegand.
+  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />: Convierte el número de serie de la tarjeta (CSN) según un formato Wiegand definido por el usuario y lo muestra. Para configurar un nuevo formato Wiegand, consulte <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' />.
 
 ### <Cmd sid='device.card.Wiegand' product='2' className='normal' /> {/* #deviceCardwiegand */}
 
-Selecciona los tipos de tarjetas Wiegand y define los formatos Wiegand. Elija el formato Wiegand que se utilizará en la opción <Cmd sid='device.cardFormat.wiegand.format' product='2' />.
+Selecciona los tipos de tarjetas Wiegand y define los formatos Wiegand. En la opción <Cmd sid='device.cardFormat.wiegand.format' product='2' />, seleccione el formato Wiegand que se utilizará.
 
 <Image src='/img/biostarx-setting-device-detail-card-wiegand.png' />
 
 :::info
 
-Consulte <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> para configurar un nuevo formato Wiegand.
+Para configurar un nuevo formato Wiegand, consulte <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' />.
 
 :::
 
@@ -383,7 +383,7 @@ Seleccione los tipos de tarjetas inteligentes Suprema y configure la estructura 
 
 <EV2EV3SecurityMessage type='suprema' />
 
-* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Elija la estructura de tarjeta inteligente Suprema. Consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> para configurar un nuevo formato de tarjeta inteligente.
+* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Elija la estructura de tarjeta inteligente Suprema. Para configurar una nueva estructura de tarjeta inteligente, consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' />.
 
 * <Cmd sid='device.info.supremaSmartCardByteOrder' product='2' />
 
@@ -393,13 +393,13 @@ Seleccione los tipos de tarjetas inteligentes Suprema y configure la estructura 
 
 ### <Cmd sid='device.card.customSmartCard' product='2' className='normal' /> {/* #deviceCardcustomSmartCard */}
 
-Seleccione los tipos de tarjetas inteligentes personalizadas emitidas por terceros y configure la estructura y el orden de bytes de la tarjeta.
+Seleccione el tipo de tarjeta inteligente personalizada emitida por un tercero y configure la estructura de la tarjeta y el orden de bytes.
 
 <Image src='/img/biostarx-setting-device-detail-card-custom.png' />
 
 <EV2EV3SecurityMessage type='custom' />
 
-* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Elija la estructura de tarjeta inteligente personalizada. Consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> para configurar un nuevo formato de tarjeta inteligente.
+* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Elija la estructura de tarjeta inteligente personalizada. Para configurar una nueva estructura de tarjeta inteligente, consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' />.
 
 * <Cmd sid='device.info.customSmartCardByteOrder' product='2' />
 
@@ -411,41 +411,41 @@ Seleccione los tipos de tarjetas inteligentes personalizadas emitidas por tercer
 
 <summary>Ver dispositivos y versiones de firmware que admiten tarjetas inteligentes personalizadas</summary>
 
-* BioStation 3 Max: versión de firmware 1.3.0 o superior
+* Firmware BioStation 3 Max v1.3.0 o posterior
 
-* Firmware de XPass Q2, versión 1.0.0 o posterior
+* Firmware XPass Q2 v1.0.0 o posterior
 
-* BioEntry W3 versión de firmware 1.0.0 o superior
+* Firmware BioEntry W3 v1.0.0 o posterior
 
-* BioStation 2a versión de firmware 1.1.0 o superior
+* Firmware BioStation 2a v1.1.0 o posterior
 
-* BioStation 3 versión de firmware 1.3.0 o superior
+* Firmware BioStation 3 v1.3.0 o posterior
 
-* X-Station 2 versión de firmware 1.3.0 o superior
+* Firmware X-Station 2 v1.3.0 o posterior
 
-* BioLite N2 versión de firmware 1.6.2 o superior
+* Firmware BioLite N2 v1.6.2 o posterior
 
-* XPass D2 versión de firmware 1.7.1 o superior
+* Firmware XPass D2 v1.7.1 o posterior
 
-* BioEntry P2 versión de firmware 1.5.1 o superior
+* Firmware BioEntry P2 v1.5.1 o posterior
 
-* BioEntry W2 versión de firmware 1.8.0 o superior
+* Firmware BioEntry W2 v1.8.0 o posterior
 
 </details>
 
 ### <Cmd sid='device.info.csnMobile' product='2' className='normal' /> {/* #deviceCsnMobile */}
 
-Configure el método para reconocer tarjetas móviles.
+Configure cómo el dispositivo reconoce las tarjetas móviles.
 
 <Image src='/img/biostarx-setting-device-detail-card-csn-mobile.png' />
 
-* <Cmd>NFC</Cmd>: Reconoce tarjetas móviles mediante comunicación NFC desde dispositivos móviles.
+* <Cmd>NFC</Cmd>: Reconoce tarjetas móviles mediante comunicación NFC con un dispositivo móvil.
 
 * <Cmd>BLE</Cmd>: Reconoce tarjetas móviles mediante comunicación Bluetooth Low Energy (BLE).
 
 ### <Cmd sid='device.info.templateOnMobile' product='2' className='normal' /> {/* #deviceInfotemplateOnMobile */}
 
-Especifique cómo funciona el reconocimiento en Template on Mobile y configure el orden de bytes para los biométricos enrolados directamente por el usuario en el dispositivo.
+Configure el método de reconocimiento para plantilla en el móvil, seleccione los datos biométricos que el usuario registra directamente en el dispositivo y configure el orden de bytes.
 
 <Image src='/img/biostarx-setting-device-detail-card-tom.png' />
 
@@ -457,13 +457,13 @@ Especifique cómo funciona el reconocimiento en Template on Mobile y configure e
 
 <details>
 
-<summary>Ver dispositivos y versiones de firmware que admiten plantillas en el móvil</summary>
+<summary>Ver dispositivos y versiones de firmware que admiten plantilla en el móvil</summary>
 
-* Firmware de BioStation 3 Max, versión 1.0.0 o posterior
+* Firmware BioStation 3 Max v1.0.0 o posterior
 
-* BioEntry W3 versión de firmware 1.0.0 o superior
+* Firmware BioEntry W3 v1.0.0 o posterior
 
-* BioStation 3 versión de firmware 1.2.0 o superior
+* Firmware BioStation 3 v1.2.0 o posterior
 
 </details>
 
@@ -475,6 +475,6 @@ En el grupo <Cmd sid='device.info.pin' product='2' />, active o desactive la opc
 
 :::info
 
-La opción <Cmd sid='device.info.scrambleKeypad' product='2' /> solo está disponible en los productos Suprema que admiten interfaces de usuario a través de la pantalla LCD.
+La opción <Cmd sid='device.info.scrambleKeypad' product='2' /> está disponible solo en productos Suprema con una interfaz de usuario LCD.
 
 :::
