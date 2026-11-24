@@ -1,45 +1,42 @@
 ---
 id: settings-device-manage-device-users
-title: Manage Users Registered on Device
-description: This document provides guidance on managing users stored in the device.
-keywords:
-  - Device
-  - User
+title: Manage Users Registered on a Device
+description: Learn how to manage users registered on the device.
 ---
 
-You can check the number of users, fingerprints, faces, and cards stored on the device. Information about users not registered on **BioStar X** can be compared with registered user information, and you can send or delete this information on the **BioStar X** server.
+Check the number of users, fingerprints, faces, and cards registered on a device. You can compare this information with the users registered in **BioStar X**, and then send users to the **BioStar X** server or delete them from the device.
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. Select the device from the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list and right-click.
+3. In the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list, right-click the device.
 
-4. Click <Cmd sid='button.manageUsersInDevice' product='2' /> from the pop-up menu.
+4. Click <Cmd sid='button.manageUsersInDevice' product='2' /> in the pop-up menu.
 
    <Image src='/img/biostarx-setting-device-manage-device-users.png' />
 
-When the <Cmd sid='device.menu.manageUsersInDevice' product='2' /> window appears, you can compare the user information registered on the device with the user information registered on **BioStar X**.
+When the <Cmd sid='device.menu.manageUsersInDevice' product='2' /> window appears, compare the user information registered on the device with the user information registered in **BioStar X**.
 
 <Image src='/img/biostarx-setting-device-manage-device-users-popup.png' />
 
-Refer to the values displayed in the <Cmd sid='common.status' product='2' /> column to choose whether to delete user information from the device or send it to the **BioStar X** server. The values in the <Cmd sid='common.status' product='2' /> column are as follows:
+Check the values in the <Cmd sid='common.status' product='2' /> column to choose whether to delete user information from the device or send it to the **BioStar X** server. The values in the <Cmd sid='common.status' product='2' /> column are as follows.
 
 * <Cmd sid='user.syncStatus.same' product='2' />: User with the same information registered on the **BioStar X** server
 
 * <Cmd sid='user.syncStatus.different' product='2' />: User with information different from that registered on the **BioStar X** server
 
-* <Cmd sid='user.syncStatus.newUser' product='2' />: **BioStar X** user not stored on the server
+* <Cmd sid='user.syncStatus.newUser' product='2' />: User not registered on the **BioStar X** server
 
-To delete specific user information from the device, select the user to delete and click <Cmd sid='button.delete' product='2' />. To send user information to the **BioStar X** server, click <Cmd sid='button.upload' product='2' />.
+To delete user information from the device, select the users to delete, and then click <Cmd sid='button.delete' product='2' />. To send user information to the **BioStar X** server, click <Cmd sid='button.upload' product='2' />.
 
 :::info
 
-* The <Cmd sid='button.manageUsersInDevice' product='2' /> feature can only be used with one device selected.
+* You can use <Cmd sid='button.manageUsersInDevice' product='2' /> for only one device at a time.
 
-* When clicking <Cmd sid='button.upload' product='2' />, if there is a user on the **BioStar X** server with the same ID, it can be updated with the device’s information.
+* When you click <Cmd sid='button.upload' product='2' />, you can update a user on the **BioStar X** server with the same ID using the device information.
 
-* Deleted user information is removed only from the device and will be retained on the **BioStar X** server.
+* Deleted user information is removed only from the device and remains on the **BioStar X** server.
 
 * For more information on device settings, see <DocLink docId='platform/biostar_x/settings-device-details' />.
 
