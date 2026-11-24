@@ -1,67 +1,63 @@
 ---
 id: lockoverride
-title: Set Emergency Open Permissions
-description: This guide explains how to grant emergency open permissions to card credentials for specific users to open all doors in emergency situations.
-keywords:
-  - Emergency
-  - Open
-  - Access
+title: Set Up Lock Override Permissions
+description: Learn how to grant Lock Override permissions to card credentials so that specific users can unlock all doors in an emergency.
 ---
 
-You can set emergency open permissions to allow specific users to access all doors in emergency situations. If a door is opened with a card that has emergency access permission set, that door remains open, allowing anyone to enter.
+Set Lock Override permissions so that specific users can access all doors in an emergency. When a door is unlocked with a card that has Lock Override permissions, the door stays unlocked so that anyone can enter.
 
 ## Before you start
 
-You must first add the card credentials before setting the emergency open permissions. For more information on adding card credentials, see <DocLink docId='platform/biostar_x/enroll-credential-card' />.
+Before you set Lock Override permissions, add a card credential. For more information about adding card credentials, see <DocLink docId='platform/biostar_x/enroll-credential-card' />.
 
 :::info
 
-* Other credentials besides card credentials are not supported.
+* Only card credentials are supported.
 
 * All card credentials are supported except smart cards (AoC) and ToM mobile access cards (ToM AoC).
 
-* Depending on the device, emergency open functionality may not be supported. Refer to the supported devices and firmware versions below.
+* Some devices might not support Lock Override. For supported devices and firmware versions, see the following list.
 
   * BioStation 3 Max firmware v1.0.0 or later
 
   * XPass Q2 firmware v1.0.0 or later
 
-  * BioStation 3 firmware v1.4.0 or higher
+  * BioStation 3 firmware v1.4.0 or later
 
 :::
 
-## Set emergency open permissions
+## Set Lock Override permissions
 
-1. Click <Cmd sid='shell.header.user' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Double click the user you wish to set emergency open permissions for in the user list.
+2. In the user list, double-click the user to set Lock Override permissions for.
 
-   Alternatively, select a user and click the <Cmd sid='team.user.preview.button.seeMore' /> button in the profile displayed on the right screen.
+   Alternatively, select the user, and then click <Cmd sid='team.user.preview.button.seeMore' /> in the profile on the right side of the screen.
 
-3. When the user detail screen appears, go to the <Cmd sid='team.user.credential.title' /> section.
+3. When the user details screen appears, go to the <Cmd sid='team.user.credential.title' /> section.
 
-4. Click the checkbox in the <Cmd sid='team.user.table.lockOverride' /> item for the card credentials you want to allow for emergency open.
+4. For each card credential to use for Lock Override, select the <Cmd sid='team.user.table.lockOverride' /> checkbox.
 
    <Image src='/img/biostarx-user-credential-set-emergency-opening.png' />
 
-5. When a warning message appears, check the content and click <Cmd sid='common.button.continue' />.
+5. When a warning message appears, review it, and then click <Cmd sid='common.button.continue' />.
 
    <Image src='/img/biostarx-user-credential-set-emergency-opening-warning.png' width='60%' />
 
-6. Click <Cmd sid='common.save' /> at the top right of the screen.
+6. Click <Cmd sid='common.save' /> in the upper-right corner of the screen.
 
-Complete the setting of emergency open permissions.
+Lock Override permissions are set.
 
 :::caution
 
-Users can open all doors with an access card configured with emergency access permission.
+The user can unlock all doors with an access card that has Lock Override permissions.
 
 :::
 
 :::info
 
-* You can select one or more card credentials to grant emergency access permission.
+* You can grant Lock Override permissions to one or more card credentials.
 
-* To revoke emergency access permission, click the checkbox of the selected card credential's <Cmd sid='team.user.table.lockOverride' /> item again.
+* To remove Lock Override permissions, clear the <Cmd sid='team.user.table.lockOverride' /> checkbox for the card credential.
 
 :::
