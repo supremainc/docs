@@ -1,7 +1,7 @@
 ---
 id: settings-device-details-auth
 title: Authentication Settings
-description: Instructions for various settings related to user authentication on the device are provided.
+description: Learn how to set various options related to user authentication on the device.
 keywords:
   - Device
   - Authentication
@@ -9,305 +9,305 @@ keywords:
 
 import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-force.mdx';
 
-Instructions for various settings related to user authentication on the device are provided. <Cmd sid='device.info.authentication' product='2' /> section provides step-by-step information on authentication methods and key authentication options supported by the device. Note that changes to settings will be applied to the actual device, and configure the authentication policy according to your environment by referring to the features and precautions of each option.
+Learn how to set various options related to user authentication on the device. The <Cmd sid='device.info.authentication' product='2' /> section provides step-by-step information on authentication methods and key authentication options supported by the device. Note that changes you make are applied to the actual device. Review each option's features and precautions, and then configure an authentication policy for your environment.
 
 :::info
 
 * The available network options may differ depending on the device type.
 
-* If the user has made any arbitrary changes, click <Cmd sid='button.apply' product='2' />. Changes will not be applied to the device if not saved.
+* If you made changes, click <Cmd sid='button.apply' product='2' />. Unsaved changes are not applied to the device.
 
 :::
 
 ## Authentication method settings {/* #howToAuth */}
 
-You can set the device's authentication mode, permissions, server matching, and authentication timeout.
+Set the device's authentication mode, permissions, server matching, and authentication timeout.
 
 <Image src='/img/biostarx-setting-device-edit-auth-mode.png' />
 
-* <Cmd sid='device.info.authenticationMode' product='2' />: Set the authentication mode of the device by combining one or more credentials. For more information, see <DocLink inner='#added-auth-mode' />.
+* <Cmd sid='device.info.authenticationMode' product='2' />: Set the device authentication mode by combining one or more credentials. For more information, see <DocLink inner='#added-auth-mode' />.
 
-  * Click the <IcEdit /> button to modify the added authentication mode.
+  * To modify an added authentication mode, click <IcEdit />.
 
-  * Click the <IcTrash2 /> button to delete the added authentication mode.
+  * To delete an added authentication mode, click <IcTrash2 />.
 
-* <Cmd sid='device.info.usersHaveFullAccess' product='2' />: Users registered on the device can be granted all access permissions without defining access group settings.
+* <Cmd sid='device.info.usersHaveFullAccess' product='2' />: Grants all access permissions to users registered on the device without defining access group settings.
 
-   :::info
+  :::info
 
-   When this option is set to <Cmd sid='common.use' product='2' />, the device cannot be registered in <Cmd sid='common.accessLevel' product='2' /> and <Cmd sid='ag.floorLevel.title' product='2' />.
+  When this option is set to <Cmd sid='common.use' product='2' />, the device cannot be added to <Cmd sid='common.accessLevel' product='2' /> and <Cmd sid='ag.floorLevel.title' product='2' />.
 
-   :::
+  :::
 
-* <Cmd sid='device.info.authTimeout' product='2' />: This is the timeout for authenticating the second credential when multiple credentials are used in <Cmd sid='device.info.authenticationMode' product='2' /> option. If the credential is not authenticated within the specified time, authentication will fail.
+* <Cmd sid='device.info.authTimeout' product='2' />: Set the wait time for authenticating the second credential when you use multiple credentials in <Cmd sid='device.info.authenticationMode' product='2' />. If the credential is not authenticated within the specified time, authentication fails.
 
 * <Cmd sid='common.serverMatching' product='2' />
 
-  * <Cmd sid='common.active' product='2' />: Activates server matching. Configure the server matching feature to authenticate using user information stored on the server where **BioStar X** is installed.
+  * <Cmd sid='common.active' product='2' />: Activates server matching. Configure server matching to authenticate using user information stored on the server where **BioStar X** is installed.
 
-  * <Cmd sid='common.inactive' product='2' />: Deactivates server matching. In this case, authentication is performed using the user information registered on the device.
+  * <Cmd sid='common.inactive' product='2' />: Deactivates server matching. In this case, the device authenticates using the user information registered on the device.
 
   <details>
 
-  <summary>View devices and firmware versions supporting <Cmd sid='common.serverMatching' product='2' /> feature</summary>
+  <summary>View devices and firmware versions that support <Cmd sid='common.serverMatching' product='2' /></summary>
 
-  * BioStation 3 Max firmware 1.0.0 or later
+  * BioStation 3 Max firmware v1.0.0 or later
 
-  * XPass Q2 firmware 1.0.0 or later
+  * XPass Q2 firmware v1.0.0 or later
 
-  * BioEntry W3 firmware version 1.0.0 or higher
+  * BioEntry W3 firmware v1.0.0 or later
 
-  * BioStation 3 firmware 1.0.0 or higher
+  * BioStation 3 firmware v1.0.0 or later
 
-  * X-Station 2 firmware 1.0.0 or higher
+  * X-Station 2 firmware v1.0.0 or later
 
-  * FaceStation F2 firmware 1.0.0 or higher
+  * FaceStation F2 firmware v1.0.0 or later
 
-  * XPass 2 firmware 1.0.0 or higher
+  * XPass 2 firmware v1.0.0 or later
 
-  * BioLite N2 firmware 1.0.0 or higher
+  * BioLite N2 firmware v1.0.0 or later
 
-  * XPass D2 firmware version 1.0.0 or higher
+  * XPass D2 firmware v1.0.0 or later
 
-  * BioEntry P2 firmware 1.0.0 or higher
+  * BioEntry P2 firmware v1.0.0 or later
 
-  * FaceStation 2 firmware version 1.4.0 or higher
+  * FaceStation 2 firmware v1.4.0 or later
 
-  * BioEntry W2 firmware 1.0.0 or higher
+  * BioEntry W2 firmware v1.0.0 or later
 
-  * BioStation L2 firmware 1.0.0 or higher
+  * BioStation L2 firmware v1.0.0 or later
 
-  * BioStation A2 firmware 1.0.0 or higher
+  * BioStation A2 firmware v1.0.0 or later
 
-  * BioStation 2 firmware 1.2.0 or higher
+  * BioStation 2 firmware v1.2.0 or later
 
-  * CoreStation firmware version 1.0.0 or higher
+  * CoreStation firmware v1.0.0 or later
 
-  * FaceLite does not support server matching feature.
+  * FaceLite does not support the server matching feature.
 
-  * The BioStation 3, BioEntry W3, and FaceStation F2 devices cannot use server-based matching for facial authentication.
+  * The BioStation 3, BioEntry W3, and FaceStation F2 devices cannot use server matching for facial authentication.
 
   </details>
 
-* <Cmd sid='device.info.faceDetection' product='2' />: Set the algorithm steps for recognizing faces using the built-in camera when the user authenticates.
+* <Cmd sid='device.info.faceDetection' product='2' />: Set the algorithm steps for detecting faces using the device's built-in camera when the user authenticates.
 
-  * <Cmd sid='device.faceDetectionLevel.normal' product='2' />: Detects faces at a distance equivalent to the length of a person's arm.
+  * <Cmd sid='device.faceDetectionLevel.normal' product='2' />: Detects faces at about arm's length.
 
-  * <Cmd sid='device.faceDetectionLevel.strict' product='2' />: Requires the user to be closer than the length of a person's arm to detect a face.
+  * <Cmd sid='device.faceDetectionLevel.strict' product='2' />: Requires the user to be closer than arm's length to detect a face.
 
-  * <Cmd sid='device.faceDetectionLevel.none' product='2' />: Does not use facial recognition functionality.
+  * <Cmd sid='device.faceDetectionLevel.none' product='2' />: Does not use face detection.
 
-   :::info
+    :::info
 
-   This option is supported on the BioStation A2.
+    BioStation A2 supports this option.
 
-   :::
+    :::
 
-* <Cmd sid='device.info.userIdDisplay' product='2' />: Control whether to display or hide the user ID shown on the device when authentication is successful.
-
-  * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
-
-* <Cmd sid='device.info.userNameDisplay' product='2' />: Control whether to display or hide the user name shown on the device when authentication is successful.
+* <Cmd sid='device.info.userIdDisplay' product='2' />: Set whether to show or hide the user ID that appears on the device after successful authentication.
 
   * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-* <Cmd sid='device.info.authFailLockout.label' product='2' />: If authentication fails repeatedly within a short time, the device locks for a certain period. This blocks brute-force attacks. Set this option to <Cmd sid='device.info.enable' product='2' /> to configure the settings below. The default is <Cmd sid='device.info.disable' product='2' />.
+* <Cmd sid='device.info.userNameDisplay' product='2' />: Set whether to show or hide the user name that appears on the device after successful authentication.
 
-  * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />: Set the number of authentication failures allowed before lockout to 3\~15 attempts. The default is 5 attempts.
+  * <Cmd sid='device.info.authUserDisplay.displayAll' product='2' /> / <Cmd sid='device.info.authUserDisplay.maskAllButFirstLetter' product='2' /> / <Cmd sid='device.info.authUserDisplay.hideAll' product='2' />
 
-  * <Cmd sid='device.info.authFailLockout.monitoringWindow' product='2' />: Set the time window for counting authentication failures to 30\~300 seconds. The default is 60 seconds.
+* <Cmd sid='device.info.authFailLockout.label' product='2' />: If authentication fails repeatedly within a short time, the device locks for a set period. This blocks brute-force attacks. When this option is set to <Cmd sid='device.info.enable' product='2' />, you can set the following options. The default is <Cmd sid='device.info.disable' product='2' />.
 
-  * <Cmd sid='device.info.authFailLockout.firstLockout' product='2' />: Set the lockout time applied when failures reach <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' /> to 30\~900 seconds. The default is 60 seconds, and a value is required.
+  * <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />: Set the number of authentication failures allowed before lockout, from 3 to 15. The default is 5 attempts.
 
-  * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: 2nd lockout time, applied when authentication failures continue even after the 1st lockout is cleared. Set this option to <Cmd sid='common.use' product='2' /> to enter a value between 900\~3,600 seconds. The default is 900 seconds.
+  * <Cmd sid='device.info.authFailLockout.monitoringWindow' product='2' />: Set the time window for counting authentication failures, from 30 to 300 seconds. The default is 60 seconds.
 
-     :::note
+  * <Cmd sid='device.info.authFailLockout.firstLockout' product='2' />: Set the lockout time applied when failures reach <Cmd sid='device.info.authFailLockout.maxAttempts' product='2' />, from 30 to 900 seconds. The default is 60 seconds, and a value is required.
 
-     Set this option to <Cmd sid='device.info.disable' product='2' /> to repeatedly apply only the 1st lockout, without a 2nd lockout.
+  * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: Set the 2nd lockout time, which applies when authentication failures continue after the 1st lockout ends. When this option is set to <Cmd sid='common.use' product='2' />, you can enter a value from 900 to 3,600 seconds. The default is 900 seconds.
 
-     :::
+    :::note
 
-  * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />: If no additional failures occur within this time after the last failure, the device initializes the cumulative failure count. Set it to 600\~3,600 seconds. The default is 1,800 seconds.
+    When this option is set to <Cmd sid='device.info.disable' product='2' />, only the 1st lockout applies repeatedly, without a 2nd lockout.
 
-   :::info
+    :::
+
+  * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />: If no additional failures occur within this time after the last failure, the device initializes the cumulative failure count. Set a value from 600 to 3,600 seconds. The default is 1,800 seconds.
+
+  :::info
 
   * When the device is locked, change <Cmd sid='device.info.authFailLockout.label' product='2' /> to <Cmd sid='device.info.disable' product='2' /> and save. The device unlocks immediately. However, changing <Cmd sid='device.info.authFailLockout.secondLockout' product='2' /> to <Cmd sid='device.info.disable' product='2' /> and saving does not unlock the device.
 
-  * Support for the <Cmd sid='device.info.authFailLockout.label' product='2' /> option is included in BioStation 3 firmware 1.5.0 or later.
+  * BioStation 3 firmware v1.5.0 or later supports the <Cmd sid='device.info.authFailLockout.label' product='2' /> option.
 
-   :::
+  :::
 
-### Add authentication mode {/* #added-auth-mode */}
+### Add an authentication mode {/* #added-auth-mode */}
 
-Set the device's authentication mode in the <Cmd sid='device.info.authenticationMode' product='2' /> option. You can configure the authentication mode by combining credentials such as fingerprint, ID, card, PIN, and face.
+Set the device's authentication mode in the <Cmd sid='device.info.authenticationMode' product='2' /> option. Combine credentials such as fingerprint, ID, card, PIN, and face to set the authentication mode.
 
-1. In the <Cmd sid='device.info.authenticationMode' product='2' /> option, click the <IcAdd/> <Cmd sid='button.add' product='2' /> button.
+1. In the <Cmd sid='device.info.authenticationMode' product='2' /> option, click <IcAdd/> <Cmd sid='button.add' product='2' />.
 
-2. When the <Cmd sid='device.addNewAuthMode' product='2' /> window appears, drag the desired authentication mode to the center area.
+2. When the <Cmd sid='device.addNewAuthMode' product='2' /> window appears, drag an authentication mode to the center area.
 
    <Image src='/img/biostarx-setting-device-edit-auth-mode-adding.png' />
 
-   You can add up to five desired authentication modes.
+   Up to five authentication modes can be added.
 
-3. Select the desired item in the <Cmd sid='schedule.schedule' product='2' /> option.
+3. Select a schedule in the <Cmd sid='schedule.schedule' product='2' /> option.
 
-4. Once all settings are completed, click the <Cmd sid='button.apply' product='2' /> button.
+4. After you complete all settings, click <Cmd sid='button.apply' product='2' />.
 
 :::info
 
-If the desired schedule is not available in the <Cmd sid='schedule.schedule' product='2' /> option, click <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> to add a new schedule. You can add a new schedule. For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
+If the schedule is not available in the <Cmd sid='schedule.schedule' product='2' /> option, click <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' />. You can add a new schedule. For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
 :::
 
 ## Fingerprint authentication settings
 
-In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configure details related to the device's fingerprint authentication.
+In the <Cmd sid='device.info.fingerprint' product='2' /> group, set details for the device's fingerprint authentication.
 
 <Image src='/img/biostarx-setting-device-detail-fingerprint.png' />
 
 * <Cmd sid='device.info.securityLevel' product='2' />: Set the security level used for authenticating fingerprints. Higher security levels increase the [False Rejection Rate (FRR)](../../reference/glossary#frr) but decrease the [False Acceptance Rate (FAR)](../../reference/glossary#far).
 
-* <Cmd sid='device.info.scanTimeout' product='2' />: Set the timeout for fingerprint scanning. Failure to scan within the time set will result in authentication failure.
+* <Cmd sid='device.info.scanTimeout' product='2' />: Set the timeout for fingerprint scanning. If the device does not scan a fingerprint within the time set, authentication fails.
 
-* <Cmd sid='device.info.sensorSensitivity' product='2' />: Set the sensitivity of the fingerprint recognition sensor. Set the sensitivity higher to obtain precise fingerprint information.
+* <Cmd sid='device.info.sensorSensitivity' product='2' />: Set the sensitivity of the fingerprint recognition sensor. To get more precise fingerprint information, set a higher sensitivity.
 
-* <Cmd sid='device.info.1NFastMode' product='2' />: Set the speed of fingerprint authentication. When <Cmd sid='common.auto' product='2' /> is selected, it sets the authentication performance according to the total fingerprint templates registered on the device.
+* <Cmd sid='device.info.1NFastMode' product='2' />: Set the fingerprint authentication performance. When <Cmd sid='common.auto' product='2' /> is selected, the device sets the authentication performance based on the total number of fingerprint templates enrolled on the device.
 
-* <Cmd sid='device.info.templateFormat' product='2' />: View the configured fingerprint template format.
+* <Cmd sid='device.info.templateFormat' product='2' />: Shows the configured fingerprint template format.
 
-* <Cmd sid='device.info.matchingTimeout' product='2' />: Set the timeout for fingerprint matching. If authentication is not completed within the specified time, it will fail.
+* <Cmd sid='device.info.matchingTimeout' product='2' />: Set the timeout for fingerprint matching. If authentication is not completed within the time set, authentication fails.
 
-* <Cmd sid='device.info.viewImage' product='2' />: Display fingerprint images on the screen during authentication.
+* <Cmd sid='device.info.viewImage' product='2' />: Shows fingerprint images on the screen during authentication.
 
 * <Cmd sid='device.info.sensorMode' product='2' />: Set the operating mode of the fingerprint sensor.
 
-  * <Cmd sid='device.sensorMode.autoOn' product='2' />: The fingerprint sensor turns on by recognizing the user's finger.
+  * <Cmd sid='device.sensorMode.autoOn' product='2' />: The fingerprint sensor turns on when it detects a finger.
 
-  * <Cmd sid='device.sensorMode.alwaysOn' product='2' />: The fingerprint sensor remains always on.
+  * <Cmd sid='device.sensorMode.alwaysOn' product='2' />: The fingerprint sensor is always on.
 
-* <Cmd sid='device.info.advancedEnrollment' product='2' />: Assess the quality of scanned fingerprints to save high-quality fingerprint information. Set to <Cmd sid='common.use' product='2' /> to notify the user if the fingerprint quality is low, helping to scan fingerprints correctly.
+* <Cmd sid='device.info.advancedEnrollment' product='2' />: Checks the quality of scanned fingerprints to save high-quality fingerprint information. When this option is set to <Cmd sid='common.use' product='2' />, the device notifies the user when fingerprint quality is low and helps the user scan the fingerprint correctly.
 
-* <Cmd sid='device.info.fingerprintLFD' product='2' />: Set the level for [fake fingerprint](../../reference/glossary#fake_fp) detection. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+* <Cmd sid='device.info.fingerprintLFD' product='2' />: Set the level for [fake fingerprint](../../reference/glossary#fake_fp) detection. Higher levels for fake fingerprint detection may also increase rejection rates for real fingerprints.
 
-* <Cmd sid='device.info.duplicateCheck' product='2' />: Check for duplicate registrations when enrolling fingerprints.
+* <Cmd sid='device.info.duplicateCheck' product='2' />: Checks for duplicate enrollments when enrolling fingerprints.
 
 :::info
 
-* The options available for configuration may vary depending on the type of device.
+* Available options may vary depending on the device type.
 
-* Changing the <Cmd sid='device.info.templateFormat' product='2' /> option in fingerprint authentication settings will render all previously stored fingerprints unusable. Make sure to select a template in the <Cmd sid='device.info.templateFormat' product='2' /> option before enrolling users' fingerprints.
+* Changing the <Cmd sid='device.info.templateFormat' product='2' /> option in the fingerprint authentication settings renders all previously stored fingerprints unusable. Make sure to select a template in the <Cmd sid='device.info.templateFormat' product='2' /> option before enrolling the user's fingerprints.
 
-* <Cmd sid='device.info.viewImage' product='2' /> option is supported on BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2, and BioStation 2.
+* The <Cmd sid='device.info.viewImage' product='2' /> option is supported on BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2, and BioStation 2.
 
-* <Cmd sid='device.info.fingerprintLFD' product='2' /> option is supported on BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2, and BioEntry W2.
+* The <Cmd sid='device.info.fingerprintLFD' product='2' /> option is supported on BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2, and BioEntry W2.
 
 :::
 
 ## Facial authentication settings {/* #faceDetectionSettings */}
 
-In the <Cmd sid='user.credential.face' product='2' /> or <Cmd sid='user.credential.visualface' product='2' /> group, you can configure the device's facial authentication settings.
+In the <Cmd sid='user.credential.face' product='2' /> or <Cmd sid='user.credential.visualface' product='2' /> group, set details for the device's facial authentication.
 
 <Image src='/img/biostarx-setting-device-detail-face.png' />
 
-* <Cmd sid='device.info.securityLevel' product='2' />: Set the security level used for authenticating faces. Higher security levels increase the [False Rejection Rate (FRR)](../../reference/glossary#frr) but decrease the [False Acceptance Rate (FAR)](../../reference/glossary#far).
+* <Cmd sid='device.info.securityLevel' product='2' />: Set the security level used for facial authentication. Higher security levels increase the [False Rejection Rate (FRR)](../../reference/glossary#frr) but decrease the [False Acceptance Rate (FAR)](../../reference/glossary#far).
 
-* <Cmd sid='face.operationMode.enrollTime' product='2' />: If the user's face is not enrolled within the set time when registering, the face enrollment will be canceled.
+* <Cmd sid='face.operationMode.enrollTime' product='2' />: If the user's face is not enrolled within the set time, face enrollment is canceled.
 
 * <Cmd sid='device.info.motionSensor' product='2' />: Set the sensitivity for detecting movement around the device.
 
-* <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />: The device can detect ambient brightness and adjust the intensity of the IR LED.
+* <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />: Detects ambient brightness around the device and adjusts the IR LED intensity.
 
-* <Cmd sid='device.info.faceLFD' product='2' />: Set the level for fake face detection. Increasing the level for detecting fake face registrations may heighten the rejection rates for actual faces.
+* <Cmd sid='device.info.faceLFD' product='2' />: Set the level for fake face detection. Increasing the level for detecting fake face enrollments may increase the rejection rates for real faces.
 
-* <Cmd sid='device.authmode.settings.lightBrightness' product='2' />: Manually adjust the brightness of the device's light. Set brightness by choosing <Cmd sid='device.authmode.settings.ambientBrightness.normal' product='2' /> or <Cmd sid='device.authmode.settings.ambientBrightness.high' product='2' />, or select <Cmd sid='device.authmode.settings.lightBrightness.notUse' product='2' /> to turn off the light.
+* <Cmd sid='device.authmode.settings.lightBrightness' product='2' />: Manually adjust the brightness of the device's light. Select <Cmd sid='device.authmode.settings.ambientBrightness.normal' product='2' /> or <Cmd sid='device.authmode.settings.ambientBrightness.high' product='2' /> to set the brightness, or select <Cmd sid='device.authmode.settings.lightBrightness.notUse' product='2' /> to turn off the light.
 
 * <Cmd sid='device.info.faceQuickEnrollment' product='2' />: Set whether to enable quick face enrollment.
 
-  * <Cmd sid='device.info.enable' product='2' />: Configures the face enrollment procedure to one step.
+  * <Cmd sid='device.info.enable' product='2' />: Sets the face enrollment procedure to one step.
 
-  * <Cmd sid='device.info.disabled' product='2' />: Sets the face enrollment procedure to 3 steps. Set to <Cmd sid='device.info.disabled' product='2' /> for high-quality face template enrollment.
+  * <Cmd sid='device.info.disabled' product='2' />: Sets the face enrollment procedure to three steps. To enroll high-quality face templates, set this option to <Cmd sid='device.info.disabled' product='2' />.
 
-* <Cmd sid='device.info.duplicateCheck' product='2' />: Check for duplicate registrations when enrolling faces.
+* <Cmd sid='device.info.duplicateCheck' product='2' />: Checks for duplicate enrollments when enrolling faces.
 
-* <Cmd sid='device.info.faceDetectSetting' product='2' />: Configure the environmental settings for recognizing the user's face during authentication.
+* <Cmd sid='device.info.faceDetectSetting' product='2' />: Set the environment for detecting the user's face during facial authentication.
 
   * <Cmd sid='device.info.faceMaxRotation' product='2' />: Set the maximum rotation angle permitted for the face.
 
-  * <Cmd sid='device.info.faceDetectDist' product='2' />: Set the minimum and maximum distances for recognizing the face.
+  * <Cmd sid='device.info.faceDetectDist' product='2' />: Set the minimum and maximum distances for detecting faces.
 
-  * <Cmd sid='device.info.faceWideSearch' product='2' />: Set to <Cmd sid='common.on' product='2' /> to allow facial recognition across the entire camera view.
+  * <Cmd sid='device.info.faceWideSearch' product='2' />: To detect faces across the entire camera view, set this option to <Cmd sid='common.on' product='2' />.
 
 * <Cmd sid='device.info.faceOperationMode' product='2' />: Set the operation mode of the device during facial authentication.
 
-  * <Cmd sid='device.info.face.operation_mode.enable' product='2' />: Perform both visual and infrared matching to enhance the accuracy of facial authentication.
+  * <Cmd sid='device.info.face.operation_mode.enable' product='2' />: Uses both visual and infrared matching to improve the accuracy of facial authentication.
 
-  * <Cmd sid='device.info.face.operation_mode.disable' product='2' />: Allows for rapid authentication of users walking within the device's authentication range.
+  * <Cmd sid='device.info.face.operation_mode.disable' product='2' />: Authenticates users quickly while they walk within the device's authentication range.
 
-* <Cmd sid='device.info.faceFakeDetection' product='2' />: Prevent user authentication using fake faces such as photos. This is activated when the <Cmd sid='device.info.faceOperationMode' product='2' /> option is set to <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
+* <Cmd sid='device.info.faceFakeDetection' product='2' />: Prevents user authentication using fake faces such as photos. This option is enabled when the <Cmd sid='device.info.faceOperationMode' product='2' /> option is set to <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
 
-* <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Stores both the actual facial image and a template containing only the extracted feature data. Disable this setting if you do not want to store the actual image.
+* <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Stores both the actual facial image and a template containing only the extracted feature data. To avoid storing the actual image, turn off this setting.
 
-* <Cmd sid='device.info.reauthPrevention' product='2' />: Set this to prevent duplicate authentication when the same user’s face is detected again within a short time. Set this option to <Cmd sid='device.info.enable' product='2' /> and set <Cmd sid='device.info.reauthPreventionTime' product='2' /> to 3\~60 seconds.
+* <Cmd sid='device.info.reauthPrevention' product='2' />: Set whether to prevent duplicate authentication when the same user's face is detected again within a short time. When this option is set to <Cmd sid='device.info.enable' product='2' />, you can set <Cmd sid='device.info.reauthPreventionTime' product='2' /> from 3 to 60 seconds.
 
   <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
 
-   :::note
+  :::note
 
-   This setting applies to both <Cmd sid='device.info.antiTailgating.label' product='2' /> and <Cmd sid='device.info.multiFaceAuth.label' product='2' />, regardless of which option is enabled.
+  This setting applies to both <Cmd sid='device.info.antiTailgating.label' product='2' /> and <Cmd sid='device.info.multiFaceAuth.label' product='2' />, regardless of which option is enabled.
 
-   :::
+  :::
 
-* <Cmd sid='device.info.antiTailgating.label' product='2' />: If the camera detects 2 or more faces at the same time within the device camera’s capture range, it considers this tailgating and stops authentication.
+* <Cmd sid='device.info.antiTailgating.label' product='2' />: If the camera detects two or more faces at the same time within the device camera's capture range, it considers this tailgating and stops authentication.
 
 * <Cmd sid='device.info.multiFaceAuth.label' product='2' />: Authenticates multiple users in sequence within the camera view.
 
-   :::note
+  :::note
 
   * This option requires a separate device license. Devices without a license cannot enable this option. For more information, see <DocLink docId='platform/biostar_x/settings-license-device-license' />.
 
-  * Set this option to <Cmd sid='common.use' product='2' /> to use Facial Authentication only, regardless of the <Cmd sid='device.info.authenticationMode' product='2' /> setting.
+  * When this option is set to <Cmd sid='common.use' product='2' />, the device uses facial authentication only, regardless of the <Cmd sid='device.info.authenticationMode' product='2' /> setting.
 
   * Devices that use this option cannot use <Cmd sid='device.info.tna' product='2' /> or <Cmd sid='device.info.serverPrivateMsg' product='2' />.
 
-   :::
+  :::
 
 :::info
 
-* The options available for configuration may vary depending on the type of device.
+* Available options may vary depending on the device type.
 
-* The <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />, <Cmd sid='device.info.faceLFD' product='2' />, and <Cmd sid='device.info.faceQuickEnrollment' product='2' /> options are supported in the FaceStation 2 and FaceLite models.
+* The <Cmd sid='device.authmode.settings.ambientBrightness' product='2' />, <Cmd sid='device.info.faceLFD' product='2' />, and <Cmd sid='device.info.faceQuickEnrollment' product='2' /> options are supported on FaceStation 2 and FaceLite models.
 
-* The <Cmd sid='device.authmode.settings.lightBrightness' product='2' /> option is supported on FaceStation F2 firmware version 1.1.0 or higher.
+* The <Cmd sid='device.authmode.settings.lightBrightness' product='2' /> option is supported on FaceStation F2 firmware v1.1.0 or later.
 
-* <Cmd sid='device.info.faceDetectSetting' product='2' />, <Cmd sid='device.info.faceOperationMode' product='2' /> options are supported on BioStation 3 Max, BioStation 3, and FaceStation F2 models.
+* The <Cmd sid='device.info.faceDetectSetting' product='2' /> and <Cmd sid='device.info.faceOperationMode' product='2' /> options are supported on BioStation 3 Max, BioStation 3, and FaceStation F2 models.
 
-* Do not set <Cmd sid='device.info.antiTailgating.label' product='2' /> and <Cmd sid='device.info.multiFaceAuth.label' product='2' /> to <Cmd sid='common.use' product='2' /> at the same time. Set one option to <Cmd sid='common.use' product='2' />; the other automatically switches to <Cmd sid='common.notUse' product='2' />.
+* The <Cmd sid='device.info.antiTailgating.label' product='2' /> and <Cmd sid='device.info.multiFaceAuth.label' product='2' /> options cannot both be set to <Cmd sid='common.use' product='2' />. When you set one option to <Cmd sid='common.use' product='2' />, the other automatically switches to <Cmd sid='common.notUse' product='2' />.
 
-* Set <Cmd sid='device.info.reauthPrevention' product='2' /> and <Cmd sid='device.info.multiFaceAuth.label' product='2' /> only on the master device. Set the <Cmd sid='device.info.antiTailgating.label' product='2' /> option separately on the master and slave devices.
+* The <Cmd sid='device.info.reauthPrevention' product='2' /> and <Cmd sid='device.info.multiFaceAuth.label' product='2' /> options can be set only on the master device. The <Cmd sid='device.info.antiTailgating.label' product='2' /> option can be set separately on the master and slave devices.
 
 * Support for <Cmd sid='device.info.reauthPrevention' product='2' />, <Cmd sid='device.info.antiTailgating.label' product='2' />, and <Cmd sid='device.info.multiFaceAuth.label' product='2' /> may vary by device model and firmware version.
 
-  * BioStation 3 firmware version 1.5.0 or later
+  * BioStation 3 firmware v1.5.0 or later
 
 :::
 
-## QR/Barcode settings
+## QR/barcode settings
 
-In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configure details for QR/barcode authentication on the device.
+In the <Cmd sid='user.credential.barcode' product='2' /> group, set details for the device's QR/barcode authentication.
 
 <Image src='/img/biostarx-setting-device-detail-qrbarcode.png' />
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' /> / <Cmd sid='device.info.useBarcode' product='2' />: Set whether to use QR/barcode authentication through the device's camera.
 
-* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />: Set the camera scan timeout. If a QR/barcode is not scanned within the specified time, authentication will fail.
+* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />: Set the camera scan timeout. If a QR/barcode is not scanned within the specified time, authentication fails.
 
-* <Cmd sid='device.info.normalize' product='2' />: Set to authenticate QR codes with the same data as CSN cards or Wiegand cards issued to users.
+* <Cmd sid='device.info.normalize' product='2' />: Set whether to allow authentication with QR codes that contain the same data as the CSN or Wiegand cards issued to users.
 
-* <Cmd sid='device.authmode.settings.motionSensor' product='2' />: Set the sensitivity for detecting movement to initiate camera scanning.
+* <Cmd sid='device.authmode.settings.motionSensor' product='2' />: Set the sensitivity for detecting movement that starts camera scanning.
 
 * <Cmd sid='device.info.useBarcodeScanner' product='2' />: Set whether to use the device's scanner for QR/barcode authentication.
 
-* <Cmd sid='device.info.qrScanTimeout' product='2' />: Set the scanning timeout. If a QR/barcode is not scanned within the specified time, authentication will fail.
+* <Cmd sid='device.info.qrScanTimeout' product='2' />: Set the scanning timeout. If a QR/barcode is not scanned within the specified time, authentication fails.
 
 * <Cmd sid='device.info.useQrLed' product='2' />: Set whether to use the device's LED illumination when authenticating QR codes.
 
@@ -315,39 +315,39 @@ In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configur
 
 * The <Cmd sid='device.info.useVisualBarcode' product='2' /> option requires a separate device license. For more information, see <DocLink docId='platform/biostar_x/settings-license-device-license' />.
 
-* The devices supporting <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' />, and <Cmd sid='device.authmode.settings.motionSensor' product='2' /> options are as follows.
+* The following devices support the <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' />, and <Cmd sid='device.authmode.settings.motionSensor' product='2' /> options.
 
-  * BioStation 3 Max firmware version 1.0.0 or later
+  * BioStation 3 Max firmware v1.0.0 or later
 
-  * BioStation 3 firmware version 1.1.0 or later
+  * BioStation 3 firmware v1.1.0 or later
 
-  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware version 1.2.0 or higher
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware v1.2.0 or later
 
-  * X-Station 2 (XS2-QDPB, XS2-QAPB) firmware version 1.4.1 or higher
+  * X-Station 2 (XS2-QDPB, XS2-QAPB) firmware v1.4.1 or later
 
-* The devices supporting <Cmd sid='device.info.useBarcodeScanner' product='2' /> and <Cmd sid='device.info.qrScanTimeout' product='2' /> options are as follows.
+* The following devices support the <Cmd sid='device.info.useBarcodeScanner' product='2' /> and <Cmd sid='device.info.qrScanTimeout' product='2' /> options.
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB)
 
-* <Cmd sid='device.info.useBarcode' product='2' />, <Cmd sid='device.info.scanTimeout' product='2' />, <Cmd sid='device.info.useQrLed' product='2' /> options are supported on the following devices.
+* The following devices support the <Cmd sid='device.info.useBarcode' product='2' />, <Cmd sid='device.info.scanTimeout' product='2' />, and <Cmd sid='device.info.useQrLed' product='2' /> options.
 
-  * XPass Q2 firmware 1.0.0 or later
+  * XPass Q2 firmware v1.0.0 or later
 
 :::
 
 ## Card authentication settings
 
-In the <Cmd sid='setting.card.cardType' product='2' /> group, you can set the types of cards to be used on the device.
+In the <Cmd sid='setting.card.cardType' product='2' /> group, set the card types to use on the device.
 
 :::info
 
-Only card types supported by the device will be displayed in the <Cmd sid='setting.card.cardType' product='2' /> group.
+Only card types supported by the device appear in the <Cmd sid='setting.card.cardType' product='2' /> group.
 
 :::
 
 ### <Cmd sid='device.card.CSN' product='2' className='normal' /> {/* #deviceCardcsn */}
 
-You can select the types of CSN cards and formats and set the byte order.
+Select the CSN card and format types, and set the byte order.
 
 <Image src='/img/biostarx-setting-device-detail-card-csn.png' />
 
@@ -359,19 +359,19 @@ You can select the types of CSN cards and formats and set the byte order.
 
 * <Cmd sid='device.info.formatType' product='2' />
 
-  * <Cmd sid='device.info.cardIdFormat.normal' product='2' />: Reads and expresses the card's serial number (CSN) without separate conversion.
+  * <Cmd sid='device.info.cardIdFormat.normal' product='2' />: Reads the card serial number (CSN) without conversion and shows it.
 
-  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />: Transforms and expresses the card's serial number (CSN) according to user-defined Wiegand format. See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to set a new Wiegand format.
+  * <Cmd sid='device.info.cardIdFormat.wiegand' product='2' />: Converts the card serial number (CSN) based on a user-defined Wiegand format and shows it. To set a new Wiegand format, see <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' />.
 
 ### <Cmd sid='device.card.Wiegand' product='2' className='normal' /> {/* #deviceCardwiegand */}
 
-Select the types of Wiegand cards and set the Wiegand formats. Choose the Wiegand format to be used in the <Cmd sid='device.cardFormat.wiegand.format' product='2' /> option.
+Select the types of Wiegand cards and set the Wiegand formats. In the <Cmd sid='device.cardFormat.wiegand.format' product='2' /> option, select the Wiegand format to use.
 
 <Image src='/img/biostarx-setting-device-detail-card-wiegand.png' />
 
 :::info
 
-See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to set a new Wiegand format.
+To set a new Wiegand format, see <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' />.
 
 :::
 
@@ -383,7 +383,7 @@ Select the types of Suprema smart cards and set the card layout and byte order.
 
 <EV2EV3SecurityMessage type='suprema' />
 
-* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Choose the Suprema smart card layout. See <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> to set a new smart card layout.
+* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Select the Suprema smart card layout. To set a new smart card layout, see <DocLink docId='platform/biostar_x/settings-credential-smart-format' />.
 
 * <Cmd sid='device.info.supremaSmartCardByteOrder' product='2' />
 
@@ -393,13 +393,13 @@ Select the types of Suprema smart cards and set the card layout and byte order.
 
 ### <Cmd sid='device.card.customSmartCard' product='2' className='normal' /> {/* #deviceCardcustomSmartCard */}
 
-Select types of custom smart cards issued by third parties and set the card layout and byte order.
+Select the type of custom smart card issued by a third party, and set the card layout and byte order.
 
 <Image src='/img/biostarx-setting-device-detail-card-custom.png' />
 
 <EV2EV3SecurityMessage type='custom' />
 
-* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Choose the custom smart card layout. See <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> to set a new smart card layout.
+* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Select the custom smart card layout. To set a new smart card layout, see <DocLink docId='platform/biostar_x/settings-credential-smart-format' />.
 
 * <Cmd sid='device.info.customSmartCardByteOrder' product='2' />
 
@@ -411,41 +411,41 @@ Select types of custom smart cards issued by third parties and set the card layo
 
 <summary>View devices and firmware versions supporting custom smart cards</summary>
 
-* BioStation 3 Max firmware version 1.3.0 or higher
+* BioStation 3 Max firmware v1.3.0 or later
 
-* XPass Q2 firmware 1.0.0 or later
+* XPass Q2 firmware v1.0.0 or later
 
-* BioEntry W3 firmware version 1.0.0 or higher
+* BioEntry W3 firmware v1.0.0 or later
 
-* BioStation 2a firmware version 1.1.0 or higher
+* BioStation 2a firmware v1.1.0 or later
 
-* BioStation 3 firmware version 1.3.0 or higher
+* BioStation 3 firmware v1.3.0 or later
 
-* X-Station 2 firmware version 1.3.0 or higher
+* X-Station 2 firmware v1.3.0 or later
 
-* BioLite N2 firmware version 1.6.2 or higher
+* BioLite N2 firmware v1.6.2 or later
 
-* XPass D2 firmware version 1.7.1 or higher
+* XPass D2 firmware v1.7.1 or later
 
-* BioEntry P2 firmware version 1.5.1 or higher
+* BioEntry P2 firmware v1.5.1 or later
 
-* BioEntry W2 firmware version 1.8.0 or higher
+* BioEntry W2 firmware v1.8.0 or later
 
 </details>
 
 ### <Cmd sid='device.info.csnMobile' product='2' className='normal' /> {/* #deviceCsnMobile */}
 
-You can set the method for recognizing mobile cards.
+Set how the device recognizes mobile cards.
 
 <Image src='/img/biostarx-setting-device-detail-card-csn-mobile.png' />
 
-* <Cmd>NFC</Cmd>: Recognizes mobile cards through NFC communication from mobile devices.
+* <Cmd>NFC</Cmd>: Recognizes mobile cards through NFC communication with a mobile device.
 
 * <Cmd>BLE</Cmd>: Recognizes mobile cards through Bluetooth Low Energy (BLE) communication.
 
 ### <Cmd sid='device.info.templateOnMobile' product='2' className='normal' /> {/* #deviceInfotemplateOnMobile */}
 
-You can specify how recognition works on the Template on Mobile and set the byte order for biometrics enrolled directly by the user on the device.
+Set the recognition method for Template on Mobile, select the biometrics that the user enrolls directly on the device, and set the byte order.
 
 <Image src='/img/biostarx-setting-device-detail-card-tom.png' />
 
@@ -457,24 +457,24 @@ You can specify how recognition works on the Template on Mobile and set the byte
 
 <details>
 
-<summary>View devices and firmware versions supporting templates on mobile</summary>
+<summary>View devices and firmware versions supporting Template on Mobile</summary>
 
-* BioStation 3 Max firmware 1.0.0 or later
+* BioStation 3 Max firmware v1.0.0 or later
 
-* BioEntry W3 firmware version 1.0.0 or higher
+* BioEntry W3 firmware v1.0.0 or later
 
-* BioStation 3 firmware version 1.2.0 or higher
+* BioStation 3 firmware v1.2.0 or later
 
 </details>
 
 ## PIN authentication settings
 
-In the <Cmd sid='device.info.pin' product='2' /> group, you can turn the <Cmd sid='device.info.scrambleKeypad' product='2' /> option on or off for the device's PIN authentication.
+In the <Cmd sid='device.info.pin' product='2' /> group, turn the <Cmd sid='device.info.scrambleKeypad' product='2' /> option on or off for the device's PIN authentication.
 
 <Image src='/img/biostarx-setting-device-detail-pin.png' />
 
 :::info
 
-The <Cmd sid='device.info.scrambleKeypad' product='2' /> option is only available on Suprema products that support user interfaces through the LCD screen.
+The <Cmd sid='device.info.scrambleKeypad' product='2' /> option is available only on Suprema products with an LCD user interface.
 
 :::
