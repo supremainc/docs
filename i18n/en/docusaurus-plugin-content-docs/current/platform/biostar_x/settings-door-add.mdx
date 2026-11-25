@@ -14,7 +14,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
 * Set access levels, access groups, and floor levels for access control before registering doors. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
-* Register devices before registering doors. For more information about device registration, refer to the following.
+* Register devices before registering doors. For more information about registering devices, see the following documents.
 
   * <DocLink docId='platform/biostar_x/settings-adding-devices' />
 
@@ -24,9 +24,9 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
 ## Register door {/* #adding-door */}
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> on the left sidebar.
+2. Click <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> in the left sidebar.
 
 3. Click <Cmd sid='button.func.addDoor' product='2' />.
 
@@ -46,7 +46,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
    * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, see <DocLink inner='#alarm' />.
 
-5. Once all configurations are complete, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+5. After you complete all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 ### Set basic information {/* #info */}
 
@@ -64,7 +64,7 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 * The door name can be up to 48 characters long.
 
-* For more information on registering door groups, see <DocLink docId='platform/biostar_x/settings-manage-door-group' />.
+* For more information about registering door groups, see <DocLink docId='platform/biostar_x/settings-manage-door-group' />.
 
 :::
 
@@ -100,7 +100,7 @@ In the <Cmd sid='device.info.configuration' product='2' /> section, set the devi
 
 :::info
 
-* Select the wireless door lock connected to CoreStation as <Cmd sid='door.entryDevice' product='2' /> or <Cmd sid='door.exitDevice' product='2' />. For more information on connecting a wireless door lock, see <DocLink docId='platform/biostar_x/settings-device-using-wireless-door-lock' />.
+* Select the wireless door lock connected to CoreStation as <Cmd sid='door.entryDevice' product='2' /> or <Cmd sid='door.exitDevice' product='2' />. For more information about connecting a wireless door lock, see <DocLink docId='platform/biostar_x/settings-device-using-wireless-door-lock' />.
 
 * If you selected a wireless door lock for <Cmd sid='door.entryDevice' product='2' />, you cannot use the <Cmd sid='common.doorRelay' product='2' /> option.
 
@@ -132,7 +132,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='common.device' product='2' />: Select the device to use for dual authentication. To disable dual authentication, select <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />.
 
-  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one.
+  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If the schedule you need isn't in the list, click <Cmd sid='button.plusAddSchedule' product='2' /> to add it.
 
   * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Set the order of administrator authentication.
 
@@ -148,9 +148,9 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * Modify settings in the following menu to change the dual authentication of the device configured for occupancy limit settings. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
-    For more information on the <Cmd sid='zone.occupancy.title' product='2' /> settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
+    For more information about the <Cmd sid='zone.occupancy.title' product='2' /> settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
-  * For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
+  * For more information about schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
   :::
 
@@ -158,7 +158,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='common.sensor' product='2' />: Select a sensor to detect tailgating.
 
-* <Cmd sid='door.authDoorControl.title' product='2' />: Enable the door to remain unlocked when an authorized user performs a Double Badge (Double Badge). For more information, refer to <DocLink docId='platform/biostar_x/settings-door-auth-control' />.
+* <Cmd sid='door.authDoorControl.title' product='2' />: Enable the door to remain unlocked when an authorized user performs a Double Badge (Double Badge). For more information, see <DocLink docId='platform/biostar_x/settings-door-auth-control' />.
 
   :::note
 
@@ -184,7 +184,7 @@ Refer below to complete the settings in the <Cmd sid='door.antiPassBack' product
 
 :::info
 
-* This can be used when both entry and exit devices are installed, and setting <Cmd sid='door.exitDevice' product='2' /> option to <Cmd sid='common.none' product='2' /> in the <Cmd sid='device.info.configuration' product='2' /> section will render it unusable. For more information on setting up the exit device, see <DocLink inner='#configdoor' />.
+* This can be used when both entry and exit devices are installed, and setting <Cmd sid='door.exitDevice' product='2' /> option to <Cmd sid='common.none' product='2' /> in the <Cmd sid='device.info.configuration' product='2' /> section will render it unusable. For more information about setting up the exit device, see <DocLink inner='#configdoor' />.
 
 * The <Cmd sid='door.antiPassBack' product='2' /> section requires a master device configured via RS-485 and a slave device.
 
