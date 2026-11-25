@@ -1,5 +1,5 @@
 {
-  "xpass2_v2": {
+  "xpass_2a": {
     "credentials": {
       "label": "크리덴셜",
       "label_id": "specs.credentials",
@@ -10,7 +10,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XP2-MDPB-V2,<br/>XP2-GDPB-V2,<br/>XP2-GKDPB-V2",
+              "label": "XP2A-MDPB,<br/>XP2A-GDPB,<br/>XP2A-GKDPB",
               "value": {
                "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
                "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
@@ -19,7 +19,7 @@
               }
             },
             "model2": {
-              "label": "XP2-MAPB-V2",
+              "label": "XP2A-MAPB",
               "value": {
                 "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
                 "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
@@ -28,7 +28,7 @@
               }
             },
             "model3": {
-              "label": "XP2-MAPB-H-V2",
+              "label": "XP2A-MAPB-H",
               "value": {
                "ko": "125kHz EM, HID Prox & 13.56MHz iCLASS SE/SR/Seos",
                "en": "125kHz EM, HID Prox & 13.56MHz iCLASS SE/SR/Seos",
@@ -68,7 +68,7 @@
         "modelName": {
           "label": "모델명",
           "label_id": "specs.general.modelName",
-          "value": "XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2, XP2-GDPB-V2, XP2-GKDPB-V2"
+          "value": "XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H, XP2A-GDPB, XP2A-GKDPB"
         },
         "cpu": {
           "label": "CPU",
@@ -158,12 +158,12 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 48 x 144.7 x 27 (mm)", "XP2-GDPB-V2, XP2-GKDPB-V2: 80 x 130 x 25 (mm)"]
+              "value": ["XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 48 x 144.7 x 27 (mm)", "XP2A-GDPB, XP2A-GKDPB: 80 x 130 x 25 (mm)"]
             },
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
-              "value": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 39.8 x 132.2 (mm)", "XP2-GDPB-V2, XP2-GKDPB-V2: 72.4 x 116.1 (mm)"]
+              "value": ["XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 39.8 x 132.2 (mm)", "XP2A-GDPB, XP2A-GKDPB: 72.4 x 116.1 (mm)"]
             }
           }
         },
@@ -175,16 +175,16 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": [ "XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 144 g", "XP2-GDPB-V2: 220 g", "XP2-GKDPB-V2: 235 g" ]
+              "value": [ "XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 144 g", "XP2A-GDPB: 220 g", "XP2A-GKDPB: 235 g" ]
             },
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
               "value": {
-                "ko": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (와셔 및 볼트 포함)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (와셔 및 볼트 포함)"],
-                "en": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (including washers and bolts)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (including washers and bolts)"],
-                "es": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (incluye arandelas y tornillos)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (incluye arandelas y tornillos)"],
-                "ja": ["XP2-MDPB-V2, XP2-MAPB-V2, XP2-MAPB-H-V2: 30 g (ワッシャーおよびボルトを含む)", "XP2-GDPB-V2, XP2-GKDPB-V2: 52 g (ワッシャーおよびボルトを含む)"]
+                "ko": ["XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 30 g (와셔 및 볼트 포함)", "XP2A-GDPB, XP2A-GKDPB: 52 g (와셔 및 볼트 포함)"],
+                "en": ["XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 30 g (including washers and bolts)", "XP2A-GDPB, XP2A-GKDPB: 52 g (including washers and bolts)"],
+                "es": ["XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 30 g (incluye arandelas y tornillos)", "XP2A-GDPB, XP2A-GKDPB: 52 g (incluye arandelas y tornillos)"],
+                "ja": ["XP2A-MDPB, XP2A-MAPB, XP2A-MAPB-H: 30 g (ワッシャーおよびボルトを含む)", "XP2A-GDPB, XP2A-GKDPB: 52 g (ワッシャーおよびボルトを含む)"]
               }
             }
           }
@@ -207,7 +207,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XP2-MDPB-V2,<br/>XP2-GDPB-V2",
+              "label": "XP2A-MDPB,<br/>XP2A-GDPB",
               "value": {
                "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
                "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
@@ -216,7 +216,7 @@
               }
             },
             "model2": {
-              "label": "XP2-GKDPB-V2",
+              "label": "XP2A-GKDPB",
               "value": {
                "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, TELEC, RoHS, REACH, WEEE",
                "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, TELEC, RoHS, REACH, WEEE",
@@ -225,7 +225,7 @@
               }
             },
             "model3": {
-              "label": "XP2-MAPB-V2,<br/>XP2-MAPB-H-V2",
+              "label": "XP2A-MAPB,<br/>XP2A-MAPB-H",
               "value": {
                "ko": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
                "en": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
