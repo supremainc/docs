@@ -1,6 +1,6 @@
 # How to Install BioStar 2 with MSSQL
 
-BioStar 2 is a web-based, open, and integrated security platform that provides comprehensive functionality for access control and time & attendance. There are two types of databases to use in BioStar 2 (Maria DB and MSSQL). The databases each have different methods for installing BioStar 2. Here, we will cover how to install BioStar2 with MSSQL step-by-step.
+BioStar 2 is a web-based, open, and integrated security platform that provides comprehensive functionality for access control and time & attendance. There are two types of databases to use in BioStar 2 (Maria DB and MSSQL). The databases each have different methods for installing BioStar 2. Here, we will cover how to install BioStar 2 with MSSQL step-by-step.
 
 :::info
 
@@ -32,7 +32,7 @@ Direct installation of BioStar 2 with the MS-SQL database currently is not suppo
 
 1. Right-click **Protocols for SUPREMA** and click **TCP/IP Properties**.
 
-1. Choose **Yes** for Enabled, and set up the TCP Port (ex. Here, it is set to 1433). Press Apply.
+1. Choose **Yes** for Enabled, and set up the TCP Port (ex. Here, it is set to 1433). Press **Apply**.
 
 1. You must restart the service to apply changes. Go to SQL Server Services, and right-click the second item from the list. Click **Restart**.
 
@@ -46,7 +46,7 @@ Direct installation of BioStar 2 with the MS-SQL database currently is not suppo
 
    <Image src='/img/how-to/mssql_install_3.png' width='1000' alone />
 
-1. In the Database Files section, we recommend setting the Initial Size (MB) to 3000 and setting the Autogrowth/Maxsize to (By 10MB, Unlimited).
+1. In the Database Files section, we recommend setting the Initial Size (MB) to 3000 and setting the Autogrowth/Maxsize to (By 10 MB, Unlimited).
 
    <Image src='/img/how-to/mssql_install_4.png' width='1000' alone />
 
@@ -70,7 +70,7 @@ Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at
 
 1. Download the latest BioStar 2 Setup file at BioStar 2 Package. You can choose the (x64) or (x86) setup based on your computer's system requirements.
 
-1. After downloading the BioStar 2 setup file, right-click and click "Extract All...".
+1. After downloading the BioStar 2 setup file, right-click and click **Extract All...**.
 
 1. Right-click the BioStar 2 Setup and run as administrator.
 
@@ -86,13 +86,13 @@ Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at
 
 1. Choose **Custom installation** as the Database installation type.
 
-   <Image src='/img/how-to/mssql_install_11.png' width='700' alone />
+   <Image src='/img/how-to/mssql_install_11.png' width='500' alone />
 
 1. Choose DB Type as MS-SQL. Input the Server IP (you can see the Server IP by typing **ipconfig** on the Command Prompt). Input the Server port (Here, it is 1433 configured previously at MS-SQL).
 
 1. Input the DB name based on the database created at the Server Management Studio.
 
-   <Image src='/img/how-to/mssql_install_12.png' width='700' alone />
+   <Image src='/img/how-to/mssql_install_12.png' width='500' alone />
 
 1. Select destination location for the installation.
 
@@ -114,15 +114,15 @@ Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at
 
 1. After the installation process has been completed, open BioStar 2 Settings to confirm the system status. Check the Service Status and the HTTPS Port.
 
-   <Image src='/img/how-to/mssql_install_17.png' width='900' alone />
+   <Image src='/img/how-to/mssql_install_17.png' width='500' alone />
 
 ## How to Install Certificate for BioStar 2
 
 If you try to open BioStar 2 right after installation, you will get the following privacy error message. Currently, there is no certificate installed at BioStar 2. So, the web protocol is displaying **Not secure**. Please refer to [How to configure HTTP or HTTPS protocol](http-https-protocol) for steps to install the certificate for BioStar 2. Then, it will be displayed as **Connection is secure**.
 
-<Image src='/img/how-to/mariadb_installation_10.png' width='400' alone />
+<Image src='/img/how-to/mariadb_installation_10.png' width='300' alone />
 
-<Image src='/img/how-to/mariadb_installation_11.png' width='400' alone />
+<Image src='/img/how-to/mariadb_installation_11.png' width='300' alone />
 
 :::info
 

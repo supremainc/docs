@@ -1,10 +1,22 @@
 # How to Install BioStar 2 with Maria DB
 
-BioStar 2 is a web-based, open, and integrated security platform that provides comprehensive functionality for access control and time & attendance. There are two types of databases to use in BioStar 2 (Maria DB and MSSQL). The databases each have different methods for installing BioStar 2. Here, we will cover how to install BioStar2 with Maria DB step-by-step.
+BioStar 2 is a web-based, open, and integrated security platform that provides comprehensive functionality for access control and time & attendance. There are two types of databases to use in BioStar 2 (Maria DB and MSSQL). The databases each have different methods for installing BioStar 2. Here, we will cover how to install BioStar 2 with Maria DB step-by-step.
 
 Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at [BioStar 2 Package](https://www.supremainc.com/en/support/biostar-2-package.asp) to check the system requirements for your computer.
 
-<Image src='/img/how-to/mariadb_installation_1.png' width='1000' alone />
+**Minimum System Requirements**
+
+| \> | Item | Small | Medium | Enterprise |
+|---|---|---|---|---|
+| Environment | Total Devices | 1 to 50 | 51 to 100 | 101 to 1,000 |
+| System requirement (Server) | OS | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022<br/>- Windows virtual environments on Mac Boot Camp are not supported. |
+| ^ | Database | \> | \> | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022<br/>- TLS 1.2 is supported for MS SQL secure communication.<br/>- For enterprise environment, it is recommended to install an MS SQL database.<br/>- MariaDB 11.4.4 is not supported on Windows Server 2012 operating system, so BioStar 2 cannot be upgraded to version 2.9.10 or later. |
+| ^ | CPU | 2 GHz Dual Core | 4 GHz Quad Core | 4 GHz 16 Core |
+| ^ | RAM | 8 GB | 16 GB | 32 GB |
+| ^ | SSD | 512 GB | 1 TB | 1 TB |
+| System requirement (Client) | CPU | 1 GHz | 1 GHz | 1 GHz |
+| ^ | RAM | 4 GB | 4 GB | 4 GB |
+| ^ | Web Browser | \> | \> | Google Chrome version 100 or later |
 
 ## BioStar 2 Installation
 
@@ -56,15 +68,15 @@ Before installing BioStar 2, please refer to the BioStar 2 Installation Guide at
 
 1. After the installation process has been completed, open BioStar 2 Settings to confirm the system status. Check the Service Status and the HTTPS Port.
 
-   <Image src='/img/how-to/mariadb_installation_9.png' width='600' alone />
+   <Image src='/img/how-to/mariadb_installation_9.png' width='500' alone />
 
 ## How to Install Certificate for BioStar 2
 
 If you try to open BioStar 2 right after installation, you will get the following privacy error message. Currently, there is no certificate installed at BioStar 2. So, the web protocol is displaying **Not secure**. Please refer to [How to configure HTTP or HTTPS protocol](http-https-protocol) for steps to install the certificate for BioStar 2. Then, it will be displayed as **Connection is secure**.
 
-<Image src='/img/how-to/mariadb_installation_10.png' width='400' alone />
+<Image src='/img/how-to/mariadb_installation_10.png' width='300' alone />
 
-<Image src='/img/how-to/mariadb_installation_11.png' width='400' alone />
+<Image src='/img/how-to/mariadb_installation_11.png' width='300' alone />
 
 :::info
 

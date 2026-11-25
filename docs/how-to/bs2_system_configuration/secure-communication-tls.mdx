@@ -6,13 +6,13 @@ A transport layer security (TLS/SSL) feature for the communication between the s
 
 This feature would stop malicious users from connecting to the device by pretending to be the server with the same server IP.
 
-<Image src='/img/how-to/2x_sc_secure_communication_ssl_tls_01.png' width='500' alone />
+<Image src='/img/how-to/2x_sc_secure_communication_ssl_tls_01.png' className='none' width='400' alone />
 
 This security option is achieved by storing a digital certificate in the device.
 
 When the device connects to the server, it will exchange an encryption key (session key) using the digital certificate to provide server identity verification.
 
-<Image src='/img/how-to/2x_sc_secure_communication_ssl_tls_02.png' width='700' alone />
+<Image src='/img/how-to/2x_sc_secure_communication_ssl_tls_02.png' className='none' width='600' alone />
 
 :::info
 
@@ -22,7 +22,7 @@ BioStar 2 supports TLS version 1.1 and 1.2. For more generic security informatio
 
 ## Configuration
 
-:::caution
+:::warning
 
 Access to devices can be limited when this feature is turned on.
 
@@ -82,16 +82,16 @@ Follow the steps below to configure the secure communication. It is not turned o
 
    <Image src='/img/how-to/2x_sc_secure_communication_ssl_tls_03.png' width='1000' alone />
 
-:::caution
+   :::caution
 
-Do not turn off the secure communication option if the device is physically disconnected from the network while using the secure communication feature.
+   * Do not turn off the secure communication option if the device is physically disconnected from the network while using the secure communication feature.
 
-If the feature is turned off, the certificate of your BioStar 2 will be deleted and the device will not be able to connect to the server again.
+   * If the feature is turned off, the certificate of your BioStar 2 will be deleted and the device will not be able to connect to the server again.
 
-To connect the device to the server again, the certificate saved in the device must be deleted or the device must be reset to factory default.
+   * To connect the device to the server again, the certificate saved in the device must be deleted or the device must be reset to factory default.
 
-For devices without LCD, such as W2 or P2, you can factory default the device with the reset buttons as shown in the device manual.
+   * For devices without LCD, such as W2 or P2, you can factory default the device with the reset buttons as shown in the device manual.
 
-Refer to the FAQ article: [Factory Default W2 / P2](http://support.supremainc.com/solution/articles/24000014900--both-biostar-network-and-factory-default-w2) 
+   * Refer to the FAQ article: [Factory Default W2 / P2](http://support.supremainc.com/solution/articles/24000014900--both-biostar-network-and-factory-default-w2) 
 
-:::
+   :::

@@ -4,13 +4,13 @@ Three new devices have been introduced with the release of BioStar 2.5:
 
 CoreStation, Suprema's first controller for a centralized access system; P2, the next-generation model of BioEntry Plus; R2, the dummy reader designed to be used with CoreStation.
 
-<Image src='/img/how-to/2x_sysconfig_corestation_001.png' width='800' alone />
+<Image src='/img/how-to/2x_sysconfig_corestation_001.png' className='none' width='800' alone />
 
 Since it is a centralized controller, CoreStation does not have a reading capability unlike other edge devices and its role is to control the slave and Wiegand devices that are connected to the device.
 
 It has 4 relays, 4 Wiegand inputs, and 5 RS485 channels where you can connect slave devices.
 
-<Image src='/img/how-to/2x_sysconfig_corestation_002.png' width='800' alone />
+<Image src='/img/how-to/2x_sysconfig_corestation_002.png' className='none' width='800' alone />
 
 The device's input is a supervised input. This means that the device can sense if the input has tampered just like the DM-20.
 
@@ -46,7 +46,7 @@ It can control multiple DM-20s with a daisy chain and also control multiple biom
 
 The CoreStation itself will have to be wired with an ethernet to be connected to the BioStar 2 server.
 
-<Image src='/img/how-to/2x_sysconfig_corestation_004.png' width='900' alone />
+<Image src='/img/how-to/2x_sysconfig_corestation_004.png' className='none' width='900' alone />
 
 CoreStation also comes with an optional enclosure which includes power supply unit and the power distribution board.
 
@@ -60,19 +60,23 @@ The enclosure has a tamper switch that sends a tamper event every time the enclo
 
 :::info
 
-If you are curious about what combinations you could use to install an access control system with CoreStation, refer to the following PDF file: CoreStation Configuration Options(#)
+If you are curious about what combinations you could use to install an access control system with CoreStation, refer to the following PDF file: [CoreStation Configuration Options](https://supremadocs.blob.core.windows.net/img/how-to/corestation_configuration_options.pdf).
 
 :::
 
-<Image src='/img/how-to/2x_sysconfig_corestation_005.png' width='800' alone />
+<Image src='/img/how-to/2x_sysconfig_corestation_005.png' className='none' width='800' alone />
 
-**R2 / P2**
+**BioEntry R2 / BioEntry P2**
 
-The R2 and P2 devices are 2 additional devices that are introduced with BioStar 2.5. Both have the same exterior look. However, the R2 devices only have a power and RS-485 connection because their purpose is to scan the card/fingerprint and send it to the master device.
+The BioEntry R2 and BioEntry P2 devices are 2 additional devices that are introduced with BioStar 2.5. Both have the same exterior look. However, the BioEntry R2 devices only have a power and RS-485 connection because their purpose is to scan the card/fingerprint and send it to the master device.
 
 :::info
 
-For detailed device specifications, refer to the [A&E specification page](#) or our homepage products page. 
+For more details on how to connect and install each device, refer to the guide for the respective product.
+
+* [BioEntry R2](/device/bioentry_r2/)
+
+* [BioEntry P2](/device/bioentry_p2/)
 
 :::
 
@@ -106,7 +110,7 @@ CoreStation should be wired with Ethernet to connect to the server and the slave
 
    <Image src='/img/how-to/2x_sysconfig_corestation_010.png' width='600' alone />
 
-   <Image src='/img/how-to/2x_sysconfig_corestation_011.png' width='600' alone />
+   <Image src='/img/how-to/2x_sysconfig_corestation_011.png' className='none' width='600' alone />
 
 1. If you're using a supervised input, configure the resistor value as necessary on **Supervised Input**.
 

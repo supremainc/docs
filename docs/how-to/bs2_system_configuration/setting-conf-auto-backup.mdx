@@ -1,6 +1,6 @@
 # Supporting Automatic backup function for "setting.conf" file
 
-When the setting.conf file is corrupted, BioStar2 Administrator can not access the login page of BioStar2.
+When the setting.conf file is corrupted, BioStar 2 Administrator can not access the login page of BioStar 2.
 
 The corrupted case of the setting.conf file could be occurred by an upgrade progress or an unexpected server machine power off. From BioStar 2.7.10, the auto-backup feature of setting.conf file is added to prevent the corrupted **setting.conf** file.
 
@@ -12,6 +12,6 @@ There are two types to the backup file of the **setting.conf** file.
 
 * Normal case for backup progress → In this case, it is backed up with such as `setting.conf.[timestamp].c` or `setting.conf.[timestamp].s`.
 
-* Abnormal case for backup progress → In this case, it is backed up with such as `setting.conf.[timestamp].err`. (Corrupted setting.conf)
+* Abnormal case for backup progress → In this case, it is backed up with such as `setting.conf.[timestamp].err`. (Corrupted **setting.conf**)
 
-If **setting.conf** is corrupted during running BioStar 2 server, BioStar2 Server will automatically restore **setting.conf** file to most recent timestamp.
+If **setting.conf** is corrupted during running BioStar 2 server, BioStar 2 Server will automatically restore **setting.conf** file to most recent timestamp.

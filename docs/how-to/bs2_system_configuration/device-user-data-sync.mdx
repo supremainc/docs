@@ -8,11 +8,11 @@ User data sync was only supported from the server side only up to 2.7.0 version.
 
 This functionality works by checking user enrolled/edited logs from the server side. When the user enroll/edited logs are uploaded to the server, the server pulls the user data from the device, and updates it, and syncs to the other devices.
 
-<Image src='/img/how-to/device_sync.jpg' width='700' alone />
+<Image src='/img/how-to/device_sync.jpg' className='none' width='700' alone />
 
 In case of having the same user data in the server, the device side user data are merged to the server DB. In other words, the already existing user fields in the server side won't be affected and only the vacant user fields are updated as below.
 
-<Image src='/img/how-to/device_sync_2.jpg' width='600' alone />
+<Image src='/img/how-to/device_sync_2.jpg' className='none' width='600' alone />
 
 Please note that the 'user data delete' from the device won't affect the server side user data.
 

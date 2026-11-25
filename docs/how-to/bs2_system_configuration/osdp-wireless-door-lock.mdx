@@ -28,11 +28,11 @@ Below the v.2.9.3 or lower version of BioStar 2, the configuration of the door l
 
 ## Basic Concepts
 
-* **Configuration**
+* Configuration
 
    <Image src='/img/how-to/p2.jpg' width='1000' alone />
 
-* Data Processing Order.
+* Data Processing Order
 
    1. Scan the enrolled card on the Wireless Door Lock.
 
@@ -52,109 +52,101 @@ Below the v.2.9.3 or lower version of BioStar 2, the configuration of the door l
 
    :::
 
-* **OSDP Antenna**
+* OSDP Antenna
 
-   <Image src='/img/how-to/p3.png' width='98' alone />
+   <Image src='/img/how-to/p3.png' className='none' width='98' alone />
 
-* **Wireless Door Lock**
+* Wireless Door Lock
 
-  1. **Knob type**
+   1. Knob type
 
-      <Image src='/img/how-to/p4.png' width='100' alone />
+      <Image src='/img/how-to/p4.png' className='none' width='100' alone />
 
-  1. **Handle type**
+   1. Handle type
 
-      <Image src='/img/how-to/p5.png' width='100' alone />
+      <Image src='/img/how-to/p5.png' className='none' width='100' alone />
 
 ## Basic Concepts
 
 Please find the below major features on **Wireless Door Lock**.
 
-### Feature 1
+1. You can add up to **TWO OSDP antennas** and **TWELVE Wireless Door Locks** per ONE CoreStation.
 
-You can add up to **TWO OSDP antennas** and **TWELVE Wireless Door Locks** per ONE CoreStation.
+   :::info
 
-:::info
+   * **ONLY ONE** OSDP antenna module can be connected per **ONE** RS-485 port of CoreStation via OSDP.
 
-* **ONLY ONE** OSDP antenna module can be connected per **ONE** RS-485 port of CoreStation via OSDP.
+   * Up to **SIX** Wireless Door Locks can be added per **ONE** OSDP antenna module.
 
-* Up to **SIX** Wireless Door Locks can be added per **ONE** OSDP antenna module.
+   :::
 
-:::
+1. It needs to have a **specific license** to use this new function **Wireless Door Lock**. **So you SHOULD purchase the specific license for this function FIRST** and activate the license file you receive after purchase in BioStar 2. Only after that, you can add the OSDP antenna on CoreStation in BioStar 2.
 
-### Feature 2
+   :::info
 
-It needs to have a **specific license** to use this new function **Wireless Door Lock**. **So you SHOULD purchase the specific license for this function FIRST** and activate the license file you receive after purchase in BioStar 2. Only after that, you can add the OSDP antenna on CoreStation in BioStar 2.
+   For more details about how to activate the license file in BioStar 2, please refer to the begging part of Execution Procedure in this article. 
 
-:::info
+   :::
 
-For more details about how to activate the license file in BioStar 2, please refer to the begging part of Execution Procedure in this article. 
+1. You should purchase and use separately the **TWO types of products** (**OSDP Antenna and Wireless Door Lock**) manufactured by U&Z to use this new feature. To check which models are available in each product, please refer to the below.
 
-:::
+   * **OSDP Antenna**: **Only one** model can be supported.
 
-### Feature 3
+      * CX8936 BLE
 
-You should purchase and use separately the **TWO types of products** (**OSDP Antenna and Wireless Door Lock**) manufactured by U&Z to use this new feature. To check which models are available in each product, please refer to the below.
+   * **Wireless Door Lock**: **Two types** of model can be supported (**Knob type or Handle type**).
 
-1. OSDP Antenna: **Only one** model can be supported.
+      * **Knob type**: CX212x
 
-   **CX8936 BLE**
+         <Image src='/img/how-to/p6.jpg' width='500' alone />
 
-1. Wireless Door Lock: **Two types** of model can be supported (**Knob type or Handle type**)
+      * **Handle type**: CX217x
 
-   * **Knob type: CX212x**
+         <Image src='/img/how-to/p7.jpg' width='500' alone />
 
-      <Image src='/img/how-to/p6.jpg' width='900' alone />
+1. When using this new feature, you can use the below functions by setting in BioStar 2.
 
-   * **Handle type: CX217x**
+   1. Use the Wireless Door Lock as Entry device or Exit device when configuring the door.
 
-      <Image src='/img/how-to/p7.jpg' width='1000' alone />
+      :::info
 
-### Feature 4
+      * If you select the Wireless Door Lock as Entry device, you SHOULD select the Wireless Door Lock as Exit device.
 
-When using this new feature, you can use the below functions by setting in BioStar 2.
+      * If you select the Wireless Door Lock as Entry device or Exit device, there is NO POPUP for relay settings.
 
-1. Use the Wireless Door Lock as Entry device or Exit device when configuring the door.
+      <Image src='/img/how-to/p7.jpg' width='500' alone />
 
-   Note that,
+      :::
 
-   1. If you select the Wireless Door Lock as Entry device, you SHOULD select the Wireless Door Lock as Exit device.
+   1. Set and use Trigger & Action (How to configure Trigger and Action on Setting).
 
-   1. If you select the Wireless Door Lock as Entry device or Exit device, there is NO POPUP for relay settings
+   1. Set and use APB function in Zone (How to configure an Anti-Passback).
 
-      <Image src='/img/how-to/p7.jpg' width='1000' alone />
+   1. Can be used for Access Control.
 
-1. Set and use Trigger & Action (How to configure Trigger and Action on Setting).
+      :::info
 
-1. Set and use APB function in Zone (How to configure an Anti-Passback).
+      * Only CSN Cards that types of MIFARE or DESFire can be supported for this function.
 
-1. Can be used for Access Control.
+      * You CAN set the schedule about the set Access Group.
 
-   Note that,
+      :::
 
-   1. Only CSN Cards that types of MIFARE or DESFire can be supported for this function.
+1. When using the Wireless Door Lock, the user's card data is encrypted by **SCB key** and then, the encrypted data is sent to the OSDP antenna. The key is generated automatically when adding the CoreStation in BioStar 2.
 
-   1. You CAN set the schedule about the set Access Group.
+   :::info
 
-### Feature 5
+   If adding the OSDP antenna on CoreStation normally, the popup for setting SCB KEY in CoreStation is inactivated. 
 
-When using the Wireless Door Lock, the user's card data is encrypted by **SCB key** and then, the encrypted data is sent to the OSDP antenna. The key is generated automatically when adding the CoreStation in BioStar 2.
+   :::
 
-:::info
+   <Image src='/img/how-to/p8.jpg' width='700' alone />
 
-If adding the OSDP antenna on CoreStation normally, the popup for setting SCB KEY in CoreStation is inactivated. 
+1. When trying to authenticate at the Wireless Door Lock using the **CSN card**, you can get the below results.
 
-:::
+   * If the authentication **SUCCEEDS**, the **Green LED** is turned on the Wireless Door Lock.
 
-<Image src='/img/how-to/p8.jpg' width='700' alone />
-
-### Feature 6
-
-When trying to authenticate at the Wireless Door Lock using the **CSN card**, you can get the below results.
-
-* If the authentication **SUCCEEDS**, the **Green LED** is turned on the Wireless Door Lock.
-
-* If the authentication **FAILS**, the **Red LED** is turned on the Wireless Door Lock.
+   * If the authentication **FAILS**, the **Red LED** is turned on the Wireless Door Lock.
 
 ## Precautions
 
@@ -182,7 +174,7 @@ When trying to authenticate at the Wireless Door Lock using the **CSN card**, yo
 
    :::info
 
-   You can get the changed battery status of Wireless Door Lock whenever the battery status has been changed by selecting options among the 3 types of battery status (**Low battery level, Critical battery level and Empty battery**) and setting the alert with it at **Alert** in **Settings** of BioStar 2.
+   You can get the changed battery status of Wireless Door Lock whenever the battery status has been changed by selecting options among the 3 types of battery status (**Low battery level**, **Critical battery level** and **Empty battery**) and setting the alert with it at **Alert** in **Settings** of BioStar 2.
 
    <Image src='/img/how-to/p10.jpg' width='500' alone /> 
 
@@ -222,43 +214,43 @@ You **SHOULD** purchase the **license** first before following these procedures.
 
 1. Enroll the card to be used via other Suprema devices first and then, synchronize the user's data to the CoreStation. For the synchronization, there are automatic method and manual methods as the below. 
 
-:::info
+   :::info
 
-Only CSN Cards that types of **MIFARE** or **DESFire** can be supported for this function. 
+   Only CSN Cards that types of **MIFARE** or **DESFire** can be supported for this function. 
 
-:::
+   :::
 
-* **Automatic method**: Go to Server in Settings in BioStar 2 and go to User/Device Management. And then, select the proper option in Automatic User Synchronization. For more details, please refer to the following article. How to synchronize devices with the server.
+   * **Automatic method**: Go to Server in Settings in BioStar 2 and go to User/Device Management. And then, select the proper option in Automatic User Synchronization. For more details, please refer to the following article. How to synchronize devices with the server.
 
-   <Image src='/img/how-to/p16.png' width='600' alone />
+      <Image src='/img/how-to/p16.png' width='600' alone />
 
-* **Manual method**:
+   * **Manual method**:
 
-   **Option 1.**
+      **Option 1.**
 
-   Go to **USERS** and select the user in which the card has been enrolled. Then, click **Transfer to Device** and select your **CoreStation**. And then, click **Transfer**.
+      Go to **USERS** and select the user in which the card has been enrolled. Then, click **Transfer to Device** and select your **CoreStation**. And then, click **Transfer**.
 
-   <Image src='/img/how-to/p17.png' width='1000' alone />
+      <Image src='/img/how-to/p17.png' width='1000' alone />
 
-   **Option 2.**
+      **Option 2.**
 
-   **Right-Click** on the added CoreStation in BioStar 2. And them, click **Sync Device** or **Delete data & Sync Device**.
+      **Right-Click** on the added CoreStation in BioStar 2. And them, click **Sync Device** or **Delete data & Sync Device**.
 
-   <Image src='/img/how-to/p18.png' width='400' alone />
+      <Image src='/img/how-to/p18.png' width='400' alone />
 
 ### Connect the OSDP antenna and CoreStation via RS-485
 
 1. Connect each RS-485 port of both the OSDP antenna and CoreStation using a cable.
 
-   <Image src='/img/how-to/p19.png' width='500' alone />
+   <Image src='/img/how-to/p19.png' className='none' width='500' alone />
 
    :::info
 
    Please refer to the cabling for the OSDP antenna.
 
-   * **RS485A1 and RS485B1**: for RS485 communication
+   * **RS485A1 and RS485B1**: For RS485 communication.
 
-   * **Vin and GND**: for supplying the power
+   * **Vin and GND**: For supplying the power.
 
    <Image src='/img/how-to/p20.png' width='1000' alone />
 
@@ -270,7 +262,7 @@ Only CSN Cards that types of **MIFARE** or **DESFire** can be supported for this
 
 1. Then, you can find the RS485 port available now. At this time, select the **Port** of CoreStation which is **connected to the OSDP antenna**.
 
-   <Image src='/img/how-to/p22.png' width='700' alone />
+   <Image src='/img/how-to/p22.png' width='600' alone />
 
 1. Then, you can find the information for the **connected OSDP antenna** into the selected port. If the information is correct, then click **Apply**.
 
@@ -284,7 +276,7 @@ Only CSN Cards that types of **MIFARE** or **DESFire** can be supported for this
 
 :::info
 
-It is possible to automatically add a Wireless Door Lock to the OSDP antenna only when the Wireless Door Lock is in the state of **service mode** first. To make the Wireless Door Lock the service mode, the **SERVICEKEY** card** is scanned on the Wireless Door Lock.
+It is possible to automatically add a Wireless Door Lock to the OSDP antenna only when the Wireless Door Lock is in the state of **service mode** first. To make the Wireless Door Lock the service mode, the **'SERVICEKEY' card** is scanned on the Wireless Door Lock.
 
 <Image src='/img/how-to/p25.png' width='300' alone /> 
 
@@ -322,13 +314,13 @@ It is possible to automatically add a Wireless Door Lock to the OSDP antenna onl
 
    * If the authentication **FAILS**, the **Red LED** is turned on the Wireless Door Lock.
 
-   * Example) Authentication success
+   Example, Authentication success
 
-      <Image src='/img/how-to/p31.png' width='500' alone />
+   <Image src='/img/how-to/p31.png' width='500' alone />
 
-      You can find the authentication results as well in the **Event Log** of **MONITORING** in BioStar 2.
+   You can find the authentication results as well in the **Event Log** of **MONITORING** in BioStar 2.
 
-      <Image src='/img/how-to/p32.png' width='1000' alone />
+   <Image src='/img/how-to/p32.png' width='1000' alone />
 
 ## Demo
 

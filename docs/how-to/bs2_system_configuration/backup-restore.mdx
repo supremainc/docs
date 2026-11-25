@@ -4,7 +4,9 @@ From v.2.9.3 of BioStar 2, the function **Backup & Restore** has been introduced
 
 :::info
 
-If you have an issue with this feature in BioStar 2 v2.9.4 or v2.9.5, please refer to the linked article below. [How can we help you today?](https://support.supremainc.com/en/support/solutions/articles/24000088219)
+If you have an issue with this feature in BioStar 2 v2.9.4 or v2.9.5, please refer to the linked article below.
+
+* [How can we help you today?](https://support.supremainc.com/en/support/solutions/articles/24000088219)
 
 :::
 
@@ -22,11 +24,11 @@ Until v.2.9.2, or lower versions, users needed to manually backup the necessary 
 
 ## Summary
 
-### 1. Backup:
+### Backup
 
 Users can back up the necessary data automatically and regularly by using the new function SYSTEM BACKUP in the Settings of BioStar 2.
 
-<Image src='/img/how-to/backup_icon.png' width='300' alone />
+<Image src='/img/how-to/backup_icon.png' width='100' alone />
 
 :::info
 
@@ -49,10 +51,10 @@ The below data is backed up in your current BioStar 2 when using this function.
    * lic
 
    * util
-   
+
       :::info
-      
-      The path in reference to **system.conf**.
+
+      The path in reference to `system.conf`.
 
       :::
 
@@ -78,7 +80,7 @@ The below data is backed up in your current BioStar 2 when using this function.
 
    * sysbackup.conf
 
-### 2. Restore:
+### Restore
 
 Users can restore the backup data by using an extra application named **biostar-restore** located at `C:\Program Files\BioStar 2(x64)`.
 
@@ -86,7 +88,7 @@ Users can restore the backup data by using an extra application named **biostar-
 
 ## Major Features
 
-### 1. Set the cycle for backup of the data
+### Set the cycle for backup of the data
 
 Users can back up the files in BioStar 2 automatically and periodically according to the selected option in **Frequency** of **Automatic System Backup**.
 
@@ -116,15 +118,15 @@ There are a total of four options (**Not Use** / **Daily** / **Weekly** / **Mont
 
    :::info
 
-   Users can see the last time the data was backed up, indicated by the red line below in the General 
+   Users can see the last time the data was backed up, indicated by the red line below in the General.
 
    :::
 
-* Example)
+* Example
 
    <Image src='/img/how-to/pic6.png' width='900' alone />
 
-### 2. Set the number of files to keep
+### Set the number of files to keep
 
 Users can define the maximum number of backup files to keep by setting **Number of Backup Files to Keep** in the General section of BioStar 2. Once a specific number is set, the oldest backup data will be deleted when the number of backup files exceeds this limit.
 
@@ -134,19 +136,19 @@ The allowable number range is **from 1 to 100**.
 
 :::
 
-* Example)
+* Example
 
    <Image src='/img/how-to/pic7.png' width='1000' alone />
 
-### 3. Use the extra application to restore
+### Use the extra application to restore
 
 Restoring the data is processed through the extra tool named **biostar-restore**. The tool will be automatically installed when installing BioStar 2 v.2.9.3 and located in `C:\Program Files\BioStar 2(x64)`. Since the specific tool for data restoration is separate from BioStar 2, users can attempt to restore data when BioStar 2 isn't running normally due to configuration problems or database issues.
 
-### 4. Restorable depending on the backup data version
+### Restorable depending on the backup data version
 
 If the backup data was generated using a version lower than the current one, it cannot be restored through this new function.
 
-* Example)
+* Example,
 
    If the backup data is generated in v.2.9.3, it CANNOT be restored in v.2.9.4 or a higher version of BioStar 2.
 
@@ -164,13 +166,13 @@ If you are in the above case, please check first if the sysadmin has already bee
 
 <Image src='/img/how-to/pic8.png' width='900' alone />
 
-* **Error Case 1.**
+* Error Case 1
 
    <Image src='/img/how-to/pic9.png' width='300' alone />
 
-* **Error Case 2.**
+* Error Case 2
 
-   <Image src='/img/how-to/pic10.png' width='600' alone />
+   <Image src='/img/how-to/pic10.png' width='500' alone />
 
 ## Execution Procedure
 
@@ -198,31 +200,31 @@ If you are in the above case, please check first if the sysadmin has already bee
 
 1. Run the application named **biostar-restore** located at `C:\Program Files\BioStar 2(x64)`.
 
-   <Image src='/img/how-to/pic14.png' width='600' alone />
+   <Image src='/img/how-to/pic14.png' width='400' alone />
 
-1. 
-{/* 확인 */}
+1. Restore the backup file according to the database you use.
+
    1. If using Maria DB,
 
       Select the file and apply it after clicking the **Select File** button. Then, put the **root password** on your **Maria DB** and click the **Restore** button.
 
-      <Image src='/img/how-to/pic15.png' width='800' alone />
+      <Image src='/img/how-to/pic15.png' width='500' alone />
 
    1. If using MSSQL,
 
       Select the file and apply it after clicking the **Select File** button. Then, click the **Restore** button.
 
-      <Image src='/img/how-to/pic16.png' width='700' alone />
+      <Image src='/img/how-to/pic16.png' width='500' alone />
 
 1. Then, you will see an additional popup appear below. Then, click **Yes**.
 
-   <Image src='/img/how-to/pic17.png' width='300' alone />
+   <Image src='/img/how-to/pic17.png' width='350' alone />
 
 1. Finally, the restoration is completed normally if you see the popup below.
 
    However, please note that the popup does not disappear even when the restoration is completed normally.
 
-   <Image src='/img/how-to/pic18.png' width='600' alone />
+   <Image src='/img/how-to/pic18.png' width='500' alone />
 
 1. You must log into BioStar 2 again once the restoration has been completed.
 

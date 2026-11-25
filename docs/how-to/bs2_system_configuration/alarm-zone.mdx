@@ -6,7 +6,7 @@ You can trigger the device to make sounds or send a relay on the event of an int
 
 This is basically something you would turn on at the end of the day after closing your offices and you would disarm the device when you start work on the next day.
 
-<Image src='/img/how-to/2x_sysconfig_alarm_zone_001.png' width='600' alone />
+<Image src='/img/how-to/2x_sysconfig_alarm_zone_001.png' className='none' width='500' alone />
 
 Refer to the bottom of the article to see which devices support this zone.
 
@@ -24,7 +24,11 @@ While it has an armed status, users will be unable to enter and an attempt to au
 
 1. Add the device to a door.
 
-   Refer to door configuration link [How to add and configure doors](door-settings)
+   :::info
+
+   Refer to door configuration link [How to add and configure doors](door-settings).
+
+   :::
 
 1. Click the **ZONE** menu.
 
@@ -58,17 +62,17 @@ While it has an armed status, users will be unable to enter and an attempt to au
 
    :::info
 
-   Arm Delay Time: device will wait and make a beep sound for the number of seconds configured before arming.
+   * **Arm Delay Time**: Device will wait and make a beep sound for the number of seconds configured before arming.
 
-   Disarm Delay Time: device will not make an alarm action on **Intrusion alarm detected** event for the configured number of seconds when intrusion is detected. 
+   * **Disarm Delay Time**: Device will not make an alarm action on **Intrusion alarm detected** event for the configured number of seconds when intrusion is detected. 
 
    :::
 
 1. Click **+ Add** to choose the method to arm/disarm the device.
 
-   :::info
+   :::note
 
-   There are 3 methods to arm/disarm the device.
+   **There are 3 methods to arm/disarm the device.**
 
    1. **Access Card**: This will require registering a CSN/Wiegand Card for arming and user authentication to arm/disarm the device. You can make up to 128 Access Cards.
 
@@ -98,7 +102,7 @@ While it has an armed status, users will be unable to enter and an attempt to au
 
    :::info
 
-   If you want to turn off the **Alert Sound** after an Alarm event you have to **Clear Alarm** in the **Monitoring** → **Device Status** menu 
+   If you want to turn off the **Alert Sound** after an Alarm event you have to **Clear Alarm** in the **Monitoring** → **Device Status** menu.
 
    :::
 
@@ -118,16 +122,20 @@ You can clear the alarm in the **Zone Status** tab of the **Monitoring** page bu
 
 ## Supported Devices
 
-*  The devices below support alarm zone from BioStar 2.5: 
+:::caution
+
+Other entry devices do not support this zone.
+
+:::
+
+* The devices below support alarm zone from BioStar 2.5: 
 
    <Image src='/img/how-to/alarmzone1.png' width='700' alone />
 
-*  The devices below support alarm zone from BioStar 2.6.0: 
+* The devices below support alarm zone from BioStar 2.6.0: 
 
    <Image src='/img/how-to/alarmzone2.png' width='700' alone />
 
-*  The devices below support alarm zone from BioStar 2.9: 
+* The devices below support alarm zone from BioStar 2.9: 
 
-   <Image src='/img/how-to/intrusion_alarm_zone_supported_devices.png' width='1000' alone />
-
-Other entry devices do not support this zone.
+   <Image src='/img/how-to/intrusion_alarm_zone_supported_devices.png' width='700' alone />

@@ -16,9 +16,11 @@ For devices **WITH function keys** (touchscreen/keypad such as BioStation 3, Bio
 
 However, for devices **WITHOUT function keys** (e.g., XPass 2, BioEntry W2, BioEntry W3), this method does not work. These devices cannot display T&A options for users to select, so you cannot assign multiple codes to one device. Instead, each T&A function (Check In, Check Out, Break Start, Break End) must be assigned to a separate physical device or door location.
 
-:::info
+:::note
 
-**Common Mistake**: Assigning both **Check In** (Code 1) and **Check Out** (Code 2) to a single XPass 2 or BioEntry W2 device will cause incorrect T&A results and missing punch logs. 
+**Common Mistake**
+
+Assigning both **Check In** (Code 1) and **Check Out** (Code 2) to a single XPass 2 or BioEntry W2 device will cause incorrect T&A results and missing punch logs. 
 
 :::
 
@@ -26,9 +28,11 @@ Following guideline shows how to configure check in and check out functions for 
 
 ## Configuration Steps
 
-:::info
+:::note
 
-**Key Principle**: Each T&A function (Check In, Check Out, Break Start, Break End) must be assigned to a **SEPARATE physical device** or **separate door location** when using devices without function keys.
+**Key Principle**
+
+Each T&A function (Check In, Check Out, Break Start, Break End) must be assigned to a **SEPARATE physical device** or **separate door location** when using devices without function keys.
 
 :::
 
@@ -39,7 +43,7 @@ Following guideline shows how to configure check in and check out functions for 
 1. Choose **IN** device and set it mode to **Fixed** option with **Break End**.
 
    <Image src='/img/how-to/fixed_1.png' width='900' alone />
-   
+
 1. Choose **OUT** device and set it mode to **Fixed** option with **Break Start**.
 
    <Image src='/img/how-to/fixed_2.png' width='900' alone /> 
@@ -56,10 +60,14 @@ Starting version 2.4, if you are using **First check-in & Last check-out** with 
 
 ## Device Type Quick Reference
 
+<div className='overflow-x col4--25-20-30'>
+
 | Device Type | Examples | T&A Configuration Method | Notes |
 | --- | --- | --- | --- |
-| **WITH Function Keys** (Touchscreen/Keypad) | BioStation 3, BioStation 2a, X-Station 2, FaceStation F2, BioLite N2, FaceStation 2 | **Multiple codes in ONE device** (up to 16 codes)<br/>Users select T&A type at device | Can assign multiple T&A punch types (Check In, Check Out, Break Start, Break End, Meal Time Start, Meal Time End) |
-| **WITHOUT Function Keys** | XPass 2, BioEntry W2, BioEntry W3 | **One T&A type per device**<br/>Use Fixed mode or By Schedule mode | Cannot assign multiple codes<br/>Each device performs only one T&A function |
+| **WITH Function Keys** (Touchscreen / Keypad) | BioStation 3<br/>BioStation 2a<br/>X-Station 2<br/>FaceStation F2<br/>BioLite N2<br/>FaceStation 2 | **Multiple codes in ONE device** (up to 16 codes)<br/>Users select T&A type at device | Can assign multiple T&A punch types (Check In, Check Out, Break Start, Break End, Meal Time Start, Meal Time End) |
+| **WITHOUT Function Keys** | XPass 2<br/>BioEntry W2<br/>BioEntry W3 | **One T&A type per device**<br/>Use Fixed mode or By Schedule mode | Cannot assign multiple codes<br/>Each device performs only one T&A function |
+
+</div>
 
 :::info
 
