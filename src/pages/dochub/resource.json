@@ -337,7 +337,7 @@
             "BS2A-ODPB",
             "BS2A-OAPWB"
         ],
-        "version": "1.2.4",
+        "version": "1.2.5",
         "manuals": {
             "ko": "device/biostation_2a/BioStation 2a_UG_1.04_KO_260923.pdf",
             "en": "device/biostation_2a/BioStation 2a_UG_1.04_EN_260923.pdf",
@@ -345,15 +345,15 @@
             "ja": "device/biostation_2a/BioStation 2a_UG_1.04_JA_260923.pdf"
         },
         "release_notes": {
-            "ko": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.4_KO_260825.pdf",
-            "en": "device/biostation_2a/BioStation 2a_ReleaseNotes_1.2.4_EN_260825.pdf"
+            "ko": "device/biostation_2a/BioStation 2a_RN_1.2.5_KO_261027.pdf",
+            "en": "device/biostation_2a/BioStation 2a_RN_1.2.5_EN_261027.pdf"
         },
         "a_e": "device/biostation_2a/SUPREMA_BioStation_2a_AE-Specification_260622.docx",
         "dt": {
             "ko": "device/biostation_2a/BioStation 2a_DrillingTemplate_KO.pdf",
             "en": "device/biostation_2a/BioStation 2a_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-08-26"
+        "release_date": "2026-10-27"
     },
     {
         "category": "biometric",
