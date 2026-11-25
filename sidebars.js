@@ -687,12 +687,10 @@ function createSidebars(preview) {
           },
           items: [
             'how-to/bs2_system_configuration/installation',
-            'how-to/bs2_system_configuration/server-start-failure',
             'how-to/bs2_system_configuration/install-mariadb',
             'how-to/bs2_system_configuration/install-mssql',
             'how-to/bs2_system_configuration/web-client-connection',
             'how-to/bs2_system_configuration/http-https-protocol',
-            'how-to/bs2_system_configuration/http-to-https',
             'how-to/bs2_system_configuration/license-activation',
             'how-to/bs2_system_configuration/hexadecimal-card-key',
             'how-to/bs2_system_configuration/hashkey-management',
@@ -770,7 +768,6 @@ function createSidebars(preview) {
             'how-to/bs2_system_configuration/enrollment-device-registration',
             'how-to/bs2_system_configuration/sip-auth-id',
             'how-to/bs2_system_configuration/xpass-d2-settings',
-            'how-to/bs2_system_configuration/rs485-mode',
             'how-to/bs2_system_configuration/duress-event-action',
             'how-to/bs2_system_configuration/one-device-legacy-mode',
             'how-to/bs2_system_configuration/secure-tamper',
@@ -909,29 +906,12 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: '비디오',
-          link: {
-            type: 'doc',
-            id: 'how-to/bs2_system_configuration/video',
-          },
-          items: [
-            'how-to/bs2_system_configuration/video-overview',
-            'how-to/bs2_system_configuration/live-video-view',
-          ]
-        },
-        {
-          type: 'category',
           label: '모바일',
           link: {
             type: 'doc',
             id: 'how-to/bs2_system_configuration/mobile-app',
           },
           items: [
-            'how-to/bs2_system_configuration/cloud-mobile-app',
-            'how-to/bs2_system_configuration/mobile-app-user-enrollment',
-            'how-to/bs2_system_configuration/mobile-app-biomini-fingerprint',
-            'how-to/bs2_system_configuration/mobile-app-push-alarm',
-            'how-to/bs2_system_configuration/mobile-app-door-control',
             'how-to/bs2_system_configuration/device-manager-app',
             'how-to/bs2_system_configuration/device-manager-app-smart-card-layout',
           ]
@@ -975,8 +955,6 @@ function createSidebars(preview) {
             'how-to/bs2_system_configuration/felica-smart-card-layout',
             'how-to/bs2_system_configuration/auto-user-sync-all-devices',
             'how-to/bs2_system_configuration/secure-communication-connection',
-            'how-to/bs2_system_configuration/server-device-port-usage',
-            'how-to/bs2_system_configuration/connection-modes',
             'how-to/bs2_system_configuration/odbc-driver-17',
           ]
         },
