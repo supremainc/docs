@@ -1,139 +1,136 @@
 ---
 id: settings-device-image-log
-title: Configuración de Registros de Imágenes
-description: Este documento proporciona instrucciones para configurar eventos y horarios que generen registros de imágenes, opciones para eliminar registros de imágenes y métodos para configurar rutas de almacenamiento.
-keywords:
-  - Dispositivo
-  - Registro de imágenes
+title: Configurar registros de imágenes
+description: Aprenda a configurar eventos y horarios para generar registros de imágenes en un dispositivo, y cómo establecer opciones de eliminación y rutas de guardado para los registros de imágenes.
 ---
 
-<Cmd sid='common.imageLog' product='2' /> permite la verificación por imágenes de los eventos que ocurren en dispositivos con cámara. Puede registrar imágenes faciales de los usuarios que pasan por las puertas o situaciones durante la ocurrencia de eventos usando la cámara del dispositivo. Las imágenes registradas se pueden visualizar en los eventos en tiempo real en la página <Cmd sid='shell.header.arena' />.
+<Cmd sid='common.imageLog' product='2' /> es una función que le permite ver como imágenes los eventos que ocurren en dispositivos con cámaras. La cámara del dispositivo puede registrar la imagen del rostro de un usuario cuando pasa por una puerta, o la escena cuando ocurre un evento. Las imágenes registradas aparecen en los eventos en tiempo real en la página <Cmd sid='shell.header.arena' />.
 
 <Image src='/img/biostarx-setting-device-imagelog-example.png' caption />
 
-Al configurar el registro de imágenes, se creará un registro de imágenes del evento en la lista <Cmd sid='arena.eventTable.title' />. Haz clic en <IcImgLog /> a la derecha del elemento del evento. Visualiza la imagen capturada cuando ocurrió el evento en el panel derecho.
+Cuando configura los registros de imágenes, se genera un registro de imágenes para el evento en la lista <Cmd sid='arena.eventTable.title' />. Haga clic en <IcImgLog /> en el extremo derecho de la entrada del evento. La imagen capturada cuando ocurrió el evento aparece en el panel derecho.
 
 :::info
 
 * Esta función es compatible con BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, FaceStation 2 y BioStation A2.
 
-* Para obtener más información sobre cómo ver los registros de eventos en la página <Cmd sid='shell.header.arena' />, consulta <DocLink docId='platform/biostar_x/monitoring-event' />.
+* Para obtener más información sobre cómo ver los registros de eventos en la página <Cmd sid='shell.header.arena' />, consulte <DocLink docId='platform/biostar_x/monitoring-event' />.
 
 :::
 
 :::caution
 
-El dispositivo no aplica los ajustes del menú <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />. Habilite la opción <Cmd sid='common.imageLog' product='2' /> en cada dispositivo. Para más información, consulte <DocLink docId='platform/biostar_x/settings-device-details-advanced#image-log-settings' />.
+Los ajustes que configure en el menú <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> no se aplican a los dispositivos. Active la opción <Cmd sid='common.imageLog' product='2' /> en cada dispositivo. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-device-details-advanced#image-log-settings' />.
 
 :::
 
-## Agregar ajustes básicos {/* #add-image-log-settings */}
+## Agregar ajustes predeterminados {/* #add-image-log-settings */}
 
-Configure los ajustes básicos que entran en vigor cuando habilita <Cmd sid='common.imageLog' product='2' /> en un dispositivo. Configure eventos y horarios para crear registros de imágenes. Se generará un registro de imágenes cuando se cumplan las condiciones de eventos y horarios.
+Configure los ajustes predeterminados que se aplican cuando activa la opción <Cmd sid='common.imageLog' product='2' /> del dispositivo. Configure los eventos y los horarios para generar registros de imágenes. Se genera un registro de imágenes cuando se cumplen las condiciones del evento y del horario.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> en la barra lateral izquierda.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
 3. Haga clic en <Cmd sid='button.plusAdd' product='2' /> a la derecha de la sección <Cmd sid='common.preset' product='2' />.
 
    <Image src='/img/biostarx-setting-device-imagelog-add.png' />
 
-4. Cuando agregue un evento al final de la lista, haga clic en <IcDown /> para el evento deseado y seleccione las opciones.
+4. Cuando se agrega un evento al final de la lista, haga clic en <IcDown /> para el evento y seleccione una opción.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-event.png' />
 
-5. Haga clic en <IcDown /> en el horario del evento seleccionado y elija la opción deseada.
+5. Haga clic en <IcDown /> en el horario del evento y seleccione una opción.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-schedule.png' />
 
-6. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar la configuración.
+6. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
-Si el horario deseado no está disponible, haz clic en <Cmd sid='button.plusAddSchedule' product='2' /> para agregar uno. Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
+Si el horario que necesita no está en la lista, haga clic en <Cmd sid='button.plusAddSchedule' product='2' /> para agregarlo. Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
 
 :::
 
-## Modificar ajustes básicos {/* #edit-image-log-settings */}
+## Editar ajustes predeterminados {/* #edit-image-log-settings */}
 
-Cambia los eventos y horarios de los registros de imágenes existentes.
+Cambie los eventos y los horarios del registro de imágenes que configuró anteriormente.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> en la barra lateral izquierda.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. En la lista de la sección <Cmd sid='common.preset' product='2' />, haga clic en <IcDown /> para el evento que desea modificar y seleccione las opciones.
+3. En la lista de la sección <Cmd sid='common.preset' product='2' />, haga clic en <IcDown /> para el evento que desea cambiar y seleccione una opción.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-event.png' />
 
-4. Haga clic en <IcDown /> en el horario del evento seleccionado y elija la opción deseada.
+4. Haga clic en <IcDown /> en el horario del evento y seleccione una opción.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-schedule.png' />
 
-5. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar la configuración.
+5. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
-* Si el horario deseado no está disponible, haz clic en <Cmd sid='button.plusAddSchedule' product='2' /> para agregar uno. Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
+* Si el horario que necesita no está en la lista, haga clic en <Cmd sid='button.plusAddSchedule' product='2' /> para agregarlo. Para obtener más información sobre la configuración de horarios, consulte <DocLink docId='platform/biostar_x/settings-schedule' />.
 
-* Los ajustes básicos modificados solo afectan a los dispositivos agregados a partir de ahora. Estos cambios no afectan a los dispositivos donde <Cmd sid='common.imageLog' product='2' /> ya está habilitado. Agregue los cambios en los ajustes de cada dispositivo.
+* Los ajustes predeterminados actualizados solo se aplican a los dispositivos agregados recientemente. No se aplican a los dispositivos que ya tienen activada la opción <Cmd sid='common.imageLog' product='2' />, así que configúrelos en los ajustes de cada dispositivo.
 
 :::
 
-## Eliminar ajustes básicos {/* #delete-image-log-settings */}
+## Eliminar ajustes predeterminados {/* #delete-image-log-settings */}
 
-Elimina los eventos y horarios de los registros de imágenes existentes.
+Elimine los eventos y las programaciones de registros de imágenes que configuró anteriormente.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> en la barra lateral izquierda.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
 3. En la lista de la sección <Cmd sid='common.preset' product='2' />, haga clic en <IcTrash2 /> para el evento que desea eliminar.
 
    <Image src='/img/biostarx-setting-device-imagelog-remove.png' />
 
-4. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar la configuración.
+4. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 ## <Cmd sid='setting.imageLog.deleteOption' product='2' className='bold' /> {/* #image-log-delete-options */}
 
-Configura opciones de eliminación para que los archivos de registro de imágenes no ocupen espacio en el servidor **BioStar X**. Los registros de imágenes que superen el tamaño de archivo o la duración establecidos se eliminarán automáticamente. 
+Configure las opciones de eliminación para que los archivos de registro de imágenes no sigan ocupando espacio de almacenamiento en el servidor **BioStar X**. Los registros de imágenes que superen el tamaño de archivo o el período de retención establecidos se eliminan automáticamente. 
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> en la barra lateral izquierda.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. Configura las condiciones para eliminar registros de imágenes en la sección <Cmd sid='setting.imageLog.deleteOption' product='2' />.
+3. En la sección <Cmd sid='setting.imageLog.deleteOption' product='2' />, configure las condiciones para eliminar registros de imágenes.
 
    <Image src='/img/biostarx-setting-device-imagelog-delete-option.png' />
 
-   * <Cmd sid='setting.imageLog.deleteOption' product='2' />: Elige la unidad de tamaño de archivo (<Cmd>MB</Cmd>/<Cmd>GB</Cmd>) o la unidad de duración (<Cmd sid='setting.imageLog.deleteOption.day' product='2' />/<Cmd sid='setting.imageLog.deleteOption.week' product='2' />/<Cmd sid='setting.imageLog.deleteOption.month' product='2' />).
+   * <Cmd sid='setting.imageLog.deleteOption' product='2' />: Seleccione la unidad de tamaño de archivo (<Cmd>MB</Cmd>/<Cmd>GB</Cmd>) o la unidad de período (<Cmd sid='setting.imageLog.deleteOption.day' product='2' />/<Cmd sid='setting.imageLog.deleteOption.week' product='2' />/<Cmd sid='setting.imageLog.deleteOption.month' product='2' />).
 
-   * <Cmd sid='setting.imageLog.deleteOption.log.amount' product='2' />: Define la unidad de la condición establecida en <Cmd sid='setting.imageLog.deleteOption' product='2' />.
+   * <Cmd sid='setting.imageLog.deleteOption.log.amount' product='2' />: Configure la unidad para la condición establecida en <Cmd sid='setting.imageLog.deleteOption' product='2' />.
 
-   * <Cmd sid='setting.imageLog.deleteCheckDuration' product='2' />: Selecciona el ciclo para eliminar registros de imágenes.
+   * <Cmd sid='setting.imageLog.deleteCheckDuration' product='2' />: Seleccione el intervalo para eliminar registros de imágenes.
 
-4. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar la configuración.
+4. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 ## <Cmd sid='setting.imageLog.storagePath' product='2' className='bold' /> {/* #image-log-save-path */}
 
-Configura la ruta donde se almacenan los registros de imágenes. 
+Configure la ruta donde se almacenan los registros de imágenes. 
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> en la barra lateral izquierda.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. Ingresa la ruta para almacenar los registros de imágenes en el campo <Cmd sid='setting.imageLog.imageLogFilePath' product='2' /> de la sección <Cmd sid='setting.imageLog.storagePath' product='2' />.
+3. En la sección <Cmd sid='setting.imageLog.storagePath' product='2' />, ingrese la ruta para almacenar registros de imágenes en el campo <Cmd sid='setting.imageLog.imageLogFilePath' product='2' />.
 
    <Image src='/img/biostarx-setting-device-imagelog-savepath.png' />
 
-4. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar la configuración.
+4. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
-* La ruta de almacenamiento no se crea automáticamente; debe crearse previamente para almacenar registros de imágenes.
+* La ruta de guardado no se crea automáticamente, así que cree previamente la ruta para almacenar registros de imágenes.
 
-* Por ejemplo, si ingresas `.\imagelog\`, los registros de imágenes se almacenarán en la ruta donde está instalado BioStar X. 
+* Por ejemplo, si ingresa `.\imagelog\`, los registros de imágenes se guardarán en la ruta donde está instalado BioStar X. 
 
   > *C:\\Program Files\\BioStar X\\imagelog\\*
 
@@ -141,22 +138,22 @@ Configura la ruta donde se almacenan los registros de imágenes.
 
 ## <Cmd sid='setting.image_log.title' product='2' className='bold' /> {/* #image-log-user-profile */}
 
-Configura el dispositivo para mostrar la foto de perfil del usuario al monitorizar registros de eventos y registros en tiempo real si el dispositivo no puede capturar registros de imágenes.
+Configure el sistema para que muestre la foto de perfil del usuario cuando supervise los registros de eventos y los registros en tiempo real en dispositivos que no pueden capturar registros de imágenes.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> en la barra lateral izquierda.
+2. En la barra lateral izquierda, haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. Marca la casilla de <Cmd sid='setting.image_log.display' product='2' /> en la sección <Cmd sid='setting.image_log.title' product='2' />.
+3. En la sección <Cmd sid='setting.image_log.title' product='2' />, seleccione la casilla de verificación <Cmd sid='setting.image_log.display' product='2' />.
 
    <Image src='/img/biostarx-setting-device-imagelog-userprofile.png' />
 
-4. Haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar la configuración.
+4. Para guardar los cambios, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
-* Cuando esta opción está habilitada, si se genera un registro de imágenes, no se mostrará la foto de perfil del usuario y se mostrará el registro de imágenes grabado.
+* Cuando esta opción está activada y se genera un registro de imágenes, el sistema muestra la imagen capturada del registro de imágenes en lugar de la foto de perfil del usuario.
 
-* Para obtener más información sobre cómo ver los registros de eventos en la página <Cmd sid='shell.header.arena' />, consulta <DocLink docId='platform/biostar_x/monitoring-event' />.
+* Para obtener más información sobre cómo ver los registros de eventos en la página <Cmd sid='shell.header.arena' />, consulte <DocLink docId='platform/biostar_x/monitoring-event' />.
 
 :::
