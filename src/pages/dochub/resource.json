@@ -197,7 +197,7 @@
             "BEW3-DB",
             "BEW3-APB"
         ],
-        "version": "1.0.4",
+        "version": "1.0.5",
         "manuals": {
             "ko": "device/bioentry_w3/BioEntry W3_IG_1.04_KO_260918.pdf",
             "en": "device/bioentry_w3/BioEntry W3_IG_1.04_EN_260918.pdf",
@@ -205,15 +205,15 @@
             "ja": "device/bioentry_w3/BioEntry W3_IG_1.04_JA_260918.pdf"
         },
         "release_notes": {
-            "ko": "device/bioentry_w3/BioEntry W3_RN_1.0.4_KO_260825.pdf",
-            "en": "device/bioentry_w3/BioEntry W3_RN_1.0.4_EN_260825.pdf"
+            "ko": "device/bioentry_w3/BioEntry W3_RN_1.0.5_KO_261104.pdf",
+            "en": "device/bioentry_w3/BioEntry W3_RN_1.0.5_EN_261104.pdf"
         },
         "a_e": "device/bioentry_w3/SUPREMA_BioEntry_W3_AE-Specification_260622.docx",
         "dt": {
             "ko": "device/bioentry_w3/BioEntry W3_DrillingTemplate_KO.pdf",
             "en": "device/bioentry_w3/BioEntry W3_DrillingTemplate_EN.pdf"
         },
-        "release_date": "2026-08-31"
+        "release_date": "2026-11-04"
     },
     {
         "category": "biometric",
