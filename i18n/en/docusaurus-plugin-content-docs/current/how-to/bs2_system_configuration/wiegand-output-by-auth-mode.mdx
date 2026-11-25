@@ -1,0 +1,39 @@
+# Understanding Wiegand output per authentication mode
+
+The Suprema devices can be used as an access control unit itself, but there may be a situation where the units need to be connected to 3rd party access controllers via Wiegand as an intelligent reader providing fingerprint or face authentication. In this case, there will be a need to send out a Wiegand signal after successful authentication. In BioStar 2, the concept has been set to send out a specific Wiegand value based on the credentials user has and which are used.
+
+## How it works
+
+When the device is set to send out a Wiegand signal on successful authentication, the way it operates will be different based on the credentials that were used for the authentication.
+
+### Card Authentication
+
+In BioStar 2, up to 8 cards can be allocated to a single user.
+
+<Image src='/img/how-to/wieg1.png' width='600' alone />
+
+When the device is set to send out Wiegand signals, using a card will be straightforward. It will send out the card data that was interpreted by the device. For example, if the HID Corporate 1000 card having ID '1512-368214' was used for the authentication, the card data will be sent via Wiegand in an HID Corporate 1000 format.
+
+<Image src='/img/how-to/wieg2.png' width='600' alone />
+
+### Fingerprint/Face Authentication
+
+As mentioned before, the card authentication will send the card data based on which card was used.
+
+What will happen when using a fingerprint or face for the authentication? The answer is that it still will send out the card ID. However, in this case, it will send the first card ID that is registered for the user.
+
+If the user with 8 cards, authenticates with a fingerprint/face, the card ID that was registered first will be sent out via Wiegand. For example, if the user authenticates with a fingerprint/face, the card data 56-41252 will be sent out via Wiegand in a 26-bit SIA Standard format.
+
+<Image src='/img/how-to/wieg3.png' width='600' alone />
+
+### How to send a Wiegand signal using fingerprint/face without using a card
+
+There will be situations, where the user doesn't use a card but needs to send out a certain value via Wiegand. In this case, it will be essential to manually register a card ID to the user.
+
+1. Enroll a card by setting the **Registration Option** as **Enter Manually**.
+
+   <Image src='/img/how-to/wieg4.png' width='600' alone />
+
+1. It is also possible to easily use the user ID as the card ID by clicking the **Use User ID** button.
+
+   <Image src='/img/how-to/wieg5.png' width='600' alone />

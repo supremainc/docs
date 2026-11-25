@@ -242,5 +242,9 @@
   "item.label.ViOnyx AI Camera API": {
     "message": "ViOnyx AI Camera API",
     "description": "Navbar item with label ViOnyx AI Camera API"
+  },
+  "item.label.Milestone": {
+    "message": "Milestone",
+    "description": "Navbar item with label Milestone"
   }
 }

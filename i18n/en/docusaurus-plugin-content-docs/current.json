@@ -698,5 +698,69 @@
   "sidebar.aicamwebserver.category.출입 통제 관리하기": {
     "message": "Manage Access Control",
     "description": "The label for category '출입 통제 관리하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.bs2_system_configuration.category.BioStar 2 시스템 구성": {
+    "message": "BioStar 2 System Configuration",
+    "description": "The label for category 'BioStar 2 시스템 구성' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.일반": {
+    "message": "General",
+    "description": "The label for category '일반' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.사용자": {
+    "message": "User",
+    "description": "The label for category '사용자' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.장치": {
+    "message": "Device",
+    "description": "The label for category '장치' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.출입문": {
+    "message": "Door",
+    "description": "The label for category '출입문' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.출입통제": {
+    "message": "Access Control",
+    "description": "The label for category '출입통제' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.구역": {
+    "message": "Zone",
+    "description": "The label for category '구역' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.보고서": {
+    "message": "Report",
+    "description": "The label for category '보고서' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.근태관리": {
+    "message": "Time Attendance",
+    "description": "The label for category '근태관리' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.모니터링": {
+    "message": "Monitoring",
+    "description": "The label for category '모니터링' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.모바일": {
+    "message": "Mobile App",
+    "description": "The label for category '모바일' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.설정": {
+    "message": "Setting",
+    "description": "The label for category '설정' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.인테그레이션": {
+    "message": "Integration",
+    "description": "The label for category '인테그레이션' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.bs2_system_configuration.category.방문자": {
+    "message": "Visitor",
+    "description": "The label for category '방문자' in sidebar 'bs2_system_configuration'"
+  },
+  "sidebar.howto.link.BioStar 2 시스템 구성": {
+    "message": "BioStar 2 System Configuration",
+    "description": "The label for link 'BioStar 2 시스템 구성' in sidebar 'howto', linking to '/how-to/bs2_system_configuration/'"
+  },
+  "sidebar.milestone.category.Milestone": {
+    "message": "Milestone",
+    "description": "The label for category 'Milestone' in sidebar 'milestone'"
   }
 }

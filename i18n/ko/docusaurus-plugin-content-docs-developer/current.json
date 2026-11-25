@@ -129,6 +129,10 @@
   },
   "sidebar.deviceSdk.category.활용 가이드": {
     "message": "활용 가이드",
-    "description": "The label for category '릴리스 노트' in sidebar 'deviceSdk'"
+    "description": "The label for category '활용 가이드' in sidebar 'deviceSdk'"
+  },
+  "sidebar.deviceSdk.category.Lift Control API": {
+    "message": "Lift Control API",
+    "description": "The label for category 'Lift Control API' in sidebar 'deviceSdk'"
   }
 }
