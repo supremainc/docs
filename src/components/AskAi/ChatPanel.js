@@ -29,6 +29,7 @@ import {
 import Translate, {translate} from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {createSolisAdapter} from './solisAdapter';
+import {createAlgoliaAdapter} from './algoliaAdapter';
 import {MarkdownText} from './MarkdownText';
 import ChatFeedback from './ChatFeedback';
 import {HISTORY_TURNS, MAX_QUESTION_LENGTH, MAX_QUESTIONS_PER_CHAT} from './limits';
@@ -36,10 +37,18 @@ import {TooltipIconButton} from './TooltipIconButton';
 import styles from './thread.module.css';
 
 export default function ChatPanel({onClose}) {
-  const {siteConfig} = useDocusaurusContext();
-  const {baseUrl, clientCode} = siteConfig.customFields.solis;
-  // 세션 토큰과 키 쌍을 재사용하도록 어댑터(클라이언트)는 패널이 살아 있는 동안 하나만 만든다.
-  const adapter = useMemo(() => createSolisAdapter(baseUrl, clientCode), [baseUrl, clientCode]);
+  const {siteConfig, i18n} = useDocusaurusContext();
+  const {provider, solis, algolia} = siteConfig.customFields.askAi;
+  const language = i18n.currentLocale;
+  // 어댑터(클라이언트)는 패널이 살아 있는 동안 하나만 만든다(SOLIS는 세션 토큰과 키 쌍을 재사용한다).
+  // 답변 서버는 docusaurus.config.js의 customFields.askAi.provider로 고른다.
+  const adapter = useMemo(
+    () =>
+      provider === 'solis'
+        ? createSolisAdapter(solis.baseUrl, solis.clientCode)
+        : createAlgoliaAdapter({...algolia, language}),
+    [provider, solis, algolia, language],
+  );
   // 새 대화를 누르면 key를 바꿔 런타임을 새로 만든다(진행 중인 답변도 함께 취소된다).
   const [threadKey, setThreadKey] = useState(0);
   const newChat = () => setThreadKey((key) => key + 1);
@@ -289,9 +298,21 @@ function AssistantMessage() {
 }
 
 // Empty는 마지막 파트가 출처일 때도 렌더링되므로, 답변을 만드는 동안에만 표시한다.
+// 어댑터가 문서를 검색하는 중이라고 알려 주면(metadata.custom.searching) 안내 문구를 함께 보여 준다.
 function Indicator() {
   const running = useAuiState((s) => s.message.status?.type === 'running');
+  const searching = useAuiState((s) => s.message.metadata?.custom?.searching === true);
   if (!running) return null;
+  if (searching) {
+    return (
+      <span className={styles.searching} role="status">
+        <span className={styles.indicator} aria-hidden="true">
+          ●
+        </span>
+        {translate({id: 'askAi.searching', message: '문서를 검색하는 중...'})}
+      </span>
+    );
+  }
   return (
     <span
       className={styles.indicator}

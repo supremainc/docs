@@ -386,6 +386,15 @@
   animation: pulse 2s infinite;
 }
 
+/* 문서를 검색하는 동안 진행 표시 옆에 보여 주는 안내 문구 */
+.searching {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
 @keyframes pulse {
   50% {
     opacity: 0.5;

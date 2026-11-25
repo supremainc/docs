@@ -1325,6 +1325,9 @@
   "askAi.thinking": {
     "message": "답변을 준비하는 중"
   },
+  "askAi.searching": {
+    "message": "문서를 검색하는 중..."
+  },
   "askAi.copy": {
     "message": "복사"
   },

@@ -59,9 +59,22 @@ const config = {
   trailingSlash: false,
   customFields: {
     context: process.env.CONTEXT || 'production',
-    solis: {
-      baseUrl: 'https://solis-test.supremainc.com',
-      clientCode: 'aws-test',
+    // Ask AI 챗봇(src/components/AskAi)의 답변 서버.
+    askAi: {
+      // 'algolia': Algolia Agent Studio, 'solis': SOLIS 서버(복구되면 다시 'solis'로 바꾼다)
+      provider: 'algolia',
+      solis: {
+        baseUrl: 'https://solis-test.supremainc.com',
+        clientCode: 'aws-test',
+      },
+      // main/preview 모두 같은 에이전트(main 앱의 SPDocs 인덱스)를 쓴다.
+      // apiKey는 search 권한만 있는 키다. 브라우저에 노출되므로 Agent Studio의 허용 도메인과 rate limit으로 보호한다.
+      algolia: {
+        appId: 'G6Y3H2PNC3',
+        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
+        agentId: '4bf0c5fe-bed9-4355-a3f2-ef665bf86c5d',
+        indexName: 'SPDocs',
+      },
     },
   },
   clientModules: [
