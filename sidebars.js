@@ -2109,6 +2109,7 @@ function createSidebars(preview) {
             id: 'device/bioentry_w3/release-notes/index',
           },
           items: [
+            'device/bioentry_w3/release-notes/105',
             'device/bioentry_w3/release-notes/104',
             'device/bioentry_w3/release-notes/103',
             'device/bioentry_w3/release-notes/102',
