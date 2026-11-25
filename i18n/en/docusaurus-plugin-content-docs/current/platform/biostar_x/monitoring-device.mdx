@@ -6,11 +6,11 @@ description: Monitor devices and cameras connected to all areas and doors in rea
 
 This document provides guidance on using the device and camera monitoring features. You can check the status of devices and cameras, view detailed information, and play camera video in real-time, among various other features. Additionally, review recent events to efficiently manage the status of devices and cameras.
 
-To access the <Cmd sid='arena.title' /> page, click <Cmd sid='arena.title' /> in the <Cmd sid='shell.header.launcher' /> or select <Cmd sid='arena.title' /> from the menu at the top left of the screen.
+To access the <Cmd sid='arena.title' /> page, click <Cmd sid='arena.title' /> in the <Cmd sid='shell.header.launcher' /> or select <Cmd sid='arena.title' /> from the menu in the upper-left corner of the screen.
 
 ## Checking device and camera status
 
-Click the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. You can check the status of all devices and cameras. Refer to the following for the status of devices and cameras.
+Click the <Cmd sid='arena.tree.device.title' /> tab in the left sidebar. You can check the status of all devices and cameras. Refer to the following for the status of devices and cameras.
 
 <div className='col2--20-80 overflow-x'>
 
@@ -25,7 +25,7 @@ Click the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. You can
 
 ### View devices that need attention {/* #checkAttentionFilter */}
 
-Administrators can view only devices that require action in one list. In the left sidebar, click the <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Check device status and take action on devices with issues.
+Administrators can view only devices that require action in one list. Click the <Cmd sid='arena.tree.door.entitiesNeedAttention' /> in the left sidebar. Check device status and take action on devices with issues.
 
 <Image src='/img/biostarx-monitoring-device-attention-filter.png' />
 
@@ -45,13 +45,13 @@ In the device tree, the system marks abnormal devices as action-required.
 
 * The <Cmd sid='arena.tree.deviceLocked' /> condition depends on the job conditions and actions set in <DocLink docId='platform/biostar_x/settings-triger-and-action' />. For information on checking and releasing this status, see <DocLink inner='#deviceLockRelease' />.
 
-* Configure the <Cmd sid='arena.preview.device.authFailLockout.title' /> condition in device settings. For details, see <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />. For information on checking and releasing this status, see <DocLink inner='#authFailLockout' />.
+* Configure the <Cmd sid='arena.preview.device.authFailLockout.title' /> condition in device settings. For more information, see <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />. For information on checking and releasing this status, see <DocLink inner='#authFailLockout' />.
 
 :::
 
 ## Device control
 
-Select the desired device from the list on the left sidebar and right-click. You can select the desired feature from the popup menu.
+Select the desired device from the list in the left sidebar and right-click. Select a feature from the pop-up menu.
 
 <Image src='/img/biostarx-monitoring-device-popup.png' />
 
@@ -69,17 +69,17 @@ The control features shown may vary depending on the device type.
 
 ### Reconnect device
 
-Regardless of the device connection status, click <Cmd sid='arena.tree.contextMenu.reconnect' /> in the popup menu. Use this to reconnect disconnected devices, or resend settings and clear abnormal states on connected devices. When the device reconnects, the status icon changes to normal status (<IcDeviceOn />).
+Regardless of the device connection status, click <Cmd sid='arena.tree.contextMenu.reconnect' /> in the pop-up menu. Use this to reconnect disconnected devices, or resend settings and clear abnormal states on connected devices. When the device reconnects, the status icon changes to normal status (<IcDeviceOn />).
 
 :::info
 
-The <Cmd sid='arena.tree.contextMenu.reconnect' /> feature does not support devices set to the <Cmd sid='device.info.deviceToServerConnection' product='2' /> option. For more information on registering devices, see <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
+The <Cmd sid='arena.tree.contextMenu.reconnect' /> feature does not support devices set to the <Cmd sid='device.info.deviceToServerConnection' product='2' /> option. For more information about registering devices, see <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
 
 :::
 
 ### Restart device
 
-To restart the device, click <Cmd sid='arena.tree.contextMenu.reboot' /> in the popup menu. When the warning message window appears, click <Cmd sid='common.button.ok' />.
+To restart the device, click <Cmd sid='arena.tree.contextMenu.reboot' /> in the pop-up menu. When the warning message window appears, click <Cmd sid='common.button.ok' />.
 
 ### Unlock the device {/* #deviceLockRelease */}
 
@@ -87,7 +87,7 @@ When the device locks based on admin-defined conditions, <Cmd sid='arena.tree.de
 
 <Image src='/img/biostarx-monitoring-device-lock.png' />
 
-* The popup menu shows <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> only when the device is locked. Select the locked device, then click <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> in the popup menu.
+* The pop-up menu shows <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> only when the device is locked. Select the locked device, then click <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> in the pop-up menu.
 
 * Select the locked device. In the banner at the top of the right preview panel, click <Cmd sid='arena.preview.banner.unlock' />.
 
@@ -101,7 +101,7 @@ Only users with <Cmd sid='setting.account.administrator' /> or <Cmd sid='setting
 
 If authentication fails the number of times set in <Cmd sid='device.info.authFailLockout.label' product='2' />, the device switches to the locked state. When the device is in authentication failure lockout, <Cmd sid='arena.preview.device.authFailLockout.title' /> appears under the device name in the left sidebar. Selecting the device shows the same banner at the top of the right preview panel. The banner shows the event time and device information.
 
-The popup menu shows <Cmd sid='arena.batchResult.action.clearLockout' /> only when the device is in authentication failure lockout. Select the locked device, then click <Cmd sid='arena.batchResult.action.clearLockout' /> in the popup menu.
+The pop-up menu shows <Cmd sid='arena.batchResult.action.clearLockout' /> only when the device is in authentication failure lockout. Select the locked device, then click <Cmd sid='arena.batchResult.action.clearLockout' /> in the pop-up menu.
 
 <Image src='/img/biostarx-monitoring-device-auth-fail-lock.png' />
 
@@ -109,7 +109,7 @@ The popup menu shows <Cmd sid='arena.batchResult.action.clearLockout' /> only wh
 
 * Only users with <Cmd sid='setting.account.administrator' /> or <Cmd sid='setting.account.monitoringOperator' /> privileges see the <Cmd sid='arena.batchResult.action.clearLockout' /> menu.
 
-* After the set lockout time (<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />) elapses, the device unlocks automatically. The lockout clears without additional action. For more information on lockout conditions and lockout time settings, see <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
+* After the set lockout time (<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />) elapses, the device unlocks automatically. The lockout clears without additional action. For more information about lockout conditions and lockout time settings, see <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
 
 :::
 
@@ -119,7 +119,7 @@ To stop all alarm-based and trigger-based actions running on the device, click <
 
 ### Device detailed view
 
-To view detailed information about the device, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. Or double-click the device. The detailed information of the device will appear on the right side of the screen.
+To view detailed information about the device, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the pop-up menu. Or double-click the device. The detailed information of the device will appear on the right side of the screen.
 
 <Image src='/img/biostarx-monitoring-device-details.png' />
 
@@ -131,7 +131,7 @@ To view detailed information about the device, click <Cmd sid='arena.tree.contex
 
 ## Control multiple devices at once {/* #batch-control */}
 
-This section describes how to select multiple devices and run commands such as reconnect, restart, or unlock. Select two or more devices in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar. The batch control panel appears on the right.
+This section describes how to select multiple devices and run commands such as reconnect, restart, or unlock. Select two or more devices in the <Cmd sid='arena.tree.device.title' /> tab in the left sidebar. The batch control panel appears on the right.
 
 <Image src='/img/biostarx-monitoring-device-multi-select.png' />
 
@@ -143,7 +143,7 @@ Bulk control does not include cameras. For camera control, see <DocLink inner='#
 
 ### Select multiple devices {/* #select-multiple-devices */}
 
-Use the following methods to select devices in the <Cmd sid='arena.tree.device.title' /> tab on the left sidebar.
+Use the following methods to select devices in the <Cmd sid='arena.tree.device.title' /> tab in the left sidebar.
 
 * **<Kbd>Ctrl</Kbd> + click**: Add or remove the clicked device from the selection list. This keeps the remaining selection.
 
@@ -214,19 +214,19 @@ If the selection includes different device types, the system shows the combined 
 
 ## Controlling camera {/* #controlCamera */}
 
-Select the desired camera from the list on the left sidebar and right-click. You can select the desired feature from the popup menu.
+Select the desired camera from the list in the left sidebar and right-click. Select a feature from the pop-up menu.
 
 <Image src='/img/biostarx-monitoring-camera-popup.png' />
 
 ### Playing camera video
 
-To place the camera video in the video tile and monitor in real-time, click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the popup menu.
+To place the camera video in the video tile and monitor in real-time, click <Cmd sid='arena.tree.contextMenu.openVideo' /> in the pop-up menu.
 
 :::note
 
 Adding camera video to video tiles can also be done in the following ways:
 
-* Double-click the camera to play the video from the camera on the left sidebar. 
+* Double-click the camera to play the video from the camera in the left sidebar. 
 
 * You can also add video by dragging and dropping the camera into the video tile area.
 
@@ -234,16 +234,16 @@ Adding camera video to video tiles can also be done in the following ways:
 
 :::info
 
-* Video tiles are added in order from the top left of the screen. If there is no space to add more, an error message appears.
+* Videos are added to the video tiles in order, starting from the upper-left corner of the screen. If there is no space on the current screen, an error message appears.
 
-* For more information on video controls and the tools displayed on the video, see <DocLink docId='platform/biostar_x/monitoring-video' />.
+* For more information about video controls and the tools displayed on the video, see <DocLink docId='platform/biostar_x/monitoring-video' />.
 
-* If a camera does not appear in the <Cmd sid='arena.tree.device.allCameraGroups' /> list, check the camera group permissions. If the administrator for a custom permission hasn't configured the camera group permissions, the camera may not be visible. For more information on configuring camera group permissions, see <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
+* If a camera does not appear in the <Cmd sid='arena.tree.device.allCameraGroups' /> list, check the camera group permissions. If an administrator with custom permissions has not set camera group permissions, cameras might not appear. For more information about setting camera group permissions, see <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
 
 :::
 
 ### Camera detailed view
 
-To view the camera details, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the popup menu. You can check the camera's group, description, ID, and IP address.
+To view the camera details, click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the pop-up menu. You can check the camera's group, description, ID, and IP address.
 
 <Image src='/img/biostarx-monitoring-camera-details.png' />

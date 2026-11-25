@@ -6,7 +6,7 @@ description: Monitor the status of doors, elevators, and advanced access control
 
 Monitor door, elevator, and advanced access control status in real time to operate the security system reliably. Use the status icons in <Cmd sid='shell.header.arena' /> to check alarms and abnormal status at a glance. Review only entries that need action and respond immediately.
 
-Click <Cmd sid='shell.header.arena' /> on the <Cmd sid='shell.header.launcher' /> page or select <Cmd sid='shell.header.arena' /> from the shortcut list at the top left of the screen. Check the status of each entry in the <Cmd sid='arena.tree.door.title' /> tab on the left sidebar of the screen.
+On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.arena' />, or select <Cmd sid='shell.header.arena' /> from the shortcut list in the upper-left corner of the screen. Check the status of each entry in the <Cmd sid='arena.tree.door.title' /> tab in the left sidebar.
 
 ## Before you start
 
@@ -14,13 +14,13 @@ Ensure that the devices connected to the door are correctly configured. It is im
 
 :::info
 
-* For more information on adding and configuring devices, see <DocLink docId='platform/biostar_x/settings-manage-devices' />.
+* For more information about adding and configuring devices, see <DocLink docId='platform/biostar_x/settings-manage-devices' />.
 
-* For more information on adding and configuring doors, see <DocLink docId='platform/biostar_x/settings-manage-door' />.
+* For more information about adding and configuring doors, see <DocLink docId='platform/biostar_x/settings-manage-door' />.
 
-* The <Cmd sid='setting.server.logUploadType' product='2' /> feature must be enabled to monitor or control the status of the access door. Enable this feature under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> in the <Cmd sid='common.general' product='2' /> section.
+* The <Cmd sid='setting.server.logUploadType' product='2' /> feature must be enabled to monitor or control the door status. Enable this feature under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> in the <Cmd sid='common.general' product='2' /> section.
 
-* The feature to connect cameras to doors through the VMS server is available as an additional option with an **Essential** license or higher. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* The feature to connect cameras to doors through the VMS server is available as an additional option with an **Essential** license or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
@@ -34,15 +34,15 @@ import Doortree from './door-tree.json';
 
 :::info
 
-* For more information on adding and configuring devices, see <DocLink docId='platform/biostar_x/settings-manage-devices' />.
+* For more information about adding and configuring devices, see <DocLink docId='platform/biostar_x/settings-manage-devices' />.
 
-* For more information on adding and configuring doors, see <DocLink docId='platform/biostar_x/settings-manage-door' />.
+* For more information about adding and configuring doors, see <DocLink docId='platform/biostar_x/settings-manage-door' />.
 
-* For more information on adding and configuring elevators, see <DocLink docId='platform/biostar_x/settings-manage-elevators' />.
+* For more information about adding and configuring elevators, see <DocLink docId='platform/biostar_x/settings-manage-elevators' />.
 
-* For more information on advanced access control settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
+* For more information about advanced access control settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
-* For more information on linking doors and cameras, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
+* For more information about linking doors and cameras, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
 
 :::
 
@@ -83,11 +83,11 @@ Right-click on the device and select the <Cmd sid='arena.tree.contextMenu.reconn
 
   * [Advanced access control settings](settings-advanced-ac)
 
-* You can connect the entrance door and the camera in video rules to set alarms. For more information on configuring video rules, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
+* You can connect the entrance door and the camera in video rules to set alarms. For more information about configuring video rules, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
 
-* When linked with the VMS server, AI event alarms for videos can be sent to **BioStar X**. For more information, refer to the manual for the VMS server.
+* When linked with the VMS server, AI event alarms for videos can be sent to **BioStar X**. For more information, see the manual for the VMS server.
 
-* For more information on acknowledging alarms, see <DocLink docId='platform/biostar_x/monitoring-event#acknowledge-alarm-and-record-action' />.
+* For more information about acknowledging alarms, see <DocLink docId='platform/biostar_x/monitoring-event#acknowledge-alarm-and-record-action' />.
 
 :::
 
@@ -107,13 +107,13 @@ A banner at the top of the panel shows current status details, such as the alarm
 
 * The buttons on the banner vary by alarm type. Click a button to take the action for the alarm.
 
-* Door controls, such as locking and unlocking, remain available while an alarm appears. For more information on door control, see <DocLink docId='platform/biostar_x/control-door' />.
+* Door controls, such as locking and unlocking, remain available while an alarm appears. For more information about door control, see <DocLink docId='platform/biostar_x/control-door' />.
 
 :::
 
 ### View entries that need attention {/* #checkAttentionFilter */}
 
-Administrators can view only doors and elevators that need action at a glance. In the left sidebar, click the <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Check door and elevator status and take immediate action when problems occur.
+Administrators can view only doors and elevators that need action at a glance. Click the <Cmd sid='arena.tree.door.entitiesNeedAttention' /> in the left sidebar. Check door and elevator status and take immediate action when problems occur.
 
 <Image src='/img/biostarx-monitoring-door-attention-filter.png' />
 
@@ -287,7 +287,7 @@ Check the camera status to verify that the camera is operating normally. Refer t
 
 :::info
 
-* If the camera linked to the access door isn't visible, check the camera group's permissions. If the administrator for a custom permission hasn't configured the camera group permissions, the camera may not be visible. For more information on configuring camera group permissions, see <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
+* If the camera linked to the door is not visible, check the camera group permissions. If an administrator with custom permissions has not set camera group permissions, cameras might not appear. For more information about setting camera group permissions, see <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
 
 * To link a door to a camera, add a video rule. For more information, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
 
@@ -308,7 +308,7 @@ You can check the security status of the entrance door or advanced access contro
 
 :::info
 
-The security status is displayed only when the entrance door is set to **guard**. For more information on intrusion alarm settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac-intrusion-alarm' />.
+The security status is displayed only when the entrance door is set to **guard**. For more information about intrusion alarm settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac-intrusion-alarm' />.
 
 :::
 
@@ -335,7 +335,7 @@ You can expand or collapse the list through the top-level group or sub-group.
 
 1. In the <Cmd sid='arena.tree.door.title' /> tab, select <Cmd sid='arena.tree.door.allDoorGroups' /> or <Cmd sid='arena.tree.door.allElevatorGroups' />, <Cmd sid='arena.tree.door.allZones' /> and right-click.
 
-2. Choose <Cmd sid='arena.tree.expandAll' /> or <Cmd sid='arena.tree.collapseAll' /> from the popup menu. 
+2. Choose <Cmd sid='arena.tree.expandAll' /> or <Cmd sid='arena.tree.collapseAll' /> from the pop-up menu. 
 
 All sub-lists can be expanded or collapsed based on the selected top-level group.
 
@@ -343,6 +343,6 @@ All sub-lists can be expanded or collapsed based on the selected top-level group
 
 1. To expand or collapse the list of sub-groups in each top-level group, select the sub-group and right-click. 
 
-2. Select <Cmd sid='arena.tree.contextMenu.expandBelow' /> or <Cmd sid='arena.tree.contextMenu.collapseBelow' /> option from the popup menu. 
+2. Select <Cmd sid='arena.tree.contextMenu.expandBelow' /> or <Cmd sid='arena.tree.contextMenu.collapseBelow' /> option from the pop-up menu. 
 
 You can expand or collapse the list of the selected sub-group.
