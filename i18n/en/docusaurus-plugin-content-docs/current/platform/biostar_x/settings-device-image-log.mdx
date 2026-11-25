@@ -1,139 +1,136 @@
 ---
 id: settings-device-image-log
-title: Image Log Settings
-description: This document provides instructions for setting events and schedules to generate image logs, options for deleting image logs, and methods for configuring storage paths.
-keywords:
-  - Device
-  - Image log
+title: Set Up Image Logs
+description: Learn how to set events and schedules to generate image logs on a device, and how to set deletion options and save paths for image logs.
 ---
 
-<Cmd sid='common.imageLog' product='2' /> allows for image verification of events that occur on devices with cameras. It can record face images of users passing through doors or situations during event occurrences using the device's camera. The recorded images can be viewed through real-time events on the <Cmd sid='shell.header.arena' /> page.
+<Cmd sid='common.imageLog' product='2' /> is a feature that lets you view events that occur on devices with cameras as images. The device camera can record a user's face image as they pass through a door, or the scene when an event occurs. Recorded images appear in real-time events on the <Cmd sid='shell.header.arena' /> page.
 
 <Image src='/img/biostarx-setting-device-imagelog-example.png' caption />
 
-When you set up image logging, an image log for the event will be created in the <Cmd sid='arena.eventTable.title' /> list. Click the <IcImgLog /> button at the far right of the event item. You can view the image captured when the event occurred in the right panel.
+When you set up image logs, an image log is generated for the event in the <Cmd sid='arena.eventTable.title' /> list. Click <IcImgLog /> at the far right of the event entry. The image captured when the event occurred appears in the right pane.
 
 :::info
 
 * This feature is supported on BioStation 3 Max, BioStation 3, X-Station 2, FaceStation F2, FaceStation 2, and BioStation A2.
 
-* For more information on viewing event logs on the <Cmd sid='shell.header.arena' /> page, see <DocLink docId='platform/biostar_x/monitoring-event' />.
+* For more information about viewing event logs on the <Cmd sid='shell.header.arena' /> page, see <DocLink docId='platform/biostar_x/monitoring-event' />.
 
 :::
 
 :::caution
 
-Settings in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> menu do not apply to the device. Enable the <Cmd sid='common.imageLog' product='2' /> option on each device. For more information, refer to <DocLink docId='platform/biostar_x/settings-device-details-advanced#image-log-settings' />.
+Settings you configure in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> menu are not applied to devices. Turn on the <Cmd sid='common.imageLog' product='2' /> option on each device. For more information, see <DocLink docId='platform/biostar_x/settings-device-details-advanced#image-log-settings' />.
 
 :::
 
-## Add basic settings {/* #add-image-log-settings */}
+## Add default settings {/* #add-image-log-settings */}
 
-Configure the basic settings that take effect when <Cmd sid='common.imageLog' product='2' /> is enabled on a device. Configure events and schedules for image log creation. An image log will be generated if the conditions of events and schedules are met.
+Set the default settings that apply when you turn on the device's <Cmd sid='common.imageLog' product='2' /> option. Set the events and schedules for generating image logs. An image log is generated when the event and schedule conditions are met.
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> on the left sidebar.
+2. In the left sidebar, click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
 3. Click <Cmd sid='button.plusAdd' product='2' /> to the right of the <Cmd sid='common.preset' product='2' /> section.
 
    <Image src='/img/biostarx-setting-device-imagelog-add.png' />
 
-4. When an event is added at the bottom of the list, click <IcDown /> for the desired event and select your options.
+4. When an event is added at the bottom of the list, click <IcDown /> for the event and select an option.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-event.png' />
 
-5. Click <IcDown /> in the schedule for the selected event and choose the preferred option.
+5. Click <IcDown /> for the event's schedule and select an option.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-schedule.png' />
 
-6. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+6. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one. For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
+If the schedule you need isn't in the list, click <Cmd sid='button.plusAddSchedule' product='2' /> to add it. For more information about schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
 :::
 
-## Modify basic settings {/* #edit-image-log-settings */}
+## Edit default settings {/* #edit-image-log-settings */}
 
-You can change the events and schedules of existing image logs.
+Change the image log events and schedules that you set earlier.
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> on the left sidebar.
+2. In the left sidebar, click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. In the list of the <Cmd sid='common.preset' product='2' /> section, click <IcDown /> for the event you want to modify and select your options.
+3. In the list of the <Cmd sid='common.preset' product='2' /> section, click <IcDown /> for the event to change and select an option.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-event.png' />
 
-4. Click <IcDown /> in the schedule for the selected event and choose the preferred option.
+4. Click <IcDown /> for the event's schedule and select an option.
 
    <Image src='/img/biostarx-setting-device-imagelog-select-schedule.png' />
 
-5. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+5. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-* If the desired schedule is not available, click <Cmd sid='button.plusAddSchedule' product='2' /> to add one. For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
+* If the schedule you need isn't in the list, click <Cmd sid='button.plusAddSchedule' product='2' /> to add it. For more information about schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
-* The modified basic settings apply only to newly added devices. The changes do not apply to devices where <Cmd sid='common.imageLog' product='2' /> is already enabled. Add the changes in each device’s settings.
+* The updated default settings apply only to newly added devices. They do not apply to devices that already have the <Cmd sid='common.imageLog' product='2' /> option turned on, so add them in each device's settings.
 
 :::
 
-## Delete basic settings {/* #delete-image-log-settings */}
+## Delete default settings {/* #delete-image-log-settings */}
 
-You can delete events and schedules of existing image logs.
+Delete the image log events and schedules that you set earlier.
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> on the left sidebar.
+2. In the left sidebar, click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. In the list of the <Cmd sid='common.preset' product='2' /> section, click <IcTrash2 /> for the event you want to delete.
+3. In the list of the <Cmd sid='common.preset' product='2' /> section, click <IcTrash2 /> for the event to delete.
 
    <Image src='/img/biostarx-setting-device-imagelog-remove.png' />
 
-4. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+4. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 ## <Cmd sid='setting.imageLog.deleteOption' product='2' className='bold' /> {/* #image-log-delete-options */}
 
-You can set delete options so that image log files do not take up space on the **BioStar X** server. Image logs that exceed the set file size or duration will be automatically deleted. 
+Set deletion options so that image log files don't keep taking up storage space on the **BioStar X** server. Image logs that exceed the set file size or retention period are deleted automatically. 
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> on the left sidebar.
+2. In the left sidebar, click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. Set the conditions for deleting image logs in the <Cmd sid='setting.imageLog.deleteOption' product='2' /> section.
+3. In the <Cmd sid='setting.imageLog.deleteOption' product='2' /> section, set the conditions for deleting image logs.
 
    <Image src='/img/biostarx-setting-device-imagelog-delete-option.png' />
 
-   * <Cmd sid='setting.imageLog.deleteOption' product='2' />: Choose the file size unit (<Cmd>MB</Cmd>/<Cmd>GB</Cmd>) or duration unit (<Cmd sid='setting.imageLog.deleteOption.day' product='2' />/<Cmd sid='setting.imageLog.deleteOption.week' product='2' />/<Cmd sid='setting.imageLog.deleteOption.month' product='2' />).
+   * <Cmd sid='setting.imageLog.deleteOption' product='2' />: Select the file size unit (<Cmd>MB</Cmd>/<Cmd>GB</Cmd>) or the period unit (<Cmd sid='setting.imageLog.deleteOption.day' product='2' />/<Cmd sid='setting.imageLog.deleteOption.week' product='2' />/<Cmd sid='setting.imageLog.deleteOption.month' product='2' />).
 
-   * <Cmd sid='setting.imageLog.deleteOption.log.amount' product='2' />: Set the unit of the condition defined in <Cmd sid='setting.imageLog.deleteOption' product='2' />.
+   * <Cmd sid='setting.imageLog.deleteOption.log.amount' product='2' />: Set the unit for the condition set in <Cmd sid='setting.imageLog.deleteOption' product='2' />.
 
-   * <Cmd sid='setting.imageLog.deleteCheckDuration' product='2' />: Choose the cycle for deleting image logs.
+   * <Cmd sid='setting.imageLog.deleteCheckDuration' product='2' />: Select the interval for deleting image logs.
 
-4. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+4. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 ## <Cmd sid='setting.imageLog.storagePath' product='2' className='bold' /> {/* #image-log-save-path */}
 
-You can set the path where image logs are stored. 
+Set the path where image logs are stored. 
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> on the left sidebar.
+2. In the left sidebar, click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. Enter the path for storing image logs in the <Cmd sid='setting.imageLog.imageLogFilePath' product='2' /> input field of the <Cmd sid='setting.imageLog.storagePath' product='2' /> section.
+3. In the <Cmd sid='setting.imageLog.storagePath' product='2' /> section, enter the path to store image logs in the <Cmd sid='setting.imageLog.imageLogFilePath' product='2' /> field.
 
    <Image src='/img/biostarx-setting-device-imagelog-savepath.png' />
 
-4. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+4. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-* The storage path is not created automatically, so it must be created in advance for storing image logs.
+* The save path is not created automatically, so create the path to store image logs in advance.
 
-* For example, entering `.\imagelog\` will store image logs under the path where BioStar X is installed. 
+* For example, entering `.\imagelog\` saves image logs under the path where BioStar X is installed. 
 
   > *C:\\Program Files\\BioStar X\\imagelog\\*
 
@@ -141,22 +138,22 @@ You can set the path where image logs are stored.
 
 ## <Cmd sid='setting.image_log.title' product='2' className='bold' /> {/* #image-log-user-profile */}
 
-You can configure the device to display the user's profile picture when monitoring event logs and real-time logs if the device cannot shoot image logs.
+Set the system to show the user's profile photo when you monitor event logs and real-time logs on devices that cannot capture image logs.
 
-1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
-2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> on the left sidebar.
+2. In the left sidebar, click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' />.
 
-3. Check the checkbox for the <Cmd sid='setting.image_log.display' product='2' /> item in the <Cmd sid='setting.image_log.title' product='2' /> section.
+3. In the <Cmd sid='setting.image_log.title' product='2' /> section, select the <Cmd sid='setting.image_log.display' product='2' /> checkbox.
 
    <Image src='/img/biostarx-setting-device-imagelog-userprofile.png' />
 
-4. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+4. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-* When this option is enabled, if an image log occurs, the user profile picture will not be shown, and the recorded image log will be displayed instead.
+* When this option is turned on and an image log is generated, the system shows the captured image log instead of the user's profile photo.
 
-* For more information on viewing event logs on the <Cmd sid='shell.header.arena' /> page, see <DocLink docId='platform/biostar_x/monitoring-event' />.
+* For more information about viewing event logs on the <Cmd sid='shell.header.arena' /> page, see <DocLink docId='platform/biostar_x/monitoring-event' />.
 
 :::
