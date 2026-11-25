@@ -1325,6 +1325,9 @@
   "askAi.thinking": {
     "message": "Preparing an answer"
   },
+  "askAi.searching": {
+    "message": "Searching the docs..."
+  },
   "askAi.copy": {
     "message": "Copy"
   },
