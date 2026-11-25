@@ -38,4 +38,6 @@ uploadtr.bat
 genpdf/svg-components-map.mjs
 bun.lock
 /docs/device/vionyx_webserver/reference/
+/docs/platform/biostar_air/reference
+/docs/platform/biostar_x/reference
 /.mcp.json
