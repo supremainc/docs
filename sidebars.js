@@ -2708,24 +2708,24 @@ function createSidebars(preview) {
       ],
     },
   ],
-  xpass2_v2: [
+  xpass_2a: [
     {
       type: 'category',
-      label: 'XPass 2 V2',
+      label: 'XPass 2a',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
       link: {
         type: 'doc',
-        id: 'device/xpass_2_v2/index',
+        id: 'device/xpass_2a/index',
       },
       items: [
-        'device/xpass_2_v2/safety-instructions',
-        'device/xpass_2_v2/getting-started',
-        'device/xpass_2_v2/installation',
-        'device/xpass_2_v2/product-specifications',
-        'device/xpass_2_v2/regulatory-information',
-        'device/xpass_2_v2/appendices',
+        'device/xpass_2a/safety-instructions',
+        'device/xpass_2a/getting-started',
+        'device/xpass_2a/installation',
+        'device/xpass_2a/product-specifications',
+        'device/xpass_2a/regulatory-information',
+        'device/xpass_2a/appendices',
       ],
     },
   ],
@@ -3090,7 +3090,7 @@ function createSidebars(preview) {
 
 //   Preview가 아니면 조건부 사이드바 제거 (빌드 최적화)
   if (!preview) {
-    delete sidebars.xpass2_v2;
+    delete sidebars.xpass_2a;
   }
   
   return sidebars;
