@@ -700,10 +700,10 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          // {
-          //   type: 'custom-askAi',
-          //   position: 'right',
-          // },
+          {
+            type: 'custom-askAi',
+            position: 'right',
+          },
           {
             type: 'localeDropdown',
             position: 'right',
