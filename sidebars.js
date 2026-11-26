@@ -2670,6 +2670,7 @@ function createSidebars(preview) {
             id: 'device/xpass_q2/release-notes/index',
           },
           items: [
+            'device/xpass_q2/release-notes/102',
             'device/xpass_q2/release-notes/101',
             'device/xpass_q2/release-notes/100',
           ]
