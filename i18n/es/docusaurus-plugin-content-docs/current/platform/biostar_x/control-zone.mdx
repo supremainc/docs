@@ -1,27 +1,27 @@
 ---
 id: control-zone
 title: Gestionar el Control de Acceso Avanzado
-description: Controle el control de acceso avanzado y verifique la información detallada.
+description: Administre el control de acceso avanzado y consulte información detallada.
 keywords:
   - Monitorizar
   - Control de acceso avanzado
 ---
 
-Esta guía explica cómo controlar puertas o dispositivos configurados con control de acceso avanzado. Las funciones proporcionadas permiten respuestas rápidas y una gestión eficiente en caso de problemas.
+Aprenda a controlar puertas o dispositivos configurados con control de acceso avanzado. Estas funciones le ayudan a responder rápidamente a los problemas y a gestionar de forma eficiente.
 
-1. Haga clic en <Cmd sid='shell.header.arena' /> en la página <Cmd sid='shell.header.launcher' /> o seleccione <Cmd sid='shell.header.arena' /> en la lista de accesos directos en la esquina superior izquierda de la pantalla.
+1. En la página <Cmd sid='shell.header.launcher' />, haga clic en <Cmd sid='shell.header.arena' /> o seleccione <Cmd sid='shell.header.arena' /> en la lista de accesos directos en la esquina superior izquierda de la pantalla.
 
-2. Vaya a la pestaña <Cmd sid='arena.tree.door.title' /> en la barra lateral izquierda de la pantalla y seleccione <Cmd sid='arena.tree.door.allZones' />. 
+2. Haga clic en la pestaña <Cmd sid='arena.tree.door.title' /> en la barra lateral izquierda y luego haga clic en <Cmd sid='arena.tree.door.allZones' />. 
 
-3. Seleccione el control de acceso avanzado configurado y haga clic derecho. Seleccione la función deseada en el menú emergente.
+3. Seleccione una entrada de control de acceso avanzado y luego haga clic con el botón derecho. Seleccione una función en el menú emergente.
 
 <Image src='/img/biostarx-monitoring-door-zone-popup.png' />
 
 :::info
 
-* Las funciones ofrecidas varían según el tipo de control de acceso avanzado. Los tipos de control de acceso avanzado son los siguientes.
+* Las funciones disponibles varían según el tipo de control de acceso avanzado. Los tipos de control de acceso avanzado son los siguientes.
 
-  * **Anti-Passback**
+  * **Anti-passback**
 
   * Alarma de incendios
 
@@ -37,19 +37,19 @@ Esta guía explica cómo controlar puertas o dispositivos configurados con contr
 
   * Pase de lista
 
-* Para más información sobre cada función de control de acceso avanzado, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
+* Para obtener más información sobre cada función de control de acceso avanzado, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
 * Para seleccionar y controlar varios ajustes de control de acceso avanzado a la vez, consulte <DocLink docId='platform/biostar_x/monitoring-batch-control' />.
 
 :::
 
-## Borrar anti-passback {/* #apb-release */}
+## Borrar APB {/* #apb-release */}
 
-Borre la alarma APB de la puerta o dispositivo configurado con **Anti-Passback**. Haz clic en <Cmd sid='arena.tree.contextMenu.clearApb' /> en el menú emergente. Un mensaje de finalización aparece en la parte superior de la pantalla.
+Borre la alarma de APB en puertas o dispositivos configurados con **Anti-Passback**. Haga clic en <Cmd sid='arena.tree.contextMenu.clearApb' /> en el menú emergente. Un mensaje de finalización aparece en la parte superior de la pantalla.
 
 :::info
 
-* La función <Cmd sid='arena.tree.contextMenu.clearApb' /> solo está disponible para **Anti-Passback**.
+* La función <Cmd sid='arena.tree.contextMenu.clearApb' /> solo está disponible en **Anti-Passback**.
 
 * Para obtener más información sobre la configuración de **Anti-Passback**, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac-apb' />.
 
@@ -59,7 +59,7 @@ Borre la alarma APB de la puerta o dispositivo configurado con **Anti-Passback**
 
 ## Borrar alarma {/* #alarm */}
 
-Borre la alarma que ocurrió en la puerta o dispositivo. Haga clic en <Cmd sid='arena.tree.contextMenu.clearAlarm' /> en el menú emergente. Un mensaje de finalización aparece en la parte superior de la pantalla.
+Borre las alarmas que se produzcan en una puerta o dispositivo. Haga clic en <Cmd sid='arena.tree.contextMenu.clearAlarm' /> en el menú emergente. Un mensaje de finalización aparece en la parte superior de la pantalla.
 
 :::info
 
@@ -67,19 +67,19 @@ Borre la alarma que ocurrió en la puerta o dispositivo. Haga clic en <Cmd sid='
 
 :::
 
-## Activar/desactivar {/* #zone-revitalizationdisabled */}
+## Habilitar/deshabilitar {/* #zone-revitalizationdisabled */}
 
-Active el control de acceso avanzado o desactive las funciones que no se usen. El control de acceso avanzado desactivado aparece atenuado. Haga clic en <Cmd sid='arena.tree.contextMenu.enable' /> o <Cmd sid='arena.tree.contextMenu.disable' /> en el menú emergente.
+Puede habilitar las funciones de control de acceso avanzado o deshabilitar las funciones que no se utilicen. El control de acceso avanzado desactivado aparece atenuado. Haga clic en <Cmd sid='arena.tree.contextMenu.enable' /> o <Cmd sid='arena.tree.contextMenu.disable' /> en el menú emergente.
 
 <Image src='/img/biostarx-monitoring-door-zone-disabled.png' />
 
-## Seguridad/desarmar {/* #security-zone-control */}
+## Armar/desarmar {/* #security-zone-control */}
 
-Active o desactive la seguridad de la puerta o dispositivo. Haz clic en <Cmd sid='arena.tree.contextMenu.arm' /> o <Cmd sid='arena.tree.contextMenu.disarm' /> en el menú emergente.
+Arme o desarme una puerta o dispositivo. Haz clic en <Cmd sid='arena.tree.contextMenu.arm' /> o <Cmd sid='arena.tree.contextMenu.disarm' /> en el menú emergente.
 
 :::info
 
-* <Cmd sid='arena.tree.contextMenu.arm' /> o <Cmd sid='arena.tree.contextMenu.disarm' /> solo pueden usarse en controles de acceso avanzado configurados para seguridad.
+* <Cmd sid='arena.tree.contextMenu.arm' /> o <Cmd sid='arena.tree.contextMenu.disarm' /> solo se pueden usar para el control de acceso avanzado configurado como alarma de intrusión.
 
 * Para más información sobre la configuración de alarmas de intrusión, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac-intrusion-alarm' />.
 
@@ -87,23 +87,23 @@ Active o desactive la seguridad de la puerta o dispositivo. Haz clic en <Cmd sid
 
 ## Ver informe de reunión {/* #confirmation-of-muster-reports */}
 
-Haga clic en <Cmd sid='arena.tree.contextMenu.musterReport' /> para revisar el informe de reunión. En la nueva ventana, verifique las horas de entrada y salida de los usuarios y si el tiempo de estancia se ha excedido, mediante la lista de usuarios y los dispositivos configurados con la función de reunión.
+Para ver el informe de muster, haga clic en <Cmd sid='arena.tree.contextMenu.musterReport' />. Cuando se abre una nueva ventana, la lista de usuarios y los dispositivos configurados para muster muestran las horas de entrada, las horas de salida y los excesos de tiempo de permanencia.
 
 :::info
 
-* La función <Cmd sid='arena.tree.contextMenu.musterReport' /> solo está disponible en los reunión.
+* La función <Cmd sid='arena.tree.contextMenu.musterReport' /> solo está disponible en muster.
 
-* Para obtener más información sobre la función de control de presencia, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac-muster' />.
+* Para obtener más información sobre la función de muster, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac-muster' />.
 
 :::
 
-## Monitorear límite de ocupación {/* #monitoring-of-restrictions-on-the-number-of-people */}
+## Monitorear límites de ocupación {/* #monitoring-of-restrictions-on-the-number-of-people */}
 
-Verifique el estado de los dispositivos configurados con la función de límite de ocupación. Haga clic en <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> en el menú emergente. En la nueva ventana, vaya al menú <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />. Verifique el estado en la lista <Cmd sid='zone.occupancy.title' product='2' />.
+Verifique el estado de los dispositivos configurados con la función de límite de ocupación. Haga clic en <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> en el menú emergente. Cuando se abra una nueva ventana, vaya al menú <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' />. Verifique el estado en la lista <Cmd sid='zone.occupancy.title' product='2' />.
 
 :::info
 
-* La función <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> solo está disponible para elementos configurados con la función de límite de ocupación.
+* La función <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> solo está disponible para las entradas configuradas con la función de límite de ocupación.
 
 * Para obtener más información sobre la configuración del límite de ocupación, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac-occupancy' />.
 
@@ -111,18 +111,18 @@ Verifique el estado de los dispositivos configurados con la función de límite 
 
 ## Ver detalles {/* #detail-view */}
 
-Verifique la información detallada y el historial de eventos del control de acceso avanzado. Haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. La información detallada y el historial de eventos se muestran en el panel derecho de la pantalla.
+Consulte la información detallada y el historial de eventos del control de acceso avanzado. Haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. La información detallada y el historial de eventos aparecen en el panel derecho de la pantalla.
 
 <Image src='/img/biostarx-monitoring-door-ac-details.png' />
 
-* **Control de acceso avanzado**: Controle el tipo de control de acceso avanzado seleccionado.
+* **Controles del control de acceso avanzado**: Proporciona funciones de control para el control de acceso avanzado seleccionado.
 
-* **Información detallada**: Verifique el nombre y el estado de la función de control de acceso avanzado, la información del dispositivo, etc.
+* **Información detallada**: Muestra el nombre y el estado de la función de control de acceso avanzado y la información del dispositivo.
 
-* <Cmd sid='arena.recentEvent' />: Verifique la lista de eventos recientes ocurridos en el control de acceso avanzado seleccionado.
+* <Cmd sid='arena.recentEvent' />: Muestra una lista de eventos recientes ocurridos en el control de acceso avanzado seleccionado.
 
 :::info
 
-Para obtener más información sobre cada elemento en la sección de detalles del control de acceso avanzado, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
+Para obtener más información sobre cada elemento de la sección de detalles del control de acceso avanzado, consulte <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
 :::

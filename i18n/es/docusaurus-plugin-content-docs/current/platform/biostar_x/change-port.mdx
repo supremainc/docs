@@ -1,25 +1,25 @@
 ---
 id: change-port
 title: Cambiar el Puerto
-description: Guía para cambiar el puerto cuando el puerto predeterminado (443) de BioStar X no está disponible.
+description: Aprenda a cambiar el puerto cuando el puerto predeterminado (443) de BioStar X no esté disponible.
 keywords:
   - Configuración de BioStar X
   - puerto
 ---
 
-Esta guía explica cómo cambiar el puerto cuando el puerto predeterminado (443) de **BioStar X** no está disponible.
+Aprenda a cambiar el puerto cuando el puerto predeterminado (443) de **BioStar X** no esté disponible.
 
-1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+1. En Windows, haga clic en <Start/> → **BioStar X** → **BioStar X Service Manager**.
 
-2. Cuando aparezca la ventana **BioStar X Service Manager** en el navegador web, haga clic en el menú <Cmd>SERVICES</Cmd>.
+2. Cuando aparezca la ventana **BioStar X Service Manager** en el navegador web, haga clic en <Cmd>SERVICES</Cmd>.
 
-3. Para detener todos los servicios, haga clic en el botón <Cmd>Stop All</Cmd> en la esquina superior derecha de la pantalla.
+3. Para detener todos los servicios, haga clic en <Cmd>Stop All</Cmd> en la esquina superior derecha de la pantalla.
 
    <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
 
 4. Haga clic en <Cmd>SERVICE SETTINGS</Cmd> en la barra lateral izquierda.
 
-5. Ingrese el número de puerto que desea cambiar en el campo de entrada <Cmd>HTTPS Port</Cmd> de la sección <Cmd>Unified Gateway Service</Cmd>.
+5. En la sección <Cmd>Unified Gateway Service</Cmd>, ingrese el nuevo número de puerto en el campo <Cmd>HTTPS Port</Cmd>.
 
    <Image src='/img/common/biostarx-tutoria-service-manager-services-change-port.png' alone />
 
@@ -29,12 +29,12 @@ Esta guía explica cómo cambiar el puerto cuando el puerto predeterminado (443)
 
 8. Vaya a <Cmd>SERVICES</Cmd> y haga clic en **Start** para todos los servicios.
 
-9. Acceda a **BioStar X** desde el navegador web.
+9. Acceda a **BioStar X** en un navegador web.
 
 :::info
 
 * Si cambió el número de puerto a 450, ingrese `https://{ip_address}:450` en la barra de direcciones.
 
-* La compatibilidad para cambiar el puerto varía según el servicio.
+* Es posible que algunos servicios no admitan el cambio de puerto.
 
 :::

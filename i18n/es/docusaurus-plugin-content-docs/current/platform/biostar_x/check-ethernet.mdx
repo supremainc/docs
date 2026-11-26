@@ -1,13 +1,13 @@
 ---
 id: check-ethernet
 title: Verificar la Prioridad de Red
-description: Instrucciones para verificar y configurar la prioridad de red del servidor antes de instalar BioStar X.
+description: Aprenda a verificar y configurar la prioridad de red del servidor antes de instalar BioStar X.
 keywords:
   - Red
   - BioStar X
 ---
 
-Instrucciones para verificar y configurar la prioridad de red del servidor antes de instalar **BioStar X**.
+Aprenda a verificar y configurar la prioridad de red del servidor antes de instalar **BioStar X**.
 
 ## ¿Cuándo se necesita?
 
@@ -17,7 +17,7 @@ Debe verificar y configurar la prioridad de red en las siguientes situaciones.
 
 * Cuando un adaptador de red específico debe utilizarse para el servicio de **BioStar X**
 
-* Para evitar problemas de conexión de red después de instalar **BioStar X**
+* Cuando necesite evitar problemas de conexión de red después de instalar **BioStar X**
 
 :::info
 
@@ -27,7 +27,7 @@ Si ninguna de las situaciones anteriores aplica, no es necesario cambiar la prio
 
 :::warning
 
-Durante la instalación de **BioStar X**, se seleccionará automáticamente el adaptador de red con una métrica más baja (mayor prioridad). Como puede ser difícil cambiar esta configuración después de la instalación, asegúrese de verificar y ajustar la prioridad de red antes de la instalación.
+Durante la instalación de **BioStar X**, se selecciona automáticamente el adaptador de red con un valor de métrica de red más bajo (mayor prioridad). Como puede ser difícil cambiar esta configuración después de la instalación, **asegúrese de verificar y ajustar la prioridad de red antes de la instalación**.
 
 :::
 
@@ -35,7 +35,7 @@ Durante la instalación de **BioStar X**, se seleccionará automáticamente el a
 
 ### Verificar en el símbolo del sistema
 
-1. Busque `cmd` en el menú **Inicio** y ejecute **Símbolo del sistema**.
+1. Para abrir el **Command Prompt**, busque `cmd` en el menú **Start**.
 
 2. Ingrese el siguiente comando.
 
@@ -43,9 +43,9 @@ Durante la instalación de **BioStar X**, se seleccionará automáticamente el a
    route print
    ```
 
-3. Busque entradas en la sección **IPv4 Route Table** donde **Network Destination** sea `0.0.0.0`.
+3. En la salida, busque entradas en la sección **IPv4 Route Table** donde **Network Destination** sea `0.0.0.0`.
 
-4. Verifique el valor en la columna **Metric**. Cuanto menor sea el valor, mayor será la prioridad.
+4. Verifique el valor en la columna **Metric**. **Cuanto menor sea el valor, mayor será la prioridad**.
 
 <PageBreak />
 
@@ -53,29 +53,29 @@ Durante la instalación de **BioStar X**, se seleccionará automáticamente el a
 
 <Image src='/img/common/biostarx-install-check-network-cmd.png' alone />
 
-En el ejemplo anterior, la interfaz `192.168.40.123` tiene un valor de métrica de **20**, lo que resulta en una prioridad más alta.
+En el ejemplo anterior, la interfaz `192.168.40.123` tiene un valor de métrica de **20**, por lo que tiene una prioridad más alta.
 
 ### Verificar la información del adaptador de red
 
-Verifique qué adaptador de red corresponde a cada interfaz.
+Verifique a qué adaptador de red corresponde cada interfaz.
 
-1. En la ventana del **Símbolo del sistema**, ingrese el siguiente comando.
+1. En la ventana del **Command Prompt**, ingrese el siguiente comando.
 
    ```cmd
    ipconfig /all
    ```
 
-2. Empareje la **dirección IPv4** de cada adaptador de red con la dirección **Gateway** identificada anteriormente para determinar de cuál se trata.
+2. Haga coincidir la **IPv4 address** de cada adaptador de red con la dirección de **Gateway** que verificó anteriormente para identificar el adaptador.
 
 <PageBreak />
 
 ## Cambiar la prioridad de red
 
-Para aumentar la prioridad del adaptador de red deseado, siga los pasos a continuación.
+Para aumentar la prioridad del adaptador de red seleccionado, siga estos pasos.
 
 :::info
 
-Los siguientes pasos están basados en Windows 11. La ubicación del menú puede variar según la versión de Windows que esté utilizando.
+Estos pasos se basan en Windows 11. La ubicación de los menús puede variar según su versión de Windows.
 
 :::
 
@@ -84,11 +84,11 @@ Los siguientes pasos están basados en Windows 11. La ubicación del menú puede
 
 ### Abrir la configuración de red
 
-1. En el menú **Inicio**, escriba **Ver conexiones de red**.
+1. En el menú **Start**, escriba **View Network Connections**.
 
    <Image src='/img/biostarx-install-check-start-network-search.png' />
 
-2. Haga clic en **Ver conexiones de red** en los resultados de la búsqueda.
+2. Haga clic en **View Network Connections** en los resultados de la búsqueda.
 
 3. Haga doble clic en el adaptador conectado a Internet en la lista.
 
@@ -99,17 +99,17 @@ Los siguientes pasos están basados en Windows 11. La ubicación del menú puede
 
 ### Abrir las opciones del adaptador
 
-1. Cuando aparezca la ventana **Estado de Ethernet**, haga clic en el botón **Propiedades**.
+1. Cuando aparezca la ventana **Ethernet Status**, haga clic en **Properties**.
 
    <Image src='/img/biostarx-install-check-ethernet-status.png' />
 
-2. Cuando aparezca la ventana Propiedades de Ethernet, seleccione <b>Protocolo de Internet versión 4 (TCP/IPv4)</b> en la lista.
+2. Cuando aparezca la ventana Propiedades de Ethernet, seleccione <b>Internet Protocol Version 4 (TCP/IPv4)</b> en la lista.
 
    <Image src='/img/biostarx-install-check-ethernet-properties.png' />
 
-3. Haga clic en el botón **Propiedades**.
+3. Haga clic en **Properties**.
 
-4. Cuando aparezca la ventana **Propiedades de Protocolo de Internet versión 4 (TCP/IPv4)**, haga clic en el botón **Avanzado**.
+4. Cuando aparezca la ventana **Internet Protocol Version 4 (TCP/IPv4) Properties**, haga clic en **Advanced**.
 
    <Image src='/img/biostarx-install-check-protocol-properties.png' />
 
@@ -122,17 +122,17 @@ Los siguientes pasos están basados en Windows 11. La ubicación del menú puede
 
    <Image src='/img/biostarx-install-check-set-metrics.png' />
 
-2. Ingrese el valor deseado en el campo **Interface Metric**.
+2. Ingrese el valor que desea usar en el campo **Interface Metric**.
 
-   * Si desea la prioridad más alta, ingrese `1`.
+   * Para obtener la prioridad más alta, ingrese `1`.
 
-   * Si desea una prioridad mayor que la de otros adaptadores, ingrese un número menor que los valores de métrica de los demás adaptadores.
+   * Para obtener una prioridad más alta que la de otros adaptadores, ingrese un número menor que los valores de métrica de los demás adaptadores.
 
-3. Para guardar la configuración y cerrar todas las ventanas, haga clic en el botón **OK**.
+3. Para guardar la configuración y cerrar todas las ventanas, haga clic en **OK**.
 
 :::info
 
-Los valores que puede ingresar en **Interface Metric** van de `1` a `9999`. Cuanto menor sea el valor, mayor será la prioridad.
+El campo **Interface Metric** acepta valores de `1` a `9999`. Los valores más bajos tienen mayor prioridad.
 
 :::
 
@@ -141,7 +141,7 @@ Los valores que puede ingresar en **Interface Metric** van de `1` a `9999`. Cuan
 
 ### Verificar la configuración
 
-1. Vuelva a abrir el **Símbolo del sistema** y ejecute el comando `route print`.
+1. Vuelva a abrir el **Command Prompt** y ejecute el comando `route print`.
 
 2. Verifique si el valor de la métrica ha cambiado.
 
@@ -150,25 +150,25 @@ Los valores que puede ingresar en **Interface Metric** van de `1` a `9999`. Cuan
 
 ## Solución de Problemas
 
-* Si la configuración no se aplica, reinicie el equipo o deshabilite y vuelva a habilitar el adaptador de red.
+* Si la configuración no se aplica, reinicie el equipo o deshabilite y luego vuelva a habilitar el adaptador de red.
 
-* Si se pierde la conexión de red, vuelva a la configuración original y habilite de nuevo la opción **Automatic Metric**. Comuníquese con su administrador de red para verificar la configuración correcta.
+* Si se pierde la conexión de red, vuelva a la configuración original y seleccione de nuevo la casilla **Automatic Metric**. Comuníquese con el administrador de red para verificar la configuración correcta.
 
 :::info
 
-Si necesita cambiar la configuración de red después de instalar **BioStar X**, se recomienda desinstalar por completo el programa y luego volver a instalarlo.
+Si necesita cambiar la configuración de red después de instalar **BioStar X**, debe desinstalar por completo el programa y luego volver a instalarlo.
 
 :::
 
 <NextStep>
 <NextItem to='express-install'>
 
-Esta guía proporciona un método de instalación sencillo para usuarios primerizos.
+Conozca cómo usar Express Installation para usuarios que la usan por primera vez.
 
 </NextItem>
 <NextItem to='custom-install'>
 
-Guía al usuario para configurar una instalación personalizada que se integre con una base de datos que ya haya instalado.
+Aprenda a realizar una instalación personalizada que use una base de datos que ya instaló.
 
 </NextItem>
 </NextStep>

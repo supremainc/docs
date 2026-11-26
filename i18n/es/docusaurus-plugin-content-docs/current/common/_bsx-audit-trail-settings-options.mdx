@@ -12,9 +12,9 @@ La sección <Cmd sid='audit.retention.sectionTimeAttendance' /> consta de los si
 
 </Include>
 
-* <Cmd sid='audit.retention.groupChanges' />: Registros de creación, actualización y eliminación. El sistema siempre los registra. No puede activar ni desactivar el registro.
+* <Cmd sid='audit.retention.groupChanges' />: Registros de creación, actualización y eliminación. Los registros siempre se guardan y no puede activar ni desactivar el registro.
 
-* <Cmd sid='audit.retention.groupAccess' />: Ver registros. Defina si el sistema crea registros.
+* <Cmd sid='audit.retention.groupAccess' />: Registros de la actividad de visualización. Puede configurar si se guardan registros.
 
 :::info
 
@@ -36,7 +36,7 @@ La sección <Cmd sid='audit.retention.sectionTimeAttendance' /> consta de los si
 
 ### Registros de cambios
 
-Como el sistema siempre registra el grupo <Cmd sid='audit.retention.groupChanges' />, seleccione el ajuste <Cmd sid='audit.retention.labelRetention' />.
+Como el grupo <Cmd sid='audit.retention.groupChanges' /> siempre se registra, seleccione una opción de <Cmd sid='audit.retention.labelRetention' />.
 
 * <Cmd sid='audit.retention.optionEndless' />: Conserve los registros de forma permanente sin eliminación automática.
 
@@ -44,9 +44,9 @@ Como el sistema siempre registra el grupo <Cmd sid='audit.retention.groupChanges
 
 ### Ver registros
 
-En el grupo <Cmd sid='audit.retention.groupAccess' />, defina si el sistema conserva los registros de visualización.
+En el grupo <Cmd sid='audit.retention.groupAccess' />, configure si se registrarán los eventos de visualización.
 
-* <Cmd sid='audit.retention.labelLogging' />: Establezca esta opción en <Cmd sid='audit.retention.loggingOn' /> para conservar los registros de visualización. Si no se necesita, establézcalo en <Cmd sid='audit.retention.loggingOff' />.
+* <Cmd sid='audit.retention.labelLogging' />: Para registrar los eventos de visualización, configúrelo en <Cmd sid='audit.retention.loggingOn' />. Si no se necesita, establézcalo en <Cmd sid='audit.retention.loggingOff' />.
 
 * <Cmd sid='audit.retention.labelRetention' />: Seleccione un método de retención.
 
@@ -56,7 +56,7 @@ En el grupo <Cmd sid='audit.retention.groupAccess' />, defina si el sistema cons
 
 :::info
 
-Cuando <Cmd sid='audit.retention.labelLogging' /> está en <Cmd sid='audit.retention.loggingOff' />, el sistema no registra eventos de visualización. Después de cambiarlo a <Cmd sid='audit.retention.loggingOn' />, el sistema no muestra los registros anteriores.
+Cuando <Cmd sid='audit.retention.labelLogging' /> está configurado en <Cmd sid='audit.retention.loggingOff' />, no se registran los eventos de visualización. No puede ver los registros del período anterior, aunque luego lo configure en <Cmd sid='audit.retention.loggingOn' />.
 
 :::
 
@@ -64,20 +64,20 @@ Cuando <Cmd sid='audit.retention.labelLogging' /> está en <Cmd sid='audit.reten
 
 <Include type={props.type} ref='accesscontrol'>
 
-Después de completar los ajustes de <Cmd sid='audit.retention.groupChanges' /> y <Cmd sid='audit.retention.groupAccess' />, haz clic en el botón <Cmd sid='common.apply' /> en la parte inferior de la sección <Cmd sid='audit.retention.sectionAccessControl' />. Guarda ambos ajustes de grupo juntos.
+Después de completar la configuración de <Cmd sid='audit.retention.groupChanges' /> y <Cmd sid='audit.retention.groupAccess' />, haga clic en <Cmd sid='common.apply' /> en la parte inferior de la sección <Cmd sid='audit.retention.sectionAccessControl' />. Guarda la configuración de ambos grupos a la vez.
 
 </Include>
 
 <Include type={props.type} ref='timeattendance'>
 
-Después de completar los ajustes de <Cmd sid='audit.retention.groupChanges' /> y <Cmd sid='audit.retention.groupAccess' />, haz clic en el botón <Cmd sid='common.apply' /> en la parte inferior de la sección <Cmd sid='audit.retention.sectionTimeAttendance' />. Guarda ambos ajustes de grupo juntos.
+Después de completar la configuración de <Cmd sid='audit.retention.groupChanges' /> y <Cmd sid='audit.retention.groupAccess' />, haga clic en <Cmd sid='common.apply' /> en la parte inferior de la sección <Cmd sid='audit.retention.sectionTimeAttendance' />. Guarda la configuración de ambos grupos a la vez.
 
 </Include>
 
 ## Cómo funciona la eliminación automática
 
-El servidor ejecuta esta tarea todos los días a la 1 a. m. La tarea elimina los registros que superan el período de retención establecido en <Cmd sid='audit.retention.optionCustom' />, sin importar las acciones del usuario. La tarea evalúa y elimina los registros al mismo tiempo. La tarea se ejecuta solo una vez al día.
+El servidor elimina automáticamente los registros que superen el período de retención establecido en <Cmd sid='audit.retention.optionCustom' /> durante la tarea que ejecuta a diario a la 1 a. m., independientemente de las acciones del usuario. La evaluación y la eliminación se realizan juntas en la misma tarea, y esta evaluación ocurre solo una vez al día.
 
-> Por ejemplo, establece los registros de <Cmd sid='audit.retention.groupAccess' /> en 30 días en <Cmd sid='audit.retention.optionCustom' />. A la 1 a. m., la tarea elimina los registros con más de 30 días de antigüedad. Los registros que acaban de superar el período de retención permanecen hasta que se ejecute la siguiente tarea de la 1 a. m.
+> Por ejemplo, si configura los registros de <Cmd sid='audit.retention.groupAccess' /> en 30 días en <Cmd sid='audit.retention.optionCustom' />, la tarea que se ejecuta a la 1 a. m. elimina de inmediato los registros con más de 30 días de antigüedad. Los registros que acaban de superar el período de retención permanecen hasta la 1 a. m. del día siguiente. tarea, porque la tarea se ejecuta solo una vez al día.
 
 Cuando <Cmd sid='audit.retention.labelRetention' /> se establece en <Cmd sid='audit.retention.optionEndless' />, la tarea de eliminación automática no se ejecuta y los registros se conservan permanentemente.

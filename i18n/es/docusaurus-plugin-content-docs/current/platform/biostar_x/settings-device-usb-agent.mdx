@@ -1,10 +1,10 @@
 ---
 id: settings-device-usb-agent
-title: Configuración del Agente USB
-description: Este documento proporciona instrucciones para usar el dispositivo de enrolamiento de huellas USB y el dispositivo de enrolamiento de tarjetas al acceder a BioStar X en la PC cliente.
+title: Configurar el agente USB
+description: Aprenda a usar un dispositivo USB de enrolamiento de huellas dactilares y un dispositivo de enrolamiento de tarjetas al acceder a BioStar X desde una PC cliente.
 ---
 
-Al acceder a **BioStar X** desde una PC cliente, **BioStar X** permite usar dispositivos USB de enrolamiento de huellas, de enrolamiento de tarjetas y escáneres de ID. Instale el agente de dispositivo USB para hacerlo. Este documento brinda orientación sobre cómo instalar y configurar el agente de dispositivo USB.
+Admite dispositivos USB de enrolamiento de huellas dactilares, dispositivos de enrolamiento de tarjetas y escáneres de ID cuando accede a **BioStar X** desde una PC cliente. Instale el agente de dispositivo USB para hacerlo. Aprenda a instalar y configurar el USB Device Agent.
 
 ## Dispositivos Compatibles
 
@@ -18,15 +18,15 @@ Los siguientes dispositivos pueden usarse después de instalar el USB Device Age
 
 :::info
 
-Los escáneres DESKO están soportados en la versión 1.0.3 o superior de BioStar X.
+Los escáneres de ID DESKO son compatibles con BioStar X versión 1.0.3 o posterior.
 
 :::
 
-## Instale el agente del dispositivo USB {/* #install-usb-agent */}
+## Instalar el USB Device Agent {/* #install-usb-agent */}
 
-Para usar un dispositivo USB de inscripción de huellas dactilares, un dispositivo de inscripción de tarjetas y un escáner de ID conectándose a **BioStar X** desde una PC cliente, debe instalarse el USB Device Agent.
+Para usar dispositivos USB de enrolamiento de huellas dactilares, dispositivos de enrolamiento de tarjetas y escáneres de ID al acceder a **BioStar X** desde una PC cliente, instale el USB Device Agent.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
 2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> en la barra lateral izquierda.
 
@@ -38,7 +38,7 @@ Para usar un dispositivo USB de inscripción de huellas dactilares, un dispositi
 
 :::info
 
-Si **User Account Control** está habilitado en Windows, el agente USB no se puede iniciar automáticamente. Desactive User Account Control o ejecútelo directamente con privilegios administrativos.
+Si **User Account Control** está habilitado en Windows, el agente USB no puede iniciarse automáticamente. Desactive User Account Control o ejecútelo directamente con privilegios de administrador.
 
 :::
 
@@ -46,19 +46,19 @@ Si **User Account Control** está habilitado en Windows, el agente USB no se pue
 
 Configure el orden de bytes del dispositivo de tarjeta USB.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
 2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> en la barra lateral izquierda.
 
-3. Configure la opción <Cmd sid='settings.usbAgent.byteOrder.title' product='2' /> en la sección <Cmd sid='settings.usbAgent.byteOrder' product='2' />.
+3. En la sección <Cmd sid='settings.usbAgent.byteOrder.title' product='2' />, configure la opción <Cmd sid='settings.usbAgent.byteOrder' product='2' />.
 
    <Image src='/img/biostarx-setting-device-usb-byte-order.png' />
 
-   * <Cmd>MSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte grandes a pequeñas, almacenando secuencialmente el número de serie de la tarjeta (CSN) de izquierda a derecha.
+   * <Cmd>MSB</Cmd>: Procesa los datos de la tarjeta desde el byte más significativo hasta el byte menos significativo y almacena el número de serie de la tarjeta (CSN) secuencialmente de izquierda a derecha.
 
-   * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte pequeñas a grandes, almacenando el número de serie de la tarjeta (CSN).
+   * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta desde el byte menos significativo hasta el byte más significativo y almacena el número de serie de la tarjeta (CSN).
 
-4. Una vez completados todos los ajustes, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+4. Después de completar todas las configuraciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
@@ -66,22 +66,22 @@ La opción <Cmd sid='settings.usbAgent.byteOrder' product='2' /> se aplica solo 
 
 :::
 
-## Configure el puerto del agente USB
+## Configurar el puerto del agente USB
 
-Configure el puerto usado por el agente USB.
+Configure el puerto que usa el agente USB.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
 2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> en la barra lateral izquierda.
 
-3. Ingrese el número de puerto en <Cmd sid='settings.usbAgent.port' product='2' /> en la sección <Cmd sid='settings.usbAgent.port.title' product='2' />.
+3. En la sección <Cmd sid='settings.usbAgent.port.title' product='2' />, introduzca el número de puerto en el campo de entrada <Cmd sid='settings.usbAgent.port' product='2' />.
 
    <Image src='/img/biostarx-setting-device-usb-agent-port.png' />
 
-4. Una vez completados todos los ajustes, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+4. Después de completar todas las configuraciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
-El agente USB es un programa que opera por cliente y la configuración del número de puerto permite que el servidor se comunique a través de ese puerto.
+El agente USB se ejecuta en cada PC cliente, y la configuración del número de puerto permite que el servidor se comunique a través de ese puerto.
 
 :::
