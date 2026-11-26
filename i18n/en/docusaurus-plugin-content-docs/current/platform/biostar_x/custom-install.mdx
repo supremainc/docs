@@ -6,11 +6,11 @@ keywords:
   - Custom installation
 ---
 
-This document provides a step-by-step guide on how to install **BioStar X** using the <Cmd code='biostar2.install.customInstall' className='bold'/> method. <Cmd code='biostar2.install.customInstall' className='bold'/> creates a database schema in conjunction with an existing database (MariaDB, MS SQL Server) installed on a local or remote server. Prepare the database and user account to be linked before starting the installation.
+Learn how to install **BioStar X** step by step using the <Cmd code='biostar2.install.customInstall' className='bold'/> method. <Cmd code='biostar2.install.customInstall' className='bold'/> connects to an existing database (MariaDB or MS SQL Server) on a local or remote server and generates the database schema. Before you start the installation, prepare the database and user account to connect to.
 
 ## Before you start {/* #start-before */}
 
-* The databases that can be used in integration with **BioStar X** are as follows.
+* The following databases are supported for use with **BioStar X**.
 
   * MariaDB 11.4.4
 
@@ -26,14 +26,14 @@ This document provides a step-by-step guide on how to install **BioStar X** usin
 
   * MS SQL Server 2022
 
-* MS SQL Server communication security supports TLS 1.2.
+* MS SQL Server supports TLS 1.2 for secure communication.
 
-* If the database table creation fails when MS SQL Server is set as the Database Type, you can create the table by executing the script in *C:\Program Files\BioStar X\dbscript\mssql* folder.
+* If database table creation fails after you set MS SQL Server as the database, run the scripts in *C:\Program Files\BioStar X\dbscript\mssql* to create the tables.
 
-* When installing with <Cmd code='biostar2.install.customInstall' className='bold'/>, **AC DB name**, **TA DB name**, and **VE DB name** cannot be set the same.
+* When you select <Cmd code='biostar2.install.customInstall' className='bold'/> as the installation option, you cannot set **AC DB name**, **TA DB name**, and **VE DB name** to the same value.
 
 * To use Windows authentication, [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) is required.
-  Please install the driver first.
+  Install the driver first.
 
 import InstallStep from '../../common/_biostar-install-steps.mdx';
 

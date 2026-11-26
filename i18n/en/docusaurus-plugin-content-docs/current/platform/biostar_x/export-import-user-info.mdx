@@ -1,24 +1,24 @@
 ---
 id: export-import-user-info
 title: Export/Import User Information
-description: You can utilize user information from a previous version or a different server by exporting or importing user data.
+description: You can use user information from a previous version or another server by exporting or importing it.
 keywords:
   - User information
   - Export
   - Import
 ---
 
-You can utilize user information from a previous version or a different server by exporting or importing user data.
+You can use user information from a previous version or another server by exporting or importing it.
 
 ## Export or import CSV {/* #csvexportimport */}
 
-Save selected user information as a CSV file, or load saved CSV files. This allows for easy transfer of user information using CSV files.
+You can save selected user information as a CSV file, or import a saved CSV file. You can easily transfer user information using a CSV file.
 
 :::info
 
-* If there are custom user fields not added to **BioStar X**, the CSV file cannot be imported correctly. For more information about adding custom user fields, see <DocLink docId='platform/biostar_x/settings-server-server#custom-field' />.
+* If you have custom user field data that you did not add to **BioStar X**, you cannot import the CSV file correctly. For more information about adding custom user fields, see <DocLink docId='platform/biostar_x/settings-server-server#custom-field' />.
 
-* If user information is entered in a language other than English or Korean, save the CSV file in UTF-8 format.
+* If user information is entered in a language other than English or Korean, save the CSV file as UTF-8.
 
 :::
 
@@ -26,13 +26,13 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Click the checkbox next to the users you want to save as a CSV file from the user list. You can select one or more users.
+2. Select the checkbox next to the users to save as a CSV file in the user list. You can select one or more users.
 
 3. Click <IcMoreW /> in the upper-right corner of the screen and select <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' />.
 
    <Image src='/img/biostarx-user-export-csv.png' />
 
-4. When the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> window appears, enter <Cmd sid='team.menu.export.exportReason' /> (optional), and click <Cmd sid='common.button.download' />.
+4. When the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> window appears, enter <Cmd sid='team.menu.export.exportReason' /> (optional) and click <Cmd sid='common.button.download' />.
 
    <Image src='/img/biostarx-user-export-csv-popup.png' />
 
@@ -56,55 +56,55 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
    <Image src='/img/biostarx-user-import-01.png' />
 
-5. User data fields from the CSV file will automatically map to user data fields in **BioStar X**. Click <Cmd sid='user.list.csvImport.reMapping' product='2' /> to remap fields with the same name.
+5. The user data fields in the CSV file are automatically mapped to the user data fields in **BioStar X**. To remap fields with the same name, click <Cmd sid='user.list.csvImport.reMapping' product='2' />.
 
    <Image src='/img/biostarx-user-import-02.png' width='50%' />
 
-6. Select whether to keep user data already registered with user IDs in **BioStar X** or to overwrite it with the information from the CSV file and click <Cmd sid='common.apply' />.
+6. Choose whether to keep the data of users whose IDs already exist in **BioStar X** or overwrite it with the CSV data, and then click <Cmd sid='common.apply' />.
 
    <Image src='/img/biostarx-user-import-03.png' />
 
-If an error occurs while importing the CSV file, you can recheck and upload only the CSV data that caused the error.
+If an error occurs while importing the CSV file information, you can recheck and upload only the CSV data that caused the error.
 
 :::info
 
-* Mobile access cards can be issued through CSV import. When using the regular site, one credit will be deducted from the Airfob Portal for each mobile access card issued upon completion of the import. To avoid issuing mobile access cards, disable mapping.
+* CSV import lets you issue mobile access cards. When using the regular site, one credit is deducted from the Airfob Portal for each mobile access card when the import completes. To avoid issuing mobile access cards, remove the mapping.
 
-* If the CSV file contains identical data to mobile access cards already issued to users registered in **BioStar X**, you can choose to maintain or overwrite the data, in which case existing mobile access cards will be retained.
+* If the CSV file contains the **same** data as a mobile access card issued to a user registered in **BioStar X**, you can keep or overwrite the data, and the existing mobile access card is retained.
 
-* If the CSV file contains different data from mobile access cards issued to users registered in **BioStar X**, maintaining the data will keep existing mobile access cards, while overwriting will issue new mobile access cards to the respective users.
+* If the CSV file contains **different** data from a mobile access card issued to a user registered in **BioStar X**, keeping the data retains the existing mobile access card, and overwriting it issues a new mobile access card to that user.
 
-* When issuing mobile access cards through CSV import on a dynamic site, ensure to input values for the `mobile_start_datetime` and `mobile_expiry_datetime` fields.
+* When you issue mobile access cards through CSV import on a dynamic site, make sure you enter values for the `mobile_start_datetime` and `mobile_expiry_datetime` fields.
 
 * **BioStar X** QR cannot be issued through CSV import.
 
-* User facial data can be enrolled through CSV import. For more information, see <DocLink docId='platform/biostar_x/batch-import-face#import-csv' />.
+* CSV import lets you enroll a user's face. For more information, see <DocLink docId='platform/biostar_x/batch-import-face#import-csv' />.
 
-* User PINs can be enrolled through CSV import. For more information, see <DocLink docId='platform/biostar_x/enroll-credential-pin' />.
+* CSV import lets you enroll a user's PIN. For more information, see <DocLink docId='platform/biostar_x/enroll-credential-pin' />.
 
-* If you add columns that do not match the saved CSV file, you cannot import the file into **BioStar X**.
+* If you add columns that do not match the saved CSV file, **BioStar X** cannot import it.
 
 * If a username starts with `&@~`, importing that CSV entry fails.
 
 * Set the validity period (expiration date and time) up to 2037-12-31 23:59:59. Import fails for entries with values after this date.
 
-* Avoid opening the exported CSV file directly in spreadsheet programs such as Excel. If a username starts with the `=` character, the program may treat it as a formula and show a different value.
+* Avoid opening the exported CSV file directly in spreadsheet programs such as Excel. If a username starts with the `=` character, the program may treat it as a formula and show a different value than the actual value.
 
 :::
 
 ## Export or import data files {/* #exportimportdatafile */}
 
-User information can be stored on external storage (USB) for import into **BioStar X** or devices. Up to 500,000 user records can be transferred from the server to devices or between devices.
+You can store user information on external storage (USB) and import it into **BioStar X** or a device. Up to 500,000 user records can be transferred from the server to a device or from one device to another.
 
 :::info
 
-* Data exported from devices using outdated firmware cannot be imported into **BioStar X**. Always use the latest version of the firmware.
+* Data exported from devices running outdated firmware cannot be imported into **BioStar X**. Always use the latest firmware version.
 
-* Data cannot be imported if different fingerprint template formats are used. For example, data exported from devices using the Suprema fingerprint template format cannot be imported into devices using the ISO fingerprint template format.
+* Data cannot be imported when different fingerprint template formats are used. For example, data exported from devices using the Suprema fingerprint template format cannot be imported into devices using the ISO fingerprint template format.
 
-* When importing user data, if fingerprint and face credentials stored on the **BioStar X** server already exist, it will be overwritten by the existing data.
+* When importing user data, if fingerprint and face credentials already exist on the **BioStar X** server, the existing data is overwritten.
 
-* Data cannot be imported from devices with outdated firmware versions. Upgrade the device firmware to a compatible version. 
+* Data cannot be imported from devices running outdated firmware. Upgrade the device firmware to a compatible version. 
 
   <details>
   <summary>View compatible devices and firmware versions</summary>
@@ -131,25 +131,25 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Click the checkbox next to the users you want to export from the user list. You can select one or more users.
+2. In the user list, select the checkbox for the users to export. You can select one or more users.
 
 3. Click <IcMoreW /> in the upper-right corner of the screen, then select <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.dataFile' />.
 
    <Image src='/img/biostarx-user-export-data.png' />
 
-4. In the <Cmd sid='team.menu.dialog.exprotDataFile.title' /> window, select the device to apply the data file.
+4. In the <Cmd sid='team.menu.dialog.exprotDataFile.title' /> window, select the device to apply the data file to.
 
    <Image src='/img/biostarx-user-export-data-select-device.png' />
 
 5. Enter <Cmd sid='team.menu.export.exportReason' /> (optional) and click <Cmd sid='common.apply' />.
 
-6. Save the data file in your desired local path.
+6. Save the data file to a local path.
 
 :::info
 
-* The data file export includes user profile photos, IDs, names, validity periods, access groups, PINs, private authentication modes, credentials (face, fingerprint, card, mobile card, face, QR/Barcode), and one-to-one security level information.
+* Data file export saves the following user information as a file: profile photo, ID, name, validity period, access group, PIN, private authentication mode, credentials (face, fingerprint, card, mobile card, face, QR/Barcode), and 1:1 security level.
 
-* Selecting the incorrect device to apply the data file may cause it to be unrecognized by that device.
+* If you do not select the correct device to apply the data file to, the device cannot recognize the data file.
 
 * <Cmd sid='team.menu.export.exportReason' /> is optional. Export reasons are recorded in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
@@ -157,7 +157,7 @@ User information can be stored on external storage (USB) for import into **BioSt
 
 :::caution
 
-To import file exported from **BioStar X** into devices, you must rename the file as follows so that the device can recognize it. The file name format will be adjusted to be automatically recognized through future device firmware updates.
+To import a file exported from **BioStar X** to a device, rename the file as follows so the device can recognize it. The file name format is scheduled to be adjusted through a future device firmware update so the device recognizes it automatically.
 
 *<b>BioStarX</b>_YYYYMMDD_HHMMSS.tgz* → *<b>BioStar2</b>_YYYYMMDD_HHMMSS.tgz*
 
@@ -173,4 +173,4 @@ To import file exported from **BioStar X** into devices, you must rename the fil
 
 3. Select the data file (*.tgz*) saved locally.
 
-A message will appear on the screen if the data file is successfully imported.
+If the data file is imported successfully, a message appears on the screen.
