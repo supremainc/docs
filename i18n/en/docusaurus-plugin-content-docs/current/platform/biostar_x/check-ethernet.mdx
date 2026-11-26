@@ -1,41 +1,41 @@
 ---
 id: check-ethernet
 title: Check Network Priority
-description: Instructions for checking and setting the server's network priority before installing BioStar X.
+description: Learn how to check and set the server's network priority before installing BioStar X.
 keywords:
   - Network
   - BioStar X
 ---
 
-Instructions for checking and setting the server's network priority before installing **BioStar X**.
+Learn how to check and set the server's network priority before installing **BioStar X**.
 
 ## When is it needed?
 
-You need to check and set network priority in the following situations.
+You need to check and set the network priority in the following situations.
 
 * When two or more network adapters (LAN cards) are installed on the server
 
 * When a specific network adapter must be used for the **BioStar X** service
 
-* To prevent network connection issues after installing **BioStar X**
+* When you need to prevent network connection issues after installing **BioStar X**
 
 :::info
 
-If none of the above situations apply, there is no need to change the network priority. Skip this step and proceed with the installation of **BioStar X**. For more information about installing **BioStar X**, see <DocLink docId='platform/biostar_x/express-install' />.
+If none of the above situations apply, you do not need to change the network priority. Skip this step and continue installing **BioStar X**. For more information about installing **BioStar X**, see <DocLink docId='platform/biostar_x/express-install' />.
 
 :::
 
 :::warning
 
-A network adapter with a lower metric (higher priority) will be automatically selected during the installation of **BioStar X**. Since it may be difficult to change this setting after installation, be sure to check and adjust the network priority before installation.
+During **BioStar X** installation, the network adapter with a lower network metric value (higher priority) is automatically selected. Since it may be difficult to change this setting after installation, **make sure you check and adjust the network priority before installation**.
 
 :::
 
 ## Check Network Priority
 
-### Check in command prompt
+### Check in Command Prompt
 
-1. Search for `cmd` in the **Start** menu and run **Command Prompt**.
+1. To open **Command Prompt**, search for `cmd` in the **Start** menu.
 
 2. Enter the following command.
 
@@ -43,9 +43,9 @@ A network adapter with a lower metric (higher priority) will be automatically se
    route print
    ```
 
-3. Look for entries in the **IPv4 Route Table** section where **Network Destination** is `0.0.0.0`.
+3. In the output, look for entries in the **IPv4 Route Table** section where **Network Destination** is `0.0.0.0`.
 
-4. Check the value in the **Metric** column. The lower the value, the higher the priority.
+4. Check the value in the **Metric** column. **The lower the value, the higher the priority**.
 
 <PageBreak />
 
@@ -53,11 +53,11 @@ A network adapter with a lower metric (higher priority) will be automatically se
 
 <Image src='/img/common/biostarx-install-check-network-cmd.png' alone />
 
-In the above example, the `192.168.40.123` interface has a metric value of **20**, resulting in a higher priority.
+In the example above, the `192.168.40.123` interface has a metric value of **20**, so it has a higher priority.
 
 ### Check network adapter information
 
-Verify which network adapter corresponds to each interface.
+Verify which network adapter each interface corresponds to.
 
 1. In the **Command Prompt** window, enter the command below.
 
@@ -65,17 +65,17 @@ Verify which network adapter corresponds to each interface.
    ipconfig /all
    ```
 
-2. Match each network adapter's **IPv4 address** with the **Gateway** address identified earlier to identify which adapter it is.
+2. Match each network adapter's **IPv4 address** with the **Gateway** address you checked earlier to identify the adapter.
 
 <PageBreak />
 
 ## Change network priority
 
-To raise the priority of the desired network adapter, follow the steps below.
+To increase the priority of the selected network adapter, follow these steps.
 
 :::info
 
-The following steps are based on Windows 11. The menu location may vary depending on the version of Windows you are using.
+These steps are based on Windows 11. Menu locations may vary depending on your Windows version.
 
 :::
 
@@ -88,9 +88,9 @@ The following steps are based on Windows 11. The menu location may vary dependin
 
    <Image src='/img/biostarx-install-check-start-network-search.png' />
 
-2. Click **View Network Connections** from the search results.
+2. Click **View Network Connections** in the search results.
 
-3. Double-click on the adapter connected to the internet from the list.
+3. Double-click the adapter connected to the internet in the list.
 
    <Image src='/img/biostarx-install-check-control-network-connections.png' />
 
@@ -118,21 +118,21 @@ The following steps are based on Windows 11. The menu location may vary dependin
 
 ### Metric settings
 
-1. Uncheck the **Automatic Metric** checkbox.
+1. Clear the **Automatic Metric** checkbox.
 
    <Image src='/img/biostarx-install-check-set-metrics.png' />
 
-2. Enter the desired value in the **Interface Metric** field.
+2. Enter the value to use in the **Interface Metric** field.
 
-   * If you want the highest priority, enter `1`.
+   * For the highest priority, enter `1`.
 
-   * If you want a higher priority than other adapters, enter a number smaller than the metric values of other adapters.
+   * For a higher priority than other adapters, enter a number smaller than the other adapters' metric values.
 
 3. To save the settings and close all windows, click **OK**.
 
 :::info
 
-The values you can enter for **Interface Metric** range from `1` to `9999`. The lower the value, the higher the priority.
+The **Interface Metric** field accepts values from `1` to `9999`. Lower values have higher priority.
 
 :::
 
@@ -141,7 +141,7 @@ The values you can enter for **Interface Metric** range from `1` to `9999`. The 
 
 ### Check settings
 
-1. Reopen **Command Prompt** and execute the `route print` command.
+1. Reopen **Command Prompt** and run the `route print` command.
 
 2. Check whether the metric value has changed.
 
@@ -150,20 +150,20 @@ The values you can enter for **Interface Metric** range from `1` to `9999`. The 
 
 ## Troubleshooting
 
-* If the settings are not applied, restart your computer or disable and then re-enable the network adapter.
+* If the setting does not apply, restart the computer or disable and then re-enable the network adapter.
 
-* If the network connection is lost, revert to the original settings and re-enable the **Automatic Metric** option. Contact your network administrator to verify the correct settings.
+* If the network connection is lost, revert to the original settings and select the **Automatic Metric** checkbox again. Contact the network administrator to verify the correct settings.
 
 :::info
 
-If you need to change network settings after installing **BioStar X**, it's recommended to completely uninstall the program and then reinstall it.
+If you need to change network settings after installing **BioStar X**, you should completely uninstall the program and then reinstall it.
 
 :::
 
 <NextStep>
 <NextItem to='express-install'>
 
-This guide provides a simple installation method for first-time users.
+Learn how to use Express Installation for first-time users.
 
 </NextItem>
 <NextItem to='custom-install'>

@@ -1,63 +1,63 @@
 ---
 id: ad-encrypt
-title: Active Directory Encryption
-description: You can use the encryption when communicating with a Windows Active Directory server.
+title: Set Up Active Directory Encryption
+description: Encryption is available for communication with a Windows Active Directory server.
 ---
 
-You can use the encryption when communicating with a Windows Active Directory server. Set according to the following order when using the encryption for the first time.
+Encryption is available for communication with a Windows Active Directory server. When you use Active Directory encryption for the first time, set it up in the following order.
 
-## Step 1. Installing Active Directory certificate services
+## Step 1. Install Active Directory Certificate Services
 
-To use Windows Active Directory server encryption communication, you must install the Active Directory Certificate Services. The Active Directory Certificate Services can be installed as follows:
+To use encrypted communication with a Windows Active Directory server, you must install Active Directory Certificate Services. To install Active Directory Certificate Services, follow these steps.
 
 1. On the PC where the Windows Active Directory server is installed, run **Server Manager**, and then click **Manage** → **Add Roles and Features**.
 
 2. On **Before You Begin**, click **Next**.
 
-3. On **Select Installation Type**, select **Role-Based or feature-based installation** and then click **Next**.
+3. On **Select Installation Type**, select **Role-based or feature-based installation**, and then click **Next**.
 
-4. On **Select destination server**, select **Select a server from the server pool**, check the server,and click **Next**.
+4. On **Select destination server**, select **Select a server from the server pool**, confirm the server, and then click **Next**.
 
-5. On **Select Server Roles**, select **Active Directory Certificate Services** and click **Next**.
+5. On **Select Server Roles**, select **Active Directory Certificate Services**, and then click **Next**.
 
-6. When a pop-up window appears, view the details and click **Add Features** → **Next**.
+6. When a pop-up window appears, review the details, click **Add Features**, and then click **Next**.
 
-7. View the details of **Active Directory Certificate Services** and click **Next**.
+7. Review the details of **Active Directory Certificate Services**, and then click **Next**.
 
 8. On **Confirm installation selections**, click **Install**. When installation is complete, click **Configure Active Directory Certificate Services on the destination server**.
 
-9. When **AD CS Configuration wizard** appears, view the details and click **Next**.
+9. When the **AD CS Configuration** window appears, review the settings, and then click **Next**.
 
-10. On **Role Services**, click **Certification Authority** → **Next**.
+10. On **Role Services**, select **Certification Authority**, and then click **Next**.
 
-11. On the **Setup Type** page, select **Enterprise CA** and click **Next**.
+11. On **Setup Type**, select **Enterprise CA**, and then click **Next**.
 
-12. On the **Specify the type of the CA** page, select **Root CA** and click **Next**.
+12. On **Specify the type of the CA**, select **Root CA**, and then click **Next**.
 
-13. On the **Specify the type of the private key** page, select **Create a new private key** and click **Next**.
+13. On **Specify the type of the private key**, select **Create a new private key**, and then click **Next**.
 
-14. Set the **Cryptography for CA**, **CA Name**, and **Validity Period**, and then click **Next**.
+14. Set **Cryptography**, **CA Name**, and **Validity Period**, and then click **Next**.
 
-15. On the **CA Database** page, set the **folder location for the certificate database** and the **certificate database log** and then click **Next**.
+15. On **CA Database**, set **Certificate database location** and **Certificate database log location**, and then click **Next**.
 
-16. On **Confirmation** page, view the details of Active Directory Certificate Services and click **Configure**.
+16. On **Confirmation**, review the details of the Active Directory Certificate Services settings, and then click **Configure**.
 
-## Step 2. Connecting LDAPS (LDAP over SSL/TLS)
+## Step 2. Connect LDAPS (LDAP over SSL/TLS)
 
-1. Click **Start** → **Run**.
+1. Click **Start** → **Run** in Windows.
 
 2. Enter **ldp** in the input field.
 
-3. When the **Ldp-disconnected** window appears, click **Connect**.
+3. When the **Ldp-disconnected** window appears, click **Connection**.
 
-4. Fill in **Server** and **Port** fields and select **SSL**.
+4. Enter values in the **Server** and **Port** fields, select **SSL**, and then click **OK**.
 
-## Step 3. Copying the root certificate
+## Step 3. Copy the root certificate
 
 1. Run Command Prompt on the PC where the Windows Active Directory server is installed.
 
-2. Enter `certutil -ca.cert client.crt` command to copy the root certificate.
+2. Enter `certutil -ca.cert client.crt` to copy the root certificate.
 
-3. Enter `keytool -import -keystore ad.jks -file client.crt` command to convert the server certificate to *.jks* format.
+3. Enter `keytool -import -keystore ad.jks -file client.crt` to convert the server certificate to *.jks* format.
 
-4. Save the *.jks*-formatted server certificate to the **BioStar X** installation path.
+4. Save the *.jks*-format server certificate to the **BioStar X** installation path.

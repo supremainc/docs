@@ -1,7 +1,7 @@
 ---
 id: add-sub-db
-title: Add Auxiliary Database
-description: When adding a Multi Communications Server, add and connect an auxiliary database to reduce the load on the main server.
+title: Add a Secondary Database
+description: Learn how to add and connect a secondary database that works with the Multi Communications Server to reduce the load on the main server.
 keywords:
   - Database
   - Add
@@ -11,11 +11,11 @@ keywords:
 import DbQueryCreate from "../../common/_bsx-sub-db-create-table-query-mariadb.mdx";
 import DbQueryCreateSQL from "../../common/_bsx-sub-db-create-table-query-mssql.mdx";
 
-When adding a Multi Communications Server, add and connect an auxiliary database to reduce the load on the main server.
+Learn how to add and connect a secondary database that works with the Multi Communications Server to reduce the load on the main server.
 
 :::info
 
-* You need a **multi-communication server** license to add an auxiliary database. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* To add a secondary database, you need a **Multi Communications Server** license. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 * For more information about installing the Multi Communications Server, see <DocLink docId='platform/biostar_x/install-communication-server' />.
 
@@ -23,19 +23,19 @@ When adding a Multi Communications Server, add and connect an auxiliary database
 
 ## Before you start
 
-If you are using a domain or hostname instead of an IP address for communication between databases in a MariaDB environment, be sure to check the following guidance.
+If you use a domain or hostname instead of an IP address for database communication in MariaDB, make sure you review the guidance below.
 
-* If you do not use an IP address, `Create user` or `Grant` enrollment may not be possible.
+* If you do not use an IP address, you may not be able to run `Create user` or `Grant`.
 
-* If you are communicating using a domain or hostname, ensure that user and permissions are registered for localhost.
+* If you communicate using a domain or hostname, make sure a user and permissions are registered for localhost.
 
-* If you installed BioStar X using the convenient installation method, the root account is registered only for localhost, so you must add the server's IP address or *127.0.0.1*.
+* If you installed BioStar X using Express Installation, the root account is registered only for localhost. Also register the user and permissions for the server IP address or *127.0.0.1*.
 
-### Registration method
+### How to register
 
-Check if a password is set for the account with Host *127.0.0.1* and User root; if not set, be sure to establish a password and grant permissions.
+Check whether the root user with Host *127.0.0.1* has a password; if not, set one and grant permissions.
 
-1. Check if a password is set for the account with Host *127.0.0.1* and User root. 
+1. Check whether the root user with Host *127.0.0.1* has a password. 
 
    ```sql
    SELECT * FROM mysql.user;
@@ -43,9 +43,9 @@ Check if a password is set for the account with Host *127.0.0.1* and User root; 
 
    <Image src='/img/common/biostarx-subdb-mariadb-specific.png' alone />
 
-   If blank, the password is not set, so be sure to run the query in the following items to add a password and grant permissions.
+   If it is blank, no password is set, so make sure to run the query in the next entry to add a password and grant permissions.
 
-2. Set a password and grant permissions for the account with Host *127.0.0.1* and User root.
+2. Set a password and grant permissions for the root user with Host *127.0.0.1*.
 
    ```sql
    ALTER USER 'root'@'127.0.0.1' IDENTIFIED BY '<Main DB AC Schema Password>';
@@ -75,15 +75,15 @@ Check if a password is set for the account with Host *127.0.0.1* and User root; 
    FLUSH PRIVILEGES;
    ```
 
-### IP address communication settings
+### Set up communication by IP address
 
-The following settings can force communication via IP address.
+Use the settings below to force communication by IP address.
 
-1. After installing **BioStar X**, move to the following path.
+1. After you install **BioStar X**, go to the following path.
 
    >  C:\Program Files\BioStar X\ta\mariadb-11.4.4-winx64
 
-2. Open the *my.cnf* file with the owner's permissions and add the `skip-name-resolve` option to the [mysqld] section.
+2. Open the *my.cnf* file with administrator privileges and add the `skip-name-resolve` option to the [mysqld] section.
 
    ```ini
    [mysqld]
@@ -100,9 +100,9 @@ The following settings can force communication via IP address.
 
 3. Restart the MariaDB service.
 
-## Add auxiliary database {/* #add-sub-db */}
+## Add a secondary database {/* #add-sub-db */}
 
-This section provides guidance on adding an auxiliary database. Depending on the type of database being used, there are two methods: MariaDB and SQL Server.
+Learn how to add a secondary database. Depending on your database type, use one of two methods: MariaDB or SQL Server.
 
 ### MariaDB {/* #mariadb */}
 
@@ -111,7 +111,7 @@ This section provides guidance on adding an auxiliary database. Depending on the
 
 #### Main database
 
-Grant the account and permissions to access the main database from the new auxiliary database.
+Create an account and grant permissions so the new secondary database can access the main database.
 
 ```sql
 CREATE USER '<Main DB AC Schema User>'@'<Sub DB IP>' IDENTIFIED BY '<Main DB AC Schema Password>';
@@ -130,9 +130,9 @@ FLUSH PRIVILEGES;
 </Step>
 <Step>
 
-#### Auxiliary database
+#### Secondary database
 
-Grant the account and permissions to access the new auxiliary database from the main database.
+Create an account and grant permissions so the main database can access the new secondary database.
 
 ```sql
 CREATE USER '<Sub DB AC Schema User>'@'<Main DB IP>' IDENTIFIED BY '<Sub DB AC Schema Password>';
@@ -151,15 +151,15 @@ FLUSH PRIVILEGES;
 </Step>
 <Step>
 
-#### Check for FederatedX usage
+#### Check whether FederatedX is enabled
 
-Run the command below in both the main and auxiliary databases to check if the FederatedX storage engine is enabled.
+In both the main and secondary databases, run the command below to check whether the FederatedX storage engine is enabled.
 
 ```sql
 SHOW ENGINES;
 ```
 
-If the query result shows `Engine : FEDERATED, Support : YES`, it is already installed. If the FederatedX storage engine is not installed, execute the query below.
+If the query result shows `Engine : FEDERATED, Support : YES`, it is already installed. If the FederatedX storage engine is not installed, run the query below.
 
 ```sql
 INSTALL PLUGIN federated SONAME 'ha_federatedx';
@@ -167,16 +167,16 @@ INSTALL PLUGIN federated SONAME 'ha_federatedx';
 
 :::info
 
-Check if the *ha_federatedx.dll* file exists in the *lib/plugin* folder under the path where MariaDB is installed. Typically, the dll file exists at *C:\Program Files\MariaDB \{version}\lib\plugin* path.
+Check whether the *ha_federatedx.dll* file exists in the *lib/plugin* folder under the path where MariaDB is installed. Typically, the dll file is located at *C:\Program Files\MariaDB \{version}\lib\plugin*.
 
 :::
 
 </Step>
 <Step>
 
-#### Register server alias
+#### Register a server alias
 
-Register a server alias to allow the federatedX table created in the auxiliary database to access the source table in the main database.
+Register a server alias so that the federatedX table created in the secondary database can access the source table in the main database.
 
 ```sql
 CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
@@ -185,7 +185,7 @@ CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>',
 SELECT * FROM mysql.servers;
 ```
 
-If you need to change information about Host, Port, DB, User, or Password for the existing registered server name, it can be modified using the `Alter` statement. You may also change certain information only.
+To change the Host, Port, DB, User, or Password information for a registered server name, modify it using an `Alter` statement. You can also change only some of the information.
 
 ```sql
 ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
@@ -200,11 +200,11 @@ ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'bios
 </Step>
 <Step>
 
-#### Table link settings
+#### Set up table links
 
-Follow the steps below to link the necessary tables in the auxiliary database to the tables in the main database.
+Follow the steps below to link the required tables in the secondary database to the tables in the main database.
 
-* The following is the query to generate `CREATE TABLE` statements in the main database.
+* The following query generates `CREATE TABLE` statements in the main database.
 
   ```sql
   select
@@ -224,13 +224,13 @@ Follow the steps below to link the necessary tables in the auxiliary database to
 
   :::info
 
-  Due to the nature of FederatedX, it is recommended to set `Table_type` to 'BASE TABLE'. `VIEW type` is also possible but not recommended.
+  Due to the nature of FederatedX, set `Table_type` to 'BASE TABLE'. `VIEW type` also works, but is not recommended.
 
   :::
 
 <div className='print--invisible'>
 
-* Be sure to input the `CREATE` statement generated by the above query into the auxiliary database.
+* Make sure to enter the `CREATE` statement generated by the query above in the secondary database.
 
   <DbQueryCreate />
 
@@ -239,7 +239,7 @@ Follow the steps below to link the necessary tables in the auxiliary database to
 </Step>
 <Step>
 
-#### Service Manager settings
+#### Set up Service Manager
 
 1. Run **BioStar X Service Manager**. (<Start/> → **BioStar X** → **BioStar X Service Manager**)
 
@@ -247,7 +247,7 @@ Follow the steps below to link the necessary tables in the auxiliary database to
 
 3. Click <Cmd>+ Add Database</Cmd> in the upper-right corner of the screen.
 
-4. Enter each item in the database addition screen.
+4. In the Add Database screen, enter each field.
 
    <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
 
@@ -261,7 +261,7 @@ Follow the steps below to link the necessary tables in the auxiliary database to
 
    * <Cmd>Port</Cmd>: Enter the port number of the database server.
 
-   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Enter the name, user, and password of the AC, TA databases.
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Enter the name, user, and password for the AC and TA databases.
 
 5. Click <Cmd>Test Connection</Cmd> in the upper-right corner to check if the database is connected properly.
 
@@ -277,7 +277,7 @@ Follow the steps below to link the necessary tables in the auxiliary database to
 
 #### Grant permissions for the main database
 
-Grant the following permissions on the main database with an account that has sysadmin privileges.
+Using an account with sysadmin privileges, grant the following permissions on the main database.
 
 ```sql
 GRANT ALTER ANY LINKED SERVER TO [<MAIN DATABASE AC USER>];
@@ -292,13 +292,13 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 </Step>
 <Step>
 
-#### Grant permissions for the auxiliary database
+#### Grant permissions for the secondary database
 
-1. Connect User Mapping for tables and users in the auxiliary database with an account that has sysadmin privileges. At this time, adding the `db_owner` role is necessary.
+1. sysadmin privileges are required to connect User Mapping for the tables and users in the secondary database. Then add the `db_owner` role.
 
    <Image src='/img/common/biostarx-subdb-user-mapping.png' alone />
 
-2. Grant the following permissions to the database to be added.
+2. Grant the following permissions to the database you add.
 
    ```sql
    GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
@@ -313,9 +313,9 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 </Step>
 <Step>
 
-#### Service Manager settings
+#### Set up Service Manager
 
-Use **BioStar X Service Manager** to add the auxiliary database.
+To add a secondary database, use **BioStar X Service Manager**.
 
 1. Run **BioStar X Service Manager**. (<Start/> → **BioStar X** → **BioStar X Service Manager**)
 
@@ -323,7 +323,7 @@ Use **BioStar X Service Manager** to add the auxiliary database.
 
 3. Click <Cmd>+ Add Database</Cmd> in the upper-right corner of the screen.
 
-4. Enter each item in the database addition screen.
+4. In the Add Database screen, enter each field.
 
    <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
 
@@ -337,7 +337,7 @@ Use **BioStar X Service Manager** to add the auxiliary database.
 
    * <Cmd>Port</Cmd>: Enter the port number of the database server.
 
-   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Enter the name, user, and password of the AC, TA databases.
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Enter the name, user, and password for the AC and TA databases.
 
 5. Click <Cmd>Test Connection</Cmd> in the upper-right corner to check if the database is connected properly.
 
@@ -345,18 +345,18 @@ Use **BioStar X Service Manager** to add the auxiliary database.
 
 :::info
 
-* After completing the settings, Linked Server settings for both main and auxiliary databases will be automatically applied.
+* After setup is complete, Linked Server settings are applied automatically to the main and secondary databases.
 
-* Even when modifying database information, the Linked Server settings will be automatically changed. When modifying the main database, the changes will reflect in the Linked Server settings of all registered auxiliary databases. When modifying the auxiliary database, only changes for the main database and that auxiliary database will be reflected.
+* When you edit database information, the Linked Server settings change automatically. When you edit the main database, the updated information is applied to the Linked Server settings for all registered secondary databases. When you edit a secondary database, the updated information is applied only to the main database and that secondary database.
 
 :::
 
 </Step>
 <Step>
 
-#### Generate Linked Temp Table query
+#### Generate a Linked Temp Table query
 
-Run the query below in the main database to generate the Linked Temp Table query to be created in the auxiliary database.
+Run the query below in the main database to generate a Linked Temp Table query to run in the secondary database.
 
 ```sql
 USE [<AC Schema>];
@@ -411,7 +411,7 @@ ORDER BY t.name;
 
 :::info
 
-This is an example of a `CREATE` statement generated by the above query.
+This is an example of a `CREATE` statement generated by the query above.
 
 <DbQueryCreateSQL />
 
@@ -422,9 +422,9 @@ This is an example of a `CREATE` statement generated by the above query.
 </Step>
 <Step>
 
-#### Execute query in the auxiliary database.
+#### Run the query in the secondary database
 
-Copy the previously generated `CREATE SYNONYM` query in full. Connect to the auxiliary database server to be added, write the query as below, and execute it. It will be stored in Synonyms in the AC schema of the auxiliary database.
+Copy the entire `CREATE SYNONYM` query that you generated earlier. Connect to the secondary database server you are adding, and then write and run the query as shown below. They are stored in Synonyms under the AC schema of the secondary database.
 
 ```sql
 use [<Sub DB AC Database>];
