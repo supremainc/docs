@@ -62,10 +62,10 @@ const config = {
     // Ask AI 챗봇(src/components/AskAi)의 답변 서버.
     askAi: {
       // 'algolia': Algolia Agent Studio, 'solis': SOLIS 서버(복구되면 다시 'solis'로 바꾼다)
-      provider: 'algolia',
+      provider: 'solis',
       solis: {
         baseUrl: 'https://solis-test.supremainc.com',
-        clientCode: 'aws-test',
+        clientCode: 'f3ceb17da3b1351aacfa02bb214a7afc',
       },
       // main/preview 모두 같은 에이전트(main 앱의 SPDocs 인덱스)를 쓴다.
       // apiKey는 search 권한만 있는 키다. 브라우저에 노출되므로 Agent Studio의 허용 도메인과 rate limit으로 보호한다.
