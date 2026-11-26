@@ -1,0 +1,35 @@
+---
+id: 102
+title: Firmware Version 1.0.2
+---
+
+# Firmware Version 1.0.2 (Build No. 1.0.2_261123)
+
+Release<Separator/>2026-11-26
+
+:::caution
+
+Due to enhanced security, firmware upgraded to v1.0.2 or later cannot be downgraded to an earlier version.
+
+:::
+
+## New Features and Improvements
+
+---
+
+    {/* (XPQ2FW-210) CVE-2026-98432 보안 취약점 개선 */}
+1. Improved security vulnerabilities
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+    {/* (XPQ2FW-209) [OSDP] 사용자 키가 설정된 상태에서 기본 키로 연결을 요청하는 CHLNG 수신 시 NAK 대신 CCRYPT로 응답하는 문제 */}
+1. Device responding differently from the OSDP standard when receiving a default key connection request with an SCB Key set in OSDP secure communication. <Badge>1.0.0</Badge>
+
+    {/* (XPQ2FW-208) [FISF-2491] Broadcast 주소(0x7F)로 수신한 KEYSET 명령을 복호화하지 않아 NAK로 응답하는 문제 */}
+1. Connection failing due to key setting failure when OSDP secure communication is enabled on a third-party controller. <Badge>1.0.0</Badge>
+
+</BugLists>
