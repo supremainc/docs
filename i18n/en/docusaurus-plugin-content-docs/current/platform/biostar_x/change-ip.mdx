@@ -8,11 +8,11 @@ Use this document when the server's network environment changes or when you need
 
 :::info
 
-The main server IP address change feature is supported in **BioStar X v1.0.2** and later.
+The main server IP address change feature is supported in **BioStar X v1.0.2** or later.
 
 :::
 
-## IP address change
+## Change IP address
 
 First, change the IP address on the server where **BioStar X** is installed. Change the IP address of the network adapter connected to the external network.
 
@@ -32,7 +32,7 @@ Use the **BioStar X IP Setting** tool to change the IP address.
 
 1. In Windows, click <Start/> → **BioStar X** → **BioStar X IP Setting**.
 
-2. When the <Cmd>BioStar X IP Setting</Cmd> window appears, select the IP address you want to use from <Cmd>Server Address</Cmd>.
+2. When the <Cmd>BioStar X IP Setting</Cmd> window appears, select the IP address in <Cmd>Server Address</Cmd>.
 
    <Image src='/img/common/biostarx-sm-change-ip.png' alone />
 
@@ -50,17 +50,17 @@ Use the **BioStar X IP Setting** tool to change the IP address.
 
    <Image src='/img/common/biostarx-sm-change-ip-success.png' alone />
 
-After the IP address change completes, restart all services.
+After the IP address change completes, all services restart.
 
 :::info
 
 * The IP address cannot be entered manually; select one from the IP addresses listed in <Cmd>Server Address</Cmd>.
 
-* You can view the new IP address in **BioStar X Service Manager** → <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Server (Main)</Cmd> under <Cmd>Server Address</Cmd>.
+* The new IP address appears in **BioStar X Service Manager** → <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Server (Main)</Cmd> under <Cmd>Server Address</Cmd>.
 
    ![BioStar X Service Manager Server Address](/img/common/biostarx-sm-change-ip-check.png)
 
-* If a device is registered to BioStar X with the <Cmd sid='device.info.deviceToServerConnection' product='2' /> option, the administrator must manually update that device's server IP to the new IP address.
+* If a device is registered to BioStar X with the <Cmd sid='device.info.deviceToServerConnection' product='2' /> option, the administrator must manually update that device's server IP address to the new IP address.
 
 :::
 
@@ -80,31 +80,31 @@ If the database is hosted on the same server as **BioStar X**, stop all services
 
 6. Restart all services related to **BioStar X** in Windows Services (service.msc).
 
-Open a web browser and verify that you can access the server using the new IP address.
+Open a web browser and verify that the server is accessible using the new IP address.
 
 ## Update Multi Communications Server {/* #communicationServer */}
 
-If you installed an additional Multi Communications Server, update its settings to use the main server's new IP address. Run this on the server where you installed the Multi Communications Server.
+If you installed an additional Multi Communications Server, update its settings to use the main server's new IP address. Follow this procedure on the server where you installed the Multi Communications Server.
 
-1. Navigate to *C:\Program Files\BioStar X Communications Server*.
+1. Navigate to *C:\\Program Files\\BioStar X Communications Server*.
 
 2. Run *biostar-device-cert-enroll.exe*.
 
-3. When the <Cmd>Certificate Enrollment</Cmd> window appears, enter the new IP address of the main server in the <Cmd>Main Server IP Address</Cmd> field.
+3. When the <Cmd>Certificate Enrollment</Cmd> window appears, enter the new main server IP address in the <Cmd>Main Server IP Address</Cmd> field.
 
    <Image src='/img/common/biostarx-sm-change-ip-enroll-cert.png' alone />
 
-4. If the main server's port number differs from the default (21810), enter the new port number in the <Cmd>BioStar X Coordinator Service Port</Cmd> field.
+4. If the main server port number differs from the default (21810), enter the new port number in the <Cmd>BioStar X Coordinator Service Port</Cmd> field.
 
 5. Click <Cmd>Enroll</Cmd>.
 
-After updating the main server's IP address, a success message appears.
+When the main server IP address update completes, a success message appears.
 
 <Image src='/img/common/biostarx-sm-change-ip-enroll-cert-success.png' alone />
 
 :::info
 
-* If you didn't install a Multi Communications Server, skip this step.
+* If you did not install a Multi Communications Server, skip this step.
 
 * If you changed the port number on the main server where BioStar X is installed, run **BioStar X Service Manager** on the main server and check the <Cmd>Client Port</Cmd> value under <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Coordinator Service</Cmd>.
 

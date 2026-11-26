@@ -1,22 +1,22 @@
-## Register plugin {/* #register-plugin */}
+## Register a plugin {/* #register-plugin */}
 
-1. Click <Start/> → **BioStar X** → **BioStar X Service Manager** on Windows.
+1. In Windows, click <Start/> → **BioStar X** → **BioStar X Service Manager**.
 
-2. Click <Cmd>PLUGINS</Cmd> in the left side menu.
+2. Click <Cmd>PLUGINS</Cmd> in the left sidebar.
 
 3. Click <Cmd>Add Plugin</Cmd> in the upper right.
 
    <Image src='/img/common/biostarx-sm-plugins-add.png' width='60%' alone />
 
-4. Enter plugin information on the <Cmd>Add New Plugin</Cmd> screen.
+4. On the <Cmd>Add New Plugin</Cmd> screen, enter the plugin information.
 
    <Image src='/img/common/biostarx-sm-plugins-add-new.png' width='60%' alone />
 
-5. Enter plugin information and click <Cmd>Apply</Cmd> to complete registration.
+5. Enter the plugin information, and then click <Cmd>Apply</Cmd> to complete registration.
 
 :::info
 
-If you have activated <Cmd>Session Bridge</Cmd>, you can download the certificate at the bottom of the screen. The certificate is required for secure communication between **BioStar X** and the plugin. If you lose the certificate, you can download it again. At this time, the existing certificate will be invalidated.
+If <Cmd>Session Bridge</Cmd> is turned on, you can download the certificate at the bottom of the screen. The certificate is required for secure communication between **BioStar X** and the plugin. If you lose the certificate, you can download it again. Then, the existing certificate is invalidated.
 
 <Image src='/img/common/biostarx-sm-plugins-download-certification.png' alone />
 
@@ -24,32 +24,32 @@ If you have activated <Cmd>Session Bridge</Cmd>, you can download the certificat
 
 ### Enter plugin information
 
-* <Cmd>Plugin Name</Cmd>: Enter the name of the plugin. You can enter up to 48 characters. You cannot use the same name as an existing registered plugin.
+* <Cmd>Plugin Name</Cmd>: Enter the plugin name. Enter up to 48 characters. You cannot use the same name as an existing registered plugin.
 
-* <Cmd>Description</Cmd>: Enter a description of the plugin. You can enter up to 500 characters.
+* <Cmd>Description</Cmd>: Enter a description of the plugin. Enter up to 500 characters.
 
-* <Cmd>Plugin Address</Cmd>: Enter the address of the plugin. It must be a valid URL starting with `http://` or `https://`, and you cannot use the same address as an existing registered plugin.
+* <Cmd>Plugin Address</Cmd>: Enter the plugin address. It must be a valid URL that starts with `http://` or `https://`, and you cannot use the same address as an existing registered plugin.
 
-* <Cmd>Plugin Icon</Cmd>: Upload the plugin's icon.
+* <Cmd>Plugin Icon</Cmd>: Upload the plugin icon.
 
-  * Supported formats are JPEG, PNG, SVG, GIF. 
+  * Supported formats are JPEG, PNG, SVG, and GIF. 
 
-  * The maximum file size is 1MB, and 0KB empty files cannot be uploaded. 
+  * The maximum file size is 1 MB, and you cannot upload empty (0 KB) files. 
 
-  * Uploaded images will be automatically resized to 104×104 pixels. 
+  * Uploaded images are automatically resized to 104×104 pixels. 
 
-* <Cmd>Session Bridge</Cmd>: Activate to use the session bridge. Using this feature automatically inherits permissions for BioStar X users, so no separate login is required when accessing the plugin.
+* <Cmd>Session Bridge</Cmd>: Turn on to use Session Bridge. This feature automatically inherits BioStar X user permissions, so no separate login is required when you access the plugin.
 
 :::info
 
-* If you do not upload an icon, an icon will be generated automatically from the first letter of the plugin name. The uploaded icon can be deleted by clicking the <IcTrash2 /> button, and it will be replaced with the automatically generated icon upon deletion.
+* If you do not upload an icon, an icon is automatically generated from the first letter of the plugin name. To delete the uploaded icon, click <IcTrash2 />; the automatically generated icon replaces it.
 
-* Once <Cmd>Session Bridge</Cmd> is activated, it cannot be deactivated, and the plugin address cannot be changed for security reasons.
+* Once <Cmd>Session Bridge</Cmd> is turned on, it cannot be turned off, and the plugin address cannot be changed for security reasons.
 
 :::
 
-### Check on the launcher screen
+### Check the launcher screen
 
-You can see the added plugins on the <Cmd sid='shell.header.launcher' /> screen of **BioStar X**.
+The plugins you added appear on the <Cmd sid='shell.header.launcher' /> screen of **BioStar X**.
 
 <Image src='/img/biostarx-added-plugins-launcher.png' />

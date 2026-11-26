@@ -1,31 +1,31 @@
 ---
 id: control-zone
 title: Control Advanced Access Control
-description: Control advanced access control and check detailed information.
+description: Control advanced access control and view detailed information.
 keywords:
   - Monitoring
   - Advanced access control
 ---
 
-This guides how to control doors or devices set with advanced access control. The features provided enable quick responses and efficient management in case of issues.
+Learn how to control doors or devices set to advanced access control. These features help you respond quickly to issues and manage efficiently.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.arena' />, or select <Cmd sid='shell.header.arena' /> from the shortcut list in the upper-left corner of the screen.
 
-2. Move to <Cmd sid='arena.tree.door.title' /> tab under the left sidebar on the screen and select <Cmd sid='arena.tree.door.allZones' />. 
+2. Click the <Cmd sid='arena.tree.door.title' /> tab in the left sidebar, and then click <Cmd sid='arena.tree.door.allZones' />. 
 
-3. Select the configured advanced access control and right-click. Select a feature from the pop-up menu.
+3. Select an advanced access control entry, and then right-click. Select a feature from the pop-up menu.
 
 <Image src='/img/biostarx-monitoring-door-zone-popup.png' />
 
 :::info
 
-* The features offered vary depending on the type of advanced access control. The types of advanced access control are as follows.
+* Available features vary depending on the type of advanced access control. The types of advanced access control are as follows.
 
-  * **Anti-Passback**
+  * **Anti-passback**
 
   * Fire Alarm
 
-  * Scheduled Lock/Unlock
+  * Scheduled lock/unlock
 
   * Intrusion Alarm
 
@@ -43,13 +43,13 @@ This guides how to control doors or devices set with advanced access control. Th
 
 :::
 
-## Clear anti pass back {/* #apb-release */}
+## Clear APB {/* #apb-release */}
 
-You can clear the APB alarm for the door or device set to **Anti-Passback**. Click <Cmd sid='arena.tree.contextMenu.clearApb' /> in the pop-up menu. A completion message appears at the top of the screen.
+Clear the APB alarm for doors or devices set to **Anti-Passback**. Click <Cmd sid='arena.tree.contextMenu.clearApb' /> in the pop-up menu. A completion message appears at the top of the screen.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.clearApb' /> feature is only available for **Anti-Passback**.
+* The <Cmd sid='arena.tree.contextMenu.clearApb' /> feature is available only in **Anti-Passback**.
 
 * For more information about **Anti-Passback** settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac-apb' />.
 
@@ -59,7 +59,7 @@ You can clear the APB alarm for the door or device set to **Anti-Passback**. Cli
 
 ## Clear alarm {/* #alarm */}
 
-You can clear the alarm that occurred at the door or device. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the pop-up menu. A completion message appears at the top of the screen.
+Clear alarms that occur on a door or device. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the pop-up menu. A completion message appears at the top of the screen.
 
 :::info
 
@@ -67,19 +67,19 @@ You can clear the alarm that occurred at the door or device. Click <Cmd sid='are
 
 :::
 
-## Activate/Deactivate {/* #zone-revitalizationdisabled */}
+## Enable/disable {/* #zone-revitalizationdisabled */}
 
-You can activate advanced access control or disable unused features. Deactivated advanced access control appears dimmed. Click <Cmd sid='arena.tree.contextMenu.enable' /> or <Cmd sid='arena.tree.contextMenu.disable' /> in the pop-up menu.
+You can enable advanced access control features or disable unused features. Deactivated advanced access control appears dimmed. Click <Cmd sid='arena.tree.contextMenu.enable' /> or <Cmd sid='arena.tree.contextMenu.disable' /> in the pop-up menu.
 
 <Image src='/img/biostarx-monitoring-door-zone-disabled.png' />
 
-## Security/Disarm {/* #security-zone-control */}
+## Arm/disarm {/* #security-zone-control */}
 
-You can set or clear the security for the door or device. Click <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> in the pop-up menu.
+Arm or disarm a door or device. Click <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> in the pop-up menu.
 
 :::info
 
-* <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> can only be used on advanced access control set for security.
+* <Cmd sid='arena.tree.contextMenu.arm' /> or <Cmd sid='arena.tree.contextMenu.disarm' /> can be used only for advanced access control set to intrusion alarm.
 
 * For more information about intrusion alarm settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac-intrusion-alarm' />.
 
@@ -87,23 +87,23 @@ You can set or clear the security for the door or device. Click <Cmd sid='arena.
 
 ## View muster report {/* #confirmation-of-muster-reports */}
 
-To check the report on musters, click <Cmd sid='arena.tree.contextMenu.musterReport' />. In the new window, you can check user entry and exit times and whether the stay time has exceeded through the user list and devices set with the muster feature.
+To view the muster report, click <Cmd sid='arena.tree.contextMenu.musterReport' />. When a new window opens, the user list and devices set to muster show entry times, exit times, and stay time overages.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.musterReport' /> feature is only available in musters.
+* The <Cmd sid='arena.tree.contextMenu.musterReport' /> feature is available only in muster.
 
 * For more information about the muster feature, see <DocLink docId='platform/biostar_x/settings-advanced-ac-muster' />.
 
 :::
 
-## Monitoring occupancy limit {/* #monitoring-of-restrictions-on-the-number-of-people */}
+## Monitor occupancy limits {/* #monitoring-of-restrictions-on-the-number-of-people */}
 
-You can check the status of devices set with the occupancy limit feature. Click <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> in the pop-up menu. In the new window, go to the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> menu. You can check the status in the <Cmd sid='zone.occupancy.title' product='2' /> list.
+Check the status of devices set to the occupancy limit feature. Click <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> in the pop-up menu. When a new window opens, go to the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> menu. Check the status in the <Cmd sid='zone.occupancy.title' product='2' /> list.
 
 :::info
 
-* The <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> feature is only available for items set with the occupancy limit feature.
+* The <Cmd sid='arena.tree.contextMenu.occupancyMonitoring' /> feature is available only for entries set to the occupancy limit feature.
 
 * For more information about occupancy limit settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac-occupancy' />.
 
@@ -111,15 +111,15 @@ You can check the status of devices set with the occupancy limit feature. Click 
 
 ## View details {/* #detail-view */}
 
-You can check detailed information and event occurrence history of advanced access control. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the pop-up menu. Detailed information and event occurrence history are displayed in the right panel of the screen.
+View detailed information and event history for advanced access control. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the pop-up menu. Detailed information and event history appear in the right pane of the screen.
 
 <Image src='/img/biostarx-monitoring-door-ac-details.png' />
 
-* **Advanced access control**: Control the selected advanced access control.
+* **Advanced access control controls**: Provides control features for the selected advanced access control.
 
-* **Detailed Information**: You can check the name and status of the advanced access control feature, device information, etc.
+* **Detailed information**: Shows the name and status of the advanced access control feature and device information.
 
-* <Cmd sid='arena.recentEvent' />: You can check the list of recent events occurred in the selected advanced access control.
+* <Cmd sid='arena.recentEvent' />: Shows a list of recent events that occurred in the selected advanced access control.
 
 :::info
 

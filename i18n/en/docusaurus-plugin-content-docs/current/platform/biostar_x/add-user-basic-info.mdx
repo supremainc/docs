@@ -1,46 +1,46 @@
 ---
 id: add-user-basic-info
 title: Enter Basic User Information
-description: This section describes how to enter basic user information.
+description: Learn how to enter a user's basic information in detail.
 keywords:
   - User
   - User group
 ---
 
-This section describes how to enter basic user information. The entered user information is used for search and management. Managing user information clearly helps comply with the organization's security and privacy policies.
+Learn how to enter a user's basic information in detail. The system uses the user information you enter for search and management. Managing user information clearly helps you comply with your organization's security policies and privacy policies.
 
-* When you systematically enter basic information such as name, department, position, and group, you can easily search for, classify, and manage users.
+* Systematically entering basic information such as name, department, job title, and group lets you easily search for, categorize, and manage users.
 
-* You can refine the access rights based on the user's affiliation, position, and group information.
+* You can set more granular access permissions based on the user's department, job title, and group information.
 
-* It is advantageous for security and auditing because it allows for accurate tracking of activities, access logs, etc. by user.
+* This helps security and auditing because you can accurately track each user's activity history and access logs.
 
-Go to the <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> page. You can enter user information in the two ways below.
+Go to the <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> page, and enter user information in one of the two ways below.
 
 import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <EnterUserPage />
 
-The fields that can be set in the <Cmd sid='team.user.information' /> section are as follows. Please enter user information by referring to the description for each field.
+The fields you can set in the <Cmd sid='team.user.information' /> section are as follows. Enter user information based on the description for each field.
 
 <Image src='/img/biostarx-new-user-information.png' />
 
-* **Photo**: Register the user's photo. You can take a photo with the webcam or upload a photo from your PC. When you hover over the profile, the tools available will be displayed.
+* **Photo**: Add a photo of the user. You can take a photo with a webcam or upload a photo from your PC. When you hover over the profile, available tools appear.
 
   <Columns>
   <Column className='width--20'><Image src='/img/common/biostarx-new-user-photo.png' alone /></Column>
   <Column className='padding--l10'>
 
-  * <IcCamera/>: If a webcam is connected to the PC, you can click the button to take and register a photo.
+  * <IcCamera/>: Takes a photo with the webcam connected to your PC and adds it.
 
-  * <IcUpload/>: You can upload an image file saved on your PC.
+  * <IcUpload/>: Uploads an image file saved on your PC.
 
   For more information, see <DocLink docId='platform/biostar_x/enroll-credential-face#erollbywebcambyphoto' />.
 
   </Column>
   </Columns>
 
-* <Cmd sid='team.user.table.id' />: Enter the unique ID to assign to the user.
+* <Cmd sid='team.user.table.id' />: Enter a unique ID to assign to the user.
 
 * <Cmd sid='team.user.table.name' />: Enter the user's name.
 
@@ -48,15 +48,15 @@ The fields that can be set in the <Cmd sid='team.user.information' /> section ar
 
 * <Cmd sid='team.user.table.phone' />: Enter the phone number.
 
-* <Cmd sid='team.user.table.department' />: Enter the department to which the user belongs.
+* <Cmd sid='team.user.table.department' />: Enter the user's department.
 
-* <Cmd sid='team.user.table.title' />: Enter the user's position.
+* <Cmd sid='team.user.table.title' />: Enter the user's job title.
 
-* Select <Cmd sid='team.user.table.group' />: Select the user's group. For more information about adding and managing user groups, see <DocLink docId='platform/biostar_x/user-group-manage' />.
+* <Cmd sid='team.user.table.group' />: Select the user's group. For more information about adding and managing user groups, see <DocLink docId='platform/biostar_x/user-group-manage' />.
 
-* <Cmd sid='team.user.table.period' />: Set a period for using the user account. You can either click on the date and time area to enter them manually or click <IcCalc /> to select the desired date and time.
+* <Cmd sid='team.user.table.period' />: Set the period for using the user account. Click the date and time area to enter values directly, or click <IcCalc /> to select a date and time.
 
-* <Cmd sid='team.user.table.status' />: You can temporarily disable the user account.
+* <Cmd sid='team.user.table.status' />: Set this to temporarily deactivate the user account.
 
 To save the basic information you entered, click <Cmd sid='user.save' product='2' /> in the upper-right corner of the screen.
 
@@ -66,25 +66,25 @@ import UserNameIDrule from '../../common/_bsx-user-id-name-rule.mdx';
 
 :::info
 
-* The available values for <Cmd sid='team.user.table.id' /> vary by the <Cmd sid="setting.userDevice.useridType" product='2' /> option in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> menu. For more information, see <DocLink docId='platform/biostar_x/settings-server-server#userid-type' />.
+* Values you can set for <Cmd sid='team.user.table.id' /> depend on the <Cmd sid="setting.userDevice.useridType" product='2' /> option in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> menu. For more information, see <DocLink docId='platform/biostar_x/settings-server-server#userid-type' />.
 
   * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />: Enter a number from 1 to 4294967294.
 
   * <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />: Enter a combination of letters and numbers.
 
-* To display the user's photo, department, and position on the mobile access card, ensure to add a photo and enter the department and position.
+* To display the user's photo, department, and position on the mobile access card, make sure to add a photo and enter the department and position.
 
-* Position and department names can be entered up to 64 characters, including special characters, `spaces`, and `_`.
+* Position and department names support up to 64 characters, including the special symbols `space` and `_`.
 
-* If using a mobile access card, be sure to enter the user's email when sending via email.
+* If you use a mobile access card, enter the user's email when you send the card by email.
 
-* To use face mobile enrollment or BioStar X QR, be sure to enter the user's email address.
+* To use face mobile enrollment or BioStar X QR, enter the user's email address.
 
 :::
 
 :::tip
 
-In addition to the basic input fields provided by **BioStar X**, you can add custom fields using the <Cmd sid='team.userTemplate.table.customField' /> feature to enter additional user information. <Cmd sid='team.userTemplate.table.customField' /> is a useful feature that allows you to expand user information according to the organization's requirements.
+To enter additional user information beyond the default input fields provided by **BioStar X**, add custom fields using the <Cmd sid='team.userTemplate.table.customField' /> feature. <Cmd sid='team.userTemplate.table.customField' /> is a useful feature for extending user information to meet your organization's requirements.
 
 For more information about adding <Cmd sid='team.userTemplate.table.customField' />, see <DocLink docId='platform/biostar_x/settings-server-server#custom-field' />.
 
@@ -93,7 +93,7 @@ For more information about adding <Cmd sid='team.userTemplate.table.customField'
 <NextStep>
 <NextItem to='enroll-credential'>
 
-Enroll the user credentials and set access authentication method in the <Cmd sid='team.user.credential.title' /> section.
+In the <Cmd sid='team.user.credential.title' /> section, enroll user credentials and set the access authentication method.
 
 </NextItem>
 <NextItem to='set-permission'>
@@ -103,7 +103,7 @@ Learn how to set the user's access permissions in the <Cmd sid='team.user.permis
 </NextItem>
 <NextItem to='set-user-advanced'>
 
-In the <Cmd sid='common.advanced' product='2' /> section, you can set the message to display on the device when the user accesses it or exclude that user from synchronization when linking with <Cmd sid='settings.activeDirectory.title' product='2' className='normal' />.
+In the <Cmd sid='common.advanced' product='2' /> section, you can set the message to show on the device when the user requests access or exclude the user from synchronization when linking with <Cmd sid='settings.activeDirectory.title' product='2' className='normal' />.
 
 </NextItem>
 <NextItem to='edit-user'>

@@ -1,7 +1,7 @@
 ---
 id: before-start
 title: Before You Start
-description: This guide covers what you need to know before starting BioStar X.
+description: Learn what you need to know before getting started with BioStar X.
 keywords:
   - Installation guide
   - MariaDB
@@ -11,7 +11,7 @@ keywords:
 
 :::tip
 
-This guide provides important information you should know before starting **BioStar X**. **BioStar X** supports 64-bit operating systems. Check the system requirements of the PC where you want to install **BioStar X**, then install it.
+Learn what you need to know before getting started with **BioStar X**. **BioStar X** supports 64-bit operating systems. Check the system requirements of the PC before you install **BioStar X**, and then install it.
 
 :::
 
@@ -19,27 +19,27 @@ This guide provides important information you should know before starting **BioS
 
 Before installing **BioStar X**, check the following and proceed with the installation.
 
-* **BioStar X** can only be installed on a 64bit operating system.
+* **BioStar X** can only be installed on a 64-bit operating system.
 
-* If you are using MS SQL 2012 Express, refer to the following link to install the [Service Pack 3](https://www.microsoft.com/download/details.aspx?id=49996).
+* If you are using MS SQL 2012 Express, install [Service Pack 3](https://www.microsoft.com/download/details.aspx?id=49996).
 
-* If you are using MS SQL 2014 Express, refer to the following link to install [Service Pack 2](https://www.microsoft.com/ko-kr/download/details.aspx?id=53168).
+* If you are using MS SQL 2014 Express, install [Service Pack 2](https://www.microsoft.com/en-us/download/details.aspx?id=53168).
 
-* If you are using MS SQL Server, set the `Collation` option of the server and each table to CI (Case-insensitive).
+* If you are using MS SQL Server, set the `Collation` option for the server and each table to CI (Case-insensitive).
 
-* When backing up a database from an older version of **BioStar X**, disable all services before proceeding. Furthermore, if you do not back up and restore the AC database and the TA database together, you will not be able to use the TA database.
+* When you back up a database from an earlier version of **BioStar X**, disable all services before you proceed. Also, back up and restore the AC database and the TA database together, or you cannot use the TA database.
 
-* If you want to back up the database of **BioStar X**, be sure to also back up the *enckey* in the *\Program Files\BioStar X\util* folder and the *system.conf* and *setting.conf* file in the *\Program Files\BioStar X* folder. Otherwise, the database will be unavailable.
+* To back up the **BioStar X** database, also back up the *enckey* file in the *\Program Files\BioStar X\util* folder and the *system.conf* and *setting.conf* files in the *\Program Files\BioStar X* folder. Otherwise, you cannot use the database.
 
-* For the default port used by **BioStar X**, see <DocLink docId='platform/biostar_x/service-settings' />. If another program occupies the same port, **BioStar X** may not work properly.
+* For the default values for the ports used by **BioStar X**, see <DocLink docId='platform/biostar_x/service-settings' />. If another program occupies the same port, **BioStar X** may not work properly.
 
 ## Check the database {/* #checkdb */}
 
-If you are using a user-configured database, check the items below before installing **BioStar X**.
+If you are using a database that you set up yourself, check the following before installing **BioStar X**.
 
 ### MariaDB {/* #mariadb */}
 
-1. Please change the options below under the `[mysql]` section in the *my.cnf* file.
+1. In the *my.cnf* file, change the options under the `[mysql]` section as follows.
 
    ```ini title='my.cnf'
    character-set-server=utf8
@@ -47,14 +47,14 @@ If you are using a user-configured database, check the items below before instal
    max_connections = 600
    ```
 
-2. Please add the options below under the `[mysql]` section in the *my.cnf* file.
+2. In the *my.cnf* file, add the following options under the `[mysql]` section.
 
    ```ini title='my.cnf'
    log_bin_trust_function_creators = 1
    group_concat_max_len = 102400
    ```
 
-3. Connect to MariaDB with root privileges and execute the command below.
+3. Connect to MariaDB with root privileges, and run the command below.
 
    ```sql title='SQL'
    GRANT SUPER ON . TO user_id@'localhost' IDENTIFIED BY "password";
@@ -65,108 +65,108 @@ If you are using a user-configured database, check the items below before instal
 
 :::info
 
-* Set the `Collation` options for all databases and tables to be case-insensitive (CI).
+* Set the `Collation` option for all databases and tables to CI (Case-insensitive).
 
-* Database names can only contain numbers, English letters (case-sensitive), and special symbols `-` `_`.
+* Database names can contain only numbers, English letters (case-sensitive), and the special symbols `-` and `_`.
 
 :::
 
-#### Port settings {/* #port-setting */}
+#### Set up ports {/* #port-setting */}
 
-* Run **SQL Server Configuration Manager** and set **TCP/IP Protocol** for **Protocols for SQLEXPRESS** to the desired port number.
+* After you run **SQL Server Configuration Manager**, set the **TCP/IP Protocol** under **Protocols for SQLEXPRESS** to the port number to use.
 
-* Restart the **SQL Server Services** to apply the settings.
+* Restart the SQL Server service to apply the settings.
 
-#### Creating the user and database {/* #create-a-user-and-database */}
+#### Create a user and database {/* #create-a-user-and-database */}
 
-1. Log in with the **sa** account using **SQL Server Authentication** in **SQL Server Management Studio**.
+1. Log in to **SQL Server Management Studio** with the **sa** account using **SQL Server Authentication**.
 
-2. Right-click on **Security** and click **New Login**.
+2. Right-click **Security**, and then click **New Login**.
 
-3. Enter the desired name in the **Login Name** field and select **SQL Server Authentication**.
+3. Enter a name in the **Login name** field, and then select **SQL Server Authentication**.
 
-4. Enter the desired password in the **Password** and **Confirm password** fields, then uncheck **Enforce password policy**.
+4. Enter the password to use in the **Password** and **Confirm password** fields, and then clear **Enforce password policy**.
 
 5. Click **OK**.
 
-6. Right-click on **Database** and click **New Database**.
+6. Right-click **Databases**, and then click **New Database**.
 
-7. Enter the desired name in the Database Name field.
+7. Enter a name in the **Database name** field.
 
 8. Enter the login name set in step **3** in the **Owner** field.
 
 :::tip
 
-Set the following recommended values in the **Database Files** section. Configure **Autogrowth** using fixed sizes (MB/GB) rather than percentages, and avoid very small increments that would cause frequent growth events.
+In the **Database Files** section, set the following recommended values. Set **Autogrowth** to a fixed size (MB/GB) rather than a percentage, and avoid very small increments that cause frequent growth events.
 
 <Image src='/img/biostarx-before-start-new-database.png' caption />
 
-#### Small (under 10 GB)
+#### Small organizations (10 GB or less)
 
-* Data: **Initial Size** 1 - 5 GB, **Autogrowth** 100 - 512 MB
+* Data: **Initial Size** 1 to 5 GB, **Autogrowth** 100 to 512 MB
 
-* Log: **Initial Size** 512 MB - 2 GB, **Autogrowth** 100 - 512 MB
+* Log: **Initial Size** 512 MB to 2 GB, **Autogrowth** 100 to 512 MB
 
-* TempDB: **Initial Size** 512 MB - 1 GB
+* TempDB: **Initial Size** 512 MB to 1 GB
 
-> e.g. Data 2 GB (**Autogrowth** 256 MB) / Log 1 GB (**Autogrowth** 128 MB) / TempDB 512 MB
+> For example: Data 2 GB (**Autogrowth** 256 MB) / Log 1 GB (**Autogrowth** 128 MB) / TempDB 512 MB
 
-#### Medium (10 - 500 GB)
+#### Medium organizations (10 to 500 GB)
 
-* Data: **Initial Size** 10 - 50 GB, **Autogrowth** 512 MB - 1 GB
+* Data: **Initial Size** 10 to 50 GB, **Autogrowth** 512 MB to 1 GB
 
-* Log: **Initial Size** 5 - 10 GB, **Autogrowth** 512 MB - 1 GB
+* Log: **Initial Size** 5 to 10 GB, **Autogrowth** 512 MB to 1 GB
 
-* TempDB: **Initial Size** 2 - 8 GB
+* TempDB: **Initial Size** 2 to 8 GB
 
-> e.g. Data 20 GB (**Autogrowth** 1 GB) / Log 5 GB (**Autogrowth** 512 MB) / TempDB 4 GB
+> For example: Data 20 GB (**Autogrowth** 1 GB) / Log 5 GB (**Autogrowth** 512 MB) / TempDB 4 GB
 
-#### Enterprise (500 GB or higher)
+#### Large organizations (500 GB or more)
 
-* Data: **Initial Size** 100 GB or higher, **Autogrowth** 1 - 4 GB
+* Data: **Initial Size** at least 100 GB, **Autogrowth** 1 to 4 GB
 
-* Log: **Initial Size** 20 ~ 100 GB, **Autogrowth** 1 ~ 4 GB
+* Log: **Initial Size** 20 to 100 GB, **Autogrowth** 1 to 4 GB
 
-* TempDB: **Initial Size** 8 - 32 GB
+* TempDB: **Initial Size** 8 to 32 GB
 
-> e.g. Data 100 GB (**Autogrowth** 2 GB) / Log 50 GB (**Autogrowth** 2 GB) / TempDB 16 GB
+> For example: Data 100 GB (**Autogrowth** 2 GB) / Log 50 GB (**Autogrowth** 2 GB) / TempDB 16 GB
 
 :::
 
 :::caution
 
-* Do not set **Autogrowth** to very small increments or leave the **Maxsize** to **Unlimited**. Instead, set appropriate limits based on expected growth and monitor usage.
+* Don't set **Autogrowth** to very small increments or set **Maxsize** to **Unlimited**; set appropriate limits based on expected growth, or monitor it.
 
-* In environments with many transactions, backup the logs periodically to ensure that the size of the log files does not increase.
+* In environments with high transaction volume, back up the log regularly to prevent the log file size from increasing.
 
 :::
 
-#### Setting the Windows Authentication database {/* #windows-authentication-database-settings */}
+#### Set up the Windows Authentication database {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>
 
 ##### Preliminary settings {/* #preliminary-setting */}
 
-If you are using **Microsoft Windows Active Directory**, complete the presets as below before setting up the Windows Authentication database.
+If you use **Microsoft Windows Active Directory**, complete the prerequisites below before you set up the Windows Authentication database.
 
-1. Log in as an administrator account in **SQL Server Management Studio**.
+1. Log in to **SQL Server Management Studio** with an administrator account.
 
-2. Right-click on **Security** and click **New Login**.
+2. Right-click **Security**, and then click **New Login**.
 
-3. Select **Windows Authentication** and then click **Search**.
+3. Select **Windows Authentication**, and then click **Search**.
 
 4. Click on the location in the **Select a user or group** window, select the Active Directory path, and click **OK**.
 
 5. Enter the user name in the **Enter object name to select** field, then click **Check Names** \> **OK**.
 
-6. Click on **Server Roles** in the **Select a page**.
+6. Under **Select a page**, click **Server Roles**.
 
 7. Select **sysadmin** and then click **OK**.
 
-8. Click on **User Mapping** in the **Select page**.
+8. Under **Select a page**, click **User Mapping**.
 
-9. Select **ac**, **master**, **ta**, **ve** and set the **Default Schema** to **dbo**.
+9. Select **ac**, **master**, **ta**, and **ve**, and set **Default Schema** to **dbo**.
 
 10. To save the settings, click **OK**.
 
@@ -177,15 +177,15 @@ If you are using **Microsoft Windows Active Directory**, complete the presets as
 
 1. Run *services.msc*.
 
-2. In the **Properties** \> **Logon** window of the SQL Server database, select **Specify account** and log in as a domain user.
+2. In the SQL Server database **Properties** \> **Log On** window, select **Specify account**, and then log in with a domain user account.
 
-3. Add port 1433 as an exception in the Windows Firewall.
+3. Add port 1433 as an exception in Windows Firewall.
 
-4. Create empty **ac**, **ta**, **ve** databases in SQL Server with **sysadmin** authentication.
+4. Create empty **ac**, **ta**, and **ve** databases in SQL Server using **sysadmin** authentication.
 
-5. Set the domain user to use Windows Authentication for SQL Server and assign all permissions except **sysadmin** to the **ac**, **ta**, **ve** databases.
+5. Set the domain user to use Windows Authentication for SQL Server, and assign all permissions except **sysadmin** to the **ac**, **ta**, and **ve** databases.
 
-6. Connect all services except the local computer in *services.msc*.
+6. In *services.msc*, connect to all services except Local Computer.
 
 7. Set the domain user as an administrator on the local service computer.
 
@@ -194,25 +194,25 @@ If you are using **Microsoft Windows Active Directory**, complete the presets as
 </Step>
 <Step>
 
-##### Setting the database {/* #database-setting */}
+##### Set up the database {/* #database-setting */}
 
-1. After running the **SQL Server Configuration Manager**, click on **Client Protocol** under **SQL Native Client**.
+1. Run **SQL Server Configuration Manager**, and then click **Client Protocols** under **SQL Native Client**.
 
-2. Select **TCP/IP** and check the default port.
+2. Select **TCP/IP**, and then check the default port.
 
-3. Click on the **Protocols for SQL EXPRESS** under **SQL Server Network Configuration**.
+3. Under **SQL Server Network Configuration**, click **Protocols for SQL EXPRESS**.
 
-4. Check if the ODBC port in **TCP/IP** is set to the same value as the default port.
+4. Make sure the ODBC port in **TCP/IP** is set to the same value as the default port.
 
-5. Log in as an administrator account in **SQL Server Management Studio**.
+5. Log in to **SQL Server Management Studio** with an administrator account.
 
-6. Click on **Security** \> **Log In**, then double-click **NT AUTHORITY\SYSTEM**.
+6. Click **Security** \> **Logins**, and then double-click **NT AUTHORITY\SYSTEM**.
 
-7. Click on **Server Roles** in the **Select a page**.
+7. Under **Select a page**, click **Server Roles**.
 
 8. Select **public** and **sysadmin**, then click **OK**.
 
-9. Click on **User Mapping** in the **Select page**.
+9. Under **Select a page**, click **User Mapping**.
 
 10. Select the **ac**, **ta**, **ve** database and click **OK** to save.
 
@@ -223,12 +223,12 @@ If you are using **Microsoft Windows Active Directory**, complete the presets as
 <NextStep>
 <NextItem to='system-requirements'>
 
-Learn the minimum system requirements to install **BioStar X**.
+Learn the minimum system requirements for installing **BioStar X**.
 
 </NextItem>
 <NextItem to='express-install'>
 
-This guide provides a simple installation method for first-time users.
+Learn how to use Express Installation for first-time users.
 
 </NextItem>
 <NextItem to='custom-install'>

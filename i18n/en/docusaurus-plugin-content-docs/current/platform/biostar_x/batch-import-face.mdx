@@ -1,7 +1,7 @@
 ---
 id: batch-import-face
 title: Batch Enroll Faces
-description: Learn how to batch enroll users' faces.
+description: Learn how to batch enroll users’ faces.
 keywords:
   - Face
   - Enrollment
@@ -10,25 +10,25 @@ keywords:
   - Authentication
 ---
 
-Learn how to batch enroll users' faces. You can enroll faces of multiple users at once by using the import feature with a CSV file or by loading face pictures with file names that match user IDs. Alternatively, you can send face enrollment links via email to multiple users, allowing them to enroll faces directly from their mobile devices.
+Learn how to batch enroll users’ faces. You can batch enroll multiple users’ faces by using the CSV import feature or importing face photos with filenames that match user IDs. Alternatively, you can email face enrollment links to multiple users so they can enroll their faces directly on mobile devices.
 
 ## Before you start
 
-Prepare user face images before starting batch enrollment. 
+Prepare users’ face images before starting batch face enrollment. 
 
-* Face image files must be stored in one folder. Face image file names must match user IDs.
+* All face image files must be saved in one folder. Face image filenames must match user IDs.
 
-* The maximum file size for supported image types is 10MB.
+* The maximum supported image file size is 10 MB.
 
-* Supported image formats include JPG, JPEG, and PNG.
+* The supported image formats are JPG, JPEG, and PNG.
 
-## Enroll with CSV file import {/* #import-csv */}
+## Enroll faces by importing a CSV file {/* #import-csv */}
 
-You can enroll users' faces in bulk using the CSV import feature.
+You can batch enroll users’ faces using the CSV import feature.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. In the user list, check the checkbox of the user whose face you want to enroll. You can select one or more users.
+2. In the user list, select the checkbox for the user to enroll a face. You can select one or more users.
 
 3. Click <IcMoreW /> in the upper-right corner of the screen and select <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' />.
 
@@ -36,9 +36,9 @@ You can enroll users' faces in bulk using the CSV import feature.
 
 5. Save the CSV file to a location on your computer.
 
-6. Open the CSV file and add `face_image_file1`, `face_image_file2` columns.
+6. Open the CSV file and add the `face_image_file1` and `face_image_file2` columns.
 
-7. Enter the filenames of the face images, including the extensions, in the added columns and save.
+7. Enter the face image filenames, including extensions, in the added columns, and save the file.
 
 8. Click <IcMoreW /> in the upper-right corner of the screen and select <Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.csv' />.
 
@@ -48,7 +48,7 @@ You can enroll users' faces in bulk using the CSV import feature.
 
     <Image src='/img/biostarx-user-import-01.png' />
 
-11. Choose whether to overwrite user data already registered in **BioStar X** with the information from the CSV file, and click <Cmd sid='common.apply' />.
+11. Select whether to keep user data already registered in **BioStar X** or overwrite it with the CSV file information, and click <Cmd sid='common.apply' />.
 
     <Image src='/img/biostarx-user-import-03.png' />
 
@@ -56,21 +56,21 @@ You can enroll users' faces in bulk using the CSV import feature.
 
     <Image src='/img/biostarx-new-user-credential-face-import-csv.png' />
 
-13. Select the path where the face images are stored and click <Cmd sid='button.upload' product='2' />.
+13. Select the path where the face images are saved, and click <Cmd sid='button.upload' product='2' />.
 
-14. To complete CSV import, click <Cmd sid='common.button.next' />.
+14. To complete the CSV import, click <Cmd sid='common.button.next' />.
 
-If an error occurs while importing the CSV file, you can recheck and upload only the CSV data that caused the error.
+If an error occurs while importing the CSV file information, you can recheck and upload only the CSV data that caused the error.
 
 :::info
 
-It is recommended to use the same path for the CSV file and the face image files to be imported.
+Use the same path for the CSV file and the face image files to import.
 
 :::
 
-## Import face {/* #import-face */}
+## Import faces {/* #import-face */}
 
-You can import face images with file names matching user IDs and enroll them for face authentication. Prepare user face image files before starting. Face image file names must match user IDs.
+You can import face photos with filenames that match user IDs and enroll faces for facial authentication. Before you start, prepare users’ face image files. Face image filenames must match user IDs.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
@@ -82,7 +82,7 @@ You can import face images with file names matching user IDs and enroll them for
 
 4. Select the path where the face images are stored.
 
-5. Select the method to load face images in the <Cmd sid='user.list.visualFaceImport.newImport' /> option.
+5. In the <Cmd sid='user.list.visualFaceImport.newImport' /> option, select how to import face images.
 
    * <Cmd sid='user.list.visualFaceImport.default' />: Loads images with filenames matching the user IDs.
 
@@ -90,37 +90,37 @@ You can import face images with file names matching user IDs and enroll them for
 
 6. In the <Cmd sid='user.list.visualFileImport.duplicateUser' /> option, select <Cmd sid='user.list.csvImport.duplicateUser.preserve' product='2' /> or <Cmd sid='user.list.csvImport.duplicateUser.overwrite' product='2' />.
 
-   * <Cmd sid='user.list.csvImport.duplicateUser.preserve' />: Preserves the face images of registered users.
+   * <Cmd sid='user.list.csvImport.duplicateUser.preserve' />: Keeps the face images of registered users.
 
-   * <Cmd sid='user.list.csvImport.duplicateUser.overwrite' />: Overwrites the face images of registered users with the newly imported face images.
+   * <Cmd sid='user.list.csvImport.duplicateUser.overwrite' />: Replaces the face images of registered users with the newly imported face images.
 
-7. To use the imported face images as profile images, click the <Cmd sid='team.user.credential.visualFace.useAsProfileImage' /> option to enable it.
+7. To use the imported face images as profile images, turn on <Cmd sid='team.user.credential.visualFace.useAsProfileImage' />.
 
 8. Click <Cmd sid='common.start' />.
 
-If an error occurs while importing a face image file, a list of photos with errors appears. Check the list and try again.
+If an error occurs while importing face image files, a list of photos with errors appears. Check the list and try again.
 
 :::info
 
-A maximum of 1 face image can be imported per user ID.
+You can import up to one face image per user ID.
 
 :::
 
 ## Enroll faces using a mobile device {/* #mobile-device */}
 
-You can send face enrollment links to users via email. Users can access the link on their mobile devices to enroll faces directly.
+You can send face enrollment links to users by email. Users can open the link on a mobile device and enroll their face.
 
 ### Before you start
 
-* Complete the email information settings, including SMTP settings, before using the mobile face enrollment feature. For more information, see <DocLink docId='platform/biostar_x/settings-email-setting' />.
+* Before using mobile face enrollment, complete the email settings, including SMTP settings. For more information, see <DocLink docId='platform/biostar_x/settings-email-setting' />.
 
-* You must enable the <Cmd sid='setting.menu.remoteAccess.root' /> feature to use the mobile face enrollment feature. For more information about <Cmd sid='setting.menu.remoteAccess.root' />, see <DocLink docId='platform/biostar_x/settings-remote-access' />.
+* To use the mobile face enrollment feature, turn on <Cmd sid='setting.menu.remoteAccess.root' />. For more information about <Cmd sid='setting.menu.remoteAccess.root' />, see <DocLink docId='platform/biostar_x/settings-remote-access' />.
 
-### Send face enrollment link
+### Send a face enrollment link
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. In the user list, check the checkbox of the user whose face you want to enroll. You can select one or more users.
+2. In the user list, select the checkbox for the user to enroll a face. You can select one or more users.
 
 3. Click <IcMoreW /> in the upper-right corner of the screen and select <Cmd sid='team.menu.sendFaceMobileEnrollLink' />.
 
@@ -130,24 +130,24 @@ You can send face enrollment links to users via email. Users can access the link
 
    <Image src='/img/biostarx-user-face-mobile-link-warning.png' width='60%' />
 
-The face enrollment link is sent to the email of the selected users. Once the users complete the upload, their face credential is added to their user profiles.
+The face enrollment link is sent to the email address of the selected users. When the user completes the upload, the face credential is added to the user information.
 
 :::info
 
-* You can check the email sending status in <Cmd sid='monitoring.auditTrail' product='2' />. For more information about the system audit trail, see <DocLink docId='platform/biostar_x/settings-system-audit-trail' />.
+* The email sending status appears in <Cmd sid='monitoring.auditTrail' product='2' />. For more information about the system audit trail, see <DocLink docId='platform/biostar_x/settings-system-audit-trail' />.
 
-* The language displayed on the page accessed via the face enrollment mobile link follows the language settings of the browser used on the mobile device.
+* The language shown on the page accessed through the face enrollment mobile link follows the mobile browser language settings.
 
-* When the user accesses the face enrollment mobile link that was sent, the face enrollment service will be executed as shown below. Follow the instructions on the screen.
+* When the user opens the face enrollment mobile link, the face enrollment service starts as shown below. Follow the instructions on the screen.
 
   <Image src='/img/biostarx-new-user-credential-face-mobile-app.png' className='none' />
 
-* The maximum file size for supported image types is 10MB.
+* The maximum supported image file size is 10 MB.
 
-* Supported image formats include JPG, JPEG, and PNG.
+* The supported image formats are JPG, JPEG, and PNG.
 
-* The sent face enrollment mobile link will expire after 24 hours.
+* The sent face enrollment mobile link expires after 24 hours.
 
-* Once the Face Mobile Enrollment process is successful after uploading a face picture, an enrollment success message appears on the screen. If enrollment fails, a failure message and reason are displayed, and the user can retry the Visual Face Enrollment again using a different face picture.
+* When the user uploads a face photo and mobile face enrollment succeeds, an enrollment success message appears on the screen. If enrollment fails, a failure message and the reason appear, and the user can try face enrollment again using a different photo.
 
 :::

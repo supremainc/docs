@@ -12,9 +12,9 @@ The <Cmd sid='audit.retention.sectionTimeAttendance' /> section consists of the 
 
 </Include>
 
-* <Cmd sid='audit.retention.groupChanges' />: Creation, update, and deletion logs. Always recorded. Cannot turn logging on or off.
+* <Cmd sid='audit.retention.groupChanges' />: Creation, update, and deletion logs. Logs are always recorded, and you cannot turn logging on or off.
 
-* <Cmd sid='audit.retention.groupAccess' />: View logs. Set whether to record logs.
+* <Cmd sid='audit.retention.groupAccess' />: Records of view activity. You can set whether logs are recorded.
 
 :::info
 
@@ -36,7 +36,7 @@ The <Cmd sid='audit.retention.sectionTimeAttendance' /> section consists of the 
 
 ### Change logs
 
-Because the <Cmd sid='audit.retention.groupChanges' /> group is always recorded, select the <Cmd sid='audit.retention.labelRetention' /> setting.
+Because the <Cmd sid='audit.retention.groupChanges' /> group is always recorded, select a <Cmd sid='audit.retention.labelRetention' /> option.
 
 * <Cmd sid='audit.retention.optionEndless' />: Keep logs permanently without automatic deletion.
 
@@ -44,9 +44,9 @@ Because the <Cmd sid='audit.retention.groupChanges' /> group is always recorded,
 
 ### View logs
 
-In the <Cmd sid='audit.retention.groupAccess' /> group, set whether to keep view logs.
+In the <Cmd sid='audit.retention.groupAccess' /> group, set whether to record view logs.
 
-* <Cmd sid='audit.retention.labelLogging' />: Set to <Cmd sid='audit.retention.loggingOn' /> to keep view logs. If not needed, set it to <Cmd sid='audit.retention.loggingOff' />.
+* <Cmd sid='audit.retention.labelLogging' />: To record view logs, set to <Cmd sid='audit.retention.loggingOn' />. If not needed, set it to <Cmd sid='audit.retention.loggingOff' />.
 
 * <Cmd sid='audit.retention.labelRetention' />: Select a retention method.
 
@@ -56,7 +56,7 @@ In the <Cmd sid='audit.retention.groupAccess' /> group, set whether to keep view
 
 :::info
 
-When <Cmd sid='audit.retention.labelLogging' /> is set to <Cmd sid='audit.retention.loggingOff' />, the system does not record view events. After setting it to <Cmd sid='audit.retention.loggingOn' />, the system cannot view earlier records.
+When <Cmd sid='audit.retention.labelLogging' /> is set to <Cmd sid='audit.retention.loggingOff' />, view events are not recorded. You cannot view records from the earlier period even if you later set it to <Cmd sid='audit.retention.loggingOn' />.
 
 :::
 
@@ -64,20 +64,20 @@ When <Cmd sid='audit.retention.labelLogging' /> is set to <Cmd sid='audit.retent
 
 <Include type={props.type} ref='accesscontrol'>
 
-After completing the <Cmd sid='audit.retention.groupChanges' /> and <Cmd sid='audit.retention.groupAccess' /> settings, click <Cmd sid='common.apply' /> at the bottom of the <Cmd sid='audit.retention.sectionAccessControl' /> section. Save both group settings together.
+After completing the <Cmd sid='audit.retention.groupChanges' /> and <Cmd sid='audit.retention.groupAccess' /> settings, click <Cmd sid='common.apply' /> at the bottom of the <Cmd sid='audit.retention.sectionAccessControl' /> section. Saves the settings for both groups together.
 
 </Include>
 
 <Include type={props.type} ref='timeattendance'>
 
-After completing the <Cmd sid='audit.retention.groupChanges' /> and <Cmd sid='audit.retention.groupAccess' /> settings, click <Cmd sid='common.apply' /> at the bottom of the <Cmd sid='audit.retention.sectionTimeAttendance' /> section. Save both group settings together.
+After completing the <Cmd sid='audit.retention.groupChanges' /> and <Cmd sid='audit.retention.groupAccess' /> settings, click <Cmd sid='common.apply' /> at the bottom of the <Cmd sid='audit.retention.sectionTimeAttendance' /> section. Saves the settings for both groups together.
 
 </Include>
 
 ## How automatic deletion works
 
-The server runs this job daily at 1 a.m. It deletes records past the retention period set in <Cmd sid='audit.retention.optionCustom' />, regardless of user actions. The job evaluates and deletes records at the same time. It runs only once a day.
+The server automatically deletes records that exceed the retention period set in <Cmd sid='audit.retention.optionCustom' /> during the job it runs daily at 1 a.m., regardless of user actions. Evaluation and deletion happen together in the same job, and this evaluation occurs only once a day.
 
-> For example, set <Cmd sid='audit.retention.groupAccess' /> records to 30 days in <Cmd sid='audit.retention.optionCustom' />. At 1 a.m., the job deletes records older than 30 days. Records just past the retention period remain until the next 1 AM job runs.
+> For example, if you set <Cmd sid='audit.retention.groupAccess' /> records to 30 days in <Cmd sid='audit.retention.optionCustom' />, the job run at 1 a.m. immediately deletes records older than 30 days. Records just past the retention period remain until the next day's 1 a.m. job, because the job runs only once a day.
 
 When <Cmd sid='audit.retention.labelRetention' /> is set to <Cmd sid='audit.retention.optionEndless' />, the automatic deletion job does not run, and records are retained permanently.

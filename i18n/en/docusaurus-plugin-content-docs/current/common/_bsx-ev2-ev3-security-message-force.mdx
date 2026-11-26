@@ -1,8 +1,8 @@
-* <Cmd sid='device.card.secureMessaging.enforce' product='2' />: When this option is set to <Cmd sid='common.on' product='2' />, only cards that support EV2 secure messaging (DESFire EV2/EV3) can be used for authentication. The device rejects authentication with DESFire EV1 cards, which do not support EV2 secure messaging.
+* <Cmd sid='device.card.secureMessaging.enforce' product='2' />: When this option is set to <Cmd sid='common.on' product='2' />, authentication is available only with cards that support EV2 secure messaging (DESFire EV2/EV3). Authentication with DESFire EV1 cards that do not support EV2 secure messaging is rejected.
 
   <Include type={props.type} ref='suprema'>
 
-  This option is available when you select <Cmd sid='device.card.desfire_ev1' product='2' /> and the <Cmd sid='setting.cardFormat.encryptionType' product='2' /> of the selected <Cmd sid='device.card.supremaSmartCard' product='2' /> is <Cmd>AES</Cmd>. If <Cmd sid='common.supremaSmartCard' product='2' /> is not in use, this option appears as <Cmd sid='common.off' product='2' />.
+   This option is enabled when <Cmd sid='device.card.desfire_ev1' product='2' /> is selected and <Cmd sid='setting.cardFormat.encryptionType' product='2' /> of the selected <Cmd sid='device.card.supremaSmartCard' product='2' /> is <Cmd>AES</Cmd>. If <Cmd sid='common.supremaSmartCard' product='2' /> is not in use, this option appears as <Cmd sid='common.off' product='2' />.
 
   <Image src='/img/biostarx-setting-device-detail-card-smart-security-force.png' className='none' />
 
@@ -10,20 +10,20 @@
 
   <Include type={props.type} ref='custom'>
 
-  This option is available when you select <Cmd sid='device.card.desfire_ev1' product='2' /> and the <Cmd sid='setting.cardFormat.encryptionType' product='2' /> of the selected <Cmd sid='device.card.customSmartCard' product='2' /> is <Cmd>AES</Cmd>. If <Cmd sid='common.customSmartCard' product='2' /> is not in use, this option appears as <Cmd sid='common.off' product='2' />.
+   This option is enabled when <Cmd sid='device.card.desfire_ev1' product='2' /> is selected and <Cmd sid='setting.cardFormat.encryptionType' product='2' /> of the selected <Cmd sid='device.card.customSmartCard' product='2' /> is <Cmd>AES</Cmd>. If <Cmd sid='common.customSmartCard' product='2' /> is not in use, this option appears as <Cmd sid='common.off' product='2' />.
 
   <Image src='/img/biostarx-setting-device-detail-card-custom-security-force.png' className='none' />
 
   </Include>
 
-  :::note
+   :::note
 
-  * <Cmd sid='common.supremaSmartCard' product='2' /> and <Cmd sid='common.customSmartCard' product='2' /> share the same settings. If either one is in use, a confirmation message appears when you change either value. When you click <Cmd sid='button.ok' product='2' /> in the confirmation message, both options change together. If one of them is not in use, you can change the value without a confirmation message.
+  * <Cmd sid='common.supremaSmartCard' product='2' /> and <Cmd sid='common.customSmartCard' product='2' /> share the same settings. If either one is in use, a confirmation message appears when you change either value. When you click <Cmd sid='button.ok' product='2' /> in the message window, both options change together. If either one is not in use, you can change the value without a confirmation message.
 
   * Secure messaging is available only on DESFire EV2 and EV3 cards. To use it, enable DESFire and set the card layout encryption type to AES.
 
-  * If the device does not support EV2 secure messaging, the <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option does not appear.
+  * If the device does not support the EV2 secure messaging feature, the <Cmd sid='device.card.secureMessaging.enforce' product='2' /> option does not appear.
 
   * You can also select multiple devices and set this option with <Cmd sid='device.batchEdit' product='2' />. Batch editing automatically excludes devices that do not support EV2 secure messaging.
 
-  :::
+   :::

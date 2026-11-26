@@ -1,19 +1,19 @@
 ---
 id: control-elevator
 title: Control Elevators
-description: Control elevators and check detailed information.
+description: Control elevators and view details.
 keywords:
   - Monitoring
   - Elevator
 ---
 
-This guide describes how to control the elevator. You can control the elevator or check detailed information through the provided features.
+Learn how to control elevators. Use the available features to control elevators or view details.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.arena' />, or select <Cmd sid='shell.header.arena' /> from the shortcut list in the upper-left corner of the screen.
 
 2. In the <Cmd sid='arena.tree.door.title' /> tab in the left sidebar, go to <Cmd sid='arena.tree.door.allElevatorGroups' />. 
 
-3. Select the elevator in the desired group and right-click. Select a feature from the pop-up menu.
+3. Select an elevator in the group, and then right-click. Select a feature from the pop-up menu.
 
 :::info
 
@@ -25,21 +25,21 @@ This guide describes how to control the elevator. You can control the elevator o
 
 ## Control Elevators
 
-You can acknowledge or check details of alarms triggered by the elevator.
+Clear alarms triggered by the elevator or view details.
 
 <Image src='/img/biostarx-monitoring-door-elevator-popup.png' />
 
 ### Clear alarm {/* #clear-alarm */}
 
-You can deactivate the alarm that occurred at this elevator. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the pop-up menu. A completion message appears in the upper-right corner of the screen.
+Clear alarms triggered by the selected elevator. Click <Cmd sid='arena.tree.contextMenu.clearAlarm' /> in the pop-up menu. A completion message appears in the upper-right corner of the screen.
 
 ### View details {/* #detail-view */}
 
-You can check detailed information about the elevator and the event history. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the pop-up menu. Detailed information and event history for the elevator appear on the right side of the screen.
+View detailed information about the elevator and the event history. Click <Cmd sid='arena.tree.contextMenu.viewDetail' /> in the pop-up menu. Elevator details and the event history appear in the right pane.
 
 <Image src='/img/biostarx-monitoring-door-elevator-details.png' />
 
-* **Elevator control**: Set the elevator to locked or open.
+* **Elevator control**: Changes the elevator status to locked or unlocked.
 
   <Image src='/img/biostarx-monitoring-door-elevator-details-control.png' />
 
@@ -47,42 +47,42 @@ You can check detailed information about the elevator and the event history. Cli
 
   <Image src='/img/biostarx-monitoring-door-elevator-details-floor-list.png' className='none' />
 
-* <Cmd sid='arena.preview.elevator.normalizeAllFloors' />: Use this when an administrator manually opens or locks all floors.
+* <Cmd sid='arena.preview.elevator.normalizeAllFloors' />: Available when an administrator has manually unlocked or locked all floors.
 
-* **View Details**: You can check the name, location, status information, and more for the elevator.
+* **Elevator details**: Shows the elevator name, location, status, and more.
 
-* <Cmd sid='arena.recentEvent' />: You can check the recent event list that occurred at the selected elevator.
+* <Cmd sid='arena.recentEvent' />: Shows the recent event list for the selected elevator.
 
 :::info
 
-For more information about each item in the elevator details section, see <DocLink docId='platform/biostar_x/settings-elevators-add' />.
+For more information about each entry in the Elevator details section, see <DocLink docId='platform/biostar_x/settings-elevators-add' />.
 
 :::
 
 ## Floor access control {/* #floor-access-control */}
 
-You can control the floors that can be accessed by the elevator. Click on the relay for the floor set in the elevator and right-click. Select the desired feature from the pop-up menu.
+Control the floors that the elevator can access. Click the relay for the floor set on the elevator, and then right-click. Select the desired feature from the pop-up menu.
 
 <Image src='/img/biostarx-monitoring-door-elevator-floor-popup.png' />
 
-### Floor open {/* #floor-open */}
+### Unlock a floor {/* #floor-open */}
 
-The opened floor can be accessed by anyone. Click <Cmd sid='arena.tree.contextMenu.unlock' /> in the pop-up menu, and then select an option.
+Anyone can access an unlocked floor. Click <Cmd sid='arena.tree.contextMenu.unlock' /> in the pop-up menu, and then select an option.
 
-* <Cmd sid='arena.tree.contextMenu.unlockOnce' />: Opens the floor once.
+* <Cmd sid='arena.tree.contextMenu.unlockOnce' />: Unlocks the floor once.
 
-* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Opens the floor regardless of time.
+* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />: Unlocks the floor regardless of time.
 
 :::tip
 
-The floor can be temporarily opened for the convenience of external guests when they visit. After opening the floor, be sure to switch to <Cmd sid='arena.tree.contextMenu.normalize' /> mode.
+Temporarily unlock the selected floor when external guests visit so they can enter easily. After unlocking a floor, make sure to set it to <Cmd sid='arena.tree.contextMenu.normalize' />.
 
 :::
 
-### Normalize floor {/* #floor-unlock */}
+### Normalize a floor {/* #floor-unlock */}
 
-Changing the floor to <Cmd sid='arena.tree.contextMenu.normalize' /> status will allow only authorized users to access. Click <Cmd sid='arena.tree.contextMenu.normalize' /> in the pop-up menu.
+When you set the selected floor to <Cmd sid='arena.tree.contextMenu.normalize' />, only authorized users can access it. Click <Cmd sid='arena.tree.contextMenu.normalize' /> in the pop-up menu.
 
-### Lock floor {/* #floor-lock */}
+### Lock a floor {/* #floor-lock */}
 
-Changing the floor to <Cmd sid='arena.tree.contextMenu.lock' /> status will prevent anyone from access. Click <Cmd sid='arena.tree.contextMenu.lock' /> in the pop-up menu.
+When you set the selected floor to <Cmd sid='arena.tree.contextMenu.lock' />, no one can access it. Click <Cmd sid='arena.tree.contextMenu.lock' /> in the pop-up menu.
