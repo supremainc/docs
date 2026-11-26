@@ -1,31 +1,31 @@
 ---
 id: set-user-advanced
-title: Configure User Advanced Settings
-description: Learn how to set messages to display on the device when the user enters and how to exclude directory integration features.
+title: Set Up Advanced User Settings
+description: Learn how to set a message that appears on the device when the user enters and how to exclude the user from directory sync.
 keywords:
   - User
   - Advanced Settings
 ---
 
-You can set messages to display on the device when the user enters or exclude the user from synchronization during <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> integration. This feature can be set when adding or editing a user.
+You can set a message that appears on the device when the user enters, or exclude the user from synchronization when integrating <Cmd sid='settings.activeDirectory.title' product='2' className='normal' />. Set this when you add or edit a user.
 
-Go to the <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> page and set access permissions using the two methods below.
+Go to the <Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> page, and configure these settings using the two methods below.
 
 import EnterUserPage from '../../common/_enter-user-page.mdx';
 
 <EnterUserPage />
 
-The items that can be set in the <Cmd sid='common.advanced' product='2' /> section are as follows.
+Set the following fields in the <Cmd sid='common.advanced' product='2' /> section.
 
 <Image src='/img/biostarx-user-advanced.png' />
 
-* <Cmd sid='common.privateMessage' product='2' />: You can enter a message to display on the device when the user enters. You can enter up to 128 characters for the message.
+* <Cmd sid='common.privateMessage' product='2' />: Enter a message that appears on the device when the user enters. The message can be up to 128 characters long.
 
-* <Cmd sid='user.adsync.exclude' product='2' />: You can exclude the user from synchronization during <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> integration.
+* <Cmd sid='user.adsync.exclude' product='2' />: Select to exclude the user from synchronization when integrating with <Cmd sid='settings.activeDirectory.title' product='2' className='normal' />.
 
 :::info
 
-* The <Cmd sid='user.adsync.exclude' product='2' /> option is available as an add-on for **Essential** licenses or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* The <Cmd sid='user.adsync.exclude' product='2' /> option is available as an add-on with an **Essential** license or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 * For more information about directory integration settings, see <DocLink docId='platform/biostar_x/settings-diretory-integration' />.
 
