@@ -311,8 +311,8 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       tags: ['RFID']
     },
     {
-      title: 'XPass 2 V2',
-      url: `/device/xpass_2_v2`,
+      title: 'XPass 2a',
+      url: `/device/xpass_2a`,
       img: require('@site/static/img/cover/xpass2.webp').default,
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
