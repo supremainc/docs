@@ -1,69 +1,69 @@
 ---
 id: dashboard-adding-widget
 title: Agregar Widgets
-description: El panel es una pantalla de monitoreo personalizable donde los usuarios pueden organizar libremente la información que deseen.
+description: El panel es una pantalla de monitoreo personalizable donde los usuarios pueden organizar libremente la información que necesitan.
 keywords:
   - Tablero
   - Widget
 ---
 
-El panel de **BioStar X** es una pantalla de monitoreo personalizable donde los usuarios pueden organizar libremente la información que deseen. Agrega distintos widgets para configurar la información clave del sistema de control de acceso según tu entorno de trabajo.
+El panel de **BioStar X** es una pantalla de monitoreo personalizable donde los usuarios pueden organizar libremente la información que necesitan. Puede agregar varios widgets para organizar la información clave del sistema de control de acceso según su entorno de trabajo.
 
-Los tipos de widgets disponibles son los siguientes.
+Puede agregar los siguientes tipos de widgets.
 
 * **Gráfico**: Visualiza los datos de eventos de acceso en gráficos de barras, líneas o pastel
 
-* **Contador**: Muestra la cantidad de eventos por día o semana en números
+* **Contador**: Muestra la cantidad de eventos diarios o semanales
 
 * **Eventos en tiempo real**: Monitorea todos los eventos que ocurren en **BioStar X** en tiempo real
 
-* **Monitoreo de acceso en tiempo real**: Muestra en tiempo real la información del usuario que se autentica correctamente en dispositivos específicos
+* **Monitoreo de acceso en tiempo real**: Muestra en tiempo real información sobre los usuarios que se autentican correctamente en un dispositivo específico
 
-* **Estado de uso del sistema**: Muestra en números el estado de registro de usuarios, dispositivos, puntos de acceso, etc.
+* **Estado de uso del sistema**: Muestra los recuentos de registro de usuarios, dispositivos, puertas y más
 
-* **Control de puertas**: Verifica el estado de los puntos de acceso seleccionados y contrólalos de forma remota
+* **Control de puertas**: Verifica el estado de la puerta seleccionada y la controla de forma remota
 
 * **Texto**: Coloca texto personalizado, como anuncios o títulos de widgets
 
-Los widgets colocados en el panel ofrecen las siguientes ventajas.
+Los widgets del panel ofrecen los siguientes beneficios.
 
-* **Configuración personalizada**: Selecciona solo la información necesaria para el trabajo y organízala en una sola pantalla
+* **Diseño personalizado**: Le permite seleccionar solo la información que necesita para el trabajo y colocarla en una sola pantalla
 
-* **Monitoreo en tiempo real**: Verifica al instante los eventos de acceso y el estado del sistema
+* **Monitoreo en tiempo real**: Le permite verificar de inmediato los eventos de acceso y el estado del sistema
 
-* **Visualización intuitiva**: Representa los datos mediante gráficos y contadores
+* **Visualización intuitiva**: Representa visualmente los datos con gráficos y contadores
 
 * **Gestión eficiente**: Mejora la eficiencia del trabajo al integrar funciones de monitoreo y control
 
 ## Agregar widgets {/* #add-widgets */}
 
-Agrega widgets en <Cmd sid='shell.header.dashboard' /> para consultar la información que necesites.
+Agregar widgets a <Cmd sid='shell.header.dashboard' /> le permite ver la información que necesita.
 
-1. Haz clic en <Cmd sid='shell.header.dashboard' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.dashboard' />.
 
 2. Haga clic en <Cmd sid='reportApp.addWidget' product='2' />.
 
    <Image src='/img/biostarx-dashboard-add-widget.png' />
 
-3. Cuando aparezca la ventana <Cmd sid='reportApp.addNewWidget' product='2' />, selecciona el elemento deseado en <Cmd sid='reportApp.widgetType' product='2' /> e ingresa o define los campos requeridos.
+3. Cuando aparezca la ventana <Cmd sid='reportApp.addNewWidget' product='2' />, seleccione una opción en <Cmd sid='reportApp.widgetType' product='2' /> e ingrese o configure los campos requeridos.
 
    <Image src='/img/biostarx-dashboard-add-widget-type.png' width={400} />
 
-4. Completa la configuración del widget y haz clic en <Cmd sid='reportApp.apply' product='2' />.
+4. Complete la configuración del widget y haga clic en <Cmd sid='reportApp.apply' product='2' />.
 
-5. Una vez creado el widget en el área de visualización, ajusta su tamaño o colócalo en la ubicación deseada.
+5. Cuando se cree un widget en el área de visualización, cambie su tamaño o colóquelo en la ubicación que necesite.
 
-6. Una vez que hayas completado todos los ajustes, haz clic en <Cmd sid='reportApp.apply' product='2' /> en la esquina superior derecha de la pantalla.
+6. Una vez que haya completado todos los ajustes, haga clic en <Cmd sid='reportApp.apply' product='2' /> en la esquina superior derecha de la pantalla.
 
 :::info
 
-Si ya agregaste un widget, haz clic en el ícono <IcSet2 /> en la esquina superior derecha de la pantalla. Una vez que entres en el modo <Cmd sid='reportApp.dashboardSettings' product='2' />, haz clic en <Cmd sid='reportApp.addWidget' product='2' />.
+Si ya se agregó un widget, haga clic en <IcSet2 /> en la esquina superior derecha de la pantalla. Una vez que ingrese al modo <Cmd sid='reportApp.dashboardSettings' product='2' />, haga clic en <Cmd sid='reportApp.addWidget' product='2' />.
 
 :::
 
 ## Tipos de widgets {/* #widget-types */}
 
-* El tamaño predeterminado varía según el widget y está optimizado para verse mejor en ese tamaño.
+* El tamaño predeterminado del widget varía según el widget, y cada widget está optimizado para verse mejor en su tamaño predeterminado.
 
 * Todos los widgets se pueden redimensionar arrastrando la esquina inferior derecha.
 
@@ -71,89 +71,89 @@ Si ya agregaste un widget, haz clic en el ícono <IcSet2 /> en la esquina superi
 
 ### Gráfico {/* #chart */}
 
-Al seleccionar los datos de gráfico deseados, se muestra en el gráfico la cantidad de eventos ocurridos.
+Seleccione los datos del gráfico para mostrar la cantidad de eventos en un gráfico.
 
 <Image src='/img/common/biostarx-chart.png' caption alone />
 
-* <Cmd sid='reportApp.widgetTypes.chartData' product='2' />: En la lista de eventos diarios o semanales, selecciona los datos de gráfico deseados.
+* <Cmd sid='reportApp.widgetTypes.chartData' product='2' />: Seleccione los datos del gráfico de la lista de eventos diarios o semanales.
 
   * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
-* <Cmd sid='reportApp.chartType' product='2' />: Selecciona el tipo deseado entre <Cmd sid='reportApp.chartTypes.verticalBar' product='2' />, <Cmd sid='reportApp.chartTypes.horizontalBar' product='2' />, <Cmd sid='reportApp.chartTypes.line' product='2' />, y <Cmd sid='reportApp.chartTypes.pie' product='2' />.
+* <Cmd sid='reportApp.chartType' product='2' />: Seleccione un tipo entre <Cmd sid='reportApp.chartTypes.verticalBar' product='2' />, <Cmd sid='reportApp.chartTypes.horizontalBar' product='2' />, <Cmd sid='reportApp.chartTypes.line' product='2' /> o <Cmd sid='reportApp.chartTypes.pie' product='2' />.
 
-* <Cmd sid='reportApp.chartColorSchemes' product='2' />: Selecciona el color deseado entre los 5 esquemas de color.
+* <Cmd sid='reportApp.chartColorSchemes' product='2' />: Seleccione un color de entre cinco esquemas de color.
 
 :::info
 
-Los gráficos que se muestran al seleccionar <Cmd sid='reportApp.chartColorSchemes' product='2' /> utilizan valores aleatorios para la vista previa; no son valores reales.
+Los valores del gráfico que se muestran al seleccionar <Cmd sid='reportApp.chartColorSchemes' product='2' /> son valores aleatorios para la vista previa; no son valores reales.
 
 :::
 
 ### Contador {/* #bar */}
 
-Al seleccionar los datos de contador deseados, se muestra como número la cantidad de eventos ocurridos.
+Seleccione los datos del contador para mostrar la cantidad de eventos ocurridos.
 
 <Image src='/img/common/biostarx-counter.png' caption alone />
 
-* <Cmd sid='reportApp.widgetTypes.counterData' product='2' />: En la lista de eventos diarios o semanales, selecciona los datos de contador deseados.
+* <Cmd sid='reportApp.widgetTypes.counterData' product='2' />: Seleccione los datos del contador de la lista de eventos diarios o semanales.
 
   * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
 
 ### Texto {/* #text */}
 
-Ingresa y coloca el texto deseado en el área de widgets de <Cmd sid='shell.header.dashboard' />. Después de crearlo, colócalo en la ubicación necesaria y úsalo como título de un widget o como aviso.
+Ingrese texto y colóquelo en el área de widgets de <Cmd sid='shell.header.dashboard' />. Después de crearlo, colóquelo donde sea necesario para usarlo como título de widget o como aviso.
 
 <Image src='/img/common/biostarx-text.png' caption alone />
 
 :::info
 
-Si seleccionas la opción <Cmd sid='reportApp.widgetTypes.text.removeBackground' product='2' /> al crear un widget <Cmd sid='reportApp.widgetTypes.text' product='2' />, se aplicará transparencia al fondo.
+Si selecciona la opción <Cmd sid='reportApp.widgetTypes.text.removeBackground' product='2' /> al crear un widget <Cmd sid='reportApp.widgetTypes.text' product='2' />, el fondo se vuelve transparente.
 
 :::
 
 ### Eventos en tiempo real {/* #realtime-events */}
 
-Muestra los eventos que ocurren en **BioStar X** en tiempo real. Verifica eventos filtrando eventos específicos, usuarios, puertas y dispositivos.
+Muestra los eventos que ocurren en **BioStar X** en tiempo real. Filtre por evento, usuario, puerta o dispositivo para ver eventos.
 
 <Image src='/img/biostarx-real-time-event.png' caption />
 
-* <Cmd sid='reportApp.pause' product='2' />: Pausar el evento en tiempo real.
+* <Cmd sid='reportApp.pause' product='2' />: Pausa los eventos en tiempo real.
 
-* <Cmd sid='reportApp.play' product='2' />: Reanudar el evento en tiempo real que se detuvo.
+* <Cmd sid='reportApp.play' product='2' />: Reanuda los eventos en tiempo real pausados.
 
-* <Cmd sid='reportApp.clear' product='2' />: Se eliminará todo el registro capturado.
+* <Cmd sid='reportApp.clear' product='2' />: Elimina todos los registros de autenticación.
 
 :::info
 
-Si navegas a otra página y regresas a <Cmd sid='shell.header.dashboard' />, la lista se borrará y los eventos se registrarán nuevamente.
+Si navega a otra página y luego regresa a <Cmd sid='shell.header.dashboard' />, la lista se borra y los eventos se registran nuevamente.
 
 :::
 
 ### Monitoreo de acceso en tiempo real {/* #real-time-access-monitoring */}
 
-Selecciona un dispositivo y muestra la foto de perfil e información (<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.date' product='2' />, <Cmd sid='reportApp.device' product='2' />) del usuario que se autentique correctamente en tiempo real.
+Seleccione un dispositivo para mostrar la foto de perfil y la información (<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.date' product='2' />, <Cmd sid='reportApp.device' product='2' />) de los usuarios que se autentican correctamente en ese dispositivo en tiempo real.
 
 <Image src='/img/biostarx-checkpoint.png' caption />
 
-* <Cmd sid='reportApp.pause' product='2' />: Pausar el punto de control.
+* <Cmd sid='reportApp.pause' product='2' />: Pausa el monitoreo de acceso en tiempo real.
 
-* <Cmd sid='reportApp.play' product='2' />: Reanudar el punto de control que se pausó.
+* <Cmd sid='reportApp.play' product='2' />: Reanuda el monitoreo de acceso en tiempo real pausado.
 
-* <Cmd sid='reportApp.clear' product='2' />: Se eliminará todo el registro capturado.
+* <Cmd sid='reportApp.clear' product='2' />: Elimina todos los registros de autenticación.
 
 :::info
 
-Se registran hasta 5 personas en <Cmd sid='reportApp.widgetTypes.checkpoint' product='2' />.
+<Cmd sid='reportApp.widgetTypes.checkpoint' product='2' /> registra hasta cinco usuarios.
 
 :::
 
 ### Estado de uso del sistema {/* #system-usage-status */}
 
-Los distintos estados de uso de BioStar X se muestran en números.
+Muestra varias estadísticas de uso de BioStar X como números.
 
 <Image src='/img/common/biostarx-system-usage.png' caption alone />
 
-Los <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' /> que se pueden mostrar son los siguientes:
+Lo siguiente se puede mostrar en <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' />.
 
 * <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />, <Cmd sid='user.credential.IRFace' product='2' />
 
@@ -163,13 +163,13 @@ Selecciona una puerta para verificar y controlar su estado.
 
 <Image src='/img/biostarx-door-control.png' caption />
 
-Los siguientes elementos se pueden controlar con los botones <Cmd sid='reportApp.doorControl.actionsBtn' product='2' />:
+Lo siguiente se puede controlar con <Cmd sid='reportApp.doorControl.actionsBtn' product='2' />.
 
 * <Cmd sid='reportApp.doorControl.actions.open' product='2' />, <Cmd sid='reportApp.doorControl.actions.normalize' product='2' />, <Cmd sid='reportApp.doorControl.actions.lock' product='2' />, <Cmd sid='reportApp.doorControl.actions.unlock' product='2' />, <Cmd sid='reportApp.doorControl.actions.clearAlarm' product='2' />, <Cmd sid='reportApp.doorControl.actions.clearAPB' product='2' />
 
 :::info
 
-El nombre del widget <Cmd sid='reportApp.widgetTypes.doorControl' product='2' /> se asigna automáticamente al nombre de la puerta y no puede modificarse.
+El nombre del widget <Cmd sid='reportApp.widgetTypes.doorControl' product='2' /> se establece automáticamente con el nombre de la puerta y no se puede cambiar.
 
 :::
 
@@ -177,8 +177,8 @@ El nombre del widget <Cmd sid='reportApp.widgetTypes.doorControl' product='2' />
 
 Puede configurar el intervalo de actualización de datos de los widgets agregados al panel.
 
-1. Haz clic en <Cmd sid='shell.header.dashboard' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.dashboard' />.
 
-2. Haz clic en el icono <IcSet2 /> en la esquina superior derecha de la pantalla.
+2. Haga clic en <IcSet2 /> en la esquina superior derecha de la pantalla.
 
-3. Una vez que ingrese al modo <Cmd sid='reportApp.dashboardSettings' product='2' />, configure <Cmd sid='reportApp.autoRefreshInterval' product='2' /> en la configuración general en la parte inferior de la pantalla.
+3. Después de entrar en el modo <Cmd sid='reportApp.dashboardSettings' product='2' />, configure <Cmd sid='reportApp.autoRefreshInterval' product='2' /> en Configuración general, en la parte inferior de la pantalla.

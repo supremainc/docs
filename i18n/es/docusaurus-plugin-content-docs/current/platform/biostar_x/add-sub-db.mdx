@@ -1,7 +1,7 @@
 ---
 id: add-sub-db
-title: Agregar Base de Datos Auxiliar
-description: Al agregar un servidor de comunicaciones múltiples, agrega y conecta una base de datos auxiliar. Esto reduce la carga en el servidor principal.
+title: Agregar una base de datos secundaria
+description: Aprenda a agregar y conectar una base de datos secundaria que funcione con Multi Communications Server para reducir la carga en el servidor principal.
 keywords:
   - Base de datos
   - Agregar
@@ -11,31 +11,31 @@ keywords:
 import DbQueryCreate from "../../common/_bsx-sub-db-create-table-query-mariadb.mdx";
 import DbQueryCreateSQL from "../../common/_bsx-sub-db-create-table-query-mssql.mdx";
 
-Al agregar un servidor de comunicaciones múltiples, agrega y conecta una base de datos auxiliar. Esto reduce la carga en el servidor principal.
+Aprenda a agregar y conectar una base de datos secundaria que funcione con Multi Communications Server para reducir la carga en el servidor principal.
 
 :::info
 
-* Necesitas una licencia de **servidor de comunicación múltiple** para agregar una base de datos auxiliar. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* Para agregar una base de datos secundaria, necesita una licencia de **Multi Communications Server**. Para obtener más información sobre las políticas de licencias, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
-* Para más información sobre la instalación del Servidor de comunicaciones múltiples, consulta <DocLink docId='platform/biostar_x/install-communication-server' />.
+* Para obtener más información sobre la instalación de Multi Communications Server, consulta <DocLink docId='platform/biostar_x/install-communication-server' />.
 
 :::
 
 ## Antes de comenzar
 
-Si usas un dominio o nombre de host en lugar de una dirección IP para la comunicación entre bases de datos en un entorno MariaDB, asegúrate de revisar la siguiente guía.
+Si usa un dominio o nombre de host en lugar de una dirección IP para la comunicación de base de datos en MariaDB, asegúrese de revisar las indicaciones a continuación.
 
-* Si no utilizas una dirección IP, puede que no sea posible ejecutar `Create user` o `Grant`.
+* Si no usa una dirección IP, es posible que no pueda ejecutar `Create user` o `Grant`.
 
-* Si la comunicación se realiza mediante un dominio o nombre de host, asegura que el usuario y los permisos estén registrados para localhost.
+* Si se comunica mediante un dominio o nombre de host, asegúrese de que haya un usuario y permisos registrados para localhost.
 
-* Si instalaste BioStar X mediante el método de instalación conveniente, la cuenta root está registrada solo para localhost, por lo que debes agregar la dirección IP del servidor o *127.0.0.1*.
+* Si instaló BioStar X mediante la instalación Express, la cuenta root está registrada solo para localhost. Además, registre el usuario y los permisos para la dirección IP del servidor o *127.0.0.1*.
 
-### Método de registro
+### Cómo registrar
 
-Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* y Usuario root; si no existe, establece una contraseña y otorga permisos.
+Verifique si el usuario root con Host *127.0.0.1* tiene una contraseña; si no, establezca una y otorgue permisos.
 
-1. Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* y Usuario root. 
+1. Verifique si el usuario root con Host *127.0.0.1* tiene una contraseña. 
 
    ```sql
    SELECT * FROM mysql.user;
@@ -43,9 +43,9 @@ Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* 
 
    <Image src='/img/common/biostarx-subdb-mariadb-specific.png' alone />
 
-   Si está en blanco, la contraseña no está establecida; ejecuta la consulta en los siguientes elementos para agregar una contraseña y otorgar permisos.
+   Si está en blanco, no hay una contraseña establecida; asegúrese de ejecutar la consulta de la siguiente entrada para agregar una contraseña y otorgar permisos.
 
-2. Establece una contraseña y otorga permisos para la cuenta con Host *127.0.0.1* y Usuario root.
+2. Establezca una contraseña y otorgue permisos para el usuario root con Host *127.0.0.1*.
 
    ```sql
    ALTER USER 'root'@'127.0.0.1' IDENTIFIED BY '<Main DB AC Schema Password>';
@@ -75,15 +75,15 @@ Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* 
    FLUSH PRIVILEGES;
    ```
 
-### Configuración de comunicación mediante dirección IP
+### Configurar la comunicación por dirección IP
 
-Las siguientes configuraciones pueden forzar la comunicación mediante dirección IP.
+Use la siguiente configuración para forzar la comunicación por dirección IP.
 
-1. Después de instalar **BioStar X**, dirígete a la siguiente ruta.
+1. Después de instalar **BioStar X**, vaya a la siguiente ruta.
 
    >  C:\Program Files\BioStar X\ta\mariadb-11.4.4-winx64
 
-2. Abre el archivo *my.cnf* con permisos de propietario y agrega la opción `skip-name-resolve` a la sección [mysqld].
+2. Abra el archivo *my.cnf* con privilegios de administrador y agregue la opción `skip-name-resolve` a la sección [mysqld].
 
    ```ini
    [mysqld]
@@ -100,9 +100,9 @@ Las siguientes configuraciones pueden forzar la comunicación mediante direcció
 
 3. Reinicia el servicio de MariaDB.
 
-## Agregar base de datos auxiliar {/* #add-sub-db */}
+## Agregar una base de datos secundaria {/* #add-sub-db */}
 
-Esta sección brinda orientación sobre cómo agregar una base de datos auxiliar. Según el tipo de base de datos que se utilice, existen dos métodos: MariaDB y SQL Server.
+Aprenda a agregar una base de datos secundaria. Según el tipo de base de datos, use uno de dos métodos: MariaDB o SQL Server.
 
 ### MariaDB {/* #mariadb */}
 
@@ -111,7 +111,7 @@ Esta sección brinda orientación sobre cómo agregar una base de datos auxiliar
 
 #### Base de datos principal
 
-Otorga la cuenta y los permisos para acceder a la base de datos principal desde la nueva base de datos auxiliar.
+Cree una cuenta y otorgue permisos para que la nueva base de datos secundaria pueda acceder a la base de datos principal.
 
 ```sql
 CREATE USER '<Main DB AC Schema User>'@'<Sub DB IP>' IDENTIFIED BY '<Main DB AC Schema Password>';
@@ -130,9 +130,9 @@ FLUSH PRIVILEGES;
 </Step>
 <Step>
 
-#### Base de datos auxiliar
+#### Base de datos secundaria
 
-Otorga la cuenta y los permisos para acceder a la nueva base de datos auxiliar desde la base de datos principal.
+Cree una cuenta y otorgue permisos para que la base de datos principal pueda acceder a la nueva base de datos secundaria.
 
 ```sql
 CREATE USER '<Sub DB AC Schema User>'@'<Main DB IP>' IDENTIFIED BY '<Sub DB AC Schema Password>';
@@ -151,15 +151,15 @@ FLUSH PRIVILEGES;
 </Step>
 <Step>
 
-#### Verificar el uso de FederatedX
+#### Verifique si FederatedX está habilitado
 
-Ejecuta el siguiente comando tanto en la base de datos principal como en la auxiliar para verificar si el motor de almacenamiento FederatedX está habilitado.
+En las bases de datos principal y secundaria, ejecute el siguiente comando para comprobar si el motor de almacenamiento FederatedX está habilitado.
 
 ```sql
 SHOW ENGINES;
 ```
 
-Si el resultado de la consulta muestra `Engine : FEDERATED, Support : YES`, ya está instalado. Si el motor de almacenamiento FederatedX no está instalado, ejecuta la siguiente consulta.
+Si el resultado de la consulta muestra `Engine : FEDERATED, Support : YES`, ya está instalado. Si el motor de almacenamiento FederatedX no está instalado, ejecute la siguiente consulta.
 
 ```sql
 INSTALL PLUGIN federated SONAME 'ha_federatedx';
@@ -167,16 +167,16 @@ INSTALL PLUGIN federated SONAME 'ha_federatedx';
 
 :::info
 
-Verifica si el archivo *ha_federatedx.dll* existe en la carpeta *lib/plugin* en la ruta donde está instalada MariaDB. Normalmente, el archivo dll se encuentra en la ruta *C:\Program Files\MariaDB \{version}\lib\plugin*.
+Compruebe si el archivo *ha_federatedx.dll* existe en la carpeta *lib/plugin* dentro de la ruta donde está instalada MariaDB. Normalmente, el archivo dll se encuentra en *C:\Program Files\MariaDB \{version}\lib\plugin*.
 
 :::
 
 </Step>
 <Step>
 
-#### Registrar alias de servidor
+#### Registrar un alias de servidor
 
-Registra un alias de servidor para que la tabla federatedX creada en la base de datos auxiliar pueda acceder a la tabla origen en la base de datos principal.
+Registre un alias de servidor para que la tabla federatedX creada en la base de datos secundaria pueda acceder a la tabla de origen en la base de datos principal.
 
 ```sql
 CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
@@ -185,7 +185,7 @@ CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>',
 SELECT * FROM mysql.servers;
 ```
 
-Si necesitas cambiar la información de Host, Puerto, BD, Usuario o Contraseña del nombre de servidor registrado, puedes modificarla usando la instrucción `Alter`. También puedes cambiar solo cierta información.
+Para cambiar la información de Host, Port, DB, User o Password de un nombre de servidor registrado, modifíquela mediante una instrucción `Alter`. También puede cambiar solo parte de la información.
 
 ```sql
 ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
@@ -200,11 +200,11 @@ ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'bios
 </Step>
 <Step>
 
-#### Configuración de enlace de tablas
+#### Configurar enlaces de tablas
 
-Sigue los pasos a continuación para enlazar las tablas necesarias en la base de datos auxiliar con las tablas en la base de datos principal.
+Siga los pasos a continuación para vincular las tablas necesarias de la base de datos secundaria con las tablas de la base de datos principal.
 
-* A continuación se muestra la consulta para generar sentencias `CREATE TABLE` en la base de datos principal.
+* La siguiente consulta genera sentencias `CREATE TABLE` en la base de datos principal.
 
   ```sql
   select
@@ -224,13 +224,13 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
   :::info
 
-  Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
+  Debido a la naturaleza de FederatedX, establezca `Table_type` en 'BASE TABLE'. El `VIEW type` también funciona, pero no se recomienda.
 
   :::
 
 <div className='print--invisible'>
 
-* Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
+* Asegúrese de ingresar en la base de datos secundaria la sentencia `CREATE` generada por la consulta anterior.
 
   <DbQueryCreate />
 
@@ -239,15 +239,15 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 </Step>
 <Step>
 
-#### Configuración de Service Manager
+#### Configurar Service Manager
 
 1. Ejecuta **BioStar X Service Manager**. (<Start /> → **BioStar X** → **BioStar X Service Manager**)
 
 2. Haz clic en el menú <Cmd>DATABASE</Cmd> en la barra lateral izquierda.
 
-3. Haz clic en <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
+3. Haga clic en <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
 
-4. Ingresa cada elemento en la pantalla de adición de base de datos.
+4. En la pantalla Add Database, ingrese cada campo.
 
    <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
 
@@ -261,11 +261,11 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
    * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
 
-   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingrese el nombre, el usuario y la contraseña de las bases de datos AC y TA.
 
-5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
+5. Haga clic en <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está conectada correctamente.
 
-6. Haz clic en <Cmd>Save</Cmd> en la parte superior derecha de la pantalla para guardar la configuración.
+6. Para guardar la configuración, haga clic en <Cmd>Save</Cmd> en la esquina superior derecha de la pantalla.
 
 </Step>
 </Steps>
@@ -277,7 +277,7 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
 #### Otorgar permisos para la base de datos principal
 
-Concede los siguientes permisos en la base de datos principal con una cuenta que tenga privilegios de sysadmin.
+Con una cuenta con privilegios de sysadmin, otorgue los siguientes permisos en la base de datos principal.
 
 ```sql
 GRANT ALTER ANY LINKED SERVER TO [<MAIN DATABASE AC USER>];
@@ -292,13 +292,13 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 </Step>
 <Step>
 
-#### Otorgar permisos para la base de datos auxiliar
+#### Otorgar permisos para la base de datos secundaria
 
-1. Conecta User Mapping para las tablas y usuarios en la base de datos auxiliar con una cuenta que tenga privilegios de sysadmin. En este momento, es necesario agregar el rol `db_owner`.
+1. se requieren privilegios de sysadmin para configurar User Mapping para las tablas y los usuarios en la base de datos secundaria. Luego, agregue el rol `db_owner`.
 
    <Image src='/img/common/biostarx-subdb-user-mapping.png' alone />
 
-2. Otorga los siguientes permisos a la base de datos que se va a agregar.
+2. Otorgue los siguientes permisos a la base de datos que agregue.
 
    ```sql
    GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
@@ -313,17 +313,17 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 </Step>
 <Step>
 
-#### Configuración de Service Manager
+#### Configurar Service Manager
 
-Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
+Para agregar una base de datos secundaria, use **BioStar X Service Manager**.
 
 1. Ejecuta **BioStar X Service Manager**. (<Start /> → **BioStar X** → **BioStar X Service Manager**)
 
 2. Haz clic en el menú <Cmd>DATABASE</Cmd> en la barra lateral izquierda.
 
-3. Haz clic en <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
+3. Haga clic en <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
 
-4. Ingresa cada elemento en la pantalla de adición de base de datos.
+4. En la pantalla Add Database, ingrese cada campo.
 
    <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
 
@@ -337,26 +337,26 @@ Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
 
    * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
 
-   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingrese el nombre, el usuario y la contraseña de las bases de datos AC y TA.
 
-5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
+5. Haga clic en <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está conectada correctamente.
 
-6. Haz clic en <Cmd>Save</Cmd> en la parte superior derecha de la pantalla para guardar la configuración.
+6. Para guardar la configuración, haga clic en <Cmd>Save</Cmd> en la esquina superior derecha de la pantalla.
 
 :::info
 
-* Después de completar la configuración, los ajustes de Linked Server para ambas bases de datos, principal y auxiliar, se aplicarán automáticamente.
+* Una vez completada la configuración, la configuración de Linked Server se aplica automáticamente a las bases de datos principal y secundaria.
 
-* Incluso al modificar la información de la base de datos, los ajustes de Linked Server se cambiarán automáticamente. Al modificar la base de datos principal, los cambios se reflejarán en los ajustes de Linked Server de todas las bases de datos auxiliares registradas. Cuando se modifique la base de datos auxiliar, solo se reflejarán los cambios correspondientes a la base de datos principal y a esa base de datos auxiliar.
+* Cuando edita la información de la base de datos, la configuración de Linked Server cambia automáticamente. Cuando edita la base de datos principal, la información actualizada se aplica a la configuración de Linked Server de todas las bases de datos secundarias registradas. Cuando edita una base de datos secundaria, la información actualizada se aplica solo a la base de datos principal y a esa base de datos secundaria.
 
 :::
 
 </Step>
 <Step>
 
-#### Generar la consulta de Linked Temp Table
+#### Generar una consulta de Linked Temp Table
 
-Ejecuta la siguiente consulta en la base de datos principal para generar la consulta de Linked Temp Table que se creará en la base de datos auxiliar.
+Ejecute la siguiente consulta en la base de datos principal para generar una consulta de Linked Temp Table que se ejecutará en la base de datos secundaria.
 
 ```sql
 USE [<AC Schema>];
@@ -422,9 +422,9 @@ Este es un ejemplo de una instrucción `CREATE` generada por la consulta anterio
 </Step>
 <Step>
 
-#### Ejecutar la consulta en la base de datos auxiliar.
+#### Ejecutar la consulta en la base de datos secundaria
 
-Copia por completo la consulta `CREATE SYNONYM` generada previamente. Conéctate al servidor de base de datos auxiliar que se va a agregar, escribe la consulta como se muestra a continuación y ejecútala. Se almacenará en Synonyms del esquema AC de la base de datos auxiliar.
+Copie toda la consulta `CREATE SYNONYM` que generó anteriormente. Conéctese al servidor de base de datos secundaria que está agregando y luego escriba y ejecute la consulta como se muestra a continuación. Se almacenan en Synonyms, en el esquema AC de la base de datos secundaria.
 
 ```sql
 use [<Sub DB AC Database>];

@@ -29,17 +29,17 @@ Al utilizar estas funciones, los administradores pueden establecer políticas de
 
 * Los dispositivos y versiones de firmware que se pueden configurar para el ajuste de límite de ocupación son los siguientes.
 
-  * FaceStation F2 versión de firmware 1.1.0 o superior
+  * Firmware de FaceStation F2 v1.1.0 o posterior
 
-  * FaceStation 2 versión de firmware 1.5.0 o superior
+  * Firmware de FaceStation 2 v1.5.0 o posterior
 
 :::
 
 ## Establecer límite de ocupación {/* #addOccupancyZone */}
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haz clic en <Cmd sid='button.func.addZone' product='2' />.
 
@@ -53,7 +53,7 @@ Al utilizar estas funciones, los administradores pueden establecer políticas de
 
 7. En la sección <Cmd sid='zone.occupancy.countByPass' product='2' />, seleccione los grupos de acceso que siempre puedan omitir el ajuste de límite de ocupación. Para obtener más información, consulte <DocLink inner='#countByPass' />.
 
-8. Después de completar todas las configuraciones, haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
+8. Después de completar todas las configuraciones, haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla.
 
 :::info
 
@@ -61,23 +61,23 @@ Al utilizar estas funciones, los administradores pueden establecer políticas de
 
 :::
 
-## Guía de opciones de ajuste {/* #setting */}
+## Opciones de configuración {/* #setting */}
 
 Los detalles del ajuste de límite de ocupación son los siguientes.
 
-* <Cmd sid='zone.globalZone' product='2' />: Puedes verificar el alcance de aplicación. Configure hasta 2 límites de <Cmd sid='zone.globalZone.global' product='2' /> y solo se podrán ingresar números menores que el límite.
+* <Cmd sid='zone.globalZone' product='2' />: Muestra el alcance. Configure hasta 2 límites de <Cmd sid='zone.globalZone.global' product='2' /> y solo se podrán ingresar números menores que el límite.
 
 * <Cmd sid='common.activate' product='2' />: Active o desactive temporalmente los ajustes.
 
-* <Cmd sid='zone.entryDevices' product='2' />: Selecciona el dispositivo que se utilizará al entrar. Puedes elegir de la lista de dispositivos registrados.
+* <Cmd sid='zone.entryDevices' product='2' />: Seleccione los dispositivos que se utilizarán para la entrada. Seleccione un dispositivo de la lista de dispositivos registrados.
 
-* <Cmd sid='zone.exitDevices' product='2' />: Selecciona el dispositivo que se utilizará al salir. Puedes elegir de la lista de dispositivos registrados.
+* <Cmd sid='zone.exitDevices' product='2' />: Seleccione los dispositivos que se utilizarán para la salida. Seleccione un dispositivo de la lista de dispositivos registrados.
 
 * <Cmd sid='zone.occupancy.limit' product='2' />: Ingrese el número de personas a limitar para la entrada. El ingreso se restringe si el número de personas alcanza el límite de ocupación establecido. Ingrese un número de 0 a 10,000; si lo establece en 0, el acceso será ilimitado.
 
 * <Cmd sid='zone.occupancy.autoCountReset' product='2' />: Defina la hora para inicializar automáticamente el conteo de ocupación almacenado. Cada día a la hora establecida, se restablecerán el conteo de ocupación y el número de personas que siempre omiten el límite.
 
-* <Cmd sid='zone.occupancy.list.almostFull' product='2' />: Envíe una alerta al administrador o registre un evento antes de que el número de personas que ingresan alcance el límite establecido. Cuando las prealertas de ocupación están habilitadas, el campo de entrada <Cmd sid='zone.occupancy.1stLevel' product='2' /> se activa. Para configurar <Cmd sid='zone.occupancy.2stLevel' product='2' />, haga clic en el botón <IcAdd className='border radius' />.
+* <Cmd sid='zone.occupancy.list.almostFull' product='2' />: Envíe una alerta al administrador o registre un evento antes de que el número de personas que ingresan alcance el límite establecido. Cuando las prealertas de ocupación están habilitadas, el campo de entrada <Cmd sid='zone.occupancy.1stLevel' product='2' /> se activa. Para configurar <Cmd sid='zone.occupancy.2stLevel' product='2' />, haga clic en <IcAdd className='border radius' />.
 
 * <Cmd sid='zone.occupancy.networkFailureAction' product='2' />: Determine si se permite la entrada y salida cuando se produce un error de red en el dispositivo configurado. Si se establece permitir entrada y salida, la restricción de ingreso se detiene cuando el dispositivo pierde la conexión de red y los usuarios pueden ingresar incluso si el número real supera el límite.
 
@@ -93,7 +93,7 @@ Los detalles del ajuste de límite de ocupación son los siguientes.
 
 * Configure hasta 2 límites de <Cmd sid='zone.occupancy.list.almostFull' product='2' /> y solo se podrán ingresar números menores que el límite. <Cmd sid='zone.occupancy.1stLevel' product='2' /> y <Cmd sid='zone.occupancy.2stLevel' product='2' /> no pueden configurarse con el mismo valor.
 
-* Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+* Para obtener más información sobre el registro de dispositivos, consulte los siguientes documentos.
 
   * <DocLink docId='platform/biostar_x/settings-adding-devices' />
 
@@ -151,9 +151,9 @@ Cuando se establece <Cmd sid='zone.occupancy.limit' product='2' />, puede ingres
 
 Puede restablecer el conteo de ocupación y el número de personas con paso siempre permitido. Al continuar con el restablecimiento de la ocupación se eliminará toda la información de entrada y salida de los usuarios, y la precisión del conteo de ocupación puede variar según el estado de la conexión de red.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='zone.occupancy.title' product='2' /> en la lista.
 
@@ -167,9 +167,9 @@ Puede restablecer el conteo de ocupación y el número de personas con paso siem
 
 Puede activar una configuración de límite de ocupación desactivada o desactivar una configuración activa. Al desactivar las configuraciones se restablecerán <Cmd sid='zone.occupancy.fullscreen.currentOccupancy' product='2' /> y <Cmd sid='zone.occupancy.list.countBypass' product='2' />.
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='zone.occupancy.title' product='2' /> en la lista.
 
@@ -179,9 +179,9 @@ Puede activar una configuración de límite de ocupación desactivada o desactiv
 
 ## Eliminar {/* #deleteOccupancyZone */}
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haz clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> en la barra lateral izquierda.
 
 3. Haga clic en <Cmd sid='zone.occupancy.title' product='2' /> en la lista.
 

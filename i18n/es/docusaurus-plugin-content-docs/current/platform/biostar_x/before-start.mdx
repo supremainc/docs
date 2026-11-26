@@ -1,7 +1,7 @@
 ---
 id: before-start
 title: Antes de Comenzar
-description: Esta guía cubre lo que debe saber antes de iniciar BioStar X.
+description: Conozca lo que necesita saber antes de comenzar con BioStar X.
 keywords:
   - Guía de instalación
   - MariaDB
@@ -11,7 +11,7 @@ keywords:
 
 :::tip
 
-Esta guía proporciona información importante que debe conocer antes de iniciar **BioStar X**. **BioStar X** es compatible con sistemas operativos de 64 bits. Verifique los requisitos del sistema de la PC donde desea instalar **BioStar X** y luego instálelo.
+Conozca lo que necesita saber antes de comenzar con **BioStar X**. **BioStar X** es compatible con sistemas operativos de 64 bits. Verifique los requisitos del sistema de la PC antes de instalar **BioStar X** y, luego, instálelo.
 
 :::
 
@@ -21,25 +21,25 @@ Antes de instalar **BioStar X**, verifique lo siguiente y continúe con la insta
 
 * **BioStar X** solo se puede instalar en un sistema operativo de 64 bits.
 
-* Si está utilizando MS SQL 2012 Express, consulte el siguiente enlace para instalar el [Service Pack 3](https://www.microsoft.com/download/details.aspx?id=49996).
+* Si está utilizando MS SQL 2012 Express, instale el [Service Pack 3](https://www.microsoft.com/download/details.aspx?id=49996).
 
-* Si está utilizando MS SQL 2014 Express, consulte el siguiente enlace para instalar el [Service Pack 2](https://www.microsoft.com/ko-kr/download/details.aspx?id=53168).
+* Si está utilizando MS SQL 2014 Express, instale el [Service Pack 2](https://www.microsoft.com/en-us/download/details.aspx?id=53168).
 
-* Si está utilizando MS SQL Server, configure la opción `Collation` del servidor y de cada tabla en CI (sin distinción de mayúsculas).
+* Si está utilizando MS SQL Server, configure la opción `Collation` del servidor y de cada tabla a CI (sin distinción de mayúsculas y minúsculas).
 
-* Al hacer una copia de seguridad de una base de datos de una versión anterior de **BioStar X**, desactive todos los servicios antes de continuar. Además, si no respalda y restaura juntas las bases de datos AC y TA, no podrá utilizar la base de datos TA.
+* Cuando haga una copia de seguridad de una base de datos de una versión anterior de **BioStar X**, desactive todos los servicios antes de continuar. Además, haga una copia de seguridad y restaure las bases de datos AC y TA juntas, o no podrá usar la base de datos TA.
 
-* Si desea respaldar la base de datos de **BioStar X**, asegúrese de respaldar también el *enckey* en la carpeta *\Program Files\BioStar X\util* y los archivos *system.conf* y *setting.conf* en la carpeta *\Program Files\BioStar X*. De lo contrario, la base de datos no estará disponible.
+* Para hacer una copia de seguridad de la base de datos de **BioStar X**, haga una copia de seguridad también del archivo *enckey* en la carpeta *\Program Files\BioStar X\util* y de los archivos *system.conf* y *setting.conf* en la carpeta *\Program Files\BioStar X*. De lo contrario, no podrá usar la base de datos.
 
-* Para ver el puerto predeterminado que usa **BioStar X**, consulte <DocLink docId='platform/biostar_x/service-settings' />. Si otro programa ocupa el mismo puerto, **BioStar X** podría no funcionar correctamente.
+* Para ver los valores predeterminados de los puertos utilizados por **BioStar X**, consulte <DocLink docId='platform/biostar_x/service-settings' />. Si otro programa ocupa el mismo puerto, **BioStar X** podría no funcionar correctamente.
 
 ## Verificar la base de datos {/* #checkdb */}
 
-Si está utilizando una base de datos configurada por el usuario, verifique los siguientes elementos antes de instalar **BioStar X**.
+Si está utilizando una base de datos que configuró usted mismo, verifique lo siguiente antes de instalar **BioStar X**.
 
 ### MariaDB {/* #mariadb */}
 
-1. Cambie las siguientes opciones en la sección `[mysql]` del archivo *my.cnf*.
+1. En el archivo *my.cnf*, cambie las opciones en la sección `[mysql]` de la siguiente manera.
 
    ```ini title='my.cnf'
    character-set-server=utf8
@@ -47,7 +47,7 @@ Si está utilizando una base de datos configurada por el usuario, verifique los 
    max_connections = 600
    ```
 
-2. Agregue las siguientes opciones en la sección `[mysql]` del archivo *my.cnf*.
+2. En el archivo *my.cnf*, agregue las siguientes opciones en la sección `[mysql]`.
 
    ```ini title='my.cnf'
    log_bin_trust_function_creators = 1
@@ -65,110 +65,110 @@ Si está utilizando una base de datos configurada por el usuario, verifique los 
 
 :::info
 
-* Configure las opciones de `Collation` para todas las bases de datos y tablas como insensibles a mayúsculas (CI).
+* Configure la opción `Collation` para todas las bases de datos y tablas a CI (sin distinción de mayúsculas y minúsculas).
 
-* Los nombres de base de datos solo pueden contener números, letras en inglés (distinguiendo mayúsculas y minúsculas) y los símbolos especiales `-` `_`.
+* Los nombres de base de datos solo pueden contener números, letras en inglés (distinguiendo mayúsculas y minúsculas) y los símbolos especiales `-` y `_`.
 
 :::
 
-#### Ajustes de puertos {/* #port-setting */}
+#### Configurar puertos {/* #port-setting */}
 
-* Ejecute **SQL Server Configuration Manager** y establezca **TCP/IP Protocol** para **Protocols for SQLEXPRESS** en el número de puerto deseado.
+* Después de ejecutar **SQL Server Configuration Manager**, configure **TCP/IP Protocol** en **Protocols for SQLEXPRESS** con el número de puerto que se utilizará.
 
-* Reinicie los **SQL Server Services** para aplicar los ajustes.
+* Reinicie el servicio de SQL Server para aplicar la configuración.
 
-#### Crear el usuario y la base de datos {/* #create-a-user-and-database */}
+#### Crear un usuario y una base de datos {/* #create-a-user-and-database */}
 
-1. Inicie sesión con la cuenta **sa** usando **SQL Server Authentication** en **SQL Server Management Studio**.
+1. Inicie sesión en **SQL Server Management Studio** con la cuenta **sa** usando **SQL Server Authentication**.
 
-2. Haga clic derecho en **Security** y haga clic en **New Login**.
+2. Haga clic derecho en **Security** y, luego, haga clic en **New Login**.
 
-3. Ingrese el nombre deseado en el campo **Login Name** y seleccione **SQL Server Authentication**.
+3. Ingrese un nombre en el campo **Login name** y, luego, seleccione **SQL Server Authentication**.
 
-4. Ingrese la contraseña deseada en los campos **Password** y **Confirm password**, luego desmarque **Enforce password policy**.
+4. Ingrese la contraseña que va a usar en los campos **Password** y **Confirm password**, y luego desmarque **Enforce password policy**.
 
-5. Haga clic en **OK** para guardar los ajustes.
+5. Haga clic en **OK**.
 
-6. Haga clic derecho en **Database** y seleccione **New Database**.
+6. Haga clic con el botón derecho en **Databases** y luego haga clic en **New Database**.
 
-7. Ingrese el nombre deseado en el campo Database Name.
+7. Ingrese un nombre en el campo **Database name**.
 
 8. Ingrese el nombre de inicio de sesión configurado en el paso **3** en el campo **Owner**.
 
 :::tip
 
-Establezca los siguientes valores recomendados en la sección **Database Files**. Configure **Autogrowth** usando tamaños fijos (MB/GB) en lugar de porcentajes y evite incrementos muy pequeños que puedan causar eventos de crecimiento frecuentes.
+En la sección **Database Files**, configure los siguientes valores recomendados. Configure **Autogrowth** con un tamaño fijo (MB/GB) en lugar de un porcentaje y evite incrementos muy pequeños que provoquen eventos de crecimiento frecuentes.
 
 <Image src='/img/biostarx-before-start-new-database.png' caption />
 
-#### Pequeña (menos de 10 GB)
+#### Organizaciones pequeñas (10 GB o menos)
 
-* Datos: **Initial Size** 1 - 5 GB, **Autogrowth** 100 - 512 MB
+* Datos: **Initial Size** de 1 a 5 GB, **Autogrowth** de 100 a 512 MB
 
-* Registro: **Initial Size** 512 MB - 2 GB, **Autogrowth** 100 - 512 MB
+* Registro: **Initial Size** de 512 MB a 2 GB, **Autogrowth** de 100 a 512 MB
 
-* TempDB: **Initial Size** 512 MB - 1 GB
+* TempDB: **Initial Size** de 512 MB a 1 GB
 
-> p. ej. Datos 2 GB (**Autogrowth** 256 MB) / Registro 1 GB (**Autogrowth** 128 MB) / TempDB 512 MB
+> Por ejemplo: Datos 2 GB (**Autogrowth** 256 MB) / Registro 1 GB (**Autogrowth** 128 MB) / TempDB 512 MB
 
-#### Mediano (10 - 500 GB)
+#### Organizaciones medianas (de 10 a 500 GB)
 
-* Datos: **Initial Size** 10 - 50 GB, **Autogrowth** 512 MB - 1 GB
+* Datos: **Initial Size** de 10 a 50 GB, **Autogrowth** de 512 MB a 1 GB
 
-* Registro: **Initial Size** 5 - 10 GB, **Autogrowth** 512 MB - 1 GB
+* Registro: **Initial Size** de 5 a 10 GB, **Autogrowth** de 512 MB a 1 GB
 
-* TempDB: **Initial Size** 2 - 8 GB
+* TempDB: **Initial Size** de 2 a 8 GB
 
-> p. ej. Datos 20 GB (**Autogrowth** 1 GB) / Registro 5 GB (**Autogrowth** 512 MB) / TempDB 4 GB
+> Por ejemplo: Datos 20 GB (**Autogrowth** 1 GB) / Registro 5 GB (**Autogrowth** 512 MB) / TempDB 4 GB
 
-#### Empresa (500 GB o más)
+#### Organizaciones grandes (500 GB o más)
 
-* Datos: **Initial Size** 100 GB o más, **Autogrowth** 1 - 4 GB
+* Datos: **Initial Size** de al menos 100 GB, **Autogrowth** de 1 a 4 GB
 
-* Registro: **Initial Size** 20 ~ 100 GB, **Autogrowth** 1 ~ 4 GB
+* Registro: **Initial Size** de 20 a 100 GB, **Autogrowth** de 1 a 4 GB
 
-* TempDB: **Initial Size** 8 - 32 GB
+* TempDB: **Initial Size** de 8 a 32 GB
 
-> p. ej. Datos 100 GB (**Autogrowth** 2 GB) / Registro 50 GB (**Autogrowth** 2 GB) / TempDB 16 GB
+> Por ejemplo: Datos 100 GB (**Autogrowth** 2 GB) / Registro 50 GB (**Autogrowth** 2 GB) / TempDB 16 GB
 
 :::
 
 :::caution
 
-* No configure **Autogrowth** con incrementos muy pequeños ni deje **Maxsize** en **Unlimited**. En su lugar, establezca límites apropiados según el crecimiento esperado y supervise el uso.
+* No configure **Autogrowth** con incrementos muy pequeños ni configure **Maxsize** como **Unlimited**; establezca límites adecuados según el crecimiento previsto o supervise el crecimiento.
 
-* En entornos con muchas transacciones, respalde los registros periódicamente para evitar que el tamaño de los archivos de registro aumente.
+* En entornos con un alto volumen de transacciones, haga copias de seguridad del registro de forma regular para evitar que aumente el tamaño del archivo de registro.
 
 :::
 
-#### Configurar la base de datos de autenticación de Windows {/* #windows-authentication-database-settings */}
+#### Configure la base de datos de autenticación de Windows {/* #windows-authentication-database-settings */}
 
 <Steps>
 <Step>
 
 ##### Ajustes previos {/* #preliminary-setting */}
 
-Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones previas que se indican a continuación antes de configurar la base de datos de autenticación de Windows.
+Si utiliza **Microsoft Windows Active Directory**, complete los requisitos previos a continuación antes de configurar la base de datos de autenticación de Windows.
 
-1. Inicie sesión con una cuenta de administrador en **SQL Server Management Studio**.
+1. Inicie sesión en **SQL Server Management Studio** con una cuenta de administrador.
 
-2. Haga clic derecho en **Security** y haga clic en **New Login**.
+2. Haga clic derecho en **Security** y, luego, haga clic en **New Login**.
 
-3. Seleccione **Windows Authentication** y luego haga clic en **Search**.
+3. Seleccione **Windows Authentication** y, a continuación, haga clic en **Search**.
 
 4. En la ventana **Select a user or group**, haga clic en Ubicación, seleccione la ruta de Active Directory y haga clic en **OK**.
 
 5. Ingrese el nombre de usuario en el campo **Enter object name to select**, luego haga clic en **Check Names** > **OK**.
 
-6. Haga clic en **Server Roles** en **Select a page**.
+6. En **Select a page**, haga clic en **Server Roles**.
 
 7. Seleccione **sysadmin** y luego haga clic en **OK**.
 
-8. Haz clic en **User Mapping** en la página **Select**.
+8. En **Select a page**, haga clic en **User Mapping**.
 
-9. Selecciona **ac**, **master**, **ta**, **ve** y establece **Default Schema** en **dbo**.
+9. Seleccione **ac**, **master**, **ta** y **ve**, y establezca **Default Schema** en **dbo**.
 
-10. Haga clic en **OK** para guardar los ajustes.
+10. Para guardar la configuración, haga clic en **OK**.
 
 </Step>
 <Step>
@@ -177,15 +177,15 @@ Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones 
 
 1. Ejecuta *services.msc*.
 
-2. En la ventana **Properties** > **Logon** de la base de datos de SQL Server, selecciona **Specify account** e inicia sesión como usuario de dominio.
+2. En la ventana **Properties** \> **Log On** de la base de datos de SQL Server, seleccione **Specify account** y luego inicie sesión con una cuenta de usuario de dominio.
 
-3. Agrega el puerto 1433 como excepción en el Firewall de Windows.
+3. Agregue el puerto 1433 como una excepción en Windows Firewall.
 
-4. Crea las bases de datos vacías **ac**, **ta**, **ve** en SQL Server con autenticación **sysadmin**.
+4. Cree bases de datos vacías **ac**, **ta** y **ve** en SQL Server mediante autenticación **sysadmin**.
 
-5. Configura al usuario de dominio para que use la autenticación de Windows en SQL Server y asigna todos los permisos excepto **sysadmin** a las bases de datos **ac**, **ta**, **ve**.
+5. Configure al usuario de dominio para que use Windows Authentication para SQL Server y asigne todos los permisos, excepto **sysadmin**, a las bases de datos **ac**, **ta** y **ve**.
 
-6. Conecta todos los servicios, excepto el equipo local, en *services.msc*.
+6. En *services.msc*, conéctese a todos los servicios excepto Local Computer.
 
 7. Establece al usuario de dominio como administrador en el equipo de servicio local.
 
@@ -194,25 +194,25 @@ Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones 
 </Step>
 <Step>
 
-##### Ajustes de la base de datos {/* #database-setting */}
+##### Configurar la base de datos {/* #database-setting */}
 
-1. Después de ejecutar **SQL Server Configuration Manager**, haz clic en **Client Protocol** en **SQL Native Client**.
+1. Ejecute **SQL Server Configuration Manager** y luego haga clic en **Client Protocols** en **SQL Native Client**.
 
-2. Selecciona **TCP/IP** y verifica el puerto predeterminado.
+2. Seleccione **TCP/IP** y luego verifique el puerto predeterminado.
 
-3. Haz clic en **Protocols for SQL EXPRESS** en **SQL Server Network Configuration**.
+3. En **SQL Server Network Configuration**, haga clic en **Protocols for SQL EXPRESS**.
 
-4. Comprueba que el puerto ODBC en **TCP/IP** esté configurado con el mismo valor que el puerto predeterminado.
+4. Asegúrese de que el puerto ODBC en **TCP/IP** esté configurado con el mismo valor que el puerto predeterminado.
 
-5. Inicie sesión con una cuenta de administrador en **SQL Server Management Studio**.
+5. Inicie sesión en **SQL Server Management Studio** con una cuenta de administrador.
 
-6. Haz clic en **Security** > **Log In**, luego haz doble clic en **NT AUTHORITY\SYSTEM**.
+6. Haga clic en **Security** \> **Logins** y luego haga doble clic en **NT AUTHORITY\SYSTEM**.
 
-7. Haga clic en **Server Roles** en **Select a page**.
+7. En **Select a page**, haga clic en **Server Roles**.
 
 8. Selecciona **public** y **sysadmin**, luego haz clic en **OK**.
 
-9. Haz clic en **User Mapping** en la página **Select**.
+9. En **Select a page**, haga clic en **User Mapping**.
 
 10. Selecciona las bases de datos **ac**, **ta**, **ve** y haz clic en **OK** para guardar.
 
@@ -223,17 +223,17 @@ Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones 
 <NextStep>
 <NextItem to='system-requirements'>
 
-Conoce los requisitos mínimos del sistema para instalar **BioStar X**.
+Conozca los requisitos mínimos del sistema para instalar **BioStar X**.
 
 </NextItem>
 <NextItem to='express-install'>
 
-Esta guía proporciona un método de instalación sencillo para usuarios primerizos.
+Conozca cómo usar Express Installation para usuarios que la usan por primera vez.
 
 </NextItem>
 <NextItem to='custom-install'>
 
-Guía al usuario para configurar una instalación personalizada que se integre con una base de datos que ya haya instalado.
+Aprenda a realizar una instalación personalizada que use una base de datos que ya instaló.
 
 </NextItem>
 </NextStep>

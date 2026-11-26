@@ -1,24 +1,24 @@
 ---
 id: settings-device-upgrade-firmware
 title: Actualizar Firmware
-description: Instrucciones para actualizar el firmware de los dispositivos conectados a BioStar X.
+description: Aprenda a actualizar el firmware de los dispositivos conectados a BioStar X.
 keywords:
   - Dispositivo
-  - firmware
+  - Firmware
   - Actualizar
 ---
 
-Los dispositivos conectados a **BioStar X** pueden actualizar su firmware fácilmente sin conexiones ni operaciones adicionales. Mantener el firmware del dispositivo actualizado resuelve vulnerabilidades de seguridad y permite acceder a nuevas funciones.
+El firmware de los dispositivos conectados a **BioStar X** puede actualizarse fácilmente sin conexiones ni acciones adicionales. Mantener el firmware del dispositivo actualizado resuelve vulnerabilidades de seguridad y le permite usar nuevas funciones.
 
 ## Antes de comenzar {/* #before-start */}
 
-Antes de actualizar el firmware del dispositivo, prepare la nueva versión del archivo de firmware. Guarde el archivo de firmware descargado en la ruta siguiente y extráigalo. Cree una nueva carpeta si la carpeta *firmware* no existe.
+Antes de actualizar el firmware del dispositivo, prepare el nuevo archivo de firmware. Guarde el archivo de firmware descargado en la ruta siguiente y extráigalo. Cree la carpeta *firmware* si no existe.
 
 > *C:\Program Files\BioStar X\firmware*
 
 :::info
 
-Busque el nombre del modelo de su dispositivo en el [Centro de descargas de Suprema](https://download.supremainc.com) para descargar la última versión del archivo de firmware.
+Busque el nombre del modelo del dispositivo en el [Suprema Download Center](https://download.supremainc.com) y descargue el archivo de firmware más reciente.
 
 :::
 
@@ -26,7 +26,7 @@ Busque el nombre del modelo de su dispositivo en el [Centro de descargas de Supr
 
 :::caution
 
-* Antes de actualizar el firmware, asegúrese de que el dispositivo tenga alimentación y conectividad de red. En particular, asegúrese de que la alimentación no se interrumpa durante la actualización.
+* Antes de actualizar el firmware, compruebe la alimentación eléctrica del dispositivo y el estado de la red. En particular, asegúrese de que la alimentación no se interrumpa durante la actualización.
 
 * Según el tipo y el modo del dispositivo, puede tardar hasta 1 hora o más. Además, no se puede usar el dispositivo durante la actualización.
 
@@ -36,9 +36,9 @@ Busque el nombre del modelo de su dispositivo en el [Centro de descargas de Supr
 
 ### Actualizar firmware para un solo dispositivo
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
 3. Haga clic en el dispositivo que desea actualizar en la lista de dispositivos.
 
@@ -52,15 +52,15 @@ Busque el nombre del modelo de su dispositivo en el [Centro de descargas de Supr
 
 6. Cuando aparezca la ventana del mensaje de advertencia, haga clic en <Cmd sid='button.continue' product='2' />.
 
-Esto inicia la actualización de firmware del dispositivo.
+Se inicia la actualización de firmware en el dispositivo.
 
 ### Actualizar firmware para varios dispositivos
 
-1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.setting' />.
 
-2. Haz clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> en la barra lateral izquierda.
 
-3. Seleccione la casilla situada completamente a la izquierda de los dispositivos que desea actualizar en la lista de dispositivos. Puede seleccionar varios dispositivos.
+3. Seleccione la casilla del extremo izquierdo de cada dispositivo que desea actualizar en la lista de dispositivos. Puede seleccionar varios dispositivos.
 
 4. Haga clic en <Cmd sid='button.firmwareUpgrade' product='2' /> en la esquina superior derecha de la lista de dispositivos.
 
@@ -72,16 +72,16 @@ Esto inicia la actualización de firmware del dispositivo.
 
 6. Cuando aparezca la ventana del mensaje de advertencia, haga clic en <Cmd sid='button.continue' product='2' />.
 
-Esto inicia la actualización de firmware de los dispositivos seleccionados.
+Se inicia la actualización de firmware en los dispositivos seleccionados.
 
 :::info
 
-* El botón <Cmd sid='button.firmwareUpgrade' product='2' /> se activa solo después de seleccionar un dispositivo de la lista de dispositivos.
+* El botón <Cmd sid='button.firmwareUpgrade' product='2' /> se habilita solo después de seleccionar un dispositivo en la lista de dispositivos.
 
-* Los dispositivos con el mismo modo RS-485 pueden actualizarse simultáneamente en grupos. Por ejemplo, los dispositivos maestros pueden actualizar varios dispositivos maestros a la vez, y los dispositivos esclavos pueden actualizar varios dispositivos esclavos a la vez.
+* Los dispositivos con el mismo modo RS-485 pueden actualizarse simultáneamente. Por ejemplo, puede actualizar varios dispositivos maestros a la vez y varios dispositivos esclavos a la vez.
 
-* Los dispositivos maestros o los esclavos sin maestro pueden actualizarse simultáneamente en grupos.
+* Los dispositivos maestros o los dispositivos esclavos sin un maestro pueden actualizarse simultáneamente.
 
-* Los dispositivos esclavos conectados al mismo dispositivo maestro no pueden actualizarse simultáneamente.
+* Varios dispositivos esclavos conectados al mismo dispositivo maestro no pueden actualizarse simultáneamente.
 
 :::

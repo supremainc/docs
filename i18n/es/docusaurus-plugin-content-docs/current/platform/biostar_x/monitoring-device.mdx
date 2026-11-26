@@ -6,11 +6,11 @@ description: Supervisa en tiempo real los dispositivos y cámaras conectados a t
 
 Este documento proporciona orientación sobre cómo usar las funciones de supervisión de dispositivos y cámaras. Puedes verificar el estado de dispositivos y cámaras, ver información detallada y reproducir video de la cámara en tiempo real, entre otras funciones. Además, revisa los eventos recientes para gestionar de manera eficiente el estado de dispositivos y cámaras.
 
-Para acceder a la página <Cmd sid='arena.title' />, haz clic en <Cmd sid='arena.title' /> en <Cmd sid='shell.header.launcher' /> o selecciona <Cmd sid='arena.title' /> en el menú de la parte superior izquierda de la pantalla.
+Para acceder a la página <Cmd sid='arena.title' />, haga clic en <Cmd sid='arena.title' /> en el <Cmd sid='shell.header.launcher' /> o seleccione <Cmd sid='arena.title' /> en el menú de la esquina superior izquierda de la pantalla.
 
 ## Verificar estado de dispositivos y cámaras
 
-Haz clic en la pestaña <Cmd sid='arena.tree.device.title' /> en la barra lateral izquierda. Puedes verificar el estado de todos los dispositivos y cámaras. Consulta lo siguiente para conocer el estado de los dispositivos y cámaras.
+Haga clic en la pestaña <Cmd sid='arena.tree.device.title' /> en la barra lateral izquierda. Puedes verificar el estado de todos los dispositivos y cámaras. Consulta lo siguiente para conocer el estado de los dispositivos y cámaras.
 
 <div className='col2--20-80 overflow-x'>
 
@@ -25,7 +25,7 @@ Haz clic en la pestaña <Cmd sid='arena.tree.device.title' /> en la barra latera
 
 ### Ver dispositivos que requieren atención {/* #checkAttentionFilter */}
 
-Los administradores pueden ver solo los dispositivos que requieren acción en una lista. En la barra lateral izquierda, haz clic en <Cmd sid='arena.tree.door.entitiesNeedAttention' />. Revise el estado del dispositivo y tome medidas en dispositivos con problemas.
+Los administradores pueden ver solo los dispositivos que requieren acción en una lista. Haga clic en <Cmd sid='arena.tree.door.entitiesNeedAttention' /> en la barra lateral izquierda. Revise el estado del dispositivo y tome medidas en dispositivos con problemas.
 
 <Image src='/img/biostarx-monitoring-device-attention-filter.png' />
 
@@ -45,13 +45,13 @@ En el árbol de dispositivos, el sistema marca los dispositivos anómalos como d
 
 * La condición <Cmd sid='arena.tree.deviceLocked' /> depende de las condiciones y acciones del trabajo establecidas en <DocLink docId='platform/biostar_x/settings-triger-and-action' />. Para obtener información sobre cómo revisar y liberar este estado, consulte <DocLink inner='#deviceLockRelease' />.
 
-* Configure la condición <Cmd sid='arena.preview.device.authFailLockout.title' /> en los ajustes del dispositivo. Para obtener detalles, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />. Para obtener información sobre cómo revisar y liberar este estado, consulte <DocLink inner='#authFailLockout' />.
+* Configure la condición <Cmd sid='arena.preview.device.authFailLockout.title' /> en los ajustes del dispositivo. Para más información, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />. Para obtener información sobre cómo revisar y liberar este estado, consulte <DocLink inner='#authFailLockout' />.
 
 :::
 
 ## Control del dispositivo
 
-Selecciona el dispositivo deseado de la lista en la barra lateral izquierda y haz clic derecho. Seleccione la función deseada en el menú emergente.
+Seleccione el dispositivo deseado de la lista en la barra lateral izquierda y haga clic con el botón derecho. Seleccione una función en el menú emergente.
 
 <Image src='/img/biostarx-monitoring-device-popup.png' />
 
@@ -73,13 +73,13 @@ Independientemente del estado de conexión del dispositivo, haga clic en <Cmd si
 
 :::info
 
-La característica <Cmd sid='arena.tree.contextMenu.reconnect' /> no es compatible con dispositivos conectados mediante la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />. Para obtener más información sobre el registro de dispositivos, consulte <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
+La característica <Cmd sid='arena.tree.contextMenu.reconnect' /> no es compatible con dispositivos conectados mediante la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />. Para obtener más información sobre el registro de dispositivos, consulta <DocLink docId='platform/biostar_x/settings-adding-devices#setipaddress' />.
 
 :::
 
 ### Reiniciar dispositivo
 
-Para reiniciar el dispositivo, haz clic en <Cmd sid='arena.tree.contextMenu.reboot' /> en el menú emergente. Cuando aparezca la ventana de mensaje de advertencia, haga clic en <Cmd sid='common.button.ok' />.
+Para reiniciar el dispositivo, haga clic en <Cmd sid='arena.tree.contextMenu.reboot' /> en el menú emergente. Cuando aparezca la ventana de mensaje de advertencia, haga clic en <Cmd sid='common.button.ok' />.
 
 ### Desbloquear el dispositivo {/* #deviceLockRelease */}
 
@@ -87,7 +87,7 @@ Cuando el dispositivo se bloquea según condiciones definidas por el administrad
 
 <Image src='/img/biostarx-monitoring-device-lock.png' />
 
-* El menú emergente muestra <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> solo cuando el dispositivo está bloqueado. Seleccione el dispositivo bloqueado y, luego, haga clic en <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> en el menú emergente.
+* El menú emergente muestra <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> solo cuando el dispositivo está bloqueado. Seleccione el dispositivo bloqueado y luego haga clic en <Cmd sid='arena.tree.contextMenu.deviceUnlock' /> en el menú emergente.
 
 * Seleccione el dispositivo bloqueado. En el banner en la parte superior del panel de vista previa derecho, haga clic en <Cmd sid='arena.preview.banner.unlock' />.
 
@@ -101,7 +101,7 @@ Solo los usuarios con privilegios de <Cmd sid='setting.account.administrator' />
 
 Si la autenticación falla la cantidad de veces establecida en <Cmd sid='device.info.authFailLockout.label' product='2' />, el dispositivo cambia al estado bloqueado. Cuando el dispositivo está en bloqueo por fallas de autenticación, <Cmd sid='arena.preview.device.authFailLockout.title' /> aparece debajo del nombre del dispositivo en la barra lateral izquierda. Al seleccionar el dispositivo, el panel de vista previa derecho muestra el mismo banner en la parte superior. El banner muestra la hora del evento y la información del dispositivo.
 
-El menú emergente muestra <Cmd sid='arena.batchResult.action.clearLockout' /> solo cuando el dispositivo está en bloqueo por fallas de autenticación. Seleccione el dispositivo bloqueado y, luego, haga clic en <Cmd sid='arena.batchResult.action.clearLockout' /> en el menú emergente.
+El menú emergente muestra <Cmd sid='arena.batchResult.action.clearLockout' /> solo cuando el dispositivo está en bloqueo por fallas de autenticación. Seleccione el dispositivo en bloqueo y luego haga clic en <Cmd sid='arena.batchResult.action.clearLockout' /> en el menú emergente.
 
 <Image src='/img/biostarx-monitoring-device-auth-fail-lock.png' />
 
@@ -109,7 +109,7 @@ El menú emergente muestra <Cmd sid='arena.batchResult.action.clearLockout' /> s
 
 * Solo los usuarios con privilegios de <Cmd sid='setting.account.administrator' /> o <Cmd sid='setting.account.monitoringOperator' /> ven el menú <Cmd sid='arena.batchResult.action.clearLockout' />.
 
-* Después de que transcurra el tiempo de bloqueo establecido (<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />), el dispositivo se desbloquea automáticamente. El dispositivo elimina el bloqueo sin acciones adicionales. Para más información sobre condiciones y ajustes del tiempo de bloqueo, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
+* Después de que transcurra el tiempo de bloqueo establecido (<Cmd sid='device.info.authFailLockout.firstLockout' product='2' />/<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />), el dispositivo se desbloquea automáticamente. El dispositivo elimina el bloqueo sin acciones adicionales. Para obtener más información sobre las condiciones de bloqueo y la configuración del tiempo de bloqueo, consulte <DocLink docId='platform/biostar_x/settings-device-details-auth#howToAuth' />.
 
 :::
 
@@ -119,7 +119,7 @@ Para detener todas las acciones basadas en alarmas y activadores del dispositivo
 
 ### Vista detallada del dispositivo
 
-Para ver información detallada del dispositivo, haz clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. O haz doble clic en el dispositivo. La información detallada del dispositivo aparecerá en el lado derecho de la pantalla.
+Para ver información detallada del dispositivo, haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. O haz doble clic en el dispositivo. La información detallada del dispositivo aparecerá en el lado derecho de la pantalla.
 
 <Image src='/img/biostarx-monitoring-device-details.png' />
 
@@ -214,13 +214,13 @@ Si la selección incluye distintos tipos de dispositivos, el sistema muestra los
 
 ## Controlar la cámara {/* #controlCamera */}
 
-Selecciona la cámara deseada de la lista en la barra lateral izquierda y haz clic derecho. Seleccione la función deseada en el menú emergente.
+Seleccione la cámara deseada de la lista en la barra lateral izquierda y haga clic con el botón derecho. Seleccione una función en el menú emergente.
 
 <Image src='/img/biostarx-monitoring-camera-popup.png' />
 
 ### Reproducir video de la cámara
 
-Para colocar el video de la cámara en el mosaico de video y supervisarlo en tiempo real, haz clic en <Cmd sid='arena.tree.contextMenu.openVideo' /> en el menú emergente.
+Para colocar el video de la cámara en el mosaico de video y supervisarlo en tiempo real, haga clic en <Cmd sid='arena.tree.contextMenu.openVideo' /> en el menú emergente.
 
 :::note
 
@@ -234,16 +234,16 @@ También puedes añadir video de la cámara a los mosaicos de video de las sigui
 
 :::info
 
-* Los mosaicos de video se añaden en orden desde la parte superior izquierda de la pantalla. Si no hay espacio para añadir más, aparece un mensaje de error.
+* Los videos se añaden a los mosaicos de video en orden, comenzando por la esquina superior izquierda de la pantalla. Si no hay espacio en la pantalla actual, aparece un mensaje de error.
 
 * Para obtener más información sobre los controles de video y las herramientas que se muestran en el video, consulte <DocLink docId='platform/biostar_x/monitoring-video' />.
 
-* Si una cámara no aparece en la lista <Cmd sid='arena.tree.device.allCameraGroups' />, revisa los permisos del grupo de cámaras. Si el administrador de un permiso personalizado no ha configurado los permisos del grupo de cámaras, la cámara podría no ser visible. Para obtener más información sobre cómo configurar los permisos de los grupos de cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
+* Si una cámara no aparece en la lista <Cmd sid='arena.tree.device.allCameraGroups' />, revisa los permisos del grupo de cámaras. Si un administrador con permisos personalizados no ha establecido los permisos del grupo de cámaras, es posible que las cámaras no aparezcan. Para obtener más información sobre cómo configurar los permisos del grupo de cámaras, consulte <DocLink docId='platform/biostar_x/settings-videos-camera#addCameraPermission' />.
 
 :::
 
 ### Vista detallada de la cámara
 
-Haz clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente para ver los detalles de la cámara. Puedes verificar el grupo, la descripción, el ID y la dirección IP de la cámara.
+Para ver los detalles de la cámara, haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente. Puedes verificar el grupo, la descripción, el ID y la dirección IP de la cámara.
 
 <Image src='/img/biostarx-monitoring-camera-details.png' />

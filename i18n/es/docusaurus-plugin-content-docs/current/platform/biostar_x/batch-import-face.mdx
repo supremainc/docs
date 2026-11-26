@@ -1,7 +1,7 @@
 ---
 id: batch-import-face
 title: Inscribir Rostros por Lotes
-description: Aprende a inscribir rostros de usuarios por lotes.
+description: Aprende a inscribir los rostros de los usuarios por lotes.
 keywords:
   - Rostro
   - Enrolamiento
@@ -10,37 +10,37 @@ keywords:
   - Autenticación
 ---
 
-Aprende a inscribir rostros de usuarios por lotes. Inscribe los rostros de varios usuarios a la vez mediante la función de importación con un archivo CSV o cargando fotografías de rostro cuyos nombres de archivo coincidan con los ID de usuario. Como alternativa, envía enlaces de inscripción de rostro por correo electrónico a varios usuarios, lo que les permitirá inscribir sus rostros directamente desde sus dispositivos móviles.
+Aprende a inscribir los rostros de los usuarios por lotes. Puedes inscribir por lotes los rostros de varios usuarios mediante la función de importación de CSV o importando fotos de rostro con nombres de archivo que coincidan con los ID de usuario. Como alternativa, puedes enviar por correo electrónico enlaces de inscripción de rostro a varios usuarios para que puedan inscribir su rostro directamente desde dispositivos móviles.
 
 ## Antes de comenzar
 
-Prepara las imágenes de rostro de los usuarios antes de comenzar la inscripción por lotes. 
+Prepara las imágenes de rostro de los usuarios antes de iniciar la inscripción de rostro por lotes. 
 
-* Los archivos de imagen de rostro deben almacenarse en una sola carpeta. Los nombres de archivo de las imágenes de rostro deben coincidir con los ID de usuario.
+* Todos los archivos de imágenes de rostro deben guardarse en una sola carpeta. Los nombres de archivo de las imágenes de rostro deben coincidir con los ID de usuario.
 
-* El tamaño máximo de archivo para los tipos de imagen admitidos es de 10MB.
+* El tamaño máximo admitido del archivo de imagen es de 10 MB.
 
-* Los formatos de imagen admitidos incluyen JPG, JPEG y PNG.
+* Los formatos de imagen compatibles son JPG, JPEG y PNG.
 
-## Inscribir con importación de archivo CSV {/* #import-csv */}
+## Inscribir rostros mediante la importación de un archivo CSV {/* #import-csv */}
 
-Inscribe rostros de usuarios en bloque mediante la función de importación CSV.
+Puedes inscribir por lotes los rostros de los usuarios mediante la función de importación de CSV.
 
-1. Haz clic en <Cmd sid='shell.header.user' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.user' />.
 
-2. En la lista de usuarios, marca la casilla del usuario cuyo rostro deseas inscribir. Selecciona más de un usuario.
+2. En la lista de usuarios, marca la casilla del usuario para inscribir su rostro. Puede seleccionar uno o más usuarios.
 
-3. Haz clic en el botón <IcMoreW /> en la esquina superior derecha de la pantalla y selecciona <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' />.
+3. Haga clic en <IcMoreW /> en la esquina superior derecha de la pantalla y seleccione <Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' />.
 
 4. Cuando aparezca la ventana de exportación CSV, haz clic en <Cmd sid='common.button.download' />.
 
-5. Guarda el archivo CSV en la ubicación deseada de tu ruta local.
+5. Guarde el archivo CSV en una ubicación de su equipo.
 
-6. Abre el archivo CSV y agrega las columnas `face_image_file1`, `face_image_file2`.
+6. Abre el archivo CSV y agrega las columnas `face_image_file1` y `face_image_file2`.
 
-7. Ingresa los nombres de archivo de las imágenes de rostro, incluidas las extensiones, en las columnas agregadas y guarda.
+7. Ingresa los nombres de archivo de las imágenes de rostro, incluidas las extensiones, en las columnas agregadas y guarda el archivo.
 
-8. Haz clic en <IcMoreW /> en la parte superior derecha de la pantalla y selecciona <Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.csv' />.
+8. Haga clic en <IcMoreW /> en la esquina superior derecha de la pantalla y seleccione <Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.csv' />.
 
 9. Selecciona el archivo CSV modificado.
 
@@ -48,31 +48,31 @@ Inscribe rostros de usuarios en bloque mediante la función de importación CSV.
 
     <Image src='/img/biostarx-user-import-01.png' />
 
-11. Elige si deseas sobrescribir los datos de usuario ya registrados en **BioStar X** con la información del archivo CSV y haz clic en <Cmd sid='common.apply' />.
+11. Selecciona si deseas conservar los datos del usuario ya registrados en **BioStar X** o sobrescribirlos con la información del archivo CSV, y haz clic en <Cmd sid='common.apply' />.
 
     <Image src='/img/biostarx-user-import-03.png' />
 
-12. Haz clic en el botón <Cmd sid='button.browse' product='2' /> en <Cmd sid='user.list.csvImport.visualFaceImageFolder' product='2' />.
+12. Haz clic en <Cmd sid='button.browse' product='2' /> en <Cmd sid='user.list.csvImport.visualFaceImageFolder' product='2' />.
 
     <Image src='/img/biostarx-new-user-credential-face-import-csv.png' />
 
-13. Selecciona la ruta donde se almacenan las imágenes de rostro y haz clic en <Cmd sid='button.upload' product='2' />.
+13. Selecciona la ruta donde se guardan las imágenes de rostro y haz clic en <Cmd sid='button.upload' product='2' />.
 
-14. Para completar la importación CSV, haz clic en <Cmd sid='common.button.next' />.
+14. Para completar la importación de CSV, haz clic en <Cmd sid='common.button.next' />.
 
-Si ocurre un error al importar el archivo CSV, puedes volver a revisar y subir solo los datos CSV que provocaron el error.
+Si se produce un error al importar la información del archivo CSV, puede volver a verificar y cargar solo los datos CSV que causaron el error.
 
 :::info
 
-Se recomienda usar la misma ruta para el archivo CSV y los archivos de imágenes de rostro que se van a importar.
+Usa la misma ruta para el archivo CSV y los archivos de imágenes de rostro que se van a importar.
 
 :::
 
-## Importar rostro {/* #import-face */}
+## Importar rostros {/* #import-face */}
 
-Puedes importar imágenes de rostro con nombres de archivo que coincidan con los ID de usuario e inscribirlas para autenticación facial. Prepara los archivos de imágenes de rostro de los usuarios antes de comenzar. Los nombres de archivo de las imágenes de rostro deben coincidir con los ID de usuario.
+Puedes importar fotos de rostro con nombres de archivo que coincidan con los ID de usuario e inscribir los rostros para la autenticación facial. Antes de empezar, prepara los archivos de imágenes de rostro de los usuarios. Los nombres de archivo de las imágenes de rostro deben coincidir con los ID de usuario.
 
-1. Haz clic en <Cmd sid='shell.header.user' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.user' />.
 
 2. Haz clic en <IcMoreW /> en la esquina superior derecha de la pantalla y selecciona <Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.face' />.
 
@@ -82,7 +82,7 @@ Puedes importar imágenes de rostro con nombres de archivo que coincidan con los
 
 4. Selecciona la ruta donde se almacenan las imágenes de rostro.
 
-5. Selecciona el método para cargar imágenes de rostro en la opción <Cmd sid='user.list.visualFaceImport.newImport' />.
+5. En la opción <Cmd sid='user.list.visualFaceImport.newImport' />, selecciona cómo importar las imágenes de rostro.
 
    * <Cmd sid='user.list.visualFaceImport.default' />: Carga imágenes cuyos nombres de archivo coinciden con los ID de usuario.
 
@@ -92,37 +92,37 @@ Puedes importar imágenes de rostro con nombres de archivo que coincidan con los
 
    * <Cmd sid='user.list.csvImport.duplicateUser.preserve' />: Conserva las imágenes de rostro de los usuarios registrados.
 
-   * <Cmd sid='user.list.csvImport.duplicateUser.overwrite' />: Sobrescribe las imágenes de rostro de los usuarios registrados con las nuevas imágenes importadas.
+   * <Cmd sid='user.list.csvImport.duplicateUser.overwrite' />: Reemplaza las imágenes de rostro de los usuarios registrados por las nuevas imágenes de rostro importadas.
 
-7. Para usar las imágenes de rostro importadas como imágenes de perfil, haz clic en la opción <Cmd sid='team.user.credential.visualFace.useAsProfileImage' /> para habilitarla.
+7. Para usar las imágenes de rostro importadas como imágenes de perfil, activa <Cmd sid='team.user.credential.visualFace.useAsProfileImage' />.
 
 8. Haz clic en <Cmd sid='common.start' />.
 
-Si ocurre un error al importar un archivo de imagen de rostro, aparece una lista de fotos con errores. Revisa la lista y vuelve a intentar.
+Si ocurre un error al importar archivos de imágenes de rostro, aparece una lista de fotos con errores. Revisa la lista y vuelve a intentar.
 
 :::info
 
-Se puede importar un máximo de 1 imagen de rostro por ID de usuario.
+Puede importar hasta una imagen facial por ID de usuario.
 
 :::
 
 ## Inscribir rostros con un dispositivo móvil {/* #mobile-device */}
 
-Envía enlaces de inscripción de rostro a los usuarios por correo electrónico. Los usuarios pueden acceder al enlace en sus dispositivos móviles para inscribir sus rostros directamente.
+Puede enviar enlaces de inscripción de rostro a los usuarios por correo electrónico. Los usuarios pueden abrir el enlace en un dispositivo móvil y registrar su rostro.
 
 ### Antes de comenzar
 
-* Completa la configuración de información de correo electrónico, incluyendo la configuración SMTP, antes de usar la función de inscripción facial móvil. Para obtener más información, consulta <DocLink docId='platform/biostar_x/settings-email-setting' />.
+* Antes de usar la inscripción de rostro móvil, complete la configuración de correo electrónico, incluida la configuración de SMTP. Para obtener más información, consulta <DocLink docId='platform/biostar_x/settings-email-setting' />.
 
-* Debes habilitar la función <Cmd sid='setting.menu.remoteAccess.root' /> para usar la inscripción facial móvil. Para obtener más información sobre <Cmd sid='setting.menu.remoteAccess.root' />, consulta <DocLink docId='platform/biostar_x/settings-remote-access' />.
+* Para usar la función de inscripción de rostro móvil, active <Cmd sid='setting.menu.remoteAccess.root' />. Para obtener más información sobre <Cmd sid='setting.menu.remoteAccess.root' />, consulte <DocLink docId='platform/biostar_x/settings-remote-access' />.
 
-### Enviar enlace de inscripción de rostro
+### Enviar un enlace de inscripción de rostro
 
-1. Haz clic en <Cmd sid='shell.header.user' /> en la página <Cmd sid='shell.header.launcher' />.
+1. En la página <Cmd sid='shell.header.launcher' />, haz clic en <Cmd sid='shell.header.user' />.
 
-2. En la lista de usuarios, marca la casilla del usuario cuyo rostro deseas inscribir. Selecciona más de un usuario.
+2. En la lista de usuarios, marca la casilla del usuario para inscribir su rostro. Puede seleccionar uno o más usuarios.
 
-3. Haz clic en el botón <IcMoreW /> en la esquina superior derecha de la pantalla y selecciona <Cmd sid='team.menu.sendFaceMobileEnrollLink' />.
+3. Haga clic en <IcMoreW /> en la esquina superior derecha de la pantalla y seleccione <Cmd sid='team.menu.sendFaceMobileEnrollLink' />.
 
    <Image src='/img/biostarx-user-face-mobile-link.png' />
 
@@ -130,24 +130,24 @@ Envía enlaces de inscripción de rostro a los usuarios por correo electrónico.
 
    <Image src='/img/biostarx-user-face-mobile-link-warning.png' width='60%' />
 
-El enlace de inscripción de rostro se envía al correo electrónico de los usuarios seleccionados. Una vez que los usuarios completen la carga, su credencial de rostro se añade a sus perfiles de usuario.
+El enlace de inscripción de rostro se envía a la dirección de correo electrónico de los usuarios seleccionados. Cuando el usuario completa la carga, la credencial facial se agrega a la información del usuario.
 
 :::info
 
-* Puedes comprobar el estado de envío de correos electrónicos en <Cmd sid='monitoring.auditTrail' product='2' />. Para obtener más información sobre el registro de auditoría del sistema, consulta <DocLink docId='platform/biostar_x/settings-system-audit-trail' />.
+* El estado de envío del correo electrónico aparece en <Cmd sid='monitoring.auditTrail' product='2' />. Para obtener más información sobre el registro de auditoría del sistema, consulte <DocLink docId='platform/biostar_x/settings-system-audit-trail' />.
 
 * El idioma que se muestra en la página a la que se accede mediante el enlace móvil de inscripción de rostro sigue la configuración de idioma del navegador utilizado en el dispositivo móvil.
 
-* Cuando el usuario abra el enlace móvil de registro facial que se le envió, se ejecutará el servicio de registro facial como se muestra a continuación. Sigue las instrucciones en la pantalla.
+* Cuando el usuario abre el enlace móvil de inscripción de rostro, el servicio de inscripción de rostro se inicia como se muestra a continuación. Sigue las instrucciones en la pantalla.
 
   <Image src='/img/biostarx-new-user-credential-face-mobile-app.png' className='none' />
 
-* El tamaño máximo de archivo para los tipos de imagen admitidos es de 10MB.
+* El tamaño máximo admitido del archivo de imagen es de 10 MB.
 
-* Los formatos de imagen admitidos incluyen JPG, JPEG y PNG.
+* Los formatos de imagen compatibles son JPG, JPEG y PNG.
 
-* El enlace móvil de inscripción de rostro enviado caducará después de 24 horas.
+* El enlace móvil de inscripción de rostro enviado caduca después de 24 horas.
 
-* Una vez que el proceso de inscripción móvil de rostro se complete correctamente tras cargar una fotografía de rostro, aparece un mensaje de éxito de inscripción en la pantalla. Si la inscripción falla, se muestra un mensaje de error y el motivo, y el usuario puede volver a intentar la inscripción facial visual con una fotografía de rostro diferente.
+* Cuando el usuario carga una foto de rostro y la inscripción de rostro móvil se completa correctamente, aparece en la pantalla un mensaje de inscripción exitosa. Si la inscripción falla, aparecen un mensaje de error y el motivo, y el usuario puede intentar nuevamente la inscripción de rostro con una foto diferente.
 
 :::
