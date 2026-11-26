@@ -16,7 +16,7 @@
     "description": "The label for category 튜토리얼 in sidebar biostarx"
   },
   "sidebar.biostarx.category.사용자": {
-    "message": "User",
+    "message": "Users",
     "description": "The label for category '사용자' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.사용자 등록하기": {
@@ -72,7 +72,7 @@
     "description": "The label for category '출입문 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.엘리베이터 관리하기": {
-    "message": "Managing Elevators",
+    "message": "Manage Elevators",
     "description": "The label for category '엘리베이터 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.운영 권한 관리하기": {
@@ -104,7 +104,7 @@
     "description": "The label for category '서버 설정하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.라이선스 활성화하기": {
-    "message": "Activate License",
+    "message": "Activate Licenses",
     "description": "The label for category '라이선스 활성화하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.시스템 설정하기": {
@@ -128,11 +128,11 @@
     "description": "The label for category '사용하기' in sidebar 'biostation2a'"
   },
   "sidebar.biostarx.category.사용자 크리덴셜 등록하기": {
-    "message": "Enroll User's Credential",
+    "message": "Enroll User Credentials",
     "description": "The label for category '사용자 크리덴셜 등록하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.맵 관리하기": {
-    "message": "Manage Map",
+    "message": "Manage Maps",
     "description": "The label for category '맵 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostar_air.category.BioStar Air": {
@@ -240,15 +240,15 @@
     "description": "The label for category '대시보드' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.플러그인": {
-    "message": "Plugin",
+    "message": "Plugins",
     "description": "The label for category '플러그인' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.근태 관리 사용하기": {
-    "message": "How to Use Time & Attendance",
+    "message": "Use Time & Attendance",
     "description": "The label for category '근태 관리 사용하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.방문자 신청 및 관리하기": {
-    "message": "Manage Visitors",
+    "message": "Apply for and Manage Visits",
     "description": "The label for category '방문자 신청 및 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostation3.category.Release Notes": {

@@ -1,21 +1,21 @@
 ---
 id: login-with-mfa
-title: Login in with Multi-Factor Authentication
-description: Using multi-factor authentication when logging into BioStar X can enhance the security of your account.
+title: Log in with Multi-Factor Authentication
+description: Using the multi-factor authentication feature when you log in to BioStar X enhances your account security.
 keywords:
-  - Log in
+  - Login
   - MFA
   - Multi-Factor Authentication
-  - Multi-factor authentication
+  - Multi-Factor Authentication
 ---
 
-You can use the **Multi-Factor Authentication** feature to enhance security when logging into **BioStar X**. Enabling <Cmd sid='team.user.permission.multiFactorAuth' /> adds a fingerprint authentication step through a fingerprint scanner to the combination of user ID and password.
+Use the **multi-factor authentication** feature to enhance security when you log in to **BioStar X**. Turning on <Cmd sid='team.user.permission.multiFactorAuth' /> adds a fingerprint authentication step, using a fingerprint scanner, to the user ID and password combination.
 
 :::info
 
-* Users who want to use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature must enroll their fingerprint and set their username, password, and operator level.
+* To use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature, a user must have a fingerprint enrolled and must have an ID, password, and operator level set.
 
-* To use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature, a fingerprint scanner that supports multi-factor authentication login must be connected to the **BioStar X** client PC. Please refer to the list below for devices supported by the fingerprint scanner.
+* To use <Cmd sid='team.user.permission.multiFactorAuth' />, connect a fingerprint scanner that supports multi-factor authentication login to the **BioStar X** client PC. For supported fingerprint scanner devices, see the list below.
 
   * BioMini
 
@@ -23,37 +23,37 @@ You can use the **Multi-Factor Authentication** feature to enhance security when
 
   * BioMini Slim 2
 
-* If you use the <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> account with the <Cmd sid='biostar.login' product='2' /> option, you cannot use the <Cmd sid='team.user.permission.multiFactorAuth' /> feature.
+* If you use the <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> account with the <Cmd sid='biostar.login' product='2' /> option, you cannot use <Cmd sid='team.user.permission.multiFactorAuth' />.
 
-* Administrators who set <Cmd sid='team.user.permission.multiFactorAuth' /> cannot authenticate with **BioStar X** services (attendance management and video) other than access control. To use the service, log in after disabling the <Cmd sid='team.user.permission.multiFactorAuth' /> setting. You can then reactivate the <Cmd sid='team.user.permission.multiFactorAuth' /> setting.
+* Administrators who set <Cmd sid='team.user.permission.multiFactorAuth' /> cannot log in to **BioStar X** services other than access control (attendance management and video) for the first time. To use those services, log in after turning off the <Cmd sid='team.user.permission.multiFactorAuth' /> setting. Then you can turn on the <Cmd sid='team.user.permission.multiFactorAuth' /> setting again.
 
 :::
 
 :::caution
 
-* After setting up the multi-factor authentication feature for the main admin account (ID 1), be aware that you will not be able to log in with that account if the fingerprint authentication becomes unavailable.
+* Make sure fingerprint authentication is available after you set up multi-factor authentication for the master administrator account (ID 1), or you cannot log in.
 
-* If login becomes impossible due to fingerprint issues, contact <Support />.
+* If you cannot log in using fingerprint authentication, contact <Support />.
 
 :::
 
 ## Multi-factor authentication settings {/* #multifactorauthenticationsetting */}
 
-Follow the steps below to set <Cmd sid='team.user.permission.multiFactorAuth' />.
+To set <Cmd sid='team.user.permission.multiFactorAuth' />, follow these steps.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Double click on the user who wants to set <Cmd sid='team.user.permission.multiFactorAuth' /> from the user list.
+2. In the user list, double-click the user to set <Cmd sid='team.user.permission.multiFactorAuth' />.
 
    Alternatively, select a user and click <Cmd sid='team.user.preview.button.seeMore' /> in the profile displayed on the right screen.
 
-3. When the user preview screen appears, set the <Cmd sid='common.fingerprintLogin' product='2' /> item to <Cmd sid='common.use' /> in the <Cmd sid='team.user.permission.title' /> section.
+3. When the user preview screen appears, in the <Cmd sid='team.user.permission.title' /> section, set <Cmd sid='common.fingerprintLogin' product='2' /> to <Cmd sid='common.use' />.
 
    <Image src='/img/biostarx-edit-user-mfa-use.png' />
 
 4. Click <Cmd sid='common.save' /> in the upper-right corner of the screen.
 
-Completing multi-factor authentication setup.
+Multi-factor authentication setup is complete.
 
 ## Multi-factor authentication batch settings {/* #multifactorauthenticationbatchset */}
 
@@ -61,39 +61,39 @@ Completing multi-factor authentication setup.
 
 **Before you start**
 
-To use the multi-authentication login feature, you must meet the following conditions.
+To use multi-factor authentication for login, you must meet the following conditions.
 
-* The user must have a registered fingerprint authentication method.
+* The user must have a fingerprint credential enrolled.
 
 * <Cmd sid='team.userTemplate.table.operator' />, <Cmd sid='user.loginId' product='2' />, and <Cmd sid='common.password' product='2' /> must be set. For more information, see <DocLink docId='platform/biostar_x/set-permission' />.
 
 :::
 
-You can use the batch edit feature to apply the <Cmd sid='team.user.permission.multiFactorAuth' /> feature to multiple users.
+You can use the batch edit feature to apply <Cmd sid='team.user.permission.multiFactorAuth' /> to multiple users.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Click the checkbox to the left of the user you want to set up multi-factor authentication for in the user list.
+2. To set up multi-factor authentication, select the checkbox to the left of the user in the user list.
 
 3. Click <Cmd sid='common.batchEdit' /> in the upper-right corner of the screen.
 
-4. When the batch edit window appears, click the checkbox for the <Cmd sid='common.fingerprintLogin' product='2' /> option in the <Cmd sid='team.user.permission.title' /> section and set it to <Cmd sid='common.use' />.
+4. When the batch edit window appears, in the <Cmd sid='team.user.permission.title' /> section, select the checkbox for the <Cmd sid='common.fingerprintLogin' product='2' /> option and set it to <Cmd sid='common.use' />.
 
    <Image src='/img/biostarx-batch-edit-user-mfa-use.png' />
 
 5. Click <Cmd sid='common.save' /> in the upper-right corner of the screen.
 
-Completing the multi-factor authentication setup for multiple selected users.
+Multi-factor authentication is set for the selected users.
 
 :::info
 
-Users among the selected who do not meet the conditions required to activate the <Cmd sid='common.fingerprintLogin' product='2' /> feature can be confirmed through the pop-up message of <Cmd sid='user.batchedit.popup.notavailableuser' product='2' />. Please check the conditions required for the settings and try again.
+Users among the selected who do not meet the conditions required to activate the <Cmd sid='common.fingerprintLogin' product='2' /> feature can be confirmed through the pop-up message of <Cmd sid='user.batchedit.popup.notavailableuser' product='2' />. Check the prerequisites for the setting and try again.
 
 :::
 
-## Log in with Multi-Factor authentication {/* #loginwithmultifactorauthentication */}
+## Log in with multi-factor authentication {/* #loginwithmultifactorauthentication */}
 
-1. Access **BioStar X** log in screen through a web browser.
+1. In a web browser, go to the **BioStar X** login screen.
 
 2. Enter your user ID and password, then click <Cmd sid='auth.login' />.
 
@@ -101,14 +101,14 @@ Users among the selected who do not meet the conditions required to activate the
 
    <Image src='/img/biostarx-mfa-login-scan-fingerprint.png' />
 
-Completing the login.
+Login is complete.
 
 :::info
 
-* The scan time limit is fixed at 18 seconds and cannot be changed.
+* The fingerprint scan time limit is fixed at 18 seconds and cannot be changed.
 
-* Fingerprint scanning can be attempted up to three times consecutively. If the fingerprint is not accurately scanned within these three attempts, authentication will fail.
+* You can scan your fingerprint up to three times in a row, and authentication fails if the fingerprint is not scanned correctly within three tries.
 
-* If authentication fails, click <Cmd sid='button.retry' product='2' /> to retry fingerprint authentication. Up to two retry attempts are allowed. If authentication fails after retry attempts, the process will revert to the ID and Password login step.
+* If authentication fails, click <Cmd sid='button.retry' product='2' /> to retry fingerprint authentication. You can retry up to two times. If authentication fails on every retry, the initial login screen appears.
 
 :::

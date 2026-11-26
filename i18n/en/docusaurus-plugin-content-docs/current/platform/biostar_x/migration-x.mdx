@@ -1,30 +1,30 @@
 ---
 id: migration-x
 title: Upgrade
-description: This document guides the procedure for upgrading BioStar 2 to BioStar X and the requirements to check before the upgrade.
+description: Learn how to upgrade BioStar 2 to BioStar X and what to check before you start the upgrade.
 keywords:
   - Upgrade
 ---
 
-This document provides a step-by-step guide on how to upgrade BioStar 2 to **BioStar X**. Check the system requirements and precautions before starting the upgrade.
+Learn how to upgrade BioStar 2 to **BioStar X** step by step. Check the system requirements and precautions before you start the upgrade.
 
 ## Before you start {/* #start-before */}
 
-Check the following before upgrading from **BioStar 2** to **BioStar X**.
+Check the following before upgrading from BioStar 2 to **BioStar X**.
 
 :::info[Important]
 
 ### Minimum requirements
 
-* Before proceeding with the upgrade, refer to <DocLink docId='platform/biostar_x/system-requirements' /> to confirm that the server specifications meet the requirements.
+* Before you proceed with the upgrade, see <DocLink docId='platform/biostar_x/system-requirements' /> and confirm that your server meets the requirements.
 
 * If you are in an environment of BioStar 2 v2.9.11 or later, you can upgrade to **BioStar X**.
 
-  * If you are using a version of BioStar 2 lower than v2.6.4, you must upgrade sequentially up to v2.9.11 before upgrading. For instructions on upgrading BioStar 2 step-by-step, refer to the **BioStar 2 Admin Guide**. 
+  * If you are using BioStar 2 v2.6.4 or earlier, upgrade sequentially to v2.9.11 first. For instructions on upgrading BioStar 2 step by step, see the **BioStar 2 Admin Guide**. 
 
-  * You cannot upgrade on versions of BioStar 2 below v2.9.10.
+  * You cannot upgrade from BioStar 2 v2.9.10 or earlier.
 
-* If the following devices are connected to BioStar 2, the upgrade to **BioStar X** is not supported. 
+* If the following devices are connected to BioStar 2, upgrading to **BioStar X** is not supported. 
 
   * XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net
 
@@ -32,17 +32,17 @@ Check the following before upgrading from **BioStar 2** to **BioStar X**.
 
 ### License
 
-* You must contact your dealer to prepare at least one BioStar X license before upgrading to **BioStar X**.
+* Contact your dealer and prepare at least one BioStar X license before upgrading to **BioStar X**.
 
 * A different licensing policy applies when upgrading to **BioStar X** compared to BioStar 2.
 
-* If you upgrade while having an Advanced or higher grade license of BioStar 2 AC license activated, the following service features and settings will be deleted.
+* If you upgrade while an Advanced grade or higher BioStar 2 AC license is activated, the service features and settings below are deleted.
 
   * Graphic Map
 
   * Cloud
 
-* To use the BioStar 2 T&A service on **BioStar X**, you must purchase the **BioStar X T&A** license separately.
+* To use the BioStar 2 T&A service in **BioStar X**, purchase the **BioStar X T&A** license separately.
 
 :::
 
@@ -50,13 +50,13 @@ Check the following before upgrading from **BioStar 2** to **BioStar X**.
 
 ### Verify certificate {/* #checkCert */}
 
-When you upgrade from BioStar 2 to BioStar X, the `biostar_cert.crt` file in `nginx\conf` and the one in `nginx\cert` may differ. Upgrading in this state causes the following problems.
+When you upgrade from BioStar 2 to BioStar X, the `biostar_cert.crt` files in `nginx\conf` and `nginx\cert` may differ. If you upgrade in this state, the following problems occur.
 
-* Certain audit logs are not recorded.
+* Some audit logs are not recorded.
 
 * Creating user groups, adding Wiegand, and refreshing the tree fail.
 
-Follow these steps to match the certificate files before upgrading to BioStar X.
+To match the certificate files before upgrading to BioStar X, follow these steps.
 
 1. Stop the BioStar 2 service.
 
@@ -66,7 +66,7 @@ Follow these steps to match the certificate files before upgrading to BioStar X.
 
 :::
 
-## Upgrade installation guide {/* #upgrade-install */}
+## Upgrade installation instructions {/* #upgrade-install */}
 
 1. Go to the [Suprema Download Center](https://download.supremainc.com/), log in, and download the installation package (*BioStar X Setup.X.Y.Z.BB.exe*).
 
@@ -76,7 +76,7 @@ Follow these steps to match the certificate files before upgrading to BioStar X.
 
    <Image src='/img/biostarx-install-select-language.png' />
 
-4. Agree to the licensing policy of transitioning from BioStar 2 to **BioStar X**. Click the checkbox and select the <Cmd code='biostar2.install.next' className='bold'/> button.
+4. Agree to the licensing policy for transitioning from BioStar 2 to **BioStar X**. Select the checkbox, and then click <Cmd code='biostar2.install.next' className='bold'/>.
 
    <Image src='/img/biostarx-install-2-to-x-agree.png' />
 
@@ -84,7 +84,7 @@ Follow these steps to match the certificate files before upgrading to BioStar X.
 
    <Image src='/img/biostarx-install-agree.png' />
 
-6. When upgrading from BioStar 2, the existing database will be connected to proceed with the installation. Click <Cmd code='biostar2.install.next' className='bold'/>.
+6. When upgrading from BioStar 2, the installer connects to your existing database to continue the installation. Click <Cmd code='biostar2.install.next' className='bold'/>.
 
    <Image src='/img/biostarx-upgrade-select-install-type.png' />
 
@@ -100,7 +100,7 @@ Follow these steps to match the certificate files before upgrading to BioStar X.
 
    <Image src='/img/biostarx-install-read-covenant.png' />
 
-10. If a port number related message appears, click <Cmd code='biostar2.install.ok' className='bold' />.
+10. When a message about the port number appears, click <Cmd code='biostar2.install.ok' className='bold' />.
 
     <Image src='/img/biostarx-install-set-port-confirm.png' />
 
@@ -108,7 +108,7 @@ Follow these steps to match the certificate files before upgrading to BioStar X.
 
     <Image src='/img/biostarx-upgrade-set-port.png' />
 
-12. Select the components of **BioStar X** and click <Cmd code='biostar2.install.next' className='bold'/>. If you select **USB Device Agent**, the USB Agent and driver for using BioMini, BioMini Plus 2, BioMini Slim 2, and DUALi DE-620 will be installed together.
+12. Select the components of **BioStar X** and click <Cmd code='biostar2.install.next' className='bold'/>. Selecting **USB Device Agent** installs the USB Agent and drivers required to use BioMini, BioMini Plus 2, BioMini Slim 2, and DUALi DE-620.
 
     <Image src='/img/biostarx-install-additional.png' />
 
@@ -120,7 +120,7 @@ Follow these steps to match the certificate files before upgrading to BioStar X.
 
     <Image src='/img/biostarx-install-additional-fin.png' />
 
-15. Complete the installation of **USB Device Agent** by following the instructions on the installation screen.
+15. Follow the instructions on the installation screen to complete the **USB Device Agent** installation.
 
 import InstallNotes from '../../common/_install-note.mdx';
 

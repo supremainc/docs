@@ -1,15 +1,15 @@
 ---
 id: install-communication-server
-title: Install Multi Communications Server
-description: This document guides the installation process for the Multi Communications Server.
+title: Install the Multi Communications Server
+description: Learn how to install the Multi Communications Server.
 keywords:
   - Multi Communications Server
   - Installation
 ---
 
-This document explains how to install the **BioStar X** **Multi Communications Server**. 
+Learn how to install the **BioStar X** **Multi Communications Server**. 
 
-The Multi Communications Server handles communication with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single Multi Communications Server can connect up to 1,000 devices. Add multiple Multi Communications Servers as needed.
+The Multi Communications Server handles communication with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single Multi Communications Server can connect up to 1,000 devices, and you can add multiple Multi Communications Servers as needed.
 
 :::info
 
@@ -25,25 +25,25 @@ Before installing the Multi Communications Server, check the following.
 
 * The Multi Communications Server can only be installed on a 64-bit operating system. For more information about minimum system requirements, see <DocLink docId='platform/biostar_x/system-requirements#communication-server' />.
 
-* A Multi Communications Server license is required to install and connect the server. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* A Multi Communications Server license is required to install and connect the Multi Communications Server. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
-### Pre-installation checks {/* #check-before-install */}
+### Checks before installation {/* #check-before-install */}
 
 Before installing the Multi Communications Server, run **BioStar X Service Manager** to check the information required during installation.
 
-1. Click <Start/> → **BioStar X** → **BioStar X Service Manager** on Windows.
+1. In Windows, click <Start/> → **BioStar X** → **BioStar X Service Manager**.
 
-2. The <Cmd>BioStar X Service Manager</Cmd> window appears.
+2. The <Cmd>BioStar X Service Manager</Cmd> window opens.
 
 3. Click <Cmd>SERVICE SETTINGS</Cmd>.
 
-Below is the information required to install the Multi Communications Server. Review and prepare each item.
+Below is the information you need to enter when installing the Multi Communications Server. Review and prepare each requirement.
 
 <Image src='/img/biostarx-cumm-server-matching.png' />
 
 <div className='table-fixed'>
 
-| BioStar X Service Manager | Information required for Multi Communications Server installation |
+| BioStar X Service Manager | Information to enter when installing the Multi Communications Server |
 | --- | --- |
 | <Cmd>BioStar X Core Service</Cmd> → <Cmd>RPC Port</Cmd> | **BioStar X Server gRPC Port for Communication** |
 | <Cmd>BioStar X Coordinator Service</Cmd> → <Cmd>Client Port</Cmd> | **BioStar X Coordinator Service Port for Communication** |
@@ -59,9 +59,9 @@ For more information about <Cmd>SERVICE SETTINGS</Cmd>, see <DocLink docId='plat
 
 ## Installation guide {/* #install-guide */}
 
-Follow the steps below to install the Multi Communications Server.
+To install the Multi Communications Server, follow these steps.
 
-1. Access the [Suprema Download Center](https://download.supremainc.com/), log in, and download the installation package (*BioStar X Communications Server.X.Y.X.BB.exe*).
+1. Go to the [Suprema Download Center](https://download.supremainc.com/), log in, and download the installation package (*BioStar X Communications Server.X.Y.Z.BB.exe*).
 
 2. Run the downloaded installation file.
 
@@ -73,19 +73,19 @@ Follow the steps below to install the Multi Communications Server.
 
    <Image src='/img/biostarx-install-comm-server-license-agree.png' />
 
-5. Set the installation path for the Multi Communications Server and click <Cmd code='biostar2.install.next' className='bold'/>.
+5. Set the installation path for the Multi Communications Server, and then click <Cmd code='biostar2.install.next' className='bold'/>.
 
    <Image src='/img/biostarx-install-comm-server-set-path.png' />
 
-6. Review the permissions and responsibilities regarding personal information and click <Cmd code='biostar2.install.next' className='bold'/> to continue the installation.
+6. To continue the installation, review the permissions and responsibilities regarding personal information and click <Cmd code='biostar2.install.next' className='bold'/>.
 
    <Image src='/img/biostarx-install-comm-server-private-policy.png' />
 
-7. Select the components of the Multi Communications Server and click <Cmd code='biostar2.install.next' className='bold'/>.
+7. Select the components for the Multi Communications Server, and then click <Cmd code='biostar2.install.next' className='bold'/>.
 
    <Image src='/img/biostarx-install-comm-server-select-component.png' />
 
-8. Enter the IP address and port number of the **BioStar X** server, and input details for connection to the **BioStar X** server. Complete your settings and click <Cmd code='biostar2.install.next' className='bold'/>.
+8. Enter the IP address and port number of the **BioStar X** server, and enter the values in each field to connect to the **BioStar X** server. Complete the setup and click <Cmd code='biostar2.install.next' className='bold'/>.
 
    <Image src='/img/biostarx-install-comm-server-settings.png' />
 
@@ -103,7 +103,7 @@ Follow the steps below to install the Multi Communications Server.
 
     <Image src='/img/biostarx-install-comm-server-port-settings.png' />
 
-11. When you finish preparing for installation, click <Cmd code='biostar2.install.btnInstall' className='bold'/>. Proceed with the installation.
+11. When you finish preparing for installation, click <Cmd code='biostar2.install.btnInstall' className='bold'/>. The installation starts.
 
     <Image src='/img/biostarx-install-comm-server-install-step.png' />
 
@@ -111,15 +111,15 @@ Follow the steps below to install the Multi Communications Server.
 
     <Image src='/img/biostarx-install-comm-server-complete.png' />
 
-Complete the installation of the Multi Communications Server. Once the installation is complete, verify the connection between the Multi Communications Server and the **BioStar X** main server.
+The Multi Communications Server installation is complete. Once the installation is complete, verify that the Multi Communications Server is connected to the **BioStar X** main server.
 
-## Post-installation checks {/* #check-after-install */}
+## Checks after installation {/* #check-after-install */}
 
 After installing the Multi Communications Server, connect it to the main server in **BioStar X Service Manager**.
 
-1. Click <Start/> → **BioStar X** → **BioStar X Service Manager** on Windows. 
+1. In Windows, click <Start/> → **BioStar X** → **BioStar X Service Manager**. 
 
-2. The <Cmd>BioStar X Service Manager</Cmd> window appears.
+2. The <Cmd>BioStar X Service Manager</Cmd> window opens.
 
 3. Click the <Cmd>COMMUNICATIONS</Cmd> menu in the left sidebar.
 
@@ -127,22 +127,22 @@ After installing the Multi Communications Server, connect it to the main server 
 
 4. Click <Cmd>Add Communication Server</Cmd> in the upper-right corner of the screen.
 
-5. When the <Cmd>Add Communication Server</Cmd> window appears, select the checkbox that matches the installed Multi Communications Server IP address. In the <Cmd>Database</Cmd> column, select the database to use.
+5. When the <Cmd>Add Communication Server</Cmd> window appears, select the checkbox for the entry that matches the IP address of the installed Multi Communications Server, and select a database in the <Cmd>Database</Cmd> column.
 
    <Image src='/img/common/biostarx-sm-cluster-main-03.png' alone />
 
 6. Click <Cmd>Add</Cmd>.
 
-In the Multi Communications Server list, check that <Cmd>Server Status</Cmd> shows <Cmd>Connected</Cmd>.
+In the Multi Communications Server list, check that the <Cmd>Server Status</Cmd> column for the added Multi Communications Server shows <Cmd>Connected</Cmd>.
 
 <Image src='/img/common/biostarx-sm-cluster-main-04.png' alone />
 
 :::info
 
-* The <Cmd>COMMUNICATIONS</Cmd> menu can be used when the multi-communication server license is activated. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* The <Cmd>COMMUNICATIONS</Cmd> menu is available when the Multi Communications Server license is activated. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
-* To delete the Multi Communications Server, check the box of the server to be deleted in the list and click <Cmd>Delete Communication Server</Cmd> in the upper-right corner of the screen.
+* To delete a Multi Communications Server, select the checkbox for the server in the list, and then click <Cmd>Delete Communication Server</Cmd> in the upper-right corner of the screen.
 
-* When adding a Multi Communications Server, add a secondary database to reduce the load on the main server. For more information about adding a secondary database, see <DocLink docId='platform/biostar_x/add-sub-db' />.
+* When you add a Multi Communications Server, you can add a secondary database to reduce the main server load. For more information about adding a secondary database, see <DocLink docId='platform/biostar_x/add-sub-db' />.
 
 :::
