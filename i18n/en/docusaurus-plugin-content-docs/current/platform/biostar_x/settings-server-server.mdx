@@ -1,92 +1,92 @@
 ---
 id: settings-server-server
-title: Server Detailed Settings
-description: Guidance on the basic information of the BioStar X server, user and device management, server matching, system log levels, and settings for saving facial images.
+title: Configure Advanced Server Settings
+description: Learn how to configure the basic information of the BioStar X server, user and device management, server matching, system log levels, and face image storage.
 keywords:
-  - Server
+  - Server settings
   - User Management
   - Device Management
   - Server matching
   - System log
 ---
 
-You can change the basic information settings of the BioStar X server, user and device management, server matching, system log levels, and settings for saving facial images.
+You can change settings for the **BioStar X** server basics, user and device management, server matching, system log levels, and face image storage.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.server" /> in the left sidebar.
 
-3. Set the desired items in each section.
+3. Set the options you need in each section.
 
-   * <Cmd sid='common.general' product='2' />: You can set the IP address, port number, session expiration time, event log upload method, and log retention period.
+   * <Cmd sid='common.general' product='2' />: Sets the IP address, port number, session timeout, event log upload method, and log retention period.
 
-   * <Cmd sid='setting.server.userDeviceManagement' product='2' />: You can change user and device management settings.
+   * <Cmd sid='setting.server.userDeviceManagement' product='2' />: Changes user and device management settings.
 
-   * <Cmd sid='setting.server.logLevelManagement' product='2' />: You can change system log level settings.
+   * <Cmd sid='setting.server.logLevelManagement' product='2' />: Changes system log level settings.
 
-   * <Cmd sid='settings.expertSettings.title' product='2' />: You can set it to save both the actual image and the template of the face or save only the template without storing the actual image.
+   * <Cmd sid='settings.expertSettings.title' product='2' />: Sets whether to store both the face image and template, or store only the template without the face image.
 
 4. To save the settings, click <Cmd sid='button.apply' product='2' /> in the lower-right corner of the screen.
 
 ## Basic information settings {/* #basic-setting */}
 
-You can check or set basic information for **BioStar X** in the <Cmd sid='common.general' product='2' /> section.
+In the <Cmd sid='common.general' product='2' /> section, check or set basic information for **BioStar X**.
 
 <Image src='/img/biostarx-settings-server-general.png' className='none' />
 
-* <Cmd sid="setting.server.biostarIPAdress" product='2' />: You can check the server IP address.
+* <Cmd sid="setting.server.biostarIPAdress" product='2' />: Shows the server IP address.
 
 * <Cmd sid="setting.server.logUploadType" product='2' />: Select an event log upload method. If real-time communication with the server is difficult, set this to <Cmd sid="common.manual" product='2' />.
 
 * <Cmd sid="setting.server.logRetainDays" product='2' />: The log retention period can be set from 1 to 120 days.
 
-* <Cmd sid="common.sessionTimeout" product='2' />: Set a session timeout period. If there is no operation after logging into BioStar X for the configured time, you will be automatically logged out.
+* <Cmd sid="common.sessionTimeout" product='2' />: Set the session timeout. If you are inactive for the set time after you log in to **BioStar X**, you are automatically logged out.
 
 :::info
 
-If you set the <Cmd sid="setting.server.logUploadType" product='2' /> to <Cmd sid='common.auto' product='2' />, the event logs stored on the device upload automatically to the server when the connection between the server and device is lost and restored.
+If you set the <Cmd sid="setting.server.logUploadType" product='2' /> option to <Cmd sid='common.auto' product='2' />, the device automatically uploads its stored event logs when it reconnects to the server.
 
 :::
 
 ## User and device management {/* #user-and-device-management */}
 
-In the <Cmd sid='setting.server.userDeviceManagement' product='2' /> section, you can set the synchronization and authentication methods between users and devices.
+In the <Cmd sid='setting.server.userDeviceManagement' product='2' /> section, set synchronization and authentication methods between users and devices.
 
 <Image src='/img/biostarx-settings-server-management.png' className='none' />
 
 ### <Cmd sid="setting.server.automaticUserSync" product='2' className='normal' /> {/* #user-sync */}
 
-In the <Cmd sid="setting.server.automaticUserSync" product='2' /> option, you can choose how to synchronize user information between the server and devices. Synchronization includes access levels and access groups assigned to users. If you change access levels or access groups on the **BioStar X** server, the changes automatically apply to the related devices.
+Select how to synchronize user information between the server and devices in the <Cmd sid="setting.server.automaticUserSync" product='2' /> option. Synchronization includes users' access levels and access groups, so changes to them on the **BioStar X** server automatically apply to the related devices.
 
-* <Cmd sid="setting.server.syncOption.allDevices" product='2' />: User information is synchronized automatically between the server and all registered devices.
+* <Cmd sid="setting.server.syncOption.allDevices" product='2' />: User information is automatically synchronized between the server and devices.
 
-* <Cmd sid="setting.server.syncOption.deviceSync" product='2' />: User information from the server is synchronized with all devices registered on the server. However, user information modified on the device is not synchronized to the server, and only user information added on the device is synchronized to the server.
+* <Cmd sid="setting.server.syncOption.deviceSync" product='2' />: User information on the server is synchronized with all devices registered on the server. However, user information modified on a device is not synchronized to the server, and only user information added on a device is synchronized to the server.
 
-* <Cmd sid="setting.server.syncOption.smartSync" product='2' />: Only devices belonging to an access group with changes are automatically synchronized with the server.
+* <Cmd sid="setting.server.syncOption.smartSync" product='2' />: Only devices in an access group with changes are automatically synchronized with the server.
 
 :::info
 
-* If you select the <Cmd sid="setting.server.syncOption.smartSync" product='2' /> option, users saved on devices that do not belong to the access group cannot be managed by the server. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />, select each device, and click <Cmd sid="device.sync_all" product='2' /> to start synchronization. For more information about the <Cmd sid="device.sync_all" product='2' /> feature, see <DocLink docId='platform/biostar_x/settings-device-using-functions' />.
+* If you select the <Cmd sid="setting.server.syncOption.smartSync" product='2' /> option, users stored on a device that are not in an access group cannot be managed on the server. To use this option, click <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />, select each device, and click <Cmd sid="device.sync_all" product='2' /> to run synchronization. For more information about the <Cmd sid="device.sync_all" product='2' /> feature, see <DocLink docId='platform/biostar_x/settings-device-using-functions' />.
 
-* Even if you select the <Cmd sid="setting.server.syncOption.smartSync" product='2' /> option, special access groups designated for specific purposes will synchronize regardless of the device access group.
+* Even if you select the <Cmd sid="setting.server.syncOption.smartSync" product='2' /> option, access groups designated for special purposes are synchronized regardless of the device access group, as follows.
 
-  * Dual authentication access group set up in the Devices and Elevators.
+  * Dual authentication access group set for devices and elevators
 
-  * Always pass group for anti-passback setting
+  * Bypass group in the anti-passback settings
 
-  * Always pass group for schedule lock setting
+  * Bypass group in the scheduled lock settings
 
-  * Open authentication access group for schedule open setting
+  * Unlock authentication access group in the scheduled unlock settings
 
-  * Access/Deactivate group for guard setting 
+  * Intrusion alarm group in the intrusion alarm settings 
 
-* Even if you select the <Cmd sid="setting.server.syncOption.smartSync" product='2' /> option, users designated as device administrators will synchronize regardless of the access group.
+* Even if you select the <Cmd sid="setting.server.syncOption.smartSync" product='2' /> option, users designated as device administrators are synchronized regardless of the access group.
 
 :::
 
 ### <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' className='normal' /> {/* #fingerprint-template-format */}
 
-In the <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> option, you can choose the fingerprint template format. Select from the following items.
+In the <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> option, select the fingerprint template format. Select from the following options.
 
 * <Cmd>SUPREMA</Cmd>: Suprema fingerprint template format. Used when enrolling fingerprints on Suprema devices.
 
@@ -96,17 +96,17 @@ In the <Cmd sid="setting.server.fingerprintTemplateFormat" product='2' /> option
 
 :::info
 
-If there are existing user fingerprint templates on the device, they cannot be changed to another format.
+If user fingerprint templates remain on the device, you cannot change to a different format.
 
 :::
 
 ### <Cmd sid="setting.userDevice.useridType" product='2' className='normal' /> {/* #userid-type */}
 
-In the <Cmd sid="setting.userDevice.useridType" product='2' /> option, you can select the user ID type as <Cmd sid="setting.userDevice.useridType.numeric" product='2' /> or <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />. Check the list of devices registered in the **BioStar X** server and select compatible settings.
+In the <Cmd sid="setting.userDevice.useridType" product='2' /> option, select <Cmd sid="setting.userDevice.useridType.numeric" product='2' /> or <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> as the user ID type. Check the list of devices registered on the **BioStar X** server, and select compatible settings.
 
 <details>
 
-<summary>View devices and firmware versions that can change <Cmd sid="setting.userDevice.useridType" product='2' /></summary>
+<summary>View devices and firmware versions that support changing <Cmd sid="setting.userDevice.useridType" product='2' /></summary>
 
 * BioStation 3 Max firmware v1.0.0 or later
 
@@ -144,27 +144,27 @@ In the <Cmd sid="setting.userDevice.useridType" product='2' /> option, you can s
 
 :::info
 
-Changing from <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> to <Cmd sid="setting.userDevice.useridType.numeric" product='2' /> requires deleting all user information registered in **BioStar X**.
+If you change from <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' /> to <Cmd sid="setting.userDevice.useridType.numeric" product='2' />, you must delete all user information registered in **BioStar X**.
 
 :::
 
 ### <Cmd sid="setting.server.enrollment_device.title" product='2' className='normal' /> {/* #enrollment-device */}
 
-You can add frequently used devices for enrolling fingerprints, faces, or cards in the <Cmd sid="setting.server.enrollment_device.title" product='2' /> option for convenience. 
+The <Cmd sid="setting.server.enrollment_device.title" product='2' /> option lets you add devices you use often to enroll fingerprints, faces, or cards. 
 
-1. Click <Cmd sid="button.plusAdd" product='2' /> to add a device.
+1. To add a device, click <Cmd sid="button.plusAdd" product='2' />.
 
-2. When the <Cmd sid='setting.server.enrollment_device.configure.title' product='2' /> window appears, click the checkbox of the desired device from the list.
+2. When the <Cmd sid='setting.server.enrollment_device.configure.title' product='2' /> window appears, select the checkbox for the device to add in the list.
 
    <Image src='/img/biostarx-settings-server-management-enroll-device.png' className='none' />
 
-3. Click <Cmd sid='button.add' product='2' /> to add the selected device.
+3. To add the selected device, click <Cmd sid='button.add' product='2' />.
 
 4. To save the added device settings, click <Cmd sid='button.apply' product='2' /> in the lower-right corner of the screen.
 
 :::info
 
-* If you find it difficult to locate a registered device from the list due to the large number, enter keywords in the search input field to find devices. You can enter the device ID, device name, device group, and IP address.
+* If there are too many registered devices to find in the list, enter a keyword in the search field to search for a device. Enter a device ID, device name, device group, or IP address.
 
 * For more information about enrolling fingerprints or face, card credentials, see the followings:
 
@@ -180,31 +180,31 @@ You can add frequently used devices for enrolling fingerprints, faces, or cards 
 
 ### <Cmd sid="setting.server.custom_field.title" product='2' className='normal' /> {/* #custom-field */}
 
-In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you can add fields to input additional information about the user. The added fields will be displayed on the user information screen.
+The <Cmd sid="setting.server.custom_field.title" product='2' /> option lets you add fields for entering additional user information. The added fields appear on the user information screen.
 
 1. To add a custom user field, click <Cmd sid="button.plusAdd" product='2' />.
 
-2. Enter the name of the custom user field and select the desired item type.
+2. Enter a name for the custom user field, and select a type.
 
    <Image src='/img/biostarx-settings-server-management-custome-field.png' />
 
-   * <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />: Allows entry of values from 0 to 4294962795; characters cannot be entered.
+   * <Cmd sid="setting.server.custom_field.type.numericbox" product='2' />: Enter a value from 0 to 4294967295. Letters are not allowed.
 
-   * <Cmd sid="setting.server.custom_field.type.textbox" product='2' />: Allows entry of up to 32 characters of numbers and letters.
+   * <Cmd sid="setting.server.custom_field.type.textbox" product='2' />: Allows entry of up to 32 characters, including numbers and letters.
 
-   * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />: Allows addition of up to 20 items of 32 characters; each item is separated by a semicolon (;). (e.g., Select1;Select2;Select3)
+   * <Cmd sid="setting.server.custom_field.type.combobox" product='2' />: Add up to 20 entries of up to 32 characters, separated by semicolons (;). (for example, Option1;Option2;Option3)
 
      <Image src='/img/biostarx-settings-server-management-custome-field-select.png' />
 
-   * <Cmd sid='setting.server.custom_field.type.fileupload' product='2' />: You can add a field for file uploads.
+   * <Cmd sid='setting.server.custom_field.type.fileupload' product='2' />: Adds a field for file uploads.
 
      :::note
 
-     * The maximum file size is 1MB.
+     * The maximum file size is 1 MB.
 
-     * The file name can be a minimum of 1 character and a maximum of 120 characters.
+     * The file name can be from 1 to 120 characters long.
 
-     * File name requirements: The file name must use alphanumeric characters, underscores (`_`), and hyphens (`-`), and use a period (`.`) to separate the extension.
+     * File name requirements: Use alphanumeric characters, underscores (`_`), and hyphens (`-`), and use a period (`.`) to separate the extension.
 
      * There are no restrictions on file extensions, and uploaded files are encrypted and stored in the database.
 
@@ -214,21 +214,21 @@ In the <Cmd sid="setting.server.custom_field.title" product='2' /> option, you c
 
 :::info
 
-* To change the order of the custom user fields, change the numbers in the <Cmd sid='setting.server.custom_field.order' product='2' /> column. The position of that field will change.
+* To change the order of custom user fields, change the number in the <Cmd sid='setting.server.custom_field.order' product='2' /> column. The field position changes.
 
 * After modifying the custom user fields, click <Cmd sid='button.apply' product='2' /> in the lower-right corner of the screen.
 
-* Click <IcTrash2 /> to delete a custom user field. Deleted fields cannot be recovered.
+* To delete a custom user field, click <IcTrash2 />. Deleted fields cannot be recovered.
 
 * For more information about registering and editing user information, see <DocLink docId='platform/biostar_x/how-to-guide-user' />.
 
-* User information with added custom user fields can be printed on a card. For more information, see <DocLink docId='platform/biostar_x/settings-card-printer#adding-custom-user-fields' />.
+* User information with custom user fields can be printed on a card. For more information, see <DocLink docId='platform/biostar_x/settings-card-printer#adding-custom-user-fields' />.
 
 :::
 
 ### AoC card settings {/* #aoc-card-setting */}
 
-To issue an [Access on Card (AoC)](../../reference/glossary#access_on_card) credential that stores user credentials on a card, enable the <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' /> option to delete personal information and credential data from the **BioStar X** server.
+To delete personal information and credential data from the **BioStar X** server when issuing [Access on Card (AoC)](../../reference/glossary#access_on_card) that stores the user's credentials on a card, turn on <Cmd sid="setting.server.deleteCredentialAfterAOC" product='2' />.
 
 :::info
 
@@ -290,7 +290,7 @@ To issue an [Access on Card (AoC)](../../reference/glossary#access_on_card) cred
 
 </details>
 
-* <Cmd sid="user.mobileCredentialCard" product='2' /> and <Cmd sid="common.mobileCredential" product='2' /> features cannot be used at the same time.
+* <Cmd sid="user.mobileCredentialCard" product='2' /> and <Cmd sid="common.mobileCredential" product='2' /> cannot be used at the same time.
 
 :::
 
@@ -300,21 +300,21 @@ To issue an [Access on Card (AoC)](../../reference/glossary#access_on_card) cred
 
   :::info
 
-  The access control event log retention setting applies only to server logs. This setting does not apply to device event logs. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' />, and delete device event logs individually.
+  The access control event log retention setting applies only to server logs. This setting does not apply to device event logs. If you need to delete device event logs, delete them individually in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> menu.
 
   :::
 
-* <Cmd sid="setting.server.hideCredentialFaces" product='2' />: To protect users' personal information, the preview image can be hidden during the registration of face credentials. When this option is enabled, the preview screen will not be provided when enrolling users' face credentials.
+* <Cmd sid="setting.server.hideCredentialFaces" product='2' />: To protect users' personal information, hide the preview image when you enroll face credentials. When this option is enabled, the preview screen does not appear when you enroll face credentials for a user.
 
-## Server matching {/* #servermatching */}
+## Set up server matching {/* #servermatching */}
 
-In the <Cmd sid='common.serverMatching' product='2' /> section, you can set up the [server matching](../../reference/glossary#server_matching) feature to authenticate user information on **BioStar X** without authenticating on the device.
+In the <Cmd sid='common.serverMatching' product='2' /> section, you can set up the [server matching](../../reference/glossary#server_matching) feature, which authenticates user information in **BioStar X** instead of on the device.
 
 <Image src='/img/biostarx-settings-server-server-matching.png' className='none' />
 
-* <Cmd sid="setting.server.serverMatching.use" product='2' />: Activates/Deactivates server matching.
+* <Cmd sid="setting.server.serverMatching.use" product='2' />: Turn server matching on or off.
 
-* <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product='2' />: You can configure how many matchings can be done simultaneously.
+* <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product='2' />: Set the maximum number of server matching tasks that can run at the same time.
 
   :::note
 
@@ -324,37 +324,37 @@ In the <Cmd sid='common.serverMatching' product='2' /> section, you can set up t
 
 * <Cmd sid='common.fingerPrint' product='2' />
 
-  * <Cmd sid="setting.server.serverMatching.fastMode" product='2' />: You can configure the fingerprint matching speed.
+  * <Cmd sid="setting.server.serverMatching.fastMode" product='2' />: Adjust the fingerprint matching speed.
 
-  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: Configure the server matching security level for fingerprints. The higher the security level is set, the more the false rejection rate (FRR) can occur.
+  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: Set the server matching security level for fingerprints. A higher security level increases the false rejection rate (FRR).
 
 * <Cmd sid='common.face' product='2' />
 
-  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: Configure the server matching security level for IR faces. The higher the security level is set, the more the false rejection rate (FRR) can occur.
+  * <Cmd sid="setting.server.serverMatching.securityLevel" product='2' />: Set the server matching security level for IR face. A higher security level increases the false rejection rate (FRR).
 
 :::info
 
-The <Cmd sid='common.serverMatching' product='2' /> feature is available as an additional option with an **Essential** or higher license. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
+The <Cmd sid='common.serverMatching' product='2' /> feature is available as an add-on option with an **Essential** license or higher. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
 
 :::
 
-## System log level settings {/* #systemloglevel */}
+## Set system log level {/* #systemloglevel */}
 
 In the <Cmd sid='setting.server.logLevelManagement' product='2' /> section, you can set the level of system logs stored in the database.
 
 <Image src='/img/biostarx-settings-server-system-log-level.png' className='none' />
 
-System logs are managed according to predefined categories, and the log levels are classified into <Cmd sid="setting.server.logLevel.trace" product='2' />, <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' />. The high level contains all lower level logs. For example, if you select <Cmd sid="setting.server.logLevel.trace" product='2' />, it will include and save all lower levels of <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' /> logs.
+System logs are managed by predefined categories, and log levels are divided into <Cmd sid="setting.server.logLevel.trace" product='2' />, <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' />. A higher level includes all lower-level logs. For example, if you select <Cmd sid="setting.server.logLevel.trace" product='2' />, the system saves all <Cmd sid="setting.server.logLevel.debug" product='2' />, <Cmd sid="setting.server.logLevel.info" product='2' />, <Cmd sid="setting.server.logLevel.warning" product='2' />, and <Cmd sid="setting.server.logLevel.error" product='2' /> logs as well.
 
-## Saving facial images {/* #storevisualfaceimage */}
+## Store face images {/* #storevisualfaceimage */}
 
-When enrolling a face as a credential, you can set it to save both the actual image and template, or to save only the template without the actual image.
+When you enroll a face as a credential, you can set whether to store both the actual image and the template, or only the template.
 
 :::note
 
-**Before using**
+**Before you begin**
 
-Before enabling the <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> option, save any changes in the <Cmd sid="setting.menu.server.server" /> menu first. Click <Cmd sid="button.apply" product='2' /> in the lower-right corner of the screen.
+Before enabling the <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> option, save any changes you made in the <Cmd sid="setting.menu.server.server" /> menu first. Click <Cmd sid="button.apply" product='2' /> in the lower-right corner of the screen.
 
 :::
 
@@ -364,24 +364,24 @@ Before enabling the <Cmd sid="settings.expertSettings.enableOptionLabel" product
 
 2. Click <Cmd sid='settings.expertSettings.enableButton' product='2' />.
 
-3. When you enter the <Cmd sid="settings.expertSettings.detail.title" product='2' /> screen, set the <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> option.
+3. When the <Cmd sid="settings.expertSettings.detail.title" product='2' /> screen appears, set the <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> option.
 
    <Image src='/img/biostarx-settings-server-expert2.png' />
 
-   * <Cmd sid="common.use" product='2' />: This is the default setting. Saves both the actual image and the template of the face credential.
+   * <Cmd sid="common.use" product='2' />: Default. Stores both the actual image and the template of the face credential.
 
-   * <Cmd sid="common.notUse" product='2' />: Does not save the actual image of the face credential and saves only the template. Read the warning pop-up that appears when you select this option carefully before setting it.
+   * <Cmd sid="common.notUse" product='2' />: Stores only the template and does not store the actual image of the face credential. Read the warning pop-up that appears when you select this option carefully before setting it.
 
 4. To save the settings, click <Cmd sid="button.apply" product='2' />.
 
 :::caution
 
-**Precautions when disabling the <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> option**
+**Precautions when turning off the <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> option**
 
-* If you disable this feature, all stored facial images will be deleted, and future enrolled facial images will only save the templates excluding the images.
+* If you turn off this feature, all stored face images are deleted, and only templates are stored for faces enrolled later.
 
-* This feature cannot be disabled if the enrolled facial images do not have both types of templates. For more information about the <Cmd sid='team.menu.faceMigration' /> feature, see <DocLink docId='platform/biostar_x/migration-face' />.
+* You cannot turn off this feature if the enrolled face images do not have both types of templates. For more information about the <Cmd sid='team.menu.faceMigration' /> feature, see <DocLink docId='platform/biostar_x/migration-face' />.
 
-* After disabling this feature, if you include invalid face image templates in the <Cmd sid="menu.dataImport" product='2' />, you will not be able to import the data file. To resolve this issue, temporarily enable this feature before importing the data file.
+* After you disable this feature, you cannot import a data file from <Cmd sid="menu.dataImport" product='2' /> if it includes invalid face image templates. To resolve the issue, temporarily enable this feature and then import the data file.
 
 :::

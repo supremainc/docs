@@ -33,11 +33,11 @@ import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-fo
 
 * <Cmd sid='device.info.usersHaveFullAccess' product='2' />：デバイスに登録されたユーザーに出入グループ設定なしですべての出入権限を付与できます。
 
-   :::info
+  :::info
 
-   このオプションを <Cmd sid='common.use' product='2' /> に設定すると、<Cmd sid='common.accessLevel' product='2' /> および <Cmd sid='ag.floorLevel.title' product='2' /> にデバイスを登録できません。
+  このオプションを <Cmd sid='common.use' product='2' /> に設定すると、<Cmd sid='common.accessLevel' product='2' /> および <Cmd sid='ag.floorLevel.title' product='2' /> にデバイスを登録できません。
 
-   :::
+  :::
 
 * <Cmd sid='device.info.authTimeout' product='2' />：<Cmd sid='device.info.authenticationMode' product='2' /> オプションで複数のクレデンシャルを組み合わせて使用する場合、2 番目のクレデンシャルを認証するまでの待機時間です。指定した時間内にクレデンシャルを認証しない場合、認証に失敗します。
 
@@ -97,11 +97,11 @@ import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-fo
 
   * <Cmd sid='device.faceDetectionLevel.none' product='2' />：顔検出機能を使用しません。
 
-   :::info
+  :::info
 
-   このオプションは BioStation A2 モデルでサポートされています。
+  このオプションは BioStation A2 モデルでサポートされています。
 
-   :::
+  :::
 
 * <Cmd sid='device.info.userIdDisplay' product='2' />：認証成功時にデバイスに表示されるユーザーIDを表示または非表示にできます。
 
@@ -121,21 +121,21 @@ import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-fo
 
   * <Cmd sid='device.info.authFailLockout.secondLockout' product='2' />: 1次ロックが解除された後も認証失敗が繰り返される場合に適用する2次ロック時間です。このオプションを <Cmd sid='common.use' product='2' /> に設定すると、900\~3,600秒の値を入力できます。デフォルトは900秒です。
 
-     :::note
+    :::note
 
-     このオプションを <Cmd sid='device.info.disable' product='2' /> に設定すると、2次ロックなしで1次ロックのみを繰り返し適用します。
+    このオプションを <Cmd sid='device.info.disable' product='2' /> に設定すると、2次ロックなしで1次ロックのみを繰り返し適用します。
 
-     :::
+    :::
 
   * <Cmd sid='device.info.authFailLockout.resetTime.label' product='2' />：最後の認証失敗後、この時間内に追加の失敗がなければ、累積失敗回数を初期化します。 600\~3,600秒の範囲で設定してください。デフォルトは1,800秒です。
 
-   :::info
+  :::info
 
   * デバイスが現在ロック状態の場合、<Cmd sid='device.info.authFailLockout.label' product='2' />を<Cmd sid='device.info.disable' product='2' />に変更して保存すると、デバイスは直ちにロックを解除します。ただし、<Cmd sid='device.info.authFailLockout.secondLockout' product='2' />を<Cmd sid='device.info.disable' product='2' />に変更して保存しても、デバイスはロックを解除しません。
 
   * <Cmd sid='device.info.authFailLockout.label' product='2' /> オプションは BioStation 3 のファームウェア 1.5.0 以降でサポートされています。
 
-   :::
+  :::
 
 ### 認証モードを追加する {/* #added-auth-mode */}
 
@@ -251,17 +251,17 @@ import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-fo
 
   <Image src='/img/biostarx-setting-device-detail-face-block-duplicate-auth.png' />
 
-   :::note
+  :::note
 
-   この設定は、<Cmd sid='device.info.antiTailgating.label' product='2' /> と <Cmd sid='device.info.multiFaceAuth.label' product='2' /> のどちらを使用しても共通で適用されます。
+  この設定は、<Cmd sid='device.info.antiTailgating.label' product='2' /> と <Cmd sid='device.info.multiFaceAuth.label' product='2' /> のどちらを使用しても共通で適用されます。
 
-   :::
+  :::
 
 * <Cmd sid='device.info.antiTailgating.label' product='2' />：デバイスカメラの撮影範囲内で2人以上の顔を同時に検知すると、共連れと判断して認証を中断します。
 
 * <Cmd sid='device.info.multiFaceAuth.label' product='2' />：デバイスカメラの撮影範囲内にいる複数のユーザーの顔を順番に認証します。
 
-   :::note
+  :::note
 
   * このオプションを使用するには、別途デバイスライセンスが必要です。ライセンスがないデバイスでは、このオプションを使用に設定できません。詳しくは<DocLink docId='platform/biostar_x/settings-license-device-license' />をご覧ください。
 
@@ -269,7 +269,7 @@ import EV2EV3SecurityMessage from '../../common/_bsx-ev2-ev3-security-message-fo
 
   * このオプションを使用するデバイスでは、<Cmd sid='device.info.tna' product='2' />および<Cmd sid='device.info.serverPrivateMsg' product='2' />機能は使用できません。
 
-   :::
+  :::
 
 :::info
 

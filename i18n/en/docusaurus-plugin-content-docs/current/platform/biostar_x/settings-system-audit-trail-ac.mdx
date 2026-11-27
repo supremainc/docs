@@ -1,12 +1,12 @@
 ---
 id: settings-system-audit-trail-ac
 title: View Access Control Audit Logs
-description: This section explains how to review and filter all access control activities, such as creating, updating, deleting, and viewing records.
+description: Learn how to review and filter all access control activities, such as creating, updating, deleting, and viewing records, in audit logs.
 ---
 
-The <Cmd sid='setting.menu.auditTrail.acAuditLog' /> feature records access control activity for users, devices, and doors: create, update, delete, view, export, import, and operations. Each record shows when, who made the change, what changed, and how, to support audits and troubleshooting.
+The <Cmd sid='setting.menu.auditTrail.acAuditLog' /> feature records all create, update, delete, view, export, import, and operational activities related to access control, such as users, devices, and doors. Each record shows when the change happened, who made it, what changed, and how, to support security audits and troubleshooting.
 
-* **Security audit**: Detect unauthorized access attempts or privilege abuse.
+* **Security audit**: Detect unauthorized access tries or privilege abuse.
 
 * **Troubleshooting**: Track when system errors occur and review setting changes.
 
@@ -26,36 +26,36 @@ The <Cmd sid='setting.menu.auditTrail.acAuditLog' /> feature records access cont
 
 * To change audit log policies such as the retention period, see <DocLink docId='platform/biostar_x/settings-system-audit-trail-settings' />.
 
-* After upgrading to version 1.0.3, the system encrypts new audit logs regardless of the <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> option under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' />.
+* After upgrading to version 1.0.3, new audit logs are stored encrypted regardless of the <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> option under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' />.
 
-* If the system does not record certain audit logs after the upgrade from BioStar 2 to **BioStar X**, see <DocLink docId='platform/biostar_x/migration-x#checkCert' />.
+* If some audit logs are not recorded after upgrading from BioStar 2 to **BioStar X**, see <DocLink docId='platform/biostar_x/migration-x#checkCert' />.
 
 :::
 
 ## Table layout {/* #audit-trail-columns */}
 
-The audit log list table has 10 columns and shows records in descending order by <Cmd sid='audit.column.datetime' />.
+The audit log list table has 10 columns and shows the records that match the current search criteria, newest first by <Cmd sid='audit.column.datetime' />.
 
 | Column | Description |
 | --- | --- |
 | <Cmd sid='audit.column.datetime' /> | The date and time the event occurred. |
-| <Cmd sid='audit.column.user' /> | The user who performed the event. Displayed in the **id(name)** format. |
+| <Cmd sid='audit.column.user' /> | The user who performed the event. Shown in the **id(name)** format. |
 | <Cmd sid='audit.column.accountLevel' /> | The administrator level of the user who performed the event. |
-| <Cmd sid='audit.column.action' /> | The type of action executed. Classified as one of <Cmd sid='action.create' />, <Cmd sid='action.update' />, <Cmd sid='action.delete' />, <Cmd sid='action.read' />, <Cmd sid='action.export' />, <Cmd sid='action.import' />, or <Cmd sid='action.operation' />. |
-| <Cmd sid='audit.column.category' /> | The domain category of the event target (for example, users, devices, and doors). |
-| <Cmd sid='audit.column.target' /> | The target the action applies to. Displayed in the **type: id(name)** format. |
-| <Cmd sid='audit.column.subAction' /> | Shows only when a detailed action name exists, such as login method or alarm disarm. |
+| <Cmd sid='audit.column.action' /> | The type of action that was run. Classified as one of <Cmd sid='action.create' />, <Cmd sid='action.update' />, <Cmd sid='action.delete' />, <Cmd sid='action.read' />, <Cmd sid='action.export' />, <Cmd sid='action.import' />, or <Cmd sid='action.operation' />. |
+| <Cmd sid='audit.column.category' /> | The domain category of the event target (for example, user, device, or door). |
+| <Cmd sid='audit.column.target' /> | The target the action applies to. Shown in the **type: id(name)** format. |
+| <Cmd sid='audit.column.subAction' /> | Appears only when a detailed action name exists, such as a login method or alarm clearing. |
 | <Cmd sid='audit.column.modifiedFields' /> | The name of the field that changed or was viewed. |
-| <Cmd sid='audit.column.details' /> | Detailed information for each action. (e.g., changed values, reasons, and search criteria) |
-| <Cmd sid='audit.column.ip' /> | IP address from which the user accessed. The system shows automatically issued records as **127.0.0.1**. |
+| <Cmd sid='audit.column.details' /> | Detailed information for each action. (for example, changed values, reasons, and search criteria) |
+| <Cmd sid='audit.column.ip' /> | The IP address the user connected from. Records that the system generates automatically appear as **127.0.0.1**. |
 
 :::info
 
-* If the <Cmd sid='audit.column.target' /> or <Cmd sid='audit.column.modifiedFields' /> value has 2 or more entries, only the first item is shown, and the rest are collapsed into a remaining-count badge on the right (e.g., **+208**). If the remaining count is 1,000 or more, the badge shows **+999**. Check the exact total count in the detail pop-up title. Click the badge to open the detail pop-up for that cell.
+* If the <Cmd sid='audit.column.target' /> or <Cmd sid='audit.column.modifiedFields' /> column has two or more values, only the first appears, and the rest are collapsed into a count badge on the right (for example, **+208**). If the remaining count is 1,000 or more, the badge shows **+999**. Check the exact total count in the detail pop-up title. Click the badge to open the detail pop-up for that cell.
 
   <Image src='/img/biostarx-settings-system-audit-trail-list-badge.png' />
 
-* Long cell values truncate to one line with an ellipsis. Hover over the value to see the full text in a tooltip. The tooltip truncates overflow text as `...`.
+* Long cell values truncate to one line with an ellipsis. When you hover over the cell, the full value appears in a tooltip, and text longer than the tooltip is shortened to `...`.
 
   <Image src='/img/biostarx-settings-system-audit-trail-list-tooltip.png' />
 
@@ -71,7 +71,7 @@ Enter a keyword in the <Cmd sid='audit.detail.searchPlaceholder' /> field at the
 
 ## Find records with filters
 
-Combine the filters in the <Cmd sid='audit.filter.title' /> section to narrow down and find the records you need. Select multiple values in one filter to combine them with `OR`. Apply multiple filters together to combine them with `AND`.
+Combine the filters in the <Cmd sid='audit.filter.title' /> section to narrow down records. Selecting multiple values in one filter combines them with `OR`, and applying multiple filters together combines them with `AND`.
 
 <Image src='/img/biostarx-settings-system-audit-trail-set-filter.png' />
 
@@ -84,53 +84,53 @@ Combine the filters in the <Cmd sid='audit.filter.title' /> section to narrow do
 | <Cmd sid='audit.filter.target' /> | Enter a search term and press <Kbd>Enter</Kbd> to find matching targets. |
 | <Cmd sid='audit.filter.action' /> | Select one or more actions from the checkbox list. |
 | <Cmd sid='audit.filter.subAction' /> | Select a detailed action from the searchable list. |
-| <Cmd sid='audit.filter.ip' /> | Enter a search term, then press <Kbd>Enter</Kbd> to find matching IP addresses. |
+| <Cmd sid='audit.filter.ip' /> | Enter a search term and press <Kbd>Enter</Kbd> to find matching IP addresses. |
 
-* If you apply no filters, records from the last 30 days appear by default.
+* If no filters are applied, records from the last 30 days appear by default.
 
 * Select a value in each filter pop-up, then click <Cmd sid='audit.filter.addCondition' /> to apply it to the search immediately. Click <Cmd sid='audit.filter.cancel' /> to cancel the selection and close the pop-up.
 
   <Image src='/img/biostarx-settings-system-audit-trail-set-filter-popup.png' />
 
-* Applied filters appear as the first filter and the number of additional filters. Click <IcClose title='Disable' /> to disable only that filter. Filters with no selected value appear as <Cmd sid='audit.filter.none' />.
+* Applied filters appear summarized as the first entry and the number of additional entries. Click <IcClose title='Disable' /> to clear only that filter. Filters with no selected value appear as <Cmd sid='audit.filter.none' />.
 
   <Image src='/img/biostarx-settings-system-audit-trail-seted-filters.png' />
 
 :::info
 
-Enter a search term to see results for the <Cmd sid='audit.filter.user' />, <Cmd sid='audit.filter.accountLevel' />, <Cmd sid='audit.filter.target' />, and <Cmd sid='audit.filter.ip' /> filters. The search supports partial matches; enter part of a name or ID. The search includes deleted targets and marks them as <Cmd sid='audit.detail.target.deleted' />.
+Enter a search term to see results for the <Cmd sid='audit.filter.user' />, <Cmd sid='audit.filter.accountLevel' />, <Cmd sid='audit.filter.target' />, and <Cmd sid='audit.filter.ip' /> filters. The search supports partial matches, so you can enter part of a name or ID. The search includes deleted targets, marked as <Cmd sid='audit.detail.target.deleted' />.
 
 :::
 
-### Set the query period
+### Set the date range
 
 Click <Cmd sid='audit.filter.datetime' /> to open the <Cmd sid='audit.filter.dateRangeTitle' /> pop-up.
 
 <Image src='/img/biostarx-settings-system-audit-trail-set-period.png' />
 
-1. Set the date and time for <Cmd sid='audit.filter.startDatetime' /> and <Cmd sid='audit.filter.endDatetime' />. Click <Cmd sid='audit.filter.today' /> to jump to today.
+1. Set the date and time for <Cmd sid='audit.filter.startDatetime' /> and <Cmd sid='audit.filter.endDatetime' /> separately. Click <Cmd sid='audit.filter.today' /> to jump to today's date.
 
-2. Click <Cmd sid='audit.filter.ok' /> to apply the query period.
+2. To apply the date range, click <Cmd sid='audit.filter.ok' />.
 
-## Save filter
+## Save a filter
 
-Save frequently used search conditions in <Cmd sid='audit.filter.savedFilters' />, then load them when needed.
+You can save frequently used search conditions in <Cmd sid='audit.filter.savedFilters' /> and load them again later.
 
-1. Set filters to match the required conditions.
+1. Set the filter conditions.
 
 2. Click <Cmd sid='audit.filter.save' /> in the <Cmd sid='audit.filter.title' /> section.
 
-3. The system adds <Cmd sid='audit.filter.newFilterName' /> to the filter list on the left.
+3. The system adds the <Cmd sid='audit.filter.newFilterName' /> entry to the filter list in the left pane.
 
 <Image src='/img/biostarx-settings-system-audit-trail-add-filter.png' />
 
-* Click <IcAuditEdit title='Edit' />, enter a new name, then press <Kbd>Enter</Kbd> to rename the filter.
+* To rename the filter, click <IcAuditEdit title='Edit' />, enter a new name, then press <Kbd>Enter</Kbd>.
 
-* Click <IcAuditDelete title='Delete' /> to delete the filter.
+* To delete the filter, click <IcAuditDelete title='Delete' />.
 
 :::info
 
-You can save up to 20 filters. The browser stores saved filters, so they do not appear on other PCs or browsers.
+Up to 20 filters can be saved. The browser stores saved filters, so they do not appear on other PCs or browsers.
 
 :::
 
@@ -138,13 +138,13 @@ You can save up to 20 filters. The browser stores saved filters, so they do not 
 
 Move between pages or set the number of items to appear on each page.
 
-* <IcFirst />: Go to the first page.
+* <IcFirst />: Goes to the first page.
 
-* <IcFw />: Go to the previous page.
+* <IcFw />: Goes to the previous page.
 
-* <IcBw />: Go to the next page.
+* <IcBw />: Goes to the next page.
 
-* <IcLast />: Go to the last page.
+* <IcLast />: Goes to the last page.
 
 * <Image src='/img/ico-audit-trail-rows-page.png' ico />: Select the number of rows per page.
 
@@ -162,9 +162,9 @@ Change column positions or hide columns in the audit log table. On the right sid
 
 * In <Cmd sid='audit.columnSettings.listHeading' />, clear the checkbox for the column to hide.
 
-* Drag a column to change the column order.
+* To change the column order, drag the column.
 
-* Click <Cmd sid='audit.columnSettings.defaultColumn' /> to initialize column settings.
+* To initialize the column settings, click <Cmd sid='audit.columnSettings.defaultColumn' />.
 
 To save the settings, click <Cmd sid='common.apply' />.
 
@@ -183,7 +183,7 @@ Export audit logs to a CSV file for use with external analysis tools.
 
    <Image src='/img/biostarx-settings-system-audit-trail-export-csv.png' />
 
-The exported CSV includes 10 columns, one row per record, and quotes all values. Values with multiple targets use a vertical bar (`|`) (e.g., **User: 7(Kim)|User: 8(Lee)**). The <Cmd sid='audit.column.details' /> value includes all targets and fields without truncation.
+The exported CSV includes 10 columns, one row per record, and quotes all values. Values with multiple targets are separated by a vertical bar (`|`) (for example, **User: 7(Kim)|User: 8(Lee)**), and the <Cmd sid='audit.column.details' /> value includes all targets and fields without truncation.
 
 :::caution
 
@@ -193,7 +193,7 @@ The CSV file includes values as-is, including values a spreadsheet program may i
 
 :::tip
 
-If you set filters, the export includes only the filtered results in the CSV file.
+If you set filters, only the filtered results are exported to the CSV file.
 
 :::
 
@@ -205,10 +205,10 @@ The same table also shows records from earlier versions (BioStar 2). BioStar 2 r
 
 * <Cmd sid='audit.column.modifiedFields' /> always shows a hyphen (`-`).
 
-* you can also search BioStar 2 records with the provided filters, and <Cmd sid='audit.filter.user' /> and <Cmd sid='audit.filter.target' /> match both name and ID.
+* The provided filters also search BioStar 2 records, and <Cmd sid='audit.filter.user' /> and <Cmd sid='audit.filter.target' /> match by both name and ID.
 
 :::info
 
-Legacy records may include unsupported search criteria. When you load a saved filter, a notice appears if certain criteria are excluded.
+Legacy records may include unsupported search criteria. When you load a saved filter, a notice appears if some criteria are excluded.
 
 :::

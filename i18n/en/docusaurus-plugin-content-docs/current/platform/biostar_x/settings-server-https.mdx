@@ -1,35 +1,35 @@
 ---
 id: settings-server-https
-title: Install HTTPS Certificate
-description: To connect BioStar X via HTTPS, you must register the IP address of the server where BioStar X is installed to install the certificate.
+title: Install an HTTPS Certificate
+description: To connect BioStar X over HTTPS, you must register the IP address of the server where BioStar X is installed to install a certificate.
 keywords:
   - HTTPS
   - Certificate
 ---
 
-To connect **BioStar X** via HTTPS, you must register the IP address of the server where **BioStar X** is installed to install the certificate.
+To connect **BioStar X** over HTTPS, you must register the IP address of the server where **BioStar X** is installed to install a certificate.
 
 ## When certificate installation is required
 
-If you access **BioStar X** without the HTTPS certificate installed, a security warning like the following will appear in your web browser.
+If you access **BioStar X** without an HTTPS certificate installed, a security warning like the following appears in your web browser.
 
 <Image src='/img/biostarx-settings-server-not-secure.png' />
 
-These warnings appear because the browser cannot verify the identity of the server. Installing the certificate will make the browser trust the **BioStar X** server, allowing for a secure HTTPS connection without security warnings.
+These warnings appear because the browser cannot verify the identity of the server. When you install the certificate, the browser trusts the **BioStar X** server, so you can use a secure HTTPS connection without security warnings.
 
-## Certificate installation
+## Install a certificate
 
-Install the certificate before using **BioStar X** for correct network connectivity.
+Install the certificate before you use **BioStar X** to ensure proper network connectivity.
 
-1. Access the **BioStar X** login page.
+1. Go to the **BioStar X** login page.
 
-2. Click the <Cmd sid='auth.httpsDownload' /> link at the bottom of the screen.
+2. Click <Cmd sid='auth.httpsDownload' /> at the bottom of the screen.
 
    <Image src='/img/biostarx-settings-server-login-down-https-cert.png' />
 
 3. Save the *cert-register.zip* file locally.
 
-4. Extract the downloaded file and run the *cert-register.exe* file. The **Enroll Certificate** program runs.
+4. Extract the downloaded file, and then run the *cert-register.exe* file. The **Enroll Certificate** program opens.
 
 5. Select **BioStar X** for **Target System**, enter the IP address of the PC where **BioStar X** is installed in **Server Address**, and click **Enrollment**.
 
@@ -43,17 +43,17 @@ Install the certificate before using **BioStar X** for correct network connectiv
 
 6. Read the security warning message, and then click **Yes**.
 
-Restart the web browser and enter the registered IP address to navigate to the **BioStar X** page. When you click the icon to the left of the address bar, the message **This connection is secure** will appear.
+Restart the web browser, enter the registered IP address, and go to the **BioStar X** page. When you click the icon to the left of the address bar, the message **This connection is secure** appears.
 
 <Image src='/img/biostarx-settings-server-secure.png' />
 
 :::info
 
-The IP address entered in **Enroll Certificate** must be the same as the IP address set in **BioStar X**. You can check it in the menu path <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> under <Cmd sid='setting.server.biostarIPAdress' product='2' />.
+The IP address you enter in **Enroll Certificate** must match the IP address set in **BioStar X**. Check it under <Cmd sid='setting.server.biostarIPAdress' product='2' /> in the menu path <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' />.
 
 :::
 
-## Certificate installation in server settings
+## Install a certificate in server settings
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -65,7 +65,7 @@ The IP address entered in **Enroll Certificate** must be the same as the IP addr
 
 4. Save the *cert-register.zip* file locally.
 
-5. Unzip the downloaded file and run **cert-register.exe** file. The **Enroll Certificate** program runs.
+5. Extract the downloaded file, and then run the **cert-register.exe** file. The **Enroll Certificate** program opens.
 
 6. Select **BioStar X** for **Target System**, enter the IP address of the PC where **BioStar X** is installed in **Server Address**, and click **Enrollment**.
 
@@ -79,15 +79,15 @@ The IP address entered in **Enroll Certificate** must be the same as the IP addr
 
 7. Read the security warning message, and then click **Yes**.
 
-Restart the web browser and enter the registered IP address to navigate to the **BioStar X** page. When you click the icon to the left of the address bar, the message **This connection is secure** will appear.
+Restart the web browser, enter the registered IP address, and go to the **BioStar X** page. When you click the icon to the left of the address bar, the message **This connection is secure** appears.
 
 <Image src='/img/biostarx-settings-server-secure.png' />
 
-## Certificate installation for the VMS server {/* #vms-certification */}
+## Install the VMS server certificate {/* #vms-certification */}
 
-If the following situations occur, you can install the certificate from the VMS server onto the client PC to resolve the issue.
+If any of the following situations occur, resolve the issue by installing the certificate from the VMS server on the client PC.
 
-* When accessing **Video Management System** (VMS) through the browser, and a 'Not secure' warning appears
+* When you access **Video Management System** (VMS) through a browser and a 'Not secure' warning appears
 
 * When real-time video plays on the <Cmd sid='shell.header.arena' /> page but recorded video does not play
 
@@ -97,15 +97,15 @@ If the following situations occur, you can install the certificate from the VMS 
 
 * For more information about installing the certificate on the VMS server, see <DocLink docId='platform/biostar_x/settings-video-integration#install-vms-certification' />.
 
-* The function to integrate with the VMS server must be purchased separately in an additional options package. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
+* The feature that integrates with the VMS server requires a separately purchased add-on option. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
 
 :::
 
 ### Install the certificate on the client PC {/* #install-client-certification */}
 
-1. On a **BioStar X** client PC, download the HTTPS certificate installer (*cert-register.zip*) from the login screen or <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.https" />.
+1. On a client PC with **BioStar X** installed, download the HTTPS certificate installer (*cert-register.zip*) from the login screen or <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.menu.server.https" />.
 
-2. Unzip the downloaded file and run **cert-register.exe** file. The **Enroll Certificate** program runs.
+2. Extract the downloaded file, and then run the **cert-register.exe** file. The **Enroll Certificate** program opens.
 
 3. Select **VMS** for **Target System** and enter the following information.
 
@@ -119,4 +119,4 @@ If the following situations occur, you can install the certificate from the VMS 
 
 5. Read the security warning message, and then click **Yes**.
 
-Restart the web browser and check if the recorded video from the VMS server plays normally on the <Cmd sid='shell.header.arena' /> page.
+Restart the web browser, and then check whether the recorded video from the VMS server plays normally on the <Cmd sid='shell.header.arena' /> page.

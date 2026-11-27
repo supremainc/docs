@@ -1,56 +1,56 @@
 ---
 id: settings-remote-access
-title: Remote Access Settings
-description: Learn how to configure remote access using the ngrok service.
+title: Set Up Remote Access
+description: Learn how to set up Remote Access using the ngrok service.
 keywords:
   - Remote Access
   - ngrok
 ---
 
-Remote access via ngrok allows secure access to internal networks from external networks. This feature enables access to the **BioStar X** server remotely without firewall settings or port forwarding.
+Remote Access is a feature that lets you securely connect to an internal network from an external network through the ngrok service. This feature lets you remotely access the **BioStar X** server without firewall settings or port forwarding.
 
 :::info
 
-* The Remote Access feature is available as an additional option. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />. The remote access license is an annual subscription.
+* The Remote Access feature is available as an add-on option. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />. The Remote Access license is an annual subscription.
 
-* When purchasing the remote access license, Suprema generates a bot account, endpoint, and license document for remote access use on the ngrok Suprema site.
+* When you purchase a Remote Access license, Suprema issues the license, creates a bot account and endpoint on the ngrok Suprema site, and provides the license document to you.
 
 :::
 
 :::caution
 
-* Remote Access is provided through ngrok’s third‑party tunneling service. Before using this feature, please review [Remote Access Feature Agreement](../../legal/eula#remote-access-agreement).
+* The Remote Access feature is provided through ngrok's tunneling service, a third-party service. Before using this feature, please review [Remote Access Feature Agreement](../../legal/eula#remote-access-agreement).
 
-* BioStar X simply supports the connection by calling the ngrok API, but the security, safety, and continuity of internet connectivity entirely depend on the ngrok service. Therefore, Suprema assumes no responsibility for any security incidents, data loss, or system breaches that may occur during the use of this feature.
+* BioStar X only supports the connection by calling the ngrok API, and internet connection security, safety, and continuity depend entirely on the ngrok service. Therefore, Suprema assumes no responsibility for any security incidents, data loss, or system breaches that may occur while using this feature.
 
 :::
 
-## When to use this?
+## When should you use it?
 
-Use the remote access feature in the following situations.
+Use the Remote Access feature in the following situations.
 
-* When you need to connect to the **BioStar X** server from an external network
+* When you need to access the **BioStar X** server on your internal network from an external network
 
-* When it's challenging to connect directly due to firewalls or NAT environments
+* When a firewall or NAT environment makes direct access difficult
 
-* When you want to quickly set up remote access without complex network setups
+* When you need to set up remote access easily without complex network settings
 
-* When you need to temporarily provide outside access rights
+* When you need to temporarily grant external access
 
-## Remote access setup
+## Set up Remote Access
 
 <Steps>
 <Step>
 
-### Activate remote access license
+### Activate the Remote Access license
 
-1. Log in with your **BioStar X** admin ID.
+1. Log in with a **BioStar X** administrator account.
 
 2. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 3. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.menu.license.biostarXLicense' /> in the left sidebar.
 
-4. Enter the remote access license key and admin name provided by Suprema, then click <Cmd sid='setting.server.license.button.activate' product='2' />.
+4. Enter the Remote Access license key and administrator name provided by Suprema, and then click <Cmd sid='setting.server.license.button.activate' product='2' />.
 
 :::info
 
@@ -61,9 +61,9 @@ For more information about license registration, see <DocLink docId='platform/bi
 </Step>
 <Step>
 
-### Activate remote access
+### Activate Remote Access
 
-1. Log in with your **BioStar X** admin ID.
+1. Log in with a **BioStar X** administrator account.
 
 2. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -78,9 +78,9 @@ For more information about license registration, see <DocLink docId='platform/bi
 
 ### Enter ngrok setup information
 
-Enter the ngrok setup information provided by Suprema.
+Enter the ngrok setting information provided by Suprema.
 
-* <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Enter your **Authtoken**.
+* <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Enter the **Authtoken**.
 
 * <Cmd sid='setting.remoteAccess.field.hostURL' />: Enter the endpoint URL. The URL is in the format `https://subdomain.bsx.ngrok.app`.
 
@@ -106,16 +106,16 @@ The subdomain (`subdomain`) must follow the rules below. Subdomains that do not 
 
 </Steps>
 
-## Access endpoint URL
+## Access the endpoint URL
 
-After completing the setup, verify whether you can access the **BioStar X** server from an external network using the endpoint URL you entered in <Cmd sid='setting.remoteAccess.field.hostURL' />.
+After you complete the setup, verify that you can access the **BioStar X** server from an external network using the endpoint URL entered in <Cmd sid='setting.remoteAccess.field.hostURL' />.
 
 :::info
 
-* After connecting to the endpoint URL, go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' /> to check access logs.
+* After connecting to the endpoint URL, you can check access logs in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
-  > Example: [Remote Access] 192.168.1.100
+  > For example: [Remote Access] 192.168.1.100
 
-* If you cannot access via endpoint URL from an external network, contact the sales point or distributor that issued your license.
+* If you cannot access the endpoint URL from an external network, contact the sales office or distributor that issued the license.
 
 :::

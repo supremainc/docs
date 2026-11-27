@@ -1,24 +1,24 @@
 ---
 id: settings-system-system-restore
-title: System Restore
-description: This guide explains how to restore the database, settings, licenses, etc. of BioStar X to a previous state using a system backup file.
+title: Restore the System
+description: Learn how to restore the BioStar X database, settings, licenses, and more to a previous state using a system backup file.
 keywords:
-  - System Restore
+  - System restore
   - Backup
   - Restore
 ---
 
-You can restore using a system backup file when there is an issue with **BioStar X** or you need to revert to a previous state. Using the Restore feature, you can restore the database, settings, and license information to their state at the time of the backup.
+If an issue occurs in **BioStar X** or you need to revert to a previous state, you can restore it using a system backup file. The restore feature restores the database, settings, and license information to the state at the time of the backup.
 
 ## Before you start
 
 Before starting the system restore, check the following.
 
-* Restoration cannot proceed if the version of **BioStar X** at the time of the backup is different from the current version. To check the version of **BioStar X**, click <IcInfo /> in the upper-right corner of the screen.
+* The restore cannot proceed if the **BioStar X** version at the time of the backup differs from the current version. To check the version of **BioStar X**, click <IcInfo /> in the upper-right corner of the screen.
 
   <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
 
-* To check the version of **BioStar X** at the time of the backup, extract the backup file and check the `biostarVersion` value in the *sysbackup.conf* file.
+* To check the **BioStar X** version at the time of the backup, extract the backup file and check the `biostarVersion` value in the *sysbackup.conf* file.
 
 * If the SQL Server database and **BioStar X** are installed on different servers, you cannot use **BioStar X** system backup and restore.
 
@@ -28,9 +28,9 @@ Before starting the system restore, check the following.
 
   * **BioStar X v1.0.1 or earlier**: The restore may fail. Verify the server IP address before proceeding with the restore.
 
-* Even if the encryption key or image log path has changed, the restore follows the current setting paths of the target **BioStar X**. If no custom path is specified, the restore will use the default path on the target **BioStar X**.
+* Even if the encryption key and image log path have changed, the restore uses the current path settings of the target **BioStar X**. If no custom path is set, the restore uses the default path of the target **BioStar X**.
 
-* When you perform a restore, the current data is automatically backed up. If the restore fails, you can revert to the state prior to the restore.
+* When you run a restore, the current data is automatically backed up, so even if the restore fails, the system can revert to the state before the restore.
 
 :::info
 
@@ -38,33 +38,33 @@ For more information about creating a system backup, see <DocLink docId='platfor
 
 :::
 
-## System Restore
+## System restore
 
 1. In Windows, run <Start/> → **BioStar X** → **BioStar X Restore**.
 
    > Program path: *C:\Program Files\BioStar X\biostar-restore.exe*
 
-2. Click **Select File** and choose the backup file to restore.
+2. Click **Select File**, and then select the backup file to restore.
 
    <Image src='/img/common/setting-system-restore.png' className='none' alone />
 
-3. To start the restoration, click **Restore**.
+3. To start the restore, click **Restore**.
 
-4. Validate the backup file.
+4. The backup file is validated.
 
 5. When the **You can proceed to restore** message appears, enter the database password and click **Restore**.
 
    <Image src='/img/common/setting-system-restore-validate.png' className='none' alone />
 
-6. Click **Restore** to confirm and continue the restore.
+6. Review the confirmation message, and then click **Restore** to continue the restore.
 
    <Image src='/img/common/setting-system-restore-confirm.png'  className='none' alone />
 
-7. A message appears showing restore progress. Wait for the restore to complete.
+7. A message appears showing the restore progress. Wait until the restore is complete.
 
    <Image src='/img/common/setting-system-restore-continues.png' className='none' alone />
 
-If the **Restore has already been completed** message appears, the restore is complete. Access **BioStar X** to verify the restored data.
+If the **Restore has already been completed** message appears, the restore is complete. Log in to **BioStar X** and verify the restored data.
 
 <Image src='/img/common/setting-system-restore-complete.png' className='none' alone />
 
@@ -72,6 +72,6 @@ If the **Restore has already been completed** message appears, the restore is co
 
 * If the PC shuts down unexpectedly during the restore, run **BioStar X Restore** again to retry the restore.
 
-* If the restore server IP differs from the backup server IP while using a Multi Communications Server, reissue the certificate. For more information about how to reissue the certificate for the Multi Communications Server, see <DocLink docId='platform/biostar_x/change-ip#communicationServer' />.
+* If the restore server IP address differs from the backup server IP address and a Multi Communications Server is connected, you must reissue the certificate. For more information about how to reissue the certificate for the Multi Communications Server, see <DocLink docId='platform/biostar_x/change-ip#communicationServer' />.
 
 :::
