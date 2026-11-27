@@ -1,13 +1,13 @@
 ---
 id: tna-rule-shift-paycode
-title: Set Time Code
-description: This guides the configuration of time codes used for working hour calculations.
+title: Set Up Time Codes
+description: Learn how to set up time codes used for working time calculations.
 keywords:
   - Work hours
-  - Time code
+  - time code
 ---
 
-This guides the configuration of <Cmd sid='tab.payCode' product='2' className='normal' /> settings used for working hour calculations. You can set standard time codes, overtime time codes, and leave time codes. Each <Cmd sid='tab.payCode' product='2' className='normal' /> can be used with different hourly weights.
+Learn how to set up <Cmd sid='tab.payCode' product='2' className='normal' /> used for working time calculations. You can set time codes for regular work, overtime, and absence. Each <Cmd sid='tab.payCode' product='2' className='normal' /> can use a different hourly weight.
 
 ## <Cmd sid='payCode.addPayCode' product='2' className='bold' />
 
@@ -19,15 +19,15 @@ This guides the configuration of <Cmd sid='tab.payCode' product='2' className='n
 
    <Image src='/img/biostarx-tna-shift-paycode.png' />
 
-4. When the <Cmd sid='payCode.addPayCode' product='2' /> screen appears, set each item.
+4. When the <Cmd sid='payCode.addPayCode' product='2' /> screen appears, set each field.
 
 :::info
 
 * To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
-* To add <Cmd sid='tab.shift' product='2' className='normal' />, click <Cmd sid='payCode.applyAndAddShift' product='2' />.
+* To add a <Cmd sid='tab.shift' product='2' className='normal' /> next, click <Cmd sid='payCode.applyAndAddShift' product='2' />.
 
-* After saving the settings, click <Cmd sid='ta.apply_add_another' product='2' /> to add another <Cmd sid='tab.payCode' product='2' />.
+* To add another <Cmd sid='tab.payCode' product='2' /> after you save the settings, click <Cmd sid='ta.apply_add_another' product='2' />.
 
 :::
 
@@ -41,20 +41,20 @@ This guides the configuration of <Cmd sid='tab.payCode' product='2' className='n
 
 * <Cmd sid='form.type' product='2' />: Select the type of <Cmd sid='tab.payCode' product='2' className='normal' />.
 
-  * <Cmd sid='payCode.countAsAttendance' product='2' />: Set as the <Cmd sid='tab.payCode' product='2' className='normal' /> to be used for normal attendance.
+  * <Cmd sid='payCode.countAsAttendance' product='2' />: Sets the <Cmd sid='tab.payCode' product='2' className='normal' /> used for regular work.
 
-  * <Cmd sid='payCode.accumulateTowardOvertime' product='2' />: Set as the <Cmd sid='tab.payCode' product='2' className='normal' /> to be used for overtime.
+  * <Cmd sid='payCode.accumulateTowardOvertime' product='2' />: Sets the <Cmd sid='tab.payCode' product='2' className='normal' /> used for overtime.
 
-  * <Cmd sid='payCode.trackOnLeaveManagement' product='2' />: Set as the <Cmd sid='tab.payCode' product='2' className='normal' /> to be used for leaves, business trips, etc.
+  * <Cmd sid='payCode.trackOnLeaveManagement' product='2' />: Sets the <Cmd sid='tab.payCode' product='2' className='normal' /> used for outings, offsite work, business trips, and leave.
 
-* <Cmd sid='payCode.timeRate' product='2' />: Set the hourly weight according to <Cmd sid='tab.payCode' product='2' className='normal' />. **1** is the base weight, and if set to **2**, the configured <Cmd sid='tab.payCode' product='2' className='normal' /> will calculate working hours as double per hour.
+* <Cmd sid='payCode.timeRate' product='2' />: Set the hourly weight for the <Cmd sid='tab.payCode' product='2' className='normal' />. **1** is the base weight, and if you set it to **2**, working time is calculated at 2 times the hourly rate when the configured <Cmd sid='tab.payCode' product='2' className='normal' /> applies.
 
 * <Cmd sid='payCode.color' product='2' />: Set the color to distinguish the <Cmd sid='tab.payCode' product='2' className='normal' />.
 
 <NextStep>
 <NextItem to='tna-rule-shift-day'>
 
-You can set daily working rules based on a 24-hour period. Working rules include time rule settings based on time, daily start time settings, and time rounding rules.
+You can set a shift on a daily (24-hour) basis. A shift includes time code settings by time period, day start time settings, and time rounding rules.
 
 </NextItem>
 </NextStep>

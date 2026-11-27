@@ -1,41 +1,41 @@
 ---
 id: tna-report
-title: View the Report
-description: You can generate T&A reports from user attendance events collected through the system, and edit time records or export them as CSV or PDF files.
+title: View T&A Reports
+description: Generate T&A reports from attendance events collected by the system, edit time records, or export them to CSV or PDF.
 keywords:
-  - Time & attendance report
+  - T&A reports
   - Reports
 ---
 
-You can generate T&A reports from user attendance events collected through the system, and edit time records or export them as CSV or PDF files.
+Generate T&A reports from attendance events collected by the system, edit time records, or export them to CSV or PDF.
 
-Easily use the pre-set 7 report filters, and administrators can set filters themselves.
+You can easily use the seven preset report filters, and administrators can also set filters themselves.
 
 ## Before you start
 
-### Before using the multilingual report
+### Before using multilingual reports
 
-**BioStar X** supports both Korean and English by default. To use multilingual reports, set your desired language according to the following instructions.
+**BioStar X** supports Korean and English by default. To use multilingual reports, set the language to use by following the instructions below.
 
 1. Navigate to the following path. *C:\Program Files\BioStar X\plugin\ta\dist\setup\report_fonts*
 
-2. Create a folder with the name of the language you want to use. Refer to the ISO 639-1 standards for language names. For example, to use Spanish, create a folder named "es."
+2. Create a folder named for the language you use. For language names, see ISO 639-1. For example, to use Spanish, create a folder named "es."
 
-3. Copy and paste the fonts into the created folder. Only one TrueType font is supported.
+3. Copy and paste the font into the folder you created. Only one TrueType font is supported.
 
-### Before updating the report,
+### Before updating the report
 
-**BioStar X** uses MariaDB as the default database. If you are using MS SQL Server database, please check the following items first.
+**BioStar X** uses MariaDB as the default database. If you use an MS SQL Server database, check the following first.
 
-When using **BioStar X** with MS SQL Server, if there are many registered users, the memory usage on the PC may accumulate each time the report is updated. Reset the maximum server memory of the MS SQL Server database.
+When you use **BioStar X** with an MS SQL Server database and many users are registered, PC memory usage can build up each time you update a report. Reset the maximum server memory for the MS SQL Server database.
 
 1. Run **Microsoft SQL Server Management Studio**.
 
-2. Right-click on the **BioStar X** database in the object explorer.
+2. In Object Explorer, right-click the **BioStar X** database.
 
 3. Click on **Properties** in the pop-up menu.
 
-4. Click **Memory** and reduce the value of **Maximum server memory** item.
+4. Click **Memory**, and then reduce the value of **Maximum server memory**.
 
 :::info
 
@@ -43,11 +43,11 @@ For more information about MariaDB and MS SQL Server settings during **BioStar X
 
 :::
 
-## Check the report
+## View T&A reports
 
-### Generate the report
+### Generate a T&A report
 
-This provides instructions on generating attendance records reports for registered users.
+Learn how to generate a T&A report for registered users.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
@@ -55,41 +55,41 @@ This provides instructions on generating attendance records reports for register
 
    <Image src='/img/biostarx-tna-report.png' />
 
-3. Click the desired report filter item from the left sidebar of the screen.
+3. Click the report filter in the left sidebar.
 
 4. In <Cmd sid='common.userGroup' product='2' /> or <Cmd sid='common.user' product='2' />, click <IcSearch />, then specify the group or user.
 
 5. To generate the report, click <Cmd sid='button.updateReport' product='2' />.
 
-6. When the list of reports appears at the bottom of the screen, you can click the desired item to view details.
+6. When the report list appears at the bottom of the screen, click an entry to view details.
 
 <Image src='/img/biostarx-tna-report-update-list.png' />
 
-### Set the filter conditions
+### Set filter conditions
 
-You can set filter conditions to generate a new T&A record report.
+Set filter conditions to generate a new T&A report.
 
 <Image src='/img/biostarx-tna-report-filter-setting.png' />
 
 * <Cmd sid='common.name' product='2' />: Enter the report name.
 
-* <Cmd sid='ta.report.condition.reportType' product='2' />: Select the desired report type. The available report types are as follows.
+* <Cmd sid='ta.report.condition.reportType' product='2' />: Select the report type. The available report types are as follows.
 
   * <Cmd sid='report.daily' product='2' />, <Cmd sid='report.dailySummary' product='2' />, <Cmd sid='report.individual' product='2' />, <Cmd sid='report.individualSummary' product='2' />, <Cmd sid='report.leave' product='2' />, <Cmd sid='report.exception' product='2' />, <Cmd sid='report.modifiedPunchLogHistory' product='2' />, <Cmd sid='report.workweek' product='2' />
 
   :::info
 
-  By selecting <Cmd sid='ta.report.condition.reportType' product='2' /> as <Cmd sid='report.individual' product='2' />, you can set whether to output user entry records.
+  Selecting <Cmd sid='ta.report.condition.reportType' product='2' /> as <Cmd sid='report.individual' product='2' /> lets you set whether to include the user's access records in the report.
 
   <Image src='/img/biostarx-tna-report-individual-types.png' />
 
-  * <Cmd sid='report.individual.optionSummary' product='2' />: This outputs only the user's check-in and check-out records in the report.
+  * <Cmd sid='report.individual.optionSummary' product='2' />: Outputs only the user's clock-in and clock-out records in the report.
 
-  * <Cmd sid='report.individual.optionDetail' product='2' />: This outputs all user entry records in the report.
+  * <Cmd sid='report.individual.optionDetail' product='2' />: Outputs all of the user's access records in the report.
 
   :::
 
-* <Cmd sid='grid.columnSetting' product='2' />: You can change the order of the report table columns or hide them.
+* <Cmd sid='grid.columnSetting' product='2' />: Changes the column order in the report table or hides columns.
 
   <Image src='/img/biostarx-tna-report-filter-setting-column.png' />
 
@@ -99,31 +99,31 @@ You can set filter conditions to generate a new T&A record report.
 
   :::
 
-* <Cmd sid='report.filter' product='2' />: This will only activate when <Cmd sid='ta.report.condition.reportType' product='2' /> is set to <Cmd sid='report.leave' product='2' /> or <Cmd sid='report.exception' product='2' />, and you can choose specific conditions for absence or exception records.
+* <Cmd sid='report.filter' product='2' />: Activates only when <Cmd sid='ta.report.condition.reportType' product='2' /> is set to <Cmd sid='report.leave' product='2' /> or <Cmd sid='report.exception' product='2' />, and lets you select detailed conditions for absence or exception records.
 
-* <Cmd sid='common.userGroup' product='2' /> / <Cmd sid='common.user' product='2' />: Select the user group or user for report generation.
+* <Cmd sid='common.userGroup' product='2' /> / <Cmd sid='common.user' product='2' />: Select the user group or user to generate the report.
 
-* <Cmd sid='ta.report.condition.saveFilter.button' product='2' />: You can save the configured attendance report as a filter.
+* <Cmd sid='ta.report.condition.saveFilter.button' product='2' />: Saves the configured T&A report as a filter.
 
   <Image src='/img/biostarx-tna-report-filter-saving.png' />
 
 ### Set report period
 
-This provides instructions on setting the report period.
+Learn how to set the report period.
 
 <Image src='/img/biostarx-tna-report-period-setting.png' />
 
-You can set the report period to <Cmd sid='timeCard.daily' product='2' />, <Cmd sid='timeCard.weekly' product='2' />, or <Cmd sid='timeCard.monthly' product='2' />. To generate a report for a specific period, select <Cmd sid='timeCard.custom' product='2' />.
+Set the report period to <Cmd sid='timeCard.daily' product='2' />, <Cmd sid='timeCard.weekly' product='2' />, or <Cmd sid='timeCard.monthly' product='2' />. To generate a report for a specific period, select <Cmd sid='timeCard.custom' product='2' />.
 
-### Export report
+### Export a report
 
-* <Cmd sid='button.downloadToCsv' product='2' />: You can save the generated report as a CSV file.
+* <Cmd sid='button.downloadToCsv' product='2' />: Saves the generated report as a CSV file.
 
-* <Cmd sid='button.exportPdf' product='2' />: You can save the generated report as a PDF file.
+* <Cmd sid='button.exportPdf' product='2' />: Saves the generated report as a PDF file.
 
-## Generate working alarm time report
+## Generate a working alarm time report
 
-You can generate T&A reports for users who have reached the designated working hours or notify the administrator via email. The alert working hours report is generated weekly.
+You can generate T&A reports for users who have reached the specified working hours or notify administrators by email. Working alarm time reports are generated weekly.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
@@ -133,35 +133,35 @@ You can generate T&A reports for users who have reached the designated working h
 
    <Image src='/img/biostarx-tna-report-working-alarm.png' />
 
-4. Set each item in <Cmd sid='ta.report.condition.filterConditions' product='2' /> and <Cmd sid='ta.report.condition.reportPeriod' product='2' />.
+4. Set each field in <Cmd sid='ta.report.condition.filterConditions' product='2' /> and <Cmd sid='ta.report.condition.reportPeriod' product='2' />.
 
 5. To generate the report, click <Cmd sid='button.updateReport' product='2' />.
 
 :::info
 
-To send notifications to the administrator via email for users who have reached the designated working hours, set <Cmd sid='ta.report.condition.autoEmail' product='2' />. For more information, see <DocLink inner='#autoEmail' />.
+To send email notifications to administrators for users who have reached the specified working hours, set <Cmd sid='ta.report.condition.autoEmail' product='2' />. For more information, see <DocLink inner='#autoEmail' />.
 
 :::
 
-### Automatic email sending setting {/* #autoEmail */}
+### Set up automatic email sending {/* #autoEmail */}
 
-You can automatically send alarm emails to the administrator for users who have reached the designated working hours.
+The system can automatically send alarm emails to administrators for users who have reached the specified working hours.
 
 <Image src='/img/biostarx-tna-report-working-alarm-auto-email.png' />
 
-* <Cmd sid='common.email' product='2' />: Click the checkbox to automatically send emails to the administrator.
+* <Cmd sid='common.email' product='2' />: Select the checkbox to automatically send emails to administrators.
 
-* <Cmd sid='setting.dst.dayOfWeek' product='2' />: Select the day of the week to send emails to the administrator.
+* <Cmd sid='setting.dst.dayOfWeek' product='2' />: Select the day of the week to send emails to administrators.
 
-* <Cmd sid='shift.time' product='2' />: Set the time to send emails to the administrator.
+* <Cmd sid='shift.time' product='2' />: Set the time to send emails to administrators.
 
-* <Cmd sid='setting.triggerAction.recipient' product='2' />: You can specify the administrator who will receive the email. Click <Cmd sid='button.edit' product='2' /> to open the <Cmd sid='setting.triggerAction.recipient' product='2' /> pop-up window. Enter the email address. You can specify more than one administrator.
+* <Cmd sid='setting.triggerAction.recipient' product='2' />: Select the administrators to receive the email. Click <Cmd sid='button.edit' product='2' /> to open the <Cmd sid='setting.triggerAction.recipient' product='2' /> pop-up window. Enter the email address. You can specify one or more administrators.
 
   <Image src='/img/biostarx-tna-report-working-alarm-auto-email-receipt.png' />
 
 :::info
 
-* To set the <Cmd sid='ta.report.condition.autoEmail' product='2' /> feature, you must set filter conditions and then save the filter.
+* To set the <Cmd sid='ta.report.condition.autoEmail' product='2' /> feature, set the filter conditions and then save the filter.
 
 * The sender information of automatically sent emails can be set in <Cmd sid='setting.setting' product='2' />(<IcSet />) → <Cmd sid='setting.triggerAction.senderInfor' product='2' /> in the left sidebar. For more information, see <DocLink docId='platform/biostar_x/tna-settings#senderInfo' />.
 

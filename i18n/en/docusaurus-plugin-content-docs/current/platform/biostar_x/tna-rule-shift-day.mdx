@@ -1,13 +1,13 @@
 ---
 id: tna-rule-shift-day
-title: Set Daily Shift
-description: Create work rules by applying different time rules based on time for a 24-hour period.
+title: Set Up Shifts
+description: Create a shift by applying different time codes based on the time within a 24-hour period.
 keywords:
   - Work hours
-  - Daily work rules
+  - Shift
 ---
 
-Create work rules by applying different time rules based on time for a 24-hour period. Choose from fixed, flexible, or floating work options, and set the start time of the day, rounding rules, etc.
+Create a shift by applying different time codes based on the time within a 24-hour period. Select fixed, flexible, or floating shifts, and set the start time of the day and time rounding rules.
 
 ## <Cmd sid='shift.addShift' product='2' className='bold' />
 
@@ -19,25 +19,25 @@ Create work rules by applying different time rules based on time for a 24-hour p
 
    <Image src='/img/biostarx-tna-shift-day.png' />
 
-4. When the <Cmd sid='shift.addShift' product='2' /> screen appears, set each item.
+4. When the <Cmd sid='shift.addShift' product='2' /> screen appears, set each field.
 
 :::info
 
 * To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
-* To continue adding weekly work rules, click <Cmd sid='payCode.applyAndAddShift' product='2' />.
+* To add a schedule template next, click <Cmd sid='payCode.applyAndAddShift' product='2' />.
 
-* After saving the settings, click <Cmd sid='ta.apply_add_another' product='2' /> to add another <Cmd sid='tab.shift' product='2' />.
+* To add another <Cmd sid='tab.shift' product='2' /> after you save the settings, click <Cmd sid='ta.apply_add_another' product='2' />.
 
 :::
 
 ## Schedule options
 
-Depending on the type of work rule, you can select either <Cmd sid='shift.type.fixed' product='2' />, <Cmd sid='shift.type.flexible' product='2' />, or <Cmd sid='shift.type.floating' product='2' />. Setting options may vary depending on the selected type of work rule.
+Depending on the shift type, you can select <Cmd sid='shift.type.fixed' product='2' />, <Cmd sid='shift.type.flexible' product='2' />, or <Cmd sid='shift.type.floating' product='2' />. Setting options may vary depending on the selected shift type.
 
 ### <Cmd sid='shift.type.fixed' product='2' className='normal' />
 
-This is a work rule for arriving and departing at set times. Enter the name and description of <Cmd sid='tab.shift' product='2' className='normal' /> and select <Cmd sid='form.type' product='2' /> as <Cmd sid='shift.type.fixed' product='2' />.
+A shift where the employee clocks in and out at set times. Enter the name and description for <Cmd sid='tab.shift' product='2' className='normal' />, and set <Cmd sid='form.type' product='2' /> to <Cmd sid='shift.type.fixed' product='2' />.
 
 <Image src='/img/biostarx-tna-shift-day-adding-fixed.png' />
 
@@ -47,15 +47,15 @@ import Shift from '../../common/_tna-rule-shift-settings.mdx';
 
 :::info
 
-* You can only add one time rule set as <Cmd sid='payCode.countAsAttendance' product='2' /> to <Cmd sid='tab.shift' product='2' className='normal' />.
+* Only one time code set to <Cmd sid='payCode.countAsAttendance' product='2' /> is allowed in <Cmd sid='tab.shift' product='2' className='normal' />.
 
-* You can set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, and <Cmd sid='shift.rounding' product='2' /> for a time rule set as <Cmd sid='payCode.accumulateTowardOvertime' product='2' />.
+* For a time code set to <Cmd sid='payCode.accumulateTowardOvertime' product='2' />, you can set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, and <Cmd sid='shift.rounding' product='2' />.
 
 :::
 
-### Flexible work
+### Flexible shift
 
-This is a work rule that sets the daily working hours and flexibly adjusts the arrival and departure times based on the start time of the day. Enter the name and description of <Cmd sid='tab.shift' product='2' className='normal' /> and select <Cmd sid='form.type' product='2' /> as <Cmd sid='shift.type.flexible' product='2' />.
+A shift that sets daily work hours and flexibly adjusts clock-in and clock-out times based on the start time of the day. Enter the name and description for <Cmd sid='tab.shift' product='2' className='normal' />, and set <Cmd sid='form.type' product='2' /> to <Cmd sid='shift.type.flexible' product='2' />.
 
 <Image src='/img/biostarx-tna-shift-day-adding-flexible.png' />
 
@@ -63,13 +63,13 @@ This is a work rule that sets the daily working hours and flexibly adjusts the a
 
 :::info
 
-A time rule set as <Cmd sid='payCode.accumulateTowardOvertime' product='2' /> cannot be added.
+You cannot add a time code set to <Cmd sid='payCode.accumulateTowardOvertime' product='2' />.
 
 :::
 
 ### Floating Shift
 
-This is a work rule that allows flexible setting of arrival and departure times. Enter the name and description of <Cmd sid='tab.shift' product='2' className='normal' /> and select <Cmd sid='form.type' product='2' /> as <Cmd sid='shift.type.floating' product='2' />.
+A shift that lets you set clock-in and clock-out times freely. Enter the name and description for <Cmd sid='tab.shift' product='2' className='normal' />, and set <Cmd sid='form.type' product='2' /> to <Cmd sid='shift.type.floating' product='2' />.
 
 <Image src='/img/biostarx-tna-shift-day-adding-floating.png' />
 
@@ -77,20 +77,20 @@ This is a work rule that allows flexible setting of arrival and departure times.
 
 :::info
 
-* Work shifts can consist of up to five time slots. Click <Cmd sid='button.addplus' product='2' /> to add a time slot.
+* A shift can consist of up to five time slots. Click <Cmd sid='button.addplus' product='2' /> to add a time slot.
 
-* When setting absences, the <Cmd sid='shift.timeSegmentSet.default' product='2' /> option must be selected. <Cmd sid='shift.timeSegmentSet.default' product='2' /> can be selected from the time slots configured into work shifts.
+* Select the <Cmd sid='shift.timeSegmentSet.default' product='2' /> option when setting absences. In <Cmd sid='shift.timeSegmentSet.default' product='2' />, select one of the time slots that make up the shift.
 
   <Image src='/img/biostarx-tna-shift-day-adding-floating-timesegment.png' />
 
-* You can set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, and <Cmd sid='shift.rounding' product='2' /> for a time rule set as <Cmd sid='payCode.accumulateTowardOvertime' product='2' />.
+* For a time code set to <Cmd sid='payCode.accumulateTowardOvertime' product='2' />, you can set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, and <Cmd sid='shift.rounding' product='2' />.
 
 :::
 
 <NextStep>
 <NextItem to='tna-rule-shift-schedule'>
 
-You can set weekly work rules based on the daily work rules configured. You can set weekly work rules on a weekly or daily basis.
+You can set up a schedule template based on the configured shift. You can set up schedule templates by week or by day.
 
 </NextItem>
 </NextStep>

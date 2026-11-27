@@ -1,9 +1,9 @@
 ---
 id: system-requirements
-title: System Minimum Requirements
-description: Check the system requirements for installing BioStar X to configure the optimal environment for your organization size.
+title: Minimum System Requirements
+description: Check the system requirements for installing BioStar X and set up the optimal environment for the size of your organization.
 keywords:
-  - System Minimum Requirements
+  - Minimum System Requirements
   - Operating System
   - Database
   - CPU
@@ -12,7 +12,7 @@ keywords:
 
 **BioStar X** provides a reliable and scalable integrated security management solution for large enterprise environments. The system can efficiently manage over a thousand devices through a distributed architecture consisting of a main server and a Multi Communications Server.
 
-The main server manages the system's core management features. The Multi Communications Server handles device communication, distributes the load, and optimizes performance. Additionally, administrators can access the system via a web browser on client PCs and perform all management tasks. Check the system requirements below to configure the optimal environment for your organization size.
+The main server handles the system's core management features, and the Multi Communications Server handles device communication to distribute the load and optimize performance. Additionally, you can access the system through a web browser on a client PC and run all management tasks. Check the system requirements below and set up the optimal environment for the size of your organization.
 
 :::info
 
@@ -22,15 +22,15 @@ For more information about license configuration and optimization, contact the <
 
 ## Main server {/* #main-server */}
 
-The main server is the server where the central management system of **BioStar X** is installed. The user accesses the system through a web browser to manage it and handle all tasks such as setting user information or access permissions. It is also responsible for monitoring the overall status of the system and managing event logs or alarms.
+The main server is where the central management system for **BioStar X** is installed. You access the system through a web browser to manage it and handle all tasks, such as setting user information or access permissions. It is also responsible for monitoring the overall system status and managing event logs and alarms.
 
 <div className='overflow-x col5--15-10-25'>
 
 | \> | Item | Small | Medium | Enterprise |
 | --- | --- | --- | --- | --- |
-| Usage Environment | Total Devices | 1 to 50 | 51 to 100 | 101 to 1,000 |
-| System Requirement | Operating System | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025 |
-| ^ | Database | \> | \> | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
+| Usage environment | Number of devices | 1 to 50 | 51 to 100 | 101 to 1,000 |
+| System environment | Operating System | \> | \> | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025 |
+| ^ | Database | \> | \> | MariaDB 11.4.4, MS SQL Server 2012 SP3/2014 SP2/2016 SP1/2017/2019/2022 |
 | ^ | CPU | 2.3 GHz 6-core | 2.3 GHz 8-core | Minimum 2.3 GHz<br/>Recommended 4.0 GHz 16-core |
 | ^ | RAM | 16 GB | 32 GB | Minimum 64 GB<br/>Recommended 128 GB |
 | ^ | SSD | 512 GB | 512 GB | 1 TB |
@@ -42,13 +42,13 @@ The main server is the server where the central management system of **BioStar X
 
 * **BioStar X** can only be installed on 64-bit operating systems.
 
-* MS SQL Server communication security supports TLS 1.2.
+* MS SQL Server secure communication supports TLS 1.2.
 
-* If MS SQL Server and **BioStar X** are installed on different PCs, you should install the [Microsoft OLE DB Driver for SQL Server](https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server) on a PC with **BioStar X** installed.
+* If MS SQL Server and **BioStar X** are installed on different PCs, install the [Microsoft OLE DB Driver for SQL Server](https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server) on the PC where **BioStar X** is installed.
 
-* For enterprise environment, it is recommended to install an MS SQL Server database.
+* For large organizations, we recommend installing an MS SQL Server database.
 
-* If you are using an MS SQL Server database and **BioStar X T&A**, you will need to install the [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) appropriate for your environment.
+* If you use an MS SQL Server database and **BioStar X T&A**, install the [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) for your environment.
 
 * The Windows virtual environment provided by Boot Camp on macOS is not supported.
 
@@ -58,7 +58,7 @@ The main server is the server where the central management system of **BioStar X
 
 ### SQL Server license requirements {/* #sqlserver-requriements */}
 
-If using SQL Server as the database, a proper SQL Server license is required depending on the number of connected devices for stable operation of **BioStar X**. Refer to the recommended license configurations for each environment to select a license suitable for the size and needs of your organization.
+If you use SQL Server as the database, you need an appropriate SQL Server license for the number of connected devices to run **BioStar X** reliably. Review the recommended license settings for each environment, and select a license that fits your organization's size and needs.
 
 :::info
 
@@ -68,7 +68,7 @@ For more information about SQL Server licenses, see [Microsoft SQL Server Licens
 
 #### General usage {/* #general */}
 
-| Organization | Total Devices | Number of cores |
+| Organization | Number of devices | Number of cores |
 | --- | --- | --- |
 | Small | 1 to 50 | 4 - 6 |
 | Medium | 50 - 300 devices | 8 - 12 |
@@ -76,7 +76,7 @@ For more information about SQL Server licenses, see [Microsoft SQL Server Licens
 
 #### Using the BioStar X API {/* #useapi */}
 
-| Organization | Total Devices | Number of cores |
+| Organization | Number of devices | Number of cores |
 | --- | --- | --- |
 | Small | 1 to 50 | 4 - 6 |
 | Medium | 50 - 300 devices | 8 - 12 |
@@ -84,13 +84,13 @@ For more information about SQL Server licenses, see [Microsoft SQL Server Licens
 
 ## Multi Communications Server {/* #communication-server */}
 
-The Multi Communications Server handles communication with access control devices. It helps to manage many devices reliably by installing separately from the main server. A single Multi Communications Server can connect up to 1,000 devices. Add multiple Multi Communications Servers as needed.
+The Multi Communications Server handles communication with access control devices. Installing it separately from the main server helps you manage large numbers of devices reliably. A single Multi Communications Server can connect up to 1,000 devices. Add multiple Multi Communications Servers as needed.
 
 <div className='overflow-x'>
 
-| \> | Item | Specification |
+| \> | Item | Specifications |
 | --- | --- | --- |
-| System Requirement | Operating System | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025 |
+| System environment | Operating System | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025 |
 | ^ | CPU | Minimum 2.3 GHz, recommended 4.0 GHz 16-core |
 | ^ | RAM | Minimum 64 GB, recommended 128 GB |
 | ^ | SSD | 1 TB |
@@ -105,16 +105,16 @@ Up to 1,000 devices can connect via Ethernet (TCP/IP).
 
 ## Client {/* #client */}
 
-The client is the PC where administrators access **BioStar X** through a web browser to operate the system.
+A client is a PC where administrators access **BioStar X** through a web browser to operate the system.
 
 <div className='overflow-x'>
 
 | \> | Item | Small | Medium | Enterprise |
 | --- | --- | --- | --- | --- |
-| System Requirement | CPU | 2.5 GHz | 2.5 GHz | Minimum 2.5 GHz |
+| System environment | CPU | 2.5 GHz | 2.5 GHz | Minimum 2.5 GHz |
 | ^ | RAM | 16 GB | 32 GB | Minimum 32 GB |
 | ^ | GPU | \> | \> | Minimum NVIDIA GeForce RTX 4060 when using VMS |
-| ^ | web browser | \> | \> | Google Chrome version 100 or later |
+| ^ | Web browser | \> | \> | Google Chrome version 100 or later |
 
 </div>
 
@@ -122,6 +122,6 @@ The client is the PC where administrators access **BioStar X** through a web bro
 
 * **BioStar X** is optimized for Google Chrome.
 
-* The web interface of **BioStar X** does not provide support for mobile browsers.
+* The **BioStar X** web interface does not support mobile browsers.
 
 :::
