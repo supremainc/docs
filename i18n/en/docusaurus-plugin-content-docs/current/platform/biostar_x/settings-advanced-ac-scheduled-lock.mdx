@@ -1,17 +1,14 @@
 ---
 id: settings-advanced-ac-scheduled-lock
 title: Scheduled Lock
-description: Guidance on how to set up schedule lock. Schedule lock provides the ability to lock doors at specific times.
-keywords:
-  - Advanced access control
-  - Scheduled Lock
+description: Learn how to set up scheduled lock. Scheduled lock locks doors at specific times.
 ---
 
-Guidance on how to set up schedule lock. Schedule lock provides the ability to lock doors at specific times. This feature enhances access control and is useful for restricting access during certain periods.
+Learn how to set up scheduled lock. Scheduled lock locks doors at specific times. This feature strengthens access control and helps restrict access during specific time periods.
 
 :::info
 
-Schedule lock settings only support <Cmd sid='zone.globalZone.local' product='2' /> mode.
+Scheduled lock settings are supported only in <Cmd sid='zone.globalZone.local' product='2' /> mode.
 
 :::
 
@@ -25,39 +22,39 @@ Schedule lock settings only support <Cmd sid='zone.globalZone.local' product='2'
 
 4. Select <Cmd sid='zone.scheduledLock' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the schedule lock feature to add in the <Cmd sid='common.information' product='2' /> section.
+5. In the <Cmd sid='common.information' product='2' /> section, enter the name of the scheduled lock to add.
 
    <Image src='/img/biostarx-settings-adv-ac-add-schedule-lock.png' />
 
-6. Set the details of the schedule lock feature in the <Cmd sid='common.setting' product='2' /> section. For more information, see <DocLink inner='#setting' />.
+6. In the <Cmd sid='common.setting' product='2' /> section, set the details of scheduled lock. For more information, see <DocLink inner='#setting' />.
 
-7. Set the action to take when a schedule lock violation occurs in the <Cmd sid='common.alarm' product='2' /> section.
+7. In the <Cmd sid='common.alarm' product='2' /> section, set the action to run when a scheduled lock violation occurs.
 
-8. Select the access group that can bypass the schedule lock in the <Cmd sid='zone.forcedLock.bypass' product='2' /> section. Users in this group can bypass the schedule lock.
+8. In the <Cmd sid='zone.forcedLock.bypass' product='2' /> section, select the access group that can bypass scheduled lock. Users in this group can bypass scheduled lock.
 
 9. After you complete all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-The <Cmd sid='common.alarm' product='2' /> section must set <Cmd sid='zone.pause.doorselected' product='2' /> to be usable.
+The <Cmd sid='common.alarm' product='2' /> section is available only when <Cmd sid='zone.pause.doorselected' product='2' /> is set.
 
 :::
 
 ## Setting options {/* #setting */}
 
-The details for setting schedule lock are as follows.
+The detailed settings for scheduled lock are as follows.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Turn the setting on, or turn it off temporarily.
 
-* <Cmd sid='zone.forcedLock.doorLockType' product='2' />: You can set it to lock only the entrance device or to lock both entrance and exit devices.
+* <Cmd sid='zone.forcedLock.doorLockType' product='2' />: Set whether to lock only entry devices or both entry and exit devices.
 
-* <Cmd sid='zone.pause.doorselected' product='2' />: Select the doors to specify schedule lock rules.
+* <Cmd sid='zone.pause.doorselected' product='2' />: Select the doors to apply scheduled lock rules to.
 
 * <Cmd sid='common.schedule' product='2' />: Select a schedule. If the schedule you need isn't in the list, click <Cmd sid='button.plusAddSchedule' product='2' /> to add it.
 
 :::info
 
-* You can select multiple doors to configure schedule lock functionality in <Cmd sid='zone.globalZone.local' product='2' /> mode.
+* In <Cmd sid='zone.globalZone.local' product='2' /> mode, you can select multiple doors to configure scheduled lock.
 
 * For more information about schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 

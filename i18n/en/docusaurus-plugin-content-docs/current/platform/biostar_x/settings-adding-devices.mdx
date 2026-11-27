@@ -1,45 +1,45 @@
 ---
 id: settings-adding-devices
 title: Register Device
-description: This guide describes how to register a device in BioStar X.
+description: Learn how to register a device in BioStar X.
 keywords:
   - Device
-  - Add device
+  - Add a device
 ---
 
-This guide explains how to register a device in **BioStar X**. Registering a device allows **BioStar X** to monitor and manage the status of that device. Ensure the device is properly connected before searching for it. It’s convenient to know the location, ID, IP address, and other details in advance when adding multiple devices at once.
+Learn how to register a device in **BioStar X**. When you register a device, you can monitor and manage its status in **BioStar X**. Make sure the device is connected properly before you search for it. When you add multiple devices at once, it helps to know each device's location, ID, and IP address in advance.
 
 :::info
 
-* When registering a new device, change the device key value to the server's data encryption key value. All user data on the device will be deleted during the key conversion.
+* When you register a new device, BioStar X changes the device key to the server's data encryption key. All user data on the device is deleted during key conversion.
 
-* To delete all setting information and user data stored on the device and resend them, click <Cmd sid='device.sync_all' product='2' />. You can find the <Cmd sid='device.sync_all' product='2' /> option by selecting the device from the device list and clicking the <IcMoreW /> button.
+* To delete all settings and user information stored on the device and send them again, click <Cmd sid='device.sync_all' product='2' />. To find the <Cmd sid='device.sync_all' product='2' /> option, select a device in the device list and click <IcMoreW />.
 
-* To register all devices in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, right-click the group name and click <Cmd sid='device.menu.addAllWaitingDevices' product='2' />. To register devices individually, right-click on the device name and click <Cmd sid='device.menu.addWaitingDevice' product='2' />.
+* To register all devices in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, right-click the group name and click <Cmd sid='device.menu.addAllWaitingDevices' product='2' />. To register devices individually, right-click the device name and click <Cmd sid='device.menu.addWaitingDevice' product='2' />.
 
-* If the user ID type on **BioStar X** differs from the device, change the device settings according to **BioStar X**’s user ID configuration.
+* If the user ID type is set differently in **BioStar X** and on the device, change the device settings to match the user ID settings in **BioStar X**.
 
-* If the user ID type on **BioStar X** is set to alphanumeric, some devices may not be usable or may have restrictions. For more information, see <DocLink docId='platform/biostar_x/settings-server-server#userid-type' />.
+* If the user ID type in **BioStar X** is set to alphanumeric, some devices may be unavailable or have restrictions. For more information, see <DocLink docId='platform/biostar_x/settings-server-server#userid-type' />.
 
-* To register a device and configure its details, see <DocLink docId='platform/biostar_x/settings-device-details' />.
+* To register a device and set its details, see <DocLink docId='platform/biostar_x/settings-device-details' />.
 
 * Up to 1,000 devices can connect via Ethernet (TCP/IP).
 
-* Obtain a **Device Manager** or higher license to register devices. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
+* You need a **Device Manager** or higher license to register devices. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
 
 :::
 
 ## Before you start {/* #before-start */}
 
-Check the following before registering the device.
+Check the following before you register a device.
 
 * Set access levels, access groups, and floor levels for access control. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
 * Create a group to manage devices efficiently. For more information, see <DocLink docId='platform/biostar_x/settings-manage-device-group' />.
 
-## Quick registration {/* #quickadd-device */}
+## Quickly register a device {/* #quickadd-device */}
 
-Devices on the same network as **BioStar X** can be automatically searched and registered.
+You can automatically search for and register devices on the same network as **BioStar X**.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -49,67 +49,67 @@ Devices on the same network as **BioStar X** can be automatically searched and r
 
    <Image src='/img/biostarx-setting-device-search-device.png' />
 
-4. When the <Cmd sid='device.searchDevice' product='2' /> window appears, a list of all devices that can be registered will be displayed. If the desired device is not in the list, click <Cmd sid='button.search' product='2' /> in the top right corner.
+4. When the <Cmd sid='device.searchDevice' product='2' /> window appears, it shows a list of all devices available for registration. If the device is not in the list, click <Cmd sid='button.search' product='2' /> in the upper-right corner.
 
    <Image src='/img/biostarx-setting-add-device.png' />
 
-5. Select the devices to register from the device list or deselect devices to not register.
+5. Select the devices to register from the device list, or clear the devices not to register.
 
-6. To change the name of the device to be registered, click <IcEdit /> in the <Cmd sid='device.info.name' product='2' /> column and make the change.
+6. To change the name of a device to register, in the <Cmd sid='device.info.name' product='2' /> column, click <IcEdit /> and then make the change.
 
    <Image src='/img/biostarx-setting-add-device-rename.png' />
 
-7. To specify the group for the device to be registered, select it in the <Cmd sid='device.info.group' product='2' /> column.
+7. To set the group for a device to register, select it in the <Cmd sid='device.info.group' product='2' /> column.
 
    <Image src='/img/biostarx-setting-add-device-group.png' />
 
-8. Once all settings for the selected devices are complete, click <Cmd sid='button.add' product='2' />.
+8. After you finish all settings for the selected devices, click <Cmd sid='button.add' product='2' />.
 
-The added devices will appear in the device list. Select the added device and click <Cmd sid='button.syncDevice' product='2' />.
+The added devices appear in the device list. Select the added device, and click <Cmd sid='button.syncDevice' product='2' />.
 
 <Image src='/img/biostarx-setting-device-sync-device.png' />
 
 :::info
 
-Devices for which the IP address is unavailable or needs to be changed can be modified by clicking <Cmd sid='button.setIp' product='2' />. For more information, see <DocLink inner='#setipaddress' />.
+If a device IP address is unavailable or needs to be changed, click <Cmd sid='button.setIp' product='2' /> to change it. For more information, see <DocLink inner='#setipaddress' />.
 
 :::
 
-### IP address setting {/* #setipaddress */}
+### Set an IP address {/* #setipaddress */}
 
-You can change the IP address of the device to be registered. Click <Cmd sid='button.setIp' product='2' /> at the bottom left of the <Cmd sid='device.searchDevice' product='2' /> window. When the <Cmd sid='button.setIp' product='2' /> window appears, select the device to change the IP address.
+You can change the IP address of the device to register. Click <Cmd sid='button.setIp' product='2' /> in the lower-left corner of the <Cmd sid='device.searchDevice' product='2' /> window. When the <Cmd sid='button.setIp' product='2' /> window appears, select the device to change the IP address for in the device list.
 
 <Image src='/img/biostarx-setting-device-set-ip.png' />
 
-* <Cmd sid='device.info.useDhcp' product='2' />: Select this option to allow the device to automatically obtain an IP address via DHCP. Selecting this option may result in the IP address changing each time the device connects to the network.
+* <Cmd sid='device.info.useDhcp' product='2' />: Turn on to have the device automatically obtain an IP address via DHCP. If you turn on this option, the IP address may change each time the device connects to the network.
 
   :::note
 
-  To manually enter the IP address, subnet mask, gateway, etc., deselect this option.
+  To manually enter the IP address, subnet mask, and gateway, clear this option.
 
   :::
 
-* <Cmd sid='device.info.deviceToServerConnection' product='2' />: Select this option to configure the device to connect to the **BioStar X** server. You will need to enter the IP address and port number of the server where **BioStar X** is installed.
+* <Cmd sid='device.info.deviceToServerConnection' product='2' />: Turn on to set the device to connect to the **BioStar X** server. Enter the IP address and port number of the server where **BioStar X** is installed.
 
 :::info
 
-After completing all IP settings and saving changes, click <Cmd sid='button.apply' product='2' />. To cancel changes, click <Cmd sid='button.cancel' product='2' />.
+To complete all IP settings and save changes, click <Cmd sid='button.apply' product='2' />. To cancel changes, click <Cmd sid='button.cancel' product='2' />.
 
 :::
 
 ### Device search options {/* #devicesearchoptions */}
 
-You can set device search options by clicking <IcSet /> at the top right of the <Cmd sid='device.searchDevice' product='2' /> window.
+To set device search options, in the <Cmd sid='device.searchDevice' product='2' /> window, click <IcSet /> in the upper-right corner.
 
 <Image src='/img/biostarx-setting-add-device-option.png' />
 
-* <Cmd sid='device.showNewDevicesOnly' product='2' />: Select this option to display only newly discovered devices in the search list.
+* <Cmd sid='device.showNewDevicesOnly' product='2' />: Turn on to show only newly discovered devices in the search list.
 
-* <Cmd sid='device.timeout' product='2' />: Set the desired time to exclude devices that do not respond for a certain period from the search list. This can be set in seconds, with a default of 3 seconds.
+* <Cmd sid='device.timeout' product='2' />: Set the time to exclude devices that do not respond for a period of time from the search list. Set this in seconds; the default is 3 seconds.
 
 ## Advanced search {/* #advancedsearch */}
 
-You can specify the IP address and port number of a specific device to register it.
+You can register a device by entering its IP address and port number.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -119,29 +119,29 @@ You can specify the IP address and port number of a specific device to register 
 
    <Image src='/img/biostarx-setting-device-adv-search-device.png' />
 
-4. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to be registered.
+4. When the <Cmd sid='button.func.advancedSearch' product='2' /> window appears, enter the IP address and port number of the device to register.
 
    <Image src='/img/biostarx-setting-device-advanced-search.png' />
 
-5. Click <Cmd sid='button.search' product='2' /> to display devices matching the entered criteria.
+5. Click <Cmd sid='button.search' product='2' /> to show devices that match the entered criteria in the list.
 
    <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
 
 6. To register the device, click <Cmd sid='button.add' product='2' />.
 
-The added devices will appear in the device list. Select the added device and click <Cmd sid='button.syncDevice' product='2' />.
+The added devices appear in the device list. Select the added device, and click <Cmd sid='button.syncDevice' product='2' />.
 
 ## Register waiting devices {/* #addingWaitingDevices */}
 
-Devices with the <Cmd sid='ui_283' product='dev' /> option set try to connect to the **BioStar X** server using the server IP address and port number. Devices connected this way do not automatically register in the active device list. These devices appear in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, and an authorized administrator must register them manually.
+Devices set with the <Cmd sid='ui_283' product='dev' /> option try to connect to the **BioStar X** server using the server IP address and port number. Devices connected this way are not automatically added to the active device list. These devices appear in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, and an authorized administrator must register them manually.
 
-1. In the device's <Cmd sid='ui_283' product='dev' /> option, set the IP address and port number of **BioStar X**.
+1. In the device <Cmd sid='ui_283' product='dev' /> option, set the IP address and port number for **BioStar X**.
 
 2. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 3. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-4. Check the devices shown in the <Cmd sid='menu.device.waitingDevice' product='2' /> group.
+4. Check the devices that appear in the <Cmd sid='menu.device.waitingDevice' product='2' /> group.
 
    <Image src='/img/biostarx-settings-device-waiting-list.png' />
 
@@ -153,14 +153,14 @@ Devices with the <Cmd sid='ui_283' product='dev' /> option set try to connect to
 
 6. In the pop-up menu, click <Cmd sid='device.menu.addWaitingDevice' product='2' />(individual device) or <Cmd sid='device.menu.addAllWaitingDevices' product='2' />(all devices).
 
-After an administrator registers a device in the <Cmd sid='menu.device.waitingDevice' product='2' /> group, it moves to the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list.
+When a device in the <Cmd sid='menu.device.waitingDevice' product='2' /> group is registered, it moves to the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list.
 
 :::info
 
-* Set the device <Cmd sid='ui_283' product='dev' /> option at <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' />. Menu paths may vary by device.
+* Set the device <Cmd sid='ui_283' product='dev' /> option in <Cmd sid='ui_193' product='dev' /> → <Cmd sid='ui_344' product='dev' /> → <Cmd sid='ui_180' product='dev' />. Menu paths may vary by device.
 
-* You can also configure this setting in **BioStar X** via <Cmd sid='button.setIp' product='2' /> → <Cmd sid='device.info.deviceToServerConnection' product='2' /> (<DocLink inner='#setipaddress' />).
+* Alternatively, in **BioStar X**, set it in <Cmd sid='button.setIp' product='2' /> → <Cmd sid='device.info.deviceToServerConnection' product='2' /> (<DocLink inner='#setipaddress' />).
 
-* Devices that remain in the <Cmd sid='menu.device.waitingDevice' product='2' /> group are not synchronized. User data, access levels, access groups, and device settings are not transferred to a device until it has been registered and sync device has been performed.
+* Devices in the <Cmd sid='menu.device.waitingDevice' product='2' /> group are not synchronized. User data, access levels, access groups, and device settings are not sent to the device until you register it and device sync runs.
 
 :::

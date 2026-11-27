@@ -1,16 +1,16 @@
 ---
 id: settings-adding-custom-account
-title: Add Custom Permissions
-description: This guide describes how to add the desired permission level.
+title: Add a Custom Permission
+description: Learn how to add a permission level.
 keywords:
   - Account
-  - Operating permission
+  - Operator permissions
   - Custom permission
 ---
 
-This guide describes how to add the desired permission level. Custom permissions are user-customizable features that allow for additional permissions beyond the default operational permissions.
+Learn how to add a permission level. Custom permissions are a user-customizable feature that lets you set additional permissions beyond the default operator permissions.
 
-## Add custom permissions
+## Add a custom permission
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -20,17 +20,17 @@ This guide describes how to add the desired permission level. Custom permissions
 
    <Image src='/img/biostarx-settings-account-add-custom-permission.png' />
 
-4. Enter a name and description for the newly created permission.
+4. Enter a name and description for the new permission.
 
    <Image src='/img/biostarx-settings-account-add-custom-permission-details.png' />
 
-5. Fill in or select each of the remaining items.
+5. Enter or select the remaining fields.
 
 6. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-* The types of <Cmd sid='settings.account.menu.setting' product='2' /> settings you can configure may vary depending on the activated license type.
+* The available <Cmd sid='settings.account.menu.setting' product='2' /> options may vary depending on the active license type.
 
 * For more information about <Cmd sid='settings.account.menu.detailSetting' product='2' />, see <DocLink inner='#detailSetting' />.
 
@@ -42,13 +42,13 @@ This guide describes how to add the desired permission level. Custom permissions
 
 ### <Cmd sid='settings.account.menu.detailSetting' product='2' className='normal' /> {/* #detailSetting */}
 
-Set detailed permissions for items. You can select groups to grant edit and view permissions for each menu. You can set item permissions for <Cmd sid='common.permission.module.userGroup' product='2' />, <Cmd sid='common.permission.module.deviceGroup' product='2' />, <Cmd sid='common.permission.module.doorGroup' product='2' />, <Cmd sid='common.permission.module.accessGroup' product='2' /> based on the information of already created groups in each menu.
+Set detailed permissions for entries. Select the groups to grant edit and view permissions for each menu. Set detailed entry permissions for <Cmd sid='common.permission.module.userGroup' product='2' />, <Cmd sid='common.permission.module.deviceGroup' product='2' />, <Cmd sid='common.permission.module.doorGroup' product='2' />, and <Cmd sid='common.permission.module.accessGroup' product='2' /> based on the groups already created in each menu.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-item.png' />
 
 :::info
 
-* If your desired group is not available, go to the appropriate menu to add a new group. For more information about adding groups, see the followings:
+* If the group is not available, go to that menu and add a new group. For more information about adding groups, see the followings:
 
   * <DocLink docId='platform/biostar_x/user-group-manage' />
 
@@ -68,21 +68,21 @@ Set detailed permissions for items. You can select groups to grant edit and view
 
 ### <Cmd sid='settings.account.menu.setting' product='2' className='normal' /> {/* #menuSetting */}
 
-Select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' /> for each menu. Assign different permissions to each menu. Click the <Cmd sid='settings.account.menu.permission' product='2' /> checkbox, then select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' />.
+Select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' /> for each menu. Assign different permissions to each menu. Select the <Cmd sid='settings.account.menu.permission' product='2' /> checkbox for the menu, and then select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' />.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-menus.png' />
 
-* <Cmd sid='settings.account.menu.readOnly' product='2' />: Grants permission to enter the menu and only view the settings.
+* <Cmd sid='settings.account.menu.readOnly' product='2' />: Grants permission to enter the menu and view the settings only.
 
-* <Cmd sid='settings.account.menu.fullAccess' product='2' />: Grants permission to add, edit, or delete entries in the menu.
+* <Cmd sid='settings.account.menu.fullAccess' product='2' />: Grants permission to add, edit, and delete entries in the menu.
 
 :::info
 
-* In the <Cmd sid='shell.header.arena' /> menu, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> allows adding tabs or controlling state tree entries.
+* In the <Cmd sid='shell.header.arena' /> menu, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> lets you add tabs or control state tree entries.
 
-* In the <Cmd sid='shell.header.data' /> menu, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> allows saving reports, adding automatic report schedules, and accessing settings.
+* In the <Cmd sid='shell.header.data' /> menu, <Cmd sid='settings.account.menu.fullAccess' product='2' className='bold' /> allows you to save reports, add automatic report schedules, and access settings.
 
-* In the <Cmd sid='shell.header.dashboard' /> menu, <Cmd sid='settings.account.menu.readOnly' product='2' className='bold' /> permission allows creating new dashboards and widgets.
+* In the <Cmd sid='shell.header.dashboard' /> menu, you can create new dashboards and widgets with only the <Cmd sid='settings.account.menu.readOnly' product='2' className='bold' /> permission.
 
 * Menus not listed in <Cmd sid='settings.account.menu.item' product='2' /> are accessible regardless of permissions.
 
@@ -90,7 +90,7 @@ Select <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='set
 
 :::tip
 
-Click a parent menu permission to enable permissions for all submenus.
+When you click the permission for a parent menu, permissions for all submenus are enabled.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-example.png' />
 
@@ -98,7 +98,7 @@ Click a parent menu permission to enable permissions for all submenus.
 
 ### Plugin
 
-After adding a plugin, configure plugin permissions. Users without plugin permissions cannot access the plugin, and the plugin does not appear on the home screen or launcher.
+If you add a plugin, you can set plugin permissions. Users without plugin permissions cannot access the plugin, and the plugin does not appear on the home screen or launcher.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-plugin.png' />
 
@@ -106,18 +106,18 @@ After adding a plugin, configure plugin permissions. Users without plugin permis
 
 * A plugin license is required to use plugin features. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
-* Apply <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' /> only to the <Cmd sid='common.permission.module.time_attendance' product='2' /> plugin.
+* For the <Cmd sid='common.permission.module.time_attendance' product='2' /> plugin only, you can apply <Cmd sid='settings.account.menu.readOnly' product='2' /> or <Cmd sid='settings.account.menu.fullAccess' product='2' />.
 
 :::
 
 ### <Cmd sid='settings.account.addUser' product='2' className='normal' /> {/* #addUser */}
 
-You can add or verify user information for granting permissions. Click <Cmd sid='button.plusAdd' product='2' /> to add a user. Select the user to grant permissions from the user list.
+Add or review user information to grant permissions. To add a user, click <Cmd sid='button.plusAdd' product='2' />. In the user list, select the user to grant permissions to.
 
 <Image src='/img/biostarx-settings-account-add-custom-permission-details-users.png' />
 
 :::info
 
-Clicking <IcTrash2 /> next to a user in the user list will exclude that user from permissions.
+When you click <IcTrash2 /> for a user in the user list, the user is excluded from the permission.
 
 :::

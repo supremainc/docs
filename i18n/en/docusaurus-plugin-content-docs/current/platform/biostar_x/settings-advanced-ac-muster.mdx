@@ -1,27 +1,27 @@
 ---
 id: settings-advanced-ac-muster
 title: Muster
-description: This guide describes how to configure muster settings. Set the location where users will gather in case of an emergency and monitor the number of people in that specific location.
+description: Learn how to set up muster settings. Set the location where users gather during an emergency and monitor occupancy in that location.
 keywords:
   - Advanced access control
   - Muster
 ---
 
-The muster is a necessary setting for effective personnel management and safety assurance during emergencies. This feature allows administrators to designate a specific location as a gathering point to predefine where users will gather during emergencies.
+Muster is an essential setting for effective personnel management and safety during emergencies. With this feature, you can designate a location as a muster point to define in advance where users gather during emergencies.
 
-The muster setting serves the following purposes:
+The muster setting serves the following purposes.
 
-* **Emergency response**: Designate a location where users can safely gather in case of emergencies, such as fires or earthquakes.
+* **Emergency response**: Designate a location where users can safely gather during emergencies such as fires or earthquakes
 
-* **Personnel monitoring**: Check the current number of people and the list of entrants in real-time in a specific location.
+* **Occupancy monitoring**: Check the current headcount and the entry list for a location in real time
 
-* **Long stay detection**: Detect users remaining in a specific location beyond the set time and send notifications to the administrator.
+* **Long-stay detection**: Detect users who remain in a location longer than the set time and send a notification to the administrator
 
-* **Enhanced security**: Continuously monitor access to sensitive locations to improve security levels.
+* **Enhanced security**: Continuously monitor access to sensitive locations to improve security levels
 
-Through these features, administrators can establish a more systematic and efficient security management framework.
+These features help you build a more systematic and efficient security management framework.
 
-## Register muster {/* #addMusterZone */}
+## Register a muster zone {/* #addMusterZone */}
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -31,27 +31,27 @@ Through these features, administrators can establish a more systematic and effic
 
 4. Select <Cmd sid='zone.muster' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the muster setting to be added in the <Cmd sid='common.information' product='2' /> section.
+5. In the <Cmd sid='common.information' product='2' /> section, enter the name of the muster setting to add.
 
    <Image src='/img/biostarx-settings-adv-ac-add-muster.png' />
 
-6. Set the details of the muster settings in the <Cmd sid='common.setting' product='2' /> section. For more information, see <DocLink inner='#setting' />.
+6. In the <Cmd sid='common.setting' product='2' /> section, set the details for the muster settings. For more information, see <DocLink inner='#setting' />.
 
-7. Configure the actions to be taken when specific events occur in the muster settings in the <Cmd sid='common.alarm' product='2' /> section.
+7. In the <Cmd sid='common.alarm' product='2' /> section, set the actions to run when specific events occur in the muster settings.
 
 8. After you complete all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-The <Cmd sid='common.alarm' product='2' /> section can only be used after configuring both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+The <Cmd sid='common.alarm' product='2' /> section is available only after you set both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
 
 :::
 
 ### Setting options {/* #setting */}
 
-The details for muster settings are as follows:
+The details for muster settings are as follows.
 
-* <Cmd sid='zone.globalZone' product='2' />: Shows the scope. The muster setting only supports <Cmd sid='zone.globalZone.global' product='2' /> mode and can be set up with all devices registered in **BioStar X**.
+* <Cmd sid='zone.globalZone' product='2' />: Shows the scope. Muster settings support only <Cmd sid='zone.globalZone.global' product='2' /> mode, and you can set them up on all devices registered in **BioStar X**.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Turn the setting on, or turn it off temporarily.
 
@@ -59,9 +59,9 @@ The details for muster settings are as follows:
 
 * <Cmd sid='zone.exitDevices' product='2' />: Select the devices to use for exit. Select from the list of registered devices.
 
-* <Cmd sid='zone.muster.accessGroup' product='2' />: Set the access group for users who will stay in the gathering location. You can set up to 16 access groups.
+* <Cmd sid='zone.muster.accessGroup' product='2' />: Select the access group for users who stay in the muster location. You can set up to 16 access groups.
 
-* <Cmd sid='zone.muster.timeLimit' product='2' />: You can set the maximum time allowed to stay in the gathering location. It can be set for a maximum of 4320 minutes, and an alarm will occur if a user stays in the gathering location beyond the specified time.
+* <Cmd sid='zone.muster.timeLimit' product='2' />: Set the maximum time a user can stay in the muster location. The maximum is 4320 minutes, and an alarm occurs if a user stays in the muster location longer than the specified time.
 
 :::info
 

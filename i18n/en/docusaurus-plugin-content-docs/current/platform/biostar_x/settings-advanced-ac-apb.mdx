@@ -1,13 +1,13 @@
 ---
 id: settings-advanced-ac-apb
 title: Anti-passback
-description: Guidelines for setting up anti-passback. Anti-passback provides enhanced features compared to anti-passback generated based on doors or devices.
+description: Learn how to set up anti-passback. Anti-passback provides more advanced features than door- or device-based anti-passback.
 keywords:
   - Advanced access control
   - Anti-passback
 ---
 
-Anti-passback provides enhanced features compared to anti-passback generated based on doors or devices. Set up anti-passback to force users to use designated doors and devices upon entry and exit. This prevents unauthorized re-entry and enhances security.
+Anti-passback provides more advanced features than door- or device-based anti-passback. Set up anti-passback to require users to use designated doors and devices when they enter and exit. This prevents unauthorized re-entry and enhances security.
 
 :::info
 
@@ -25,67 +25,67 @@ Anti-passback provides enhanced features compared to anti-passback generated bas
 
 4. Select <Cmd sid='zone.antiPassback' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the additional anti-passback feature in the <Cmd sid='common.information' product='2' /> section.
+5. In the <Cmd sid='common.information' product='2' /> section, enter the name of the anti-passback feature to add.
 
    <Image src='/img/biostarx-settings-adv-ac-add-apb.png' />
 
-6. Set the details of the anti-passback feature in the <Cmd sid='common.setting' product='2' /> section. For more information, see <DocLink inner='#setting' />.
+6. In the <Cmd sid='common.setting' product='2' /> section, set the anti-passback feature details. For more information, see <DocLink inner='#setting' />.
 
-7. Set the actions to perform when an anti-passback violation occurs in the <Cmd sid='common.alarm' product='2' /> section.
+7. In the <Cmd sid='common.alarm' product='2' /> section, set the actions to run when an anti-passback violation occurs.
 
-8. Select the entry groups that can bypass anti-passback in the <Cmd sid='zone.apb.bypass' product='2' /> section. Users belonging to this group can bypass anti-passback.
+8. In the <Cmd sid='zone.apb.bypass' product='2' /> section, select the access groups that can bypass anti-passback. Users in this group can bypass anti-passback.
 
 9. After you complete all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-The <Cmd sid='common.alarm' product='2' /> section can only be used after configuring both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+The <Cmd sid='common.alarm' product='2' /> section is available only after you set both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
 
 :::
 
 ## Setting options {/* #setting */}
 
-The details for anti-passback settings are as follows.
+Anti-passback settings are as follows.
 
 * <Cmd sid='zone.globalZone' product='2' />: Set the scope.
 
-  * <Cmd sid='zone.globalZone.local' product='2' />: Can be set with entry devices connected via RS-485.
+  * <Cmd sid='zone.globalZone.local' product='2' />: Select to use devices connected to the entry device via RS-485.
 
-  * <Cmd sid='zone.globalZone.global' product='2' />: Can be set to all devices registered in **BioStar X**.
+  * <Cmd sid='zone.globalZone.global' product='2' />: Select to use all devices registered in **BioStar X**.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Turn the setting on, or turn it off temporarily.
 
-* <Cmd sid='zone.apbType' product='2' />: Select the type of anti-passback.
+* <Cmd sid='zone.apbType' product='2' />: Select the anti-passback type.
 
-  * <Cmd sid='door.apbType.hard' product='2' />: Creates anti-passback events and cannot enter.
+  * <Cmd sid='door.apbType.hard' product='2' />: Creates an anti-passback event and blocks access.
 
-  * <Cmd sid='door.apbType.soft' product='2' />: Creates anti-passback events and can enter.
+  * <Cmd sid='door.apbType.soft' product='2' />: Creates an anti-passback event and allows access.
 
-* <Cmd sid='door.resetTime' product='2' />: Set the waiting time until re-entry is allowed after a user violates anti-passback rules. After the specified time has passed following an alarm, the user's access is automatically allowed.
+* <Cmd sid='door.resetTime' product='2' />: Set the wait time before access is allowed again for a user who violated the anti-passback rule. After an alarm occurs and the set time elapses, the system automatically allows access for that user.
 
-  * Can be set within the range of **1** minute to **10080** minutes (7 days).
+  * Set a value from **1** to **10080** minutes (7 days).
 
-  * Setting to **0** minutes will prevent the alarm from clearing automatically until the administrator clears it manually.
+  * If set to **0** minutes, the alarm does not clear automatically, and access is blocked until the administrator clears it manually.
 
-* <Cmd sid='zone.apbUseDoorSensor' product='2' />: Set the scope in which anti-passback rules apply.
+* <Cmd sid='zone.apbUseDoorSensor' product='2' />: Set the scope to apply anti-passback rules.
 
-  * <Cmd sid='common.on' product='2' />: Anti-passback rules apply according to the actual operation of the entry and exit devices.
+  * <Cmd sid='common.on' product='2' />: Anti-passback rules apply based on the actual operation of the door with the configured entry and exit devices.
 
-  * <Cmd sid='common.off' product='2' />: Rules apply based on user authentication regardless of the door's operation.
+  * <Cmd sid='common.off' product='2' />: Rules apply based on user authentication regardless of door operation.
 
-  * <Cmd sid='zone.apbUseEachDoorSensorSetting' product='2' />: When using APB based on entry for the corresponding door, the anti-passback rules apply according to the sensor usage option setting.
+  * <Cmd sid='zone.apbUseEachDoorSensorSetting' product='2' />: When door-based APB is used for this door, anti-passback rules apply based on the sensor usage option setting.
 
 * <Cmd sid='zone.entryDevices' product='2' />: Select the devices to use for entry. Select from the list of registered devices.
 
 * <Cmd sid='zone.exitDevices' product='2' />: Select the devices to use for exit. Select from the list of registered devices.
 
-* <Cmd sid='zone.apbFailAction' product='2' />: Set the door action when communication with devices configured with anti-passback in **BioStar X** is interrupted. This feature is available when the <Cmd sid='zone.globalZone' product='2' /> option is set to <Cmd sid='zone.globalZone.global' product='2' />.
+* <Cmd sid='zone.apbFailAction' product='2' />: Set the door action when communication between **BioStar X** and a device set up with anti-passback is interrupted. This feature is available when the <Cmd sid='zone.globalZone' product='2' /> option is set to <Cmd sid='zone.globalZone.global' product='2' />.
 
-  * <Cmd sid='zone.apbFailAction.noAction' product='2' />: The door opens when the user is authenticated normally.
+  * <Cmd sid='zone.apbFailAction.noAction' product='2' />: The door unlocks when the user is authenticated normally.
 
-  * <Cmd sid='zone.apbFailAction.recordLog' product='2' />: An anti-passback violation alarm occurs and the door opens.
+  * <Cmd sid='zone.apbFailAction.recordLog' product='2' />: An anti-passback violation alarm occurs and the door unlocks.
 
-  * <Cmd sid='zone.apbFailAction.doorLocked' product='2' />: An anti-passback violation alarm occurs and the door does not open.
+  * <Cmd sid='zone.apbFailAction.doorLocked' product='2' />: An anti-passback violation alarm occurs and the door does not unlock.
 
 :::info
 

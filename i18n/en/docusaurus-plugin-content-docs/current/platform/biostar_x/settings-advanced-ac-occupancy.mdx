@@ -1,33 +1,33 @@
 ---
 id: settings-advanced-ac-occupancy
 title: Occupancy Limit
-description: This guide describes how to set occupancy limit settings. Monitor occupancy status and limit the maximum number of occupants in certain places.
+description: Learn how to set up occupancy limit settings. Limit the maximum number of people who can enter a location and monitor occupancy status.
 keywords:
   - Advanced access control
   - Occupancy Limit
 ---
 
-The occupancy limit feature is a key access control function to ensure the safety and efficiency of spaces. This feature allows administrators to set a maximum number of occupants that can enter simultaneously for each location, preventing overcrowding and enabling more systematic space management.
+Occupancy limit is a key access control feature for ensuring the safety and efficiency of spaces. With this feature, set the maximum number of people who can enter each location at the same time to prevent overcrowding and manage spaces systematically.
 
 The main applications of the occupancy limit setting are as follows.
 
-* **Safety Management**: Prevention of safety incidents by limiting the maximum number of occupants based on fire safety regulations or building capacity limits.
+* **Safety management**: Prevention of safety incidents by limiting the maximum number of occupants based on fire safety regulations or building capacity limits
 
-* **Space Efficiency**: Optimization of the work environment by maintaining appropriate occupancy in meeting rooms, laboratories, and workspaces.
+* **Space efficiency**: Optimization of the work environment by maintaining appropriate occupancy in meeting rooms, laboratories, and workspaces
 
-* **Infectious Disease Response**: Management of personnel in situations requiring social distancing or crowd density restrictions.
+* **Infectious disease response**: Management of personnel in situations requiring social distancing or crowd density restrictions
 
-* **Real-time monitoring**: Check the current occupancy and entry/exit status for each location in real time.
+* **Real-time monitoring**: Check the current occupancy and entry/exit status for each location in real time
 
-* **Automatic Alerts**: Immediate notifications to administrators upon reaching the set occupancy limit, enabling swift responses.
+* **Automatic alerts**: Immediate notifications to administrators upon reaching the set occupancy limit, enabling swift responses
 
-By utilizing these features, administrators can establish tailored personnel management policies suited to the characteristics of each space, ensuring safe and efficient facility operations.
+With these features, you can establish customized occupancy policies for each space and ensure safe and efficient facility operations.
 
 :::info
 
 * You can add up to 100 occupancy limit settings.
 
-* The devices and firmware versions that can be configured for the occupancy limit setting are as follows.
+* The supported devices and firmware versions for occupancy limit settings are as follows.
 
   * FaceStation F2 firmware v1.1.0 or later
 
@@ -35,7 +35,7 @@ By utilizing these features, administrators can establish tailored personnel man
 
 :::
 
-## Register occupancy limit {/* #addOccupancyZone */}
+## Register an occupancy limit {/* #addOccupancyZone */}
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -45,19 +45,19 @@ By utilizing these features, administrators can establish tailored personnel man
 
 4. Select <Cmd sid='zone.occupancy.title' product='2' /> and click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the occupancy limit setting to add in the <Cmd sid='common.information' product='2' /> section.
+5. In the <Cmd sid='common.information' product='2' /> section, enter the name of the occupancy limit setting to add.
 
    <Image src='/img/biostarx-settings-adv-ac-add-occupancy.png' />
 
-6. Configure the details of the occupancy limit setting in the <Cmd sid='common.configuration' product='2' /> section. For more information, see <DocLink inner='#setting' />.
+6. In the <Cmd sid='common.configuration' product='2' /> section, set the details for the occupancy limit setting. For more information, see <DocLink inner='#setting' />.
 
-7. In the <Cmd sid='zone.occupancy.countByPass' product='2' /> section, you can select access groups that can always bypass the occupancy limit setting. For more information, see <DocLink inner='#countByPass' />.
+7. In the <Cmd sid='zone.occupancy.countByPass' product='2' /> section, select the access groups that can bypass the occupancy limit setting. For more information, see <DocLink inner='#countByPass' />.
 
 8. After you complete all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-<Cmd sid='common.name' product='2' /> can accept up to 48 characters and cannot be set with the same name as other settings.
+In <Cmd sid='common.name' product='2' />, enter up to 48 characters, and use a name different from other settings.
 
 :::
 
@@ -65,33 +65,33 @@ By utilizing these features, administrators can establish tailored personnel man
 
 The details for the occupancy limit setting are as follows.
 
-* <Cmd sid='zone.globalZone' product='2' />: Shows the scope. The occupancy limit setting supports only <Cmd sid='zone.globalZone.global' product='2' /> mode and can be set for all devices registered to **BioStar X**.
+* <Cmd sid='zone.globalZone' product='2' />: Shows the scope. Occupancy limit settings support only <Cmd sid='zone.globalZone.global' product='2' /> mode and can be applied to all devices registered to **BioStar X**.
 
-* <Cmd sid='common.activate' product='2' />: You can activate or temporarily deactivate the settings.
+* <Cmd sid='common.activate' product='2' />: Turn on to activate the setting, or turn off to deactivate it temporarily.
 
 * <Cmd sid='zone.entryDevices' product='2' />: Select the devices to use for entry. Select from the list of registered devices.
 
 * <Cmd sid='zone.exitDevices' product='2' />: Select the devices to use for exit. Select from the list of registered devices.
 
-* <Cmd sid='zone.occupancy.limit' product='2' />: Enter the number of persons to limit for entry. Entry is restricted if the number of individuals reaches the set occupancy limit. You can enter a number from 0 to 10,000, and setting it to 0 allows access without limits.
+* <Cmd sid='zone.occupancy.limit' product='2' />: Enter the maximum number of people allowed to enter. When the number of people inside reaches the set limit, entry is restricted. Enter a number from 0 to 10,000, and set it to 0 to allow access with no occupancy limit.
 
-* <Cmd sid='zone.occupancy.autoCountReset' product='2' />: You can set the time to automatically initialize the stored occupancy count. Every day at the set time, the occupancy count and the number of always-passing individuals will be reset.
+* <Cmd sid='zone.occupancy.autoCountReset' product='2' />: Set the time to automatically initialize the stored occupancy count. At the set time each day, the system initializes the occupancy count and bypass count.
 
-* <Cmd sid='zone.occupancy.list.almostFull' product='2' />: You can send an alert to the administrator or log an event before the number of entrants reaches the set limit. When occupancy pre-alerts are enabled, the <Cmd sid='zone.occupancy.1stLevel' product='2' /> input field becomes active. To set <Cmd sid='zone.occupancy.2stLevel' product='2' />, click <IcAdd className='border radius' />.
+* <Cmd sid='zone.occupancy.list.almostFull' product='2' />: Sends an alert to the administrator in advance or records an event in the event log before the occupancy count reaches the configured limit. When occupancy pre-alerts are turned on, the <Cmd sid='zone.occupancy.1stLevel' product='2' /> input field is enabled. To set <Cmd sid='zone.occupancy.2stLevel' product='2' />, click <IcAdd className='border radius' />.
 
-* <Cmd sid='zone.occupancy.networkFailureAction' product='2' />: You can determine whether to allow entry and exit when a network error occurs with the configured device. When set to allow entry and exit, the entry restriction stops when the device loses network connection, and users can enter even if the actual number of entrants exceeds the limit.
+* <Cmd sid='zone.occupancy.networkFailureAction' product='2' />: Sets whether to allow users to enter and exit when a network error occurs on the configured device. When set to allow entry and exit, entry restriction stops if the device loses network connection, and users can enter even when the occupancy count exceeds the limit.
 
 :::info
 
 * The same device cannot be set for both <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' /> at the same time.
 
-* You can select up to 128 devices for <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
+* Select up to 128 devices for <Cmd sid='zone.entryDevices' product='2' /> and <Cmd sid='zone.exitDevices' product='2' />.
 
 * A device configured with <Cmd sid='door.dualAuthentication' product='2' /> on a door cannot be assigned to <Cmd sid='zone.entryDevices' product='2' /> or <Cmd sid='zone.exitDevices' product='2' />.
 
-* Set the time for the <Cmd sid='zone.occupancy.autoCountReset' product='2' /> option while considering the standard time zone of the actual location. For example, if a **BioStar X** server is located in a UTC+1:00 region and the auto-reset time is set to 00:00, the **BioStar X** client in the UTC+2:00 region will have the occupancy automatically reset at 01:00.
+* Set the time for the <Cmd sid='zone.occupancy.autoCountReset' product='2' /> option while considering the standard time zone of the actual location. For example, if you set the occupancy auto-reset time to 00:00 on a **BioStar X** server in a UTC+1:00 region, occupancy is automatically reset at 01:00 on a **BioStar X** client in a UTC+2:00 region.
 
-* You can set up to 2 <Cmd sid='zone.occupancy.list.almostFull' product='2' /> limits, and only numbers smaller than the limit can be entered. <Cmd sid='zone.occupancy.1stLevel' product='2' /> and <Cmd sid='zone.occupancy.2stLevel' product='2' /> cannot be set to the same value.
+* Set up to two <Cmd sid='zone.occupancy.list.almostFull' product='2' /> values, and enter only numbers less than the configured limit value. <Cmd sid='zone.occupancy.1stLevel' product='2' /> and <Cmd sid='zone.occupancy.2stLevel' product='2' /> cannot be set to the same value.
 
 * For more information about registering devices, see the following documents.
 
@@ -103,53 +103,53 @@ The details for the occupancy limit setting are as follows.
 
 :::
 
-## Always-pass headcount setting {/* #countByPass */}
+## Set up bypass users {/* #countByPass */}
 
-You can select access groups that can always bypass the occupancy limit setting. Users who belong to the always bypass group can enter and exit regardless of the occupancy count and will not be counted in the occupancy numbers. Currently active members who are always bypassing can be seen in the always bypass occupants column in the occupancy limit settings list.
+Select the access groups that can bypass the occupancy limit setting. Users who belong to a bypass group can enter and exit regardless of the occupancy count, and they are not included in the occupancy count. Check the bypass users currently present in the **Bypass Count** column of the occupancy limit settings list.
 
 :::info
 
-* When using a thermal camera connected to the device, setting <Cmd sid='device.thermal.mode' product='2' /> to <Cmd sid='device.thermal.authTemperatureOnlyMode' product='2' /> will not work even if always-pass individuals are set.
+* When a thermal camera is connected to the device and <Cmd sid='device.thermal.mode' product='2' /> is set to <Cmd sid='device.thermal.authTemperatureOnlyMode' product='2' />, the bypass setting does not work even if you set bypass users.
 
-* You can set up to 16 <Cmd sid='zone.occupancy.bypassGroup' product='2' /> groups.
+* Set up to 16 <Cmd sid='zone.occupancy.bypassGroup' product='2' /> groups.
 
 :::
 
-## Check occupancy list status {/* #occupancyZoneList */}
+## Check the list status {/* #occupancyZoneList */}
 
-You can check the occupancy limit settings list. You can check the status of each setting and the occupancy count, and change the settings as needed.
+View the occupancy limit settings list. Check the status of each setting and the occupancy count, and change the settings as needed.
 
-* <Cmd sid='zone.occupancy.list.name' product='2' />: You can check the name.
+* <Cmd sid='zone.occupancy.list.name' product='2' />: Shows the name.
 
-* <Cmd sid='zone.occupancy.list.status' product='2' />: You can check the status.
+* <Cmd sid='zone.occupancy.list.status' product='2' />: Shows the status.
 
-  * <Cmd sid='zone.occupancy.list.normal' product='2' />: Indicates that the number of users in the zone is less than the number set by <Cmd sid='common.limit' product='2' />, <Cmd sid='zone.occupancy.almostFull' product='2' />(<Cmd sid='zone.occupancy.1stLevel' product='2' />, <Cmd sid='zone.occupancy.2stLevel' product='2' />). Users can enter this location.
+  * <Cmd sid='zone.occupancy.list.normal' product='2' />: Indicates that the number of users present is less than the number set in <Cmd sid='common.limit' product='2' />, <Cmd sid='zone.occupancy.almostFull' product='2' /> (<Cmd sid='zone.occupancy.1stLevel' product='2' />, <Cmd sid='zone.occupancy.2stLevel' product='2' />). Users can enter this location.
 
   * <Cmd sid='zone.occupancy.almostFull' product='2' />: Indicates that the number of users present has reached the value set in <Cmd sid='zone.occupancy.1stLevel' product='2' /> or <Cmd sid='zone.occupancy.2stLevel' product='2' />.
 
-  * <Cmd sid='zone.occupancy.list.full' product='2' />: Indicates that the number of users present has reached the limit set. Further entries are restricted.
+  * <Cmd sid='zone.occupancy.list.full' product='2' />: Indicates that the number of users present has reached the limit set. Further entry is restricted.
 
-* <Cmd sid='zone.occupancy.list.countLimit' product='2' />: Check the current number of occupants compared to the capacity. If there is a discrepancy between the recorded occupancy and the actual number of users present due to situations like network errors, the administrator can click <IcAdd className='border radius' /> or <IcMinus className='border radius' /> or click the occupancy count to directly modify the count.
+* <Cmd sid='zone.occupancy.list.countLimit' product='2' />: Shows the current number of occupants compared to the capacity. In special situations such as network errors, the occupancy count may not match the actual number of users present. In that case, the administrator can click <IcAdd className='border radius' /> or <IcMinus className='border radius' />, or click the occupancy count to edit it directly.
 
-* <Cmd sid='zone.occupancy.countByPass' product='2' />: Check the number of users currently in the always-pass group.
+* <Cmd sid='zone.occupancy.countByPass' product='2' />: Shows the number of bypass users who are currently inside.
 
-* <Cmd sid='zone.occupancy.list.deviceStatus' product='2' />: Check the status of the configured devices.
+* <Cmd sid='zone.occupancy.list.deviceStatus' product='2' />: Shows the status of the configured devices.
 
-  * <Cmd sid='zone.occupancy.list.normal' product='2' />: The network of all configured devices is functioning normally.
+  * <Cmd sid='zone.occupancy.list.normal' product='2' />: The network for all configured devices is functioning normally.
 
-  * <Cmd sid='zone.occupancy.networkFailure' product='2' />: Indicates that one or more devices are experiencing network errors.
+  * <Cmd sid='zone.occupancy.networkFailure' product='2' />: Indicates that a network error has occurred on one or more devices.
 
-* <Cmd sid='zone.occupancy.list.fullscreen' product='2' />: You can view the status of the occupancy limit settings in full screen.
+* <Cmd sid='zone.occupancy.list.fullscreen' product='2' />: Shows the current status of the occupancy limit settings in full-screen mode.
 
 :::info
 
-When <Cmd sid='zone.occupancy.limit' product='2' /> is set, you can enter occupancy counts up to a maximum of 50,000. If <Cmd sid='zone.occupancy.limit' product='2' /> is not set, you can enter counts up to a maximum of 999,999. You cannot enter numbers exceeding the maximum input value, and if the actual occupancy exceeds this value, the excess will not be recorded in the database.
+When <Cmd sid='zone.occupancy.limit' product='2' /> is set, the maximum occupancy count you can enter is 50,000. If <Cmd sid='zone.occupancy.limit' product='2' /> is not set, the maximum count you can enter is 999,999. You cannot enter values above the maximum, and any occupancy above it is not recorded in the database.
 
 :::
 
-## Initialize occupancy {/* #resetOccupancy */}
+## Reset the occupancy count {/* #resetOccupancy */}
 
-You can reset the occupancy count and the number of always-pass individuals. Proceeding with the occupancy reset will delete all user's entry and exit information, and the accuracy of the occupancy count may vary depending on the network connection status.
+You can reset the occupancy count and bypass count. If you reset the occupancy count, all user entry and exit information is deleted, and the count may be inaccurate depending on the network connection status.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -157,15 +157,15 @@ You can reset the occupancy count and the number of always-pass individuals. Pro
 
 3. Click <Cmd sid='zone.occupancy.title' product='2' /> in the list.
 
-4. Click the checkbox for the setting you want to initialize from the occupancy limit settings list.
+4. Select the checkbox for the setting to reset in the occupancy limit settings list.
 
 5. Click <Cmd sid='zone.occupancy.list.reset' product='2' /> in the upper-right corner of the screen.
 
 6. When a confirmation message appears, click <Cmd sid='button.apply' product='2' />.
 
-## Activate/deactivate {/* #activateDeactivateOccupancyZone */}
+## Activate or deactivate {/* #activateDeactivateOccupancyZone */}
 
-You can activate a deactivated occupancy limit setting or deactivate an activated setting. Deactivating the settings will reset <Cmd sid='zone.occupancy.fullscreen.currentOccupancy' product='2' /> and <Cmd sid='zone.occupancy.list.countBypass' product='2' />.
+You can activate a deactivated occupancy limit setting or deactivate an activated setting. When you deactivate the setting, <Cmd sid='zone.occupancy.fullscreen.currentOccupancy' product='2' /> and <Cmd sid='zone.occupancy.list.countBypass' product='2' /> are reset.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -173,7 +173,7 @@ You can activate a deactivated occupancy limit setting or deactivate an activate
 
 3. Click <Cmd sid='zone.occupancy.title' product='2' /> in the list.
 
-4. Click the checkbox for the item in the occupancy limit settings list to activate or deactivate.
+4. Select the checkbox for the entry to activate or deactivate in the occupancy limit settings list.
 
 5. Click <Cmd sid='zone.occupancy.list.activate' product='2' /> or <Cmd sid='zone.occupancy.list.deactivate' product='2' /> in the upper-right corner of the screen.
 
@@ -185,7 +185,7 @@ You can activate a deactivated occupancy limit setting or deactivate an activate
 
 3. Click <Cmd sid='zone.occupancy.title' product='2' /> in the list.
 
-4. Click the checkbox for the item you want to delete from the occupancy limit settings list.
+4. Select the checkbox for the entry to delete in the occupancy limit settings list.
 
 5. Click <Cmd sid='zone.occupancy.list.deleteZone' product='2' /> in the upper-right corner of the screen.
 
