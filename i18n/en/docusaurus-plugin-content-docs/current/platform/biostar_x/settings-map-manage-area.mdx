@@ -1,7 +1,7 @@
 ---
 id: settings-map-manage-area
-title: Configure Area
-description: Complete the floor and facility configuration to set up the area. Verify secured areas through the map.
+title: Set Up Areas
+description: After you set up floors and facilities, you can configure areas. You can manage and check the areas you are securing on the map.
 keywords:
   - Map
   - Zone
@@ -9,13 +9,13 @@ keywords:
   - Facility
 ---
 
-Complete the floor and facility configuration to set up the area. Verify secured areas through the map. Configuring zones provides functionality to access and monitor the facilities and floors in the respective zone on the <Cmd sid='shell.header.arena' /> page.
+After you set up floors and facilities, you can configure areas. You can manage and check the areas you are securing on the map. When you configure an area, the <Cmd sid='shell.header.arena' /> page lets you enter the facility and floor for that area to monitor it.
 
 <Image src='/img/monitoring-map-open-map.png' />
 
 :::info
 
-* Register floors and facilities before configuring zones. For more information about registering floors and facilities, see the following:
+* Register floors and facilities before you configure areas. For more information about registering floors and facilities, see the following:
 
   * <DocLink docId='platform/biostar_x/settings-map-manage-floor' />
 
@@ -23,49 +23,49 @@ Complete the floor and facility configuration to set up the area. Verify secured
 
 * For more information about map monitoring, see <DocLink docId='platform/biostar_x/monitoring-map' />.
 
-* The add zone and settings feature is available through additional options with an **Essential** license or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+* Adding and setting up areas is available as an add-on option with an **Essential** license or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
-## Add zone {/* #add-area */}
+## Add an area {/* #add-area */}
 
-Configure and manage zones of the security areas you are currently managing via the map.
+You can set up and manage areas for the security areas you are currently managing on the map.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> in the left sidebar.
 
-3. Click <Cmd sid='setting.area.table.action.newArea' /> in the upper right of the area list screen.
+3. Click <Cmd sid='setting.area.table.action.newArea' /> in the upper-right corner of the area list screen.
 
    <Image src='/img/biostarx-settings-map-add-area.png' />
 
-4. Enter the name and description of the area you want to add in the <Cmd sid='setting.area.information.section.title' /> section of the <Cmd sid='setting.area.page.title' /> screen.
+4. On the <Cmd sid='setting.area.page.title' /> screen, enter the name and description of the area to add in the <Cmd sid='setting.area.information.section.title' /> section.
 
-5. Set the location of the zone to add on the map in the <Cmd sid='setting.area.configuration.section.title' /> section.
+5. On the map in the <Cmd sid='setting.area.configuration.section.title' /> section, set the location of the area to add.
 
-6. Right-click on the map and select <Cmd sid='setting.area.label.setArea' />.
+6. Right-click the map and select <Cmd sid='setting.area.label.setArea' />.
 
    <Image src='/img/biostarx-settings-map-area-add-01.png' />
 
-7. Set the zone in your desired shape. Click the mouse to start drawing and drag to set the zone.
+7. Set the area in the shape you need. Click to start, and drag to define the area.
 
    <Image src='/img/biostarx-settings-map-area-drawing.gif' alone />
 
    :::note
 
-   To reset the area, you must delete the configured area. To delete the area, click <IcFremove />.
+   To define the area again, you must delete the existing area. To delete the area, click <IcFremove />.
 
    :::
 
-8. To add facilities to the configured area, right-click and select <Cmd sid='map.menu.add.facility' />.
+8. To add a facility to the defined area, right-click and select <Cmd sid='map.menu.add.facility' />.
 
    <Image src='/img/biostarx-settings-map-area-add-02.png' />
 
    :::note
 
-   When adding a zone, at least one facility, entrance, or camera must be configured.
+   When you add an area, you must set at least one facility, door, or camera.
 
-   * To add an entrance, right-click and select <Cmd sid='setting.area.label.addDoor' />.
+   * To add a door, right-click and select <Cmd sid='setting.area.label.addDoor' />.
 
    * To add a camera, right-click and select <Cmd sid='setting.area.label.addCamera' />.
 
@@ -77,7 +77,7 @@ Configure and manage zones of the security areas you are currently managing via 
 
    :::note
 
-   When adding an entrance or camera, the <Cmd sid='setting.area.label.addDoor' /> or <Cmd sid='setting.area.label.addCamera' /> window will also appear. Select the item to add and click <Cmd sid='common.apply' />.
+   When you add a door or camera, the <Cmd sid='setting.area.label.addDoor' /> or <Cmd sid='setting.area.label.addCamera' /> window also appears. Select the entry to add and click <Cmd sid='common.apply' />.
 
    :::
 
@@ -85,31 +85,31 @@ Configure and manage zones of the security areas you are currently managing via 
 
 :::info
 
-* You can search for your desired location using the input field at the top left of the map. Click <IcCurP /> to return to the current location.
+* The input field in the upper-left corner of the map lets you search for a location. To return to your current location, click <IcCurP />.
 
   <Image src='/img/biostarx-settings-map-area-find-point.png' />
 
-* When adding a zone on the map, it can only be set as a single polygon. When setting a zone, ensure that the start and end points are the same. Once configured, the shape of the zone cannot be changed. To modify the zone, you must delete it and re-add it.
+* When you add an area on the map, you can define it only as a single polygon. When you define an area, make sure the start and end points are the same. After you set up an area, you cannot change its shape. To edit an area, delete it and add it again.
 
-* The positions of the added facilities, entrances, and cameras can be changed via drag-and-drop on the map.
+* Reposition added facilities, doors, and cameras by drag-and-drop on the map.
 
 :::
 
-## Edit zone {/* #edit-area */}
+## Edit an area {/* #edit-area */}
 
-You can delete and reconfigure existing zones or add or remove facilities, entrances, and cameras.
+You can delete an existing area and set it up again, or add or remove facilities, doors, or cameras.
 
-### Reset zone
+### Reset an area
 
-To reset a zone on the map, you must delete the existing zone and re-add it. 
+To reset an area on the map, delete the existing area and add it again. 
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> in the left sidebar.
 
-3. Select the zone you want to reset from the zone list. 
+3. Select the area to reset from the area list. 
 
-4. In the map under the <Cmd sid='setting.area.configuration.section.title' /> section, click <IcFremove /> at the top left of the already created area.
+4. On the map in the <Cmd sid='setting.area.configuration.section.title' /> section, click <IcFremove /> in the upper-left corner of the existing area.
 
    <Image src='/img/biostarx-settings-map-area-reset.png' alone />
 
@@ -117,23 +117,23 @@ To reset a zone on the map, you must delete the existing zone and re-add it.
 
 6. To set the area as desired and save, click <Cmd sid='button.apply' product='2' /> in the lower-right corner of the screen.
 
-### Delete facility/entrance/camera
+### Delete a facility, door, or camera
 
-Click the facility, entrance, or camera you want to delete on the map. The <IcFremove /> icon will appear. Click the icon to delete the selected facility.
+Click the facility, door, or camera to delete on the map. The <IcFremove /> icon appears. Click the icon to delete the selected facility.
 
 <Image src='/img/biostarx-settings-map-area-x-btn.png' alone />
 
 ### Set camera coverage
 
-You can set the camera coverage area on the map. Right-click the icon where the camera is placed and select <Cmd sid='setting.area.button.addCoverage' />.
+Set the camera coverage area on the map. Right-click the icon where the camera is placed, and select <Cmd sid='setting.area.button.addCoverage' />.
 
 <Image src='/img/biostarx-settings-map-area-camera-setting.png' />
 
-* To change the shooting range, click and drag the green area's shooting range in the desired direction.
+* To change the coverage area, click and drag the green coverage area in the direction you need.
 
   <Image src='/img/biostarx-settings-map-area-camera-rot.png' alone />
 
-* To adjust the coverage area, hold the edge of the range and drag to resize.
+* To adjust the coverage, click and drag an end corner of the range to resize it.
 
   <Image src='/img/biostarx-settings-map-area-camera-adjust.png' alone />
 
@@ -141,20 +141,20 @@ You can set the camera coverage area on the map. Right-click the icon where the 
 
 :::caution
 
-Settings made by the user are only features provided for the convenience of security management and do not reflect the actual shooting range of the camera.
+The coverage you set is only for easier security management and does not reflect the camera's actual coverage.
 
 :::
 
-## Delete zone
+## Delete an area
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> in the left sidebar.
 
-3. Check the checkbox of the zone you want to delete from the zone list.
+3. Select the checkbox for the area to delete in the area list.
 
    <Image src='/img/biostarx-settings-map-area-remove-item.png' />
 
 4. Click <Cmd sid='common.delete' /> in the upper-right corner of the screen.
 
-5. When the confirmation message window appears, click <Cmd sid='common.dialog.yes' />.
+5. When the confirmation message appears, click <Cmd sid='common.dialog.yes' />.

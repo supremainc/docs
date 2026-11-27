@@ -1,86 +1,86 @@
 ---
 id: settings-manage-account
 title: Manage Operation Permissions
-description: This guide describes how to assign operator permissions and add and configure custom permissions to registered users.
+description: Learn how to grant operator permissions to registered users and add and set up custom permissions.
 keywords:
   - Account
   - Operator permissions
   - Custom permission
 ---
 
-This guide describes how to assign operator permissions and add and configure custom permissions to registered users. Operator permissions control the tasks a user can perform on **Biostar X**. **Custom permissions** allow the setting of additional permissions beyond the default operator permissions.
+Learn how to grant operator permissions to registered users and add and set up custom permissions. Operator permissions are a feature that controls what a user can do in **BioStar X**. **Custom permissions** are a feature that lets you set additional permissions beyond the default operator permissions.
 
 ## Check permission types
 
-On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />. Click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> in the left sidebar. Refer to the provided accounts based on permission levels.
+On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />. Click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> in the left sidebar. See the default accounts provided for each permission level.
 
 import AccountList from '../../common/_account-list.mdx';
 
 <AccountList />
 
-## Granting operator permissions to users {/* #addUserPermission */}
+## Grant operator permissions to users {/* #addUserPermission */}
 
-Guide on granting operator permissions to general users.
+Learn how to grant operator permissions to regular users.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> in the left sidebar.
 
-3. Click the desired item from the account list.
+3. Click an account type in the account list.
 
-4. Click <Cmd sid='button.plusAdd' product='2' /> in the <Cmd sid='settings.account.addUser' product='2' /> option.
+4. In the <Cmd sid='settings.account.addUser' product='2' /> option, click <Cmd sid='button.plusAdd' product='2' />.
 
    <Image src='/img/biostarx-settings-account-add-permission.png' caption />
 
-5. Select the user to whom you want to grant operator permissions from the user list.
+5. In the user list, select the user to grant operator permissions to.
 
-6. After selecting all desired users, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
+6. After you select the users, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-* If it’s difficult to find users due to their quantity, click <IcSearch /> to search and select the desired user.
+* If it is difficult to find a user because there are many users, click <IcSearch /> to search for and select the user.
 
-* Operator permissions can also be granted when adding or modifying user information. For more information, see <DocLink docId='platform/biostar_x/set-permission' />.
+* You can also grant operator permissions when you add or edit user information. For more information, see <DocLink docId='platform/biostar_x/set-permission' />.
 
-* If permissions have already been set when adding or modifying user information, they will be included in the <Cmd sid='settings.account.addUser' product='2' /> option.
+* If permissions are already set when you add or edit user information, they appear in the <Cmd sid='settings.account.addUser' product='2' /> option.
 
 :::
 
-## Excluding operator permissions
+## Remove operator permissions
 
-Guide on excluding operator permissions granted to users.
+Learn how to remove operator permissions granted to a user.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.account.root' /> → <Cmd sid='setting.menu.account.account' /> in the left sidebar.
 
-3. Click the desired account type from the account list.
+3. Click an account type in the account list.
 
-4. Click <IcTrash2 /> for the user to exclude from operation in the <Cmd sid='settings.account.addUser' product='2' /> option.
+4. In the <Cmd sid='settings.account.addUser' product='2' /> option, click <IcTrash2 /> next to the user to remove operator permissions from.
 
    <Image src='/img/biostarx-settings-account-exclude-permission.png' caption />
 
 5. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
-## Checking operator permission details
+## View operator permission details
 
-Click an account in the account list in the <Cmd sid='setting.menu.account.account' /> menu to view its operator permission details.
+To view operator permission details for an account, click the account in the account list in the <Cmd sid='setting.menu.account.account' /> menu.
 
 <Image src='/img/biostarx-settings-account-detail.png' />
 
-* <Cmd sid='common.name' product='2' />: The name of the selected operator permission.
+* <Cmd sid='common.name' product='2' />: Shows the name of the selected operator permission.
 
-* <Cmd sid='settings.accountList.columnDesc' product='2' />: A brief description of the permission.
+* <Cmd sid='settings.accountList.columnDesc' product='2' />: Shows a brief description of the permission.
 
-* <Cmd sid='settings.account.menu.detailSetting' product='2' />: Can view the groups granted permissions item by item.
+* <Cmd sid='settings.account.menu.detailSetting' product='2' />: Shows the groups that have been granted permissions for each entry.
 
-* <Cmd sid='settings.account.menu.setting' product='2' />: Can view the permissions granted to access the menu.
+* <Cmd sid='settings.account.menu.setting' product='2' />: Shows the permissions to access menus.
 
-  * <Cmd sid='settings.account.menu.readOnly' product='2' />: Grants permission to add, edit, or delete items in the menu.
+  * <Cmd sid='settings.account.menu.fullAccess' product='2' />: Grants permission to add, edit, and delete entries in the menu.
 
-  * <Cmd sid='settings.account.menu.fullAccess' product='2' />: Grants permission to enter the menu and only view the settings.
+  * <Cmd sid='settings.account.menu.readOnly' product='2' />: Grants permission to enter the menu and view the settings only.
 
-* <Cmd sid='settings.account.addUser' product='2' />: Can view users granted permissions.
+* <Cmd sid='settings.account.addUser' product='2' />: Shows the users who have been granted permissions.
 
 :::info
 
