@@ -1,14 +1,14 @@
 ---
 id: settings-device-using-functions
-title: Use Device Management Feature
-description: Instructions for reconnecting devices, synchronizing, batch editing, deleting, and exporting/importing settings.
+title: Use Device Management Features
+description: Learn how to reconnect or synchronize devices, batch edit, delete, and export or import settings.
 keywords:
   - Device
 ---
 
-This guide explains how to use additional features of **BioStar X**. This section explains how to reconnect devices, synchronize, batch edit device information, delete devices, and export/import settings. It also explains how to delete secure communication certificates when deleting devices.
+Learn how to use other device features in **BioStar X**. Learn how to reconnect or synchronize devices, batch edit information, delete devices, and export or import settings, and how to delete secure communication certificates when you delete devices.
 
-## Manage a Single Device
+## Manage a single device
 
 Use the following steps to manage a single device.
 
@@ -16,15 +16,15 @@ Use the following steps to manage a single device.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. In the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list, right-click the device. Or, click the checkbox for the device you want in the device list.
+3. In the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list, right-click the device. Alternatively, click the checkbox for the device in the device list.
 
    <Image src='/img/biostarx-setting-device-functions.png' />
 
-4. Select the desired action from the pop-up menu or from the top of the device list.
+4. Select a feature from the pop-up menu or from the top of the device list.
 
-Refer to the features below. The features provided may vary depending on the device.
+For the available features, see below. Available features may vary depending on the device.
 
-* <Cmd sid='button.reconnect' product='2' />: Reconnect the selected device. This option is available when one device is selected. In general, the device automatically returns online without user intervention after the network connection is restored. Use this feature when the device does not reconnect automatically after the network is restored.
+* <Cmd sid='button.reconnect' product='2' />: Reconnects the selected device. This feature is available only when you select one device. In general, the device automatically comes back online after the network connection is restored. Use this feature when the device does not reconnect automatically after the network is restored.
 
    :::info
 
@@ -32,17 +32,17 @@ Refer to the features below. The features provided may vary depending on the dev
 
    :::
 
-* <Cmd sid='button.syncDevice' product='2' />: Synchronize all user information registered on the device with **BioStar X**. This synchronization is based on the **BioStar X** database, and user information registered only on the device will be deleted. Use the <Cmd sid='button.manageUsersInDevice' product='2' /> feature to upload user information to **BioStar X**.
+* <Cmd sid='button.syncDevice' product='2' />: Synchronizes all user information on the registered device with **BioStar X**. Synchronization is based on the **BioStar X** database, and user information registered only on the device is deleted. To upload user information to **BioStar X**, use the <Cmd sid='button.manageUsersInDevice' product='2' /> feature.
 
-* <Cmd sid='device.sync_all' product='2' />: Delete all setting information and user information stored on the device and resend it. This feature can also be accessed by selecting the device from the list and clicking the <IcMoreW /> button.
+* <Cmd sid='device.sync_all' product='2' />: Deletes all settings and user information stored on the device and resends them. This feature is also available when you select a device in the device list and click <IcMoreW />.
 
-* <Cmd sid='button.manageUsersInDevice' product='2' />: Upload or delete user information registered on the device in **BioStar X**. For more information, see <DocLink docId='platform/biostar_x/settings-device-manage-device-users' />.
+* <Cmd sid='button.manageUsersInDevice' product='2' />: Uploads user information registered on the device to **BioStar X** or deletes it from the device. For more information, see <DocLink docId='platform/biostar_x/settings-device-manage-device-users' />.
 
-* <Cmd sid='button.firmwareUpgrade' product='2' />: Easily upgrade the device firmware. For more information, see <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />.
+* <Cmd sid='button.firmwareUpgrade' product='2' />: Easily upgrades the device firmware. For more information, see <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />.
 
-* <Cmd sid='device.menu.reboot' product='2' />: Restart the selected device. Use this feature when the device is not operating normally.
+* <Cmd sid='device.menu.reboot' product='2' />: Restarts the selected device. Use this feature when the device is not working properly.
 
-* <Cmd sid='button.deleteDevice' product='2' />: Delete the selected device from the list. Devices set as doors or zones cannot be deleted. For more information, see <DocLink inner='#deleteDevice' />.
+* <Cmd sid='button.deleteDevice' product='2' />: Deletes the selected device from the list. Devices set as doors or zones cannot be deleted. For more information, see <DocLink inner='#deleteDevice' />.
 
 :::info
 
@@ -60,35 +60,35 @@ Use the following steps to manage one or more devices.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. Click the checkbox for the device you want in the device list. You can select 1 or more devices.
+3. Click the checkboxes for the devices in the device list. Select one or more devices.
 
    <Image src='/img/biostarx-setting-device-list-batch-edit.png' />
 
-4. Select the desired feature at the top of the device list.
+4. Select a feature at the top of the device list.
 
-Refer to the features below. The features provided may vary depending on the device.
+For the available features, see below. Available features may vary depending on the device.
 
-* <Cmd sid='button.syncDevice' product='2' />: Synchronize all user information registered on the device with **BioStar X**. This synchronization is based on the **BioStar X** database, and user information registered only on the device will be deleted.
+* <Cmd sid='button.syncDevice' product='2' />: Synchronizes all user information on the registered device with **BioStar X**. Synchronization is based on the **BioStar X** database, and user information registered only on the device is deleted.
 
-* <Cmd sid='button.batchEdit' product='2' />: Batch edit information for the selected devices. Click the button to open the <Cmd sid='device.batchEdit' product='2' /> window.
+* <Cmd sid='button.batchEdit' product='2' />: Batch edits information for the selected devices. When you click the button, the <Cmd sid='device.batchEdit' product='2' /> window appears.
 
   <Image src='/img/biostarx-setting-device-batch-edit.png' />
 
    :::info
 
-  * The details displayed in the <Cmd sid='device.batchEdit' product='2' /> window may vary depending on the selected device types.
+  * Depending on the selected device type, the details that appear in the <Cmd sid='device.batchEdit' product='2' /> window may vary.
 
-  * When selecting a master device and slave devices simultaneously for batch editing, only certain items within <Cmd sid='device.info.authentication' product='2' /> and <Cmd sid='device.info.displaySound' product='2' /> can be modified.
+  * If you select a master device and slave devices at the same time and click Batch Edit, you can change only some options in <Cmd sid='device.info.authentication' product='2' /> and <Cmd sid='device.info.displaySound' product='2' />.
 
-  * <Cmd sid='device.info.authenticationMode' product='2' /> can only be batch edited when devices with the same model name are selected.
+  * <Cmd sid='device.info.authenticationMode' product='2' /> can be batch edited only when you select devices with the same model name.
 
    :::
 
-* <Cmd sid='button.firmwareUpgrade' product='2' />: Easily upgrade the device firmware. For more information, see <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />.
+* <Cmd sid='button.firmwareUpgrade' product='2' />: Easily upgrades the device firmware. For more information, see <DocLink docId='platform/biostar_x/settings-device-upgrade-firmware' />.
 
-* <Cmd sid='button.deleteDevice' product='2' />: Delete the selected device from the list. Devices set as doors or zones cannot be deleted. For more information, see <DocLink inner='#deleteDevice' />.
+* <Cmd sid='button.deleteDevice' product='2' />: Deletes the selected device from the list. Devices set as doors or zones cannot be deleted. For more information, see <DocLink inner='#deleteDevice' />.
 
-## Delete devices {/* #deleteDevice */}
+## Delete a device {/* #deleteDevice */}
 
 Use <Cmd sid='button.deleteDevice' product='2' /> to delete devices from the list. The options that appear during deletion depend on whether <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is enabled.
 
@@ -100,65 +100,65 @@ When <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is set to <Cmd sid
 
 ### When secure communication is enabled
 
-When <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is set to <Cmd sid="common.use" product='2' />, the <Cmd sid='device.deleteDeviceConfirmTitle' product='2' /> dialog shows the <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option.
+If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is set to <Cmd sid="common.use" product='2' />, the <Cmd sid='device.deleteDeviceConfirmTitle' product='2' /> dialog shows the <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option.
 
 <Image src='/img/biostarx-setting-device-delete-check.png' />
 
-* If <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> is cleared (default), delete only the device and keep the certificate.
+* If <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> is cleared (default), only the device is deleted and the certificate is kept.
 
-* If <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> is selected, also delete the secure communication certificate stored on the device. Use this option to connect the device to another **BioStar X** server after deleting it.
+* If <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> is selected, the secure communication certificate stored on the device is also deleted. Use this option to connect the deleted device to another **BioStar X** server.
 
 :::caution
 
-If a device disconnects from **BioStar X**, it cannot delete its certificate. If <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> is selected, device deletion fails. To delete the device, clear the option or reconnect the device, then try again.
+The certificate on a device disconnected from **BioStar X** cannot be deleted, so you cannot delete the device while <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> is selected. To delete the device, clear the option or reconnect the device, then try again.
 
 :::
 
 :::info
 
-* If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is enabled, deleting the device without selecting <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> leaves the certificate on the device. Then change the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option to <Cmd sid="common.notUse" product='2' />, and enroll the device in **BioStar X** again. The device fails to connect because the certificate remains. If you use the default certificate, change the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option back to <Cmd sid='common.use' product='2' />.
+* If <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is enabled, deleting the device without selecting <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> leaves the certificate on the device. If you then set <Cmd sid='setting.sever.secure.comm.menu' product='2' /> to <Cmd sid="common.notUse" product='2' /> and register the device in **BioStar X** again, the device does not connect because the certificate remains on it. If you use the default certificate, change the <Cmd sid='setting.sever.secure.comm.menu' product='2' /> option back to <Cmd sid='common.use' product='2' />.
 
-* If all selected devices are slave devices or do not support secure communication, delete devices without the <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option.
+* If all selected devices are slave devices or do not support secure communication, delete the devices without the <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option.
 
 * The <Cmd sid='confirm.deleteDeviceCertOptionLabel' product='2' /> option appears only when <Cmd sid='setting.sever.secure.comm.menu' product='2' /> is enabled. For more information, see <DocLink docId='platform/biostar_x/settings-system-security#communicationByDevice' />.
 
 :::
 
-## Export/import device configuration {/* #exportImportDeviceConfig */}
+## Export/import device settings {/* #exportImportDeviceConfig */}
 
-Export configurations from one device to a file, then import and apply them to another device of the same model. Instead of entering the same configurations on multiple devices, create a configuration file from a configured device and apply it to the others.
+Export the settings from one device to a file, then import and apply them to another device of the same model. Instead of entering the same settings on multiple devices, create a settings file from a configured device and apply it to the other devices.
 
 :::info
 
-* Same model means the detailed model name and part number match (for example, XXX in XPD2-XXX).
+* Same model means that the detailed model name and part number match (for example, XXX in XPD2-XXX).
 
-* The export/import device configuration feature is available to administrators with full permissions for device settings. For more information about administrator permission settings, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
+* The export/import device settings feature is available to administrators with full permissions for device settings. For more information about administrator permission settings, see <DocLink docId='platform/biostar_x/settings-manage-account' />.
 
 :::
 
-### Export device configuration {/* #exportDeviceConfig */}
+### Export device settings {/* #exportDeviceConfig */}
 
-To download the configurations for a single device as a file, follow these steps.
+To download the settings for a single device as a file, follow these steps.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. In the device list, click the checkbox for the device whose configurations to export. You can select only one device.
+3. In the device list, select the checkbox for the device to export settings from. Only one device can be selected.
 
 4. Click <IcMoreW title='More' /> → <Cmd sid='device.templateExport.label' product='2' /> at the top of the device list.
 
    <Image src='/img/biostarx-setting-device-export-settings.png' />
 
-5. When the download window appears, save the configurations file locally.
+5. When the download window appears, save the settings file locally.
 
 :::caution
 
-Configurations export is unavailable for the following devices.
+You cannot export settings for the following devices.
 
-* Devices disconnected from **BioStar X** or with a response timeout
+* Devices that are disconnected from **BioStar X** or have timed out
 
-* Virtual device
+* Virtual devices
 
 * Devices without RS-485 communication mode (for example, Wiegand devices, I/O modules, Door Interface, Door modules, Secure modules, and OSDP Antenna/Reader)
 
@@ -166,107 +166,107 @@ Configurations export is unavailable for the following devices.
 
 :::info
 
-* You cannot run this feature unless you select exactly one device.
+* This feature is unavailable unless you select exactly one device.
 
 * The file name is set automatically in this order: model name, device ID, RS-485 communication mode (Master/Default/Slave), and export date. The date follows the date format set in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.preferences.root' />. 
 
-   For example, if the model name is BS3-DB, the device ID is 538001234, the serial communication mode is <Cmd sid='device.rs485.master' product='2' />, and the export date is 6/23/2026, the file is saved as `BS3-DB_538001234_Master_20260623.json`.
+   For example, a device with the model name BS3-DB, device ID 538001234, serial communication mode <Cmd sid='device.rs485.master' product='2' />, and export date June 23, 2026 is saved as `BS3-DB_538001234_Master_20260623.json`.
 
 :::
 
 :::note
 
-**Configurations excluded from export** <Anchor id='exportExcludedsettings' />
+**Settings excluded from export** <Anchor id='exportExcludedsettings' />
 
-The following configurations are not included in the export file because they must be unique per device, are stored only on the device, or contain sensitive information such as credentials.
+The following settings are not included in the export file because they must be unique per device, are stored only on the device, or contain sensitive information such as authentication information.
 
-* Device-specific configurations: <Cmd sid='device.info.name' product='2' className='normal' />, <Cmd sid='device.info.group' product='2' className='normal' />, wired and wireless network, server connection, OSDP identifier, and <Cmd sid='device.info.triggerNAction' product='2' className='normal' />
+* Device-specific settings: <Cmd sid='device.info.name' product='2' className='normal' />, <Cmd sid='device.info.group' product='2' className='normal' />, wired and wireless network settings, server connection settings, OSDP identifier, <Cmd sid='device.info.triggerNAction' product='2' className='normal' />
 
-* These configurations are stored only on the device. You cannot move them to another device: language resources, Home screen, and sound options in <Cmd sid='device.info.displaySound' product='2' className='normal' />, the SCB key for serial communication, and video options added to BioStation 3 Max
+* Settings stored only on the device that cannot be moved to another device: language resources, home screen, and sound options in <Cmd sid='device.info.displaySound' product='2' className='normal' />, the SCB key for serial communication, and video settings added to BioStation 3 Max
 
-* Credentials and sensitive information: usernames and passwords for IP intercom and RTSP, <Cmd sid='device.masterAdmin.title' product='2' className='normal' />, and the <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' className='normal' /> option
+* Authentication information and sensitive information: usernames and passwords for Intercom and RTSP, <Cmd sid='device.masterAdmin.title' product='2' className='normal' /> settings, <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' className='normal' /> options
 
 :::
 
-### Import device configuration {/* #importDeviceConfig */}
+### Import device settings {/* #importDeviceConfig */}
 
-To apply the exported configurations file to one or more devices of the same model, follow these steps.
+To apply the exported settings file to one or more devices of the same model, follow these steps.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. In the device list, click the checkbox for the device that will receive the configurations. You can select one or more devices.
+3. In the device list, select the checkbox for the device to apply the settings to. You can select one or more devices.
 
 4. Click <IcMoreW title='More' /> → <Cmd sid='device.templateImport.label' product='2' /> at the top of the device list.
 
    <Image src='/img/biostarx-setting-device-import-settings.png' />
 
-5. When the Open window appears in the web browser, select the configurations file saved locally.
+5. When the Open window appears in the web browser, select the settings file saved locally.
 
-6. When the Import device configurations result message appears, review it and click <Cmd sid='button.ok' product='2' />.
+6. When the Import device settings result message appears, review the message and click <Cmd sid='button.ok' product='2' />.
 
 :::caution
 
-The system accepts configuration files created on other sites or servers as valid files without verifying the source or showing a warning. Verify that a trusted source created the file to import.
+The system accepts settings files created on other sites or servers as valid files without verifying the source or showing a warning. Make sure the file to import comes from a trusted source.
 
 :::
 
 :::info
 
-Select at least one device to run this feature.
+This feature is unavailable unless you select at least one device.
 
 :::
 
-When you run Import, the system checks the following in order before applying the configurations. If any check fails, the system does not apply the configurations and shows the reason.
+When you run the import, the system checks the following in order before applying the settings. If any check does not meet the conditions, the system does not apply the settings and shows the reason.
 
 * Whether all selected devices have the same model name (including the part number)
 
-* Whether the RS-485 communication mode matches between the selected devices and the file
+* Whether the RS-485 communication mode matches across the selected devices and the file
 
 * Whether the model name saved in the file (including the part number) matches the model names of the selected devices (including the part number)
 
-* Whether any of the selected devices is a virtual device (Virtual Device)
+* Whether any of the selected devices is a virtual device
 
-If the checks pass, the system applies all configurations except [Configurations excluded from export](#exportExcludedsettings) to all selected devices.
+If the checks pass, the system applies all settings except [Settings excluded from export](#exportExcludedsettings) to all selected devices.
 
 :::info
 
-* Importing a file from an unsupported device sets the feature Off and turns off enabled options. Importing a file from a supported device into an unsupported device skips the feature and applies the remaining configurations. In both cases, the system does not mark the import as failed or add it to the failure list.
+* If you import a file exported from a device that does not support a feature into a device that supports it, the feature is applied as turned off, and any options already turned on in the target device are turned off. Conversely, if you import a file exported from a device that supports a feature into a device that does not support it, the feature is not applied and only the remaining settings are applied. In both cases, the system does not mark the import as failed or include it in the failure list.
 
-* Configurations that require a device license do not apply to devices without that license. Importing a file from an unlicensed device sets the configuration Off and turns off enabled options. In both cases, the system does not mark the import as failed or add it to the failure list.
+* Settings that require a device license do not apply to devices that do not have the license applied. Conversely, if you import a file exported from an unlicensed device into a licensed device, the setting is applied as turned off, and any options already turned on in the target device are turned off. In both cases, the system does not mark the import as failed or include it in the failure list.
 
-* The system shows a success message after it applies the configurations to all devices. If configurations fail to apply, a message shows failed device count and a link to download the CSV failure list. The file lists each failed device ID, name, and reason (disconnected, or access groups block full access permissions).
+* If the system successfully applies the settings to all devices, a success message appears. If the system fails to apply the settings to some or all devices, a message appears with the number of failed devices and lets you download the failure list as a CSV file. This file contains the ID, name, and failure reason for each failed device (the device is disconnected, or an access group is set so full access cannot be turned on).
 
   > For example, if an import run at 15:45:30 on 6/23/2026 fails, the file name is `Device_Template_Import_Error_20260623T154530.csv`.
 
 * CoreStation devices are also included.
 
-* View the export and import history for device configurations at <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+* To view the export and import history for device settings, click <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
 ## Delete event logs from a device {/* #deleteLogsFromDevice */}
 
-You can delete event logs stored on the device.
+This feature deletes event logs stored on the device.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. Click the checkbox for the device you want in the device list. You can select 1 or more devices.
+3. Click the checkboxes for the devices in the device list. Select one or more devices.
 
 4. Click <IcMoreW title='More' /> → <Cmd sid='button.clearLog' product='2' /> at the top of the device list.
 
    <Image src='/img/biostarx-setting-device-list-delete-log.png' />
 
-5. If a warning dialog appears, review the message and click <Cmd sid='button.continue' product='2' />.
+5. When a warning message appears, review it and click <Cmd sid='button.continue' product='2' />.
 
-When the device event log deletion is complete, a pop-up message appears. View the number of target devices, successful devices, and failed devices.
+When the device event log deletion is complete, a pop-up message appears. Shows the number of target devices, successful devices, and failed devices.
 
 :::caution
 
-Event logs deleted from a device cannot be recovered and cannot be resent from the server to the device. Before proceeding with deletion, confirm the device event logs are stored on the server. Also, if the selected devices include slave, virtual, or Wiegand devices, those devices do not store logs and are excluded from log deletion.
+Event logs deleted from a device cannot be recovered and cannot be resent from the server to the device. Make sure the device event logs are stored on the server before you proceed with deletion. Also, if the selected devices include slave devices, virtual devices, or Wiegand devices, those devices do not store logs and are excluded from log deletion.
 
 :::
 
@@ -274,17 +274,17 @@ Event logs deleted from a device cannot be recovered and cannot be resent from t
 
 * Only users with the <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> permission can use this feature.
 
-* View the device event log deletion history at <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
+* To view the device event log deletion history, click <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.auditTrail.root' /> → <Cmd sid='setting.menu.auditTrail.acAuditLog' />.
 
 :::
 
 ## Additional features
 
-Use additional features such as printing the device list or changing column settings.
+Additional features are available, such as printing the device list or changing column settings.
 
-### Print device list
+### Print the device list
 
-Save the device list as a PDF or SVG file for printing.
+Save the device list as a PDF or SVG file, and then print it.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -294,17 +294,17 @@ Save the device list as a PDF or SVG file for printing.
 
 4. Click <Cmd sid='button.print' product='2' /> in the pop-up menu.
 
-5. When the <Cmd sid='printOption.dialog.header' product='2' /> window appears, select your desired format in the <Cmd sid='printOption.fileFormat' product='2' /> options and set the other options.
+5. When the <Cmd sid='printOption.dialog.header' product='2' /> window appears, select a format under <Cmd sid='printOption.fileFormat' product='2' /> and set the other options.
 
    <Image src='/img/biostarx-setting-device-list-print.png' />
 
 6. Click <Cmd sid='team.menu.print' />.
 
-You can print the PDF or SVG file that opens through the browser.
+You can print the PDF or SVG file that opens in the browser.
 
-### Device List Column Settings
+### Device list column settings
 
-You can change the column settings displayed in the device list. Select the columns to show, or change their order.
+You can change which columns appear in the device list. Select the columns to show, or change their order.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -314,7 +314,7 @@ You can change the column settings displayed in the device list. Select the colu
 
 4. Click <Cmd sid='menu.columnSetting' product='2' /> in the pop-up menu.
 
-5. When the <Cmd sid='columnSetting.dialog.header' product='2' /> window appears, select or deselect the desired columns.
+5. When the <Cmd sid='columnSetting.dialog.header' product='2' /> window appears, select or clear columns to show.
 
    <Image src='/img/biostarx-setting-device-list-column-setting.png' />
 

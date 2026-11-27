@@ -1,16 +1,16 @@
 ---
 id: settings-door-auth-control
-title: Configure Door Control through Authentication
-description: This topic explains how to set up a door control through authentication function that switches a door to Always Open when an authorized user double-badges (Double Badge) with a card.
+title: Set Up Door Control Through Authentication
+description: Learn how to set up door control through authentication, which switches a door to Always Unlock when an authorized user double-badges with a card.
 ---
 
-Door control through authentication switches a door to always open when a designated user authenticates twice in a row (Double Badge) with the same card on a supported device. In Always Open mode, double-badge again. The door returns to its original mode when the allowed schedule ends.
+Door control through authentication switches a door to Always Unlock when a designated user authenticates twice in a row with the same card on a supported device (Double Badge). In Always Unlock mode, if the user double-badges again or the allowed schedule ends, the door automatically returns to its original mode.
 
 ## Before you start {/* #before-start */}
 
-* The door must belong to an access group. On the Add Door screen, this feature is unavailable because the door is not in an access group yet. Save the door, add it to an access group, and set this feature on the Edit Door Info screen. For more information about access group settings, see <DocLink docId='platform/biostar_x/settings-access-control' />.
+* The door must belong to an access group. On the Add Door screen, you cannot use this feature because the door is not in an access group yet. After you save the door, add it to an access group, and set up this feature on the Edit Door Info screen. For more information about access group settings, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
-* For more information about adding doors and editing door information, see the following documents.
+* For more information about registering doors and editing door information, see the following documents.
 
   * <DocLink docId='platform/biostar_x/settings-door-add' />
 
@@ -18,17 +18,17 @@ Door control through authentication switches a door to always open when a design
 
 :::info
 
-* Support for door control through authentication starts with the following devices and firmware versions. Use this feature only on doors that use supported devices.
+* Door control through authentication is supported on the following devices with the listed firmware versions or later. This feature is available only on doors that use supported devices.
 
   * XPass 2 firmware v1.5.3 or later
 
   * FaceStation F2 firmware v2.3.0 or later
 
-* This feature works only with card-type credentials (CSN, Wiegand, smart cards, and mobile card CSN/ToM). This feature does not apply to template credentials or biometric authentication such as fingerprint and Facial Authentication. The system processes them as standard access authentication.
+* This feature works only with card-type credentials (CSN, Wiegand, smart cards, and mobile card CSN/ToM). This feature does not apply to template credentials or biometric authentication such as fingerprint and facial authentication, and the system processes them as standard access authentication.
 
-* Door control through authentication works only when the device authentication mode is set to Card. **BioStar X** does not check the device authentication mode. Verify the device authentication mode before using this feature.
+* Door control through authentication works only when the device authentication mode is set to Card. **BioStar X** does not check the device authentication mode, so make sure you verify the device authentication mode before using this feature.
 
-* The device recognizes a double badge only when the two authentications occur within 3 seconds. If the interval exceeds 3 seconds, the device treats each authentication as a separate access authentication.
+* The device recognizes a double badge only when the interval between the first and second authentications is within 3 seconds. If the interval exceeds 3 seconds, the device treats the two authentications as separate access authentications.
 
 :::
 
@@ -38,7 +38,7 @@ Door control through authentication switches a door to always open when a design
 
 2. Click <Cmd sid='setting.menu.accessPoint.root' /> → <Cmd sid='setting.menu.door.root' /> in the left sidebar.
 
-3. In the door list, click the door to configure.
+3. In the door list, click the door to set up.
 
 4. In the <Cmd sid='common.option' product='2' /> section, go to <Cmd sid='door.authDoorControl.title' product='2' />.
 
@@ -48,7 +48,7 @@ Door control through authentication switches a door to always open when a design
 
    <Image src='/img/biostarx-setting-door-auth-control-use.png' />
 
-6. In <Cmd sid='common.schedule' product='2' />, select the schedule for using this feature. The default is <Cmd>Always</Cmd>. If the schedule is not available, add a schedule first.
+6. In <Cmd sid='common.schedule' product='2' />, select the schedule to use this feature. The default is <Cmd>Always</Cmd>. If no schedule meets your needs, add a schedule first.
 
 7. To add users who can control the door with Double Badge, click <Cmd sid='button.plusAdd' product='2' /> and select from the <Cmd sid='common.user' product='2' /> list.
 
@@ -56,13 +56,13 @@ Door control through authentication switches a door to always open when a design
 
    :::note
 
-   * <Cmd sid='common.user' product='2' /> list shows only users with door access. Check access groups and access levels in <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.accessControl.root' />.
+   * The <Cmd sid='common.user' product='2' /> list shows only users who have access permissions for the door. Click <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.accessControl.root' /> to check access groups and access levels.
 
-   * Specify up to 12 users.
+   * The maximum is 12 users.
 
-   * Click <IcSearch title='Search' /> to search for a specific user.
+   * To search for a specific user, click <IcSearch title='Search' />.
 
-   * Select individual users only. User group selection is unavailable.
+   * Select individual users only, not user groups.
 
    :::
 
@@ -78,23 +78,23 @@ Door control through authentication switches a door to always open when a design
 
 ## Notes {/* #note */}
 
-* Doors that use door control through authentication cannot change the entry or exit device to an unsupported model. Before changing the device, set <Cmd sid='door.authDoorControl.title' product='2' /> to <Cmd sid='common.off' product='2' />.
+* For a door that uses door control through authentication, you cannot change the entry or exit device to an unsupported model. To change the device, first set the <Cmd sid='door.authDoorControl.title' product='2' /> option to <Cmd sid='common.off' product='2' />.
 
-* If a control user loses door access, the list marks the user as <Cmd sid='door.authDoorControl.noAccessBadge' product='2' />. This status prevents saving. Grant access again or remove the user from the list.
+* If a user designated as a control user loses access to the door due to a change in access group, the list shows the user with the <Cmd sid='door.authDoorControl.noAccessBadge' product='2' /> status. You can't save in this status, so grant door access again or remove the user from the list.
 
   <Image src='/img/biostarx-setting-door-auth-control-not-allow-users.png' />
 
-* Saving requires at least one control user.
+* You can't save unless you specify at least one control user.
 
-* If the selected schedule is deleted, the <Cmd sid='common.schedule' product='2' /> field shows <Cmd sid='door.authDoorControl.deletedSchedule' product='2' />. This status prevents saving. Select another schedule.
+* If the selected schedule is deleted, the <Cmd sid='common.schedule' product='2' /> field shows <Cmd sid='door.authDoorControl.deletedSchedule' product='2' />. You can't save in this status, so select another schedule.
 
-* In Hard mode, access is denied when an [anti-passback](../../reference/glossary#apb) violation occurs, so door control through authentication does not work. In Soft mode, access is allowed, so it does work.
+* If an [anti-passback](../../reference/glossary#apb) violation occurs, door control through authentication does not work in Hard mode (access denied) but works in Soft mode (access allowed).
 
-* When other advanced access control features apply, they take priority.
+* If other advanced access control features such as fire alarm, scheduled lock, or scheduled unlock also apply, those advanced access control features take priority.
 
 ## Related information {/* #related */}
 
-* Check door control through authentication in the door preview panel on <Cmd sid='shell.header.arena' />. Related events appear as <Cmd sid='eventType.23824' product='2' /> in <Cmd sid='arena.eventTable.title' />. For more information about door monitoring, see <DocLink docId='platform/biostar_x/monitoring-door' />.
+* The status of door control through authentication appears in the door preview panel on <Cmd sid='shell.header.arena' />, and related events appear in <Cmd sid='arena.eventTable.title' /> as <Cmd sid='eventType.23824' product='2' />. For more information about door monitoring, see <DocLink docId='platform/biostar_x/monitoring-door' />.
 
   <Image src='/img/biostarx-setting-door-auth-control-monitoring.png' />
 

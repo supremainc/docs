@@ -1,18 +1,18 @@
 ---
 id: settings-device-connection-manager
-title: Device Connection Management Settings
-description: This document provides guidance on connecting and managing a large number of devices through the communication server in BioStar X. You can manage up to 3,000 network devices by distributing them across multiple servers.
+title: Set Up Device Connection Manager
+description: Learn how to connect and manage a large number of devices through communication servers in BioStar X. You can manage up to 3,000 network devices by distributing them across multiple servers.
 keywords:
   - Device Connection Manager
   - Communication Server
   - Settings
 ---
 
-**BioStar X**'s <Cmd sid='settings.deviceConnectionManager.settingMenuTitle' product='2' /> is a feature designed to efficiently manage a large number of devices in companies or large buildings. Previously, a single server could connect a maximum of 1,000 devices, but now you can install multiple **communication** servers on several computers to manage up to 3,000 network devices.
+**BioStar X**'s <Cmd sid='settings.deviceConnectionManager.settingMenuTitle' product='2' /> is a feature designed to efficiently manage a large number of devices in companies or large buildings. Previously, one server could connect up to 1,000 devices, but now you can install **communication** servers on multiple computers to manage up to 3,000 network devices.
 
 :::info
 
-* This feature requires the **Device Manager** license to be activated. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
+* This feature is available when the **Device Manager** license is activated. For more information about the licensing policy, see <DocLink docId='platform/biostar_x/licensing' />.
 
 * For more information about the Multi Communications Server specifications and installation, see the followings:
 
@@ -24,62 +24,62 @@ keywords:
 
 ## Key features
 
-* **Server Expansion**: Install communication servers on additional computers besides the main computer to connect more devices.
+* **Server expansion**: Install communication servers on additional computers besides the main computer to connect more devices.
 
-* **Multiple Server Operation**: Use up to three servers together to support a total of 3,000 devices.
+* **Multiple server operation**: Use up to three servers together to support a total of 3,000 devices.
 
-* **Convenient Device Management**: When adding new devices, choose which server to connect to, and you can also move existing devices to another server.
+* **Convenient device management**: When adding new devices, you can choose which server to connect to, and you can also move existing devices to another server.
 
-* **Large Environment Support**: Operate a large number of devices reliably in large business sites or buildings.
+* **Support for large environments**: Reliably operate a large number of devices in large business sites or buildings.
 
-The Multi Communications Server is a dedicated service that separates the device connection feature from the BioStar X integrated server. It focuses solely on reliable communication with devices, enhancing the performance of the overall system.
+The Multi Communications Server is a dedicated service that separates only the device connection feature from the BioStar X integrated server. It focuses on reliable communication with devices to improve overall system performance.
 
 ## Move devices to another server
 
-This feature lets you move devices from the main server or another Multi Communications Server to another Multi Communications Server. This feature helps maintain the connection status of the devices while moving them between servers.
+You can move devices registered to the main server or another Multi Communications Server to a different Multi Communications Server. This feature helps you move devices between servers while maintaining the devices' connection status.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.deviceConnectionManager' /> in the left sidebar.
 
-3. From the <Cmd sid='settings.deviceConnectionManager.followerSelectLabel' product='2' /> section on the left, select the server where the device you want to move is registered.
+3. In the <Cmd sid='settings.deviceConnectionManager.followerSelectLabel' product='2' /> field on the left, select the server where the device to move is registered.
 
    <Image src='/img/biostarx-setting-device-connection-manager-01.png' />
 
-4. In the <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> section on the right, select the target server to which you want to move the devices.
+4. In the <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> field on the right, select the destination server to move the devices to.
 
    <Image src='/img/biostarx-setting-device-connection-manager-02.png' />
 
-5. Select the device(s) you want to move from the device list. You can select multiple devices.
+5. Select the devices to move in the device list. You can select multiple devices.
 
    <Image src='/img/biostarx-setting-device-connection-manager-03.png' />
 
    :::note
 
-   To search for a specific device, enter keywords in the input field at the top. You can search by device name or serial number.
+   To search for a device, enter a keyword in the input field at the top. You can search by device name or serial number.
 
    :::
 
-6. Click <Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' /> to move the device to the target server.
+6. To move the devices to the destination server, click <Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' />.
 
    <Image src='/img/biostarx-setting-device-connection-manager-04.png' />
 
-7. Check the total number of devices to move, the number of TCP/IP connected devices, the name of the server to move to, and the IP address in the message window.
+7. In the message window, check the total number of devices to move, the number of devices connected via TCP/IP, the destination server name, and the IP address.
 
 8. Click <Cmd sid='button.yes' product='2' />.
 
-Once the move is complete, you can check the total number of devices moved, the number of TCP/IP connected devices, and the name and IP address of the moved server in the message window. 
+After the move, the message window shows the total number of devices moved, TCP/IP-connected devices, and the destination server name and IP address. 
 
-If there are devices that failed to move, the message window will show the number of devices that failed to move and the number of TCP/IP connected devices. To view a list of devices that failed to move and the reasons for failure in a CSV file, click <Cmd sid='button.download' product='2' />.
+If any devices fail to move, the message window shows the number of devices that failed to move and the number of TCP/IP-connected devices. To view a list of devices that failed to move and the reasons for failure in a CSV file, click <Cmd sid='button.download' product='2' />.
 
 :::info
 
-* If there are no connected extension servers, <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> on the right side of the screen will not be displayed.
+* If there are no connected extension servers, <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> does not appear in the right pane.
 
-* When selecting a server, you can see all registered devices, including Wiegand and RS-485 connected devices on that server.
+* When you select a server, the list shows all registered devices on that server, including devices connected via Wiegand and RS-485.
 
-* Selecting a device or device group will also move the subordinate devices connected to the device and the devices included in the group.
+* When you select a device or device group, the subordinate devices connected to the device and the devices included in the group are also moved.
 
-* Devices that are not connected via TCP/IP cannot be moved.
+* Devices not connected via TCP/IP cannot be moved.
 
 :::
