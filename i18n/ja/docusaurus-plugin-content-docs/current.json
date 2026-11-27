@@ -247,9 +247,9 @@
     "message": "勤怠管理を使用",
     "description": "The label for category '근태 관리 사용하기' in sidebar 'biostarx'"
   },
-  "sidebar.biostarx.category.방문자 신청 및 관리하기": {
-    "message": "訪問者の申請と管理",
-    "description": "The label for category '방문자 신청 및 관리하기' in sidebar 'biostarx'"
+  "sidebar.biostarx.category.방문 신청 및 관리하기": {
+    "message": "訪問の申請と管理",
+    "description": "The label for category '방문 신청 및 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostation3.category.Release Notes": {
     "message": "リリースノート",

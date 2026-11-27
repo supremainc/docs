@@ -1,53 +1,53 @@
 ---
 id: view-user-by-access
 title: Manage Access Groups
-description: This guide shows how to query users by access group and explore the access permission structure.
+description: Learn how to view users by access group and explore the access permission structure.
 keywords:
   - User
   - Access permissions
 ---
 
-This guide shows how to query and manage users based on access groups. Use <Cmd sid='team.tree.accessExplorer' /> to check registered users by access group and explore the access permission hierarchy through the tree structure.
+Learn how to view and manage users by access group. Use <Cmd sid='team.tree.accessExplorer' /> to view registered users by access group and explore the access permission hierarchy in the tree structure.
 
 :::info
 
-To check access doors or floors belonging to an access group in <Cmd sid='team.tree.accessExplorer' />, you must first set up the access control feature. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
+To check the doors or floors in an access group in <Cmd sid='team.tree.accessExplorer' />, you must set up the access control feature first. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
 :::
 
-## Check users by access group {/* #view-user-by-access */}
+## View users by access group {/* #view-user-by-access */}
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Click the <Cmd sid='team.tree.accessExplorer' /> tab in the tree structure menu.
+2. In the tree structure menu, click <Cmd sid='team.tree.accessExplorer' />.
 
    <Image src='/img/biostarx-user-access-explorer.png' />
 
-3. Click the desired access permission group in <Cmd sid='team.user.tree.accessExplorerRootName' />.
+3. In <Cmd sid='team.user.tree.accessExplorerRootName' />, click an access group.
 
-You can view users belonging to the selected access permission group in the user list.
+Users in the selected access group appear in the user list.
 
 :::info
 
-To expand or collapse access levels or floor levels under the access group, click <IcAdd /> or <IcMinus />.
+To expand or collapse access levels or floor levels under an access group, click <IcAdd /> or <IcMinus />.
 
 :::
 
 ## Learn about the tree structure {/* #learn-tree-view */}
 
-The tree structure menu is composed of the following structure.
+The tree structure menu has the following structure.
 
 <Treeview />
 
-* **Access group** is the upper layer that includes access levels, floor levels, user groups, and users. You can manage access permissions through the **access group**. See <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' /> For more information about creating access groups.
+* An **access group** is a top-level group that includes access levels, floor levels, user groups, and users. You manage access permissions through an **access group**. For more information about creating access groups, see <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />.
 
-* **Access level** sets the times when users can enter and grants permission to access doors during this time. See <DocLink docId='platform/biostar_x/settings-access-control-manage-access-level' /> For more information about creating access levels.
+* An **access level** sets when users can access and grants permission to access doors during that time. For more information about creating access levels, see <DocLink docId='platform/biostar_x/settings-access-control-manage-access-level' />.
 
-* You can manage the floors users can access via elevators through the **floor level**. See <DocLink docId='platform/biostar_x/settings-access-control-manage-floor-level' /> For more information about creating floor levels.
+* Use a **floor level** to manage the floors users can access by elevator. For more information about creating floor levels, see <DocLink docId='platform/biostar_x/settings-access-control-manage-floor-level' />.
 
-* **Schedule** is a feature that efficiently operates access control and attendance management by setting access and holiday schedules. See <DocLink docId='platform/biostar_x/settings-schedule' /> For more information about registering schedules.
+* A **schedule** is a feature that sets access and holiday schedules to run access control and Time & Attendance efficiently. For more information about registering schedules, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
-* You can register elevators and manage the floors accessible via the elevators. For more information about registering an elevator, see <DocLink docId='platform/biostar_x/settings-elevators-add' />.
+* You can register **elevators** and manage the floors users can access by elevator. For more information about registering an elevator, see <DocLink docId='platform/biostar_x/settings-elevators-add' />.
 
 :::info
 

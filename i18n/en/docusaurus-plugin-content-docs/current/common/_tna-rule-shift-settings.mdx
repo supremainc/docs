@@ -2,7 +2,7 @@
 
 * <Cmd sid='shift.dayStartTime' product='2' />: Set the start time for the workday.
 
-  <Cmd sid='shift.dayStartTimeExcessTime' product='2' /> allows you to set work rules for hours worked in excess of 24 hours based on the set day start time. It can be set for a maximum of 6 hours.
+  <Cmd sid='shift.dayStartTimeExcessTime' product='2' /> lets you set shift rules for hours worked beyond 24 hours from the set day start time. It can be set for a maximum of 6 hours.
 
   <Image src='/img/biostarx-tna-shift-day-adding-fixed-before-after-time.png' />
 
@@ -30,7 +30,7 @@
 
 <Include type={props.type} ref='fixed,floating'>
 
-* <Cmd sid='shift.timeSegment' product='2' />: After selecting the items set in the <Cmd sid='shift.payCode' product='2' /> column for attendance records, set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />.
+* <Cmd sid='shift.timeSegment' product='2' />: In the <Cmd sid='shift.payCode' product='2' /> column, select a time code to record on time cards, and then set <Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, and <Cmd sid='shift.minDuration' product='2' />.
 
   <Include type={props.type} ref='floating'>
 
@@ -70,7 +70,7 @@
 
 <Include type={props.type} ref='flexible'>
 
-* <Cmd sid='shift.payCode' product='2' />: Select the items for attendance records.
+* <Cmd sid='shift.payCode' product='2' />: Select the time code to record on time cards.
 
 * <Cmd sid='shift.punchInTimeLimit' product='2' /> / <Cmd sid='shift.punchOutTimeLimit' product='2' />: Set the time range in which users can authenticate their clock-in and clock-out times.
 
