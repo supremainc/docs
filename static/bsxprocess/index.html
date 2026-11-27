@@ -12,7 +12,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BioStar X 제품 출시 프로세스 v3.0</title>
+<title>BioStar X 제품 출시 프로세스 v3.1</title>
 <style>
   :root{
     --accent:#9E2B3E; --accent-dark:#7C2231; --accent-bg:#FBF3F4;
@@ -167,8 +167,8 @@
 </nav>
 <main>
 
-<h1>BioStar X 제품 출시 프로세스 <span class="chip">v3.0</span></h1>
-<p class="docmeta">최종 수정 2026-11-02 &middot; 기반: 제품 출시 프로세스 v1.2 (XPS-TSS-MCS 합의) + R&amp;D(BSS/QES) 협의 반영</p>
+<h1>BioStar X 제품 출시 프로세스 <span class="chip">v3.1</span></h1>
+<p class="docmeta">최종 수정 2026-11-26 &middot; 기반: 제품 출시 프로세스 v1.2 (XPS-TSS-MCS 합의) + R&amp;D(BSS/QES) 협의 반영</p>
 
 <h2 id="s1">1. 개요</h2>
 <p>BioStar X 릴리스에 대한 표준 출시 프로세스를 정의한다. XPS, BSS, QES, TSS TS, TSS TW, MCS 간 역할과 일정을 명확히 하여 일관된 품질의 릴리스를 보장한다.</p>
@@ -201,7 +201,7 @@
   <thead><tr><th class="num">#</th><th>조직</th><th>역할</th><th>일정 기준</th><th>핵심 책임</th></tr></thead>
   <tbody>
     <tr><td class="num">2-2-1</td><td class="owner">XPS (PM)</td><td>제품 기획</td><td class="when">출시일 · 등록일</td><td>전반적인 프로세스 리드. 출시일 결정. PLI 작성, RN/매뉴얼 범위 결정 및 검토, 내부 인원 온보딩, 전체 일정 오케스트레이션. Known Issues 합동 회의와 등록 판정은 등록일 기준.</td></tr>
-    <tr><td class="num">2-2-2</td><td class="owner">BSS (개발)</td><td>연구개발</td><td class="when">등록일</td><td>기능 변경 내역, 매뉴얼 콘텐츠, API 변경 내역 작성. JIRA 필터 정리. 매뉴얼 초안 기술 확인. 제품 등록. 사내 베타 빌드 이후 변경 발생 시 TSS TW에 즉시 공유. 등록일 변동 예상 시 XPS에 즉시 공유.</td></tr>
+    <tr><td class="num">2-2-2</td><td class="owner">BSS (개발)</td><td>연구개발</td><td class="when">등록일 · 출시일</td><td>기능 변경 내역, 매뉴얼 콘텐츠, API 변경 내역 작성. JIRA 필터 정리. 매뉴얼 초안 기술 확인. 제품 등록. 사내 베타 빌드 이후 변경 발생 시 TSS TW에 즉시 공유. 등록일 변동 예상 시 XPS에 즉시 공유. 알파 테스트 프로그램 진행은 출시일 기준.</td></tr>
     <tr><td class="num">2-2-3</td><td class="owner">QES (검증)</td><td>연구개발</td><td class="when">등록일</td><td>버그 영향도 분류 (기존 QES 분류체계 활용), RN 범위 1차 확정 및 최종 반영 이슈 판단, Known Issues 정리, 사내 베타 빌드 전달, 릴리스 품질 판정</td></tr>
     <tr><td class="num">2-2-4</td><td class="owner">TSS TS (교육/서포트)</td><td>기술 서비스</td><td class="when">출시일</td><td>외부 교육 자료 개발 및 실시, 고객 교육, 서포트 채널 모니터링</td></tr>
     <tr><td class="num">2-2-5</td><td class="owner">TSS TW (기술 문서)</td><td>기술 문서</td><td class="when">등록일 · 출시일</td><td>Revision Note 작성, 사용자 매뉴얼 업데이트, API 매뉴얼 업데이트. 최종본 확정은 등록일 기준, 외부 퍼블리시는 출시일 기준.</td></tr>
@@ -267,7 +267,7 @@
     <tr data-phase="r3" data-owner="XPS"><td class="num">4-1-13</td><td class="when" data-w="-1">W-1<span class="wdate"></span></td><td>BSS·QES·TSS TW 보고를 받아 <a href="#s8-2">8-2</a> 기준 충족 여부를 확인하고 등록 가부 판정. 미충족 시 등록일 조정</td><td class="owner"><span class="otag">XPS</span></td><td>등록 판정 결과</td></tr>
     <tr class="phase-row" data-phase="r4"><td colspan="5" data-w="0">GO 단계 (W0)<span class="wdate"></span></td></tr>
     <tr data-phase="r4" data-owner="BSS"><td class="num">4-1-14</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>개발 프로젝트 기반으로 슈프리마에 정식 제품으로 등록</td><td class="owner"><span class="otag">BSS</span></td><td>등록된 제품</td></tr>
-    <tr data-phase="r4" data-owner="TSS TW"><td class="num">4-1-15</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>확정된 최종 반영 범위를 RN에 반영하여 최종 Revision Note와 매뉴얼 배포본을 확정 (고객 대상 퍼블리시는 <a href="#s4-2">4-2-7</a>)</td><td class="owner"><span class="otag">TSS TW</span></td><td>확정된 Revision Note, 매뉴얼</td></tr>
+    <tr data-phase="r4" data-owner="TSS TW"><td class="num">4-1-15</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>확정된 최종 반영 범위를 RN에 반영하여 최종 Revision Note와 매뉴얼 배포본을 확정 (고객 대상 퍼블리시는 <a href="#s4-2">4-2-8</a>)</td><td class="owner"><span class="otag">TSS TW</span></td><td>확정된 Revision Note, 매뉴얼</td></tr>
   </tbody>
 </table>
 <p class="emptynote" hidden>선택한 담당의 항목이 등록 트랙에 없다.</p>
@@ -281,27 +281,30 @@
     <tr data-phase="l1" data-owner="XPS"><td class="num">4-2-1</td><td class="when" data-w="-6">W-6<span class="wdate"></span></td><td>PLI를 작성하여 MCS, TSS, KBS Sales, GBS, 지사에 배포</td><td class="owner"><span class="otag">XPS</span></td><td>PLI 문서</td></tr>
     <tr data-phase="l1" data-owner="MCS"><td class="num">4-2-2</td><td class="when" data-w="-6">W-6<span class="wdate"></span></td><td>마케팅 캠페인 기획 시작</td><td class="owner"><span class="otag">MCS</span></td><td>캠페인 전략</td></tr>
     <tr class="phase-row" data-phase="l2"><td colspan="5" data-w="-4,-3">READY 단계 (W-4 ~ W-3)<span class="wdate"></span></td></tr>
-    <tr data-phase="l2" data-owner="XPS"><td class="num">4-2-3</td><td class="when" data-w="-3">W-3<span class="wdate"></span></td><td><b>내부 인원 대상 온보딩 트레이닝(Webinar)</b>을 실시하고 잠정 Revision Note를 사내 공유</td><td class="owner"><span class="otag">XPS</span></td><td>내부 온보딩 완료, 잠정 Revision Note 사내 공유</td></tr>
+    <tr data-phase="l2" data-owner="BSS"><td class="num">4-2-3</td><td class="when" data-w="-4">W-4<span class="wdate"></span></td><td>알파 테스트 프로그램 진행</td><td class="owner"><span class="otag">BSS</span></td><td>알파 빌드 배포, 접수 이슈 목록</td></tr>
+    <tr data-phase="l2" data-owner="XPS"><td class="num">4-2-4</td><td class="when" data-w="-3">W-3<span class="wdate"></span></td><td><b>내부 인원 대상 온보딩 트레이닝(Webinar)</b>을 실시하고 잠정 Revision Note를 사내 공유</td><td class="owner"><span class="otag">XPS</span></td><td>내부 온보딩 완료, 잠정 Revision Note 사내 공유</td></tr>
     <tr class="phase-row" data-phase="l3"><td colspan="5" data-w="-2,-1">SET 단계 (W-2 ~ W-1)<span class="wdate"></span></td></tr>
-    <tr data-phase="l3" data-owner="TSS TS"><td class="num">4-2-4</td><td class="when" data-w="-2">W-2<span class="wdate"></span></td><td>외부 교육 자료를 완성하여 내부에 배포</td><td class="owner"><span class="otag">TSS TS</span></td><td>외부 교육 자료</td></tr>
-    <tr data-phase="l3" data-owner="MCS"><td class="num">4-2-5</td><td class="when" data-w="-2,-1">W-2~W-1<span class="wdate"></span></td><td>외부 교육 자료를 검수·최종화하고 마케팅 메시지 정합성 확인</td><td class="owner"><span class="otag">MCS</span></td><td>최종화된 외부 자료</td></tr>
-    <tr data-phase="l3" data-owner="XPS"><td class="num">4-2-6</td><td class="when" data-w="-1">W-1<span class="wdate"></span></td><td><b>제품 출시 미팅</b>을 주관하여 출시 준비 상태 점검 및 Go/No-Go 판정</td><td class="owner"><span class="otag">XPS</span></td><td>Go/No-Go 판정</td></tr>
+    <tr data-phase="l3" data-owner="TSS TS"><td class="num">4-2-5</td><td class="when" data-w="-2">W-2<span class="wdate"></span></td><td>외부 교육 자료를 완성하여 내부에 배포</td><td class="owner"><span class="otag">TSS TS</span></td><td>외부 교육 자료</td></tr>
+    <tr data-phase="l3" data-owner="MCS"><td class="num">4-2-6</td><td class="when" data-w="-2,-1">W-2~W-1<span class="wdate"></span></td><td>외부 교육 자료를 검수·최종화하고 마케팅 메시지 정합성 확인</td><td class="owner"><span class="otag">MCS</span></td><td>최종화된 외부 자료</td></tr>
+    <tr data-phase="l3" data-owner="XPS"><td class="num">4-2-7</td><td class="when" data-w="-1">W-1<span class="wdate"></span></td><td><b>제품 출시 미팅</b>을 주관하여 출시 준비 상태 점검 및 Go/No-Go 판정</td><td class="owner"><span class="otag">XPS</span></td><td>Go/No-Go 판정</td></tr>
     <tr class="phase-row" data-phase="l4"><td colspan="5" data-w="0,1">GO 단계 (W0 ~ W+1)<span class="wdate"></span></td></tr>
-    <tr data-phase="l4" data-owner="TSS TW"><td class="num">4-2-7</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>확정된 최종 Revision Note와 매뉴얼을 고객 대상으로 퍼블리시 (XPS 공개 승인 후)</td><td class="owner"><span class="otag">TSS TW</span></td><td>퍼블리시된 Revision Note, 매뉴얼</td></tr>
-    <tr data-phase="l4" data-owner="TSS TS"><td class="num">4-2-8</td><td class="when" data-w="0,1">W0~W+1<span class="wdate"></span></td><td>외부 교육 자료를 퍼블리시하고 고객 교육 실시 (출시 이후 지속)</td><td class="owner"><span class="otag">TSS TS</span></td><td>퍼블리시된 교육 자료, 고객 교육 실시</td></tr>
-    <tr data-phase="l4" data-owner="MCS"><td class="num">4-2-9</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>마케팅 캠페인 런치</td><td class="owner"><span class="otag">MCS</span></td><td>런치된 캠페인</td></tr>
-    <tr data-phase="l4" data-owner="XPS"><td class="num">4-2-10</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>지역 커뮤니케이션</td><td class="owner"><span class="otag">XPS</span></td><td>—</td></tr>
-    <tr data-phase="l4" data-owner="TSS TS"><td class="num">4-2-11</td><td class="when" data-w="0,1">W0~W+1<span class="wdate"></span></td><td>서포트 채널을 모니터링하고 접수된 이슈 대응</td><td class="owner"><span class="otag">TSS TS</span></td><td>서포트 이슈 대응 현황</td></tr>
-    <tr data-phase="l4" data-owner="XPS"><td class="num">4-2-12</td><td class="when" data-w="1">W+1<span class="wdate"></span></td><td>고객 피드백 모니터링</td><td class="owner"><span class="otag">XPS</span></td><td>—</td></tr>
-    <tr data-phase="l4" data-owner="MCS"><td class="num">4-2-13</td><td class="when" data-w="1">W+1<span class="wdate"></span></td><td>마케팅 캠페인 성과 추적</td><td class="owner"><span class="otag">MCS</span></td><td>캠페인 성과 리포트</td></tr>
+    <tr data-phase="l4" data-owner="TSS TW"><td class="num">4-2-8</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>확정된 최종 Revision Note와 매뉴얼을 고객 대상으로 퍼블리시 (XPS 공개 승인 후)</td><td class="owner"><span class="otag">TSS TW</span></td><td>퍼블리시된 Revision Note, 매뉴얼</td></tr>
+    <tr data-phase="l4" data-owner="TSS TS"><td class="num">4-2-9</td><td class="when" data-w="0,1">W0~W+1<span class="wdate"></span></td><td>외부 교육 자료를 퍼블리시하고 고객 교육 실시 (출시 이후 지속)</td><td class="owner"><span class="otag">TSS TS</span></td><td>퍼블리시된 교육 자료, 고객 교육 실시</td></tr>
+    <tr data-phase="l4" data-owner="MCS"><td class="num">4-2-10</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>마케팅 캠페인 런치</td><td class="owner"><span class="otag">MCS</span></td><td>런치된 캠페인</td></tr>
+    <tr data-phase="l4" data-owner="XPS"><td class="num">4-2-11</td><td class="when" data-w="0">W0<span class="wdate"></span></td><td>지역 커뮤니케이션</td><td class="owner"><span class="otag">XPS</span></td><td>—</td></tr>
+    <tr data-phase="l4" data-owner="TSS TS"><td class="num">4-2-12</td><td class="when" data-w="0,1">W0~W+1<span class="wdate"></span></td><td>서포트 채널을 모니터링하고 접수된 이슈 대응</td><td class="owner"><span class="otag">TSS TS</span></td><td>서포트 이슈 대응 현황</td></tr>
+    <tr data-phase="l4" data-owner="XPS"><td class="num">4-2-13</td><td class="when" data-w="1">W+1<span class="wdate"></span></td><td>고객 피드백 모니터링</td><td class="owner"><span class="otag">XPS</span></td><td>—</td></tr>
+    <tr data-phase="l4" data-owner="MCS"><td class="num">4-2-14</td><td class="when" data-w="1">W+1<span class="wdate"></span></td><td>마케팅 캠페인 성과 추적</td><td class="owner"><span class="otag">MCS</span></td><td>캠페인 성과 리포트</td></tr>
   </tbody>
 </table>
 <p class="emptynote" hidden>선택한 담당의 항목이 출시 트랙에 없다.</p>
 
 <div class="note"><b>표 읽는 법.</b> <b>담당</b>은 해당 미션이 완료되는 것에 최종 책임을 지는 조직이다. 활동 문장 안에 포함된 PM 리뷰·승인은 그 미션의 한 단계이며 별도 행으로 두지 않는다. 단계별 세부 담당은 <a href="#s5-1">5-1</a>, <a href="#sB">부록 B</a> 참조.</div>
 
-<div class="note"><b>트랙 간 선행 관계.</b> 출시 트랙의 아래 항목은 등록 트랙 산출물을 받아야 시작할 수 있다. <a href="#s4-2">4-2-3</a> 내부 온보딩은 <a href="#s4-1">4-1-7</a> 잠정 RN을, <a href="#s4-2">4-2-4</a> 외부 교육 자료는 <a href="#s4-1">4-1-11</a> 승인된 매뉴얼을, <a href="#s4-2">4-2-6</a> 제품 출시 미팅은 <a href="#s4-1">4-1-8</a>·<a href="#s4-1">4-1-10</a> Known Issues를, <a href="#s4-2">4-2-7</a> 퍼블리시는 <a href="#s4-1">4-1-15</a> 확정본을 받는다.<br>
+<div class="note"><b>트랙 간 선행 관계.</b> 출시 트랙의 아래 항목은 등록 트랙 산출물을 받아야 시작할 수 있다. <a href="#s4-2">4-2-4</a> 내부 온보딩은 <a href="#s4-1">4-1-7</a> 잠정 RN을, <a href="#s4-2">4-2-5</a> 외부 교육 자료는 <a href="#s4-1">4-1-11</a> 승인된 매뉴얼을, <a href="#s4-2">4-2-7</a> 제품 출시 미팅은 <a href="#s4-1">4-1-8</a>·<a href="#s4-1">4-1-10</a> Known Issues를, <a href="#s4-2">4-2-8</a> 퍼블리시는 <a href="#s4-1">4-1-15</a> 확정본을 받는다.<br>
 <b>권장 최소 간격 1주.</b> 등록일과 출시일이 같으면 외부 교육 자료 완성(출시 W-2)이 매뉴얼 승인(등록 W-1)보다 앞서는 역전이 남는다. 두 날짜를 <b>1주 이상</b> 벌리면 이 역전이 해소된다.</div>
+
+<div class="note"><b>내부 교육 시점.</b> 지사 대상 기술 교육(<a href="#s4-2">4-2-5</a>)은 현재 출시 W-2이며, <b>최종적으로 출시 W-4를 목표로 점진적으로 당긴다.</b> 내부 인원이 출시 전에 제품 내용을 습득할 시간을 충분히 확보하기 위함이다. 다만 교육 자료는 승인된 매뉴얼(<a href="#s4-1">4-1-11</a>, 등록 W-1)을 기반으로 하므로, 교육을 앞당기려면 등록일과 출시일의 간격도 함께 늘어나야 한다. 출시 W-3이면 2주, 출시 W-4면 3주가 필요하다.</div>
 
 <h2 id="s5">5. Revision Note 프로세스 <span class="tbadge">기준: 제품 등록일</span></h2>
 
