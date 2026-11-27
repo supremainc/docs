@@ -1099,7 +1099,7 @@ function createSidebars(preview) {
             },
             {
               type: 'category',
-              label: '방문자 신청 및 관리하기',
+              label: '방문 신청 및 관리하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_x/visitor',
