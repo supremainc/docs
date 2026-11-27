@@ -1,15 +1,15 @@
 ---
 id: tna-settings
-title: Set Time & Attendance
-description: You can register devices to use for attendance management or set the sender information to be used when sending notification emails.
+title: Set Up Time & Attendance
+description: You can register devices for Time & Attendance or set sender information for notification emails.
 keywords:
   - T&A (Time and Attendance)
   - Settings
 ---
 
-You can register devices to use for attendance management or set the sender information to be used when sending notification emails. You can also set the document delimiter for exporting attendance reports via CSV.
+You can register devices for Time & Attendance or set sender information for notification emails. You can also set the delimiter used to export T&A reports as CSV.
 
-## Access attendance management settings
+## Access Time & Attendance settings
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.tna' />.
 
@@ -21,27 +21,27 @@ You can register devices to use for attendance management or set the sender info
 
 <Image src='/img/biostarx-tna-settings.png' />
 
-## Attendance management settings
+## Time & Attendance settings
 
 ### <Cmd sid='setting.devices' product='2' className='normal' />
 
-List of devices that can be used for attendance management. To register as an attendance management device, select the desired device and click <Cmd sid='setting.register' product='2' />.
+This is a list of devices that you can use for Time & Attendance. To register a device for Time & Attendance, select the device and click <Cmd sid='setting.register' product='2' />.
 
 <Image src='/img/biostarx-tna-settings-unregister-list.png' />
 
 ### <Cmd sid='setting.registerDevices' product='2' className='normal' />
 
-List of devices currently used for attendance management. 
+This is a list of devices currently used for Time & Attendance. 
 
-* To unregister, select the desired device and click <Cmd sid='setting.unregister' product='2' />.
+* To unregister a device, select the device and click <Cmd sid='setting.unregister' product='2' />.
 
   <Image src='/img/biostarx-tna-settings-register-list.png' />
 
-* To edit the attendance settings of a registered device, click <Cmd sid='setting.setting' product='2' />. For more information about attendance settings, see <DocLink docId='platform/biostar_x/settings-device-details-advanced#attendance-management' />.
+* To edit Time & Attendance settings for a registered device, click <Cmd sid='setting.setting' product='2' />. For more information about attendance settings, see <DocLink docId='platform/biostar_x/settings-device-details-advanced#attendance-management' />.
 
   <Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
 
-  <Cmd sid='setting.typeCode' product='2' /> is a setting to map <Cmd sid='device.tna.eventKey' product='2' /> with attendance event types. Attendance event types are as follows:
+  The <Cmd sid='setting.typeCode' product='2' /> setting maps <Cmd sid='device.tna.eventKey' product='2' /> to attendance event types. Attendance event types are as follows.
 
   * <Cmd sid='PUNCH_TYPE_CHECK_IN' product='2' />
 
@@ -57,17 +57,17 @@ List of devices currently used for attendance management.
 
 :::info
 
-* You can only edit the attendance settings of a device when connected to the device.
+* You can edit a device's Time & Attendance settings only when you are connected to the device.
 
-* If you delete a registered device from the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> menu, the system also automatically deletes the registered attendance management device.
+* If you delete a registered device from the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> menu, the registered Time & Attendance device is also deleted automatically.
 
-* If you set the <Cmd sid='device.info.multiFaceAuth.label' product='2' /> option to <Cmd sid='common.use' product='2' />, the device does not support attendance management. For more information about <Cmd sid='device.info.multiFaceAuth.label' product='2' />, see <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />.
+* If you set the <Cmd sid='device.info.multiFaceAuth.label' product='2' /> option to <Cmd sid='common.use' product='2' />, you cannot use the device for Time & Attendance. For more information about <Cmd sid='device.info.multiFaceAuth.label' product='2' />, see <DocLink docId='platform/biostar_x/settings-device-details-auth#faceDetectionSettings' />.
 
 :::
 
 ### <Cmd sid='setting.triggerAction.senderInfor' product='2' className='normal' /> {/* #senderInfo */}
 
-You can set the sender information to be used when sending notification emails. Click <Cmd sid='button.edit' product='2' />.
+You can set sender information for notification emails. Click <Cmd sid='button.edit' product='2' />.
 
 <Image src='/img/biostarx-tna-settings-sender-info.png' />
 
@@ -77,12 +77,12 @@ import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
 
 ### <Cmd sid='setting.export' product='2' className='normal' />
 
-With the <Cmd sid='button.downloadToCsv' product='2' /> feature, you can choose the document delimiter when exporting attendance reports.
+The <Cmd sid='button.downloadToCsv' product='2' /> feature lets you choose the delimiter when exporting T&A reports.
 
 <Image src='/img/biostarx-tna-settings-export-csv.png' />
 
 ### <Cmd sid='tna.settings.punchlogs.optionTitle' product='2' className='normal' />
 
-You can set the period to store attendance records. Set the <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> option to <Cmd sid='common.active' product='2' /> and enter the period. To save the settings, click <Cmd sid='tna.settings.apply' product='2' />.
+You can set how long to store punch logs. Set the <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> option to <Cmd sid='common.active' product='2' /> and enter the period. To save the settings, click <Cmd sid='tna.settings.apply' product='2' />.
 
 <Image src='/img/biostarx-tna-settings-save-period.png' />

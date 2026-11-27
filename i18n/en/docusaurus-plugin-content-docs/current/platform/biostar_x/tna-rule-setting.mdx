@@ -1,22 +1,22 @@
 ---
 id: tna-rule-setting
-title: Set Shift
-description: This guide explains how to configure the attendance management rules by setting the work schedule in hourly, daily, and weekly units.
+title: Set Up Attendance Rules
+description: Learn how to configure attendance rules by setting up work schedules by hour, day, and week.
 keywords:
-  - Working rules
-  - Time Attendance
+  - attendance rules
+  - Time and attendance
 ---
 
-This guide explains how to configure the attendance management rules by setting the work schedule in hourly, daily, and weekly units.
+Learn how to configure attendance rules by setting up work schedules by hour, day, and week.
 
-If this is your first time registering working rules, follow the steps below to configure it.
+If this is your first time setting up attendance rules, follow the steps below in order.
 
 <Steps>
 <Step>
 
 ## <Cmd sid='tab.payCode' product='2' className='bold' />
 
-You can set time rules for attendance record management, overtime, and absences. You can set hourly weights and can color code them for easy identification.
+You can set time codes for time card management, overtime, and absences. You can set hourly weights and assign colors so you can identify them at a glance.
 
 For more information about the <Cmd sid='tab.payCode' product='2' className='normal' /> settings, see <DocLink docId='platform/biostar_x/tna-rule-shift-paycode' />.
 
@@ -25,7 +25,7 @@ For more information about the <Cmd sid='tab.payCode' product='2' className='nor
 
 ## <Cmd sid='tab.shift' product='2' className='bold' />
 
-You can set daily working rules based on a 24-hour period. Working rules include time rule settings based on time, daily start time settings, and time rounding rules.
+You can set a shift on a daily (24-hour) basis. A shift includes time code settings by time period, day start time settings, and time rounding rules.
 
 For more information about the <Cmd sid='tab.shift' product='2' className='normal' /> settings, see <DocLink docId='platform/biostar_x/tna-rule-shift-day' />.
 
@@ -34,7 +34,7 @@ For more information about the <Cmd sid='tab.shift' product='2' className='norma
 
 ## <Cmd sid='tab.scheduleTemplate' product='2' className='bold' />
 
-You can set weekly work rules based on the daily work rules configured. You can set weekly work rules on a weekly or daily basis.
+You can set up a schedule template based on the configured shift. You can set up schedule templates by week or by day.
 
 For more information about the <Cmd sid='tab.scheduleTemplate' product='2' className='normal' /> settings, see <DocLink docId='platform/biostar_x/tna-rule-shift-schedule' />.
 
@@ -43,7 +43,7 @@ For more information about the <Cmd sid='tab.scheduleTemplate' product='2' class
 
 ## <Cmd sid='rule.rule' product='2' className='bold' />
 
-This can be useful when you have not added overtime rules to the daily working rules. The overtime set in daily working rules has start and end times, but <Cmd sid='rule.rule' product='2' /> calculates the total time exceeding the regular working hours. <Cmd sid='rule.rule' product='2' /> can be conveniently used when managing the total overtime hours daily/weekly/monthly, and if you set <Cmd sid='rule.rule' product='2' />, it will apply instead of the overtime rule added to the working rules.
+This is useful when you do not add an overtime time code to a shift. Overtime set in a shift has start and end times, but <Cmd sid='rule.rule' product='2' /> calculates the total time beyond regular hours. <Cmd sid='rule.rule' product='2' /> is useful for managing total overtime hours on a daily, weekly, or monthly basis. When you set <Cmd sid='rule.rule' product='2' />, it applies instead of the overtime time codes added to the shift.
 
 For more information about the <Cmd sid='rule.rule' product='2' className='normal' /> settings, see <DocLink docId='platform/biostar_x/tna-rule-shift-overtime' />.
 
@@ -52,7 +52,7 @@ For more information about the <Cmd sid='rule.rule' product='2' className='norma
 
 ## Work schedule
 
-You can set the period to apply the working schedule configured in the previous step, along with users, other working rules, and leave schedules.
+You can set the period, users, rules, and leave schedules to apply the work schedule set in the previous step.
 
 For more information about the <Cmd sid='ta.schedule' product='2' className='normal' /> settings, see <DocLink docId='platform/biostar_x/tna-rule-schedule' />.
 

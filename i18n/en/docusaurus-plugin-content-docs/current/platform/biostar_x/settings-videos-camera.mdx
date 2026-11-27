@@ -1,7 +1,7 @@
 ---
 id: settings-videos-camera
 title: Set Up the Camera
-description: Learn how to add a camera to BioStar X after VMS integration and efficiently manage it by grouping. This covers how to set up cameras for real-time monitoring and video search.
+description: Learn how to add cameras to BioStar X after VMS integration and manage them efficiently by grouping them. It covers camera settings for real-time monitoring and video search.
 keywords:
   - Camera
   - Settings
@@ -9,27 +9,27 @@ keywords:
   - Group
 ---
 
-After completing the VMS integration, select and set up the cameras to be used in BioStar X. Appropriate camera configurations enable the use of the following security management features.
+After you complete VMS integration, you must select and set up the cameras to use in BioStar X. Proper camera settings enable the following security management features.
 
-* **Optional Monitoring**: You can add only the necessary cameras from all the cameras of VMS to **BioStar X**.
+* **Selective monitoring**: Add only the cameras you need from all cameras in VMS to **BioStar X**.
 
-* **Efficient Management**: Cameras can be systematically managed by grouping them according to location or purpose.
+* **Efficient management**: Group cameras to manage them systematically by location or purpose.
 
 :::info
 
 * For more information about how to integrate with the VMS server, see <DocLink docId='platform/biostar_x/settings-video-integration' />.
 
-* The camera group permission is required to add cameras or configure groups. For more information about camera group permissions, see <DocLink inner='#addCameraPermission' />.
+* Camera group permission is required to add cameras or set up groups. For more information about camera group permissions, see <DocLink inner='#addCameraPermission' />.
 
 :::
 
-## Camera settings and management
+## Set up and manage cameras
 
-After VMS integration, you can set up and manage cameras in the menu <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />.
+After VMS integration, you can set up and manage cameras in the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> menu.
 
 ### Add camera
 
-If integrated with VMS, you can add cameras connected to the VMS server to **BioStar X** and play live video and recorded footage on the <Cmd sid='shell.header.arena' /> page.
+If VMS is integrated, you can add cameras connected to the VMS server to **BioStar X** and play live and recorded video on the <Cmd sid='shell.header.arena' /> page.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -37,19 +37,19 @@ If integrated with VMS, you can add cameras connected to the VMS server to **Bio
 
 3. Click <Cmd sid='video.addCamera.button' product='2' />.
 
-4. When the <Cmd sid='video.addCamera' product='2' /> window appears, select the cameras to exclude from the list.
+4. When the <Cmd sid='video.addCamera' product='2' /> window appears, select the cameras to exclude from the camera list.
 
-   If your desired camera is not displayed, click <Cmd sid='video.addCamera.refresh' product='2' /> to refresh the camera list.
+   If a camera does not appear, click <Cmd sid='video.addCamera.refresh' product='2' /> to refresh the camera list.
 
 5. Once you have selected the cameras, click <Cmd sid='button.add' product='2' /> in the lower-right corner of the screen.
 
-You can check the added cameras in the camera list.
+The camera list shows the cameras you added.
 
 <Image src='/img/biostarx-settings-video-add-camera.png' />
 
 ### Edit camera information
 
-You can edit the information of the added cameras. You can change the camera name, group, description, etc.
+Edit information for the cameras you added. Change the camera name, group, and description.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -57,9 +57,9 @@ You can edit the information of the added cameras. You can change the camera nam
 
 3. Click the <Cmd sid='video.table.th.camera' product='2' /> tab in the upper-left corner of the screen.
 
-4. Click the camera you want to edit in the camera list.
+4. In the camera list, click the camera to edit.
 
-5. When the screen showing the camera information appears, edit your desired items.
+5. When the screen showing camera information appears, edit the fields.
 
    <Image src='/img/biostarx-settings-video-edit-camera-info.png' />
 
@@ -67,19 +67,19 @@ You can edit the information of the added cameras. You can change the camera nam
 
 :::info
 
-The camera ID and IP address cannot be modified.
+The camera ID and IP address cannot be edited.
 
 :::
 
-### Delete camera
+### Delete a camera
 
-You can delete the added cameras.
+Delete the cameras you added.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
 
-3. Click the checkbox on the far left of the camera you want to delete from the camera list. You can select more than one camera.
+3. In the camera list, select the checkbox on the far left of the camera to delete. You can select one or more cameras.
 
 4. Click <IcTrash /> <Cmd sid='video.camera.delete' product='2' /> in the upper-right corner of the screen.
 
@@ -89,17 +89,17 @@ You can delete the added cameras.
 
 :::info
 
-If the camera you want to delete is included in a rule, you cannot delete the camera. Remove the camera from the rule and try again. For more information about creating and managing rules, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
+If the camera you are deleting is included in a rule, you cannot delete it. Remove the camera from the rule, and then try again. For more information about creating and managing rules, see <DocLink docId='platform/biostar_x/settings-videos-rule' />.
 
 :::
 
-## Camera group settings and management
+## Set up and manage camera groups
 
-You can group multiple cameras to manage them systematically by location or purpose. Follow the steps below to create and manage camera groups.
+Group multiple cameras to manage them systematically by location or purpose. Follow the steps below to create and manage camera groups.
 
-### Camera group permission setting {/* #addCameraPermission */}
+### Set camera group permissions {/* #addCameraPermission */}
 
-Administrators need the camera group permission to add cameras or configure groups. System administrators, user administrators, and monitoring administrators have access to all camera groups. If you need different permission settings, add a custom permission to configure camera group access.
+An administrator needs camera group permissions to add cameras or set up groups. Administrators, user administrators, and monitoring administrators have permission for all camera groups. If you need separate permission settings, add a custom permission to set camera group permissions.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -117,23 +117,23 @@ Administrators need the camera group permission to add cameras or configure grou
 
    <Image src='/img/biostarx-settings-video-camera-add-custom-camera-group.png' />
 
-   * Select <Cmd sid='setting.account.group.allCameraGroups' product='2' /> to grant permissions for all camera groups.
+   * To grant permissions for all camera groups, select <Cmd sid='setting.account.group.allCameraGroups' product='2' />.
 
-   * To grant permissions for an individual camera group, select the desired group from the camera group list. You can select one or more groups.
+   * To grant permissions for an individual camera group, select a group shown in the camera group list. You can select one or more groups.
 
-6. In <Cmd sid='settings.account.addUser' product='2' />, click <Cmd sid='button.plusAdd' product='2' /> and select the users to assign permissions to.
+6. In <Cmd sid='settings.account.addUser' product='2' />, click <Cmd sid='button.plusAdd' product='2' /> and select the users to grant permissions to.
 
 7. To save the settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 :::info
 
-If you do not have permission for a specific camera group, you cannot view the cameras in that group.
+If you do not have permission for a camera group, you cannot view the cameras in that group.
 
 :::
 
-### Add camera group
+### Add a camera group
 
-You can group multiple cameras for management by adding a camera group.
+Add a camera group to manage multiple cameras as a group.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -141,33 +141,33 @@ You can group multiple cameras for management by adding a camera group.
 
 3. Click the <Cmd sid='video.table.th.camera' product='2' /> tab in the upper-left corner of the screen.
 
-4. Select <Cmd sid='video.camera.all.group' product='2' /> and right-click.
+4. Right-click <Cmd sid='video.camera.all.group' product='2' />.
 
    <Image src='/img/biostarx-settings-video-add-camera-group.png' />
 
 5. Click <Cmd sid='video.contextMenu.add.group' product='2' /> from the pop-up menu.
 
-6. Enter the desired group name and press the <Kbd>Enter</Kbd> key.
+6. Enter a group name and press <Kbd>Enter</Kbd>.
 
 :::info
 
-* You can create camera groups with up to 8 subgroups.
+* Camera groups can have up to eight levels of subgroups.
 
-* Camera group names can be entered up to 48 characters long.
+* Camera group names can be up to 48 characters.
 
-* When you select a camera group from the camera list, only the cameras belonging to that group will be displayed in the list.
+* When you select a camera group in the camera list, only the cameras in that group appear in the list.
 
 :::
 
-### Add multiple cameras to the group
+### Add multiple cameras to a group
 
-You can add more than one camera to the added group.
+You can add one or more cameras to the group you added.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
 
-3. Click the checkbox on the far left of the cameras to be added to the group in the camera list. You can select more than one camera.
+3. In the camera list, select the checkbox on the far left of each camera to add to the group. You can select one or more cameras.
 
 4. If you select more than one camera, <IcEditUL /> <Cmd sid='button.batchEdit' product='2' /> will be activated in the upper-right corner of the screen. Click <Cmd sid='button.batchEdit' product='2' />.
 
@@ -175,69 +175,69 @@ You can add more than one camera to the added group.
 
 5. When the <Cmd sid='button.batchEdit' product='2' /> window appears, click <Cmd sid='common.group' product='2' /> of the <IcEdit /> item.
 
-6. Select the desired group from the group list.
+6. Select a group from the group list.
 
 7. Click <Cmd sid='button.apply' product='2' />.
 
 :::info
 
-From the camera list in the <Cmd sid='video.table.th.camera' product='2' /> tab, you can also add cameras to the group by drag and drop.
+In the camera list on the <Cmd sid='video.table.th.camera' product='2' /> tab, you can also add cameras to a group by drag and drop.
 
 <Image src='/img/biostarx-settings-video-move-camera-group.png' alone />
 
 :::
 
-### Edit camera group name
+### Edit a camera group name
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
 
-3. Click the <Cmd sid='video.table.th.camera' product='2' /> tab.
+3. Click <Cmd sid='video.table.th.camera' product='2' />.
 
-4. Select the group you want to rename and right-click.
+4. Right-click the group to rename.
 
 5. Click <Cmd sid='video.contextMenu.rename.group' product='2' /> from the pop-up menu.
 
    <Image src='/img/biostarx-settings-video-rename-camera-group.png' />
 
-6. Enter the desired group name and press the <Kbd>Enter</Kbd> key.
+6. Enter a group name and press <Kbd>Enter</Kbd>.
 
-### Delete camera group
+### Delete a camera group
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
 
-3. Click the <Cmd sid='video.table.th.camera' product='2' /> tab.
+3. Click <Cmd sid='video.table.th.camera' product='2' />.
 
-4. Select the group you want to rename and right-click.
+4. Right-click the group to delete.
 
 5. Click <Cmd sid='video.contextMenu.delete.group' product='2' /> from the pop-up menu.
 
-6. Check the warning message and click <Cmd sid='button.yes' product='2' />.
+6. Check the warning message, and then click <Cmd sid='button.yes' product='2' />.
 
 :::info
 
-If the camera group contains cameras, you cannot delete the group. Move the cameras belonging to the group to another group or remove them from the group and try again.
+If the camera group contains cameras, you cannot delete the group. Move the cameras in the group to another group, or remove them from the group, and then try again.
 
 :::
 
-## Column settings
+## List column settings
 
-You can add or change the order of columns to display in the list, or set them to be hidden.
+You can add, reorder, or hide columns shown in the list.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> in the left sidebar.
 
-3. In the upper right corner of the <Cmd sid='video.header.all.camera' product='2' /> list, click <IcMoreW /> → <Cmd sid='columnSetting.dialog.header' product='2' />.
+3. In the upper-right corner of the <Cmd sid='video.header.all.camera' product='2' /> list, click <IcMoreW /> → <Cmd sid='columnSetting.dialog.header' product='2' />.
 
-4. When the <Cmd sid='columnSetting.dialog.header' product='2' /> window appears, you can click the checkboxes of the columns you want to display to add or set them to be hidden. To change the column order, drag and drop the columns.
+4. When the <Cmd sid='columnSetting.dialog.header' product='2' /> window appears, select or clear the checkbox for each column to show or hide it. To change the column order, drag and drop the columns.
 
    <Image src='/img/biostarx-settings-video-column-layout.png' />
 
-5. Once you have changed all column settings, click <Cmd sid='button.ok' product='2' />.
+5. After you change all column settings, click <Cmd sid='button.ok' product='2' />.
 
 :::info
 

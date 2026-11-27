@@ -1,40 +1,40 @@
 ---
 id: transfer-user-info-to-device
-title: Transfer User Information to the Device
-description: This guides on how to transfer user information to the registered device.
+title: Transfer User Information to Devices
+description: Learn how to transfer user information to registered devices.
 keywords:
   - User
   - Device
 ---
 
-Provides a feature to transmit user information registered on the **BioStar X** server to the device for access control. When user information is sent to the device, the device will use the user data to determine access permissions and can perform authentication even in offline environments.
+This feature transfers user information registered on the **BioStar X** server to devices for access control. When you transfer user information to a device, the device uses it to determine access permissions and can run authentication offline.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.user' />.
 
-2. Click the checkbox to the left of the user whose information you want to send from the user list. You can select one or more users.
+2. In the user list, select the checkbox at the far left of the user whose information to transfer. You can select one or more users.
 
 3. Select the <IcMoreW/> button in the upper-right corner of the screen and click <Cmd sid='team.menu.transferToDevice' />.
 
    <Image src='/img/biostarx-user-list-transfer-device.png' />
 
-4. When the <Cmd sid='team.menu.transferToDevice' /> window appears, select the device from the list to which you want to transfer user information.
+4. When the <Cmd sid='team.menu.transferToDevice' /> window appears, select the device to transfer user information to from the device list.
 
    <Image src='/img/biostarx-user-transfer-to-devices.png' width='50%' />
 
-5. If the information is different for the same ID, click the checkbox for the <Cmd sid='user.overwriteWhenTransfer' product='2' /> option to overwrite with the contents of the **BioStar X** server.
+5. To overwrite information that differs for the same ID with the information on the **BioStar X** server, select the <Cmd sid='user.overwriteWhenTransfer' product='2' /> checkbox.
 
-6. If you have selected all the devices to transfer, click <Cmd sid='common.apply' />.
+6. After you select all devices to transfer to, click <Cmd sid='common.apply' />.
 
-Transferring user information to the selected device.
+User information is transferred to the selected devices.
 
 :::info
 
-* You can also search for devices by entering keywords in the search input field.
+* You can also search for devices by entering a keyword in the search field.
 
-* To transfer user information, the device must be connected to the **BioStar X** server.
+* To transfer user information, make sure the device is connected to the **BioStar X** server.
 
-* If you change information for a user who is already registered on the device, you must resend the user information to reflect the changes on the device. For information on using the <Cmd sid='setting.server.automaticUserSync' product='2' /> option to synchronize user information with the device, see <DocLink docId='platform/biostar_x/settings-server-server#user-sync' />.
+* If you change information for a user already registered on the device, you must resend the user information to apply the changes to the device. For more information about using the <Cmd sid='setting.server.automaticUserSync' product='2' /> option to synchronize user information with devices, see <DocLink docId='platform/biostar_x/settings-server-server#user-sync' />.
 
-* There is a limit to the number of users that can be registered on each device. Check the number of users that can be registered to the device.
+* Each device has a limit to the number of users that can be registered. Check the number of users that can be registered on the device.
 
 :::
