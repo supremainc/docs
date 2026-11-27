@@ -1,25 +1,25 @@
 ---
 id: settings-adding-slave-device
-title: Register Slave
-description: This provides guidance on adding a slave to the master.
+title: Register a Slave Device
+description: Learn how to add a slave device to a master device.
 keywords:
   - Device
   - slave device
 ---
 
-You can easily expand the access control system network by adding a [slave device](../../reference/glossary#slave_device) to the registered [master device](../../reference/glossary#master_device). The master and slave devices can be connected via RS-485 communication. In addition to devices, add-on devices such as Secure I/O 2 can also be connected and used.
+Easily expand the access control system network by adding a [slave device](../../reference/glossary#slave_device) to the registered [master device](../../reference/glossary#master_device). You can connect the master device and slave device via RS-485. You can also connect and use add-on devices such as Secure I/O 2.
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
 2. Click <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.device' /> in the left sidebar.
 
-3. Right-click on the master or slave device in the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list.
+3. Right-click the master or slave device in the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list.
 
    <Image src='/img/biostarx-setting-device-adding-slave-device.png' />
 
 4. Click <Cmd sid='device.menu.searchSlaveDevice' product='2' /> in the pop-up menu.
 
-5. When the list of slave devices connected to the master device appears, select the device to register. If the desired device is not listed, click <Cmd sid='button.search' product='2' /> in the upper right corner.
+5. When the list of slave devices connected to the master device appears, select the device to register. If the device is not listed, click <Cmd sid='button.search' product='2' /> in the upper-right corner.
 
    <Image src='/img/biostarx-setting-device-adding-slave-list.png' />
 
@@ -27,19 +27,19 @@ You can easily expand the access control system network by adding a [slave devic
 
 7. When the device registration confirmation message appears, click <Cmd sid='button.ok' product='2' />.
 
-The registered slave device will appear under the selected device. In the device list, the master shows the <Mastermark /> icon, and the slave shows the <Slavemark /> icon.
+The registered slave device appears under the selected device. In the device list, master devices show the <Mastermark /> icon, and slave devices show the <Slavemark /> icon.
 
 <Image src='/img/biostarx-setting-device-list-with-slace.png' />
 
 :::info
 
-* You cannot add a facial authentication device as a slave when the master device is a fingerprint authentication device.
+* You cannot add a facial authentication device as a slave device when the master device is a fingerprint authentication device.
 
-* You cannot add a facial authentication device as a slave if the master device is a facial authentication device and another slave device has already been added.
+* You cannot add a facial authentication device as a slave device if another slave device has already been added to a facial authentication master device.
 
-* Only one facial authentication device can be added as a slave when connecting a facial authentication device as the master.
+* When a facial authentication device is the master, you can add only one facial authentication device as a slave.
 
-* When connecting a facial authentication device as the master, you can additionally connect one Secure I/O 2 and one DM-20.
+* When a facial authentication device is the master and you connect a facial authentication device as a slave, you can additionally connect one Secure I/O 2 and one DM-20.
 
 * The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication performance.
 

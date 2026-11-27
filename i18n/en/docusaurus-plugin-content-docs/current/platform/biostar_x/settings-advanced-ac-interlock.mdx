@@ -1,35 +1,35 @@
 ---
 id: settings-advanced-ac-interlock
 title: Interlock
-description: Guidance on how to set interlock. Interlock is a method of access control that enhances security by blocking access to other doors when one door is open among multiple doors.
+description: Learn how to set up interlock. Interlock is an access control method that enhances security by blocking access through other doors when one door is open.
 keywords:
   - Advanced access control
   - Interlock
 ---
 
-Interlock is an access control method used in areas where security is important. When interlock is set up in a location with two or more doors, it operates as follows.
+Interlock is an access control method used in areas where security is critical. When you set up interlock in a location with two or more doors, it operates as follows.
 
-* Monitor the status of each door in real-time via door sensors and relays.
+* It monitors the status of each door in real time through door sensors and relays.
 
-* If one door is open or unlocked, all other doors automatically enter a locked state.
+* If one door is open or unlocked, all other doors automatically become locked.
 
-* You can set it to block additional access while a user is present at the location.
+* You can set it to block additional access while a user remains in the area.
 
-This method enhances security by preventing multiple doors from being opened simultaneously.
+This prevents multiple doors from opening at the same time and enhances security.
 
 :::info
 
-* A single interlock setting can consist of up to 4 doors.
+* A single interlock zone can include up to four doors.
 
-* Only doors composed of devices connected to CoreStation can have interlock set up.
+* You can set up interlock only for doors made up of devices connected to CoreStation.
 
-* Devices set as interlock cannot be used in other interlock settings.
+* Devices used in an interlock zone cannot be used in another interlock zone.
 
-* Doors set as interlock cannot be used in other settings, except fire alarm settings.
+* Doors used in an interlock zone cannot be used in other settings, except fire alarm settings.
 
 :::
 
-## Register interlock {/* #addInterlockZone */}
+## Register an interlock {/* #addInterlockZone */}
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -37,30 +37,30 @@ This method enhances security by preventing multiple doors from being opened sim
 
 3. Click <Cmd sid='button.func.addZone' product='2' />.
 
-4. Select <Cmd sid='zone.interLock' product='2' /> and click <Cmd sid='button.apply' product='2' />.
+4. Select <Cmd sid='zone.interLock' product='2' />, then click <Cmd sid='button.apply' product='2' />.
 
-5. Enter the name of the interlock setting to be added in the <Cmd sid='common.information' product='2' /> section.
+5. In the <Cmd sid='common.information' product='2' /> section, enter the name of the interlock zone to add.
 
    <Image src='/img/biostarx-settings-adv-ac-add-interlock.png' />
 
-6. Set the details of the interlock setting in the <Cmd sid='common.setting' product='2' /> section. For more information, see <DocLink inner='#setting' />.
+6. In the <Cmd sid='common.setting' product='2' /> section, set the details for the interlock zone. For more information, see <DocLink inner='#setting' />.
 
-7. You can set it up so that access is not allowed when a user is present in the <Cmd sid='common.option' product='2' /> section.
+7. In the <Cmd sid='common.option' product='2' /> section, you can set access to be blocked while a user is present.
 
-8. In the <Cmd sid='common.alarm' product='2' /> section, set the actions to be performed when specific events occur in the interlock setting.
+8. In the <Cmd sid='common.alarm' product='2' /> section, set the actions to run when specific events occur in the interlock zone.
 
 :::info
 
-The <Cmd sid='common.option' product='2' /> and <Cmd sid='common.alarm' product='2' /> sections can only be used if the <Cmd sid='zone.pause.doorselected' product='2' /> option is set in the <Cmd sid='common.setting' product='2' /> section.
+The <Cmd sid='common.option' product='2' /> and <Cmd sid='common.alarm' product='2' /> sections are available only when, in the <Cmd sid='common.setting' product='2' /> section, you set <Cmd sid='zone.pause.doorselected' product='2' />.
 
 :::
 
 ## Setting options {/* #setting */}
 
-The details for interlock settings are as follows.
+The detailed settings for interlock zones are as follows.
 
-* <Cmd sid='zone.globalZone' product='2' />: Set the scope. Interlock settings only support <Cmd sid='zone.globalZone.local' product='2' /> mode and can only be set with devices connected to CoreStation via RS-485.
+* <Cmd sid='zone.globalZone' product='2' />: Set the scope. Interlock zone settings support only <Cmd sid='zone.globalZone.local' product='2' /> mode and require devices connected to CoreStation via RS-485.
 
 * <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />: Turn the setting on, or turn it off temporarily.
 
-* <Cmd sid='zone.pause.doorselected' product='2' />: Select the door to be designated as an interlock. You must select at least 2 or more doors, and only doors with connected door sensors can be added.
+* <Cmd sid='zone.pause.doorselected' product='2' />: Select the doors to include in the interlock zone. You must select at least two doors, and you can add only doors with a door sensor connected.
