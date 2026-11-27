@@ -1,7 +1,7 @@
 ---
 id: settings-diretory-integration
-title: Directory Integration Settings
-description: This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.
+title: Set Up Directory Integration
+description: Learn how to synchronize and manage users by integrating Microsoft Entra ID with BioStar X.
 toc_max_heading_level: 2
 ---
 
@@ -9,25 +9,25 @@ import UserGroupFilter from '../../common/_usergroupfilter.mdx';
 import UserCustomField from '../../common/_usercustomfield.mdx';
 import SyncIntegration from '../../common/_sync-with-integ.mdx';
 
-This document provides guidance on how to synchronize and manage users by integrating **Microsoft Entra ID** (hereafter **Entra ID**) or **Active Directory** with **BioStar X**. 
+Learn how to synchronize and manage users by integrating **Microsoft Entra ID** (hereafter **Entra ID**) or **Active Directory** with **BioStar X**. 
 
-Integrating with **Entra ID** or **Active Directory** provides the following convenient features, enhancing both security and usability. This enhances both security and convenience.
+Integrating with **Entra ID** or **Active Directory** provides the following convenient features. This improves security and convenience.
 
-* You can log in to BioStar X using your **Entra ID** account via Single Sign-On (SSO) provided by **Entra ID**.
+* You can log in to **BioStar X** using your **Entra ID** account through the Single Sign-On (SSO) feature provided by **Entra ID**.
 
 * You can log in to **BioStar X** using Lightweight Directory Access Protocol (LDAP) authentication provided by **Active Directory**.
 
-* Users and groups configured in **Entra ID** or **Active Directory** can be synchronized with **BioStar X**.
+* You can synchronize users and groups configured in **Entra ID** or **Active Directory** with **BioStar X**.
 
 * You can map user information such as job title, department, and group used in **Entra ID** or **Active Directory** to the custom fields of **BioStar X**.
 
 :::info
 
-The **Entra ID** or **Active Directory** settings feature is available as an add-on with the **Essential** license or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
+The **Entra ID** or **Active Directory** settings feature is available as an add-on option with an **Essential** license or higher. For more information about licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
-## Directory integration settings {/* #intergratewithentraid */}
+## Set up directory integration {/* #intergratewithentraid */}
 
 <Tabs>
 <TabItem label='Entra ID' value='entraid'>
@@ -38,11 +38,11 @@ The **Entra ID** or **Active Directory** settings feature is available as an add
 
 3. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> in the left sidebar.
 
-4. Select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
+4. In <Cmd sid='settings.activeDirectory.title' product='2' />, select <Cmd sid='settings.activeDirectory.AdServerNew' product='2' />.
 
    <Image src='/img/biostarx-setting-directory-integ-entraid.png' />
 
-5. Set each item as instructed below.
+5. Set each field as instructed below.
 
 :::info
 
@@ -55,15 +55,15 @@ To integrate with Entra ID, go to <Cmd sid='setting.menu.system.root' /> → <Cm
 
 ### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {/* #EntraidServer */}
 
-Enter the server information for **Entra ID** and click <Cmd sid='settings.activeDirectory.Connect' product='2' /> in <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />.
+In the <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> section, enter the server information for **Entra ID** and click <Cmd sid='settings.activeDirectory.Connect' product='2' />.
 
 <Image src='/img/biostarx-setting-directory-server.png' />
 
 * <Cmd sid='settings.activeDirectory.ClientID' product='2' />: Enter the **Client ID** of the application registered in **Entra ID**.
 
-* <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />: Enter the **Client secret** added in **Certificates & secrets** of the application registered in **Entra ID**.
+* <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />: Enter the client secret added under **Client secrets** in **Certificates & secrets** for the application registered in **Entra ID**.
 
-* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />: Enter the primary domain name that you input when creating your organization in **Entra ID**.
+* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />: Enter the primary domain name that you entered when you created your organization in **Entra ID**.
 
 :::info
 
@@ -71,9 +71,9 @@ Enter the server information for **Entra ID** and click <Cmd sid='settings.activ
 
 * For more information about configuring **Certificates & secrets** in **Entra ID**, see [the following link](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret).
 
-* **Tenant ID** can be found in the **Overview** of the registered application in **Entra ID**.
+* Find the **Tenant ID** in **Overview** for the application registered in **Entra ID**.
 
-* You can check the information for <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' /> in the **Overview** of **Entra ID**.
+* Find the <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' /> information in **Overview** in **Entra ID**.
 
   <Image src='/img/biostarx-setting-directory-primary-domain.png' />
 
@@ -93,7 +93,7 @@ Enter the server information for **Entra ID** and click <Cmd sid='settings.activ
 
 :::info
 
-By default, **BioStar X** maps each user field to a matching user information field in <strong>Entra ID</strong>. To use a field value other than the default, click an entry in the <Cmd sid='settings.activeDirectory.FieldNameEI' product='2' /> column and select a different field value.
+By default, each user field in **BioStar X** maps to a matching user information field in <strong>Entra ID</strong>. To select a field value other than the default, click an entry in the <Cmd sid='settings.activeDirectory.FieldNameEI' product='2' /> column and select a different field value.
 
 <Image src='/img/biostarx-setting-directory-userfield-select-other.png' />
 
@@ -101,7 +101,7 @@ By default, **BioStar X** maps each user field to a matching user information fi
 
 :::caution
 
-The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrating with **Entra ID**. <Cmd sid='common.userId' product='2' /> is automatically generated and applied by **BioStar X**.
+The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrating with **Entra ID**. **BioStar X** automatically generates and applies <Cmd sid='common.userId' product='2' />.
 
 :::
 
@@ -111,11 +111,11 @@ The <Cmd sid='common.userId' product='2' /> field cannot be mapped when integrat
 
 ### <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> {/* #setssoEntraid */}
 
-Change the <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> to <Cmd sid='device.info.enabled' product='2' /> to enable login to **BioStar X** using **Entra ID SSO**.
+To enable login to **BioStar X** using **Entra ID SSO**, set <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> to <Cmd sid='device.info.enabled' product='2' />.
 
 <Image src='/img/biostarx-setting-directory-login-with-entraid.png' />
 
-Copy the redirection URI from the <Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> field(<IcCopy2 />) and paste it into the SSO redirection settings in the **Entra ID** portal. When a user successfully logs in with **Entra ID**, they will be redirected to this address.
+Copy the redirection URI in <Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> (<IcCopy2 />), and paste it into the SSO redirection settings in the **Entra ID** portal. When a user successfully logs in with **Entra ID**, they are redirected to this address.
 
 :::info
 
@@ -123,9 +123,9 @@ Copy the redirection URI from the <Cmd sid='settings.activeDirectory.Redirection
 
   * [Register an application in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
 
-  * [How to add a redirect URI to your application](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
+  * [Add a redirect URI to an application](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
 
-* The redirection address can be found in the **Overview** of the registered application in **Entra ID**.
+* Find the redirect URI in **Overview** for the application registered in **Entra ID**.
 
 :::
 
@@ -138,9 +138,9 @@ Copy the redirection URI from the <Cmd sid='settings.activeDirectory.Redirection
 </Step>
 <Step>
 
-### Save Settings
+### Save settings
 
-After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. To view the settings results, see <DocLink inner='#checksettings' />.
+After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. To check the settings results, see <DocLink inner='#checksettings' />.
 
 </Step>
 
@@ -156,18 +156,17 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 
 3. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> in the left sidebar.
 
-4. Select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
+4. In <Cmd sid='settings.activeDirectory.title' product='2' />, select <Cmd sid='settings.activeDirectory.AdServerOld' product='2' />.
 
    <Image src='/img/biostarx-setting-directory-integ-ad.png' />
 
-5. Set each item as instructed below.
+5. Set each field as instructed below.
 
 :::info
 
-* The Active Directory is available for a system environment with Windows Server 2008 R2 or
-  later.
+* Active Directory is available on systems running Windows Server 2008 R2 or later.
 
-* To integrate with Active Directory, go to <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.server' product='2' /> and set <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
+* To integrate with Active Directory, click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.server' product='2' />, and set <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
 
 :::
 
@@ -177,29 +176,29 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 
 ### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {/* #ADserver */}
 
-Enter the server information for **Active Directory** and click <Cmd sid='settings.activeDirectory.Connect' product='2' /> in <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />.
+In the <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> section, enter the server information for **Active Directory**, and then click <Cmd sid='settings.activeDirectory.Connect' product='2' />.
 
 <Image src='/img/biostarx-setting-directory-ad-server.png' />
 
-* <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />: Enter the server address for Windows Active Directory.
+* <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />: Enter the Windows Active Directory server address.
 
-* <Cmd sid='settings.activeDirectory.UserName' product='2' />: Enter the user name used by Windows Active Directory.
+* <Cmd sid='settings.activeDirectory.UserName' product='2' />: Enter the Windows Active Directory login ID.
 
-* <Cmd sid='settings.activeDirectory.Password' product='2' />: Enter the password used by Windows Active Directory.
+* <Cmd sid='settings.activeDirectory.Password' product='2' />: Enter the Windows Active Directory login password.
 
-* <Cmd sid='settings.activeDirectory.DomainNode' product='2' />: Enter the base domain name for Windows Active Directory. You can find the base domain name in the following steps:
+* <Cmd sid='settings.activeDirectory.DomainNode' product='2' />: Enter the default domain name for Windows Active Directory. To find the default domain name, follow these steps.
 
-  1. Run the **Active Directory Administrative Center**.
+  1. Run **Active Directory Administrative Center**.
 
-  2. Right-click on the node where user data is stored, and then click **Property**.
+  2. Right-click the node where user data is stored, and then select **Properties**.
 
-  3. In the **property** window, select **Expand** and then click **Attribute Editor**.
+  3. In the **Properties** window, select **Extensions**, and then click **Attribute Editor**.
 
-  4. View the value of **distinguishedName**.
+  4. Check the **distinguishedName** value.
 
-* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: You can use encryption when communicating with the Windows Active Directory server. To install Active Directory Certificate Services and configure the <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, see <DocLink docId='platform/biostar_x/ad-encrypt' />.
+* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: Turn on encryption when communicating with the Windows Active Directory server. To install Active Directory Certificate Services and set <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, see <DocLink docId='platform/biostar_x/ad-encrypt' />.
 
-  * <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />: Enter the password for the encryption key store of the Windows Active Directory server. You can enter the password when the <Cmd sid='settings.activeDirectory.secureTransfer' product='2' /> is set to <Cmd sid='device.info.enabled' product='2' />.
+  * <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />: Enter the password for the encryption key store on the Windows Active Directory server. This field is available when <Cmd sid='settings.activeDirectory.secureTransfer' product='2' /> is set to <Cmd sid='device.info.enabled' product='2' />.
 
 </Step>
 
@@ -215,7 +214,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
 :::info
 
-By default, **BioStar X** maps each user field to a matching user information field in <strong>Active Directory</strong>. To use a field value other than the default, click an entry in the <Cmd sid='settings.activeDirectory.FieldNameAD' product='2' /> column and select a different field value.
+By default, each user field in **BioStar X** maps to a matching user information field in <strong>Active Directory</strong>. To select a field value other than the default, click an entry in the <Cmd sid='settings.activeDirectory.FieldNameAD' product='2' /> column and select a different field value.
 
 <Image src='/img/biostarx-setting-directory-userfield-select-other-ad.png' />
 
@@ -227,11 +226,11 @@ By default, **BioStar X** maps each user field to a matching user information fi
 
 ### <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> {/* #setssoAD */}
 
-To configure login to **BioStar X** using the user ID of the Active Directory server, change the <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> to <Cmd sid='device.info.enabled' product='2' />. The value of the `sAMAccountName` field from the Active Directory server will be mapped to the **BioStar X** login ID.
+To set up login with the user ID of the Active Directory server, change <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> to <Cmd sid='device.info.enabled' product='2' />. The value of the `sAMAccountName` field from the Active Directory server is mapped to the **BioStar X** login ID.
 
 :::caution
 
-The `sAMAccountName` field cannot contain special characters. You may fail to log in if it does not comply with the login ID policy of **BioStar X**.
+Special characters are not allowed in the `sAMAccountName` field. If the value does not comply with the **BioStar X** login ID policy, login may fail.
 
 :::
 
@@ -246,9 +245,9 @@ The `sAMAccountName` field cannot contain special characters. You may fail to lo
 </Step>
 <Step>
 
-### Save Settings
+### Save settings
 
-After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. To view the settings results, see <DocLink inner='#checksettings' />.
+After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. To check the settings results, see <DocLink inner='#checksettings' />.
 
 </Step>
 </Steps>
@@ -258,32 +257,32 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 
 ## Check settings results {/* #checksettings */}
 
-After completing the integration settings with **Entra ID** or **Active Directory**, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. Refer to the following to check the synchronized settings.
+After you complete the integration settings for **Entra ID** or **Active Directory**, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. Check the synchronized settings as follows.
 
-* You can check the synchronized user list in the <Cmd sid='common.user' product='2' /> menu.
+* In the <Cmd sid='common.user' product='2' /> menu, check the synchronized user list.
 
-* After completing the login settings with **Entra ID** or **Active Directory**, you can see <Cmd sid='login.entraidLoginBtn' product='2' /> when logging in to **BioStar X**.
+* After you complete the login settings with **Entra ID** or **Active Directory**, <Cmd sid='login.entraidLoginBtn' product='2' /> appears when you log in to **BioStar X**.
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
 ## Handle unsupported characters {/* #unsupportedcharacter */}
 
-If a user ID or name in **Entra ID** or **Active Directory** includes unsupported characters, the system synchronizes the user after removing them.
+If a user ID or user name in **Entra ID** or **Active Directory** includes unsupported characters, the system synchronizes the user after removing only the unsupported characters.
 
-> For example, if a directory service user id is `john/doe` and the user name is `John<Doe>`, **BioStar X** registers them as `johndoe` and `JohnDoe`.
+> For example, if a directory service user ID is `john/doe` and the user name is `John<Doe>`, **BioStar X** registers them as `johndoe` and `JohnDoe`.
 
 :::info
 
-* The system excludes periods(`.`) and apostrophes(`'`) in user names from unsupported characters and saves the original directory service values. 
+* Periods (`.`) and apostrophes (`'`) in user names are not treated as unsupported characters, so the system registers the directory service values as is. 
 
-  > Example: `O'Brien`, `John.Doe` → Saved with the original directory service values
+  > Example: `O'Brien`, `John.Doe` → registered with the directory service values as is
 
-* The system excludes periods(`.`) from unsupported characters in user IDs and saves the original directory service values, but removes apostrophes(`'`) because user IDs cannot include them. 
+* Periods (`.`) in user IDs are excluded from unsupported characters and are registered as is, but apostrophes (`'`) are removed because user IDs cannot include them. 
 
   > Directory service user ID examples:
   >
-  > * `O'Brien` → Saved as `OBrien` 
-  > * `john.doe` → Saved as `john.doe`
+  > * `O'Brien` → registered as `OBrien` 
+  > * `john.doe` → registered as `john.doe`
 
 * For more information about user ID and name input rules, see <DocLink docId='platform/biostar_x/add-user-basic-info' />.
 
@@ -291,15 +290,15 @@ If a user ID or name in **Entra ID** or **Active Directory** includes unsupporte
 
 ## Exclude from directory integration {/* #excludeintegration */}
 
-When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='setting.menu.directoryIntegration.root' /> feature, users who do not exist in the directory service may be deleted from **BioStar X**. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
+When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='setting.menu.directoryIntegration.root' /> feature, users who do not exist in the directory service may be deleted from **BioStar X**. If any users should not be deleted, exclude them from the integration using the following method.
 
 1. Log in to **BioStar X** with an administrator account.
 
 2. Go to the <Cmd sid='common.user' product='2' /> menu.
 
-3. Click on the user you want to exclude from the integration in the <Cmd sid='menu.user.allUserGroups' product='2' /> list.
+3. In the <Cmd sid='menu.user.allUserGroups' product='2' /> list, click the user to exclude from integration.
 
-4. When the selected user's details screen appears, in the <Cmd sid='common.advanced' product='2' /> section, enable the <Cmd sid='user.adsync.exclude' product='2' /> option.
+4. When the selected user's details screen appears, turn on the <Cmd sid='user.adsync.exclude' product='2' /> option in the <Cmd sid='common.advanced' product='2' /> section.
 
    <Image src='/img/biostarx-user-advance-exclude-sync.png' />
 
@@ -309,29 +308,29 @@ The selected users will be excluded from integration when using the <Cmd sid='se
 
 :::info
 
-The system automatically excludes these users from integration.
+The system automatically excludes these users from directory integration.
 
-* When a user name starts with `&@~` consecutively at the beginning
+* When a user name starts with `&@~`
 
-* User id or user name is blank
+* When the user ID or user name is blank
 
-* The user ID (up to 32 characters) or user name (up to 48 characters) exceeds the length limit
+* When the user ID (up to 32 characters) or user name (up to 48 characters) exceeds the length limit
 
-* user id matches a system-reserved value, such as `admin`
+* When the user ID matches a system-reserved value, such as `admin`
 
-* The user ID is a single period (`.`) or two periods (`..`)
+* When the user ID is a single period (`.`) or two periods (`..`)
 
 :::
 
 ## Disable directory integration {/* #disableIntegration */}
 
-To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature, follow the steps:
+To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature, follow these steps.
 
 1. Log in to **BioStar X** with an administrator account.
 
 2. Click <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
 
-3. Select <Cmd sid='settings.activeDirectory.notUse' product='2' /> in <Cmd sid='settings.activeDirectory.title' product='2' />.
+3. In <Cmd sid='settings.activeDirectory.title' product='2' />, select <Cmd sid='settings.activeDirectory.notUse' product='2' />.
 
    <Image src='/img/biostarx-setting-directory-unset.png' />
 
@@ -343,6 +342,6 @@ To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature,
 
 :::caution
 
-When the <Cmd sid='settings.activeDirectory.title' product='2' /> is set to <Cmd sid='settings.activeDirectory.notUse' product='2' />, all integration settings with **Entra ID** or **Active Directory** in **BioStar X** will be removed. The integrated user and group information will not be deleted, but will no longer be synchronized. Please make sure to check before disabling the integration.
+When <Cmd sid='settings.activeDirectory.title' product='2' /> is set to <Cmd sid='settings.activeDirectory.notUse' product='2' />, all settings for integration with **Entra ID** or **Active Directory** in **BioStar X** are disabled. Integrated user and group information is not deleted, but it is no longer synchronized. Make sure you check before disabling integration.
 
 :::

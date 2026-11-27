@@ -1,27 +1,27 @@
 ---
 id: settings-email-setting
-title: Email Setting
-description: You can configure information such as the subject line of the email that will send the mobile link for face enrollment, the company name, company logo, and contact details.
+title: Set Up Email Settings
+description: Set the email subject, company name, company logo, and contact details to send face enrollment mobile links or issue QR/barcodes.
 keywords:
-  - Email Setting
-  - Enroll face
+  - Email settings
+  - Face enrollment
 ---
 
-You can configure information such as the subject line of the email that will send the mobile link for face enrollment, the company name, company logo, and contact details.
+Set the email subject, company name, company logo, and contact details to send face enrollment mobile links or issue QR/barcodes.
 
 :::info
 
-* You must register the user's email address in the user information to send the mobile link for face enrollment or issue a QR/Barcode. For more information about user details, see <DocLink docId='platform/biostar_x/add-user-basic-info' />.
+* To send a face enrollment mobile link to users or issue a QR/barcode, an email address must be registered in the user information. For more information about user details, see <DocLink docId='platform/biostar_x/add-user-basic-info' />.
 
-* The devices that can perform **facial authentication** are as follows.
+* The following devices support **facial authentication**.
 
   * FaceStation F2, BioStation 3, BioEntry W3, BioStation 3 Max
 
-* The devices that can use **QR/Barcode authentication through scanner** are as follows.
+* The following devices support **QR/Barcode authentication with a scanner**.
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB)
 
-* The devices that can use **QR/Barcode authentication through camera** are as follows.
+* The following devices support **QR/Barcode authentication with a camera**.
 
   * BioStation 3 Max firmware v1.0.0 or later
 
@@ -31,7 +31,7 @@ You can configure information such as the subject line of the email that will se
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB) firmware v1.4.1 or later
 
-* Using **Use QR/Barcode through Camera** requires a separate device license. For more information about device licenses, see <DocLink docId='platform/biostar_x/settings-license-device-license' />.
+* To use **QR/Barcode authentication with a camera**, you need a separate device license. For more information about device licenses, see <DocLink docId='platform/biostar_x/settings-license-device-license' />.
 
 :::
 
@@ -51,21 +51,21 @@ Enter the SMTP server information for sending emails.
 
 import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
 
-* <Cmd sid="common.emailContent.smtp" product='2' />: Set the SMTP(Simple Mail Transfer Protocol) for sending emails. Click <Cmd sid='button.smtpSetting' product='2' /> to open the <Cmd sid="common.emailContent.smtp" product='2' /> settings window.
+* <Cmd sid="common.emailContent.smtp" product='2' />: Set up Simple Mail Transfer Protocol (SMTP) for sending emails. When you click <Cmd sid='button.smtpSetting' product='2' />, the <Cmd sid="common.emailContent.smtp" product='2' /> settings window appears.
 
   <Image src='/img/biostarx-settings-email-smtp-option.png' className='none' />
 
   <EmailSmtpOptions />
 
-* <Cmd sid="common.emailContent.smtpTestMail" product='2' />: To check if there are any issues with the SMTP settings, enter the email address to receive the email and click <Cmd sid="button.smtpSettingTest" product='2' />.
+* <Cmd sid="common.emailContent.smtpTestMail" product='2' />: To check that the SMTP settings work, enter a recipient email address, and then click <Cmd sid="button.smtpSettingTest" product='2' />.
 
-## Set up mobile link for face enrollment
+## Set up a mobile link for face enrollment
 
-Set to <Cmd sid="common.use" product='2' /> to send a facial enrollment mobile link to the user via email.
+To send a face enrollment mobile link to the user by email, turn on <Cmd sid="common.use" product='2' />.
 
 <Image src='/img/biostarx-settings-email-visual-face.png' />
 
-* <Cmd sid="common.emailContent.title" product='2' />: Enter the subject line of the email to send the mobile link for face enrollment.
+* <Cmd sid="common.emailContent.title" product='2' />: Enter the email subject for sending the mobile link for face enrollment.
 
 * <Cmd sid="common.emailContent.companyName" product='2' />: Enter the company name.
 
@@ -73,29 +73,29 @@ Set to <Cmd sid="common.use" product='2' /> to send a facial enrollment mobile l
 
   :::info
 
-  * Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, PNG.
+  * Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, and PNG.
 
-  * Supported image file size is up to 5MB.
+  * The maximum supported image file size is 5 MB.
 
   :::
 
 * <Cmd sid="common.emailContent.adminContact" product='2' />: Enter the contact information of the person in charge.
 
-* <Cmd sid="printOption.footer" product='2' />: Enter the content to be notified to users enrolling their face, such as legal notices. It will be displayed at the bottom of the email sent with the mobile link for face enrollment.
+* <Cmd sid="printOption.footer" product='2' />: Enter information for users who enroll their faces, such as legal notices. It appears at the bottom of the email sent with the mobile link for face enrollment.
 
   :::info
 
-  Footer can be up to 5,000 characters in length.
+  The footer can be up to 5,000 characters long.
 
   :::
 
-## QR/Barcode setting
+## Set up QR/Barcode issuance
 
-To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />.
+To issue a QR code or barcode to the user by email, turn on <Cmd sid="common.use" product='2' />.
 
 <Image src='/img/biostarx-settings-email-qr.png' className='none' />
 
-* <Cmd sid="common.emailContent.title" product='2' />: Enter the title of the email.
+* <Cmd sid="common.emailContent.title" product='2' />: Enter the subject of the email to send the QR code or barcode.
 
 * <Cmd sid="common.emailContent.companyName" product='2' />: Enter the company name.
 
@@ -103,9 +103,9 @@ To use the QR/Barcode set it as <Cmd sid="common.use" product='2' />.
 
   :::info
 
-  * Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, PNG.
+  * Supported image file formats are GIF, JPG, JPEG, JPE, JFIF, and PNG.
 
-  * Supported image file size is up to 5MB.
+  * The maximum supported image file size is 5 MB.
 
   :::
 

@@ -1,18 +1,18 @@
 ---
 id: settings-device-details-network
-title: Network Settings
-description: Guidelines for network settings such as TCP/IP, RS-485, and server communication for the device.
+title: Set Up Network
+description: Learn how to set up the device network settings, such as TCP/IP, RS-485, and server communication.
 keywords:
   - Device
   - Network
   - TCP/IP
   - RS-485
   - Server Communication
-  - Serial communication
+  - Serial Communication
   - Intelligent Slave
 ---
 
-Here are the network settings for the registered device. In the <Cmd sid='device.info.network' product='2' /> section, you can set the device's TCP/IP, RS-485, and server communication network.
+Learn how to set up network settings for a registered device. The <Cmd sid='device.info.network' product='2' /> section lets you configure network settings for the device, such as TCP/IP, RS-485, and server communication.
 
 <Image src='/img/biostarx-setting-device-edit-network.png' />
 
@@ -26,7 +26,7 @@ Here are the network settings for the registered device. In the <Cmd sid='device
 
 ## TCP/IP settings
 
-In the <Cmd sid='device.info.tcpIpSetting' product='2' /> group, you can set the device's IP address.
+The <Cmd sid='device.info.tcpIpSetting' product='2' /> group lets you set the device IP address.
 
 :::info
 
@@ -36,25 +36,25 @@ For more information about IP address settings when registering a device, see <D
 
 ### Dynamic IP settings
 
-To set the device to use dynamic IP, click the checkbox for the <Cmd sid='device.info.useDhcp' product='2' /> option. The device will automatically receive an IP address from the DHCP server, which may change. In this case, the IP address of the device may change.
+To set the device to use dynamic IP, select the <Cmd sid='device.info.useDhcp' product='2' /> checkbox. The device automatically receives an IP address from the DHCP server. In this case, the device IP address may change.
 
 ### Static IP settings
 
-To set the device's IP address statically, uncheck the checkbox for the <Cmd sid='device.info.useDhcp' product='2' /> option. You can enter the device's network information in the details below. 
+To set a static IP address for the device, clear the <Cmd sid='device.info.useDhcp' product='2' /> checkbox. Enter the device network information in the fields below. 
 
 * <Cmd sid='device.info.ipAddress' product='2' />: Enter the device IP address. Enter the IP address in `xxx.xxx.xxx.xxx` format. Each octet must be a number from 0 to 255.
 
-* <Cmd sid='device.info.subnetMask' product='2' />: Enter the device's subnet mask.
+* <Cmd sid='device.info.subnetMask' product='2' />: Enter the device subnet mask.
 
-* <Cmd sid='device.info.gateway' product='2' />: Enter the device's gateway address.
+* <Cmd sid='device.info.gateway' product='2' />: Enter the device gateway address.
 
-* <Cmd sid='device.info.devicePort' product='2' />: Enter the device's port number.
+* <Cmd sid='device.info.devicePort' product='2' />: Enter the device port number.
 
-* <Cmd sid='device.info.dnsServerAddress' product='2' />: Enter the device's DNS server address.
+* <Cmd sid='device.info.dnsServerAddress' product='2' />: Enter the device DNS server address.
 
 <details>
 
-<summary>View devices and firmware versions that can accept DNS server addresses</summary>
+<summary>View devices and firmware versions that support entering a DNS server address</summary>
 
 * BioStation 3 Max firmware v1.0.0 or later
 
@@ -86,11 +86,11 @@ To set the device's IP address statically, uncheck the checkbox for the <Cmd sid
 
 ## Wireless LAN settings
 
-In the <Cmd sid='device.info.wlan' product='2' /> group, you can enable or disable the device's wireless LAN settings. Detailed settings are available in the device's user guide.
+In the <Cmd sid='device.info.wlan' product='2' /> group, you can turn the device's wireless LAN on or off. You can set the details on the device; for more information, see the device's user guide.
 
 :::info
 
-Refer to the following devices that support wireless LAN settings:
+For devices that support wireless LAN settings, see below.
 
 * BioStation 2
 
@@ -104,9 +104,9 @@ Refer to the following devices that support wireless LAN settings:
 
 ## Server communication settings
 
-In the <Cmd sid='device.info.server' product='2' /> group, you can configure how the device communicates with the **BioStar X** server.
+In the <Cmd sid='device.info.server' product='2' /> group, you can set how the device communicates with the **BioStar X** server.
 
-* <Cmd sid='device.info.deviceToServerConnection' product='2' />: Selecting this option allows you to enter the IP address and port number of the **BioStar X** server the device will connect to.
+* <Cmd sid='device.info.deviceToServerConnection' product='2' />: Select this option to enter the IP address and port number of the **BioStar X** server that the device connects to.
 
 * <Cmd sid='device.info.serverIP' product='2' />: Enter the IP address or domain name of the **BioStar X** server.
 
@@ -114,13 +114,13 @@ In the <Cmd sid='device.info.server' product='2' /> group, you can configure how
 
 :::tip
 
-This feature is useful when the IP address of the **BioStar X** server changes. By pre-configuring this option on multiple devices before changing the server's IP address, the devices will automatically connect to the updated IP address.
+This feature is useful when the IP address of the **BioStar X** server changes. If you set this option on multiple devices before changing the **BioStar X** server IP address, the devices automatically connect to the updated IP address.
 
 :::
 
 <details>
 
-<summary>View devices and firmware versions that allow entering domain names in <Cmd sid='device.info.serverIP' product='2' /></summary>
+<summary>View devices and firmware versions that allow entering a domain in <Cmd sid='device.info.serverIP' product='2' /></summary>
 
 * BioStation 3 Max firmware v1.0.0 or later
 
@@ -156,17 +156,17 @@ This feature is useful when the IP address of the **BioStar X** server changes. 
 
 ## Serial communication settings
 
-In the <Cmd sid='device.info.serialSetting' product='2' /> group, you can set the mode, transmission performance, and display authentication results for devices connected via RS-485.
+In the <Cmd sid='device.info.serialSetting' product='2' /> group, you can set the mode, transmission speed, and authentication results to display for devices connected via RS-485.
 
 * <Cmd sid='device.info.rs485' product='2' />: Set the RS-485 mode.
 
-* <Cmd sid='device.info.baudRate' product='2' />: Set the RS-485 communication performance.
+* <Cmd sid='device.info.baudRate' product='2' />: Set the RS-485 communication speed.
 
-* <Cmd sid='device.info.osdpAuthResult' product='2' />: Choose the authentication result to display on the device’s screen when using the device with a third-party controller.
+* <Cmd sid='device.info.osdpAuthResult' product='2' />: Select the authentication result to show on the device screen when you use the device with a third-party controller.
 
-  * <Cmd sid='device.info.osdpControllerResult' product='2' />: You can display the authentication result from the third-party controller on the device.
+  * <Cmd sid='device.info.osdpControllerResult' product='2' />: Shows the authentication result from the third-party controller on the device.
 
-  * <Cmd sid='device.info.osdpDeviceResult' product='2' />: You can display the device’s authentication result.
+  * <Cmd sid='device.info.osdpDeviceResult' product='2' />: Shows the device's authentication result.
 
 :::info
 
@@ -176,19 +176,19 @@ The <Cmd sid='device.info.osdpAuthResult' product='2' /> option is enabled when 
 
 ## Intelligent slave settings
 
-In the <Cmd sid='device.info.intelligentPD' product='2' /> group, when a user authenticates using a fingerprint in an environment where Suprema devices are connected to third-party controllers, the authentication result is sent as Open Supervised Device Protocol (OSDP) card data to support numerous 1:1 or 1:N matching.
+In the <Cmd sid='device.info.intelligentPD' product='2' /> group, set the device to send the result as [Open Supervised Device Protocol (OSDP)](../../reference/glossary#osdp) card data when a user authenticates with a fingerprint on a Suprema device connected to a third-party controller. This supports multiple 1:1 or 1:N matching.
 
-* <Cmd sid='device.info.ipdUseFailCode' product='2' />: When using the intelligent slave, if an exception occurs such as authentication failure, enter the exception code in decimal (0-18446744073709551615) or hexadecimal (0-FFFFFFFFFFFFFFFF) format to record an accurate log. Hexadecimal can be input using numbers or letters.
+* <Cmd sid='device.info.ipdUseFailCode' product='2' />: To record accurate logs when an exception such as an authentication failure occurs while you use intelligent slave, enter the exception code in decimal (0 to 18446744073709551615) or hexadecimal (0 to FFFFFFFFFFFFFFFF) format. Hexadecimal values can contain numbers and letters.
 
   <Image src='/img/biostarx-setting-device-edit-network-exception-code.png' />
 
-* <Cmd sid='device.info.ipdCardFormat' product='2' />: You can output the card ID or user ID upon successful authentication.
+* <Cmd sid='device.info.ipdCardFormat' product='2' />: Select whether to output the card ID or user ID when authentication succeeds.
 
-* <Cmd sid='device.info.ipdOsdpID' product='2' />: Enter the OSDP address of the device. This should be a number between 0 and 126.
+* <Cmd sid='device.info.ipdOsdpID' product='2' />: Enter the device's OSDP address. Enter a number from 0 to 126.
 
 :::info
 
-* You can input data of up to 8 bytes for <Cmd sid='device.info.ipdUseFailCode' product='2' />.
+* Enter up to 8 bytes of data for <Cmd sid='device.info.ipdUseFailCode' product='2' />.
 
 * The <Cmd sid='device.info.intelligentPD' product='2' /> option is enabled when the <Cmd sid='device.info.rs485' product='2' /> option is set to <Cmd sid='device.rs485.default' product='2' />.
 

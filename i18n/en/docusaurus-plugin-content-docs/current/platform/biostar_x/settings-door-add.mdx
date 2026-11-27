@@ -1,20 +1,20 @@
 ---
 id: settings-door-add
-title: Register Door
-description: Set the door for access control. Select the entrance/exit device based on the door or set up anti-passback to enhance security, and configure alarms.
+title: Register a Door
+description: Set up doors to use for access control. Enhance security by selecting entry/exit devices for the door or setting anti-passback, and configure alarms.
 keywords:
   - Door
   - Security
   - Access control
 ---
 
-This guide describes how to register and set up doors. Connect entry and exit devices for each door, and configure security features such as anti-passback and dual authentication to establish a systematic access management environment. Additionally, configure alarms based on the door status to prevent security incidents in advance.
+Learn how to register and set up a door. Build a structured access management environment by connecting entry/exit devices for each door and setting security features such as anti-passback and dual authentication. You can also set alarms based on door status to help prevent security incidents.
 
 ## Before you start {/* #before-start */}
 
-* Set access levels, access groups, and floor levels for access control before registering doors. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
+* Before you register a door, set access levels, access groups, and floor levels for access control. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
-* Register devices before registering doors. For more information about registering devices, see the following documents.
+* Before you register a door, register devices. For more information about registering devices, see the following documents.
 
   * <DocLink docId='platform/biostar_x/settings-adding-devices' />
 
@@ -22,7 +22,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
   * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
 
-## Register door {/* #adding-door */}
+## Register a door {/* #adding-door */}
 
 1. On the <Cmd sid='shell.header.launcher' /> page, click <Cmd sid='shell.header.setting' />.
 
@@ -32,29 +32,29 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
    <Image src='/img/biostarx-setting-door-adding.png' />
 
-4. When the <Cmd sid='door.addNewDoor' product='2' /> screen appears, set each section item in order.
+4. When the <Cmd sid='door.addNewDoor' product='2' /> screen appears, set each option in each section in order.
 
-   * <Cmd sid='common.information' product='2' />: Set the basic information of the door. For more information, see <DocLink inner='#info' />.
+   * <Cmd sid='common.information' product='2' />: Set the door's basic information. For more information, see <DocLink inner='#info' />.
 
-   * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more information, see <DocLink inner='#configdoor' />.
+   * <Cmd sid='device.info.configuration' product='2' />: Set the devices connected to the door, entry and exit buttons, and door sensors. For more information, see <DocLink inner='#configdoor' />.
 
    * <Cmd sid='common.option' product='2' />: Set additional options. For more information, see <DocLink inner='#option' />.
 
-   * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more information, see <DocLink inner='#antipassback' />.
+   * <Cmd sid='door.antiPassBack' product='2' />: Set anti-passback to manage access history and enhance security. For more information, see <DocLink inner='#antipassback' />.
 
-   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more information, see <DocLink inner='#timed-apb' />.
+   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for anti-passback. For more information, see <DocLink inner='#timed-apb' />.
 
-   * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, see <DocLink inner='#alarm' />.
+   * <Cmd sid='door.alarm' product='2' />: Set the alarm to sound or prevent device use when an anti-passback violation occurs. For more information, see <DocLink inner='#alarm' />.
 
 5. After you complete all settings, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen.
 
 ### Set basic information {/* #info */}
 
-In the <Cmd sid='common.information' product='2' /> section, you can input or change the door's name, group, and description.
+In the <Cmd sid='common.information' product='2' /> section, enter or change the door name, group, and description.
 
 <Image src='/img/biostarx-setting-door-adding-info.png' />
 
-* <Cmd sid='common.name' product='2' />: Enter the door name. Enter a name that can be specified for convenient management.
+* <Cmd sid='common.name' product='2' />: Enter the door name. Enter a name that identifies the door for easier management.
 
 * <Cmd sid='common.group' product='2' />: Select the door group.
 
@@ -62,7 +62,7 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 :::info
 
-* The door name can be up to 48 characters long.
+* The door name can be up to 48 characters.
 
 * For more information about registering door groups, see <DocLink docId='platform/biostar_x/settings-manage-door-group' />.
 
@@ -70,23 +70,23 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 ### Set door settings {/* #configdoor */}
 
-In the <Cmd sid='device.info.configuration' product='2' /> section, set the devices connected to the door, exit buttons, and door sensors.
+The <Cmd sid='device.info.configuration' product='2' /> section lets you set the devices connected to the door, exit buttons, and door sensors.
 
 <Image src='/img/biostarx-setting-door-adding-configuration.png' />
 
-* <Cmd sid='door.entryDevice' product='2' />: Select the device to be used for entry. If the device is not listed, register the device first.
+* <Cmd sid='door.entryDevice' product='2' />: Select the device to use for entry. If the device does not appear in the list, register it first.
 
-* <Cmd sid='common.doorRelay' product='2' />: Choose the [relay](../../reference/glossary#relay) that will function as the door lock mechanism.
+* <Cmd sid='common.doorRelay' product='2' />: Select the [relay](../../reference/glossary#relay) that controls the door lock.
 
-* <Cmd sid='door.exitButton' product='2' />: Select the port to be used as the exit button.
+* <Cmd sid='door.exitButton' product='2' />: Select the port to use as the exit button.
 
-  * <Cmd sid='door.switchType' product='2' />: Can be set to <Cmd>N/C</Cmd> ([Normally Closed](../../reference/glossary#nc)) or <Cmd>N/O</Cmd> ([Normally Open](../../reference/glossary#no)).
+  * <Cmd sid='door.switchType' product='2' />: Set to <Cmd>N/C</Cmd>([Normally Closed](../../reference/glossary#nc)) or <Cmd>N/O</Cmd>([Normally Open](../../reference/glossary#no)).
 
-  * <Cmd sid='door.simulateUnlockSupported' product='2' />: Configure so that an exit button input generates a door open request log without triggering the relay.
+  * <Cmd sid='door.simulateUnlockSupported' product='2' />: Set the exit button to generate a door open request log without operating the relay.
 
-* <Cmd sid='door.doorSensor' product='2' />: Choose the port to confirm the door's status. Setting it to <Cmd sid='common.none' product='2' /> will disable the use of the <Cmd sid='door.alarm' product='2' /> section.
+* <Cmd sid='door.doorSensor' product='2' />: Select the port to use to check the door status. If set to <Cmd sid='common.none' product='2' />, the <Cmd sid='door.alarm' product='2' /> section is unavailable.
 
-  * <Cmd sid='door.switchType' product='2' />: Can be set to <Cmd>N/C</Cmd> ([Normally Closed](../../reference/glossary#nc)) or <Cmd>N/O</Cmd> ([Normally Open](../../reference/glossary#no)).
+  * <Cmd sid='door.switchType' product='2' />: Set to <Cmd>N/C</Cmd>([Normally Closed](../../reference/glossary#nc)) or <Cmd>N/O</Cmd>([Normally Open](../../reference/glossary#no)).
 
   * <Cmd sid='door.apbUseDoorSensor' product='2' />: Set whether to use the door sensor when using the <Cmd sid='zone.apbUseDoorSensor' product='2' /> option.
 
@@ -96,11 +96,11 @@ In the <Cmd sid='device.info.configuration' product='2' /> section, set the devi
 
   :::
 
-* <Cmd sid='door.exitDevice' product='2' />: Select the device to be used for exit.
+* <Cmd sid='door.exitDevice' product='2' />: Select the device to use for exit.
 
 :::info
 
-* Select the wireless door lock connected to CoreStation as <Cmd sid='door.entryDevice' product='2' /> or <Cmd sid='door.exitDevice' product='2' />. For more information about connecting a wireless door lock, see <DocLink docId='platform/biostar_x/settings-device-using-wireless-door-lock' />.
+* You can select a wireless door lock connected to CoreStation as <Cmd sid='door.entryDevice' product='2' /> or <Cmd sid='door.exitDevice' product='2' />. For more information about connecting a wireless door lock, see <DocLink docId='platform/biostar_x/settings-device-using-wireless-door-lock' />.
 
 * If you selected a wireless door lock for <Cmd sid='door.entryDevice' product='2' />, you cannot use the <Cmd sid='common.doorRelay' product='2' /> option.
 
@@ -110,43 +110,43 @@ In the <Cmd sid='device.info.configuration' product='2' /> section, set the devi
 
 ### Set additional options {/* #option */}
 
-In the <Cmd sid='common.option' product='2' /> section, you can set additional options for the door.
+In the <Cmd sid='common.option' product='2' /> section, set additional options for the door.
 
 <Image src='/img/biostarx-setting-door-adding-aditional-option.png' />
 
-* <Cmd sid='common.open' product='2' />: Set options for door opening.
+* <Cmd sid='common.open' product='2' />: Set options for door unlock.
 
-  * <Cmd sid='door.openTime' product='2' />: Set the duration for which the door remains open after authentication is complete. The door will automatically lock after this time.
+  * <Cmd sid='door.openTime' product='2' />: Set how long the door stays unlocked after authentication is complete. After this time, the door locks automatically.
 
-  * <Cmd sid='door.openOnce' product='2' />: The door will lock when the door sensor detects it has closed. If set to <Cmd sid='door.openOnceOn' product='2' />, the option <Cmd sid='door.option.openCondition.useAutoDoor' product='2' /> cannot be used.
+  * <Cmd sid='door.openOnce' product='2' />: The door locks when the door sensor detects that the door has closed. If <Cmd sid='door.option.openCondition.useAutoDoor' product='2' /> is set to <Cmd sid='door.openOnceOn' product='2' />, this option cannot be used.
 
-  * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: If using an automatic door as the door, the relay can operate regardless of the door sensor's status. If set to <Cmd sid='door.openOnceOn' product='2' />, the <Cmd sid='door.openOnce' product='2' /> option cannot be used.
+  * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: If you use an automatic door as the door, the relay can operate regardless of the door sensor status. If <Cmd sid='door.openOnce' product='2' /> is set to <Cmd sid='door.openOnceOn' product='2' />, this option cannot be used.
 
   :::note
 
-  The <Cmd sid='door.openTime' product='2' /> may vary depending on the type of door locking device being used.
+  The <Cmd sid='door.openTime' product='2' /> value may vary depending on the type of door locking device in use.
 
   :::
 
-* <Cmd sid='door.dualAuthentication' product='2' />: Set to require two people (a regular user and an administrator) to authenticate credentials to open the door.
+* <Cmd sid='door.dualAuthentication' product='2' />: Set to require two people (a regular user and an administrator) to authenticate using their credentials to unlock the door.
 
   * <Cmd sid='common.device' product='2' />: Select the device to use for dual authentication. To disable dual authentication, select <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />.
 
-  * <Cmd sid='door.schedule' product='2' />: Select the schedule for using dual authentication. If the schedule you need isn't in the list, click <Cmd sid='button.plusAddSchedule' product='2' /> to add it.
+  * <Cmd sid='door.schedule' product='2' />: Select the schedule for dual authentication. If the schedule you need isn't in the list, click <Cmd sid='button.plusAddSchedule' product='2' /> to add it.
 
   * <Cmd sid='door.dualAuthentication.approvalType' product='2' />: Set the order of administrator authentication.
 
     * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Two authentications are required regardless of the authentication group.
 
-    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: The general user must authenticate first, followed by an authenticated user included in the set authentication group.
+    * <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />: A regular user authenticates first, and then a user in the selected authentication group authenticates.
 
-  * <Cmd sid='door.approvalGroup' product='2' />: Set the group to which the administrator belongs. This option can be used when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
+  * <Cmd sid='door.approvalGroup' product='2' />: Set the group that the administrator belongs to. This option is available when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
 
-  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. If the second authentication is not completed within the set time, the door will not open.
+  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. If the second authentication is not completed within the set time, the door does not unlock.
 
   :::note
 
-  * Modify settings in the following menu to change the dual authentication of the device configured for occupancy limit settings. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
+  * To change dual authentication for the device configured in occupancy limit settings, modify the setting in the following menu. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.accessManagement.root' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
     For more information about the <Cmd sid='zone.occupancy.title' product='2' /> settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
@@ -154,11 +154,11 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   :::
 
-* <Cmd sid='door.antiTailSensor' product='2' />: Set to detect tailgating where an unauthorized person follows an authorized person to enter.
+* <Cmd sid='door.antiTailSensor' product='2' />: Set to detect tailgating, where an unauthenticated person follows an authenticated person to enter.
 
   * <Cmd sid='common.sensor' product='2' />: Select a sensor to detect tailgating.
 
-* <Cmd sid='door.authDoorControl.title' product='2' />: Enable the door to remain unlocked when an authorized user performs a Double Badge (Double Badge). For more information, see <DocLink docId='platform/biostar_x/settings-door-auth-control' />.
+* <Cmd sid='door.authDoorControl.title' product='2' />: Sets the door to remain unlocked when an authorized user double-badges. For more information, see <DocLink docId='platform/biostar_x/settings-door-auth-control' />.
 
   :::note
 
@@ -168,58 +168,58 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
 ### Set anti-passback {/* #antipassback */}
 
-[Anti-passback](../../reference/glossary#apb) is used to manage access history and enhance security. It can prevent cases where a user hands over their entry card to another user after entering and stop outsiders from entering when they follow users with access privileges.
+[Anti-passback](../../reference/glossary#apb) is used to manage access history and enhance security. It prevents misuse in which a user enters and then passes the access card to another user, and it prevents an outsider who follows a user with access privileges inside from leaving.
 
-Refer below to complete the settings in the <Cmd sid='door.antiPassBack' product='2' /> section.
+See below to set options in the <Cmd sid='door.antiPassBack' product='2' /> section.
 
-* <Cmd sid='common.type' product='2' />: Choose the type of anti-passback.
+* <Cmd sid='common.type' product='2' />: Select the anti-passback type.
 
-  * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Does not utilize the anti-passback feature.
+  * <Cmd sid='door.dualAuthentication.approvalType.none' product='2' />: Does not use the anti-passback feature.
 
-  * <Cmd sid='door.apbType.soft' product='2' />: During an anti-passback violation, entry is allowed but will trigger an alarm or create a log in **BioStar X**.
+  * <Cmd sid='door.apbType.soft' product='2' />: If anti-passback is violated, access is allowed, but an alarm sounds or a log is created in **BioStar X**.
 
-  * <Cmd sid='door.apbType.hard' product='2' />: During an anti-passback violation, entry is not allowed, and an alarm will sound or a log will be created in **BioStar X**.
+  * <Cmd sid='door.apbType.hard' product='2' />: If anti-passback is violated, access is not allowed, and an alarm sounds or a log is created in **BioStar X**.
 
-* <Cmd sid='door.resetTime' product='2' />: Set the time until the anti-passback feature resets. This can be set for up to 7 days (10080 minutes), and if set to 0, it will not reset.
+* <Cmd sid='door.resetTime' product='2' />: Set the time until anti-passback is initialized. This can be set for up to 7 days (10080 minutes), and if set to 0, anti-passback is not initialized.
 
 :::info
 
-* This can be used when both entry and exit devices are installed, and setting <Cmd sid='door.exitDevice' product='2' /> option to <Cmd sid='common.none' product='2' /> in the <Cmd sid='device.info.configuration' product='2' /> section will render it unusable. For more information about setting up the exit device, see <DocLink inner='#configdoor' />.
+* This is available only when both entry and exit devices are installed; it is unavailable if <Cmd sid='door.exitDevice' product='2' /> is set to <Cmd sid='common.none' product='2' /> in the <Cmd sid='device.info.configuration' product='2' /> section. For more information about setting up the exit device, see <DocLink inner='#configdoor' />.
 
-* The <Cmd sid='door.antiPassBack' product='2' /> section requires a master device configured via RS-485 and a slave device.
+* To enable the <Cmd sid='door.antiPassBack' product='2' /> section, you need a master device and a slave device configured via RS-485.
 
-* If <Cmd sid='timedAPB.title' product='2' /> section is enabled, <Cmd sid='door.antiPassBack' product='2' /> cannot be used.
+* If the <Cmd sid='timedAPB.title' product='2' /> section is enabled, <Cmd sid='door.antiPassBack' product='2' /> cannot be used.
 
 :::
 
 ### Set timed anti-passback {/* #timed-apb */}
 
-When a user attempts to re-authenticate on the same device after entry authentication, the anti-passback feature will prevent immediate re-authentication. The <Cmd sid='timedAPB.title' product='2' /> section sets the initialization time for the anti-passback feature to effectively limit frequent entries by users.
+When a user tries to authenticate again on the same device after access authentication, anti-passback prevents immediate re-authentication. In the <Cmd sid='timedAPB.title' product='2' /> section, set the initialization time for anti-passback to effectively limit frequent entries by users.
 
 <Image src='/img/biostarx-setting-door-adding-time-litmit-apb.png' />
 
 * <Cmd sid='timedAPB.field' product='2' />: Select the device to use the timed anti-passback feature.
 
-* <Cmd sid='door.resetTime' product='2' />: Set the time until the anti-passback feature resets. The input unit is minutes (min), with a default of 10 minutes. It can be set for a maximum of 60 minutes.
+* <Cmd sid='door.resetTime' product='2' />: Set the time until anti-passback is initialized. Input is in minutes (min), and the default is 10 minutes. The maximum is 60 minutes.
 
-* <Cmd sid='zone.apb.bypassGroup' product='2' />: Select access groups that can always pass without being subject to timed anti-passback.
+* <Cmd sid='zone.apb.bypassGroup' product='2' />: Select the access groups that bypass timed anti-passback.
 
 ### Set alarms {/* #alarm */}
 
-In the <Cmd sid='door.alarm' product='2' /> section, you can configure to sound an alarm or block device usage when the door is forcibly opened, left open, or when an anti-passback violation occurs. Click <Cmd sid='button.addplus' product='2' /> for the item to add an alarm.
+In the <Cmd sid='door.alarm' product='2' /> section, set an alarm to sound or block device use when the door is forcibly opened, left open, or an anti-passback violation occurs. To add an alarm, click <Cmd sid='button.addplus' product='2' /> for the event to add it to.
 
 <Image src='/img/biostarx-setting-door-adding-alarm.png' />
 
-* <Cmd sid='door.heldOpen' product='2' />: Configure alarm actions when the door is left open.
+* <Cmd sid='door.heldOpen' product='2' />: Set the alarm actions when the door is left open.
 
-* <Cmd sid='door.heldOpenTime' product='2' />: Set the time for the alarm to sound when the door has been open for an extended period. Determine the maximum time the door may remain open.
+* <Cmd sid='door.heldOpenTime' product='2' />: Set the time for the alarm to sound when the door remains open for an extended period. Set the maximum time the door can remain open.
 
-* <Cmd sid='door.forcedOpen' product='2' />: Configure alarm actions when the door is forcibly opened.
+* <Cmd sid='door.forcedOpen' product='2' />: Set the alarm actions when the door is forcibly opened.
 
-* <Cmd sid='door.antiPassBack' product='2' /> / <Cmd sid='timedAPB.title' product='2' />: Set alarm actions for anti-passback or timed anti-passback violations.
+* <Cmd sid='door.antiPassBack' product='2' /> / <Cmd sid='timedAPB.title' product='2' />: Set the alarm actions when an anti-passback or timed anti-passback violation occurs.
 
 :::info
 
-The <Cmd sid='door.antiPassBack' product='2' /> option can only be set if the exit device is registered.
+The <Cmd sid='door.antiPassBack' product='2' /> option can be set only if an exit device is registered.
 
 :::
